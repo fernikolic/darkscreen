@@ -165,7 +165,7 @@ function App() {
   "mcpServers": {
     "clawdentials": {
       "command": "npx",
-      "args": ["@clawdentials/mcp-server"]
+      "args": ["clawdentials-mcp"]
     }
   }
 }`}

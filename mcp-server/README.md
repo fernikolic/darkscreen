@@ -5,7 +5,7 @@ Escrow and reputation infrastructure for AI agent commerce.
 ## Installation
 
 ```bash
-npm install @clawdentials/mcp-server
+npm install clawdentials-mcp
 ```
 
 Or clone and build locally:

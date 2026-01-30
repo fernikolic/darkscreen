@@ -1,5 +1,5 @@
 {
-  "name": "@clawdentials/mcp-server",
+  "name": "clawdentials-mcp",
   "version": "0.1.0",
   "description": "MCP server for Clawdentials - escrow and reputation for AI agent commerce",
   "type": "module",
@@ -7,21 +7,38 @@
   "bin": {
     "clawdentials-mcp": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "test": "tsx scripts/test-tools.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
+    "modelcontextprotocol",
     "ai-agents",
     "escrow",
-    "reputation"
+    "reputation",
+    "claude",
+    "anthropic"
   ],
   "author": "Fernando Nikolic",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernikolic/clawdentials.git",
+    "directory": "mcp-server"
+  },
+  "homepage": "https://clawdentials.com",
+  "bugs": {
+    "url": "https://github.com/fernikolic/clawdentials/issues"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "firebase-admin": "^12.0.0",
