@@ -9,7 +9,7 @@ export function initFirestore(): Firestore {
   if (getApps().length === 0) {
     // Uses GOOGLE_APPLICATION_CREDENTIALS env var or default credentials
     app = initializeApp({
-      projectId: 'perception-app-3db34',
+      projectId: 'clawdentials',
     });
   } else {
     app = getApps()[0];

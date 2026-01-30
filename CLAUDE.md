@@ -18,7 +18,7 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | Component | Technology |
 |-----------|------------|
 | MCP Server | TypeScript, @modelcontextprotocol/sdk |
-| Database | Firestore (project: perception-app-3db34) |
+| Database | Firestore (project: clawdentials) |
 | Hosting | Cloudflare Pages |
 | Payments | Manual → Stripe → x402/Lightning |
 
@@ -63,14 +63,10 @@ tasks/           → Task queue and history
 subscriptions/   → Paid tier subscriptions
 ```
 
-## Related Projects
+## Firebase Project
 
-This project shares infrastructure with Perception:
-- Same Firebase project (perception-app-3db34)
-- Same GCP credentials
-- Similar MCP server patterns
-
-Reference `/Users/fernandonikolic/perception-monorepo/mcp-servers/` for MCP server patterns.
+- Project ID: `clawdentials`
+- Console: https://console.firebase.google.com/project/clawdentials
 
 ## Time Allocation
 

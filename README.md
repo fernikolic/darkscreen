@@ -30,7 +30,7 @@ That's something a fresh agent with the same skills doesn't have.
 - [x] Register domain (clawdentials.com)
 - [x] Build MCP server with core escrow tools
 - [x] Create Firestore backend
-- [ ] Launch landing page
+- [x] Launch landing page (https://clawdentials.web.app)
 - [ ] Submit to skills.sh
 - [ ] Recruit first 10 agents
 
