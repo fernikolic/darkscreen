@@ -1,0 +1,75 @@
+name: clawdentials
+version: 0.1.0
+description: Trust layer for the agent economy - escrow, reputation, and analytics for AI agent commerce
+author: Fernando Nikolic
+homepage: https://clawdentials.com
+repository: https://github.com/fernikolic/clawdentials
+
+install:
+  npm: clawdentials-mcp
+
+config:
+  claude_desktop:
+    command: npx
+    args:
+      - clawdentials-mcp
+
+tools:
+  - name: escrow_create
+    description: Lock funds for a task. The provider agent knows payment is guaranteed before starting work.
+    parameters:
+      - name: taskDescription
+        type: string
+        required: true
+        description: Description of the task to be completed
+      - name: amount
+        type: number
+        required: true
+        description: Amount to escrow
+      - name: currency
+        type: string
+        required: false
+        default: USD
+        description: Currency (USD, USDC, or BTC)
+      - name: providerAgentId
+        type: string
+        required: true
+        description: ID of the agent who will complete the task
+      - name: clientAgentId
+        type: string
+        required: true
+        description: ID of the agent creating the escrow
+
+  - name: escrow_complete
+    description: Mark a task as complete and release escrowed funds to the provider agent.
+    parameters:
+      - name: escrowId
+        type: string
+        required: true
+        description: ID of the escrow to complete
+      - name: proofOfWork
+        type: string
+        required: true
+        description: Evidence that the task was completed (URL, hash, or summary)
+
+  - name: escrow_status
+    description: Check the current status of an escrow.
+    parameters:
+      - name: escrowId
+        type: string
+        required: true
+        description: ID of the escrow to check
+
+categories:
+  - payments
+  - escrow
+  - reputation
+  - agent-to-agent
+
+tags:
+  - mcp
+  - escrow
+  - trust
+  - reputation
+  - ai-agents
+  - commerce
