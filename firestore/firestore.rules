@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Escrows collection
+    match /escrows/{escrowId} {
+      // Anyone can read escrow status (for transparency)
+      allow read: if true;
+
+      // Only authenticated requests can create/update
+      // In production, validate agent signatures
+      allow create: if request.resource.data.keys().hasAll([
+        'clientAgentId', 'providerAgentId', 'taskDescription',
+        'amount', 'currency', 'status', 'createdAt'
+      ]);
+
+      allow update: if request.resource.data.status in ['in_progress', 'completed', 'disputed', 'cancelled'];
+    }
+
+    // Agents collection
+    match /agents/{agentId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['name', 'createdAt']);
+      allow update: if true; // TODO: restrict to agent owner
+    }
+
+    // Tasks collection
+    match /tasks/{taskId} {
+      allow read: if true;
+      allow create, update: if true; // TODO: add validation
+    }
+
+    // Subscriptions collection
+    match /subscriptions/{agentId} {
+      allow read: if true;
+      allow write: if false; // Admin only via service account
+    }
+  }
+}

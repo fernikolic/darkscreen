@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.local
+*.local
+
+# Firebase
+firebase-debug.log
+.firebase/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credentials (never commit these)
+*-service-account.json
+*-credentials.json
+serviceAccountKey.json
