@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/bounties', label: '🎯 Bounties' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/identity', label: 'Identity' },
   { href: '/payments', label: 'Payments' },
