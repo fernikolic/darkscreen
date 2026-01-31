@@ -16,6 +16,7 @@
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "test": "tsx scripts/test-tools.ts",
+    "test:bounty": "tsx scripts/test-bounty.ts",
     "e2e": "tsx scripts/e2e-test.ts",
     "e2e:real": "tsx scripts/e2e-test.ts --real",
     "typecheck": "tsc --noEmit",

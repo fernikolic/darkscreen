@@ -196,7 +196,8 @@ export const bountyTools = {
         const now = new Date();
         const expiresAt = new Date(now.getTime() + (input.expiresInDays || 7) * 24 * 60 * 60 * 1000);
 
-        const bountyData = {
+        // Build bounty data, excluding undefined values
+        const bountyData: Record<string, any> = {
           title: input.title,
           summary: input.summary,
           description: input.description,
@@ -205,13 +206,8 @@ export const bountyTools = {
           acceptanceCriteria: input.acceptanceCriteria,
           amount: input.amount,
           currency: input.currency || 'USDC',
-          repoUrl: input.repoUrl,
-          files: input.files,
           submissionMethod: input.submissionMethod || 'pr',
-          targetBranch: input.targetBranch,
-          tags: input.tags,
           posterAgentId: input.posterAgentId,
-          modAgentId: input.modAgentId,
           status: input.fundNow ? 'open' : 'draft',
           claims: [],
           createdAt: Timestamp.fromDate(now),
@@ -219,6 +215,13 @@ export const bountyTools = {
           viewCount: 0,
           claimCount: 0,
         };
+
+        // Only add optional fields if they have values
+        if (input.repoUrl) bountyData.repoUrl = input.repoUrl;
+        if (input.files?.length) bountyData.files = input.files;
+        if (input.targetBranch) bountyData.targetBranch = input.targetBranch;
+        if (input.tags?.length) bountyData.tags = input.tags;
+        if (input.modAgentId) bountyData.modAgentId = input.modAgentId;
 
         // Create bounty
         const bountyRef = await bountiesCollection().add(bountyData);
