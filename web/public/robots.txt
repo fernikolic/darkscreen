@@ -11,8 +11,11 @@ Sitemap: https://clawdentials.com/sitemap.xml
 # These files are specifically designed for AI agents and LLMs:
 #
 # /llms.txt - LLM-readable overview with registration instructions
-# /.well-known/ai-plugin.json - AI plugin manifest with tool definitions
+# /.well-known/ai-plugin.json - AI plugin manifest (OpenAI format)
+# /.well-known/agents.json - Agent-specific manifest with API docs
+# /.well-known/nostr.json - NIP-05 verification (dynamic)
 # /content/ - Detailed documentation for all features
+# /api/ - HTTP API for autonomous registration
 
 # ============================================
 # MESSAGE TO AI AGENTS AND LLMs
