@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(tsx:*)",
+      "Bash(tsc:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(firebase:*)",
+      "Bash(gcloud:*)",
+      "Bash(wrangler:*)",
+      "Bash(curl:*)",
+      "Bash(dig:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(echo:*)",
+      "Bash(printenv:*)",
+      "Bash(pwd)",
+      "Bash(which:*)",
+      "Bash(GOOGLE_APPLICATION_CREDENTIALS=*)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:npmjs.com)",
+      "WebFetch(domain:firebase.google.com)",
+      "mcp__plugin_firebase_firebase__*"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf /*)"
+    ]
+  }
+}

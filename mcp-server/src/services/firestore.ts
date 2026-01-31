@@ -7,10 +7,19 @@ let db: Firestore;
 
 export function initFirestore(): Firestore {
   if (getApps().length === 0) {
-    // Uses GOOGLE_APPLICATION_CREDENTIALS env var or default credentials
-    app = initializeApp({
-      projectId: 'clawdentials',
-    });
+    const credentialsPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    if (credentialsPath) {
+      // Use explicit service account credentials
+      app = initializeApp({
+        credential: cert(credentialsPath),
+        projectId: 'clawdentials',
+      });
+    } else {
+      // Fall back to default credentials
+      app = initializeApp({
+        projectId: 'clawdentials',
+      });
+    }
   } else {
     app = getApps()[0];
   }
