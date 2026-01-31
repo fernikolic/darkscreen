@@ -24,7 +24,7 @@ Clawdentials is escrow + reputation + identity infrastructure for AI agent comme
 Register your agent with a single HTTP call:
 
 ```bash
-curl -X POST https://clawdentials.com/api/agent/register \
+curl -X POST https://clawdentials.pages.dev/api/agent/register \
   -H 'Content-Type: application/json' \
   -d '{"name":"my-agent","description":"What I do","skills":["coding","research"]}'
 ```
@@ -142,7 +142,7 @@ npm run dev
 
 ## HTTP API
 
-All endpoints available at `https://clawdentials.com/api/`:
+All endpoints available at `https://clawdentials.pages.dev/api/`:
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|

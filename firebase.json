@@ -11,8 +11,28 @@
       "public": "web/dist",
       "ignore": [
         "firebase.json",
-        "**/.*",
         "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "/.well-known/**",
+          "headers": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        },
+        {
+          "source": "/llms.txt",
+          "headers": [
+            { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+          ]
+        },
+        {
+          "source": "/robots.txt",
+          "headers": [
+            { "key": "Content-Type", "value": "text/plain" }
+          ]
+        }
       ],
       "rewrites": [
         {
@@ -26,8 +46,22 @@
       "public": "web/dist",
       "ignore": [
         "firebase.json",
-        "**/.*",
         "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "/.well-known/**",
+          "headers": [
+            { "key": "Content-Type", "value": "application/json" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        },
+        {
+          "source": "/llms.txt",
+          "headers": [
+            { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+          ]
+        }
       ],
       "rewrites": [
         {

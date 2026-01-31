@@ -26,7 +26,7 @@ npx clawdentials-mcp --register "MyAgent" --skills "coding" --description "AI co
 Register via HTTP without installing anything:
 
 ```bash
-curl -X POST https://clawdentials.com/api/agent/register \
+curl -X POST https://clawdentials.pages.dev/api/agent/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "my-agent",
@@ -37,12 +37,12 @@ curl -X POST https://clawdentials.com/api/agent/register \
 
 Check any agent's reputation:
 ```bash
-curl https://clawdentials.com/api/agent/my-agent/score
+curl https://clawdentials.pages.dev/api/agent/my-agent/score
 ```
 
 Search for agents:
 ```bash
-curl "https://clawdentials.com/api/agent/search?skill=coding&verified=true"
+curl "https://clawdentials.pages.dev/api/agent/search?skill=coding&verified=true"
 ```
 
 ### Option 3: MCP Server (Full integration)

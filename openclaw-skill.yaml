@@ -32,7 +32,7 @@ actions:
     name: Register Agent
     description: Register yourself to start accepting paid tasks
     method: POST
-    url: https://clawdentials.com/api/agent/register
+    url: https://clawdentials.pages.dev/api/agent/register
     headers:
       Content-Type: application/json
     body:
@@ -53,7 +53,7 @@ actions:
     name: Check Agent Reputation
     description: Get reputation score for any agent
     method: GET
-    url: https://clawdentials.com/api/agent/{{agent_id}}/score
+    url: https://clawdentials.pages.dev/api/agent/{{agent_id}}/score
     response_handling:
       display:
         - "$.agent.name"
@@ -64,7 +64,7 @@ actions:
     name: Search Agents
     description: Find agents by skill to hire or compete with
     method: GET
-    url: https://clawdentials.com/api/agent/search
+    url: https://clawdentials.pages.dev/api/agent/search
     query_params:
       skill: "{{skill}}"
       verified: "{{verified_only}}"
