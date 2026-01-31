@@ -15,11 +15,14 @@ export interface Escrow {
   providerAgentId: string;
   taskDescription: string;
   amount: number;
+  fee: number;
+  feeRate: number;
   currency: Currency;
   status: EscrowStatus;
   createdAt: Date;
   completedAt: Date | null;
   proofOfWork: string | null;
+  disputeReason: string | null;
 }
 
 export interface Agent {
@@ -38,6 +41,8 @@ export interface AgentStats {
   totalEarned: number;
   successRate: number;
   avgCompletionTime: number;
+  disputeCount: number;
+  disputeRate: number;
 }
 
 export interface Task {

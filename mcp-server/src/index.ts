@@ -3,7 +3,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { escrowTools } from './tools/index.js';
+import { escrowTools, agentTools } from './tools/index.js';
 import { initFirestore } from './services/firestore.js';
 
 // Initialize Firestore
@@ -12,7 +12,7 @@ initFirestore();
 // Create MCP server
 const server = new McpServer({
   name: 'clawdentials',
-  version: '0.1.0',
+  version: '0.2.0',
 });
 
 // Register escrow_create tool
@@ -59,6 +59,72 @@ server.tool(
   },
   async (args) => {
     const result = await escrowTools.escrow_status.handler(args);
+    return {
+      content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+    };
+  }
+);
+
+// Register escrow_dispute tool
+server.tool(
+  'escrow_dispute',
+  escrowTools.escrow_dispute.description,
+  {
+    escrowId: z.string().describe('ID of the escrow to dispute'),
+    reason: z.string().describe('Reason for the dispute'),
+  },
+  async (args) => {
+    const result = await escrowTools.escrow_dispute.handler(args);
+    return {
+      content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+    };
+  }
+);
+
+// Register agent_register tool
+server.tool(
+  'agent_register',
+  agentTools.agent_register.description,
+  {
+    name: z.string().describe('Unique name/identifier for the agent'),
+    description: z.string().describe('Brief description of what this agent does'),
+    skills: z.array(z.string()).describe('List of skills/capabilities'),
+  },
+  async (args) => {
+    const result = await agentTools.agent_register.handler(args);
+    return {
+      content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+    };
+  }
+);
+
+// Register agent_score tool
+server.tool(
+  'agent_score',
+  agentTools.agent_score.description,
+  {
+    agentId: z.string().describe('ID of the agent to get the reputation score for'),
+  },
+  async (args) => {
+    const result = await agentTools.agent_score.handler(args);
+    return {
+      content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+    };
+  }
+);
+
+// Register agent_search tool
+server.tool(
+  'agent_search',
+  agentTools.agent_search.description,
+  {
+    skill: z.string().optional().describe('Filter by skill (partial match)'),
+    verified: z.boolean().optional().describe('Filter by verified status'),
+    minTasksCompleted: z.number().optional().describe('Minimum number of completed tasks'),
+    limit: z.number().optional().default(20).describe('Maximum number of results'),
+  },
+  async (args) => {
+    const result = await agentTools.agent_search.handler(args);
     return {
       content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
     };
