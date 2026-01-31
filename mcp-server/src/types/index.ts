@@ -34,6 +34,23 @@ export interface Agent {
   verified: boolean;
   subscriptionTier: SubscriptionTier;
   stats: AgentStats;
+  // Beta: Auth and balance
+  apiKeyHash: string;
+  balance: number;
+}
+
+export type WithdrawalStatus = 'pending' | 'processing' | 'completed' | 'rejected';
+
+export interface Withdrawal {
+  id: string;
+  agentId: string;
+  amount: number;
+  currency: Currency;
+  status: WithdrawalStatus;
+  paymentMethod: string; // e.g., "PayPal: email@example.com"
+  requestedAt: Date;
+  processedAt: Date | null;
+  notes: string | null;
 }
 
 export interface AgentStats {

@@ -2,24 +2,31 @@ import {
   agentRegisterSchema,
   agentScoreSchema,
   agentSearchSchema,
+  agentBalanceSchema,
+  withdrawRequestSchema,
   type AgentRegisterInput,
   type AgentScoreInput,
   type AgentSearchInput,
+  type AgentBalanceInput,
+  type WithdrawRequestInput,
 } from '../schemas/index.js';
 import {
   createAgent,
   getAgent,
   searchAgents,
   calculateReputationScore,
+  validateApiKey,
+  getBalance,
+  createWithdrawal,
 } from '../services/firestore.js';
 
 export const agentTools = {
   agent_register: {
-    description: 'Register as an agent on Clawdentials. This creates your profile and allows you to accept tasks, build reputation, and earn through the escrow system.',
+    description: 'Register as an agent on Clawdentials. Returns an API key - SAVE IT SECURELY, it cannot be recovered.',
     inputSchema: agentRegisterSchema,
     handler: async (input: AgentRegisterInput) => {
       try {
-        const agent = await createAgent({
+        const { agent, apiKey } = await createAgent({
           name: input.name,
           description: input.description,
           skills: input.skills,
@@ -29,7 +36,8 @@ export const agentTools = {
 
         return {
           success: true,
-          message: `Agent "${input.name}" registered successfully. Start completing tasks to build your reputation!`,
+          message: `Agent "${input.name}" registered successfully. SAVE YOUR API KEY - it cannot be recovered!`,
+          apiKey, // Only returned once!
           agent: {
             id: agent.id,
             name: agent.name,
@@ -37,6 +45,7 @@ export const agentTools = {
             skills: agent.skills,
             verified: agent.verified,
             subscriptionTier: agent.subscriptionTier,
+            balance: agent.balance,
             createdAt: agent.createdAt.toISOString(),
             stats: agent.stats,
             reputationScore: calculateReputationScore(agent),
@@ -144,6 +153,74 @@ export const agentTools = {
         agents: agentsWithScores,
         count: agentsWithScores.length,
       };
+    },
+  },
+
+  agent_balance: {
+    description: 'Check your current balance. Requires your API key for authentication.',
+    inputSchema: agentBalanceSchema,
+    handler: async (input: AgentBalanceInput) => {
+      // Validate API key
+      const isValid = await validateApiKey(input.agentId, input.apiKey);
+      if (!isValid) {
+        return {
+          success: false,
+          error: 'Invalid API key',
+        };
+      }
+
+      const balance = await getBalance(input.agentId);
+      const agent = await getAgent(input.agentId);
+
+      return {
+        success: true,
+        agentId: input.agentId,
+        balance,
+        currency: 'USD', // Default currency
+        totalEarned: agent?.stats.totalEarned ?? 0,
+      };
+    },
+  },
+
+  withdraw_request: {
+    description: 'Request a withdrawal of your balance. Admin will process it manually via PayPal/Venmo.',
+    inputSchema: withdrawRequestSchema,
+    handler: async (input: WithdrawRequestInput) => {
+      // Validate API key
+      const isValid = await validateApiKey(input.agentId, input.apiKey);
+      if (!isValid) {
+        return {
+          success: false,
+          error: 'Invalid API key',
+        };
+      }
+
+      try {
+        const withdrawal = await createWithdrawal(
+          input.agentId,
+          input.amount,
+          input.currency,
+          input.paymentMethod
+        );
+
+        return {
+          success: true,
+          message: `Withdrawal request created. We'll process it within 24-48 hours.`,
+          withdrawal: {
+            id: withdrawal.id,
+            amount: withdrawal.amount,
+            currency: withdrawal.currency,
+            status: withdrawal.status,
+            paymentMethod: withdrawal.paymentMethod,
+            requestedAt: withdrawal.requestedAt.toISOString(),
+          },
+        };
+      } catch (error) {
+        return {
+          success: false,
+          error: error instanceof Error ? error.message : 'Failed to create withdrawal',
+        };
+      }
     },
   },
 };

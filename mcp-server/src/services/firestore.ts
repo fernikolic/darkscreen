@@ -1,9 +1,22 @@
 import { initializeApp, getApps, App, applicationDefault } from 'firebase-admin/app';
 import { getFirestore, Firestore, Timestamp } from 'firebase-admin/firestore';
-import type { Escrow, Agent, Task, AgentStats } from '../types/index.js';
+import { createHash, randomBytes } from 'crypto';
+import type { Escrow, Agent, Task, AgentStats, Withdrawal } from '../types/index.js';
 
 // Platform fee rate (10%)
 export const FEE_RATE = 0.10;
+
+// Admin secret (in production, use environment variable)
+export const ADMIN_SECRET = process.env.CLAWDENTIALS_ADMIN_SECRET || 'clawdentials-admin-secret-change-me';
+
+// API Key utilities
+export function generateApiKey(): string {
+  return `clw_${randomBytes(24).toString('hex')}`;
+}
+
+export function hashApiKey(apiKey: string): string {
+  return createHash('sha256').update(apiKey).digest('hex');
+}
 
 let app: App;
 let db: Firestore;
@@ -37,6 +50,7 @@ export const collections = {
   agents: () => getDb().collection('agents'),
   tasks: () => getDb().collection('tasks'),
   subscriptions: () => getDb().collection('subscriptions'),
+  withdrawals: () => getDb().collection('withdrawals'),
 };
 
 // Escrow operations
@@ -125,7 +139,7 @@ function defaultAgentStats(): AgentStats {
 }
 
 // Agent operations
-export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'>): Promise<Agent> {
+export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats' | 'apiKeyHash' | 'balance'>): Promise<{ agent: Agent; apiKey: string }> {
   const docRef = collections.agents().doc(data.name); // Use name as ID for simplicity
   const existingDoc = await docRef.get();
 
@@ -133,10 +147,16 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
     throw new Error(`Agent with name "${data.name}" already exists`);
   }
 
+  // Generate API key
+  const apiKey = generateApiKey();
+  const apiKeyHash = hashApiKey(apiKey);
+
   const agent: Omit<Agent, 'id'> = {
     ...data,
     createdAt: new Date(),
     stats: defaultAgentStats(),
+    apiKeyHash,
+    balance: 0,
   };
 
   await docRef.set({
@@ -144,7 +164,7 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
     createdAt: Timestamp.fromDate(agent.createdAt),
   });
 
-  return { id: docRef.id, ...agent };
+  return { agent: { id: docRef.id, ...agent }, apiKey };
 }
 
 export async function getAgent(agentId: string): Promise<Agent | null> {
@@ -170,7 +190,18 @@ export async function getAgent(agentId: string): Promise<Agent | null> {
       disputeCount: data.stats?.disputeCount || 0,
       disputeRate: data.stats?.disputeRate || 0,
     },
+    apiKeyHash: data.apiKeyHash || '',
+    balance: data.balance || 0,
   };
+}
+
+// Validate API key for an agent
+export async function validateApiKey(agentId: string, apiKey: string): Promise<boolean> {
+  const agent = await getAgent(agentId);
+  if (!agent || !agent.apiKeyHash) {
+    return false;
+  }
+  return agent.apiKeyHash === hashApiKey(apiKey);
 }
 
 export async function getOrCreateAgent(agentId: string): Promise<Agent> {
@@ -180,13 +211,14 @@ export async function getOrCreateAgent(agentId: string): Promise<Agent> {
   }
 
   // Auto-create minimal agent record for tracking
-  return createAgent({
+  const { agent } = await createAgent({
     name: agentId,
     description: 'Auto-registered agent',
     skills: [],
     verified: false,
     subscriptionTier: 'free',
   });
+  return agent;
 }
 
 export async function searchAgents(query: {
@@ -321,4 +353,247 @@ export function calculateReputationScore(agent: Agent): number {
 
   // Clamp between 0 and 100
   return Math.min(100, Math.max(0, Math.round(normalizedScore * 10) / 10));
+}
+
+// Balance operations
+export async function getBalance(agentId: string): Promise<number> {
+  const agent = await getAgent(agentId);
+  return agent?.balance ?? 0;
+}
+
+export async function creditBalance(agentId: string, amount: number, notes?: string): Promise<number> {
+  const agentRef = collections.agents().doc(agentId);
+  const doc = await agentRef.get();
+
+  if (!doc.exists) {
+    throw new Error(`Agent not found: ${agentId}`);
+  }
+
+  const currentBalance = doc.data()!.balance || 0;
+  const newBalance = currentBalance + amount;
+
+  await agentRef.update({ balance: newBalance });
+
+  return newBalance;
+}
+
+export async function debitBalance(agentId: string, amount: number): Promise<number> {
+  const agentRef = collections.agents().doc(agentId);
+  const doc = await agentRef.get();
+
+  if (!doc.exists) {
+    throw new Error(`Agent not found: ${agentId}`);
+  }
+
+  const currentBalance = doc.data()!.balance || 0;
+
+  if (currentBalance < amount) {
+    throw new Error(`Insufficient balance: have ${currentBalance}, need ${amount}`);
+  }
+
+  const newBalance = currentBalance - amount;
+  await agentRef.update({ balance: newBalance });
+
+  return newBalance;
+}
+
+// Escrow with balance (new flow)
+export async function createEscrowWithBalance(
+  data: Omit<Escrow, 'id' | 'createdAt' | 'completedAt' | 'proofOfWork' | 'fee' | 'feeRate' | 'disputeReason'>
+): Promise<Escrow> {
+  // First, check and debit client balance
+  const clientBalance = await getBalance(data.clientAgentId);
+  if (clientBalance < data.amount) {
+    throw new Error(`Insufficient balance: have ${clientBalance} ${data.currency}, need ${data.amount} ${data.currency}`);
+  }
+
+  // Debit the full amount from client
+  await debitBalance(data.clientAgentId, data.amount);
+
+  // Create the escrow
+  const docRef = collections.escrows().doc();
+  const fee = data.amount * FEE_RATE;
+
+  const escrow: Omit<Escrow, 'id'> = {
+    ...data,
+    fee,
+    feeRate: FEE_RATE,
+    status: 'pending',
+    createdAt: new Date(),
+    completedAt: null,
+    proofOfWork: null,
+    disputeReason: null,
+  };
+
+  await docRef.set({
+    ...escrow,
+    createdAt: Timestamp.fromDate(escrow.createdAt),
+  });
+
+  return { id: docRef.id, ...escrow };
+}
+
+export async function completeEscrowWithBalance(escrowId: string, proofOfWork: string): Promise<Escrow | null> {
+  const escrowRef = collections.escrows().doc(escrowId);
+  const doc = await escrowRef.get();
+
+  if (!doc.exists) {
+    return null;
+  }
+
+  const escrowData = doc.data()!;
+
+  // Credit provider with amount minus fee
+  const netAmount = escrowData.amount - (escrowData.fee || escrowData.amount * FEE_RATE);
+  await creditBalance(escrowData.providerAgentId, netAmount);
+
+  const completedAt = new Date();
+  await escrowRef.update({
+    status: 'completed',
+    completedAt: Timestamp.fromDate(completedAt),
+    proofOfWork,
+  });
+
+  const escrow = await getEscrow(escrowId);
+
+  // Update agent stats
+  if (escrow) {
+    await updateAgentStats(escrow.providerAgentId, netAmount);
+  }
+
+  return escrow;
+}
+
+export async function refundEscrow(escrowId: string): Promise<Escrow | null> {
+  const escrow = await getEscrow(escrowId);
+  if (!escrow) {
+    return null;
+  }
+
+  if (escrow.status !== 'disputed') {
+    throw new Error('Can only refund disputed escrows');
+  }
+
+  // Refund full amount to client
+  await creditBalance(escrow.clientAgentId, escrow.amount);
+
+  // Update escrow status
+  const escrowRef = collections.escrows().doc(escrowId);
+  await escrowRef.update({ status: 'cancelled' });
+
+  return getEscrow(escrowId);
+}
+
+// Withdrawal operations
+export async function createWithdrawal(
+  agentId: string,
+  amount: number,
+  currency: 'USD' | 'USDC' | 'BTC',
+  paymentMethod: string
+): Promise<Withdrawal> {
+  // Check balance
+  const balance = await getBalance(agentId);
+  if (balance < amount) {
+    throw new Error(`Insufficient balance: have ${balance}, need ${amount}`);
+  }
+
+  // Debit balance (hold funds)
+  await debitBalance(agentId, amount);
+
+  // Create withdrawal record
+  const docRef = collections.withdrawals().doc();
+  const withdrawal: Omit<Withdrawal, 'id'> = {
+    agentId,
+    amount,
+    currency,
+    status: 'pending',
+    paymentMethod,
+    requestedAt: new Date(),
+    processedAt: null,
+    notes: null,
+  };
+
+  await docRef.set({
+    ...withdrawal,
+    requestedAt: Timestamp.fromDate(withdrawal.requestedAt),
+  });
+
+  return { id: docRef.id, ...withdrawal };
+}
+
+export async function getWithdrawal(withdrawalId: string): Promise<Withdrawal | null> {
+  const doc = await collections.withdrawals().doc(withdrawalId).get();
+  if (!doc.exists) {
+    return null;
+  }
+
+  const data = doc.data()!;
+  return {
+    id: doc.id,
+    agentId: data.agentId,
+    amount: data.amount,
+    currency: data.currency,
+    status: data.status,
+    paymentMethod: data.paymentMethod,
+    requestedAt: data.requestedAt.toDate(),
+    processedAt: data.processedAt?.toDate() ?? null,
+    notes: data.notes ?? null,
+  };
+}
+
+export async function listWithdrawals(status?: string, limit: number = 50): Promise<Withdrawal[]> {
+  // Simple query without compound index - filter in memory
+  const snapshot = await collections.withdrawals().limit(limit * 2).get();
+  let withdrawals: Withdrawal[] = [];
+
+  for (const doc of snapshot.docs) {
+    const w = await getWithdrawal(doc.id);
+    if (w) {
+      if (!status || w.status === status) {
+        withdrawals.push(w);
+      }
+    }
+  }
+
+  // Sort by requestedAt descending and limit
+  withdrawals = withdrawals
+    .sort((a, b) => b.requestedAt.getTime() - a.requestedAt.getTime())
+    .slice(0, limit);
+
+  return withdrawals;
+}
+
+export async function processWithdrawal(
+  withdrawalId: string,
+  action: 'complete' | 'reject',
+  notes?: string
+): Promise<Withdrawal | null> {
+  const withdrawal = await getWithdrawal(withdrawalId);
+  if (!withdrawal) {
+    return null;
+  }
+
+  if (withdrawal.status !== 'pending' && withdrawal.status !== 'processing') {
+    throw new Error(`Cannot process withdrawal with status: ${withdrawal.status}`);
+  }
+
+  const withdrawalRef = collections.withdrawals().doc(withdrawalId);
+
+  if (action === 'complete') {
+    await withdrawalRef.update({
+      status: 'completed',
+      processedAt: Timestamp.fromDate(new Date()),
+      notes: notes || 'Payment sent',
+    });
+  } else {
+    // Refund the held amount back to agent
+    await creditBalance(withdrawal.agentId, withdrawal.amount);
+    await withdrawalRef.update({
+      status: 'rejected',
+      processedAt: Timestamp.fromDate(new Date()),
+      notes: notes || 'Withdrawal rejected',
+    });
+  }
+
+  return getWithdrawal(withdrawalId);
 }

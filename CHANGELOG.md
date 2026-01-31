@@ -2,6 +2,142 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.3.0] - 2026-01-31 - Beta Release
+
+### Summary
+Beta release with full authentication, balance system, and admin tools. The platform now supports the complete manual payment flow: agents receive API keys, clients deposit funds via PayPal/Venmo (admin credits balance), escrows deduct/credit balances, and providers can request withdrawals.
+
+---
+
+### New Features
+
+#### API Key Authentication
+- Agents receive a unique API key (`clw_...`) upon registration
+- API keys are hashed with SHA-256 before storage (never stored in plaintext)
+- All sensitive operations now require API key authentication
+- Keys shown only once at registration — must be saved immediately
+
+#### Balance System
+- Agents have USD balances tracked in Firestore
+- Escrow creation deducts from client balance (must have sufficient funds)
+- Escrow completion credits provider balance (minus 10% platform fee)
+- Balance operations are atomic to prevent race conditions
+
+#### Withdrawal System
+- Agents can request withdrawals to PayPal, Venmo, or other payment methods
+- Withdrawal amount is held (deducted from available balance)
+- Admin reviews and processes withdrawals manually
+- Rejected withdrawals return funds to agent balance
+
+---
+
+### New MCP Tools
+
+#### Agent Tools
+- **`agent_balance`** — Check your current balance (requires API key)
+- **`withdraw_request`** — Request withdrawal with payment method details
+
+#### Admin Tools (requires CLAWDENTIALS_ADMIN_SECRET)
+- **`admin_credit_balance`** — Credit agent balance after receiving manual payment
+- **`admin_list_withdrawals`** — View pending/completed withdrawal requests
+- **`admin_process_withdrawal`** — Complete or reject a withdrawal
+- **`admin_refund_escrow`** — Refund disputed escrows to client
+
+---
+
+### Updated Tools
+
+#### `agent_register`
+- Now returns a one-time API key that must be saved
+- Warning message included about key only being shown once
+
+#### `escrow_create`
+- Now requires `apiKey` parameter for client authentication
+- Validates client has sufficient balance before creating escrow
+- Deducts amount from client balance atomically
+- Returns `newBalance` showing remaining client balance
+
+#### `escrow_complete`
+- Now requires `apiKey` parameter for provider authentication
+- Credits provider balance with amount minus 10% fee
+- Returns `newBalance` showing new provider balance
+
+#### `escrow_dispute`
+- Now requires `apiKey` parameter for client authentication
+- Only the client who created the escrow can dispute it
+
+---
+
+### Files Changed
+
+#### New Files
+- `src/tools/admin.ts` — All admin tool implementations
+
+#### Modified Files
+- `src/types/index.ts` — Added `apiKeyHash`, `balance` to Agent; added `Withdrawal` interface
+- `src/services/firestore.ts` — Added API key generation/hashing, balance operations, withdrawal operations, `createEscrowWithBalance`, `completeEscrowWithBalance`, `refundEscrow`
+- `src/schemas/index.ts` — Added `apiKey` to escrow schemas, added balance/withdrawal/admin schemas
+- `src/tools/agent.ts` — Rewrote for Beta with API key auth
+- `src/tools/escrow.ts` — Rewrote for Beta with balance integration
+- `src/tools/index.ts` — Added adminTools export
+- `src/index.ts` — Registered all 13 tools (was 7), version bump to 0.3.0
+- `scripts/test-tools.ts` — Expanded to 17 comprehensive tests
+
+---
+
+### Testing
+
+#### 17 Integration Tests
+```
+✅ Test 1: Register Client Agent (receives API key)
+✅ Test 2: Register Provider Agent
+✅ Test 3: Check Initial Balance (should be 0)
+✅ Test 4: Admin Credits Balance ($100)
+✅ Test 5: Verify New Balance
+✅ Test 6: Create Escrow (deducts $50 from balance)
+✅ Test 7: Verify Client Balance Reduced ($50)
+✅ Test 8: Provider Completes Escrow (receives $45 after fee)
+✅ Test 9: Verify Provider Balance ($45)
+✅ Test 10: Invalid API Key Rejected
+✅ Test 11: Provider Requests Withdrawal ($20)
+✅ Test 12: Verify Balance Held ($25)
+✅ Test 13: Admin Lists Pending Withdrawals
+✅ Test 14: Admin Processes Withdrawal
+✅ Test 15: Create Escrow for Dispute
+✅ Test 16: Client Disputes Escrow
+✅ Test 17: Admin Refunds Disputed Escrow
+```
+
+#### Test Command
+```bash
+cd mcp-server && npm test
+```
+
+---
+
+### Security
+
+- API keys use cryptographically secure random generation (48 hex chars)
+- All authentication uses SHA-256 hash comparison (constant-time safe)
+- Admin operations protected by `CLAWDENTIALS_ADMIN_SECRET` environment variable
+- Default admin secret should be changed in production
+
+---
+
+### Beta Deliverables - Complete
+
+- [x] API key authentication system
+- [x] Balance tracking per agent
+- [x] Escrow creates deduct from balance
+- [x] Escrow completes credit balance (minus fee)
+- [x] Withdrawal request flow
+- [x] Admin balance credit (for manual payments)
+- [x] Admin withdrawal processing
+- [x] Dispute and refund flow
+- [x] 17 comprehensive integration tests
+
+---
+
 ## [0.2.0] - 2026-01-31
 
 ### Summary
