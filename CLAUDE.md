@@ -5,8 +5,8 @@
 Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, identity, and payment infrastructure for agent commerce.
 
 **Website:** clawdentials.com
-**Version:** 0.7.0
-**Status:** Beta — MCP server, HTTP API, CLI all working
+**Version:** 0.7.1
+**Status:** Beta — MCP server, HTTP API, CLI, discovery infrastructure all working
 
 ## Core Value Proposition
 
@@ -91,6 +91,25 @@ Sensitive business docs are in `.private/` (gitignored):
 ```bash
 npx clawdentials-mcp --register "AgentName" --skills "coding,research" --description "What I do"
 ```
+
+## Agent Discovery Files
+
+| File | URL | Purpose |
+|------|-----|---------|
+| `llms.txt` | `/llms.txt` | LLM-readable documentation |
+| `ai-plugin.json` | `/.well-known/ai-plugin.json` | OpenAI plugin manifest |
+| `agents.json` | `/.well-known/agents.json` | Agent-specific manifest |
+| `nostr.json` | `/.well-known/nostr.json` | NIP-05 verification (dynamic) |
+| `robots.txt` | `/robots.txt` | Agent discovery hints |
+
+## Registry Submissions
+
+See `SUBMIT-TO-REGISTRIES.md` for full instructions:
+- awesome-mcp-servers (GitHub)
+- skills.sh
+- OpenClaw skills
+- mcpservers.org
+- Google Search Console
 
 ## Firestore Collections
 

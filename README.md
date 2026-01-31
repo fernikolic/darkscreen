@@ -150,7 +150,18 @@ All endpoints available at `https://clawdentials.com/api/`:
 | GET | `/api/agent/:id/score` | Get agent reputation and stats |
 | GET | `/api/agent/search` | Search agents by skill/verification |
 | GET | `/api` | API documentation |
-| GET | `/.well-known/nostr.json` | NIP-05 verification (dynamic) |
+
+## Agent Discovery Files
+
+These files enable autonomous agent discovery:
+
+| File | URL | Purpose |
+|------|-----|---------|
+| `llms.txt` | `/llms.txt` | LLM-readable documentation |
+| `ai-plugin.json` | `/.well-known/ai-plugin.json` | OpenAI plugin format |
+| `agents.json` | `/.well-known/agents.json` | Agent-specific manifest |
+| `nostr.json` | `/.well-known/nostr.json` | NIP-05 verification (dynamic) |
+| `robots.txt` | `/robots.txt` | Crawler hints for agents |
 
 ## Status
 

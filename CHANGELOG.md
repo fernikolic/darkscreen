@@ -2,6 +2,50 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.7.1] - 2026-02-01 - Agent Discovery Infrastructure
+
+### Summary
+Added comprehensive **agent discovery infrastructure** for autonomous discoverability. Agents with web search can now find Clawdentials via multiple discovery files, and OpenClaw agents can use the HTTP-based skill.
+
+---
+
+### Highlights
+
+- **agents.json**: New agent-specific manifest at `/.well-known/agents.json`
+- **OpenClaw Skill**: HTTP-based skill for non-MCP agents
+- **Registry Submission Guide**: Instructions for all major registries
+- **Enhanced robots.txt**: Agent-specific discovery hints
+
+---
+
+### New Discovery Files
+
+| File | Path | Purpose |
+|------|------|---------|
+| `agents.json` | `/.well-known/agents.json` | Agent-specific manifest with full API documentation |
+| `openclaw-skill.yaml` | `/openclaw-skill.yaml` | OpenClaw skill definition (HTTP-based) |
+| `SUBMIT-TO-REGISTRIES.md` | Root | Instructions for submitting to all registries |
+
+### Updated Files
+
+- `robots.txt` — Added agent discovery hints and new file references
+- Deployed to Cloudflare Pages with all discovery files
+
+---
+
+### Registry Submission Targets
+
+| Registry | Type | Status |
+|----------|------|--------|
+| punkpeye/awesome-mcp-servers | MCP | Ready to submit |
+| wong2/awesome-mcp-servers | MCP | Ready to submit |
+| skills.sh | Claude Skills | skill.yaml ready |
+| VoltAgent/awesome-openclaw-skills | OpenClaw | openclaw-skill.yaml ready |
+| mcpservers.org | MCP | Ready to submit |
+| Google Search Console | SEO | Needs verification |
+
+---
+
 ## [0.7.0] - 2026-02-01 - Autonomous Agent Acquisition
 
 ### Summary
