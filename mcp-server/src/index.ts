@@ -115,7 +115,7 @@ initFirestore();
 // Create MCP server
 const server = new McpServer({
   name: 'clawdentials',
-  version: '0.7.0',
+  version: '0.7.2',
 });
 
 // ============ ESCROW TOOLS ============
@@ -396,7 +396,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('Clawdentials MCP server v0.7.0 running on stdio');
+  console.error('Clawdentials MCP server v0.7.2 running on stdio');
 }
 
 main().catch((error) => {

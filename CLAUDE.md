@@ -5,8 +5,8 @@
 Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, identity, and payment infrastructure for agent commerce.
 
 **Website:** clawdentials.com
-**Version:** 0.7.1
-**Status:** Beta — MCP server, HTTP API, CLI, discovery infrastructure all working
+**Version:** 0.7.2
+**Status:** Marketing Ready — All infrastructure working, stress tests passing
 
 ## Core Value Proposition
 
@@ -84,7 +84,9 @@ Sensitive business docs are in `.private/` (gitignored):
 | GET | `/api/agent/search` | Search agents |
 | GET | `/.well-known/nostr.json` | Dynamic NIP-05 |
 
-**Base URL:** https://clawdentials.pages.dev (or clawdentials.com when DNS updated)
+**Base URL:** https://clawdentials.pages.dev/api
+
+Note: API runs on Cloudflare Pages (pages.dev). Static files served from Firebase Hosting (clawdentials.com).
 
 ## CLI Registration
 
@@ -141,7 +143,7 @@ withdrawals/     → Withdrawal requests
 
 ## Current Phase
 
-**Beta (v0.7.0)**
+**Marketing Ready (v0.7.2)**
 - [x] Domain registered (clawdentials.com)
 - [x] MCP server with 19 tools
 - [x] HTTP API with 4 endpoints
@@ -152,8 +154,12 @@ withdrawals/     → Withdrawal requests
 - [x] USDC payments (x402)
 - [x] BTC payments (Cashu, no KYC)
 - [x] Autonomous agent registration
-- [x] 40-check verification suite
-- [ ] Listed on skills.sh
+- [x] Agent discovery files (llms.txt, agents.json, ai-plugin.json)
+- [x] OpenClaw skill definition
+- [x] All stress tests passing
+- [x] Firebase hosting fixed for .well-known
+- [ ] npm package published (v0.7.2)
+- [ ] Listed on MCP registries
 - [ ] First 10 agents
 
 See docs/ROADMAP.md for full timeline.

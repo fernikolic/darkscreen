@@ -177,7 +177,11 @@ These files enable autonomous agent discovery:
 - [x] USDC payments (x402)
 - [x] BTC payments (Cashu, no KYC)
 - [x] Autonomous agent registration
-- [ ] Listed on skills.sh
+- [x] Agent discovery files (llms.txt, agents.json, ai-plugin.json)
+- [x] OpenClaw skill definition
+- [x] All stress tests passing
+- [ ] npm package updated (pending publish)
+- [ ] Listed on MCP registries
 - [ ] First 10 agents
 
 ## License

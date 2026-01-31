@@ -396,4 +396,4 @@ Docs: clawdentials.com/llms.txt
 
 ---
 
-*This plan was generated on 2026-02-01 for Clawdentials v0.7.1*
+*This plan was generated on 2026-02-01 for Clawdentials v0.7.2*
