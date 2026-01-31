@@ -4,7 +4,7 @@ import 'dotenv/config';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { escrowTools, agentTools, adminTools, paymentTools } from './tools/index.js';
+import { escrowTools, agentTools, adminTools, paymentTools, bountyTools } from './tools/index.js';
 import { initFirestore } from './services/firestore.js';
 
 // ============ CLI REGISTRATION GATEWAY ============
@@ -115,7 +115,7 @@ initFirestore();
 // Create MCP server
 const server = new McpServer({
   name: 'clawdentials',
-  version: '0.7.2',
+  version: '0.8.0',
 });
 
 // ============ ESCROW TOOLS ============
@@ -392,11 +392,144 @@ server.tool(
   }
 );
 
+// ============ BOUNTY TOOLS ============
+
+server.tool(
+  'bounty_create',
+  bountyTools.bounty_create.description,
+  {
+    title: z.string().describe('Short title for the bounty'),
+    summary: z.string().describe('1-3 sentence summary of the task'),
+    description: z.string().describe('Full task description in markdown'),
+    difficulty: z.enum(['trivial', 'easy', 'medium', 'hard', 'expert']).describe('Difficulty level'),
+    requiredSkills: z.array(z.string()).describe('Skills needed'),
+    acceptanceCriteria: z.array(z.string()).describe('List of acceptance criteria'),
+    amount: z.number().positive().describe('Bounty reward amount'),
+    currency: z.enum(['USD', 'USDC', 'USDT', 'BTC']).optional().default('USDC').describe('Currency'),
+    expiresInDays: z.number().optional().default(7).describe('Days until expiry'),
+    repoUrl: z.string().optional().describe('Repository URL'),
+    files: z.array(z.object({ path: z.string(), description: z.string().optional() })).optional(),
+    submissionMethod: z.enum(['pr', 'patch', 'gist', 'proof']).optional().default('pr'),
+    targetBranch: z.string().optional().describe('Target branch for PRs'),
+    modAgentId: z.string().optional().describe('Moderator agent ID'),
+    tags: z.array(z.string()).optional().describe('Tags for discoverability'),
+    posterAgentId: z.string().describe('Your agent ID'),
+    apiKey: z.string().describe('Your API key'),
+    fundNow: z.boolean().optional().default(false).describe('Fund immediately'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_create.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_fund',
+  bountyTools.bounty_fund.description,
+  {
+    bountyId: z.string().describe('ID of the bounty to fund'),
+    agentId: z.string().describe('Your agent ID'),
+    apiKey: z.string().describe('Your API key'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_fund.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_claim',
+  bountyTools.bounty_claim.description,
+  {
+    bountyId: z.string().describe('ID of the bounty to claim'),
+    agentId: z.string().describe('Your agent ID'),
+    apiKey: z.string().describe('Your API key'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_claim.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_submit',
+  bountyTools.bounty_submit.description,
+  {
+    bountyId: z.string().describe('ID of the bounty'),
+    submissionUrl: z.string().describe('URL to your submission'),
+    notes: z.string().optional().describe('Description of your approach'),
+    agentId: z.string().describe('Your agent ID'),
+    apiKey: z.string().describe('Your API key'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_submit.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_judge',
+  bountyTools.bounty_judge.description,
+  {
+    bountyId: z.string().describe('ID of the bounty'),
+    winnerAgentId: z.string().describe('Agent ID of the winner'),
+    notes: z.string().optional().describe('Judging notes'),
+    judgeAgentId: z.string().describe('Your agent ID'),
+    apiKey: z.string().describe('Your API key'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_judge.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_search',
+  bountyTools.bounty_search.description,
+  {
+    skill: z.string().optional().describe('Filter by required skill'),
+    difficulty: z.enum(['trivial', 'easy', 'medium', 'hard', 'expert']).optional(),
+    status: z.enum(['open', 'claimed', 'in_review']).optional().default('open'),
+    minAmount: z.number().optional().describe('Minimum reward'),
+    maxAmount: z.number().optional().describe('Maximum reward'),
+    tag: z.string().optional().describe('Filter by tag'),
+    limit: z.number().optional().default(20).describe('Max results'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_search.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_get',
+  bountyTools.bounty_get.description,
+  {
+    bountyId: z.string().describe('ID of the bounty'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_get.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'bounty_export_markdown',
+  bountyTools.bounty_export_markdown.description,
+  {
+    bountyId: z.string().describe('ID of the bounty to export'),
+  },
+  async (args) => {
+    const result = await bountyTools.bounty_export_markdown.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
 // Start server
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('Clawdentials MCP server v0.7.2 running on stdio');
+  console.error('Clawdentials MCP server v0.8.0 running on stdio');
 }
 
 main().catch((error) => {
