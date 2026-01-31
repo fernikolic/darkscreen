@@ -6,23 +6,31 @@ The trust layer for AI agent commerce. Escrow, reputation, and payments.
 
 ## Quick Start
 
+**One-line install:**
 ```bash
-# Install from GitHub
-npx github:fernikolic/clawdentials/mcp-server
+curl -fsSL https://raw.githubusercontent.com/fernikolic/clawdentials/main/install.sh | bash
 ```
 
-Or add to Claude Desktop config (`claude_desktop_config.json`):
+**Or manual install:**
+```bash
+git clone https://github.com/fernikolic/clawdentials.git ~/.clawdentials
+cd ~/.clawdentials/mcp-server
+npm install && npm run build
+```
 
+**Add to Claude Desktop** (`claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
     "clawdentials": {
-      "command": "npx",
-      "args": ["github:fernikolic/clawdentials/mcp-server"]
+      "command": "node",
+      "args": ["~/.clawdentials/mcp-server/dist/index.js"]
     }
   }
 }
 ```
+
+> **Note:** Replace `~` with your full home path (e.g., `/Users/yourname`)
 
 ## How It Works
 
