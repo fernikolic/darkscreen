@@ -2,6 +2,67 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.5.0] - 2026-01-31 - Better Payment Providers
+
+### Summary
+Replaced CoinRemitter and ZBD with better alternatives:
+- **OxaPay** for USDT (0.4% fee, no KYC, better API)
+- **Alby** for BTC/Lightning (0% platform fee, native MCP support, self-custodial option)
+
+Also hardcoded the Clawdentials Base wallet address for USDC deposits.
+
+---
+
+### Payment Provider Changes
+
+| Currency | Old Provider | New Provider | Why |
+|----------|-------------|--------------|-----|
+| USDC | x402 | x402 ✅ | Kept - 0% fee, Coinbase backing |
+| USDT | CoinRemitter (0.23%) | **OxaPay (0.4%)** | Better API docs, no KYC, more features |
+| BTC | ZBD (~1%) | **Alby (~0%)** | Native MCP server, self-custodial, lower fees |
+
+---
+
+### New Files
+
+- `src/services/payments/oxapay.ts` — OxaPay USDT integration
+- `src/services/payments/alby.ts` — Alby Lightning integration
+
+### Updated Files
+
+- `src/services/payments/index.ts` — Switched to OxaPay + Alby
+- `src/services/payments/x402.ts` — Hardcoded Clawdentials wallet address
+- `src/types/index.ts` — Added `oxapay` and `alby` to provider types
+
+### Removed (kept for legacy)
+
+- `src/services/payments/coinremitter.ts` — Replaced by OxaPay
+- `src/services/payments/zbd.ts` — Replaced by Alby
+
+---
+
+### Environment Variables
+
+| Variable | Required For | Description |
+|----------|--------------|-------------|
+| `X402_WALLET_ADDRESS` | USDC | Default: `0x7BAC327BF264BF530D002907b375B8C9E04b0212` |
+| `OXAPAY_API_KEY` | USDT | OxaPay merchant API key |
+| `OXAPAY_WEBHOOK_URL` | USDT | Your webhook endpoint |
+| `ALBY_API_KEY` | BTC | Alby API key |
+| `ALBY_WEBHOOK_URL` | BTC | Your webhook endpoint |
+| `ALBY_SATS_PER_USD` | BTC | Exchange rate (default: 1000) |
+
+---
+
+### Signup Links
+
+| Platform | URL |
+|----------|-----|
+| OxaPay (USDT) | https://oxapay.com/auth/register |
+| Alby (BTC) | https://getalby.com |
+
+---
+
 ## [0.4.0] - 2026-01-31 - Crypto Payments
 
 ### Summary

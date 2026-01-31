@@ -3,18 +3,22 @@
  *
  * Provides a single interface for all payment rails:
  * - USDC via x402 on Base
- * - USDT via CoinRemitter on TRC-20
- * - BTC via ZBD on Lightning
+ * - USDT via OxaPay on TRC-20 (and other networks)
+ * - BTC via Alby on Lightning
  */
 
 import { x402Service } from './x402.js';
-import { coinremitterService } from './coinremitter.js';
-import { zbdService } from './zbd.js';
+import { oxapayService } from './oxapay.js';
+import { albyService } from './alby.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
 export { x402Service } from './x402.js';
-export { coinremitterService } from './coinremitter.js';
-export { zbdService } from './zbd.js';
+export { oxapayService } from './oxapay.js';
+export { albyService } from './alby.js';
+
+// Legacy exports for backwards compatibility
+export { oxapayService as coinremitterService } from './oxapay.js';
+export { albyService as zbdService } from './alby.js';
 
 export interface CreateDepositRequest {
   agentId: string;
@@ -32,7 +36,7 @@ export interface CreateDepositResponse {
     address?: string; // Wallet address or Lightning invoice
     url?: string; // Payment page URL if available
     amount: number;
-    amountRaw?: string; // Amount in native units (wei, millisats, etc.)
+    amountRaw?: string; // Amount in native units (wei, sats, etc.)
     expiresAt?: Date;
     qrData?: string; // Data for QR code (address or invoice)
   };
@@ -83,7 +87,7 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     }
 
     case 'USDT': {
-      const result = await coinremitterService.createDeposit({
+      const result = await oxapayService.createDeposit({
         amount: request.amount,
         agentId: request.agentId,
         description: request.description,
@@ -99,17 +103,18 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
         paymentInstructions: {
           currency: 'USDT',
           network: 'trc20',
-          address: result.deposit?.paymentAddress || undefined,
-          url: result.deposit?.paymentUrl || undefined,
+          address: result.invoice?.payAddress,
+          url: result.invoice?.payLink,
           amount: request.amount,
+          amountRaw: result.invoice?.payAmount?.toString(),
           expiresAt: result.deposit?.expiresAt || undefined,
-          qrData: result.deposit?.paymentAddress || undefined,
+          qrData: result.invoice?.payAddress,
         },
       };
     }
 
     case 'BTC': {
-      const result = await zbdService.createDeposit({
+      const result = await albyService.createDeposit({
         amount: request.amount,
         agentId: request.agentId,
         description: request.description,
@@ -125,11 +130,11 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
         paymentInstructions: {
           currency: 'BTC',
           network: 'lightning',
-          address: result.invoice?.invoice, // bolt11 invoice
+          address: result.invoice?.paymentRequest, // bolt11 invoice
           amount: request.amount,
-          amountRaw: result.invoice?.amount, // millisats
-          expiresAt: result.deposit?.expiresAt || undefined,
-          qrData: result.invoice?.invoice, // Lightning invoice for QR
+          amountRaw: result.invoice?.amountSats?.toString(),
+          expiresAt: result.invoice?.expiresAt || undefined,
+          qrData: result.invoice?.paymentRequest, // Lightning invoice for QR
         },
       };
     }
@@ -157,7 +162,12 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     }
 
     case 'USDT': {
-      const result = await coinremitterService.sendWithdrawal(request.destination, request.amount);
+      const result = await oxapayService.sendPayout(
+        request.destination,
+        request.amount,
+        'USDT',
+        'TRC20'
+      );
       return {
         success: result.success,
         txId: result.txId,
@@ -166,10 +176,10 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     }
 
     case 'BTC': {
-      const result = await zbdService.sendWithdrawal(request.destination, request.amount);
+      const result = await albyService.sendPayment(request.destination, request.amount);
       return {
         success: result.success,
-        txId: result.paymentId,
+        txId: result.paymentHash,
         error: result.error,
       };
     }
@@ -186,22 +196,25 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
  * Get configuration status for all payment providers
  */
 export function getPaymentConfig(): {
-  usdc: { configured: boolean; network: string };
-  usdt: { configured: boolean; network: string };
-  btc: { configured: boolean; network: string };
+  usdc: { configured: boolean; network: string; provider: string };
+  usdt: { configured: boolean; network: string; provider: string };
+  btc: { configured: boolean; network: string; provider: string };
 } {
   return {
     usdc: {
       configured: !!x402Service.config.walletAddress,
-      network: 'Base (x402)',
+      network: 'Base L2',
+      provider: 'x402 (Coinbase)',
     },
     usdt: {
-      configured: coinremitterService.config.configured,
-      network: 'Tron TRC-20 (CoinRemitter)',
+      configured: oxapayService.config.configured,
+      network: 'Tron TRC-20',
+      provider: 'OxaPay',
     },
     btc: {
-      configured: zbdService.config.configured,
-      network: 'Lightning (ZBD)',
+      configured: albyService.config.configured,
+      network: 'Lightning',
+      provider: 'Alby',
     },
   };
 }
@@ -212,6 +225,6 @@ export const paymentService = {
   getConfig: getPaymentConfig,
   // Individual services for advanced use
   x402: x402Service,
-  coinremitter: coinremitterService,
-  zbd: zbdService,
+  oxapay: oxapayService,
+  alby: albyService,
 };

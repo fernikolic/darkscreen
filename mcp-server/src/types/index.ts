@@ -19,7 +19,7 @@ export interface Deposit {
   network: PaymentNetwork;
   status: 'pending' | 'confirming' | 'completed' | 'expired' | 'failed';
   // Payment provider details
-  provider: 'x402' | 'coinremitter' | 'zbd';
+  provider: 'x402' | 'oxapay' | 'alby' | 'coinremitter' | 'zbd'; // oxapay/alby are new, coinremitter/zbd for legacy
   externalId: string | null; // Invoice ID from provider
   paymentAddress: string | null; // Address or invoice string
   paymentUrl: string | null; // Payment page URL if available

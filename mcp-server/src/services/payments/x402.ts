@@ -9,7 +9,7 @@ import type { Deposit } from '../../types/index.js';
 
 // Configuration
 const X402_FACILITATOR_URL = process.env.X402_FACILITATOR_URL || 'https://x402.org/facilitator';
-const X402_WALLET_ADDRESS = process.env.X402_WALLET_ADDRESS || ''; // Your Base wallet for receiving USDC
+const X402_WALLET_ADDRESS = process.env.X402_WALLET_ADDRESS || '0x7BAC327BF264BF530D002907b375B8C9E04b0212'; // Clawdentials Base wallet
 const X402_NETWORK = process.env.X402_NETWORK || 'eip155:8453'; // Base mainnet (84532 for testnet)
 
 export interface X402PaymentRequest {
