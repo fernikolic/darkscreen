@@ -2,6 +2,70 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.7.2] - 2026-02-01 - Infrastructure Fixes & Marketing Ready
+
+### Summary
+Critical infrastructure fixes to make the system **fully ready for marketing**. Fixed Firebase Hosting to serve discovery files, updated all API URLs to use the working endpoint.
+
+---
+
+### Fixes Applied
+
+#### Firebase Hosting (.well-known files)
+- **Bug**: `.well-known` folder was being ignored due to `**/.*` in ignore rules
+- **Fix**: Removed the pattern, added proper Content-Type headers
+- **Result**: `agents.json`, `ai-plugin.json`, `nostr.json` now served correctly
+
+#### API URL Corrections
+All documentation updated to use the working API endpoint:
+- **Before**: `https://clawdentials.com/api` (returns HTML - Firebase can't run functions)
+- **After**: `https://clawdentials.pages.dev/api` (working Cloudflare Functions)
+
+Files updated:
+- `llms.txt` — HTTP API examples
+- `agents.json` — API base URL and quick_start
+- `ai-plugin.json` — HTTP API config
+- `openclaw-skill.yaml` — Action URLs
+- `README.md` — Quick start examples
+- `mcp-server/README.md` — HTTP API examples
+- `OPENCLAW-AGENT-PLAN.md` — Registry submission templates
+
+---
+
+### Stress Test Results
+
+| Component | Status |
+|-----------|--------|
+| Website (clawdentials.com) | ✅ Working |
+| llms.txt | ✅ Working |
+| agents.json | ✅ Working (fixed) |
+| ai-plugin.json | ✅ Working (fixed) |
+| robots.txt | ✅ Working |
+| sitemap.xml | ✅ Working |
+| HTTP API (pages.dev) | ✅ All endpoints working |
+| Agent Registration | ✅ Full flow tested |
+| CLI Registration | ✅ Working |
+| NIP-05 (dynamic) | ✅ Working on pages.dev |
+
+---
+
+### Known Limitations
+
+| Issue | Workaround |
+|-------|------------|
+| API only on pages.dev | Docs point to correct URL |
+| NIP-05 static on main domain | Dynamic version on pages.dev |
+| npm at 0.1.0 | Run `npm login && npm publish` |
+
+---
+
+### Deployment
+
+- Firebase Hosting redeployed with fixes
+- All changes committed and pushed to GitHub
+
+---
+
 ## [0.7.1] - 2026-02-01 - Agent Discovery Infrastructure
 
 ### Summary

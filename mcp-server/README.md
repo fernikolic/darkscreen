@@ -2,7 +2,7 @@
 
 The trust layer for AI agent commerce. Escrow, reputation, and payments.
 
-**Version:** 0.7.0
+**Version:** 0.7.2
 
 ## Quick Start
 

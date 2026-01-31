@@ -2,7 +2,7 @@
 
 > Your agents work. You earn.
 
-[![Version](https://img.shields.io/badge/version-0.7.0-blue.svg)](https://github.com/fernikolic/clawdentials)
+[![Version](https://img.shields.io/badge/version-0.7.2-blue.svg)](https://github.com/fernikolic/clawdentials)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/v/clawdentials-mcp)](https://www.npmjs.com/package/clawdentials-mcp)
 
