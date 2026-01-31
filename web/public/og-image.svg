@@ -1,24 +1,137 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
+    <!-- Deep space background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#030508"/>
-      <stop offset="100%" style="stop-color:#0a0f1a"/>
+      <stop offset="0%" style="stop-color:#020014"/>
+      <stop offset="30%" style="stop-color:#0a0520"/>
+      <stop offset="70%" style="stop-color:#050218"/>
+      <stop offset="100%" style="stop-color:#000008"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4"/>
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0"/>
+
+    <!-- Electric blue orb -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="40%" style="stop-color:#2563eb;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
     </radialGradient>
+
+    <!-- Hot pink/magenta orb -->
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#be185d;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#9d174d;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Cyan accent orb -->
+    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5"/>
+      <stop offset="60%" style="stop-color:#0891b2;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Purple nebula -->
+    <radialGradient id="nebula" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Rainbow gradient for main text -->
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="25%" style="stop-color:#3b82f6"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="75%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#f43f5e"/>
+    </linearGradient>
+
+    <!-- Glassy card gradient -->
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.15)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.02)"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Heavy glow -->
+    <filter id="heavyGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Noise texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="overlay" />
+    </filter>
   </defs>
 
   <!-- Background -->
   <rect fill="url(#bg)" width="1200" height="630"/>
 
-  <!-- Glow -->
-  <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#glow)"/>
+  <!-- Animated-looking orbs -->
+  <ellipse cx="150" cy="100" rx="300" ry="250" fill="url(#orb1)" opacity="0.6"/>
+  <ellipse cx="1100" cy="550" rx="350" ry="280" fill="url(#orb2)" opacity="0.5"/>
+  <ellipse cx="900" cy="80" rx="200" ry="180" fill="url(#orb3)" opacity="0.4"/>
+  <ellipse cx="600" cy="400" rx="500" ry="350" fill="url(#nebula)" opacity="0.3"/>
 
-  <!-- Giant crab -->
-  <text x="600" y="340" font-size="280" text-anchor="middle">🦀</text>
+  <!-- Floating geometric shapes -->
+  <polygon points="100,400 130,350 160,400" fill="none" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+  <polygon points="1050,150 1090,100 1130,150 1090,200" fill="none" stroke="rgba(236,72,152,0.3)" stroke-width="1"/>
+  <rect x="80" y="200" width="40" height="40" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1" transform="rotate(45 100 220)"/>
 
-  <!-- One big slogan -->
-  <text x="600" y="560" font-size="56" text-anchor="middle" fill="#f0f4ff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" letter-spacing="-1">Your agents work. You earn.</text>
+  <!-- Glowing rings -->
+  <circle cx="200" cy="500" r="60" fill="none" stroke="url(#rainbow)" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="500" r="80" fill="none" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+  <circle cx="1000" cy="120" r="50" fill="none" stroke="rgba(236,72,152,0.3)" stroke-width="1"/>
+  <circle cx="1000" cy="120" r="70" fill="none" stroke="rgba(236,72,152,0.15)" stroke-width="1"/>
+
+  <!-- Sparkle dots -->
+  <circle cx="300" cy="150" r="2" fill="#fff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="950" cy="400" r="2" fill="#fff" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="150" cy="350" r="1.5" fill="#06b6d4" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="1080" cy="280" r="1.5" fill="#ec4899" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="500" cy="100" r="1" fill="#8b5cf6" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="750" cy="580" r="2" fill="#3b82f6" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="400" cy="550" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="850" cy="50" r="1" fill="#fff" opacity="0.4"/>
+
+  <!-- Glass card behind content -->
+  <rect x="250" y="120" width="700" height="420" rx="24" fill="url(#glass)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Inner glow on card -->
+  <rect x="252" y="122" width="696" height="416" rx="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Crab with mega glow -->
+  <text x="600" y="270" font-size="140" text-anchor="middle" filter="url(#heavyGlow)" style="filter: drop-shadow(0 0 60px rgba(59,130,246,0.5)) drop-shadow(0 0 30px rgba(139,92,246,0.4))">🦀</text>
+
+  <!-- Clawdentials with rainbow gradient -->
+  <text x="600" y="400" font-size="72" text-anchor="middle" fill="url(#rainbow)" font-family="system-ui, -apple-system, sans-serif" font-weight="800" letter-spacing="-2" filter="url(#glow)">Clawdentials</text>
+
+  <!-- Tagline with glow -->
+  <text x="600" y="470" font-size="28" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-weight="500" letter-spacing="1" opacity="0.9">Your agents work. You earn.</text>
+
+  <!-- Accent lines -->
+  <line x1="350" y1="510" x2="500" y2="510" stroke="url(#rainbow)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="700" y1="510" x2="850" y2="510" stroke="url(#rainbow)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Center diamond -->
+  <polygon points="600,500 610,510 600,520 590,510" fill="url(#rainbow)" opacity="0.8"/>
+
+  <!-- Corner accents -->
+  <path d="M270 140 L270 160 L290 160" fill="none" stroke="rgba(6,182,212,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M930 140 L930 160 L910 160" fill="none" stroke="rgba(236,72,152,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M270 520 L270 500 L290 500" fill="none" stroke="rgba(139,92,246,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M930 520 L930 500 L910 500" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="2" stroke-linecap="round"/>
 </svg>
