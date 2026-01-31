@@ -175,10 +175,18 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
     balance: 0,
     nostrPubkey: nostrKeys.publicKey,
     nip05,
+    // Moltbook fields (if provided)
+    moltbookId: data.moltbookId,
+    moltbookKarma: data.moltbookKarma,
   };
 
+  // Remove undefined fields before saving
+  const cleanAgent = Object.fromEntries(
+    Object.entries(agent).filter(([_, v]) => v !== undefined)
+  );
+
   await docRef.set({
-    ...agent,
+    ...cleanAgent,
     createdAt: Timestamp.fromDate(agent.createdAt),
   });
 
@@ -220,6 +228,8 @@ export async function getAgent(agentId: string): Promise<Agent | null> {
     balance: data.balance || 0,
     nostrPubkey: data.nostrPubkey || undefined,
     nip05: data.nip05 || undefined,
+    moltbookId: data.moltbookId || undefined,
+    moltbookKarma: data.moltbookKarma || undefined,
   };
 }
 
