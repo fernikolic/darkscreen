@@ -1,7 +1,7 @@
 /**
  * OxaPay Payment Service - USDT (and other cryptos)
  *
- * Uses OxaPay API for USDT deposits and withdrawals.
+ * Uses OxaPay API v1 for USDT deposits and withdrawals.
  * Docs: https://docs.oxapay.com
  * Fee: 0.4%
  */
@@ -13,7 +13,7 @@ const OXAPAY_API_KEY = process.env.OXAPAY_API_KEY || '';
 const OXAPAY_WEBHOOK_URL = process.env.OXAPAY_WEBHOOK_URL || '';
 
 // API base URL
-const API_BASE = 'https://api.oxapay.com';
+const API_BASE = 'https://api.oxapay.com/v1';
 
 export interface OxaPayPaymentRequest {
   amount: number; // USD amount
@@ -27,17 +27,14 @@ export interface OxaPayPaymentResponse {
   deposit?: Partial<Deposit>;
   invoice?: {
     trackId: string;
-    payAddress: string;
-    payAmount: number;
-    payCurrency: string;
-    payLink: string;
+    paymentUrl: string;
     expiredAt: number;
   };
   error?: string;
 }
 
 /**
- * Make API request to OxaPay
+ * Make API request to OxaPay v1
  */
 async function apiRequest(endpoint: string, data: Record<string, any>): Promise<any> {
   if (!OXAPAY_API_KEY) {
@@ -48,17 +45,15 @@ async function apiRequest(endpoint: string, data: Record<string, any>): Promise<
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'merchant_api_key': OXAPAY_API_KEY,
     },
-    body: JSON.stringify({
-      merchant: OXAPAY_API_KEY,
-      ...data,
-    }),
+    body: JSON.stringify(data),
   });
 
   const result = await response.json();
 
-  if (result.result !== 100) {
-    throw new Error(result.message || `OxaPay API error: ${result.result}`);
+  if (result.status !== 200) {
+    throw new Error(result.message || `OxaPay API error: ${result.status}`);
   }
 
   return result;
@@ -78,48 +73,44 @@ export async function createOxaPayDeposit(
   }
 
   try {
-    const orderId = `clw_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+    const orderId = `clw_${request.agentId}_${Date.now()}`;
 
-    const result = await apiRequest('/merchants/request', {
+    const result = await apiRequest('/payment/invoice', {
       amount: request.amount,
       currency: 'USD',
-      payCurrency: request.currency || 'USDT', // Can also be BTC, ETH, etc.
-      network: 'TRC20', // Default to TRC20 for USDT
-      lifeTime: 30, // 30 minutes
-      orderId,
+      to_currency: request.currency || 'USDT',
+      lifetime: 30, // 30 minutes
+      order_id: orderId,
       description: request.description || `Deposit for ${request.agentId}`,
-      callbackUrl: OXAPAY_WEBHOOK_URL,
-      returnUrl: '',
-      email: '',
+      callback_url: OXAPAY_WEBHOOK_URL || undefined,
+      fee_paid_by_payer: 0, // We pay the fee
+      sandbox: false,
     });
 
-    const expiresAt = new Date(result.expiredAt * 1000);
+    const expiresAt = new Date(result.data.expired_at * 1000);
 
     return {
       success: true,
       deposit: {
-        id: `oxapay_${result.trackId}`,
+        id: `oxapay_${result.data.track_id}`,
         agentId: request.agentId,
         amount: request.amount,
         currency: 'USDT',
         network: 'trc20',
         status: 'pending',
         provider: 'oxapay' as any,
-        externalId: result.trackId,
-        paymentAddress: result.payAddress,
-        paymentUrl: result.payLink,
+        externalId: result.data.track_id,
+        paymentAddress: null, // OxaPay uses payment URL instead
+        paymentUrl: result.data.payment_url,
         createdAt: new Date(),
         expiresAt,
         completedAt: null,
         txHash: null,
       },
       invoice: {
-        trackId: result.trackId,
-        payAddress: result.payAddress,
-        payAmount: result.payAmount,
-        payCurrency: result.payCurrency,
-        payLink: result.payLink,
-        expiredAt: result.expiredAt,
+        trackId: result.data.track_id,
+        paymentUrl: result.data.payment_url,
+        expiredAt: result.data.expired_at,
       },
     };
   } catch (error) {
@@ -146,17 +137,17 @@ export async function getPaymentStatus(trackId: string): Promise<{
   }
 
   try {
-    const result = await apiRequest('/merchants/inquiry', {
-      trackId,
+    const result = await apiRequest('/payment/inquiry', {
+      track_id: trackId,
     });
 
     // OxaPay statuses: Waiting, Confirming, Paid, Failed, Expired
     return {
       success: true,
-      status: result.status,
-      paid: result.status === 'Paid',
-      amount: parseFloat(result.amount || '0'),
-      txId: result.txID,
+      status: result.data.status,
+      paid: result.data.status === 'Paid',
+      amount: parseFloat(result.data.amount || '0'),
+      txId: result.data.txID,
     };
   } catch (error) {
     return {
@@ -177,20 +168,22 @@ export function parseWebhookPayload(body: Record<string, any>): {
   txId: string | null;
 } {
   return {
-    trackId: body.trackId,
+    trackId: body.track_id,
     status: body.status,
     amount: parseFloat(body.amount || '0'),
-    orderId: body.orderId, // Contains agentId
+    orderId: body.order_id, // Contains agentId
     txId: body.txID || null,
   };
 }
 
 /**
- * Verify webhook signature (OxaPay uses HMAC)
+ * Verify webhook signature (OxaPay uses HMAC SHA512)
  */
-export function verifyWebhook(body: string, signature: string, secret: string): boolean {
+export function verifyWebhook(body: string, signature: string): boolean {
+  if (!OXAPAY_API_KEY) return false;
+
   const crypto = require('crypto');
-  const hmac = crypto.createHmac('sha512', secret);
+  const hmac = crypto.createHmac('sha512', OXAPAY_API_KEY);
   hmac.update(body);
   const calculatedSignature = hmac.digest('hex');
   return calculatedSignature === signature;
@@ -214,18 +207,18 @@ export async function sendOxaPayPayout(
   }
 
   try {
-    const result = await apiRequest('/merchants/payout', {
+    const result = await apiRequest('/payment/payout', {
       address: toAddress,
       amount,
       currency,
       network,
-      callbackUrl: OXAPAY_WEBHOOK_URL,
+      callback_url: OXAPAY_WEBHOOK_URL || undefined,
       description: 'Clawdentials withdrawal',
     });
 
     return {
       success: true,
-      txId: result.trackId,
+      txId: result.data.track_id,
     };
   } catch (error) {
     return {
@@ -243,26 +236,44 @@ export async function getSupportedCurrencies(): Promise<{
   currencies?: any[];
   error?: string;
 }> {
-  try {
-    const response = await fetch(`${API_BASE}/merchants/allowedCoins`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ merchant: OXAPAY_API_KEY }),
-    });
-    const result = await response.json();
+  if (!OXAPAY_API_KEY) {
+    return { success: false, error: 'OXAPAY_API_KEY not configured' };
+  }
 
-    if (result.result !== 100) {
-      throw new Error(result.message);
-    }
+  try {
+    const result = await apiRequest('/payment/currencies', {});
 
     return {
       success: true,
-      currencies: result.allowed,
+      currencies: result.data,
     };
   } catch (error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Failed to get currencies',
+    };
+  }
+}
+
+/**
+ * Test API connection
+ */
+export async function testConnection(): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  if (!OXAPAY_API_KEY) {
+    return { success: false, error: 'OXAPAY_API_KEY not configured' };
+  }
+
+  try {
+    // Try to get currencies as a simple API test
+    await getSupportedCurrencies();
+    return { success: true };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'API connection failed',
     };
   }
 }
@@ -274,6 +285,7 @@ export const oxapayService = {
   verifyWebhook,
   sendPayout: sendOxaPayPayout,
   getSupportedCurrencies,
+  testConnection,
   config: {
     configured: !!OXAPAY_API_KEY,
     webhookUrl: OXAPAY_WEBHOOK_URL,

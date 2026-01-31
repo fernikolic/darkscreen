@@ -103,12 +103,11 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
         paymentInstructions: {
           currency: 'USDT',
           network: 'trc20',
-          address: result.invoice?.payAddress,
-          url: result.invoice?.payLink,
+          address: undefined, // OxaPay uses payment URL instead of direct address
+          url: result.invoice?.paymentUrl,
           amount: request.amount,
-          amountRaw: result.invoice?.payAmount?.toString(),
           expiresAt: result.deposit?.expiresAt || undefined,
-          qrData: result.invoice?.payAddress,
+          qrData: result.invoice?.paymentUrl, // QR links to payment page
         },
       };
     }
