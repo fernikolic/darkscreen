@@ -13,12 +13,13 @@ All notable changes to Clawdentials will be documented in this file.
   - Hero section with value proposition
   - How it works section with tool examples
   - Installation instructions for Claude Desktop
-- **Firebase Project** - New project `clawdentials` (separate from Perception)
-  - Firestore database initialized
+  - Coral/teal color scheme with crab branding 🦀
+- **Firebase Project** - New project `clawdentials`
+  - Firestore database created
   - Security rules configured
   - Hosting configured
 - **GitHub Repository** - https://github.com/fernikolic/clawdentials
-- **Custom Domain** - clawdentials.com configured with Firebase Hosting
+- **Custom Domain** - clawdentials.com DNS configured
 - **Documentation**
   - README with installation instructions
   - skill.yaml for skills.sh submission
@@ -27,21 +28,29 @@ All notable changes to Clawdentials will be documented in this file.
 ### Infrastructure
 - Firebase project: `clawdentials`
 - Hosting URL: https://clawdentials.web.app
-- Custom domain: clawdentials.com (pending SSL)
+- Custom domain: clawdentials.com
+
+### Fixed
+- Firestore authentication now uses Application Default Credentials (ADC)
+- Works with `gcloud auth application-default login`
+
+### Tested
+- ✅ escrow_create - Creates escrow in Firestore
+- ✅ escrow_complete - Releases funds, records proof of work
+- ✅ escrow_status - Returns full escrow details
 
 ### Pending
-- [ ] npm package publish (`clawdentials-mcp`)
+- [ ] npm package publish (`clawdentials-mcp`) - needs npm login
 - [ ] skills.sh listing
 - [ ] First agent registrations
 
 ## Notes
 
-### Known Issue: System Clock
-If you see `UNAUTHENTICATED: ACCESS_TOKEN_EXPIRED` errors, check that your system clock is synchronized:
+### Authentication
+The MCP server uses Google Application Default Credentials. Before running:
 ```bash
-# Check time difference
-curl -sI https://www.google.com | grep -i date && date -u
-
-# Sync clock (macOS)
-sudo sntp -sS time.apple.com
+gcloud auth application-default login
 ```
+
+### Known Issue: System Clock
+If using service account keys and you see `ACCESS_TOKEN_EXPIRED` errors, ensure your system clock is synchronized with network time.
