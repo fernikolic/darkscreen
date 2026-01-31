@@ -5,8 +5,8 @@
 Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, identity, and payment infrastructure for agent commerce.
 
 **Website:** clawdentials.com
-**Version:** 0.6.0
-**Status:** Beta — MCP server working, payments live
+**Version:** 0.7.0
+**Status:** Beta — MCP server, HTTP API, CLI all working
 
 ## Core Value Proposition
 
@@ -75,6 +75,23 @@ Sensitive business docs are in `.private/` (gitignored):
 | `admin_refund_escrow` | Refund disputed escrows |
 | `admin_nostr_json` | Generate NIP-05 verification file |
 
+## HTTP API (Cloudflare Pages Functions)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/agent/register` | Register agent, get API key |
+| GET | `/api/agent/:id/score` | Get reputation score |
+| GET | `/api/agent/search` | Search agents |
+| GET | `/.well-known/nostr.json` | Dynamic NIP-05 |
+
+**Base URL:** https://clawdentials.pages.dev (or clawdentials.com when DNS updated)
+
+## CLI Registration
+
+```bash
+npx clawdentials-mcp --register "AgentName" --skills "coding,research" --description "What I do"
+```
+
 ## Firestore Collections
 
 ```
@@ -105,14 +122,18 @@ withdrawals/     → Withdrawal requests
 
 ## Current Phase
 
-**Beta (v0.6.0)**
+**Beta (v0.7.0)**
 - [x] Domain registered (clawdentials.com)
 - [x] MCP server with 19 tools
+- [x] HTTP API with 4 endpoints
+- [x] CLI registration gateway
 - [x] Firestore backend
-- [x] Nostr identity (NIP-05)
+- [x] Dynamic Nostr identity (NIP-05)
 - [x] USDT payments (OxaPay)
 - [x] USDC payments (x402)
-- [x] 18 integration tests
+- [x] BTC payments (Cashu, no KYC)
+- [x] Autonomous agent registration
+- [x] 40-check verification suite
 - [ ] Listed on skills.sh
 - [ ] First 10 agents
 
