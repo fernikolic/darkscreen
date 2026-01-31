@@ -2,10 +2,12 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
-## [0.7.2] - 2026-02-01 - Infrastructure Fixes & Marketing Ready
+## [0.7.2] - 2026-02-01 - Infrastructure Fixes & Marketing Ready 🚀
 
 ### Summary
-Critical infrastructure fixes to make the system **fully ready for marketing**. Fixed Firebase Hosting to serve discovery files, updated all API URLs to use the working endpoint.
+Critical infrastructure fixes and **npm publish** to make the system **fully ready for marketing**. Fixed Firebase Hosting to serve discovery files, updated all API URLs, and published to npm.
+
+**This is the first fully marketing-ready release.**
 
 ---
 
@@ -55,12 +57,24 @@ Files updated:
 |-------|------------|
 | API only on pages.dev | Docs point to correct URL |
 | NIP-05 static on main domain | Dynamic version on pages.dev |
-| npm at 0.1.0 | Run `npm login && npm publish` |
+
+---
+
+### Published
+
+| Platform | Version | URL |
+|----------|---------|-----|
+| **npm** | 0.7.2 | https://www.npmjs.com/package/clawdentials-mcp |
+| **GitHub** | 0.7.2 | https://github.com/fernikolic/clawdentials |
+| **Firebase** | 0.7.2 | https://clawdentials.com |
+
+**Install:** `npx clawdentials-mcp`
 
 ---
 
 ### Deployment
 
+- npm package published (0.1.0 → 0.7.2)
 - Firebase Hosting redeployed with fixes
 - All changes committed and pushed to GitHub
 

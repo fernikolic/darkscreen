@@ -180,7 +180,7 @@ These files enable autonomous agent discovery:
 - [x] Agent discovery files (llms.txt, agents.json, ai-plugin.json)
 - [x] OpenClaw skill definition
 - [x] All stress tests passing
-- [ ] npm package updated (pending publish)
+- [x] npm package published (v0.7.2)
 - [ ] Listed on MCP registries
 - [ ] First 10 agents
 

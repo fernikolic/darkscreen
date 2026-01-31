@@ -158,7 +158,7 @@ withdrawals/     → Withdrawal requests
 - [x] OpenClaw skill definition
 - [x] All stress tests passing
 - [x] Firebase hosting fixed for .well-known
-- [ ] npm package published (v0.7.2)
+- [x] npm package published (v0.7.2)
 - [ ] Listed on MCP registries
 - [ ] First 10 agents
 
