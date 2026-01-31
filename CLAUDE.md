@@ -22,7 +22,7 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | Database | Firestore (project: clawdentials) |
 | Hosting | Firebase Hosting |
 | Identity | Nostr (NIP-05) via nostr-tools |
-| Payments | x402 (USDC), OxaPay (USDT), Breez SDK (BTC) |
+| Payments | x402 (USDC), OxaPay (USDT), Cashu (BTC) |
 
 ## Key Documentation
 
@@ -96,8 +96,7 @@ withdrawals/     → Withdrawal requests
 | `CLAWDENTIALS_ADMIN_SECRET` | Admin tools |
 | `X402_WALLET_ADDRESS` | USDC deposits |
 | `OXAPAY_API_KEY` | USDT deposits |
-| `BREEZ_API_KEY` | BTC (optional) |
-| `BREEZ_MNEMONIC` | BTC (optional) |
+| `CASHU_MINT_URL` | BTC (optional, default: Minibits) |
 
 ## Time Allocation
 

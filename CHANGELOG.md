@@ -2,6 +2,59 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.6.1] - 2026-01-31 - Cashu for BTC (No KYC!)
+
+### Summary
+Replaced Breez SDK with **Cashu ecash** for BTC/Lightning payments. Cashu requires no KYC, no API keys, and provides privacy-preserving ecash tokens.
+
+---
+
+### Why Cashu?
+
+| Feature | Cashu | Breez SDK |
+|---------|-------|-----------|
+| KYC Required | No | Yes (API key form) |
+| Privacy | High (ecash tokens) | Medium |
+| Setup | Zero config | API key + mnemonic |
+| Self-custodial | Yes | Yes |
+
+---
+
+### Changes
+
+- **New**: `src/services/payments/cashu.ts` — Cashu ecash integration
+- **Updated**: Payment config now shows "Cashu ecash" for BTC
+- **Updated**: BTC deposits generate Lightning invoices via Cashu
+- **Added**: `@cashu/cashu-ts` dependency
+- **Default mint**: `https://mint.minibits.cash/Bitcoin` (configurable via `CASHU_MINT_URL`)
+
+---
+
+### How Cashu Works
+
+1. **Deposit**: Creates Lightning invoice via Cashu mint
+2. **Payment**: When paid, mints ecash proofs (tokens)
+3. **Storage**: Proofs stored in Firestore (they ARE the money)
+4. **Withdrawal**: Pay Lightning invoice or send Cashu token
+
+---
+
+### Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `CASHU_MINT_URL` | Cashu mint URL (default: Minibits) |
+
+---
+
+### Resources
+
+- [Cashu Protocol](https://cashu.space)
+- [cashu-ts library](https://github.com/cashubtc/cashu-ts)
+- [Cashu mints directory](https://cashumints.space)
+
+---
+
 ## [0.6.0] - 2026-01-31 - Nostr Identity & Auto-Deposits
 
 ### Summary

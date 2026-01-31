@@ -4,16 +4,18 @@
  * Provides a single interface for all payment rails:
  * - USDC via x402 on Base
  * - USDT via OxaPay on TRC-20 (and other networks)
- * - BTC via Alby on Lightning
+ * - BTC via Cashu on Lightning (no KYC, privacy-preserving)
  */
 
 import { x402Service } from './x402.js';
 import { oxapayService } from './oxapay.js';
+import { cashuService } from './cashu.js';
 import { breezService } from './breez.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
 export { x402Service } from './x402.js';
 export { oxapayService } from './oxapay.js';
+export { cashuService } from './cashu.js';
 export { breezService } from './breez.js';
 
 // Legacy exports for backwards compatibility
@@ -114,8 +116,9 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     }
 
     case 'BTC': {
-      const result = await breezService.createDeposit({
-        amount: request.amount,
+      // Use Cashu for BTC - no KYC, privacy-preserving ecash
+      const result = await cashuService.createDeposit({
+        amount: request.amount, // Amount in sats
         agentId: request.agentId,
         description: request.description,
       });
@@ -126,15 +129,24 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
 
       return {
         success: true,
-        deposit: result.deposit,
+        deposit: {
+          id: result.quote?.quoteId,
+          agentId: request.agentId,
+          amount: request.amount,
+          currency: 'BTC',
+          status: 'pending',
+          provider: 'cashu',
+          createdAt: new Date(),
+          expiresAt: result.quote?.expiresAt,
+        },
         paymentInstructions: {
           currency: 'BTC',
           network: 'lightning',
-          address: result.invoice?.bolt11, // bolt11 invoice
+          address: result.quote?.bolt11, // Lightning invoice
           amount: request.amount,
-          amountRaw: result.invoice?.amountSats?.toString(),
-          expiresAt: result.invoice?.expiresAt || undefined,
-          qrData: result.invoice?.bolt11, // Lightning invoice for QR
+          amountRaw: result.quote?.amount?.toString(),
+          expiresAt: result.quote?.expiresAt,
+          qrData: result.quote?.bolt11, // Lightning invoice for QR
         },
       };
     }
@@ -176,11 +188,12 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     }
 
     case 'BTC': {
-      const result = await breezService.sendPayment(request.destination, request.amount);
+      // BTC withdrawals via Cashu require stored proofs
+      // This is handled at a higher level in the payment tools
+      // where we track agent's ecash proofs in Firestore
       return {
-        success: result.success,
-        txId: result.txId,
-        error: result.error,
+        success: false,
+        error: 'BTC withdrawal requires proofs. Use withdraw_crypto tool with stored Cashu proofs.',
       };
     }
 
@@ -212,9 +225,9 @@ export function getPaymentConfig(): {
       provider: 'OxaPay',
     },
     btc: {
-      configured: breezService.config.configured,
-      network: 'Lightning (Liquid)',
-      provider: 'Breez SDK',
+      configured: cashuService.config.configured,
+      network: 'Lightning (Cashu)',
+      provider: 'Cashu ecash',
     },
   };
 }
@@ -226,5 +239,6 @@ export const paymentService = {
   // Individual services for advanced use
   x402: x402Service,
   oxapay: oxapayService,
-  breez: breezService,
+  cashu: cashuService,
+  breez: breezService, // Legacy, kept for backwards compatibility
 };

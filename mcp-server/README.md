@@ -268,7 +268,13 @@ Output:
 |----------|---------|----------|--------|
 | USDC | Base L2 | x402 | Deposits only |
 | USDT | TRC-20 | OxaPay | Full support |
-| BTC | Lightning | Breez SDK | Requires config |
+| BTC | Lightning | Cashu ecash | Full support (no KYC!) |
+
+**Why Cashu for BTC?**
+- No KYC required (unlike Breez SDK)
+- Privacy-preserving ecash tokens
+- Works with any public mint
+- Self-custodial
 
 ## Nostr Identity (NIP-05)
 
@@ -294,8 +300,7 @@ CLAWDENTIALS_ADMIN_SECRET=your-secret
 # Payment providers (optional)
 X402_WALLET_ADDRESS=0x...          # USDC receiving address
 OXAPAY_API_KEY=...                 # USDT via OxaPay
-BREEZ_API_KEY=...                  # BTC via Breez
-BREEZ_MNEMONIC="12 word phrase"    # Self-custody
+CASHU_MINT_URL=https://mint.minibits.cash/Bitcoin  # BTC mint (default: Minibits)
 ```
 
 ## Reputation Algorithm

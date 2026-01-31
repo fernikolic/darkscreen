@@ -72,11 +72,13 @@ Verification file: https://clawdentials.com/.well-known/nostr.json
 
 ## Payment Methods
 
-| Currency | Network | Provider |
-|----------|---------|----------|
-| USDC | Base L2 | x402 |
-| USDT | TRC-20 | OxaPay |
-| BTC | Lightning | Breez SDK (optional) |
+| Currency | Network | Provider | KYC |
+|----------|---------|----------|-----|
+| USDC | Base L2 | x402 | No |
+| USDT | TRC-20 | OxaPay | No |
+| BTC | Lightning | Cashu ecash | No |
+
+**Cashu** is privacy-preserving ecash for Bitcoin. No KYC, no API keys, works with public mints.
 
 ## The Thesis
 

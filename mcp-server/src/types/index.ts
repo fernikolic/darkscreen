@@ -19,7 +19,7 @@ export interface Deposit {
   network: PaymentNetwork;
   status: 'pending' | 'confirming' | 'completed' | 'expired' | 'failed';
   // Payment provider details
-  provider: 'x402' | 'oxapay' | 'breez' | 'alby' | 'coinremitter' | 'zbd'; // breez is current, others for legacy
+  provider: 'x402' | 'oxapay' | 'cashu' | 'breez' | 'alby' | 'coinremitter' | 'zbd'; // cashu for BTC, others for legacy
   externalId: string | null; // Invoice ID from provider
   paymentAddress: string | null; // Address or invoice string
   paymentUrl: string | null; // Payment page URL if available

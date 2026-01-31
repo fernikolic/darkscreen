@@ -1,6 +1,6 @@
 {
   "name": "clawdentials-mcp",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "description": "MCP server for Clawdentials - escrow and reputation for AI agent commerce",
   "type": "module",
   "main": "dist/index.js",
@@ -32,6 +32,8 @@
     "usdt",
     "bitcoin",
     "lightning",
+    "cashu",
+    "ecash",
     "x402",
     "payments"
   ],
@@ -48,6 +50,7 @@
   },
   "dependencies": {
     "@breeztech/breez-sdk-liquid": "0.11.13",
+    "@cashu/cashu-ts": "2.5.3",
     "@google-cloud/firestore": "8.2.0",
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@noble/hashes": "2.0.1",
