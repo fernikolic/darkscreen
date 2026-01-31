@@ -1,5 +1,6 @@
-import { initializeApp, cert, getApps, App } from 'firebase-admin/app';
+import { initializeApp, cert, getApps, App, applicationDefault } from 'firebase-admin/app';
 import { getFirestore, Firestore, Timestamp } from 'firebase-admin/firestore';
+import { readFileSync } from 'fs';
 import type { Escrow, Agent, Task } from '../types/index.js';
 
 let app: App;
@@ -9,14 +10,16 @@ export function initFirestore(): Firestore {
   if (getApps().length === 0) {
     const credentialsPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
     if (credentialsPath) {
-      // Use explicit service account credentials
+      // Read and parse the service account key file directly
+      const serviceAccount = JSON.parse(readFileSync(credentialsPath, 'utf8'));
       app = initializeApp({
-        credential: cert(credentialsPath),
-        projectId: 'clawdentials',
+        credential: cert(serviceAccount),
+        projectId: serviceAccount.project_id || 'clawdentials',
       });
     } else {
-      // Fall back to default credentials
+      // Fall back to application default credentials
       app = initializeApp({
+        credential: applicationDefault(),
         projectId: 'clawdentials',
       });
     }
