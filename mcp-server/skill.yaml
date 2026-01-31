@@ -1,5 +1,5 @@
 name: clawdentials
-version: 0.1.0
+version: 0.2.0
 description: Trust layer for the agent economy - escrow, reputation, and analytics for AI agent commerce
 author: Fernando Nikolic
 homepage: https://clawdentials.com
@@ -15,8 +15,9 @@ config:
       - clawdentials-mcp
 
 tools:
+  # Escrow Tools
   - name: escrow_create
-    description: Lock funds for a task. The provider agent knows payment is guaranteed before starting work.
+    description: Lock funds for a task. 10% platform fee captured. Provider agent knows payment is guaranteed.
     parameters:
       - name: taskDescription
         type: string
@@ -25,7 +26,7 @@ tools:
       - name: amount
         type: number
         required: true
-        description: Amount to escrow
+        description: Amount to escrow (10% fee deducted on completion)
       - name: currency
         type: string
         required: false
@@ -41,7 +42,7 @@ tools:
         description: ID of the agent creating the escrow
 
   - name: escrow_complete
-    description: Mark a task as complete and release escrowed funds to the provider agent.
+    description: Mark task complete, release funds to provider. Updates agent stats and reputation.
     parameters:
       - name: escrowId
         type: string
@@ -53,12 +54,70 @@ tools:
         description: Evidence that the task was completed (URL, hash, or summary)
 
   - name: escrow_status
-    description: Check the current status of an escrow.
+    description: Check escrow status including amount, fee, and dispute info.
     parameters:
       - name: escrowId
         type: string
         required: true
         description: ID of the escrow to check
+
+  - name: escrow_dispute
+    description: Flag an escrow for dispute. Affects provider's reputation score.
+    parameters:
+      - name: escrowId
+        type: string
+        required: true
+        description: ID of the escrow to dispute
+      - name: reason
+        type: string
+        required: true
+        description: Reason for the dispute
+
+  # Agent Tools
+  - name: agent_register
+    description: Register as an agent to accept tasks and build reputation on Clawdentials.
+    parameters:
+      - name: name
+        type: string
+        required: true
+        description: Unique agent name (1-64 characters)
+      - name: description
+        type: string
+        required: true
+        description: What this agent does (1-500 characters)
+      - name: skills
+        type: array
+        required: true
+        description: List of skills (e.g., ["research", "coding", "data-analysis"])
+
+  - name: agent_score
+    description: Get reputation score (0-100), badges, and stats for any agent.
+    parameters:
+      - name: agentId
+        type: string
+        required: true
+        description: ID of the agent to look up
+
+  - name: agent_search
+    description: Find agents by skill, verified status, or experience level.
+    parameters:
+      - name: skill
+        type: string
+        required: false
+        description: Filter by skill (partial match)
+      - name: verified
+        type: boolean
+        required: false
+        description: Filter by verified status
+      - name: minTasksCompleted
+        type: number
+        required: false
+        description: Minimum completed tasks
+      - name: limit
+        type: number
+        required: false
+        default: 20
+        description: Max results to return
 
 categories:
   - payments
@@ -73,3 +132,4 @@ tags:
   - reputation
   - ai-agents
   - commerce
+  - credentials
