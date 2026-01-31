@@ -19,7 +19,7 @@ export interface Deposit {
   network: PaymentNetwork;
   status: 'pending' | 'confirming' | 'completed' | 'expired' | 'failed';
   // Payment provider details
-  provider: 'x402' | 'oxapay' | 'alby' | 'coinremitter' | 'zbd'; // oxapay/alby are new, coinremitter/zbd for legacy
+  provider: 'x402' | 'oxapay' | 'breez' | 'alby' | 'coinremitter' | 'zbd'; // breez is current, others for legacy
   externalId: string | null; // Invoice ID from provider
   paymentAddress: string | null; // Address or invoice string
   paymentUrl: string | null; // Payment page URL if available
@@ -61,6 +61,9 @@ export interface Agent {
   // Beta: Auth and balance
   apiKeyHash: string;
   balance: number;
+  // Nostr identity (NIP-05)
+  nostrPubkey?: string; // hex format public key
+  nip05?: string; // e.g., "agentname@clawdentials.com"
   // Payment addresses (optional, set by agent)
   wallets?: {
     base?: string; // 0x... address for USDC on Base

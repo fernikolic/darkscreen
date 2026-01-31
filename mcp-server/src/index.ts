@@ -207,6 +207,18 @@ server.tool(
   }
 );
 
+server.tool(
+  'admin_nostr_json',
+  adminTools.admin_nostr_json.description,
+  {
+    adminSecret: z.string().describe('Admin secret key'),
+  },
+  async (args) => {
+    const result = await adminTools.admin_nostr_json.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
 // ============ PAYMENT TOOLS ============
 
 server.tool(

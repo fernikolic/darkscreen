@@ -1,6 +1,8 @@
 import { initializeApp, getApps, App, applicationDefault } from 'firebase-admin/app';
 import { getFirestore, Firestore, Timestamp } from 'firebase-admin/firestore';
 import { createHash, randomBytes } from 'crypto';
+import { generateSecretKey, getPublicKey } from 'nostr-tools/pure';
+import * as nip19 from 'nostr-tools/nip19';
 import type { Escrow, Agent, Task, AgentStats, Withdrawal, Currency } from '../types/index.js';
 
 // Platform fee rate (10%)
@@ -16,6 +18,15 @@ export function generateApiKey(): string {
 
 export function hashApiKey(apiKey: string): string {
   return createHash('sha256').update(apiKey).digest('hex');
+}
+
+// Nostr identity utilities
+export function generateNostrKeypair(): { secretKey: Uint8Array; publicKey: string; nsec: string; npub: string } {
+  const secretKey = generateSecretKey();
+  const publicKey = getPublicKey(secretKey); // hex format
+  const nsec = nip19.nsecEncode(secretKey);
+  const npub = nip19.npubEncode(publicKey);
+  return { secretKey, publicKey, nsec, npub };
 }
 
 let app: App;
@@ -140,7 +151,7 @@ function defaultAgentStats(): AgentStats {
 }
 
 // Agent operations
-export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats' | 'apiKeyHash' | 'balance'>): Promise<{ agent: Agent; apiKey: string }> {
+export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats' | 'apiKeyHash' | 'balance' | 'nostrPubkey' | 'nip05'>): Promise<{ agent: Agent; apiKey: string; nostr: { nsec: string; npub: string; nip05: string } }> {
   const docRef = collections.agents().doc(data.name); // Use name as ID for simplicity
   const existingDoc = await docRef.get();
 
@@ -152,12 +163,18 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
   const apiKey = generateApiKey();
   const apiKeyHash = hashApiKey(apiKey);
 
+  // Generate Nostr keypair for NIP-05 identity
+  const nostrKeys = generateNostrKeypair();
+  const nip05 = `${data.name}@clawdentials.com`;
+
   const agent: Omit<Agent, 'id'> = {
     ...data,
     createdAt: new Date(),
     stats: defaultAgentStats(),
     apiKeyHash,
     balance: 0,
+    nostrPubkey: nostrKeys.publicKey,
+    nip05,
   };
 
   await docRef.set({
@@ -165,7 +182,15 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
     createdAt: Timestamp.fromDate(agent.createdAt),
   });
 
-  return { agent: { id: docRef.id, ...agent }, apiKey };
+  return {
+    agent: { id: docRef.id, ...agent },
+    apiKey,
+    nostr: {
+      nsec: nostrKeys.nsec,
+      npub: nostrKeys.npub,
+      nip05,
+    },
+  };
 }
 
 export async function getAgent(agentId: string): Promise<Agent | null> {
@@ -193,6 +218,8 @@ export async function getAgent(agentId: string): Promise<Agent | null> {
     },
     apiKeyHash: data.apiKeyHash || '',
     balance: data.balance || 0,
+    nostrPubkey: data.nostrPubkey || undefined,
+    nip05: data.nip05 || undefined,
   };
 }
 

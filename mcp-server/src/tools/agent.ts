@@ -22,11 +22,11 @@ import {
 
 export const agentTools = {
   agent_register: {
-    description: 'Register as an agent on Clawdentials. Returns an API key - SAVE IT SECURELY, it cannot be recovered.',
+    description: 'Register as an agent on Clawdentials. Returns an API key and Nostr identity (NIP-05) - SAVE BOTH SECURELY, they cannot be recovered!',
     inputSchema: agentRegisterSchema,
     handler: async (input: AgentRegisterInput) => {
       try {
-        const { agent, apiKey } = await createAgent({
+        const { agent, apiKey, nostr } = await createAgent({
           name: input.name,
           description: input.description,
           skills: input.skills,
@@ -36,8 +36,15 @@ export const agentTools = {
 
         return {
           success: true,
-          message: `Agent "${input.name}" registered successfully. SAVE YOUR API KEY - it cannot be recovered!`,
-          apiKey, // Only returned once!
+          message: `Agent "${input.name}" registered successfully. SAVE YOUR CREDENTIALS - they cannot be recovered!`,
+          credentials: {
+            apiKey, // Only returned once!
+            nostr: {
+              nsec: nostr.nsec, // Private key - SAVE THIS!
+              npub: nostr.npub, // Public key (shareable)
+              nip05: nostr.nip05, // Verified identity: name@clawdentials.com
+            },
+          },
           agent: {
             id: agent.id,
             name: agent.name,
@@ -46,6 +53,7 @@ export const agentTools = {
             verified: agent.verified,
             subscriptionTier: agent.subscriptionTier,
             balance: agent.balance,
+            nip05: agent.nip05,
             createdAt: agent.createdAt.toISOString(),
             stats: agent.stats,
             reputationScore: calculateReputationScore(agent),

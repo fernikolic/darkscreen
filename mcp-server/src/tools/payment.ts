@@ -7,6 +7,7 @@
 import {
   paymentService,
   getPaymentConfig,
+  oxapayService,
 } from '../services/payments/index.js';
 import {
   validateApiKey,
@@ -98,10 +99,11 @@ export const paymentTools = {
   },
 
   /**
-   * Check deposit status
+   * Check deposit status - verifies with payment provider and auto-credits if paid
    */
   deposit_status: {
-    description: 'Check the status of a deposit request.',
+    description:
+      'Check the status of a deposit request. If payment is confirmed, balance is automatically credited.',
     handler: async (args: { depositId: string }) => {
       const depositRef = getDb().collection('deposits').doc(args.depositId);
       const doc = await depositRef.get();
@@ -111,7 +113,41 @@ export const paymentTools = {
       }
 
       const data = doc.data()!;
-      return {
+      let currentStatus = data.status;
+      let completedAt = data.completedAt;
+      let txHash = data.txHash;
+      let balanceCredited = false;
+
+      // If deposit is still pending, check with the payment provider
+      if (currentStatus === 'pending' || currentStatus === 'confirming') {
+        const verificationResult = await verifyDepositWithProvider(data);
+
+        if (verificationResult.paid) {
+          // Payment confirmed! Update deposit and credit balance
+          currentStatus = 'completed';
+          completedAt = Timestamp.fromDate(new Date());
+          txHash = verificationResult.txId || null;
+
+          // Credit the agent's balance
+          await creditBalance(data.agentId, data.amount, `Deposit ${args.depositId} confirmed`);
+          balanceCredited = true;
+
+          // Update deposit record
+          await depositRef.update({
+            status: 'completed',
+            completedAt,
+            txHash,
+          });
+        } else if (verificationResult.status === 'expired' || verificationResult.status === 'failed') {
+          currentStatus = verificationResult.status;
+          await depositRef.update({ status: currentStatus });
+        } else if (verificationResult.status === 'confirming') {
+          currentStatus = 'confirming';
+          await depositRef.update({ status: 'confirming' });
+        }
+      }
+
+      const response: any = {
         success: true,
         deposit: {
           id: doc.id,
@@ -119,13 +155,22 @@ export const paymentTools = {
           amount: data.amount,
           currency: data.currency,
           network: data.network,
-          status: data.status,
+          status: currentStatus,
           provider: data.provider,
           createdAt: data.createdAt?.toDate?.() || data.createdAt,
           expiresAt: data.expiresAt?.toDate?.() || data.expiresAt,
-          completedAt: data.completedAt?.toDate?.() || data.completedAt,
+          completedAt: completedAt?.toDate?.() || completedAt,
+          txHash,
         },
       };
+
+      if (balanceCredited) {
+        const newBalance = await getBalance(data.agentId);
+        response.message = `Payment confirmed! $${data.amount} credited to your balance.`;
+        response.newBalance = newBalance;
+      }
+
+      return response;
     },
   },
 
@@ -365,4 +410,65 @@ function validateDestination(currency: string, destination: string): string | nu
   }
 
   return null;
+}
+
+/**
+ * Verify deposit with payment provider
+ */
+async function verifyDepositWithProvider(deposit: any): Promise<{
+  paid: boolean;
+  status: string;
+  txId?: string;
+}> {
+  const provider = deposit.provider;
+  const externalId = deposit.externalId;
+
+  // Check if deposit has expired
+  if (deposit.expiresAt) {
+    const expiresAt = deposit.expiresAt?.toDate?.() || deposit.expiresAt;
+    if (new Date() > expiresAt) {
+      return { paid: false, status: 'expired' };
+    }
+  }
+
+  switch (provider) {
+    case 'oxapay': {
+      // USDT via OxaPay
+      if (!externalId) {
+        return { paid: false, status: 'pending' };
+      }
+
+      const result = await oxapayService.getPaymentStatus(externalId);
+      if (!result.success) {
+        return { paid: false, status: 'pending' };
+      }
+
+      // OxaPay statuses: Waiting, Confirming, Paid, Failed, Expired
+      if (result.paid) {
+        return { paid: true, status: 'completed', txId: result.txId };
+      } else if (result.status === 'Confirming') {
+        return { paid: false, status: 'confirming' };
+      } else if (result.status === 'Failed') {
+        return { paid: false, status: 'failed' };
+      } else if (result.status === 'Expired') {
+        return { paid: false, status: 'expired' };
+      }
+      return { paid: false, status: 'pending' };
+    }
+
+    case 'x402': {
+      // USDC via x402 - manual verification for now
+      // TODO: Add Base RPC verification when needed
+      return { paid: false, status: 'pending' };
+    }
+
+    case 'breez': {
+      // BTC via Breez - SDK handles verification internally
+      // For now, return pending (Breez callbacks would update this)
+      return { paid: false, status: 'pending' };
+    }
+
+    default:
+      return { paid: false, status: 'pending' };
+  }
 }

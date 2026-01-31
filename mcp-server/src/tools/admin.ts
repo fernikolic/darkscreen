@@ -15,6 +15,7 @@ import {
   listWithdrawals,
   refundEscrow,
   getEscrow,
+  collections,
 } from '../services/firestore.js';
 import { z } from 'zod';
 
@@ -189,6 +190,58 @@ export const adminTools = {
         return {
           success: false,
           error: error instanceof Error ? error.message : 'Failed to refund escrow',
+        };
+      }
+    },
+  },
+
+  admin_nostr_json: {
+    description: 'Generate the NIP-05 nostr.json file content for all registered agents. Host this at clawdentials.com/.well-known/nostr.json',
+    inputSchema: z.object({
+      adminSecret: z.string().min(1).describe('Admin secret key'),
+    }),
+    handler: async (input: { adminSecret: string }) => {
+      // Validate admin secret
+      if (input.adminSecret !== ADMIN_SECRET) {
+        return {
+          success: false,
+          error: 'Invalid admin secret',
+        };
+      }
+
+      try {
+        // Get all agents with Nostr pubkeys
+        const snapshot = await collections.agents().get();
+        const names: Record<string, string> = {};
+
+        for (const doc of snapshot.docs) {
+          const data = doc.data();
+          if (data.nostrPubkey) {
+            // Use the agent name (lowercase, sanitized) as the identifier
+            const identifier = doc.id.toLowerCase().replace(/[^a-z0-9-_.]/g, '');
+            names[identifier] = data.nostrPubkey;
+          }
+        }
+
+        // Generate the nostr.json content
+        const nostrJson = {
+          names,
+          // Optional: add relay hints
+          // relays: {}
+        };
+
+        return {
+          success: true,
+          message: 'Host this JSON at: https://clawdentials.com/.well-known/nostr.json',
+          agentCount: Object.keys(names).length,
+          nostrJson,
+          // Also return as string for easy copy-paste
+          nostrJsonString: JSON.stringify(nostrJson, null, 2),
+        };
+      } catch (error) {
+        return {
+          success: false,
+          error: error instanceof Error ? error.message : 'Failed to generate nostr.json',
         };
       }
     },

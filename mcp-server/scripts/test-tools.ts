@@ -33,13 +33,15 @@ async function runTests() {
   });
   console.log(JSON.stringify(clientResult, null, 2));
 
-  if (!clientResult.success || !clientResult.apiKey) {
+  if (!clientResult.success || !clientResult.credentials?.apiKey) {
     console.error('❌ Client registration failed');
     process.exit(1);
   }
-  clientApiKey = clientResult.apiKey;
+  clientApiKey = clientResult.credentials.apiKey;
   console.log(`✅ Client registered: ${clientName}`);
   console.log(`   API Key: ${clientApiKey.substring(0, 20)}...`);
+  console.log(`   NIP-05: ${clientResult.credentials.nostr.nip05}`);
+  console.log(`   npub: ${clientResult.credentials.nostr.npub}`);
 
   console.log('\n--- Test 2: Register Provider Agent ---');
   const providerResult = await agentTools.agent_register.handler({
@@ -48,12 +50,13 @@ async function runTests() {
     skills: ['research', 'writing'],
   });
 
-  if (!providerResult.success || !providerResult.apiKey) {
+  if (!providerResult.success || !providerResult.credentials?.apiKey) {
     console.error('❌ Provider registration failed');
     process.exit(1);
   }
-  providerApiKey = providerResult.apiKey;
+  providerApiKey = providerResult.credentials.apiKey;
   console.log(`✅ Provider registered: ${providerName}`);
+  console.log(`   NIP-05: ${providerResult.credentials.nostr.nip05}`);
 
   // ===== BALANCE OPERATIONS =====
 
@@ -296,6 +299,22 @@ async function runTests() {
   }
   console.log(`✅ Escrow refunded, client new balance: $${refundResult.clientNewBalance}`);
 
+  // ===== NOSTR IDENTITY =====
+
+  console.log('\n=== NOSTR IDENTITY (NIP-05) ===\n');
+
+  console.log('--- Test 18: Generate nostr.json ---');
+  const nostrJsonResult = await adminTools.admin_nostr_json.handler({
+    adminSecret: ADMIN_SECRET,
+  });
+  console.log(JSON.stringify(nostrJsonResult, null, 2));
+
+  if (!nostrJsonResult.success || nostrJsonResult.agentCount < 2) {
+    console.error('❌ Nostr.json generation failed');
+    process.exit(1);
+  }
+  console.log(`✅ nostr.json generated with ${nostrJsonResult.agentCount} agents`);
+
   // ===== FINAL SUMMARY =====
 
   console.log('\n=== FINAL BALANCES ===\n');
@@ -313,9 +332,10 @@ async function runTests() {
   console.log(`Client (${clientName}): $${finalClientBalance.balance}`);
   console.log(`Provider (${providerName}): $${finalProviderBalance.balance}`);
 
-  console.log('\n🎉 All 17 tests passed!\n');
-  console.log('Beta features working:');
+  console.log('\n🎉 All 18 tests passed!\n');
+  console.log('Features working:');
   console.log('  ✅ Agent registration with API keys');
+  console.log('  ✅ Nostr identity (NIP-05)');
   console.log('  ✅ API key authentication');
   console.log('  ✅ Balance system');
   console.log('  ✅ Escrow with balance deduction/credit');
@@ -323,6 +343,7 @@ async function runTests() {
   console.log('  ✅ Admin balance credit');
   console.log('  ✅ Admin withdrawal processing');
   console.log('  ✅ Dispute and refund flow');
+  console.log('  ✅ nostr.json generation');
 }
 
 runTests().catch((error) => {

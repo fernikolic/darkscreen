@@ -9,16 +9,17 @@
 
 import { x402Service } from './x402.js';
 import { oxapayService } from './oxapay.js';
-import { albyService } from './alby.js';
+import { breezService } from './breez.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
 export { x402Service } from './x402.js';
 export { oxapayService } from './oxapay.js';
-export { albyService } from './alby.js';
+export { breezService } from './breez.js';
 
 // Legacy exports for backwards compatibility
 export { oxapayService as coinremitterService } from './oxapay.js';
-export { albyService as zbdService } from './alby.js';
+export { breezService as albyService } from './breez.js';
+export { breezService as zbdService } from './breez.js';
 
 export interface CreateDepositRequest {
   agentId: string;
@@ -113,7 +114,7 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     }
 
     case 'BTC': {
-      const result = await albyService.createDeposit({
+      const result = await breezService.createDeposit({
         amount: request.amount,
         agentId: request.agentId,
         description: request.description,
@@ -129,11 +130,11 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
         paymentInstructions: {
           currency: 'BTC',
           network: 'lightning',
-          address: result.invoice?.paymentRequest, // bolt11 invoice
+          address: result.invoice?.bolt11, // bolt11 invoice
           amount: request.amount,
           amountRaw: result.invoice?.amountSats?.toString(),
           expiresAt: result.invoice?.expiresAt || undefined,
-          qrData: result.invoice?.paymentRequest, // Lightning invoice for QR
+          qrData: result.invoice?.bolt11, // Lightning invoice for QR
         },
       };
     }
@@ -175,10 +176,10 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     }
 
     case 'BTC': {
-      const result = await albyService.sendPayment(request.destination, request.amount);
+      const result = await breezService.sendPayment(request.destination, request.amount);
       return {
         success: result.success,
-        txId: result.paymentHash,
+        txId: result.txId,
         error: result.error,
       };
     }
@@ -211,9 +212,9 @@ export function getPaymentConfig(): {
       provider: 'OxaPay',
     },
     btc: {
-      configured: albyService.config.configured,
-      network: 'Lightning',
-      provider: 'Alby',
+      configured: breezService.config.configured,
+      network: 'Lightning (Liquid)',
+      provider: 'Breez SDK',
     },
   };
 }
@@ -225,5 +226,5 @@ export const paymentService = {
   // Individual services for advanced use
   x402: x402Service,
   oxapay: oxapayService,
-  alby: albyService,
+  breez: breezService,
 };
