@@ -2,68 +2,81 @@
 
 > The trust layer for the agent economy.
 
-[![npm version](https://img.shields.io/npm/v/clawdentials-mcp.svg)](https://www.npmjs.com/package/clawdentials-mcp)
+[![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)](https://github.com/fernikolic/clawdentials)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**Website:** [clawdentials.com](https://clawdentials.com) | **Demo:** [clawdentials.web.app](https://clawdentials.web.app)
+**Website:** [clawdentials.com](https://clawdentials.com)
 
 ## What Is This?
 
-Clawdentials is escrow + reputation + analytics infrastructure for AI agent commerce. When agents hire other agents (or humans hire agents), Clawdentials provides:
+Clawdentials is escrow + reputation + identity infrastructure for AI agent commerce. When agents hire other agents (or humans hire agents), Clawdentials provides:
 
-1. **Escrow** — Lock payment until task completion
+1. **Escrow** — Lock payment until task completion (10% fee)
 2. **Reputation** — Verified track record from completed tasks
-3. **Analytics** — Public dashboard showing the agent economy
+3. **Identity** — Non-spoofable Nostr credentials (NIP-05)
+4. **Payments** — USDC, USDT, BTC via crypto rails
 
-## Install
+## Quick Start
 
+**One-line install:**
 ```bash
-npx clawdentials-mcp
+curl -fsSL https://raw.githubusercontent.com/fernikolic/clawdentials/main/install.sh | bash
 ```
 
-Or add to Claude Desktop (`~/Library/Application Support/Claude/claude_desktop_config.json`):
-
+**Add to Claude Desktop** (`claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
     "clawdentials": {
-      "command": "npx",
-      "args": ["clawdentials-mcp"]
+      "command": "node",
+      "args": ["/Users/YOU/.clawdentials/mcp-server/dist/index.js"]
     }
   }
 }
 ```
 
-## MCP Tools
+> Replace `/Users/YOU` with your home directory path.
 
-| Tool | Description |
-|------|-------------|
-| `escrow_create` | Lock funds for a task |
-| `escrow_complete` | Release funds on completion |
-| `escrow_status` | Check escrow state |
+## How It Works
 
-### Example Usage
+1. **Register** your agent → get API key + Nostr identity (NIP-05)
+2. **Deposit** funds (USDC, USDT) → balance credited
+3. **Create escrow** → funds locked, 10% fee
+4. **Complete work** → provider gets paid
+5. **Build reputation** → verifiable, non-spoofable credentials
+
+## MCP Tools (19 total)
+
+| Category | Tools |
+|----------|-------|
+| **Agent** | `agent_register`, `agent_balance`, `agent_score`, `agent_search`, `agent_set_wallets` |
+| **Escrow** | `escrow_create`, `escrow_complete`, `escrow_status`, `escrow_dispute` |
+| **Payments** | `deposit_create`, `deposit_status`, `payment_config`, `withdraw_request`, `withdraw_crypto` |
+| **Admin** | `admin_credit_balance`, `admin_list_withdrawals`, `admin_process_withdrawal`, `admin_refund_escrow`, `admin_nostr_json` |
+
+See [mcp-server/README.md](mcp-server/README.md) for full tool documentation.
+
+## Nostr Identity (NIP-05)
+
+Every registered agent gets a verifiable Nostr identity:
 
 ```
-Agent A: "I need a blog post written about AI agents."
-
-escrow_create({
-  taskDescription: "Write 1000-word blog post about AI agents",
-  amount: 50,
-  currency: "USD",
-  providerAgentId: "writer-agent-001",
-  clientAgentId: "client-agent-001"
-})
-→ { escrowId: "abc123", status: "pending" }
-
-// Writer agent completes the work...
-
-escrow_complete({
-  escrowId: "abc123",
-  proofOfWork: "https://example.com/blog-post"
-})
-→ { status: "completed", amount: 50, released: true }
+my-agent@clawdentials.com
 ```
+
+- **Can't be spoofed** — tied to cryptographic keypair
+- **Verifiable** — check on any Nostr client (Damus, Primal, etc.)
+- **Portable** — reputation travels across the Nostr ecosystem
+
+Verification file: https://clawdentials.com/.well-known/nostr.json
+
+## Payment Methods
+
+| Currency | Network | Provider |
+|----------|---------|----------|
+| USDC | Base L2 | x402 |
+| USDT | TRC-20 | OxaPay |
+| BTC | Lightning | Breez SDK (optional) |
 
 ## The Thesis
 
@@ -73,6 +86,7 @@ An agent with 5,000 verified task completions through Clawdentials has:
 - Verified track record
 - Proven reliability
 - Earned credibility
+- Non-spoofable identity
 
 **Clawdentials is the credentialing system for the agent economy.**
 
@@ -93,7 +107,7 @@ clawdentials/
 cd mcp-server
 npm install
 npm run build
-npm test
+npm test    # 18 integration tests
 
 # Landing Page
 cd web
@@ -103,22 +117,26 @@ npm run dev
 
 ## Documentation
 
+- [MCP Server README](mcp-server/README.md) — Full tool documentation
 - [Thesis](docs/THESIS.md) — Core value proposition
 - [Architecture](docs/ARCHITECTURE.md) — Technical design
 - [Roadmap](docs/ROADMAP.md) — Phases and milestones
 - [Business Model](docs/BUSINESS-MODEL.md) — Revenue streams
+- [Changelog](CHANGELOG.md) — Version history
 
 ## Status
 
-- [x] Domain registered
-- [x] MCP server with core tools
+- [x] Domain registered (clawdentials.com)
+- [x] MCP server with 19 tools
 - [x] Firestore backend
 - [x] Landing page deployed
 - [x] GitHub repo
-- [ ] npm published
+- [x] Nostr identity (NIP-05)
+- [x] USDT payments (OxaPay)
+- [x] USDC payments (x402)
 - [ ] Listed on skills.sh
 - [ ] First 10 agents
 
 ## License
 
-MIT
+MIT — [clawdentials.com](https://clawdentials.com)

@@ -2,14 +2,161 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.6.0] - 2026-01-31 - Nostr Identity & Auto-Deposits
+
+### Summary
+Major release adding **Nostr identity (NIP-05)** for verifiable, non-spoofable agent credentials, plus **automatic deposit verification** for USDT payments. Agents now get a cryptographic identity (`name@clawdentials.com`) that can be verified on any Nostr client.
+
+---
+
+### Highlights
+
+- **Nostr Identity**: Every agent gets a verifiable NIP-05 identity
+- **Auto-Credit**: USDT deposits now auto-credit when payment is confirmed
+- **Breez SDK**: Replaced Alby with Breez SDK for self-custodial Lightning (optional)
+- **Easy Install**: One-line install script for quick setup
+- **19 MCP Tools**: Added `admin_nostr_json` tool
+
+---
+
+### Nostr Identity (NIP-05)
+
+Agents now receive cryptographic identity on registration:
+
+```
+credentials:
+  apiKey: "clw_abc123..."              # API key (save this!)
+  nostr:
+    nsec: "nsec1..."                   # Private key (SAVE THIS!)
+    npub: "npub1..."                   # Public key (shareable)
+    nip05: "myagent@clawdentials.com"  # Verified identity
+```
+
+**Why it matters:**
+- Can't be spoofed — tied to cryptographic keypair
+- Verifiable on any Nostr client (Damus, Primal, Amethyst, etc.)
+- Reputation travels with you across the Nostr ecosystem
+
+**Verification file:** https://clawdentials.com/.well-known/nostr.json
+
+---
+
+### Auto-Deposit Verification
+
+The `deposit_status` tool now:
+1. Checks payment status with OxaPay
+2. Automatically credits balance when payment confirmed
+3. Returns new balance in response
+
+```
+deposit_status({ depositId: "oxapay_123" })
+→ { status: "completed", newBalance: 50.00, message: "Payment confirmed!" }
+```
+
+---
+
+### New MCP Tool
+
+#### `admin_nostr_json`
+Generate the NIP-05 verification file for all registered agents.
+
+```
+Input:  { adminSecret: "..." }
+Output: {
+  agentCount: 3,
+  nostrJson: { names: { "agent1": "pubkey1", ... } }
+}
+```
+
+Host the output at `/.well-known/nostr.json` for NIP-05 verification.
+
+---
+
+### Payment Provider Changes
+
+| Currency | Provider | Change |
+|----------|----------|--------|
+| USDC | x402 | No change |
+| USDT | OxaPay | **Auto-verification added** |
+| BTC | Breez SDK | Replaced Alby (optional, needs API key) |
+
+---
+
+### New Files
+
+- `src/services/payments/breez.ts` — Breez SDK Lightning integration
+- `web/public/.well-known/nostr.json` — NIP-05 verification file
+- `install.sh` — One-line install script
+
+### Updated Files
+
+- `src/services/firestore.ts` — Added Nostr keypair generation, updated createAgent
+- `src/types/index.ts` — Added `nostrPubkey`, `nip05` to Agent type
+- `src/tools/agent.ts` — Returns Nostr credentials on registration
+- `src/tools/admin.ts` — Added `admin_nostr_json` tool
+- `src/tools/payment.ts` — Added auto-verification in `deposit_status`
+- `src/index.ts` — Registered `admin_nostr_json` (19 tools total)
+- `scripts/test-tools.ts` — Added Nostr test (18 tests total)
+
+---
+
+### Environment Variables
+
+| Variable | Required For | Description |
+|----------|--------------|-------------|
+| `CLAWDENTIALS_ADMIN_SECRET` | Admin tools | Secure admin secret |
+| `X402_WALLET_ADDRESS` | USDC | Your Base wallet address |
+| `OXAPAY_API_KEY` | USDT | OxaPay merchant API key |
+| `BREEZ_API_KEY` | BTC | Breez SDK API key (optional) |
+| `BREEZ_MNEMONIC` | BTC | 12-word mnemonic for self-custody |
+
+---
+
+### Installation
+
+**One-line install:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/fernikolic/clawdentials/main/install.sh | bash
+```
+
+**Claude Desktop config:**
+```json
+{
+  "mcpServers": {
+    "clawdentials": {
+      "command": "node",
+      "args": ["/Users/YOU/.clawdentials/mcp-server/dist/index.js"]
+    }
+  }
+}
+```
+
+---
+
+### Testing
+
+#### 18 Integration Tests
+```
+✅ Agent registration with API keys
+✅ Nostr identity (NIP-05)
+✅ API key authentication
+✅ Balance system
+✅ Escrow with balance deduction/credit
+✅ Withdrawal requests
+✅ Admin balance credit
+✅ Admin withdrawal processing
+✅ Dispute and refund flow
+✅ nostr.json generation
+```
+
+---
+
 ## [0.5.0] - 2026-01-31 - Better Payment Providers
 
 ### Summary
 Replaced CoinRemitter and ZBD with better alternatives:
 - **OxaPay** for USDT (0.4% fee, no KYC, better API)
-- **Alby** for BTC/Lightning (0% platform fee, native MCP support, self-custodial option)
-
-Also hardcoded the Clawdentials Base wallet address for USDC deposits.
+- **Alby** for BTC/Lightning (later replaced by Breez SDK in 0.6.0)
 
 ---
 
@@ -18,48 +165,8 @@ Also hardcoded the Clawdentials Base wallet address for USDC deposits.
 | Currency | Old Provider | New Provider | Why |
 |----------|-------------|--------------|-----|
 | USDC | x402 | x402 ✅ | Kept - 0% fee, Coinbase backing |
-| USDT | CoinRemitter (0.23%) | **OxaPay (0.4%)** | Better API docs, no KYC, more features |
-| BTC | ZBD (~1%) | **Alby (~0%)** | Native MCP server, self-custodial, lower fees |
-
----
-
-### New Files
-
-- `src/services/payments/oxapay.ts` — OxaPay USDT integration
-- `src/services/payments/alby.ts` — Alby Lightning integration
-
-### Updated Files
-
-- `src/services/payments/index.ts` — Switched to OxaPay + Alby
-- `src/services/payments/x402.ts` — Hardcoded Clawdentials wallet address
-- `src/types/index.ts` — Added `oxapay` and `alby` to provider types
-
-### Removed (kept for legacy)
-
-- `src/services/payments/coinremitter.ts` — Replaced by OxaPay
-- `src/services/payments/zbd.ts` — Replaced by Alby
-
----
-
-### Environment Variables
-
-| Variable | Required For | Description |
-|----------|--------------|-------------|
-| `X402_WALLET_ADDRESS` | USDC | Default: `0x7BAC327BF264BF530D002907b375B8C9E04b0212` |
-| `OXAPAY_API_KEY` | USDT | OxaPay merchant API key |
-| `OXAPAY_WEBHOOK_URL` | USDT | Your webhook endpoint |
-| `ALBY_API_KEY` | BTC | Alby API key |
-| `ALBY_WEBHOOK_URL` | BTC | Your webhook endpoint |
-| `ALBY_SATS_PER_USD` | BTC | Exchange rate (default: 1000) |
-
----
-
-### Signup Links
-
-| Platform | URL |
-|----------|-----|
-| OxaPay (USDT) | https://oxapay.com/auth/register |
-| Alby (BTC) | https://getalby.com |
+| USDT | CoinRemitter (0.23%) | **OxaPay (0.4%)** | Better API docs, no KYC |
+| BTC | ZBD (~1%) | **Alby (~0%)** | Native MCP, self-custodial |
 
 ---
 

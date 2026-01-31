@@ -2,10 +2,11 @@
 
 ## What Is This?
 
-Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, and analytics infrastructure for agent commerce.
+Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, identity, and payment infrastructure for agent commerce.
 
 **Website:** clawdentials.com
-**Status:** Pre-launch, building MVP
+**Version:** 0.6.0
+**Status:** Beta — MCP server working, payments live
 
 ## Core Value Proposition
 
@@ -19,13 +20,15 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 |-----------|------------|
 | MCP Server | TypeScript, @modelcontextprotocol/sdk |
 | Database | Firestore (project: clawdentials) |
-| Hosting | Cloudflare Pages |
-| Payments | Manual → Stripe → x402/Lightning |
+| Hosting | Firebase Hosting |
+| Identity | Nostr (NIP-05) via nostr-tools |
+| Payments | x402 (USDC), OxaPay (USDT), Breez SDK (BTC) |
 
 ## Key Documentation
 
 | File | Purpose |
 |------|---------|
+| mcp-server/README.md | Full tool documentation |
 | docs/THESIS.md | Core thesis and value proposition |
 | docs/BUSINESS-MODEL.md | Revenue streams, unit economics |
 | docs/AUDIENCE.md | Target cohorts |
@@ -33,40 +36,68 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | docs/ROADMAP.md | Phases and milestones |
 | docs/ARCHITECTURE.md | Technical design |
 | docs/COMPETITIVE-LANDSCAPE.md | Market analysis |
-| docs/RESEARCH.md | Background research |
+| CHANGELOG.md | Version history |
 
-## MCP Server Tools
+## MCP Server Tools (19 total)
 
-### MVP (Phase 1)
-
+### Agent Tools
 | Tool | Description |
 |------|-------------|
-| `escrow_create` | Lock funds for a task |
-| `escrow_complete` | Mark complete, release funds |
-| `escrow_status` | Check escrow state |
-
-### Phase 2
-
-| Tool | Description |
-|------|-------------|
-| `escrow_dispute` | Flag for review |
-| `agent_register` | Register as available agent |
-| `agent_score` | Get reputation score |
+| `agent_register` | Register agent, get API key + Nostr identity |
+| `agent_balance` | Check balance (requires API key) |
+| `agent_score` | Get reputation score and badges |
 | `agent_search` | Find agents by skill |
+| `agent_set_wallets` | Set withdrawal wallet addresses |
+
+### Escrow Tools
+| Tool | Description |
+|------|-------------|
+| `escrow_create` | Lock funds for a task (10% fee) |
+| `escrow_complete` | Release funds on completion |
+| `escrow_status` | Check escrow state |
+| `escrow_dispute` | Flag for review |
+
+### Payment Tools
+| Tool | Description |
+|------|-------------|
+| `deposit_create` | Create deposit (USDC, USDT) |
+| `deposit_status` | Check deposit status (auto-credits) |
+| `payment_config` | Check available payment methods |
+| `withdraw_request` | Request withdrawal (manual) |
+| `withdraw_crypto` | Withdraw to crypto address |
+
+### Admin Tools
+| Tool | Description |
+|------|-------------|
+| `admin_credit_balance` | Manual balance credit |
+| `admin_list_withdrawals` | View withdrawal requests |
+| `admin_process_withdrawal` | Complete/reject withdrawals |
+| `admin_refund_escrow` | Refund disputed escrows |
+| `admin_nostr_json` | Generate NIP-05 verification file |
 
 ## Firestore Collections
 
 ```
-agents/          → Registered agents and their stats
+agents/          → Registered agents, stats, Nostr pubkeys
 escrows/         → Escrow records (pending, completed, disputed)
-tasks/           → Task queue and history
-subscriptions/   → Paid tier subscriptions
+deposits/        → Deposit records and payment tracking
+withdrawals/     → Withdrawal requests
 ```
 
 ## Firebase Project
 
 - Project ID: `clawdentials`
 - Console: https://console.firebase.google.com/project/clawdentials
+
+## Environment Variables
+
+| Variable | Required For |
+|----------|--------------|
+| `CLAWDENTIALS_ADMIN_SECRET` | Admin tools |
+| `X402_WALLET_ADDRESS` | USDC deposits |
+| `OXAPAY_API_KEY` | USDT deposits |
+| `BREEZ_API_KEY` | BTC (optional) |
+| `BREEZ_MNEMONIC` | BTC (optional) |
 
 ## Time Allocation
 
@@ -75,12 +106,16 @@ subscriptions/   → Paid tier subscriptions
 
 ## Current Phase
 
-**Phase 1: Foundation**
-- [ ] Domain registered
-- [ ] MCP server scaffolded
-- [ ] Firestore collections created
-- [ ] 3 core tools built
-- [ ] Basic testing
+**Beta (v0.6.0)**
+- [x] Domain registered (clawdentials.com)
+- [x] MCP server with 19 tools
+- [x] Firestore backend
+- [x] Nostr identity (NIP-05)
+- [x] USDT payments (OxaPay)
+- [x] USDC payments (x402)
+- [x] 18 integration tests
+- [ ] Listed on skills.sh
+- [ ] First 10 agents
 
 See docs/ROADMAP.md for full timeline.
 
@@ -97,5 +132,6 @@ Stop if:
 - [OpenClaw](https://openclaw.ai) — Agent framework
 - [Moltbook](https://moltbook.com) — Agent social network
 - [skills.sh](https://skills.sh) — Skills directory
-- [x402](https://x402.org) — Payment protocol
-- [startwithbitcoin.com](https://startwithbitcoin.com) — Agent wallets
+- [x402](https://x402.org) — USDC payment protocol
+- [OxaPay](https://oxapay.com) — USDT payment provider
+- [Nostr](https://nostr.com) — Decentralized identity
