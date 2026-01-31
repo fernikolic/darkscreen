@@ -2,6 +2,103 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.4.0] - 2026-01-31 - Crypto Payments
+
+### Summary
+Added crypto payment rails for USDC, USDT, and Bitcoin. Agents can now deposit and withdraw using:
+- **USDC** on Base via x402 protocol (0% facilitator fee)
+- **USDT** on Tron TRC-20 via CoinRemitter (0.23% fee)
+- **BTC** on Lightning via ZBD (~1% fee)
+
+---
+
+### New MCP Tools
+
+#### Payment Tools
+- **`deposit_create`** — Create a deposit request for USDC, USDT, or BTC. Returns payment address/invoice.
+- **`deposit_status`** — Check the status of a pending deposit.
+- **`payment_config`** — See which payment methods are configured and available.
+- **`withdraw_crypto`** — Request withdrawal to wallet address (USDC/USDT) or Lightning invoice/address (BTC).
+- **`agent_set_wallets`** — Set your wallet addresses for receiving withdrawals.
+
+---
+
+### Payment Services
+
+#### x402 (USDC on Base)
+- Integration with Coinbase's x402 protocol
+- Network: Base L2 (EVM)
+- Fee: Free first 1,000 tx/month, then $0.001/tx
+- Requires: `X402_WALLET_ADDRESS` env var
+
+#### CoinRemitter (USDT on TRC-20)
+- Full API integration for invoices, webhooks, and withdrawals
+- Network: Tron TRC-20
+- Fee: 0.23% + ~$0.50 network
+- Requires: `COINREMITTER_API_KEY`, `COINREMITTER_PASSWORD` env vars
+
+#### ZBD (BTC on Lightning)
+- Full API integration for charges, payments, and Lightning Addresses
+- Network: Bitcoin Lightning
+- Fee: ~1%
+- Requires: `ZBD_API_KEY` env var
+
+---
+
+### New Files
+
+- `src/services/payments/x402.ts` — x402/USDC integration
+- `src/services/payments/coinremitter.ts` — CoinRemitter/USDT integration
+- `src/services/payments/zbd.ts` — ZBD/Lightning integration
+- `src/services/payments/index.ts` — Unified payment service
+- `src/tools/payment.ts` — Payment MCP tools
+
+### Updated Files
+
+- `src/types/index.ts` — Added `USDT` currency, `PaymentNetwork`, `Deposit` interface, agent `wallets` field
+- `src/services/firestore.ts` — Added `deposits` collection, updated `Currency` type
+- `src/tools/index.ts` — Export payment tools
+- `src/index.ts` — Registered 5 new payment tools (18 total), version 0.4.0
+
+---
+
+### Environment Variables
+
+| Variable | Required For | Description |
+|----------|--------------|-------------|
+| `X402_WALLET_ADDRESS` | USDC | Your Base wallet address |
+| `X402_FACILITATOR_URL` | USDC | Default: https://x402.org/facilitator |
+| `COINREMITTER_API_KEY` | USDT | CoinRemitter wallet API key |
+| `COINREMITTER_PASSWORD` | USDT | CoinRemitter wallet password |
+| `COINREMITTER_WEBHOOK_URL` | USDT | Your webhook endpoint |
+| `ZBD_API_KEY` | BTC | ZBD API key |
+| `ZBD_CALLBACK_URL` | BTC | Your callback endpoint |
+| `ZBD_SATS_PER_USD` | BTC | Exchange rate (default: 1000) |
+
+---
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Clawdentials MCP Server                  │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
+│  │   x402      │  │ CoinRemitter│  │    ZBD      │         │
+│  │  (USDC)     │  │   (USDT)    │  │   (BTC)     │         │
+│  │  Base L2    │  │   TRC-20    │  │  Lightning  │         │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
+│         │                │                │                 │
+│         ▼                ▼                ▼                 │
+│  ┌─────────────────────────────────────────────────────┐   │
+│  │              Unified Balance Ledger                  │   │
+│  │         (Firestore: agents/{id}/balance)             │   │
+│  └─────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## [0.3.0] - 2026-01-31 - Beta Release
 
 ### Summary

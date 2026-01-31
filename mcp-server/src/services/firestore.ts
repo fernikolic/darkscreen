@@ -1,7 +1,7 @@
 import { initializeApp, getApps, App, applicationDefault } from 'firebase-admin/app';
 import { getFirestore, Firestore, Timestamp } from 'firebase-admin/firestore';
 import { createHash, randomBytes } from 'crypto';
-import type { Escrow, Agent, Task, AgentStats, Withdrawal } from '../types/index.js';
+import type { Escrow, Agent, Task, AgentStats, Withdrawal, Currency } from '../types/index.js';
 
 // Platform fee rate (10%)
 export const FEE_RATE = 0.10;
@@ -51,6 +51,7 @@ export const collections = {
   tasks: () => getDb().collection('tasks'),
   subscriptions: () => getDb().collection('subscriptions'),
   withdrawals: () => getDb().collection('withdrawals'),
+  deposits: () => getDb().collection('deposits'),
 };
 
 // Escrow operations
@@ -488,7 +489,7 @@ export async function refundEscrow(escrowId: string): Promise<Escrow | null> {
 export async function createWithdrawal(
   agentId: string,
   amount: number,
-  currency: 'USD' | 'USDC' | 'BTC',
+  currency: Currency,
   paymentMethod: string
 ): Promise<Withdrawal> {
   // Check balance

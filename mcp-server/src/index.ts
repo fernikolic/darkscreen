@@ -3,7 +3,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { escrowTools, agentTools, adminTools } from './tools/index.js';
+import { escrowTools, agentTools, adminTools, paymentTools } from './tools/index.js';
 import { initFirestore } from './services/firestore.js';
 
 // Initialize Firestore
@@ -12,7 +12,7 @@ initFirestore();
 // Create MCP server
 const server = new McpServer({
   name: 'clawdentials',
-  version: '0.3.0',
+  version: '0.4.0',
 });
 
 // ============ ESCROW TOOLS ============
@@ -23,7 +23,7 @@ server.tool(
   {
     taskDescription: z.string().describe('Description of the task to be completed'),
     amount: z.number().positive().describe('Amount to escrow'),
-    currency: z.enum(['USD', 'USDC', 'BTC']).default('USD').describe('Currency'),
+    currency: z.enum(['USD', 'USDC', 'USDT', 'BTC']).default('USD').describe('Currency'),
     providerAgentId: z.string().describe('ID of the agent who will complete the task'),
     clientAgentId: z.string().describe('ID of the agent creating the escrow'),
     apiKey: z.string().describe('API key for the client agent'),
@@ -137,7 +137,7 @@ server.tool(
     agentId: z.string().describe('ID of the agent'),
     apiKey: z.string().describe('API key for the agent'),
     amount: z.number().positive().describe('Amount to withdraw'),
-    currency: z.enum(['USD', 'USDC', 'BTC']).default('USD').describe('Currency'),
+    currency: z.enum(['USD', 'USDC', 'USDT', 'BTC']).default('USD').describe('Currency'),
     paymentMethod: z.string().describe('Payment method (e.g., "PayPal: email@example.com")'),
   },
   async (args) => {
@@ -155,7 +155,7 @@ server.tool(
     adminSecret: z.string().describe('Admin secret key'),
     agentId: z.string().describe('ID of the agent to credit'),
     amount: z.number().positive().describe('Amount to credit'),
-    currency: z.enum(['USD', 'USDC', 'BTC']).default('USD').describe('Currency'),
+    currency: z.enum(['USD', 'USDC', 'USDT', 'BTC']).default('USD').describe('Currency'),
     notes: z.string().optional().describe('Notes (e.g., "PayPal payment received")'),
   },
   async (args) => {
@@ -206,11 +206,82 @@ server.tool(
   }
 );
 
+// ============ PAYMENT TOOLS ============
+
+server.tool(
+  'deposit_create',
+  paymentTools.deposit_create.description,
+  {
+    agentId: z.string().describe('ID of the agent making the deposit'),
+    apiKey: z.string().describe('API key for the agent'),
+    amount: z.number().positive().describe('Amount to deposit in USD'),
+    currency: z.enum(['USDC', 'USDT', 'BTC']).describe('Cryptocurrency to deposit'),
+  },
+  async (args) => {
+    const result = await paymentTools.deposit_create.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'deposit_status',
+  paymentTools.deposit_status.description,
+  {
+    depositId: z.string().describe('ID of the deposit to check'),
+  },
+  async (args) => {
+    const result = await paymentTools.deposit_status.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'payment_config',
+  paymentTools.payment_config.description,
+  {},
+  async () => {
+    const result = await paymentTools.payment_config.handler();
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'withdraw_crypto',
+  paymentTools.withdraw_crypto.description,
+  {
+    agentId: z.string().describe('ID of the agent'),
+    apiKey: z.string().describe('API key for the agent'),
+    amount: z.number().positive().describe('Amount to withdraw in USD'),
+    currency: z.enum(['USDC', 'USDT', 'BTC']).describe('Cryptocurrency for withdrawal'),
+    destination: z.string().describe('Wallet address (USDC/USDT) or Lightning invoice/address (BTC)'),
+  },
+  async (args) => {
+    const result = await paymentTools.withdraw_crypto.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
+server.tool(
+  'agent_set_wallets',
+  paymentTools.agent_set_wallets.description,
+  {
+    agentId: z.string().describe('ID of the agent'),
+    apiKey: z.string().describe('API key for the agent'),
+    baseAddress: z.string().optional().describe('Base/EVM address for USDC (0x...)'),
+    trc20Address: z.string().optional().describe('TRC-20 address for USDT (T...)'),
+    lightningAddress: z.string().optional().describe('Lightning Address for BTC (user@domain)'),
+  },
+  async (args) => {
+    const result = await paymentTools.agent_set_wallets.handler(args as any);
+    return { content: [{ type: 'text', text: JSON.stringify(result, null, 2) }] };
+  }
+);
+
 // Start server
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('Clawdentials MCP server v0.3.0 running on stdio');
+  console.error('Clawdentials MCP server v0.4.0 running on stdio');
 }
 
 main().catch((error) => {
