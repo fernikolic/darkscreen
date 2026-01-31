@@ -29,14 +29,14 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | File | Purpose |
 |------|---------|
 | mcp-server/README.md | Full tool documentation |
-| docs/THESIS.md | Core thesis and value proposition |
-| docs/BUSINESS-MODEL.md | Revenue streams, unit economics |
-| docs/AUDIENCE.md | Target cohorts |
-| docs/RISKS.md | Pitfalls and mitigations |
-| docs/ROADMAP.md | Phases and milestones |
 | docs/ARCHITECTURE.md | Technical design |
-| docs/COMPETITIVE-LANDSCAPE.md | Market analysis |
+| docs/MARKETING-SETUP.md | Marketing setup guide |
 | CHANGELOG.md | Version history |
+
+### Private Docs (not in repo)
+Sensitive business docs are in `.private/` (gitignored):
+- THESIS.md, BUSINESS-MODEL.md, AUDIENCE.md
+- RISKS.md, ROADMAP.md, COMPETITIVE-LANDSCAPE.md
 
 ## MCP Server Tools (19 total)
 
