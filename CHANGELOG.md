@@ -40,7 +40,7 @@ All notable changes to Clawdentials will be documented in this file.
 - ✅ escrow_status - Returns full escrow details
 
 ### Pending
-- [ ] npm package publish (`clawdentials-mcp`) - needs npm login
+- [x] npm package publish: https://www.npmjs.com/package/clawdentials-mcp
 - [ ] skills.sh listing
 - [ ] First agent registrations
 
