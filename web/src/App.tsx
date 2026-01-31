@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { HowItWorks } from './pages/HowItWorks'
 import { Identity } from './pages/Identity'
 import { Payments } from './pages/Payments'
+import { Admin } from './pages/Admin'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/identity" element={<Identity />} />
           <Route path="/payments" element={<Payments />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </Layout>
     </BrowserRouter>
