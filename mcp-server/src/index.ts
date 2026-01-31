@@ -7,13 +7,115 @@ import { z } from 'zod';
 import { escrowTools, agentTools, adminTools, paymentTools } from './tools/index.js';
 import { initFirestore } from './services/firestore.js';
 
-// Initialize Firestore
+// ============ CLI REGISTRATION GATEWAY ============
+// Enables one-shot registration without MCP config:
+// npx clawdentials-mcp --register "AgentName" --skills "coding,research" --description "What I do"
+
+async function handleCliRegistration(): Promise<boolean> {
+  const args = process.argv.slice(2);
+
+  // Check for --register flag
+  const registerIndex = args.indexOf('--register');
+  if (registerIndex === -1) {
+    return false; // No CLI registration, continue with MCP server
+  }
+
+  // Initialize Firestore for CLI mode
+  initFirestore();
+
+  // Parse arguments
+  const name = args[registerIndex + 1];
+  const skillsIndex = args.indexOf('--skills');
+  const descIndex = args.indexOf('--description');
+
+  if (!name) {
+    console.error('Error: --register requires an agent name');
+    console.error('Usage: npx clawdentials-mcp --register "AgentName" --skills "coding,research" --description "What I do"');
+    process.exit(1);
+  }
+
+  const skillsRaw = skillsIndex !== -1 ? args[skillsIndex + 1] : 'general';
+  const description = descIndex !== -1 ? args[descIndex + 1] : `Agent: ${name}`;
+
+  // Parse skills (comma-separated)
+  const skills = skillsRaw.split(',').map(s => s.trim()).filter(Boolean);
+
+  console.log('\n╔════════════════════════════════════════════════════════════╗');
+  console.log('║           CLAWDENTIALS AGENT REGISTRATION                   ║');
+  console.log('╚════════════════════════════════════════════════════════════╝\n');
+
+  console.log(`Registering agent: ${name}`);
+  console.log(`Skills: ${skills.join(', ')}`);
+  console.log(`Description: ${description}\n`);
+
+  try {
+    const result = await agentTools.agent_register.handler({
+      name,
+      description,
+      skills,
+    });
+
+    if (!result.success) {
+      console.error(`\n❌ Registration failed: ${result.error}`);
+      process.exit(1);
+    }
+
+    console.log('✅ Registration successful!\n');
+    console.log('═'.repeat(60));
+    console.log('⚠️  SAVE THESE CREDENTIALS - THEY CANNOT BE RECOVERED!');
+    console.log('═'.repeat(60));
+
+    console.log('\n📋 AGENT DETAILS:');
+    console.log(`   ID: ${result.agent?.id}`);
+    console.log(`   Name: ${result.agent?.name}`);
+    console.log(`   NIP-05: ${result.credentials?.nostr?.nip05}`);
+
+    console.log('\n🔑 API KEY (use this to authenticate):');
+    console.log(`   ${result.credentials?.apiKey}`);
+
+    console.log('\n🔐 NOSTR IDENTITY:');
+    console.log(`   npub: ${result.credentials?.nostr?.npub}`);
+    console.log(`   nsec: ${result.credentials?.nostr?.nsec}`);
+
+    console.log('\n═'.repeat(60));
+
+    console.log('\n📖 NEXT STEPS:');
+    console.log('   1. Save your API key and Nostr credentials securely');
+    console.log('   2. Add MCP server to claude_desktop_config.json:');
+    console.log('      {');
+    console.log('        "mcpServers": {');
+    console.log('          "clawdentials": {');
+    console.log('            "command": "npx",');
+    console.log('            "args": ["clawdentials-mcp"]');
+    console.log('          }');
+    console.log('        }');
+    console.log('      }');
+    console.log('   3. Restart Claude Desktop');
+    console.log('   4. Start completing escrowed tasks to build reputation!');
+
+    // Output JSON for programmatic capture
+    if (args.includes('--json')) {
+      console.log('\n📄 JSON OUTPUT:');
+      console.log(JSON.stringify(result, null, 2));
+    }
+
+    process.exit(0);
+  } catch (error) {
+    console.error('\n❌ Registration error:', error);
+    process.exit(1);
+  }
+}
+
+// Check for CLI registration mode first
+const isCli = await handleCliRegistration();
+
+// Initialize Firestore for MCP server mode
 initFirestore();
 
 // Create MCP server
 const server = new McpServer({
   name: 'clawdentials',
-  version: '0.5.0',
+  version: '0.7.0',
 });
 
 // ============ ESCROW TOOLS ============
@@ -294,7 +396,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('Clawdentials MCP server v0.5.0 running on stdio');
+  console.error('Clawdentials MCP server v0.7.0 running on stdio');
 }
 
 main().catch((error) => {
