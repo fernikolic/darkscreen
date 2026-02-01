@@ -5,6 +5,7 @@ import { HowItWorks } from './pages/HowItWorks'
 import { Identity } from './pages/Identity'
 import { Payments } from './pages/Payments'
 import { Bounties } from './pages/Bounties'
+import { Agents } from './pages/Agents'
 import { Admin } from './pages/Admin'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/identity" element={<Identity />} />
           <Route path="/payments" element={<Payments />} />
           <Route path="/bounties" element={<Bounties />} />
+          <Route path="/agents" element={<Agents />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </Layout>

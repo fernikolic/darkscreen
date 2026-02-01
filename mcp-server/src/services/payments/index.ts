@@ -13,6 +13,24 @@ import { cashuService } from './cashu.js';
 import { breezService } from './breez.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
+// BTC price for USD to sats conversion (update periodically or fetch from API)
+// At ~$97,000/BTC: 1 USD ≈ 1030 sats
+const SATS_PER_USD = 1030;
+
+/**
+ * Convert USD to satoshis
+ */
+function usdToSats(usd: number): number {
+  return Math.floor(usd * SATS_PER_USD);
+}
+
+/**
+ * Convert satoshis to USD
+ */
+function satsToUsd(sats: number): number {
+  return sats / SATS_PER_USD;
+}
+
 export { x402Service } from './x402.js';
 export { oxapayService } from './oxapay.js';
 export { cashuService } from './cashu.js';
@@ -26,7 +44,7 @@ export { breezService as zbdService } from './breez.js';
 export interface CreateDepositRequest {
   agentId: string;
   amount: number;
-  currency: 'USDC' | 'USDT' | 'BTC';
+  currency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
   description?: string;
 }
 
@@ -116,9 +134,42 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     }
 
     case 'BTC': {
-      // Use Cashu for BTC - no KYC, privacy-preserving ecash
+      // Use OxaPay for on-chain BTC (more accessible than Lightning)
+      const result = await oxapayService.createDeposit({
+        amount: request.amount,
+        agentId: request.agentId,
+        description: request.description,
+        currency: 'BTC', // On-chain BTC
+      });
+
+      if (!result.success) {
+        return { success: false, error: result.error };
+      }
+
+      return {
+        success: true,
+        deposit: {
+          ...result.deposit,
+          currency: 'BTC',
+        },
+        paymentInstructions: {
+          currency: 'BTC',
+          network: 'base' as PaymentNetwork, // OxaPay handles multiple networks
+          url: result.invoice?.paymentUrl,
+          amount: request.amount,
+          expiresAt: result.deposit?.expiresAt || undefined,
+          qrData: result.invoice?.paymentUrl,
+        },
+      };
+    }
+
+    case 'BTC_LIGHTNING': {
+      // Use Cashu for Lightning BTC - no KYC, privacy-preserving ecash
+      // Convert USD to sats (Cashu expects sats)
+      const amountSats = usdToSats(request.amount);
+
       const result = await cashuService.createDeposit({
-        amount: request.amount, // Amount in sats
+        amount: amountSats, // Amount in sats
         agentId: request.agentId,
         description: request.description,
       });
@@ -132,7 +183,7 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
         deposit: {
           id: result.quote?.quoteId,
           agentId: request.agentId,
-          amount: request.amount,
+          amount: request.amount, // Store USD amount
           currency: 'BTC',
           status: 'pending',
           provider: 'cashu',
@@ -143,8 +194,8 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
           currency: 'BTC',
           network: 'lightning',
           address: result.quote?.bolt11, // Lightning invoice
-          amount: request.amount,
-          amountRaw: result.quote?.amount?.toString(),
+          amount: request.amount, // USD amount for display
+          amountRaw: `${amountSats} sats`, // Sats for clarity
           expiresAt: result.quote?.expiresAt,
           qrData: result.quote?.bolt11, // Lightning invoice for QR
         },
@@ -154,7 +205,7 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     default:
       return {
         success: false,
-        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC`,
+        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC (on-chain), BTC_LIGHTNING`,
       };
   }
 }
@@ -200,7 +251,7 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     default:
       return {
         success: false,
-        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC`,
+        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC (on-chain), BTC_LIGHTNING`,
       };
   }
 }
