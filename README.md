@@ -134,10 +134,13 @@ npm run dev
 ## Documentation
 
 - [MCP Server README](mcp-server/README.md) — Full tool documentation
-- [Thesis](docs/THESIS.md) — Core value proposition
+- [API Reference](docs/API-REFERENCE.md) — Endpoints, request/response shapes
 - [Architecture](docs/ARCHITECTURE.md) — Technical design
-- [Roadmap](docs/ROADMAP.md) — Phases and milestones
-- [Business Model](docs/BUSINESS-MODEL.md) — Revenue streams
+- [Security](docs/SECURITY.md) — Threat model & security controls
+- [Growth Playbook](docs/GROWTH-PLAYBOOK.md) — Distribution & adoption plan
+- [Research](docs/RESEARCH.md) — Market + competitor research
+- [Marketing Setup](docs/MARKETING-SETUP.md) — Launch checklist
+- [Marketing Posts](docs/MARKETING-POSTS.md) — Copy/paste snippets
 - [Changelog](CHANGELOG.md) — Version history
 
 ## HTTP API
