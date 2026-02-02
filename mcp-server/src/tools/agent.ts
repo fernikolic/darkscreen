@@ -62,7 +62,7 @@ export const agentTools = {
           name: input.name,
           description: input.description,
           skills: input.skills,
-          verified: false,
+          verified: true, // All agents are verified via NIP-05 at signup
           subscriptionTier: 'free',
           moltbookId: moltbookData?.id,
           moltbookKarma: moltbookData?.karma,
@@ -138,7 +138,7 @@ export const agentTools = {
 
       // Determine badge based on score and stats
       const badges: string[] = [];
-      if (agent.verified) badges.push('Verified');
+      if (agent.nip05) badges.push('NIP-05 Verified'); // Cryptographic identity
       if (agent.moltbookId) badges.push('Moltbook Linked');
       if (agent.stats.tasksCompleted >= 100) badges.push('Experienced');
       if (agent.stats.tasksCompleted >= 1000) badges.push('Expert');

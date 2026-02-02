@@ -276,11 +276,12 @@ export async function getOrCreateAgent(agentId: string): Promise<Agent> {
   }
 
   // Auto-create minimal agent record for tracking
+  // Note: auto-created agents get NIP-05 too, so they're verified
   const { agent } = await createAgent({
     name: agentId,
     description: 'Auto-registered agent',
     skills: [],
-    verified: false,
+    verified: true, // NIP-05 verified at creation
     subscriptionTier: 'free',
   });
   return agent;

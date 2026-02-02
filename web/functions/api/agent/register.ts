@@ -88,7 +88,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       description: body.description,
       skills: body.skills,
       createdAt: now,
-      verified: false,
+      verified: true, // NIP-05 verified at signup
       subscriptionTier: 'free',
       stats: {
         tasksCompleted: 0,
@@ -129,7 +129,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
           name,
           description: body.description,
           skills: body.skills,
-          verified: false,
+          verified: true, // NIP-05 verified at signup
           subscriptionTier: 'free',
           balance: 0,
           nip05,

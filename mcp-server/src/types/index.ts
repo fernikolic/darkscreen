@@ -1,5 +1,6 @@
 export type EscrowStatus =
-  | 'pending'
+  | 'pending_payment'  // Awaiting funding (invoice generated)
+  | 'pending'          // Funded, ready for work
   | 'in_progress'
   | 'completed'
   | 'disputed'
@@ -51,6 +52,10 @@ export interface Escrow {
   completedAt: Date | null;
   proofOfWork: string | null;
   disputeReason: string | null;
+  // Payment tracking (for pending_payment escrows)
+  paymentInvoice?: string | null;      // Lightning invoice or payment URL
+  paymentDepositId?: string | null;    // Links to deposits collection
+  paymentExpiresAt?: Date | null;      // Invoice expiration
 }
 
 export interface Agent {

@@ -16,11 +16,15 @@ import {
   createEscrowWithBalance,
   completeEscrowWithBalance,
   getBalance,
+  collections,
+  getDb,
 } from '../services/firestore.js';
+import { createDeposit } from '../services/payments/index.js';
+import { Timestamp } from 'firebase-admin/firestore';
 
 export const escrowTools = {
   escrow_create: {
-    description: 'Create a new escrow to lock funds for a task. Requires API key and sufficient balance.',
+    description: 'Create a new escrow to lock funds for a task. If you have sufficient balance, funds are locked immediately. If not, an invoice is generated for the selected currency (USDC/USDT/BTC).',
     inputSchema: escrowCreateSchema,
     handler: async (input: EscrowCreateInput) => {
       // Validate API key
@@ -34,47 +38,141 @@ export const escrowTools = {
 
       // Check balance first
       const balance = await getBalance(input.clientAgentId);
-      if (balance < input.amount) {
-        return {
-          success: false,
-          error: `Insufficient balance: have ${balance} ${input.currency}, need ${input.amount} ${input.currency}. Add funds first.`,
-        };
-      }
+      const hasBalance = balance >= input.amount;
 
-      try {
-        const escrow = await createEscrowWithBalance({
-          clientAgentId: input.clientAgentId,
-          providerAgentId: input.providerAgentId,
-          taskDescription: input.taskDescription,
-          amount: input.amount,
-          currency: input.currency,
-          status: 'pending',
-        });
+      if (hasBalance) {
+        // Client has sufficient balance - create funded escrow
+        try {
+          const escrow = await createEscrowWithBalance({
+            clientAgentId: input.clientAgentId,
+            providerAgentId: input.providerAgentId,
+            taskDescription: input.taskDescription,
+            amount: input.amount,
+            currency: input.currency,
+            status: 'pending',
+          });
 
-        const netAmount = escrow.amount - escrow.fee;
+          const netAmount = escrow.amount - escrow.fee;
 
-        return {
-          success: true,
-          escrowId: escrow.id,
-          message: `Escrow created. ${input.amount} ${input.currency} deducted from your balance. Provider receives ${netAmount} ${input.currency} on completion (${FEE_RATE * 100}% fee).`,
-          escrow: {
-            id: escrow.id,
-            amount: escrow.amount,
-            fee: escrow.fee,
-            feeRate: escrow.feeRate,
-            netAmount,
-            currency: escrow.currency,
-            status: escrow.status,
-            providerAgentId: escrow.providerAgentId,
-            createdAt: escrow.createdAt.toISOString(),
-          },
-          newBalance: balance - input.amount,
-        };
-      } catch (error) {
-        return {
-          success: false,
-          error: error instanceof Error ? error.message : 'Failed to create escrow',
-        };
+          return {
+            success: true,
+            escrowId: escrow.id,
+            funded: true,
+            message: `Escrow created and funded. ${input.amount} ${input.currency} deducted from your balance. Provider receives ${netAmount} ${input.currency} on completion (${FEE_RATE * 100}% fee).`,
+            escrow: {
+              id: escrow.id,
+              amount: escrow.amount,
+              fee: escrow.fee,
+              feeRate: escrow.feeRate,
+              netAmount,
+              currency: escrow.currency,
+              status: escrow.status,
+              providerAgentId: escrow.providerAgentId,
+              createdAt: escrow.createdAt.toISOString(),
+            },
+            newBalance: balance - input.amount,
+          };
+        } catch (error) {
+          return {
+            success: false,
+            error: error instanceof Error ? error.message : 'Failed to create escrow',
+          };
+        }
+      } else {
+        // Insufficient balance - generate invoice for the escrow amount
+        try {
+          // Map currency to payment currency
+          const paymentCurrency = input.currency === 'USD' ? 'USDC' : input.currency;
+
+          // Create deposit request for the escrow amount
+          const depositResult = await createDeposit({
+            agentId: input.clientAgentId,
+            amount: input.amount,
+            currency: paymentCurrency as 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING',
+            description: `Escrow funding for: ${input.taskDescription.substring(0, 50)}`,
+          });
+
+          if (!depositResult.success) {
+            return {
+              success: false,
+              error: `Failed to generate invoice: ${depositResult.error}`,
+            };
+          }
+
+          // Create escrow in pending_payment status
+          const fee = input.amount * FEE_RATE;
+          const escrowRef = collections.escrows().doc();
+          const escrowData = {
+            clientAgentId: input.clientAgentId,
+            providerAgentId: input.providerAgentId,
+            taskDescription: input.taskDescription,
+            amount: input.amount,
+            fee,
+            feeRate: FEE_RATE,
+            currency: input.currency,
+            status: 'pending_payment',
+            createdAt: Timestamp.fromDate(new Date()),
+            completedAt: null,
+            proofOfWork: null,
+            disputeReason: null,
+            // Payment tracking
+            paymentDepositId: depositResult.deposit?.id || null,
+            paymentInvoice: depositResult.paymentInstructions?.address || depositResult.paymentInstructions?.url || null,
+            paymentExpiresAt: depositResult.paymentInstructions?.expiresAt
+              ? Timestamp.fromDate(depositResult.paymentInstructions.expiresAt)
+              : null,
+          };
+
+          await escrowRef.set(escrowData);
+
+          // Store deposit in Firestore with escrow link
+          if (depositResult.deposit) {
+            const depositRef = getDb().collection('deposits').doc(depositResult.deposit.id as string);
+            await depositRef.set({
+              ...depositResult.deposit,
+              escrowId: escrowRef.id, // Link deposit to escrow
+              createdAt: Timestamp.fromDate(depositResult.deposit.createdAt as Date),
+              expiresAt: depositResult.deposit.expiresAt
+                ? Timestamp.fromDate(depositResult.deposit.expiresAt as Date)
+                : null,
+            });
+          }
+
+          const netAmount = input.amount - fee;
+
+          return {
+            success: true,
+            escrowId: escrowRef.id,
+            funded: false,
+            status: 'pending_payment',
+            message: `Escrow created but not yet funded. Pay the invoice to activate it. Provider will receive ${netAmount} ${input.currency} on completion.`,
+            escrow: {
+              id: escrowRef.id,
+              amount: input.amount,
+              fee,
+              feeRate: FEE_RATE,
+              netAmount,
+              currency: input.currency,
+              status: 'pending_payment',
+              providerAgentId: input.providerAgentId,
+              createdAt: new Date().toISOString(),
+            },
+            payment: {
+              currency: paymentCurrency,
+              amount: input.amount,
+              depositId: depositResult.deposit?.id,
+              instructions: depositResult.paymentInstructions,
+              message: `Pay ${input.amount} ${paymentCurrency} to fund this escrow`,
+            },
+            currentBalance: balance,
+            shortfall: input.amount - balance,
+          };
+        } catch (error) {
+          return {
+            success: false,
+            error: error instanceof Error ? error.message : 'Failed to create escrow with invoice',
+          };
+        }
       }
     },
   },

@@ -8,6 +8,7 @@ import {
   paymentService,
   getPaymentConfig,
   oxapayService,
+  cashuService,
 } from '../services/payments/index.js';
 import {
   validateApiKey,
@@ -169,6 +170,39 @@ export const paymentTools = {
         const newBalance = await getBalance(data.agentId);
         response.message = `Payment confirmed! $${data.amount} credited to your balance.`;
         response.newBalance = newBalance;
+
+        // Check if this deposit is linked to an escrow and activate it
+        if (data.escrowId) {
+          const escrowRef = getDb().collection('escrows').doc(data.escrowId);
+          const escrowDoc = await escrowRef.get();
+          if (escrowDoc.exists && escrowDoc.data()?.status === 'pending_payment') {
+            // Activate the escrow
+            await escrowRef.update({
+              status: 'pending',
+              paymentCompletedAt: Timestamp.fromDate(new Date()),
+            });
+            response.escrowActivated = true;
+            response.escrowId = data.escrowId;
+            response.message += ` Escrow ${data.escrowId} is now active!`;
+          }
+        }
+
+        // Check if this deposit is linked to a bounty and fund it
+        if (data.bountyId) {
+          const bountyRef = getDb().collection('bounties').doc(data.bountyId);
+          const bountyDoc = await bountyRef.get();
+          if (bountyDoc.exists && bountyDoc.data()?.status === 'draft') {
+            // Fund and open the bounty
+            await bountyRef.update({
+              status: 'open',
+              escrowId: `bounty_${data.bountyId}`,
+              paymentCompletedAt: Timestamp.fromDate(new Date()),
+            });
+            response.bountyFunded = true;
+            response.bountyId = data.bountyId;
+            response.message += ` Bounty ${data.bountyId} is now open for claims!`;
+          }
+        }
       }
 
       return response;
@@ -478,6 +512,34 @@ async function verifyDepositWithProvider(deposit: any): Promise<{
     case 'breez': {
       // BTC via Breez - SDK handles verification internally
       // For now, return pending (Breez callbacks would update this)
+      return { paid: false, status: 'pending' };
+    }
+
+    case 'cashu': {
+      // BTC via Cashu (Lightning)
+      // Check if invoice was paid and mint proofs
+      if (!externalId) {
+        return { paid: false, status: 'pending' };
+      }
+
+      const amountSats = deposit.amountSats || deposit.amount;
+      const result = await cashuService.checkDepositAndMint(externalId, amountSats);
+
+      if (!result.success) {
+        return { paid: false, status: 'pending' };
+      }
+
+      if (result.paid) {
+        // Store the proofs in the deposit record - they ARE the money
+        if (result.proofs && result.proofs.length > 0) {
+          const depositRef = getDb().collection('deposits').doc(deposit.id);
+          await depositRef.update({
+            proofs: result.proofs,
+          });
+        }
+        return { paid: true, status: 'completed' };
+      }
+
       return { paid: false, status: 'pending' };
     }
 

@@ -24,6 +24,7 @@ import {
   getDb,
   collections,
 } from '../services/firestore.js';
+import { createDeposit } from '../services/payments/index.js';
 import { Timestamp } from 'firebase-admin/firestore';
 import type { Bounty, BountyClaim, BountyListing } from '../types/index.js';
 
@@ -285,28 +286,82 @@ export const bountyTools = {
         }
 
         const balance = await getBalance(input.agentId);
-        if (balance < bounty.amount) {
+
+        if (balance >= bounty.amount) {
+          // Has balance - fund immediately
+          await debitBalance(input.agentId, bounty.amount);
+          await bountyRef.update({
+            status: 'open',
+            escrowId: `bounty_${bounty.id}`,
+          });
+
           return {
-            success: false,
-            error: `Insufficient balance. Have: ${balance}, need: ${bounty.amount}`,
+            success: true,
+            funded: true,
+            message: `Bounty funded! ${bounty.amount} ${bounty.currency} locked. Agents can now claim it.`,
+            bounty: {
+              id: bounty.id,
+              title: bounty.title,
+              status: 'open',
+            },
+          };
+        } else {
+          // Insufficient balance - generate invoice
+          const paymentCurrency = bounty.currency === 'USD' ? 'USDC' : bounty.currency;
+
+          const depositResult = await createDeposit({
+            agentId: input.agentId,
+            amount: bounty.amount,
+            currency: paymentCurrency as 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING',
+            description: `Bounty funding: ${bounty.title.substring(0, 50)}`,
+          });
+
+          if (!depositResult.success) {
+            return {
+              success: false,
+              error: `Failed to generate invoice: ${depositResult.error}`,
+            };
+          }
+
+          // Store deposit with bounty link
+          if (depositResult.deposit) {
+            const depositRef = getDb().collection('deposits').doc(depositResult.deposit.id as string);
+            await depositRef.set({
+              ...depositResult.deposit,
+              bountyId: bounty.id, // Link deposit to bounty
+              createdAt: Timestamp.fromDate(depositResult.deposit.createdAt as Date),
+              expiresAt: depositResult.deposit.expiresAt
+                ? Timestamp.fromDate(depositResult.deposit.expiresAt as Date)
+                : null,
+            });
+          }
+
+          // Update bounty with pending payment info
+          await bountyRef.update({
+            paymentDepositId: depositResult.deposit?.id || null,
+            paymentInvoice: depositResult.paymentInstructions?.address || depositResult.paymentInstructions?.url || null,
+          });
+
+          return {
+            success: true,
+            funded: false,
+            message: `Invoice generated. Pay to fund the bounty and make it visible to agents.`,
+            bounty: {
+              id: bounty.id,
+              title: bounty.title,
+              status: 'draft',
+            },
+            payment: {
+              currency: paymentCurrency,
+              amount: bounty.amount,
+              depositId: depositResult.deposit?.id,
+              instructions: depositResult.paymentInstructions,
+              message: `Pay ${bounty.amount} ${paymentCurrency} to fund this bounty`,
+            },
+            currentBalance: balance,
+            shortfall: bounty.amount - balance,
           };
         }
-
-        await debitBalance(input.agentId, bounty.amount);
-        await bountyRef.update({
-          status: 'open',
-          escrowId: `bounty_${bounty.id}`,
-        });
-
-        return {
-          success: true,
-          message: `Bounty funded! ${bounty.amount} ${bounty.currency} locked. Agents can now claim it.`,
-          bounty: {
-            id: bounty.id,
-            title: bounty.title,
-            status: 'open',
-          },
-        };
       } catch (error) {
         return {
           success: false,
