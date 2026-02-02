@@ -11,6 +11,7 @@ import { x402Service } from './x402.js';
 import { oxapayService } from './oxapay.js';
 import { cashuService } from './cashu.js';
 import { breezService } from './breez.js';
+import { breezSparkService } from './breez-spark.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
 // BTC price for USD to sats conversion (update periodically or fetch from API)
@@ -35,6 +36,7 @@ export { x402Service } from './x402.js';
 export { oxapayService } from './oxapay.js';
 export { cashuService } from './cashu.js';
 export { breezService } from './breez.js';
+export { breezSparkService } from './breez-spark.js';
 
 // Legacy exports for backwards compatibility
 export { oxapayService as coinremitterService } from './oxapay.js';
@@ -164,43 +166,87 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     }
 
     case 'BTC_LIGHTNING': {
-      // Use Cashu for Lightning BTC - no KYC, privacy-preserving ecash
-      // Convert USD to sats (Cashu expects sats)
+      // Use Breez Spark for Lightning BTC - self-custodial
       const amountSats = usdToSats(request.amount);
 
-      const result = await cashuService.createDeposit({
-        amount: amountSats, // Amount in sats
-        agentId: request.agentId,
-        description: request.description,
-      });
+      // Ensure agent has a wallet, create if not
+      if (!breezSparkService.hasWallet(request.agentId)) {
+        const walletResult = await breezSparkService.createWallet(request.agentId);
+        if (!walletResult.success) {
+          return { success: false, error: walletResult.error };
+        }
+      }
+
+      // Create Lightning invoice
+      const result = await breezSparkService.receivePayment(
+        request.agentId,
+        'lightning',
+        amountSats,
+        request.description || `Deposit for ${request.agentId}`
+      );
 
       if (!result.success) {
-        return { success: false, error: result.error };
+        // Fallback to Cashu if Breez fails
+        const cashuResult = await cashuService.createDeposit({
+          amount: amountSats,
+          agentId: request.agentId,
+          description: request.description,
+        });
+
+        if (!cashuResult.success) {
+          return { success: false, error: result.error || cashuResult.error };
+        }
+
+        return {
+          success: true,
+          deposit: {
+            id: cashuResult.quote?.quoteId,
+            agentId: request.agentId,
+            amount: request.amount,
+            amountSats: amountSats,
+            bolt11: cashuResult.quote?.bolt11,
+            externalId: cashuResult.quote?.quoteId,
+            currency: 'BTC',
+            status: 'pending',
+            provider: 'cashu',
+            createdAt: new Date(),
+            expiresAt: cashuResult.quote?.expiresAt,
+          },
+          paymentInstructions: {
+            currency: 'BTC',
+            network: 'lightning',
+            address: cashuResult.quote?.bolt11,
+            amount: request.amount,
+            amountRaw: `${amountSats} sats`,
+            expiresAt: cashuResult.quote?.expiresAt,
+            qrData: cashuResult.quote?.bolt11,
+          },
+        };
       }
+
+      // Generate unique deposit ID
+      const depositId = `breez_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
       return {
         success: true,
         deposit: {
-          id: result.quote?.quoteId,
+          id: depositId,
           agentId: request.agentId,
-          amount: request.amount, // Store USD amount
-          amountSats: amountSats, // CRITICAL: Store sats amount for minting proofs
-          bolt11: result.quote?.bolt11, // CRITICAL: Store invoice for recovery/tracking
-          externalId: result.quote?.quoteId, // CRITICAL: Quote ID for verification
+          amount: request.amount,
+          amountSats: amountSats,
+          bolt11: result.invoice,
           currency: 'BTC',
           status: 'pending',
-          provider: 'cashu',
+          provider: 'breez',
           createdAt: new Date(),
-          expiresAt: result.quote?.expiresAt,
         },
         paymentInstructions: {
           currency: 'BTC',
           network: 'lightning',
-          address: result.quote?.bolt11, // Lightning invoice
-          amount: request.amount, // USD amount for display
-          amountRaw: `${amountSats} sats`, // Sats for clarity
-          expiresAt: result.quote?.expiresAt,
-          qrData: result.quote?.bolt11, // Lightning invoice for QR
+          address: result.invoice,
+          amount: request.amount,
+          amountRaw: `${amountSats} sats`,
+          qrData: result.invoice,
         },
       };
     }
@@ -267,6 +313,10 @@ export function getPaymentConfig(): {
   usdt: { configured: boolean; network: string; provider: string };
   btc: { configured: boolean; network: string; provider: string };
 } {
+  // Prefer Breez Spark if configured, fall back to Cashu
+  const btcConfigured = breezSparkService.config.configured || cashuService.config.configured;
+  const btcProvider = breezSparkService.config.configured ? 'Breez Spark (self-custodial)' : 'Cashu ecash';
+
   return {
     usdc: {
       configured: !!x402Service.config.walletAddress,
@@ -279,9 +329,9 @@ export function getPaymentConfig(): {
       provider: 'OxaPay',
     },
     btc: {
-      configured: cashuService.config.configured,
-      network: 'Lightning (Cashu)',
-      provider: 'Cashu ecash',
+      configured: btcConfigured,
+      network: 'Lightning',
+      provider: btcProvider,
     },
   };
 }
@@ -294,5 +344,6 @@ export const paymentService = {
   x402: x402Service,
   oxapay: oxapayService,
   cashu: cashuService,
-  breez: breezService, // Legacy, kept for backwards compatibility
+  breez: breezService, // Legacy
+  breezSpark: breezSparkService, // Self-custodial Lightning
 };

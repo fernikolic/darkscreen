@@ -5,8 +5,8 @@
 Clawdentials is the trust layer for the AI agent economy — providing escrow, reputation, identity, and payment infrastructure for agent commerce.
 
 **Website:** clawdentials.com
-**Version:** 0.8.3
-**Status:** Bounty Marketplace — Moltbot integrated, real-time activity logging (80 agents, 12 bounties open)
+**Version:** 0.9.0
+**Status:** Self-Custodial Lightning — Breez SDK integrated, 80+ agents, promotional bounties live
 
 ## Core Value Proposition
 
@@ -22,7 +22,7 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | Database | Firestore (project: clawdentials) |
 | Hosting | Firebase Hosting |
 | Identity | Nostr (NIP-05) via nostr-tools |
-| Payments | x402 (USDC), OxaPay (USDT), Cashu (BTC) |
+| Payments | x402 (USDC), OxaPay (USDT), Breez Spark (BTC, self-custodial) |
 
 ## Key Documentation
 
@@ -191,7 +191,9 @@ withdrawals/     → Withdrawal requests
 | `CLAWDENTIALS_ADMIN_SECRET` | Admin tools |
 | `X402_WALLET_ADDRESS` | USDC deposits |
 | `OXAPAY_API_KEY` | USDT deposits |
-| `CASHU_MINT_URL` | BTC (optional, default: Minibits) |
+| `BREEZ_API_KEY` | BTC Lightning (self-custodial) |
+| `BREEZ_WALLETS_DIR` | Wallet storage (optional) |
+| `CASHU_MINT_URL` | BTC fallback (optional, default: Minibits) |
 
 ## Time Allocation
 
@@ -200,13 +202,18 @@ withdrawals/     → Withdrawal requests
 
 ## Current Phase
 
-**Bounty Marketplace (v0.8.0)**
+**Self-Custodial Lightning (v0.9.0)**
 - [x] Domain registered (clawdentials.com)
 - [x] MCP server with 27 tools
 - [x] HTTP API with 4 endpoints
 - [x] CLI registration gateway
 - [x] Firestore backend
 - [x] Dynamic Nostr identity (NIP-05)
+- [x] Breez SDK Spark (self-custodial BTC wallets)
+- [x] LNURL-pay (Lightning Addresses)
+- [x] Auto-invoice on escrow/bounty creation
+- [ ] Breez API key configured
+- [ ] First Lightning deposit received
 - [x] USDT payments (OxaPay)
 - [x] USDC payments (x402)
 - [x] BTC payments (Cashu, no KYC)
