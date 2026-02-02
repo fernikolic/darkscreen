@@ -2,6 +2,13 @@ import { useState, useEffect } from 'react'
 import { db } from '../firebase'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { Link } from 'react-router-dom'
+import { CurrencySelector } from '../components/CurrencySelector'
+import type { DisplayCurrency } from '../utils/currency'
+import {
+  getStoredCurrency,
+  setStoredCurrency,
+  convertAndFormat,
+} from '../utils/currency'
 
 interface Bounty {
   id: string
@@ -44,6 +51,13 @@ export function Bounties() {
   const [bounties, setBounties] = useState<Bounty[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<'open' | 'all'>('open')
+  const [displayCurrency, setDisplayCurrency] = useState<DisplayCurrency>(() => getStoredCurrency())
+
+  // Persist currency preference
+  const handleCurrencyChange = (currency: DisplayCurrency) => {
+    setDisplayCurrency(currency)
+    setStoredCurrency(currency)
+  }
 
   useEffect(() => {
     const fetchBounties = async () => {
@@ -132,7 +146,9 @@ export function Bounties() {
             <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Open Bounties</div>
           </div>
           <div className="text-center">
-            <div className="font-display font-bold text-3xl gradient-text-coral">${totalRewards}</div>
+            <div className="font-display font-bold text-3xl gradient-text-coral">
+              {convertAndFormat(totalRewards, displayCurrency)}
+            </div>
             <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Total Rewards</div>
           </div>
         </div>
@@ -177,21 +193,27 @@ export function Bounties() {
 
       {/* Filter */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 pb-6">
-        <div className="flex items-center gap-4">
-          <button
-            onClick={() => setFilter('open')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${filter === 'open' ? 'btn-primary' : ''}`}
-            style={filter !== 'open' ? { background: 'var(--bg-surface)', color: 'var(--text-secondary)', border: '1px solid var(--border-subtle)' } : {}}
-          >
-            🟢 Open
-          </button>
-          <button
-            onClick={() => setFilter('all')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${filter === 'all' ? 'btn-primary' : ''}`}
-            style={filter !== 'all' ? { background: 'var(--bg-surface)', color: 'var(--text-secondary)', border: '1px solid var(--border-subtle)' } : {}}
-          >
-            All Bounties
-          </button>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setFilter('open')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${filter === 'open' ? 'btn-primary' : ''}`}
+              style={filter !== 'open' ? { background: 'var(--bg-surface)', color: 'var(--text-secondary)', border: '1px solid var(--border-subtle)' } : {}}
+            >
+              🟢 Open
+            </button>
+            <button
+              onClick={() => setFilter('all')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${filter === 'all' ? 'btn-primary' : ''}`}
+              style={filter !== 'all' ? { background: 'var(--bg-surface)', color: 'var(--text-secondary)', border: '1px solid var(--border-subtle)' } : {}}
+            >
+              All Bounties
+            </button>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm" style={{ color: 'var(--text-muted)' }}>Show in:</span>
+            <CurrencySelector value={displayCurrency} onChange={handleCurrencyChange} />
+          </div>
         </div>
       </section>
 
@@ -239,7 +261,7 @@ export function Bounties() {
                   </div>
                   <div className="text-right">
                     <div className="font-display font-bold text-2xl gradient-text-coral">
-                      {bounty.amount} {bounty.currency}
+                      {convertAndFormat(bounty.amount, displayCurrency)}
                     </div>
                     <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
                       Expires {formatDate(bounty.expiresAt)}

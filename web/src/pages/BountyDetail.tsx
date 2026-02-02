@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { db } from '../firebase'
 import { doc, getDoc, collection, getDocs, query, orderBy } from 'firebase/firestore'
+import { getAllCurrencyFormats, currencyColors as utilCurrencyColors } from '../utils/currency'
 
 interface Bounty {
   id: string
@@ -497,10 +498,10 @@ export function BountyDetail() {
           <div className="space-y-6">
             {/* Reward Card */}
             <div className="rounded-xl p-6" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}>
-              <div className="text-center mb-6">
+              <div className="text-center mb-4">
                 <p className="text-sm mb-2" style={{ color: 'var(--text-muted)' }}>Reward</p>
                 <div className="font-display font-bold text-4xl gradient-text-coral mb-2">
-                  {bounty.amount}
+                  ${bounty.amount}
                 </div>
                 <span
                   className="inline-block px-3 py-1 rounded-full text-sm font-medium"
@@ -509,6 +510,42 @@ export function BountyDetail() {
                   {bounty.currency}
                 </span>
               </div>
+
+              {/* All Currency Conversions */}
+              {(() => {
+                const formats = getAllCurrencyFormats(bounty.amount)
+                return (
+                  <div className="mb-6 p-3 rounded-lg" style={{ background: 'var(--bg-elevated)' }}>
+                    <p className="text-xs mb-2 text-center" style={{ color: 'var(--text-muted)' }}>Equivalent in</p>
+                    <div className="grid grid-cols-3 gap-2 text-center">
+                      <div>
+                        <span
+                          className="inline-block px-2 py-1 rounded text-xs font-medium"
+                          style={{ background: utilCurrencyColors.USDC.bg, color: utilCurrencyColors.USDC.text }}
+                        >
+                          {formats.usdc}
+                        </span>
+                      </div>
+                      <div>
+                        <span
+                          className="inline-block px-2 py-1 rounded text-xs font-medium"
+                          style={{ background: utilCurrencyColors.USDT.bg, color: utilCurrencyColors.USDT.text }}
+                        >
+                          {formats.usdt}
+                        </span>
+                      </div>
+                      <div>
+                        <span
+                          className="inline-block px-2 py-1 rounded text-xs font-medium"
+                          style={{ background: utilCurrencyColors.BTC.bg, color: utilCurrencyColors.BTC.text }}
+                        >
+                          {formats.btc}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })()}
 
               {/* Claim CTA */}
               {bounty.status === 'open' && !isExpired ? (
