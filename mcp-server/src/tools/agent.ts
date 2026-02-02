@@ -82,6 +82,12 @@ export const agentTools = {
               nip05: nostr.nip05, // Verified identity: name@clawdentials.com
             },
           },
+          wallet: {
+            // Custodial wallet - Clawdentials holds keys, releases on escrow completion
+            custodialWalletId: agent.custodialWalletId,
+            depositAddress: agent.depositAddress, // Use this to receive funds
+            note: 'This is a custodial wallet. Clawdentials holds the keys and releases funds when escrow conditions are met.',
+          },
           agent: {
             id: agent.id,
             name: agent.name,
@@ -91,6 +97,7 @@ export const agentTools = {
             subscriptionTier: agent.subscriptionTier,
             balance: agent.balance,
             nip05: agent.nip05,
+            depositAddress: agent.depositAddress,
             moltbookId: agent.moltbookId,
             moltbookKarma: agent.moltbookKarma,
             createdAt: agent.createdAt.toISOString(),

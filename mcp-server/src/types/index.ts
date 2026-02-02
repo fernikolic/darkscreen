@@ -16,19 +16,23 @@ export interface Deposit {
   agentId: string;
   amount: number;
   currency: Currency;
-  network: PaymentNetwork;
+  network?: PaymentNetwork;
   status: 'pending' | 'confirming' | 'completed' | 'expired' | 'failed';
   // Payment provider details
-  provider: 'x402' | 'oxapay' | 'cashu' | 'breez' | 'alby' | 'coinremitter' | 'zbd'; // cashu for BTC, others for legacy
-  externalId: string | null; // Invoice ID from provider
-  paymentAddress: string | null; // Address or invoice string
-  paymentUrl: string | null; // Payment page URL if available
+  provider: 'x402' | 'oxapay' | 'cashu' | 'breez' | 'alby' | 'coinremitter' | 'zbd' | 'manual';
+  externalId?: string | null; // Invoice ID from provider
+  paymentAddress?: string | null; // Address or invoice string
+  paymentUrl?: string | null; // Payment page URL if available
+  // Cashu-specific fields (BTC Lightning deposits)
+  bolt11?: string; // Lightning invoice - MUST be stored for recovery
+  amountSats?: number; // Amount in satoshis - needed to mint proofs
+  proofs?: any[]; // Cashu ecash proofs (tokens) - this IS the money
   // Timestamps
   createdAt: Date;
-  expiresAt: Date | null;
-  completedAt: Date | null;
+  expiresAt?: Date | null;
+  completedAt?: Date | null;
   // Metadata
-  txHash: string | null;
+  txHash?: string | null;
 }
 
 export type SubscriptionTier = 'free' | 'verified' | 'pro';
@@ -67,7 +71,10 @@ export interface Agent {
   // Moltbook integration
   moltbookId?: string; // Moltbook agent ID
   moltbookKarma?: number; // Karma at time of linking
-  // Payment addresses (optional, set by agent)
+  // Custodial wallet - Clawdentials controls, releases on escrow completion
+  custodialWalletId?: string; // Internal wallet ID (cw_xxx)
+  depositAddress?: string; // Display address for deposits (clw1xxx)
+  // Payment addresses (optional, set by agent for withdrawals)
   wallets?: {
     base?: string; // 0x... address for USDC on Base
     trc20?: string; // T... address for USDT on Tron

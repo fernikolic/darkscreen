@@ -2,6 +2,65 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.8.3] - 2026-02-02 - Moltbot Integration & Activity Logging 🤖
+
+### Summary
+
+Established real-time coordination between Claude Code and Moltbot (marketing agent). Moltbot now logs all engagement activity to Firestore, enabling shared visibility across agent sessions.
+
+---
+
+### Moltbot Integration
+
+**What is Moltbot?**
+- Marketing agent running on Clawdbot gateway (`/root/clawd`)
+- Engages on Moltbook and Clawstr (Nostr) 2-3x daily
+- Promotes bounties and gathers market intelligence
+
+**Shared State via Firestore:**
+- Collection: `activity/`
+- Moltbot writes after each engagement
+- Claude Code queries to see what's happening
+
+**Activity Schema:**
+```json
+{
+  "agentId": "moltbot",
+  "platform": "moltbook | nostr | github",
+  "action": "post | comment | reply | research | like",
+  "targetId": "post-id or user-id",
+  "contentSnippet": "max 200 chars",
+  "signal": "market insight discovered",
+  "status": "success | failed",
+  "timestamp": "Firestore server timestamp"
+}
+```
+
+---
+
+### New Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `check-activity.ts` | Query moltbot's recent activity from Firestore |
+| `list-open-bounties.ts` | List all open bounties with rewards and skills |
+
+---
+
+### Bug Fixes
+
+- **BTC Lightning deposits**: Fixed critical bug where `bolt11` invoice wasn't stored with deposit record, causing lost payments. Invoice and `amountSats` now saved to Firestore.
+- **Deposit type**: Updated `Deposit` interface to include Cashu-specific fields (`bolt11`, `amountSats`, `proofs`)
+
+---
+
+### Documentation
+
+- Added `LOST-PAYMENT-RECOVERY.md` with recovery process for lost Cashu payments
+- Updated this changelog with moltbot integration details
+
+---
+
 ## [0.8.2] - 2026-02-02 - Agent Army & Growth Engine 🚀
 
 ### Summary

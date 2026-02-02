@@ -184,6 +184,8 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
           id: result.quote?.quoteId,
           agentId: request.agentId,
           amount: request.amount, // Store USD amount
+          amountSats: amountSats, // CRITICAL: Store sats amount for minting proofs
+          bolt11: result.quote?.bolt11, // CRITICAL: Store invoice for recovery/tracking
           currency: 'BTC',
           status: 'pending',
           provider: 'cashu',

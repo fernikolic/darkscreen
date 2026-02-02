@@ -2,136 +2,108 @@
   <defs>
     <!-- Deep space background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#020014"/>
-      <stop offset="30%" style="stop-color:#0a0520"/>
-      <stop offset="70%" style="stop-color:#050218"/>
-      <stop offset="100%" style="stop-color:#000008"/>
+      <stop offset="0%" style="stop-color:#0f0a1f"/>
+      <stop offset="50%" style="stop-color:#1a0f2e"/>
+      <stop offset="100%" style="stop-color:#0a0518"/>
     </linearGradient>
 
-    <!-- Electric blue orb -->
+    <!-- Orb gradients -->
     <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
-      <stop offset="40%" style="stop-color:#2563eb;stop-opacity:0.4"/>
-      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0"/>
     </radialGradient>
 
-    <!-- Hot pink/magenta orb -->
     <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6"/>
-      <stop offset="50%" style="stop-color:#be185d;stop-opacity:0.3"/>
-      <stop offset="100%" style="stop-color:#9d174d;stop-opacity:0"/>
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0"/>
     </radialGradient>
 
-    <!-- Cyan accent orb -->
     <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5"/>
-      <stop offset="60%" style="stop-color:#0891b2;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:0"/>
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/>
     </radialGradient>
-
-    <!-- Purple nebula -->
-    <radialGradient id="nebula" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.4"/>
-      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:0"/>
-    </radialGradient>
-
-    <!-- Rainbow gradient for main text -->
-    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#06b6d4"/>
-      <stop offset="25%" style="stop-color:#3b82f6"/>
-      <stop offset="50%" style="stop-color:#8b5cf6"/>
-      <stop offset="75%" style="stop-color:#ec4899"/>
-      <stop offset="100%" style="stop-color:#f43f5e"/>
-    </linearGradient>
-
-    <!-- Glassy card gradient -->
-    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(255,255,255,0.15)"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0.02)"/>
-    </linearGradient>
-
-    <!-- Glow filter -->
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Heavy glow -->
-    <filter id="heavyGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Noise texture -->
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feBlend in="SourceGraphic" mode="overlay" />
-    </filter>
   </defs>
 
   <!-- Background -->
   <rect fill="url(#bg)" width="1200" height="630"/>
 
-  <!-- Animated-looking orbs -->
-  <ellipse cx="150" cy="100" rx="300" ry="250" fill="url(#orb1)" opacity="0.6"/>
-  <ellipse cx="1100" cy="550" rx="350" ry="280" fill="url(#orb2)" opacity="0.5"/>
-  <ellipse cx="900" cy="80" rx="200" ry="180" fill="url(#orb3)" opacity="0.4"/>
-  <ellipse cx="600" cy="400" rx="500" ry="350" fill="url(#nebula)" opacity="0.3"/>
+  <!-- Ambient orbs -->
+  <ellipse cx="100" cy="80" rx="250" ry="200" fill="url(#orb1)"/>
+  <ellipse cx="1100" cy="550" rx="300" ry="250" fill="url(#orb2)"/>
+  <ellipse cx="800" cy="100" rx="200" ry="150" fill="url(#orb3)"/>
 
-  <!-- Floating geometric shapes -->
-  <polygon points="100,400 130,350 160,400" fill="none" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
-  <polygon points="1050,150 1090,100 1130,150 1090,200" fill="none" stroke="rgba(236,72,152,0.3)" stroke-width="1"/>
-  <rect x="80" y="200" width="40" height="40" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="1" transform="rotate(45 100 220)"/>
+  <!-- Geometric accents -->
+  <circle cx="180" cy="480" r="60" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="180" cy="480" r="80" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.2"/>
+  <circle cx="1020" cy="150" r="50" fill="none" stroke="#ec4899" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="1020" cy="150" r="70" fill="none" stroke="#ec4899" stroke-width="1" opacity="0.2"/>
 
-  <!-- Glowing rings -->
-  <circle cx="200" cy="500" r="60" fill="none" stroke="url(#rainbow)" stroke-width="1" opacity="0.3"/>
-  <circle cx="200" cy="500" r="80" fill="none" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
-  <circle cx="1000" cy="120" r="50" fill="none" stroke="rgba(236,72,152,0.3)" stroke-width="1"/>
-  <circle cx="1000" cy="120" r="70" fill="none" stroke="rgba(236,72,152,0.15)" stroke-width="1"/>
+  <!-- Sparkles -->
+  <circle cx="300" cy="130" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="900" cy="400" r="2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="100" cy="350" r="2" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="1100" cy="250" r="2" fill="#ec4899" opacity="0.7"/>
+  <circle cx="450" cy="80" r="2" fill="#8b5cf6" opacity="0.9"/>
 
-  <!-- Sparkle dots -->
-  <circle cx="300" cy="150" r="2" fill="#fff" opacity="0.8" filter="url(#glow)"/>
-  <circle cx="950" cy="400" r="2" fill="#fff" opacity="0.6" filter="url(#glow)"/>
-  <circle cx="150" cy="350" r="1.5" fill="#06b6d4" opacity="0.8" filter="url(#glow)"/>
-  <circle cx="1080" cy="280" r="1.5" fill="#ec4899" opacity="0.7" filter="url(#glow)"/>
-  <circle cx="500" cy="100" r="1" fill="#8b5cf6" opacity="0.9" filter="url(#glow)"/>
-  <circle cx="750" cy="580" r="2" fill="#3b82f6" opacity="0.6" filter="url(#glow)"/>
-  <circle cx="400" cy="550" r="1" fill="#fff" opacity="0.5"/>
-  <circle cx="850" cy="50" r="1" fill="#fff" opacity="0.4"/>
+  <!-- Glass card -->
+  <rect x="200" y="100" width="800" height="460" rx="24" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-width="1" stroke-opacity="0.12"/>
 
-  <!-- Glass card behind content -->
-  <rect x="250" y="120" width="700" height="420" rx="24" fill="url(#glass)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Crab icon - simplified solid version -->
+  <g transform="translate(505, 145)">
+    <!-- Main body -->
+    <ellipse cx="95" cy="75" rx="65" ry="45" fill="#f97316"/>
+    <ellipse cx="95" cy="75" rx="55" ry="38" fill="#ea580c"/>
 
-  <!-- Inner glow on card -->
-  <rect x="252" y="122" width="696" height="416" rx="22" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <!-- Eye stalks -->
+    <rect x="62" y="25" width="10" height="20" rx="5" fill="#f97316"/>
+    <rect x="118" y="25" width="10" height="20" rx="5" fill="#f97316"/>
 
-  <!-- Crab with mega glow -->
-  <text x="600" y="270" font-size="140" text-anchor="middle" filter="url(#heavyGlow)" style="filter: drop-shadow(0 0 60px rgba(59,130,246,0.5)) drop-shadow(0 0 30px rgba(139,92,246,0.4))">🦀</text>
+    <!-- Eyes -->
+    <circle cx="67" cy="22" r="12" fill="#fbbf24"/>
+    <circle cx="123" cy="22" r="12" fill="#fbbf24"/>
+    <circle cx="67" cy="22" r="6" fill="#1f2937"/>
+    <circle cx="123" cy="22" r="6" fill="#1f2937"/>
+    <circle cx="65" cy="20" r="2" fill="#ffffff"/>
+    <circle cx="121" cy="20" r="2" fill="#ffffff"/>
 
-  <!-- Clawdentials with rainbow gradient -->
-  <text x="600" y="400" font-size="72" text-anchor="middle" fill="url(#rainbow)" font-family="system-ui, -apple-system, sans-serif" font-weight="800" letter-spacing="-2" filter="url(#glow)">Clawdentials</text>
+    <!-- Left claw -->
+    <ellipse cx="10" cy="55" rx="35" ry="25" fill="#f97316"/>
+    <ellipse cx="-15" cy="40" rx="18" ry="12" fill="#f97316" transform="rotate(-25 -15 40)"/>
+    <ellipse cx="-15" cy="70" rx="18" ry="12" fill="#f97316" transform="rotate(25 -15 70)"/>
 
-  <!-- Tagline with glow -->
-  <text x="600" y="470" font-size="28" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-weight="500" letter-spacing="1" opacity="0.9">Your agents work. You earn.</text>
+    <!-- Right claw -->
+    <ellipse cx="180" cy="55" rx="35" ry="25" fill="#f97316"/>
+    <ellipse cx="205" cy="40" rx="18" ry="12" fill="#f97316" transform="rotate(25 205 40)"/>
+    <ellipse cx="205" cy="70" rx="18" ry="12" fill="#f97316" transform="rotate(-25 205 70)"/>
+
+    <!-- Legs -->
+    <rect x="30" y="105" width="10" height="30" rx="5" fill="#ea580c" transform="rotate(-15 35 105)"/>
+    <rect x="55" y="110" width="10" height="28" rx="5" fill="#ea580c" transform="rotate(-8 60 110)"/>
+    <rect x="125" y="110" width="10" height="28" rx="5" fill="#ea580c" transform="rotate(8 130 110)"/>
+    <rect x="150" y="105" width="10" height="30" rx="5" fill="#ea580c" transform="rotate(15 155 105)"/>
+
+    <!-- Smile -->
+    <path d="M70 85 Q95 100 120 85" fill="none" stroke="#c2410c" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title: CLAWDENTIALS - using multiple colored spans since gradients don't work well -->
+  <text x="600" y="400" font-size="72" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" letter-spacing="-1">
+    <tspan fill="#06b6d4">C</tspan><tspan fill="#3b82f6">l</tspan><tspan fill="#6366f1">a</tspan><tspan fill="#8b5cf6">w</tspan><tspan fill="#a855f7">d</tspan><tspan fill="#c026d3">e</tspan><tspan fill="#db2777">n</tspan><tspan fill="#e11d48">t</tspan><tspan fill="#ec4899">i</tspan><tspan fill="#f43f5e">a</tspan><tspan fill="#fb7185">l</tspan><tspan fill="#fda4af">s</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="465" font-size="28" text-anchor="middle" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-weight="500" letter-spacing="2">Your agents work. You earn.</text>
 
   <!-- Accent lines -->
-  <line x1="350" y1="510" x2="500" y2="510" stroke="url(#rainbow)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-  <line x1="700" y1="510" x2="850" y2="510" stroke="url(#rainbow)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="320" y1="510" x2="480" y2="510" stroke="#6366f1" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="720" y1="510" x2="880" y2="510" stroke="#ec4899" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
 
   <!-- Center diamond -->
-  <polygon points="600,500 610,510 600,520 590,510" fill="url(#rainbow)" opacity="0.8"/>
+  <polygon points="600,500 612,512 600,524 588,512" fill="#8b5cf6" opacity="0.7"/>
 
-  <!-- Corner accents -->
-  <path d="M270 140 L270 160 L290 160" fill="none" stroke="rgba(6,182,212,0.5)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M930 140 L930 160 L910 160" fill="none" stroke="rgba(236,72,152,0.5)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M270 520 L270 500 L290 500" fill="none" stroke="rgba(139,92,246,0.5)" stroke-width="2" stroke-linecap="round"/>
-  <path d="M930 520 L930 500 L910 500" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Corner brackets -->
+  <path d="M220 120 L220 145 L245 145" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M980 120 L980 145 L955 145" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M220 540 L220 515 L245 515" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M980 540 L980 515 L955 515" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
 </svg>

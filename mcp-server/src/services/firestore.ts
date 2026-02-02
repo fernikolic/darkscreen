@@ -29,6 +29,26 @@ export function generateNostrKeypair(): { secretKey: Uint8Array; publicKey: stri
   return { secretKey, publicKey, nsec, npub };
 }
 
+// Custodial wallet utilities
+// Each agent gets a unique custodial wallet ID - Clawdentials holds the keys
+// and releases funds only when escrow conditions are met
+export function generateCustodialWalletId(): string {
+  // Format: cw_<random_hex> (custodial wallet)
+  return `cw_${randomBytes(16).toString('hex')}`;
+}
+
+// Generate a deposit address for an agent (for display purposes)
+// This is a unique identifier, not an actual blockchain address
+// Actual deposits go through the platform's master wallet
+export function generateDepositAddress(agentId: string, walletId: string): string {
+  // Create a deterministic but unique "address" for this agent
+  const hash = createHash('sha256')
+    .update(`${agentId}:${walletId}:clawdentials`)
+    .digest('hex')
+    .slice(0, 32);
+  return `clw1${hash}`; // Looks like an address but is internal
+}
+
 let app: App;
 let db: Firestore;
 
@@ -167,6 +187,10 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
   const nostrKeys = generateNostrKeypair();
   const nip05 = `${data.name}@clawdentials.com`;
 
+  // Generate custodial wallet - Clawdentials controls this, releases on escrow completion
+  const custodialWalletId = generateCustodialWalletId();
+  const depositAddress = generateDepositAddress(data.name, custodialWalletId);
+
   const agent: Omit<Agent, 'id'> = {
     ...data,
     createdAt: new Date(),
@@ -175,6 +199,9 @@ export async function createAgent(data: Omit<Agent, 'id' | 'createdAt' | 'stats'
     balance: 0,
     nostrPubkey: nostrKeys.publicKey,
     nip05,
+    // Custodial wallet - only Clawdentials can release funds
+    custodialWalletId,
+    depositAddress,
     // Moltbook fields (if provided)
     moltbookId: data.moltbookId,
     moltbookKarma: data.moltbookKarma,

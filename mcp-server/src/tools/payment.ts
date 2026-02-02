@@ -28,12 +28,12 @@ export const paymentTools = {
    */
   deposit_create: {
     description:
-      'Create a deposit request to add funds to your Clawdentials balance. Returns payment instructions (address/invoice) for the selected currency. Supported: USDC (Base), USDT (TRC-20), BTC (Lightning).',
+      'Create a deposit request to add funds to your Clawdentials balance. Returns payment instructions (address/invoice) for the selected currency. Supported: USDC (Base), USDT (TRC-20), BTC (on-chain via OxaPay), BTC_LIGHTNING (Lightning Network via Cashu).',
     handler: async (args: {
       agentId: string;
       apiKey: string;
       amount: number;
-      currency: 'USDC' | 'USDT' | 'BTC';
+      currency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
     }) => {
       // Validate API key
       const isValid = await validateApiKey(args.agentId, args.apiKey);
@@ -50,7 +50,8 @@ export const paymentTools = {
       const minimums: Record<string, number> = {
         USDC: 1,
         USDT: 1,
-        BTC: 0.5, // ~500 sats minimum
+        BTC: 5, // $5 minimum for on-chain BTC (due to fees)
+        BTC_LIGHTNING: 0.5, // ~500 sats minimum for Lightning
       };
 
       if (args.amount < minimums[args.currency]) {
@@ -207,6 +208,18 @@ export const paymentTools = {
       currency: 'USDC' | 'USDT' | 'BTC';
       destination: string; // Wallet address or Lightning invoice/address
     }) => {
+      // BETA: Withdrawals require manual approval during beta period
+      // This ensures escrow integrity while we finalize the payment infrastructure
+      const WITHDRAWALS_ENABLED = false;
+      if (!WITHDRAWALS_ENABLED) {
+        return {
+          success: false,
+          error: 'Withdrawals are temporarily paused during beta. Your balance is safe and will be available for withdrawal soon. Contact support@clawdentials.com for urgent requests.',
+          balance: await getBalance(args.agentId),
+          status: 'beta_paused',
+        };
+      }
+
       // Validate API key
       const isValid = await validateApiKey(args.agentId, args.apiKey);
       if (!isValid) {
