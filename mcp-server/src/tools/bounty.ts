@@ -307,12 +307,21 @@ export const bountyTools = {
           };
         } else {
           // Insufficient balance - generate invoice
-          const paymentCurrency = bounty.currency === 'USD' ? 'USDC' : bounty.currency;
+          // BTC -> BTC_LIGHTNING (prefer Lightning for faster, cheaper deposits)
+          // USD -> USDC (default stablecoin)
+          let paymentCurrency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
+          if (bounty.currency === 'USD') {
+            paymentCurrency = 'USDC';
+          } else if (bounty.currency === 'BTC') {
+            paymentCurrency = 'BTC_LIGHTNING'; // Use Lightning for BTC
+          } else {
+            paymentCurrency = bounty.currency as 'USDC' | 'USDT';
+          }
 
           const depositResult = await createDeposit({
             agentId: input.agentId,
             amount: bounty.amount,
-            currency: paymentCurrency as 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING',
+            currency: paymentCurrency,
             description: `Bounty funding: ${bounty.title.substring(0, 50)}`,
           });
 

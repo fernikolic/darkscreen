@@ -44,7 +44,6 @@ export function Bounties() {
   const [bounties, setBounties] = useState<Bounty[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<'open' | 'all'>('open')
-  const [selectedBounty, setSelectedBounty] = useState<Bounty | null>(null)
 
   useEffect(() => {
     const fetchBounties = async () => {
@@ -211,11 +210,11 @@ export function Bounties() {
         ) : (
           <div className="space-y-4">
             {bounties.map(bounty => (
-              <div
+              <Link
                 key={bounty.id}
-                className="card-hover rounded-xl p-6 cursor-pointer"
+                to={`/bounty/${bounty.id}`}
+                className="card-hover rounded-xl p-6 cursor-pointer block"
                 style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}
-                onClick={() => setSelectedBounty(bounty)}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
@@ -247,121 +246,11 @@ export function Bounties() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
       </section>
-
-      {/* Bounty Detail Modal */}
-      {selectedBounty && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: 'rgba(0,0,0,0.8)' }}
-          onClick={() => setSelectedBounty(null)}
-        >
-          <div
-            className="max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-2xl p-8"
-            style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-subtle)' }}
-            onClick={e => e.stopPropagation()}
-          >
-            <div className="flex items-start justify-between mb-6">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span>{statusEmoji[selectedBounty.status]}</span>
-                  <span
-                    className="px-2 py-0.5 rounded text-xs font-medium"
-                    style={{ background: `${difficultyColors[selectedBounty.difficulty]}20`, color: difficultyColors[selectedBounty.difficulty] }}
-                  >
-                    {selectedBounty.difficulty}
-                  </span>
-                </div>
-                <h2 className="font-display font-bold text-2xl" style={{ color: 'var(--text-primary)' }}>
-                  {selectedBounty.title}
-                </h2>
-              </div>
-              <button
-                onClick={() => setSelectedBounty(null)}
-                className="text-2xl"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                ×
-              </button>
-            </div>
-
-            <div className="p-4 rounded-lg mb-6" style={{ background: 'var(--bg-surface)' }}>
-              <div className="flex items-center justify-between">
-                <span style={{ color: 'var(--text-secondary)' }}>Reward</span>
-                <span className="font-display font-bold text-xl gradient-text-coral">
-                  {selectedBounty.amount} {selectedBounty.currency}
-                </span>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Summary</h4>
-              <p style={{ color: 'var(--text-secondary)' }}>{selectedBounty.summary}</p>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Description</h4>
-              <div className="prose prose-sm" style={{ color: 'var(--text-secondary)' }}>
-                <pre className="whitespace-pre-wrap text-sm p-4 rounded-lg" style={{ background: 'var(--bg-surface)' }}>
-                  {selectedBounty.description}
-                </pre>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Acceptance Criteria</h4>
-              <ul className="space-y-2">
-                {selectedBounty.acceptanceCriteria.map((c, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
-                    <span>☐</span>
-                    <span>{c}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Required Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedBounty.requiredSkills.map(skill => (
-                  <span key={skill} className="px-3 py-1 rounded-full text-sm" style={{ background: 'var(--bg-surface)', color: 'var(--accent-coral)' }}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {selectedBounty.repoUrl && (
-              <div className="mb-6">
-                <h4 className="font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>Repository</h4>
-                <a
-                  href={selectedBounty.repoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm underline"
-                  style={{ color: 'var(--accent-coral)' }}
-                >
-                  {selectedBounty.repoUrl}
-                </a>
-              </div>
-            )}
-
-            <div className="p-4 rounded-lg" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}>
-              <h4 className="font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>Claim this bounty</h4>
-              <code className="block text-sm p-3 rounded" style={{ background: 'var(--bg-elevated)', color: 'var(--text-secondary)' }}>
-                {`bounty_claim({ bountyId: "${selectedBounty.id}", agentId: "YOUR_AGENT_ID", apiKey: "YOUR_API_KEY" })`}
-              </code>
-              <p className="text-xs mt-3" style={{ color: 'var(--text-muted)' }}>
-                Bounty ID: {selectedBounty.id}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* CTA */}
       <section className="relative z-10 py-16" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-subtle)' }}>

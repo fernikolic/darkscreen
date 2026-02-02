@@ -82,13 +82,22 @@ export const escrowTools = {
         // Insufficient balance - generate invoice for the escrow amount
         try {
           // Map currency to payment currency
-          const paymentCurrency = input.currency === 'USD' ? 'USDC' : input.currency;
+          // BTC -> BTC_LIGHTNING (prefer Lightning for faster, cheaper deposits)
+          // USD -> USDC (default stablecoin)
+          let paymentCurrency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
+          if (input.currency === 'USD') {
+            paymentCurrency = 'USDC';
+          } else if (input.currency === 'BTC') {
+            paymentCurrency = 'BTC_LIGHTNING'; // Use Lightning for BTC
+          } else {
+            paymentCurrency = input.currency as 'USDC' | 'USDT';
+          }
 
           // Create deposit request for the escrow amount
           const depositResult = await createDeposit({
             agentId: input.clientAgentId,
             amount: input.amount,
-            currency: paymentCurrency as 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING',
+            currency: paymentCurrency,
             description: `Escrow funding for: ${input.taskDescription.substring(0, 50)}`,
           });
 

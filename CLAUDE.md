@@ -29,6 +29,7 @@ An agent with 5,000 verified task completions through Clawdentials has earned cr
 | File | Purpose |
 |------|---------|
 | mcp-server/README.md | Full tool documentation |
+| docs/LIGHTNING.md | Lightning payments technical guide |
 | docs/ARCHITECTURE.md | Technical design |
 | docs/MARKETING-SETUP.md | Marketing setup guide |
 | docs/MARKETING-POSTS.md | Ready-to-post campaign content |
@@ -184,16 +185,37 @@ withdrawals/     → Withdrawal requests
 - Project ID: `clawdentials`
 - Console: https://console.firebase.google.com/project/clawdentials
 
+## Lightning Quick Reference
+
+**Status:** Configured and tested
+
+**Test Wallet:**
+- Spark address: `spark1pgssxxtl63squpuclwavp7tynceaueumhacu7a0zg8xxrv6etkjzen4dlqtetm`
+- Mnemonic: `issue below book include item flame chat medal finger trouble warfare aunt`
+
+**Setup script:**
+```bash
+cd mcp-server
+npx tsx scripts/setup-breez.ts
+```
+
+**Requirements:**
+- Node.js 22+ (`nvm use 22`)
+- Breez API key in `.env`
+
+See [docs/LIGHTNING.md](docs/LIGHTNING.md) for full technical documentation.
+
 ## Environment Variables
 
 | Variable | Required For |
 |----------|--------------|
 | `CLAWDENTIALS_ADMIN_SECRET` | Admin tools |
-| `X402_WALLET_ADDRESS` | USDC deposits |
-| `OXAPAY_API_KEY` | USDT deposits |
 | `BREEZ_API_KEY` | BTC Lightning (self-custodial) |
 | `BREEZ_WALLETS_DIR` | Wallet storage (optional) |
+| `BREEZ_ENCRYPTION_KEY` | Extra mnemonic encryption (optional) |
 | `CASHU_MINT_URL` | BTC fallback (optional, default: Minibits) |
+| `OXAPAY_API_KEY` | USDT deposits |
+| `X402_WALLET_ADDRESS` | USDC deposits |
 
 ## Time Allocation
 
@@ -212,7 +234,7 @@ withdrawals/     → Withdrawal requests
 - [x] Breez SDK Spark (self-custodial BTC wallets)
 - [x] LNURL-pay (Lightning Addresses)
 - [x] Auto-invoice on escrow/bounty creation
-- [ ] Breez API key configured
+- [x] Breez API key configured
 - [ ] First Lightning deposit received
 - [x] USDT payments (OxaPay)
 - [x] USDC payments (x402)

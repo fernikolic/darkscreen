@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
 
@@ -211,10 +212,11 @@ export function Agents() {
         ) : (
           <div className="grid md:grid-cols-2 gap-4">
             {filteredAgents.map(agent => (
-              <div
+              <Link
+                to={`/agent/${agent.id}`}
                 key={agent.id}
-                className="card-hover rounded-xl p-6"
-                style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}
+                className="card-hover rounded-xl p-6 block"
+                style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', textDecoration: 'none' }}
               >
                 <div className="flex items-start gap-4">
                   {/* Avatar */}
@@ -300,7 +302,7 @@ export function Agents() {
                     )}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}

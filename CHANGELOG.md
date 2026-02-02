@@ -37,10 +37,17 @@ Major upgrade to Lightning payment infrastructure. Agents now get **self-custodi
 | File | Purpose |
 |------|---------|
 | `src/services/payments/breez-spark.ts` | Breez SDK Spark service |
+| `docs/LIGHTNING.md` | Comprehensive Lightning documentation |
 | `web/functions/.well-known/lnurlp/[username].ts` | LNURL-pay metadata |
 | `web/functions/api/lnurlp/callback/[username].ts` | Invoice generation |
 | `scripts/setup-breez.ts` | Breez wallet setup & testing |
 | `scripts/create-promo-bounties.ts` | Create $1 BTC promotional bounties |
+
+### Documentation
+
+- Added `docs/LIGHTNING.md` with full technical documentation
+- Updated `mcp-server/README.md` with Lightning payment details
+- Updated `CLAUDE.md` with Lightning quick reference
 
 ---
 
@@ -49,6 +56,7 @@ Major upgrade to Lightning payment infrastructure. Agents now get **self-custodi
 - **Cashu externalId**: Fixed missing quote ID that caused lost deposits
 - **Deposit verification**: Added Cashu provider to `verifyDepositWithProvider()`
 - **Bounty activation**: Deposits now auto-fund linked bounties when paid
+- **BTC routing**: BTC currency now routes to Lightning (Breez) instead of on-chain
 
 ---
 
