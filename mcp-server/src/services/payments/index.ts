@@ -12,6 +12,7 @@ import { oxapayService } from './oxapay.js';
 import { cashuService } from './cashu.js';
 import { breezService } from './breez.js';
 import { breezSparkService } from './breez-spark.js';
+import { circleService } from './circle.js';
 import type { Currency, PaymentNetwork, Deposit } from '../../types/index.js';
 
 // BTC price for USD to sats conversion (update periodically or fetch from API)
@@ -37,6 +38,7 @@ export { oxapayService } from './oxapay.js';
 export { cashuService } from './cashu.js';
 export { breezService } from './breez.js';
 export { breezSparkService } from './breez-spark.js';
+export { circleService } from './circle.js';
 
 // Legacy exports for backwards compatibility
 export { oxapayService as coinremitterService } from './oxapay.js';
@@ -46,7 +48,7 @@ export { breezService as zbdService } from './breez.js';
 export interface CreateDepositRequest {
   agentId: string;
   amount: number;
-  currency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
+  currency: 'USDC' | 'USDC_CIRCLE' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
   description?: string;
 }
 
@@ -105,6 +107,33 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
           amountRaw: result.paymentDetails?.amount,
           expiresAt: result.deposit?.expiresAt || undefined,
           qrData: result.paymentDetails?.payTo, // EVM address for QR
+        },
+      };
+    }
+
+    case 'USDC_CIRCLE': {
+      // USDC via Circle Developer-Controlled Wallets (gas-free)
+      const result = await circleService.createDeposit({
+        amount: request.amount,
+        agentId: request.agentId,
+        description: request.description,
+      });
+
+      if (!result.success) {
+        return { success: false, error: result.error };
+      }
+
+      return {
+        success: true,
+        deposit: result.deposit,
+        paymentInstructions: {
+          currency: 'USDC',
+          network: 'base',
+          address: result.paymentDetails?.payTo,
+          amount: request.amount,
+          amountRaw: result.paymentDetails?.amount,
+          expiresAt: result.deposit?.expiresAt || undefined,
+          qrData: result.paymentDetails?.payTo,
         },
       };
     }
@@ -254,7 +283,7 @@ export async function createDeposit(request: CreateDepositRequest): Promise<Crea
     default:
       return {
         success: false,
-        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC (on-chain), BTC_LIGHTNING`,
+        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDC_CIRCLE, USDT, BTC, BTC_LIGHTNING`,
       };
   }
 }
@@ -300,7 +329,7 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
     default:
       return {
         success: false,
-        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDT, BTC (on-chain), BTC_LIGHTNING`,
+        error: `Unsupported currency: ${request.currency}. Supported: USDC, USDC_CIRCLE, USDT, BTC, BTC_LIGHTNING`,
       };
   }
 }
@@ -310,6 +339,7 @@ export async function sendWithdrawal(request: SendWithdrawalRequest): Promise<Se
  */
 export function getPaymentConfig(): {
   usdc: { configured: boolean; network: string; provider: string };
+  usdc_circle: { configured: boolean; network: string; provider: string };
   usdt: { configured: boolean; network: string; provider: string };
   btc: { configured: boolean; network: string; provider: string };
 } {
@@ -322,6 +352,11 @@ export function getPaymentConfig(): {
       configured: !!x402Service.config.walletAddress,
       network: 'Base L2',
       provider: 'x402 (Coinbase)',
+    },
+    usdc_circle: {
+      configured: circleService.config.configured,
+      network: circleService.config.chain || 'BASE-SEPOLIA',
+      provider: 'Circle (gas-free)',
     },
     usdt: {
       configured: oxapayService.config.configured,
@@ -342,6 +377,7 @@ export const paymentService = {
   getConfig: getPaymentConfig,
   // Individual services for advanced use
   x402: x402Service,
+  circle: circleService, // Gas-free USDC
   oxapay: oxapayService,
   cashu: cashuService,
   breez: breezService, // Legacy

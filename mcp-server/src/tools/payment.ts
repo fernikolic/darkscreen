@@ -9,6 +9,7 @@ import {
   getPaymentConfig,
   oxapayService,
   cashuService,
+  circleService,
 } from '../services/payments/index.js';
 import {
   validateApiKey,
@@ -29,12 +30,12 @@ export const paymentTools = {
    */
   deposit_create: {
     description:
-      'Create a deposit request to add funds to your Clawdentials balance. Returns payment instructions (address/invoice) for the selected currency. Supported: USDC (Base), USDT (TRC-20), BTC (on-chain via OxaPay), BTC_LIGHTNING (Lightning Network via Cashu).',
+      'Create a deposit request to add funds to your Clawdentials balance. Returns payment instructions (address/invoice) for the selected currency. Supported: USDC (Base via x402), USDC_CIRCLE (Base via Circle, gas-free), USDT (TRC-20), BTC (on-chain), BTC_LIGHTNING (Lightning Network).',
     handler: async (args: {
       agentId: string;
       apiKey: string;
       amount: number;
-      currency: 'USDC' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
+      currency: 'USDC' | 'USDC_CIRCLE' | 'USDT' | 'BTC' | 'BTC_LIGHTNING';
     }) => {
       // Validate API key
       const isValid = await validateApiKey(args.agentId, args.apiKey);
@@ -50,6 +51,7 @@ export const paymentTools = {
       // Minimum amounts
       const minimums: Record<string, number> = {
         USDC: 1,
+        USDC_CIRCLE: 1,
         USDT: 1,
         BTC: 5, // $5 minimum for on-chain BTC (due to fees)
         BTC_LIGHTNING: 0.5, // ~500 sats minimum for Lightning
@@ -222,6 +224,7 @@ export const paymentTools = {
         paymentMethods: config,
         supported: {
           USDC: config.usdc.configured,
+          USDC_CIRCLE: config.usdc_circle.configured,
           USDT: config.usdt.configured,
           BTC: config.btc.configured,
         },
@@ -417,6 +420,9 @@ function getPaymentMessage(
     case 'USDC':
       return `Send ${instructions.amount} USDC to ${instructions.address} on Base network.${expiry}`;
 
+    case 'USDC_CIRCLE':
+      return `Send ${instructions.amount} USDC to ${instructions.address} on Base (Circle, gas-free).${expiry}`;
+
     case 'USDT':
       if (instructions.url) {
         return `Pay ${instructions.amount} USDT at: ${instructions.url}${expiry}`;
@@ -506,6 +512,19 @@ async function verifyDepositWithProvider(deposit: any): Promise<{
     case 'x402': {
       // USDC via x402 - manual verification for now
       // TODO: Add Base RPC verification when needed
+      return { paid: false, status: 'pending' };
+    }
+
+    case 'circle': {
+      // USDC via Circle Developer-Controlled Wallets
+      if (!externalId) {
+        return { paid: false, status: 'pending' };
+      }
+
+      const result = await circleService.verifyDeposit(externalId, deposit.amount);
+      if (result.paid) {
+        return { paid: true, status: 'completed', txId: result.txHash };
+      }
       return { paid: false, status: 'pending' };
     }
 
