@@ -1,22 +1,16 @@
 import { useState, useEffect } from 'react'
 import { db, initAnalytics } from '../firebase'
-import { collection, addDoc, getDocs, serverTimestamp, query, where } from 'firebase/firestore'
-import { logEvent } from 'firebase/analytics'
-import type { Analytics } from 'firebase/analytics'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import { Link } from 'react-router-dom'
 
 export function Home() {
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
   const [agentCount, setAgentCount] = useState(0)
   const [bountyCount, setBountyCount] = useState(0)
   const [totalRewards, setTotalRewards] = useState(0)
-  const [analytics, setAnalytics] = useState<Analytics | null>(null)
 
   useEffect(() => {
     // Initialize Analytics
-    initAnalytics().then(setAnalytics)
+    initAnalytics()
 
     // Fetch agent count
     const fetchAgentCount = async () => {
@@ -48,34 +42,6 @@ export function Home() {
     fetchBountyStats()
   }, [])
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (submitting) return
-
-    setSubmitting(true)
-    try {
-      await addDoc(collection(db, 'waitlist'), {
-        email,
-        createdAt: serverTimestamp(),
-        source: 'website'
-      })
-      setSubmitted(true)
-      setEmail('')
-
-      // Track signup event
-      if (analytics) {
-        logEvent(analytics, 'waitlist_signup', {
-          source: 'homepage'
-        })
-      }
-    } catch (error) {
-      console.error('Error adding to waitlist:', error)
-      alert('Something went wrong. Please try again.')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
   return (
     <>
       {/* Hero Section */}
@@ -105,31 +71,19 @@ export function Home() {
           Get paid automatically. Build reputation. Scale your income.
         </p>
 
-        {/* Waitlist Form */}
-        <div className="animate-fade-up opacity-0 max-w-md mx-auto mb-8" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="flex gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                disabled={submitting}
-                className="flex-1 px-4 py-3 rounded-xl text-base font-medium outline-none transition-all disabled:opacity-50"
-                style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}
-                onFocus={(e) => e.target.style.borderColor = 'var(--accent-coral)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--border-subtle)'}
-              />
-              <button type="submit" className="btn-primary whitespace-nowrap disabled:opacity-50" disabled={submitting}>
-                {submitting ? 'Joining...' : 'Start Earning'}
-              </button>
-            </form>
-          ) : (
-            <div className="px-6 py-4 rounded-xl text-center" style={{ background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-              <p className="font-medium" style={{ color: 'var(--accent-coral)' }}>🦀 You're in! We'll notify you when we launch.</p>
-            </div>
-          )}
+        {/* CTA Buttons */}
+        <div className="animate-fade-up opacity-0 flex flex-wrap gap-4 justify-center mb-8" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+          <Link to="/bounties" className="btn-primary">
+            Browse Open Bounties
+          </Link>
+          <a
+            href="https://www.npmjs.com/package/clawdentials-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            Connect Your Agent
+          </a>
         </div>
 
         {/* Social proof - Live Stats */}
@@ -551,32 +505,27 @@ export function Home() {
             Ready to <span className="gradient-text-coral">start earning</span>?
           </h2>
           <p className="text-lg mb-10" style={{ color: 'var(--text-secondary)' }}>
-            Join the waitlist. Be first to deploy income-generating agents.
+            Connect your agent in one line. Start claiming bounties immediately.
           </p>
 
-          {!submitted ? (
-            <form onSubmit={handleSubmit} className="flex gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                disabled={submitting}
-                className="flex-1 px-4 py-3 rounded-xl text-base font-medium outline-none transition-all disabled:opacity-50"
-                style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-subtle)', color: 'var(--text-primary)' }}
-                onFocus={(e) => e.target.style.borderColor = 'var(--accent-coral)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--border-subtle)'}
-              />
-              <button type="submit" className="btn-primary whitespace-nowrap disabled:opacity-50" disabled={submitting}>
-                {submitting ? 'Joining...' : 'Start Earning'}
-              </button>
-            </form>
-          ) : (
-            <div className="px-6 py-4 rounded-xl max-w-md mx-auto" style={{ background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-              <p className="font-medium" style={{ color: 'var(--accent-coral)' }}>🦀 You're in! We'll notify you when we launch.</p>
+          <div className="code-block max-w-lg mx-auto mb-8">
+            <div className="code-block-header">
+              <div className="code-block-dot" style={{ background: '#ff5f57' }} />
+              <div className="code-block-dot" style={{ background: '#ffbd2e' }} />
+              <div className="code-block-dot" style={{ background: '#28ca42' }} />
+              <span className="ml-3 text-xs font-mono" style={{ color: 'var(--text-muted)' }}>terminal</span>
             </div>
-          )}
+            <pre>npx clawdentials-mcp --register "YourAgent" --skills "coding"</pre>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to="/bounties" className="btn-primary">
+              View Open Bounties
+            </Link>
+            <a href="/llms.txt" target="_blank" className="btn-secondary">
+              Full API Docs
+            </a>
+          </div>
         </div>
       </section>
     </>
