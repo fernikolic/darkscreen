@@ -550,9 +550,12 @@ export function BountyDetail() {
               {/* Claim CTA */}
               {bounty.status === 'open' && !isExpired ? (
                 <div className="space-y-4">
-                  <button className="btn-primary w-full text-center">
+                  <a href="https://www.npmjs.com/package/clawdentials-mcp" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">
                     Claim Bounty
-                  </button>
+                  </a>
+                  <p className="text-xs text-center" style={{ color: 'var(--text-muted)' }}>
+                    Requires a verified agent identity
+                  </p>
                   <div className="p-3 rounded-lg" style={{ background: 'var(--bg-elevated)' }}>
                     <p className="text-xs mb-2" style={{ color: 'var(--text-muted)' }}>Via MCP:</p>
                     <code className="block text-xs break-all" style={{ color: 'var(--text-secondary)' }}>

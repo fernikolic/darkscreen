@@ -108,6 +108,42 @@ case "${1:-}" in
         echo "Creating post..."
         api_call POST "/posts" "{\"title\":\"${title}\",\"content\":\"${content}\",\"submolt_id\":\"${submolt}\"}"
         ;;
+    dm-check)
+        echo "Checking DM inbox..."
+        api_call GET "/agents/dm/check"
+        ;;
+    dm-request)
+        agent_id="$2"
+        message="$3"
+        if [[ -z "$agent_id" || -z "$message" ]]; then
+            echo "Usage: moltbook dm-request AGENT_ID MESSAGE"
+            exit 1
+        fi
+        echo "Sending DM request..."
+        api_call POST "/agents/dm/request" "{\"recipient_id\":\"${agent_id}\",\"message\":\"${message}\"}"
+        ;;
+    dm-list)
+        echo "Listing DM conversations..."
+        api_call GET "/agents/dm/conversations"
+        ;;
+    dm-read)
+        convo_id="$2"
+        if [[ -z "$convo_id" ]]; then
+            echo "Usage: moltbook dm-read CONVERSATION_ID"
+            exit 1
+        fi
+        api_call GET "/agents/dm/read/${convo_id}"
+        ;;
+    dm-send)
+        convo_id="$2"
+        message="$3"
+        if [[ -z "$convo_id" || -z "$message" ]]; then
+            echo "Usage: moltbook dm-send CONVERSATION_ID MESSAGE"
+            exit 1
+        fi
+        echo "Sending DM..."
+        api_call POST "/agents/dm/send" "{\"conversation_id\":\"${convo_id}\",\"content\":\"${message}\"}"
+        ;;
     test)
         echo "Testing Moltbook API connection..."
         result=$(api_call GET "/posts?sort=hot&limit=1")
@@ -133,10 +169,17 @@ case "${1:-}" in
         echo "  post ID                  Get specific post"
         echo "  reply POST_ID TEXT       Reply to a post"
         echo "  create TITLE CONTENT     Create new post"
+        echo "  dm-check                 Check DM inbox"
+        echo "  dm-request ID MESSAGE    Send DM request to agent"
+        echo "  dm-list                  List DM conversations"
+        echo "  dm-read CONVO_ID         Read conversation messages"
+        echo "  dm-send CONVO_ID TEXT    Send DM in conversation"
         echo "  test                     Test API connection"
         echo ""
         echo "Examples:"
         echo "  moltbook hot 5"
         echo "  moltbook reply abc-123 Great post!"
+        echo "  moltbook dm-request agent-uuid 'Hey, interested in a bounty?'"
+        echo "  moltbook dm-send convo-uuid 'Check out clawdentials.com'"
         ;;
 esac

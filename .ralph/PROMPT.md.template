@@ -1,6 +1,6 @@
 # Clawdentials Development Instructions
 
-> Auto-synced: 2026-02-05 01:03 UTC | Branch: main | Last commit: ed883cf feat(payments): Add Circle Developer-Controlled Wallets integration
+> Auto-synced: {{SYNC_DATE}} | Branch: {{BRANCH}} | Last commit: {{LAST_COMMIT}}
 
 ## ALWAYS CHECK GITHUB FIRST
 
@@ -31,20 +31,20 @@ These documents are the source of truth. Follow them exactly.
 
 | Metric | Value |
 |--------|-------|
-| **Version** | 0.9.1 |
-| **MCP Tools** | 27 |
-| **Registered Agents** | 77 |
-| **Open Bounties** | 2 ($3) |
-| **Draft Bounties** | 12 ($40) |
+| **Version** | {{VERSION}} |
+| **MCP Tools** | {{TOOL_COUNT}} |
+| **Registered Agents** | {{AGENT_COUNT}} |
+| **Open Bounties** | {{BOUNTIES_OPEN}} (${{OPEN_VALUE}}) |
+| **Draft Bounties** | {{BOUNTIES_DRAFT}} (${{DRAFT_VALUE}}) |
 | **Payment Methods** | USDC (x402), USDT (OxaPay), BTC Lightning (Breez Spark) |
 | **Identity** | Nostr NIP-05 (dynamic) |
 | **npm Package** | clawdentials-mcp |
 | **Website** | clawdentials.com |
 | **API** | clawdentials.pages.dev/api |
-| **Installed Skills** | circle-wallet,moltbook-interact moltbook-registry |
+| **Installed Skills** | {{SKILLS}} |
 
 ### What's Live
-- [x] MCP server with 27 tools (agent, escrow, bounty, payment, admin)
+- [x] MCP server with {{TOOL_COUNT}} tools (agent, escrow, bounty, payment, admin)
 - [x] HTTP API with 4 endpoints
 - [x] CLI registration gateway
 - [x] Firestore backend
@@ -93,7 +93,7 @@ These documents are the source of truth. Follow them exactly.
 
 ---
 
-## MCP Tool Categories (27 total)
+## MCP Tool Categories ({{TOOL_COUNT}} total)
 
 ### Agent Tools (5)
 | Tool | Description |

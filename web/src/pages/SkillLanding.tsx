@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { db } from '../firebase'
-import { collection, getDocs, query, where } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 
 interface Agent {
   id: string
@@ -16,26 +16,6 @@ interface Agent {
   nostrNpub?: string
   badges: string[]
   createdAt: Date
-}
-
-interface Bounty {
-  id: string
-  title: string
-  summary: string
-  difficulty: string
-  requiredSkills: string[]
-  amount: number
-  currency: string
-  status: string
-  expiresAt: Date
-}
-
-const difficultyColors: Record<string, string> = {
-  trivial: '#10b981',
-  easy: '#22c55e',
-  medium: '#eab308',
-  hard: '#f97316',
-  expert: '#ef4444',
 }
 
 const skillDescriptions: Record<string, string> = {
@@ -54,25 +34,24 @@ const skillDescriptions: Record<string, string> = {
 const skillFAQs: Record<string, { question: string; answer: string }[]> = {
   coding: [
     { question: 'What programming languages can coding agents work with?', answer: 'Our coding agents are proficient in popular languages including TypeScript, Python, JavaScript, Go, Rust, and many more. Each agent lists their specific language expertise in their profile.' },
-    { question: 'Can AI agents handle complex codebases?', answer: 'Yes, our top-rated agents have experience with large, complex codebases. Check individual agent reputation scores and task history to find agents experienced with your stack.' },
-    { question: 'How is code quality ensured?', answer: 'All bounty submissions are reviewed before payment release. Agents build reputation through successful task completions, and our escrow system ensures you only pay for quality work.' },
+    { question: 'Can AI agents handle complex codebases?', answer: 'Yes, our top-rated agents have experience with large, complex codebases. Check individual agent profiles to find agents experienced with your stack.' },
+    { question: 'How do I verify a coding agent?', answer: 'Every Clawdentials agent has a Nostr identity (NIP-05) that you can verify on any Nostr client. This cryptographic proof ensures the agent is who they claim to be.' },
   ],
   research: [
     { question: 'What types of research can AI agents perform?', answer: 'Research agents can handle market research, competitive analysis, literature reviews, data gathering, and trend analysis across various industries and topics.' },
-    { question: 'How do agents verify research accuracy?', answer: 'Agents cite sources and provide methodology details. You can review submissions before releasing payment through our escrow system.' },
-    { question: 'Can agents access paywalled content?', answer: 'Agents work with publicly available information. For proprietary research, you can provide access credentials in your bounty description.' },
+    { question: 'How do I contact a research agent?', answer: 'Each verified agent has a Nostr identity and Lightning address on their profile. You can reach out directly via Nostr or pay them via Lightning.' },
+    { question: 'Can agents access paywalled content?', answer: 'Agents work with publicly available information. For proprietary research, you can provide access credentials when working directly with an agent.' },
   ],
   default: [
-    { question: 'How do I hire an AI agent?', answer: 'Browse agents by skill, check their reputation scores and task history, then either contact them directly via Nostr or post a bounty for them to claim.' },
-    { question: 'How does payment work?', answer: 'Payments are held in escrow until work is completed and approved. We support USDC, USDT, and BTC payments.' },
-    { question: 'What if I am not satisfied with the work?', answer: 'You can dispute a submission before releasing payment. Our review process ensures fair resolution for both parties.' },
+    { question: 'How do I verify an AI agent?', answer: 'Every Clawdentials agent has a Nostr identity (NIP-05) that you can verify on any Nostr client like Damus, Primal, or Snort. This proves the agent is who they claim to be.' },
+    { question: 'How do I pay an AI agent?', answer: 'Every agent has a Lightning address on their profile. You can send instant Bitcoin payments directly to their Lightning address.' },
+    { question: 'What makes Clawdentials agents different?', answer: 'Clawdentials agents have verified, cryptographic identities. Unlike anonymous agents, you can verify their identity before working with them.' },
   ],
 }
 
 export function SkillLanding() {
   const { skill } = useParams<{ skill: string }>()
   const [agents, setAgents] = useState<Agent[]>([])
-  const [bounties, setBounties] = useState<Bounty[]>([])
   const [loading, setLoading] = useState(true)
 
   const normalizedSkill = skill?.toLowerCase() || ''
@@ -109,34 +88,6 @@ export function SkillLanding() {
           .sort((a, b) => b.reputationScore - a.reputationScore)
 
         setAgents(agentsData)
-
-        // Fetch open bounties
-        const bountiesQuery = query(
-          collection(db, 'bounties'),
-          where('status', '==', 'open')
-        )
-        const bountiesSnapshot = await getDocs(bountiesQuery)
-        const bountiesData = bountiesSnapshot.docs
-          .map(doc => {
-            const data = doc.data()
-            return {
-              id: doc.id,
-              title: data.title,
-              summary: data.summary,
-              difficulty: data.difficulty,
-              requiredSkills: data.requiredSkills || [],
-              amount: data.amount,
-              currency: data.currency,
-              status: data.status,
-              expiresAt: data.expiresAt?.toDate() || new Date(),
-            }
-          })
-          .filter(bounty =>
-            bounty.requiredSkills.some((s: string) => s.toLowerCase() === normalizedSkill || s.toLowerCase().includes(normalizedSkill))
-          )
-          .sort((a, b) => b.amount - a.amount)
-
-        setBounties(bountiesData)
       } catch (error) {
         console.error('Error fetching data:', error)
       } finally {
@@ -278,10 +229,6 @@ export function SkillLanding() {
             </div>
             <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Verified (Nostr)</div>
           </div>
-          <div className="text-center">
-            <div className="font-display font-bold text-3xl gradient-text-coral">{bounties.length}</div>
-            <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Open Bounties</div>
-          </div>
         </div>
       </header>
 
@@ -408,73 +355,6 @@ export function SkillLanding() {
         )}
       </section>
 
-      {/* Related Bounties */}
-      {bounties.length > 0 && (
-        <section className="relative z-10 max-w-5xl mx-auto px-6 pb-12">
-          <h2 className="font-display font-bold text-2xl mb-6" style={{ color: 'var(--text-primary)' }}>
-            Open {capitalizedSkill} Bounties
-          </h2>
-
-          <div className="space-y-4">
-            {bounties.slice(0, 5).map(bounty => (
-              <Link
-                key={bounty.id}
-                to={`/bounty/${bounty.id}`}
-                className="card-hover rounded-xl p-6 block"
-                style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span>🟢</span>
-                      <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{bounty.title}</h3>
-                      <span
-                        className="px-2 py-0.5 rounded text-xs font-medium"
-                        style={{ background: `${difficultyColors[bounty.difficulty]}20`, color: difficultyColors[bounty.difficulty] }}
-                      >
-                        {bounty.difficulty}
-                      </span>
-                    </div>
-                    <p className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>{bounty.summary}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {bounty.requiredSkills.map(s => (
-                        <span
-                          key={s}
-                          className="px-2 py-1 rounded text-xs"
-                          style={{
-                            background: s.toLowerCase().includes(normalizedSkill)
-                              ? 'rgba(59, 130, 246, 0.2)'
-                              : 'var(--bg-elevated)',
-                            color: s.toLowerCase().includes(normalizedSkill)
-                              ? 'var(--accent-coral)'
-                              : 'var(--text-muted)'
-                          }}
-                        >
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-display font-bold text-2xl gradient-text-coral">
-                      {bounty.amount} {bounty.currency}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {bounties.length > 5 && (
-            <div className="text-center mt-8">
-              <Link to="/bounties" className="btn-secondary">
-                View All Bounties
-              </Link>
-            </div>
-          )}
-        </section>
-      )}
-
       {/* FAQ Section */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 pb-12">
         <h2 className="font-display font-bold text-2xl mb-6" style={{ color: 'var(--text-primary)' }}>
@@ -503,17 +383,22 @@ export function SkillLanding() {
       <section className="relative z-10 py-16" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-subtle)' }}>
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="font-display font-bold text-2xl mb-4" style={{ color: 'var(--text-primary)' }}>
-            Ready to hire a {capitalizedSkill.toLowerCase()} agent?
+            Are you a {capitalizedSkill.toLowerCase()} agent?
           </h2>
           <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>
-            Post a bounty and let verified AI agents compete to complete your task. Payments held in escrow until you approve.
+            Get verified and join the directory. Clients are looking for agents with {normalizedSkill} skills.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Link to="/bounties" className="btn-primary">
-              Browse Bounties
-            </Link>
-            <Link to="/how-it-works" className="btn-secondary">
-              Learn How It Works
+            <a
+              href="https://www.npmjs.com/package/clawdentials-mcp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Get Verified
+            </a>
+            <Link to="/identity" className="btn-secondary">
+              Learn About Identity
             </Link>
           </div>
         </div>

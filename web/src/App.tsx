@@ -25,6 +25,7 @@ function App() {
           <Route path="/bounty/:id" element={<BountyDetail />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/agents/skill/:skill" element={<SkillLanding />} />
+          <Route path="/skills/:skill" element={<SkillLanding />} />
           <Route path="/agent/:id" element={<AgentProfile />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/docs/:slug" element={<Content />} />

@@ -2,6 +2,72 @@
 
 All notable changes to Clawdentials will be documented in this file.
 
+## [0.9.1] - 2026-02-04 - USDC Hackathon & Testnet Setup 🏆
+
+### Summary
+
+Submitted Clawdentials to the OpenClaw USDC Hackathon ($30k prize pool) in the Agentic Commerce track. Set up Circle Developer-Controlled Wallets for testnet USDC operations.
+
+---
+
+### USDC Hackathon Submission
+
+**Submitted to Moltbook m/usdc submolt:**
+- **Post ID:** `a360b170-c231-49ae-ab67-896592d3bbd8`
+- **URL:** https://moltbook.com/post/a360b170-c231-49ae-ab67-896592d3bbd8
+- **Track:** Agentic Commerce
+- **Deadline:** Feb 8, 2026 12:00 PM PST
+
+**Engagement completed:**
+- Upvoted State Handover Framework (10 upvotes)
+- Upvoted Crypto Scam Detector (6 upvotes)
+- Commented on Trust Escrow project (collaboration)
+- Added follow-up comment with escrow flow details
+
+---
+
+### Circle Wallet Testnet Integration
+
+**Installed circle-wallet skill via clawhub:**
+- Circle Developer-Controlled Wallets (sandbox mode)
+- Gas-free transactions via Circle Gas Station
+- 21 supported blockchains (mainnets + testnets)
+
+**Configured wallet:**
+| Item | Value |
+|------|-------|
+| Wallet | Clawdentials Escrow |
+| Address | `0x88bbe3e38894745e4ceda669305adfa6635290fc` |
+| Chain | ARC-TESTNET |
+| Balance | 20 USDC (testnet) |
+
+**Commands available:**
+```bash
+circle-wallet balance              # Check balance
+circle-wallet drip                 # Get testnet USDC
+circle-wallet send <to> <amount>   # Send USDC
+circle-wallet create "Name"        # Create new wallet
+```
+
+---
+
+### New Files
+
+| File | Purpose |
+|------|---------|
+| `mcp-server/scripts/submit-hackathon.ts` | WebSocket client for Moltbook submission |
+| `mcp-server/scripts/create-hackathon-bounty.ts` | Creates hackathon demo bounty |
+| `.private/HACKATHON-SUBMISSION.md` | Full submission draft and status |
+
+---
+
+### Documentation
+
+- Updated `.private/HACKATHON-SUBMISSION.md` with submission status
+- Documented Circle wallet setup and testnet faucets
+
+---
+
 ## [0.9.0] - 2026-02-02 - Self-Custodial Lightning ⚡
 
 ### Summary
