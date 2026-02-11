@@ -3,6 +3,8 @@ node_modules/
 
 # Build output
 dist/
+out/
+.next/
 
 # Environment
 .env
@@ -29,18 +31,11 @@ Thumbs.db
 serviceAccountKey.json
 firebase-admin-key.json
 
-# Private docs (business strategy, not for public repo)
+# Private docs
 .private/
-
-# Local state files
-mcp-server/.last-deposit-id
-mcp-server/.last-invoice
-.ralph/.stats-cache.json
 
 # IDE and tool configs
 .agents/
 .claude/
-.clawdhub/
 .codex/
 .cursor/
-.breez-wallets/

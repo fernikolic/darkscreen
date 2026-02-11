@@ -1,18 +1,4 @@
 {
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/sync-prompt.sh\"",
-            "timeout": 30000
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "Bash(npm:*)",
@@ -26,20 +12,13 @@
       "Bash(gcloud:*)",
       "Bash(wrangler:*)",
       "Bash(curl:*)",
-      "Bash(dig:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
       "Bash(rm:*)",
-      "Bash(cat:*)",
-      "Bash(head:*)",
-      "Bash(tail:*)",
-      "Bash(echo:*)",
-      "Bash(printenv:*)",
       "Bash(pwd)",
       "Bash(which:*)",
-      "Bash(GOOGLE_APPLICATION_CREDENTIALS=*)",
       "Read",
       "Write",
       "Edit",
