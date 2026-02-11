@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { apps, CATEGORY_COLORS } from "@/data/apps";
 import { ScreenshotStrip } from "@/components/ScreenshotStrip";
 import { ChangeTimeline } from "@/components/ChangeTimeline";
+import { EmailCapture } from "@/components/EmailCapture";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -58,14 +59,9 @@ export default function AppDetail({ params }: PageProps) {
             We&apos;re actively capturing {app.name}. Get early access to be
             notified when full screenshots and change tracking are available.
           </p>
-          {/* REPLACE_WITH_TALLY_LINK */}
-          <a
-            href="#"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent-blue px-6 py-3 text-sm font-semibold text-dark-bg transition-all hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-          >
-            Get Early Access
-            <span aria-hidden="true">&rarr;</span>
-          </a>
+          <div className="mt-8 flex justify-center">
+            <EmailCapture source={`app-${app.slug}`} />
+          </div>
         </div>
       </div>
     );
@@ -147,14 +143,9 @@ export default function AppDetail({ params }: PageProps) {
           Get early access to change notifications, weekly digests, and
           before/after comparisons.
         </p>
-        {/* REPLACE_WITH_TALLY_LINK */}
-        <a
-          href="#"
-          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent-blue px-6 py-3 text-sm font-semibold text-dark-bg transition-all hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-        >
-          Get Early Access
-          <span aria-hidden="true">&rarr;</span>
-        </a>
+        <div className="mt-6 flex justify-center">
+          <EmailCapture source={`app-${app.slug}-cta`} />
+        </div>
       </section>
     </div>
   );

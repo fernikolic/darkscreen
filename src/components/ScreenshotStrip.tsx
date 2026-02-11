@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { type AppScreenshot, type FlowType } from "@/data/apps";
 import { PlaceholderScreen } from "./PlaceholderScreen";
 
@@ -58,11 +59,26 @@ export function ScreenshotStrip({
         <div className="flex gap-4" style={{ minWidth: "max-content" }}>
           {filtered.map((screenshot, idx) => (
             <div key={`${screenshot.flow}-${screenshot.step}-${idx}`} className="w-40 flex-shrink-0">
-              <PlaceholderScreen
-                color={accentColor}
-                label={screenshot.label}
-                appName={appName}
-              />
+              {screenshot.image ? (
+                <div
+                  className="relative aspect-[16/10] overflow-hidden rounded-lg border"
+                  style={{ borderColor: `${accentColor}25` }}
+                >
+                  <Image
+                    src={screenshot.image}
+                    alt={`${appName} - ${screenshot.label}`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="160px"
+                  />
+                </div>
+              ) : (
+                <PlaceholderScreen
+                  color={accentColor}
+                  label={screenshot.label}
+                  appName={appName}
+                />
+              )}
               <div className="mt-2 px-1">
                 <span className="font-mono text-[10px] text-zinc-600">
                   Step {screenshot.step}

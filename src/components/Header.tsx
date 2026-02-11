@@ -29,9 +29,8 @@ export function Header() {
           >
             Pricing
           </a>
-          {/* REPLACE_WITH_TALLY_LINK */}
           <a
-            href="#"
+            href="#get-access"
             className="rounded-lg bg-accent-blue/10 px-4 py-2 text-sm font-medium text-accent-blue transition-all hover:bg-accent-blue/20"
           >
             Get Early Access
@@ -73,8 +72,9 @@ export function Header() {
               Pricing
             </a>
             <a
-              href="#"
+              href="#get-access"
               className="rounded-lg bg-accent-blue/10 px-4 py-2 text-center text-sm font-medium text-accent-blue"
+              onClick={() => setMobileOpen(false)}
             >
               Get Early Access
             </a>

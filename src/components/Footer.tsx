@@ -23,14 +23,14 @@ export function Footer() {
             >
               Pricing
             </a>
-            {/* TODO: Replace with real Twitter link */}
             <a
-              href="#"
+              href="https://x.com/darkscreenxyz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-zinc-500 transition-colors hover:text-zinc-300"
             >
               Twitter
             </a>
-            {/* TODO: Replace with real contact email */}
             <a
               href="mailto:hello@darkscreen.xyz"
               className="text-sm text-zinc-500 transition-colors hover:text-zinc-300"

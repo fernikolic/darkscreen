@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PlaceholderScreen } from "./PlaceholderScreen";
+import { EmailCapture } from "./EmailCapture";
 
 const previewApps = [
   { name: "MetaMask", color: "#f6851b", label: "Portfolio" },
@@ -39,13 +40,6 @@ export function Hero() {
               Browse the Library
               <span aria-hidden="true">&rarr;</span>
             </Link>
-            {/* REPLACE_WITH_TALLY_LINK */}
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 rounded-lg border border-dark-border bg-dark-card px-6 py-3 text-sm font-medium text-zinc-300 transition-all hover:border-zinc-600 hover:text-white"
-            >
-              Get Early Access
-            </a>
           </div>
         </div>
 

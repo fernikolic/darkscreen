@@ -25,6 +25,7 @@ export interface AppScreenshot {
   step: number;
   label: string;
   flow: FlowType;
+  image?: string;
 }
 
 export interface AppChange {
@@ -71,7 +72,7 @@ export const apps: CryptoApp[] = [
     detailed: true,
     flows: ["Home", "Onboarding", "Swap", "Send", "Settings"],
     screenshots: [
-      { step: 1, label: "Portfolio overview", flow: "Home" },
+      { step: 1, label: "Portfolio overview", flow: "Home", image: "/screenshots/metamask-home.png" },
       { step: 2, label: "Token balances list", flow: "Home" },
       { step: 3, label: "Recent activity feed", flow: "Home" },
       { step: 4, label: "Network selector", flow: "Home" },
@@ -128,7 +129,7 @@ export const apps: CryptoApp[] = [
     detailed: true,
     flows: ["Home", "Onboarding", "Swap", "Send", "Staking", "Settings"],
     screenshots: [
-      { step: 1, label: "Token list view", flow: "Home" },
+      { step: 1, label: "Token list view", flow: "Home", image: "/screenshots/phantom-home.png" },
       { step: 2, label: "NFT gallery", flow: "Home" },
       { step: 3, label: "Activity history", flow: "Home" },
       { step: 1, label: "Welcome screen", flow: "Onboarding" },
@@ -184,7 +185,7 @@ export const apps: CryptoApp[] = [
     detailed: true,
     flows: ["Home", "Swap", "Send", "Settings"],
     screenshots: [
-      { step: 1, label: "Swap interface", flow: "Home" },
+      { step: 1, label: "Swap interface", flow: "Home", image: "/screenshots/uniswap-home.png" },
       { step: 2, label: "Pool overview", flow: "Home" },
       { step: 3, label: "Token explorer", flow: "Home" },
       { step: 1, label: "Select token pair", flow: "Swap" },
@@ -233,7 +234,7 @@ export const apps: CryptoApp[] = [
     detailed: true,
     flows: ["Home", "Onboarding", "Swap", "Send", "Staking", "Settings"],
     screenshots: [
-      { step: 1, label: "Portfolio overview", flow: "Home" },
+      { step: 1, label: "Portfolio overview", flow: "Home", image: "/screenshots/coinbase-home.png" },
       { step: 2, label: "Watchlist", flow: "Home" },
       { step: 3, label: "Market prices", flow: "Home" },
       { step: 4, label: "News feed", flow: "Home" },
@@ -293,7 +294,7 @@ export const apps: CryptoApp[] = [
     detailed: true,
     flows: ["Home", "Swap", "Settings"],
     screenshots: [
-      { step: 1, label: "Markets overview", flow: "Home" },
+      { step: 1, label: "Markets overview", flow: "Home", image: "/screenshots/aave-home.png" },
       { step: 2, label: "Your supplies dashboard", flow: "Home" },
       { step: 3, label: "Your borrows dashboard", flow: "Home" },
       { step: 1, label: "Select asset to supply", flow: "Swap" },

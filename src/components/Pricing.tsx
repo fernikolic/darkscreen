@@ -1,3 +1,7 @@
+"use client";
+
+import { EmailCapture } from "./EmailCapture";
+
 const tiers = [
   {
     name: "Free",
@@ -109,17 +113,21 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              {/* REPLACE_WITH_TALLY_LINK */}
-              <a
-                href="#"
-                className={`mt-8 block rounded-lg py-3 text-center text-sm font-semibold transition-all ${
-                  tier.highlighted
-                    ? "bg-accent-blue text-dark-bg hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-                    : "border border-dark-border bg-dark-hover text-zinc-300 hover:border-zinc-600 hover:text-white"
-                }`}
-              >
-                {tier.cta}
-              </a>
+              <div className="mt-8">
+                {tier.name === "Free" ? (
+                  <a
+                    href="#get-access"
+                    className="block rounded-lg border border-dark-border bg-dark-hover py-3 text-center text-sm font-semibold text-zinc-300 transition-all hover:border-zinc-600 hover:text-white"
+                  >
+                    {tier.cta}
+                  </a>
+                ) : (
+                  <EmailCapture
+                    variant={tier.highlighted ? "primary" : "secondary"}
+                    source={`pricing-${tier.name.toLowerCase()}`}
+                  />
+                )}
+              </div>
             </div>
           ))}
         </div>
