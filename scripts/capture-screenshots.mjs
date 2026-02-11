@@ -6,11 +6,18 @@ const screenshotDir = resolve("public/screenshots");
 mkdirSync(screenshotDir, { recursive: true });
 
 const apps = [
+  // Original 5
   { slug: "metamask", url: "https://metamask.io" },
   { slug: "phantom", url: "https://phantom.app" },
   { slug: "uniswap", url: "https://app.uniswap.org" },
   { slug: "coinbase", url: "https://www.coinbase.com/explore" },
   { slug: "aave", url: "https://app.aave.com" },
+  // New 5
+  { slug: "jupiter", url: "https://jup.ag" },
+  { slug: "lido", url: "https://stake.lido.fi" },
+  { slug: "binance", url: "https://www.binance.com/en/markets/overview" },
+  { slug: "kraken", url: "https://www.kraken.com/prices" },
+  { slug: "curve", url: "https://curve.fi" },
 ];
 
 async function main() {
