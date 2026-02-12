@@ -4,22 +4,22 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Darkscreen — Visual Intelligence for Crypto Products",
+  title: "Darkscreen — Crypto Product Design Library",
   description:
-    "See what every crypto product ships. Visual competitive intelligence for wallets, exchanges, and DeFi. Track UI changes. Spot features before they're announced.",
+    "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.",
   openGraph: {
-    title: "Darkscreen — Visual Intelligence for Crypto Products",
+    title: "Darkscreen — Crypto Product Design Library",
     description:
-      "See what every crypto product ships. Visual competitive intelligence for wallets, exchanges, and DeFi.",
+      "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
     url: "https://darkscreen.xyz",
     siteName: "Darkscreen",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Darkscreen — Visual Intelligence for Crypto Products",
+    title: "Darkscreen — Crypto Product Design Library",
     description:
-      "See what every crypto product ships. Visual competitive intelligence for wallets, exchanges, and DeFi.",
+      "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
   },
 };
 

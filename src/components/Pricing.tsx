@@ -7,10 +7,10 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "",
-    description: "Browse current screenshots for 10 apps. No history.",
+    description: "Browse current screens for 10 apps. No history.",
     features: [
       "10 apps",
-      "Current screenshots only",
+      "Current screens only",
       "Browse by category",
       "Basic search",
     ],
@@ -19,23 +19,23 @@ const tiers = [
   },
   {
     name: "Pro",
-    price: "$29",
+    price: "$9",
     period: "/mo",
     description: "Full library, 12 months of history, weekly digest.",
     features: [
-      "All 50+ apps",
+      "All 35+ apps",
       "12 months of history",
       "Before/after comparisons",
       "Weekly change digest",
-      "Export screenshots",
+      "Export screens",
     ],
     cta: "Get Early Access",
     highlighted: true,
   },
   {
     name: "Team",
-    price: "$79",
-    period: "/mo",
+    price: "$12",
+    period: "/member/mo",
     description:
       "Everything in Pro + alerts, API access, custom app requests.",
     features: [

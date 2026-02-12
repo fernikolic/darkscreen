@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { apps, CATEGORY_COLORS } from "@/data/apps";
-import { ScreenshotStrip } from "@/components/ScreenshotStrip";
+import { ScreenGallery } from "@/components/ScreenGallery";
 import { ChangeTimeline } from "@/components/ChangeTimeline";
 import { EmailCapture } from "@/components/EmailCapture";
 
@@ -10,11 +10,12 @@ export function generateStaticParams() {
 }
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function AppDetail({ params }: PageProps) {
-  const app = apps.find((a) => a.slug === params.slug);
+export default async function AppDetail({ params }: PageProps) {
+  const { slug } = await params;
+  const app = apps.find((a) => a.slug === slug);
 
   if (!app) {
     notFound();
@@ -56,8 +57,8 @@ export default function AppDetail({ params }: PageProps) {
             {app.category}
           </span>
           <p className="mx-auto mt-6 max-w-md text-zinc-400">
-            We&apos;re actively capturing {app.name}. Get early access to be
-            notified when full screenshots and change tracking are available.
+            We&apos;re adding screens for {app.name}. Get early access to be
+            notified when full screens and change tracking are available.
           </p>
           <div className="mt-8 flex justify-center">
             <EmailCapture source={`app-${app.slug}`} />
@@ -105,24 +106,24 @@ export default function AppDetail({ params }: PageProps) {
         <div className="flex gap-6">
           <div>
             <span className="block font-mono text-2xl font-bold text-white">
-              {app.screenshotCount}
+              {app.screenCount}
             </span>
-            <span className="text-xs text-zinc-500">screenshots</span>
+            <span className="text-xs text-zinc-500">screens</span>
           </div>
           <div>
             <span className="block text-sm font-medium text-white">
-              {app.lastCaptured}
+              {app.lastUpdated}
             </span>
-            <span className="text-xs text-zinc-500">last captured</span>
+            <span className="text-xs text-zinc-500">last updated</span>
           </div>
         </div>
       </div>
 
       {/* Screenshot filmstrip */}
       <section className="mb-16 rounded-xl border border-dark-border bg-dark-card p-6">
-        <h2 className="mb-6 text-xl font-semibold text-white">Screenshots</h2>
-        <ScreenshotStrip
-          screenshots={app.screenshots}
+        <h2 className="mb-6 text-xl font-semibold text-white">Screens</h2>
+        <ScreenGallery
+          screens={app.screens}
           accentColor={app.accentColor}
           appName={app.name}
           flows={app.flows}

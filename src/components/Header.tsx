@@ -33,7 +33,7 @@ export function Header() {
             href="#get-access"
             className="rounded-lg bg-accent-blue/10 px-4 py-2 text-sm font-medium text-accent-blue transition-all hover:bg-accent-blue/20"
           >
-            Get Early Access
+            Get Started Free
           </a>
         </div>
 
@@ -76,7 +76,7 @@ export function Header() {
               className="rounded-lg bg-accent-blue/10 px-4 py-2 text-center text-sm font-medium text-accent-blue"
               onClick={() => setMobileOpen(false)}
             >
-              Get Early Access
+              Get Started Free
             </a>
           </div>
         </div>

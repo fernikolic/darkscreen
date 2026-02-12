@@ -1,21 +1,21 @@
 const steps = [
   {
     number: "01",
-    title: "We Capture",
+    title: "Search",
     description:
-      "AI-powered automation screenshots every major crypto product across their key flows — onboarding, swaps, sends, staking, and more.",
+      "Find the screen or flow you need. Browse by app, category, or UI pattern across every major crypto product.",
   },
   {
     number: "02",
-    title: "We Detect",
+    title: "Compare",
     description:
-      "Weekly re-crawls with visual diff analysis spot every change — new features, redesigns, copy updates, layout shifts.",
+      "See how different apps solve the same problem. Compare onboarding flows, swap UIs, staking experiences side by side.",
   },
   {
     number: "03",
-    title: "You Decide",
+    title: "Ship",
     description:
-      "Browse the library, follow competitors, get alerts. Make product decisions based on what the market is actually shipping.",
+      "Use real-world references to make better product decisions. Stop guessing and start designing with data.",
   },
 ];
 
@@ -28,7 +28,7 @@ export function HowItWorks() {
             How it works
           </h2>
           <p className="mt-4 text-zinc-400">
-            From capture to competitive advantage in three steps.
+            From search to shipping, in three steps.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">

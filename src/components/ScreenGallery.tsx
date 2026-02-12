@@ -2,28 +2,28 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { type AppScreenshot, type FlowType } from "@/data/apps";
+import { type AppScreen, type FlowType } from "@/data/apps";
 import { PlaceholderScreen } from "./PlaceholderScreen";
 
-interface ScreenshotStripProps {
-  screenshots: AppScreenshot[];
+interface ScreenGalleryProps {
+  screens: AppScreen[];
   accentColor: string;
   appName: string;
   flows: FlowType[];
 }
 
-export function ScreenshotStrip({
-  screenshots,
+export function ScreenGallery({
+  screens,
   accentColor,
   appName,
   flows,
-}: ScreenshotStripProps) {
+}: ScreenGalleryProps) {
   const [activeFlow, setActiveFlow] = useState<FlowType | "All">("All");
 
   const filtered =
     activeFlow === "All"
-      ? screenshots
-      : screenshots.filter((s) => s.flow === activeFlow);
+      ? screens
+      : screens.filter((s) => s.flow === activeFlow);
 
   return (
     <div>
@@ -54,19 +54,19 @@ export function ScreenshotStrip({
         ))}
       </div>
 
-      {/* Screenshot filmstrip */}
+      {/* Screen gallery */}
       <div className="overflow-x-auto pb-4">
         <div className="flex gap-4" style={{ minWidth: "max-content" }}>
-          {filtered.map((screenshot, idx) => (
-            <div key={`${screenshot.flow}-${screenshot.step}-${idx}`} className="w-40 flex-shrink-0">
-              {screenshot.image ? (
+          {filtered.map((screen, idx) => (
+            <div key={`${screen.flow}-${screen.step}-${idx}`} className="w-40 flex-shrink-0">
+              {screen.image ? (
                 <div
                   className="relative aspect-[16/10] overflow-hidden rounded-lg border"
                   style={{ borderColor: `${accentColor}25` }}
                 >
                   <Image
-                    src={screenshot.image}
-                    alt={`${appName} - ${screenshot.label}`}
+                    src={screen.image}
+                    alt={`${appName} - ${screen.label}`}
                     fill
                     className="object-cover object-top"
                     sizes="160px"
@@ -75,15 +75,15 @@ export function ScreenshotStrip({
               ) : (
                 <PlaceholderScreen
                   color={accentColor}
-                  label={screenshot.label}
+                  label={screen.label}
                   appName={appName}
                 />
               )}
               <div className="mt-2 px-1">
                 <span className="font-mono text-[10px] text-zinc-600">
-                  Step {screenshot.step}
+                  Step {screen.step}
                 </span>
-                <p className="text-xs text-zinc-400">{screenshot.label}</p>
+                <p className="text-xs text-zinc-400">{screen.label}</p>
               </div>
             </div>
           ))}

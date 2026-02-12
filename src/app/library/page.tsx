@@ -29,8 +29,7 @@ export default function Library() {
           The Library
         </h1>
         <p className="mt-3 text-zinc-400">
-          Browse screenshots from 50+ crypto products. Filter by app, category,
-          and flow type.
+          Explore screens and flows from 35+ crypto products
         </p>
       </div>
 

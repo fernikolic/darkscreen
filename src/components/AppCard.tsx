@@ -64,7 +64,7 @@ export function AppCard({ app }: AppCardProps) {
           {/* Hover overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-dark-bg/60 opacity-0 transition-opacity group-hover:opacity-100">
             <span className="rounded-lg bg-accent-blue/10 px-4 py-2 text-sm font-medium text-accent-blue">
-              {app.detailed ? "View Screenshots" : "Coming Soon"}
+              {app.detailed ? "Explore Screens" : "Coming Soon"}
             </span>
           </div>
         </div>
@@ -85,11 +85,11 @@ export function AppCard({ app }: AppCardProps) {
           </div>
           <div className="mt-2 flex items-center gap-3">
             <span className="font-mono text-xs text-zinc-500">
-              {app.screenshotCount} screens
+              {app.screenCount} screens
             </span>
             <span className="text-zinc-700">&middot;</span>
             <span className="text-xs text-zinc-500">
-              Updated {app.lastCaptured}
+              Updated {app.lastUpdated}
             </span>
           </div>
         </div>

@@ -41,7 +41,7 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t border-dark-border pt-6 text-center">
           <p className="text-xs text-zinc-600">
-            Built by crypto people, for crypto people.
+            The design reference for crypto.
           </p>
         </div>
       </div>

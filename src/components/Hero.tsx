@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PlaceholderScreen } from "./PlaceholderScreen";
-import { EmailCapture } from "./EmailCapture";
+import { TOTAL_APPS, TOTAL_SCREENS, TOTAL_FLOWS } from "@/data/apps";
 
 const previewApps = [
   { name: "MetaMask", color: "#f6851b", label: "Portfolio" },
@@ -9,6 +9,12 @@ const previewApps = [
   { name: "Uniswap", color: "#ff007a", label: "Swap" },
   { name: "Aave", color: "#b6509e", label: "Lending" },
   { name: "OpenSea", color: "#2081e2", label: "Collections" },
+];
+
+const stats = [
+  { value: `${TOTAL_APPS}+`, label: "Apps" },
+  { value: `${TOTAL_SCREENS.toLocaleString()}+`, label: "Screens" },
+  { value: `${TOTAL_FLOWS}+`, label: "Flows" },
 ];
 
 export function Hero() {
@@ -23,21 +29,39 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-24 md:pt-32">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-            See what every crypto
+            The world&apos;s largest library
             <br />
-            product ships.
+            of crypto product design
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-400 md:text-xl">
-            Visual competitive intelligence for wallets, exchanges, and DeFi.
-            Track UI changes. Spot what competitors build before they announce
-            it.
+            Explore screens, flows, and UI patterns from {TOTAL_APPS}+ wallets,
+            exchanges, and DeFi protocols. The design reference built for crypto
+            product teams.
           </p>
+
+          {/* Stats row */}
+          <div className="mx-auto mt-8 flex max-w-md items-center justify-center gap-8">
+            {stats.map((stat, i) => (
+              <div key={stat.label} className="flex items-center gap-8">
+                {i > 0 && (
+                  <span className="text-dark-border">|</span>
+                )}
+                <div className="text-center">
+                  <span className="block font-mono text-2xl font-bold text-white">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-zinc-500">{stat.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/library"
               className="inline-flex items-center gap-2 rounded-lg bg-accent-blue px-6 py-3 text-sm font-semibold text-dark-bg transition-all hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
             >
-              Browse the Library
+              Explore the Library
               <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
