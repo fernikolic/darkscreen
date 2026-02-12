@@ -14,15 +14,17 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { chromium } from "playwright";
-import { mkdirSync, writeFileSync, readFileSync } from "fs";
+import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { parseArgs } from "util";
 import { createHash } from "crypto";
+import { createInterface } from "readline";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, "..");
 const SCREENSHOT_DIR = resolve(PROJECT_ROOT, "public/screenshots");
+const SESSIONS_DIR = resolve(__dirname, "sessions");
 
 // ─── CLI ────────────────────────────────────────────────────────────────────
 
@@ -33,7 +35,8 @@ const { values: args } = parseArgs({
     all: { type: "boolean", default: false },
     "max-turns": { type: "string", default: "50" },
     headed: { type: "boolean", default: false },
-    model: { type: "string", default: "claude-sonnet-4-5-20250514" },
+    model: { type: "string", default: "claude-sonnet-4-5-20250929" },
+    login: { type: "boolean", default: false },
   },
   strict: false,
 });
@@ -58,6 +61,85 @@ function loadApps() {
   } catch {
     return [];
   }
+}
+
+// ─── Session management (auth) ─────────────────────────────────────────────
+
+function sessionPath(slug) {
+  return resolve(SESSIONS_DIR, `${slug}.json`);
+}
+
+function hasSession(slug) {
+  return existsSync(sessionPath(slug));
+}
+
+async function saveSession(context, page, slug) {
+  mkdirSync(SESSIONS_DIR, { recursive: true });
+  const cookies = await context.cookies();
+  const localStorage = await page.evaluate(() => {
+    const data = {};
+    for (let i = 0; i < window.localStorage.length; i++) {
+      const key = window.localStorage.key(i);
+      data[key] = window.localStorage.getItem(key);
+    }
+    return data;
+  });
+  const sessionStorage = await page.evaluate(() => {
+    const data = {};
+    for (let i = 0; i < window.sessionStorage.length; i++) {
+      const key = window.sessionStorage.key(i);
+      data[key] = window.sessionStorage.getItem(key);
+    }
+    return data;
+  });
+  const session = {
+    slug,
+    savedAt: new Date().toISOString(),
+    url: page.url(),
+    cookies,
+    localStorage,
+    sessionStorage,
+  };
+  writeFileSync(sessionPath(slug), JSON.stringify(session, null, 2));
+  console.log(`Session saved: ${sessionPath(slug)} (${cookies.length} cookies)`);
+  return session;
+}
+
+async function loadSession(context, page, slug) {
+  const filepath = sessionPath(slug);
+  if (!existsSync(filepath)) return false;
+  const session = JSON.parse(readFileSync(filepath, "utf-8"));
+  // Add cookies to context
+  if (session.cookies && session.cookies.length > 0) {
+    await context.addCookies(session.cookies);
+  }
+  // Inject localStorage and sessionStorage after navigating
+  if (session.localStorage && Object.keys(session.localStorage).length > 0) {
+    await page.evaluate((data) => {
+      for (const [k, v] of Object.entries(data)) {
+        window.localStorage.setItem(k, v);
+      }
+    }, session.localStorage);
+  }
+  if (session.sessionStorage && Object.keys(session.sessionStorage).length > 0) {
+    await page.evaluate((data) => {
+      for (const [k, v] of Object.entries(data)) {
+        window.sessionStorage.setItem(k, v);
+      }
+    }, session.sessionStorage);
+  }
+  console.log(`Session loaded: ${filepath} (saved ${session.savedAt})`);
+  return true;
+}
+
+function waitForEnter(prompt) {
+  return new Promise((res) => {
+    const rl = createInterface({ input: process.stdin, output: process.stdout });
+    rl.question(prompt, () => {
+      rl.close();
+      res();
+    });
+  });
 }
 
 // ─── Tool definitions for Claude ───────────────────────────────────────────
@@ -222,7 +304,23 @@ const TOOLS = [
 
 // ─── System prompt ─────────────────────────────────────────────────────────
 
-function buildSystemPrompt(slug, startUrl) {
+function buildSystemPrompt(slug, startUrl, isAuthenticated = false) {
+  const authContext = isAuthenticated
+    ? `\n\n## Authentication
+You are logged into this app with a real account session. This means you can see authenticated pages like dashboards, portfolios, account settings, deposit/withdrawal flows, and other logged-in views. PRIORITIZE capturing these authenticated screens — they are the most valuable for product intelligence. Explore:
+- Dashboard / portfolio / home (logged-in view)
+- Account settings and preferences
+- Security settings (2FA, password, sessions)
+- Deposit and withdrawal flows (screenshot but don't submit)
+- Transaction/trade history
+- Notification settings
+- Profile/identity pages
+- Any premium/pro features
+- API management pages
+- Referral/rewards pages`
+    : `\n\n## Authentication
+You are NOT logged in. You can only capture public-facing pages. Screenshot "Connect Wallet" and login/signup modals but do not submit credentials.`;
+
   return `You are a meticulous UX researcher systematically documenting the interface of a crypto product called "${slug}".
 
 Your mission: explore EVERY screen, modal, dropdown, and state of this web application and capture comprehensive screenshots. You are building a visual product intelligence library.
@@ -260,7 +358,7 @@ Your mission: explore EVERY screen, modal, dropdown, and state of this web appli
 ## Current app
 - Slug: ${slug}
 - Start URL: ${startUrl}
-- Domain restriction: ${new URL(startUrl).hostname}`;
+- Domain restriction: ${new URL(startUrl).hostname}${authContext}`;
 }
 
 // ─── State hashing ─────────────────────────────────────────────────────────
@@ -487,8 +585,11 @@ async function executeTool(page, toolName, toolInput, state) {
 // ─── Main crawl loop ───────────────────────────────────────────────────────
 
 async function crawlApp(slug, startUrl) {
+  const isAuthenticated = hasSession(slug);
+  const authLabel = isAuthenticated ? " [AUTHENTICATED]" : " [PUBLIC]";
+
   console.log(`\n${"=".repeat(60)}`);
-  console.log(`  Crawling: ${slug} — ${startUrl}`);
+  console.log(`  Crawling: ${slug} — ${startUrl}${authLabel}`);
   console.log(`  Max turns: ${MAX_TURNS} | Model: ${MODEL}`);
   console.log(`${"=".repeat(60)}\n`);
 
@@ -511,6 +612,15 @@ async function crawlApp(slug, startUrl) {
 
   const page = await context.newPage();
 
+  // Load saved session (cookies) BEFORE navigating
+  if (isAuthenticated) {
+    const session = JSON.parse(readFileSync(sessionPath(slug), "utf-8"));
+    if (session.cookies && session.cookies.length > 0) {
+      await context.addCookies(session.cookies);
+      console.log(`  Loaded ${session.cookies.length} cookies from session`);
+    }
+  }
+
   // Navigate to start URL
   try {
     await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 20000 });
@@ -519,6 +629,18 @@ async function crawlApp(slug, startUrl) {
     console.error(`Failed to load ${startUrl}: ${err.message}`);
     await browser.close();
     return;
+  }
+
+  // Inject localStorage/sessionStorage AFTER page loads (needs same-origin)
+  if (isAuthenticated) {
+    try {
+      await loadSession(context, page, slug);
+      // Reload to pick up injected storage
+      await page.reload({ waitUntil: "domcontentloaded", timeout: 15000 });
+      await page.waitForTimeout(3000);
+    } catch (err) {
+      console.log(`  Warning: session injection partial: ${err.message}`);
+    }
   }
 
   const state = {
@@ -532,7 +654,7 @@ async function crawlApp(slug, startUrl) {
     isDone: false,
   };
 
-  const systemPrompt = buildSystemPrompt(slug, startUrl);
+  const systemPrompt = buildSystemPrompt(slug, startUrl, isAuthenticated);
   let messages = [];
 
   // Initial turn: provide ARIA snapshot of landing page
@@ -550,13 +672,24 @@ async function crawlApp(slug, startUrl) {
 
     console.log(`\n-- Turn ${turn}/${MAX_TURNS} --`);
 
-    // Sliding window: keep system prompt fresh, trim old messages
+    // Sliding window: trim old messages but never orphan tool_use/tool_result pairs.
+    // Messages alternate: user, assistant (with tool_use), user (with tool_result), ...
+    // We must always trim to start on a user message that has NO tool_result blocks,
+    // so we never reference a tool_use_id from a trimmed assistant message.
     if (messages.length > SLIDING_WINDOW) {
-      const trimCount = messages.length - SLIDING_WINDOW;
-      messages = messages.slice(trimCount);
-      // Ensure first message is from user
-      if (messages[0].role !== "user") {
-        messages = messages.slice(1);
+      let trimTo = messages.length - SLIDING_WINDOW;
+      // Walk forward until we find a user message with only text content (no tool_results)
+      while (trimTo < messages.length) {
+        const msg = messages[trimTo];
+        if (msg.role === "user") {
+          const content = Array.isArray(msg.content) ? msg.content : [msg.content];
+          const hasToolResult = content.some((b) => typeof b === "object" && b.type === "tool_result");
+          if (!hasToolResult) break;
+        }
+        trimTo++;
+      }
+      if (trimTo < messages.length) {
+        messages = messages.slice(trimTo);
       }
     }
 
@@ -689,7 +822,48 @@ async function crawlApp(slug, startUrl) {
 
 // ─── Entry point ───────────────────────────────────────────────────────────
 
+async function loginFlow(slug, startUrl) {
+  console.log(`\n${"=".repeat(60)}`);
+  console.log(`  Login mode: ${slug} — ${startUrl}`);
+  console.log(`  Browser will open. Log in manually, then press Enter.`);
+  console.log(`${"=".repeat(60)}\n`);
+
+  const browser = await chromium.launch({
+    headless: false,
+    args: ["--disable-blink-features=AutomationControlled"],
+  });
+
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 900 },
+    deviceScaleFactor: 2,
+    userAgent:
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    ignoreHTTPSErrors: true,
+  });
+
+  const page = await context.newPage();
+  await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+
+  await waitForEnter("\n>> Log in to the app in the browser, then press ENTER to save session... ");
+
+  await saveSession(context, page, slug);
+  await browser.close();
+  console.log(`\nSession saved! Now run the crawl:`);
+  console.log(`  node scripts/crawl-app.mjs --slug ${slug} --url ${startUrl}`);
+}
+
 async function main() {
+  // --login doesn't need an API key
+  if (args.login) {
+    if (!args.slug || !args.url) {
+      console.error("Login mode requires --slug and --url:");
+      console.error("  node scripts/crawl-app.mjs --login --slug binance --url https://www.binance.com");
+      process.exit(1);
+    }
+    await loginFlow(args.slug, args.url);
+    return;
+  }
+
   if (!process.env.ANTHROPIC_API_KEY) {
     console.error("Error: ANTHROPIC_API_KEY environment variable is required.");
     console.error("  export ANTHROPIC_API_KEY=sk-ant-...");
@@ -723,10 +897,16 @@ async function main() {
     console.error("  node scripts/crawl-app.mjs --slug <slug>  (looks up URL from apps.ts)");
     console.error("  node scripts/crawl-app.mjs --all");
     console.error("");
+    console.error("Auth (login to capture authenticated screens):");
+    console.error("  node scripts/crawl-app.mjs --login --slug <slug> --url <url>");
+    console.error("  (opens browser, you log in manually, session is saved)");
+    console.error("  (subsequent crawls auto-load the saved session)");
+    console.error("");
     console.error("Options:");
     console.error("  --max-turns <n>   Max agent turns (default: 50)");
     console.error("  --headed          Show browser window");
     console.error("  --model <id>      Claude model to use");
+    console.error("  --login           Save auth session (opens headed browser)");
     process.exit(1);
   }
 }
