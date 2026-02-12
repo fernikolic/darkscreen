@@ -27,7 +27,7 @@ export function HowItWorks() {
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             How it works
           </p>
-          <h2 className="font-serif text-3xl text-text-primary md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
             From search to shipping
           </h2>
         </div>

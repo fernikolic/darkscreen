@@ -22,7 +22,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['"Instrument Serif"', "Georgia", "serif"],
+        display: ['"Syne"', "system-ui", "sans-serif"],
         sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
         mono: ['"JetBrains Mono"', '"Fira Code"', "monospace"],
       },

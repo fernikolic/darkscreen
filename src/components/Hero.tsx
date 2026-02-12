@@ -13,9 +13,9 @@ export function Hero() {
           <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.2em] text-text-secondary">
             Product intelligence for crypto
           </p>
-          <h1 className="font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.08] text-text-primary">
+          <h1 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.08] text-text-primary">
             Every screen from every{" "}
-            <em className="text-accent-gold">crypto product,</em>{" "}
+            <span className="text-accent-gold">crypto product,</span>{" "}
             documented.
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-text-secondary">

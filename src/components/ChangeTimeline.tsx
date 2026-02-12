@@ -20,7 +20,7 @@ export function ChangeTimeline({ changes }: ChangeTimelineProps) {
       <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
         History
       </p>
-      <h2 className="mb-8 font-serif text-xl text-text-primary">
+      <h2 className="mb-8 font-display font-semibold text-xl text-text-primary">
         Change Timeline
       </h2>
       <div className="space-y-0">

@@ -59,7 +59,7 @@ export function Pricing() {
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             Pricing
           </p>
-          <h2 className="font-serif text-3xl text-text-primary md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
             Simple, transparent pricing
           </h2>
           <p className="mt-4 text-[14px] text-text-secondary">

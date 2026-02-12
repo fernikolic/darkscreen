@@ -32,7 +32,7 @@ export function ValueProps() {
               <span className="mb-6 block font-mono text-[11px] text-text-tertiary">
                 {prop.number}
               </span>
-              <h3 className="mb-4 font-serif text-xl text-text-primary">
+              <h3 className="mb-4 font-display font-semibold text-xl text-text-primary">
                 {prop.title}
               </h3>
               <p className="text-[14px] leading-relaxed text-text-secondary">

@@ -51,7 +51,7 @@ export default function Library() {
         <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
           Library
         </p>
-        <h1 className="font-serif text-3xl text-text-primary md:text-4xl">
+        <h1 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
           Explore the collection
         </h1>
         <p className="mt-3 text-[14px] text-text-secondary">

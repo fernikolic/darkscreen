@@ -10,7 +10,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-dark-border/50 bg-dark-bg/90 backdrop-blur-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-serif text-xl italic text-text-primary">
+          <span className="font-display text-xl font-bold text-text-primary">
             Darkscreen
           </span>
         </Link>
