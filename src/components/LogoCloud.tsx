@@ -1,34 +1,22 @@
 import { apps } from "@/data/apps";
 
 export function LogoCloud() {
-  const appNames = apps.slice(0, 28).map((app) => app.name);
-  // Duplicate for seamless marquee loop
-  const doubled = [...appNames, ...appNames];
-
   return (
-    <section className="relative overflow-hidden">
-      <div className="precision-line" />
-      <div className="py-20">
-        {/* Section label */}
-        <p className="mb-12 text-center font-mono text-label uppercase text-text-tertiary">
-          Tracking across the crypto ecosystem
+    <section className="border-t border-dark-border">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
+          Currently tracking
         </p>
-
-        {/* Marquee */}
-        <div className="marquee-track relative">
-          <div className="marquee-content flex animate-marquee items-center gap-10">
-            {doubled.map((name, i) => (
-              <span
-                key={`${name}-${i}`}
-                className="shrink-0 whitespace-nowrap font-mono text-body-sm text-text-ghost transition-colors duration-300 hover:text-text-secondary"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-          {/* Fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-dark-bg to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-dark-bg to-transparent" />
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {apps.slice(0, 24).map((app, i) => (
+            <span
+              key={app.slug}
+              className="whitespace-nowrap text-[14px] text-text-secondary/50 transition-colors hover:text-text-primary"
+            >
+              {app.name}
+              {i < 23 && <span className="ml-6 text-dark-border">/</span>}
+            </span>
+          ))}
         </div>
       </div>
     </section>

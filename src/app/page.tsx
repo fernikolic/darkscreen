@@ -3,7 +3,7 @@ import { ValueProps } from "@/components/ValueProps";
 import { LogoCloud } from "@/components/LogoCloud";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
-import { EmailCapture } from "@/components/EmailCapture";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,30 +15,23 @@ export default function Home() {
       <Pricing />
 
       {/* Bottom CTA */}
-      <section id="get-access" className="relative">
-        <div className="precision-line" />
-        <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
-          {/* Background orb */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="orb-blue h-[400px] w-[400px]" />
-          </div>
-
-          <div className="relative">
-            <span className="mb-4 block font-mono text-label uppercase text-text-tertiary">
-              Get Started
-            </span>
-            <h2 className="font-display text-display-md text-text-primary md:text-display-lg">
-              Stop guessing what
-              <br />
-              competitors are building.
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-body-md text-text-secondary">
-              Join product teams at top crypto companies who use Darkscreen to
-              track the market and ship better products.
-            </p>
-            <div className="mt-10 flex justify-center">
-              <EmailCapture source="bottom-cta" />
-            </div>
+      <section id="get-access" className="border-t border-dark-border">
+        <div className="mx-auto max-w-7xl px-6 py-28 text-center">
+          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+            Start exploring crypto product design
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-[14px] text-text-secondary">
+            Browse screens, flows, and UI patterns from every major crypto
+            product. Free to get started.
+          </p>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/library"
+              className="group inline-flex items-center gap-3 border-b border-accent-gold/40 pb-1 text-[14px] font-medium text-accent-gold transition-colors hover:border-accent-gold"
+            >
+              Explore the Library
+              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>

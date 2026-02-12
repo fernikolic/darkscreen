@@ -1,74 +1,46 @@
 const steps = [
   {
     number: "01",
-    title: "We Capture",
+    title: "Search",
     description:
-      "AI-powered automation screenshots every major crypto product across their key flows — onboarding, swaps, sends, staking, and more.",
-    accent: "#00d4ff",
+      "Find the screen or flow you need. Browse by app, category, chain, or UI pattern across every major crypto product.",
   },
   {
     number: "02",
-    title: "We Detect",
+    title: "Compare",
     description:
-      "Weekly re-crawls with visual diff analysis spot every change — new features, redesigns, copy updates, layout shifts.",
-    accent: "#8b5cf6",
+      "See how different apps solve the same problem. Compare onboarding flows, swap UIs, staking experiences side by side.",
   },
   {
     number: "03",
-    title: "You Decide",
+    title: "Ship",
     description:
-      "Browse the library, follow competitors, get alerts. Make product decisions based on what the market is actually shipping.",
-    accent: "#34d399",
+      "Use real-world references to make better product decisions. Stop guessing and start designing with data.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="relative">
-      <div className="precision-line" />
-
-      <div className="mx-auto max-w-7xl px-6 py-28">
-        {/* Section header */}
-        <div className="mb-20 text-center">
-          <span className="mb-4 block font-mono text-label uppercase text-text-tertiary">
+    <section className="border-t border-dark-border">
+      <div className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mb-16">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             How it works
-          </span>
-          <h2 className="font-display text-display-md text-text-primary md:text-display-lg">
-            From capture to
-            <br />
-            <span className="text-gradient">competitive advantage</span>
+          </p>
+          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+            From search to shipping
           </h2>
         </div>
-
-        {/* Steps */}
-        <div className="relative grid gap-6 md:grid-cols-3">
-          {/* Connecting line (desktop) */}
-          <div className="pointer-events-none absolute top-16 hidden h-px w-full md:block">
-            <div className="mx-auto h-px w-2/3 bg-gradient-to-r from-transparent via-dark-border to-transparent" />
-          </div>
-
+        <div className="grid gap-16 md:grid-cols-3 md:gap-10">
           {steps.map((step) => (
-            <div key={step.number} className="relative text-center md:text-left">
-              {/* Number */}
-              <div
-                className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-2xl border md:mx-0"
-                style={{
-                  borderColor: `${step.accent}20`,
-                  background: `${step.accent}08`,
-                }}
-              >
-                <span
-                  className="font-mono text-body-sm font-bold"
-                  style={{ color: step.accent }}
-                >
-                  {step.number}
-                </span>
-              </div>
-
-              <h3 className="mb-3 font-display text-display-sm text-text-primary">
+            <div key={step.number}>
+              <span className="mb-6 block font-mono text-4xl font-medium text-dark-border">
+                {step.number}
+              </span>
+              <h3 className="mb-3 text-lg font-semibold text-text-primary">
                 {step.title}
               </h3>
-              <p className="mx-auto max-w-sm text-body-sm leading-relaxed text-text-secondary md:mx-0">
+              <p className="text-[14px] leading-relaxed text-text-secondary">
                 {step.description}
               </p>
             </div>

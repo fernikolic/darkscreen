@@ -46,39 +46,49 @@ export function FilterBar({
   onFlowChange,
 }: FilterBarProps) {
   return (
-    <div className="space-y-4">
-      {/* Category pills */}
-      <div className="flex flex-wrap gap-2">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => onCategoryChange(cat)}
-            className={`rounded-xl border px-4 py-2 text-body-sm font-medium transition-all duration-300 ${
-              activeCategory === cat
-                ? "pill-active"
-                : "border-dark-border/40 text-text-tertiary hover:border-dark-border hover:text-text-secondary"
-            }`}
-          >
-            {cat === "NFT" ? "NFT / Marketplaces" : cat}
-          </button>
-        ))}
+    <div className="space-y-6">
+      {/* Category tabs */}
+      <div>
+        <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+          Category
+        </span>
+        <div className="flex flex-wrap gap-1">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => onCategoryChange(cat)}
+              className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
+                activeCategory === cat
+                  ? "border-accent-gold text-accent-gold"
+                  : "border-transparent text-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {cat === "NFT" ? "NFT / Marketplaces" : cat}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Flow type pills */}
-      <div className="flex flex-wrap gap-2">
-        {flowTypes.map((flow) => (
-          <button
-            key={flow}
-            onClick={() => onFlowChange(flow)}
-            className={`rounded-lg border px-3 py-1.5 text-[12px] font-medium transition-all duration-300 ${
-              activeFlow === flow
-                ? "pill-active-purple"
-                : "border-dark-border/30 text-text-tertiary hover:border-dark-border hover:text-text-secondary"
-            }`}
-          >
-            {FLOW_LABELS[flow] || flow}
-          </button>
-        ))}
+      {/* Flow type tabs */}
+      <div>
+        <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+          Flow type
+        </span>
+        <div className="flex flex-wrap gap-1">
+          {flowTypes.map((flow) => (
+            <button
+              key={flow}
+              onClick={() => onFlowChange(flow)}
+              className={`rounded-none border-b-2 px-3 py-2 text-[12px] font-medium transition-all ${
+                activeFlow === flow
+                  ? "border-text-secondary text-text-primary"
+                  : "border-transparent text-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {FLOW_LABELS[flow] || flow}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

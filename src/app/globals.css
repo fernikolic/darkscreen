@@ -2,237 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ============================================
-   DARKSCREEN — Obsidian Observatory
-   ============================================ */
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    scrollbar-gutter: stable;
-  }
-
-  body {
-    background: #06060b;
-    color: #f0f0f5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  ::selection {
-    background: rgba(0, 212, 255, 0.2);
-    color: #fff;
-  }
+body {
+  background: #0C0C0E;
+  color: #F4F4F5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ============================================
-   DOT GRID BACKGROUND
-   ============================================ */
-.dot-grid {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-.dot-grid-dense {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* ============================================
-   GRADIENT ORBS
-   ============================================ */
-.orb-blue {
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
-}
-
-.orb-purple {
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.10) 0%, transparent 70%);
-}
-
-.orb-warm {
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
-}
-
-/* ============================================
-   GLASS CARDS
-   ============================================ */
-.glass-card {
-  background: rgba(18, 18, 28, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.03);
-}
-
-.glass-card-hover {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card-hover:hover {
-  background: rgba(18, 18, 28, 0.8);
-  border-color: rgba(0, 212, 255, 0.12);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 1px rgba(0, 212, 255, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transform: translateY(-2px);
-}
-
-/* ============================================
-   CARD GLOW (legacy support + enhanced)
-   ============================================ */
-.card-glow {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.card-glow:hover {
-  box-shadow:
-    0 0 40px rgba(0, 212, 255, 0.06),
-    0 8px 32px rgba(0, 0, 0, 0.4);
-  border-color: rgba(0, 212, 255, 0.15);
-  transform: translateY(-2px);
-}
-
-/* ============================================
-   PILL / TAG STATES
-   ============================================ */
-.pill-active {
-  background: rgba(0, 212, 255, 0.10);
-  color: #00d4ff;
-  border-color: rgba(0, 212, 255, 0.25);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.06);
-}
-
-.pill-active-purple {
-  background: rgba(139, 92, 246, 0.10);
-  color: #8b5cf6;
-  border-color: rgba(139, 92, 246, 0.25);
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.06);
-}
-
-/* ============================================
-   ANIMATED ENTRANCE
-   ============================================ */
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.1s; }
-.stagger-3 { animation-delay: 0.15s; }
-.stagger-4 { animation-delay: 0.2s; }
-.stagger-5 { animation-delay: 0.25s; }
-.stagger-6 { animation-delay: 0.3s; }
-.stagger-7 { animation-delay: 0.35s; }
-.stagger-8 { animation-delay: 0.4s; }
-
-/* ============================================
-   GRADIENT BORDERS
-   ============================================ */
-.gradient-border {
-  position: relative;
-}
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.2),
-    rgba(139, 92, 246, 0.1),
-    rgba(0, 212, 255, 0.05)
-  );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-}
-
-/* ============================================
-   PRECISION LINE
-   ============================================ */
-.precision-line {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 212, 255, 0.2) 20%,
-    rgba(0, 212, 255, 0.2) 80%,
-    transparent
-  );
-}
-
-/* ============================================
-   LUMINOUS TEXT
-   ============================================ */
-.text-glow {
-  text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, #00d4ff, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ============================================
-   NOISE OVERLAY (very subtle)
-   ============================================ */
+/* Subtle dot grid texture */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.012;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  background-image: radial-gradient(circle, #fff 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
 }
 
-/* ============================================
-   SCROLLBAR
-   ============================================ */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1a1a2e;
-  border-radius: 4px;
+  background: #27272A;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2a42;
+  background: #52525B;
 }
 
-/* ============================================
-   SECTION DIVIDER
-   ============================================ */
-.section-divider {
-  border-top: 1px solid rgba(26, 26, 46, 0.6);
+/* Selection */
+::selection {
+  background: rgba(200, 169, 110, 0.25);
+  color: #F4F4F5;
 }
 
-/* ============================================
-   FOCUS STYLES
-   ============================================ */
-input:focus-visible,
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid rgba(0, 212, 255, 0.4);
-  outline-offset: 2px;
+/* Card hover — subtle border shift */
+.card-hover {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.card-hover:hover {
+  border-color: #52525B;
+  background-color: #1E1E22;
 }
 
-/* ============================================
-   NUMBER COUNTER SHINE
-   ============================================ */
-.number-shine {
-  background: linear-gradient(135deg, #f0f0f5 0%, #00d4ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Active filter state */
+.filter-active {
+  color: #C8A96E;
+  border-color: rgba(200, 169, 110, 0.3);
+  background: rgba(200, 169, 110, 0.06);
 }
 
-/* ============================================
-   MARQUEE PAUSE ON HOVER
-   ============================================ */
-.marquee-track:hover .marquee-content {
-  animation-play-state: paused;
-}
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }

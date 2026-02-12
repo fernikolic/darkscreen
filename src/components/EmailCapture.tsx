@@ -33,50 +33,37 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
 
   if (status === "success") {
     return (
-      <div className="flex items-center gap-2">
-        <div className="h-2 w-2 rounded-full bg-accent-emerald" />
-        <p className="text-body-sm font-medium text-accent-emerald">
-          You&apos;re on the list. We&apos;ll be in touch.
-        </p>
-      </div>
+      <p className="text-[13px] font-medium text-accent-gold">
+        You&apos;re on the list.
+      </p>
     );
   }
 
   const isPrimary = variant === "primary";
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex w-full max-w-md gap-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-md gap-2">
       <input
         type="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@company.com"
-        className="min-w-0 flex-1 rounded-xl border border-dark-border bg-dark-card/80 px-4 py-3 text-body-sm text-text-primary placeholder-text-ghost outline-none transition-all duration-300 focus:border-accent-blue/30 focus:bg-dark-card focus:shadow-glow"
+        className="min-w-0 flex-1 border-b border-dark-border bg-transparent px-0 py-2.5 text-[13px] text-text-primary placeholder-text-tertiary outline-none transition-colors focus:border-text-secondary"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className={`shrink-0 rounded-xl px-6 py-3 text-body-sm font-semibold transition-all duration-300 disabled:opacity-50 ${
+        className={`shrink-0 py-2.5 text-[13px] font-medium transition-all disabled:opacity-60 ${
           isPrimary
-            ? "bg-accent-blue text-dark-bg hover:shadow-glow-lg"
-            : "border border-dark-border bg-dark-card text-text-secondary hover:border-accent-blue/20 hover:text-text-primary"
+            ? "border-b border-accent-gold text-accent-gold hover:border-accent-gold/60"
+            : "border-b border-dark-border text-text-secondary hover:border-text-secondary hover:text-text-primary"
         }`}
       >
-        {status === "loading" ? (
-          <span className="inline-flex items-center gap-1.5">
-            <span className="h-1 w-1 animate-pulse rounded-full bg-current" />
-            <span className="h-1 w-1 animate-pulse rounded-full bg-current [animation-delay:0.2s]" />
-            <span className="h-1 w-1 animate-pulse rounded-full bg-current [animation-delay:0.4s]" />
-          </span>
-        ) : (
-          "Get Access"
-        )}
+        {status === "loading" ? "..." : "Get Access"}
       </button>
       {status === "error" && (
-        <p className="absolute -bottom-6 left-0 text-[11px] text-red-400">
-          Something went wrong. Try again.
-        </p>
+        <p className="absolute mt-12 text-xs text-red-400">Something went wrong.</p>
       )}
     </form>
   );
