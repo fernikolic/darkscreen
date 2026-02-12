@@ -37,6 +37,8 @@ const { values: args } = parseArgs({
     headed: { type: "boolean", default: false },
     model: { type: "string", default: "claude-sonnet-4-5-20250929" },
     login: { type: "boolean", default: false },
+    "auth-email": { type: "string" },
+    "auth-password": { type: "string" },
   },
   strict: false,
 });
@@ -45,6 +47,9 @@ const MAX_TURNS = parseInt(args["max-turns"], 10);
 const HEADED = args.headed;
 const MODEL = args.model;
 const SLIDING_WINDOW = 40; // max messages kept in context
+const AUTH_EMAIL = args["auth-email"] || process.env.CRAWL_AUTH_EMAIL;
+const AUTH_PASSWORD = args["auth-password"] || process.env.CRAWL_AUTH_PASSWORD;
+const HAS_CREDENTIALS = !!(AUTH_EMAIL && AUTH_PASSWORD);
 
 // ─── Apps from data file (for --all mode) ──────────────────────────────────
 
@@ -287,6 +292,21 @@ const TOOLS = [
     },
   },
   {
+    name: "pause",
+    description:
+      "Pause and wait for the human operator to complete an action in the browser (e.g., solving a CAPTCHA, completing 2FA, email verification). The browser must be in headed mode (--headed). Use this when you encounter a challenge you cannot solve programmatically.",
+    input_schema: {
+      type: "object",
+      properties: {
+        reason: {
+          type: "string",
+          description: "What the human needs to do, e.g. 'Complete CAPTCHA puzzle' or 'Enter 2FA code from authenticator app'",
+        },
+      },
+      required: ["reason"],
+    },
+  },
+  {
     name: "done",
     description: "Signal that exploration is complete. Provide a summary of what was covered.",
     input_schema: {
@@ -304,10 +324,35 @@ const TOOLS = [
 
 // ─── System prompt ─────────────────────────────────────────────────────────
 
-function buildSystemPrompt(slug, startUrl, isAuthenticated = false) {
-  const authContext = isAuthenticated
-    ? `\n\n## Authentication
-You are logged into this app with a real account session. This means you can see authenticated pages like dashboards, portfolios, account settings, deposit/withdrawal flows, and other logged-in views. PRIORITIZE capturing these authenticated screens — they are the most valuable for product intelligence. Explore:
+function buildSystemPrompt(slug, startUrl, { isAuthenticated = false, credentials = null } = {}) {
+  let authContext;
+
+  if (credentials) {
+    authContext = `\n\n## Authentication — LOGIN REQUIRED
+You have been given credentials to log into this app. Your FIRST priority is to log in:
+1. Find and click the "Log In" / "Sign In" button
+2. Enter the email: ${credentials.email}
+3. Enter the password (use the type tool with the password field selector — the password will be provided as tool input)
+4. Submit the login form
+5. If you encounter a CAPTCHA or 2FA prompt, screenshot it and use the "pause" tool to let the human operator complete it
+6. After login succeeds, screenshot the authenticated dashboard
+
+Once logged in, PRIORITIZE capturing authenticated screens:
+- Dashboard / portfolio / home (logged-in view)
+- Account settings and preferences
+- Security settings (2FA, password, sessions)
+- Deposit and withdrawal flows (screenshot but don't submit transactions)
+- Transaction/trade history
+- Notification settings
+- Profile/identity pages
+- Any premium/pro features
+- API management pages
+- Referral/rewards pages
+
+You ARE allowed to submit the login form. You are NOT allowed to submit any financial transactions, change account settings, or create API keys.`;
+  } else if (isAuthenticated) {
+    authContext = `\n\n## Authentication — SESSION LOADED
+You are logged into this app with a saved session. PRIORITIZE capturing authenticated screens:
 - Dashboard / portfolio / home (logged-in view)
 - Account settings and preferences
 - Security settings (2FA, password, sessions)
@@ -317,9 +362,11 @@ You are logged into this app with a real account session. This means you can see
 - Profile/identity pages
 - Any premium/pro features
 - API management pages
-- Referral/rewards pages`
-    : `\n\n## Authentication
+- Referral/rewards pages`;
+  } else {
+    authContext = `\n\n## Authentication
 You are NOT logged in. You can only capture public-facing pages. Screenshot "Connect Wallet" and login/signup modals but do not submit credentials.`;
+  }
 
   return `You are a meticulous UX researcher systematically documenting the interface of a crypto product called "${slug}".
 
@@ -344,10 +391,13 @@ Your mission: explore EVERY screen, modal, dropdown, and state of this web appli
 4. **Flow classification** — Classify every screenshot into one of: Home, Onboarding, Swap, Send, Staking, Settings. Use your best judgment.
 
 5. **Never:**
+   - Navigate to external domains (stay on ${new URL(startUrl).hostname} and its subdomains)
+   - Submit financial transactions (trades, withdrawals, deposits)
+   - Change account security settings or create API keys${!credentials ? `
    - Submit real forms or create real accounts
    - Enter real credentials or wallet info
-   - Navigate to external domains (stay on ${new URL(startUrl).hostname} and its subdomains)
-   - Click "Sign up" / "Create account" submit buttons (screenshot the form instead)
+   - Click "Sign up" / "Create account" submit buttons (screenshot the form instead)` : `
+   - You ARE allowed to submit the login form with the provided credentials`}
 
 6. **Label descriptively** — Each screenshot label should describe what's shown: "Main navigation with Markets tab active", "Token swap confirmation modal", "Cookie consent banner".
 
@@ -572,6 +622,17 @@ async function executeTool(page, toolName, toolInput, state) {
       return `Visual context will be included in the next turn. Reason noted: ${toolInput.reason}`;
     }
 
+    case "pause": {
+      if (HEADED) {
+        console.log(`\n  ⏸  PAUSED — ${toolInput.reason}`);
+        await waitForEnter("  >> Complete the action in the browser, then press ENTER to continue... ");
+        await page.waitForTimeout(2000);
+        return `Human completed action: "${toolInput.reason}". Page URL: ${page.url()}. You may now continue exploring.`;
+      } else {
+        return `Cannot pause in headless mode. The browser is not visible. Consider re-running with --headed flag if login requires CAPTCHA or 2FA.`;
+      }
+    }
+
     case "done": {
       state.isDone = true;
       return `Exploration complete. ${toolInput.summary}`;
@@ -586,11 +647,14 @@ async function executeTool(page, toolName, toolInput, state) {
 
 async function crawlApp(slug, startUrl) {
   const isAuthenticated = hasSession(slug);
-  const authLabel = isAuthenticated ? " [AUTHENTICATED]" : " [PUBLIC]";
+  const authLabel = HAS_CREDENTIALS ? " [LOGIN]" : isAuthenticated ? " [SESSION]" : " [PUBLIC]";
+  // Force headed mode when credentials are provided (user may need to solve CAPTCHA/2FA)
+  const useHeaded = HEADED || HAS_CREDENTIALS;
 
   console.log(`\n${"=".repeat(60)}`);
   console.log(`  Crawling: ${slug} — ${startUrl}${authLabel}`);
   console.log(`  Max turns: ${MAX_TURNS} | Model: ${MODEL}`);
+  if (HAS_CREDENTIALS) console.log(`  Auth: ${AUTH_EMAIL} (headed mode forced for 2FA/CAPTCHA)`);
   console.log(`${"=".repeat(60)}\n`);
 
   mkdirSync(SCREENSHOT_DIR, { recursive: true });
@@ -598,7 +662,7 @@ async function crawlApp(slug, startUrl) {
   const anthropic = new Anthropic();
 
   const browser = await chromium.launch({
-    headless: !HEADED,
+    headless: !useHeaded,
     args: ["--disable-blink-features=AutomationControlled"],
   });
 
@@ -654,7 +718,8 @@ async function crawlApp(slug, startUrl) {
     isDone: false,
   };
 
-  const systemPrompt = buildSystemPrompt(slug, startUrl, isAuthenticated);
+  const credentials = HAS_CREDENTIALS ? { email: AUTH_EMAIL, password: AUTH_PASSWORD } : null;
+  const systemPrompt = buildSystemPrompt(slug, startUrl, { isAuthenticated, credentials });
   let messages = [];
 
   // Initial turn: provide ARIA snapshot of landing page
@@ -662,9 +727,19 @@ async function crawlApp(slug, startUrl) {
   const initialHash = hashState(page.url(), initialAria);
   state.visitedHashes.add(initialHash);
 
+  let initialContent = `Page loaded: ${page.url()}\nState hash: ${initialHash}\nVisited states: 1\nScreenshots taken: 0`;
+  if (credentials) {
+    initialContent += `\n\nCREDENTIALS AVAILABLE — Log in first before exploring:\n  Email: ${credentials.email}\n  Password: ${credentials.password}`;
+    initialContent += `\n\nIMPORTANT: Find the login/sign-in button, click it, then use the "type" tool to enter email and password into the form fields, then submit.`;
+  }
+  if (isAuthenticated && !credentials) {
+    initialContent += `\n\nSESSION LOADED — You should be logged in. Check if the page shows authenticated content.`;
+  }
+  initialContent += `\n\nARIA snapshot:\n${initialAria}`;
+
   messages.push({
     role: "user",
-    content: `Page loaded: ${page.url()}\nState hash: ${initialHash}\nVisited states: 1\nScreenshots taken: 0\n\nARIA snapshot:\n${initialAria}`,
+    content: initialContent,
   });
 
   for (let turn = 1; turn <= MAX_TURNS; turn++) {
@@ -786,6 +861,16 @@ async function crawlApp(slug, startUrl) {
     await new Promise((r) => setTimeout(r, 1000));
   }
 
+  // ─── Save session after credential login (for future crawls) ────────────
+  if (HAS_CREDENTIALS && state.screens.length > 0) {
+    try {
+      await saveSession(context, page, slug);
+      console.log("  Session saved for future crawls (no re-login needed).");
+    } catch (err) {
+      console.log(`  Warning: could not save session: ${err.message}`);
+    }
+  }
+
   // ─── Save manifest ─────────────────────────────────────────────────────
 
   const manifest = {
@@ -897,16 +982,21 @@ async function main() {
     console.error("  node scripts/crawl-app.mjs --slug <slug>  (looks up URL from apps.ts)");
     console.error("  node scripts/crawl-app.mjs --all");
     console.error("");
-    console.error("Auth (login to capture authenticated screens):");
+    console.error("Auth (agent logs in automatically):");
+    console.error("  node scripts/crawl-app.mjs --slug binance --url https://www.binance.com \\");
+    console.error("    --auth-email user@example.com --auth-password mypassword");
+    console.error("  (agent logs in, you solve CAPTCHA/2FA in the headed browser, session saved for next time)");
+    console.error("");
+    console.error("Auth (manual login, save session):");
     console.error("  node scripts/crawl-app.mjs --login --slug <slug> --url <url>");
-    console.error("  (opens browser, you log in manually, session is saved)");
-    console.error("  (subsequent crawls auto-load the saved session)");
     console.error("");
     console.error("Options:");
-    console.error("  --max-turns <n>   Max agent turns (default: 50)");
-    console.error("  --headed          Show browser window");
-    console.error("  --model <id>      Claude model to use");
-    console.error("  --login           Save auth session (opens headed browser)");
+    console.error("  --max-turns <n>      Max agent turns (default: 50)");
+    console.error("  --headed             Show browser window");
+    console.error("  --model <id>         Claude model to use");
+    console.error("  --auth-email <e>     Email for agent login (or env CRAWL_AUTH_EMAIL)");
+    console.error("  --auth-password <p>  Password for agent login (or env CRAWL_AUTH_PASSWORD)");
+    console.error("  --login              Manual login mode (opens headed browser)");
     process.exit(1);
   }
 }
