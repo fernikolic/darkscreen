@@ -16,21 +16,21 @@ export default function Home() {
 
       {/* Bottom CTA */}
       <section id="get-access" className="border-t border-dark-border">
-        <div className="mx-auto max-w-7xl px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
+        <div className="mx-auto max-w-7xl px-6 py-28 text-center">
+          <h2 className="font-serif text-3xl text-text-primary md:text-4xl">
             Start exploring crypto product design
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-zinc-400">
+          <p className="mx-auto mt-4 max-w-lg text-[14px] text-text-secondary">
             Browse screens, flows, and UI patterns from every major crypto
             product. Free to get started.
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-10 flex justify-center">
             <Link
               href="/library"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent-blue px-6 py-3 text-sm font-semibold text-dark-bg transition-all hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
+              className="group inline-flex items-center gap-3 border-b border-accent-gold/40 pb-1 text-[14px] font-medium text-accent-gold transition-colors hover:border-accent-gold"
             >
               Explore the Library
-              <span aria-hidden="true">&rarr;</span>
+              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
             </Link>
           </div>
         </div>

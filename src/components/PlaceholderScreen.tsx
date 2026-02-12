@@ -18,48 +18,29 @@ export function PlaceholderScreen({
 
   return (
     <div
-      className={`relative ${aspectClass} overflow-hidden rounded-lg border ${className}`}
-      style={{
-        background: `linear-gradient(145deg, ${color}12, ${color}28)`,
-        borderColor: `${color}25`,
-      }}
+      className={`relative ${aspectClass} overflow-hidden border border-dark-border bg-dark-bg ${className}`}
     >
-      {/* Fake UI elements */}
-      <div className="absolute inset-x-0 top-0 flex items-center justify-between border-b px-3 py-2"
-        style={{ borderColor: `${color}15` }}
-      >
-        <div className="h-2 w-12 rounded-full" style={{ background: `${color}30` }} />
-        <div className="flex gap-1">
-          <div className="h-2 w-2 rounded-full" style={{ background: `${color}25` }} />
-          <div className="h-2 w-2 rounded-full" style={{ background: `${color}25` }} />
-        </div>
+      {/* Minimal top bar */}
+      <div className="absolute inset-x-0 top-0 border-b border-dark-border px-3 py-2">
+        <div className="h-px w-10 bg-text-tertiary/30" />
       </div>
 
       {/* Content area */}
       <div className="flex h-full flex-col items-center justify-center p-4">
         {appName && (
-          <span
-            className="mb-1 font-mono text-[10px] font-medium uppercase tracking-widest"
-            style={{ color: `${color}90` }}
-          >
+          <span className="mb-2 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-text-tertiary">
             {appName}
           </span>
         )}
-        <span className="text-center text-xs text-zinc-500">{label}</span>
+        <span className="text-center text-[11px] text-text-tertiary">
+          {label}
+        </span>
       </div>
 
-      {/* Fake bottom nav */}
+      {/* Minimal bottom bar */}
       {aspect === "mobile" && (
-        <div className="absolute inset-x-0 bottom-0 flex items-center justify-around border-t px-4 py-2"
-          style={{ borderColor: `${color}15` }}
-        >
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="h-2 w-6 rounded-full"
-              style={{ background: `${color}${i === 1 ? "40" : "18"}` }}
-            />
-          ))}
+        <div className="absolute inset-x-0 bottom-0 flex items-center justify-center border-t border-dark-border py-2">
+          <div className="h-px w-8 bg-text-tertiary/20" />
         </div>
       )}
     </div>

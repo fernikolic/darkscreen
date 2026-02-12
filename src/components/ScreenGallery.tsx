@@ -28,13 +28,13 @@ export function ScreenGallery({
   return (
     <div>
       {/* Flow tabs */}
-      <div className="mb-6 flex flex-wrap gap-2">
+      <div className="mb-8 flex flex-wrap gap-1">
         <button
           onClick={() => setActiveFlow("All")}
-          className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
+          className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
             activeFlow === "All"
-              ? "pill-active"
-              : "border-dark-border text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
+              ? "border-accent-gold text-accent-gold"
+              : "border-transparent text-text-tertiary hover:text-text-secondary"
           }`}
         >
           All
@@ -43,10 +43,10 @@ export function ScreenGallery({
           <button
             key={flow}
             onClick={() => setActiveFlow(flow)}
-            className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
+            className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
               activeFlow === flow
-                ? "pill-active"
-                : "border-dark-border text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
+                ? "border-accent-gold text-accent-gold"
+                : "border-transparent text-text-tertiary hover:text-text-secondary"
             }`}
           >
             {flow}
@@ -58,18 +58,18 @@ export function ScreenGallery({
       <div className="overflow-x-auto pb-4">
         <div className="flex gap-4" style={{ minWidth: "max-content" }}>
           {filtered.map((screen, idx) => (
-            <div key={`${screen.flow}-${screen.step}-${idx}`} className="w-40 flex-shrink-0">
+            <div
+              key={`${screen.flow}-${screen.step}-${idx}`}
+              className="w-44 flex-shrink-0"
+            >
               {screen.image ? (
-                <div
-                  className="relative aspect-[16/10] overflow-hidden rounded-lg border"
-                  style={{ borderColor: `${accentColor}25` }}
-                >
+                <div className="group relative aspect-[16/10] overflow-hidden border border-dark-border bg-dark-bg transition-all hover:border-text-tertiary">
                   <Image
                     src={screen.image}
                     alt={`${appName} - ${screen.label}`}
                     fill
                     className="object-cover object-top"
-                    sizes="160px"
+                    sizes="176px"
                   />
                 </div>
               ) : (
@@ -79,11 +79,13 @@ export function ScreenGallery({
                   appName={appName}
                 />
               )}
-              <div className="mt-2 px-1">
-                <span className="font-mono text-[10px] text-zinc-600">
+              <div className="mt-2.5 px-0.5">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
                   Step {screen.step}
                 </span>
-                <p className="text-xs text-zinc-400">{screen.label}</p>
+                <p className="mt-0.5 text-[12px] leading-relaxed text-text-secondary">
+                  {screen.label}
+                </p>
               </div>
             </div>
           ))}

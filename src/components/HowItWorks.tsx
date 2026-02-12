@@ -3,7 +3,7 @@ const steps = [
     number: "01",
     title: "Search",
     description:
-      "Find the screen or flow you need. Browse by app, category, or UI pattern across every major crypto product.",
+      "Find the screen or flow you need. Browse by app, category, chain, or UI pattern across every major crypto product.",
   },
   {
     number: "02",
@@ -23,24 +23,24 @@ export function HowItWorks() {
   return (
     <section className="border-t border-dark-border">
       <div className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
+        <div className="mb-16">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             How it works
-          </h2>
-          <p className="mt-4 text-zinc-400">
-            From search to shipping, in three steps.
           </p>
+          <h2 className="font-serif text-3xl text-text-primary md:text-4xl">
+            From search to shipping
+          </h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-16 md:grid-cols-3 md:gap-10">
           {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <span className="mb-4 block font-mono text-5xl font-bold text-dark-border">
+            <div key={step.number}>
+              <span className="mb-6 block font-mono text-4xl font-medium text-dark-border">
                 {step.number}
               </span>
-              <h3 className="mb-3 text-xl font-semibold text-white">
+              <h3 className="mb-3 text-lg font-semibold text-text-primary">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-zinc-400">
+              <p className="text-[14px] leading-relaxed text-text-secondary">
                 {step.description}
               </p>
             </div>

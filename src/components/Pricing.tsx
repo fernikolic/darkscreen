@@ -7,7 +7,7 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "",
-    description: "Browse current screens for 10 apps. No history.",
+    description: "Browse current screens for 10 apps.",
     features: [
       "10 apps",
       "Current screens only",
@@ -37,7 +37,7 @@ const tiers = [
     price: "$12",
     period: "/member/mo",
     description:
-      "Everything in Pro + alerts, API access, custom app requests.",
+      "Everything in Pro plus alerts, API access, custom requests.",
     features: [
       "Everything in Pro",
       "Real-time change alerts",
@@ -55,69 +55,64 @@ export function Pricing() {
   return (
     <section id="pricing" className="border-t border-dark-border">
       <div className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
-            Simple pricing
+        <div className="mb-16">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
+            Pricing
+          </p>
+          <h2 className="font-serif text-3xl text-text-primary md:text-4xl">
+            Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-[14px] text-text-secondary">
             Start free. Upgrade when you need history and alerts.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {tiers.map((tier) => (
+        <div className="grid gap-px overflow-hidden rounded-lg border border-dark-border md:grid-cols-3">
+          {tiers.map((tier, i) => (
             <div
               key={tier.name}
-              className={`relative rounded-xl border p-8 transition-all card-glow ${
+              className={`relative p-10 ${
                 tier.highlighted
-                  ? "border-accent-blue/30 bg-accent-blue/5"
-                  : "border-dark-border bg-dark-card"
-              }`}
+                  ? "bg-accent-gold/[0.03]"
+                  : "bg-dark-card"
+              } ${i < 2 ? "md:border-r md:border-dark-border" : ""}`}
             >
               {tier.highlighted && (
-                <span className="absolute -top-3 left-6 rounded-full bg-accent-blue px-3 py-1 text-xs font-semibold text-dark-bg">
-                  Most Popular
+                <span className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-wider text-accent-gold">
+                  Popular
                 </span>
               )}
-              <h3 className="text-lg font-semibold text-white">{tier.name}</h3>
+              <h3 className="text-[13px] font-medium uppercase tracking-wider text-text-secondary">
+                {tier.name}
+              </h3>
               <div className="mt-4 flex items-baseline">
-                <span className="font-mono text-4xl font-bold text-white">
+                <span className="font-mono text-4xl font-medium text-text-primary">
                   {tier.price}
                 </span>
                 {tier.period && (
-                  <span className="ml-1 text-sm text-zinc-500">
+                  <span className="ml-1 text-[13px] text-text-tertiary">
                     {tier.period}
                   </span>
                 )}
               </div>
-              <p className="mt-3 text-sm text-zinc-400">{tier.description}</p>
-              <ul className="mt-6 space-y-3">
+              <p className="mt-3 text-[13px] text-text-secondary">
+                {tier.description}
+              </p>
+              <ul className="mt-8 space-y-3">
                 {tier.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 text-sm text-zinc-300"
+                    className="flex items-center gap-3 text-[13px] text-text-secondary"
                   >
-                    <svg
-                      className="h-4 w-4 flex-shrink-0 text-accent-blue"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                    <span className="h-px w-3 bg-text-tertiary" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <div className="mt-8">
+              <div className="mt-10">
                 {tier.name === "Free" ? (
                   <a
                     href="#get-access"
-                    className="block rounded-lg border border-dark-border bg-dark-hover py-3 text-center text-sm font-semibold text-zinc-300 transition-all hover:border-zinc-600 hover:text-white"
+                    className="block border-b border-dark-border py-3 text-center text-[13px] font-medium text-text-secondary transition-colors hover:border-text-secondary hover:text-text-primary"
                   >
                     {tier.cta}
                   </a>

@@ -33,8 +33,8 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
 
   if (status === "success") {
     return (
-      <p className="text-sm font-medium text-accent-blue">
-        You&apos;re on the list. We&apos;ll be in touch.
+      <p className="text-[13px] font-medium text-accent-gold">
+        You&apos;re on the list.
       </p>
     );
   }
@@ -49,21 +49,21 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@company.com"
-        className="min-w-0 flex-1 rounded-lg border border-dark-border bg-dark-card px-4 py-2.5 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent-blue/50"
+        className="min-w-0 flex-1 border-b border-dark-border bg-transparent px-0 py-2.5 text-[13px] text-text-primary placeholder-text-tertiary outline-none transition-colors focus:border-text-secondary"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className={`shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all disabled:opacity-60 ${
+        className={`shrink-0 py-2.5 text-[13px] font-medium transition-all disabled:opacity-60 ${
           isPrimary
-            ? "bg-accent-blue text-dark-bg hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-            : "border border-dark-border bg-dark-card text-zinc-300 hover:border-zinc-600 hover:text-white"
+            ? "border-b border-accent-gold text-accent-gold hover:border-accent-gold/60"
+            : "border-b border-dark-border text-text-secondary hover:border-text-secondary hover:text-text-primary"
         }`}
       >
         {status === "loading" ? "..." : "Get Access"}
       </button>
       {status === "error" && (
-        <p className="absolute mt-12 text-xs text-red-400">Something went wrong. Try again.</p>
+        <p className="absolute mt-12 text-xs text-red-400">Something went wrong.</p>
       )}
     </form>
   );
