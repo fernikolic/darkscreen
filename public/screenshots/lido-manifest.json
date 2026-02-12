@@ -1,45 +1,99 @@
 {
   "slug": "lido",
   "url": "https://stake.lido.fi",
-  "crawledAt": "2026-02-12T01:22:33.427Z",
-  "totalScreenshots": 6,
-  "totalStates": 5,
+  "crawledAt": "2026-02-12T03:16:29.522Z",
+  "totalScreenshots": 15,
+  "totalStates": 8,
   "screens": [
     {
       "step": 1,
-      "label": "Home page - Initial load",
-      "flow": "Home",
-      "image": "/screenshots/lido-home-1-home-page-initial-load.png"
+      "label": "Landing page - Stake Ether main view with navigation",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-1-landing-page-stake-ether-main-view-with-navigation.png"
+    },
+    {
+      "step": 1,
+      "label": "Connect wallet modal with wallet options",
+      "flow": "Onboarding",
+      "image": "/screenshots/lido-onboarding-1-connect-wallet-modal-with-wallet-options.png"
     },
     {
       "step": 2,
-      "label": "WRAP page - Wrap stETH to wstETH",
-      "flow": "Home",
-      "image": "/screenshots/lido-home-2-wrap-page-wrap-steth-to-wsteth.png"
+      "label": "Connect wallet modal expanded with search field and more wallet options",
+      "flow": "Onboarding",
+      "image": "/screenshots/lido-onboarding-2-connect-wallet-modal-expanded-with-search-field-an.png"
     },
     {
-      "step": 1,
-      "label": "WITHDRAWALS page - Request withdrawal",
-      "flow": "Send",
-      "image": "/screenshots/lido-send-1-withdrawals-page-request-withdrawal.png"
+      "step": 2,
+      "label": "Wrap and Unwrap page - Wrap tab active",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-2-wrap-and-unwrap-page-wrap-tab-active.png"
     },
     {
       "step": 3,
-      "label": "REWARDS page - Rewards dashboard",
-      "flow": "Home",
-      "image": "/screenshots/lido-home-3-rewards-page-rewards-dashboard.png"
-    },
-    {
-      "step": 1,
-      "label": "EARN page - Lido Earn opportunities",
+      "label": "Wrap and Unwrap page - Unwrap tab active",
       "flow": "Staking",
-      "image": "/screenshots/lido-staking-1-earn-page-lido-earn-opportunities.png"
+      "image": "/screenshots/lido-staking-3-wrap-and-unwrap-page-unwrap-tab-active.png"
+    },
+    {
+      "step": 4,
+      "label": "Withdrawals page - Request tab with Lido and DEX options",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-4-withdrawals-page-request-tab-with-lido-and-dex-opt.png"
+    },
+    {
+      "step": 5,
+      "label": "Withdrawals page - Claim tab showing connect wallet prompt",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-5-withdrawals-page-claim-tab-showing-connect-wallet-.png"
+    },
+    {
+      "step": 6,
+      "label": "Rewards page - Reward History with Ethereum address input",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-6-rewards-page-reward-history-with-ethereum-address-.png"
+    },
+    {
+      "step": 7,
+      "label": "Earn page with Lido stRATEGY vault and deposit options",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-7-earn-page-with-lido-strategy-vault-and-deposit-opt.png"
+    },
+    {
+      "step": 8,
+      "label": "Earn page scrolled - Lido GGV and Lido DVV vaults visible",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-8-earn-page-scrolled-lido-ggv-and-lido-dvv-vaults-vi.png"
+    },
+    {
+      "step": 9,
+      "label": "Earn page bottom - Lido DVV vault details and disclaimers",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-9-earn-page-bottom-lido-dvv-vault-details-and-discla.png"
+    },
+    {
+      "step": 10,
+      "label": "Stake page scrolled - Statistics of Lido protocol and FAQ section",
+      "flow": "Staking",
+      "image": "/screenshots/lido-staking-10-stake-page-scrolled-statistics-of-lido-protocol-an.png"
     },
     {
       "step": 1,
-      "label": "Connect wallet modal",
-      "flow": "Onboarding",
-      "image": "/screenshots/lido-onboarding-1-connect-wallet-modal.png"
+      "label": "FAQ section with multiple questions collapsed",
+      "flow": "Home",
+      "image": "/screenshots/lido-home-1-faq-section-with-multiple-questions-collapsed.png"
+    },
+    {
+      "step": 2,
+      "label": "FAQ - How does Lido work expanded with answer",
+      "flow": "Home",
+      "image": "/screenshots/lido-home-2-faq-how-does-lido-work-expanded-with-answer.png"
+    },
+    {
+      "step": 3,
+      "label": "404 Page Not Found error page",
+      "flow": "Home",
+      "image": "/screenshots/lido-home-3-404-page-not-found-error-page.png"
     }
   ]
 }

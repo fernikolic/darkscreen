@@ -370,23 +370,32 @@ You are NOT logged in. You can only capture public-facing pages. Screenshot "Con
 
   return `You are a meticulous UX researcher systematically documenting the interface of a crypto product called "${slug}".
 
-Your mission: explore EVERY screen, modal, dropdown, and state of this web application and capture comprehensive screenshots. You are building a visual product intelligence library.
+Your mission: explore EVERY screen, modal, dropdown, and state of this web application and capture comprehensive screenshots. You are building a visual product intelligence library. A thorough crawl should produce 20-40+ screenshots.
+
+## CRITICAL: Maximize coverage per turn
+
+- **NEVER waste a turn just waiting or requesting visual context.** Every turn should ideally include a screenshot OR a navigation action (click/navigate).
+- **Combine actions:** After screenshotting, immediately click or navigate to the next thing in the SAME turn if possible.
+- **Be aggressive:** Click everything. Every nav link, every tab, every dropdown, every button that opens a modal.
+- **Don't spend more than 2 turns on any single page** unless it has multiple interactive states worth capturing.
 
 ## Rules
 
-1. **Screenshot banners/popups FIRST** — If you see a cookie banner, consent dialog, or any overlay, screenshot it with an appropriate label, THEN dismiss it, THEN screenshot the clean page underneath.
+1. **Screenshot banners/popups FIRST** — If you see a cookie banner, consent dialog, or any overlay, screenshot it, THEN dismiss it, THEN screenshot the clean page.
 
-2. **Breadth over depth** — Visit every navigation item, settings page, help section, footer link, and submenu before going deep into any single flow.
+2. **Systematic breadth-first exploration** — Follow this order:
+   a. Screenshot the landing page
+   b. Identify ALL top-level navigation items and visit EACH ONE (click every tab/link in the nav)
+   c. On each page, look for sub-navigation, tabs, or filters — click and screenshot each state
+   d. Open every dropdown menu, modal, and sidebar you can find
+   e. Try "Connect Wallet" / "Sign In" buttons (screenshot the modal, don't submit)
+   f. Look for token/asset selectors and open them
+   g. Scroll down on content-heavy pages to capture below-the-fold content
+   h. Visit footer links (help, FAQ, terms, about)
+   i. Navigate to a nonexistent path for the 404 page
+   j. Check for any settings, preferences, or configuration pages
 
-3. **Visit these areas systematically:**
-   - Main navigation items (every tab/link)
-   - Settings/preferences pages
-   - Help/support/FAQ sections
-   - Footer links (terms, privacy, about)
-   - Try a nonexistent URL path to capture the 404 page
-   - Any "Connect Wallet" or sign-up modals (screenshot but don't submit)
-   - Token/asset selector modals
-   - Dropdown menus and sidebars
+3. **Visit EVERY navigation item** — If the app has nav items like: Swap, Pool, Explore, Markets, Earn, Governance, etc. — you MUST click and screenshot EVERY SINGLE ONE. Do not skip any.
 
 4. **Flow classification** — Classify every screenshot into one of: Home, Onboarding, Swap, Send, Staking, Settings. Use your best judgment.
 
@@ -735,11 +744,31 @@ async function crawlApp(slug, startUrl) {
   if (isAuthenticated && !credentials) {
     initialContent += `\n\nSESSION LOADED — You should be logged in. Check if the page shows authenticated content.`;
   }
-  initialContent += `\n\nARIA snapshot:\n${initialAria}`;
+  const initialAriaEmpty = !initialAria || initialAria.includes("(empty page)") || initialAria.includes("unavailable") || initialAria.trim().length < 50;
+
+  // Build initial message — include visual if ARIA is empty (common on SPAs)
+  const initialMessageContent = [];
+  if (initialAriaEmpty) {
+    try {
+      await page.setViewportSize({ width: 960, height: 600 });
+      const initialVisual = await page.screenshot({ type: "jpeg", quality: 50, fullPage: false });
+      await page.setViewportSize({ width: 1440, height: 900 });
+      initialMessageContent.push({
+        type: "image",
+        source: { type: "base64", media_type: "image/jpeg", data: initialVisual.toString("base64") },
+      });
+      initialContent += "\n\n(Visual screenshot included — ARIA was insufficient)";
+    } catch {
+      initialContent += `\n\nARIA snapshot:\n${initialAria}`;
+    }
+  } else {
+    initialContent += `\n\nARIA snapshot:\n${initialAria}`;
+  }
+  initialMessageContent.push({ type: "text", text: initialContent });
 
   messages.push({
     role: "user",
-    content: initialContent,
+    content: initialMessageContent,
   });
 
   for (let turn = 1; turn <= MAX_TURNS; turn++) {
@@ -833,25 +862,34 @@ async function crawlApp(slug, startUrl) {
     const nextContent = [...toolResults];
 
     // Append context as a text block
-    let contextText = `\n--- Current state ---\nURL: ${currentUrl}\nState hash: ${stateHash}${isNewState ? " (NEW)" : " (SEEN)"}\nVisited states: ${state.visitedHashes.size}\nScreenshots taken: ${state.screens.length}\nTurns remaining: ${MAX_TURNS - turn}\n\nARIA snapshot:\n${aria}`;
+    let contextText = `\n--- Current state ---\nURL: ${currentUrl}\nState hash: ${stateHash}${isNewState ? " (NEW)" : " (SEEN)"}\nVisited states: ${state.visitedHashes.size}\nScreenshots taken: ${state.screens.length}\nTurns remaining: ${MAX_TURNS - turn}`;
 
-    // If visual was requested, capture and include screenshot image
-    if (state.sendVisualNext) {
+    // Auto-include visual when ARIA is empty (most crypto SPAs) or when explicitly requested
+    const ariaEmpty = !aria || aria.includes("(empty page)") || aria.includes("unavailable") || aria.trim().length < 50;
+    const shouldIncludeVisual = state.sendVisualNext || ariaEmpty;
+
+    if (shouldIncludeVisual) {
       state.sendVisualNext = false;
       try {
-        const visualBuf = await page.screenshot({ type: "png", fullPage: false });
+        // Capture visual context at reduced size to stay under API's 2000px limit
+        // (main screenshots use 2x DPI = 2880x1800, but context images need to be smaller)
+        await page.setViewportSize({ width: 960, height: 600 });
+        const visualBuf = await page.screenshot({ type: "jpeg", quality: 50, fullPage: false });
+        await page.setViewportSize({ width: 1440, height: 900 });
         nextContent.push({
           type: "image",
           source: {
             type: "base64",
-            media_type: "image/png",
+            media_type: "image/jpeg",
             data: visualBuf.toString("base64"),
           },
         });
-        contextText += "\n\n(Visual screenshot included above)";
+        contextText += "\n\n(Visual screenshot included — ARIA was insufficient)";
       } catch {
-        contextText += "\n\n(Visual screenshot capture failed)";
+        contextText += `\n\nARIA snapshot:\n${aria}`;
       }
+    } else {
+      contextText += `\n\nARIA snapshot:\n${aria}`;
     }
 
     nextContent.push({ type: "text", text: contextText });
