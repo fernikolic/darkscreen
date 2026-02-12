@@ -9,7 +9,9 @@
     "lint": "next lint",
     "capture": "node scripts/capture-screenshots.mjs",
     "crawl": "node scripts/crawl-app.mjs",
-    "crawl:all": "node scripts/crawl-app.mjs --all"
+    "crawl:all": "node scripts/crawl-app.mjs --all",
+    "label": "node scripts/label-screenshots.mjs",
+    "sync": "node scripts/sync-manifests.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.74.0",

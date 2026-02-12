@@ -1,99 +1,69 @@
 {
   "slug": "lido",
   "url": "https://stake.lido.fi",
-  "crawledAt": "2026-02-12T03:16:29.522Z",
-  "totalScreenshots": 15,
-  "totalStates": 8,
+  "crawledAt": "2026-02-12T03:44:43.761Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page - Stake Ether main view with navigation",
+      "label": "Stake Ether landing page with staking form and protocol statistics",
       "flow": "Staking",
-      "image": "/screenshots/lido-staking-1-landing-page-stake-ether-main-view-with-navigation.png"
-    },
-    {
-      "step": 1,
-      "label": "Connect wallet modal with wallet options",
-      "flow": "Onboarding",
-      "image": "/screenshots/lido-onboarding-1-connect-wallet-modal-with-wallet-options.png"
+      "image": "/screenshots/lido-staking-1-stake-ether-landing-page-with-staking-form-and-protocol-stat.png"
     },
     {
       "step": 2,
-      "label": "Connect wallet modal expanded with search field and more wallet options",
-      "flow": "Onboarding",
-      "image": "/screenshots/lido-onboarding-2-connect-wallet-modal-expanded-with-search-field-an.png"
-    },
-    {
-      "step": 2,
-      "label": "Wrap and Unwrap page - Wrap tab active",
+      "label": "Reward History page tracking Ethereum staking rewards and APR",
       "flow": "Staking",
-      "image": "/screenshots/lido-staking-2-wrap-and-unwrap-page-wrap-tab-active.png"
+      "image": "/screenshots/lido-staking-2-reward-history-page-tracking-ethereum-staking-rewards-and-ap.png"
     },
     {
       "step": 3,
-      "label": "Wrap and Unwrap page - Unwrap tab active",
+      "label": "Earn page showing DeFi vault strategies for yield farming",
       "flow": "Staking",
-      "image": "/screenshots/lido-staking-3-wrap-and-unwrap-page-unwrap-tab-active.png"
-    },
-    {
-      "step": 4,
-      "label": "Withdrawals page - Request tab with Lido and DEX options",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-4-withdrawals-page-request-tab-with-lido-and-dex-opt.png"
-    },
-    {
-      "step": 5,
-      "label": "Withdrawals page - Claim tab showing connect wallet prompt",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-5-withdrawals-page-claim-tab-showing-connect-wallet-.png"
-    },
-    {
-      "step": 6,
-      "label": "Rewards page - Reward History with Ethereum address input",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-6-rewards-page-reward-history-with-ethereum-address-.png"
-    },
-    {
-      "step": 7,
-      "label": "Earn page with Lido stRATEGY vault and deposit options",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-7-earn-page-with-lido-strategy-vault-and-deposit-opt.png"
-    },
-    {
-      "step": 8,
-      "label": "Earn page scrolled - Lido GGV and Lido DVV vaults visible",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-8-earn-page-scrolled-lido-ggv-and-lido-dvv-vaults-vi.png"
-    },
-    {
-      "step": 9,
-      "label": "Earn page bottom - Lido DVV vault details and disclaimers",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-9-earn-page-bottom-lido-dvv-vault-details-and-discla.png"
-    },
-    {
-      "step": 10,
-      "label": "Stake page scrolled - Statistics of Lido protocol and FAQ section",
-      "flow": "Staking",
-      "image": "/screenshots/lido-staking-10-stake-page-scrolled-statistics-of-lido-protocol-an.png"
+      "image": "/screenshots/lido-staking-3-earn-page-showing-defi-vault-strategies-for-yield-farming.png"
     },
     {
       "step": 1,
-      "label": "FAQ section with multiple questions collapsed",
-      "flow": "Home",
-      "image": "/screenshots/lido-home-1-faq-section-with-multiple-questions-collapsed.png"
+      "label": "Wrap and Unwrap stETH token conversion interface page",
+      "flow": "Swap",
+      "image": "/screenshots/lido-swap-1-wrap-and-unwrap-steth-token-conversion-interface-page.png"
+    },
+    {
+      "step": 1,
+      "label": "Withdrawals request page for stETH and wsETH redemption",
+      "flow": "Send",
+      "image": "/screenshots/lido-send-1-withdrawals-request-page-for-steth-and-wseth-redemption.png"
     },
     {
       "step": 2,
-      "label": "FAQ - How does Lido work expanded with answer",
-      "flow": "Home",
-      "image": "/screenshots/lido-home-2-faq-how-does-lido-work-expanded-with-answer.png"
+      "label": "Withdrawals page with Request and Claim tabs, FAQ section",
+      "flow": "Send",
+      "image": "/screenshots/lido-send-2-withdrawals-page-with-request-and-claim-tabs-faq-section.png"
     },
     {
       "step": 3,
-      "label": "404 Page Not Found error page",
+      "label": "Withdrawals FAQ section scrolled, expanded risk disclosure",
+      "flow": "Send",
+      "image": "/screenshots/lido-send-3-withdrawals-faq-section-scrolled-expanded-risk-disclosure.png"
+    },
+    {
+      "step": 1,
+      "label": "Connect wallet modal with multiple wallet options displayed",
+      "flow": "Onboarding",
+      "image": "/screenshots/lido-onboarding-1-connect-wallet-modal-with-multiple-wallet-options-displayed.png"
+    },
+    {
+      "step": 1,
+      "label": "404 error page - Page Not Found message displayed",
       "flow": "Home",
-      "image": "/screenshots/lido-home-3-404-page-not-found-error-page.png"
+      "image": "/screenshots/lido-home-1-404-error-page-page-not-found-message-displayed.png"
+    },
+    {
+      "step": 2,
+      "label": "Referral program page with whitelist mode information",
+      "flow": "Home",
+      "image": "/screenshots/lido-home-2-referral-program-page-with-whitelist-mode-information.png"
     }
   ]
 }
