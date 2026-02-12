@@ -11,7 +11,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight text-white">
-            DARK<span className="text-accent-blue">SCREEN</span>
+            💻 Darkscreen
           </span>
         </Link>
 
