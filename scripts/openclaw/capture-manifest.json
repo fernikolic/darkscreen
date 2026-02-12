@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "outputDir": "public/screenshots",
+  "viewport": { "width": 1440, "height": 900 },
+  "deviceScaleFactor": 2,
+  "waitAfterLoad": 4000,
+  "apps": [
+    {
+      "slug": "metamask",
+      "name": "MetaMask",
+      "routes": [
+        { "id": "home", "url": "https://portfolio.metamask.io", "label": "Portfolio overview" },
+        { "id": "swap", "url": "https://portfolio.metamask.io/swap", "label": "Swap interface" },
+        { "id": "bridge", "url": "https://portfolio.metamask.io/bridge", "label": "Bridge interface" },
+        { "id": "stake", "url": "https://portfolio.metamask.io/stake", "label": "Staking options" },
+        { "id": "explore", "url": "https://portfolio.metamask.io/explore", "label": "Explore dapps" }
+      ]
+    },
+    {
+      "slug": "phantom",
+      "name": "Phantom",
+      "routes": [
+        { "id": "home", "url": "https://phantom.app", "label": "Landing page" },
+        { "id": "download", "url": "https://phantom.app/download", "label": "Download page" },
+        { "id": "learn", "url": "https://phantom.app/learn", "label": "Learn section" },
+        { "id": "tokens", "url": "https://phantom.app/tokens", "label": "Token explorer" }
+      ]
+    },
+    {
+      "slug": "uniswap",
+      "name": "Uniswap",
+      "routes": [
+        { "id": "home", "url": "https://app.uniswap.org", "label": "App home" },
+        { "id": "swap", "url": "https://app.uniswap.org/swap", "label": "Swap interface" },
+        { "id": "explore-tokens", "url": "https://app.uniswap.org/explore/tokens", "label": "Token explorer" },
+        { "id": "explore-pools", "url": "https://app.uniswap.org/explore/pools", "label": "Pool explorer" },
+        { "id": "nfts", "url": "https://app.uniswap.org/nfts", "label": "NFT marketplace" }
+      ]
+    },
+    {
+      "slug": "coinbase",
+      "name": "Coinbase",
+      "routes": [
+        { "id": "home", "url": "https://www.coinbase.com", "label": "Landing page" },
+        { "id": "explore", "url": "https://www.coinbase.com/explore", "label": "Explore markets" },
+        { "id": "price-btc", "url": "https://www.coinbase.com/price/bitcoin", "label": "Bitcoin price page" },
+        { "id": "price-eth", "url": "https://www.coinbase.com/price/ethereum", "label": "Ethereum price page" },
+        { "id": "learn", "url": "https://www.coinbase.com/learn", "label": "Learn section" }
+      ]
+    },
+    {
+      "slug": "aave",
+      "name": "Aave",
+      "routes": [
+        { "id": "home", "url": "https://app.aave.com", "label": "Markets overview" },
+        { "id": "markets", "url": "https://app.aave.com/markets", "label": "All markets" },
+        { "id": "staking", "url": "https://app.aave.com/staking", "label": "Staking dashboard" },
+        { "id": "governance", "url": "https://app.aave.com/governance", "label": "Governance proposals" }
+      ]
+    },
+    {
+      "slug": "jupiter",
+      "name": "Jupiter",
+      "routes": [
+        { "id": "home", "url": "https://jup.ag", "label": "Swap interface" },
+        { "id": "limit", "url": "https://jup.ag/limit/SOL-USDC", "label": "Limit orders" },
+        { "id": "dca", "url": "https://jup.ag/dca/SOL-USDC", "label": "DCA interface" },
+        { "id": "perps", "url": "https://jup.ag/perps", "label": "Perpetuals trading" }
+      ]
+    },
+    {
+      "slug": "lido",
+      "name": "Lido",
+      "routes": [
+        { "id": "home", "url": "https://lido.fi", "label": "Landing page" },
+        { "id": "stake", "url": "https://stake.lido.fi", "label": "Staking interface" },
+        { "id": "withdrawals", "url": "https://stake.lido.fi/withdrawals", "label": "Withdrawals" },
+        { "id": "wrap", "url": "https://stake.lido.fi/wrap", "label": "Wrap/unwrap stETH" }
+      ]
+    },
+    {
+      "slug": "binance",
+      "name": "Binance",
+      "routes": [
+        { "id": "home", "url": "https://www.binance.com/en/markets/overview", "label": "Markets overview" },
+        { "id": "trade", "url": "https://www.binance.com/en/trade/BTC_USDT", "label": "Spot trading" },
+        { "id": "earn", "url": "https://www.binance.com/en/earn", "label": "Earn products" },
+        { "id": "convert", "url": "https://www.binance.com/en/convert", "label": "Convert interface" }
+      ]
+    },
+    {
+      "slug": "kraken",
+      "name": "Kraken",
+      "routes": [
+        { "id": "home", "url": "https://www.kraken.com/prices", "label": "Price overview" },
+        { "id": "btc", "url": "https://www.kraken.com/prices/bitcoin", "label": "Bitcoin detail" },
+        { "id": "features", "url": "https://www.kraken.com/features", "label": "Features page" },
+        { "id": "learn", "url": "https://www.kraken.com/learn", "label": "Learn center" }
+      ]
+    },
+    {
+      "slug": "curve",
+      "name": "Curve",
+      "routes": [
+        { "id": "home", "url": "https://curve.fi", "label": "Main interface" },
+        { "id": "swap", "url": "https://curve.fi/#/ethereum/swap", "label": "Swap interface" },
+        { "id": "pools", "url": "https://curve.fi/#/ethereum/pools", "label": "Pool list" },
+        { "id": "dashboard", "url": "https://curve.fi/#/ethereum/dashboard", "label": "Dashboard" }
+      ]
+    }
+  ]
+}

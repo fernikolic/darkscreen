@@ -53,10 +53,10 @@ export function FilterBar({
           <button
             key={cat}
             onClick={() => onCategoryChange(cat)}
-            className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
+            className={`rounded-xl border px-4 py-2 text-body-sm font-medium transition-all duration-300 ${
               activeCategory === cat
                 ? "pill-active"
-                : "border-dark-border text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
+                : "border-dark-border/40 text-text-tertiary hover:border-dark-border hover:text-text-secondary"
             }`}
           >
             {cat === "NFT" ? "NFT / Marketplaces" : cat}
@@ -70,10 +70,10 @@ export function FilterBar({
           <button
             key={flow}
             onClick={() => onFlowChange(flow)}
-            className={`rounded-full border px-3 py-1 text-xs font-medium transition-all ${
+            className={`rounded-lg border px-3 py-1.5 text-[12px] font-medium transition-all duration-300 ${
               activeFlow === flow
-                ? "border-accent-purple/30 bg-accent-purple/10 text-accent-purple"
-                : "border-dark-border text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
+                ? "pill-active-purple"
+                : "border-dark-border/30 text-text-tertiary hover:border-dark-border hover:text-text-secondary"
             }`}
           >
             {FLOW_LABELS[flow] || flow}

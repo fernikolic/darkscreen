@@ -22,49 +22,61 @@ export default function Library() {
   });
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
-      {/* Header */}
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-white md:text-4xl">
-          The Library
-        </h1>
-        <p className="mt-3 text-zinc-400">
-          Browse screenshots from 50+ crypto products. Filter by app, category,
-          and flow type.
-        </p>
+    <div className="relative">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 dot-grid opacity-20" />
       </div>
 
-      {/* Filters */}
-      <div className="mb-10">
-        <FilterBar
-          activeCategory={activeCategory}
-          activeFlow={activeFlow}
-          onCategoryChange={setActiveCategory}
-          onFlowChange={setActiveFlow}
-        />
-      </div>
-
-      {/* Results count */}
-      <div className="mb-6">
-        <span className="font-mono text-sm text-zinc-500">
-          {filtered.length} app{filtered.length !== 1 ? "s" : ""}
-        </span>
-      </div>
-
-      {/* App grid */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((app) => (
-          <AppCard key={app.slug} app={app} />
-        ))}
-      </div>
-
-      {filtered.length === 0 && (
-        <div className="py-20 text-center">
-          <p className="text-zinc-500">
-            No apps match the selected filters.
+      <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24">
+        {/* Header */}
+        <div className="mb-12">
+          <span className="mb-3 block font-mono text-label uppercase text-text-tertiary">
+            Browse
+          </span>
+          <h1 className="font-display text-display-md text-text-primary md:text-display-lg">
+            The Library
+          </h1>
+          <p className="mt-4 max-w-lg text-body-md text-text-secondary">
+            Browse screenshots from 50+ crypto products. Filter by app, category,
+            and flow type.
           </p>
         </div>
-      )}
+
+        {/* Filters */}
+        <div className="mb-10 rounded-2xl border border-dark-border/30 bg-dark-card/30 p-5 backdrop-blur-sm">
+          <FilterBar
+            activeCategory={activeCategory}
+            activeFlow={activeFlow}
+            onCategoryChange={setActiveCategory}
+            onFlowChange={setActiveFlow}
+          />
+        </div>
+
+        {/* Results count */}
+        <div className="mb-8 flex items-center gap-3">
+          <div className="h-px flex-1 bg-dark-border/30" />
+          <span className="font-mono text-[11px] text-text-ghost">
+            {filtered.length} app{filtered.length !== 1 ? "s" : ""}
+          </span>
+          <div className="h-px flex-1 bg-dark-border/30" />
+        </div>
+
+        {/* App grid */}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filtered.map((app) => (
+            <AppCard key={app.slug} app={app} />
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <div className="py-24 text-center">
+            <p className="text-body-md text-text-tertiary">
+              No apps match the selected filters.
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

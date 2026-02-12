@@ -33,37 +33,50 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
 
   if (status === "success") {
     return (
-      <p className="text-sm font-medium text-accent-blue">
-        You&apos;re on the list. We&apos;ll be in touch.
-      </p>
+      <div className="flex items-center gap-2">
+        <div className="h-2 w-2 rounded-full bg-accent-emerald" />
+        <p className="text-body-sm font-medium text-accent-emerald">
+          You&apos;re on the list. We&apos;ll be in touch.
+        </p>
+      </div>
     );
   }
 
   const isPrimary = variant === "primary";
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md gap-2">
+    <form onSubmit={handleSubmit} className="relative flex w-full max-w-md gap-2">
       <input
         type="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@company.com"
-        className="min-w-0 flex-1 rounded-lg border border-dark-border bg-dark-card px-4 py-2.5 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent-blue/50"
+        className="min-w-0 flex-1 rounded-xl border border-dark-border bg-dark-card/80 px-4 py-3 text-body-sm text-text-primary placeholder-text-ghost outline-none transition-all duration-300 focus:border-accent-blue/30 focus:bg-dark-card focus:shadow-glow"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className={`shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all disabled:opacity-60 ${
+        className={`shrink-0 rounded-xl px-6 py-3 text-body-sm font-semibold transition-all duration-300 disabled:opacity-50 ${
           isPrimary
-            ? "bg-accent-blue text-dark-bg hover:bg-accent-blue/90 hover:shadow-[0_0_30px_rgba(0,212,255,0.3)]"
-            : "border border-dark-border bg-dark-card text-zinc-300 hover:border-zinc-600 hover:text-white"
+            ? "bg-accent-blue text-dark-bg hover:shadow-glow-lg"
+            : "border border-dark-border bg-dark-card text-text-secondary hover:border-accent-blue/20 hover:text-text-primary"
         }`}
       >
-        {status === "loading" ? "..." : "Get Access"}
+        {status === "loading" ? (
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-1 w-1 animate-pulse rounded-full bg-current" />
+            <span className="h-1 w-1 animate-pulse rounded-full bg-current [animation-delay:0.2s]" />
+            <span className="h-1 w-1 animate-pulse rounded-full bg-current [animation-delay:0.4s]" />
+          </span>
+        ) : (
+          "Get Access"
+        )}
       </button>
       {status === "error" && (
-        <p className="absolute mt-12 text-xs text-red-400">Something went wrong. Try again.</p>
+        <p className="absolute -bottom-6 left-0 text-[11px] text-red-400">
+          Something went wrong. Try again.
+        </p>
       )}
     </form>
   );

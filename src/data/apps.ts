@@ -83,7 +83,7 @@ export const apps: CryptoApp[] = [
       { step: 3, label: "Seed phrase backup", flow: "Onboarding" },
       { step: 4, label: "Confirm seed phrase", flow: "Onboarding" },
       { step: 5, label: "Set password", flow: "Onboarding" },
-      { step: 1, label: "Select tokens to swap", flow: "Swap" },
+      { step: 1, label: "Select tokens to swap", flow: "Swap", image: "/screenshots/metamask-swap.png" },
       { step: 2, label: "Enter swap amount", flow: "Swap" },
       { step: 3, label: "Review swap details", flow: "Swap" },
       { step: 4, label: "Gas fee estimator", flow: "Swap" },
@@ -96,6 +96,9 @@ export const apps: CryptoApp[] = [
       { step: 2, label: "Security & privacy", flow: "Settings" },
       { step: 3, label: "Networks management", flow: "Settings" },
       { step: 4, label: "Advanced settings", flow: "Settings" },
+      { step: 1, label: "Bridge tokens", flow: "Swap", image: "/screenshots/metamask-bridge.png" },
+      { step: 1, label: "Staking overview", flow: "Staking", image: "/screenshots/metamask-stake.png" },
+      { step: 1, label: "Explore dApps", flow: "Home", image: "/screenshots/metamask-explore.png" },
     ],
     changes: [
       {
@@ -155,6 +158,9 @@ export const apps: CryptoApp[] = [
       { step: 1, label: "General settings", flow: "Settings" },
       { step: 2, label: "Security settings", flow: "Settings" },
       { step: 3, label: "Connected apps", flow: "Settings" },
+      { step: 1, label: "Download page", flow: "Onboarding", image: "/screenshots/phantom-download.png" },
+      { step: 1, label: "Learn & guides", flow: "Home", image: "/screenshots/phantom-learn.png" },
+      { step: 1, label: "Token explorer", flow: "Home", image: "/screenshots/phantom-tokens.png" },
     ],
     changes: [
       {
@@ -191,8 +197,8 @@ export const apps: CryptoApp[] = [
     screenshots: [
       { step: 1, label: "Swap interface", flow: "Home", image: "/screenshots/uniswap-home.png" },
       { step: 2, label: "Pool overview", flow: "Home" },
-      { step: 3, label: "Token explorer", flow: "Home" },
-      { step: 1, label: "Select token pair", flow: "Swap" },
+      { step: 3, label: "Token explorer", flow: "Home", image: "/screenshots/uniswap-explore-tokens.png" },
+      { step: 1, label: "Select token pair", flow: "Swap", image: "/screenshots/uniswap-swap.png" },
       { step: 2, label: "Enter swap amount", flow: "Swap" },
       { step: 3, label: "Review swap route", flow: "Swap" },
       { step: 4, label: "Approve token spend", flow: "Swap" },
@@ -205,6 +211,8 @@ export const apps: CryptoApp[] = [
       { step: 1, label: "Slippage tolerance", flow: "Settings" },
       { step: 2, label: "Transaction deadline", flow: "Settings" },
       { step: 3, label: "Gas price settings", flow: "Settings" },
+      { step: 1, label: "Liquidity pools explorer", flow: "Home", image: "/screenshots/uniswap-explore-pools.png" },
+      { step: 1, label: "NFT collection browser", flow: "Home", image: "/screenshots/uniswap-nfts.png" },
     ],
     changes: [
       {
@@ -241,7 +249,7 @@ export const apps: CryptoApp[] = [
     screenshots: [
       { step: 1, label: "Portfolio overview", flow: "Home", image: "/screenshots/coinbase-home.png" },
       { step: 2, label: "Watchlist", flow: "Home" },
-      { step: 3, label: "Market prices", flow: "Home" },
+      { step: 3, label: "Market prices", flow: "Home", image: "/screenshots/coinbase-price-btc.png" },
       { step: 4, label: "News feed", flow: "Home" },
       { step: 1, label: "Sign up form", flow: "Onboarding" },
       { step: 2, label: "Email verification", flow: "Onboarding" },
@@ -266,6 +274,9 @@ export const apps: CryptoApp[] = [
       { step: 2, label: "Security settings", flow: "Settings" },
       { step: 3, label: "Payment methods", flow: "Settings" },
       { step: 4, label: "Notifications", flow: "Settings" },
+      { step: 1, label: "Explore assets", flow: "Home", image: "/screenshots/coinbase-explore.png" },
+      { step: 1, label: "Learn center", flow: "Home", image: "/screenshots/coinbase-learn.png" },
+      { step: 1, label: "Ethereum price tracker", flow: "Home", image: "/screenshots/coinbase-price-eth.png" },
     ],
     changes: [
       {
@@ -313,6 +324,9 @@ export const apps: CryptoApp[] = [
       { step: 8, label: "Review borrow terms", flow: "Swap" },
       { step: 1, label: "Connect wallet prompt", flow: "Settings" },
       { step: 2, label: "Wallet info & E-mode", flow: "Settings" },
+      { step: 1, label: "Markets browser", flow: "Home", image: "/screenshots/aave-markets.png" },
+      { step: 1, label: "Staking dashboard", flow: "Staking", image: "/screenshots/aave-staking.png" },
+      { step: 1, label: "Governance proposals", flow: "Home", image: "/screenshots/aave-governance.png" },
     ],
     changes: [
       {
@@ -493,17 +507,17 @@ export const apps: CryptoApp[] = [
     flows: ["Home", "Onboarding", "Swap", "Send", "Staking", "Settings"],
     screenshots: [
       { step: 1, label: "Markets overview", flow: "Home", image: "/screenshots/binance-home.png" },
-      { step: 2, label: "Spot trading interface", flow: "Home" },
+      { step: 2, label: "Spot trading interface", flow: "Home", image: "/screenshots/binance-trade.png" },
       { step: 3, label: "Portfolio dashboard", flow: "Home" },
       { step: 1, label: "Sign up form", flow: "Onboarding" },
       { step: 2, label: "Identity verification", flow: "Onboarding" },
-      { step: 1, label: "Convert interface", flow: "Swap" },
+      { step: 1, label: "Convert interface", flow: "Swap", image: "/screenshots/binance-convert.png" },
       { step: 2, label: "Enter amount", flow: "Swap" },
       { step: 3, label: "Order confirmation", flow: "Swap" },
       { step: 1, label: "Select asset", flow: "Send" },
       { step: 2, label: "Enter address", flow: "Send" },
       { step: 3, label: "Confirm withdrawal", flow: "Send" },
-      { step: 1, label: "Earn products", flow: "Staking" },
+      { step: 1, label: "Earn products", flow: "Staking", image: "/screenshots/binance-earn.png" },
       { step: 2, label: "Flexible savings", flow: "Staking" },
       { step: 1, label: "Account settings", flow: "Settings" },
       { step: 2, label: "Security settings", flow: "Settings" },
@@ -541,6 +555,9 @@ export const apps: CryptoApp[] = [
       { step: 2, label: "Stake ETH", flow: "Staking" },
       { step: 1, label: "Account settings", flow: "Settings" },
       { step: 2, label: "API management", flow: "Settings" },
+      { step: 1, label: "Bitcoin price page", flow: "Home", image: "/screenshots/kraken-btc.png" },
+      { step: 1, label: "Features overview", flow: "Home", image: "/screenshots/kraken-features.png" },
+      { step: 1, label: "Learn center", flow: "Home", image: "/screenshots/kraken-learn.png" },
     ],
     changes: [
       { date: "Feb 6, 2026", description: "Added NFT marketplace to main navigation", type: "New Feature" },
@@ -656,6 +673,9 @@ export const apps: CryptoApp[] = [
       { step: 4, label: "Confirm swap", flow: "Swap" },
       { step: 1, label: "Slippage settings", flow: "Settings" },
       { step: 2, label: "Priority fee", flow: "Settings" },
+      { step: 1, label: "Limit orders", flow: "Swap", image: "/screenshots/jupiter-limit.png" },
+      { step: 1, label: "DCA / Recurring buys", flow: "Swap", image: "/screenshots/jupiter-dca.png" },
+      { step: 1, label: "Perpetuals trading", flow: "Swap", image: "/screenshots/jupiter-perps.png" },
     ],
     changes: [
       { date: "Feb 5, 2026", description: "Added perpetuals trading interface", type: "New Feature" },
@@ -678,12 +698,13 @@ export const apps: CryptoApp[] = [
     screenshots: [
       { step: 1, label: "Staking dashboard", flow: "Home", image: "/screenshots/lido-home.png" },
       { step: 2, label: "APR overview", flow: "Home" },
-      { step: 1, label: "Enter stake amount", flow: "Staking" },
+      { step: 1, label: "Enter stake amount", flow: "Staking", image: "/screenshots/lido-stake.png" },
       { step: 2, label: "Review staking details", flow: "Staking" },
       { step: 3, label: "Confirm transaction", flow: "Staking" },
       { step: 4, label: "Staking complete", flow: "Staking" },
       { step: 1, label: "Reward history", flow: "Settings" },
-      { step: 2, label: "Withdrawal requests", flow: "Settings" },
+      { step: 2, label: "Withdrawal requests", flow: "Settings", image: "/screenshots/lido-withdrawals.png" },
+      { step: 1, label: "Wrap stETH / wstETH", flow: "Staking", image: "/screenshots/lido-wrap.png" },
     ],
     changes: [
       { date: "Feb 3, 2026", description: "Added stETH/ETH rate chart to dashboard", type: "New Feature" },
@@ -706,13 +727,14 @@ export const apps: CryptoApp[] = [
     screenshots: [
       { step: 1, label: "Pools overview", flow: "Home", image: "/screenshots/curve-home.png" },
       { step: 2, label: "TVL dashboard", flow: "Home" },
-      { step: 3, label: "Pool details", flow: "Home" },
-      { step: 1, label: "Select pool to swap", flow: "Swap" },
+      { step: 3, label: "Pool details", flow: "Home", image: "/screenshots/curve-pools.png" },
+      { step: 1, label: "Select pool to swap", flow: "Swap", image: "/screenshots/curve-swap.png" },
       { step: 2, label: "Enter swap amount", flow: "Swap" },
       { step: 3, label: "Review swap route", flow: "Swap" },
       { step: 4, label: "Confirm transaction", flow: "Swap" },
       { step: 1, label: "Slippage tolerance", flow: "Settings" },
       { step: 2, label: "Gas settings", flow: "Settings" },
+      { step: 1, label: "Personal dashboard", flow: "Home", image: "/screenshots/curve-dashboard.png" },
     ],
     changes: [
       { date: "Feb 3, 2026", description: "Added crvUSD lending markets overview", type: "New Feature" },
