@@ -66,6 +66,33 @@ export function Hero() {
           </div>
         </div>
 
+        {/* Logo cloud */}
+        <div className="mx-auto mt-16 max-w-3xl">
+          <p className="mb-6 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary">
+            Tracking products you know
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            {[
+              "Coinbase",
+              "MetaMask",
+              "Uniswap",
+              "Kraken",
+              "Aave",
+              "Phantom",
+              "Binance",
+              "Jupiter",
+              "Lido",
+            ].map((name) => (
+              <span
+                key={name}
+                className="text-[15px] font-semibold tracking-tight text-text-tertiary/40 transition-colors hover:text-text-primary"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Featured screenshots */}
         <div className="mt-20 overflow-hidden">
           <div className="flex gap-4">
