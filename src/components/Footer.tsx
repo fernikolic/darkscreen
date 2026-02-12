@@ -10,10 +10,22 @@ export function Footer() {
           </span>
           <div className="flex items-center gap-8">
             <Link
+              href="/screens"
+              className="text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
+            >
+              Screens
+            </Link>
+            <Link
+              href="/flows"
+              className="text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
+            >
+              Flows
+            </Link>
+            <Link
               href="/library"
               className="text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
             >
-              Library
+              Apps
             </Link>
             <a
               href="#pricing"

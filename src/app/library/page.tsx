@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { apps, type AppCategory, type FlowType, type ChainType } from "@/data/apps";
+import { apps, type AppCategory, type FlowType, type ChainType, CHAIN_TYPES } from "@/data/apps";
 import { FilterBar } from "@/components/FilterBar";
 import { AppCard } from "@/components/AppCard";
+import { SortControl, type SortOption } from "@/components/SortControl";
 
-const CHAINS: Array<ChainType | "All Chains"> = [
-  "All Chains",
-  "Bitcoin",
-  "Ethereum",
-  "Solana",
-  "Multi-chain",
-];
+const CHAINS: Array<ChainType | "All Chains"> = ["All Chains", ...CHAIN_TYPES];
+
+function parseDate(dateStr: string): number {
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? 0 : d.getTime();
+}
 
 export default function Library() {
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(
@@ -24,6 +24,7 @@ export default function Library() {
     "All Chains"
   );
   const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState<SortOption>("newest");
 
   const filtered = apps.filter((app) => {
     if (activeCategory !== "All" && app.category !== activeCategory)
@@ -44,12 +45,27 @@ export default function Library() {
     return true;
   });
 
+  const sorted = [...filtered].sort((a, b) => {
+    switch (sortBy) {
+      case "newest":
+        return parseDate(b.lastUpdated) - parseDate(a.lastUpdated);
+      case "most-screens":
+        return b.screenCount - a.screenCount;
+      case "a-z":
+        return a.name.localeCompare(b.name);
+      case "z-a":
+        return b.name.localeCompare(a.name);
+      default:
+        return 0;
+    }
+  });
+
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
       {/* Header */}
       <div className="mb-12">
         <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
-          Library
+          Apps
         </p>
         <h1 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
           Explore the collection
@@ -97,21 +113,22 @@ export default function Library() {
         />
       </div>
 
-      {/* Results count */}
-      <div className="mb-8">
+      {/* Sort + Results count */}
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary">
-          {filtered.length} result{filtered.length !== 1 ? "s" : ""}
+          {sorted.length} result{sorted.length !== 1 ? "s" : ""}
         </span>
+        <SortControl value={sortBy} onChange={setSortBy} />
       </div>
 
       {/* App grid */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((app) => (
+        {sorted.map((app) => (
           <AppCard key={app.slug} app={app} />
         ))}
       </div>
 
-      {filtered.length === 0 && (
+      {sorted.length === 0 && (
         <div className="py-20 text-center">
           <p className="text-[14px] text-text-tertiary">
             No apps match the selected filters.

@@ -57,6 +57,31 @@ export interface CryptoApp {
   thumbnail?: string;
 }
 
+export const CATEGORIES: AppCategory[] = [
+  "Wallet",
+  "Exchange",
+  "DeFi",
+  "Bridge",
+  "NFT",
+  "Analytics",
+];
+
+export const FLOW_TYPES: FlowType[] = [
+  "Home",
+  "Onboarding",
+  "Swap",
+  "Send",
+  "Staking",
+  "Settings",
+];
+
+export const CHAIN_TYPES: ChainType[] = [
+  "Bitcoin",
+  "Ethereum",
+  "Solana",
+  "Multi-chain",
+];
+
 export const CATEGORY_COLORS: Record<AppCategory, string> = {
   Wallet: "#3b82f6",
   Exchange: "#22c55e",
