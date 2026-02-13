@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useCallback, useRef, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { type EnrichedScreen } from "@/data/helpers";
+import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 import { SaveToCollectionModal } from "./SaveToCollectionModal";
 
 interface ScreenModalProps {
@@ -78,6 +79,12 @@ export function ScreenModal({
             </span>
           </div>
           <div className="flex items-center gap-4">
+            <Link
+              href={getScreenPath(screen)}
+              className="text-[13px] text-text-tertiary transition-colors hover:text-accent-gold"
+            >
+              Open
+            </Link>
             {screen.image && (
               <button
                 onClick={() => setShowSave(true)}

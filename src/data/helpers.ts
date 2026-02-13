@@ -1,4 +1,4 @@
-import { apps, type AppScreen, type FlowType, type AppCategory, type ChainType } from "./apps";
+import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType } from "./apps";
 
 export interface EnrichedScreen extends AppScreen {
   appSlug: string;
@@ -18,6 +18,33 @@ export interface AppFlow {
   screens: EnrichedScreen[];
   count: number;
   thumbnail: string | undefined;
+}
+
+export interface EnrichedChange extends AppChange {
+  appSlug: string;
+  appName: string;
+  appCategory: AppCategory;
+  accentColor: string;
+}
+
+export function getScreenPath(screen: EnrichedScreen): string {
+  return `/screens/${screen.appSlug}/${screen.flow.toLowerCase()}/${screen.step}`;
+}
+
+export function getAllChanges(): EnrichedChange[] {
+  const result: EnrichedChange[] = [];
+  for (const app of apps) {
+    for (const change of app.changes) {
+      result.push({
+        ...change,
+        appSlug: app.slug,
+        appName: app.name,
+        appCategory: app.category,
+        accentColor: app.accentColor,
+      });
+    }
+  }
+  return result.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getAllScreens(): EnrichedScreen[] {

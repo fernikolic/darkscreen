@@ -53,6 +53,12 @@ export function Header() {
           >
             Library
           </Link>
+          <Link
+            href="/changes"
+            className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+          >
+            Changes
+          </Link>
           <a
             href="#pricing"
             className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
@@ -149,6 +155,13 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
             >
               Library
+            </Link>
+            <Link
+              href="/changes"
+              className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
+              onClick={() => setMobileOpen(false)}
+            >
+              Changes
             </Link>
             <a
               href="#pricing"

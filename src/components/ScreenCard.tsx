@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
-import { type EnrichedScreen } from "@/data/helpers";
+import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 
 interface ScreenCardProps {
   screen: EnrichedScreen;
@@ -10,7 +11,17 @@ interface ScreenCardProps {
 
 export function ScreenCard({ screen, onClick }: ScreenCardProps) {
   return (
-    <button onClick={onClick} className="group block w-full text-left">
+    <Link
+      href={getScreenPath(screen)}
+      onClick={(e) => {
+        // Normal click opens modal; Cmd/Ctrl+click follows the link (default <a> behavior)
+        if (!e.metaKey && !e.ctrlKey) {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      className="group block w-full text-left"
+    >
       <div className="overflow-hidden border border-dark-border bg-dark-card transition-all card-hover">
         {/* Thumbnail */}
         <div className="relative aspect-[9/16] overflow-hidden bg-dark-bg">
@@ -54,6 +65,6 @@ export function ScreenCard({ screen, onClick }: ScreenCardProps) {
           </div>
         </div>
       </div>
-    </button>
+    </Link>
   );
 }

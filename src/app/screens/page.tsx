@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
-import { type AppCategory, type FlowType, type ChainType, CATEGORIES, FLOW_TYPES, CHAIN_TYPES } from "@/data/apps";
+import { Suspense, useState, useMemo, useCallback, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { type AppCategory, type FlowType, type ChainType, type ElementTag, CATEGORIES, FLOW_TYPES, CHAIN_TYPES, ELEMENT_TAGS } from "@/data/apps";
 import { getAllScreens, getAllFlows, type EnrichedScreen } from "@/data/helpers";
 import { buildSearchIndex, searchScreens } from "@/lib/search";
 import { ScreenCard } from "@/components/ScreenCard";
@@ -13,16 +14,47 @@ const FLOWS_ALL: Array<FlowType | "All Flows"> = ["All Flows", ...FLOW_TYPES];
 const PAGE_SIZE = 48;
 
 export default function ScreensPage() {
+  return (
+    <Suspense>
+      <ScreensPageInner />
+    </Suspense>
+  );
+}
+
+function ScreensPageInner() {
+  const searchParams = useSearchParams();
   const [search, setSearch] = useState("");
   const [activeChain, setActiveChain] = useState<ChainType | "All Chains">("All Chains");
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">("All");
   const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
+  const [activeTags, setActiveTags] = useState<Set<ElementTag>>(new Set());
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [modalScreen, setModalScreen] = useState<EnrichedScreen | null>(null);
+
+  // Read ?tag= from URL on mount
+  useEffect(() => {
+    const tagParam = searchParams.get("tag");
+    if (tagParam && ELEMENT_TAGS.includes(tagParam as ElementTag)) {
+      setActiveTags(new Set([tagParam as ElementTag]));
+    }
+  }, [searchParams]);
 
   const allScreens = useMemo(() => getAllScreens(), []);
   const allFlows = useMemo(() => getAllFlows(), []);
   const { fuse } = useMemo(() => buildSearchIndex(allScreens), [allScreens]);
+
+  const toggleTag = useCallback((tag: ElementTag) => {
+    setActiveTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) {
+        next.delete(tag);
+      } else {
+        next.add(tag);
+      }
+      return next;
+    });
+    setVisibleCount(PAGE_SIZE);
+  }, []);
 
   const filtered = useMemo(() => {
     // If there's a search query, use Fuse.js for fuzzy + OCR search
@@ -38,9 +70,14 @@ export default function ScreensPage() {
       if (activeChain !== "All Chains" && !s.appChains.includes(activeChain)) return false;
       if (activeCategory !== "All" && s.appCategory !== activeCategory) return false;
       if (activeFlow !== "All Flows" && s.flow !== activeFlow) return false;
+      if (activeTags.size > 0) {
+        const screenTags = s.tags || [];
+        // Screen must have at least one of the active tags
+        if (!screenTags.some((t) => activeTags.has(t))) return false;
+      }
       return true;
     });
-  }, [allScreens, fuse, activeChain, activeCategory, activeFlow, search]);
+  }, [allScreens, fuse, activeChain, activeCategory, activeFlow, activeTags, search]);
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
@@ -135,7 +172,7 @@ export default function ScreensPage() {
       </div>
 
       {/* Flow filter */}
-      <div className="mb-10">
+      <div className="mb-6">
         <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
           Flow type
         </span>
@@ -154,6 +191,41 @@ export default function ScreensPage() {
               }`}
             >
               {flow}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Element tag filter */}
+      <div className="mb-10">
+        <div className="mb-3 flex items-center gap-3">
+          <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+            Element tags
+          </span>
+          {activeTags.size > 0 && (
+            <button
+              onClick={() => {
+                setActiveTags(new Set());
+                setVisibleCount(PAGE_SIZE);
+              }}
+              className="text-[11px] text-text-tertiary transition-colors hover:text-accent-gold"
+            >
+              Clear tags
+            </button>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {ELEMENT_TAGS.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => toggleTag(tag)}
+              className={`rounded-full border px-3 py-1.5 text-[11px] font-medium transition-all ${
+                activeTags.has(tag)
+                  ? "border-[#00d4ff]/40 bg-[#00d4ff]/10 text-[#00d4ff]"
+                  : "border-dark-border text-text-tertiary hover:border-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {tag}
             </button>
           ))}
         </div>
