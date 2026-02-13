@@ -12,6 +12,7 @@ import { wagmiConfig } from "@/lib/wallet-config";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { BookmarksProvider } from "@/contexts/BookmarksContext";
 import { CollectionsProvider } from "@/contexts/CollectionsContext";
+import { SubscriptionProvider } from "@/contexts/SubscriptionContext";
 import { SignInModal } from "@/components/SignInModal";
 
 const queryClient = new QueryClient();
@@ -30,12 +31,14 @@ export function Providers({ children }: { children: ReactNode }) {
         <SolanaConnectionProvider endpoint={SOLANA_RPC}>
           <SolanaWalletProvider wallets={solanaWallets} autoConnect={false}>
             <AuthProvider>
-              <CollectionsProvider>
-                <BookmarksProvider>
-                  {children}
-                  <SignInModal />
-                </BookmarksProvider>
-              </CollectionsProvider>
+              <SubscriptionProvider>
+                <CollectionsProvider>
+                  <BookmarksProvider>
+                    {children}
+                    <SignInModal />
+                  </BookmarksProvider>
+                </CollectionsProvider>
+              </SubscriptionProvider>
             </AuthProvider>
           </SolanaWalletProvider>
         </SolanaConnectionProvider>

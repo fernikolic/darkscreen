@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { ValueProps } from "@/components/ValueProps";
 import { LogoCloud } from "@/components/LogoCloud";
 import { HowItWorks } from "@/components/HowItWorks";
+import { Pricing } from "@/components/Pricing";
 import Link from "next/link";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <ValueProps />
       <LogoCloud />
       <HowItWorks />
+      <Pricing />
 
       {/* Bottom CTA */}
       <section id="get-access" className="border-t border-dark-border">
