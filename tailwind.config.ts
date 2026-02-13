@@ -22,9 +22,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['"Syne"', "system-ui", "sans-serif"],
-        sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
-        mono: ['"JetBrains Mono"', '"Fira Code"', "monospace"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", '"Fira Code"', "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",

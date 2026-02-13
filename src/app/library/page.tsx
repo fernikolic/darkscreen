@@ -1,10 +1,22 @@
 "use client";
 
-import { useState } from "react";
-import { apps, type AppCategory, type FlowType, type ChainType, CHAIN_TYPES } from "@/data/apps";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import {
+  apps,
+  type AppCategory,
+  type FlowType,
+  type ChainType,
+  type SectionType,
+  type StyleType,
+  CHAIN_TYPES,
+  SECTION_TYPES,
+  STYLE_TYPES,
+} from "@/data/apps";
 import { FilterBar } from "@/components/FilterBar";
 import { AppCard } from "@/components/AppCard";
 import { SortControl, type SortOption } from "@/components/SortControl";
+import { BookmarkButton } from "@/components/BookmarkButton";
 
 const CHAINS: Array<ChainType | "All Chains"> = ["All Chains", ...CHAIN_TYPES];
 
@@ -13,26 +25,52 @@ function parseDate(dateStr: string): number {
   return isNaN(d.getTime()) ? 0 : d.getTime();
 }
 
-export default function Library() {
-  const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(
-    "All"
-  );
-  const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">(
-    "All Flows"
-  );
-  const [activeChain, setActiveChain] = useState<ChainType | "All Chains">(
-    "All Chains"
-  );
+function LibraryContent() {
+  const searchParams = useSearchParams();
+
+  // Read initial state from URL params
+  const initialCategory = (() => {
+    const c = searchParams.get("category");
+    if (c) {
+      const cats = ["Wallet", "Exchange", "DeFi", "Bridge", "NFT", "Analytics"] as const;
+      const match = cats.find((cat) => cat.toLowerCase() === c.toLowerCase());
+      if (match) return match;
+    }
+    return "All" as const;
+  })();
+
+  const initialSection = (() => {
+    const s = searchParams.get("section");
+    if (s) {
+      const match = SECTION_TYPES.find((st) => st.toLowerCase() === s.toLowerCase());
+      if (match) return [match];
+    }
+    return [] as SectionType[];
+  })();
+
+  const initialStyle = (() => {
+    const s = searchParams.get("style");
+    if (s) {
+      const match = STYLE_TYPES.find((st) => st.toLowerCase() === s.toLowerCase());
+      if (match) return [match];
+    }
+    return [] as StyleType[];
+  })();
+
+  const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(initialCategory);
+  const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
+  const [activeChain, setActiveChain] = useState<ChainType | "All Chains">("All Chains");
+  const [activeSections, setActiveSections] = useState<SectionType[]>(initialSection);
+  const [activeStyles, setActiveStyles] = useState<StyleType[]>(initialStyle);
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
 
   const filtered = apps.filter((app) => {
-    if (activeCategory !== "All" && app.category !== activeCategory)
-      return false;
-    if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow))
-      return false;
-    if (activeChain !== "All Chains" && !app.chains.includes(activeChain))
-      return false;
+    if (activeCategory !== "All" && app.category !== activeCategory) return false;
+    if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow)) return false;
+    if (activeChain !== "All Chains" && !app.chains.includes(activeChain)) return false;
+    if (activeSections.length > 0 && !activeSections.some((s) => app.sections.includes(s))) return false;
+    if (activeStyles.length > 0 && !activeStyles.some((s) => app.styles.includes(s))) return false;
     if (search) {
       const q = search.toLowerCase();
       if (
@@ -67,7 +105,7 @@ export default function Library() {
         <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
           Apps
         </p>
-        <h1 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+        <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
           Explore the collection
         </h1>
         <p className="mt-3 text-[14px] text-text-secondary">
@@ -103,13 +141,17 @@ export default function Library() {
         ))}
       </div>
 
-      {/* Category + Flow filters */}
+      {/* Category + Flow + Platform + Section + Style filters */}
       <div className="mb-10">
         <FilterBar
           activeCategory={activeCategory}
           activeFlow={activeFlow}
+          activeSections={activeSections}
+          activeStyles={activeStyles}
           onCategoryChange={setActiveCategory}
           onFlowChange={setActiveFlow}
+          onSectionsChange={setActiveSections}
+          onStylesChange={setActiveStyles}
         />
       </div>
 
@@ -124,7 +166,7 @@ export default function Library() {
       {/* App grid */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {sorted.map((app) => (
-          <AppCard key={app.slug} app={app} />
+          <AppCard key={app.slug} app={app} bookmarkButton={<BookmarkButton slug={app.slug} />} />
         ))}
       </div>
 
@@ -136,5 +178,23 @@ export default function Library() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function Library() {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+          <div className="animate-pulse">
+            <div className="mb-4 h-4 w-16 rounded bg-dark-border" />
+            <div className="mb-3 h-10 w-64 rounded bg-dark-border" />
+            <div className="h-5 w-80 rounded bg-dark-border" />
+          </div>
+        </div>
+      }
+    >
+      <LibraryContent />
+    </Suspense>
   );
 }

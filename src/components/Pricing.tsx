@@ -1,10 +1,11 @@
 "use client";
 
-import { EmailCapture } from "./EmailCapture";
+import { useAuth } from "@/contexts/AuthContext";
+import { redirectToCheckout } from "@/lib/stripe";
 
 const tiers = [
   {
-    name: "Free",
+    name: "Free" as const,
     price: "$0",
     period: "",
     description: "Browse current screens for 10 apps.",
@@ -16,9 +17,10 @@ const tiers = [
     ],
     cta: "Get Started",
     highlighted: false,
+    plan: null as null,
   },
   {
-    name: "Pro",
+    name: "Pro" as const,
     price: "$9",
     period: "/mo",
     description: "Full library, 12 months of history, weekly digest.",
@@ -29,11 +31,12 @@ const tiers = [
       "Weekly change digest",
       "Export screens",
     ],
-    cta: "Get Early Access",
+    cta: "Get Pro",
     highlighted: true,
+    plan: "pro" as const,
   },
   {
-    name: "Team",
+    name: "Team" as const,
     price: "$12",
     period: "/member/mo",
     description:
@@ -46,20 +49,34 @@ const tiers = [
       "Slack integration",
       "Priority support",
     ],
-    cta: "Get Early Access",
+    cta: "Get Team",
     highlighted: false,
+    plan: "team" as const,
   },
 ];
 
 export function Pricing() {
+  const { user } = useAuth();
+
   return (
     <section id="pricing" className="border-t border-dark-border">
       <div className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-16">
+          {/* Beta pricing pill */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-gold/30 bg-accent-gold/5 px-4 py-1.5">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-gold opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-gold" />
+            </span>
+            <span className="font-mono text-[11px] font-medium uppercase tracking-wider text-accent-gold">
+              Beta Pricing
+            </span>
+          </div>
+
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             Pricing
           </p>
-          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
             Simple, transparent pricing
           </h2>
           <p className="mt-4 text-[14px] text-text-secondary">
@@ -94,9 +111,34 @@ export function Pricing() {
                   </span>
                 )}
               </div>
+
+              {/* Urgency copy for paid tiers */}
+              {tier.plan && (
+                <p className="mt-2 text-[11px] text-accent-gold/70">
+                  Lock in this price forever — goes up after beta
+                </p>
+              )}
+
               <p className="mt-3 text-[13px] text-text-secondary">
                 {tier.description}
               </p>
+
+              {/* Slots progress bar for Pro */}
+              {tier.name === "Pro" && (
+                <div className="mt-4">
+                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider">
+                    <span className="text-text-tertiary">Beta slots claimed</span>
+                    <span className="text-accent-gold">72%</span>
+                  </div>
+                  <div className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-dark-border">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-accent-gold/80 to-accent-gold"
+                      style={{ width: "72%" }}
+                    />
+                  </div>
+                </div>
+              )}
+
               <ul className="mt-8 space-y-3">
                 {tier.features.map((feature) => (
                   <li
@@ -111,16 +153,32 @@ export function Pricing() {
               <div className="mt-10">
                 {tier.name === "Free" ? (
                   <a
-                    href="#get-access"
+                    href="/library"
                     className="block border-b border-dark-border py-3 text-center text-[13px] font-medium text-text-secondary transition-colors hover:border-text-secondary hover:text-text-primary"
                   >
                     {tier.cta}
                   </a>
                 ) : (
-                  <EmailCapture
-                    variant={tier.highlighted ? "primary" : "secondary"}
-                    source={`pricing-${tier.name.toLowerCase()}`}
-                  />
+                  <div className="space-y-3">
+                    <button
+                      onClick={() =>
+                        redirectToCheckout(tier.plan!, user?.email)
+                      }
+                      className={`block w-full py-3 text-center text-[13px] font-medium transition-all ${
+                        tier.highlighted
+                          ? "border border-accent-gold bg-accent-gold/10 text-accent-gold hover:bg-accent-gold/20"
+                          : "border border-dark-border text-text-secondary hover:border-text-secondary hover:text-text-primary"
+                      }`}
+                    >
+                      {tier.cta}
+                    </button>
+                    <span className="flex items-center justify-center gap-1.5 text-[11px] text-text-tertiary">
+                      or pay with USDC
+                      <span className="rounded bg-dark-border px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider">
+                        soon
+                      </span>
+                    </span>
+                  </div>
                 )}
               </div>
             </div>

@@ -58,6 +58,23 @@ body::before {
   background: rgba(200, 169, 110, 0.06);
 }
 
+.pill-active-cyan {
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.pill-active-amber {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+/* Font overrides — outside @layer for higher specificity than Tailwind utilities */
+.font-heading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+
 /* Stagger animation delays */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }

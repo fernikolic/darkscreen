@@ -1,6 +1,30 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // User profile — owner can read/write their own doc
+    match /users/{uid} {
+      allow read, update: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid;
+
+      // Bookmarks subcollection
+      match /bookmarks/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+
+      // Collections subcollection
+      match /collections/{collectionId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Pending subscriptions — written by Cloud Function (admin SDK), read by auth context
+    match /pendingSubscriptions/{docId} {
+      allow read: if request.auth != null;
+      allow write: if false; // only Cloud Functions (admin)
+    }
+
+    // Waitlist (legacy)
     match /waitlist/{document} {
       allow create: if request.resource.data.keys().hasAll(['email', 'source', 'createdAt'])
                     && request.resource.data.email is string
@@ -8,6 +32,8 @@ service cloud.firestore {
                     && request.resource.data.email.size() < 256;
       allow read, update, delete: if false;
     }
+
+    // Default deny
     match /{document=**} {
       allow read, write: if false;
     }

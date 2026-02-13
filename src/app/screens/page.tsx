@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { type AppCategory, type FlowType, type ChainType, CATEGORIES, FLOW_TYPES, CHAIN_TYPES } from "@/data/apps";
 import { getAllScreens, getAllFlows, type EnrichedScreen } from "@/data/helpers";
+import { buildSearchIndex, searchScreens } from "@/lib/search";
 import { ScreenCard } from "@/components/ScreenCard";
 import { ScreenModal } from "@/components/ScreenModal";
 
@@ -21,23 +22,25 @@ export default function ScreensPage() {
 
   const allScreens = useMemo(() => getAllScreens(), []);
   const allFlows = useMemo(() => getAllFlows(), []);
+  const { fuse } = useMemo(() => buildSearchIndex(allScreens), [allScreens]);
 
   const filtered = useMemo(() => {
-    return allScreens.filter((s) => {
+    // If there's a search query, use Fuse.js for fuzzy + OCR search
+    let results: EnrichedScreen[];
+    if (search.trim()) {
+      results = searchScreens(fuse, search);
+    } else {
+      results = allScreens;
+    }
+
+    // Apply filters on top of search results
+    return results.filter((s) => {
       if (activeChain !== "All Chains" && !s.appChains.includes(activeChain)) return false;
       if (activeCategory !== "All" && s.appCategory !== activeCategory) return false;
       if (activeFlow !== "All Flows" && s.flow !== activeFlow) return false;
-      if (search) {
-        const q = search.toLowerCase();
-        if (
-          !s.appName.toLowerCase().includes(q) &&
-          !s.label.toLowerCase().includes(q)
-        )
-          return false;
-      }
       return true;
     });
-  }, [allScreens, activeChain, activeCategory, activeFlow, search]);
+  }, [allScreens, fuse, activeChain, activeCategory, activeFlow, search]);
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
@@ -59,7 +62,7 @@ export default function ScreensPage() {
         <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
           Screens
         </p>
-        <h1 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+        <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
           Browse every screen
         </h1>
         <p className="mt-3 text-[14px] text-text-secondary">
@@ -76,9 +79,14 @@ export default function ScreensPage() {
             setSearch(e.target.value);
             setVisibleCount(PAGE_SIZE);
           }}
-          placeholder="Search screens..."
+          placeholder="Search screens, text on screen, flows..."
           className="w-full border-b border-dark-border bg-transparent py-3 text-[14px] text-text-primary placeholder-text-tertiary outline-none transition-colors focus:border-text-secondary"
         />
+        {search.trim() && (
+          <p className="mt-2 font-mono text-[11px] text-text-tertiary">
+            Searching labels, app names, and on-screen text (OCR)
+          </p>
+        )}
       </div>
 
       {/* Chain tabs */}

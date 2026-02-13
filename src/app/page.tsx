@@ -17,7 +17,7 @@ export default function Home() {
       {/* Bottom CTA */}
       <section id="get-access" className="border-t border-dark-border">
         <div className="mx-auto max-w-7xl px-6 py-28 text-center">
-          <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
+          <h2 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
             Start exploring crypto product design
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-[14px] text-text-secondary">

@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { type EnrichedScreen } from "@/data/helpers";
+import { SaveToCollectionModal } from "./SaveToCollectionModal";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -18,6 +19,7 @@ export function ScreenModal({
   onNavigate,
 }: ScreenModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const [showSave, setShowSave] = useState(false);
   const currentIndex = flowScreens.findIndex(
     (s) => s.appSlug === screen.appSlug && s.flow === screen.flow && s.step === screen.step
   );
@@ -41,6 +43,7 @@ export function ScreenModal({
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
+      if (showSave) return; // don't navigate while save modal is open
       if (e.key === "Escape") {
         e.preventDefault();
         onClose();
@@ -50,7 +53,7 @@ export function ScreenModal({
     }
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [onClose, goPrev, goNext]);
+  }, [onClose, goPrev, goNext, showSave]);
 
   return (
     <dialog
@@ -74,12 +77,31 @@ export function ScreenModal({
               Step {screen.step}
             </span>
           </div>
-          <button
-            onClick={onClose}
-            className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
-          >
-            Close
-          </button>
+          <div className="flex items-center gap-4">
+            {screen.image && (
+              <button
+                onClick={() => setShowSave(true)}
+                className="text-[13px] text-text-tertiary transition-colors hover:text-accent-gold"
+              >
+                Save
+              </button>
+            )}
+            {screen.image && (
+              <a
+                href={screen.image}
+                download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
+                className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
+              >
+                Download
+              </a>
+            )}
+            <button
+              onClick={onClose}
+              className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
+            >
+              Close
+            </button>
+          </div>
         </div>
 
         {/* Main content */}
@@ -140,6 +162,14 @@ export function ScreenModal({
           </button>
         </div>
       </div>
+
+      {/* Save to collection modal */}
+      {showSave && screen.image && (
+        <SaveToCollectionModal
+          screenImage={screen.image}
+          onClose={() => setShowSave(false)}
+        />
+      )}
     </dialog>
   );
 }

@@ -1,68 +1,117 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { useState } from "react";
-
-const NAV_LINKS = [
-  { href: "/screens", label: "Screens" },
-  { href: "/flows", label: "Flows" },
-  { href: "/library", label: "Apps" },
-];
+import { useAuth } from "@/contexts/AuthContext";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
+  const { user, loading, signInWithGoogle, signOut } = useAuth();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-dark-border/50 bg-dark-bg/90 backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-display text-xl font-bold text-text-primary">
-            Darkscreen
+    <header className="sticky top-0 z-50 border-b border-dark-border/50 bg-dark-bg/70 backdrop-blur-2xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link href="/" className="group flex items-center gap-2.5">
+          {/* Logo mark */}
+          <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-dark-border bg-dark-card">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span className="relative font-heading text-sm font-bold text-accent-blue">D</span>
+          </div>
+          <span className="font-heading text-lg font-bold tracking-tight text-text-primary">
+            DARK<span className="text-accent-blue">SCREEN</span>
           </span>
         </Link>
 
+        {/* Platform nav */}
+        <div className="hidden items-center gap-0.5 md:flex ml-6">
+          <Link
+            href="/library"
+            className="rounded-lg px-3 py-1.5 text-body-sm text-text-primary transition-all duration-200 hover:bg-dark-card"
+          >
+            Web Apps
+          </Link>
+          <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
+            iOS
+            <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+              Soon
+            </span>
+          </span>
+          <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
+            Android
+            <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+              Soon
+            </span>
+          </span>
+        </div>
+
         {/* Desktop nav */}
-        <div className="hidden items-center gap-10 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-[13px] font-medium uppercase tracking-wider transition-colors ${
-                pathname === link.href
-                  ? "text-text-primary"
-                  : "text-text-secondary hover:text-text-primary"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="hidden items-center gap-1 md:flex">
+          <Link
+            href="/library"
+            className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+          >
+            Library
+          </Link>
           <a
             href="#pricing"
-            className="text-[13px] font-medium uppercase tracking-wider text-text-secondary transition-colors hover:text-text-primary"
+            className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
           >
             Pricing
           </a>
-          <a
-            href="#get-access"
-            className="border-b border-accent-gold/40 pb-0.5 text-[13px] font-medium text-accent-gold transition-colors hover:border-accent-gold"
-          >
-            Get Access
-          </a>
+          <div className="ml-3 h-5 w-px bg-dark-border" />
+
+          {/* Auth UI */}
+          {loading ? (
+            <div className="ml-3 h-8 w-8 animate-pulse rounded-full bg-dark-border" />
+          ) : user ? (
+            <div className="ml-3 flex items-center gap-2">
+              <Link
+                href="/saved"
+                className="rounded-lg px-3 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+              >
+                Saved
+              </Link>
+              <button
+                onClick={signOut}
+                className="group flex items-center gap-2"
+              >
+                {user.photoURL ? (
+                  <Image
+                    src={user.photoURL}
+                    alt={user.displayName || "User"}
+                    width={32}
+                    height={32}
+                    className="rounded-full border border-dark-border transition-all group-hover:border-accent-gold/30"
+                  />
+                ) : (
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-dark-border bg-dark-card text-[12px] font-medium text-text-secondary transition-all group-hover:border-accent-gold/30">
+                    {(user.displayName || user.email || "U")[0].toUpperCase()}
+                  </div>
+                )}
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={signInWithGoogle}
+              className="ml-3 rounded-lg border border-accent-blue/20 bg-accent-blue/5 px-5 py-2 text-body-sm font-medium text-accent-blue transition-all duration-300 hover:border-accent-blue/40 hover:bg-accent-blue/10 hover:shadow-glow"
+            >
+              Sign In
+            </button>
+          )}
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="text-text-secondary md:hidden"
+          className="relative rounded-lg p-2 text-text-tertiary transition-colors hover:bg-dark-card hover:text-text-primary md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
             )}
           </svg>
         </button>
@@ -70,36 +119,77 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-dark-border/50 px-6 py-6 md:hidden">
-          <div className="flex flex-col gap-5">
-            {NAV_LINKS.map((link) => (
+        <div className="border-t border-dark-border/50 px-6 py-5 md:hidden">
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-1 px-2 pb-2">
               <Link
-                key={link.href}
-                href={link.href}
-                className={`text-[13px] font-medium uppercase tracking-wider transition-colors ${
-                  pathname === link.href
-                    ? "text-text-primary"
-                    : "text-text-secondary hover:text-text-primary"
-                }`}
+                href="/library"
+                className="rounded-lg px-3 py-1.5 text-body-sm text-text-primary"
                 onClick={() => setMobileOpen(false)}
               >
-                {link.label}
+                Web Apps
               </Link>
-            ))}
+              <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
+                iOS
+                <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+                  Soon
+                </span>
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
+                Android
+                <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+                  Soon
+                </span>
+              </span>
+            </div>
+            <div className="mb-1 h-px bg-dark-border/50" />
+            <Link
+              href="/library"
+              className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
+              onClick={() => setMobileOpen(false)}
+            >
+              Library
+            </Link>
             <a
               href="#pricing"
-              className="text-[13px] font-medium uppercase tracking-wider text-text-secondary transition-colors hover:text-text-primary"
+              className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
               onClick={() => setMobileOpen(false)}
             >
               Pricing
             </a>
-            <a
-              href="#get-access"
-              className="text-[13px] font-medium text-accent-gold"
-              onClick={() => setMobileOpen(false)}
-            >
-              Get Access
-            </a>
+            <div className="my-2 h-px bg-dark-border/50" />
+
+            {/* Mobile auth */}
+            {loading ? null : user ? (
+              <>
+                <Link
+                  href="/saved"
+                  className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Saved
+                </Link>
+                <button
+                  onClick={() => {
+                    signOut();
+                    setMobileOpen(false);
+                  }}
+                  className="rounded-lg px-4 py-3 text-left text-body-sm text-text-tertiary transition-colors hover:bg-dark-card hover:text-text-primary"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => {
+                  signInWithGoogle();
+                  setMobileOpen(false);
+                }}
+                className="rounded-lg border border-accent-blue/20 bg-accent-blue/5 py-3 text-center text-body-sm font-medium text-accent-blue"
+              >
+                Sign In with Google
+              </button>
+            )}
           </div>
         </div>
       )}

@@ -20,6 +20,35 @@ export type ChainType =
   | "Solana"
   | "Multi-chain";
 
+export type PlatformType = "Web";
+
+export type SectionType =
+  | "Dashboard"
+  | "Portfolio"
+  | "Trade View"
+  | "Charts"
+  | "Token List"
+  | "Onboarding"
+  | "Settings"
+  | "Notifications"
+  | "Staking"
+  | "Governance"
+  | "NFT Gallery"
+  | "Learn"
+  | "Markets"
+  | "Bridge"
+  | "Earn";
+
+export type StyleType =
+  | "Dark Mode"
+  | "Glassmorphism"
+  | "Minimal"
+  | "Card-Heavy"
+  | "Data Dense"
+  | "Gradient-Rich"
+  | "Neon Accents"
+  | "Clean / Corporate";
+
 export type ChangeType =
   | "New Feature"
   | "Redesign"
@@ -45,6 +74,9 @@ export interface CryptoApp {
   name: string;
   category: AppCategory;
   chains: ChainType[];
+  platforms: PlatformType[];
+  sections: SectionType[];
+  styles: StyleType[];
   description: string;
   website: string;
   screenCount: number;
@@ -82,6 +114,39 @@ export const CHAIN_TYPES: ChainType[] = [
   "Multi-chain",
 ];
 
+export const PLATFORM_TYPES: PlatformType[] = [
+  "Web",
+];
+
+export const SECTION_TYPES: SectionType[] = [
+  "Dashboard",
+  "Portfolio",
+  "Trade View",
+  "Charts",
+  "Token List",
+  "Onboarding",
+  "Settings",
+  "Notifications",
+  "Staking",
+  "Governance",
+  "NFT Gallery",
+  "Learn",
+  "Markets",
+  "Bridge",
+  "Earn",
+];
+
+export const STYLE_TYPES: StyleType[] = [
+  "Dark Mode",
+  "Glassmorphism",
+  "Minimal",
+  "Card-Heavy",
+  "Data Dense",
+  "Gradient-Rich",
+  "Neon Accents",
+  "Clean / Corporate",
+];
+
 export const CATEGORY_COLORS: Record<AppCategory, string> = {
   Wallet: "#3b82f6",
   Exchange: "#22c55e",
@@ -98,6 +163,9 @@ export const apps: CryptoApp[] = [
     name: "MetaMask",
     category: "Wallet",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Card-Heavy"],
     description:
       "The most popular Ethereum wallet and gateway to blockchain apps",
     website: "https://metamask.io",
@@ -157,6 +225,9 @@ export const apps: CryptoApp[] = [
     name: "Phantom",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Staking", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Glassmorphism", "Gradient-Rich"],
     description:
       "Multi-chain wallet for Solana, Ethereum, Bitcoin, and more",
     website: "https://phantom.app",
@@ -215,14 +286,17 @@ export const apps: CryptoApp[] = [
     slug: "uniswap",
     name: "Uniswap",
     category: "DeFi",
-    chains: ["Ethereum"],
-    description: "The largest decentralized exchange protocol",
+    chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Token List", "Markets", "Portfolio", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Minimal", "Gradient-Rich", "Clean / Corporate"],
+    description: "The largest decentralized exchange protocol — browse Uniswap's full swap interface, limit orders, fiat on/off ramps, pool management, explore pages, and wallet onboarding across Ethereum, Polygon, Arbitrum, Optimism, and Base.",
     website: "https://app.uniswap.org",
-    screenCount: 21,
+    screenCount: 36,
     lastUpdated: "Feb 12, 2026",
     detailed: true,
     thumbnail: "/screenshots/uniswap-swap-1-main-landing-page-swap-interface-with-swap-anytime.png",
-    flows: ["Home", "Swap", "Send", "Settings"],
+    flows: ["Home", "Swap", "Onboarding", "Staking", "Settings"],
                 screens: [
       { step: 1, label: "Main landing page - Swap interface with \"Swap anytime, anywhere\" hero", flow: "Swap", image: "/screenshots/uniswap-swap-1-main-landing-page-swap-interface-with-swap-anytime.png" },
       { step: 1, label: "Explore page - Tokens tab with auction modal overlay", flow: "Home", image: "/screenshots/uniswap-home-1-explore-page-tokens-tab-with-auction-modal-overlay.png" },
@@ -248,21 +322,44 @@ export const apps: CryptoApp[] = [
     ],
     changes: [
       {
+        date: "Feb 12, 2026",
+        description: "Launched auction discovery page with verified/unverified/completed tabs",
+        type: "New Feature",
+      },
+      {
+        date: "Feb 8, 2026",
+        description: "Added fiat sell/off-ramp flow with percentage presets alongside existing buy flow",
+        type: "New Feature",
+      },
+      {
         date: "Feb 5, 2026",
-        description: "Added limit orders to swap interface",
+        description: "Added limit orders to swap interface with market price and percentage shortcuts",
         type: "New Feature",
       },
       {
         date: "Jan 30, 2026",
-        description:
-          "Redesigned token search with trending tokens section",
+        description: "Redesigned token search with trending tokens section and cross-network swap support",
+        type: "Redesign",
+      },
+      {
+        date: "Jan 22, 2026",
+        description: "Redesigned Explore page with unified tokens, pools, and transactions tabs",
         type: "Redesign",
       },
       {
         date: "Jan 18, 2026",
-        description:
-          "Updated fee tier selector with liquidity indicators",
+        description: "Updated fee tier selector with liquidity depth indicators",
         type: "Layout Shift",
+      },
+      {
+        date: "Jan 10, 2026",
+        description: "Revamped portfolio page with demo wallet preview for unconnected users",
+        type: "Redesign",
+      },
+      {
+        date: "Jan 3, 2026",
+        description: "Changed 'Connect Wallet' copy to 'Get Started' on landing hero",
+        type: "Copy Change",
       },
     ],
     accentColor: "#ff007a",
@@ -272,6 +369,9 @@ export const apps: CryptoApp[] = [
     name: "Coinbase",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Trade View", "Markets", "Staking", "Onboarding", "Settings", "Notifications", "Learn", "Earn"],
+    styles: ["Clean / Corporate", "Card-Heavy"],
     description: "The most trusted cryptocurrency exchange",
     website: "https://www.coinbase.com",
     screenCount: 64,
@@ -334,6 +434,9 @@ export const apps: CryptoApp[] = [
     name: "Aave",
     category: "DeFi",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Markets", "Staking", "Governance", "Earn", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Card-Heavy"],
     description: "Decentralized lending and borrowing protocol",
     website: "https://app.aave.com",
     screenCount: 21,
@@ -393,6 +496,9 @@ export const apps: CryptoApp[] = [
     name: "Trust Wallet",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "Staking", "NFT Gallery", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Card-Heavy"],
     description: "Multi-chain self-custody wallet by Binance",
     website: "https://trustwallet.com",
     screenCount: 39,
@@ -408,6 +514,9 @@ export const apps: CryptoApp[] = [
     name: "Rainbow",
     category: "Wallet",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Onboarding", "Settings"],
+    styles: ["Gradient-Rich", "Glassmorphism", "Minimal"],
     description: "Fun, simple, and secure Ethereum wallet",
     website: "https://rainbow.me",
     screenCount: 33,
@@ -423,6 +532,9 @@ export const apps: CryptoApp[] = [
     name: "Rabby",
     category: "Wallet",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "Settings"],
+    styles: ["Dark Mode", "Minimal"],
     description: "Open-source browser wallet for DeFi users",
     website: "https://rabby.io",
     screenCount: 28,
@@ -438,6 +550,9 @@ export const apps: CryptoApp[] = [
     name: "Zerion",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Glassmorphism", "Gradient-Rich"],
     description: "Smart wallet for DeFi and NFT management",
     website: "https://zerion.io",
     screenCount: 35,
@@ -453,6 +568,9 @@ export const apps: CryptoApp[] = [
     name: "Coinbase Wallet",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Onboarding", "Settings"],
+    styles: ["Clean / Corporate", "Card-Heavy"],
     description: "Self-custody wallet by Coinbase",
     website: "https://www.coinbase.com/wallet",
     screenCount: 41,
@@ -468,6 +586,9 @@ export const apps: CryptoApp[] = [
     name: "Safe",
     category: "Wallet",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Settings", "Onboarding"],
+    styles: ["Dark Mode", "Minimal", "Clean / Corporate"],
     description: "Multi-sig smart account wallet",
     website: "https://safe.global",
     screenCount: 26,
@@ -483,6 +604,9 @@ export const apps: CryptoApp[] = [
     name: "Ledger Live",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "Staking", "Onboarding", "Settings", "Markets"],
+    styles: ["Dark Mode", "Card-Heavy", "Clean / Corporate"],
     description: "Hardware wallet companion app",
     website: "https://www.ledger.com",
     screenCount: 44,
@@ -498,6 +622,9 @@ export const apps: CryptoApp[] = [
     name: "Exodus",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "Staking", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Gradient-Rich", "Card-Heavy"],
     description: "Multi-chain desktop and mobile wallet",
     website: "https://www.exodus.com",
     screenCount: 37,
@@ -513,6 +640,9 @@ export const apps: CryptoApp[] = [
     name: "OKX Wallet",
     category: "Wallet",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Card-Heavy"],
     description: "Multi-chain Web3 wallet by OKX",
     website: "https://www.okx.com/web3",
     screenCount: 42,
@@ -528,6 +658,9 @@ export const apps: CryptoApp[] = [
     name: "Xverse",
     category: "Wallet",
     chains: ["Bitcoin"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Token List", "NFT Gallery", "Staking", "Onboarding", "Learn"],
+    styles: ["Dark Mode", "Gradient-Rich", "Card-Heavy"],
     description: "Bitcoin wallet for Ordinals, NFTs, and DeFi",
     website: "https://www.xverse.app",
     screenCount: 20,
@@ -565,6 +698,9 @@ export const apps: CryptoApp[] = [
     name: "Mempool",
     category: "Analytics",
     chains: ["Bitcoin"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Charts", "Markets", "Onboarding"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Open-source Bitcoin blockchain explorer and mempool visualizer",
     website: "https://mempool.space",
     screenCount: 15,
@@ -597,6 +733,9 @@ export const apps: CryptoApp[] = [
     name: "Leather",
     category: "Wallet",
     chains: ["Bitcoin"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Staking", "Onboarding", "Settings", "Learn"],
+    styles: ["Dark Mode", "Minimal", "Card-Heavy"],
     description: "Bitcoin and Stacks wallet for Web3 with sBTC and stacking support",
     website: "https://leather.io",
     screenCount: 16,
@@ -632,6 +771,9 @@ export const apps: CryptoApp[] = [
     name: "Binance",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Staking", "Onboarding", "Settings", "Earn"],
+    styles: ["Dark Mode", "Data Dense", "Card-Heavy"],
     description: "World's largest crypto exchange by volume",
     website: "https://www.binance.com",
     screenCount: 12,
@@ -665,6 +807,9 @@ export const apps: CryptoApp[] = [
     name: "Kraken",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Staking", "Onboarding", "Settings", "Earn"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Established crypto exchange with advanced trading",
     website: "https://www.kraken.com",
     screenCount: 53,
@@ -700,6 +845,9 @@ export const apps: CryptoApp[] = [
     name: "OKX",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Data Dense"],
     description: "Global crypto exchange and Web3 platform",
     website: "https://www.okx.com",
     screenCount: 58,
@@ -715,6 +863,9 @@ export const apps: CryptoApp[] = [
     name: "Bybit",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Crypto exchange focused on derivatives",
     website: "https://www.bybit.com",
     screenCount: 49,
@@ -730,6 +881,9 @@ export const apps: CryptoApp[] = [
     name: "Crypto.com",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Markets", "Staking", "Onboarding", "Settings", "Earn"],
+    styles: ["Dark Mode", "Card-Heavy", "Gradient-Rich"],
     description: "Crypto exchange, DeFi wallet, and Visa card",
     website: "https://crypto.com",
     screenCount: 56,
@@ -745,6 +899,9 @@ export const apps: CryptoApp[] = [
     name: "Gemini",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Markets", "Staking", "Onboarding", "Settings", "Earn"],
+    styles: ["Clean / Corporate", "Minimal"],
     description: "Regulated crypto exchange and custodian",
     website: "https://www.gemini.com",
     screenCount: 42,
@@ -760,6 +917,9 @@ export const apps: CryptoApp[] = [
     name: "Robinhood Crypto",
     category: "Exchange",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Onboarding", "Settings"],
+    styles: ["Clean / Corporate", "Minimal"],
     description: "Commission-free crypto trading",
     website: "https://robinhood.com/crypto",
     screenCount: 38,
@@ -775,6 +935,9 @@ export const apps: CryptoApp[] = [
     name: "River",
     category: "Exchange",
     chains: ["Bitcoin"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Markets", "Onboarding", "Settings", "Learn"],
+    styles: ["Clean / Corporate", "Minimal"],
     description: "Bitcoin-only exchange and financial services",
     website: "https://river.com",
     screenCount: 29,
@@ -792,6 +955,9 @@ export const apps: CryptoApp[] = [
     name: "Jupiter",
     category: "DeFi",
     chains: ["Solana"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Token List", "Markets", "Earn", "Portfolio"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Leading Solana DEX aggregator",
     website: "https://jup.ag",
     screenCount: 28,
@@ -841,6 +1007,9 @@ export const apps: CryptoApp[] = [
     name: "Lido",
     category: "DeFi",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Staking", "Earn", "Settings"],
+    styles: ["Dark Mode", "Minimal", "Glassmorphism"],
     description: "Liquid staking for Ethereum and beyond",
     website: "https://lido.fi",
     screenCount: 10,
@@ -872,6 +1041,9 @@ export const apps: CryptoApp[] = [
     name: "Curve",
     category: "DeFi",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Earn", "Settings"],
+    styles: ["Dark Mode", "Data Dense"],
     description: "Stablecoin and low-slippage DEX",
     website: "https://curve.fi",
     screenCount: 27,
@@ -902,6 +1074,9 @@ export const apps: CryptoApp[] = [
     name: "1inch",
     category: "DeFi",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Token List", "Settings"],
+    styles: ["Dark Mode", "Neon Accents", "Gradient-Rich"],
     description: "Multi-chain DEX aggregator",
     website: "https://1inch.io",
     screenCount: 31,
@@ -917,6 +1092,9 @@ export const apps: CryptoApp[] = [
     name: "dYdX",
     category: "DeFi",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Portfolio", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Decentralized perpetuals exchange",
     website: "https://dydx.exchange",
     screenCount: 36,
@@ -932,6 +1110,9 @@ export const apps: CryptoApp[] = [
     name: "Hyperliquid",
     category: "DeFi",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Trade View", "Charts", "Markets", "Portfolio", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Minimal"],
     description: "High-performance perpetuals DEX on L1",
     website: "https://hyperliquid.xyz",
     screenCount: 29,
@@ -949,6 +1130,9 @@ export const apps: CryptoApp[] = [
     name: "LayerSwap",
     category: "Bridge",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Bridge", "Settings"],
+    styles: ["Dark Mode", "Minimal", "Glassmorphism"],
     description: "Cross-chain bridge and CEX-to-L2 transfers",
     website: "https://www.layerswap.io",
     screenCount: 19,
@@ -964,6 +1148,9 @@ export const apps: CryptoApp[] = [
     name: "Wormhole",
     category: "Bridge",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Bridge", "Settings"],
+    styles: ["Dark Mode", "Gradient-Rich", "Neon Accents"],
     description: "Cross-chain messaging and token bridge",
     website: "https://wormhole.com",
     screenCount: 17,
@@ -979,6 +1166,9 @@ export const apps: CryptoApp[] = [
     name: "Stargate",
     category: "Bridge",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Bridge", "Settings"],
+    styles: ["Dark Mode", "Minimal", "Glassmorphism"],
     description: "Omnichain liquidity transport protocol",
     website: "https://stargate.finance",
     screenCount: 18,
@@ -996,6 +1186,9 @@ export const apps: CryptoApp[] = [
     name: "OpenSea",
     category: "NFT",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "NFT Gallery", "Markets", "Onboarding", "Settings"],
+    styles: ["Clean / Corporate", "Card-Heavy"],
     description: "Largest NFT marketplace",
     website: "https://opensea.io",
     screenCount: 45,
@@ -1011,6 +1204,9 @@ export const apps: CryptoApp[] = [
     name: "Blur",
     category: "NFT",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "NFT Gallery", "Markets", "Charts", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Neon Accents"],
     description: "Pro NFT marketplace for traders",
     website: "https://blur.io",
     screenCount: 32,
@@ -1026,6 +1222,9 @@ export const apps: CryptoApp[] = [
     name: "Magic Eden",
     category: "NFT",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "NFT Gallery", "Markets", "Onboarding", "Settings"],
+    styles: ["Dark Mode", "Card-Heavy", "Gradient-Rich"],
     description: "Multi-chain NFT marketplace",
     website: "https://magiceden.io",
     screenCount: 37,
@@ -1043,6 +1242,9 @@ export const apps: CryptoApp[] = [
     name: "DeBank",
     category: "Analytics",
     chains: ["Multi-chain"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Portfolio", "Charts", "Settings"],
+    styles: ["Dark Mode", "Data Dense", "Card-Heavy"],
     description: "DeFi portfolio tracker and social platform",
     website: "https://debank.com",
     screenCount: 40,
@@ -1058,6 +1260,9 @@ export const apps: CryptoApp[] = [
     name: "Etherscan",
     category: "Analytics",
     chains: ["Ethereum"],
+    platforms: ["Web"],
+    sections: ["Dashboard", "Charts", "Token List", "Settings"],
+    styles: ["Clean / Corporate", "Data Dense"],
     description: "Ethereum blockchain explorer and analytics",
     website: "https://etherscan.io",
     screenCount: 35,
@@ -1074,3 +1279,32 @@ export const apps: CryptoApp[] = [
 export const TOTAL_APPS = apps.length;
 export const TOTAL_SCREENS = apps.reduce((sum, app) => sum + app.screenCount, 0);
 export const TOTAL_FLOWS = apps.reduce((sum, app) => sum + app.flows.length, 0);
+
+// Helpers for dynamic counts
+export function getAllSections(): { section: SectionType; count: number }[] {
+  return SECTION_TYPES.map((section) => ({
+    section,
+    count: apps.filter((a) => a.sections.includes(section)).length,
+  })).filter((s) => s.count > 0);
+}
+
+export function getAllStyles(): { style: StyleType; count: number }[] {
+  return STYLE_TYPES.map((style) => ({
+    style,
+    count: apps.filter((a) => a.styles.includes(style)).length,
+  })).filter((s) => s.count > 0);
+}
+
+export function getAllPlatforms(): { platform: PlatformType; count: number }[] {
+  return PLATFORM_TYPES.map((platform) => ({
+    platform,
+    count: apps.filter((a) => a.platforms.includes(platform)).length,
+  })).filter((p) => p.count > 0);
+}
+
+export function getAllCategories(): { category: AppCategory; count: number }[] {
+  return CATEGORIES.map((category) => ({
+    category,
+    count: apps.filter((a) => a.category === category).length,
+  })).filter((c) => c.count > 0);
+}
