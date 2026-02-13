@@ -7,6 +7,9 @@ import { getAllScreens, getAllFlows, type EnrichedScreen } from "@/data/helpers"
 import { buildSearchIndex, searchScreens } from "@/lib/search";
 import { ScreenCard } from "@/components/ScreenCard";
 import { ScreenModal } from "@/components/ScreenModal";
+import { PaywallOverlay } from "@/components/PaywallOverlay";
+import { useSubscription } from "@/contexts/SubscriptionContext";
+import { getScreenLimit } from "@/lib/access";
 
 const CHAINS: Array<ChainType | "All Chains"> = ["All Chains", ...CHAIN_TYPES];
 const CATEGORIES_ALL: Array<AppCategory | "All"> = ["All", ...CATEGORIES];
@@ -79,8 +82,12 @@ function ScreensPageInner() {
     });
   }, [allScreens, fuse, activeChain, activeCategory, activeFlow, activeTags, search]);
 
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = visibleCount < filtered.length;
+  const { plan } = useSubscription();
+  const screenLimit = getScreenLimit(plan);
+  const maxVisible = screenLimit !== null ? Math.min(visibleCount, screenLimit) : visibleCount;
+  const visible = filtered.slice(0, maxVisible);
+  const isCapped = screenLimit !== null && filtered.length > screenLimit;
+  const hasMore = !isCapped && visibleCount < filtered.length;
 
   const getFlowScreens = useCallback(
     (screen: EnrichedScreen): EnrichedScreen[] => {
@@ -254,6 +261,15 @@ function ScreensPageInner() {
           <p className="text-[14px] text-text-tertiary">
             No screens match the selected filters.
           </p>
+        </div>
+      )}
+
+      {/* Paywall for free users */}
+      {isCapped && (
+        <div className="mt-10">
+          <PaywallOverlay
+            message={`You're seeing ${screenLimit} of ${filtered.length} screens. Upgrade to Pro to browse all screens.`}
+          />
         </div>
       )}
 

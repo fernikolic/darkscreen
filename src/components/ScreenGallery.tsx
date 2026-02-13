@@ -6,6 +6,9 @@ import { type AppScreen, type FlowType, type AppCategory, type ChainType } from 
 import { type EnrichedScreen } from "@/data/helpers";
 import { PlaceholderScreen } from "./PlaceholderScreen";
 import { ScreenModal } from "./ScreenModal";
+import { PaywallOverlay } from "./PaywallOverlay";
+import { useSubscription } from "@/contexts/SubscriptionContext";
+import { getScreenLimit } from "@/lib/access";
 
 interface ScreenGalleryProps {
   screens: AppScreen[];
@@ -47,6 +50,11 @@ export function ScreenGallery({
       ? enriched
       : enriched.filter((s) => s.flow === activeFlow);
 
+  const { plan } = useSubscription();
+  const screenLimit = getScreenLimit(plan);
+  const isCapped = screenLimit !== null && filtered.length > screenLimit;
+  const visibleScreens = isCapped ? filtered.slice(0, screenLimit) : filtered;
+
   // For the modal, navigate within the same flow as the selected screen
   const modalFlowScreens = useMemo(() => {
     if (!modalScreen) return [];
@@ -87,7 +95,7 @@ export function ScreenGallery({
       {/* Screen gallery */}
       <div className="overflow-x-auto pb-4">
         <div className="flex gap-4" style={{ minWidth: "max-content" }}>
-          {filtered.map((screen, idx) => (
+          {visibleScreens.map((screen, idx) => (
             <button
               key={`${screen.flow}-${screen.step}-${idx}`}
               className="w-44 flex-shrink-0 text-left"
@@ -122,6 +130,13 @@ export function ScreenGallery({
           ))}
         </div>
       </div>
+
+      {/* Paywall for free users */}
+      {isCapped && (
+        <PaywallOverlay
+          message={`You're seeing ${screenLimit} of ${filtered.length} screens. Upgrade to Pro for unlimited access.`}
+        />
+      )}
 
       {/* Lightbox modal */}
       {modalScreen && (
