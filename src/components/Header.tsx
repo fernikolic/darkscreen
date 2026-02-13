@@ -4,9 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
+import { SuggestAppModal } from "./SuggestAppModal";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [suggestOpen, setSuggestOpen] = useState(false);
   const { user, loading, signInWithGoogle, signOut } = useAuth();
 
   return (
@@ -66,6 +68,12 @@ export function Header() {
             <div className="ml-3 h-8 w-8 animate-pulse rounded-full bg-dark-border" />
           ) : user ? (
             <div className="ml-3 flex items-center gap-2">
+              <button
+                onClick={() => setSuggestOpen(true)}
+                className="rounded-lg px-3 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+              >
+                Suggest App
+              </button>
               <Link
                 href="/saved"
                 className="rounded-lg px-3 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
@@ -162,6 +170,15 @@ export function Header() {
             {/* Mobile auth */}
             {loading ? null : user ? (
               <>
+                <button
+                  onClick={() => {
+                    setSuggestOpen(true);
+                    setMobileOpen(false);
+                  }}
+                  className="rounded-lg px-4 py-3 text-left text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
+                >
+                  Suggest App
+                </button>
                 <Link
                   href="/saved"
                   className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
@@ -193,6 +210,7 @@ export function Header() {
           </div>
         </div>
       )}
+      {suggestOpen && <SuggestAppModal onClose={() => setSuggestOpen(false)} />}
     </header>
   );
 }
