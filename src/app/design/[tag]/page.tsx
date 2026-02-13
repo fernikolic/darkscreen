@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ELEMENT_TAGS } from "@/data/apps";
+import { ELEMENT_TAGS, TOTAL_APPS } from "@/data/apps";
 import { getElementTagPages, toSlug, fromSlug, ELEMENT_TAG_META } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
 
@@ -186,7 +186,7 @@ export default async function ElementTagPage({ params }: PageProps) {
           Get notified when we add new {tagName} examples
         </p>
         <p className="mt-3 text-[13px] text-text-secondary">
-          We track 35+ crypto products and update screenshots weekly.
+          We track {TOTAL_APPS}+ crypto products and update screenshots weekly.
         </p>
         <div className="mt-8 flex justify-center">
           <EmailCapture source={`design-${tagSlug}`} />

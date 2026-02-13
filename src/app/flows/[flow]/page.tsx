@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { FLOW_TYPES, type FlowType } from "@/data/apps";
+import { FLOW_TYPES, TOTAL_APPS, type FlowType } from "@/data/apps";
 import { getAllFlows } from "@/data/helpers";
 import { toSlug, fromSlug, FLOW_META } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
@@ -180,7 +180,7 @@ export default async function FlowPage({ params }: PageProps) {
           Get updates when new {flowName.toLowerCase()} flows are added
         </p>
         <p className="mt-3 text-[13px] text-text-secondary">
-          We screenshot 35+ crypto products and track how their flows evolve.
+          We screenshot {TOTAL_APPS}+ crypto products and track how their flows evolve.
         </p>
         <div className="mt-8 flex justify-center">
           <EmailCapture source={`flow-${flowSlug}`} />

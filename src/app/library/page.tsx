@@ -4,6 +4,8 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   apps,
+  TOTAL_APPS,
+  CATEGORIES,
   type AppCategory,
   type FlowType,
   type ChainType,
@@ -32,8 +34,7 @@ function LibraryContent() {
   const initialCategory = (() => {
     const c = searchParams.get("category");
     if (c) {
-      const cats = ["Wallet", "Exchange", "DeFi", "Bridge", "NFT", "Analytics"] as const;
-      const match = cats.find((cat) => cat.toLowerCase() === c.toLowerCase());
+      const match = CATEGORIES.find((cat) => cat.toLowerCase() === c.toLowerCase());
       if (match) return match;
     }
     return "All" as const;
@@ -109,7 +110,7 @@ function LibraryContent() {
           Explore the collection
         </h1>
         <p className="mt-3 text-[14px] text-text-secondary">
-          Screens and flows from 35+ crypto products
+          Screens and flows from {TOTAL_APPS}+ crypto products
         </p>
       </div>
 

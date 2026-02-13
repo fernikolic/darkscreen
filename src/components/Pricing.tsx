@@ -2,6 +2,7 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import { redirectToCheckout } from "@/lib/stripe";
+import { TOTAL_APPS } from "@/data/apps";
 
 const tiers = [
   {
@@ -25,7 +26,7 @@ const tiers = [
     period: "/mo",
     description: "Full library, 12 months of history, weekly digest.",
     features: [
-      "All 35+ apps",
+      `All ${TOTAL_APPS}+ apps`,
       "12 months of history",
       "Before/after comparisons",
       "Weekly change digest",

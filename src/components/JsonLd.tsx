@@ -1,6 +1,8 @@
 // JSON-LD structured data components for SEO
 // All data is statically generated from trusted internal sources (no user input)
 
+import { TOTAL_APPS } from "@/data/apps";
+
 export function WebsiteJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -9,7 +11,7 @@ export function WebsiteJsonLd() {
     alternateName: "Darkscreens Crypto Design Library",
     url: "https://darkscreens.xyz",
     description:
-      "Crypto product design library — screenshots, UI patterns, and visual competitive intelligence from 35+ wallets, exchanges, and DeFi protocols.",
+      `Crypto product design library — screenshots, UI patterns, and visual competitive intelligence from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols.`,
     potentialAction: {
       "@type": "SearchAction",
       target: {

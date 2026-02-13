@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Providers";
 import { WebsiteJsonLd, OrganizationJsonLd } from "@/components/JsonLd";
+import { TOTAL_APPS } from "@/data/apps";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -24,18 +25,19 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.`;
+const shortDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols.`;
+
 export const metadata: Metadata = {
   title: "Darkscreens — Crypto Product Design Library",
-  description:
-    "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.",
+  description: siteDescription,
   icons: {
     icon: "/darkscreen-logo.png",
     apple: "/darkscreen-logo.png",
   },
   openGraph: {
     title: "Darkscreens — Crypto Product Design Library",
-    description:
-      "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
+    description: shortDescription,
     url: "https://darkscreens.xyz",
     siteName: "Darkscreens",
     type: "website",
@@ -43,8 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Darkscreens — Crypto Product Design Library",
-    description:
-      "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
+    description: shortDescription,
   },
 };
 

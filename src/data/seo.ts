@@ -48,22 +48,24 @@ export function getElementTagPages(): ElementTagPage[] {
   }).filter((p) => p.screens.length > 0);
 }
 
+const appCount = apps.length;
+
 export const ELEMENT_TAG_META: Record<string, { title: string; description: string }> = {
   "modal-dialog": {
     title: "Modal & Dialog Patterns in Crypto Apps",
-    description: "See how crypto wallets, exchanges, and DeFi protocols design modals, dialogs, and overlay patterns. Real screenshots from 35+ products.",
+    description: `See how crypto wallets, exchanges, and DeFi protocols design modals, dialogs, and overlay patterns. Real screenshots from ${appCount}+ products.`,
   },
   "form-input": {
     title: "Form & Input Design in Crypto Products",
-    description: "Browse form and input field designs from crypto wallets, exchanges, and DeFi apps. Real UI patterns from 35+ products.",
+    description: `Browse form and input field designs from crypto wallets, exchanges, and DeFi apps. Real UI patterns from ${appCount}+ products.`,
   },
   "data-table": {
     title: "Data Table UI in Crypto Apps",
-    description: "Explore data table layouts used by crypto exchanges, analytics platforms, and DeFi dashboards. Screenshots from 35+ products.",
+    description: `Explore data table layouts used by crypto exchanges, analytics platforms, and DeFi dashboards. Screenshots from ${appCount}+ products.`,
   },
   "navigation": {
     title: "Navigation Patterns in Crypto Products",
-    description: "Study navigation design across crypto wallets, exchanges, and DeFi protocols. Real UI examples from 35+ products.",
+    description: `Study navigation design across crypto wallets, exchanges, and DeFi protocols. Real UI examples from ${appCount}+ products.`,
   },
   "empty-state": {
     title: "Empty State Design in Crypto Apps",
@@ -71,15 +73,15 @@ export const ELEMENT_TAG_META: Record<string, { title: string; description: stri
   },
   "onboarding-walkthrough": {
     title: "Onboarding & Walkthrough Flows in Crypto",
-    description: "Compare onboarding patterns across crypto wallets, exchanges, and DeFi apps. Step-by-step screenshots from 35+ products.",
+    description: `Compare onboarding patterns across crypto wallets, exchanges, and DeFi apps. Step-by-step screenshots from ${appCount}+ products.`,
   },
   "dashboard-overview": {
     title: "Dashboard & Overview Screens in Crypto",
-    description: "Browse dashboard layouts from crypto wallets, exchanges, and DeFi protocols. Real overview screen designs from 35+ products.",
+    description: `Browse dashboard layouts from crypto wallets, exchanges, and DeFi protocols. Real overview screen designs from ${appCount}+ products.`,
   },
   "settings-preferences": {
     title: "Settings & Preferences UI in Crypto Apps",
-    description: "Explore settings page designs across crypto wallets, exchanges, and DeFi products. Real screenshots from 35+ apps.",
+    description: `Explore settings page designs across crypto wallets, exchanges, and DeFi products. Real screenshots from ${appCount}+ apps.`,
   },
   "chart-graph": {
     title: "Chart & Graph Design in Crypto Products",
@@ -99,7 +101,7 @@ export const ELEMENT_TAG_META: Record<string, { title: string; description: stri
   },
   "notification-alert": {
     title: "Notification & Alert Design in Crypto",
-    description: "See how crypto apps handle notifications, alerts, toasts, and status messages. Real UI patterns from 35+ products.",
+    description: `See how crypto apps handle notifications, alerts, toasts, and status messages. Real UI patterns from ${appCount}+ products.`,
   },
   "profile-account": {
     title: "Profile & Account Screens in Crypto Apps",
@@ -163,7 +165,7 @@ export function getComparisonPairs(): ComparisonPair[] {
 export const FLOW_META: Record<string, { title: string; description: string; intro: string }> = {
   home: {
     title: "Home Screen Design Across Crypto Products",
-    description: "Compare home screen and landing page designs from 35+ crypto wallets, exchanges, and DeFi protocols.",
+    description: `Compare home screen and landing page designs from ${appCount}+ crypto wallets, exchanges, and DeFi protocols.`,
     intro: "The home screen is the first thing users see. Compare how crypto products structure their primary landing experience — hero sections, feature highlights, and entry points.",
   },
   onboarding: {
@@ -198,7 +200,7 @@ export const FLOW_META: Record<string, { title: string; description: string; int
 export const CATEGORY_META: Record<string, { title: string; description: string; intro: string; plural: string }> = {
   wallet: {
     title: "Crypto Wallet Design — UI Screenshots & Patterns",
-    description: "Browse UI screenshots from 15+ crypto wallets including MetaMask, Phantom, Trust Wallet, and more. Compare onboarding, send, swap, and settings flows.",
+    description: `Browse UI screenshots from ${apps.filter(a => a.category === "Wallet").length}+ crypto wallets including MetaMask, Phantom, Trust Wallet, and more. Compare onboarding, send, swap, and settings flows.`,
     intro: "Crypto wallets are the gateway to Web3. Browse screenshots and UI patterns from the most popular wallets — from seed phrase onboarding to multi-chain portfolio views.",
     plural: "Wallets",
   },
@@ -228,9 +230,21 @@ export const CATEGORY_META: Record<string, { title: string; description: string;
   },
   analytics: {
     title: "Crypto Analytics Dashboard Design — Screenshots & Patterns",
-    description: "Explore UI screenshots from crypto analytics tools — DeBank, Etherscan, Mempool. Compare data visualization, explorer interfaces, and portfolio trackers.",
+    description: "Explore UI screenshots from crypto analytics tools — DeBank, Etherscan, Mempool, Dune, DeFi Llama, and more. Compare data visualization, explorer interfaces, and portfolio trackers.",
     intro: "Analytics platforms surface blockchain data for humans — explorers, portfolio trackers, and data dashboards. Compare how they handle complex data visualization.",
     plural: "Analytics Tools",
+  },
+  payment: {
+    title: "Crypto Payment & On-Ramp Design — Screenshots & Patterns",
+    description: "Browse UI screenshots from crypto payment processors and fiat on-ramps — BTCPay Server, BitPay, MoonPay, Transak. Checkout flows, invoicing, and purchase experiences.",
+    intro: "Payment and on-ramp products bridge traditional finance and crypto. Compare how they design checkout flows, invoice pages, fiat-to-crypto purchase experiences, and merchant dashboards.",
+    plural: "Payment Processors",
+  },
+  infrastructure: {
+    title: "Bitcoin & Lightning Infrastructure UI — Screenshots & Patterns",
+    description: "Explore UI screenshots from Bitcoin node management and Lightning infrastructure — Umbrel, Start9, Voltage, LNbits. Node dashboards, channel management, and server administration.",
+    intro: "Infrastructure products empower sovereign computing and Lightning Network operation. Compare how they design node dashboards, channel management, app stores, and server administration.",
+    plural: "Infrastructure Tools",
   },
 };
 
