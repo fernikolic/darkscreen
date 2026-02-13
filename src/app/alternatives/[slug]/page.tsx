@@ -25,13 +25,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = `Looking for alternatives to ${app.name}? Compare ${alts.length} ${app.category.toLowerCase()} products including ${altNames}. Side-by-side UI comparison with screenshots.`;
 
   return {
-    title: `${title} — Darkscreen`,
+    title: `${title} — Darkscreens`,
     description,
     openGraph: {
       title,
       description,
       url: `https://darkscreens.xyz/alternatives/${slug}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
     },
   };

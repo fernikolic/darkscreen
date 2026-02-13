@@ -22,13 +22,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = `Track UI changes and design updates from ${app.name}. Visual changelog showing new features, redesigns, copy changes, and layout shifts.`;
 
   return {
-    title: `${title} — Darkscreen`,
+    title: `${title} — Darkscreens`,
     description,
     openGraph: {
       title,
       description,
       url: `https://darkscreens.xyz/changelog/${slug}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
     },
   };

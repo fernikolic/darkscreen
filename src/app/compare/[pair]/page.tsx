@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = `Side-by-side UI comparison of ${found.appA.name} and ${found.appB.name}. Compare screens, flows, and design patterns from two ${found.appA.category.toLowerCase()} products.`;
 
   return {
-    title: `${title} — Darkscreen`,
+    title: `${title} — Darkscreens`,
     description,
     openGraph: {
       title,
       description,
       url: `https://darkscreens.xyz/compare/${pair}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
     },
   };

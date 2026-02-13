@@ -49,7 +49,7 @@ export function CryptoPayModal({ plan, onClose }: CryptoPayModalProps) {
           Pay with Bitcoin
         </p>
         <h3 className="font-heading text-xl font-bold text-text-primary">
-          Darkscreen {info.name}
+          Darkscreens {info.name}
         </h3>
         <p className="mt-1 text-[13px] text-text-secondary">
           {info.btcNote}

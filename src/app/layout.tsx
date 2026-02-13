@@ -25,20 +25,24 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Darkscreen — Crypto Product Design Library",
+  title: "Darkscreens — Crypto Product Design Library",
   description:
     "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.",
+  icons: {
+    icon: "/darkscreen-logo.png",
+    apple: "/darkscreen-logo.png",
+  },
   openGraph: {
-    title: "Darkscreen — Crypto Product Design Library",
+    title: "Darkscreens — Crypto Product Design Library",
     description:
       "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
     url: "https://darkscreens.xyz",
-    siteName: "Darkscreen",
+    siteName: "Darkscreens",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Darkscreen — Crypto Product Design Library",
+    title: "Darkscreens — Crypto Product Design Library",
     description:
       "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
   },

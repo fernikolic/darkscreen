@@ -20,7 +20,7 @@ interface SuggestAppModalProps {
 }
 
 export function SuggestAppModal({ onClose }: SuggestAppModalProps) {
-  const { user, signInWithGoogle } = useAuth();
+  const { user, openSignIn } = useAuth();
   const [appName, setAppName] = useState("");
   const [website, setWebsite] = useState("");
   const [category, setCategory] = useState("");
@@ -87,10 +87,13 @@ export function SuggestAppModal({ onClose }: SuggestAppModalProps) {
               Sign in to submit your suggestion
             </p>
             <button
-              onClick={signInWithGoogle}
+              onClick={() => {
+                onClose();
+                openSignIn();
+              }}
               className="w-full border border-white/20 bg-white/5 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/10"
             >
-              Sign In with Google
+              Sign In
             </button>
             <button
               onClick={onClose}

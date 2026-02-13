@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   getAllCategories,
   getAllSections,
@@ -149,15 +150,22 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-dark-border pt-8 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
+            <Image
+              src="/darkscreen-logo.png"
+              alt="Darkscreens"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <span className="font-heading text-lg font-bold text-text-primary">
-              Darkscreen
+              darkscreens
             </span>
             <span className="rounded-full border border-dark-border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-text-tertiary">
               Beta
             </span>
           </div>
           <span className="font-mono text-[11px] text-text-tertiary">
-            &copy; {new Date().getFullYear()} Darkscreen. All rights reserved.
+            &copy; {new Date().getFullYear()} Darkscreens. All rights reserved.
           </span>
         </div>
       </div>

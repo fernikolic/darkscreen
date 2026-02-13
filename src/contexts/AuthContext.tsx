@@ -1,10 +1,12 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from "react";
 import {
   onAuthStateChanged,
   signInWithPopup,
   signOut as firebaseSignOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   type User,
 } from "firebase/auth";
 import {
@@ -19,34 +21,56 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { auth, db, googleProvider } from "@/lib/firebase";
+import { sha256, truncateAddress, type WalletChain } from "@/lib/wallet-auth";
 
 interface AuthContextValue {
   user: User | null;
   loading: boolean;
   signInWithGoogle: () => void;
+  signInWithWallet: (chain: WalletChain, address: string, signature: string) => Promise<void>;
   signOut: () => Promise<void>;
+  /** Whether the unified sign-in modal is open */
+  signInOpen: boolean;
+  openSignIn: () => void;
+  closeSignIn: () => void;
 }
 
 const AuthContext = createContext<AuthContextValue>({
   user: null,
   loading: true,
   signInWithGoogle: () => {},
+  signInWithWallet: async () => {},
   signOut: async () => {},
+  signInOpen: false,
+  openSignIn: () => {},
+  closeSignIn: () => {},
 });
 
-async function ensureUserDoc(user: User) {
+async function ensureUserDoc(user: User, walletMeta?: { walletAddress: string; walletChain: WalletChain }) {
   const userRef = doc(db, "users", user.uid);
   const snap = await getDoc(userRef);
 
   if (!snap.exists()) {
-    await setDoc(userRef, {
+    const baseDoc: Record<string, unknown> = {
       email: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
+      displayName: walletMeta
+        ? truncateAddress(walletMeta.walletAddress)
+        : user.displayName,
+      photoURL: user.photoURL ?? null,
       createdAt: serverTimestamp(),
       lastLogin: serverTimestamp(),
       plan: "free",
-    });
+    };
+
+    if (walletMeta) {
+      baseDoc.walletAddress = walletMeta.walletAddress;
+      baseDoc.walletChain = walletMeta.walletChain;
+      baseDoc.authMethod = "wallet";
+    } else {
+      baseDoc.authMethod = "google";
+    }
+
+    await setDoc(userRef, baseDoc);
 
     // Check for pending subscriptions by email (from Stripe webhook before sign-in)
     if (user.email) {
@@ -70,6 +94,7 @@ async function ensureUserDoc(user: User) {
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  const [signInOpen, setSignInOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (u) => {
@@ -86,17 +111,48 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return unsubscribe;
   }, []);
 
+  const openSignIn = useCallback(() => setSignInOpen(true), []);
+  const closeSignIn = useCallback(() => setSignInOpen(false), []);
+
   const signInWithGoogle = () => {
-    signInWithPopup(auth, googleProvider).catch((err: unknown) => {
+    signInWithPopup(auth, googleProvider)
+      .then(() => setSignInOpen(false))
+      .catch((err: unknown) => {
+        const code = (err as { code?: string }).code;
+        if (code === "auth/popup-blocked") {
+          window.alert("Popup was blocked by your browser. Please allow popups for this site.");
+        } else if (code === "auth/unauthorized-domain") {
+          console.error("Firebase auth: domain not authorized. Add this domain to Firebase Console > Authentication > Settings > Authorized domains.");
+        } else if (code !== "auth/popup-closed-by-user") {
+          console.error("Sign-in failed:", err);
+        }
+      });
+  };
+
+  const signInWithWallet = async (chain: WalletChain, address: string, signature: string) => {
+    const normalizedAddress = chain === "evm" ? address.toLowerCase() : address;
+    const email = `${normalizedAddress}@wallet.darkscreen.xyz`;
+    const password = (await sha256(signature)).substring(0, 64);
+
+    try {
+      // Try signing in first (returning user)
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (err: unknown) {
       const code = (err as { code?: string }).code;
-      if (code === "auth/popup-blocked") {
-        window.alert("Popup was blocked by your browser. Please allow popups for this site.");
-      } else if (code === "auth/unauthorized-domain") {
-        console.error("Firebase auth: domain not authorized. Add this domain to Firebase Console > Authentication > Settings > Authorized domains.");
-      } else if (code !== "auth/popup-closed-by-user") {
-        console.error("Sign-in failed:", err);
+      if (code === "auth/user-not-found" || code === "auth/invalid-credential") {
+        // First time — create account
+        await createUserWithEmailAndPassword(auth, email, password);
+        // ensureUserDoc will be called by onAuthStateChanged, but we also call it
+        // here with wallet metadata so the first doc has wallet info
+        if (auth.currentUser) {
+          await ensureUserDoc(auth.currentUser, { walletAddress: address, walletChain: chain });
+        }
+      } else {
+        throw err;
       }
-    });
+    }
+
+    setSignInOpen(false);
   };
 
   const signOut = async () => {
@@ -104,7 +160,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signInWithGoogle, signOut }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        loading,
+        signInWithGoogle,
+        signInWithWallet,
+        signOut,
+        signInOpen,
+        openSignIn,
+        closeSignIn,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

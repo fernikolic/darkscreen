@@ -5,8 +5,8 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Darkscreen",
-    alternateName: "Darkscreen Crypto Design Library",
+    name: "Darkscreens",
+    alternateName: "Darkscreens Crypto Design Library",
     url: "https://darkscreens.xyz",
     description:
       "Crypto product design library — screenshots, UI patterns, and visual competitive intelligence from 35+ wallets, exchanges, and DeFi protocols.",
@@ -33,7 +33,7 @@ export function OrganizationJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Darkscreen",
+    name: "Darkscreens",
     url: "https://darkscreens.xyz",
     description:
       "Product intelligence platform for crypto — systematically screenshotting every major crypto product and tracking design changes over time.",
@@ -71,7 +71,7 @@ export function CollectionPageJsonLd({
     numberOfItems: itemCount,
     isPartOf: {
       "@type": "WebSite",
-      name: "Darkscreen",
+      name: "Darkscreens",
       url: "https://darkscreens.xyz",
     },
   };

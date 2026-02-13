@@ -13,7 +13,7 @@ export function SaveToCollectionModal({
   screenImage,
   onClose,
 }: SaveToCollectionModalProps) {
-  const { user, signInWithGoogle } = useAuth();
+  const { user, openSignIn } = useAuth();
   const {
     collections,
     createCollection,
@@ -33,10 +33,13 @@ export function SaveToCollectionModal({
         <div className="relative w-full max-w-sm border border-dark-border bg-dark-card p-8 text-center">
           <p className="mb-4 text-[14px] text-text-primary">Sign in to save screens</p>
           <button
-            onClick={signInWithGoogle}
+            onClick={() => {
+              onClose();
+              openSignIn();
+            }}
             className="border border-white/60 bg-white/10 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/20"
           >
-            Sign In with Google
+            Sign In
           </button>
           <button
             onClick={onClose}

@@ -4,24 +4,30 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
+import { truncateAddress } from "@/lib/wallet-auth";
 import { SuggestAppModal } from "./SuggestAppModal";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [suggestOpen, setSuggestOpen] = useState(false);
-  const { user, loading, signInWithGoogle, signOut } = useAuth();
+  const { user, loading, openSignIn, signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-dark-border/50 bg-dark-bg/70 backdrop-blur-2xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="group flex items-center gap-2.5">
-          {/* Logo mark */}
-          <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-dark-border bg-dark-card">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            <span className="relative font-heading text-sm font-bold text-accent-blue">D</span>
-          </div>
+          <Image
+            src="/darkscreen-logo.png"
+            alt="Darkscreens"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
           <span className="font-heading text-lg font-bold tracking-tight text-text-primary">
-            DARK<span className="text-accent-blue">SCREEN</span>
+            dark<span className="text-accent-blue">screens</span>
+          </span>
+          <span className="rounded-full border border-dark-border px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-text-tertiary">
+            Beta
           </span>
         </Link>
 
@@ -92,6 +98,10 @@ export function Header() {
                     height={32}
                     className="rounded-full border border-dark-border transition-all group-hover:border-white/20"
                   />
+                ) : user.email?.endsWith("@wallet.darkscreen.xyz") ? (
+                  <div className="flex items-center gap-1.5 rounded-lg border border-dark-border bg-dark-card px-2.5 py-1.5 font-mono text-[11px] text-text-secondary transition-all group-hover:border-white/20">
+                    {truncateAddress(user.email.replace("@wallet.darkscreen.xyz", ""))}
+                  </div>
                 ) : (
                   <div className="flex h-8 w-8 items-center justify-center rounded-full border border-dark-border bg-dark-card text-[12px] font-medium text-text-secondary transition-all group-hover:border-white/20">
                     {(user.displayName || user.email || "U")[0].toUpperCase()}
@@ -101,7 +111,7 @@ export function Header() {
             </div>
           ) : (
             <button
-              onClick={signInWithGoogle}
+              onClick={openSignIn}
               className="ml-3 rounded-lg border border-accent-blue/20 bg-accent-blue/5 px-5 py-2 text-body-sm font-medium text-accent-blue transition-all duration-300 hover:border-accent-blue/40 hover:bg-accent-blue/10 hover:shadow-glow"
             >
               Sign In
@@ -199,12 +209,12 @@ export function Header() {
             ) : (
               <button
                 onClick={() => {
-                  signInWithGoogle();
+                  openSignIn();
                   setMobileOpen(false);
                 }}
                 className="rounded-lg border border-accent-blue/20 bg-accent-blue/5 py-3 text-center text-body-sm font-medium text-accent-blue"
               >
-                Sign In with Google
+                Sign In
               </button>
             )}
           </div>

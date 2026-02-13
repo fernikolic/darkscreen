@@ -7,7 +7,7 @@ export default function SuccessPage() {
         Payment Confirmed
       </p>
       <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
-        Welcome to Darkscreen Pro
+        Welcome to Darkscreens Pro
       </h1>
       <p className="mx-auto mt-6 max-w-md text-[14px] leading-relaxed text-text-secondary">
         Your account has been upgraded. You now have full access to every app,

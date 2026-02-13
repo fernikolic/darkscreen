@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = `Browse ${app.screenCount} screenshots from ${app.name}. Explore ${app.flows.join(", ")} flows, track UI changes, and compare with other ${app.category.toLowerCase()} products.`;
 
   return {
-    title: `${title} — Darkscreen`,
+    title: `${title} — Darkscreens`,
     description,
     openGraph: {
       title,
       description,
       url: `https://darkscreens.xyz/library/${slug}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
       ...(app.thumbnail ? { images: [{ url: `https://darkscreens.xyz${app.thumbnail}` }] } : {}),
     },
@@ -92,7 +92,7 @@ export default async function AppDetail({ params }: PageProps) {
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Darkscreen", url: "https://darkscreens.xyz" },
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
           { name: "Library", url: "https://darkscreens.xyz/library" },
           { name: app.category, url: `https://darkscreens.xyz/category/${toSlug(app.category)}` },
           { name: app.name, url: `https://darkscreens.xyz/library/${app.slug}` },

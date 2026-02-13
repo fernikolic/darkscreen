@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const description = `Browse ${app.screenCount} screenshots from ${app.name}. See every screen, flow, and UI pattern in this ${app.category.toLowerCase()} product. Updated ${app.lastUpdated}.`;
 
   return {
-    title: `${title} — Darkscreen`,
+    title: `${title} — Darkscreens`,
     description,
     openGraph: {
       title,
       description,
       url: `https://darkscreens.xyz/screenshots/${slug}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
     },
   };

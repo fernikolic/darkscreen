@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!meta) return {};
 
   return {
-    title: `${meta.title} — Darkscreen`,
+    title: `${meta.title} — Darkscreens`,
     description: meta.description,
     openGraph: {
       title: meta.title,
       description: meta.description,
       url: `https://darkscreens.xyz/flows/${flowSlug}`,
-      siteName: "Darkscreen",
+      siteName: "Darkscreens",
       type: "website",
     },
   };
