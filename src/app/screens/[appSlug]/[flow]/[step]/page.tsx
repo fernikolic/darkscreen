@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { apps, type ElementTag } from "@/data/apps";
 import { getAllScreens, getScreenPath, type EnrichedScreen } from "@/data/helpers";
+import { ScreenActions } from "@/components/ScreenActions";
 
 export function generateStaticParams() {
   const screens = getAllScreens();
@@ -170,15 +171,10 @@ export default async function ScreenDetailPage({ params }: PageProps) {
 
           {/* Actions */}
           {screen.image && (
-            <div className="mt-4 flex gap-2">
-              <a
-                href={screen.image}
-                download={`${appSlug}-${screen.flow.toLowerCase()}-${screen.step}.png`}
-                className="flex-1 border border-dark-border py-2.5 text-center text-[12px] font-medium text-text-secondary transition-colors hover:border-text-tertiary hover:text-text-primary"
-              >
-                Download
-              </a>
-            </div>
+            <ScreenActions
+              imageUrl={screen.image}
+              filename={`${appSlug}-${screen.flow.toLowerCase()}-${screen.step}.png`}
+            />
           )}
 
           {/* Tags */}

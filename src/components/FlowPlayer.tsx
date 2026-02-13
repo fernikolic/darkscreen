@@ -6,6 +6,8 @@ import Link from "next/link";
 import { type EnrichedScreen } from "@/data/helpers";
 import { useSubscription } from "@/contexts/SubscriptionContext";
 import { getFlowPlayerLimit } from "@/lib/access";
+import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
+import { useToast } from "@/contexts/ToastContext";
 
 interface FlowPlayerProps {
   screens: EnrichedScreen[];
@@ -26,6 +28,9 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
   const [activeLayer, setActiveLayer] = useState<"A" | "B">("A");
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [copying, setCopying] = useState(false);
+  const canCopy = useClipboardSupport();
+  const { showToast } = useToast();
 
   const { plan } = useSubscription();
   const limit = getFlowPlayerLimit(plan);
@@ -209,6 +214,27 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
                 </>
               )}
             </button>
+            {!showPaywall && canCopy && screen.image && (
+              <button
+                onClick={async (e) => {
+                  e.stopPropagation();
+                  if (copying) return;
+                  setCopying(true);
+                  try {
+                    await copyImageToClipboard(screen.image!);
+                    showToast("Copied to clipboard");
+                  } catch {
+                    showToast("Failed to copy", "error");
+                  } finally {
+                    setCopying(false);
+                  }
+                }}
+                disabled={copying}
+                className="flex items-center gap-1.5 text-[13px] text-text-tertiary transition-colors hover:text-white disabled:opacity-50"
+              >
+                {copying ? "Copying..." : "Copy"}
+              </button>
+            )}
             <button
               onClick={onClose}
               className="flex items-center gap-1 text-[13px] text-text-tertiary transition-colors hover:text-white"

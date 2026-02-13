@@ -14,6 +14,7 @@ import { BookmarksProvider } from "@/contexts/BookmarksContext";
 import { CollectionsProvider } from "@/contexts/CollectionsContext";
 import { SubscriptionProvider } from "@/contexts/SubscriptionContext";
 import { FlowPlayerProvider } from "@/contexts/FlowPlayerContext";
+import { ToastProvider } from "@/contexts/ToastContext";
 import { SignInModal } from "@/components/SignInModal";
 
 const queryClient = new QueryClient();
@@ -33,14 +34,16 @@ export function Providers({ children }: { children: ReactNode }) {
           <SolanaWalletProvider wallets={solanaWallets} autoConnect={false}>
             <AuthProvider>
               <SubscriptionProvider>
-                <FlowPlayerProvider>
-                  <CollectionsProvider>
-                    <BookmarksProvider>
-                      {children}
-                      <SignInModal />
-                    </BookmarksProvider>
-                  </CollectionsProvider>
-                </FlowPlayerProvider>
+                <ToastProvider>
+                  <FlowPlayerProvider>
+                    <CollectionsProvider>
+                      <BookmarksProvider>
+                        {children}
+                        <SignInModal />
+                      </BookmarksProvider>
+                    </CollectionsProvider>
+                  </FlowPlayerProvider>
+                </ToastProvider>
               </SubscriptionProvider>
             </AuthProvider>
           </SolanaWalletProvider>

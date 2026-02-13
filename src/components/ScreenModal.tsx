@@ -6,6 +6,8 @@ import Image from "next/image";
 import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 import { SaveToCollectionModal } from "./SaveToCollectionModal";
 import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
+import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
+import { useToast } from "@/contexts/ToastContext";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -22,7 +24,10 @@ export function ScreenModal({
 }: ScreenModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showSave, setShowSave] = useState(false);
+  const [copying, setCopying] = useState(false);
   const { openPlayer } = useFlowPlayer();
+  const canCopy = useClipboardSupport();
+  const { showToast } = useToast();
   const currentIndex = flowScreens.findIndex(
     (s) => s.appSlug === screen.appSlug && s.flow === screen.flow && s.step === screen.step
   );
@@ -105,6 +110,26 @@ export function ScreenModal({
                 className="text-[13px] text-text-tertiary transition-colors hover:text-white"
               >
                 Save
+              </button>
+            )}
+            {screen.image && canCopy && (
+              <button
+                onClick={async () => {
+                  if (copying) return;
+                  setCopying(true);
+                  try {
+                    await copyImageToClipboard(screen.image!);
+                    showToast("Copied to clipboard");
+                  } catch {
+                    showToast("Failed to copy", "error");
+                  } finally {
+                    setCopying(false);
+                  }
+                }}
+                disabled={copying}
+                className="text-[13px] text-text-tertiary transition-colors hover:text-white disabled:opacity-50"
+              >
+                {copying ? "Copying..." : "Copy"}
               </button>
             )}
             {screen.image && (
