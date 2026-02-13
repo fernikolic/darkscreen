@@ -4,6 +4,9 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { type AppCategory, type ChangeType, CATEGORIES } from "@/data/apps";
 import { getAllChanges, type EnrichedChange } from "@/data/helpers";
+import { useSubscription } from "@/contexts/SubscriptionContext";
+import { canViewChangeHistory } from "@/lib/access";
+import { PaywallOverlay } from "@/components/PaywallOverlay";
 
 const CHANGE_TYPES: ChangeType[] = ["New Feature", "Redesign", "Copy Change", "Layout Shift", "Removed"];
 const CATEGORIES_ALL: Array<AppCategory | "All"> = ["All", ...CATEGORIES];
@@ -25,6 +28,9 @@ export default function ChangesPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">("All");
   const [activeTypes, setActiveTypes] = useState<Set<ChangeType>>(new Set());
+
+  const { plan } = useSubscription();
+  const canViewChanges = canViewChangeHistory(plan);
 
   const allChanges = useMemo(() => getAllChanges(), []);
 
@@ -169,7 +175,67 @@ export default function ChangesPage() {
         </div>
       )}
 
-      {grouped.map((group) => (
+      {/* Paywall for free users */}
+      {!canViewChanges && grouped.length > 0 && (
+        <div className="relative">
+          {/* Show first group as teaser */}
+          <div className="opacity-60">
+            <div className="mb-10">
+              <h2 className="mb-6 font-heading text-[16px] font-semibold text-text-primary">
+                {grouped[0].month}
+              </h2>
+              <div className="space-y-0">
+                {grouped[0].changes.slice(0, 3).map((change, idx) => (
+                  <div
+                    key={`${change.appSlug}-${change.date}-${idx}`}
+                    className="group relative flex gap-5 pb-8"
+                  >
+                    <div className="relative flex flex-col items-center">
+                      <div
+                        className="h-3 w-3 rounded-full border-2 border-dark-bg"
+                        style={{ backgroundColor: CHANGE_TYPE_COLORS[change.type] }}
+                      />
+                      {idx < 2 && (
+                        <div className="flex-1 w-px bg-dark-border" />
+                      )}
+                    </div>
+                    <div className="flex-1 -mt-0.5 pb-2">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                          href={`/library/${change.appSlug}`}
+                          className="text-[14px] font-medium text-text-primary transition-colors hover:text-white"
+                        >
+                          {change.appName}
+                        </Link>
+                        <span
+                          className="rounded-full px-2 py-0.5 text-[10px] font-medium"
+                          style={{
+                            color: CHANGE_TYPE_COLORS[change.type],
+                            backgroundColor: `${CHANGE_TYPE_COLORS[change.type]}15`,
+                          }}
+                        >
+                          {change.type}
+                        </span>
+                        <span className="font-mono text-[11px] text-text-tertiary">
+                          {change.date}
+                        </span>
+                      </div>
+                      <p className="mt-1.5 text-[13px] leading-relaxed text-text-secondary">
+                        {change.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <PaywallOverlay
+            message={`You're seeing a preview. Upgrade to Pro to access the full change feed (${filtered.length} changes).`}
+          />
+        </div>
+      )}
+
+      {canViewChanges && grouped.map((group) => (
         <div key={group.month} className="mb-10">
           <h2 className="mb-6 font-heading text-[16px] font-semibold text-text-primary">
             {group.month}
