@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { type AppFlow, type EnrichedScreen } from "@/data/helpers";
+import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 
 interface FlowExpandedViewProps {
   flow: AppFlow;
@@ -9,12 +10,23 @@ interface FlowExpandedViewProps {
 }
 
 export function FlowExpandedView({ flow, onScreenClick }: FlowExpandedViewProps) {
+  const { openPlayer } = useFlowPlayer();
+
   return (
     <div className="border border-t-0 border-dark-border bg-dark-card/50 p-4">
       <div className="mb-3 flex items-center justify-between">
         <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
           {flow.appName} / {flow.flowType} / {flow.count} steps
         </span>
+        <button
+          onClick={() => openPlayer(flow.screens, 0)}
+          className="flex items-center gap-1.5 text-[12px] text-text-tertiary transition-colors hover:text-white"
+        >
+          <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+          Play
+        </button>
       </div>
       <div className="overflow-x-auto pb-2">
         <div className="flex gap-3" style={{ minWidth: "max-content" }}>

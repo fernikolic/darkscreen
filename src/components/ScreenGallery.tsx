@@ -9,6 +9,7 @@ import { ScreenModal } from "./ScreenModal";
 import { PaywallOverlay } from "./PaywallOverlay";
 import { useSubscription } from "@/contexts/SubscriptionContext";
 import { getScreenLimit } from "@/lib/access";
+import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 
 interface ScreenGalleryProps {
   screens: AppScreen[];
@@ -31,6 +32,7 @@ export function ScreenGallery({
 }: ScreenGalleryProps) {
   const [activeFlow, setActiveFlow] = useState<FlowType | "All">("All");
   const [modalScreen, setModalScreen] = useState<EnrichedScreen | null>(null);
+  const { openPlayer } = useFlowPlayer();
 
   const enriched = useMemo<EnrichedScreen[]>(
     () =>
@@ -66,7 +68,7 @@ export function ScreenGallery({
   return (
     <div>
       {/* Flow tabs */}
-      <div className="mb-8 flex flex-wrap gap-1">
+      <div className="mb-8 flex flex-wrap items-center gap-1">
         <button
           onClick={() => setActiveFlow("All")}
           className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
@@ -90,6 +92,17 @@ export function ScreenGallery({
             {flow}
           </button>
         ))}
+        {activeFlow !== "All" && (
+          <button
+            onClick={() => openPlayer(filtered, 0)}
+            className="ml-2 flex items-center gap-1.5 border-b-2 border-transparent px-3 py-2 text-[13px] text-text-tertiary transition-colors hover:text-white"
+          >
+            <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+            Play Flow
+          </button>
+        )}
       </div>
 
       {/* Screen gallery */}

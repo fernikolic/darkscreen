@@ -16,6 +16,7 @@ export const FREE_TIER_SLUGS = [
 
 // Free tier limits
 export const FREE_SCREEN_LIMIT = 5;
+export const FREE_FLOW_PLAYER_LIMIT = 3;
 
 export function canAccessApp(slug: string, plan: PlanId): boolean {
   if (plan === "pro" || plan === "team") return true;
@@ -25,6 +26,11 @@ export function canAccessApp(slug: string, plan: PlanId): boolean {
 export function getScreenLimit(plan: PlanId): number | null {
   if (plan === "pro" || plan === "team") return null; // unlimited
   return FREE_SCREEN_LIMIT;
+}
+
+export function getFlowPlayerLimit(plan: PlanId): number | null {
+  if (plan === "pro" || plan === "team") return null; // unlimited
+  return FREE_FLOW_PLAYER_LIMIT;
 }
 
 export function canViewChangeHistory(plan: PlanId): boolean {

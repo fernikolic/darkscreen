@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 import { SaveToCollectionModal } from "./SaveToCollectionModal";
+import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -21,6 +22,7 @@ export function ScreenModal({
 }: ScreenModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showSave, setShowSave] = useState(false);
+  const { openPlayer } = useFlowPlayer();
   const currentIndex = flowScreens.findIndex(
     (s) => s.appSlug === screen.appSlug && s.flow === screen.flow && s.step === screen.step
   );
@@ -79,6 +81,18 @@ export function ScreenModal({
             </span>
           </div>
           <div className="flex items-center gap-4">
+            <button
+              onClick={() => {
+                onClose();
+                openPlayer(flowScreens, currentIndex);
+              }}
+              className="flex items-center gap-1.5 text-[13px] text-text-tertiary transition-colors hover:text-white"
+            >
+              <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
+              Play
+            </button>
             <Link
               href={getScreenPath(screen)}
               className="text-[13px] text-text-tertiary transition-colors hover:text-white"

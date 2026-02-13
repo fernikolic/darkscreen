@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { type AppFlow } from "@/data/helpers";
+import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 
 interface FlowCardProps {
   flow: AppFlow;
@@ -10,15 +11,30 @@ interface FlowCardProps {
 }
 
 export function FlowCard({ flow, isExpanded, onClick }: FlowCardProps) {
+  const { openPlayer } = useFlowPlayer();
   const previewScreens = flow.screens.slice(0, 5);
 
   return (
     <button onClick={onClick} className="group block w-full text-left">
       <div
-        className={`overflow-hidden border bg-dark-card transition-all card-hover ${
+        className={`relative overflow-hidden border bg-dark-card transition-all card-hover ${
           isExpanded ? "border-text-tertiary" : "border-dark-border"
         }`}
       >
+        {/* Play button */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            openPlayer(flow.screens, 0);
+          }}
+          className="absolute right-2 top-2 z-10 flex h-7 w-7 items-center justify-center bg-black/60 text-white/70 opacity-0 transition-all hover:bg-black/80 hover:text-white group-hover:opacity-100"
+          aria-label="Play flow"
+        >
+          <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+        </button>
+
         {/* Mini thumbnail strip */}
         <div className="flex gap-1 overflow-hidden p-3">
           {previewScreens.map((screen, idx) => (
