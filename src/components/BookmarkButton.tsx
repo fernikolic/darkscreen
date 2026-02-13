@@ -31,12 +31,12 @@ export function BookmarkButton({ slug, size = "sm" }: BookmarkButtonProps) {
   return (
     <button
       onClick={handleClick}
-      className={`${padding} rounded-lg bg-dark-bg/80 backdrop-blur-sm border border-dark-border transition-all hover:border-accent-gold/30 hover:bg-dark-card`}
+      className={`${padding} rounded-lg bg-dark-bg/80 backdrop-blur-sm border border-dark-border transition-all hover:border-white/20 hover:bg-dark-card`}
       aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
     >
       <svg
         className={`${iconSize} transition-colors ${
-          bookmarked ? "fill-accent-gold text-accent-gold" : "fill-none text-text-tertiary hover:text-text-secondary"
+          bookmarked ? "fill-white text-white" : "fill-none text-text-tertiary hover:text-text-secondary"
         }`}
         viewBox="0 0 24 24"
         stroke="currentColor"

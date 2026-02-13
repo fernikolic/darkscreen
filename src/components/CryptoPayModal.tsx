@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // Replace with your actual Bitcoin address
-const BTC_ADDRESS = "bc1qYOUR_BTC_ADDRESS_HERE";
+const BTC_ADDRESS = "bc1q6tl4d3sy0ywsk3gddchw42428jymmkamqjxu4w";
 
 const PLANS = {
   pro: { name: "Pro", usd: "$9/mo", btcNote: "~$9 USD in BTC" },
@@ -45,7 +45,7 @@ export function CryptoPayModal({ plan, onClose }: CryptoPayModalProps) {
           &times;
         </button>
 
-        <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-accent-gold">
+        <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-white">
           Pay with Bitcoin
         </p>
         <h3 className="font-heading text-xl font-bold text-text-primary">

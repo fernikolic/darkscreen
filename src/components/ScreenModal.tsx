@@ -81,14 +81,14 @@ export function ScreenModal({
           <div className="flex items-center gap-4">
             <Link
               href={getScreenPath(screen)}
-              className="text-[13px] text-text-tertiary transition-colors hover:text-accent-gold"
+              className="text-[13px] text-text-tertiary transition-colors hover:text-white"
             >
               Open
             </Link>
             {screen.image && (
               <button
                 onClick={() => setShowSave(true)}
-                className="text-[13px] text-text-tertiary transition-colors hover:text-accent-gold"
+                className="text-[13px] text-text-tertiary transition-colors hover:text-white"
               >
                 Save
               </button>

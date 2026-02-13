@@ -4,32 +4,102 @@ import { TOTAL_APPS, TOTAL_SCREENS, apps } from "@/data/apps";
 
 const featuredApps = apps.filter((a) => a.detailed && a.thumbnail).slice(0, 5);
 
+// Floating logos — left side (top to bottom), right side (top to bottom)
+const floatingLogos = {
+  left: [
+    { src: "/logos/coinbase.webp", alt: "Coinbase", size: 64, top: "8%", left: "8%", duration: "6s", delay: "0s" },
+    { src: "/logos/metamask.png", alt: "MetaMask", size: 56, top: "34%", left: "3%", duration: "7s", delay: "1s" },
+    { src: "/logos/curve.jpeg", alt: "Curve", size: 44, top: "56%", left: "11%", duration: "5.5s", delay: "0.5s" },
+  ],
+  right: [
+    { src: "/logos/uniswap.png", alt: "Uniswap", size: 56, top: "12%", right: "6%", duration: "6.5s", delay: "0.8s" },
+    { src: "/logos/mempool.png", alt: "Mempool", size: 48, top: "42%", right: "4%", duration: "5s", delay: "1.5s" },
+  ],
+};
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 md:pt-28 lg:pt-32">
+
+        {/* Floating logos — left */}
+        <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
+          {floatingLogos.left.map((logo) => (
+            <div
+              key={logo.alt}
+              className="animate-float absolute rounded-2xl border border-white/[0.06] bg-white/[0.03] p-2 shadow-lg shadow-black/20 backdrop-blur-sm"
+              style={{
+                top: logo.top,
+                left: logo.left,
+                animationDuration: logo.duration,
+                animationDelay: logo.delay,
+                width: logo.size + 16,
+                height: logo.size + 16,
+              }}
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.size}
+                height={logo.size}
+                className="rounded-xl"
+              />
+            </div>
+          ))}
+
+          {/* Floating logos — right */}
+          {floatingLogos.right.map((logo) => (
+            <div
+              key={logo.alt}
+              className="animate-float absolute rounded-2xl border border-white/[0.06] bg-white/[0.03] p-2 shadow-lg shadow-black/20 backdrop-blur-sm"
+              style={{
+                top: logo.top,
+                right: logo.right,
+                animationDuration: logo.duration,
+                animationDelay: logo.delay,
+                width: logo.size + 16,
+                height: logo.size + 16,
+              }}
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.size}
+                height={logo.size}
+                className="rounded-xl"
+              />
+            </div>
+          ))}
+        </div>
+
         {/* Centered headline */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.2em] text-text-secondary">
-            Product intelligence for crypto
-          </p>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
+            </span>
+            <span className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-white">
+              Product intelligence for crypto
+            </span>
+          </div>
           <h1 className="font-heading text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.08] text-text-primary">
-            Weeks of <span className="text-accent-gold">product research.</span>{" "}
-            Seconds to browse.
+            Every screen, every flow,{" "}
+            <span className="text-white">every change</span>{" "}tracked.
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-text-secondary">
-            Browse {TOTAL_SCREENS.toLocaleString()}+ screens and flows from {TOTAL_APPS}+ wallets,
-            exchanges, and DeFi protocols. The design reference built for
-            product teams who ship in crypto.
+            {TOTAL_SCREENS.toLocaleString()}+ screens and flows from {TOTAL_APPS}+
+            {" "}(and growing) wallets, exchanges, and DeFi protocols,
+            systematically captured so you never miss what shipped.
           </p>
 
           {/* CTA */}
           <div className="mt-10">
             <Link
               href="/library"
-              className="group inline-flex items-center gap-3 border-b border-accent-gold/40 pb-1 text-[14px] font-medium text-accent-gold transition-colors hover:border-accent-gold"
+              className="group inline-flex items-center gap-3 border-b border-white/25 pb-1 text-[14px] font-medium text-white transition-colors hover:border-white/60"
             >
-              Explore the library
+              See what shipped this week
               <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
             </Link>
           </div>

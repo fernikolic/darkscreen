@@ -18,7 +18,7 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 
 | File | Purpose |
 |------|---------|
-| `src/data/apps.ts` | All app data — types and 35 crypto apps |
+| `src/data/apps.ts` | All app data — types and 39 crypto apps |
 | `src/app/page.tsx` | Landing page |
 | `src/app/library/page.tsx` | Library browse page with client-side filters |
 | `src/app/library/[slug]/page.tsx` | App detail page (static params from data) |
@@ -26,23 +26,61 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `src/components/` | All UI components |
 | `next.config.ts` | Static export config (`output: 'export'`) |
 | `tailwind.config.ts` | Dark theme color palette |
+| `scripts/crawl-app.mjs` | Deterministic Playwright crawler ($0 API cost) |
+| `scripts/label-local.mjs` | Local flow classification + file renaming |
+| `scripts/auto-tag.mjs` | Auto-infer screen tags from labels |
+| `scripts/wallet-setup.mjs` | MetaMask extension setup for DeFi crawling |
 
 ## Architecture
 
 - **Fully static** — `output: 'export'` generates HTML for all routes at build time
 - **Client components** — FilterBar, ScreenshotStrip, Header (for interactivity)
 - **Data-driven** — All app content in `src/data/apps.ts`, easy to extend
-- **5 detailed apps** with screenshots + change history: MetaMask, Phantom, Uniswap, Coinbase, Aave
-- **30 basic listings** with category, flows, and "coming soon" detail pages
+- **Detailed apps** with screenshots + change history (Aave, Binance, Coinbase, Kraken, Leather, Lido, Mempool, MetaMask, Xverse)
+- **Basic listings** with category, flows, and "coming soon" detail pages
+
+## Capture Pipeline
+
+Zero-cost, fully local pipeline — no API calls required.
+
+```
+crawl-app.mjs   →  raw screenshots + {slug}-raw.json
+label-local.mjs →  renamed files + {slug}-manifest.json
+auto-tag.mjs    →  tags added to apps.ts screen entries
+```
+
+### Crawl modes
+
+| Mode | Flag | Use case |
+|------|------|----------|
+| Public | _(default)_ | Landing pages, marketing sites |
+| Login | `--login` | Manual browser login, then auto-crawl (exchanges, dashboards) |
+| Wallet | `--wallet` | MetaMask extension, auto-approves popups (DeFi apps) |
+
+### Examples
+
+```bash
+# Public crawl
+node scripts/crawl-app.mjs --slug aave
+
+# Authenticated crawl (login once, reuse session)
+node scripts/crawl-app.mjs --slug binance --login
+
+# DeFi crawl with MetaMask
+node scripts/crawl-app.mjs --slug uniswap --wallet
+
+# Crawl all apps
+node scripts/crawl-app.mjs --all
+```
 
 ## Design System
 
-- Background: `#0a0a0f` (near-black with blue tint)
-- Cards: `#13131a` with `#1e1e2e` borders
-- Primary accent: `#00d4ff` (electric cyan)
-- Secondary accent: `#8b5cf6` (muted purple)
-- Fonts: Inter (body), JetBrains Mono (data/numbers)
-- Glow effects on card hover, subtle noise texture overlay
+- Background: `#0C0C0E` (near-black)
+- Cards: `#151518` with `#27272A` borders
+- Text: `#F4F4F5` (primary), `#A1A1AA` (secondary), `#71717A` (tertiary)
+- Accents: white / zinc for interactive elements
+- Fonts: Space Grotesk (headings), Inter (body), Fira Code (mono/data)
+- Subtle dot-grid texture overlay, card hover border shifts
 
 ## Environment Variables
 

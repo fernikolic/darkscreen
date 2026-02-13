@@ -95,7 +95,7 @@ export function FilterBar({
               onClick={() => onCategoryChange(cat)}
               className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
                 activeCategory === cat
-                  ? "border-accent-gold text-accent-gold"
+                  ? "border-white/60 text-white"
                   : "border-transparent text-text-tertiary hover:text-text-secondary"
               }`}
             >
@@ -121,7 +121,7 @@ export function FilterBar({
         </svg>
         {showMore ? "Less filters" : "More filters"}
         {moreFilterCount > 0 && (
-          <span className="rounded-full bg-accent-gold/15 px-1.5 py-0.5 font-mono text-[10px] text-accent-gold">
+          <span className="rounded-full bg-white/10 px-1.5 py-0.5 font-mono text-[10px] text-white">
             {moreFilterCount}
           </span>
         )}

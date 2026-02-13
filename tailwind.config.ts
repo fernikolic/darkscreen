@@ -11,10 +11,7 @@ const config: Config = {
           border: "#27272A",
           hover: "#1E1E22",
         },
-        accent: {
-          gold: "#C8A96E",
-          "gold-dim": "#A08550",
-        },
+        accent: {},
         text: {
           primary: "#F4F4F5",
           secondary: "#A1A1AA",

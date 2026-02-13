@@ -2,7 +2,7 @@ import { type AppChange, type ChangeType } from "@/data/apps";
 
 const TYPE_STYLES: Record<ChangeType, string> = {
   "New Feature": "text-emerald-400",
-  Redesign: "text-accent-gold",
+  Redesign: "text-white",
   "Copy Change": "text-amber-400",
   "Layout Shift": "text-text-secondary",
   Removed: "text-red-400",

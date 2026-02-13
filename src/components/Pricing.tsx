@@ -63,12 +63,12 @@ export function Pricing() {
       <div className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-16">
           {/* Beta pricing pill */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-gold/30 bg-accent-gold/5 px-4 py-1.5">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-gold opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-gold" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
             </span>
-            <span className="font-mono text-[11px] font-medium uppercase tracking-wider text-accent-gold">
+            <span className="font-mono text-[11px] font-medium uppercase tracking-wider text-white">
               Beta Pricing
             </span>
           </div>
@@ -89,12 +89,12 @@ export function Pricing() {
               key={tier.name}
               className={`relative p-10 ${
                 tier.highlighted
-                  ? "bg-accent-gold/[0.03]"
+                  ? "bg-white/[0.03]"
                   : "bg-dark-card"
               } ${i < 2 ? "md:border-r md:border-dark-border" : ""}`}
             >
               {tier.highlighted && (
-                <span className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-wider text-accent-gold">
+                <span className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-wider text-white">
                   Popular
                 </span>
               )}
@@ -114,7 +114,7 @@ export function Pricing() {
 
               {/* Urgency copy for paid tiers */}
               {tier.plan && (
-                <p className="mt-2 text-[11px] text-accent-gold/70">
+                <p className="mt-2 text-[11px] text-zinc-300">
                   Lock in this price forever — goes up after beta
                 </p>
               )}
@@ -128,11 +128,11 @@ export function Pricing() {
                 <div className="mt-4">
                   <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider">
                     <span className="text-text-tertiary">Beta slots claimed</span>
-                    <span className="text-accent-gold">72%</span>
+                    <span className="text-white">72%</span>
                   </div>
                   <div className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-dark-border">
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-accent-gold/80 to-accent-gold"
+                      className="h-full rounded-full bg-gradient-to-r from-zinc-400 to-white"
                       style={{ width: "72%" }}
                     />
                   </div>
@@ -166,14 +166,14 @@ export function Pricing() {
                       }
                       className={`block w-full py-3 text-center text-[13px] font-medium transition-all ${
                         tier.highlighted
-                          ? "border border-accent-gold bg-accent-gold/10 text-accent-gold hover:bg-accent-gold/20"
+                          ? "border border-white/60 bg-white/10 text-white hover:bg-white/20"
                           : "border border-dark-border text-text-secondary hover:border-text-secondary hover:text-text-primary"
                       }`}
                     >
                       {tier.cta}
                     </button>
                     <span className="flex items-center justify-center gap-1.5 text-[11px] text-text-tertiary">
-                      or pay with USDC
+                      or pay with Bitcoin
                       <span className="rounded bg-dark-border px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider">
                         soon
                       </span>
@@ -185,6 +185,7 @@ export function Pricing() {
           ))}
         </div>
       </div>
+
     </section>
   );
 }

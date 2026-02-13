@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function SuccessPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
-      <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-accent-gold">
+      <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white">
         Payment Confirmed
       </p>
       <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
@@ -16,7 +16,7 @@ export default function SuccessPage() {
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <Link
           href="/library"
-          className="inline-flex items-center gap-2 border border-accent-gold bg-accent-gold/10 px-6 py-3 text-[13px] font-medium text-accent-gold transition-colors hover:bg-accent-gold/20"
+          className="inline-flex items-center gap-2 border border-white/60 bg-white/10 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/20"
         >
           Browse the full library
         </Link>

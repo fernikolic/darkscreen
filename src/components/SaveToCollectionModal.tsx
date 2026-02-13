@@ -34,7 +34,7 @@ export function SaveToCollectionModal({
           <p className="mb-4 text-[14px] text-text-primary">Sign in to save screens</p>
           <button
             onClick={signInWithGoogle}
-            className="border border-accent-gold bg-accent-gold/10 px-6 py-3 text-[13px] font-medium text-accent-gold transition-colors hover:bg-accent-gold/20"
+            className="border border-white/60 bg-white/10 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/20"
           >
             Sign In with Google
           </button>
@@ -95,13 +95,13 @@ export function SaveToCollectionModal({
                 key={col.id}
                 onClick={() => handleToggle(col.id)}
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-left transition-colors hover:bg-dark-hover ${
-                  isIn ? "text-accent-gold" : "text-text-secondary"
+                  isIn ? "text-white" : "text-text-secondary"
                 }`}
               >
                 <span
                   className={`flex h-4 w-4 shrink-0 items-center justify-center border text-[10px] ${
                     isIn
-                      ? "border-accent-gold bg-accent-gold/20"
+                      ? "border-white/60 bg-white/20"
                       : "border-dark-border"
                   }`}
                 >

@@ -88,7 +88,7 @@ export default async function AppDetail({ params }: PageProps) {
             href={app.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-block text-[13px] text-text-tertiary transition-colors hover:text-accent-gold"
+            className="mt-2 inline-block text-[13px] text-text-tertiary transition-colors hover:text-white"
           >
             {app.website.replace("https://", "")} &nearr;
           </a>
@@ -99,7 +99,7 @@ export default async function AppDetail({ params }: PageProps) {
               <Link
                 key={`p-${platform}`}
                 href={`/library?platform=${platform.toLowerCase()}`}
-                className="rounded-full border border-dark-border px-2.5 py-1 text-[10px] font-medium text-text-tertiary transition-colors hover:border-accent-gold/30 hover:text-accent-gold"
+                className="rounded-full border border-dark-border px-2.5 py-1 text-[10px] font-medium text-text-tertiary transition-colors hover:border-white/20 hover:text-white"
               >
                 {platform}
               </Link>

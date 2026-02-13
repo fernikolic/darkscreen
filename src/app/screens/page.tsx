@@ -137,7 +137,7 @@ function ScreensPageInner() {
             }}
             className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
               activeChain === chain
-                ? "border-accent-gold text-accent-gold"
+                ? "border-white/60 text-white"
                 : "border-transparent text-text-tertiary hover:text-text-secondary"
             }`}
           >
@@ -161,7 +161,7 @@ function ScreensPageInner() {
               }}
               className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
                 activeCategory === cat
-                  ? "border-accent-gold text-accent-gold"
+                  ? "border-white/60 text-white"
                   : "border-transparent text-text-tertiary hover:text-text-secondary"
               }`}
             >
@@ -208,7 +208,7 @@ function ScreensPageInner() {
                 setActiveTags(new Set());
                 setVisibleCount(PAGE_SIZE);
               }}
-              className="text-[11px] text-text-tertiary transition-colors hover:text-accent-gold"
+              className="text-[11px] text-text-tertiary transition-colors hover:text-white"
             >
               Clear tags
             </button>

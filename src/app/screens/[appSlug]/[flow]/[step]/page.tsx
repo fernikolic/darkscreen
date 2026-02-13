@@ -148,7 +148,7 @@ export default async function ScreenDetailPage({ params }: PageProps) {
           <div className="border border-dark-border bg-dark-card p-5">
             <Link
               href={`/library/${appSlug}`}
-              className="text-[15px] font-medium text-text-primary transition-colors hover:text-accent-gold"
+              className="text-[15px] font-medium text-text-primary transition-colors hover:text-white"
             >
               {app.name}
             </Link>
@@ -162,7 +162,7 @@ export default async function ScreenDetailPage({ params }: PageProps) {
               href={app.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-block text-[12px] text-text-tertiary transition-colors hover:text-accent-gold"
+              className="mt-2 inline-block text-[12px] text-text-tertiary transition-colors hover:text-white"
             >
               {app.website.replace("https://", "")} &nearr;
             </a>

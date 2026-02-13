@@ -33,7 +33,7 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
 
   if (status === "success") {
     return (
-      <p className="text-[13px] font-medium text-accent-gold">
+      <p className="text-[13px] font-medium text-white">
         You&apos;re on the list.
       </p>
     );
@@ -56,7 +56,7 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
         disabled={status === "loading"}
         className={`shrink-0 py-2.5 text-[13px] font-medium transition-all disabled:opacity-60 ${
           isPrimary
-            ? "border-b border-accent-gold text-accent-gold hover:border-accent-gold/60"
+            ? "border-b border-white/60 text-white hover:border-white/40"
             : "border-b border-dark-border text-text-secondary hover:border-text-secondary hover:text-text-primary"
         }`}
       >

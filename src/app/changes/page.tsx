@@ -110,7 +110,7 @@ export default function ChangesPage() {
               onClick={() => setActiveCategory(cat)}
               className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
                 activeCategory === cat
-                  ? "border-accent-gold text-accent-gold"
+                  ? "border-white/60 text-white"
                   : "border-transparent text-text-tertiary hover:text-text-secondary"
               }`}
             >
@@ -129,7 +129,7 @@ export default function ChangesPage() {
           {activeTypes.size > 0 && (
             <button
               onClick={() => setActiveTypes(new Set())}
-              className="text-[11px] text-text-tertiary transition-colors hover:text-accent-gold"
+              className="text-[11px] text-text-tertiary transition-colors hover:text-white"
             >
               Clear
             </button>
@@ -196,7 +196,7 @@ export default function ChangesPage() {
                   <div className="flex flex-wrap items-center gap-3">
                     <Link
                       href={`/library/${change.appSlug}`}
-                      className="text-[14px] font-medium text-text-primary transition-colors hover:text-accent-gold"
+                      className="text-[14px] font-medium text-text-primary transition-colors hover:text-white"
                     >
                       {change.appName}
                     </Link>

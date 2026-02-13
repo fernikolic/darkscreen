@@ -41,7 +41,7 @@ export function ScreenGallery({
           onClick={() => setActiveFlow("All")}
           className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
             activeFlow === "All"
-              ? "border-accent-gold text-accent-gold"
+              ? "border-white/60 text-white"
               : "border-transparent text-text-tertiary hover:text-text-secondary"
           }`}
         >
@@ -53,7 +53,7 @@ export function ScreenGallery({
             onClick={() => setActiveFlow(flow)}
             className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
               activeFlow === flow
-                ? "border-accent-gold text-accent-gold"
+                ? "border-white/60 text-white"
                 : "border-transparent text-text-tertiary hover:text-text-secondary"
             }`}
           >

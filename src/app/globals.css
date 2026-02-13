@@ -38,7 +38,7 @@ body::before {
 
 /* Selection */
 ::selection {
-  background: rgba(200, 169, 110, 0.25);
+  background: rgba(255, 255, 255, 0.15);
   color: #F4F4F5;
 }
 
@@ -53,9 +53,9 @@ body::before {
 
 /* Active filter state */
 .filter-active {
-  color: #C8A96E;
-  border-color: rgba(200, 169, 110, 0.3);
-  background: rgba(200, 169, 110, 0.06);
+  color: #F4F4F5;
+  border-color: rgba(244, 244, 245, 0.3);
+  background: rgba(244, 244, 245, 0.06);
 }
 
 .pill-active-cyan {
@@ -82,3 +82,12 @@ body::before {
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
+
+/* Floating logo animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float {
+  animation: float ease-in-out infinite;
+}

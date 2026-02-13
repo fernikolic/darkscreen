@@ -49,7 +49,7 @@ export default function SavedPage() {
           </p>
           <button
             onClick={signInWithGoogle}
-            className="mt-8 border border-accent-gold bg-accent-gold/10 px-8 py-3 text-[14px] font-medium text-accent-gold transition-all hover:bg-accent-gold/20"
+            className="mt-8 border border-white/60 bg-white/10 px-8 py-3 text-[14px] font-medium text-white transition-all hover:bg-white/20"
           >
             Sign In with Google
           </button>
@@ -86,7 +86,7 @@ export default function SavedPage() {
           onClick={() => setActiveTab("collections")}
           className={`border-b-2 px-4 py-3 text-[13px] font-medium transition-all ${
             activeTab === "collections"
-              ? "border-accent-gold text-accent-gold"
+              ? "border-white/60 text-white"
               : "border-transparent text-text-tertiary hover:text-text-secondary"
           }`}
         >
@@ -99,7 +99,7 @@ export default function SavedPage() {
           onClick={() => setActiveTab("bookmarks")}
           className={`border-b-2 px-4 py-3 text-[13px] font-medium transition-all ${
             activeTab === "bookmarks"
-              ? "border-accent-gold text-accent-gold"
+              ? "border-white/60 text-white"
               : "border-transparent text-text-tertiary hover:text-text-secondary"
           }`}
         >
@@ -117,11 +117,11 @@ export default function SavedPage() {
             <div className="py-20 text-center">
               <p className="text-[14px] text-text-tertiary">
                 No collections yet. Open any screen and click{" "}
-                <span className="text-accent-gold">Save</span> to create one.
+                <span className="text-white">Save</span> to create one.
               </p>
               <Link
                 href="/screens"
-                className="mt-4 inline-block text-[13px] text-accent-gold transition-colors hover:text-accent-gold/80"
+                className="mt-4 inline-block text-[13px] text-white transition-colors hover:text-white/80"
               >
                 Browse screens &rarr;
               </Link>
@@ -173,7 +173,7 @@ export default function SavedPage() {
             <div className="py-20 text-center">
               <p className="text-[14px] text-text-tertiary">
                 No saved apps yet. Browse the{" "}
-                <Link href="/library" className="text-accent-gold transition-colors hover:text-accent-gold/80">
+                <Link href="/library" className="text-white transition-colors hover:text-white/80">
                   library
                 </Link>{" "}
                 and bookmark apps you want to track.
@@ -254,7 +254,7 @@ function CollectionCard({
                 if (e.key === "Escape") onCancelEdit();
               }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full border-b border-accent-gold bg-transparent text-[14px] font-medium text-text-primary outline-none"
+              className="w-full border-b border-white/60 bg-transparent text-[14px] font-medium text-text-primary outline-none"
               autoFocus
             />
           ) : (

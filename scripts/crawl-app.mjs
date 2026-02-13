@@ -13,6 +13,8 @@
  *   node scripts/crawl-app.mjs --slug lido            (looks up URL from apps.ts)
  *   node scripts/crawl-app.mjs --all
  *   node scripts/crawl-app.mjs --login --slug binance --url https://www.binance.com
+ *   node scripts/crawl-app.mjs --slug uniswap --wallet   (DeFi with MetaMask)
+ *   node scripts/crawl-app.mjs --login --slug coinbase --app-url https://www.coinbase.com/dashboard
  *
  * Pipeline:
  *   1. crawl-app.mjs  → raw screenshots + {slug}-raw.json     ($0.00)
@@ -32,6 +34,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, "..");
 const SCREENSHOT_DIR = resolve(PROJECT_ROOT, "public/screenshots");
 const SESSIONS_DIR = resolve(__dirname, "sessions");
+const WALLETS_DIR = resolve(__dirname, "wallets");
+const METAMASK_PROFILE = resolve(WALLETS_DIR, "metamask-profile");
+const METAMASK_EXT_DIR = resolve(WALLETS_DIR, "metamask-extension");
+const METAMASK_META = resolve(WALLETS_DIR, "metamask-meta.json");
 
 // ─── CLI ──────────────────────────────────────────────────────────────
 
@@ -39,9 +45,12 @@ const { values: args } = parseArgs({
   options: {
     slug: { type: "string" },
     url: { type: "string" },
+    "app-url": { type: "string" },
     all: { type: "boolean", default: false },
     headed: { type: "boolean", default: false },
     login: { type: "boolean", default: false },
+    relogin: { type: "boolean", default: false },
+    wallet: { type: "boolean", default: false },
     "max-pages": { type: "string", default: "50" },
     "max-screenshots": { type: "string", default: "80" },
   },
@@ -49,8 +58,11 @@ const { values: args } = parseArgs({
 });
 
 const HEADED = args.headed;
-const MAX_PAGES = parseInt(args["max-pages"], 10);
-const MAX_SCREENSHOTS = parseInt(args["max-screenshots"], 10);
+const WALLET_MODE = args.wallet;
+// Authenticated crawls get higher limits by default
+const isAuthenticated = WALLET_MODE || args.login || args.relogin;
+const MAX_PAGES = parseInt(args["max-pages"], 10) || (isAuthenticated ? 100 : 50);
+const MAX_SCREENSHOTS = parseInt(args["max-screenshots"], 10) || 80;
 
 // ─── App loading (for --all and --slug without --url) ─────────────────
 
@@ -58,10 +70,21 @@ function loadApps() {
   try {
     const raw = readFileSync(resolve(PROJECT_ROOT, "src/data/apps.ts"), "utf-8");
     const entries = [];
-    const re = /slug:\s*"([^"]+)"[\s\S]*?website:\s*"([^"]+)"/g;
-    let m;
-    while ((m = re.exec(raw)) !== null) {
-      entries.push({ slug: m[1], url: m[2] });
+    // Match each app object block (from slug to accentColor)
+    const blockRe = /\{\s*slug:\s*"([^"]+)"[\s\S]*?accentColor:\s*"[^"]+"/g;
+    let block;
+    while ((block = blockRe.exec(raw)) !== null) {
+      const text = block[0];
+      const slug = block[1];
+      const urlMatch = text.match(/website:\s*"([^"]+)"/);
+      const authMatch = text.match(/authType:\s*"([^"]+)"/);
+      const appUrlMatch = text.match(/appUrl:\s*"([^"]+)"/);
+      entries.push({
+        slug,
+        url: urlMatch ? urlMatch[1] : "",
+        authType: authMatch ? authMatch[1] : "public",
+        appUrl: appUrlMatch ? appUrlMatch[1] : null,
+      });
     }
     return entries;
   } catch {
@@ -109,6 +132,13 @@ async function loadSession(context, page, slug) {
   return true;
 }
 
+function sessionAge(slug) {
+  if (!existsSync(sessionPath(slug))) return Infinity;
+  const session = JSON.parse(readFileSync(sessionPath(slug), "utf-8"));
+  if (!session.savedAt) return Infinity;
+  return (Date.now() - new Date(session.savedAt).getTime()) / 1000 / 3600; // hours
+}
+
 function waitForEnter(prompt) {
   return new Promise((res) => {
     const rl = createInterface({ input: process.stdin, output: process.stdout });
@@ -116,6 +146,85 @@ function waitForEnter(prompt) {
       rl.close();
       res();
     });
+  });
+}
+
+// ─── Wallet launch (MetaMask persistent context) ──────────────────────
+
+async function launchWithWallet() {
+  if (!existsSync(METAMASK_META)) {
+    console.error("  MetaMask not set up. Run: node scripts/wallet-setup.mjs");
+    process.exit(1);
+  }
+
+  const meta = JSON.parse(readFileSync(METAMASK_META, "utf-8"));
+  console.log(`  Loading MetaMask v${meta.metamaskVersion} from ${METAMASK_PROFILE}`);
+
+  // launchPersistentContext reuses the saved profile (with MetaMask logged in)
+  const context = await chromium.launchPersistentContext(METAMASK_PROFILE, {
+    headless: false, // Extensions require headed mode
+    args: [
+      `--disable-extensions-except=${METAMASK_EXT_DIR}`,
+      `--load-extension=${METAMASK_EXT_DIR}`,
+      "--disable-blink-features=AutomationControlled",
+    ],
+    viewport: { width: 1440, height: 900 },
+    deviceScaleFactor: 1,
+    userAgent:
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    ignoreHTTPSErrors: true,
+  });
+
+  // Set up popup handler for MetaMask approval dialogs
+  handleWalletPopup(context);
+
+  return { context, browser: null }; // No separate browser — persistent context IS the browser
+}
+
+function handleWalletPopup(context) {
+  context.on("page", async (popup) => {
+    try {
+      // MetaMask popups have chrome-extension:// URLs
+      const url = popup.url();
+      if (!url.includes("chrome-extension://")) return;
+
+      console.log(`  🦊 MetaMask popup detected: ${url}`);
+      await popup.waitForLoadState("domcontentloaded", { timeout: 10000 });
+      await sleep(1500);
+
+      // Auto-approve connection requests
+      // MetaMask "Next" button (account selection step)
+      const nextBtn = popup.locator('button:has-text("Next")');
+      if (await nextBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await nextBtn.click();
+        await sleep(1000);
+      }
+
+      // MetaMask "Connect" button (final approval)
+      const connectBtn = popup.locator('button:has-text("Connect")');
+      if (await connectBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await connectBtn.click();
+        await sleep(1000);
+      }
+
+      // MetaMask "Confirm" / "Sign" button (transaction/signature requests)
+      const confirmBtn = popup.locator('button:has-text("Confirm"), button:has-text("Sign")');
+      if (await confirmBtn.first().isVisible({ timeout: 2000 }).catch(() => false)) {
+        await confirmBtn.first().click();
+        await sleep(1000);
+      }
+
+      // MetaMask "Approve" button
+      const approveBtn = popup.locator('button:has-text("Approve")');
+      if (await approveBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
+        await approveBtn.click();
+        await sleep(1000);
+      }
+
+      console.log("  🦊 MetaMask popup handled");
+    } catch (e) {
+      // Popup may close before we can interact — that's fine
+    }
   });
 }
 
@@ -508,11 +617,26 @@ const COMMON_PATHS = [
   "/predict",
 ];
 
-async function probeCommonPaths(page, slug, baseUrl, visited) {
+// Additional paths that only make sense when authenticated
+const AUTH_PATHS = [
+  "/history",
+  "/transactions",
+  "/notifications",
+  "/account",
+  "/profile",
+  "/deposit",
+  "/withdraw",
+  "/positions",
+  "/orders",
+  "/activity",
+];
+
+async function probeCommonPaths(page, slug, baseUrl, visited, authenticated = false) {
   const origin = new URL(baseUrl).origin;
   let found = 0;
+  const paths = authenticated ? [...COMMON_PATHS, ...AUTH_PATHS] : COMMON_PATHS;
 
-  for (const p of COMMON_PATHS) {
+  for (const p of paths) {
     if (screenshotIdx >= MAX_SCREENSHOTS || found >= 15) break;
     const url = origin + p;
     const cleanUrl = url.replace(/\/$/, "");
@@ -539,39 +663,125 @@ async function probeCommonPaths(page, slug, baseUrl, visited) {
   return found;
 }
 
+// ─── Wallet connection (clicks Connect Wallet on DApps) ──────────────
+
+async function connectWallet(page, slug) {
+  const connectSelectors = [
+    'button:has-text("Connect Wallet")',
+    'button:has-text("Connect wallet")',
+    'button:has-text("Connect"):not(:has-text("Disconnect"))',
+    '[data-testid="navbar-connect-wallet"]',
+    '[data-testid="connect-wallet"]',
+  ];
+
+  for (const sel of connectSelectors) {
+    try {
+      const el = page.locator(sel).first();
+      if (await el.isVisible({ timeout: 2000 })) {
+        console.log("  🔗 Clicking connect wallet...");
+        await capture(page, slug, {
+          action: "pre-connect",
+          context: "Before wallet connect",
+        });
+
+        await el.click({ timeout: 5000 });
+        await sleep(2000);
+
+        // Look for MetaMask option in the wallet selection modal
+        const mmSelectors = [
+          'button:has-text("MetaMask")',
+          'button:has-text("Metamask")',
+          '[data-testid="MetaMask"]',
+          'img[alt="MetaMask"]',
+          'img[alt="Metamask"]',
+        ];
+
+        for (const mmSel of mmSelectors) {
+          try {
+            const mmBtn = page.locator(mmSel).first();
+            if (await mmBtn.isVisible({ timeout: 2000 })) {
+              // Screenshot the wallet selector modal
+              await capture(page, slug, {
+                action: "wallet-modal",
+                context: "Wallet selection modal",
+              });
+              await mmBtn.click({ timeout: 3000 });
+              console.log("  🦊 Selected MetaMask — waiting for popup approval...");
+              // The handleWalletPopup listener will auto-approve in MetaMask
+              await sleep(5000);
+              return true;
+            }
+          } catch {}
+        }
+
+        // No specific MetaMask button found — maybe it auto-detected the extension
+        console.log("  🔗 Connect clicked — MetaMask may auto-connect");
+        await sleep(3000);
+        return true;
+      }
+    } catch {}
+  }
+
+  console.log("  ℹ No connect wallet button found (may already be connected)");
+  return false;
+}
+
 // ─── Main crawl function ─────────────────────────────────────────────
 
 async function crawlApp(slug, startUrl) {
   const hasAuth = hasSession(slug);
+  const authMode = WALLET_MODE ? "WALLET" : hasAuth ? "SESSION" : "PUBLIC";
   console.log(`\n${"═".repeat(60)}`);
-  console.log(`  Crawling: ${slug} — ${startUrl}${hasAuth ? " [SESSION]" : ""}`);
+  console.log(`  Crawling: ${slug} — ${startUrl} [${authMode}]`);
   console.log(`  Mode: Deterministic (zero API cost)`);
   console.log(`  Limits: ${MAX_PAGES} pages, ${MAX_SCREENSHOTS} screenshots`);
   console.log(`${"═".repeat(60)}\n`);
 
+  // Warn about stale sessions
+  if (hasAuth && !WALLET_MODE) {
+    const age = sessionAge(slug);
+    if (age > 24) {
+      console.log(`  ⚠ Session is ${Math.round(age)}h old — consider --relogin if auth fails`);
+    }
+  }
+
   mkdirSync(SCREENSHOT_DIR, { recursive: true });
   resetState();
 
-  const browser = await chromium.launch({
-    headless: !HEADED,
-    args: ["--disable-blink-features=AutomationControlled"],
-  });
+  let browser = null;
+  let context;
+  let page;
 
-  const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    ignoreHTTPSErrors: true,
-  });
+  if (WALLET_MODE) {
+    // Wallet mode: use persistent context with MetaMask extension
+    const result = await launchWithWallet();
+    context = result.context;
+    browser = result.browser;
+    // Persistent context already has pages — use the first or create one
+    page = context.pages()[0] || await context.newPage();
+  } else {
+    browser = await chromium.launch({
+      headless: !HEADED,
+      args: ["--disable-blink-features=AutomationControlled"],
+    });
 
-  const page = await context.newPage();
+    context = await browser.newContext({
+      viewport: { width: 1440, height: 900 },
+      deviceScaleFactor: 1,
+      userAgent:
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      ignoreHTTPSErrors: true,
+    });
+
+    page = await context.newPage();
+  }
+
   page.setDefaultTimeout(10000);
 
   const visited = new Set();
 
-  // Load session if available
-  if (hasAuth) {
+  // Load session if available (non-wallet mode)
+  if (hasAuth && !WALLET_MODE) {
     const session = JSON.parse(readFileSync(sessionPath(slug), "utf-8"));
     if (session.cookies?.length > 0) await context.addCookies(session.cookies);
   }
@@ -585,7 +795,8 @@ async function crawlApp(slug, startUrl) {
       await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
     } catch (e) {
       console.error(`  Failed to load ${startUrl}: ${e.message}`);
-      await browser.close();
+      if (browser) await browser.close();
+      else await context.close();
       return null;
     }
   }
@@ -670,13 +881,28 @@ async function crawlApp(slug, startUrl) {
     await page.goto(startUrl, { waitUntil: "networkidle", timeout: 15000 });
     await sleep(1000);
     await dismissOverlays(page, slug);
-    await exploreInteractiveElements(page, slug, "Landing");
+
+    if (WALLET_MODE) {
+      // In wallet mode, actually connect to the DApp
+      await connectWallet(page, slug);
+      await sleep(3000);
+      // Screenshot the connected state
+      await capture(page, slug, {
+        action: "wallet-connected",
+        context: "Landing — wallet connected",
+        force: true,
+      });
+      await scrollAndCapture(page, slug, "Landing (connected)");
+    } else {
+      await exploreInteractiveElements(page, slug, "Landing");
+    }
     await exploreTokenSelectors(page, slug, "Landing");
   } catch {}
 
   // ── Phase 5: Common paths ────────────────────────────────────────
   console.log("\nPhase 5: Common paths");
-  await probeCommonPaths(page, slug, startUrl, visited);
+  const authenticated = WALLET_MODE || hasAuth;
+  await probeCommonPaths(page, slug, startUrl, visited, authenticated);
 
   // ── Save raw manifest ────────────────────────────────────────────
   const rawManifest = {
@@ -690,7 +916,8 @@ async function crawlApp(slug, startUrl) {
   const outPath = resolve(SCREENSHOT_DIR, `${slug}-raw.json`);
   writeFileSync(outPath, JSON.stringify(rawManifest, null, 2));
 
-  await browser.close();
+  if (browser) await browser.close();
+  else await context.close();
 
   console.log(`\n${"─".repeat(60)}`);
   console.log(`  Done! ${screenshots.length} screenshots for ${slug}`);
@@ -704,7 +931,7 @@ async function crawlApp(slug, startUrl) {
 
 // ─── Login flow ──────────────────────────────────────────────────────
 
-async function loginFlow(slug, startUrl) {
+async function loginFlow(slug, startUrl, crawlUrl) {
   console.log(`\n  Login mode: ${slug} — ${startUrl}`);
   console.log("  Browser will open. Log in manually, then press Enter.\n");
 
@@ -722,54 +949,95 @@ async function loginFlow(slug, startUrl) {
   const page = await context.newPage();
   await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
 
-  await waitForEnter(">> Log in to the app, then press ENTER to save session... ");
+  await waitForEnter(">> Log in to the app, then press ENTER to save session and start crawling... ");
   await saveSession(context, page, slug);
   await browser.close();
-  console.log(`\nSession saved! Now run: node scripts/crawl-app.mjs --slug ${slug} --url ${startUrl}`);
+  console.log("  Session saved! Starting crawl...\n");
+
+  // Immediately start crawling with the saved session
+  const targetUrl = crawlUrl || startUrl;
+  await crawlApp(slug, targetUrl);
 }
 
 // ─── Entry point ─────────────────────────────────────────────────────
 
 async function main() {
-  if (args.login) {
-    if (!args.slug || !args.url) {
-      console.error("Usage: node scripts/crawl-app.mjs --login --slug <slug> --url <url>");
+  // Resolve app data from apps.ts if slug is provided
+  const allApps = loadApps();
+  const appData = args.slug ? allApps.find((a) => a.slug === args.slug) : null;
+
+  // --login or --relogin: open browser for manual login, then crawl
+  if (args.login || args.relogin) {
+    if (!args.slug) {
+      console.error("Usage: node scripts/crawl-app.mjs --login --slug <slug> [--url <url>] [--app-url <url>]");
       process.exit(1);
     }
-    return loginFlow(args.slug, args.url);
+    // Skip login if session exists and not --relogin
+    if (args.login && !args.relogin && hasSession(args.slug)) {
+      const age = sessionAge(args.slug);
+      console.log(`  Session exists (${Math.round(age)}h old). Use --relogin to force new login.`);
+      console.log("  Starting crawl with existing session...\n");
+      const crawlUrl = args["app-url"] || (appData && appData.appUrl) || args.url || (appData && appData.url);
+      if (!crawlUrl) {
+        console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
+        process.exit(1);
+      }
+      return crawlApp(args.slug, crawlUrl);
+    }
+
+    const loginUrl = args.url || (appData && appData.url);
+    if (!loginUrl) {
+      console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
+      process.exit(1);
+    }
+    const crawlUrl = args["app-url"] || (appData && appData.appUrl) || loginUrl;
+    return loginFlow(args.slug, loginUrl, crawlUrl);
   }
 
   if (args.all) {
-    const apps = loadApps();
-    console.log(`Crawling all ${apps.length} apps...`);
-    for (const app of apps) {
+    console.log(`Crawling all ${allApps.length} apps...`);
+    for (const app of allApps) {
       try {
         await crawlApp(app.slug, app.url);
       } catch (e) {
         console.error(`Failed ${app.slug}: ${e.message}`);
       }
     }
-  } else if (args.slug && args.url) {
-    await crawlApp(args.slug, args.url);
   } else if (args.slug) {
-    const apps = loadApps();
-    const found = apps.find((a) => a.slug === args.slug);
-    if (!found) {
+    // Determine the URL: CLI --url > --app-url > appData.appUrl (when wallet/login) > appData.url
+    let crawlUrl = args.url;
+    if (!crawlUrl && appData) {
+      if ((WALLET_MODE || hasSession(args.slug)) && appData.appUrl) {
+        crawlUrl = appData.appUrl;
+      } else {
+        crawlUrl = appData.url;
+      }
+    }
+    if (args["app-url"]) {
+      crawlUrl = args["app-url"];
+    }
+    if (!crawlUrl) {
       console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
       process.exit(1);
     }
-    await crawlApp(found.slug, found.url);
+    await crawlApp(args.slug, crawlUrl);
   } else {
     console.error("OpenClaw Deterministic Crawler");
     console.error("Zero API cost — pure Playwright automation\n");
     console.error("Usage:");
     console.error("  node scripts/crawl-app.mjs --slug <slug> --url <url>");
     console.error("  node scripts/crawl-app.mjs --slug <slug>");
+    console.error("  node scripts/crawl-app.mjs --slug <slug> --wallet");
     console.error("  node scripts/crawl-app.mjs --all");
-    console.error("  node scripts/crawl-app.mjs --login --slug <slug> --url <url>\n");
+    console.error("  node scripts/crawl-app.mjs --login --slug <slug> [--url <url>]");
+    console.error("  node scripts/crawl-app.mjs --relogin --slug <slug> [--url <url>]\n");
     console.error("Options:");
     console.error("  --headed              Show browser window");
-    console.error("  --max-pages <n>       Max pages to visit (default: 50)");
+    console.error("  --wallet              Use MetaMask extension (DeFi apps)");
+    console.error("  --login               Manual login (KYC apps — auto-crawls after)");
+    console.error("  --relogin             Force new login even if session exists");
+    console.error("  --app-url <url>       Override authenticated app URL");
+    console.error("  --max-pages <n>       Max pages to visit (default: 50, 100 with auth)");
     console.error("  --max-screenshots <n> Max screenshots (default: 80)\n");
     console.error("Pipeline:");
     console.error("  1. crawl-app.mjs          → raw screenshots     ($0.00)");

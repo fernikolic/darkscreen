@@ -16,7 +16,7 @@ export function PaywallOverlay({
 
       {/* CTA card */}
       <div className="relative z-10 flex flex-col items-center py-16 text-center">
-        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-accent-gold">
+        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-white">
           Pro Feature
         </p>
         <p className="max-w-sm text-[14px] leading-relaxed text-text-secondary">
@@ -24,7 +24,7 @@ export function PaywallOverlay({
         </p>
         <Link
           href="/#pricing"
-          className="mt-6 inline-flex items-center gap-2 border border-accent-gold bg-accent-gold/10 px-6 py-3 text-[13px] font-medium text-accent-gold transition-colors hover:bg-accent-gold/20"
+          className="mt-6 inline-flex items-center gap-2 border border-white/60 bg-white/10 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/20"
         >
           Upgrade to Pro
         </Link>

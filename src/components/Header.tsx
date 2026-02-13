@@ -33,13 +33,13 @@ export function Header() {
           </Link>
           <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
             iOS
-            <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+            <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
               Soon
             </span>
           </span>
           <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
             Android
-            <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+            <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
               Soon
             </span>
           </span>
@@ -88,10 +88,10 @@ export function Header() {
                     alt={user.displayName || "User"}
                     width={32}
                     height={32}
-                    className="rounded-full border border-dark-border transition-all group-hover:border-accent-gold/30"
+                    className="rounded-full border border-dark-border transition-all group-hover:border-white/20"
                   />
                 ) : (
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-dark-border bg-dark-card text-[12px] font-medium text-text-secondary transition-all group-hover:border-accent-gold/30">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-dark-border bg-dark-card text-[12px] font-medium text-text-secondary transition-all group-hover:border-white/20">
                     {(user.displayName || user.email || "U")[0].toUpperCase()}
                   </div>
                 )}
@@ -137,13 +137,13 @@ export function Header() {
               </Link>
               <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
                 iOS
-                <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
                   Soon
                 </span>
               </span>
               <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
                 Android
-                <span className="rounded bg-accent-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-accent-gold/60">
+                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
                   Soon
                 </span>
               </span>

@@ -27,7 +27,7 @@ export default function Home() {
           <div className="mt-10 flex justify-center">
             <Link
               href="/library"
-              className="group inline-flex items-center gap-3 border-b border-accent-gold/40 pb-1 text-[14px] font-medium text-accent-gold transition-colors hover:border-accent-gold"
+              className="group inline-flex items-center gap-3 border-b border-white/25 pb-1 text-[14px] font-medium text-white transition-colors hover:border-white/60"
             >
               Explore the Library
               <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
