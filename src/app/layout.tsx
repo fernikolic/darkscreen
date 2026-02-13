@@ -3,6 +3,7 @@ import { DM_Sans, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Providers";
+import { WebsiteJsonLd, OrganizationJsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     title: "Darkscreen — Crypto Product Design Library",
     description:
       "Explore screens, flows, and UI patterns from 35+ wallets, exchanges, and DeFi protocols.",
-    url: "https://darkscreen.xyz",
+    url: "https://darkscreens.xyz",
     siteName: "Darkscreen",
     type: "website",
   },
@@ -50,6 +51,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${plusJakarta.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <WebsiteJsonLd />
+        <OrganizationJsonLd />
+      </head>
       <body className="min-h-screen bg-dark-bg font-sans antialiased">
         <Providers>
           <Header />

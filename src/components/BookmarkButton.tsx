@@ -16,16 +16,16 @@ export function BookmarkButton({ slug, size = "sm" }: BookmarkButtonProps) {
   const iconSize = size === "sm" ? "h-4 w-4" : "h-5 w-5";
   const padding = size === "sm" ? "p-1.5" : "p-2";
 
-  const handleClick = async (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
 
     if (!user) {
-      await signInWithGoogle();
+      signInWithGoogle();
       return;
     }
 
-    await toggleBookmark(slug);
+    toggleBookmark(slug);
   };
 
   return (

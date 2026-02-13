@@ -59,12 +59,6 @@ export function Header() {
           >
             Changes
           </Link>
-          <a
-            href="#pricing"
-            className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
-          >
-            Pricing
-          </a>
           <div className="ml-3 h-5 w-px bg-dark-border" />
 
           {/* Auth UI */}
@@ -163,13 +157,6 @@ export function Header() {
             >
               Changes
             </Link>
-            <a
-              href="#pricing"
-              className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Pricing
-            </a>
             <div className="my-2 h-px bg-dark-border/50" />
 
             {/* Mobile auth */}

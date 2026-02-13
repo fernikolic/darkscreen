@@ -90,7 +90,7 @@ export function CryptoPayModal({ plan, onClose }: CryptoPayModalProps) {
         {/* Instructions */}
         <div className="mt-6 space-y-2 text-[12px] text-text-tertiary">
           <p>1. Send the equivalent of {info.usd} in BTC to the address above</p>
-          <p>2. Email your transaction hash to <span className="text-text-secondary">support@darkscreen.xyz</span></p>
+          <p>2. Email your transaction hash to <span className="text-text-secondary">support@darkscreens.xyz</span></p>
           <p>3. We&apos;ll activate your account within 24 hours</p>
         </div>
 

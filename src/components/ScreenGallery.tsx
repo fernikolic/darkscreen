@@ -1,17 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
-import { type AppScreen, type FlowType } from "@/data/apps";
+import { type AppScreen, type FlowType, type AppCategory, type ChainType } from "@/data/apps";
+import { type EnrichedScreen } from "@/data/helpers";
 import { PlaceholderScreen } from "./PlaceholderScreen";
-import { useSubscription } from "@/contexts/SubscriptionContext";
-import { getScreenLimit } from "@/lib/access";
-import { PaywallOverlay } from "./PaywallOverlay";
+import { ScreenModal } from "./ScreenModal";
 
 interface ScreenGalleryProps {
   screens: AppScreen[];
   accentColor: string;
   appName: string;
+  appSlug: string;
+  appCategory: AppCategory;
+  appChains: ChainType[];
   flows: FlowType[];
 }
 
@@ -19,19 +21,39 @@ export function ScreenGallery({
   screens,
   accentColor,
   appName,
+  appSlug,
+  appCategory,
+  appChains,
   flows,
 }: ScreenGalleryProps) {
   const [activeFlow, setActiveFlow] = useState<FlowType | "All">("All");
-  const { plan } = useSubscription();
-  const limit = getScreenLimit(plan);
+  const [modalScreen, setModalScreen] = useState<EnrichedScreen | null>(null);
+
+  const enriched = useMemo<EnrichedScreen[]>(
+    () =>
+      screens.map((s) => ({
+        ...s,
+        appSlug,
+        appName,
+        appCategory,
+        appChains,
+        accentColor,
+      })),
+    [screens, appSlug, appName, appCategory, appChains, accentColor]
+  );
 
   const filtered =
     activeFlow === "All"
-      ? screens
-      : screens.filter((s) => s.flow === activeFlow);
+      ? enriched
+      : enriched.filter((s) => s.flow === activeFlow);
 
-  const hasMore = limit !== null && filtered.length > limit;
-  const visible = limit !== null ? filtered.slice(0, limit) : filtered;
+  // For the modal, navigate within the same flow as the selected screen
+  const modalFlowScreens = useMemo(() => {
+    if (!modalScreen) return [];
+    return enriched
+      .filter((s) => s.flow === modalScreen.flow)
+      .sort((a, b) => a.step - b.step);
+  }, [enriched, modalScreen]);
 
   return (
     <div>
@@ -65,18 +87,19 @@ export function ScreenGallery({
       {/* Screen gallery */}
       <div className="overflow-x-auto pb-4">
         <div className="flex gap-4" style={{ minWidth: "max-content" }}>
-          {visible.map((screen, idx) => (
-            <div
+          {filtered.map((screen, idx) => (
+            <button
               key={`${screen.flow}-${screen.step}-${idx}`}
-              className="w-44 flex-shrink-0"
+              className="w-44 flex-shrink-0 text-left"
+              onClick={() => setModalScreen(screen)}
             >
               {screen.image ? (
-                <div className="group relative aspect-[16/10] overflow-hidden border border-dark-border bg-dark-bg transition-all hover:border-text-tertiary">
+                <div className="group relative aspect-[16/10] cursor-pointer overflow-hidden border border-dark-border bg-dark-bg transition-all hover:border-text-tertiary">
                   <Image
                     src={screen.image}
                     alt={`${appName} - ${screen.label}`}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
                     sizes="176px"
                   />
                 </div>
@@ -95,50 +118,18 @@ export function ScreenGallery({
                   {screen.label}
                 </p>
               </div>
-            </div>
+            </button>
           ))}
-
-          {/* Blurred teasers for gated screens */}
-          {hasMore &&
-            filtered.slice(limit!, limit! + 2).map((screen, idx) => (
-              <div
-                key={`blur-${idx}`}
-                className="w-44 flex-shrink-0 opacity-40 blur-sm"
-              >
-                {screen.image ? (
-                  <div className="relative aspect-[16/10] overflow-hidden border border-dark-border bg-dark-bg">
-                    <Image
-                      src={screen.image}
-                      alt=""
-                      fill
-                      className="object-cover object-top"
-                      sizes="176px"
-                    />
-                  </div>
-                ) : (
-                  <PlaceholderScreen
-                    color={accentColor}
-                    label={screen.label}
-                    appName={appName}
-                  />
-                )}
-                <div className="mt-2.5 px-0.5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
-                    Step {screen.step}
-                  </span>
-                  <p className="mt-0.5 text-[12px] leading-relaxed text-text-secondary">
-                    {screen.label}
-                  </p>
-                </div>
-              </div>
-            ))}
         </div>
       </div>
 
-      {/* Paywall overlay when screens are gated */}
-      {hasMore && (
-        <PaywallOverlay
-          message={`Upgrade to Pro to see all ${filtered.length} screens. You're viewing ${limit} of ${filtered.length}.`}
+      {/* Lightbox modal */}
+      {modalScreen && (
+        <ScreenModal
+          screen={modalScreen}
+          flowScreens={modalFlowScreens}
+          onClose={() => setModalScreen(null)}
+          onNavigate={(s) => setModalScreen(s)}
         />
       )}
     </div>

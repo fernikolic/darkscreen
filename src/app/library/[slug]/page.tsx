@@ -1,10 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
+import { toSlug } from "@/data/seo";
 import { ScreenGallery } from "@/components/ScreenGallery";
-import { GatedChangeTimeline } from "@/components/GatedChangeTimeline";
+import { ChangeTimeline } from "@/components/ChangeTimeline";
 import { EmailCapture } from "@/components/EmailCapture";
 import { BookmarkButton } from "@/components/BookmarkButton";
+import { SoftwareAppJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -12,6 +15,28 @@ export function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const app = apps.find((a) => a.slug === slug);
+  if (!app) return {};
+
+  const title = `${app.name} — UI Screenshots, Flows & Design Patterns`;
+  const description = `Browse ${app.screenCount} screenshots from ${app.name}. Explore ${app.flows.join(", ")} flows, track UI changes, and compare with other ${app.category.toLowerCase()} products.`;
+
+  return {
+    title: `${title} — Darkscreen`,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://darkscreens.xyz/library/${slug}`,
+      siteName: "Darkscreen",
+      type: "website",
+      ...(app.thumbnail ? { images: [{ url: `https://darkscreens.xyz${app.thumbnail}` }] } : {}),
+    },
+  };
 }
 
 export default async function AppDetail({ params }: PageProps) {
@@ -58,6 +83,22 @@ export default async function AppDetail({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <SoftwareAppJsonLd
+        name={app.name}
+        description={app.description}
+        url={app.website}
+        category={app.category}
+        screenshot={app.thumbnail}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreen", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: app.category, url: `https://darkscreens.xyz/category/${toSlug(app.category)}` },
+          { name: app.name, url: `https://darkscreens.xyz/library/${app.slug}` },
+        ]}
+      />
+
       {/* Back link */}
       <Link
         href="/library"
@@ -107,7 +148,7 @@ export default async function AppDetail({ params }: PageProps) {
             {app.sections.map((section) => (
               <Link
                 key={`s-${section}`}
-                href={`/library?section=${section.toLowerCase()}`}
+                href={`/section/${toSlug(section)}`}
                 className="rounded-full border border-dark-border px-2.5 py-1 text-[10px] font-medium text-text-tertiary transition-colors hover:border-[#00d4ff]/30 hover:text-[#00d4ff]"
               >
                 {section}
@@ -116,12 +157,36 @@ export default async function AppDetail({ params }: PageProps) {
             {app.styles.map((style) => (
               <Link
                 key={`st-${style}`}
-                href={`/library?style=${style.toLowerCase()}`}
+                href={`/style/${toSlug(style)}`}
                 className="rounded-full border border-dark-border px-2.5 py-1 text-[10px] font-medium text-text-tertiary transition-colors hover:border-[#f59e0b]/30 hover:text-[#f59e0b]"
               >
                 {style}
               </Link>
             ))}
+          </div>
+
+          {/* Cross-links to pSEO pages */}
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link
+              href={`/screenshots/${app.slug}`}
+              className="text-[11px] text-text-tertiary transition-colors hover:text-white"
+            >
+              All screenshots &rarr;
+            </Link>
+            <span className="text-dark-border">|</span>
+            <Link
+              href={`/alternatives/${app.slug}`}
+              className="text-[11px] text-text-tertiary transition-colors hover:text-white"
+            >
+              Alternatives &rarr;
+            </Link>
+            <span className="text-dark-border">|</span>
+            <Link
+              href={`/changelog/${app.slug}`}
+              className="text-[11px] text-text-tertiary transition-colors hover:text-white"
+            >
+              Changelog &rarr;
+            </Link>
           </div>
         </div>
         <div className="flex gap-8 sm:text-right">
@@ -156,13 +221,16 @@ export default async function AppDetail({ params }: PageProps) {
           screens={app.screens}
           accentColor={app.accentColor}
           appName={app.name}
+          appSlug={app.slug}
+          appCategory={app.category}
+          appChains={app.chains}
           flows={app.flows}
         />
       </section>
 
       {/* Change timeline */}
       <section className="mb-16 border-t border-dark-border pt-10">
-        <GatedChangeTimeline changes={app.changes} appName={app.name} />
+        <ChangeTimeline changes={app.changes} />
       </section>
 
       {/* CTA */}

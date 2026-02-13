@@ -23,14 +23,14 @@ import { auth, db, googleProvider } from "@/lib/firebase";
 interface AuthContextValue {
   user: User | null;
   loading: boolean;
-  signInWithGoogle: () => Promise<void>;
+  signInWithGoogle: () => void;
   signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue>({
   user: null,
   loading: true,
-  signInWithGoogle: async () => {},
+  signInWithGoogle: () => {},
   signOut: async () => {},
 });
 
@@ -86,8 +86,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return unsubscribe;
   }, []);
 
-  const signInWithGoogle = async () => {
-    await signInWithPopup(auth, googleProvider);
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, googleProvider).catch((err: unknown) => {
+      const code = (err as { code?: string }).code;
+      if (code === "auth/popup-blocked") {
+        window.alert("Popup was blocked by your browser. Please allow popups for this site.");
+      } else if (code === "auth/unauthorized-domain") {
+        console.error("Firebase auth: domain not authorized. Add this domain to Firebase Console > Authentication > Settings > Authorized domains.");
+      } else if (code !== "auth/popup-closed-by-user") {
+        console.error("Sign-in failed:", err);
+      }
+    });
   };
 
   const signOut = async () => {

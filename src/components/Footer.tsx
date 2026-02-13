@@ -117,14 +117,6 @@ export function Footer() {
                   Library
                 </Link>
               </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
-                >
-                  Pricing
-                </a>
-              </li>
             </ul>
 
             {/* Connect links */}
@@ -144,7 +136,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@darkscreen.xyz"
+                  href="mailto:hello@darkscreens.xyz"
                   className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
                 >
                   Contact
