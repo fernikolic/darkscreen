@@ -24,6 +24,9 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `src/app/library/[slug]/page.tsx` | App detail page (static params from data) |
 | `src/app/globals.css` | Tailwind base + custom dark theme styles |
 | `src/components/` | All UI components |
+| `src/lib/clipboard.ts` | Copy-to-clipboard utility + `useClipboardSupport` hook |
+| `src/contexts/ToastContext.tsx` | Lightweight toast notification system |
+| `src/components/ScreenActions.tsx` | Client-side Copy + Download buttons for screen detail page |
 | `next.config.ts` | Static export config (`output: 'export'`) |
 | `tailwind.config.ts` | Dark theme color palette |
 | `scripts/crawl-app.mjs` | Deterministic Playwright crawler ($0 API cost) |
@@ -72,6 +75,33 @@ node scripts/crawl-app.mjs --slug uniswap --wallet
 # Crawl all apps
 node scripts/crawl-app.mjs --all
 ```
+
+## Copy to Clipboard
+
+Screenshots can be copied to clipboard from three surfaces: **ScreenModal**, **FlowPlayer**, and the **screen detail page**. Useful for pasting into Slack, Figma, Notion, etc.
+
+### How it works
+
+1. `copyImageToClipboard(imageUrl)` in `src/lib/clipboard.ts` fetches the image, draws it to a canvas, converts to PNG blob, and writes via `navigator.clipboard.write()`
+2. `useClipboardSupport()` hook detects `ClipboardItem` support — Copy buttons auto-hide in unsupported browsers
+3. Success/error feedback via the toast system
+
+### Where Copy appears
+
+| Surface | Location | Notes |
+|---------|----------|-------|
+| `ScreenModal` | Top bar, between Save and Download | |
+| `FlowPlayer` | Top bar, between Play/Pause and Close | Hidden during paywall overlay, uses `stopPropagation` |
+| Screen detail page | Sidebar, alongside Download | Via `ScreenActions` client component |
+
+## Toast System
+
+Lightweight notification system (no dependencies) following the existing context provider pattern.
+
+- **Provider**: `ToastProvider` in `src/contexts/ToastContext.tsx`, wraps the app in `Providers.tsx`
+- **Hook**: `useToast()` returns `showToast(message, type?)` where type is `'success' | 'error'`
+- **UI**: `src/components/Toast.tsx` — dark card with green (success) / red (error) accent border
+- **Behavior**: Auto-dismiss after 2s, max 3 stacked, portal-rendered at `z-[120]`, fixed bottom-right
 
 ## Design System
 
