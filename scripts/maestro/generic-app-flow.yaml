@@ -1,0 +1,101 @@
+appId: ${APP_ID}
+name: "Darkscreen: ${APP_NAME} screenshot flow"
+---
+# Generic flow that works for most crypto apps
+# Captures: launch → home → navigate tabs → scroll states
+
+# Wait for app to fully load
+- waitForAnimationToEnd:
+    timeout: 10000
+
+# Screenshot 1: Home / Launch screen
+- takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-001
+
+# Dismiss common overlays (cookie consent, notifications, etc.)
+- runFlow:
+    when:
+      visible: "Accept"
+    commands:
+      - tapOn: "Accept"
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Allow"
+    commands:
+      - tapOn: "Allow"
+      - waitForAnimationToEnd
+
+- runFlow:
+    when:
+      visible: "Not Now"
+    commands:
+      - tapOn: "Not Now"
+      - waitForAnimationToEnd
+
+# Screenshot 2: Clean home after dismissals
+- takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-002
+
+# Scroll down to capture below-the-fold content
+- scroll
+- waitForAnimationToEnd
+- takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-003
+
+- scroll
+- waitForAnimationToEnd
+- takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-004
+
+# Navigate bottom tabs (most crypto apps use bottom tab bars)
+- runFlow:
+    when:
+      visible: "Markets"
+    commands:
+      - tapOn: "Markets"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-005
+
+- runFlow:
+    when:
+      visible: "Portfolio"
+    commands:
+      - tapOn: "Portfolio"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-006
+
+- runFlow:
+    when:
+      visible: "Trade"
+    commands:
+      - tapOn: "Trade"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-007
+
+- runFlow:
+    when:
+      visible: "Earn"
+    commands:
+      - tapOn: "Earn"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-008
+
+- runFlow:
+    when:
+      visible: "Settings"
+    commands:
+      - tapOn: "Settings"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-009
+
+- runFlow:
+    when:
+      visible: "Profile"
+    commands:
+      - tapOn: "Profile"
+      - waitForAnimationToEnd:
+          timeout: 5000
+      - takeScreenshot: ${OUTPUT_DIR}/${SLUG}-mobile-010

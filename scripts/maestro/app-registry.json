@@ -1,0 +1,45 @@
+{
+  "_comment": "Registry of native mobile apps for Maestro screenshot capture. appId is the bundle ID (iOS) or package name (Android).",
+  "coinbase": {
+    "name": "Coinbase",
+    "ios": "com.coinbase.Coinbase",
+    "android": "com.coinbase.android",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": true
+  },
+  "binance": {
+    "name": "Binance",
+    "ios": "com.czzhao.binance",
+    "android": "com.binance.dev",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": true
+  },
+  "kraken": {
+    "name": "Kraken",
+    "ios": "com.krakenfx.app",
+    "android": "com.kraken.trade",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": true
+  },
+  "metamask": {
+    "name": "MetaMask",
+    "ios": "io.metamask",
+    "android": "io.metamask",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": true
+  },
+  "phantom": {
+    "name": "Phantom",
+    "ios": "app.phantom",
+    "android": "app.phantom",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": true
+  },
+  "uniswap": {
+    "name": "Uniswap",
+    "ios": "com.uniswap.mobile",
+    "android": "com.uniswap.mobile",
+    "flow": "generic-app-flow.yaml",
+    "requiresAuth": false
+  }
+}

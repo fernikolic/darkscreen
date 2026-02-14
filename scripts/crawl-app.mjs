@@ -66,6 +66,9 @@ const { values: args } = parseArgs({
     "save-creds": { type: "boolean", default: false },
     "no-reauth": { type: "boolean", default: false },
     proxy: { type: "string" },
+    mobile: { type: "boolean", default: false },
+    tablet: { type: "boolean", default: false },
+    device: { type: "string" },
   },
   strict: false,
 });
@@ -81,8 +84,50 @@ const MAX_SCREENSHOTS = parseInt(args["max-screenshots"], 10) || 80;
 // Force US English locale for consistent screenshots regardless of machine location
 const BROWSER_LOCALE = "en-US";
 const BROWSER_TIMEZONE = "America/New_York";
-const BROWSER_USER_AGENT =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+
+// ─── Device presets ───────────────────────────────────────────────────
+
+const DEVICE_PRESETS = {
+  desktop: {
+    viewport: { width: 1440, height: 900 },
+    userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    deviceScaleFactor: 1,
+    isMobile: false,
+    hasTouch: false,
+  },
+  "iphone-15-pro": {
+    viewport: { width: 393, height: 852 },
+    userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+    deviceScaleFactor: 3,
+    isMobile: true,
+    hasTouch: true,
+  },
+  "pixel-8": {
+    viewport: { width: 412, height: 915 },
+    userAgent: "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+    deviceScaleFactor: 2.625,
+    isMobile: true,
+    hasTouch: true,
+  },
+  "ipad-pro": {
+    viewport: { width: 1024, height: 1366 },
+    userAgent: "Mozilla/5.0 (iPad; CPU OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+    deviceScaleFactor: 2,
+    isMobile: true,
+    hasTouch: true,
+  },
+};
+
+// Resolve which device profile to use
+function resolveDevice() {
+  if (args.device && DEVICE_PRESETS[args.device]) return { name: args.device, ...DEVICE_PRESETS[args.device] };
+  if (args.mobile) return { name: "iphone-15-pro", ...DEVICE_PRESETS["iphone-15-pro"] };
+  if (args.tablet) return { name: "ipad-pro", ...DEVICE_PRESETS["ipad-pro"] };
+  return { name: "desktop", ...DEVICE_PRESETS["desktop"] };
+}
+
+const ACTIVE_DEVICE = resolveDevice();
+const BROWSER_USER_AGENT = ACTIVE_DEVICE.userAgent;
 
 // ─── App loading (for --all and --slug without --url) ─────────────────
 
@@ -188,8 +233,10 @@ async function launchWithProfile(slug, opts = {}) {
   const launchOpts = {
     headless: !headed,
     args: ["--disable-blink-features=AutomationControlled"],
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
+    viewport: ACTIVE_DEVICE.viewport,
+    deviceScaleFactor: ACTIVE_DEVICE.deviceScaleFactor,
+    isMobile: ACTIVE_DEVICE.isMobile,
+    hasTouch: ACTIVE_DEVICE.hasTouch,
     userAgent: BROWSER_USER_AGENT,
     locale: BROWSER_LOCALE,
     timezoneId: BROWSER_TIMEZONE,
@@ -829,8 +876,10 @@ async function launchWithWallet() {
       `--load-extension=${METAMASK_EXT_DIR}`,
       "--disable-blink-features=AutomationControlled",
     ],
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
+    viewport: ACTIVE_DEVICE.viewport,
+    deviceScaleFactor: ACTIVE_DEVICE.deviceScaleFactor,
+    isMobile: ACTIVE_DEVICE.isMobile,
+    hasTouch: ACTIVE_DEVICE.hasTouch,
     userAgent: BROWSER_USER_AGENT,
     locale: BROWSER_LOCALE,
     timezoneId: BROWSER_TIMEZONE,
@@ -995,7 +1044,8 @@ async function capture(page, slug, opts = {}) {
   contentHashes.add(cHash);
 
   const idx = ++screenshotIdx;
-  const filename = `${slug}-raw-${String(idx).padStart(3, "0")}.png`;
+  const deviceSuffix = ACTIVE_DEVICE.name === "desktop" ? "" : `-${ACTIVE_DEVICE.name}`;
+  const filename = `${slug}-raw${deviceSuffix}-${String(idx).padStart(3, "0")}.png`;
   const filepath = resolve(SCREENSHOT_DIR, filename);
 
   await page.screenshot({ path: filepath, fullPage: false });
@@ -1096,7 +1146,7 @@ async function extractLinks(page, baseUrl) {
 // ─── Scroll and capture ─────────────────────────────────────────────
 
 async function scrollAndCapture(page, slug, label) {
-  const viewportH = 900;
+  const viewportH = ACTIVE_DEVICE.viewport.height;
   const totalH = await page.evaluate(() => document.body.scrollHeight).catch(() => 0);
 
   if (totalH <= viewportH * 1.3) return;
@@ -1527,7 +1577,7 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
   const hasAuth = isLoginApp ? hasProfile(slug) : hasSession(slug);
   const authMode = WALLET_MODE ? "WALLET" : isLoginApp ? "PROFILE" : hasAuth ? "SESSION" : "PUBLIC";
   console.log(`\n${"═".repeat(60)}`);
-  console.log(`  Crawling: ${slug} — ${startUrl} [${authMode}]`);
+  console.log(`  Crawling: ${slug} — ${startUrl} [${authMode}] [${ACTIVE_DEVICE.name}]`);
   console.log(`  Mode: Deterministic (zero API cost)`);
   console.log(`  Limits: ${MAX_PAGES} pages, ${MAX_SCREENSHOTS} screenshots`);
   console.log(`${"═".repeat(60)}\n`);
@@ -1569,8 +1619,10 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     browser = await chromium.launch(launchOpts);
 
     context = await browser.newContext({
-      viewport: { width: 1440, height: 900 },
-      deviceScaleFactor: 1,
+      viewport: ACTIVE_DEVICE.viewport,
+      deviceScaleFactor: ACTIVE_DEVICE.deviceScaleFactor,
+      isMobile: ACTIVE_DEVICE.isMobile,
+      hasTouch: ACTIVE_DEVICE.hasTouch,
       userAgent: BROWSER_USER_AGENT,
       locale: BROWSER_LOCALE,
       timezoneId: BROWSER_TIMEZONE,
@@ -1777,9 +1829,12 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
   await probeCommonPaths(page, slug, startUrl, visited, authenticated);
 
   // ── Save raw manifest ────────────────────────────────────────────
+  const deviceSuffix = ACTIVE_DEVICE.name === "desktop" ? "" : `-${ACTIVE_DEVICE.name}`;
   const rawManifest = {
     slug,
     url: startUrl,
+    device: ACTIVE_DEVICE.name,
+    viewport: ACTIVE_DEVICE.viewport,
     crawledAt: new Date().toISOString(),
     totalScreenshots: screenshots.length,
     pageCopy: landingPageCopy || null,
@@ -1788,7 +1843,7 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     screens: [...screenshots],
   };
 
-  const outPath = resolve(SCREENSHOT_DIR, `${slug}-raw.json`);
+  const outPath = resolve(SCREENSHOT_DIR, `${slug}-raw${deviceSuffix}.json`);
   writeFileSync(outPath, JSON.stringify(rawManifest, null, 2));
 
   if (browser) await browser.close();
@@ -1980,6 +2035,9 @@ async function main() {
     console.error("  --app-url <url>       Override authenticated app URL");
     console.error("  --check-auth          Check auth health without crawling");
     console.error("  --save-creds          Prompt to save credentials during login");
+    console.error("  --mobile              Emulate iPhone 15 Pro (393x852)");
+    console.error("  --tablet              Emulate iPad Pro (1024x1366)");
+    console.error("  --device <name>       Device preset (iphone-15-pro, pixel-8, ipad-pro)");
     console.error("  --no-reauth           Skip auto-relogin, crawl with whatever state");
     console.error("  --proxy <url>         Proxy server (e.g. http://us-proxy:8080)");
     console.error("  --max-pages <n>       Max pages to visit (default: 50, 100 with auth)");
