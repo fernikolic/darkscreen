@@ -20,7 +20,8 @@
     "archive": "node scripts/archive-screens.mjs",
     "archive:all": "node scripts/archive-screens.mjs --all",
     "diff": "node scripts/diff-screens.mjs",
-    "diff:all": "node scripts/diff-screens.mjs --all"
+    "diff:all": "node scripts/diff-screens.mjs --all",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name darkscreen --commit-dirty=true"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.74.0",

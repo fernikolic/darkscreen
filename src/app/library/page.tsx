@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   apps,
@@ -90,6 +90,17 @@ function LibraryContent() {
   const [activeLayer, setActiveLayer] = useState<IntelLayer | "All">(initialLayer);
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
+
+  // Sync URL params → state on client-side navigation (e.g. Header platform links)
+  useEffect(() => {
+    const p = searchParams.get("platform");
+    if (p) {
+      const match = PLATFORM_TYPES.find((pt) => pt.toLowerCase() === p.toLowerCase());
+      setActivePlatform(match || "All");
+    } else {
+      setActivePlatform("All");
+    }
+  }, [searchParams]);
 
   const filtered = apps.filter((app) => {
     if (activePlatform !== "All" && !app.platforms.includes(activePlatform)) return false;

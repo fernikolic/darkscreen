@@ -125,6 +125,8 @@ npm install && npm run dev
 ## Deploy
 
 ```bash
-npm run build
-# Output: out/ — deploy to Cloudflare Pages
+npm run deploy
+# Builds Next.js static export → out/, then deploys to Cloudflare Pages via wrangler
 ```
+
+**Important:** The `firebase-functions/` directory contains Firebase Cloud Functions (Stripe webhooks, etc.). It was renamed from `functions/` because Wrangler auto-detects any `functions/` directory as Cloudflare Pages Functions and tries to compile it, which fails. Do not rename it back to `functions/`.
