@@ -43,24 +43,15 @@ export function Header() {
 
         {/* Platform nav */}
         <div className="hidden items-center gap-0.5 md:flex ml-6">
-          <Link
-            href="/library"
-            className="rounded-lg px-3 py-1.5 text-body-sm text-text-primary transition-all duration-200 hover:bg-dark-card"
-          >
-            Web Apps
-          </Link>
-          <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
-            iOS
-            <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
-              Soon
-            </span>
-          </span>
-          <span className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-body-sm text-text-tertiary/50 cursor-default">
-            Android
-            <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
-              Soon
-            </span>
-          </span>
+          {(["Web", "Extension", "Desktop", "iOS", "Android"] as const).map((platform) => (
+            <Link
+              key={platform}
+              href={`/library?platform=${platform}`}
+              className="rounded-lg px-3 py-1.5 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+            >
+              {platform}
+            </Link>
+          ))}
         </div>
 
         {/* Desktop nav */}
@@ -178,26 +169,17 @@ export function Header() {
       {mobileOpen && (
         <div className="border-t border-dark-border/50 px-6 py-5 md:hidden">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-1 px-2 pb-2">
-              <Link
-                href="/library"
-                className="rounded-lg px-3 py-1.5 text-body-sm text-text-primary"
-                onClick={() => setMobileOpen(false)}
-              >
-                Web Apps
-              </Link>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
-                iOS
-                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
-                  Soon
-                </span>
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 text-body-sm text-text-tertiary/50">
-                Android
-                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-wider text-zinc-400">
-                  Soon
-                </span>
-              </span>
+            <div className="flex flex-wrap items-center gap-1 px-2 pb-2">
+              {(["Web", "Extension", "Desktop", "iOS", "Android"] as const).map((platform) => (
+                <Link
+                  key={platform}
+                  href={`/library?platform=${platform}`}
+                  className="rounded-lg px-3 py-1.5 text-body-sm text-text-secondary transition-colors hover:text-text-primary"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {platform}
+                </Link>
+              ))}
             </div>
             <div className="mb-1 h-px bg-dark-border/50" />
             <Link

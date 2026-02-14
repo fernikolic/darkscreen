@@ -9,10 +9,12 @@ import {
   type AppCategory,
   type FlowType,
   type ChainType,
+  type PlatformType,
   type SectionType,
   type StyleType,
   type IntelLayer,
   CHAIN_TYPES,
+  PLATFORM_TYPES,
   SECTION_TYPES,
   STYLE_TYPES,
   INTEL_LAYERS,
@@ -70,6 +72,16 @@ function LibraryContent() {
     return "All" as const;
   })();
 
+  const initialPlatform = (() => {
+    const p = searchParams.get("platform");
+    if (p) {
+      const match = PLATFORM_TYPES.find((pt) => pt.toLowerCase() === p.toLowerCase());
+      if (match) return match;
+    }
+    return "All" as const;
+  })();
+
+  const [activePlatform, setActivePlatform] = useState<PlatformType | "All">(initialPlatform);
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(initialCategory);
   const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
   const [activeChain, setActiveChain] = useState<ChainType | "All Chains">("All Chains");
@@ -80,6 +92,7 @@ function LibraryContent() {
   const [sortBy, setSortBy] = useState<SortOption>("newest");
 
   const filtered = apps.filter((app) => {
+    if (activePlatform !== "All" && !app.platforms.includes(activePlatform)) return false;
     if (activeLayer !== "All" && !app.screens.some((s) => getScreenLayer(s) === activeLayer)) return false;
     if (activeCategory !== "All" && app.category !== activeCategory) return false;
     if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow)) return false;
@@ -126,6 +139,23 @@ function LibraryContent() {
         <p className="mt-3 text-[14px] text-text-secondary">
           Screens and flows from {TOTAL_APPS}+ crypto products
         </p>
+      </div>
+
+      {/* Platform tabs */}
+      <div className="mb-8 flex flex-wrap gap-1">
+        {(["All", ...PLATFORM_TYPES] as const).map((platform) => (
+          <button
+            key={platform}
+            onClick={() => setActivePlatform(platform)}
+            className={`rounded-full px-4 py-2 text-[14px] font-medium transition-all ${
+              activePlatform === platform
+                ? "bg-white text-dark-bg"
+                : "bg-dark-card text-text-tertiary hover:bg-dark-border/50 hover:text-text-secondary"
+            }`}
+          >
+            {platform}
+          </button>
+        ))}
       </div>
 
       {/* Search */}
