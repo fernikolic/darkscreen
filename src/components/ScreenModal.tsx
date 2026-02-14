@@ -25,22 +25,41 @@ export function ScreenModal({
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showSave, setShowSave] = useState(false);
   const [copying, setCopying] = useState(false);
+  const [showEndSlide, setShowEndSlide] = useState(false);
   const { openPlayer } = useFlowPlayer();
   const canCopy = useClipboardSupport();
   const { showToast } = useToast();
   const currentIndex = flowScreens.findIndex(
-    (s) => s.appSlug === screen.appSlug && s.flow === screen.flow && s.step === screen.step
+    (s) =>
+      s.appSlug === screen.appSlug &&
+      s.flow === screen.flow &&
+      s.step === screen.step
   );
-  const hasPrev = currentIndex > 0;
-  const hasNext = currentIndex < flowScreens.length - 1;
+  const hasPrev = showEndSlide || currentIndex > 0;
+  const hasNext = !showEndSlide && currentIndex < flowScreens.length - 1;
+  const isLast = currentIndex === flowScreens.length - 1;
 
   const goPrev = useCallback(() => {
-    if (hasPrev) onNavigate(flowScreens[currentIndex - 1]);
-  }, [hasPrev, currentIndex, flowScreens, onNavigate]);
+    if (showEndSlide) {
+      setShowEndSlide(false);
+      return;
+    }
+    if (currentIndex > 0) onNavigate(flowScreens[currentIndex - 1]);
+  }, [showEndSlide, currentIndex, flowScreens, onNavigate]);
 
   const goNext = useCallback(() => {
-    if (hasNext) onNavigate(flowScreens[currentIndex + 1]);
-  }, [hasNext, currentIndex, flowScreens, onNavigate]);
+    if (showEndSlide) return;
+    if (isLast) {
+      setShowEndSlide(true);
+    } else {
+      onNavigate(flowScreens[currentIndex + 1]);
+    }
+  }, [showEndSlide, isLast, currentIndex, flowScreens, onNavigate]);
+
+  // Reset end slide when screen changes
+  useEffect(() => {
+    setShowEndSlide(false);
+  }, [screen]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -51,7 +70,7 @@ export function ScreenModal({
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
-      if (showSave) return; // don't navigate while save modal is open
+      if (showSave) return;
       if (e.key === "Escape") {
         e.preventDefault();
         onClose();
@@ -62,6 +81,13 @@ export function ScreenModal({
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose, goPrev, goNext, showSave]);
+
+  // Click-outside-to-close: detect clicks on the backdrop (outside content)
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
 
   return (
     <dialog
@@ -82,64 +108,74 @@ export function ScreenModal({
             </span>
             <span className="text-text-tertiary">/</span>
             <span className="font-mono text-[12px] text-text-tertiary">
-              Step {screen.step}
+              {showEndSlide
+                ? `${flowScreens.length} of ${flowScreens.length}`
+                : `Step ${screen.step}`}
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => {
-                onClose();
-                openPlayer(flowScreens, currentIndex);
-              }}
-              className="flex items-center gap-1.5 text-[13px] text-text-tertiary transition-colors hover:text-white"
-            >
-              <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
-                <polygon points="5,3 19,12 5,21" />
-              </svg>
-              Play
-            </button>
-            <Link
-              href={getScreenPath(screen)}
-              className="text-[13px] text-text-tertiary transition-colors hover:text-white"
-            >
-              Open
-            </Link>
-            {screen.image && (
-              <button
-                onClick={() => setShowSave(true)}
-                className="text-[13px] text-text-tertiary transition-colors hover:text-white"
-              >
-                Save
-              </button>
-            )}
-            {screen.image && canCopy && (
-              <button
-                onClick={async () => {
-                  if (copying) return;
-                  setCopying(true);
-                  try {
-                    await copyImageToClipboard(screen.image!);
-                    showToast("Copied to clipboard");
-                  } catch {
-                    showToast("Failed to copy", "error");
-                  } finally {
-                    setCopying(false);
-                  }
-                }}
-                disabled={copying}
-                className="text-[13px] text-text-tertiary transition-colors hover:text-white disabled:opacity-50"
-              >
-                {copying ? "Copying..." : "Copy"}
-              </button>
-            )}
-            {screen.image && (
-              <a
-                href={screen.image}
-                download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
-                className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
-              >
-                Download
-              </a>
+            {!showEndSlide && (
+              <>
+                <button
+                  onClick={() => {
+                    onClose();
+                    openPlayer(flowScreens, currentIndex);
+                  }}
+                  className="flex items-center gap-1.5 text-[13px] text-text-tertiary transition-colors hover:text-white"
+                >
+                  <svg
+                    className="h-3 w-3"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <polygon points="5,3 19,12 5,21" />
+                  </svg>
+                  Play
+                </button>
+                <Link
+                  href={getScreenPath(screen)}
+                  className="text-[13px] text-text-tertiary transition-colors hover:text-white"
+                >
+                  Open
+                </Link>
+                {screen.image && (
+                  <button
+                    onClick={() => setShowSave(true)}
+                    className="text-[13px] text-text-tertiary transition-colors hover:text-white"
+                  >
+                    Save
+                  </button>
+                )}
+                {screen.image && canCopy && (
+                  <button
+                    onClick={async () => {
+                      if (copying) return;
+                      setCopying(true);
+                      try {
+                        await copyImageToClipboard(screen.image!);
+                        showToast("Copied to clipboard");
+                      } catch {
+                        showToast("Failed to copy", "error");
+                      } finally {
+                        setCopying(false);
+                      }
+                    }}
+                    disabled={copying}
+                    className="text-[13px] text-text-tertiary transition-colors hover:text-white disabled:opacity-50"
+                  >
+                    {copying ? "Copying..." : "Copy"}
+                  </button>
+                )}
+                {screen.image && (
+                  <a
+                    href={screen.image}
+                    download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
+                    className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
+                  >
+                    Download
+                  </a>
+                )}
+              </>
             )}
             <button
               onClick={onClose}
@@ -150,22 +186,54 @@ export function ScreenModal({
           </div>
         </div>
 
-        {/* Main content */}
-        <div className="flex flex-1 items-center justify-center overflow-hidden p-6">
+        {/* Main content — click outside image to close */}
+        <div
+          className="flex flex-1 items-center justify-center overflow-hidden p-6"
+          onClick={handleBackdropClick}
+        >
           {/* Prev arrow */}
           <button
             onClick={goPrev}
             disabled={!hasPrev}
             className="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center border border-dark-border text-text-tertiary transition-colors hover:border-text-tertiary hover:text-text-primary disabled:opacity-20 disabled:hover:border-dark-border disabled:hover:text-text-tertiary"
           >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
 
-          {/* Screen */}
+          {/* Screen or end slide */}
           <div className="flex max-h-full max-w-4xl flex-1 flex-col items-center">
-            {screen.image ? (
+            {showEndSlide ? (
+              <div className="flex aspect-[16/10] w-full max-w-3xl flex-col items-center justify-center border border-dark-border bg-dark-card">
+                <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+                  End of flow
+                </p>
+                <p className="font-heading text-xl font-bold text-text-primary">
+                  Want to see more?
+                </p>
+                <p className="mt-3 max-w-sm text-center text-[14px] leading-relaxed text-text-secondary">
+                  Get full access to every screen, flow, and update across{" "}
+                  {screen.appName} and 100+ other crypto products.
+                </p>
+                <Link
+                  href="/#pricing"
+                  className="mt-6 inline-flex items-center gap-2 border border-white/60 bg-white/10 px-6 py-3 text-[13px] font-medium text-white transition-colors hover:bg-white/20"
+                >
+                  Upgrade to Pro
+                </Link>
+              </div>
+            ) : screen.image ? (
               <div className="relative aspect-[16/10] w-full max-w-3xl overflow-hidden border border-dark-border">
                 <Image
                   src={screen.image}
@@ -188,22 +256,34 @@ export function ScreenModal({
                 </div>
               </div>
             )}
-            <div className="mt-4 text-center">
-              <p className="text-[14px] text-text-primary">{screen.label}</p>
-              <p className="mt-1 font-mono text-[11px] text-text-tertiary">
-                {currentIndex + 1} of {flowScreens.length} in {screen.flow}
-              </p>
-            </div>
+            {!showEndSlide && (
+              <div className="mt-4 text-center">
+                <p className="text-[14px] text-text-primary">{screen.label}</p>
+                <p className="mt-1 font-mono text-[11px] text-text-tertiary">
+                  {currentIndex + 1} of {flowScreens.length} in {screen.flow}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Next arrow */}
           <button
             onClick={goNext}
-            disabled={!hasNext}
+            disabled={showEndSlide}
             className="ml-4 flex h-10 w-10 flex-shrink-0 items-center justify-center border border-dark-border text-text-tertiary transition-colors hover:border-text-tertiary hover:text-text-primary disabled:opacity-20 disabled:hover:border-dark-border disabled:hover:text-text-tertiary"
           >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>
