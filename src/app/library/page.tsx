@@ -18,6 +18,8 @@ import {
 import { AppCard } from "@/components/AppCard";
 import { BookmarkButton } from "@/components/BookmarkButton";
 
+type PlatformFilter = PlatformType | "All" | "Mobile";
+
 type SortOption = "newest" | "most-screens" | "a-z" | "z-a";
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
@@ -77,20 +79,21 @@ function LibraryContent() {
     return [] as StyleType[];
   })();
 
-  const initialPlatform = (() => {
+  const initialPlatform = ((): PlatformFilter => {
     const p = searchParams.get("platform");
     if (p) {
+      if (p.toLowerCase() === "mobile") return "Mobile";
       const match = PLATFORM_TYPES.find(
         (pt) => pt.toLowerCase() === p.toLowerCase()
       );
       if (match) return match;
     }
-    return "All" as const;
+    return "All";
   })();
 
   const initialSearch = searchParams.get("q") || "";
 
-  const [activePlatform, setActivePlatform] = useState<PlatformType | "All">(
+  const [activePlatform, setActivePlatform] = useState<PlatformFilter>(
     initialPlatform
   );
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(
@@ -109,10 +112,14 @@ function LibraryContent() {
   useEffect(() => {
     const p = searchParams.get("platform");
     if (p) {
-      const match = PLATFORM_TYPES.find(
-        (pt) => pt.toLowerCase() === p.toLowerCase()
-      );
-      setActivePlatform(match || "All");
+      if (p.toLowerCase() === "mobile") {
+        setActivePlatform("Mobile");
+      } else {
+        const match = PLATFORM_TYPES.find(
+          (pt) => pt.toLowerCase() === p.toLowerCase()
+        );
+        setActivePlatform(match || "All");
+      }
     }
     const q = searchParams.get("q");
     if (q !== null) setSearch(q);
@@ -151,7 +158,10 @@ function LibraryContent() {
   };
 
   const filtered = apps.filter((app) => {
-    if (activePlatform !== "All") {
+    if (activePlatform === "Mobile") {
+      if (!app.platforms.includes("iOS") && !app.platforms.includes("Android"))
+        return false;
+    } else if (activePlatform !== "All") {
       if (!app.platforms.includes(activePlatform)) return false;
       if (activePlatform !== "Web" && app.platforms.includes("Web"))
         return false;
@@ -298,7 +308,7 @@ function LibraryContent() {
       <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-dark-border/50 pt-5">
         {/* Platform pills */}
         <div className="flex items-center gap-0.5 rounded-lg bg-dark-card p-1">
-          {PLATFORM_TYPES.map((platform) => (
+          {(["Web", "Mobile"] as const).map((platform) => (
             <button
               key={platform}
               onClick={() =>

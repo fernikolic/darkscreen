@@ -31,6 +31,22 @@ export function Header() {
             </span>
           </Link>
 
+          {/* Nav tabs */}
+          <div className="hidden items-center gap-1 md:flex">
+            <Link
+              href="/library?platform=Web"
+              className="px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+            >
+              Web
+            </Link>
+            <Link
+              href="/library?platform=Mobile"
+              className="px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+            >
+              Mobile
+            </Link>
+          </div>
+
           {/* Search trigger */}
           <button
             onClick={() => setSearchOpen(true)}
