@@ -31,20 +31,56 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Nav tabs */}
-          <div className="hidden items-center gap-1 md:flex">
-            <Link
-              href="/library?platform=Web"
-              className="px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
-            >
-              Web
-            </Link>
-            <Link
-              href="/library?platform=Mobile"
-              className="px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
-            >
-              Mobile
-            </Link>
+          {/* Nav tabs with sub-nav */}
+          <div className="hidden items-center gap-0.5 md:flex">
+            {/* Web dropdown */}
+            <div className="group relative">
+              <Link
+                href="/library?platform=Web"
+                className="flex items-center gap-1 px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+              >
+                Web
+                <svg className="h-3 w-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+                <div className="rounded-lg border border-dark-border/80 bg-[#1a1a1d] p-1 shadow-xl">
+                  <Link href="/library?platform=Web" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
+                    Websites
+                  </Link>
+                  <Link href="/library?platform=Desktop" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
+                    Desktop Apps
+                  </Link>
+                  <Link href="/library?platform=Extension" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
+                    Extensions
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile dropdown */}
+            <div className="group relative">
+              <Link
+                href="/library?platform=Mobile"
+                className="flex items-center gap-1 px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+              >
+                Mobile
+                <svg className="h-3 w-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+                <div className="rounded-lg border border-dark-border/80 bg-[#1a1a1d] p-1 shadow-xl">
+                  <Link href="/library?platform=iOS" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
+                    iOS
+                  </Link>
+                  <Link href="/library?platform=Android" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
+                    Android
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Search trigger */}
@@ -184,20 +220,13 @@ export function Header() {
         {mobileOpen && (
           <div className="border-t border-dark-border/50 px-6 py-4 md:hidden">
             <div className="flex flex-col gap-1">
-              <Link
-                href="/library"
-                className="py-2.5 text-[14px] text-text-secondary hover:text-text-primary"
-                onClick={() => setMobileOpen(false)}
-              >
-                Library
-              </Link>
-              <Link
-                href="/changes"
-                className="py-2.5 text-[14px] text-text-secondary hover:text-text-primary"
-                onClick={() => setMobileOpen(false)}
-              >
-                Changes
-              </Link>
+              <span className="pt-1 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Web</span>
+              <Link href="/library?platform=Web" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Websites</Link>
+              <Link href="/library?platform=Desktop" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Desktop Apps</Link>
+              <Link href="/library?platform=Extension" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Extensions</Link>
+              <span className="pt-3 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Mobile</span>
+              <Link href="/library?platform=iOS" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>iOS</Link>
+              <Link href="/library?platform=Android" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Android</Link>
               {!loading && !user && (
                 <button
                   onClick={() => {
