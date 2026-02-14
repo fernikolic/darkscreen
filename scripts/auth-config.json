@@ -1,0 +1,41 @@
+{
+  "binance": {
+    "loginUrl": "https://accounts.binance.com/en/login",
+    "selectors": {
+      "username": "#login_input",
+      "password": "#login_password",
+      "submit": "#click_login_submit"
+    },
+    "successIndicators": [
+      "[data-testid='header-user-menu']",
+      "a[href='/en/my/dashboard']",
+      "a[href*='/my/']"
+    ]
+  },
+  "coinbase": {
+    "loginUrl": "https://login.coinbase.com/signin",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href='/dashboard']",
+      "[data-testid='portfolio-balance']",
+      "a[href*='/settings']"
+    ]
+  },
+  "kraken": {
+    "loginUrl": "https://www.kraken.com/sign-in",
+    "selectors": {
+      "username": "input[name='username']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/u/trade']",
+      "a[href*='/u/funding']",
+      "[data-testid='user-menu']"
+    ]
+  }
+}

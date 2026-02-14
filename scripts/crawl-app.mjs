@@ -27,13 +27,17 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { parseArgs } from "util";
-import { createHash } from "crypto";
+import { createHash, randomBytes, createCipheriv, createDecipheriv } from "crypto";
 import { createInterface } from "readline";
+import { execFileSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, "..");
 const SCREENSHOT_DIR = resolve(PROJECT_ROOT, "public/screenshots");
 const SESSIONS_DIR = resolve(__dirname, "sessions");
+const PROFILES_DIR = resolve(__dirname, "profiles");
+const CREDENTIALS_DIR = resolve(__dirname, "credentials");
+const AUTH_CONFIG_PATH = resolve(__dirname, "auth-config.json");
 const WALLETS_DIR = resolve(__dirname, "wallets");
 const METAMASK_PROFILE = resolve(WALLETS_DIR, "metamask-profile");
 const METAMASK_EXT_DIR = resolve(WALLETS_DIR, "metamask-extension");
@@ -53,6 +57,9 @@ const { values: args } = parseArgs({
     wallet: { type: "boolean", default: false },
     "max-pages": { type: "string", default: "50" },
     "max-screenshots": { type: "string", default: "80" },
+    "check-auth": { type: "boolean", default: false },
+    "save-creds": { type: "boolean", default: false },
+    "no-reauth": { type: "boolean", default: false },
   },
   strict: false,
 });
@@ -147,6 +154,368 @@ function waitForEnter(prompt) {
       res();
     });
   });
+}
+
+// ─── Persistent profile management (for login apps) ───────────────────
+
+function profilePath(slug) {
+  return resolve(PROFILES_DIR, slug);
+}
+function hasProfile(slug) {
+  return existsSync(profilePath(slug));
+}
+
+async function launchWithProfile(slug, opts = {}) {
+  const profDir = profilePath(slug);
+  mkdirSync(profDir, { recursive: true });
+
+  const headed = opts.headed || HEADED;
+  console.log(`  Using persistent profile: ${profDir}${headed ? " (headed)" : ""}`);
+
+  const context = await chromium.launchPersistentContext(profDir, {
+    headless: !headed,
+    args: ["--disable-blink-features=AutomationControlled"],
+    viewport: { width: 1440, height: 900 },
+    deviceScaleFactor: 1,
+    userAgent:
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    ignoreHTTPSErrors: true,
+  });
+
+  return { context, browser: null };
+}
+
+function loadAuthConfig(slug) {
+  if (!existsSync(AUTH_CONFIG_PATH)) return {};
+  try {
+    const all = JSON.parse(readFileSync(AUTH_CONFIG_PATH, "utf-8"));
+    return all[slug] || {};
+  } catch {
+    return {};
+  }
+}
+
+// ─── Credential storage ───────────────────────────────────────────────
+
+function credentialPath(slug) {
+  return resolve(CREDENTIALS_DIR, `${slug}.json`);
+}
+
+function loadCredentials(slug) {
+  const p = credentialPath(slug);
+  if (!existsSync(p)) return null;
+  try {
+    const raw = readFileSync(p, "utf-8");
+    const data = JSON.parse(raw);
+    if (data.encrypted && process.env.DARKSCREEN_CRED_KEY) {
+      return decryptCredentials(data);
+    }
+    if (data.encrypted) {
+      console.log("  ⚠ Credentials are encrypted but DARKSCREEN_CRED_KEY not set");
+      return null;
+    }
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function saveCredentials(slug, creds) {
+  mkdirSync(CREDENTIALS_DIR, { recursive: true });
+  const key = process.env.DARKSCREEN_CRED_KEY;
+  if (key) {
+    const encrypted = encryptCredentials(creds, key);
+    writeFileSync(credentialPath(slug), JSON.stringify(encrypted, null, 2));
+    console.log("  Credentials saved (encrypted)");
+  } else {
+    console.log("  ⚠ DARKSCREEN_CRED_KEY not set — saving credentials in plaintext");
+    writeFileSync(credentialPath(slug), JSON.stringify({ ...creds, encrypted: false }, null, 2));
+    console.log("  Credentials saved");
+  }
+}
+
+function encryptCredentials(creds, key) {
+  const derivedKey = createHash("sha256").update(key).digest();
+  const iv = randomBytes(16);
+  const cipher = createCipheriv("aes-256-gcm", derivedKey, iv);
+  const plaintext = JSON.stringify(creds);
+  let encrypted = cipher.update(plaintext, "utf8", "hex");
+  encrypted += cipher.final("hex");
+  const tag = cipher.getAuthTag().toString("hex");
+  return { encrypted: true, iv: iv.toString("hex"), tag, data: encrypted };
+}
+
+function decryptCredentials(encData) {
+  const key = process.env.DARKSCREEN_CRED_KEY;
+  const derivedKey = createHash("sha256").update(key).digest();
+  const decipher = createDecipheriv("aes-256-gcm", derivedKey, Buffer.from(encData.iv, "hex"));
+  decipher.setAuthTag(Buffer.from(encData.tag, "hex"));
+  let decrypted = decipher.update(encData.data, "hex", "utf8");
+  decrypted += decipher.final("utf8");
+  return JSON.parse(decrypted);
+}
+
+// ─── Auth health check ────────────────────────────────────────────────
+
+async function checkAuthHealth(page, slug, authConfig = {}) {
+  const url = page.url();
+
+  // Check 1: URL contains login/signin path → session expired
+  const loginPaths = ["/login", "/signin", "/sign-in", "/auth", "/accounts/login"];
+  for (const lp of loginPaths) {
+    if (url.toLowerCase().includes(lp)) {
+      return { authenticated: false, reason: `Redirected to login page: ${url}` };
+    }
+  }
+
+  // Check 2: Login form visible on current page
+  const loginFormVisible = await page.locator('input[type="password"]').isVisible({ timeout: 2000 }).catch(() => false);
+  if (loginFormVisible) {
+    return { authenticated: false, reason: "Login form visible (password field detected)" };
+  }
+
+  // Check 3: Per-app success indicators from auth-config.json
+  if (authConfig.successIndicators?.length > 0) {
+    for (const selector of authConfig.successIndicators) {
+      const found = await page.locator(selector).isVisible({ timeout: 3000 }).catch(() => false);
+      if (found) {
+        return { authenticated: true };
+      }
+    }
+    return { authenticated: false, reason: "No success indicators found" };
+  }
+
+  // Check 4: Generic authenticated UI elements
+  const authIndicators = [
+    '[data-testid="user-menu"]',
+    '[data-testid="account-menu"]',
+    'button:has-text("Deposit")',
+    'button:has-text("Withdraw")',
+    'a:has-text("Portfolio")',
+    'a:has-text("Dashboard")',
+    '[class*="avatar"]',
+    '[class*="user-icon"]',
+    '[class*="account"]',
+  ];
+
+  for (const selector of authIndicators) {
+    const found = await page.locator(selector).first().isVisible({ timeout: 1000 }).catch(() => false);
+    if (found) {
+      return { authenticated: true };
+    }
+  }
+
+  // If no strong signal either way, assume OK (profile may have valid cookies)
+  return { authenticated: true, reason: "No login redirect detected (assuming authenticated)" };
+}
+
+// ─── Auto-relogin ─────────────────────────────────────────────────────
+
+async function attemptReauth(context, page, slug, authConfig = {}) {
+  const creds = loadCredentials(slug);
+  if (!creds || !creds.username || !creds.password) {
+    console.log("  No stored credentials — skipping auto-relogin");
+    return false;
+  }
+
+  console.log("  Attempting auto-relogin...");
+
+  // Navigate to login URL if specified
+  if (authConfig.loginUrl) {
+    try {
+      await page.goto(authConfig.loginUrl, { waitUntil: "networkidle", timeout: 15000 });
+      await sleep(2000);
+    } catch {}
+  }
+
+  // Generic username/email selectors (per-app override takes priority)
+  const userSelectors = authConfig.selectors?.username
+    ? [authConfig.selectors.username]
+    : ['input[type="email"]', 'input[name="email"]', 'input[name="username"]', 'input[name="login"]', 'input[autocomplete="username"]'];
+
+  const passSelectors = authConfig.selectors?.password
+    ? [authConfig.selectors.password]
+    : ['input[type="password"]', 'input[name="password"]'];
+
+  const submitSelectors = authConfig.selectors?.submit
+    ? [authConfig.selectors.submit]
+    : ['button[type="submit"]', 'button:has-text("Log In")', 'button:has-text("Login")', 'button:has-text("Sign In")', 'button:has-text("Sign in")', 'button:has-text("Continue")'];
+
+  // Fill username
+  let userFilled = false;
+  for (const sel of userSelectors) {
+    try {
+      const el = page.locator(sel).first();
+      if (await el.isVisible({ timeout: 2000 })) {
+        await el.fill(creds.username);
+        userFilled = true;
+        break;
+      }
+    } catch {}
+  }
+  if (!userFilled) {
+    console.log("  Could not find username field");
+    return false;
+  }
+
+  // Check for CAPTCHA before proceeding
+  const captchaVisible = await page.locator('iframe[src*="captcha"], iframe[src*="recaptcha"], [class*="captcha"], [id*="captcha"]').first().isVisible({ timeout: 1000 }).catch(() => false);
+  if (captchaVisible) {
+    console.log("  CAPTCHA detected — cannot auto-login");
+    return false;
+  }
+
+  // Try to fill password on same page (single-step login)
+  let passFilled = false;
+  for (const sel of passSelectors) {
+    try {
+      const el = page.locator(sel).first();
+      if (await el.isVisible({ timeout: 1000 })) {
+        await el.fill(creds.password);
+        passFilled = true;
+        break;
+      }
+    } catch {}
+  }
+
+  // If no password field, might be two-step login — submit username first
+  if (!passFilled) {
+    for (const sel of submitSelectors) {
+      try {
+        const el = page.locator(sel).first();
+        if (await el.isVisible({ timeout: 1000 })) {
+          await el.click();
+          await sleep(3000);
+          break;
+        }
+      } catch {}
+    }
+
+    // Now look for password field on second step
+    for (const sel of passSelectors) {
+      try {
+        const el = page.locator(sel).first();
+        if (await el.isVisible({ timeout: 3000 })) {
+          await el.fill(creds.password);
+          passFilled = true;
+          break;
+        }
+      } catch {}
+    }
+  }
+
+  if (!passFilled) {
+    console.log("  Could not find password field");
+    return false;
+  }
+
+  // Submit
+  for (const sel of submitSelectors) {
+    try {
+      const el = page.locator(sel).first();
+      if (await el.isVisible({ timeout: 1000 })) {
+        await el.click();
+        break;
+      }
+    } catch {}
+  }
+
+  await sleep(5000);
+
+  // Check for MFA prompt
+  const mfaVisible = await page.locator('input[name*="otp"], input[name*="mfa"], input[name*="2fa"], input[placeholder*="code"], input[autocomplete="one-time-code"]').first().isVisible({ timeout: 2000 }).catch(() => false);
+  if (mfaVisible) {
+    console.log("  MFA/2FA prompt detected — cannot auto-complete");
+    return false;
+  }
+
+  // Verify login succeeded
+  const health = await checkAuthHealth(page, slug, authConfig);
+  if (health.authenticated) {
+    console.log("  Auto-relogin succeeded!");
+    return true;
+  }
+
+  console.log(`  Auto-relogin failed: ${health.reason}`);
+  return false;
+}
+
+// ─── Human-in-the-loop fallback ───────────────────────────────────────
+
+async function humanInTheLoop(context, page, slug, targetUrl) {
+  console.log("\n  Manual login required. Opening headed browser...");
+
+  // Close the headless context — profile is persisted on disk
+  await context.close();
+
+  // Re-open same profile in headed mode
+  const { context: headedCtx } = await launchWithProfile(slug, { headed: true });
+  const headedPage = headedCtx.pages()[0] || await headedCtx.newPage();
+
+  try {
+    await headedPage.goto(targetUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+  } catch {}
+
+  // macOS desktop notification
+  try {
+    execFileSync("osascript", ["-e", `display notification "Login required for ${slug}" with title "Darkscreen Crawler" sound name "Ping"`]);
+  } catch {}
+
+  console.log("  Browser opened — please log in manually.");
+  console.log("  Waiting for successful authentication (5 min timeout)...\n");
+
+  // Poll for auth success
+  const authConfig = loadAuthConfig(slug);
+  const deadline = Date.now() + 5 * 60 * 1000;
+  let authenticated = false;
+
+  while (Date.now() < deadline) {
+    await sleep(3000);
+    try {
+      const health = await checkAuthHealth(headedPage, slug, authConfig);
+      if (health.authenticated) {
+        // Double-check it's not a false positive from the login page itself
+        const url = headedPage.url();
+        const onLogin = ["/login", "/signin", "/sign-in", "/auth"].some((p) => url.toLowerCase().includes(p));
+        if (!onLogin) {
+          authenticated = true;
+          break;
+        }
+      }
+    } catch {}
+  }
+
+  if (!authenticated) {
+    console.log("  Timeout — manual login not detected. Skipping this app.");
+    await headedCtx.close();
+    return null;
+  }
+
+  console.log("  Login detected! Closing headed browser...");
+
+  // Prompt to save credentials for future auto-relogin
+  if (args["save-creds"]) {
+    try {
+      const rl = createInterface({ input: process.stdin, output: process.stdout });
+      const answer = await new Promise((res) => rl.question("  Save credentials for auto-relogin? (y/N): ", res));
+      rl.close();
+      if (answer.toLowerCase() === "y") {
+        const rl2 = createInterface({ input: process.stdin, output: process.stdout });
+        const username = await new Promise((res) => rl2.question("  Username/email: ", res));
+        const password = await new Promise((res) => rl2.question("  Password: ", res));
+        rl2.close();
+        saveCredentials(slug, { username, password });
+      }
+    } catch {}
+  }
+
+  // Close headed context (profile auto-persists)
+  await headedCtx.close();
+  await sleep(1000);
+
+  // Re-open headless for crawling
+  const { context: crawlCtx } = await launchWithProfile(slug);
+  return crawlCtx;
 }
 
 // ─── Wallet launch (MetaMask persistent context) ──────────────────────
@@ -728,21 +1097,21 @@ async function connectWallet(page, slug) {
 
 // ─── Main crawl function ─────────────────────────────────────────────
 
-async function crawlApp(slug, startUrl) {
-  const hasAuth = hasSession(slug);
-  const authMode = WALLET_MODE ? "WALLET" : hasAuth ? "SESSION" : "PUBLIC";
+async function crawlApp(slug, startUrl, appAuthType = "public") {
+  const isLoginApp = appAuthType === "login";
+  const hasAuth = isLoginApp ? hasProfile(slug) : hasSession(slug);
+  const authMode = WALLET_MODE ? "WALLET" : isLoginApp ? "PROFILE" : hasAuth ? "SESSION" : "PUBLIC";
   console.log(`\n${"═".repeat(60)}`);
   console.log(`  Crawling: ${slug} — ${startUrl} [${authMode}]`);
   console.log(`  Mode: Deterministic (zero API cost)`);
   console.log(`  Limits: ${MAX_PAGES} pages, ${MAX_SCREENSHOTS} screenshots`);
   console.log(`${"═".repeat(60)}\n`);
 
-  // Warn about stale sessions
-  if (hasAuth && !WALLET_MODE) {
-    const age = sessionAge(slug);
-    if (age > 24) {
-      console.log(`  ⚠ Session is ${Math.round(age)}h old — consider --relogin if auth fails`);
-    }
+  // Legacy session deprecation warning
+  if (isLoginApp && hasSession(slug)) {
+    console.log("  ⚠ Legacy session file detected. Persistent profiles are now used instead.");
+    console.log(`    Old session: ${sessionPath(slug)}`);
+    console.log("    You can delete it — profile-based auth is more reliable.\n");
   }
 
   mkdirSync(SCREENSHOT_DIR, { recursive: true });
@@ -757,9 +1126,15 @@ async function crawlApp(slug, startUrl) {
     const result = await launchWithWallet();
     context = result.context;
     browser = result.browser;
-    // Persistent context already has pages — use the first or create one
+    page = context.pages()[0] || await context.newPage();
+  } else if (isLoginApp) {
+    // Login apps: use persistent profile (cookies, IndexedDB, etc. survive)
+    const result = await launchWithProfile(slug);
+    context = result.context;
+    browser = result.browser;
     page = context.pages()[0] || await context.newPage();
   } else {
+    // Public apps: ephemeral browser
     browser = await chromium.launch({
       headless: !HEADED,
       args: ["--disable-blink-features=AutomationControlled"],
@@ -780,8 +1155,8 @@ async function crawlApp(slug, startUrl) {
 
   const visited = new Set();
 
-  // Load session if available (non-wallet mode)
-  if (hasAuth && !WALLET_MODE) {
+  // Load legacy session cookies for non-login, non-wallet apps that have sessions
+  if (hasSession(slug) && !WALLET_MODE && !isLoginApp) {
     const session = JSON.parse(readFileSync(sessionPath(slug), "utf-8"));
     if (session.cookies?.length > 0) await context.addCookies(session.cookies);
   }
@@ -804,8 +1179,48 @@ async function crawlApp(slug, startUrl) {
   visited.add(startUrl);
   visited.add(new URL(startUrl).origin + new URL(startUrl).pathname);
 
-  // Inject session storage after navigation
-  if (hasAuth) {
+  // Auth health check + recovery cascade for login apps
+  if (isLoginApp && hasProfile(slug) && !args["no-reauth"]) {
+    const authConfig = loadAuthConfig(slug);
+    const health = await checkAuthHealth(page, slug, authConfig);
+
+    if (!health.authenticated) {
+      console.log(`  ⚠ Auth check failed: ${health.reason}`);
+
+      // Recovery cascade: auto-relogin → human-in-the-loop → skip
+      let recovered = false;
+
+      // Step 1: Try auto-relogin
+      recovered = await attemptReauth(context, page, slug, authConfig);
+
+      // Step 2: Human-in-the-loop fallback
+      if (!recovered) {
+        const newCtx = await humanInTheLoop(context, page, slug, startUrl);
+        if (newCtx) {
+          context = newCtx;
+          page = context.pages()[0] || await context.newPage();
+          page.setDefaultTimeout(10000);
+          try {
+            await page.goto(startUrl, { waitUntil: "networkidle", timeout: 30000 });
+            await sleep(2000);
+          } catch {}
+          recovered = true;
+        }
+      }
+
+      if (!recovered) {
+        console.log(`  Skipping ${slug} — could not authenticate.`);
+        if (browser) await browser.close();
+        else await context.close();
+        return null;
+      }
+    } else {
+      console.log("  Auth check passed");
+    }
+  }
+
+  // Legacy session storage injection for non-profile apps
+  if (hasSession(slug) && !WALLET_MODE && !isLoginApp) {
     try {
       await loadSession(context, page, slug);
       await page.reload({ waitUntil: "networkidle", timeout: 15000 });
@@ -901,7 +1316,7 @@ async function crawlApp(slug, startUrl) {
 
   // ── Phase 5: Common paths ────────────────────────────────────────
   console.log("\nPhase 5: Common paths");
-  const authenticated = WALLET_MODE || hasAuth;
+  const authenticated = WALLET_MODE || isLoginApp || hasSession(slug);
   await probeCommonPaths(page, slug, startUrl, visited, authenticated);
 
   // ── Save raw manifest ────────────────────────────────────────────
@@ -933,30 +1348,38 @@ async function crawlApp(slug, startUrl) {
 
 async function loginFlow(slug, startUrl, crawlUrl) {
   console.log(`\n  Login mode: ${slug} — ${startUrl}`);
-  console.log("  Browser will open. Log in manually, then press Enter.\n");
+  console.log("  Browser will open with persistent profile. Log in manually, then press Enter.\n");
 
-  const browser = await chromium.launch({
-    headless: false,
-    args: ["--disable-blink-features=AutomationControlled"],
-  });
-  const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    ignoreHTTPSErrors: true,
-  });
-  const page = await context.newPage();
+  // Use persistent profile — all cookies, IndexedDB, service workers auto-persist
+  const { context } = await launchWithProfile(slug, { headed: true });
+  const page = context.pages()[0] || await context.newPage();
   await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
 
-  await waitForEnter(">> Log in to the app, then press ENTER to save session and start crawling... ");
-  await saveSession(context, page, slug);
-  await browser.close();
-  console.log("  Session saved! Starting crawl...\n");
+  await waitForEnter(">> Log in to the app, then press ENTER to start crawling... ");
 
-  // Immediately start crawling with the saved session
+  // Prompt to save credentials for future auto-relogin
+  if (args["save-creds"]) {
+    try {
+      const rl = createInterface({ input: process.stdin, output: process.stdout });
+      const answer = await new Promise((res) => rl.question("  Save credentials for auto-relogin? (y/N): ", res));
+      rl.close();
+      if (answer.toLowerCase() === "y") {
+        const rl2 = createInterface({ input: process.stdin, output: process.stdout });
+        const username = await new Promise((res) => rl2.question("  Username/email: ", res));
+        const password = await new Promise((res) => rl2.question("  Password: ", res));
+        rl2.close();
+        saveCredentials(slug, { username, password });
+      }
+    } catch {}
+  }
+
+  // Close headed context — profile auto-persists on close
+  await context.close();
+  console.log("  Profile saved! Starting crawl...\n");
+
+  // Re-open headless for crawling
   const targetUrl = crawlUrl || startUrl;
-  await crawlApp(slug, targetUrl);
+  await crawlApp(slug, targetUrl, "login");
 }
 
 // ─── Entry point ─────────────────────────────────────────────────────
@@ -965,6 +1388,36 @@ async function main() {
   // Resolve app data from apps.ts if slug is provided
   const allApps = loadApps();
   const appData = args.slug ? allApps.find((a) => a.slug === args.slug) : null;
+  const appAuthType = appData?.authType || "public";
+
+  // --check-auth: diagnostic mode — check auth health without crawling
+  if (args["check-auth"]) {
+    if (!args.slug) {
+      console.error("Usage: node scripts/crawl-app.mjs --check-auth --slug <slug>");
+      process.exit(1);
+    }
+    if (!hasProfile(args.slug)) {
+      console.log(`  No profile exists for ${args.slug}. Run --login first.`);
+      process.exit(0);
+    }
+    const { context } = await launchWithProfile(args.slug);
+    const page = context.pages()[0] || await context.newPage();
+    const checkUrl = args["app-url"] || appData?.appUrl || args.url || appData?.url;
+    if (!checkUrl) {
+      console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
+      process.exit(1);
+    }
+    try {
+      await page.goto(checkUrl, { waitUntil: "networkidle", timeout: 30000 });
+      await sleep(2000);
+    } catch {}
+    const authConfig = loadAuthConfig(args.slug);
+    const health = await checkAuthHealth(page, args.slug, authConfig);
+    console.log(`  Auth health for ${args.slug}: ${health.authenticated ? "AUTHENTICATED" : "NOT AUTHENTICATED"}`);
+    if (health.reason) console.log(`  Reason: ${health.reason}`);
+    await context.close();
+    process.exit(0);
+  }
 
   // --login or --relogin: open browser for manual login, then crawl
   if (args.login || args.relogin) {
@@ -972,17 +1425,16 @@ async function main() {
       console.error("Usage: node scripts/crawl-app.mjs --login --slug <slug> [--url <url>] [--app-url <url>]");
       process.exit(1);
     }
-    // Skip login if session exists and not --relogin
-    if (args.login && !args.relogin && hasSession(args.slug)) {
-      const age = sessionAge(args.slug);
-      console.log(`  Session exists (${Math.round(age)}h old). Use --relogin to force new login.`);
-      console.log("  Starting crawl with existing session...\n");
+    // Skip login if profile exists and not --relogin
+    if (args.login && !args.relogin && hasProfile(args.slug)) {
+      console.log(`  Profile exists for ${args.slug}. Use --relogin to force new login.`);
+      console.log("  Starting crawl with existing profile...\n");
       const crawlUrl = args["app-url"] || (appData && appData.appUrl) || args.url || (appData && appData.url);
       if (!crawlUrl) {
         console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
         process.exit(1);
       }
-      return crawlApp(args.slug, crawlUrl);
+      return crawlApp(args.slug, crawlUrl, "login");
     }
 
     const loginUrl = args.url || (appData && appData.url);
@@ -995,19 +1447,61 @@ async function main() {
   }
 
   if (args.all) {
-    console.log(`Crawling all ${allApps.length} apps...`);
+    console.log(`\nCrawling all ${allApps.length} apps...\n`);
+    const results = { success: [], failed: [], skipped: [] };
+    const startTime = Date.now();
+
     for (const app of allApps) {
+      // Skip wallet apps unless --wallet is set
+      if (app.authType === "wallet" && !WALLET_MODE) {
+        console.log(`  Skipping ${app.slug} (wallet app — use --wallet)`);
+        results.skipped.push({ slug: app.slug, reason: "wallet mode required" });
+        continue;
+      }
+
+      // For login apps, use appUrl if profile exists
+      const crawlUrl = (app.authType === "login" && hasProfile(app.slug) && app.appUrl)
+        ? app.appUrl : app.url;
+
       try {
-        await crawlApp(app.slug, app.url);
+        const manifest = await crawlApp(app.slug, crawlUrl, app.authType);
+        if (manifest) {
+          results.success.push({ slug: app.slug, screenshots: manifest.totalScreenshots });
+        } else {
+          results.failed.push({ slug: app.slug, reason: "crawl returned null" });
+        }
       } catch (e) {
-        console.error(`Failed ${app.slug}: ${e.message}`);
+        console.error(`  Failed ${app.slug}: ${e.message}`);
+        results.failed.push({ slug: app.slug, reason: e.message });
       }
     }
+
+    // Summary report
+    const elapsed = ((Date.now() - startTime) / 1000 / 60).toFixed(1);
+    console.log(`\n${"═".repeat(60)}`);
+    console.log("  CRAWL REPORT");
+    console.log(`${"═".repeat(60)}`);
+    console.log(`  Total time: ${elapsed} min`);
+    console.log(`  Success: ${results.success.length} apps`);
+    console.log(`  Failed:  ${results.failed.length} apps`);
+    console.log(`  Skipped: ${results.skipped.length} apps`);
+    if (results.failed.length > 0) {
+      console.log("\n  Failures:");
+      for (const f of results.failed) {
+        console.log(`    - ${f.slug}: ${f.reason}`);
+      }
+    }
+    console.log(`${"═".repeat(60)}\n`);
+
+    // Write report JSON
+    const reportPath = resolve(PROJECT_ROOT, "scripts/crawl-report.json");
+    writeFileSync(reportPath, JSON.stringify({ ...results, elapsed, timestamp: new Date().toISOString() }, null, 2));
+    console.log(`  Report saved: ${reportPath}`);
   } else if (args.slug) {
-    // Determine the URL: CLI --url > --app-url > appData.appUrl (when wallet/login) > appData.url
+    // Determine the URL: CLI --url > --app-url > appData.appUrl (when auth) > appData.url
     let crawlUrl = args.url;
     if (!crawlUrl && appData) {
-      if ((WALLET_MODE || hasSession(args.slug)) && appData.appUrl) {
+      if ((WALLET_MODE || (appAuthType === "login" && hasProfile(args.slug))) && appData.appUrl) {
         crawlUrl = appData.appUrl;
       } else {
         crawlUrl = appData.url;
@@ -1020,9 +1514,9 @@ async function main() {
       console.error(`App "${args.slug}" not found in apps.ts. Provide --url.`);
       process.exit(1);
     }
-    await crawlApp(args.slug, crawlUrl);
+    await crawlApp(args.slug, crawlUrl, appAuthType);
   } else {
-    console.error("OpenClaw Deterministic Crawler");
+    console.error("Darkscreen Deterministic Crawler");
     console.error("Zero API cost — pure Playwright automation\n");
     console.error("Usage:");
     console.error("  node scripts/crawl-app.mjs --slug <slug> --url <url>");
@@ -1037,6 +1531,9 @@ async function main() {
     console.error("  --login               Manual login (KYC apps — auto-crawls after)");
     console.error("  --relogin             Force new login even if session exists");
     console.error("  --app-url <url>       Override authenticated app URL");
+    console.error("  --check-auth          Check auth health without crawling");
+    console.error("  --save-creds          Prompt to save credentials during login");
+    console.error("  --no-reauth           Skip auto-relogin, crawl with whatever state");
     console.error("  --max-pages <n>       Max pages to visit (default: 50, 100 with auth)");
     console.error("  --max-screenshots <n> Max screenshots (default: 80)\n");
     console.error("Pipeline:");

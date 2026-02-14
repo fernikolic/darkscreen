@@ -40,8 +40,17 @@ public/screenshots/archive/
 public/screenshots/diffs/
 public/screenshots/*-diff.json
 
-# Crawler auth sessions (contains cookies/tokens)
+# Crawler auth sessions (legacy — contains cookies/tokens)
 scripts/sessions/
+
+# Persistent browser profiles (contains cookies, IndexedDB, etc.)
+scripts/profiles/
+
+# Stored credentials (encrypted or plaintext)
+scripts/credentials/
+
+# Crawl batch report
+scripts/crawl-report.json
 
 # Wallet extension profiles (contains private keys)
 scripts/wallets/
