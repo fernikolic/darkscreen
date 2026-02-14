@@ -80,12 +80,12 @@ export function Hero() {
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
             </span>
             <span className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-white">
-              Product intelligence for crypto
+              Competitive intelligence for crypto
             </span>
           </div>
           <h1 className="font-heading text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.08] text-text-primary">
-            Every screen, every flow,{" "}
-            <span className="text-white">every change</span>{" "}tracked.
+            Every screen, every price,{" "}
+            <span className="text-white">every hire</span>{" "}&mdash; tracked.
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-text-secondary">
             {TOTAL_SCREENS.toLocaleString()}+ screens and flows from {TOTAL_APPS}+
@@ -127,10 +127,10 @@ export function Hero() {
           <div className="h-8 w-px bg-dark-border" />
           <div className="text-center">
             <span className="block font-mono text-2xl font-medium text-text-primary">
-              6
+              5
             </span>
             <span className="mt-1 block text-[11px] uppercase tracking-wider text-text-tertiary">
-              Flow types
+              Intel layers
             </span>
           </div>
         </div>

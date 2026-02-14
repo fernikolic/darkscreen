@@ -6,8 +6,11 @@ import {
   type FlowType,
   type SectionType,
   type StyleType,
+  type IntelLayer,
   SECTION_TYPES,
   STYLE_TYPES,
+  INTEL_LAYERS,
+  INTEL_LAYER_META,
 } from "@/data/apps";
 
 const categories: Array<AppCategory | "All"> = [
@@ -45,10 +48,12 @@ interface FilterBarProps {
   activeFlow: FlowType | "All Flows";
   activeSections: SectionType[];
   activeStyles: StyleType[];
+  activeLayer?: IntelLayer | "All";
   onCategoryChange: (cat: AppCategory | "All") => void;
   onFlowChange: (flow: FlowType | "All Flows") => void;
   onSectionsChange: (sections: SectionType[]) => void;
   onStylesChange: (styles: StyleType[]) => void;
+  onLayerChange?: (layer: IntelLayer | "All") => void;
 }
 
 export function FilterBar({
@@ -56,10 +61,12 @@ export function FilterBar({
   activeFlow,
   activeSections,
   activeStyles,
+  activeLayer = "All",
   onCategoryChange,
   onFlowChange,
   onSectionsChange,
   onStylesChange,
+  onLayerChange,
 }: FilterBarProps) {
   const [showMore, setShowMore] = useState(false);
 
@@ -83,6 +90,49 @@ export function FilterBar({
 
   return (
     <div className="space-y-6">
+      {/* Intelligence layer filter */}
+      {onLayerChange && (
+        <div>
+          <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+            Intelligence Layer
+          </span>
+          <div className="flex flex-wrap gap-1.5">
+            <button
+              onClick={() => onLayerChange("All")}
+              className={`rounded-full border px-3 py-1.5 text-[11px] font-medium transition-all ${
+                activeLayer === "All"
+                  ? "border-white/40 bg-white/10 text-white"
+                  : "border-dark-border text-text-tertiary hover:border-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              All Layers
+            </button>
+            {INTEL_LAYERS.map((layer) => {
+              const meta = INTEL_LAYER_META[layer];
+              const isActive = activeLayer === layer;
+              return (
+                <button
+                  key={layer}
+                  onClick={() => onLayerChange(layer)}
+                  className={`rounded-full border px-3 py-1.5 text-[11px] font-medium transition-all ${
+                    isActive
+                      ? "text-white"
+                      : "border-dark-border text-text-tertiary hover:border-text-tertiary hover:text-text-secondary"
+                  }`}
+                  style={{
+                    borderColor: isActive ? meta.color : undefined,
+                    backgroundColor: isActive ? `${meta.color}15` : undefined,
+                    color: isActive ? meta.color : undefined,
+                  }}
+                >
+                  {meta.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Category tabs */}
       <div>
         <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">

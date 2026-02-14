@@ -11,10 +11,13 @@ import {
   type ChainType,
   type SectionType,
   type StyleType,
+  type IntelLayer,
   CHAIN_TYPES,
   SECTION_TYPES,
   STYLE_TYPES,
+  INTEL_LAYERS,
 } from "@/data/apps";
+import { getScreenLayer } from "@/data/helpers";
 import { FilterBar } from "@/components/FilterBar";
 import { AppCard } from "@/components/AppCard";
 import { SortControl, type SortOption } from "@/components/SortControl";
@@ -58,15 +61,26 @@ function LibraryContent() {
     return [] as StyleType[];
   })();
 
+  const initialLayer = (() => {
+    const l = searchParams.get("layer");
+    if (l) {
+      const match = INTEL_LAYERS.find((il) => il.toLowerCase() === l.toLowerCase());
+      if (match) return match;
+    }
+    return "All" as const;
+  })();
+
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(initialCategory);
   const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
   const [activeChain, setActiveChain] = useState<ChainType | "All Chains">("All Chains");
   const [activeSections, setActiveSections] = useState<SectionType[]>(initialSection);
   const [activeStyles, setActiveStyles] = useState<StyleType[]>(initialStyle);
+  const [activeLayer, setActiveLayer] = useState<IntelLayer | "All">(initialLayer);
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("newest");
 
   const filtered = apps.filter((app) => {
+    if (activeLayer !== "All" && !app.screens.some((s) => getScreenLayer(s) === activeLayer)) return false;
     if (activeCategory !== "All" && app.category !== activeCategory) return false;
     if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow)) return false;
     if (activeChain !== "All Chains" && !app.chains.includes(activeChain)) return false;
@@ -149,10 +163,12 @@ function LibraryContent() {
           activeFlow={activeFlow}
           activeSections={activeSections}
           activeStyles={activeStyles}
+          activeLayer={activeLayer}
           onCategoryChange={setActiveCategory}
           onFlowChange={setActiveFlow}
           onSectionsChange={setActiveSections}
           onStylesChange={setActiveStyles}
+          onLayerChange={setActiveLayer}
         />
       </div>
 

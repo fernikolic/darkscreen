@@ -7,15 +7,15 @@ const props = [
   },
   {
     number: "02",
-    title: "Flows, Not Just Screens",
+    title: "Beyond Product UI",
     description:
-      "See complete user journeys from onboarding to staking. Understand how the best crypto products guide users through every step.",
+      "Track pricing pages, marketing copy, job listings, and company pages alongside product screens. Five intelligence layers in one platform.",
   },
   {
     number: "03",
-    title: "Built for Product Teams",
+    title: "Built for Strategy Teams",
     description:
-      "Designers find UI patterns. PMs benchmark competitors. Marketers study copy and positioning. One library for your whole team.",
+      "PMs benchmark product UI. BD teams track pricing moves. Founders monitor hiring signals. One platform for competitive intelligence.",
   },
 ];
 

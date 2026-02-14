@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { toSlug } from "@/data/seo";
-import { ScreenGallery } from "@/components/ScreenGallery";
-import { ChangeTimeline } from "@/components/ChangeTimeline";
+import { AppDetailContent } from "@/components/AppDetailContent";
 import { EmailCapture } from "@/components/EmailCapture";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { SoftwareAppJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
@@ -209,29 +209,10 @@ export default async function AppDetail({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Screenshot gallery */}
-      <section className="mb-16 border-t border-dark-border pt-10">
-        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
-          Screens
-        </p>
-        <h2 className="mb-8 font-heading font-semibold text-xl text-text-primary">
-          UI Gallery
-        </h2>
-        <ScreenGallery
-          screens={app.screens}
-          accentColor={app.accentColor}
-          appName={app.name}
-          appSlug={app.slug}
-          appCategory={app.category}
-          appChains={app.chains}
-          flows={app.flows}
-        />
-      </section>
-
-      {/* Change timeline */}
-      <section className="mb-16 border-t border-dark-border pt-10">
-        <ChangeTimeline changes={app.changes} />
-      </section>
+      {/* Layer tabs + gallery + change timeline */}
+      <Suspense fallback={<div className="animate-pulse"><div className="mb-8 h-10 w-64 rounded bg-dark-border" /><div className="h-48 rounded bg-dark-border" /></div>}>
+        <AppDetailContent app={app} />
+      </Suspense>
 
       {/* CTA */}
       <section className="border-t border-dark-border pt-10 text-center">

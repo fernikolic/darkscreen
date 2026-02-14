@@ -3,6 +3,7 @@ import { ValueProps } from "@/components/ValueProps";
 import { LogoCloud } from "@/components/LogoCloud";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
+import { IntelLayerShowcase } from "@/components/IntelLayerShowcase";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <ValueProps />
+      <IntelLayerShowcase />
       <LogoCloud />
       <HowItWorks />
       <Pricing />
@@ -18,11 +20,11 @@ export default function Home() {
       <section id="get-access" className="border-t border-dark-border">
         <div className="mx-auto max-w-7xl px-6 py-28 text-center">
           <h2 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
-            Start exploring crypto product design
+            Start exploring crypto competitive intelligence
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-[14px] text-text-secondary">
-            Browse screens, flows, and UI patterns from every major crypto
-            product. Free to get started.
+            Browse screens, pricing pages, marketing copy, and hiring signals
+            from every major crypto product. Free to get started.
           </p>
           <div className="mt-10 flex justify-center">
             <Link

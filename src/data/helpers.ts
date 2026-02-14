@@ -1,4 +1,4 @@
-import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType } from "./apps";
+import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, INTEL_LAYERS } from "./apps";
 
 export interface EnrichedScreen extends AppScreen {
   appSlug: string;
@@ -63,6 +63,44 @@ export function getAllScreens(): EnrichedScreen[] {
     }
   }
   return result;
+}
+
+export function getScreenLayer(screen: AppScreen): IntelLayer {
+  return screen.layer || "Product";
+}
+
+export function getScreensByLayer(layer: IntelLayer): EnrichedScreen[] {
+  const result: EnrichedScreen[] = [];
+  for (const app of apps) {
+    for (const screen of app.screens) {
+      if (getScreenLayer(screen) === layer) {
+        result.push({
+          ...screen,
+          appSlug: app.slug,
+          appName: app.name,
+          appCategory: app.category,
+          appChains: app.chains,
+          accentColor: app.accentColor,
+        });
+      }
+    }
+  }
+  return result;
+}
+
+export function getAppsByLayer(layer: IntelLayer): CryptoApp[] {
+  return apps.filter((app) =>
+    app.screens.some((s) => getScreenLayer(s) === layer)
+  );
+}
+
+export function getAppLayerCounts(app: CryptoApp): Partial<Record<IntelLayer, number>> {
+  const counts: Partial<Record<IntelLayer, number>> = {};
+  for (const screen of app.screens) {
+    const layer = getScreenLayer(screen);
+    counts[layer] = (counts[layer] || 0) + 1;
+  }
+  return counts;
 }
 
 export function getAllFlows(): AppFlow[] {

@@ -7,9 +7,17 @@ import { useAuth } from "@/contexts/AuthContext";
 import { truncateAddress } from "@/lib/wallet-auth";
 import { SuggestAppModal } from "./SuggestAppModal";
 
+const intelLinks = [
+  { href: "/intel/pricing", label: "Pricing Intelligence" },
+  { href: "/intel/marketing", label: "Marketing & Copy" },
+  { href: "/intel/careers", label: "Hiring Signals" },
+  { href: "/intel/company", label: "Company Intel" },
+];
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [suggestOpen, setSuggestOpen] = useState(false);
+  const [intelOpen, setIntelOpen] = useState(false);
   const { user, loading, openSignIn, signOut } = useAuth();
 
   return (
@@ -61,6 +69,33 @@ export function Header() {
           >
             Library
           </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setIntelOpen(true)}
+            onMouseLeave={() => setIntelOpen(false)}
+          >
+            <button
+              className="flex items-center gap-1 rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
+            >
+              Intel
+              <svg className={`h-3 w-3 transition-transform ${intelOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {intelOpen && (
+              <div className="absolute left-0 top-full z-50 mt-1 w-52 rounded-lg border border-dark-border bg-dark-card/95 p-1.5 shadow-xl backdrop-blur-xl">
+                {intelLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block rounded-md px-3 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           <Link
             href="/changes"
             className="rounded-lg px-4 py-2 text-body-sm text-text-secondary transition-all duration-200 hover:bg-dark-card hover:text-text-primary"
@@ -168,6 +203,21 @@ export function Header() {
             >
               Library
             </Link>
+            <div className="px-4 py-1">
+              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+                Intelligence
+              </span>
+            </div>
+            {intelLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-lg px-6 py-2.5 text-[13px] text-text-tertiary transition-colors hover:bg-dark-card hover:text-text-primary"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
               href="/changes"
               className="rounded-lg px-4 py-3 text-body-sm text-text-secondary transition-colors hover:bg-dark-card hover:text-text-primary"

@@ -58,6 +58,18 @@ export type ChangeType =
   | "Layout Shift"
   | "Removed";
 
+export type IntelLayer = "Product" | "Pricing" | "Marketing" | "Careers" | "Company";
+
+export const INTEL_LAYERS: IntelLayer[] = ["Product", "Pricing", "Marketing", "Careers", "Company"];
+
+export const INTEL_LAYER_META: Record<IntelLayer, { label: string; description: string; color: string; icon: string }> = {
+  Product:   { label: "Product UI",  description: "App screens, user flows, and design patterns", color: "#3b82f6", icon: "grid" },
+  Pricing:   { label: "Pricing",     description: "Pricing pages, tiers, and fee structures",     color: "#22c55e", icon: "dollar" },
+  Marketing: { label: "Marketing",   description: "Landing pages, positioning, and messaging",    color: "#f59e0b", icon: "megaphone" },
+  Careers:   { label: "Careers",     description: "Job listings and hiring signals",              color: "#a855f7", icon: "users" },
+  Company:   { label: "Company",     description: "About, team, investors, and partnerships",     color: "#06b6d4", icon: "building" },
+};
+
 export type ElementTag =
   | "Modal / Dialog"
   | "Form / Input"
@@ -101,6 +113,7 @@ export interface AppScreen {
   flow: FlowType;
   image?: string;
   tags?: ElementTag[];
+  layer?: IntelLayer;
 }
 
 export interface AppChange {
@@ -131,6 +144,7 @@ export interface CryptoApp {
   changes: AppChange[];
   accentColor: string;
   thumbnail?: string;
+  intelLayers?: IntelLayer[];
 }
 
 export const CATEGORIES: AppCategory[] = [

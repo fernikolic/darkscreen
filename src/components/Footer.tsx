@@ -17,7 +17,7 @@ export function Footer() {
     <footer className="border-t border-dark-border">
       <div className="mx-auto max-w-7xl px-6 py-14">
         {/* Taxonomy grid */}
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Categories */}
           <div>
             <h4 className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary">
@@ -81,6 +81,55 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Intelligence */}
+          <div>
+            <h4 className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-text-tertiary">
+              Intelligence
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/library"
+                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  Product UI
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/intel/pricing"
+                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/intel/marketing"
+                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/intel/careers"
+                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/intel/company"
+                  className="text-[13px] text-text-secondary transition-colors hover:text-text-primary"
+                >
+                  Company
+                </Link>
+              </li>
             </ul>
           </div>
 
