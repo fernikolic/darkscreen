@@ -41,11 +41,20 @@ export const metadata: Metadata = {
     url: "https://darkscreens.xyz",
     siteName: "Darkscreens",
     type: "website",
+    images: [
+      {
+        url: "https://darkscreens.xyz/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Darkscreens — See how every crypto product actually ships",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Darkscreens — Crypto Product Design Library",
     description: shortDescription,
+    images: ["https://darkscreens.xyz/og-image.png"],
   },
 };
 
