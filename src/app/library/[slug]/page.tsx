@@ -9,6 +9,7 @@ import { EmailCapture } from "@/components/EmailCapture";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { SoftwareAppJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AppLogo } from "@/components/AppLogo";
+import { SponsorBanner } from "@/components/SponsorBanner";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -136,7 +137,7 @@ export default async function AppDetail({ params }: PageProps) {
             rel="noopener noreferrer"
             className="mt-2 inline-block text-[13px] text-text-tertiary transition-colors hover:text-white"
           >
-            {app.website.replace("https://", "")} &nearr;
+            {app.website.replace("https://", "")} ↗
           </a>
 
           {/* Taxonomy tags */}
@@ -212,6 +213,11 @@ export default async function AppDetail({ params }: PageProps) {
             </span>
           </div>
         </div>
+      </div>
+
+      {/* Sponsor */}
+      <div className="mb-10">
+        <SponsorBanner placement="detail-sidebar" />
       </div>
 
       {/* Layer tabs + gallery + change timeline */}

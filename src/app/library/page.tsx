@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, Fragment } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   apps,
@@ -17,6 +17,7 @@ import {
 } from "@/data/apps";
 import { AppCard } from "@/components/AppCard";
 import { BookmarkButton } from "@/components/BookmarkButton";
+import { SponsorBanner } from "@/components/SponsorBanner";
 
 type PlatformFilter = PlatformType | "All" | "Mobile";
 
@@ -392,12 +393,19 @@ function LibraryContent() {
 
       {/* App grid */}
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {sorted.map((app) => (
-          <AppCard
-            key={app.slug}
-            app={app}
-            bookmarkButton={<BookmarkButton slug={app.slug} />}
-          />
+        {sorted.map((app, i) => (
+          <Fragment key={app.slug}>
+            <AppCard
+              app={app}
+              bookmarkButton={<BookmarkButton slug={app.slug} />}
+            />
+            {(i + 1) % 8 === 0 && i < sorted.length - 1 && (
+              <SponsorBanner
+                placement={`library-grid-${Math.floor((i + 1) / 8)}`}
+                variant="card"
+              />
+            )}
+          </Fragment>
         ))}
       </div>
 

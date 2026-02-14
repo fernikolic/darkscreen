@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
 import { AISkillTeaser } from "@/components/AISkillTeaser";
 import { IntelLayerShowcase } from "@/components/IntelLayerShowcase";
+import { SponsorBanner } from "@/components/SponsorBanner";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
       <Hero />
       <ValueProps />
       <IntelLayerShowcase />
+      <div className="mx-auto max-w-7xl px-6 py-8">
+        <SponsorBanner placement="homepage-mid" />
+      </div>
       <LogoCloud />
       <HowItWorks />
       <Pricing />

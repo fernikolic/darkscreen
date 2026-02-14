@@ -6,6 +6,7 @@ import {
   getAllStyles,
   getAllPlatforms,
 } from "@/data/apps";
+import { SponsorBanner } from "@/components/SponsorBanner";
 
 export function Footer() {
   const categories = getAllCategories();
@@ -15,6 +16,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-dark-border">
+      <div className="mx-auto max-w-7xl px-6 py-6">
+        <SponsorBanner placement="footer" />
+      </div>
       <div className="mx-auto max-w-7xl px-6 py-14">
         {/* Taxonomy grid */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
