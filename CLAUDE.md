@@ -33,6 +33,8 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `scripts/label-local.mjs` | Local flow classification + file renaming |
 | `scripts/auto-tag.mjs` | Auto-infer screen tags from labels |
 | `scripts/wallet-setup.mjs` | MetaMask extension setup for DeFi crawling |
+| `scripts/fetch-logos.mjs` | Fetch app logos from free favicon/logo APIs |
+| `src/components/AppLogo.tsx` | Reusable logo component with letter-circle fallback |
 
 ## Architecture
 
@@ -75,6 +77,53 @@ node scripts/crawl-app.mjs --slug uniswap --wallet
 # Crawl all apps
 node scripts/crawl-app.mjs --all
 ```
+
+## App Logos
+
+Every app in `apps.ts` has a corresponding logo at `/public/logos/{slug}.png`. Logos are displayed across 4 surfaces via the `AppLogo` component.
+
+### Fetching logos
+
+```bash
+# Fetch logos for all apps missing a logo
+npm run fetch-logos
+
+# Fetch logo for a single new app
+node scripts/fetch-logos.mjs --slug <slug>
+
+# Re-fetch all logos (overwrite existing)
+node scripts/fetch-logos.mjs --force
+
+# Preview what would be fetched
+node scripts/fetch-logos.mjs --dry-run
+```
+
+The script tries sources in waterfall order: Google Favicon (128px) → icon.horse → Clearbit → DuckDuckGo. Files < 1KB are skipped (likely placeholders). Batches 5 concurrent requests.
+
+### When adding a new app
+
+1. Add the app to `src/data/apps.ts`
+2. Run `node scripts/fetch-logos.mjs --slug <slug>` to fetch its logo
+3. If the script fails (all sources return tiny/broken images), manually save a PNG to `/public/logos/<slug>.png`
+4. The `AppLogo` component handles missing logos gracefully — it shows a letter-circle fallback
+
+### Where logos appear
+
+| Surface | Size | File |
+|---------|------|------|
+| AppCard (library grid) | 20px | `src/components/AppCard.tsx` |
+| LogoCloud (homepage footer) | 18px | `src/components/LogoCloud.tsx` |
+| Hero (floating + inline cloud) | 16-64px | `src/components/Hero.tsx` |
+| App detail header | 48px | `src/app/library/[slug]/page.tsx` |
+| App detail "coming soon" | 40px | `src/app/library/[slug]/page.tsx` |
+
+### AppLogo component
+
+```tsx
+<AppLogo slug="coinbase" name="Coinbase" size={24} />
+```
+
+Props: `slug`, `name`, `size` (default 24), `className`, `rounded`. Uses Next.js `<Image>` with `onError` fallback to a styled circle showing the first letter.
 
 ## Copy to Clipboard
 
