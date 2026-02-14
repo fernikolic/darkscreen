@@ -22,7 +22,9 @@
  *   3. sync-manifests.mjs → updates apps.ts                    ($0.00)
  */
 
-import { chromium } from "playwright";
+import { chromium } from "playwright-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import { TOTP } from "otpauth";
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -30,6 +32,9 @@ import { parseArgs } from "util";
 import { createHash, randomBytes, createCipheriv, createDecipheriv } from "crypto";
 import { createInterface } from "readline";
 import { execFileSync } from "child_process";
+
+// Anti-detection: stealth plugin hides WebDriver flag, randomizes fingerprints
+chromium.use(StealthPlugin());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, "..");
@@ -60,16 +65,24 @@ const { values: args } = parseArgs({
     "check-auth": { type: "boolean", default: false },
     "save-creds": { type: "boolean", default: false },
     "no-reauth": { type: "boolean", default: false },
+    proxy: { type: "string" },
   },
   strict: false,
 });
 
 const HEADED = args.headed;
 const WALLET_MODE = args.wallet;
+const PROXY_SERVER = args.proxy || process.env.DARKSCREEN_PROXY || null;
 // Authenticated crawls get higher limits by default
 const isAuthenticated = WALLET_MODE || args.login || args.relogin;
 const MAX_PAGES = parseInt(args["max-pages"], 10) || (isAuthenticated ? 100 : 50);
 const MAX_SCREENSHOTS = parseInt(args["max-screenshots"], 10) || 80;
+
+// Force US English locale for consistent screenshots regardless of machine location
+const BROWSER_LOCALE = "en-US";
+const BROWSER_TIMEZONE = "America/New_York";
+const BROWSER_USER_AGENT =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
 // ─── App loading (for --all and --slug without --url) ─────────────────
 
@@ -172,15 +185,20 @@ async function launchWithProfile(slug, opts = {}) {
   const headed = opts.headed || HEADED;
   console.log(`  Using persistent profile: ${profDir}${headed ? " (headed)" : ""}`);
 
-  const context = await chromium.launchPersistentContext(profDir, {
+  const launchOpts = {
     headless: !headed,
     args: ["--disable-blink-features=AutomationControlled"],
     viewport: { width: 1440, height: 900 },
     deviceScaleFactor: 1,
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    userAgent: BROWSER_USER_AGENT,
+    locale: BROWSER_LOCALE,
+    timezoneId: BROWSER_TIMEZONE,
+    extraHTTPHeaders: { "Accept-Language": "en-US,en;q=0.9" },
     ignoreHTTPSErrors: true,
-  });
+  };
+  if (PROXY_SERVER) launchOpts.proxy = { server: PROXY_SERVER };
+
+  const context = await chromium.launchPersistentContext(profDir, launchOpts);
 
   return { context, browser: null };
 }
@@ -234,6 +252,26 @@ function saveCredentials(slug, creds) {
   }
 }
 
+async function promptSaveCredentials(slug) {
+  if (!args["save-creds"]) return;
+  try {
+    const rl = createInterface({ input: process.stdin, output: process.stdout });
+    const answer = await new Promise((res) => rl.question("  Save credentials for auto-relogin? (y/N): ", res));
+    rl.close();
+    if (answer.toLowerCase() !== "y") return;
+
+    const rl2 = createInterface({ input: process.stdin, output: process.stdout });
+    const username = await new Promise((res) => rl2.question("  Username/email: ", res));
+    const password = await new Promise((res) => rl2.question("  Password: ", res));
+    const totpSecret = await new Promise((res) => rl2.question("  TOTP secret (base32, or press Enter to skip): ", res));
+    rl2.close();
+
+    const creds = { username, password };
+    if (totpSecret.trim()) creds.totpSecret = totpSecret.trim();
+    saveCredentials(slug, creds);
+  } catch {}
+}
+
 function encryptCredentials(creds, key) {
   const derivedKey = createHash("sha256").update(key).digest();
   const iv = randomBytes(16);
@@ -253,6 +291,261 @@ function decryptCredentials(encData) {
   let decrypted = decipher.update(encData.data, "hex", "utf8");
   decrypted += decipher.final("utf8");
   return JSON.parse(decrypted);
+}
+
+// ─── CAPTCHA detection and solving (CapSolver API) ────────────────────
+
+const CAPSOLVER_API = "https://api.capsolver.com";
+
+async function detectCaptcha(page) {
+  // Cloudflare Turnstile
+  const turnstile = await page.locator('iframe[src*="challenges.cloudflare.com"], [class*="cf-turnstile"]').first().isVisible({ timeout: 2000 }).catch(() => false);
+  if (turnstile) {
+    const siteKey = await page.evaluate(() => {
+      const el = document.querySelector('[class*="cf-turnstile"]');
+      return el?.getAttribute("data-sitekey") || null;
+    }).catch(() => null);
+    return { type: "turnstile", siteKey };
+  }
+
+  // reCAPTCHA v2
+  const recaptchaV2 = await page.locator('iframe[src*="google.com/recaptcha"], .g-recaptcha').first().isVisible({ timeout: 1000 }).catch(() => false);
+  if (recaptchaV2) {
+    const siteKey = await page.evaluate(() => {
+      const el = document.querySelector('.g-recaptcha');
+      return el?.getAttribute("data-sitekey") || null;
+    }).catch(() => null);
+    return { type: "recaptchav2", siteKey };
+  }
+
+  // hCaptcha
+  const hcaptcha = await page.locator('iframe[src*="hcaptcha.com"], .h-captcha').first().isVisible({ timeout: 1000 }).catch(() => false);
+  if (hcaptcha) {
+    const siteKey = await page.evaluate(() => {
+      const el = document.querySelector('.h-captcha');
+      return el?.getAttribute("data-sitekey") || null;
+    }).catch(() => null);
+    return { type: "hcaptcha", siteKey };
+  }
+
+  // reCAPTCHA v3 (invisible — check for script tag)
+  const recaptchaV3 = await page.evaluate(() => {
+    const scripts = document.querySelectorAll('script[src*="recaptcha"]');
+    for (const s of scripts) {
+      if (s.src.includes("render=")) {
+        const match = s.src.match(/render=([^&]+)/);
+        return match ? match[1] : null;
+      }
+    }
+    return null;
+  }).catch(() => null);
+  if (recaptchaV3) {
+    return { type: "recaptchav3", siteKey: recaptchaV3 };
+  }
+
+  return null;
+}
+
+async function solveCaptcha(page, captchaInfo) {
+  const apiKey = process.env.CAPSOLVER_API_KEY;
+  if (!apiKey) {
+    console.log("  ⚠ CAPTCHA detected but CAPSOLVER_API_KEY not set — cannot solve");
+    return false;
+  }
+
+  console.log(`  Solving ${captchaInfo.type} CAPTCHA via CapSolver...`);
+
+  const taskTypeMap = {
+    turnstile: "AntiTurnstileTaskProxyLess",
+    recaptchav2: "ReCaptchaV2TaskProxyLess",
+    recaptchav3: "ReCaptchaV3TaskProxyLess",
+    hcaptcha: "HCaptchaTaskProxyLess",
+  };
+
+  const taskType = taskTypeMap[captchaInfo.type];
+  if (!taskType || !captchaInfo.siteKey) {
+    console.log("  Could not determine CAPTCHA task type or site key");
+    return false;
+  }
+
+  try {
+    // Create task
+    const taskPayload = {
+      clientKey: apiKey,
+      task: {
+        type: taskType,
+        websiteURL: page.url(),
+        websiteKey: captchaInfo.siteKey,
+      },
+    };
+
+    // reCAPTCHA v3 needs pageAction and minScore
+    if (captchaInfo.type === "recaptchav3") {
+      taskPayload.task.pageAction = "login";
+      taskPayload.task.minScore = 0.7;
+    }
+
+    const createRes = await fetch(`${CAPSOLVER_API}/createTask`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(taskPayload),
+    });
+    const createData = await createRes.json();
+
+    if (createData.errorId !== 0) {
+      console.log(`  CapSolver error: ${createData.errorDescription || createData.errorCode}`);
+      return false;
+    }
+
+    const taskId = createData.taskId;
+    console.log(`  CapSolver task created: ${taskId}`);
+
+    // Poll for result (max 120s)
+    const deadline = Date.now() + 120_000;
+    while (Date.now() < deadline) {
+      await sleep(3000);
+      const resultRes = await fetch(`${CAPSOLVER_API}/getTaskResult`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ clientKey: apiKey, taskId }),
+      });
+      const resultData = await resultRes.json();
+
+      if (resultData.status === "ready") {
+        const token = resultData.solution?.token || resultData.solution?.gRecaptchaResponse;
+        if (!token) {
+          console.log("  CapSolver returned no token");
+          return false;
+        }
+
+        console.log("  CAPTCHA solved! Injecting token...");
+
+        // Inject the solution token into the page
+        if (captchaInfo.type === "turnstile") {
+          await page.evaluate((t) => {
+            const input = document.querySelector('[name="cf-turnstile-response"]') ||
+                          document.querySelector('input[name*="turnstile"]');
+            if (input) input.value = t;
+            // Also try the callback
+            if (window.turnstile?.getResponse) {
+              try { window.turnstile.execute(); } catch {}
+            }
+          }, token);
+        } else if (captchaInfo.type === "hcaptcha") {
+          await page.evaluate((t) => {
+            const textarea = document.querySelector('[name="h-captcha-response"]') ||
+                             document.querySelector('textarea[name*="hcaptcha"]');
+            if (textarea) textarea.value = t;
+            // Trigger callback
+            if (window.hcaptcha) {
+              try { window.hcaptcha.execute(); } catch {}
+            }
+          }, token);
+        } else {
+          // reCAPTCHA v2/v3
+          await page.evaluate((t) => {
+            const textarea = document.querySelector('#g-recaptcha-response') ||
+                             document.querySelector('textarea[name="g-recaptcha-response"]');
+            if (textarea) {
+              textarea.value = t;
+              textarea.style.display = "block"; // Some sites check visibility
+            }
+            // Trigger callback
+            if (window.___grecaptcha_cfg?.clients) {
+              for (const client of Object.values(window.___grecaptcha_cfg.clients)) {
+                try {
+                  const callback = Object.values(client).find(v => typeof v?.callback === "function");
+                  if (callback) callback.callback(t);
+                } catch {}
+              }
+            }
+          }, token);
+        }
+
+        await sleep(1000);
+        return true;
+      }
+
+      if (resultData.status === "failed" || resultData.errorId !== 0) {
+        console.log(`  CapSolver failed: ${resultData.errorDescription || "unknown error"}`);
+        return false;
+      }
+    }
+
+    console.log("  CapSolver timeout (120s)");
+    return false;
+  } catch (e) {
+    console.log(`  CapSolver error: ${e.message}`);
+    return false;
+  }
+}
+
+// ─── TOTP 2FA automation ──────────────────────────────────────────────
+
+function generateTOTP(secret) {
+  const totp = new TOTP({
+    secret,
+    digits: 6,
+    period: 30,
+    algorithm: "SHA1",
+  });
+  return totp.generate();
+}
+
+async function handle2FA(page, slug, authConfig = {}) {
+  // Detect 2FA/MFA prompt
+  const totpSelectors = authConfig.selectors?.totp
+    ? [authConfig.selectors.totp]
+    : [
+        'input[name*="otp"]', 'input[name*="mfa"]', 'input[name*="2fa"]',
+        'input[name*="totp"]', 'input[placeholder*="code"]',
+        'input[placeholder*="Code"]', 'input[autocomplete="one-time-code"]',
+        'input[inputmode="numeric"][maxlength="6"]',
+      ];
+
+  let totpField = null;
+  for (const sel of totpSelectors) {
+    const el = page.locator(sel).first();
+    if (await el.isVisible({ timeout: 2000 }).catch(() => false)) {
+      totpField = el;
+      break;
+    }
+  }
+
+  if (!totpField) return true; // No 2FA prompt — we're good
+
+  console.log("  2FA/TOTP prompt detected");
+
+  // Load TOTP secret from credentials
+  const creds = loadCredentials(slug);
+  if (!creds?.totpSecret) {
+    console.log("  No TOTP secret stored — cannot auto-complete 2FA");
+    return false;
+  }
+
+  const code = generateTOTP(creds.totpSecret);
+  console.log(`  Generated TOTP code: ${code.slice(0, 2)}****`);
+
+  await totpField.fill(code);
+  await sleep(500);
+
+  // Submit the 2FA form
+  const submitSelectors = authConfig.selectors?.totpSubmit
+    ? [authConfig.selectors.totpSubmit]
+    : ['button[type="submit"]', 'button:has-text("Verify")', 'button:has-text("Submit")', 'button:has-text("Continue")', 'button:has-text("Confirm")'];
+
+  for (const sel of submitSelectors) {
+    try {
+      const btn = page.locator(sel).first();
+      if (await btn.isVisible({ timeout: 1000 })) {
+        await btn.click();
+        break;
+      }
+    } catch {}
+  }
+
+  await sleep(3000);
+  return true;
 }
 
 // ─── Auth health check ────────────────────────────────────────────────
@@ -358,11 +651,14 @@ async function attemptReauth(context, page, slug, authConfig = {}) {
     return false;
   }
 
-  // Check for CAPTCHA before proceeding
-  const captchaVisible = await page.locator('iframe[src*="captcha"], iframe[src*="recaptcha"], [class*="captcha"], [id*="captcha"]').first().isVisible({ timeout: 1000 }).catch(() => false);
-  if (captchaVisible) {
-    console.log("  CAPTCHA detected — cannot auto-login");
-    return false;
+  // Detect and solve CAPTCHA if present
+  const captchaInfo = await detectCaptcha(page);
+  if (captchaInfo) {
+    const solved = await solveCaptcha(page, captchaInfo);
+    if (!solved) {
+      console.log("  CAPTCHA could not be solved — falling through to human");
+      return false;
+    }
   }
 
   // Try to fill password on same page (single-step login)
@@ -389,6 +685,14 @@ async function attemptReauth(context, page, slug, authConfig = {}) {
           break;
         }
       } catch {}
+    }
+
+    // CAPTCHA might appear between username and password steps
+    const midCaptcha = await detectCaptcha(page);
+    if (midCaptcha) {
+      const solved = await solveCaptcha(page, midCaptcha);
+      if (!solved) return false;
+      await sleep(2000);
     }
 
     // Now look for password field on second step
@@ -422,12 +726,13 @@ async function attemptReauth(context, page, slug, authConfig = {}) {
 
   await sleep(5000);
 
-  // Check for MFA prompt
-  const mfaVisible = await page.locator('input[name*="otp"], input[name*="mfa"], input[name*="2fa"], input[placeholder*="code"], input[autocomplete="one-time-code"]').first().isVisible({ timeout: 2000 }).catch(() => false);
-  if (mfaVisible) {
-    console.log("  MFA/2FA prompt detected — cannot auto-complete");
+  // Handle 2FA/TOTP if prompted
+  const twoFAOk = await handle2FA(page, slug, authConfig);
+  if (!twoFAOk) {
+    console.log("  2FA could not be completed — falling through to human");
     return false;
   }
+  await sleep(2000);
 
   // Verify login succeeded
   const health = await checkAuthHealth(page, slug, authConfig);
@@ -494,20 +799,7 @@ async function humanInTheLoop(context, page, slug, targetUrl) {
   console.log("  Login detected! Closing headed browser...");
 
   // Prompt to save credentials for future auto-relogin
-  if (args["save-creds"]) {
-    try {
-      const rl = createInterface({ input: process.stdin, output: process.stdout });
-      const answer = await new Promise((res) => rl.question("  Save credentials for auto-relogin? (y/N): ", res));
-      rl.close();
-      if (answer.toLowerCase() === "y") {
-        const rl2 = createInterface({ input: process.stdin, output: process.stdout });
-        const username = await new Promise((res) => rl2.question("  Username/email: ", res));
-        const password = await new Promise((res) => rl2.question("  Password: ", res));
-        rl2.close();
-        saveCredentials(slug, { username, password });
-      }
-    } catch {}
-  }
+  await promptSaveCredentials(slug);
 
   // Close headed context (profile auto-persists)
   await headedCtx.close();
@@ -530,7 +822,7 @@ async function launchWithWallet() {
   console.log(`  Loading MetaMask v${meta.metamaskVersion} from ${METAMASK_PROFILE}`);
 
   // launchPersistentContext reuses the saved profile (with MetaMask logged in)
-  const context = await chromium.launchPersistentContext(METAMASK_PROFILE, {
+  const walletOpts = {
     headless: false, // Extensions require headed mode
     args: [
       `--disable-extensions-except=${METAMASK_EXT_DIR}`,
@@ -539,10 +831,15 @@ async function launchWithWallet() {
     ],
     viewport: { width: 1440, height: 900 },
     deviceScaleFactor: 1,
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    userAgent: BROWSER_USER_AGENT,
+    locale: BROWSER_LOCALE,
+    timezoneId: BROWSER_TIMEZONE,
+    extraHTTPHeaders: { "Accept-Language": "en-US,en;q=0.9" },
     ignoreHTTPSErrors: true,
-  });
+  };
+  if (PROXY_SERVER) walletOpts.proxy = { server: PROXY_SERVER };
+
+  const context = await chromium.launchPersistentContext(METAMASK_PROFILE, walletOpts);
 
   // Set up popup handler for MetaMask approval dialogs
   handleWalletPopup(context);
@@ -1095,6 +1392,134 @@ async function connectWallet(page, slug) {
   return false;
 }
 
+// ─── Metadata extraction (zero API cost) ─────────────────────────────────
+
+async function extractPageCopy(page) {
+  try {
+    return await page.evaluate(() => {
+      const h1 = document.querySelector('h1')?.innerText?.trim() || null;
+      const metaDesc = document.querySelector('meta[name="description"]')?.content || null;
+      const ogTitle = document.querySelector('meta[property="og:title"]')?.content || null;
+      const ogDesc = document.querySelector('meta[property="og:description"]')?.content || null;
+      const heroArea = document.querySelector('main, [role="main"], section:first-of-type') || document.body;
+      const ctas = [...heroArea.querySelectorAll('a, button')]
+        .map(el => el.innerText?.trim())
+        .filter(t => t && t.length > 1 && t.length < 80)
+        .slice(0, 10);
+      const navItems = [...new Set(
+        [...document.querySelectorAll('nav a, header a, [role="navigation"] a')]
+          .map(el => el.innerText?.trim())
+          .filter(t => t && t.length > 1 && t.length < 50)
+      )];
+      return { h1, metaDescription: metaDesc, ogTitle, ogDescription: ogDesc, ctas, navItems };
+    });
+  } catch (e) {
+    console.log(`  ⚠ Copy extraction failed: ${e.message}`);
+    return null;
+  }
+}
+
+async function detectTechStack(page) {
+  try {
+    return await page.evaluate(() => {
+      const stack = [];
+
+      // Frameworks
+      if (document.querySelector('#__next') || window.__NEXT_DATA__) stack.push({ category: 'Framework', name: 'Next.js', evidence: '__NEXT_DATA__ or #__next' });
+      else if (window.__NUXT__) stack.push({ category: 'Framework', name: 'Nuxt.js', evidence: '__NUXT__' });
+      else if (window.___gatsby) stack.push({ category: 'Framework', name: 'Gatsby', evidence: '___gatsby' });
+      if (document.querySelector('[data-reactroot], [data-reactid]') || window.__REACT_DEVTOOLS_GLOBAL_HOOK__) stack.push({ category: 'Framework', name: 'React', evidence: 'React markers' });
+      if (window.__VUE__) stack.push({ category: 'Framework', name: 'Vue.js', evidence: '__VUE__' });
+      if (document.querySelector('[ng-version], [_ngcontent]')) stack.push({ category: 'Framework', name: 'Angular', evidence: 'ng-version attribute' });
+
+      // CSS
+      const allClasses = document.body.innerHTML;
+      if (allClasses.match(/\b(sm:|md:|lg:|xl:)/)) stack.push({ category: 'CSS', name: 'Tailwind CSS', evidence: 'Responsive utility classes' });
+      if (document.querySelector('.bootstrap, [class*="col-md-"], [class*="col-lg-"]')) stack.push({ category: 'CSS', name: 'Bootstrap', evidence: 'Bootstrap grid classes' });
+      if (document.querySelector('[class*="chakra-"]')) stack.push({ category: 'CSS', name: 'Chakra UI', evidence: 'chakra- class prefix' });
+      if (document.querySelector('[class*="MuiBox"], [class*="MuiButton"]')) stack.push({ category: 'CSS', name: 'Material UI', evidence: 'Mui class prefix' });
+
+      // Analytics
+      const scripts = [...document.querySelectorAll('script[src]')].map(s => s.src);
+      const allScriptSrc = scripts.join(' ');
+      if (window.analytics || allScriptSrc.includes('segment')) stack.push({ category: 'Analytics', name: 'Segment', evidence: 'analytics.js or segment script' });
+      if (window.mixpanel || allScriptSrc.includes('mixpanel')) stack.push({ category: 'Analytics', name: 'Mixpanel', evidence: 'mixpanel object or script' });
+      if (window.ga || window.gtag || allScriptSrc.includes('google-analytics') || allScriptSrc.includes('gtag')) stack.push({ category: 'Analytics', name: 'Google Analytics', evidence: 'ga/gtag' });
+      if (window.hj || allScriptSrc.includes('hotjar')) stack.push({ category: 'Analytics', name: 'Hotjar', evidence: 'hj or hotjar script' });
+      if (window.amplitude || allScriptSrc.includes('amplitude')) stack.push({ category: 'Analytics', name: 'Amplitude', evidence: 'amplitude object or script' });
+      if (window.FS || allScriptSrc.includes('fullstory')) stack.push({ category: 'Analytics', name: 'FullStory', evidence: 'FS object or script' });
+      if (window.DD_RUM || allScriptSrc.includes('datadoghq')) stack.push({ category: 'Analytics', name: 'Datadog', evidence: 'DD_RUM or datadog script' });
+
+      // Error tracking
+      if (window.__SENTRY__ || allScriptSrc.includes('sentry')) stack.push({ category: 'Error Tracking', name: 'Sentry', evidence: '__SENTRY__ or sentry script' });
+
+      // Support
+      if (window.Intercom || allScriptSrc.includes('intercom')) stack.push({ category: 'Support', name: 'Intercom', evidence: 'Intercom widget' });
+
+      // Wallets
+      if (window.ethereum) stack.push({ category: 'Wallet', name: 'Ethereum (window.ethereum)', evidence: 'window.ethereum injected' });
+      if (window.solana) stack.push({ category: 'Wallet', name: 'Solana (window.solana)', evidence: 'window.solana injected' });
+      if (window.nostr) stack.push({ category: 'Wallet', name: 'Nostr (window.nostr)', evidence: 'window.nostr injected' });
+
+      // CDN/Hosting
+      const metaGenerator = document.querySelector('meta[name="generator"]')?.content || '';
+      if (metaGenerator.includes('Vercel') || document.cookie.includes('__vercel')) stack.push({ category: 'CDN', name: 'Vercel', evidence: 'Vercel meta or cookie' });
+
+      // Cookie consent
+      if (document.querySelector('#onetrust-banner-sdk') || allScriptSrc.includes('onetrust')) stack.push({ category: 'Privacy', name: 'OneTrust', evidence: 'OneTrust banner' });
+      if (document.querySelector('#CookiebotWidget') || allScriptSrc.includes('cookiebot')) stack.push({ category: 'Privacy', name: 'Cookiebot', evidence: 'Cookiebot widget' });
+
+      return stack;
+    });
+  } catch (e) {
+    console.log(`  ⚠ Tech stack detection failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function capturePerformance(page) {
+  try {
+    return await page.evaluate(() => {
+      const timing = performance.timing;
+      const loadTime = timing.loadEventEnd - timing.navigationStart;
+      const domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart;
+
+      const resources = performance.getEntriesByType('resource');
+      let jsSize = 0, cssSize = 0, imageSize = 0, fontSize = 0, otherSize = 0;
+
+      for (const r of resources) {
+        const size = r.transferSize || 0;
+        if (r.initiatorType === 'script' || r.name.match(/\.js(\?|$)/i)) jsSize += size;
+        else if (r.initiatorType === 'css' || r.name.match(/\.css(\?|$)/i)) cssSize += size;
+        else if (r.initiatorType === 'img' || r.name.match(/\.(png|jpg|jpeg|gif|webp|svg|avif)(\?|$)/i)) imageSize += size;
+        else if (r.name.match(/\.(woff2?|ttf|otf|eot)(\?|$)/i)) fontSize += size;
+        else otherSize += size;
+      }
+
+      const totalTransfer = jsSize + cssSize + imageSize + fontSize + otherSize;
+
+      return {
+        loadTime: Math.max(0, loadTime),
+        domContentLoaded: Math.max(0, domContentLoaded),
+        lcp: typeof window.__DS_LCP === 'number' ? Math.round(window.__DS_LCP) : null,
+        cls: typeof window.__DS_CLS === 'number' ? Math.round(window.__DS_CLS * 1000) / 1000 : null,
+        resourceCount: resources.length,
+        transferSize: totalTransfer,
+        breakdown: {
+          js: jsSize,
+          css: cssSize,
+          images: imageSize,
+          fonts: fontSize,
+          other: otherSize,
+        },
+      };
+    });
+  } catch (e) {
+    console.log(`  ⚠ Performance capture failed: ${e.message}`);
+    return null;
+  }
+}
+
 // ─── Main crawl function ─────────────────────────────────────────────
 
 async function crawlApp(slug, startUrl, appAuthType = "public") {
@@ -1135,16 +1560,21 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     page = context.pages()[0] || await context.newPage();
   } else {
     // Public apps: ephemeral browser
-    browser = await chromium.launch({
+    const launchOpts = {
       headless: !HEADED,
       args: ["--disable-blink-features=AutomationControlled"],
-    });
+    };
+    if (PROXY_SERVER) launchOpts.proxy = { server: PROXY_SERVER };
+
+    browser = await chromium.launch(launchOpts);
 
     context = await browser.newContext({
       viewport: { width: 1440, height: 900 },
       deviceScaleFactor: 1,
-      userAgent:
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      userAgent: BROWSER_USER_AGENT,
+      locale: BROWSER_LOCALE,
+      timezoneId: BROWSER_TIMEZONE,
+      extraHTTPHeaders: { "Accept-Language": "en-US,en;q=0.9" },
       ignoreHTTPSErrors: true,
     });
 
@@ -1160,6 +1590,22 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     const session = JSON.parse(readFileSync(sessionPath(slug), "utf-8"));
     if (session.cookies?.length > 0) await context.addCookies(session.cookies);
   }
+
+  // Register performance observers before navigation
+  try {
+    await page.evaluateOnNewDocument(() => {
+      window.__DS_LCP = 0;
+      window.__DS_CLS = 0;
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) window.__DS_LCP = entry.startTime;
+      }).observe({ type: 'largest-contentful-paint', buffered: true });
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) window.__DS_CLS += entry.value;
+        }
+      }).observe({ type: 'layout-shift', buffered: true });
+    });
+  } catch {}
 
   // ── Phase 1: Landing page ────────────────────────────────────────
   console.log("Phase 1: Landing page");
@@ -1238,6 +1684,17 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     });
   }
   await scrollAndCapture(page, slug, "Landing page");
+
+  // ── Extract page metadata (zero API cost) ──────────────────────────────
+  console.log("\n  Extracting page metadata...");
+  const landingPageCopy = await extractPageCopy(page);
+  if (landingPageCopy) console.log(`    Copy: h1="${landingPageCopy.h1 || '(none)'}", ${landingPageCopy.ctas.length} CTAs`);
+
+  const detectedTechStack = await detectTechStack(page);
+  console.log(`    Tech stack: ${detectedTechStack.length} technologies detected`);
+
+  const perfData = await capturePerformance(page);
+  if (perfData) console.log(`    Performance: ${perfData.loadTime}ms load, ${perfData.resourceCount} resources`);
 
   // ── Phase 2: Discover links ──────────────────────────────────────
   console.log("\nPhase 2: Link discovery");
@@ -1325,6 +1782,9 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     url: startUrl,
     crawledAt: new Date().toISOString(),
     totalScreenshots: screenshots.length,
+    pageCopy: landingPageCopy || null,
+    techStack: detectedTechStack || [],
+    performance: perfData || null,
     screens: [...screenshots],
   };
 
@@ -1358,20 +1818,7 @@ async function loginFlow(slug, startUrl, crawlUrl) {
   await waitForEnter(">> Log in to the app, then press ENTER to start crawling... ");
 
   // Prompt to save credentials for future auto-relogin
-  if (args["save-creds"]) {
-    try {
-      const rl = createInterface({ input: process.stdin, output: process.stdout });
-      const answer = await new Promise((res) => rl.question("  Save credentials for auto-relogin? (y/N): ", res));
-      rl.close();
-      if (answer.toLowerCase() === "y") {
-        const rl2 = createInterface({ input: process.stdin, output: process.stdout });
-        const username = await new Promise((res) => rl2.question("  Username/email: ", res));
-        const password = await new Promise((res) => rl2.question("  Password: ", res));
-        rl2.close();
-        saveCredentials(slug, { username, password });
-      }
-    } catch {}
-  }
+  await promptSaveCredentials(slug);
 
   // Close headed context — profile auto-persists on close
   await context.close();
@@ -1534,8 +1981,13 @@ async function main() {
     console.error("  --check-auth          Check auth health without crawling");
     console.error("  --save-creds          Prompt to save credentials during login");
     console.error("  --no-reauth           Skip auto-relogin, crawl with whatever state");
+    console.error("  --proxy <url>         Proxy server (e.g. http://us-proxy:8080)");
     console.error("  --max-pages <n>       Max pages to visit (default: 50, 100 with auth)");
-    console.error("  --max-screenshots <n> Max screenshots (default: 80)\n");
+    console.error("  --max-screenshots <n> Max screenshots (default: 80)");
+    console.error("\n  Env vars:");
+    console.error("  CAPSOLVER_API_KEY     CapSolver API key for automated CAPTCHA solving");
+    console.error("  DARKSCREEN_PROXY      Default proxy (overridden by --proxy)");
+    console.error("  DARKSCREEN_CRED_KEY   Passphrase for encrypting stored credentials\n");
     console.error("Pipeline:");
     console.error("  1. crawl-app.mjs          → raw screenshots     ($0.00)");
     console.error("  2. label-screenshots.mjs  → labeled manifest    (~$0.05)");

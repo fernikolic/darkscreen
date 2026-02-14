@@ -4,7 +4,9 @@
     "selectors": {
       "username": "#login_input",
       "password": "#login_password",
-      "submit": "#click_login_submit"
+      "submit": "#click_login_submit",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
     },
     "successIndicators": [
       "[data-testid='header-user-menu']",
@@ -17,7 +19,9 @@
     "selectors": {
       "username": "input[name='email']",
       "password": "input[name='password']",
-      "submit": "button[type='submit']"
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
     },
     "successIndicators": [
       "a[href='/dashboard']",
@@ -30,7 +34,9 @@
     "selectors": {
       "username": "input[name='username']",
       "password": "input[name='password']",
-      "submit": "button[type='submit']"
+      "submit": "button[type='submit']",
+      "totp": "input[name='otp']",
+      "totpSubmit": "button[type='submit']"
     },
     "successIndicators": [
       "a[href*='/u/trade']",
