@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import {
   apps,
   CATEGORIES,
@@ -211,13 +212,14 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
                 }}
                 className="flex items-center gap-2 rounded-full border border-dark-border/60 bg-dark-card/50 px-3 py-1.5 text-[13px] font-medium text-text-secondary transition-colors hover:border-text-tertiary hover:text-text-primary"
               >
-                {s.type === "app" ? (
-                  <span
-                    className="flex h-5 w-5 items-center justify-center rounded-md text-[10px] font-bold text-white"
-                    style={{ backgroundColor: s.color }}
-                  >
-                    {s.label[0]}
-                  </span>
+                {s.type === "app" && s.slug ? (
+                  <Image
+                    src={`/logos/${s.slug}.png`}
+                    alt={s.label}
+                    width={20}
+                    height={20}
+                    className="rounded-md"
+                  />
                 ) : (
                   <svg
                     className="h-3.5 w-3.5 text-text-tertiary"
@@ -254,12 +256,13 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
                       onClick={() => navigateToApp(app.slug)}
                       className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-colors hover:bg-white/5"
                     >
-                      <div
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[15px] font-bold text-white"
-                        style={{ backgroundColor: app.accentColor }}
-                      >
-                        {app.name[0]}
-                      </div>
+                      <Image
+                        src={`/logos/${app.slug}.png`}
+                        alt={app.name}
+                        width={40}
+                        height={40}
+                        className="shrink-0 rounded-xl"
+                      />
                       <div className="min-w-0 flex-1">
                         <div className="text-[14px] font-medium text-text-primary">
                           {app.name}
@@ -320,12 +323,13 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
                           className="group relative"
                           title={app.name}
                         >
-                          <div
-                            className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl text-lg font-bold text-white shadow-lg transition-transform duration-150 group-hover:scale-110"
-                            style={{ backgroundColor: app.accentColor }}
-                          >
-                            {app.name[0]}
-                          </div>
+                          <Image
+                            src={`/logos/${app.slug}.png`}
+                            alt={app.name}
+                            width={52}
+                            height={52}
+                            className="rounded-2xl shadow-lg transition-transform duration-150 group-hover:scale-110"
+                          />
                         </button>
                       ))}
                     </div>
