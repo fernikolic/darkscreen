@@ -159,12 +159,25 @@ function LibraryContent() {
 
   const filtered = apps.filter((app) => {
     if (activePlatform === "Mobile") {
-      if (!app.platforms.includes("iOS") && !app.platforms.includes("Android"))
+      // Must have iOS or Android, and must NOT also have Web
+      // (since all current screenshots are web captures, showing them
+      // under Mobile would be misleading)
+      const hasMobile =
+        app.platforms.includes("iOS") || app.platforms.includes("Android");
+      if (!hasMobile || app.platforms.includes("Web")) return false;
+    } else if (activePlatform === "Web") {
+      // Web groups Web + Extension + Desktop — show any app with at least one
+      if (
+        !app.platforms.includes("Web") &&
+        !app.platforms.includes("Extension") &&
+        !app.platforms.includes("Desktop")
+      )
         return false;
     } else if (activePlatform !== "All") {
+      // Individual platform (iOS, Android, Desktop, Extension)
+      // Must have that platform and must NOT also have Web
       if (!app.platforms.includes(activePlatform)) return false;
-      if (activePlatform !== "Web" && app.platforms.includes("Web"))
-        return false;
+      if (app.platforms.includes("Web")) return false;
     }
     if (activeCategory !== "All" && app.category !== activeCategory)
       return false;
