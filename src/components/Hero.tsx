@@ -1,19 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { TOTAL_APPS, TOTAL_SCREENS, apps } from "@/data/apps";
+import { AppLogo } from "@/components/AppLogo";
 
 const featuredApps = apps.filter((a) => a.detailed && a.thumbnail).slice(0, 5);
 
 // Floating logos — left side (top to bottom), right side (top to bottom)
 const floatingLogos = {
   left: [
-    { src: "/logos/coinbase.webp", alt: "Coinbase", size: 64, top: "8%", left: "8%", duration: "6s", delay: "0s" },
+    { src: "/logos/coinbase.png", alt: "Coinbase", size: 64, top: "8%", left: "8%", duration: "6s", delay: "0s" },
     { src: "/logos/metamask.png", alt: "MetaMask", size: 56, top: "34%", left: "3%", duration: "7s", delay: "1s" },
-    { src: "/logos/curve.jpeg", alt: "Curve", size: 44, top: "56%", left: "11%", duration: "5.5s", delay: "0.5s" },
+    { src: "/logos/curve.png", alt: "Curve", size: 44, top: "56%", left: "11%", duration: "5.5s", delay: "0.5s" },
+    { src: "/logos/kraken.png", alt: "Kraken", size: 40, top: "75%", left: "6%", duration: "6.2s", delay: "0.3s" },
   ],
   right: [
     { src: "/logos/uniswap.png", alt: "Uniswap", size: 56, top: "12%", right: "6%", duration: "6.5s", delay: "0.8s" },
     { src: "/logos/mempool.png", alt: "Mempool", size: 48, top: "42%", right: "4%", duration: "5s", delay: "1.5s" },
+    { src: "/logos/phantom.png", alt: "Phantom", size: 44, top: "65%", right: "9%", duration: "5.8s", delay: "1.2s" },
+    { src: "/logos/aave.png", alt: "Aave", size: 40, top: "20%", right: "12%", duration: "6.8s", delay: "0.5s" },
   ],
 };
 
@@ -142,21 +146,22 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {[
-              "Coinbase",
-              "MetaMask",
-              "Uniswap",
-              "Kraken",
-              "Aave",
-              "Phantom",
-              "Binance",
-              "Jupiter",
-              "Lido",
-            ].map((name) => (
+              { name: "Coinbase", slug: "coinbase" },
+              { name: "MetaMask", slug: "metamask" },
+              { name: "Uniswap", slug: "uniswap" },
+              { name: "Kraken", slug: "kraken" },
+              { name: "Aave", slug: "aave" },
+              { name: "Phantom", slug: "phantom" },
+              { name: "Binance", slug: "binance" },
+              { name: "Jupiter", slug: "jupiter" },
+              { name: "Lido", slug: "lido" },
+            ].map((app) => (
               <span
-                key={name}
-                className="text-[15px] font-semibold tracking-tight text-text-tertiary/40 transition-colors hover:text-text-primary"
+                key={app.slug}
+                className="flex items-center gap-1.5 text-[15px] font-semibold tracking-tight text-text-tertiary/40 transition-colors hover:text-text-primary"
               >
-                {name}
+                <AppLogo slug={app.slug} name={app.name} size={20} />
+                {app.name}
               </span>
             ))}
           </div>
@@ -182,7 +187,8 @@ export function Hero() {
                   />
                 </div>
                 <div className="flex items-center justify-between px-3 py-2.5">
-                  <span className="truncate text-[12px] font-medium text-text-primary">
+                  <span className="flex items-center gap-1.5 truncate text-[12px] font-medium text-text-primary">
+                    <AppLogo slug={app.slug} name={app.name} size={16} />
                     {app.name}
                   </span>
                   <span className="ml-2 shrink-0 font-mono text-[10px] text-text-tertiary">

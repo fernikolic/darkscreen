@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { type CryptoApp } from "@/data/apps";
+import { AppLogo } from "@/components/AppLogo";
 
 interface AppCardProps {
   app: CryptoApp;
@@ -55,9 +56,12 @@ export function AppCard({ app, bookmarkButton }: AppCardProps) {
       {/* Card info */}
       <div className="border-t border-dark-border p-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-[14px] font-medium text-text-primary">
-            {app.name}
-          </h3>
+          <div className="flex items-center gap-2">
+            <AppLogo slug={app.slug} name={app.name} size={20} />
+            <h3 className="text-[14px] font-medium text-text-primary">
+              {app.name}
+            </h3>
+          </div>
           <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
             {app.category}
           </span>

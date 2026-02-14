@@ -1,4 +1,5 @@
 import { apps } from "@/data/apps";
+import { AppLogo } from "@/components/AppLogo";
 
 export function LogoCloud() {
   return (
@@ -11,8 +12,9 @@ export function LogoCloud() {
           {apps.slice(0, 24).map((app, i) => (
             <span
               key={app.slug}
-              className="whitespace-nowrap text-[14px] text-text-secondary/50 transition-colors hover:text-text-primary"
+              className="flex items-center gap-1.5 whitespace-nowrap text-[14px] text-text-secondary/50 transition-colors hover:text-text-primary"
             >
+              <AppLogo slug={app.slug} name={app.name} size={18} />
               {app.name}
               {i < 23 && <span className="ml-6 text-dark-border">/</span>}
             </span>

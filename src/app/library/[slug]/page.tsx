@@ -8,6 +8,7 @@ import { AppDetailContent } from "@/components/AppDetailContent";
 import { EmailCapture } from "@/components/EmailCapture";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { SoftwareAppJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { AppLogo } from "@/components/AppLogo";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -65,7 +66,10 @@ export default async function AppDetail({ params }: PageProps) {
           <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
             Coming Soon
           </p>
-          <h1 className="font-heading text-3xl font-bold text-text-primary">{app.name}</h1>
+          <div className="flex items-center justify-center gap-3">
+            <AppLogo slug={app.slug} name={app.name} size={40} />
+            <h1 className="font-heading text-3xl font-bold text-text-primary">{app.name}</h1>
+          </div>
           <span className="mt-3 inline-block font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
             {app.category}
           </span>
@@ -117,6 +121,7 @@ export default async function AppDetail({ params }: PageProps) {
             {app.category} / {app.chains[0]}
           </p>
           <div className="flex items-center gap-3">
+            <AppLogo slug={app.slug} name={app.name} size={48} />
             <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
               {app.name}
             </h1>
