@@ -20,30 +20,37 @@ export function AISkillTeaser() {
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
 
           <div className="relative px-10 py-14 md:px-16 md:py-20">
-            {/* Coming soon pill with Claude icon */}
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5">
-              <ClaudeIcon className="h-3.5 w-3.5 text-[#D97757]" />
-              <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-text-tertiary">
-                Coming to Claude Code
+            {/* Coming soon pills */}
+            <div className="mb-8 flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5">
+                <ClaudeIcon className="h-3.5 w-3.5 text-[#D97757]" />
+                <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-text-tertiary">
+                  Claude Code
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5">
+                <span className="text-sm leading-none">🦀</span>
+                <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-text-tertiary">
+                  OpenClaw
+                </span>
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                Coming soon
               </span>
             </div>
 
             <div className="grid gap-12 md:grid-cols-2 md:items-center">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-text-primary md:text-3xl">
-                  Design crypto products with
+                  Crypto competitive intelligence,
                   <br />
-                  real competitive context
+                  built into your workflow
                 </h2>
                 <p className="mt-4 max-w-md text-[14px] leading-relaxed text-text-secondary">
                   Ship better products, faster. Our entire library — distilled
-                  into a skill that gives product designers, PMs, and marketers
+                  into a skill that gives designers, PMs, and marketers
                   instant access to what 100+ crypto products actually ship.
-                  No more guessing. No more stale Figma references.
-                </p>
-                <p className="mt-4 max-w-md text-[13px] leading-relaxed text-text-tertiary">
-                  Available as a skill for Claude Code and AI agents like
-                  OpenClaw.
+                  Real patterns. Real copy. Real flows.
                 </p>
               </div>
 
