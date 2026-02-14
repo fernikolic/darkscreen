@@ -10,6 +10,7 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { SoftwareAppJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { AppLogo } from "@/components/AppLogo";
 import { SponsorBanner } from "@/components/SponsorBanner";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://darkscreens.xyz/library/${slug}`,
       siteName: "Darkscreens",
       type: "website",
-      ...(app.thumbnail ? { images: [{ url: `https://darkscreens.xyz${app.thumbnail}` }] } : {}),
+      ...(app.thumbnail ? { images: [{ url: screenshotUrl(app.thumbnail) || `https://darkscreens.xyz${app.thumbnail}` }] } : {}),
     },
   };
 }
