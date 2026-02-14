@@ -4,28 +4,36 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   apps,
-  TOTAL_APPS,
   CATEGORIES,
   type AppCategory,
   type FlowType,
-  type ChainType,
   type PlatformType,
   type SectionType,
   type StyleType,
-  type IntelLayer,
-  CHAIN_TYPES,
+  FLOW_TYPES,
   PLATFORM_TYPES,
   SECTION_TYPES,
   STYLE_TYPES,
-  INTEL_LAYERS,
 } from "@/data/apps";
-import { getScreenLayer } from "@/data/helpers";
-import { FilterBar } from "@/components/FilterBar";
 import { AppCard } from "@/components/AppCard";
-import { SortControl, type SortOption } from "@/components/SortControl";
 import { BookmarkButton } from "@/components/BookmarkButton";
 
-const CHAINS: Array<ChainType | "All Chains"> = ["All Chains", ...CHAIN_TYPES];
+type SortOption = "newest" | "most-screens" | "a-z" | "z-a";
+
+const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "newest", label: "Latest" },
+  { value: "most-screens", label: "Most screens" },
+  { value: "a-z", label: "A\u2013Z" },
+];
+
+const FLOW_LABELS: Record<string, string> = {
+  Home: "Home & Dashboard",
+  Onboarding: "Onboarding",
+  Swap: "Swap & Trade",
+  Send: "Send & Receive",
+  Staking: "Staking",
+  Settings: "Settings",
+};
 
 function parseDate(dateStr: string): number {
   const d = new Date(dateStr);
@@ -39,7 +47,9 @@ function LibraryContent() {
   const initialCategory = (() => {
     const c = searchParams.get("category");
     if (c) {
-      const match = CATEGORIES.find((cat) => cat.toLowerCase() === c.toLowerCase());
+      const match = CATEGORIES.find(
+        (cat) => cat.toLowerCase() === c.toLowerCase()
+      );
       if (match) return match;
     }
     return "All" as const;
@@ -48,7 +58,9 @@ function LibraryContent() {
   const initialSection = (() => {
     const s = searchParams.get("section");
     if (s) {
-      const match = SECTION_TYPES.find((st) => st.toLowerCase() === s.toLowerCase());
+      const match = SECTION_TYPES.find(
+        (st) => st.toLowerCase() === s.toLowerCase()
+      );
       if (match) return [match];
     }
     return [] as SectionType[];
@@ -57,64 +69,107 @@ function LibraryContent() {
   const initialStyle = (() => {
     const s = searchParams.get("style");
     if (s) {
-      const match = STYLE_TYPES.find((st) => st.toLowerCase() === s.toLowerCase());
+      const match = STYLE_TYPES.find(
+        (st) => st.toLowerCase() === s.toLowerCase()
+      );
       if (match) return [match];
     }
     return [] as StyleType[];
   })();
 
-  const initialLayer = (() => {
-    const l = searchParams.get("layer");
-    if (l) {
-      const match = INTEL_LAYERS.find((il) => il.toLowerCase() === l.toLowerCase());
-      if (match) return match;
-    }
-    return "All" as const;
-  })();
-
   const initialPlatform = (() => {
     const p = searchParams.get("platform");
     if (p) {
-      const match = PLATFORM_TYPES.find((pt) => pt.toLowerCase() === p.toLowerCase());
+      const match = PLATFORM_TYPES.find(
+        (pt) => pt.toLowerCase() === p.toLowerCase()
+      );
       if (match) return match;
     }
     return "All" as const;
   })();
 
-  const [activePlatform, setActivePlatform] = useState<PlatformType | "All">(initialPlatform);
-  const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(initialCategory);
-  const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
-  const [activeChain, setActiveChain] = useState<ChainType | "All Chains">("All Chains");
-  const [activeSections, setActiveSections] = useState<SectionType[]>(initialSection);
+  const initialSearch = searchParams.get("q") || "";
+
+  const [activePlatform, setActivePlatform] = useState<PlatformType | "All">(
+    initialPlatform
+  );
+  const [activeCategory, setActiveCategory] = useState<AppCategory | "All">(
+    initialCategory
+  );
+  const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">(
+    "All Flows"
+  );
+  const [activeSections, setActiveSections] =
+    useState<SectionType[]>(initialSection);
   const [activeStyles, setActiveStyles] = useState<StyleType[]>(initialStyle);
-  const [activeLayer, setActiveLayer] = useState<IntelLayer | "All">(initialLayer);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(initialSearch);
   const [sortBy, setSortBy] = useState<SortOption>("newest");
 
-  // Sync URL params → state on client-side navigation (e.g. Header platform links)
+  // Sync URL params on client-side navigation
   useEffect(() => {
     const p = searchParams.get("platform");
     if (p) {
-      const match = PLATFORM_TYPES.find((pt) => pt.toLowerCase() === p.toLowerCase());
+      const match = PLATFORM_TYPES.find(
+        (pt) => pt.toLowerCase() === p.toLowerCase()
+      );
       setActivePlatform(match || "All");
-    } else {
-      setActivePlatform("All");
     }
+    const q = searchParams.get("q");
+    if (q !== null) setSearch(q);
   }, [searchParams]);
+
+  const toggleSection = (section: SectionType) => {
+    setActiveSections((prev) =>
+      prev.includes(section)
+        ? prev.filter((s) => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const toggleStyle = (style: StyleType) => {
+    setActiveStyles((prev) =>
+      prev.includes(style)
+        ? prev.filter((s) => s !== style)
+        : [...prev, style]
+    );
+  };
+
+  const hasActiveFilters =
+    activeCategory !== "All" ||
+    activeFlow !== "All Flows" ||
+    activeSections.length > 0 ||
+    activeStyles.length > 0 ||
+    activePlatform !== "All";
+
+  const clearFilters = () => {
+    setActiveCategory("All");
+    setActiveFlow("All Flows");
+    setActiveSections([]);
+    setActiveStyles([]);
+    setActivePlatform("All");
+    setSearch("");
+  };
 
   const filtered = apps.filter((app) => {
     if (activePlatform !== "All") {
       if (!app.platforms.includes(activePlatform)) return false;
-      // For non-Web platforms, only show apps exclusive to that platform
-      // (since all current screenshots are web captures)
-      if (activePlatform !== "Web" && app.platforms.includes("Web")) return false;
+      if (activePlatform !== "Web" && app.platforms.includes("Web"))
+        return false;
     }
-    if (activeLayer !== "All" && !app.screens.some((s) => getScreenLayer(s) === activeLayer)) return false;
-    if (activeCategory !== "All" && app.category !== activeCategory) return false;
-    if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow)) return false;
-    if (activeChain !== "All Chains" && !app.chains.includes(activeChain)) return false;
-    if (activeSections.length > 0 && !activeSections.some((s) => app.sections.includes(s))) return false;
-    if (activeStyles.length > 0 && !activeStyles.some((s) => app.styles.includes(s))) return false;
+    if (activeCategory !== "All" && app.category !== activeCategory)
+      return false;
+    if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow))
+      return false;
+    if (
+      activeSections.length > 0 &&
+      !activeSections.some((s) => app.sections.includes(s))
+    )
+      return false;
+    if (
+      activeStyles.length > 0 &&
+      !activeStyles.some((s) => app.styles.includes(s))
+    )
+      return false;
     if (search) {
       const q = search.toLowerCase();
       if (
@@ -143,93 +198,182 @@ function LibraryContent() {
   });
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
-      {/* Header */}
-      <div className="mb-12">
-        <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
-          Apps
-        </p>
-        <h1 className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
-          Explore the collection
-        </h1>
-        <p className="mt-3 text-[14px] text-text-secondary">
-          Screens and flows from {TOTAL_APPS}+ crypto products
-        </p>
+    <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+      {/* Browse grid — Mobbin-style 4-column discovery */}
+      <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-4 md:gap-x-16">
+        {/* Categories */}
+        <div>
+          <h3 className="mb-5 text-[12px] font-medium uppercase tracking-wider text-text-tertiary">
+            Categories
+          </h3>
+          <div className="space-y-1.5">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() =>
+                  setActiveCategory(activeCategory === cat ? "All" : cat)
+                }
+                className={`block font-heading text-lg font-bold transition-colors md:text-[22px] ${
+                  activeCategory === cat
+                    ? "text-white"
+                    : "text-text-secondary hover:text-white"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Screens (flows) */}
+        <div>
+          <h3 className="mb-5 text-[12px] font-medium uppercase tracking-wider text-text-tertiary">
+            Screens
+          </h3>
+          <div className="space-y-1.5">
+            {FLOW_TYPES.map((flow) => (
+              <button
+                key={flow}
+                onClick={() =>
+                  setActiveFlow(activeFlow === flow ? "All Flows" : flow)
+                }
+                className={`block font-heading text-lg font-bold transition-colors md:text-[22px] ${
+                  activeFlow === flow
+                    ? "text-white"
+                    : "text-text-secondary hover:text-white"
+                }`}
+              >
+                {FLOW_LABELS[flow] || flow}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Sections */}
+        <div>
+          <h3 className="mb-5 text-[12px] font-medium uppercase tracking-wider text-text-tertiary">
+            Sections
+          </h3>
+          <div className="space-y-1.5">
+            {SECTION_TYPES.slice(0, 6).map((section) => (
+              <button
+                key={section}
+                onClick={() => toggleSection(section)}
+                className={`block font-heading text-lg font-bold transition-colors md:text-[22px] ${
+                  activeSections.includes(section)
+                    ? "text-white"
+                    : "text-text-secondary hover:text-white"
+                }`}
+              >
+                {section}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Styles */}
+        <div>
+          <h3 className="mb-5 text-[12px] font-medium uppercase tracking-wider text-text-tertiary">
+            Styles
+          </h3>
+          <div className="space-y-1.5">
+            {STYLE_TYPES.map((style) => (
+              <button
+                key={style}
+                onClick={() => toggleStyle(style)}
+                className={`block font-heading text-lg font-bold transition-colors md:text-[22px] ${
+                  activeStyles.includes(style)
+                    ? "text-white"
+                    : "text-text-secondary hover:text-white"
+                }`}
+              >
+                {style}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* Platform tabs */}
-      <div className="mb-8 flex flex-wrap gap-1">
-        {(["All", ...PLATFORM_TYPES] as const).map((platform) => (
-          <button
-            key={platform}
-            onClick={() => setActivePlatform(platform)}
-            className={`rounded-full px-4 py-2 text-[14px] font-medium transition-all ${
-              activePlatform === platform
-                ? "bg-white text-dark-bg"
-                : "bg-dark-card text-text-tertiary hover:bg-dark-border/50 hover:text-text-secondary"
-            }`}
-          >
-            {platform}
-          </button>
-        ))}
-      </div>
+      {/* Filter bar */}
+      <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-dark-border/50 pt-5">
+        {/* Platform pills */}
+        <div className="flex items-center gap-0.5 rounded-lg bg-dark-card p-1">
+          {PLATFORM_TYPES.map((platform) => (
+            <button
+              key={platform}
+              onClick={() =>
+                setActivePlatform(
+                  activePlatform === platform ? "All" : platform
+                )
+              }
+              className={`rounded-md px-3 py-1 text-[13px] font-medium transition-all ${
+                activePlatform === platform
+                  ? "bg-dark-border/80 text-white"
+                  : "text-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {platform}
+            </button>
+          ))}
+        </div>
 
-      {/* Search */}
-      <div className="mb-6">
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search apps..."
-          className="w-full border-b border-dark-border bg-transparent py-3 text-[14px] text-text-primary placeholder-text-tertiary outline-none transition-colors focus:border-text-secondary"
-        />
-      </div>
+        {/* Separator */}
+        <div className="hidden h-5 w-px bg-dark-border/50 md:block" />
 
-      {/* Chain filter */}
-      <div className="mb-6 flex flex-wrap gap-2">
-        {CHAINS.map((chain) => (
-          <button
-            key={chain}
-            onClick={() => setActiveChain(chain)}
-            className={`rounded-none border-b-2 px-3 py-2 text-[13px] font-medium transition-all ${
-              activeChain === chain
-                ? "border-white/60 text-white"
-                : "border-transparent text-text-tertiary hover:text-text-secondary"
-            }`}
-          >
-            {chain}
-          </button>
-        ))}
-      </div>
+        {/* Sort tabs */}
+        <div className="flex items-center gap-0.5">
+          {SORT_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => setSortBy(opt.value)}
+              className={`px-3 py-1.5 text-[13px] font-medium transition-colors ${
+                sortBy === opt.value
+                  ? "text-white underline decoration-2 underline-offset-[6px]"
+                  : "text-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
 
-      {/* Category + Flow + Platform + Section + Style filters */}
-      <div className="mb-10">
-        <FilterBar
-          activeCategory={activeCategory}
-          activeFlow={activeFlow}
-          activeSections={activeSections}
-          activeStyles={activeStyles}
-          activeLayer={activeLayer}
-          onCategoryChange={setActiveCategory}
-          onFlowChange={setActiveFlow}
-          onSectionsChange={setActiveSections}
-          onStylesChange={setActiveStyles}
-          onLayerChange={setActiveLayer}
-        />
-      </div>
-
-      {/* Sort + Results count */}
-      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-        <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary">
-          {sorted.length} result{sorted.length !== 1 ? "s" : ""}
-        </span>
-        <SortControl value={sortBy} onChange={setSortBy} />
+        {/* Right side: results + clear */}
+        <div className="ml-auto flex items-center gap-3">
+          <span className="font-mono text-[11px] text-text-tertiary">
+            {sorted.length} app{sorted.length !== 1 ? "s" : ""}
+          </span>
+          {hasActiveFilters && (
+            <button
+              onClick={clearFilters}
+              className="flex items-center gap-1.5 text-[12px] text-text-tertiary transition-colors hover:text-text-secondary"
+            >
+              <svg
+                className="h-3.5 w-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+              Clear
+            </button>
+          )}
+        </div>
       </div>
 
       {/* App grid */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {sorted.map((app) => (
-          <AppCard key={app.slug} app={app} bookmarkButton={<BookmarkButton slug={app.slug} />} />
+          <AppCard
+            key={app.slug}
+            app={app}
+            bookmarkButton={<BookmarkButton slug={app.slug} />}
+          />
         ))}
       </div>
 

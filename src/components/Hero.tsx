@@ -80,17 +80,17 @@ export function Hero() {
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
             </span>
             <span className="font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-white">
-              Competitive intelligence for crypto
+              Product & design intelligence for crypto
             </span>
           </div>
           <h1 className="font-heading text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.08] text-text-primary">
-            Every screen, every price,{" "}
-            <span className="text-white">every hire</span>{" "}&mdash; tracked.
+            See how every crypto product{" "}
+            <span className="text-white">actually ships</span>
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-text-secondary">
             {TOTAL_SCREENS.toLocaleString()}+ screens and flows from {TOTAL_APPS}+
-            {" "}(and growing) wallets, exchanges, and DeFi protocols,
-            systematically captured so you never miss what shipped.
+            {" "}wallets, exchanges, and DeFi protocols &mdash;
+            systematically captured so you can study what the best teams are building.
           </p>
 
           {/* CTA */}
