@@ -12,6 +12,8 @@ const intelLinks = [
   { href: "/intel/marketing", label: "Marketing & Copy" },
   { href: "/intel/careers", label: "Hiring Signals" },
   { href: "/intel/company", label: "Company Intel" },
+  { href: "/techstack", label: "Tech Stack" },
+  { href: "/performance", label: "Performance" },
 ];
 
 export function Header() {
@@ -84,14 +86,16 @@ export function Header() {
             </button>
             {intelOpen && (
               <div className="absolute left-0 top-full z-50 mt-1 w-52 rounded-lg border border-dark-border bg-dark-card/95 p-1.5 shadow-xl backdrop-blur-xl">
-                {intelLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block rounded-md px-3 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary"
-                  >
-                    {link.label}
-                  </Link>
+                {intelLinks.map((link, i) => (
+                  <div key={link.href}>
+                    {i === 4 && <div className="my-1 h-px bg-dark-border/50" />}
+                    <Link
+                      href={link.href}
+                      className="block rounded-md px-3 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary"
+                    >
+                      {link.label}
+                    </Link>
+                  </div>
                 ))}
               </div>
             )}

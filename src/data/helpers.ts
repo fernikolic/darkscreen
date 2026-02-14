@@ -1,4 +1,8 @@
-import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, INTEL_LAYERS } from "./apps";
+import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, type DiffChange, type CopySnapshot, type CopyChange, type TechStackEntry, type PerformanceMetrics, INTEL_LAYERS } from "./apps";
+import { autoChangesBySlug } from "./auto-changes";
+import { copyDataBySlug } from "./copy-tracking";
+import { techStackBySlug } from "./techstack";
+import { performanceBySlug } from "./performance";
 
 export interface EnrichedScreen extends AppScreen {
   appSlug: string;
@@ -136,6 +140,82 @@ export function getAllFlows(): AppFlow[] {
         count: sorted.length,
         thumbnail: firstWithImage?.image,
       });
+    }
+  }
+  return result;
+}
+
+// ── Auto-detected changes ─────────────────────────────────────────────────
+
+export function getAutoChanges(slug: string): DiffChange[] {
+  return autoChangesBySlug[slug] || [];
+}
+
+export interface EnrichedAutoChange extends DiffChange {
+  appSlug: string;
+  appName: string;
+  appCategory: AppCategory;
+  accentColor: string;
+}
+
+export function getAllChangesWithAuto(): (EnrichedChange | EnrichedAutoChange)[] {
+  const manual = getAllChanges();
+  const auto: EnrichedAutoChange[] = [];
+
+  for (const app of apps) {
+    const appAutoChanges = autoChangesBySlug[app.slug];
+    if (!appAutoChanges) continue;
+    for (const change of appAutoChanges) {
+      auto.push({
+        ...change,
+        appSlug: app.slug,
+        appName: app.name,
+        appCategory: app.category,
+        accentColor: app.accentColor,
+      });
+    }
+  }
+
+  return [...manual, ...auto].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+// ── Copy tracking ─────────────────────────────────────────────────────────
+
+export function getCopyData(slug: string): { snapshots: CopySnapshot[]; changes: CopyChange[] } {
+  return copyDataBySlug[slug] || { snapshots: [], changes: [] };
+}
+
+// ── Tech stack ────────────────────────────────────────────────────────────
+
+export function getTechStack(slug: string): TechStackEntry[] {
+  return techStackBySlug[slug] || [];
+}
+
+export function getAllTechStacks(): Record<string, { app: CryptoApp; stack: TechStackEntry[] }> {
+  const result: Record<string, { app: CryptoApp; stack: TechStackEntry[] }> = {};
+  for (const app of apps) {
+    const stack = techStackBySlug[app.slug];
+    if (stack && stack.length > 0) {
+      result[app.slug] = { app, stack };
+    }
+  }
+  return result;
+}
+
+// ── Performance ───────────────────────────────────────────────────────────
+
+export function getPerformanceData(slug: string): PerformanceMetrics[] {
+  return performanceBySlug[slug] || [];
+}
+
+export function getAllPerformanceData(): Record<string, { app: CryptoApp; metrics: PerformanceMetrics[] }> {
+  const result: Record<string, { app: CryptoApp; metrics: PerformanceMetrics[] }> = {};
+  for (const app of apps) {
+    const metrics = performanceBySlug[app.slug];
+    if (metrics && metrics.length > 0) {
+      result[app.slug] = { app, metrics };
     }
   }
   return result;

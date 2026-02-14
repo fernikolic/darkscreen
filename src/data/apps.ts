@@ -122,6 +122,59 @@ export interface AppChange {
   type: ChangeType;
 }
 
+// Feature 1: Automated Change Detection
+export type DiffStatus = "changed" | "added" | "removed" | "unchanged";
+
+export interface DiffChange extends AppChange {
+  source: "auto";
+  diffPercent?: number;
+  beforeImage?: string;
+  afterImage?: string;
+  flow?: string;
+  step?: number;
+  screenLabel?: string;
+}
+
+// Feature 2: Copy/Messaging Tracking
+export interface CopySnapshot {
+  date: string;
+  url: string;
+  h1?: string;
+  metaDescription?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ctas: string[];
+  navItems: string[];
+}
+
+export interface CopyChange {
+  date: string;
+  element: string;
+  oldText: string;
+  newText: string;
+  url: string;
+}
+
+// Feature 3: Tech Stack
+export interface TechStackEntry {
+  category: string;
+  name: string;
+  evidence: string;
+}
+
+// Feature 4: Performance
+export interface PerformanceMetrics {
+  date: string;
+  url: string;
+  loadTime: number;
+  domContentLoaded: number;
+  lcp?: number;
+  cls?: number;
+  resourceCount: number;
+  transferSize: number;
+  breakdown: { js: number; css: number; images: number; fonts: number; other: number };
+}
+
 export type AuthType = "public" | "wallet" | "login";
 
 export interface CryptoApp {

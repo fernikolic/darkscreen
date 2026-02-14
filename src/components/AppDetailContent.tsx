@@ -2,11 +2,14 @@
 
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { type CryptoApp, type IntelLayer, INTEL_LAYER_META } from "@/data/apps";
-import { getScreenLayer, getAppLayerCounts } from "@/data/helpers";
+import { type CryptoApp, type IntelLayer, type AppChange, type DiffChange, INTEL_LAYER_META } from "@/data/apps";
+import { getScreenLayer, getAppLayerCounts, getAutoChanges, getCopyData, getTechStack, getPerformanceData } from "@/data/helpers";
 import { IntelLayerTabs } from "./IntelLayerTabs";
 import { ScreenGallery } from "./ScreenGallery";
 import { ChangeTimeline } from "./ChangeTimeline";
+import { CopyTracker } from "./CopyTracker";
+import { TechStackBadges } from "./TechStackBadges";
+import { PerformanceCard } from "./PerformanceCard";
 
 interface AppDetailContentProps {
   app: CryptoApp;
@@ -50,8 +53,25 @@ export function AppDetailContent({ app }: AppDetailContentProps) {
     return Array.from(flows);
   }, [layerScreens]);
 
+  // Merge manual + auto changes
+  const allChanges = useMemo((): (AppChange | DiffChange)[] => {
+    const autoChanges = getAutoChanges(app.slug);
+    return [...app.changes, ...autoChanges].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  }, [app]);
+
+  // Copy, tech stack, performance data
+  const copyData = useMemo(() => getCopyData(app.slug), [app.slug]);
+  const techStack = useMemo(() => getTechStack(app.slug), [app.slug]);
+  const perfMetrics = useMemo(() => getPerformanceData(app.slug), [app.slug]);
+
   const showTabs = availableLayers.length > 1;
   const meta = INTEL_LAYER_META[activeLayer];
+
+  const hasCopyData = copyData.snapshots.length > 0 || copyData.changes.length > 0;
+  const hasTechStack = techStack.length > 0;
+  const hasPerfData = perfMetrics.length > 0;
 
   return (
     <>
@@ -97,7 +117,44 @@ export function AppDetailContent({ app }: AppDetailContentProps) {
       {/* Change timeline — only under Product tab */}
       {activeLayer === "Product" && (
         <section className="mb-16 border-t border-dark-border pt-10">
-          <ChangeTimeline changes={app.changes} />
+          <ChangeTimeline changes={allChanges} />
+        </section>
+      )}
+
+      {/* Copy Tracker — only under Product tab, if data exists */}
+      {activeLayer === "Product" && hasCopyData && (
+        <section className="mb-16 border-t border-dark-border pt-10">
+          <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+            Messaging
+          </p>
+          <h2 className="mb-8 font-heading font-semibold text-xl text-text-primary">
+            Copy & Messaging
+          </h2>
+          <CopyTracker
+            snapshots={copyData.snapshots}
+            changes={copyData.changes}
+            appName={app.name}
+          />
+        </section>
+      )}
+
+      {/* Tech Stack — only under Product tab, if data exists */}
+      {activeLayer === "Product" && hasTechStack && (
+        <section className="mb-16 border-t border-dark-border pt-10">
+          <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+            Technology
+          </p>
+          <h2 className="mb-8 font-heading font-semibold text-xl text-text-primary">
+            Tech Stack
+          </h2>
+          <TechStackBadges techStack={techStack} />
+        </section>
+      )}
+
+      {/* Performance — only under Product tab, if data exists */}
+      {activeLayer === "Product" && hasPerfData && (
+        <section className="mb-16 border-t border-dark-border pt-10">
+          <PerformanceCard metrics={perfMetrics} appName={app.name} />
         </section>
       )}
     </>

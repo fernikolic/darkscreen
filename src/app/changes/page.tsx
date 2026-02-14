@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { type AppCategory, type ChangeType, CATEGORIES } from "@/data/apps";
-import { getAllChanges, type EnrichedChange } from "@/data/helpers";
+import { getAllChanges, getAllChangesWithAuto, type EnrichedChange, type EnrichedAutoChange } from "@/data/helpers";
 import { useSubscription } from "@/contexts/SubscriptionContext";
 import { canViewChangeHistory } from "@/lib/access";
 import { PaywallOverlay } from "@/components/PaywallOverlay";
@@ -28,11 +28,12 @@ export default function ChangesPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">("All");
   const [activeTypes, setActiveTypes] = useState<Set<ChangeType>>(new Set());
+  const [sourceFilter, setSourceFilter] = useState<"all" | "manual" | "auto">("all");
 
   const { plan } = useSubscription();
   const canViewChanges = canViewChangeHistory(plan);
 
-  const allChanges = useMemo(() => getAllChanges(), []);
+  const allChanges = useMemo(() => getAllChangesWithAuto(), []);
 
   const toggleType = (type: ChangeType) => {
     setActiveTypes((prev) => {
@@ -50,6 +51,11 @@ export default function ChangesPage() {
     return allChanges.filter((c) => {
       if (activeCategory !== "All" && c.appCategory !== activeCategory) return false;
       if (activeTypes.size > 0 && !activeTypes.has(c.type)) return false;
+      if (sourceFilter !== "all") {
+        const isAuto = "source" in c && (c as EnrichedAutoChange).source === "auto";
+        if (sourceFilter === "auto" && !isAuto) return false;
+        if (sourceFilter === "manual" && isAuto) return false;
+      }
       if (search.trim()) {
         const q = search.toLowerCase();
         if (
@@ -61,7 +67,7 @@ export default function ChangesPage() {
       }
       return true;
     });
-  }, [allChanges, activeCategory, activeTypes, search]);
+  }, [allChanges, activeCategory, activeTypes, sourceFilter, search]);
 
   // Group by month
   const grouped = useMemo(() => {
@@ -154,6 +160,28 @@ export default function ChangesPage() {
               style={activeTypes.has(type) ? { color: CHANGE_TYPE_COLORS[type] } : undefined}
             >
               {type}
+            </button>
+          ))}
+        </div>
+
+        {/* Source filter */}
+        <div className="mt-4 flex items-center gap-3">
+          <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">
+            Source
+          </span>
+          {(["all", "manual", "auto"] as const).map((src) => (
+            <button
+              key={src}
+              onClick={() => setSourceFilter(src)}
+              className={`rounded-full border px-3 py-1.5 text-[11px] font-medium transition-all ${
+                sourceFilter === src
+                  ? src === "auto"
+                    ? "border-cyan-500/30 text-cyan-400"
+                    : "border-white/20 text-text-primary"
+                  : "border-dark-border text-text-tertiary hover:border-text-tertiary hover:text-text-secondary"
+              }`}
+            >
+              {src === "all" ? "All" : src === "manual" ? "Manual" : "Auto-detected"}
             </button>
           ))}
         </div>
@@ -275,6 +303,11 @@ export default function ChangesPage() {
                     >
                       {change.type}
                     </span>
+                    {"source" in change && (change as EnrichedAutoChange).source === "auto" && (
+                      <span className="rounded-full bg-cyan-500/10 px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-cyan-400 border border-cyan-500/20">
+                        Auto
+                      </span>
+                    )}
                     <span className="font-mono text-[11px] text-text-tertiary">
                       {change.date}
                     </span>
