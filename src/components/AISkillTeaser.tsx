@@ -42,9 +42,9 @@ export function AISkillTeaser() {
             <div className="grid gap-12 md:grid-cols-2 md:items-center">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-text-primary md:text-3xl">
-                  Crypto competitive intelligence,
+                  Build better crypto products
                   <br />
-                  built into your workflow
+                  with real market context
                 </h2>
                 <p className="mt-4 max-w-md text-[14px] leading-relaxed text-text-secondary">
                   Ship better products, faster. Our entire library — distilled
