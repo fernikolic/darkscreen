@@ -81,6 +81,17 @@ export function Header() {
                 </div>
               </div>
             </div>
+
+            {/* AI Skills link */}
+            <Link
+              href="/#ai-skills"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+            >
+              AI Skills
+              <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-text-tertiary">
+                soon
+              </span>
+            </Link>
           </div>
 
           {/* Search trigger */}
@@ -227,6 +238,11 @@ export function Header() {
               <span className="pt-3 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Mobile</span>
               <Link href="/library?platform=iOS" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>iOS</Link>
               <Link href="/library?platform=Android" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Android</Link>
+              <span className="pt-3 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">AI Skills</span>
+              <Link href="/#ai-skills" className="flex items-center gap-2 py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+                Design Intelligence
+                <span className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-text-tertiary">soon</span>
+              </Link>
               {!loading && !user && (
                 <button
                   onClick={() => {

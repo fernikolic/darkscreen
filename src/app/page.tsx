@@ -3,6 +3,7 @@ import { ValueProps } from "@/components/ValueProps";
 import { LogoCloud } from "@/components/LogoCloud";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
+import { AISkillTeaser } from "@/components/AISkillTeaser";
 import { IntelLayerShowcase } from "@/components/IntelLayerShowcase";
 import Link from "next/link";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <LogoCloud />
       <HowItWorks />
       <Pricing />
+      <AISkillTeaser />
 
       {/* Bottom CTA */}
       <section id="get-access" className="border-t border-dark-border">
