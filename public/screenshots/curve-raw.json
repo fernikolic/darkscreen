@@ -1,0 +1,80 @@
+{
+  "slug": "curve",
+  "url": "https://curve.fi",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "crawledAt": "2026-02-14T04:04:28.529Z",
+  "totalScreenshots": 3,
+  "pageCopy": {
+    "h1": null,
+    "metaDescription": "Curve-frontend is a user interface application designed to connect to Curve's deployment of smart contracts.",
+    "ogTitle": "Curve.finance",
+    "ogDescription": "Curve-frontend is a user interface application designed to connect to Curve's deployment of smart contracts.",
+    "ctas": [
+      "Connect Wallet"
+    ],
+    "navItems": [
+      "DEX",
+      "LLAMALEND",
+      "GOVERNANCE",
+      "BRIDGE",
+      "SWAP",
+      "POOLS",
+      "POOL CREATION",
+      "DASHBOARD"
+    ]
+  },
+  "techStack": [
+    {
+      "category": "CSS",
+      "name": "Material UI",
+      "evidence": "Mui class prefix"
+    },
+    {
+      "category": "Error Tracking",
+      "name": "Sentry",
+      "evidence": "__SENTRY__ or sentry script"
+    }
+  ],
+  "performance": {
+    "loadTime": 5545,
+    "domContentLoaded": 5541,
+    "lcp": null,
+    "cls": null,
+    "resourceCount": 30,
+    "transferSize": 3052713,
+    "breakdown": {
+      "js": 2553118,
+      "css": 143033,
+      "images": 356262,
+      "fonts": 0,
+      "other": 300
+    }
+  },
+  "screens": [
+    {
+      "index": 1,
+      "filename": "curve-raw-001.png",
+      "url": "https://www.curve.finance/dex/ethereum/swap",
+      "action": "landing",
+      "context": "Landing page"
+    },
+    {
+      "index": 2,
+      "filename": "curve-raw-002.png",
+      "url": "https://www.curve.finance/settings/ethereum/swap",
+      "action": "common-path",
+      "context": "Path: /settings"
+    },
+    {
+      "index": 3,
+      "filename": "curve-raw-003.png",
+      "url": "https://www.curve.finance/portfolio/ethereum/swap",
+      "action": "common-path",
+      "context": "Path: /portfolio"
+    }
+  ]
+}

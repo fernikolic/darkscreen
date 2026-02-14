@@ -1,8 +1,69 @@
 {
   "slug": "aave",
   "url": "https://app.aave.com",
-  "crawledAt": "2026-02-13T04:41:35.776Z",
-  "totalScreenshots": 12,
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "crawledAt": "2026-02-14T04:10:08.734Z",
+  "totalScreenshots": 15,
+  "pageCopy": {
+    "h1": "Core Instance",
+    "metaDescription": "Aave is an Open Source Protocol to create Non-Custodial Liquidity Markets to earn interest on supplying and borrowing assets with a variable or stable interest rate. The protocol is designed for easy integration into your products and services.",
+    "ogTitle": "Aave - Open Source Liquidity Protocol",
+    "ogDescription": "Aave is an Open Source Protocol to create Non-Custodial Liquidity Markets to earn interest on supplying and borrowing assets with a variable or stable interest rate. The protocol is designed for easy integration into your products and services.",
+    "ctas": [
+      "Favourite",
+      "All Categories",
+      "View details",
+      "Details",
+      "Details",
+      "Details",
+      "Details",
+      "Details",
+      "Details",
+      "Details"
+    ],
+    "navItems": [
+      "Dashboard",
+      "Markets",
+      "Governance",
+      "Savings"
+    ]
+  },
+  "techStack": [
+    {
+      "category": "Framework",
+      "name": "Next.js",
+      "evidence": "__NEXT_DATA__ or #__next"
+    },
+    {
+      "category": "CSS",
+      "name": "Material UI",
+      "evidence": "Mui class prefix"
+    },
+    {
+      "category": "Error Tracking",
+      "name": "Sentry",
+      "evidence": "__SENTRY__ or sentry script"
+    }
+  ],
+  "performance": {
+    "loadTime": 2692,
+    "domContentLoaded": 247,
+    "lcp": null,
+    "cls": null,
+    "resourceCount": 193,
+    "transferSize": 91541,
+    "breakdown": {
+      "js": 0,
+      "css": 0,
+      "images": 18300,
+      "fonts": 0,
+      "other": 73241
+    }
+  },
   "screens": [
     {
       "index": 1,
@@ -28,62 +89,83 @@
     {
       "index": 4,
       "filename": "aave-raw-004.png",
+      "url": "https://app.aave.com/markets/",
+      "action": "page",
+      "context": "Markets (/markets/)"
+    },
+    {
+      "index": 5,
+      "filename": "aave-raw-005.png",
+      "url": "https://app.aave.com/markets/",
+      "action": "scroll",
+      "context": "Markets — scrolled 1"
+    },
+    {
+      "index": 6,
+      "filename": "aave-raw-006.png",
       "url": "https://app.aave.com/governance/",
       "action": "page",
       "context": "Governance (/governance/)"
     },
     {
-      "index": 5,
-      "filename": "aave-raw-005.png",
+      "index": 7,
+      "filename": "aave-raw-007.png",
       "url": "https://app.aave.com/governance/",
       "action": "scroll",
       "context": "Governance — scrolled 1"
     },
     {
-      "index": 6,
-      "filename": "aave-raw-006.png",
+      "index": 8,
+      "filename": "aave-raw-008.png",
       "url": "https://app.aave.com/sgho/",
       "action": "page",
       "context": "Savings (/sgho/)"
     },
     {
-      "index": 7,
-      "filename": "aave-raw-007.png",
+      "index": 9,
+      "filename": "aave-raw-009.png",
       "url": "https://app.aave.com/reserve-overview/",
       "action": "page",
       "context": "Details (/reserve-overview/)"
     },
     {
-      "index": 8,
-      "filename": "aave-raw-008.png",
+      "index": 10,
+      "filename": "aave-raw-010.png",
       "url": "https://app.aave.com/staking/",
       "action": "page",
       "context": "Umbrella (/staking/)"
     },
     {
-      "index": 9,
-      "filename": "aave-raw-009.png",
+      "index": 11,
+      "filename": "aave-raw-011.png",
       "url": "https://app.aave.com/safety-module/",
       "action": "page",
       "context": "Safety Module (/safety-module/)"
     },
     {
-      "index": 10,
-      "filename": "aave-raw-010.png",
+      "index": 12,
+      "filename": "aave-raw-012.png",
       "url": "https://app.aave.com/v3-migration/",
       "action": "page",
       "context": "Migrate to Aave V3 (/v3-migration/)"
     },
     {
-      "index": 11,
-      "filename": "aave-raw-011.png",
+      "index": 13,
+      "filename": "aave-raw-013.png",
+      "url": "https://app.aave.com/",
+      "action": "interaction",
+      "context": "Landing — Connect Wallet modal"
+    },
+    {
+      "index": 14,
+      "filename": "aave-raw-014.png",
       "url": "https://app.aave.com/this-page-does-not-exist-404-test/",
       "action": "common-path",
       "context": "Path: /this-page-does-not-exist-404-test"
     },
     {
-      "index": 12,
-      "filename": "aave-raw-012.png",
+      "index": 15,
+      "filename": "aave-raw-015.png",
       "url": "https://app.aave.com/bridge/",
       "action": "common-path",
       "context": "Path: /bridge"
