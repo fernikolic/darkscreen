@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { apps, type ElementTag } from "@/data/apps";
 import { getAllScreens, getScreenPath, type EnrichedScreen } from "@/data/helpers";
 import { ScreenActions } from "@/components/ScreenActions";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   const screens = getAllScreens();
@@ -82,7 +83,7 @@ export default async function ScreenDetailPage({ params }: PageProps) {
           <div className="relative aspect-[16/10] w-full overflow-hidden border border-dark-border bg-dark-card">
             {screen.image ? (
               <Image
-                src={screen.image}
+                src={screenshotUrl(screen.image)!}
                 alt={`${app.name} - ${screen.label}`}
                 fill
                 className="object-contain"
@@ -172,7 +173,7 @@ export default async function ScreenDetailPage({ params }: PageProps) {
           {/* Actions */}
           {screen.image && (
             <ScreenActions
-              imageUrl={screen.image}
+              imageUrl={screenshotUrl(screen.image)!}
               filename={`${appSlug}-${screen.flow.toLowerCase()}-${screen.step}.png`}
             />
           )}

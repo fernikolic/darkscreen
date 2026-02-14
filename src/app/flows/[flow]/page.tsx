@@ -6,6 +6,7 @@ import { FLOW_TYPES, TOTAL_APPS, type FlowType } from "@/data/apps";
 import { getAllFlows } from "@/data/helpers";
 import { toSlug, fromSlug, FLOW_META } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return FLOW_TYPES.map((f) => ({ flow: toSlug(f) }));
@@ -120,7 +121,7 @@ export default async function FlowPage({ params }: PageProps) {
                 <div className="relative aspect-[9/16] bg-dark-bg">
                   {screen.image ? (
                     <Image
-                      src={screen.image}
+                      src={screenshotUrl(screen.image)!}
                       alt={`${screen.appName} ${flowName} — step ${screen.step}`}
                       fill
                       className="object-cover object-top"

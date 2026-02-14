@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface DiffViewerProps {
   beforeImage: string;
@@ -10,7 +11,9 @@ interface DiffViewerProps {
   label?: string;
 }
 
-export function DiffViewer({ beforeImage, afterImage, diffPercent, label }: DiffViewerProps) {
+export function DiffViewer({ beforeImage: rawBefore, afterImage: rawAfter, diffPercent, label }: DiffViewerProps) {
+  const beforeImage = screenshotUrl(rawBefore)!;
+  const afterImage = screenshotUrl(rawAfter)!;
   const [mode, setMode] = useState<"slider" | "side">("slider");
   const [sliderPos, setSliderPos] = useState(50);
 

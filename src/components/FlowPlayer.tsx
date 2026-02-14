@@ -8,6 +8,7 @@ import { useSubscription } from "@/contexts/SubscriptionContext";
 import { getFlowPlayerLimit } from "@/lib/access";
 import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
 import { useToast } from "@/contexts/ToastContext";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface FlowPlayerProps {
   screens: EnrichedScreen[];
@@ -50,7 +51,7 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
       (i) => i >= 0 && i < screens.length,
     );
     for (const i of preloadIndices) {
-      const src = screens[i]?.image;
+      const src = screenshotUrl(screens[i]?.image);
       if (src) {
         const img = new Image();
         img.src = src;
@@ -231,7 +232,7 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
                       if (copying) return;
                       setCopying(true);
                       try {
-                        await copyImageToClipboard(screen.image!);
+                        await copyImageToClipboard(screenshotUrl(screen.image)!);
                         showToast("Copied to clipboard");
                       } catch {
                         showToast("Failed to copy", "error");
@@ -309,7 +310,7 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
               {screens[layerAIndex]?.image && (
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img
-                  src={screens[layerAIndex].image}
+                  src={screenshotUrl(screens[layerAIndex].image)!}
                   alt={screens[layerAIndex].label}
                   className="max-h-[80vh] max-w-[90vw] object-contain"
                   draggable={false}
@@ -325,7 +326,7 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
               {screens[layerBIndex]?.image && (
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img
-                  src={screens[layerBIndex].image}
+                  src={screenshotUrl(screens[layerBIndex].image)!}
                   alt={screens[layerBIndex].label}
                   className="max-h-[80vh] max-w-[90vw] object-contain"
                   draggable={false}

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { type AppFlow, type EnrichedScreen } from "@/data/helpers";
 import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface FlowExpandedViewProps {
   flow: AppFlow;
@@ -39,7 +40,7 @@ export function FlowExpandedView({ flow, onScreenClick }: FlowExpandedViewProps)
               {screen.image ? (
                 <div className="relative aspect-[9/16] overflow-hidden border border-dark-border bg-dark-bg transition-all group-hover:border-text-tertiary">
                   <Image
-                    src={screen.image}
+                    src={screenshotUrl(screen.image)!}
                     alt={`${screen.appName} - ${screen.label}`}
                     fill
                     className="object-cover object-top"

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { toSlug } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
@@ -152,7 +153,7 @@ export default async function ScreenshotsPage({ params }: PageProps) {
                 <div className="relative aspect-[9/16] bg-dark-bg">
                   {screen.image ? (
                     <Image
-                      src={screen.image}
+                      src={screenshotUrl(screen.image)!}
                       alt={`${app.name} ${flow} — ${screen.label}`}
                       fill
                       className="object-cover object-top"

@@ -10,6 +10,7 @@ import { PaywallOverlay } from "./PaywallOverlay";
 import { useSubscription } from "@/contexts/SubscriptionContext";
 import { getScreenLimit } from "@/lib/access";
 import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface ScreenGalleryProps {
   screens: AppScreen[];
@@ -117,7 +118,7 @@ export function ScreenGallery({
               {screen.image ? (
                 <div className="group relative aspect-[16/10] cursor-pointer overflow-hidden border border-dark-border bg-dark-bg transition-all hover:border-text-tertiary">
                   <Image
-                    src={screen.image}
+                    src={screenshotUrl(screen.image)!}
                     alt={`${appName} - ${screen.label}`}
                     fill
                     className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"

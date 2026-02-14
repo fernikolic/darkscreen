@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { getComparisonPairs, getSharedFlows, toSlug } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return getComparisonPairs().map((p) => ({ pair: p.slug }));
@@ -141,7 +142,7 @@ export default async function ComparePage({ params }: PageProps) {
                           <div className="relative aspect-[9/16] bg-dark-bg">
                             {screen.image ? (
                               <Image
-                                src={screen.image}
+                                src={screenshotUrl(screen.image)!}
                                 alt={`${appA.name} ${flow} — ${screen.label}`}
                                 fill
                                 className="object-cover object-top"
@@ -170,7 +171,7 @@ export default async function ComparePage({ params }: PageProps) {
                           <div className="relative aspect-[9/16] bg-dark-bg">
                             {screen.image ? (
                               <Image
-                                src={screen.image}
+                                src={screenshotUrl(screen.image)!}
                                 alt={`${appB.name} ${flow} — ${screen.label}`}
                                 fill
                                 className="object-cover object-top"

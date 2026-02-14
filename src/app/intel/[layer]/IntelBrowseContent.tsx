@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { type CryptoApp, type AppCategory, type IntelLayer } from "@/data/apps";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface IntelBrowseContentProps {
   layer: IntelLayer;
@@ -78,7 +79,7 @@ export function IntelBrowseContent({
                 <div className="relative aspect-[4/3] overflow-hidden bg-dark-bg">
                   {app.thumbnail ? (
                     <Image
-                      src={app.thumbnail}
+                      src={screenshotUrl(app.thumbnail)!}
                       alt={`${app.name} screenshot`}
                       fill
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { type CryptoApp } from "@/data/apps";
 import { AppLogo } from "@/components/AppLogo";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface AppCardProps {
   app: CryptoApp;
@@ -17,7 +18,7 @@ export function AppCard({ app, bookmarkButton }: AppCardProps) {
       <div className="relative aspect-[4/3] overflow-hidden bg-dark-bg">
         {app.thumbnail ? (
           <Image
-            src={app.thumbnail}
+            src={screenshotUrl(app.thumbnail)!}
             alt={`${app.name} screenshot`}
             fill
             className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

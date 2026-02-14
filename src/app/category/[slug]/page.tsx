@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { CATEGORIES, type AppCategory, CATEGORY_COLORS } from "@/data/apps";
 import { toSlug, fromSlug, CATEGORY_META, getAppsByCategory, getComparisonPairs } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return CATEGORIES.map((c) => ({ slug: toSlug(c) }));
@@ -107,7 +108,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   <div className="relative aspect-[4/3] overflow-hidden bg-dark-bg">
                     {app.thumbnail ? (
                       <Image
-                        src={app.thumbnail}
+                        src={screenshotUrl(app.thumbnail)!}
                         alt={`${app.name} screenshot`}
                         fill
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

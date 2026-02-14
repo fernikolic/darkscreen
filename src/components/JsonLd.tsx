@@ -2,6 +2,7 @@
 // All data is statically generated from trusted internal sources (no user input)
 
 import { TOTAL_APPS } from "@/data/apps";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function WebsiteJsonLd() {
   const jsonLd = {
@@ -140,7 +141,7 @@ export function SoftwareAppJsonLd({
   if (screenshot) {
     jsonLd.screenshot = {
       "@type": "ImageObject",
-      url: `https://darkscreens.xyz${screenshot}`,
+      url: screenshotUrl(screenshot) || `https://darkscreens.xyz${screenshot}`,
     };
   }
 

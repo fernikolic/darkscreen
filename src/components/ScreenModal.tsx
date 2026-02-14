@@ -8,6 +8,7 @@ import { SaveToCollectionModal } from "./SaveToCollectionModal";
 import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
 import { useToast } from "@/contexts/ToastContext";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -152,7 +153,7 @@ export function ScreenModal({
                       if (copying) return;
                       setCopying(true);
                       try {
-                        await copyImageToClipboard(screen.image!);
+                        await copyImageToClipboard(screenshotUrl(screen.image)!);
                         showToast("Copied to clipboard");
                       } catch {
                         showToast("Failed to copy", "error");
@@ -168,7 +169,7 @@ export function ScreenModal({
                 )}
                 {screen.image && (
                   <a
-                    href={screen.image}
+                    href={screenshotUrl(screen.image)!}
                     download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
                     className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
                   >
@@ -236,7 +237,7 @@ export function ScreenModal({
             ) : screen.image ? (
               <div className="relative aspect-[16/10] w-full max-w-3xl overflow-hidden border border-dark-border">
                 <Image
-                  src={screen.image}
+                  src={screenshotUrl(screen.image)!}
                   alt={`${screen.appName} - ${screen.label}`}
                   fill
                   className="object-contain"
@@ -292,7 +293,7 @@ export function ScreenModal({
       {/* Save to collection modal */}
       {showSave && screen.image && (
         <SaveToCollectionModal
-          screenImage={screen.image}
+          screenImage={screenshotUrl(screen.image)!}
           onClose={() => setShowSave(false)}
         />
       )}

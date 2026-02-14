@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { SECTION_TYPES, type SectionType } from "@/data/apps";
 import { toSlug, fromSlug, SECTION_META, getAppsBySection } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return SECTION_TYPES.filter((s) => getAppsBySection(s).length > 0).map((s) => ({
@@ -112,7 +113,7 @@ export default async function SectionPage({ params }: PageProps) {
                   <div className="relative aspect-[4/3] overflow-hidden bg-dark-bg">
                     {app.thumbnail ? (
                       <Image
-                        src={app.thumbnail}
+                        src={screenshotUrl(app.thumbnail)!}
                         alt={`${app.name} screenshot`}
                         fill
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

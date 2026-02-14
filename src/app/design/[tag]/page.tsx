@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ELEMENT_TAGS, TOTAL_APPS } from "@/data/apps";
 import { getElementTagPages, toSlug, fromSlug, ELEMENT_TAG_META } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return getElementTagPages().map((p) => ({ tag: p.slug }));
@@ -125,7 +126,7 @@ export default async function ElementTagPage({ params }: PageProps) {
                   <div className="relative aspect-[9/16] overflow-hidden bg-dark-bg">
                     {screen.image ? (
                       <Image
-                        src={screen.image}
+                        src={screenshotUrl(screen.image)!}
                         alt={`${screen.appName} — ${screen.label}`}
                         fill
                         className="object-cover object-top"

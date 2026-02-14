@@ -3,6 +3,12 @@ const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.darkscreens.xyz",
+      },
+    ],
   },
   webpack: (config) => {
     // wagmi v3 barrel-exports optional connectors whose peer deps aren't

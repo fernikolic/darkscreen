@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { type AppFlow } from "@/data/helpers";
 import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface FlowCardProps {
   flow: AppFlow;
@@ -44,7 +45,7 @@ export function FlowCard({ flow, isExpanded, onClick }: FlowCardProps) {
             >
               {screen.image ? (
                 <Image
-                  src={screen.image}
+                  src={screenshotUrl(screen.image)!}
                   alt={screen.label}
                   fill
                   className="object-cover object-top"

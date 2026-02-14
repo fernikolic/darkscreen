@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { TOTAL_APPS, TOTAL_SCREENS, apps } from "@/data/apps";
 import { AppLogo } from "@/components/AppLogo";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 const featuredApps = apps.filter((a) => a.detailed && a.thumbnail).slice(0, 5);
 
@@ -179,7 +180,7 @@ export function Hero() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={app.thumbnail!}
+                    src={screenshotUrl(app.thumbnail)!}
                     alt={app.name}
                     fill
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

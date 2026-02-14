@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { STYLE_TYPES, type StyleType } from "@/data/apps";
 import { toSlug, fromSlug, STYLE_META, getAppsByStyle } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return STYLE_TYPES.map((s) => ({ slug: toSlug(s) }));
@@ -88,7 +89,7 @@ export default async function StylePage({ params }: PageProps) {
                 <div className="relative aspect-[4/3] overflow-hidden bg-dark-bg">
                   {app.thumbnail ? (
                     <Image
-                      src={app.thumbnail}
+                      src={screenshotUrl(app.thumbnail)!}
                       alt={`${app.name} screenshot`}
                       fill
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -161,7 +162,7 @@ export default async function StylePage({ params }: PageProps) {
                 >
                   <div className="relative aspect-[9/16] bg-dark-bg">
                     <Image
-                      src={screen.image!}
+                      src={screenshotUrl(screen.image)!}
                       alt={`${screen.appName} — ${screen.label}`}
                       fill
                       className="object-cover object-top"

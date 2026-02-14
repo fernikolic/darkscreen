@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 interface ScreenCardProps {
   screen: EnrichedScreen;
@@ -27,7 +28,7 @@ export function ScreenCard({ screen, onClick }: ScreenCardProps) {
         <div className="relative aspect-[9/16] overflow-hidden bg-dark-bg">
           {screen.image ? (
             <Image
-              src={screen.image}
+              src={screenshotUrl(screen.image)!}
               alt={`${screen.appName} - ${screen.label}`}
               fill
               className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"

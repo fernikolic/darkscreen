@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPatternPages, PATTERN_META, toSlug } from "@/data/seo";
 import { EmailCapture } from "@/components/EmailCapture";
+import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
   return getPatternPages().map((p) => ({ slug: p.slug }));
@@ -113,7 +114,7 @@ export default async function PatternPage({ params }: PageProps) {
                     <div className="relative aspect-[9/16] bg-dark-bg">
                       {screen.image ? (
                         <Image
-                          src={screen.image}
+                          src={screenshotUrl(screen.image)!}
                           alt={`${app.name} ${page.flow} — step ${screen.step}`}
                           fill
                           className="object-cover object-top"

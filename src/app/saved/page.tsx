@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { screenshotUrl } from "@/lib/screenshot-url";
 import { apps } from "@/data/apps";
 import { getAllScreens } from "@/data/helpers";
 import { AppCard } from "@/components/AppCard";
@@ -229,7 +230,7 @@ function CollectionCard({
           {previewImages.map((img, i) => (
             <div key={i} className="relative aspect-square overflow-hidden">
               <Image
-                src={img}
+                src={screenshotUrl(img)!}
                 alt=""
                 fill
                 className="object-cover"
@@ -305,7 +306,7 @@ function CollectionCard({
                   <div key={img} className="group">
                     <div className="relative aspect-[16/10] overflow-hidden border border-dark-border bg-dark-bg">
                       <Image
-                        src={img}
+                        src={screenshotUrl(img)!}
                         alt={screen?.label || "Saved screen"}
                         fill
                         className="object-cover object-top"
