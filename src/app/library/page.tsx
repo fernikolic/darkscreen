@@ -158,26 +158,27 @@ function LibraryContent() {
   };
 
   const filtered = apps.filter((app) => {
-    if (activePlatform === "Mobile") {
-      // Must have iOS or Android, and must NOT also have Web
-      // (since all current screenshots are web captures, showing them
-      // under Mobile would be misleading)
-      const hasMobile =
-        app.platforms.includes("iOS") || app.platforms.includes("Android");
-      if (!hasMobile || app.platforms.includes("Web")) return false;
+    // All current screenshots are web captures. Non-web platform views
+    // should only show apps once we have actual native screenshots.
+    // For now, check if the app has screenshots tagged for that platform.
+    // TODO: add per-screen platform tags when native captures land.
+    if (activePlatform === "Mobile" || activePlatform === "iOS" || activePlatform === "Android") {
+      // No native mobile screenshots exist yet — show nothing
+      return false;
     } else if (activePlatform === "Web") {
-      // Web groups Web + Extension + Desktop — show any app with at least one
+      // All screenshots are web captures, so just check the app has a web presence
       if (
         !app.platforms.includes("Web") &&
         !app.platforms.includes("Extension") &&
         !app.platforms.includes("Desktop")
       )
         return false;
-    } else if (activePlatform !== "All") {
-      // Individual platform (iOS, Android, Desktop, Extension)
-      // Must have that platform and must NOT also have Web
-      if (!app.platforms.includes(activePlatform)) return false;
-      if (app.platforms.includes("Web")) return false;
+    } else if (activePlatform === "Desktop") {
+      // Only show apps with desktop-specific captures (none yet)
+      return false;
+    } else if (activePlatform === "Extension") {
+      // Extensions are web-based, show apps that are extension-only or have extension
+      if (!app.platforms.includes("Extension")) return false;
     }
     if (activeCategory !== "All" && app.category !== activeCategory)
       return false;
@@ -402,9 +403,20 @@ function LibraryContent() {
 
       {sorted.length === 0 && (
         <div className="py-20 text-center">
-          <p className="text-[14px] text-text-tertiary">
-            No apps match the selected filters.
-          </p>
+          {activePlatform === "Mobile" || activePlatform === "iOS" || activePlatform === "Android" || activePlatform === "Desktop" ? (
+            <>
+              <p className="text-[15px] font-medium text-text-secondary">
+                {activePlatform === "Mobile" ? "Mobile" : activePlatform} screenshots coming soon
+              </p>
+              <p className="mt-2 text-[13px] text-text-tertiary">
+                We&apos;re working on capturing native {activePlatform === "Mobile" ? "iOS and Android" : activePlatform.toLowerCase()} app screens. Currently all screenshots are web captures.
+              </p>
+            </>
+          ) : (
+            <p className="text-[14px] text-text-tertiary">
+              No apps match the selected filters.
+            </p>
+          )}
         </div>
       )}
     </div>
