@@ -103,7 +103,12 @@ function LibraryContent() {
   }, [searchParams]);
 
   const filtered = apps.filter((app) => {
-    if (activePlatform !== "All" && !app.platforms.includes(activePlatform)) return false;
+    if (activePlatform !== "All") {
+      if (!app.platforms.includes(activePlatform)) return false;
+      // For non-Web platforms, only show apps exclusive to that platform
+      // (since all current screenshots are web captures)
+      if (activePlatform !== "Web" && app.platforms.includes("Web")) return false;
+    }
     if (activeLayer !== "All" && !app.screens.some((s) => getScreenLayer(s) === activeLayer)) return false;
     if (activeCategory !== "All" && app.category !== activeCategory) return false;
     if (activeFlow !== "All Flows" && !app.flows.includes(activeFlow)) return false;

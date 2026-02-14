@@ -94,9 +94,15 @@ function ScreensPageInner() {
       const flow = allFlows.find(
         (f) => f.appSlug === screen.appSlug && f.flowType === screen.flow
       );
-      return flow ? flow.screens : [screen];
+      const screens = flow ? flow.screens : [screen];
+      // Only allow navigation within the visible (capped) set
+      if (screenLimit !== null) {
+        const visibleSet = new Set(visible.map((s) => `${s.appSlug}-${s.flow}-${s.step}`));
+        return screens.filter((s) => visibleSet.has(`${s.appSlug}-${s.flow}-${s.step}`));
+      }
+      return screens;
     },
-    [allFlows]
+    [allFlows, screenLimit, visible]
   );
 
   return (

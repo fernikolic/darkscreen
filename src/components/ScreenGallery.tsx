@@ -57,13 +57,13 @@ export function ScreenGallery({
   const isCapped = screenLimit !== null && filtered.length > screenLimit;
   const visibleScreens = isCapped ? filtered.slice(0, screenLimit) : filtered;
 
-  // For the modal, navigate within the same flow as the selected screen
+  // For the modal, navigate within the same flow but only within visible (capped) screens
   const modalFlowScreens = useMemo(() => {
     if (!modalScreen) return [];
-    return enriched
+    return visibleScreens
       .filter((s) => s.flow === modalScreen.flow)
       .sort((a, b) => a.step - b.step);
-  }, [enriched, modalScreen]);
+  }, [visibleScreens, modalScreen]);
 
   return (
     <div>
