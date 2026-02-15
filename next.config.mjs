@@ -6,7 +6,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.darkscreens.xyz",
+        hostname: "darkscreen-r2-proxy.fernandonikolic.workers.dev",
       },
     ],
   },

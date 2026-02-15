@@ -22,7 +22,7 @@
     "archive:all": "node scripts/archive-screens.mjs --all",
     "diff": "node scripts/diff-screens.mjs",
     "diff:all": "node scripts/diff-screens.mjs --all",
-    "deploy": "NEXT_PUBLIC_SCREENSHOT_CDN=https://cdn.darkscreens.xyz npm run build && node scripts/clean-out-screenshots.mjs && npx wrangler pages deploy out --project-name darkscreen --commit-dirty=true"
+    "deploy": "NEXT_PUBLIC_SCREENSHOT_CDN=https://darkscreen-r2-proxy.fernandonikolic.workers.dev npm run build && node scripts/clean-out-screenshots.mjs && npx wrangler pages deploy out --project-name darkscreen --commit-dirty=true"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.74.0",
