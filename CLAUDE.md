@@ -152,6 +152,20 @@ Lightweight notification system (no dependencies) following the existing context
 - **UI**: `src/components/Toast.tsx` — dark card with green (success) / red (error) accent border
 - **Behavior**: Auto-dismiss after 2s, max 3 stacked, portal-rendered at `z-[120]`, fixed bottom-right
 
+## SEO
+
+Full documentation in [`docs/SEO.md`](docs/SEO.md). Summary:
+
+- **Metadata**: `generateMetadata` on all 15 dynamic page types (title, description, OG image)
+- **JSON-LD**: 6 structured data types — WebsiteJsonLd and OrganizationJsonLd on every page, BreadcrumbJsonLd on 13 page types, CollectionPageJsonLd on 6, SoftwareAppJsonLd on app detail, FAQJsonLd on 3
+- **FAQ sections**: Programmatic FAQ generators + visible sections on homepage, category, and flow pages
+- **Sitemap**: Auto-generated from `getAllSeoRoutes()` with 5 priority tiers
+- **robots.txt**: Allow all + 11 named AI crawlers explicitly allowed
+- **LLM context**: `public/llms.txt` (concise) and `public/llms-full.txt` (full product directory)
+- **Content enrichment**: Data-driven prose on compare, alternatives, and screenshots pages
+
+Key files: `src/components/JsonLd.tsx`, `src/data/seo.ts`, `src/app/sitemap.ts`, `src/app/robots.ts`
+
 ## Design System
 
 - Background: `#0C0C0E` (near-black)
