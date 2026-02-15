@@ -7,6 +7,8 @@ interface SponsorBannerProps {
   variant?: "inline" | "card";
 }
 
+const SPONSOR_URL = "https://perception.to/?ref=darkscreens";
+
 export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerProps) {
   const { isPro } = useSubscription();
 
@@ -14,9 +16,12 @@ export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerPr
 
   if (variant === "card") {
     return (
-      <div
+      <a
+        href={SPONSOR_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         data-placement={placement}
-        className="relative overflow-hidden rounded-xl border border-amber-500/20 bg-gradient-to-br from-amber-950/30 via-dark-card to-dark-card px-5 py-10 text-center"
+        className="group relative block overflow-hidden rounded-xl border border-amber-500/20 bg-gradient-to-br from-amber-950/30 via-dark-card to-dark-card px-5 py-10 text-center transition-colors hover:border-amber-500/30"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.06),transparent_70%)]" />
         <div className="relative">
@@ -24,26 +29,26 @@ export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerPr
             Sponsored
           </span>
           <p className="text-[14px] font-medium text-text-primary/80">
-            Your brand here
+            Perception
           </p>
           <p className="mt-1 text-[12px] text-text-tertiary">
-            Reach crypto builders and product teams
+            Track crypto narratives across 250+ media sources
           </p>
-          <a
-            href="mailto:hello@darkscreens.xyz?subject=Sponsorship"
-            className="mt-4 inline-flex items-center gap-1 rounded-md border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 font-mono text-[11px] text-amber-400/70 transition-colors hover:border-amber-500/40 hover:text-amber-300"
-          >
-            Learn more &rarr;
-          </a>
+          <span className="mt-4 inline-flex items-center gap-1 rounded-md border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 font-mono text-[11px] text-amber-400/70 transition-colors group-hover:border-amber-500/40 group-hover:text-amber-300">
+            Try Perception &rarr;
+          </span>
         </div>
-      </div>
+      </a>
     );
   }
 
   return (
-    <div
+    <a
+      href={SPONSOR_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       data-placement={placement}
-      className="relative overflow-hidden rounded-xl border border-amber-500/20 bg-gradient-to-r from-amber-950/30 via-dark-card to-dark-card px-6 py-5"
+      className="group relative block overflow-hidden rounded-xl border border-amber-500/20 bg-gradient-to-r from-amber-950/30 via-dark-card to-dark-card px-6 py-5 transition-colors hover:border-amber-500/30"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(245,158,11,0.06),transparent_60%)]" />
       <div className="relative flex items-center justify-between">
@@ -52,16 +57,14 @@ export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerPr
             Sponsored
           </span>
           <p className="text-[13px] text-text-secondary">
-            Your brand here — reach crypto builders and product teams
+            <span className="font-medium text-text-primary/80">Perception</span>
+            {" "}&mdash; Track crypto narratives and sentiment across 250+ media sources
           </p>
         </div>
-        <a
-          href="mailto:hello@darkscreens.xyz?subject=Sponsorship"
-          className="shrink-0 rounded-md border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 font-mono text-[11px] text-amber-400/70 transition-colors hover:border-amber-500/40 hover:text-amber-300"
-        >
-          Learn more &rarr;
-        </a>
+        <span className="shrink-0 rounded-md border border-amber-500/20 bg-amber-500/5 px-3 py-1.5 font-mono text-[11px] text-amber-400/70 transition-colors group-hover:border-amber-500/40 group-hover:text-amber-300">
+          Try Perception &rarr;
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
