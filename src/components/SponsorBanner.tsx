@@ -22,22 +22,21 @@ export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerPr
         target="_blank"
         rel="noopener noreferrer"
         data-placement={placement}
-        className="group relative block overflow-hidden rounded-xl border border-[#2a2a35] bg-[#12121a] px-5 py-8 text-center transition-all hover:border-[#4a3f6b]"
+        className="group relative block overflow-hidden rounded-xl border-l-2 border-l-indigo-400 border-y border-r border-y-white/10 border-r-white/10 bg-[#1a1a2e] px-5 py-8 text-center transition-all hover:bg-[#1e1e35]"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(120,80,220,0.08),transparent_70%)]" />
         <div className="relative flex flex-col items-center">
-          <span className="mb-4 font-mono text-[9px] uppercase tracking-[0.2em] text-text-tertiary/60">
+          <span className="mb-4 font-mono text-[9px] uppercase tracking-[0.2em] text-indigo-400/80">
             Sponsored
           </span>
           <img
             src={LOGO_URL}
             alt="Perception"
-            className="mb-4 h-7 w-auto"
+            className="mb-4 h-7 w-auto brightness-125"
           />
-          <p className="text-[12px] leading-relaxed text-text-secondary">
+          <p className="text-[13px] leading-relaxed text-zinc-300">
             Track crypto narratives across<br />250+ media sources
           </p>
-          <span className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] text-white/70 transition-all group-hover:bg-white/[0.12] group-hover:text-white/90">
+          <span className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-indigo-500/15 px-4 py-2 font-mono text-[11px] font-medium text-indigo-300 transition-all group-hover:bg-indigo-500/25 group-hover:text-indigo-200">
             Try Perception &rarr;
           </span>
         </div>
@@ -51,27 +50,26 @@ export function SponsorBanner({ placement, variant = "inline" }: SponsorBannerPr
       target="_blank"
       rel="noopener noreferrer"
       data-placement={placement}
-      className="group relative block overflow-hidden rounded-xl border border-[#2a2a35] bg-[#12121a] px-6 py-4 transition-all hover:border-[#4a3f6b]"
+      className="group relative block overflow-hidden rounded-xl border-l-2 border-l-indigo-400 border-y border-r border-y-white/10 border-r-white/10 bg-[#1a1a2e] px-6 py-4 transition-all hover:bg-[#1e1e35]"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(120,80,220,0.08),transparent_60%)]" />
       <div className="relative flex items-center justify-between gap-4">
         <div className="flex items-center gap-5">
-          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-text-tertiary/60">
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-indigo-400/80">
             Sponsored
           </span>
-          <div className="hidden h-4 w-px bg-white/[0.08] sm:block" />
+          <div className="hidden h-4 w-px bg-white/10 sm:block" />
           <div className="flex items-center gap-3">
             <img
               src={LOGO_URL}
               alt="Perception"
-              className="h-5 w-auto"
+              className="h-5 w-auto brightness-125"
             />
-            <p className="text-[13px] text-text-secondary">
+            <p className="text-[13px] text-zinc-300">
               Track crypto narratives and sentiment across 250+ media sources
             </p>
           </div>
         </div>
-        <span className="shrink-0 rounded-full bg-white/[0.07] px-4 py-1.5 font-mono text-[11px] text-white/70 transition-all group-hover:bg-white/[0.12] group-hover:text-white/90">
+        <span className="shrink-0 rounded-full bg-indigo-500/15 px-4 py-2 font-mono text-[11px] font-medium text-indigo-300 transition-all group-hover:bg-indigo-500/25 group-hover:text-indigo-200">
           Try it free &rarr;
         </span>
       </div>
