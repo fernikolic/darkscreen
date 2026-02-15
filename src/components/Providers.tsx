@@ -15,6 +15,7 @@ import { CollectionsProvider } from "@/contexts/CollectionsContext";
 import { SubscriptionProvider } from "@/contexts/SubscriptionContext";
 import { FlowPlayerProvider } from "@/contexts/FlowPlayerContext";
 import { ToastProvider } from "@/contexts/ToastContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SignInModal } from "@/components/SignInModal";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ export function Providers({ children }: { children: ReactNode }) {
           <SolanaWalletProvider wallets={solanaWallets} autoConnect={false}>
             <AuthProvider>
               <SubscriptionProvider>
+                <ThemeProvider>
                 <ToastProvider>
                   <FlowPlayerProvider>
                     <CollectionsProvider>
@@ -44,6 +46,7 @@ export function Providers({ children }: { children: ReactNode }) {
                     </CollectionsProvider>
                   </FlowPlayerProvider>
                 </ToastProvider>
+                </ThemeProvider>
               </SubscriptionProvider>
             </AuthProvider>
           </SolanaWalletProvider>

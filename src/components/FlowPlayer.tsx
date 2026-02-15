@@ -9,6 +9,7 @@ import { getFlowPlayerLimit } from "@/lib/access";
 import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
 import { useToast } from "@/contexts/ToastContext";
 import { screenshotUrl } from "@/lib/screenshot-url";
+import { PrototypePlayer } from "./PrototypePlayer";
 
 interface FlowPlayerProps {
   screens: EnrichedScreen[];
@@ -30,8 +31,11 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [copying, setCopying] = useState(false);
+  const [prototypeMode, setPrototypeMode] = useState(false);
   const canCopy = useClipboardSupport();
   const { showToast } = useToast();
+
+  const hasAnyHotspots = screens.some((s) => s.hotspots && s.hotspots.length > 0);
 
   const { plan } = useSubscription();
   const limit = getFlowPlayerLimit(plan);
@@ -204,6 +208,14 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
           <div className="flex items-center gap-3">
             {!showEndSlide && (
               <>
+                {hasAnyHotspots && (
+                  <button
+                    onClick={() => setPrototypeMode(true)}
+                    className="flex items-center gap-1.5 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/10 px-2.5 py-1 text-[12px] text-[#00d4ff] transition-colors hover:bg-[#00d4ff]/20"
+                  >
+                    Prototype
+                  </button>
+                )}
                 <button
                   onClick={togglePlayback}
                   className="flex items-center gap-1.5 text-[13px] text-text-tertiary transition-colors hover:text-white"
@@ -378,5 +390,17 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
   );
 
   if (typeof window === "undefined") return null;
+
+  // Render PrototypePlayer when in prototype mode
+  if (prototypeMode) {
+    return (
+      <PrototypePlayer
+        screens={screens}
+        initialIndex={currentIndex}
+        onClose={() => setPrototypeMode(false)}
+      />
+    );
+  }
+
   return createPortal(content, document.body);
 }

@@ -2,9 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Theme custom properties ──────────────────────────────────────── */
+
+:root,
+[data-theme="dark"] {
+  --color-bg: 12 12 14;
+  --color-card: 21 21 24;
+  --color-border: 39 39 42;
+  --color-hover: 30 30 34;
+  --color-text-primary: 244 244 245;
+  --color-text-secondary: 161 161 170;
+  --color-text-tertiary: 113 113 122;
+  --color-scrollbar: #27272A;
+  --color-scrollbar-hover: #52525B;
+  --color-selection-bg: rgba(255, 255, 255, 0.15);
+  --color-card-hover-border: #52525B;
+  --dot-color: #fff;
+  --dot-opacity: 0.03;
+}
+
+[data-theme="light"] {
+  --color-bg: 250 250 250;
+  --color-card: 255 255 255;
+  --color-border: 228 228 231;
+  --color-hover: 244 244 245;
+  --color-text-primary: 24 24 27;
+  --color-text-secondary: 82 82 91;
+  --color-text-tertiary: 161 161 170;
+  --color-scrollbar: #D4D4D8;
+  --color-scrollbar-hover: #A1A1AA;
+  --color-selection-bg: rgba(0, 0, 0, 0.1);
+  --color-card-hover-border: #A1A1AA;
+  --dot-color: #000;
+  --dot-opacity: 0.03;
+}
+
 body {
-  background: #0C0C0E;
-  color: #F4F4F5;
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-text-primary));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,8 +51,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
-  background-image: radial-gradient(circle, #fff 0.5px, transparent 0.5px);
+  opacity: var(--dot-opacity);
+  background-image: radial-gradient(circle, var(--dot-color) 0.5px, transparent 0.5px);
   background-size: 24px 24px;
 }
 
@@ -29,17 +64,17 @@ body::before {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272A;
+  background: var(--color-scrollbar);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525B;
+  background: var(--color-scrollbar-hover);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(255, 255, 255, 0.15);
-  color: #F4F4F5;
+  background: var(--color-selection-bg);
+  color: rgb(var(--color-text-primary));
 }
 
 /* Card hover — subtle border shift */
@@ -47,15 +82,15 @@ body::before {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 .card-hover:hover {
-  border-color: #52525B;
-  background-color: #1E1E22;
+  border-color: var(--color-card-hover-border);
+  background-color: rgb(var(--color-hover));
 }
 
 /* Active filter state */
 .filter-active {
-  color: #F4F4F5;
-  border-color: rgba(244, 244, 245, 0.3);
-  background: rgba(244, 244, 245, 0.06);
+  color: rgb(var(--color-text-primary));
+  border-color: rgb(var(--color-text-primary) / 0.3);
+  background: rgb(var(--color-text-primary) / 0.06);
 }
 
 .pill-active-cyan {

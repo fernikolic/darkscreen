@@ -8,10 +8,11 @@ const BTC_ADDRESS = "bc1q6tl4d3sy0ywsk3gddchw42428jymmkamqjxu4w";
 const PLANS = {
   pro: { name: "Pro", usd: "$9/mo", btcNote: "~$9 USD in BTC" },
   team: { name: "Team", usd: "$12/mo", btcNote: "~$12 USD in BTC" },
+  education: { name: "Education", usd: "$4/mo", btcNote: "~$4 USD in BTC" },
 };
 
 interface CryptoPayModalProps {
-  plan: "pro" | "team";
+  plan: "pro" | "team" | "education";
   onClose: () => void;
 }
 

@@ -107,13 +107,104 @@ export const ELEMENT_TAGS: ElementTag[] = [
   "Loading State",
 ];
 
+// Granular crypto-specific element types for AI detection
+export type GranularElementTag =
+  | ElementTag
+  | "Token Selector"
+  | "Swap Form"
+  | "Price Chart"
+  | "Gas Estimator"
+  | "Wallet Connect Button"
+  | "Transaction Confirmation"
+  | "Portfolio Pie Chart"
+  | "APY / Yield Display"
+  | "Staking Form"
+  | "Bridge Selector"
+  | "Token Balance"
+  | "Network Selector"
+  | "Slippage Settings"
+  | "Transaction History"
+  | "Address Input"
+  | "QR Code"
+  | "Price Ticker"
+  | "Volume Bar Chart"
+  | "Order Book"
+  | "Liquidity Pool Card"
+  | "Fee Breakdown"
+  | "Approval Button"
+  | "Progress Stepper"
+  | "Banner / Announcement"
+  | "Tooltip / Popover"
+  | "Copy Address Button"
+  | "Explorer Link"
+  | "Token Logo Grid"
+  | "Countdown Timer";
+
+export const GRANULAR_ELEMENT_TAGS: GranularElementTag[] = [
+  ...ELEMENT_TAGS,
+  "Token Selector",
+  "Swap Form",
+  "Price Chart",
+  "Gas Estimator",
+  "Wallet Connect Button",
+  "Transaction Confirmation",
+  "Portfolio Pie Chart",
+  "APY / Yield Display",
+  "Staking Form",
+  "Bridge Selector",
+  "Token Balance",
+  "Network Selector",
+  "Slippage Settings",
+  "Transaction History",
+  "Address Input",
+  "QR Code",
+  "Price Ticker",
+  "Volume Bar Chart",
+  "Order Book",
+  "Liquidity Pool Card",
+  "Fee Breakdown",
+  "Approval Button",
+  "Progress Stepper",
+  "Banner / Announcement",
+  "Tooltip / Popover",
+  "Copy Address Button",
+  "Explorer Link",
+  "Token Logo Grid",
+  "Countdown Timer",
+];
+
+export interface DetectedElement {
+  tag: GranularElementTag;
+  x: number;       // percentage from left (0-100)
+  y: number;       // percentage from top (0-100)
+  width: number;   // percentage of viewport width
+  height: number;  // percentage of viewport height
+  confidence: number;
+}
+
+export type DeviceType = "desktop" | "mobile" | "tablet";
+
+export interface ScreenHotspot {
+  x: number;            // percentage from left (0-100)
+  y: number;            // percentage from top (0-100)
+  width: number;        // percentage width
+  height: number;       // percentage height
+  targetStep?: number;  // screen step this links to
+  targetFlow?: FlowType; // flow this links to (if cross-flow navigation)
+  label?: string;       // tooltip: "Open Swap", "Connect Wallet"
+}
+
 export interface AppScreen {
   step: number;
   label: string;
   flow: FlowType;
   image?: string;
+  video?: string;           // path to WebM clip
+  videoDuration?: number;   // duration in seconds
   tags?: ElementTag[];
   layer?: IntelLayer;
+  hotspots?: ScreenHotspot[];
+  device?: DeviceType;      // defaults to "desktop" when absent
 }
 
 export interface AppChange {

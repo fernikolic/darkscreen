@@ -52,8 +52,15 @@ export const stripeWebhook = functions.https.onRequest(async (req, res) => {
     const email = session.customer_details?.email || session.customer_email;
     const amountTotal = session.amount_total || 0;
 
-    // Determine plan from amount (900 = pro $9, 1200 = team $12)
-    const plan = amountTotal >= 1200 ? "team" : "pro";
+    // Determine plan from amount (400 = education $4, 900 = pro $9, 1200 = team $12)
+    let plan: "pro" | "team" | "education";
+    if (amountTotal >= 1200) {
+      plan = "team";
+    } else if (amountTotal <= 400) {
+      plan = "education";
+    } else {
+      plan = "pro";
+    }
 
     if (!email) {
       console.error("No email in checkout session:", session.id);

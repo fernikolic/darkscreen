@@ -9,6 +9,8 @@ import { useFlowPlayer } from "@/contexts/FlowPlayerContext";
 import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
 import { useToast } from "@/contexts/ToastContext";
 import { screenshotUrl } from "@/lib/screenshot-url";
+import { SimilarScreens } from "./SimilarScreens";
+import { VideoPlayer } from "./VideoPlayer";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -27,6 +29,7 @@ export function ScreenModal({
   const [showSave, setShowSave] = useState(false);
   const [copying, setCopying] = useState(false);
   const [showEndSlide, setShowEndSlide] = useState(false);
+  const [showSimilar, setShowSimilar] = useState(false);
   const { openPlayer } = useFlowPlayer();
   const canCopy = useClipboardSupport();
   const { showToast } = useToast();
@@ -168,6 +171,14 @@ export function ScreenModal({
                   </button>
                 )}
                 {screen.image && (
+                  <button
+                    onClick={() => setShowSimilar(!showSimilar)}
+                    className={`text-[13px] transition-colors ${showSimilar ? "text-[#00d4ff]" : "text-text-tertiary hover:text-white"}`}
+                  >
+                    Find Similar
+                  </button>
+                )}
+                {screen.image && (
                   <a
                     href={screenshotUrl(screen.image)!}
                     download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
@@ -234,6 +245,14 @@ export function ScreenModal({
                   Upgrade to Pro
                 </Link>
               </div>
+            ) : screen.video ? (
+              <div className="relative aspect-[16/10] w-full max-w-3xl overflow-hidden border border-dark-border">
+                <VideoPlayer
+                  src={screen.video}
+                  poster={screen.image}
+                  className="h-full w-full"
+                />
+              </div>
             ) : screen.image ? (
               <div className="relative aspect-[16/10] w-full max-w-3xl overflow-hidden border border-dark-border">
                 <Image
@@ -289,6 +308,20 @@ export function ScreenModal({
           </button>
         </div>
       </div>
+
+      {/* Similar screens panel */}
+      {showSimilar && screen.image && !showEndSlide && (
+        <div className="border-t border-dark-border bg-dark-bg/80 px-6 py-4">
+          <SimilarScreens
+            imagePath={screen.image}
+            limit={8}
+            onScreenClick={(s) => {
+              setShowSimilar(false);
+              onNavigate(s);
+            }}
+          />
+        </div>
+      )}
 
       {/* Save to collection modal */}
       {showSave && screen.image && (

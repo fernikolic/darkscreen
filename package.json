@@ -22,6 +22,9 @@
     "archive:all": "node scripts/archive-screens.mjs --all",
     "diff": "node scripts/diff-screens.mjs",
     "diff:all": "node scripts/diff-screens.mjs --all",
+    "add-app": "node scripts/add-app.mjs",
+    "batch-crawl": "node scripts/batch-crawl.mjs",
+    "recrawl": "node scripts/recrawl-stale.mjs",
     "deploy": "NEXT_PUBLIC_SCREENSHOT_CDN=https://darkscreen-r2-proxy.fernandonikolic.workers.dev npm run build && node scripts/clean-out-screenshots.mjs && npx wrangler pages deploy out --project-name darkscreen --commit-dirty=true"
   },
   "dependencies": {
@@ -35,6 +38,7 @@
     "@tanstack/react-query": "5.90.21",
     "firebase": "12.9.0",
     "fuse.js": "7.1.0",
+    "jszip": "3.10.1",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",

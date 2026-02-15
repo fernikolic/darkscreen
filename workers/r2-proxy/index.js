@@ -25,6 +25,15 @@ export default {
     headers.set("etag", object.httpEtag);
     headers.set("cache-control", "public, max-age=86400, s-maxage=604800");
 
+    // Ensure correct content-type for known file types
+    if (key.endsWith(".webm")) {
+      headers.set("content-type", "video/webm");
+    } else if (key.endsWith(".png")) {
+      headers.set("content-type", "image/png");
+    } else if (key.endsWith(".jpg") || key.endsWith(".jpeg")) {
+      headers.set("content-type", "image/jpeg");
+    }
+
     // CORS
     const origin = request.headers.get("origin") || "";
     if (

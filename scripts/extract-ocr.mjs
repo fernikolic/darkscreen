@@ -9,10 +9,12 @@
  *
  * Usage:
  *   ANTHROPIC_API_KEY=sk-ant-... node scripts/extract-ocr.mjs
- *   node scripts/extract-ocr.mjs --force          # re-extract all
- *   node scripts/extract-ocr.mjs --batch 10       # images per API call
+ *   node scripts/extract-ocr.mjs --force            # re-extract all
+ *   node scripts/extract-ocr.mjs --batch 10          # images per API call
+ *   node scripts/extract-ocr.mjs --concurrency 5     # parallel API calls
+ *   node scripts/extract-ocr.mjs --slug aave         # only one app
  *
- * Cost: ~$0.01 per screenshot with Haiku (~$3 for 300 screenshots)
+ * Cost: ~$0.01 per screenshot with Haiku (~$40 for 4,000 screenshots)
  */
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -30,7 +32,9 @@ const { values: args } = parseArgs({
   options: {
     force: { type: "boolean", default: false },
     batch: { type: "string", default: "5" },
+    concurrency: { type: "string", default: "3" },
     model: { type: "string", default: "claude-haiku-4-5-20251001" },
+    slug: { type: "string" },
   },
   strict: false,
 });
@@ -42,6 +46,7 @@ if (!process.env.ANTHROPIC_API_KEY) {
 }
 
 const BATCH_SIZE = parseInt(args.batch, 10);
+const CONCURRENCY = parseInt(args.concurrency, 10);
 const MODEL = args.model;
 const client = new Anthropic();
 
@@ -69,13 +74,54 @@ while ((match = imageRegex.exec(appsFile)) !== null) {
 
 console.log(`Found ${imagePaths.length} screenshots referenced in apps.ts`);
 
+// Filter by slug if specified
+const filteredPaths = args.slug
+  ? imagePaths.filter((p) => p.includes(`/${args.slug}-`))
+  : imagePaths;
+
+if (args.slug) {
+  console.log(`Filtered to ${filteredPaths.length} screenshots for slug "${args.slug}"`);
+}
+
 // Filter out already-extracted (unless --force)
-const toExtract = imagePaths.filter((p) => !existing[p]);
-console.log(`Need to extract: ${toExtract.length} (${imagePaths.length - toExtract.length} cached)\n`);
+const toExtract = filteredPaths.filter((p) => !existing[p]);
+console.log(`Need to extract: ${toExtract.length} (${filteredPaths.length - toExtract.length} cached)\n`);
 
 if (toExtract.length === 0) {
   console.log("Nothing to do. Use --force to re-extract all.");
   process.exit(0);
+}
+
+// ─── Progress tracking ───────────────────────────────────────────────
+
+const startTime = Date.now();
+let completed = 0;
+let failed = 0;
+
+function formatTime(ms) {
+  if (ms < 1000) return `${ms}ms`;
+  const sec = Math.floor(ms / 1000);
+  if (sec < 60) return `${sec}s`;
+  const min = Math.floor(sec / 60);
+  const remainSec = sec % 60;
+  return `${min}m ${remainSec}s`;
+}
+
+function printProgress() {
+  const elapsed = Date.now() - startTime;
+  const rate = completed > 0 ? elapsed / completed : 0;
+  const remaining = (toExtract.length - completed) * rate;
+  const pct = ((completed / toExtract.length) * 100).toFixed(1);
+
+  const filledLen = Math.floor(completed / toExtract.length * 30);
+  const bar = "\u2588".repeat(filledLen) + "\u2591".repeat(30 - filledLen);
+
+  process.stdout.write(
+    `\r  ${bar} ${pct}% | ${completed}/${toExtract.length} | ` +
+    `${(completed / (elapsed / 1000)).toFixed(1)} img/s | ` +
+    `ETA: ${formatTime(Math.round(remaining))} | ` +
+    `Failed: ${failed}   `
+  );
 }
 
 // ─── Extract text via Claude Vision ───────────────────────────────────
@@ -88,7 +134,6 @@ async function extractBatch(paths) {
   for (const imgPath of paths) {
     const fullPath = resolve(PROJECT_ROOT, "public" + imgPath);
     if (!existsSync(fullPath)) {
-      console.log(`  ⚠ Missing: ${imgPath}`);
       continue;
     }
 
@@ -125,14 +170,12 @@ async function extractBatch(paths) {
   // Extract JSON from response
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
-    console.log(`  ⚠ No JSON in response`);
     return {};
   }
 
   try {
     return JSON.parse(jsonMatch[0]);
   } catch {
-    console.log(`  ⚠ Invalid JSON response`);
     return {};
   }
 }
@@ -141,14 +184,19 @@ async function extractBatch(paths) {
 
 async function main() {
   const results = { ...existing };
-  const totalBatches = Math.ceil(toExtract.length / BATCH_SIZE);
 
+  // Split into batches
+  const batches = [];
   for (let i = 0; i < toExtract.length; i += BATCH_SIZE) {
-    const batch = toExtract.slice(i, i + BATCH_SIZE);
-    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+    batches.push(toExtract.slice(i, i + BATCH_SIZE));
+  }
 
-    console.log(`  Batch ${batchNum}/${totalBatches} (${batch.length} images)...`);
+  console.log(`Processing ${batches.length} batches with concurrency ${CONCURRENCY}...\n`);
 
+  // Process batches with concurrency limit
+  let batchIndex = 0;
+
+  async function processBatch(batch) {
     try {
       const extracted = await extractBatch(batch);
       let count = 0;
@@ -158,22 +206,45 @@ async function main() {
           count++;
         }
       }
-      console.log(`    Extracted text from ${count}/${batch.length} images`);
+      completed += batch.length;
+      if (batch.length - count > 0) failed += batch.length - count;
     } catch (err) {
-      console.log(`  ⚠ Batch ${batchNum} failed: ${err.message}`);
+      completed += batch.length;
+      failed += batch.length;
     }
+
+    printProgress();
 
     // Save incrementally (in case of crash)
     writeFileSync(OCR_PATH, JSON.stringify(results, null, 2));
-
-    // Rate limit
-    if (i + BATCH_SIZE < toExtract.length) {
-      await new Promise((r) => setTimeout(r, 1000));
-    }
   }
 
-  console.log(`\n${"─".repeat(60)}`);
+  // Run batches with concurrency pool
+  async function runPool() {
+    const workers = [];
+    for (let w = 0; w < CONCURRENCY; w++) {
+      workers.push(
+        (async () => {
+          while (batchIndex < batches.length) {
+            const idx = batchIndex++;
+            if (idx >= batches.length) break;
+            await processBatch(batches[idx]);
+            // Rate limit per worker
+            await new Promise((r) => setTimeout(r, 500));
+          }
+        })()
+      );
+    }
+    await Promise.all(workers);
+  }
+
+  await runPool();
+
+  const elapsed = Date.now() - startTime;
+  console.log(`\n\n${"─".repeat(60)}`);
   console.log(`  OCR complete: ${Object.keys(results).length} screenshots indexed`);
+  console.log(`  New extractions: ${completed - failed} successful, ${failed} failed`);
+  console.log(`  Time: ${formatTime(elapsed)} (${(completed / (elapsed / 1000)).toFixed(1)} img/s)`);
   console.log(`  Output: ${OCR_PATH}`);
   console.log(`${"─".repeat(60)}`);
 }

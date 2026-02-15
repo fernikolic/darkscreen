@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
+import { useTheme } from "@/contexts/ThemeContext";
 import { truncateAddress } from "@/lib/wallet-auth";
 import { SearchOverlay } from "./SearchOverlay";
 
@@ -11,6 +12,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { user, loading, openSignIn, signOut } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
 
   return (
@@ -45,7 +47,7 @@ export function Header() {
                 </svg>
               </Link>
               <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-                <div className="rounded-lg border border-dark-border/80 bg-[#1a1a1d] p-1 shadow-xl">
+                <div className="rounded-lg border border-dark-border/80 bg-dark-card p-1 shadow-xl">
                   <Link href="/library?platform=Web" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
                     Websites
                   </Link>
@@ -71,7 +73,7 @@ export function Header() {
                 </svg>
               </Link>
               <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-                <div className="rounded-lg border border-dark-border/80 bg-[#1a1a1d] p-1 shadow-xl">
+                <div className="rounded-lg border border-dark-border/80 bg-dark-card p-1 shadow-xl">
                   <Link href="/library?platform=iOS" className="block rounded-md px-4 py-2 text-[13px] text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary whitespace-nowrap">
                     iOS
                   </Link>
@@ -121,6 +123,23 @@ export function Header() {
 
           {/* Right actions */}
           <div className="flex shrink-0 items-center gap-2">
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="rounded-lg p-2 text-text-tertiary transition-colors hover:text-text-primary"
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {theme === "dark" ? (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                </svg>
+              )}
+            </button>
+
             {loading ? (
               <div className="h-8 w-8 animate-pulse rounded-full bg-dark-border" />
             ) : user ? (

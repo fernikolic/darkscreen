@@ -1,4 +1,5 @@
-import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, type DiffChange, type CopySnapshot, type CopyChange, type TechStackEntry, type PerformanceMetrics, INTEL_LAYERS } from "./apps";
+import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, type DiffChange, type CopySnapshot, type CopyChange, type TechStackEntry, type PerformanceMetrics, type GranularElementTag, type DetectedElement, INTEL_LAYERS } from "./apps";
+import elementsData from "./elements.json";
 import { autoChangesBySlug } from "./auto-changes";
 import { copyDataBySlug } from "./copy-tracking";
 import { techStackBySlug } from "./techstack";
@@ -219,4 +220,64 @@ export function getAllPerformanceData(): Record<string, { app: CryptoApp; metric
     }
   }
   return result;
+}
+
+// ── Detected elements ────────────────────────────────────────────────────
+
+const elementsMap = elementsData as Record<string, DetectedElement[]>;
+
+export function getElementsForImage(imagePath: string): DetectedElement[] {
+  return elementsMap[imagePath] || [];
+}
+
+export interface ElementTypeInfo {
+  tag: GranularElementTag;
+  count: number;
+  appCount: number;
+  screens: EnrichedScreen[];
+  thumbnail?: string;
+}
+
+export function getAllElements(): ElementTypeInfo[] {
+  const allScreens = getAllScreens();
+  const screensByImage = new Map<string, EnrichedScreen>();
+  for (const s of allScreens) {
+    if (s.image) screensByImage.set(s.image, s);
+  }
+
+  const tagMap = new Map<string, { screens: Set<string>; apps: Set<string>; thumbnail?: string }>();
+
+  for (const [imagePath, elements] of Object.entries(elementsMap)) {
+    if (!Array.isArray(elements)) continue;
+    const screen = screensByImage.get(imagePath);
+    if (!screen) continue;
+
+    for (const el of elements) {
+      if (!el.tag) continue;
+      let entry = tagMap.get(el.tag);
+      if (!entry) {
+        entry = { screens: new Set(), apps: new Set(), thumbnail: undefined };
+        tagMap.set(el.tag, entry);
+      }
+      entry.screens.add(imagePath);
+      entry.apps.add(screen.appSlug);
+      if (!entry.thumbnail) entry.thumbnail = imagePath;
+    }
+  }
+
+  const result: ElementTypeInfo[] = [];
+  for (const [tag, data] of tagMap) {
+    const screens = Array.from(data.screens)
+      .map((p) => screensByImage.get(p))
+      .filter((s): s is EnrichedScreen => !!s);
+    result.push({
+      tag: tag as GranularElementTag,
+      count: data.screens.size,
+      appCount: data.apps.size,
+      screens,
+      thumbnail: data.thumbnail,
+    });
+  }
+
+  return result.sort((a, b) => b.count - a.count);
 }

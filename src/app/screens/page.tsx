@@ -2,11 +2,13 @@
 
 import { Suspense, useState, useMemo, useCallback, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { type AppCategory, type FlowType, type ChainType, type ElementTag, CATEGORIES, FLOW_TYPES, CHAIN_TYPES, ELEMENT_TAGS } from "@/data/apps";
+import { type AppCategory, type FlowType, type ChainType, type ElementTag, type DeviceType, CATEGORIES, FLOW_TYPES, CHAIN_TYPES, ELEMENT_TAGS } from "@/data/apps";
 import { getAllScreens, getAllFlows, type EnrichedScreen } from "@/data/helpers";
-import { buildSearchIndex, searchScreens } from "@/lib/search";
+import { buildSearchIndex, searchScreens, getOcrSnippet } from "@/lib/search";
 import { ScreenCard } from "@/components/ScreenCard";
 import { ScreenModal } from "@/components/ScreenModal";
+import { OcrSnippet } from "@/components/OcrSnippet";
+import { BatchSelect } from "@/components/BatchSelect";
 import { PaywallOverlay } from "@/components/PaywallOverlay";
 import { useSubscription } from "@/contexts/SubscriptionContext";
 import { getScreenLimit } from "@/lib/access";
@@ -14,6 +16,13 @@ import { getScreenLimit } from "@/lib/access";
 const CHAINS: Array<ChainType | "All Chains"> = ["All Chains", ...CHAIN_TYPES];
 const CATEGORIES_ALL: Array<AppCategory | "All"> = ["All", ...CATEGORIES];
 const FLOWS_ALL: Array<FlowType | "All Flows"> = ["All Flows", ...FLOW_TYPES];
+const DEVICES: Array<DeviceType | "All Devices"> = ["All Devices", "desktop", "mobile", "tablet"];
+const DEVICE_LABELS: Record<string, string> = {
+  "All Devices": "All Devices",
+  desktop: "Desktop",
+  mobile: "Mobile",
+  tablet: "Tablet",
+};
 const PAGE_SIZE = 48;
 
 export default function ScreensPage() {
@@ -31,6 +40,7 @@ function ScreensPageInner() {
   const [activeCategory, setActiveCategory] = useState<AppCategory | "All">("All");
   const [activeFlow, setActiveFlow] = useState<FlowType | "All Flows">("All Flows");
   const [activeTags, setActiveTags] = useState<Set<ElementTag>>(new Set());
+  const [activeDevice, setActiveDevice] = useState<DeviceType | "All Devices">("All Devices");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [modalScreen, setModalScreen] = useState<EnrichedScreen | null>(null);
 
@@ -78,9 +88,13 @@ function ScreensPageInner() {
         // Screen must have at least one of the active tags
         if (!screenTags.some((t) => activeTags.has(t))) return false;
       }
+      if (activeDevice !== "All Devices") {
+        const screenDevice = s.device || "desktop";
+        if (screenDevice !== activeDevice) return false;
+      }
       return true;
     });
-  }, [allScreens, fuse, activeChain, activeCategory, activeFlow, activeTags, search]);
+  }, [allScreens, fuse, activeChain, activeCategory, activeFlow, activeTags, activeDevice, search]);
 
   const { plan } = useSubscription();
   const screenLimit = getScreenLimit(plan);
@@ -155,6 +169,26 @@ function ScreensPageInner() {
             }`}
           >
             {chain}
+          </button>
+        ))}
+      </div>
+
+      {/* Device filter */}
+      <div className="mb-6 flex flex-wrap gap-2">
+        {DEVICES.map((device) => (
+          <button
+            key={device}
+            onClick={() => {
+              setActiveDevice(device);
+              setVisibleCount(PAGE_SIZE);
+            }}
+            className={`rounded-full border px-3 py-1.5 text-[11px] font-medium transition-all ${
+              activeDevice === device
+                ? "border-white/40 bg-white/10 text-white"
+                : "border-dark-border text-text-tertiary hover:border-text-tertiary hover:text-text-secondary"
+            }`}
+          >
+            {DEVICE_LABELS[device]}
           </button>
         ))}
       </div>
@@ -244,23 +278,76 @@ function ScreensPageInner() {
         </div>
       </div>
 
-      {/* Results count */}
-      <div className="mb-8">
-        <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary">
-          {filtered.length} screen{filtered.length !== 1 ? "s" : ""}
-        </span>
-      </div>
+      {/* Results count + batch select */}
+      <BatchSelect screens={visible}>
+        {({ isSelectMode, isSelected, toggleSelect }) => (
+          <>
+            <div className="mb-8">
+              <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary">
+                {filtered.length} screen{filtered.length !== 1 ? "s" : ""}
+              </span>
+            </div>
 
-      {/* Screen grid */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {visible.map((screen, idx) => (
-          <ScreenCard
-            key={`${screen.appSlug}-${screen.flow}-${screen.step}-${idx}`}
-            screen={screen}
-            onClick={() => setModalScreen(screen)}
-          />
-        ))}
-      </div>
+            {/* Screen grid */}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+              {visible.map((screen, idx) => {
+                const ocrSnippet = search.trim() && screen.image
+                  ? getOcrSnippet(screen.image, search)
+                  : null;
+                const checked = isSelectMode && isSelected(screen);
+                return (
+                  <div
+                    key={`${screen.appSlug}-${screen.flow}-${screen.step}-${idx}`}
+                    className="relative"
+                  >
+                    {isSelectMode && (
+                      <div
+                        className="absolute left-2 top-2 z-10 cursor-pointer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          toggleSelect(screen);
+                        }}
+                      >
+                        <div
+                          className={`flex h-5 w-5 items-center justify-center rounded border transition-all ${
+                            checked
+                              ? "border-[#00d4ff] bg-[#00d4ff]"
+                              : "border-white/40 bg-black/50"
+                          }`}
+                        >
+                          {checked && (
+                            <svg className="h-3 w-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    <ScreenCard
+                      screen={screen}
+                      onClick={() => {
+                        if (isSelectMode) {
+                          toggleSelect(screen);
+                        } else {
+                          setModalScreen(screen);
+                        }
+                      }}
+                    />
+                    {ocrSnippet && (
+                      <OcrSnippet
+                        text={ocrSnippet}
+                        query={search}
+                        className="mt-1.5 px-1"
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
+      </BatchSelect>
 
       {filtered.length === 0 && (
         <div className="py-20 text-center">

@@ -24,16 +24,29 @@ export function ScreenCard({ screen, onClick }: ScreenCardProps) {
       className="group block w-full text-left"
     >
       <div className="overflow-hidden border border-dark-border bg-dark-card transition-all card-hover">
-        {/* Thumbnail */}
-        <div className="relative aspect-[9/16] overflow-hidden bg-dark-bg">
+        {/* Thumbnail — mobile uses 9:19, tablet uses 3:4, desktop uses 9:16 */}
+        <div className={`relative overflow-hidden bg-dark-bg ${
+          screen.device === "mobile" ? "aspect-[9/19]" :
+          screen.device === "tablet" ? "aspect-[3/4]" :
+          "aspect-[9/16]"
+        }`}>
           {screen.image ? (
-            <Image
-              src={screenshotUrl(screen.image)!}
-              alt={`${screen.appName} - ${screen.label}`}
-              fill
-              className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
-            />
+            <>
+              <Image
+                src={screenshotUrl(screen.image)!}
+                alt={`${screen.appName} - ${screen.label}`}
+                fill
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+              />
+              {screen.video && (
+                <div className="absolute right-2 top-2 rounded-full bg-black/60 p-1.5">
+                  <svg className="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <polygon points="5,3 19,12 5,21" />
+                  </svg>
+                </div>
+              )}
+            </>
           ) : (
             <div className="flex h-full flex-col items-center justify-center p-4">
               <span className="mb-2 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-text-tertiary">

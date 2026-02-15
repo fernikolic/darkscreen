@@ -13,6 +13,7 @@ import {
   STYLE_TYPES,
   ELEMENT_TAGS,
   SECTION_TYPES,
+  GRANULAR_ELEMENT_TAGS,
 } from "./apps";
 import { getAllScreens, type EnrichedScreen } from "./helpers";
 
@@ -569,6 +570,8 @@ export function getAllSeoRoutes(): string[] {
     "/flows",
     "/screens",
     "/changes",
+    "/text-search",
+    "/elements",
   ];
 
   // App pages
@@ -586,9 +589,14 @@ export function getAllSeoRoutes(): string[] {
     }
   }
 
-  // Element tag pages
+  // Element tag pages (design)
   for (const page of getElementTagPages()) {
     routes.push(`/design/${page.slug}`);
+  }
+
+  // Granular element pages
+  for (const tag of GRANULAR_ELEMENT_TAGS) {
+    routes.push(`/elements/${toSlug(tag)}`);
   }
 
   // Comparison pages

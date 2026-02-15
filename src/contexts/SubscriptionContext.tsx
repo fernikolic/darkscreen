@@ -46,7 +46,7 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
     return unsubscribe;
   }, [user]);
 
-  const isPro = plan === "pro" || plan === "team";
+  const isPro = plan === "pro" || plan === "team" || plan === "education";
 
   return (
     <SubscriptionContext.Provider value={{ plan, loading, isPro }}>

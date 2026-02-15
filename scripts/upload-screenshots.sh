@@ -15,9 +15,9 @@ PARALLEL=${PARALLEL:-10}
 SKIP_FILE=${SKIP_FILE:-""}
 
 if [[ "${1:-}" == "--slug" && -n "${2:-}" ]]; then
-  PATTERN="${2}-*.png"
+  PATTERN="${2}-*"
 elif [[ "${1:-}" == "--all" ]]; then
-  PATTERN="*.png"
+  PATTERN="*"
 else
   echo "Usage: bash scripts/upload-screenshots.sh --all | --slug <slug>"
   exit 1
@@ -28,6 +28,10 @@ TMPFILE=$(mktemp)
 for file in $DIR/$PATTERN; do
   [ -f "$file" ] || continue
   basename=$(basename "$file")
+  # Only upload PNG and WebM files
+  if [[ "$basename" != *.png && "$basename" != *.webm ]]; then
+    continue
+  fi
   if [[ "$basename" == *"-raw-"* ]]; then
     continue
   fi
@@ -50,7 +54,11 @@ upload_one() {
   local basename
   basename=$(basename "$file")
   local key="screenshots/$basename"
-  npx wrangler r2 object put "$BUCKET/$key" --file "$file" --content-type "image/png" --remote > /dev/null 2>&1
+  local content_type="image/png"
+  if [[ "$basename" == *.webm ]]; then
+    content_type="video/webm"
+  fi
+  npx wrangler r2 object put "$BUCKET/$key" --file "$file" --content-type "$content_type" --remote > /dev/null 2>&1
   echo "✓ $key"
 }
 export -f upload_one

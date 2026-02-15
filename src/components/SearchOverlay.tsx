@@ -20,7 +20,7 @@ const FLOW_LABELS: Record<string, string> = {
   Settings: "Settings",
 };
 
-type Tab = "trending" | "categories" | "screens" | "sections" | "styles";
+type Tab = "trending" | "categories" | "screens" | "sections" | "styles" | "text-on-screen";
 
 const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
   {
@@ -65,6 +65,15 @@ const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
     icon: (
       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+      </svg>
+    ),
+  },
+  {
+    id: "text-on-screen",
+    label: "Text on Screen",
+    icon: (
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
       </svg>
     ),
   },
@@ -455,6 +464,43 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
                         </button>
                       );
                     })}
+                  </div>
+                )}
+
+                {/* Text on Screen */}
+                {activeTab === "text-on-screen" && (
+                  <div>
+                    <p className="mb-4 text-[13px] text-text-secondary">
+                      Search for specific text visible in screenshots — buttons, labels, error messages, and more.
+                    </p>
+                    <button
+                      onClick={() => {
+                        router.push("/text-search");
+                        onClose();
+                      }}
+                      className="w-full rounded-xl bg-white/[0.04] px-4 py-4 text-left transition-colors hover:bg-white/[0.08]"
+                    >
+                      <span className="text-[14px] font-medium text-text-primary">
+                        Open Text Search
+                      </span>
+                      <span className="mt-1 block text-[12px] text-text-tertiary">
+                        How do crypto apps say X? Search OCR text across all screenshots.
+                      </span>
+                    </button>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {["connect wallet", "slippage", "approve", "gas fee", "swap"].map((term) => (
+                        <button
+                          key={term}
+                          onClick={() => {
+                            router.push(`/text-search?q=${encodeURIComponent(term)}`);
+                            onClose();
+                          }}
+                          className="rounded-full border border-dark-border/60 px-3 py-1.5 text-[12px] text-text-tertiary transition-colors hover:border-text-tertiary hover:text-text-secondary"
+                        >
+                          &ldquo;{term}&rdquo;
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

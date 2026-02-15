@@ -6,16 +6,16 @@ const config: Config = {
     extend: {
       colors: {
         dark: {
-          bg: "#0C0C0E",
-          card: "#151518",
-          border: "#27272A",
-          hover: "#1E1E22",
+          bg: "rgb(var(--color-bg) / <alpha-value>)",
+          card: "rgb(var(--color-card) / <alpha-value>)",
+          border: "rgb(var(--color-border) / <alpha-value>)",
+          hover: "rgb(var(--color-hover) / <alpha-value>)",
         },
         accent: {},
         text: {
-          primary: "#F4F4F5",
-          secondary: "#A1A1AA",
-          tertiary: "#71717A",
+          primary: "rgb(var(--color-text-primary) / <alpha-value>)",
+          secondary: "rgb(var(--color-text-secondary) / <alpha-value>)",
+          tertiary: "rgb(var(--color-text-tertiary) / <alpha-value>)",
         },
       },
       fontFamily: {

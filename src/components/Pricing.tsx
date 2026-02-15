@@ -54,6 +54,21 @@ const tiers = [
     highlighted: false,
     plan: "team" as const,
   },
+  {
+    name: "Education" as const,
+    price: "$4",
+    period: "/mo",
+    description: "Full Pro access for students and educators.",
+    features: [
+      "Everything in Pro",
+      "Verify with .edu email",
+      "Perfect for research",
+      "Cancel anytime",
+    ],
+    cta: "Get Education",
+    highlighted: false,
+    plan: "education" as const,
+  },
 ];
 
 export function Pricing() {
@@ -84,7 +99,7 @@ export function Pricing() {
             Start free. Upgrade when you need history and alerts.
           </p>
         </div>
-        <div className="grid gap-px overflow-hidden rounded-lg border border-dark-border md:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-lg border border-dark-border md:grid-cols-4">
           {tiers.map((tier, i) => (
             <div
               key={tier.name}
@@ -92,7 +107,7 @@ export function Pricing() {
                 tier.highlighted
                   ? "bg-white/[0.03]"
                   : "bg-dark-card"
-              } ${i < 2 ? "md:border-r md:border-dark-border" : ""}`}
+              } ${i < tiers.length - 1 ? "md:border-r md:border-dark-border" : ""}`}
             >
               {tier.highlighted && (
                 <span className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-wider text-white">
