@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { toSlug } from "@/data/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -57,6 +58,14 @@ export default async function ScreenshotsPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: app.name, url: `https://darkscreens.xyz/library/${app.slug}` },
+          { name: "Screenshots", url: `https://darkscreens.xyz/screenshots/${app.slug}` },
+        ]}
+      />
       <Link
         href={`/library/${app.slug}`}
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
@@ -134,9 +143,13 @@ export default async function ScreenshotsPage({ params }: PageProps) {
       </div>
 
       {/* Screenshots by flow */}
-      {Array.from(byFlow.entries()).map(([flow, screens]) => (
+      {Array.from(byFlow.entries()).map(([flow, screens]) => {
+        const sorted = [...screens].sort((a, b) => a.step - b.step);
+        const firstLabel = sorted[0]?.label;
+        const lastLabel = sorted[sorted.length - 1]?.label;
+        return (
         <section key={flow} className="mb-10 border-t border-dark-border pt-8">
-          <div className="mb-6 flex items-center justify-between">
+          <div className="mb-4 flex items-center justify-between">
             <h2 className="font-heading text-lg font-semibold text-text-primary">
               {flow}
             </h2>
@@ -147,6 +160,9 @@ export default async function ScreenshotsPage({ params }: PageProps) {
               Compare {flow.toLowerCase()} flows &rarr;
             </Link>
           </div>
+          <p className="mb-6 text-[12px] text-text-tertiary">
+            {screens.length} step{screens.length !== 1 ? "s" : ""}{firstLabel && lastLabel && screens.length > 1 ? ` — from "${firstLabel}" to "${lastLabel}"` : ""}.
+          </p>
           <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {screens.sort((a, b) => a.step - b.step).map((screen, i) => (
               <div key={`${flow}-${screen.step}-${i}`} className="overflow-hidden border border-dark-border bg-dark-card">
@@ -189,7 +205,8 @@ export default async function ScreenshotsPage({ params }: PageProps) {
             ))}
           </div>
         </section>
-      ))}
+        );
+      })}
 
       {app.screens.length === 0 && (
         <section className="mb-12 border-t border-dark-border pt-8">

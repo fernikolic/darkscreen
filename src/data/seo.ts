@@ -631,3 +631,104 @@ export function getAllSeoRoutes(): string[] {
 
   return routes;
 }
+
+// ── FAQ data generators ──────────────────────────────────────
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  wallet: "A crypto wallet is a software application or hardware device that allows users to store, send, and receive cryptocurrencies. Wallets manage private keys and interact with blockchain networks to facilitate transactions.",
+  exchange: "A crypto exchange is a platform where users can buy, sell, and trade cryptocurrencies. Exchanges provide order books, trading pairs, and market data to facilitate price discovery and asset conversion.",
+  defi: "A DeFi (Decentralized Finance) app is a blockchain-based financial application that operates without traditional intermediaries. DeFi apps offer services like lending, borrowing, trading, and yield farming through smart contracts.",
+  bridge: "A crypto bridge is a protocol that enables transferring assets between different blockchain networks. Bridges lock tokens on one chain and mint equivalent tokens on another, enabling cross-chain interoperability.",
+  nft: "An NFT marketplace is a platform for buying, selling, and discovering non-fungible tokens — unique digital assets representing art, collectibles, gaming items, and more on the blockchain.",
+  analytics: "A crypto analytics tool provides data visualization, portfolio tracking, and blockchain exploration capabilities. These tools help users monitor on-chain activity, track wallet balances, and analyze market trends.",
+  payment: "A crypto payment processor enables merchants and individuals to accept, send, and manage cryptocurrency payments. These tools bridge traditional payment systems with blockchain networks.",
+  infrastructure: "Crypto infrastructure tools provide the foundational services for running blockchain nodes, managing Lightning Network channels, and operating sovereign computing environments.",
+};
+
+export function getCategoryFAQs(
+  slug: string,
+  name: string,
+  plural: string,
+  appCount: number,
+  screenCount: number,
+  appNames: string[]
+): FAQItem[] {
+  const description = CATEGORY_DESCRIPTIONS[slug] || `A crypto ${name.toLowerCase()} is a product in the ${name.toLowerCase()} category of the crypto ecosystem.`;
+  const topNames = appNames.slice(0, 6).join(", ");
+
+  return [
+    {
+      question: `What is a crypto ${name.toLowerCase()}?`,
+      answer: description,
+    },
+    {
+      question: `How many ${plural.toLowerCase()} does Darkscreens track?`,
+      answer: `Darkscreens currently tracks ${appCount} ${plural.toLowerCase()} with a total of ${screenCount.toLocaleString()} screenshots across all user flows.`,
+    },
+    {
+      question: `Which ${plural.toLowerCase()} are included?`,
+      answer: `Darkscreens tracks ${plural.toLowerCase()} including ${topNames}, and more. Each product is screenshotted across multiple user flows like onboarding, home, swap, send, and settings.`,
+    },
+    {
+      question: "How often are screenshots updated?",
+      answer: "Darkscreens re-crawls tracked products weekly and captures new screenshots whenever UI changes are detected. Historical screenshots are preserved to show design evolution over time.",
+    },
+  ];
+}
+
+const FLOW_DESCRIPTIONS: Record<string, string> = {
+  home: "A home flow in crypto apps refers to the primary landing experience — the first screen users see after logging in or opening the app. It typically includes portfolio overviews, quick actions, and navigation to core features.",
+  onboarding: "An onboarding flow in crypto apps is the initial setup experience for new users. It covers account creation, wallet setup, seed phrase backup, KYC verification, and introductory tutorials.",
+  swap: "A swap flow in crypto apps is the token exchange experience. It includes token selection, amount input, price impact display, slippage settings, routing information, and transaction confirmation.",
+  send: "A send flow in crypto apps is the process of transferring cryptocurrency to another address. It involves address input, amount entry, network selection, fee estimation, and transaction confirmation.",
+  staking: "A staking flow in crypto apps is the process of locking tokens to earn rewards. It covers validator selection, amount delegation, APY display, reward tracking, and unstaking.",
+  settings: "A settings flow in crypto apps includes security preferences, notification controls, connected apps management, network configuration, and account profile settings.",
+};
+
+export function getFlowFAQs(
+  flowSlug: string,
+  flowName: string,
+  appCount: number,
+  totalScreens: number
+): FAQItem[] {
+  const description = FLOW_DESCRIPTIONS[flowSlug] || `A ${flowName.toLowerCase()} flow in crypto apps is a common user journey that involves ${flowName.toLowerCase()}-related interactions and screens.`;
+
+  return [
+    {
+      question: `What is a ${flowName.toLowerCase()} flow in crypto apps?`,
+      answer: description,
+    },
+    {
+      question: `How many crypto apps have a ${flowName.toLowerCase()} flow?`,
+      answer: `Darkscreens tracks ${appCount} crypto products with a ${flowName.toLowerCase()} flow, totaling ${totalScreens.toLocaleString()} screenshots across all implementations.`,
+    },
+    {
+      question: `How can I compare ${flowName.toLowerCase()} flow designs?`,
+      answer: `Darkscreens shows each app's ${flowName.toLowerCase()} flow side by side with step-by-step screenshots. You can compare how different products approach the same user journey and identify patterns and best practices.`,
+    },
+  ];
+}
+
+export const HOMEPAGE_FAQS: FAQItem[] = [
+  {
+    question: "What is Darkscreens?",
+    answer: "Darkscreens is a product intelligence platform for crypto. We systematically screenshot every major crypto product — wallets, exchanges, DeFi protocols, bridges, and more — and track how their UIs change over time. Product teams use Darkscreens for competitive analysis, design inspiration, and tracking industry trends.",
+  },
+  {
+    question: `How many crypto products does Darkscreens track?`,
+    answer: `Darkscreens currently tracks ${apps.length}+ crypto products across wallets, exchanges, DeFi protocols, bridges, NFT marketplaces, and analytics tools. Each product is screenshotted across multiple user flows.`,
+  },
+  {
+    question: "How often are screenshots updated?",
+    answer: "We re-crawl tracked products weekly and capture new screenshots whenever UI changes are detected. Our automated pipeline ensures consistent, high-quality captures across all platforms.",
+  },
+  {
+    question: "Is Darkscreens free?",
+    answer: "Darkscreens offers a free tier that lets you browse the full library of screenshots and compare products. Premium plans include full-resolution downloads, change alerts, and advanced filtering.",
+  },
+];

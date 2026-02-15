@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FLOW_TYPES, TOTAL_APPS, type FlowType } from "@/data/apps";
 import { getAllFlows } from "@/data/helpers";
-import { toSlug, fromSlug, FLOW_META } from "@/data/seo";
+import { toSlug, fromSlug, FLOW_META, getFlowFAQs } from "@/data/seo";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -46,6 +47,13 @@ export default async function FlowPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Flows", url: "https://darkscreens.xyz/flows" },
+          { name: `${flowName} Flow`, url: `https://darkscreens.xyz/flows/${flowSlug}` },
+        ]}
+      />
       <Link
         href="/flows"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
@@ -156,6 +164,34 @@ export default async function FlowPage({ params }: PageProps) {
           </p>
         </div>
       )}
+
+      {/* FAQ */}
+      {(() => {
+        const totalScreens = allFlows.reduce((sum, f) => sum + f.count, 0);
+        const faqs = getFlowFAQs(flowSlug, flowName, allFlows.length, totalScreens);
+        return (
+          <>
+            <FAQJsonLd questions={faqs} />
+            <section className="mb-12 border-t border-dark-border pt-10">
+              <h2 className="mb-8 font-heading text-lg font-semibold text-text-primary">
+                Frequently asked questions
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <h3 className="text-[14px] font-medium text-text-primary">
+                      {faq.question}
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-text-secondary">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        );
+      })()}
 
       {/* Other flows */}
       <section className="mb-12 border-t border-dark-border pt-10">

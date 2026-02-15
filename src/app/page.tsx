@@ -6,6 +6,8 @@ import { Pricing } from "@/components/Pricing";
 import { AISkillTeaser } from "@/components/AISkillTeaser";
 import { IntelLayerShowcase } from "@/components/IntelLayerShowcase";
 import { SponsorBanner } from "@/components/SponsorBanner";
+import { FAQJsonLd } from "@/components/JsonLd";
+import { HOMEPAGE_FAQS } from "@/data/seo";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,6 +23,28 @@ export default function Home() {
       <HowItWorks />
       <Pricing />
       <AISkillTeaser />
+
+      {/* FAQ */}
+      <FAQJsonLd questions={HOMEPAGE_FAQS} />
+      <section className="border-t border-dark-border">
+        <div className="mx-auto max-w-3xl px-6 py-20">
+          <h2 className="mb-10 font-heading text-2xl font-bold text-text-primary md:text-3xl">
+            Frequently asked questions
+          </h2>
+          <div className="space-y-8">
+            {HOMEPAGE_FAQS.map((faq) => (
+              <div key={faq.question}>
+                <h3 className="text-[15px] font-medium text-text-primary">
+                  {faq.question}
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-text-secondary">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Bottom CTA */}
       <section id="get-access" className="border-t border-dark-border">

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { STYLE_TYPES, type StyleType } from "@/data/apps";
 import { toSlug, fromSlug, STYLE_META, getAppsByStyle } from "@/data/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -45,6 +46,19 @@ export default async function StylePage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: styleName, url: `https://darkscreens.xyz/style/${slug}` },
+        ]}
+      />
+      <CollectionPageJsonLd
+        name={meta?.title || `${styleName} Apps`}
+        description={meta?.description || `${styleName} products tracked by Darkscreens.`}
+        url={`https://darkscreens.xyz/style/${slug}`}
+        itemCount={styleApps.length}
+      />
       <Link
         href="/library"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"

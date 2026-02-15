@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPatternPages, PATTERN_META, toSlug } from "@/data/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -44,6 +45,19 @@ export default async function PatternPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: `${page.category} ${page.flow}`, url: `https://darkscreens.xyz/patterns/${slug}` },
+        ]}
+      />
+      <CollectionPageJsonLd
+        name={meta?.title || `${page.category} ${page.flow} Patterns`}
+        description={meta?.description || `${page.category} ${page.flow} flow patterns across crypto products.`}
+        url={`https://darkscreens.xyz/patterns/${slug}`}
+        itemCount={page.apps.length}
+      />
       <Link
         href="/library"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { toSlug } from "@/data/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 
 export function generateStaticParams() {
@@ -66,6 +67,14 @@ export default async function ChangelogPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: app.name, url: `https://darkscreens.xyz/library/${app.slug}` },
+          { name: "Changelog", url: `https://darkscreens.xyz/changelog/${app.slug}` },
+        ]}
+      />
       <Link
         href={`/library/${app.slug}`}
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"

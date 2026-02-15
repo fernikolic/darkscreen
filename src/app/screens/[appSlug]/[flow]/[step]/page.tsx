@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps, type ElementTag } from "@/data/apps";
 import { getAllScreens, getScreenPath, type EnrichedScreen } from "@/data/helpers";
 import { ScreenActions } from "@/components/ScreenActions";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
 export function generateStaticParams() {
@@ -17,6 +19,36 @@ export function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ appSlug: string; flow: string; step: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { appSlug, flow, step } = await params;
+  const stepNum = parseInt(step, 10);
+
+  const app = apps.find((a) => a.slug === appSlug);
+  if (!app) return {};
+
+  const screen = app.screens.find(
+    (s) => s.flow.toLowerCase() === flow && s.step === stepNum
+  );
+  if (!screen) return {};
+
+  const title = `${screen.label} — ${app.name} ${screen.flow} Flow Step ${step}`;
+  const description = `Screenshot of ${app.name}'s ${screen.flow} flow, step ${step}: ${screen.label}. Browse all ${app.screenCount} screens from ${app.name}.`;
+  const ogImage = screen.image ? screenshotUrl(screen.image) : undefined;
+
+  return {
+    title: `${title} | Darkscreens`,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://darkscreens.xyz/screens/${appSlug}/${flow}/${step}`,
+      siteName: "Darkscreens",
+      type: "website",
+      ...(ogImage ? { images: [{ url: ogImage }] } : {}),
+    },
+  };
 }
 
 export default async function ScreenDetailPage({ params }: PageProps) {
@@ -55,6 +87,14 @@ export default async function ScreenDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: app.name, url: `https://darkscreens.xyz/library/${appSlug}` },
+          { name: screen.flow, url: `https://darkscreens.xyz/flows/${screen.flow.toLowerCase()}` },
+          { name: `Step ${screen.step}`, url: `https://darkscreens.xyz/screens/${appSlug}/${flow}/${step}` },
+        ]}
+      />
       {/* Breadcrumb */}
       <nav className="mb-8 flex items-center gap-2 text-[13px]">
         <Link

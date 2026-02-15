@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SECTION_TYPES, type SectionType } from "@/data/apps";
 import { toSlug, fromSlug, SECTION_META, getAppsBySection } from "@/data/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -57,6 +58,19 @@ export default async function SectionPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: sectionName, url: `https://darkscreens.xyz/section/${slug}` },
+        ]}
+      />
+      <CollectionPageJsonLd
+        name={meta?.title || `${sectionName} Section`}
+        description={meta?.description || `${sectionName} sections across crypto products.`}
+        url={`https://darkscreens.xyz/section/${slug}`}
+        itemCount={sectionApps.length}
+      />
       <Link
         href="/library"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"

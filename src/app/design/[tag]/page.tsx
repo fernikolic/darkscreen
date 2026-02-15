@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ELEMENT_TAGS, TOTAL_APPS } from "@/data/apps";
 import { getElementTagPages, toSlug, fromSlug, ELEMENT_TAG_META } from "@/data/seo";
+import { BreadcrumbJsonLd, CollectionPageJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -56,6 +57,20 @@ export default async function ElementTagPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: "UI Patterns", url: "https://darkscreens.xyz/library" },
+          { name: tagName, url: `https://darkscreens.xyz/design/${tagSlug}` },
+        ]}
+      />
+      <CollectionPageJsonLd
+        name={meta?.title || `${tagName} Patterns`}
+        description={meta?.description || `${tagName} UI patterns across crypto products.`}
+        url={`https://darkscreens.xyz/design/${tagSlug}`}
+        itemCount={page.screens.length}
+      />
       <Link
         href="/library"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"

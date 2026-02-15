@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { getComparisonPairs, getSharedFlows, toSlug } from "@/data/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -62,6 +63,13 @@ export default async function ComparePage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: `${appA.name} vs ${appB.name}`, url: `https://darkscreens.xyz/compare/${pair}` },
+        ]}
+      />
       <Link
         href="/library"
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
@@ -81,6 +89,16 @@ export default async function ComparePage({ params }: PageProps) {
         <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-text-secondary">
           Side-by-side comparison of two {appA.category.toLowerCase()} products.
           Compare UI patterns, screen designs, and user flows.
+        </p>
+        <p className="mt-3 max-w-2xl text-[13px] leading-relaxed text-text-tertiary">
+          {appA.name} has {appA.screenCount} screens across {appA.flows.length} flows,
+          while {appB.name} has {appB.screenCount} screens across {appB.flows.length} flows.
+          {sharedFlows.length > 0
+            ? ` They share ${sharedFlows.length} flow${sharedFlows.length !== 1 ? "s" : ""} in common: ${sharedFlows.join(", ")}.`
+            : " They have no flows in common."}
+          {" "}{appA.name} supports {appA.chains.join(", ")}{appA.chains.join(", ") !== appB.chains.join(", ")
+            ? `, while ${appB.name} supports ${appB.chains.join(", ")}`
+            : `, and ${appB.name} supports the same chain${appB.chains.length !== 1 ? "s" : ""}`}.
         </p>
       </div>
 

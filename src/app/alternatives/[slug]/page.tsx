@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { apps } from "@/data/apps";
 import { toSlug, getAlternatives } from "@/data/seo";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { EmailCapture } from "@/components/EmailCapture";
 
 export function generateStaticParams() {
@@ -47,6 +48,14 @@ export default async function AlternativesPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Darkscreens", url: "https://darkscreens.xyz" },
+          { name: "Library", url: "https://darkscreens.xyz/library" },
+          { name: app.name, url: `https://darkscreens.xyz/library/${app.slug}` },
+          { name: "Alternatives", url: `https://darkscreens.xyz/alternatives/${app.slug}` },
+        ]}
+      />
       <Link
         href={`/library/${app.slug}`}
         className="group mb-10 inline-flex items-center gap-2 text-[13px] text-text-tertiary transition-colors hover:text-text-secondary"
@@ -66,6 +75,13 @@ export default async function AlternativesPage({ params }: PageProps) {
         <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-text-secondary">
           {alternatives.length} {app.category.toLowerCase()} products you can compare with {app.name}.
           Browse screenshots and UI patterns from each alternative to find the right fit.
+        </p>
+        <p className="mt-3 max-w-2xl text-[13px] leading-relaxed text-text-tertiary">
+          {app.name} supports {app.chains.join(", ")} and offers {app.flows.length} user
+          flow{app.flows.length !== 1 ? "s" : ""} ({app.flows.join(", ")}). When evaluating
+          alternatives, consider chain support, available flows, design style
+          ({app.styles.slice(0, 2).join(", ")}), and total screen count ({app.screenCount} screens
+          for {app.name}).
         </p>
       </div>
 
