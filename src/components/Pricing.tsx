@@ -115,7 +115,8 @@ export function Pricing() {
 
               {/* Urgency copy for paid tiers */}
               {tier.plan && (
-                <p className="mt-2 text-[11px] text-zinc-300">
+                <p className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 text-[11px] font-medium text-amber-400">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
                   Lock in this price forever — goes up after beta
                 </p>
               )}

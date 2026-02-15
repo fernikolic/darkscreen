@@ -40,7 +40,7 @@ export function OrganizationJsonLd() {
     url: "https://darkscreens.xyz",
     description:
       "Product intelligence platform for crypto — systematically screenshotting every major crypto product and tracking design changes over time.",
-    sameAs: [],
+    sameAs: ["https://x.com/darkscreenxyz"],
   };
 
   return (

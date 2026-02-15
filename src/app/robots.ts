@@ -44,6 +44,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "Cohere-ai",
         allow: "/",
       },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Applebot",
+        allow: "/",
+      },
     ],
     sitemap: "https://darkscreens.xyz/sitemap.xml",
   };

@@ -6,8 +6,8 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T04:03:34.559Z",
-  "totalScreenshots": 2,
+  "crawledAt": "2026-02-14T17:22:21.789Z",
+  "totalScreenshots": 8,
   "pageCopy": {
     "h1": null,
     "metaDescription": "Bridge native USDC, USDT, ETH, BTC, and OFTs across 80+ chains using Stargate, the fastest, lowest-fee cross-chain bridge with wallet support and no wrapping.",
@@ -32,18 +32,18 @@
     }
   ],
   "performance": {
-    "loadTime": 8115,
-    "domContentLoaded": 998,
+    "loadTime": 1888,
+    "domContentLoaded": 472,
     "lcp": null,
     "cls": null,
     "resourceCount": 184,
-    "transferSize": 4728745,
+    "transferSize": 4728158,
     "breakdown": {
       "js": 4230716,
       "css": 273868,
       "images": 132206,
       "fonts": 0,
-      "other": 91955
+      "other": 91368
     }
   },
   "screens": [
@@ -57,9 +57,51 @@
     {
       "index": 2,
       "filename": "stargate-raw-002.png",
-      "url": "https://stargate.finance/rewards",
+      "url": "https://stargate.finance/stake",
+      "action": "page",
+      "context": "Stake (/stake)"
+    },
+    {
+      "index": 3,
+      "filename": "stargate-raw-003.png",
+      "url": "https://stargate.finance/overview",
+      "action": "overlay",
+      "context": "Overlay before dismiss"
+    },
+    {
+      "index": 4,
+      "filename": "stargate-raw-004.png",
+      "url": "https://stargate.finance/this-page-does-not-exist-404-test",
       "action": "common-path",
-      "context": "Path: /rewards"
+      "context": "Path: /this-page-does-not-exist-404-test"
+    },
+    {
+      "index": 5,
+      "filename": "stargate-raw-005.png",
+      "url": "https://stargate.finance/about",
+      "action": "common-path",
+      "context": "Path: /about"
+    },
+    {
+      "index": 6,
+      "filename": "stargate-raw-006.png",
+      "url": "https://stargate.finance/earn",
+      "action": "overlay",
+      "context": "Overlay before dismiss"
+    },
+    {
+      "index": 7,
+      "filename": "stargate-raw-007.png",
+      "url": "https://stargate.finance/pool",
+      "action": "overlay",
+      "context": "Overlay before dismiss"
+    },
+    {
+      "index": 8,
+      "filename": "stargate-raw-008.png",
+      "url": "https://stargate.finance/pool",
+      "action": "common-path",
+      "context": "Path: /pool"
     }
   ]
 }
