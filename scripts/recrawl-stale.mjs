@@ -115,10 +115,10 @@ for (let i = 0; i < stale.length; i++) {
   if (app.authType === "wallet") crawlArgs.push("--wallet");
 
   const steps = [
-    { label: "Crawling", cmd: "crawl-app.mjs", args: crawlArgs },
-    { label: "Labeling", cmd: "label-local.mjs", args: ["--slug", app.slug] },
-    { label: "Tagging", cmd: "auto-tag.mjs", args: ["--slug", app.slug] },
-    { label: "Syncing", cmd: "sync-manifests.mjs", args: ["--slug", app.slug] },
+    { label: "Crawling", cmd: "crawl-app.mjs", args: crawlArgs, timeout: 600000 },
+    { label: "Labeling", cmd: "label-local.mjs", args: ["--slug", app.slug], timeout: 120000 },
+    { label: "Tagging", cmd: "auto-tag.mjs", args: ["--slug", app.slug], timeout: 120000 },
+    { label: "Syncing", cmd: "sync-manifests.mjs", args: ["--slug", app.slug], timeout: 120000 },
   ];
 
   let ok = true;
@@ -127,7 +127,7 @@ for (let i = 0; i < stale.length; i++) {
       execFileSync("node", [resolve(__dirname, step.cmd), ...step.args], {
         stdio: "inherit",
         cwd: PROJECT_ROOT,
-        timeout: 300000,
+        timeout: step.timeout,
       });
     } catch (err) {
       console.error(`    ${step.label} failed: ${err.message}`);

@@ -133,8 +133,8 @@ for (let i = 0; i < publicApps.length; i++) {
   console.log(`\n[${i + 1}/${publicApps.length}] Backfilling ${app.name}...`);
 
   const steps = [
-    { label: "Crawling", cmd: "crawl-app.mjs", cmdArgs: ["--slug", app.slug] },
-    { label: "Labeling", cmd: "label-local.mjs", cmdArgs: ["--slug", app.slug] },
+    { label: "Crawling", cmd: "crawl-app.mjs", cmdArgs: ["--slug", app.slug], timeout: 600000 },
+    { label: "Labeling", cmd: "label-local.mjs", cmdArgs: ["--slug", app.slug], timeout: 120000 },
   ];
 
   let ok = true;
@@ -144,7 +144,7 @@ for (let i = 0; i < publicApps.length; i++) {
       execFileSync("node", [resolve(__dirname, step.cmd), ...step.cmdArgs], {
         stdio: "inherit",
         cwd: PROJECT_ROOT,
-        timeout: 300000, // 5 min per step
+        timeout: step.timeout,
       });
     } catch (err) {
       console.error(`  ${step.label} failed: ${err.message}`);
