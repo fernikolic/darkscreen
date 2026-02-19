@@ -4039,27 +4039,13 @@ export const apps: CryptoApp[] = [
                     screens: [
       { step: 1, label: "Landing page", flow: "Home", image: "/screenshots/marinade-home-1-landing-page.png" },
       { step: 2, label: "RoadmapOur strategic milestones", flow: "Home", image: "/screenshots/marinade-home-2-roadmapour-strategic-milestones.png" },
-      { step: 3, label: "Documentation
-
-Detailed guides and resources", flow: "Home", image: "/screenshots/marinade-home-3-documentation-detailed-guides-and-resources.png" },
-      { step: 4, label: "Network
-
-Network performance insights", flow: "Home", image: "/screenshots/marinade-home-4-network-network-performance-insights.png" },
-      { step: 5, label: "Network
-
-Network performance insights — scrolled 1", flow: "Home", image: "/screenshots/marinade-home-5-network-network-performance-insights-scrolled-1.png" },
-      { step: 6, label: "Network
-
-Network performance insights — scrolled 2", flow: "Home", image: "/screenshots/marinade-home-6-network-network-performance-insights-scrolled-2.png" },
-      { step: 7, label: "Network
-
-Network performance insights — scrolled 4", flow: "Home", image: "/screenshots/marinade-home-7-network-network-performance-insights-scrolled-4.png" },
-      { step: 8, label: "Audits
-
-Security and compliance reports", flow: "Home", image: "/screenshots/marinade-home-8-audits-security-and-compliance-reports.png" },
-      { step: 9, label: "Media Kit
-
-All your media and press needs", flow: "Home", image: "/screenshots/marinade-home-9-media-kit-all-your-media-and-press-needs.png" },
+      { step: 3, label: "Documentation Detailed guides and resources", flow: "Home", image: "/screenshots/marinade-home-3-documentation-detailed-guides-and-resources.png" },
+      { step: 4, label: "Network Network performance insights", flow: "Home", image: "/screenshots/marinade-home-4-network-network-performance-insights.png" },
+      { step: 5, label: "Network Network performance insights — scrolled 1", flow: "Home", image: "/screenshots/marinade-home-5-network-network-performance-insights-scrolled-1.png" },
+      { step: 6, label: "Network Network performance insights — scrolled 2", flow: "Home", image: "/screenshots/marinade-home-6-network-network-performance-insights-scrolled-2.png" },
+      { step: 7, label: "Network Network performance insights — scrolled 4", flow: "Home", image: "/screenshots/marinade-home-7-network-network-performance-insights-scrolled-4.png" },
+      { step: 8, label: "Audits Security and compliance reports", flow: "Home", image: "/screenshots/marinade-home-8-audits-security-and-compliance-reports.png" },
+      { step: 9, label: "Media Kit All your media and press needs", flow: "Home", image: "/screenshots/marinade-home-9-media-kit-all-your-media-and-press-needs.png" },
       { step: 10, label: "Marinade in MediaExplore our latest press coverage", flow: "Home", image: "/screenshots/marinade-home-10-marinade-in-mediaexplore-our-latest-press-coverage.png" },
       { step: 11, label: "All custodians", flow: "Home", image: "/screenshots/marinade-home-11-all-custodians.png" },
       { step: 12, label: "MNDE TokenShape Marinade", flow: "Home", image: "/screenshots/marinade-home-12-mnde-tokenshape-marinade.png" },
@@ -4076,19 +4062,13 @@ All your media and press needs", flow: "Home", image: "/screenshots/marinade-hom
       { step: 9, label: "Use CasesComplete staking solution", flow: "Staking", image: "/screenshots/marinade-staking-9-use-casescomplete-staking-solution.png" },
       { step: 10, label: "How Marinade tech worksLearn what’s behind the sce", flow: "Staking", image: "/screenshots/marinade-staking-10-how-marinade-tech-workslearn-whats-behind-the-sce.png" },
       { step: 11, label: "Institutional-grade StakingAdvanced institutional", flow: "Staking", image: "/screenshots/marinade-staking-11-institutionalgrade-stakingadvanced-institutional.png" },
-      { step: 12, label: "Governance Process
-
-Structured decision-making", flow: "Staking", image: "/screenshots/marinade-staking-12-governance-process-structured-decisionmaking.png" },
+      { step: 12, label: "Governance Process Structured decision-making", flow: "Staking", image: "/screenshots/marinade-staking-12-governance-process-structured-decisionmaking.png" },
       { step: 13, label: "Stake now", flow: "Staking", image: "/screenshots/marinade-staking-13-stake-now.png" },
       { step: 14, label: "Learn more", flow: "Staking", image: "/screenshots/marinade-staking-14-learn-more.png" },
-      { step: 15, label: "Stake SOL and earn USDG
-
-Be first to earn top-tier", flow: "Staking", image: "/screenshots/marinade-staking-15-stake-sol-and-earn-usdg-be-first-to-earn-toptier.png" },
+      { step: 15, label: "Stake SOL and earn USDG Be first to earn top-tier", flow: "Staking", image: "/screenshots/marinade-staking-15-stake-sol-and-earn-usdg-be-first-to-earn-toptier.png" },
       { step: 1, label: "Solana staking guideBasics of staking explained", flow: "Settings", image: "/screenshots/marinade-settings-1-solana-staking-guidebasics-of-staking-explained.png" },
       { step: 2, label: "BlogNews and insight from Marinade", flow: "Settings", image: "/screenshots/marinade-settings-2-blognews-and-insight-from-marinade.png" },
-      { step: 3, label: "Knowledge Base
-
-Guides, tips, and support info", flow: "Settings", image: "/screenshots/marinade-settings-3-knowledge-base-guides-tips-and-support-info.png" },
+      { step: 3, label: "Knowledge Base Guides, tips, and support info", flow: "Settings", image: "/screenshots/marinade-settings-3-knowledge-base-guides-tips-and-support-info.png" },
       { step: 4, label: "Terms of Use", flow: "Settings", image: "/screenshots/marinade-settings-4-terms-of-use.png" },
       { step: 5, label: "Privacy Policy", flow: "Settings", image: "/screenshots/marinade-settings-5-privacy-policy.png" },
       { step: 6, label: "Referral Terms", flow: "Settings", image: "/screenshots/marinade-settings-6-referral-terms.png" },
@@ -6141,8 +6121,7 @@ Guides, tips, and support info", flow: "Settings", image: "/screenshots/marinade
       { step: 6, label: "Blog", flow: "Home", image: "/screenshots/start9-home-6-blog.png" },
       { step: 7, label: "Marketplace", flow: "Home", image: "/screenshots/start9-home-7-marketplace.png" },
       { step: 8, label: "Dev Docs", flow: "Home", image: "/screenshots/start9-home-8-dev-docs.png" },
-      { step: 9, label: "like to tinker?
-        DIY your server", flow: "Home", image: "/screenshots/start9-home-9-like-to-tinker-diy-your-server.png" },
+      { step: 9, label: "like to tinker? DIY your server", flow: "Home", image: "/screenshots/start9-home-9-like-to-tinker-diy-your-server.png" },
       { step: 10, label: "Donate", flow: "Home", image: "/screenshots/start9-home-10-donate.png" },
       { step: 11, label: "this-page-does-not-exist-404-test page", flow: "Home", image: "/screenshots/start9-home-11-thispagedoesnotexist404test-page.png" },
       { step: 1, label: "Support", flow: "Settings", image: "/screenshots/start9-settings-1-support.png" },
@@ -6546,8 +6525,7 @@ Guides, tips, and support info", flow: "Settings", image: "/screenshots/marinade
                     screens: [
       { step: 1, label: "Landing page", flow: "Home", image: "/screenshots/wasabi-home-1-landing-page.png" },
       { step: 2, label: "Docs", flow: "Home", image: "/screenshots/wasabi-home-2-docs.png" },
-      { step: 3, label: "RPC
-        Interface", flow: "Home", image: "/screenshots/wasabi-home-3-rpc-interface.png" },
+      { step: 3, label: "RPC Interface", flow: "Home", image: "/screenshots/wasabi-home-3-rpc-interface.png" },
       { step: 4, label: "guide", flow: "Home", image: "/screenshots/wasabi-home-4-guide.png" },
       { step: 5, label: "this-page-does-not-exist-404-test page", flow: "Home", image: "/screenshots/wasabi-home-5-thispagedoesnotexist404test-page.png" },
       { step: 1, label: "Find", flow: "Settings", image: "/screenshots/wasabi-settings-1-find.png" },
