@@ -1,0 +1,91 @@
+name: Weekly Crawl & Deploy
+
+on:
+  schedule:
+    # Every Monday at 6 AM UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      # ─── Setup ─────────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      # ─── Download current screenshots from R2 ──────────────────
+      # Needed so archive + diff can compare old vs new
+      - name: Download screenshots from R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: bash scripts/download-r2-screenshots.sh
+
+      # ─── Archive current state (for diffing later) ─────────────
+      - name: Archive current screenshots
+        run: node scripts/archive-screens.mjs --all
+
+      # ─── Recrawl stale public apps ─────────────────────────────
+      # Login apps are auto-skipped by recrawl-stale.mjs
+      - name: Recrawl stale apps (7+ days old)
+        run: node scripts/recrawl-stale.mjs --days 7
+
+      # ─── Diff & generate change records ────────────────────────
+      - name: Diff screenshots against archive
+        run: node scripts/diff-screens.mjs --all
+
+      - name: Generate auto-detected changes
+        run: node scripts/generate-changes.mjs --all
+
+      # ─── Upload new/changed screenshots to R2 ─────────────────
+      - name: Upload screenshots to R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PARALLEL: "25"
+        run: bash scripts/upload-screenshots.sh --all
+
+      # ─── Commit data changes ───────────────────────────────────
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/apps.ts src/data/auto-changes.ts
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: weekly crawl — update screenshots and change data"
+            git push
+          fi
+
+      # ─── Build & Deploy ────────────────────────────────────────
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler pages deploy out --project-name=darkscreen

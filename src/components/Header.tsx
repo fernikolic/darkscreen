@@ -84,6 +84,14 @@ export function Header() {
               </div>
             </div>
 
+            {/* Changes link */}
+            <Link
+              href="/changes"
+              className="px-3 py-1.5 text-[14px] font-medium text-text-secondary transition-colors hover:text-text-primary"
+            >
+              Changes
+            </Link>
+
             {/* AI Skills link */}
             <Link
               href="/#ai-skills"
@@ -257,6 +265,7 @@ export function Header() {
               <span className="pt-3 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Mobile</span>
               <Link href="/library?platform=iOS" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>iOS</Link>
               <Link href="/library?platform=Android" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Android</Link>
+              <Link href="/changes" className="py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>Changes</Link>
               <span className="pt-3 pb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Skills</span>
               <Link href="/#ai-skills" className="flex items-center gap-2 py-1.5 pl-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
                 Design Intelligence
