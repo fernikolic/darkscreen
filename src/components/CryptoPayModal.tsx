@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// Replace with your actual Bitcoin address
 const BTC_ADDRESS = "bc1q6tl4d3sy0ywsk3gddchw42428jymmkamqjxu4w";
 
 const PLANS = {

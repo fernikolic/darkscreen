@@ -114,7 +114,6 @@ function SignInModalInner() {
 
       setStatus("success");
     } catch (err: unknown) {
-      console.error("EVM wallet sign-in failed:", err);
       setStatus("error");
       setError(err instanceof Error ? err.message : "Wallet connection failed");
     }
@@ -166,7 +165,6 @@ function SignInModalInner() {
 
       setStatus("success");
     } catch (err: unknown) {
-      console.error("Solana wallet sign-in failed:", err);
       setStatus("error");
       setError(err instanceof Error ? err.message : "Wallet connection failed");
     }
@@ -201,7 +199,6 @@ function SignInModalInner() {
 
       setStatus("success");
     } catch (err: unknown) {
-      console.error("Nostr sign-in failed:", err);
       setStatus("error");
       setError(err instanceof Error ? err.message : "Nostr sign-in failed");
     }

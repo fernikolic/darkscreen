@@ -1,0 +1,28 @@
+"use client";
+
+export default function Error({
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  return (
+    <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
+      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-tertiary">
+        Error
+      </p>
+      <h1 className="mt-3 font-heading text-3xl font-bold text-text-primary sm:text-4xl">
+        Something went wrong
+      </h1>
+      <p className="mt-3 max-w-md text-[15px] leading-relaxed text-text-secondary">
+        An unexpected error occurred. Please try again.
+      </p>
+      <button
+        onClick={reset}
+        className="mt-8 rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-text-primary transition-colors hover:bg-white/10"
+      >
+        Try again
+      </button>
+    </div>
+  );
+}

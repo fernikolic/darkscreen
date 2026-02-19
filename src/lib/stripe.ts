@@ -1,8 +1,7 @@
-// Stripe Payment Link URLs (test mode)
 export const STRIPE_LINKS = {
   pro: "https://buy.stripe.com/test_9B6cN58No2g9a7y1F663K03",
   team: "https://buy.stripe.com/test_9B67sL3t40815Ri2Ja63K04",
-  education: "https://buy.stripe.com/test_edu_placeholder",
+  education: null,
 } as const;
 
 export type PlanId = "free" | "pro" | "team" | "education";
@@ -26,6 +25,7 @@ export const PLANS: Record<PlanId, PlanConfig> = {
  */
 export function redirectToCheckout(plan: "pro" | "team" | "education", email?: string | null) {
   const link = STRIPE_LINKS[plan];
+  if (!link) return;
   const url = new URL(link);
   if (email) {
     url.searchParams.set("prefilled_email", email);

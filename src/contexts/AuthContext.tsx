@@ -103,8 +103,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (u) {
         try {
           await ensureUserDoc(u);
-        } catch (err) {
-          console.error("Failed to create/update user doc:", err);
+        } catch {
+          // Silently handled — user doc creation is non-blocking
         }
       }
     });
@@ -122,10 +122,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (code === "auth/popup-blocked") {
           window.alert("Popup was blocked by your browser. Please allow popups for this site.");
         } else if (code === "auth/unauthorized-domain") {
-          console.error("Firebase auth: domain not authorized. Add this domain to Firebase Console > Authentication > Settings > Authorized domains.");
-        } else if (code !== "auth/popup-closed-by-user") {
-          console.error("Sign-in failed:", err);
+          window.alert("This domain is not authorized for sign-in. Please contact support.");
         }
+        // auth/popup-closed-by-user is expected — user cancelled
       });
   };
 
