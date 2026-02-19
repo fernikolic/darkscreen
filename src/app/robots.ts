@@ -17,11 +17,15 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
+      {
         userAgent: "Google-Extended",
         allow: "/",
       },
       {
-        userAgent: "Amazonbot",
+        userAgent: "Googlebot",
         allow: "/",
       },
       {
@@ -37,6 +41,30 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
+        userAgent: "Applebot",
+        allow: "/",
+      },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
+      },
+      {
+        userAgent: "Meta-ExternalAgent",
+        allow: "/",
+      },
+      {
+        userAgent: "YouBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Diffbot",
+        allow: "/",
+      },
+      {
+        userAgent: "Amazonbot",
+        allow: "/",
+      },
+      {
         userAgent: "Bytespider",
         allow: "/",
       },
@@ -45,12 +73,17 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
-        userAgent: "OAI-SearchBot",
+        userAgent: "CCBot",
         allow: "/",
       },
       {
-        userAgent: "Applebot",
+        userAgent: "Timpibot",
         allow: "/",
+      },
+      // Noindex authenticated/transactional pages
+      {
+        userAgent: "*",
+        disallow: ["/saved", "/success"],
       },
     ],
     sitemap: "https://darkscreens.xyz/sitemap.xml",

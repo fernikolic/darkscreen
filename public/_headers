@@ -3,3 +3,25 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Sitemap — explicit XML content type + 24h cache for crawlers
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=86400, s-maxage=86400
+
+/sitemap/*.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=86400, s-maxage=86400
+
+# robots.txt — cache for 24h
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# LLM context files — plain text with cache
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400

@@ -572,6 +572,8 @@ export function getAllSeoRoutes(): string[] {
     "/changes",
     "/text-search",
     "/elements",
+    "/performance",
+    "/techstack",
   ];
 
   // App pages

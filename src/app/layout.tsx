@@ -29,11 +29,15 @@ const siteDescription = `Explore screens, flows, and UI patterns from ${TOTAL_AP
 const shortDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols.`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://darkscreens.xyz"),
   title: "Darkscreens — Crypto Product Design Library",
   description: siteDescription,
   icons: {
     icon: "/darkscreen-logo.png",
     apple: "/darkscreen-logo.png",
+  },
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
     title: "Darkscreens — Crypto Product Design Library",
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://darkscreens.xyz/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Darkscreens — See how every crypto product actually ships",
@@ -54,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Darkscreens — Crypto Product Design Library",
     description: shortDescription,
-    images: ["https://darkscreens.xyz/og-image.png"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -68,6 +72,8 @@ export default function RootLayout({
       <head>
         <WebsiteJsonLd />
         <OrganizationJsonLd />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Context" />
       </head>
       <body className="min-h-screen bg-dark-bg font-sans antialiased">
         <Providers>

@@ -4,6 +4,7 @@ import { TOTAL_APPS } from "@/data/apps";
 export const metadata: Metadata = {
   title: "Crypto App Design Library — Browse 155+ Products | Darkscreens",
   description: `Browse UI screenshots and design patterns from ${TOTAL_APPS}+ crypto wallets, exchanges, and DeFi protocols. Filter by category, flow, style, and platform.`,
+  alternates: { canonical: "/library" },
   openGraph: {
     title: "Crypto App Design Library — Browse 155+ Products | Darkscreens",
     description: `Browse UI screenshots and design patterns from ${TOTAL_APPS}+ crypto wallets, exchanges, and DeFi protocols.`,

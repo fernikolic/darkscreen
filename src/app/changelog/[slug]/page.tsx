@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${title} — Darkscreens`,
     description,
+    alternates: { canonical: `/changelog/${slug}` },
     openGraph: {
       title,
       description,

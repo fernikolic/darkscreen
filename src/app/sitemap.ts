@@ -27,8 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority = 0.7;
     } else if (route.startsWith("/category/") || route.startsWith("/chain/")) {
       priority = 0.7;
-    } else if (route === "/text-search" || route === "/elements") {
-      priority = 0.8;
+    } else if (route === "/text-search" || route === "/elements" || route === "/performance" || route === "/techstack") {
+      priority = 0.7;
     } else if (route.startsWith("/elements/")) {
       priority = 0.6;
     } else if (route.startsWith("/design/") || route.startsWith("/patterns/")) {

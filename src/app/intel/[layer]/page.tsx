@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${meta.label} Intelligence — Darkscreens`,
     description: `${meta.description}. Track ${meta.label.toLowerCase()} across crypto products.`,
+    alternates: { canonical: `/intel/${slug}` },
     openGraph: {
       title: `${meta.label} Intelligence — Darkscreens`,
       description: `${meta.description}. Track ${meta.label.toLowerCase()} across crypto products.`,
