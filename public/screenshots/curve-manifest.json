@@ -2,26 +2,14 @@
   "slug": "curve",
   "url": "https://curve.fi",
   "crawledAt": "2026-02-14T04:04:28.529Z",
-  "totalScreenshots": 3,
-  "totalStates": 3,
+  "totalScreenshots": 6,
+  "totalStates": 6,
   "screens": [
-    {
-      "step": 1,
-      "label": "Landing page",
-      "flow": "Swap",
-      "image": "/screenshots/curve-swap-1-landing-page.png"
-    },
-    {
-      "step": 2,
-      "label": "settings page",
-      "flow": "Swap",
-      "image": "/screenshots/curve-swap-2-settings-page.png"
-    },
-    {
-      "step": 3,
-      "label": "portfolio page",
-      "flow": "Swap",
-      "image": "/screenshots/curve-swap-3-portfolio-page.png"
-    }
+    { "step": 1, "label": "Landing page", "flow": "Home", "image": "/screenshots/curve-swap-1-landing-page.png" },
+    { "step": 2, "label": "Dashboard", "flow": "Home", "image": "/screenshots/curve-dashboard.png" },
+    { "step": 1, "label": "Swap", "flow": "Swap", "image": "/screenshots/curve-swap.png" },
+    { "step": 1, "label": "Pools", "flow": "Staking", "image": "/screenshots/curve-pools.png" },
+    { "step": 2, "label": "Lending", "flow": "Staking", "image": "/screenshots/curve-lending.png" },
+    { "step": 1, "label": "Settings", "flow": "Settings", "image": "/screenshots/curve-swap-2-settings-page.png" }
   ]
 }
