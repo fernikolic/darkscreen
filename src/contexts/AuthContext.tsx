@@ -83,6 +83,8 @@ async function ensureUserDoc(user: User, walletMeta?: { walletAddress: string; w
           plan: sub.plan || "pro",
           stripeCustomerId: sub.stripeCustomerId || null,
           subscriptionId: sub.subscriptionId || null,
+          ...(sub.paymentMethod && { paymentMethod: sub.paymentMethod }),
+          ...(sub.mdkCustomerId && { mdkCustomerId: sub.mdkCustomerId }),
         });
       }
     }

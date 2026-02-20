@@ -1,6 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import Stripe from "stripe";
+import { Webhook } from "standardwebhooks";
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -109,6 +110,143 @@ export const stripeWebhook = functions.https.onRequest(async (req, res) => {
     if (!snapshot.empty) {
       await snapshot.docs[0].ref.update({ plan: "free" });
       console.log(`Downgraded customer ${customerId} to free`);
+    }
+  }
+
+  res.status(200).json({ received: true });
+});
+
+/* ─── moneydevkit (Bitcoin / Lightning) ─── */
+
+const MDK_PRODUCT_IDS: Record<string, string> = {
+  pro: process.env.MDK_PRODUCT_PRO || "",
+  team: process.env.MDK_PRODUCT_TEAM || "",
+  education: process.env.MDK_PRODUCT_EDUCATION || "",
+};
+
+/**
+ * moneydevkit webhook handler.
+ *
+ * Verifies signature with standardwebhooks, then handles:
+ *   - checkout.completed → update or create pending subscription
+ *   - subscription.created → mark active
+ *   - subscription.renewed → update subscribedAt
+ *   - subscription.canceled → downgrade to free
+ */
+export const mdkWebhook = functions.https.onRequest(async (req, res) => {
+  if (req.method !== "POST") {
+    res.status(405).send("Method Not Allowed");
+    return;
+  }
+
+  const webhookSecret = process.env.MDK_WEBHOOK_SECRET;
+  if (!webhookSecret) {
+    console.error("Missing MDK_WEBHOOK_SECRET");
+    res.status(500).send("Server configuration error");
+    return;
+  }
+
+  // Verify webhook signature using standardwebhooks
+  const msgId = req.headers["webhook-id"] as string;
+  const msgTimestamp = req.headers["webhook-timestamp"] as string;
+  const msgSignature = req.headers["webhook-signature"] as string;
+
+  if (!msgId || !msgTimestamp || !msgSignature) {
+    res.status(400).send("Missing webhook signature headers");
+    return;
+  }
+
+  try {
+    const wh = new Webhook(webhookSecret);
+    wh.verify(req.rawBody.toString(), {
+      "webhook-id": msgId,
+      "webhook-timestamp": msgTimestamp,
+      "webhook-signature": msgSignature,
+    });
+  } catch (err) {
+    console.error("MDK webhook signature verification failed:", err);
+    res.status(400).send("Invalid signature");
+    return;
+  }
+
+  const event = req.body as { type: string; data: Record<string, unknown> };
+  const eventType = event.type;
+  const data = event.data;
+
+  // Determine plan from product ID
+  const productId = data.product_id as string | undefined;
+  let plan: "pro" | "team" | "education" = "pro";
+  if (productId) {
+    const entry = Object.entries(MDK_PRODUCT_IDS).find(([, id]) => id === productId);
+    if (entry) plan = entry[0] as "pro" | "team" | "education";
+  }
+
+  if (eventType === "checkout.completed") {
+    const email = data.customer_email as string | undefined;
+    if (!email) {
+      console.error("No email in MDK checkout event");
+      res.status(200).json({ received: true });
+      return;
+    }
+
+    const usersRef = db.collection("users");
+    const snapshot = await usersRef.where("email", "==", email).limit(1).get();
+
+    if (!snapshot.empty) {
+      await snapshot.docs[0].ref.update({
+        plan,
+        paymentMethod: "bitcoin",
+        mdkCustomerId: (data.customer_id as string) || null,
+        subscribedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      console.log(`[MDK] Updated plan for ${email} to ${plan}`);
+    } else {
+      await db.collection("pendingSubscriptions").add({
+        email,
+        plan,
+        paymentMethod: "bitcoin",
+        mdkCustomerId: (data.customer_id as string) || null,
+        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      console.log(`[MDK] Created pending subscription for ${email} (${plan})`);
+    }
+  }
+
+  if (eventType === "subscription.created") {
+    const email = data.customer_email as string | undefined;
+    if (email) {
+      const snapshot = await db.collection("users").where("email", "==", email).limit(1).get();
+      if (!snapshot.empty) {
+        await snapshot.docs[0].ref.update({ mdkSubscriptionStatus: "active" });
+        console.log(`[MDK] Subscription active for ${email}`);
+      }
+    }
+  }
+
+  if (eventType === "subscription.renewed") {
+    const email = data.customer_email as string | undefined;
+    if (email) {
+      const snapshot = await db.collection("users").where("email", "==", email).limit(1).get();
+      if (!snapshot.empty) {
+        await snapshot.docs[0].ref.update({
+          subscribedAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+        console.log(`[MDK] Subscription renewed for ${email}`);
+      }
+    }
+  }
+
+  if (eventType === "subscription.canceled") {
+    const email = data.customer_email as string | undefined;
+    if (email) {
+      const snapshot = await db.collection("users").where("email", "==", email).limit(1).get();
+      if (!snapshot.empty) {
+        await snapshot.docs[0].ref.update({
+          plan: "free",
+          mdkSubscriptionStatus: "canceled",
+        });
+        console.log(`[MDK] Subscription canceled for ${email}`);
+      }
     }
   }
 

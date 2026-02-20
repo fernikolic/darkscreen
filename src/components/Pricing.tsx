@@ -2,6 +2,7 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import { redirectToCheckout } from "@/lib/stripe";
+import { redirectToBitcoinCheckout } from "@/lib/mdk";
 import { TOTAL_APPS } from "@/data/apps";
 
 const tiers = [
@@ -189,12 +190,17 @@ export function Pricing() {
                     >
                       {tier.cta}
                     </button>
-                    <span className="flex items-center justify-center gap-1.5 text-[11px] text-text-tertiary">
-                      or pay with Bitcoin
-                      <span className="rounded bg-dark-border px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider">
-                        soon
-                      </span>
-                    </span>
+                    <button
+                      onClick={() =>
+                        redirectToBitcoinCheckout(tier.plan!, user?.email)
+                      }
+                      className="flex w-full items-center justify-center gap-1.5 text-[11px] text-text-tertiary transition-colors hover:text-text-secondary"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.546z" />
+                      </svg>
+                      Pay with Bitcoin
+                    </button>
                   </div>
                 )}
               </div>
