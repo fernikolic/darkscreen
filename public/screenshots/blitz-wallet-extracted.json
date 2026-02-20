@@ -1,0 +1,2633 @@
+{
+  "slug": "blitz-wallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:52:34.975Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 22,
+  "screens": [
+    {
+      "image": "/screenshots/blitz-wallet-settings-3-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, center-aligned, high contrast",
+          "bodyStyle": "Medium weight sans-serif, left-aligned, generous line height",
+          "dataStyle": "Dates in gray text below summaries"
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top bar with logo, nav links, and blue download CTA",
+            "position": "top fixed",
+            "notable": "Sticky header with primary action button consistently placed"
+          },
+          {
+            "type": "content-cards",
+            "description": "Three stacked post cards with light gray backgrounds",
+            "position": "main content area",
+            "notable": "Cards have category tags (RELEASE/LEARN) in uppercase, consistent padding"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered headline with subheading",
+            "position": "above cards",
+            "notable": "Clean, minimal hero introduces blog section"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero section draws eye first, followed by chronologically ordered cards with decreasing visual weight",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-browse",
+        "userIntent": "Discover latest news, features, and educational content about Blitz Wallet",
+        "entryPoints": [
+          "Main navigation",
+          "Footer links",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click individual post card",
+          "Navigation to Products/Features/About/Contact",
+          "Download button",
+          "Exit to external links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post card",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Download button",
+            "action": "Open download page or app store"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Blog posts organized chronologically (newest first), categorized by type (RELEASE, LEARN), with category tags and publication dates",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The latest from Blitz Wallet",
+        "subheadline": "Making bitcoin payments simple",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "RELEASE",
+            "context": "Card category tag",
+            "purpose": "Indicate post type"
+          },
+          {
+            "text": "LEARN",
+            "context": "Card category tag",
+            "purpose": "Indicate educational post type"
+          },
+          {
+            "text": "January 26, 2026",
+            "context": "Below post title",
+            "purpose": "Publication date context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "January 26, 2026",
+          "November 24, 2025",
+          "September 28, 2025"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-4-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#212121"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif/sans-serif, center-aligned, prominent spacing",
+          "bodyStyle": "Regular weight sans-serif, justified, high readability for legal text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top bar with logo and navigation",
+            "position": "top fixed",
+            "notable": "Consistent with blog page"
+          },
+          {
+            "type": "page-title",
+            "description": "Large centered 'Privacy Policy' heading",
+            "position": "above content",
+            "notable": "Minimal, clear, centered"
+          },
+          {
+            "type": "content-block",
+            "description": "Long-form legal text organized by sections",
+            "position": "main content",
+            "notable": "Section headings in bold, inline hyperlinks in blue"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title dominates, section headings create visual breaks, body text provides secondary hierarchy",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-documentation",
+        "userIntent": "Review Blitz Wallet's data collection and privacy practices",
+        "entryPoints": [
+          "Footer link",
+          "Settings menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "External privacy policy link (Google Analytics)",
+          "Back to main navigation",
+          "Contact"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Privacy Policy link",
+            "action": "Navigate to Google Analytics privacy policy (external)"
+          }
+        ],
+        "informationArchitecture": "Narrative legal document with clear section headings (Blitz, Information Collection) explaining data practices for app and website separately",
+        "frictionPoints": [
+          "Long-form legal text may require sustained reading",
+          "No table of contents for quick navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cookies: None",
+            "context": "Within Information Collection section",
+            "purpose": "Clarify no cookies used"
+          },
+          {
+            "text": "Blitz Wallet, LLC created the Blitz app as a free app.",
+            "context": "Opening sentence of Blitz section",
+            "purpose": "Establish entity and product type"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Free app",
+          "Explicit cookie policy (None)",
+          "Separation of App and Website data practices"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-5-terms-of-use.png",
+      "label": "Terms of Use",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#212121"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main title, numbered bold headings for sections",
+          "bodyStyle": "Regular weight sans-serif, left-aligned, substantial line height",
+          "dataStyle": "Dates in gray text (Last Updated: Jan 12, 2026)"
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top bar with logo and navigation",
+            "position": "top fixed",
+            "notable": "Consistent header design"
+          },
+          {
+            "type": "page-title",
+            "description": "Large centered 'Terms of Usage' heading",
+            "position": "above content",
+            "notable": "Minimal, clear"
+          },
+          {
+            "type": "metadata",
+            "description": "Last Updated date",
+            "position": "below title",
+            "notable": "Provides freshness signal"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Sections with numeric headers and bold subsection headings",
+            "position": "main content",
+            "notable": "Bullet points for definitions, bold text for emphasis"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title > Last Updated > Section numbers > Section text > Bullets, creating clear scannable structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-documentation",
+        "userIntent": "Review terms governing use of Blitz Wallet app",
+        "entryPoints": [
+          "Footer link",
+          "Settings menu",
+          "Direct URL",
+          "Onboarding acknowledgment"
+        ],
+        "exitPoints": [
+          "Back to navigation",
+          "Contact",
+          "Download app"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Numbered legal sections (Introduction/Acceptance, Definitions) with bullet-point definitions, explaining binding agreement and key terms",
+        "frictionPoints": [
+          "Dense legal language",
+          "No table of contents or anchor links",
+          "Long scrolling document"
+        ],
+        "progressIndicators": [
+          "Section numbering indicates progress through document"
+        ]
+      },
+      "copy": {
+        "headline": "Terms of Usage",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last Updated: Jan 12, 2026",
+            "context": "Below headline",
+            "purpose": "Indicate document freshness"
+          },
+          {
+            "text": "By installing, accessing, or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms.",
+            "context": "Within section 1",
+            "purpose": "Enforce legal acceptance requirement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Jan 12, 2026"
+        ],
+        "trustSignals": [
+          "Legally binding agreement",
+          "Clear definitions",
+          "Specific mention of digital assets and security"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-home-4-signin-page.png",
+      "label": "signin page",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/charcoal, large size (h2 level)",
+          "bodyStyle": "Regular sans-serif, medium gray, moderate size",
+          "dataStyle": "Large numeric display with dollar sign, semi-bold, dark with lighter accent"
+        },
+        "components": [
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners and subtle shadow",
+            "position": "Center of screen",
+            "notable": "Clean, minimal card design with generous internal padding"
+          },
+          {
+            "type": "Badge Component",
+            "description": "Blue circular badge with 'S' initial next to 'Signin' text",
+            "position": "Below headline",
+            "notable": "User profile indicator with light gray background pill shape"
+          },
+          {
+            "type": "Disabled Button",
+            "description": "Light gray Continue button",
+            "position": "Bottom of card",
+            "notable": "Disabled state indicates form is incomplete"
+          },
+          {
+            "type": "Text Link",
+            "description": "Switch Currency secondary action",
+            "position": "Bottom of card",
+            "notable": "Border-only button with minimal styling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > Amount > User indicator > Actions, centered with clear focal point on transaction amount",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Complete a payment transaction after authentication",
+        "entryPoints": [
+          "Home page",
+          "Payment initiation flow"
+        ],
+        "exitPoints": [
+          "Continue to payment details",
+          "Switch Currency modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue Button",
+            "action": "Proceed to next step (currently disabled)"
+          },
+          {
+            "element": "Switch Currency Link",
+            "action": "Open currency selection interface"
+          },
+          {
+            "element": "User Badge",
+            "action": "May toggle account/profile menu"
+          }
+        ],
+        "informationArchitecture": "Transaction details (amount) centered with authentication status at top, actions stacked below",
+        "frictionPoints": [
+          "Continue button is disabled, creating uncertainty about readiness",
+          "No clear indication of why the button is disabled",
+          "Amount shows $0, suggesting incomplete data entry"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button-disabled",
+            "placement": "Bottom of card"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Bottom of card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Signin",
+            "context": "Badge next to blue S icon",
+            "purpose": "Indicates authenticated user status"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-1-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (h1 level), dark charcoal, centered",
+          "bodyStyle": "Regular sans-serif, medium gray, centered, generous line height",
+          "dataStyle": "Bold sans-serif, blue (#0066FF), large numeric/text hybrid display"
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Sticky top navigation with logo, menu links, and CTA button",
+            "position": "Top of page",
+            "notable": "Blue 'Download' button stands out as primary action"
+          },
+          {
+            "type": "Section Badge",
+            "description": "Outline pill with 'Our Mission' text",
+            "position": "Above headline",
+            "notable": "Light blue border, acts as section marker"
+          },
+          {
+            "type": "Feature Callout Cards",
+            "description": "Three inline feature displays (100% / Open Source / Instant)",
+            "position": "Below subheadline",
+            "notable": "Blue headings with gray descriptive text underneath"
+          },
+          {
+            "type": "Section Divider Badge",
+            "description": "'Why We Exist' pill marker",
+            "position": "Below feature cards",
+            "notable": "Same style as 'Our Mission' marker"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo/Nav > Section marker > Headline > Subheading > Feature trio > Divider > Next section",
+        "innovativeElements": [
+          "Stacked section badges as visual dividers",
+          "Three-column feature display with blue accent on key metrics"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blitz Wallet's mission, value proposition, and key features",
+        "entryPoints": [
+          "Homepage direct navigation",
+          "About menu link"
+        ],
+        "exitPoints": [
+          "Download app",
+          "Contact page",
+          "Features page",
+          "Products page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Our Mission Badge",
+            "action": "Navigate to mission section or expand details"
+          },
+          {
+            "element": "Download Button",
+            "action": "Initiate app download"
+          },
+          {
+            "element": "Navigation Menu",
+            "action": "Route to other pages"
+          },
+          {
+            "element": "Why We Exist Badge",
+            "action": "Navigate to next section"
+          }
+        ],
+        "informationArchitecture": "Linear vertical flow: intro headline > value prop > key features > mission statement preview > navigation to next section",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Section badges (Our Mission, Why We Exist) provide visual progress markers"
+        ]
+      },
+      "copy": {
+        "headline": "Making Bitcoin Simple for Everyone",
+        "subheadline": "We're building the most user-friendly Bitcoin wallet that brings the power of self-custody to everyone, without the complexity.",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Our Mission",
+            "style": "ghost-button",
+            "placement": "Above headline"
+          },
+          {
+            "text": "Why We Exist",
+            "style": "ghost-button",
+            "placement": "Below feature section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100%",
+            "context": "Feature trio",
+            "purpose": "Emphasizes complete self-custody"
+          },
+          {
+            "text": "Open Source",
+            "context": "Feature trio",
+            "purpose": "Signals transparency and trust"
+          },
+          {
+            "text": "Instant",
+            "context": "Feature trio",
+            "purpose": "Highlights speed/Lightning network capability"
+          },
+          {
+            "text": "Self-Custodial",
+            "context": "Under 100%",
+            "purpose": "Explains the feature benefit"
+          },
+          {
+            "text": "Fully Transparent",
+            "context": "Under Open Source",
+            "purpose": "Reinforces trust signal"
+          },
+          {
+            "text": "Lightning Fast",
+            "context": "Under Instant",
+            "purpose": "Clarifies technical capability"
+          }
+        ],
+        "tone": "friendly-casual, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open Source - implies auditable code",
+          "Self-Custodial - emphasizes user control",
+          "100% - absolute language for security"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-2-contact.png",
+      "label": "Contact",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (h1 level), dark charcoal, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray, left-aligned",
+          "dataStyle": "Regular sans-serif, gray placeholder text in input fields"
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Sticky top navigation with logo, menu links, and CTA button",
+            "position": "Top of page",
+            "notable": "Consistent with other pages"
+          },
+          {
+            "type": "Form Container",
+            "description": "Three input fields (Name, Email, Message) with underline styling",
+            "position": "Right side of page",
+            "notable": "Minimalist form design with underline-only borders"
+          },
+          {
+            "type": "Submit Button",
+            "description": "Dark/charcoal button with white text",
+            "position": "Bottom right of form",
+            "notable": "Solid dark button contrasts with light form inputs"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left headline > Left subheading > Right-side form fields > Bottom submit button",
+        "innovativeElements": [
+          "Split-layout with conversational copy on left, form on right",
+          "Underline-only form input styling (minimal/elegant)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Send a message or inquiry to Blitz Wallet team",
+        "entryPoints": [
+          "Contact menu link",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Submit form",
+          "Navigate to other pages via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Name Input Field",
+            "action": "Enter optional name"
+          },
+          {
+            "element": "Email Input Field",
+            "action": "Enter required email address"
+          },
+          {
+            "element": "Message Input Field",
+            "action": "Enter required message"
+          },
+          {
+            "element": "Submit Button",
+            "action": "Submit form"
+          }
+        ],
+        "informationArchitecture": "Conversational greeting and call-to-action on left, form fields organized vertically on right (Name > Email > Message > Submit)",
+        "frictionPoints": [
+          "Form fields use underline-only styling which may be unclear as interactive inputs",
+          "No visual feedback shown for required vs optional fields until hover/focus"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Contact Us",
+        "subheadline": "Hi, Have a question in mind?",
+        "ctas": [
+          {
+            "text": "Submit",
+            "style": "primary-button",
+            "placement": "Bottom right of form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Name (optional)",
+            "context": "First form field label",
+            "purpose": "Indicates field is not required"
+          },
+          {
+            "text": "Enter name here",
+            "context": "Name input placeholder",
+            "purpose": "Guides user on expected input"
+          },
+          {
+            "text": "Email (required)",
+            "context": "Second form field label",
+            "purpose": "Indicates field is mandatory"
+          },
+          {
+            "text": "Enter email here",
+            "context": "Email input placeholder",
+            "purpose": "Guides user on expected input"
+          },
+          {
+            "text": "Message (required)",
+            "context": "Third form field label",
+            "purpose": "Indicates field is mandatory"
+          },
+          {
+            "text": "Add message here",
+            "context": "Message input placeholder",
+            "purpose": "Guides user on expected input"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#1A2332",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, dark navy sans-serif, large scale (48px+), high contrast",
+          "bodyStyle": "Regular weight, dark gray sans-serif, 16-18px, comfortable line-height",
+          "dataStyle": "Large numeric values in blue with SAT ticker, transaction amounts right-aligned, small gray timestamps"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky nav with logo, menu items (Products, Features, About, Contact), and blue Download button",
+            "position": "Top",
+            "notable": "Minimal, clean navigation with strong CTA placement"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Split layout with headline/copy on left, phone mockup on right showing wallet dashboard",
+            "position": "Left half",
+            "notable": "Phone mockup displays live transaction feed with balance indicator and action buttons"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Two buttons below copy: solid blue 'Download Now' and outlined 'Explore Products'",
+            "position": "Bottom left",
+            "notable": "Primary/secondary button contrast clearly established"
+          },
+          {
+            "type": "Transaction List",
+            "description": "Vertical list showing user transactions with arrows, names, amounts, timestamps",
+            "position": "Phone mockup on right",
+            "notable": "Blue action buttons (up/down arrows, settings, exchange) positioned in center of phone"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates left side, copy below, CTAs prominent but not overwhelming. Phone mockup on right anchors attention with activity and visual interest.",
+        "innovativeElements": [
+          "Phone mockup integrated seamlessly into hero showing real transaction activity rather than static interface",
+          "Color-coded transaction directions (up/down arrows in blue)",
+          "Circular avatar icons for transaction counterparties"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Blitz Wallet is and download or explore the product",
+        "entryPoints": [
+          "Direct URL visit",
+          "External link/referral",
+          "Search engine"
+        ],
+        "exitPoints": [
+          "Download button (to app store)",
+          "Explore Products link (to products page)",
+          "Navigation menu (to other sections)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download Now button",
+            "action": "Navigate to app download/store"
+          },
+          {
+            "element": "Explore Products button",
+            "action": "Navigate to products detail page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective pages"
+          }
+        ],
+        "informationArchitecture": "Hero-driven with single value proposition (Bitcoin payments made simple). Phone mockup provides concrete product visualization. Two clear paths: immediate download or learn more.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Payments Made Simple",
+        "subheadline": "The complete Bitcoin ecosystem in your pocket. Send, spend, gift, convert and accept payments with lightning speed.",
+        "ctas": [
+          {
+            "text": "Download Now →",
+            "style": "primary-button",
+            "placement": "Bottom left, above secondary CTA"
+          },
+          {
+            "text": "Explore Products",
+            "style": "ghost-button",
+            "placement": "Bottom left, below primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "TOTAL BALANCE",
+            "context": "Above balance amount on phone mockup",
+            "purpose": "Label for wallet balance display"
+          },
+          {
+            "text": "SAT",
+            "context": "After all transaction amounts",
+            "purpose": "Currency ticker for Satoshis"
+          },
+          {
+            "text": "7 days ago",
+            "context": "Below each transaction name",
+            "purpose": "Relative timestamp for transaction recency"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual",
+        "dataFormatting": [
+          "86 256 SAT (large white text)",
+          "-22 000 SAT (negative amounts in right column)",
+          "+32 650 SAT (positive amounts in right column)",
+          "7 days ago (small gray timestamps)"
+        ],
+        "trustSignals": [
+          "Complete ecosystem mention (send, spend, gift, convert, accept)",
+          "Lightning speed reference (appeals to Bitcoin tech advantage)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-home-2-brand.png",
+      "label": "Brand",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#1A2332",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, black sans-serif, 56-64px, centered",
+          "bodyStyle": "Regular weight, dark gray sans-serif, 18px, centered, multi-line paragraphs",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky nav with logo, menu (Products, Features, About, Contact), blue Download button",
+            "position": "Top",
+            "notable": "Consistent with landing page header"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Pill-shaped button showing 'Brand Resources' as active section",
+            "position": "Above headline",
+            "notable": "Indicates section selection within site architecture"
+          },
+          {
+            "type": "Centered Content Block",
+            "description": "Main headline, subheadline, and description centered on page",
+            "position": "Upper-middle",
+            "notable": "Generous whitespace around text elements"
+          },
+          {
+            "type": "Secondary Tab",
+            "description": "Pill button showing 'Logo Files' as section marker",
+            "position": "Below main content area",
+            "notable": "Transitions to next section visually"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered design with strong top-to-bottom flow. Large headline commands attention, descriptive copy below, visual breaks with pill buttons guide navigation.",
+        "innovativeElements": [
+          "Minimal, content-focused design emphasizing brand guidelines over interface elements",
+          "Pill-shaped navigation tabs as soft section separators"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access brand resources including logos, colors, and guidelines for building with Blitz",
+        "entryPoints": [
+          "Navigation menu from landing page",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Download logo files (action implied by 'Logo Files' button)",
+          "Navigation menu (to other sections)",
+          "Scroll down (to more brand resources)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Brand Resources tab",
+            "action": "Active section indicator, may navigate to resources overview"
+          },
+          {
+            "element": "Logo Files tab",
+            "action": "Navigate to logo download section"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Sequential brand resource pages accessible via pill-shaped tabs. Clear section headers introduce each resource type. Content flows top-to-bottom with generous whitespace.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active tab indication (Brand Resources)"
+        ]
+      },
+      "copy": {
+        "headline": "Build with Blitz",
+        "subheadline": "Everything you need to represent Blitz Wallet accurately. Download logos, reference our brand colors, and find resources to support Bitcoin adoption.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Brand Resources",
+            "context": "Pill button above headline",
+            "purpose": "Section navigation and labeling"
+          },
+          {
+            "text": "Logo Files",
+            "context": "Pill button below main content",
+            "purpose": "Section navigation for logo assets"
+          },
+          {
+            "text": "Our Logos",
+            "context": "Secondary headline",
+            "purpose": "Subsection title"
+          },
+          {
+            "text": "Use these logos when referencing Blitz Wallet. Always maintain clear space around the logo and never alter its proportions or colors.",
+            "context": "Under 'Our Logos' subheading",
+            "purpose": "Brand guideline instruction"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Emphasis on brand accuracy and proper usage",
+          "Support for Bitcoin adoption messaging"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-home-3-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "centered-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#1A2332",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold, black sans-serif, 40-48px, centered",
+          "bodyStyle": "Regular weight, dark gray sans-serif, 16px, centered",
+          "dataStyle": "Large numeric value '$ 0' in light gray, currency symbol black"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Simplified nav with logo and menu (Home, About, Contact), blue Download button",
+            "position": "Top",
+            "notable": "Reduced menu items compared to main pages"
+          },
+          {
+            "type": "White Card Container",
+            "description": "Centered white card with rounded corners containing form content",
+            "position": "Center of page",
+            "notable": "Modal-like appearance with soft shadow against light background"
+          },
+          {
+            "type": "Recipient Pill",
+            "description": "Rounded pill showing recipient name with blue avatar circle",
+            "position": "Top of card",
+            "notable": "Test data showing non-existent recipient"
+          },
+          {
+            "type": "Amount Display",
+            "description": "Large currency amount showing '$ 0' in light gray",
+            "position": "Middle of card",
+            "notable": "Zero balance display, likely prototype/test state"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Continue button (disabled gray state) and Switch Currency text link",
+            "position": "Bottom of card",
+            "notable": "Primary action disabled, secondary action available"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card design centers focus on payment form. Amount display dominates, recipient above, actions below. Light gray disabled state for primary button indicates incomplete form state.",
+        "innovativeElements": [
+          "Clear visual indication of form incompleteness through disabled button state"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Send a payment to a Bitcoin address or contact",
+        "entryPoints": [
+          "Send Payment action from dashboard/navigation"
+        ],
+        "exitPoints": [
+          "Continue button (when enabled with valid amount)",
+          "Switch Currency link (to change payment currency)",
+          "Back to previous screen (via implicit back action)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Recipient pill",
+            "action": "Display or change recipient (likely clickable)"
+          },
+          {
+            "element": "Amount display / input area",
+            "action": "Enter or modify payment amount"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceed to payment confirmation when enabled"
+          },
+          {
+            "element": "Switch Currency link",
+            "action": "Change payment currency (USD, SAT, etc.)"
+          }
+        ],
+        "informationArchitecture": "Simple linear form: recipient → amount → confirmation. Clear visual states indicate when form is ready to proceed.",
+        "frictionPoints": [
+          "Continue button is disabled, requiring user to enter amount before proceeding",
+          "Test data (invalid recipient name) may confuse users if not a real prototype"
+        ],
+        "progressIndicators": [
+          "Form state indication through button enabled/disabled state"
+        ]
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom of card, disabled state"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Bottom of card, below Continue"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This-Page-Does-Not-Exist-404-Test",
+            "context": "In recipient pill",
+            "purpose": "Test data recipient name"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0 (currency symbol + amount in large gray text)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$ 0 (indicates no amount entered yet)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-6-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, center-aligned, dark gray",
+          "bodyStyle": "Regular sans-serif, 16px, gray for secondary text",
+          "dataStyle": "Large monetary display with $ symbol and numeric value in mixed weights"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links (Home, About, Contact), and Download CTA",
+            "position": "Top fixed",
+            "notable": "Clean horizontal layout with right-aligned primary action button"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners containing payment form",
+            "position": "Center of viewport",
+            "notable": "Floating card design with subtle shadow, takes up ~50% width"
+          },
+          {
+            "type": "Badge",
+            "description": "Blue circular avatar with 'S' initial and 'Settings' label",
+            "position": "Top center of card",
+            "notable": "Pill-shaped button with icon and text pairing"
+          },
+          {
+            "type": "Amount Display",
+            "description": "Large dollar amount prominently displayed",
+            "position": "Center of card below badge",
+            "notable": "Mixed typography: bold $ symbol with gray numeric value"
+          },
+          {
+            "type": "Button Group",
+            "description": "Primary 'Continue' button and secondary 'Switch Currency' text link",
+            "position": "Bottom of card",
+            "notable": "Disabled-state gray button with lower contrast secondary action"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > Settings badge/selector > Amount display > Primary CTA > Secondary action",
+        "innovativeElements": [
+          "Circular avatar badge system for feature switching within same modal context"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Configure payment settings before sending",
+        "entryPoints": [
+          "From dashboard send payment flow",
+          "Direct navigation to settings"
+        ],
+        "exitPoints": [
+          "Continue to payment confirmation",
+          "Switch currency selector",
+          "Back to dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Settings badge",
+            "action": "Opens settings configuration (context suggests swappable feature selector)"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceeds to next payment step with current amount and settings"
+          },
+          {
+            "element": "Switch Currency",
+            "action": "Opens currency selection modal/dropdown"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: User context (Settings) → Transaction amount → Actions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom center of card"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Bottom secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Settings",
+            "context": "Badge label",
+            "purpose": "Identifies current user context/mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-7-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, center-aligned, dark gray",
+          "bodyStyle": "Regular sans-serif, 16px, gray for secondary text",
+          "dataStyle": "Large monetary display with $ symbol and numeric value in mixed weights"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links, and Download CTA",
+            "position": "Top fixed",
+            "notable": "Consistent with settings page header"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners containing payment form",
+            "position": "Center of viewport",
+            "notable": "Identical card styling to settings page"
+          },
+          {
+            "type": "Badge",
+            "description": "Blue circular avatar with 'H' initial and 'Help' label",
+            "position": "Top center of card",
+            "notable": "Same pill-shaped badge pattern, swapped context (Settings → Help)"
+          },
+          {
+            "type": "Amount Display",
+            "description": "Large dollar amount prominently displayed",
+            "position": "Center of card below badge",
+            "notable": "Identical to settings page"
+          },
+          {
+            "type": "Button Group",
+            "description": "Primary 'Continue' button and secondary 'Switch Currency' link",
+            "position": "Bottom of card",
+            "notable": "Identical to settings page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > Help badge/selector > Amount display > Primary CTA > Secondary action",
+        "innovativeElements": [
+          "Context-switching badge system maintains modal structure across different feature modes"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Access help resources while in payment flow",
+        "entryPoints": [
+          "From Send Payment form Help badge click",
+          "Contextual help access"
+        ],
+        "exitPoints": [
+          "Return to Send Payment",
+          "Continue to payment confirmation",
+          "Switch currency"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Help badge",
+            "action": "Indicates help context is active; could open help panel or tooltip"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceeds with payment using current settings"
+          },
+          {
+            "element": "Switch Currency",
+            "action": "Opens currency selection"
+          }
+        ],
+        "informationArchitecture": "Identical structure to settings page: User context (Help) → Transaction amount → Actions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom center of card"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Bottom secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Help",
+            "context": "Badge label",
+            "purpose": "Identifies help context/mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-8-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, center-aligned, dark gray",
+          "bodyStyle": "Regular sans-serif, 16px, gray for secondary text",
+          "dataStyle": "Large monetary display with $ symbol and numeric value in mixed weights"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links, and Download CTA",
+            "position": "Top fixed",
+            "notable": "Consistent across all three pages"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners",
+            "position": "Center of viewport",
+            "notable": "Identical card structure and styling"
+          },
+          {
+            "type": "Badge",
+            "description": "Blue circular avatar with 'F' initial and 'Faq' label",
+            "position": "Top center of card",
+            "notable": "Same contextual badge pattern, swapped to FAQ mode"
+          },
+          {
+            "type": "Amount Display",
+            "description": "Large dollar amount prominently displayed",
+            "position": "Center of card below badge",
+            "notable": "Consistent $ 0 display"
+          },
+          {
+            "type": "Button Group",
+            "description": "Primary 'Continue' button and secondary 'Switch Currency' link",
+            "position": "Bottom of card",
+            "notable": "Identical layout to both previous screens"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > FAQ badge/selector > Amount display > Primary CTA > Secondary action",
+        "innovativeElements": [
+          "Reusable modal template with swappable badge context creates consistent pattern for feature modes"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Browse FAQ while in payment flow",
+        "entryPoints": [
+          "From Send Payment form FAQ badge click",
+          "Contextual FAQ access"
+        ],
+        "exitPoints": [
+          "Return to Send Payment",
+          "Continue to payment confirmation",
+          "Switch currency"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Faq badge",
+            "action": "Indicates FAQ context is active; could expand FAQ panel or link to FAQ section"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceeds with payment"
+          },
+          {
+            "element": "Switch Currency",
+            "action": "Opens currency selector"
+          }
+        ],
+        "informationArchitecture": "Consistent template: User context badge → Transaction amount → Primary/secondary actions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom center of card"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Bottom secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Faq",
+            "context": "Badge label",
+            "purpose": "Identifies FAQ context/mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-settings-9-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "card-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, dark gray, centered",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray",
+          "dataStyle": "Large monospace numerals with currency symbol, 72px, bold gray"
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "User identifier pill with blue circular avatar and label",
+            "position": "top-center above amount",
+            "notable": "Avatar uses initials, rounded pill styling with light background"
+          },
+          {
+            "type": "currency-display",
+            "description": "Large dollar amount display with $ symbol and 0 value",
+            "position": "center",
+            "notable": "0 value displayed in lighter gray to indicate empty/placeholder state"
+          },
+          {
+            "type": "button-primary",
+            "description": "Continue action button",
+            "position": "bottom-center",
+            "notable": "Disabled/inactive styling with gray background"
+          },
+          {
+            "type": "button-secondary",
+            "description": "Switch Currency text link",
+            "position": "bottom-center below primary",
+            "notable": "Ghost button style with border, lower visual priority"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Vertical stacking with strong emphasis on amount display; user identifier anchors attention at top; actions stack below with primary above secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a payment transaction to an identified recipient (About)",
+        "entryPoints": [
+          "Navigation from settings or wallet dashboard"
+        ],
+        "exitPoints": [
+          "Continue button to next step",
+          "Switch Currency to modify payment",
+          "Back to previous screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue button",
+            "action": "Proceeds to next step of payment flow; currently disabled"
+          },
+          {
+            "element": "Switch Currency link",
+            "action": "Opens currency selector to change payment denomination"
+          },
+          {
+            "element": "User badge",
+            "action": "May allow recipient selection or display recipient details"
+          }
+        ],
+        "informationArchitecture": "Linear payment form with recipient context at top, amount in focus, and action buttons below",
+        "frictionPoints": [
+          "Continue button is disabled, preventing progress",
+          "No visible amount input field—amount appears to be $0 placeholder",
+          "User must navigate to Switch Currency to change payment type"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "ghost-button",
+            "placement": "bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "About",
+            "context": "User identifier label",
+            "purpose": "Identifies payment recipient"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "card-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, dark gray, centered",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray",
+          "dataStyle": "Large monospace numerals with currency symbol, 72px, bold gray"
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "User identifier pill with blue circular avatar and label",
+            "position": "top-center above amount",
+            "notable": "Avatar shows 'L' initial, rounded pill with light background"
+          },
+          {
+            "type": "currency-display",
+            "description": "Large dollar amount display",
+            "position": "center",
+            "notable": "$ 0 value in lighter gray, suggests placeholder state"
+          },
+          {
+            "type": "button-primary",
+            "description": "Continue action button",
+            "position": "bottom-center",
+            "notable": "Disabled styling with gray background"
+          },
+          {
+            "type": "button-secondary",
+            "description": "Switch Currency link",
+            "position": "bottom",
+            "notable": "Ghost button with border outline"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Vertical alignment with large amount display as focal point; user context at top; actions below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Authenticate and access wallet for payment or transaction",
+        "entryPoints": [
+          "Initial app launch",
+          "Logout and return to login"
+        ],
+        "exitPoints": [
+          "Continue to wallet dashboard after authentication",
+          "Switch to signup flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue button",
+            "action": "Validates login credentials and proceeds to wallet; currently disabled"
+          },
+          {
+            "element": "Switch Currency button",
+            "action": "Allows currency preference selection before login"
+          }
+        ],
+        "informationArchitecture": "Authentication-focused screen reusing payment form template; user account context displayed with amount scaffold",
+        "frictionPoints": [
+          "No visible email/password input fields",
+          "Continue button disabled—missing form validation",
+          "Unclear what credentials user needs to enter",
+          "Amount display ($0) may confuse user about purpose of screen"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "ghost-button",
+            "placement": "bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Login",
+            "context": "User identifier label",
+            "purpose": "Indicates login context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-onboarding-2-signup-page.png",
+      "label": "signup page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "card-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, dark gray, centered",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray",
+          "dataStyle": "Large monospace numerals with currency symbol, 72px, bold gray"
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "User identifier pill with blue avatar and label",
+            "position": "top-center above amount",
+            "notable": "Avatar shows 'S' initial, rounded pill styling"
+          },
+          {
+            "type": "currency-display",
+            "description": "Large dollar amount display",
+            "position": "center",
+            "notable": "$ 0 placeholder value in lighter gray"
+          },
+          {
+            "type": "button-primary",
+            "description": "Continue action button",
+            "position": "bottom-center",
+            "notable": "Disabled state with gray background"
+          },
+          {
+            "type": "button-secondary",
+            "description": "Switch Currency link",
+            "position": "bottom",
+            "notable": "Ghost button with subtle border"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered card with vertical progression from headline to amount to actions",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create new wallet account and register for service",
+        "entryPoints": [
+          "New user signup",
+          "From login screen signup link"
+        ],
+        "exitPoints": [
+          "Continue to wallet creation or KYC",
+          "Switch to login flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue button",
+            "action": "Submits signup form and creates account; currently disabled"
+          },
+          {
+            "element": "Switch Currency button",
+            "action": "Changes preferred currency for new account"
+          }
+        ],
+        "informationArchitecture": "Registration-focused form using consistent payment form template; amount placeholder suggests wallet setup context",
+        "frictionPoints": [
+          "No visible form fields for name, email, password",
+          "Continue button disabled—form appears incomplete",
+          "Payment form template used for signup is confusing UX",
+          "No indication of required fields or validation rules"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "ghost-button",
+            "placement": "bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Signup",
+            "context": "User identifier label",
+            "purpose": "Indicates signup context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-staking-1-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24-28px, dark charcoal",
+          "bodyStyle": "Regular sans-serif, 14-16px, mid-gray",
+          "dataStyle": "Extra-bold sans-serif, 48-56px, large currency amounts with $ symbol prefix"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links, and primary CTA",
+            "position": "top",
+            "notable": "Blue accent on Download button creates clear action hierarchy"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners and shadow",
+            "position": "center",
+            "notable": "Soft drop shadow creates depth on light background"
+          },
+          {
+            "type": "Currency Badge",
+            "description": "Circular blue badge with 'E' letter and 'Earn' label",
+            "position": "upper-center of modal",
+            "notable": "Single-letter icon with rounded background indicates token type"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Full-width disabled gray button",
+            "position": "lower-center",
+            "notable": "Disabled state prevents action when amount is $0"
+          },
+          {
+            "type": "Secondary Button",
+            "description": "Text-based link button",
+            "position": "bottom",
+            "notable": "Lower visual weight, enables currency switching"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title → Currency selector → Large amount display → Action buttons (primary disabled, secondary enabled)",
+        "innovativeElements": [
+          "Currency badge with initial letter in circle",
+          "Two-tier button hierarchy with primary disabled state"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate an earning transaction by selecting currency and amount",
+        "entryPoints": [
+          "Staking flow entry",
+          "Home navigation"
+        ],
+        "exitPoints": [
+          "Continue button (disabled)",
+          "Switch Currency link",
+          "Main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Currency Badge Selector",
+            "action": "Likely toggles or expands currency options"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Proceeds to transaction confirmation (currently disabled)"
+          },
+          {
+            "element": "Switch Currency Link",
+            "action": "Changes selected currency token"
+          }
+        ],
+        "informationArchitecture": "Selection state (currency) → Amount input implied → Action confirmation",
+        "frictionPoints": [
+          "Continue button is disabled at $0, may confuse users about how to proceed",
+          "No visible amount input field, unclear how to enter custom amounts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button-disabled",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "bottom"
+          },
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Earn",
+            "context": "next to currency badge",
+            "purpose": "Labels the selected earning product type"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0 (currency symbol with zero value)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-staking-2-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24-28px, dark charcoal",
+          "bodyStyle": "Regular sans-serif, 14-16px, mid-gray",
+          "dataStyle": "Extra-bold sans-serif, 48-56px, large currency amounts with $ symbol prefix"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links, and primary CTA",
+            "position": "top",
+            "notable": "Consistent styling across all screens"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with rounded corners",
+            "position": "center",
+            "notable": "Identical layout to earn page for consistency"
+          },
+          {
+            "type": "Currency Badge",
+            "description": "Circular blue badge with 'S' letter and 'Stake' label",
+            "position": "upper-center of modal",
+            "notable": "Different letter 'S' indicates different token/product variant"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Full-width disabled gray button",
+            "position": "lower-center",
+            "notable": "Disabled state consistent with earn variant"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title → Currency selector (Stake variant) → Large amount display → Action buttons",
+        "innovativeElements": [
+          "Currency badge system with contextual letter changes"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a staking transaction with token selection",
+        "entryPoints": [
+          "Staking flow navigation",
+          "Home"
+        ],
+        "exitPoints": [
+          "Continue button (disabled)",
+          "Switch Currency",
+          "Navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Currency Badge",
+            "action": "Indicates Stake product variant"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Proceeds when amount > 0 (currently disabled)"
+          },
+          {
+            "element": "Switch Currency",
+            "action": "Changes token selection"
+          }
+        ],
+        "informationArchitecture": "Product variant (Stake vs Earn) → Amount selection → Confirmation",
+        "frictionPoints": [
+          "No visible input mechanism for amount entry",
+          "Disabled button with no clear call-to-action for entering amount"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button-disabled",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Stake",
+            "context": "next to currency badge",
+            "purpose": "Labels the staking product variant"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-staking-3-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24-28px, dark charcoal",
+          "bodyStyle": "Regular sans-serif, 14-16px, mid-gray",
+          "dataStyle": "Extra-bold sans-serif, 48-56px, large currency amounts"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Consistent top navigation bar",
+            "position": "top",
+            "notable": "Uniform across all screen variants"
+          },
+          {
+            "type": "Modal Card",
+            "description": "White rounded card container",
+            "position": "center",
+            "notable": "Repeatable pattern for transaction flows"
+          },
+          {
+            "type": "Currency Badge",
+            "description": "Circular blue badge with 'S' letter and 'Staking' label",
+            "position": "upper-center",
+            "notable": "Full 'Staking' word versus abbreviated 'Stake' - product naming variation"
+          },
+          {
+            "type": "Amount Display",
+            "description": "Large centered currency amount",
+            "position": "center",
+            "notable": "Prominent display with dollar sign and value"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title → Product variant badge → Amount → Primary action → Secondary action",
+        "innovativeElements": [
+          "Currency badge with full product name 'Staking'"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Complete staking transaction setup",
+        "entryPoints": [
+          "Staking product selection",
+          "Earn/Stake flow"
+        ],
+        "exitPoints": [
+          "Continue (disabled)",
+          "Switch Currency",
+          "Navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Staking Badge",
+            "action": "Displays selected product type"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Submits transaction (disabled at $0)"
+          },
+          {
+            "element": "Switch Currency",
+            "action": "Changes currency selection"
+          }
+        ],
+        "informationArchitecture": "Product selection (Staking) → Amount confirmation → Transaction submission",
+        "frictionPoints": [
+          "Same disabled state as previous screens",
+          "Unclear how user inputs amount without visible input field"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button-disabled",
+            "placement": "center-bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Staking",
+            "context": "currency badge label",
+            "purpose": "Full product name for staking variant"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-swap-4-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "card-centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, large size (32px+)",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px",
+          "dataStyle": "Large currency amount in dark gray with currency symbol, numeric portion in lighter gray"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top navigation bar with logo, menu items, and CTA button",
+            "position": "top",
+            "notable": "Blue Download CTA stands out prominently on right side"
+          },
+          {
+            "type": "modal-card",
+            "description": "Centered white card with rounded corners and subtle shadow",
+            "position": "center",
+            "notable": "Clean, minimal card design with generous internal padding"
+          },
+          {
+            "type": "recipient-badge",
+            "description": "Avatar with initial and recipient name in pill-shaped container",
+            "position": "top-center of card",
+            "notable": "Blue circular avatar with white initial 'M' creates visual focus"
+          },
+          {
+            "type": "amount-display",
+            "description": "Large currency amount prominently displayed",
+            "position": "center of card",
+            "notable": "Dollar sign in dark gray, zero in lighter gray creates visual hierarchy"
+          },
+          {
+            "type": "button-primary-disabled",
+            "description": "Continue button in disabled state (light gray)",
+            "position": "lower-center of card",
+            "notable": "Button is disabled, indicating form is incomplete"
+          },
+          {
+            "type": "button-secondary",
+            "description": "Switch Currency text button",
+            "position": "bottom of card",
+            "notable": "Secondary action in plain text style with border"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-to-bottom flow: recipient → amount → action buttons. The large '$0' amount dominates attention, with recipient badge above as context and buttons below for progression.",
+        "innovativeElements": [
+          "Recipient badge with avatar creates personal context for payment",
+          "Two-tier button hierarchy clearly distinguishes primary (Continue) from secondary (Switch Currency) actions"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Review and confirm payment details before sending crypto to Markets",
+        "entryPoints": [
+          "From swap initiation screen after selecting recipient and amount",
+          "From transaction confirmation flow"
+        ],
+        "exitPoints": [
+          "Continue button → proceed to payment confirmation",
+          "Switch Currency button → return to amount/currency selection",
+          "Header navigation → Home, About, Contact pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue button",
+            "action": "Validate and proceed to next step (currently disabled due to $0 amount)"
+          },
+          {
+            "element": "Switch Currency button",
+            "action": "Navigate back to currency selection screen"
+          },
+          {
+            "element": "Markets recipient badge",
+            "action": "Possibly edit or change recipient"
+          },
+          {
+            "element": "Download button (header)",
+            "action": "Initiate wallet download"
+          }
+        ],
+        "informationArchitecture": "Linear form progression with recipient confirmation, amount display, and dual action options. Amount is the focal point between context (who) and actions (what next).",
+        "frictionPoints": [
+          "Continue button is disabled at $0 amount—user must enter valid amount before proceeding",
+          "No visible input field for amount shown—user may need to go back to edit"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button-disabled",
+            "placement": "center-lower of card"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link-button",
+            "placement": "bottom of card"
+          },
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Markets",
+            "context": "Recipient badge below headline",
+            "purpose": "Identifies who the payment is going to"
+          }
+        ],
+        "tone": "professional-technical, clean and minimal",
+        "dataFormatting": [
+          "$ 0 (currency symbol separated from amount, zero in lighter gray)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$ 0 (indicates no amount entered yet)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32px, dark charcoal, center-aligned",
+          "bodyStyle": "Regular sans-serif, 16px, medium gray",
+          "dataStyle": "Large monospace-style numbers with currency symbol, $0 in gray"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "Top bar",
+            "notable": "Sticky header with bright blue Download button"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with shadow, rounded corners",
+            "position": "Center viewport",
+            "notable": "Clean isolation with subtle shadow and generous padding"
+          },
+          {
+            "type": "Segmented Toggle",
+            "description": "Currency type selector with icon and label",
+            "position": "Below headline",
+            "notable": "Blue circular badge with white letter icon (S), light gray background pill"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Continue action button",
+            "position": "Lower section",
+            "notable": "Disabled state (gray), full-width"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws eye first, currency selector provides context, amount dominates middle, CTAs anchor bottom",
+        "innovativeElements": [
+          "Tabbed currency type selector using icon + label pattern",
+          "Large numeric display creates clear focal point"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a swap transaction by selecting swap type and reviewing amount",
+        "entryPoints": [
+          "From wallet dashboard",
+          "From transaction menu",
+          "Direct link to payment flow"
+        ],
+        "exitPoints": [
+          "Continue button (proceed to next step)",
+          "Switch Currency link (explore other transaction types)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap/Trade/Exchange Toggle",
+            "action": "Switch between transaction types"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Proceed to confirm payment details"
+          },
+          {
+            "element": "Switch Currency Link",
+            "action": "Change currency or transaction mode"
+          }
+        ],
+        "informationArchitecture": "Linear single-task form: header context → transaction type selection → amount display → action buttons",
+        "frictionPoints": [
+          "Continue button appears disabled, unclear if user can proceed",
+          "Amount shows $0, no input field visible - user journey unclear"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Center bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Below continue button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Swap",
+            "context": "Transaction type badge",
+            "purpose": "Labels the currently selected transaction mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0 (currency symbol + large number format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$0 displayed as placeholder when no amount entered"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32px, dark charcoal, center-aligned",
+          "bodyStyle": "Regular sans-serif, 16px, medium gray",
+          "dataStyle": "Large monospace-style numbers with currency symbol, $0 in gray"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "Top bar",
+            "notable": "Consistent with swap page, maintains brand identity"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with shadow, rounded corners",
+            "position": "Center viewport",
+            "notable": "Identical layout to swap page, demonstrates template reuse"
+          },
+          {
+            "type": "Segmented Toggle",
+            "description": "Currency type selector with icon and label",
+            "position": "Below headline",
+            "notable": "Blue circular badge with white letter icon (T), light gray background pill"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Continue action button",
+            "position": "Lower section",
+            "notable": "Disabled state (gray), full-width"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws eye first, currency selector provides context, amount dominates middle, CTAs anchor bottom",
+        "innovativeElements": [
+          "Dynamic transaction type switching with persistent layout structure"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a trade transaction by selecting trade type and reviewing amount",
+        "entryPoints": [
+          "From wallet dashboard",
+          "From transaction menu",
+          "From swap page via Switch Currency"
+        ],
+        "exitPoints": [
+          "Continue button (proceed to next step)",
+          "Switch Currency link (explore other transaction types)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade Type Toggle",
+            "action": "Activate trade transaction mode"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Proceed to confirm trade details"
+          },
+          {
+            "element": "Switch Currency Link",
+            "action": "Change currency or transaction mode"
+          }
+        ],
+        "informationArchitecture": "Linear single-task form matching swap page structure for consistency",
+        "frictionPoints": [
+          "Continue button appears disabled, unclear if user can proceed",
+          "Amount shows $0, no input field visible",
+          "Three similar pages may cause confusion about transaction type differences"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Center bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Below continue button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trade",
+            "context": "Transaction type badge",
+            "purpose": "Labels the currently selected transaction mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0 (currency symbol + large number format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$0 displayed as placeholder when no amount entered"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/blitz-wallet-swap-3-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#F5F5F5",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32px, dark charcoal, center-aligned",
+          "bodyStyle": "Regular sans-serif, 16px, medium gray",
+          "dataStyle": "Large monospace-style numbers with currency symbol, $0 in gray"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "Top bar",
+            "notable": "Consistent branding across all transaction type screens"
+          },
+          {
+            "type": "Modal Card",
+            "description": "Centered white card with shadow, rounded corners",
+            "position": "Center viewport",
+            "notable": "Template reused for third variation"
+          },
+          {
+            "type": "Segmented Toggle",
+            "description": "Currency type selector with icon and label",
+            "position": "Below headline",
+            "notable": "Blue circular badge with white letter icon (E), light gray background pill"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Continue action button",
+            "position": "Lower section",
+            "notable": "Disabled state (gray), full-width"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws eye first, currency selector provides context, amount dominates middle, CTAs anchor bottom",
+        "innovativeElements": [
+          "Consistent template with letter-icon variations for different transaction types"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate an exchange transaction by selecting exchange type and reviewing amount",
+        "entryPoints": [
+          "From wallet dashboard",
+          "From transaction menu",
+          "From swap or trade page via Switch Currency"
+        ],
+        "exitPoints": [
+          "Continue button (proceed to next step)",
+          "Switch Currency link (explore other transaction types)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Exchange Type Toggle",
+            "action": "Activate exchange transaction mode"
+          },
+          {
+            "element": "Continue Button",
+            "action": "Proceed to confirm exchange details"
+          },
+          {
+            "element": "Switch Currency Link",
+            "action": "Change currency or transaction mode"
+          }
+        ],
+        "informationArchitecture": "Linear single-task form with consistent template for all transaction types",
+        "frictionPoints": [
+          "Continue button appears disabled, unclear if user can proceed",
+          "Amount shows $0, no input field visible",
+          "Three near-identical pages may confuse users about functional differences"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send Payment",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Center bottom"
+          },
+          {
+            "text": "Switch Currency",
+            "style": "text-link",
+            "placement": "Below continue button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Exchange",
+            "context": "Transaction type badge",
+            "purpose": "Labels the currently selected transaction mode"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 0 (currency symbol + large number format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$0 displayed as placeholder when no amount entered"
+        ]
+      }
+    }
+  ]
+}

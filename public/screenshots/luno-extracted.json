@@ -1,0 +1,4876 @@
+{
+  "slug": "luno",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T12:18:35.625Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 40,
+  "screens": [
+    {
+      "image": "/screenshots/luno-home-8-api.png",
+      "label": "API",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#1A1A2E"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, centered, ~60-72px",
+          "bodyStyle": "Medium weight sans-serif, slate blue, centered, ~18-20px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with Luno logo, menu items (Explore, Invest, Why Luno?, Learn & Support), and Sign in/Sign up buttons",
+            "position": "Top fixed",
+            "notable": "Clean separation of primary nav and authentication CTAs"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered heading and subheading with 3D rendered API cylinder devices illustration",
+            "position": "Center to bottom",
+            "notable": "Large-scale 3D visualization dominates composition"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eyes drawn upward to headline, then down to illustration. Illustration serves as focal point anchoring the composition.",
+        "innovativeElements": [
+          "3D rendered mechanical cipher/lock devices with glowing blue accents",
+          "Stacked cylindrical forms creating depth and visual interest"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Learn about Luno's API capabilities for developers",
+        "entryPoints": [
+          "Navigation menu 'Explore' or direct link",
+          "Scrolled from homepage"
+        ],
+        "exitPoints": [
+          "Sign up button",
+          "Learn & Support",
+          "Other nav items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Initiates account creation or API access signup"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different product/information sections"
+          }
+        ],
+        "informationArchitecture": "Value proposition presented first (headline + subheading) followed by visual representation of the product",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Luno API",
+        "subheadline": "Build custom applications or integrate payments with our powerful cryptocurrency API",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Explore",
+            "context": "Navigation menu",
+            "purpose": "Guides to product exploration section"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-9-your-safety.png",
+      "label": "Your safety",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1A1A2E",
+          "#FFFFFF",
+          "#FF6B35",
+          "#9D4EDD"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, centered, ~60-72px",
+          "bodyStyle": "Medium weight sans-serif, slate blue, centered, ~18-20px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with Luno logo and primary menu items",
+            "position": "Top fixed",
+            "notable": "Consistent header across sections"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered heading and subheading with security-themed 3D illustration",
+            "position": "Center to bottom",
+            "notable": "Padlocks with glowing accent colors convey security and trust"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline anchors attention at top, subheading provides context, illustration provides security reassurance",
+        "innovativeElements": [
+          "3D rendered padlocks with neon orange security bands and glowing accents",
+          "Color-coded locks (orange, purple, gold) suggesting multi-layer security",
+          "Ethereal lighting effects on security elements"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Build trust by learning about security measures protecting user assets",
+        "entryPoints": [
+          "Scrolled from homepage",
+          "Security/Why Luno navigation"
+        ],
+        "exitPoints": [
+          "Learn & Support",
+          "Sign up",
+          "Navigate to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Initiates account creation"
+          },
+          {
+            "element": "Learn & Support",
+            "action": "Navigate to detailed security documentation"
+          }
+        ],
+        "informationArchitecture": "Trust-building value proposition (headline) → reassurance subheading → visual proof through security imagery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How we keep your crypto safe",
+        "subheadline": "Optimal protection for your assets",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Security measures visualization",
+          "Asset protection messaging"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-10-our-products.png",
+      "label": "Our products",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#1A1A2E",
+          "#FFFFFF",
+          "#E8E8F0"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, centered, ~60-72px",
+          "bodyStyle": "Medium weight sans-serif, slate blue, centered, ~16-18px",
+          "dataStyle": "Numeric with currency symbols (R1,756, $81,672)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with Luno logo and menu items",
+            "position": "Top fixed",
+            "notable": "Consistent navigation pattern"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered headline, subheading, and product demonstration with smartphone and hardware element",
+            "position": "Center to bottom",
+            "notable": "Product mockup showing actual app interface with crypto prices and trading options"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → subheading context → product visualization showing tangible interface",
+        "innovativeElements": [
+          "Product mockup integration showing real app UI (My balance: R1,756, crypto price list with Bitcoin, Ethereum)",
+          "Hardware element alongside smartphone suggesting multi-platform support",
+          "Realistic app interface preview within hero section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Understand the professional tools and products Luno offers to all user levels",
+        "entryPoints": [
+          "Scrolled from homepage",
+          "Explore/Products navigation"
+        ],
+        "exitPoints": [
+          "Sign up",
+          "Learn & Support",
+          "Other navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Initiates account creation"
+          },
+          {
+            "element": "Product mockup",
+            "action": "Visual reference, typically links to product details or demo"
+          }
+        ],
+        "informationArchitecture": "Product value proposition (headline) → democratization message (subheading) → visual proof through mockup showing actual product interface",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Professional tools anyone can use",
+        "subheadline": "Supercharge your trading and investment strategies with our suite of easy-to-use, powerful crypto tools.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-friendly, empowering",
+        "dataFormatting": [
+          "R1,756 (South African Rand balance)",
+          "$81,672 (USD pricing)",
+          "-3.12% (percentage change)"
+        ],
+        "trustSignals": [
+          "Real product interface mockup",
+          "Multi-asset support shown (Bitcoin, Ethereum)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, dark navy/black, centered, ~60px",
+          "bodyStyle": "Medium-weight sans-serif, dark gray, centered, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items (Explore, Invest, Why Luno?, Learn & Support), and auth buttons",
+            "position": "Top fixed",
+            "notable": "Clean minimal design with clear CTA hierarchy"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered headline with subheadline and dual CTAs",
+            "position": "Upper-middle",
+            "notable": "Primary button (Create an account) in bright blue, secondary app download buttons"
+          },
+          {
+            "type": "Product Image",
+            "description": "3D rendered smartphone with Luno app on screen, surrounded by abstract geometric shapes",
+            "position": "Lower half",
+            "notable": "Modern, clean product visualization against minimal background"
+          },
+          {
+            "type": "Cookie Banner",
+            "description": "Legal compliance banner with explain text and action buttons",
+            "position": "Bottom overlay",
+            "notable": "Dark semi-transparent background, three CTA options"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye guided top-to-bottom: headline → subheadline → CTA buttons → product image. Hero section dominates upper viewport.",
+        "innovativeElements": [
+          "3D product visualization with geometric shape abstraction",
+          "Minimal cookie banner design with three distinct button states"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Luno's value proposition and create an account or download the app",
+        "entryPoints": [
+          "Direct website visit",
+          "Marketing campaign link",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Create an account (primary CTA)",
+          "Download app (iOS/Android)",
+          "Navigate to Explore/Invest/Why Luno?/Learn & Support",
+          "Sign in (if existing user)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Create an account button",
+            "action": "Navigate to signup form or flow"
+          },
+          {
+            "element": "App download buttons (Apple/Play Store)",
+            "action": "Redirect to respective app stores"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to corresponding sections"
+          },
+          {
+            "element": "Cookie banner buttons",
+            "action": "Manage cookie preferences or accept/reject"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation provides access to key sections (Explore, Invest, Learn). Hero content focuses on single CTA. Cookie banner separates legal compliance.",
+        "frictionPoints": [
+          "Cookie banner overlay may distract from main CTA",
+          "Multiple download options could confuse first-time users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A smarter way to invest",
+        "subheadline": "Join 15 million customers worldwide investing in Bitcoin and more.",
+        "ctas": [
+          {
+            "text": "Create an account",
+            "style": "primary-button",
+            "placement": "Hero section center"
+          },
+          {
+            "text": "Download",
+            "style": "text-link",
+            "placement": "Next to app store icons"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "May we use optional cookies to improve our service and give you a better experience?",
+            "context": "Cookie banner",
+            "purpose": "Request consent for analytics and personalization"
+          },
+          {
+            "text": "View our partners",
+            "context": "Cookie banner footer",
+            "purpose": "Transparency about data sharing"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual",
+        "dataFormatting": [
+          "15 million customers (social proof number)",
+          "Bitcoin and more (asset types)"
+        ],
+        "trustSignals": [
+          "15 million customers worldwide",
+          "Industry-standard security (implied in navigation)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with overlay",
+        "colorScheme": "light with dark overlay",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark, ~20px",
+          "bodyStyle": "Regular sans-serif, dark gray, ~14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Cookie Banner",
+            "description": "Modal overlay with legal text, action buttons, and links",
+            "position": "Bottom full-width",
+            "notable": "Three button states: primary (Agree), secondary (Disagree), tertiary (Manage Cookies)"
+          },
+          {
+            "type": "Backdrop",
+            "description": "Semi-transparent dark overlay behind banner",
+            "position": "Full screen",
+            "notable": "Dims landing page content while keeping banner readable"
+          },
+          {
+            "type": "Text Links",
+            "description": "Cookie notice and partners links",
+            "position": "Banner footer",
+            "notable": "Underlined for clickability, accessible legal navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Banner dominates bottom third; text hierarchy: heading → body → links → buttons",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal-overlay",
+        "userIntent": "Respond to cookie consent request to continue browsing",
+        "entryPoints": [
+          "Landing page load (GDPR/privacy regulation trigger)"
+        ],
+        "exitPoints": [
+          "Agree button (accept all cookies)",
+          "Disagree button (reject non-essential cookies)",
+          "Manage Cookies button (customize preferences)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Agree button",
+            "action": "Accept all cookies and dismiss banner"
+          },
+          {
+            "element": "Disagree button",
+            "action": "Reject optional cookies and dismiss banner"
+          },
+          {
+            "element": "Manage Cookies button",
+            "action": "Open detailed cookie preferences modal"
+          },
+          {
+            "element": "Cookie notice link",
+            "action": "Navigate to full privacy/cookie policy"
+          },
+          {
+            "element": "View our partners link",
+            "action": "Show list of data partners"
+          }
+        ],
+        "informationArchitecture": "Legal compliance first, preference options below, links to detailed policies at bottom",
+        "frictionPoints": [
+          "Blocking overlay prevents interaction with main content",
+          "Three buttons may overwhelm users—unclear which is default"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "May we use optional cookies to improve our service and give you a better experience?",
+        "subheadline": "Optional cookies let us understand how visitors use our website, personalise their experience and show them relevant ads. These 'optional' cookies will not be set unless you click on 'agree'. You can change your cookie preferences at any time by clicking on 'manage cookies'. For more information please take a look at our cookie notice.",
+        "ctas": [
+          {
+            "text": "Agree",
+            "style": "primary-button",
+            "placement": "Banner right"
+          },
+          {
+            "text": "Disagree",
+            "style": "primary-button",
+            "placement": "Banner center-right"
+          },
+          {
+            "text": "Manage Cookies",
+            "style": "secondary-button",
+            "placement": "Banner left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "cookie notice",
+            "context": "Body text, underlined link",
+            "purpose": "Link to detailed privacy policy"
+          },
+          {
+            "text": "View our partners",
+            "context": "Footer of banner",
+            "purpose": "Transparency about data sharing partners"
+          }
+        ],
+        "tone": "professional-technical, formal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit mention of cookie notice and privacy policy",
+          "Offers granular control over cookie preferences"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-4-explore.png",
+      "label": "Explore",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, dark, centered, ~56px",
+          "bodyStyle": "Medium sans-serif, gray, centered, ~16px",
+          "dataStyle": "Numeric in context (R1,756), displayed prominently in app screenshot"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Header with logo, menu, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Consistent with landing page design"
+          },
+          {
+            "type": "Hero Headline",
+            "description": "Large centered heading describing core value proposition",
+            "position": "Upper section",
+            "notable": "Security-focused messaging"
+          },
+          {
+            "type": "Download CTA",
+            "description": "Text label with inline app store icons",
+            "position": "Below headline",
+            "notable": "Simple, text-based call to action"
+          },
+          {
+            "type": "Feature Cards (Inline)",
+            "description": "Three horizontal feature cards with icons and text",
+            "position": "Mid-section",
+            "notable": "Icons left-aligned, text describes benefit, teal/blue color for accent text"
+          },
+          {
+            "type": "Image Grid",
+            "description": "Left: person on transit with phone, Center: app UI mockup, Right: hands with tablet device",
+            "position": "Lower section"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates; feature cards provide secondary scanning; images provide visual proof at bottom",
+        "innovativeElements": [
+          "Three-column feature card layout with muted icon colors and accent text",
+          "Mixed media grid combining user photos with product screenshots"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-explore",
+        "userIntent": "Discover Luno's core features and understand security/trust benefits",
+        "entryPoints": [
+          "Navigation click from home",
+          "Direct URL to /explore section"
+        ],
+        "exitPoints": [
+          "Download app (iOS/Android)",
+          "Navigate to other sections via menu",
+          "Scroll down to see additional features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download text with app icons",
+            "action": "Redirect to app stores"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Switch between sections (Explore, Invest, Why Luno?, Learn)"
+          },
+          {
+            "element": "Feature cards",
+            "action": "Likely non-interactive; static information display"
+          }
+        ],
+        "informationArchitecture": "Hero message → feature list → product imagery. Vertical scroll reveals more. Three key benefits presented side-by-side for quick scanning.",
+        "frictionPoints": [
+          "Multiple image sections below may require scrolling to see full content",
+          "Feature card text relies on small icons; may not be immediately clear to all users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The secure way to buy, store and grow your crypto",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "text-link",
+            "placement": "Below headline with app store icons"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Deposit and withdraw instantly",
+            "context": "Feature card left",
+            "purpose": "Highlight convenience benefit"
+          },
+          {
+            "text": "Trusted by over 15 million customers",
+            "context": "Feature card center",
+            "purpose": "Build social proof and trust"
+          },
+          {
+            "text": "Industry-leading security processes",
+            "context": "Feature card right",
+            "purpose": "Emphasize safety and compliance"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "R1,756 (South African Rand, portfolio value in app screenshot)",
+          "15 million customers (trust metric)"
+        ],
+        "trustSignals": [
+          "Trusted by over 15 million customers",
+          "Industry-leading security processes",
+          "Instant deposit and withdrawal capabilities"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-5-explore.png",
+      "label": "Explore",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#1F2937",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, centered, 60+ px",
+          "bodyStyle": "Medium weight, muted blue-gray, centered, 16-18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, four main nav items, and authentication buttons",
+            "position": "Top of page",
+            "notable": "Clean layout with Sign in (outlined) and Sign up (solid blue) CTAs"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered text with headline, subheadline, and 3D illustrated assets",
+            "position": "Center-upper portion",
+            "notable": "Large headline with strong visual hierarchy"
+          },
+          {
+            "type": "Promotional banner",
+            "description": "Discovery Bank partnership announcement with blue background",
+            "position": "Bottom of visible area",
+            "notable": "Bright blue banner with white text and 'Read more' link, sticky presence"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn from logo → headline → subheadline → 3D assets → promotional banner",
+        "innovativeElements": [
+          "3D isometric illustration of architectural crypto coins and assets",
+          "Soft grayscale geometric shapes with colorful accent elements (blue, yellow, orange)",
+          "Layered depth effect in illustrations creating modern aesthetic"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Luno's value proposition for institutional investors",
+        "entryPoints": [
+          "Direct visit to luno.com",
+          "Explore navigation link"
+        ],
+        "exitPoints": [
+          "Sign up",
+          "Explore",
+          "Invest",
+          "Learn & Support",
+          "Promotional banner link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to account creation flow"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Scroll to relevant sections or navigate to sub-pages"
+          },
+          {
+            "element": "Discovery Bank banner link",
+            "action": "Navigate to partnership details"
+          }
+        ],
+        "informationArchitecture": "Hero-driven landing with value proposition centered, navigation distributed horizontally, promotional content anchored to bottom",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Giving an edge to institutional investors",
+        "subheadline": "Cutting-edge solutions built to help your business capitalise on crypto opportunities",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Sign in",
+            "style": "outlined-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Read more",
+            "style": "text-link",
+            "placement": "Discovery Bank banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Discovery Bank and Luno bring digital assets to traditional banking.",
+            "context": "Promotional banner at bottom",
+            "purpose": "Communicate partnership value and legitimacy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Discovery Bank partnership mention",
+          "Focus on 'institutional investors' positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-6-view-assets.png",
+      "label": "View assets",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#1F2937",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark navy, centered, 50+ px",
+          "bodyStyle": "Medium weight, slate blue, centered, 16-18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent header with logo, nav items, and auth buttons",
+            "position": "Top",
+            "notable": "Same pattern as previous screen for consistency"
+          },
+          {
+            "type": "Hero with centerpiece device mockup",
+            "description": "Central smartphone displaying trading interface with charts and BUY/SELL buttons",
+            "position": "Center-lower portion",
+            "notable": "Dark-themed mobile app mockup surrounded by 3D analytical visualizations"
+          },
+          {
+            "type": "3D data visualization landscape",
+            "description": "Isometric charts, coins, pie charts, bar graphs, and toggle controls",
+            "position": "Surrounding the central device",
+            "notable": "Mix of grayscale geometry with orange, blue accent colors"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → subheadline → central device (primary focus) → surrounding analytical assets",
+        "innovativeElements": [
+          "Central dark-theme mobile mockup as focal point in light background",
+          "3D layered analytical tools creating immersive environment",
+          "Candlestick chart visualization inside mobile device",
+          "Interactive-looking toggle switches and pie charts integrated into scene"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand the crypto buying process and see app interface capabilities",
+        "entryPoints": [
+          "Landing page scroll",
+          "View assets section link"
+        ],
+        "exitPoints": [
+          "Sign up",
+          "Explore",
+          "Invest",
+          "Learn & Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation items",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Start account creation"
+          },
+          {
+            "element": "Mobile mockup",
+            "action": "Visual demonstration (non-interactive in landing context)"
+          }
+        ],
+        "informationArchitecture": "Sequential messaging: headline (action) → subheadline (benefit) → visual proof (device + environment)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Buy crypto in a few easy steps",
+        "subheadline": "Sign up and start investing in crypto",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right"
+          },
+          {
+            "text": "Sign in",
+            "style": "outlined-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Professional mobile app design showcased",
+          "Established trading interface (BUY/SELL buttons visible)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-7-predict.png",
+      "label": "Predict",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FDB856",
+          "#E879A0",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark navy, centered, 50+ px",
+          "bodyStyle": "Medium weight, muted blue-gray, centered, 14-16px",
+          "dataStyle": "Inline link text in blue for 'Terms apply'"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Standard header navigation",
+            "position": "Top",
+            "notable": "Consistent with previous screens"
+          },
+          {
+            "type": "Hero headline with incentive",
+            "description": "Prominent offer of monetary reward",
+            "position": "Upper center",
+            "notable": "Large dollar amount ($10,000) creates urgency"
+          },
+          {
+            "type": "3D gamified visualization",
+            "description": "Stylized bitcoin coins and dumbbell weights representing predictions/gains",
+            "position": "Center-lower",
+            "notable": "Prediction cards with usernames and price predictions overlaid on 3D objects"
+          },
+          {
+            "type": "Prediction cards",
+            "description": "Small white cards showing user predictions with blue icon and prediction value",
+            "position": "Overlaid on 3D scene",
+            "notable": "Showing Camilla's, Nolan's, and Franco's predictions as social proof"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline (action/incentive) → subheadline (explanation) → 3D visualization (gamification) → individual prediction cards (social proof)",
+        "innovativeElements": [
+          "Gamified prediction interface with 3D coin/dumbbell metaphor",
+          "Social proof through peer prediction display",
+          "Animated-feeling 3D objects suggesting mechanical/competition element",
+          "Color-coded prediction cards with user avatars"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Engage with price prediction game feature and understand gamification aspect of platform",
+        "entryPoints": [
+          "Landing page scroll",
+          "Price Predict section"
+        ],
+        "exitPoints": [
+          "Sign up",
+          "Navigate to other sections",
+          "Read Terms apply link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms apply link",
+            "action": "Navigate to terms and conditions"
+          },
+          {
+            "element": "Prediction cards",
+            "action": "Visual demonstration of user predictions"
+          },
+          {
+            "element": "Navigation and auth buttons",
+            "action": "Access platform or account functions"
+          }
+        ],
+        "informationArchitecture": "Incentive-driven messaging with gamification: large reward offer → explanation → peer participation → implied participation path",
+        "frictionPoints": [
+          "Terms apply disclaimer might reduce perceived value of offer"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Win up to $10,000 in Bitcoin",
+        "subheadline": "Ever wanted to put your crypto skills to the test? With Luno's Price Predict, you could get up to $10,000 in Bitcoin just by predicting the price. Terms apply.",
+        "ctas": [
+          {
+            "text": "Terms apply",
+            "style": "text-link",
+            "placement": "End of subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Camilla's Prediction $108 916",
+            "context": "Prediction card overlay",
+            "purpose": "Social proof - show real user participation"
+          },
+          {
+            "text": "Nolan's Prediction $96 782",
+            "context": "Prediction card overlay",
+            "purpose": "Social proof - demonstrate engagement"
+          },
+          {
+            "text": "Franco's Prediction $ 98 731",
+            "context": "Prediction card overlay",
+            "purpose": "Social proof - build credibility through peer participation"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "$10,000 (large incentive amount)",
+          "$108 916, $96 782, $98 731 (predicted price points)"
+        ],
+        "trustSignals": [
+          "Named user predictions with specific values",
+          "Gamification suggests active user community",
+          "Prize amount ($10,000) demonstrates platform commitment"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-11-careers.png",
+      "label": "Careers",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#DC143C"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, dark gray sans-serif; prominent and centered",
+          "bodyStyle": "Medium-weight gray sans-serif; readable paragraph text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error icon",
+            "description": "Large red circle with white X symbol",
+            "position": "Center of browser window mockup",
+            "notable": "Universal error indicator; high contrast and visibility"
+          },
+          {
+            "type": "Browser chrome mockup",
+            "description": "Simulated browser window with gray toolbar",
+            "position": "Upper third of screen",
+            "notable": "Contextualizes error as web-based blocking"
+          },
+          {
+            "type": "FAQ section",
+            "description": "Two-column layout with 'Why have I been blocked?' and 'What can I do to resolve this?'",
+            "position": "Bottom half",
+            "notable": "Provides helpful context and next steps"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error icon dominates center; heading text guides user; detailed explanations below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why access is denied and how to resolve it",
+        "entryPoints": [
+          "Attempted navigation to luno.com"
+        ],
+        "exitPoints": [
+          "Contact site owner",
+          "Use Cloudflare Ray ID"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error notification at top; contextual explanation in two Q&A sections",
+        "frictionPoints": [
+          "User is blocked from accessing the service",
+          "Resolution requires external action (email site owner)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sorry, you have been blocked",
+        "subheadline": "You are unable to access luno.com",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution.",
+            "context": "Why have I been blocked section",
+            "purpose": "Explains the technical reason for blocking"
+          },
+          {
+            "text": "You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+            "context": "What can I do to resolve this section",
+            "purpose": "Provides actionable next steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Cloudflare Ray ID reference"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Sorry, you have been blocked"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-12-bug-bounty.png",
+      "label": "Bug bounty",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F0F2FF",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "Very large, bold, dark navy sans-serif; centered and prominent",
+          "bodyStyle": "Medium, light blue-gray sans-serif; centered paragraphs with generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Luno logo, nav items (Explore, Invest, Why Luno?, Learn & Support), Sign in and Sign up buttons",
+            "position": "Top of page",
+            "notable": "Persistent header with authentication CTAs in primary blue"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline and descriptive text centered on light background",
+            "position": "Upper third",
+            "notable": "Clean, minimal design with generous white space"
+          },
+          {
+            "type": "Primary CTA button",
+            "description": "Bright blue 'Submit' button with rounded corners",
+            "position": "Center, below text",
+            "notable": "High contrast, clearly actionable"
+          },
+          {
+            "type": "Illustration",
+            "description": "3D isometric blocks in blue gradient on grid background",
+            "position": "Lower third",
+            "notable": "Modern, abstract security/tech metaphor"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline anchors attention; supporting text flows downward; CTA button guides action; illustration adds visual interest below",
+        "innovativeElements": [
+          "3D isometric illustration with grid backdrop; modern abstract security symbolism"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Report security vulnerabilities or participate in bug bounty program",
+        "entryPoints": [
+          "Navigation from main site",
+          "Security researcher discovery"
+        ],
+        "exitPoints": [
+          "Submit button → Bug bounty platform",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Submit button",
+            "action": "Initiates bug bounty submission or redirects to external platform"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections of Luno site"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Redirect to account creation"
+          }
+        ],
+        "informationArchitecture": "Single-purpose page with headline, explanation, value proposition, and clear CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Our bug bounty program",
+        "subheadline": "If you've discovered a potential vulnerability or security issue, please share it through our public bug bounty program on Bugcrowd.",
+        "ctas": [
+          {
+            "text": "Submit",
+            "style": "primary-button",
+            "placement": "Center, below main text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bugcrowd provides a structured, rewards-driven environment that ensures your efforts are recognised and responsibly addressed.",
+            "context": "Middle of page",
+            "purpose": "Explains benefits of using Bugcrowd platform"
+          },
+          {
+            "text": "Thank you for helping build a safer and more secure Luno app.",
+            "context": "Below main explanation",
+            "purpose": "Gratitude and social proof; emphasizes security commitment"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Reference to Bugcrowd platform",
+          "Emphasis on structured rewards and responsible disclosure"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-13-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052FF",
+          "#1F3A73"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, dark navy sans-serif; left-aligned on right panel",
+          "bodyStyle": "Medium, gray sans-serif; conversational and friendly",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with Luno logo, nav menu, and auth buttons",
+            "position": "Top of page",
+            "notable": "Consistent with other pages; persistent navigation"
+          },
+          {
+            "type": "Illustration",
+            "description": "3D isometric magnifying glass over stacked papers with blue accents",
+            "position": "Left side, vertically centered",
+            "notable": "Search/discovery metaphor; modern 3D rendering"
+          },
+          {
+            "type": "Error content panel",
+            "description": "Right-aligned text with headline, subheadline, and button",
+            "position": "Right side, vertically centered",
+            "notable": "Clean, scannable layout with clear CTA"
+          },
+          {
+            "type": "Secondary CTA button",
+            "description": "Blue 'Home' button with rounded corners",
+            "position": "Right panel, below text",
+            "notable": "High contrast, clearly actionable"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Illustration draws eye; headline on right anchors attention; subheadline provides context; button offers clear next action",
+        "innovativeElements": [
+          "Playful 404 error with casual tone; balanced split layout with illustration and text"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand page doesn't exist and return to valid navigation",
+        "entryPoints": [
+          "Mistyped URL",
+          "Broken link",
+          "Dead navigation path"
+        ],
+        "exitPoints": [
+          "Home button → Return to homepage",
+          "Navigation menu → Browse other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Home button",
+            "action": "Navigate back to homepage"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Standard 404 page with empathetic messaging, visual break from seriousness, and immediate recovery path",
+        "frictionPoints": [
+          "User attempted to access non-existent page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Well, this is awkward.",
+        "subheadline": "Seems you're in the wrong block. Home is just a click away.",
+        "ctas": [
+          {
+            "text": "Home",
+            "style": "primary-button",
+            "placement": "Right panel, below subheading"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Well, this is awkward.",
+          "Seems you're in the wrong block. Home is just a click away."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/luno-home-15-explore-page.png",
+      "label": "explore page",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Large serif bold (404 Not Found in ~48px)",
+          "bodyStyle": "Small sans-serif (nginx text)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-heading",
+            "description": "404 Not Found message",
+            "position": "top-center",
+            "notable": "Minimal default server error page"
+          },
+          {
+            "type": "divider",
+            "description": "Horizontal line separator",
+            "position": "below heading",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal - single centered heading with server identifier below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to navigate to a page that doesn't exist or is not available",
+        "entryPoints": [
+          "Direct navigation to invalid URL",
+          "Broken link from navigation"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Manual URL entry"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Standard HTTP error response with minimal context",
+        "frictionPoints": [
+          "No actionable guidance provided",
+          "No links to return to valid pages",
+          "No explanation of what went wrong"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "nginx",
+            "context": "Below main heading",
+            "purpose": "Identifies the web server software"
+          }
+        ],
+        "tone": "technical-minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404 Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-onboarding-1-sign-in.png",
+      "label": "Sign in",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#1a1a2e"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (Sign in with your email)",
+          "bodyStyle": "Regular sans-serif, medium",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "icon",
+            "description": "Envelope icon with letter illustration",
+            "position": "top-center of modal",
+            "notable": "Friendly, branded visual signal for email authentication"
+          },
+          {
+            "type": "input-field",
+            "description": "Email text input with blue border",
+            "position": "center",
+            "notable": "Clear focus state with rounded corners"
+          },
+          {
+            "type": "primary-button",
+            "description": "NEXT button in bright blue",
+            "position": "below input",
+            "notable": "Full-width, rounded, high contrast"
+          },
+          {
+            "type": "text-link",
+            "description": "HAVING TROUBLE link",
+            "position": "below primary button",
+            "notable": "Blue color matching brand"
+          },
+          {
+            "type": "social-auth-buttons",
+            "description": "Continue with Apple and Google buttons",
+            "position": "bottom of modal",
+            "notable": "Apple is black, Google has outline style - clear visual differentiation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong focus on email input as primary path, social auth as secondary option",
+        "innovativeElements": [
+          "Icon-first design pattern",
+          "Dual authentication paths with clear visual hierarchy"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Sign into existing Luno account via email",
+        "entryPoints": [
+          "Sign In button from header",
+          "Direct navigation to login"
+        ],
+        "exitPoints": [
+          "NEXT button to password entry",
+          "Continue with Apple",
+          "Continue with Google",
+          "HAVING TROUBLE link for account recovery"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Capture user email address"
+          },
+          {
+            "element": "NEXT button",
+            "action": "Proceed to password verification"
+          },
+          {
+            "element": "HAVING TROUBLE link",
+            "action": "Navigate to account recovery flow"
+          },
+          {
+            "element": "Continue with Apple",
+            "action": "Initiate Apple OAuth flow"
+          },
+          {
+            "element": "Continue with Google",
+            "action": "Initiate Google OAuth flow"
+          }
+        ],
+        "informationArchitecture": "Email-first with social auth alternatives; support link for friction recovery",
+        "frictionPoints": [
+          "Two-step email/password entry (not one-step)",
+          "No password recovery visible upfront"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sign in with your email",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "NEXT",
+            "style": "primary-button",
+            "placement": "center below input"
+          },
+          {
+            "text": "HAVING TROUBLE",
+            "style": "text-link",
+            "placement": "center below primary button"
+          },
+          {
+            "text": "Continue With Apple",
+            "style": "secondary-button",
+            "placement": "bottom of modal"
+          },
+          {
+            "text": "Continue With Google",
+            "style": "secondary-button",
+            "placement": "bottom of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "or sign in with your social account",
+            "context": "Above social auth buttons",
+            "purpose": "Explains alternative authentication method"
+          }
+        ],
+        "tone": "friendly-professional",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Luno branding in header",
+          "Social auth partnerships (Apple, Google)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-onboarding-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (Create your account)",
+          "bodyStyle": "Regular sans-serif, medium (body text and links)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Luno logo with help and close icons",
+            "position": "top-left and top-right",
+            "notable": "Minimal header with contextual help"
+          },
+          {
+            "type": "heading",
+            "description": "Create your account",
+            "position": "top-center",
+            "notable": "Large, clear primary action"
+          },
+          {
+            "type": "login-link",
+            "description": "Already have one? Log In",
+            "position": "below heading",
+            "notable": "Light gray text with blue link for account switcher"
+          },
+          {
+            "type": "input-field",
+            "description": "Email input with subtle border",
+            "position": "center",
+            "notable": "Clean, minimal styling"
+          },
+          {
+            "type": "collapsible-section",
+            "description": "Do you need a business account? Sign up here",
+            "position": "below email input",
+            "notable": "Secondary account type option with link"
+          },
+          {
+            "type": "legal-text",
+            "description": "Terms of use, privacy policy acknowledgment",
+            "position": "below input",
+            "notable": "Links embedded in text, compact representation"
+          },
+          {
+            "type": "primary-button",
+            "description": "Next button in bright blue",
+            "position": "bottom",
+            "notable": "Full-width, rounded"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Single form focused with legal/compliance text below fold",
+        "innovativeElements": [
+          "Business account toggle as secondary flow",
+          "Legal consent inline with form rather than separate modal"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create new Luno account with email address",
+        "entryPoints": [
+          "CREATE ACCOUNT button from header",
+          "Sign-in page for new users"
+        ],
+        "exitPoints": [
+          "Next button to password/verification step",
+          "Log In link to existing account flow",
+          "Sign up here link to business account flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Capture email for new account"
+          },
+          {
+            "element": "Next button",
+            "action": "Proceed to next onboarding step"
+          },
+          {
+            "element": "Log In link",
+            "action": "Switch to sign-in flow"
+          },
+          {
+            "element": "Sign up here link",
+            "action": "Navigate to business account creation"
+          },
+          {
+            "element": "terms of use link",
+            "action": "Open terms document"
+          },
+          {
+            "element": "privacy policy link",
+            "action": "Open privacy policy document"
+          }
+        ],
+        "informationArchitecture": "Linear form with optional business account branch; legal links provide additional context without blocking flow",
+        "frictionPoints": [
+          "Dense legal text may deter some users",
+          "No indication of next steps after clicking Next"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Create your account",
+        "subheadline": "Already have one? Log In",
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "bottom-center"
+          },
+          {
+            "text": "Log In",
+            "style": "text-link",
+            "placement": "top-right of headline"
+          },
+          {
+            "text": "Sign up here",
+            "style": "text-link",
+            "placement": "after business account question"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Do you need a business account?",
+            "context": "Below email input",
+            "purpose": "Offers alternative account type for B2B users"
+          },
+          {
+            "text": "By creating an account, I accept the terms of use, and consent to the processing of my personal and biometric data as stated in the privacy policy.",
+            "context": "Below input fields",
+            "purpose": "Legal compliance and consent capture"
+          }
+        ],
+        "tone": "professional-friendly",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Legal compliance text referencing terms and privacy policy",
+          "Luno branding"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-1-explore.png",
+      "label": "Explore",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#0052FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large, centered, sans-serif, white text on black background",
+          "bodyStyle": "Medium weight, centered, light gray on black",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal navigation with logo, menu items, and auth buttons",
+            "position": "top of page",
+            "notable": "Clean contrast with white nav on black, blue primary CTA"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered headline with subheading and product imagery",
+            "position": "center-screen",
+            "notable": "Minimalist design with MacBook product visualization"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down: navigation → hero headline → subheading → product image at bottom",
+        "innovativeElements": [
+          "3D perspective MacBook visualization with subtle shadow/depth",
+          "High contrast black background emphasizes white headline text"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Luno's crypto trading platform capabilities",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign click",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Sign up button (top right)",
+          "Explore navigation link",
+          "Invest navigation link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigates to account creation flow"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Navigates to login page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Scroll to or navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Single-page hero layout introducing value proposition before deeper exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "High-performance crypto investing",
+        "subheadline": "Get the most out of your crypto trading with an exchange built to deliver",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top right header"
+          },
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Explore",
+            "context": "navigation menu",
+            "purpose": "Guide user to market exploration section"
+          },
+          {
+            "text": "Invest",
+            "context": "navigation menu",
+            "purpose": "Guide user to investment features"
+          },
+          {
+            "text": "Why Luno?",
+            "context": "navigation menu",
+            "purpose": "Position unique value proposition"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-2-trade-now.png",
+      "label": "Trade now",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F2942",
+          "#0052FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Small uppercase labels, technical sans-serif",
+          "bodyStyle": "Monospace for prices and data, regular sans-serif for labels",
+          "dataStyle": "Monospace with color coding: green for increases, red for decreases"
+        },
+        "components": [
+          {
+            "type": "left-sidebar-navigation",
+            "description": "Vertical icon-based navigation with Home, Trade, Orders, Explore, Rewards, Portfolio",
+            "position": "left edge",
+            "notable": "Icon-only design with minimal labels, professional trading interface pattern"
+          },
+          {
+            "type": "chart-area",
+            "description": "Candlestick chart with technical indicators and trading view controls",
+            "position": "center-left, takes 60% width",
+            "notable": "Professional trading chart with volume, time selectors (5y, 1y, 3m, etc.)"
+          },
+          {
+            "type": "order-book-panel",
+            "description": "Right panel showing order book with buy/sell prices in red/green columns",
+            "position": "right, top portion",
+            "notable": "Real-time price levels with color-coded buy/sell amounts"
+          },
+          {
+            "type": "trading-form",
+            "description": "Buy/Sell toggle with limit/market/stop-limit options, amount inputs",
+            "position": "right, middle",
+            "notable": "Quick percentage buttons (25%, 50%, 75%, 100%) for position sizing"
+          },
+          {
+            "type": "recent-trades-panel",
+            "description": "Scrollable table of recent executed trades with time, price, amount",
+            "position": "right, bottom",
+            "notable": "Live-updating trade history showing market activity"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Multi-focal: chart dominates left side, order book and trading controls share right side, recent trades anchor bottom",
+        "innovativeElements": [
+          "Split real-time chart view with depth/volume indicators",
+          "Inline position sizing with percentage quick-select buttons",
+          "Color-coded red/green throughout for quick directional scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Execute a crypto trade (buy ETH with BTC) by analyzing market data and placing an order",
+        "entryPoints": [
+          "Click Trade in sidebar",
+          "Select pair from Explore",
+          "Continue from chart view"
+        ],
+        "exitPoints": [
+          "Click SIGN UP or SIGN IN to proceed with order",
+          "Navigate to different pair via dropdown",
+          "Access Orders, Assets, or other sidebar items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pair selector (ETH/BTC dropdown)",
+            "action": "Changes displayed chart and order book"
+          },
+          {
+            "element": "Chart timeframe buttons (1h, 5y, 1y, etc.)",
+            "action": "Updates chart granularity"
+          },
+          {
+            "element": "Indicators button",
+            "action": "Opens technical analysis tools"
+          },
+          {
+            "element": "BUY/SELL toggle",
+            "action": "Switches between buy and sell mode"
+          },
+          {
+            "element": "Limit/Market/Stop-limit buttons",
+            "action": "Changes order type"
+          },
+          {
+            "element": "Amount percentage buttons (25%, 50%, 75%, 100%)",
+            "action": "Pre-fills amount based on balance"
+          },
+          {
+            "element": "SIGN UP / SIGN IN buttons",
+            "action": "Requires authentication before order submission"
+          }
+        ],
+        "informationArchitecture": "Professional trading platform: real-time data (chart + order book) → user decision (order form) → authentication gate → execution",
+        "frictionPoints": [
+          "Authentication required blocks non-logged-in users from trading",
+          "Zero balances shown may confuse users about actual trading capability"
+        ],
+        "progressIndicators": [
+          "Balance display showing actual holdings",
+          "Cost and Fee calculations updated in real-time"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "right panel, center"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "right panel, below sign up"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LAST TRADED PRICE",
+            "context": "top data row",
+            "purpose": "Label for current market price"
+          },
+          {
+            "text": "24H CHANGE / 24H HIGH / 24H LOW / 24H VOLUME",
+            "context": "top data row headers",
+            "purpose": "Display key market metrics"
+          },
+          {
+            "text": "TRADINGVIEW / DEPTH",
+            "context": "chart area tabs",
+            "purpose": "Toggle between chart view types"
+          },
+          {
+            "text": "Time in force",
+            "context": "trading form label",
+            "purpose": "Explain order duration settings"
+          },
+          {
+            "text": "Balance: / Cost: / Fee: / Buy total:",
+            "context": "trading form right column",
+            "purpose": "Display account impact of trade"
+          },
+          {
+            "text": "Post-only order",
+            "context": "trading form checkbox",
+            "purpose": "Explain advanced order option"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "BTC 0.029762 (price format)",
+          "0.03% (percentage change with +/- symbol)",
+          "ETH 8.69 (volume)",
+          "20:21 (time format HH:MM)",
+          "$0.029762 (price with currency)"
+        ],
+        "trustSignals": [
+          "Real-time order book with live price levels",
+          "Recent trades execution history visible",
+          "Professional trading interface (TradingView integration)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-3-trade-now-depth-tab.png",
+      "label": "Trade now — Depth tab",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F2942",
+          "#00D4AA",
+          "#FF4444"
+        ],
+        "typography": {
+          "headingStyle": "Small uppercase labels, technical sans-serif",
+          "bodyStyle": "Monospace for prices, regular sans-serif for labels",
+          "dataStyle": "Numeric depth visualization with color gradient (green/teal for bid, red for ask)"
+        },
+        "components": [
+          {
+            "type": "depth-chart",
+            "description": "Area chart showing order book depth, buy orders (green/teal) on left, sell orders (red) on right",
+            "position": "center-left, takes 60% width",
+            "notable": "Stacked area visualization makes order book liquidity immediately apparent, with sharp cliff showing market structure"
+          },
+          {
+            "type": "y-axis-price-scale",
+            "description": "Logarithmic price scale on left side of chart",
+            "position": "left of chart",
+            "notable": "Shows magnitude of price range in cumulative order depth"
+          },
+          {
+            "type": "x-axis-price-level",
+            "description": "Price level scale at bottom showing actual bid/ask prices",
+            "position": "bottom of chart",
+            "notable": "Horizontal axis shows specific price points where orders are concentrated"
+          },
+          {
+            "type": "order-book-panel",
+            "description": "Right panel showing order book with buy/sell prices",
+            "position": "right, top portion",
+            "notable": "Traditional limit order book under the depth chart"
+          },
+          {
+            "type": "trading-form",
+            "description": "Buy/Sell trading interface with order type and amount controls",
+            "position": "right, middle",
+            "notable": "Identical to previous screen, positioned for quick execution"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Depth chart dominates left side with clear visual representation of liquidity, order book reference on right, trading controls below",
+        "innovativeElements": [
+          "Gradient area chart replacing candlestick view for liquidity visualization",
+          "Clear visual representation of market impact at different price levels",
+          "Sharp discontinuities in depth reveal market structure and support/resistance"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Analyze liquidity depth before executing a trade to understand market impact",
+        "entryPoints": [
+          "Click DEPTH tab from candlestick chart view",
+          "Continue from previous trading screen"
+        ],
+        "exitPoints": [
+          "Return to TRADINGVIEW tab",
+          "Execute trade via form on right",
+          "Navigate to different pair"
+        ],
+        "interactiveElements": [
+          {
+            "element": "DEPTH tab",
+            "action": "Switches from candlestick chart to depth/liquidity view"
+          },
+          {
+            "element": "Chart area",
+            "action": "Displays interactive depth visualization (may be zoomable)"
+          },
+          {
+            "element": "Pair selector dropdown",
+            "action": "Changes displayed depth chart and order book"
+          },
+          {
+            "element": "BUY/SELL trading controls",
+            "action": "Submits order after authentication"
+          }
+        ],
+        "informationArchitecture": "Alternative market analysis view: depth visualization (liquidity) → order book reference → trading decision → form submission",
+        "frictionPoints": [
+          "Depth chart requires interpretation; not all users understand visual liquidity representation",
+          "Tab switching between TRADINGVIEW and DEPTH may interrupt analysis flow"
+        ],
+        "progressIndicators": [
+          "Balance and cost calculations in real-time"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "right panel"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "right panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "TRADINGVIEW / DEPTH",
+            "context": "chart area tabs",
+            "purpose": "Toggle between chart and depth visualization"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.0200 to 0.0400 (price axis)",
+          "Magnitude from 2.5 to 32.5 (y-axis order depth volume)"
+        ],
+        "trustSignals": [
+          "Professional depth chart visualization",
+          "Real-time liquidity data"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-4-trade-now-open-orders-tab.png",
+      "label": "Trade now — Open Orders tab",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f3a",
+          "#0066ff",
+          "#00d4aa",
+          "#ff3333"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, 12-14px, letter-spaced, muted gray for section headers",
+          "bodyStyle": "Monospace, 11-12px for numerical data, bright white/green/red for values",
+          "dataStyle": "Monospace font for prices and amounts, color-coded by direction (green for positive, red for sell orders)"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "Live price chart with dual-line overlay showing bid/ask spread",
+            "position": "left-center, occupies 40% of width",
+            "notable": "Large interactive chart with distinct green (buy) and red (sell) trend lines"
+          },
+          {
+            "type": "order-book-table",
+            "description": "Two-column table showing BTC prices and amounts, color-coded by side",
+            "position": "center, ~20% width",
+            "notable": "Prices in red (sell side), amounts in white, sorted with spread highlighted"
+          },
+          {
+            "type": "trading-panel",
+            "description": "Right sidebar with order placement form and recent trades list",
+            "position": "right, ~30% width",
+            "notable": "Toggle between BUY/SELL tabs with order type options (Limit/Market/Stop-limit)"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Horizontal tabs for Open Orders, Order History, Trade History, Assets",
+            "position": "bottom-left of chart",
+            "notable": "Open Orders underlined, indicating active tab state"
+          },
+          {
+            "type": "sidebar-navigation",
+            "description": "Vertical icon menu on far left",
+            "position": "left edge",
+            "notable": "Home, Trade, Orders, Explore, Rewards, Portfolio icons with labels"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates left side, order book draws secondary attention via contrasting colors, trading panel on right is tertiary focus with prominent blue CTA buttons",
+        "innovativeElements": [
+          "Dual trend line overlay on single candlestick chart to show bid/ask simultaneously",
+          "Color-coded order book with red/green to match buy/sell psychology",
+          "Floating recent trades section within trading panel reduces modal friction"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with form overlay",
+        "userIntent": "Monitor open orders and market conditions before executing new trades",
+        "entryPoints": [
+          "Clicked 'Trade' from main navigation",
+          "Selected trading pair (ETH/BTC)",
+          "Navigated to 'Open Orders' tab"
+        ],
+        "exitPoints": [
+          "Click to Order History tab",
+          "Click to Trade History tab",
+          "Click BUY/SELL to place new order",
+          "Click SIGN UP to create account"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Limit/Market/Stop-limit buttons",
+            "action": "Toggle order type for new trade"
+          },
+          {
+            "element": "25%/50%/75%/100% allocation buttons",
+            "action": "Quick-fill position sizing"
+          },
+          {
+            "element": "Good till cancelled dropdown",
+            "action": "Set order expiration policy"
+          },
+          {
+            "element": "Amount input field",
+            "action": "Specify trade size in ETH"
+          }
+        ],
+        "informationArchitecture": "Market data (chart, order book) on left; trading execution controls on right; historical order context below chart; authentication upsell at bottom",
+        "frictionPoints": [
+          "User must be signed in to place orders—SIGN UP/SIGN IN CTAs appear in multiple places but not prominent above fold",
+          "Real-time balance shown as 0.00000000 for all currencies, suggesting zero account value or demo state creates confusion",
+          "No visible confirmation between order placement and execution"
+        ],
+        "progressIndicators": [
+          "Tab underline shows active 'Open Orders' state",
+          "Time-based sorting in recent trades (20:21, 20:20, 20:08, etc.)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "ETH/BTC",
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "bottom-center of chart area"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "below SIGN UP"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Time in force",
+            "context": "above dropdown",
+            "purpose": "Label for order expiration setting"
+          },
+          {
+            "text": "Balance:",
+            "context": "right panel, below Cost",
+            "purpose": "Shows available BTC balance"
+          },
+          {
+            "text": "Good till cancelled",
+            "context": "Dropdown value",
+            "purpose": "Default order expiration policy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "BTC 0.029762 (6 decimals for price)",
+          "0.03% (green, right-aligned for 24h change)",
+          "ETH 8.69 (volume in units)",
+          "0.10 (order amounts in decimals)"
+        ],
+        "trustSignals": [
+          "Real-time market data (Last Traded Price, 24H metrics)",
+          "Transparent order book with visible bid-ask spread",
+          "Time-stamped recent trades (20:21, 20:20, etc.)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-5-trade-now-order-history-tab.png",
+      "label": "Trade now — Order History tab",
+      "flowType": "Swap",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f3a",
+          "#0066ff",
+          "#00d4aa",
+          "#ff3333"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, 12-14px, letter-spaced, muted gray",
+          "bodyStyle": "Monospace, 11-12px for data, white text",
+          "dataStyle": "Monospace for prices and amounts, color-coded by transaction type"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "Live price chart with bid/ask overlay",
+            "position": "left-center",
+            "notable": "Same as Open Orders tab—visual consistency maintained"
+          },
+          {
+            "type": "order-book-table",
+            "description": "Order book display",
+            "position": "center",
+            "notable": "Identical layout to previous tab"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Four tabs: Open Orders, Order History, Trade History, Assets",
+            "position": "bottom-left of chart",
+            "notable": "Order History tab now underlined to show active state (differs from previous screenshot)"
+          },
+          {
+            "type": "recent-trades-table",
+            "description": "Table showing historical orders with TIME, PRICE, AMOUNT columns",
+            "position": "right panel, lower section",
+            "notable": "Displays 10+ historical orders, mostly filled at same time (20:21, 20:20, etc.)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates; order book secondary; historical trades list provides audit trail in right sidebar",
+        "innovativeElements": [
+          "Tab switching without page reload—seamless data context switching",
+          "Consistent styling across order states (opened/filled/cancelled)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review past order execution to audit trading activity and verify fills",
+        "entryPoints": [
+          "Clicked 'Open Orders' tab, then 'Order History'",
+          "Navigated from Trade or Orders section"
+        ],
+        "exitPoints": [
+          "Return to Open Orders tab",
+          "Navigate to Trade History tab",
+          "Access Assets tab",
+          "Place new trade via right panel"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Order History tab",
+            "action": "Switch view to show completed/cancelled orders"
+          },
+          {
+            "element": "Horizontal scroll (if needed)",
+            "action": "View full order details in table"
+          }
+        ],
+        "informationArchitecture": "Historical audit trail displayed in chronological order (newest first); market context on left; trading form accessible on right for re-entry",
+        "frictionPoints": [
+          "No visible filters or search on order history—may be difficult to find specific orders if list grows large",
+          "No export or download option visible for tax/accounting purposes"
+        ],
+        "progressIndicators": [
+          "Tab underline shows 'Order History' is active",
+          "Time stamps on each order (20:21, 20:20, etc.)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "ETH/BTC",
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "bottom-left of chart"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "below SIGN UP"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "RECENT TRADES",
+            "context": "Section header in right panel",
+            "purpose": "Label for historical order list"
+          },
+          {
+            "text": "TIME",
+            "context": "Column header in order history table",
+            "purpose": "Sorts by execution time"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "20:21 (24-hour time format, HH:MM)",
+          "0.029762 (prices to 6 decimals)",
+          "0.10 (amounts in crypto units)"
+        ],
+        "trustSignals": [
+          "Complete order history with timestamps",
+          "Accurate pricing and execution data",
+          "Transparent trade amounts"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-6-trade-now-buy-tab.png",
+      "label": "Trade now — Buy tab",
+      "flowType": "Swap",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f3a",
+          "#0066ff",
+          "#00d4aa",
+          "#ff3333"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, 12-14px, letter-spaced, muted gray",
+          "bodyStyle": "Monospace, 11-12px for numbers, white/green/red text",
+          "dataStyle": "Monospace font, color-coded by direction (green for buy prices)"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "Live price chart with dual trend lines",
+            "position": "left-center, 40% width",
+            "notable": "Green line dominates (buy side focus consistent with BUY tab active state)"
+          },
+          {
+            "type": "order-book-table",
+            "description": "Bid/ask price levels with amounts",
+            "position": "center, 20% width",
+            "notable": "Red prices (sell side) and green prices (buy side) both visible; spread highlighted"
+          },
+          {
+            "type": "trading-form",
+            "description": "Right sidebar with BUY tab active, form fields for price and amount",
+            "position": "right, 30% width",
+            "notable": "BUY/SELL toggle tabs visible; BUY tab highlighted in cyan/teal"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "OPEN ORDERS, ORDER HISTORY, TRADE HISTORY, ASSETS tabs",
+            "position": "bottom-left of chart",
+            "notable": "TRADE HISTORY tab now underlined (differs from previous screenshots)"
+          },
+          {
+            "type": "amount-allocation-buttons",
+            "description": "Quick-fill buttons: 25%, 50%, 75%, 100%",
+            "position": "right panel, below Amount field",
+            "notable": "Allows rapid position sizing without manual input"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart + order book on left provide market context; BUY form on right is primary focus with large blue SIGN UP button",
+        "innovativeElements": [
+          "Buy/Sell tab toggle changes visual emphasis (green for buy, red for sell theme)",
+          "Real-time order book integration with trading form",
+          "Quick allocation buttons reduce friction for position sizing"
+        ]
+      },
+      "flow": {
+        "screenType": "form with market-data context",
+        "userIntent": "Place a buy order for ETH using BTC, with real-time price discovery",
+        "entryPoints": [
+          "Navigated from Trade section",
+          "Clicked BUY tab within trading panel",
+          "Previously viewed Open Orders or Order History"
+        ],
+        "exitPoints": [
+          "Click SIGN UP to create account and execute trade",
+          "Click SIGN IN to log in and execute trade",
+          "Return to Open Orders, Order History, or Trade History tabs",
+          "Switch to SELL tab to reverse order direction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BUY/SELL tabs",
+            "action": "Toggle order side and form context"
+          },
+          {
+            "element": "Limit/Market/Stop-limit buttons",
+            "action": "Select order type"
+          },
+          {
+            "element": "25%/50%/75%/100% buttons",
+            "action": "Auto-fill amount field based on wallet balance"
+          },
+          {
+            "element": "BTC Price input",
+            "action": "Set limit price for order"
+          },
+          {
+            "element": "ETH Amount input",
+            "action": "Specify quantity to purchase"
+          },
+          {
+            "element": "Good till cancelled dropdown",
+            "action": "Set order expiration"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Initiate account creation and trade submission"
+          }
+        ],
+        "informationArchitecture": "Market data (chart, order book) on left shows live pricing; trading form on right collects order parameters; upsell CTAs (SIGN UP/SIGN IN) block order execution until authenticated",
+        "frictionPoints": [
+          "Sign-up requirement creates high friction—user must create account before executing any trade",
+          "Balance shows 0.00000000 for all currencies, may confuse user about account state",
+          "No preview of final order before submission visible",
+          "Form requires signing up even to view what a trade would cost"
+        ],
+        "progressIndicators": [
+          "TRADE HISTORY tab underlined showing active context (differs from other tabs)",
+          "Order form shows estimated costs: Balance, Cost, Fee, Buy total"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "ETH/BTC",
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "right panel, prominent below form fields"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "below SIGN UP button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BTC Price",
+            "context": "Right panel, form label",
+            "purpose": "Clarifies input is for limit price setting"
+          },
+          {
+            "text": "Balance:",
+            "context": "Right panel, summary section",
+            "purpose": "Shows available BTC balance (currently 0)"
+          },
+          {
+            "text": "Cost:",
+            "context": "Right panel, summary",
+            "purpose": "Estimated total BTC cost of buy order"
+          },
+          {
+            "text": "Fee:",
+            "context": "Right panel, with info icon",
+            "purpose": "Trading fee disclosure with help info"
+          },
+          {
+            "text": "Buy total:",
+            "context": "Right panel, summary",
+            "purpose": "All-in cost including fees"
+          }
+        ],
+        "tone": "professional-technical with slight urgency (prominent SIGN UP CTA)",
+        "dataFormatting": [
+          "BTC 0.029762 (price to 6 decimals)",
+          "ETH amounts in decimal units",
+          "BTC 0.00000000 (zero balance display format)",
+          "0.029651, 0.029660, 0.029628 (order book price levels)"
+        ],
+        "trustSignals": [
+          "Real-time market data (LAST TRADED PRICE, 24H CHANGE, 24H HIGH/LOW/VOLUME)",
+          "Transparent fee disclosure",
+          "Live order book with visible bid-ask spread",
+          "Accurate balance and cost calculations"
+        ],
+        "jargonLevel": "intermediate-to-expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-staking-2-get-bundles.png",
+      "label": "Get bundles",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#FFFFFF",
+          "#F5F7FA"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark navy, center-aligned, bold weight",
+          "bodyStyle": "Medium sans-serif, muted blue-gray, center-aligned, supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with logo, nav items (Explore, Invest, Why Luno?, Learn & Support), and auth buttons",
+            "position": "top",
+            "notable": "Clean separation between product nav and authentication"
+          },
+          {
+            "type": "Hero heading",
+            "description": "Large tagline 'A smarter way to diversify'",
+            "position": "center-top",
+            "notable": "Simple, benefit-focused messaging"
+          },
+          {
+            "type": "Subheading",
+            "description": "Description of diversified portfolio investment",
+            "position": "center",
+            "notable": "Educational copy explaining the value proposition"
+          },
+          {
+            "type": "3D asset carousel",
+            "description": "Three cylindrical bundle visualizations with embedded crypto icons and gradient accents",
+            "position": "center-bottom",
+            "notable": "Premium 3D rendering creates product differentiation and visual interest"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down flow: logo → nav → hero headline → subheading → 3D assets. Eyes drawn center naturally.",
+        "innovativeElements": [
+          "3D rendered bundle cylinders with gradient and metallic finishes",
+          "Embedded Bitcoin icon with orange glow in center asset",
+          "Clean asymmetric asset positioning (left, center, right variation)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what bundle staking products Luno offers",
+        "entryPoints": [
+          "From main navigation 'Invest' menu",
+          "From external marketing campaign"
+        ],
+        "exitPoints": [
+          "Click 'Sign up' button (top-right)",
+          "Click 'Sign in' button (top-right)",
+          "Navigate to other main sections via nav bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Opens registration flow for new users"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Opens login for existing users"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to different product sections"
+          }
+        ],
+        "informationArchitecture": "Single-layer landing with headline value prop, supporting description, and visual asset showcase",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A smarter way to diversify",
+        "subheadline": "Invest in a diversified portfolio of top-performing assets that automatically tracks the market",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-staking-3-rewards-and-promotions.png",
+      "label": "Rewards and promotions",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#0052CC"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, left-aligned, bold",
+          "bodyStyle": "Regular sans-serif, dark gray, left-aligned, body text",
+          "dataStyle": "Date formatting (10 Jun 2025), inline links in blue"
+        },
+        "components": [
+          {
+            "type": "Main content panel",
+            "description": "Left-aligned column with terms, conditions, and program details",
+            "position": "left",
+            "notable": "Dense informational content with multiple sections and embedded links"
+          },
+          {
+            "type": "Sidebar navigation",
+            "description": "Right panel with Legal links and related documentation",
+            "position": "right",
+            "notable": "Contextual navigation linking to compliance and regulatory documents"
+          },
+          {
+            "type": "Section headers",
+            "description": "Prominent black headings for each major section (Rewards and promotions, Luno Rewards: the Rules, Referral details)",
+            "position": "main content",
+            "notable": "Clear visual separation of content blocks"
+          },
+          {
+            "type": "Timestamp",
+            "description": "'Last updated: 10 Jun 2025'",
+            "position": "top of main content",
+            "notable": "Indicates document freshness and compliance awareness"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Vertical scanning: title → timestamp → section headers → body text. Sidebar provides secondary navigation.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand reward program rules, eligibility, and referral mechanics",
+        "entryPoints": [
+          "From Invest section navigation",
+          "From Learn & Support menu",
+          "Direct link in referral context"
+        ],
+        "exitPoints": [
+          "Click sidebar links to Legal documents",
+          "Navigate back via breadcrumb or nav menu",
+          "Click external links (Terms of use, Privacy policy)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of use link",
+            "action": "Routes to terms document"
+          },
+          {
+            "element": "Privacy policy link",
+            "action": "Routes to privacy documentation"
+          },
+          {
+            "element": "Article link",
+            "action": "Routes to help center article"
+          },
+          {
+            "element": "Sidebar navigation links",
+            "action": "Routes to related legal documents"
+          }
+        ],
+        "informationArchitecture": "Main content area structured as hierarchical sections (heading > description > details). Sidebar acts as contextual legal navigation.",
+        "frictionPoints": [
+          "Dense text blocks may require scrolling on smaller screens",
+          "Multiple internal links could cause navigation confusion"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Rewards and promotions",
+        "subheadline": "The rules for earning rewards with Luno",
+        "ctas": [
+          {
+            "text": "this article",
+            "style": "text-link",
+            "placement": "in body paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 10 Jun 2025",
+            "context": "Below subheading",
+            "purpose": "Indicates document currency and regulatory compliance"
+          },
+          {
+            "text": "This page contains the terms and conditions for Luno's various reward programmes and promotions.",
+            "context": "Opening paragraph",
+            "purpose": "Sets context and scope for reader"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: DD Mon YYYY (10 Jun 2025)"
+        ],
+        "trustSignals": [
+          "Explicit mention of Terms of use and Privacy policy",
+          "Legal links sidebar with regulatory/compliance documents"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-1-about-us.png",
+      "label": "About us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark navy/black, center-aligned, bold",
+          "bodyStyle": "Large sans-serif, dark gray, center-aligned, supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top horizontal header with logo, nav items, and auth buttons",
+            "position": "top",
+            "notable": "Consistent with other screens in product"
+          },
+          {
+            "type": "Headline section",
+            "description": "Two-line center-aligned value proposition",
+            "position": "center-upper",
+            "notable": "Progressive disclosure of brand positioning"
+          },
+          {
+            "type": "Hero images",
+            "description": "Two lifestyle photographs (woman at desk, woman working in office)",
+            "position": "corners (top-right, bottom-left)",
+            "notable": "Asymmetric image placement creates visual balance and human connection"
+          },
+          {
+            "type": "Spacer",
+            "description": "Significant vertical whitespace dominates layout",
+            "position": "center",
+            "notable": "Breathing room emphasizes minimalism and premium positioning"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Extreme vertical focus on headlines with supporting imagery in corners. Eyes settle on text first, images provide context.",
+        "innovativeElements": [
+          "Asymmetric image placement (top-right and bottom-left)",
+          "Minimal text with maximal whitespace",
+          "Lifestyle photography over abstract/icon imagery"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Luno's mission, values, and company positioning",
+        "entryPoints": [
+          "From navigation menu or settings",
+          "From 'Why Luno?' section",
+          "From external about-page link"
+        ],
+        "exitPoints": [
+          "Click nav menu to explore other sections",
+          "Click Sign up/Sign in buttons",
+          "Scroll down to see additional company information (not visible in this crop)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Routes to different sections"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Opens registration flow"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Opens login flow"
+          }
+        ],
+        "informationArchitecture": "Single-layer presentation of mission/vision statements with supporting lifestyle imagery. Likely scrolls to reveal additional company details below.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The future of finance is here.",
+        "subheadline": "Accessible, transparent, and global.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-7-trade-now-sell-tab.png",
+      "label": "Trade now — Sell tab",
+      "flowType": "Swap",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#1a1f2e",
+          "#00d4ff",
+          "#ff4757"
+        ],
+        "typography": {
+          "headingStyle": "All-caps labels in light gray, minimal emphasis",
+          "bodyStyle": "Monospace numbers in white or colored text (red/green for values)",
+          "dataStyle": "Numeric values in monospace font, color-coded (red for prices, green for positive changes)"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left vertical nav with icons (Home, Trade, Orders, Explore, Rewards, Portfolio)",
+            "position": "left edge",
+            "notable": "Persistent navigation with 6 main sections"
+          },
+          {
+            "type": "price-chart",
+            "description": "Large candlestick chart with dual-axis overlay (green and red lines)",
+            "position": "center-left, 60% width",
+            "notable": "Shows both line and candle views with volume indicator below"
+          },
+          {
+            "type": "order-book",
+            "description": "Real-time order book with asks (red) and bids (green), price/amount columns",
+            "position": "right panel, 30% width",
+            "notable": "Color-coded by side with amount column on right"
+          },
+          {
+            "type": "trade-form",
+            "description": "BUY/SELL tab interface with order type buttons (Limit, Market, Stop-limit)",
+            "position": "right panel below order book",
+            "notable": "Dual input fields for amount and price with quick-fill percentage buttons (25%, 50%, 75%, 100%)"
+          },
+          {
+            "type": "recent-trades-table",
+            "description": "Scrollable table showing timestamp, price, amount",
+            "position": "right panel, bottom section",
+            "notable": "Time, price (red text), and amount columns with real-time updates"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates center-left; order book and form compete for attention on right; recent trades below",
+        "innovativeElements": [
+          "Dual-axis overlay of line and candlestick data on single chart",
+          "Quick-fill percentage buttons for rapid position sizing",
+          "Color-coded order book (red/green for ask/bid clarity)",
+          "Real-time trade ticker integrated into form area"
+        ]
+      },
+      "flow": {
+        "screenType": "trading-form",
+        "userIntent": "Execute a sell order in the ETH/BTC pair with real-time market data reference",
+        "entryPoints": [
+          "From Trade home via pair selection",
+          "From market alert notification",
+          "Direct link to specific trading pair"
+        ],
+        "exitPoints": [
+          "Sign up (bottom CTA)",
+          "Sign in (bottom CTA)",
+          "Switch to Buy tab",
+          "Switch trading pair via dropdown",
+          "Navigate to other sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BUY/SELL tabs",
+            "action": "Toggle between buying and selling interface"
+          },
+          {
+            "element": "Order type buttons (Limit/Market/Stop-limit)",
+            "action": "Switch order execution strategy"
+          },
+          {
+            "element": "Percentage buttons (25%, 50%, 75%, 100%)",
+            "action": "Auto-fill amount field with fraction of available balance"
+          },
+          {
+            "element": "Time in force dropdown",
+            "action": "Set order expiration (Good till cancelled)"
+          },
+          {
+            "element": "Chart zoom/timeframe (TRADINGVIEW toolbar)",
+            "action": "Adjust chart view and technical indicators"
+          }
+        ],
+        "informationArchitecture": "Left-to-right: navigation → price action → order execution. Chart provides context for trading decision; form enables execution; recent trades show liquidity.",
+        "frictionPoints": [
+          "Users must sign up/in before executing trades (prominent bottom CTAs for non-authenticated users)",
+          "Order book and form compete for space; may require scrolling on smaller screens",
+          "Technical indicator toolbar adds cognitive load for less-experienced traders"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "bottom center"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "bottom center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LAST TRADED PRICE",
+            "context": "header above price display",
+            "purpose": "Clarify that 0.029762 is the most recent trade price"
+          },
+          {
+            "text": "24H CHANGE / 24H HIGH / 24H LOW / 24H VOLUME",
+            "context": "header row above metrics",
+            "purpose": "Label key market statistics"
+          },
+          {
+            "text": "BTC PRICE / AMOUNT",
+            "context": "order book column headers",
+            "purpose": "Identify order book data columns"
+          },
+          {
+            "text": "Time in force",
+            "context": "form field label with info icon",
+            "purpose": "Explain order expiration logic"
+          },
+          {
+            "text": "Good till cancelled",
+            "context": "dropdown value",
+            "purpose": "Show default order duration setting"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Price: 0.029762 BTC (decimal to 6 places)",
+          "24H Change: +0.03% (percent sign with color indicator)",
+          "24H High/Low: 0.029931 / 0.029762 (same precision as price)",
+          "Volume: ETH 8.69",
+          "Amount in order form: 0.50, 1.97, 7.30 (decimal precision varies)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-swap-8-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#1a1f2e",
+          "#00d4ff",
+          "#ff4757",
+          "#1ecc71"
+        ],
+        "typography": {
+          "headingStyle": "Inline labels within chart (ticker symbol, OHLC values in monospace)",
+          "bodyStyle": "Monospace for all data; sans-serif for UI labels",
+          "dataStyle": "Numeric values in monospace, color-coded (red for down, green for up, white for neutral)"
+        },
+        "components": [
+          {
+            "type": "trading-toolbar",
+            "description": "Horizontal toolbar with timeframe buttons (1h, 1d, etc.), indicators toggle, drawing tools",
+            "position": "top-left of chart",
+            "notable": "Full technical analysis toolkit with 10+ tool options including trendline, Fibonacci, volume profile"
+          },
+          {
+            "type": "candlestick-chart",
+            "description": "Professional candlestick chart with volume bars below, OHLC display overlay",
+            "position": "center-left, 60% width",
+            "notable": "Shows 1-hour timeframe with detailed price action (red/green candles with wicks)"
+          },
+          {
+            "type": "chart-legend",
+            "description": "Inline chart info showing ticker, timeframe, OHLC values, change percentage, spread",
+            "position": "top-left within chart",
+            "notable": "Red box highlight on current price (0.029690); shows -0.50% in red to indicate down movement"
+          },
+          {
+            "type": "timeframe-selector",
+            "description": "Buttons for 5y, 1y, 3m, 1m, 5d, 1d with quick-select at bottom",
+            "position": "bottom-left of chart",
+            "notable": "12 different timeframe options including logarithmic scale toggle"
+          },
+          {
+            "type": "order-book",
+            "description": "Order book identical to previous screen with asks/bids",
+            "position": "right panel, 35% width",
+            "notable": "Highlights specific bid level (7.30 amount in red background)"
+          },
+          {
+            "type": "trade-form",
+            "description": "Identical Buy/Sell form with Limit/Market/Stop-limit options",
+            "position": "right panel below order book",
+            "notable": "Same UI as previous screen"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart and toolbar dominate left 60%; order book and form occupy right 35%; time display bottom-right of chart",
+        "innovativeElements": [
+          "Professional-grade technical analysis toolbar integrated into trading interface (Fibonacci, trend tools, volume profile)",
+          "Inline OHLC values displayed on chart overlay for quick reference",
+          "Timeframe selector with both short (5m, 1m) and long (1y, 5y) options",
+          "Visual price point indicator (red box on current price level)"
+        ]
+      },
+      "flow": {
+        "screenType": "trading-dashboard",
+        "userIntent": "Analyze price action using technical tools before executing a trade; compare 1h chart to order book",
+        "entryPoints": [
+          "From previous trade screen (same pair, expanded view)",
+          "From Markets section in sidebar",
+          "From price alert notification"
+        ],
+        "exitPoints": [
+          "Back to simplified trade view (click chart collapse or back button)",
+          "Switch to different pair via dropdown",
+          "Switch to different section via sidebar",
+          "Sign up/in to execute trade"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Drawing toolbar (trendline, Fibonacci, volume profile icons)",
+            "action": "Enable drawing mode for technical analysis annotations on chart"
+          },
+          {
+            "element": "Timeframe buttons (5y, 1y, 3m, 1m, 5d, 1d)",
+            "action": "Change chart timeframe; refresh candlestick data"
+          },
+          {
+            "element": "Indicators button",
+            "action": "Open technical indicator menu (RSI, MACD, etc.)"
+          },
+          {
+            "element": "Save button (top-right)",
+            "action": "Save chart view/annotations to user account"
+          },
+          {
+            "element": "Fullscreen button",
+            "action": "Expand chart to fill screen for detailed analysis"
+          },
+          {
+            "element": "Price alerts icon (top-right)",
+            "action": "Open price alert creation dialog"
+          }
+        ],
+        "informationArchitecture": "Technical analysis tools (left toolbar) → Chart data (center) → Order-by-order execution context (right). Timeframe selector bridges chart and execution layers.",
+        "frictionPoints": [
+          "Dense toolbar may overwhelm non-technical users",
+          "Chart and order book compete for screen space; requires horizontal scrolling on mobile",
+          "No obvious next step after analysis; user must manually switch to form or trading tab"
+        ],
+        "progressIndicators": [
+          "Current price highlighted in red box (0.029690)",
+          "Timeframe display at bottom-right shows time zone (UTC-5)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "bottom center"
+          },
+          {
+            "text": "SIGN IN",
+            "style": "text-link",
+            "placement": "bottom center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ETH/BTC - 1h - Luno",
+            "context": "chart legend top-left",
+            "purpose": "Identify trading pair, timeframe, and platform"
+          },
+          {
+            "text": "O 0.029812 H 0.029830 L 0.029690 C 0.029690 -0.00150 (-0.50%)",
+            "context": "inline chart data display",
+            "purpose": "Show OHLC values and change percentage for current period"
+          },
+          {
+            "text": "Volume 0.94",
+            "context": "bottom-left of chart",
+            "purpose": "Display trading volume for visible timeframe"
+          },
+          {
+            "text": "Price alerts",
+            "context": "button in top-right toolbar",
+            "purpose": "Label price alert feature"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "OHLC: 0.029812 (6 decimal places)",
+          "Change: -0.00150 (-0.50%) in red",
+          "Volume: 0.94 (2 decimal places)",
+          "Time display: 20:31:14 (UTC-5)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-staking-1-start-earning.png",
+      "label": "Start earning",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#0052cc",
+          "#ff6b35",
+          "#9d4edd"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif; dark navy/charcoal color; ~48px weight",
+          "bodyStyle": "Regular weight sans-serif; medium gray; ~18px size",
+          "dataStyle": "Metric badge with icon + label + percentage (+ 3%)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo (left), 4 menu items (Explore, Invest, Why Luno?, Learn & Support), and auth buttons (right)",
+            "position": "top edge",
+            "notable": "Clean, minimal nav; Sign in (outlined button) and Sign up (filled blue button)"
+          },
+          {
+            "type": "hero-section",
+            "description": "Full-width white background with centered text content and illustration",
+            "position": "above fold",
+            "notable": "Vertical stack: headline, subheadline, CTA button, 3D illustration"
+          },
+          {
+            "type": "headline",
+            "description": "Main value proposition text",
+            "position": "center of hero",
+            "notable": "Dark text on white; single line ~60px height"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Colorful 3D bar chart visualization with stacked blocks (blue, white, orange, purple)",
+            "position": "below copy, center",
+            "notable": "Abstract representation of growth/earnings; semi-realistic texturing"
+          },
+          {
+            "type": "product-card",
+            "description": "White card with icon badge, label, benefit amount; overlaid on illustration",
+            "position": "bottom-right of illustration",
+            "notable": "Shows Ethereum staking reward (+3%); blue icon with chart symbol"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline (largest) → subheadline → CTA button → illustration (largest visual element) → product card (smallest but colored)",
+        "innovativeElements": [
+          "3D isometric illustration of stacked blocks as growth metaphor",
+          "Product card overlaid on illustration (depth/layering effect)",
+          "Color-coded blocks (brand blue, orange, purple) suggesting product variety",
+          "Percentage badge (+3%) as social proof of return"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page",
+        "userIntent": "Introduce staking feature and convince user to begin earning on crypto holdings",
+        "entryPoints": [
+          "From 'Explore' or 'Invest' menu navigation",
+          "From email campaign or marketing funnel",
+          "Direct landing page URL"
+        ],
+        "exitPoints": [
+          "Click 'Start earning' button → staking product page or onboarding flow",
+          "Click 'Invest' nav → products/offerings page",
+          "Click 'Learn & Support' → educational content",
+          "Sign up → account creation flow",
+          "Sign in → dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start earning button",
+            "action": "Navigate to staking product page or authentication screen (probably sign up)"
+          },
+          {
+            "element": "Sign up button (nav)",
+            "action": "Open sign up modal or page"
+          },
+          {
+            "element": "Sign in button (nav)",
+            "action": "Open sign in modal or page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections (Explore, Invest, Why Luno?, Learn & Support)"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with 4 key sections; hero section communicates core value (passive income via staking); single CTA pushes user toward conversion",
+        "frictionPoints": [
+          "Limited specificity about how staking works (users must click CTA or navigate elsewhere)",
+          "No visible trust signals on this screen (no TVL, audit info, or risk disclaimers)",
+          "Single product shown (Ethereum); may not address users interested in other assets"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A smarter way to grow your crypto",
+        "subheadline": "Earn up to 11% a year in just a couple of taps with staking",
+        "ctas": [
+          {
+            "text": "Start earning",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Sign in",
+            "style": "outline-button",
+            "placement": "top-right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Explore",
+            "context": "main nav",
+            "purpose": "Navigate to browse/discovery section"
+          },
+          {
+            "text": "Invest",
+            "context": "main nav",
+            "purpose": "Navigate to investment products"
+          },
+          {
+            "text": "Why Luno?",
+            "context": "main nav",
+            "purpose": "Highlight differentiators/value proposition"
+          },
+          {
+            "text": "Learn & Support",
+            "context": "main nav",
+            "purpose": "Access help, education, and documentation"
+          },
+          {
+            "text": "Staking rewards",
+            "context": "product card label",
+            "purpose": "Name the staking product"
+          },
+          {
+            "text": "+ 3%",
+            "context": "product card, next to Ethereum label",
+            "purpose": "Display expected annual return percentage"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "Return rate: up to 11% a year (headline number)",
+          "Ethereum specific rate: + 3%"
+        ],
+        "trustSignals": [
+          "Specific return rates (11% maximum, 3% for Ethereum) suggest transparency and realistic expectations",
+          "Mention of 'just a couple of taps' emphasizes ease/accessibility"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-2-compliance-information.png",
+      "label": "Compliance information",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 32px+, strong hierarchy",
+          "bodyStyle": "Medium gray, 16px, generous line-height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Luno logo + main nav (Explore, Invest, Why Luno?, Learn & Support) + auth buttons",
+            "position": "top",
+            "notable": "Persistent header with primary action (Sign up) in bright blue"
+          },
+          {
+            "type": "Main Content Panel",
+            "description": "Left-aligned article with heading, subheading, update timestamp, and long-form compliance text",
+            "position": "center-left",
+            "notable": "Clear hierarchical structure with bold subheadings breaking up dense text"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Right-aligned 'Legal' section with blue text links to various compliance documents",
+            "position": "right",
+            "notable": "Persistent sidebar with contextual legal links, no primary action"
+          },
+          {
+            "type": "Bullet List",
+            "description": "Key components of AML/CTF framework listed with bold term + explanation",
+            "position": "center-left, lower",
+            "notable": "Mixed formatting with bold labels and regular text explanations"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-to-right scan: large heading draws eye, subheading explains context, body text cascades down, sidebar provides secondary navigation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Luno's AML and KYC compliance processes and regulatory approach",
+        "entryPoints": [
+          "Learn & Support nav",
+          "Settings/Legal section",
+          "Sidebar Legal link"
+        ],
+        "exitPoints": [
+          "Navigate to other Legal docs via sidebar",
+          "Return to main nav sections",
+          "Sign up/Sign in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Legal sidebar links",
+            "action": "Navigate to related compliance documents"
+          },
+          {
+            "element": "Main nav items",
+            "action": "Navigate to Explore, Invest, Why Luno?, Learn & Support"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Initiate account creation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: primary content in main panel, supplementary legal links in sidebar, persistent navigation at top",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Last updated: 01 Mar 2021"
+        ]
+      },
+      "copy": {
+        "headline": "Compliance Information",
+        "subheadline": "Luno's approach to ensuring compliance in the industry",
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 01 Mar 2021",
+            "context": "Below subheading",
+            "purpose": "Establishes content freshness and trust"
+          },
+          {
+            "text": "Money laundering is the process whereby...",
+            "context": "First paragraph",
+            "purpose": "Defines terminology for audience clarity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "AML framework implementation",
+          "CTF legislation compliance",
+          "Regulatory alignment",
+          "Internal systems and controls"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-3-customer-protection.png",
+      "label": "Customer protection",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 32px+, strong weight",
+          "bodyStyle": "Medium gray, 16px, consistent line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Consistent top navigation bar with Luno branding, main menu, and auth controls",
+            "position": "top",
+            "notable": "Identical to previous screen, maintains consistency"
+          },
+          {
+            "type": "Main Content Panel",
+            "description": "Instructional content with headline, subheadline, and detailed security guidance",
+            "position": "center-left",
+            "notable": "Content focuses on user actions to prevent account compromise"
+          },
+          {
+            "type": "Definition Lists",
+            "description": "Pairs security threats with practical education on how they work",
+            "position": "center-left, lower"
+          },
+          {
+            "type": "Legal Sidebar",
+            "description": "Right-aligned blue text links to compliance and privacy documents",
+            "position": "right",
+            "notable": "Consistent sidebar with previous screen"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline commands attention, subheading sets user context, bold terms break up paragraphs and guide scanning",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "educational-content",
+        "userIntent": "Learn how to secure their Luno account and avoid scams/theft",
+        "entryPoints": [
+          "Learn & Support nav",
+          "Customer protection section",
+          "Security concern"
+        ],
+        "exitPoints": [
+          "Navigate to other Legal/Help sections via sidebar",
+          "Return to main navigation",
+          "Contact support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar legal links",
+            "action": "Navigate to related compliance docs"
+          },
+          {
+            "element": "Main nav",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Sign up/Sign in buttons",
+            "action": "Account authentication"
+          }
+        ],
+        "informationArchitecture": "Educational with defensive structure: headline frames the goal (keep account safe), subheading states the problem (compromise risk), body explains mechanisms and mitigations",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Last updated: 19 Jan 2021"
+        ]
+      },
+      "copy": {
+        "headline": "How to keep your account safe",
+        "subheadline": "Avoid having your account compromised",
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 19 Jan 2021",
+            "context": "Below subheading",
+            "purpose": "Trust signal: content is current"
+          },
+          {
+            "text": "Luno follows strict internal security practices aimed at keeping your cryptocurrency safe",
+            "context": "Opening paragraph",
+            "purpose": "Establishes company commitment before asking for user responsibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Internal security practices",
+          "Detailed threat education",
+          "Practical prevention guidance"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-4-complaints-policy.png",
+      "label": "Complaints policy",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 32px+ heading; numbered sections in 24px+",
+          "bodyStyle": "Medium gray, 16px, clean readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Consistent persistent header with logo, nav, and auth buttons",
+            "position": "top",
+            "notable": "Standard branding and navigation maintained across all settings screens"
+          },
+          {
+            "type": "Content Panel",
+            "description": "Main heading, subheading, update date, then table of contents, followed by detailed sections",
+            "position": "center-left",
+            "notable": "TOC provides quick navigation to 10 sections; numbered structure aids scanning"
+          },
+          {
+            "type": "Numbered List (TOC)",
+            "description": "10-item table of contents with section headings",
+            "position": "center-left, upper-mid",
+            "notable": "Acts as both outline and navigation aid"
+          },
+          {
+            "type": "Section Headers",
+            "description": "Large numbered section headings (e.g., '1. The purpose of this Complaints Process')",
+            "position": "center-left, repeating",
+            "notable": "Consistent formatting with numbered style for easy reference"
+          },
+          {
+            "type": "Legal Sidebar",
+            "description": "Right sidebar with Legal section and blue text links",
+            "position": "right",
+            "notable": "Persistent design element across all three settings screens"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline → subheading frames context → TOC provides roadmap → numbered sections guide deep reading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Luno's complaints process and how to submit feedback or grievances",
+        "entryPoints": [
+          "Learn & Support nav",
+          "Customer care section",
+          "Complaints inquiry"
+        ],
+        "exitPoints": [
+          "Navigate to other Legal docs via sidebar",
+          "Return to main navigation",
+          "Contact Luno"
+        ],
+        "interactiveElements": [
+          {
+            "element": "TOC links (implicit/numbered sections)",
+            "action": "Jump to relevant section of document"
+          },
+          {
+            "element": "Sidebar Legal links",
+            "action": "Navigate to other compliance documents"
+          },
+          {
+            "element": "Main nav",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Auth buttons",
+            "action": "Sign in or register"
+          }
+        ],
+        "informationArchitecture": "Document structure with TOC: headline sets context, subheading explains purpose, table of contents provides navigation, numbered sections allow systematic reading or targeted lookup",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Last updated: 01 Mar 2021"
+        ]
+      },
+      "copy": {
+        "headline": "Complaints Process",
+        "subheadline": "What you should do if you have a complaint",
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 01 Mar 2021",
+            "context": "Below subheading",
+            "purpose": "Establishes content currency"
+          },
+          {
+            "text": "We know that your honest feedback is critical to developing a sustainable business, so we've implemented a complaints process for you to let us know if you're unhappy with our service or product.",
+            "context": "Section 1 opening",
+            "purpose": "Reframes complaints as valued input, builds trust in the process"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal complaints process",
+          "External adjudication option",
+          "Legal action transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-5-risk-warning.png",
+      "label": "Risk warning",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#F5F7FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (~32px), dark gray/black, high contrast",
+          "bodyStyle": "Regular sans-serif (~16px), dark gray, generous line height for readability",
+          "dataStyle": "Monospace or technical font for cryptocurrency-related terms and links"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Main navigation with logo, menu items (Explore, Invest, Why Luno, Learn & Support), and auth buttons",
+            "position": "top",
+            "notable": "Clean, minimal design with clear visual separation between primary nav and secondary actions"
+          },
+          {
+            "type": "sidebar",
+            "description": "Right-side Legal menu with 12+ linked items including privacy, terms, disclosures",
+            "position": "right",
+            "notable": "Persistent navigation for settings/legal pages; current page 'Risk warning' highlighted in blue"
+          },
+          {
+            "type": "content-block",
+            "description": "Numbered list (1-4) with detailed explanations of cryptocurrency risks",
+            "position": "left-main",
+            "notable": "Inline hyperlinks in blue for 'Supported Cryptocurrencies' and other key terms"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top nav anchors attention, main content dominates left panel, sidebar provides secondary navigation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse / informational",
+        "userIntent": "Understand cryptocurrency risks before investing; review important disclaimers",
+        "entryPoints": [
+          "Settings/Legal menu in sidebar",
+          "Learn & Support navigation item",
+          "Direct link from onboarding flow"
+        ],
+        "exitPoints": [
+          "Other Legal menu items (Privacy, Terms, etc.)",
+          "Back to main Invest or Explore sections",
+          "Sign up / Sign in at top-right"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinks (blue text)",
+            "action": "Navigate to related pages (Privacy Policy, Supported Cryptocurrencies)"
+          },
+          {
+            "element": "Sidebar Legal menu items",
+            "action": "Switch between legal/compliance documents"
+          },
+          {
+            "element": "Sign in / Sign up buttons",
+            "action": "Initiate authentication flow"
+          }
+        ],
+        "informationArchitecture": "Linear educational content organized by risk category (reversibility, volatility, backing, regulation); sidebar provides contextual legal navigation",
+        "frictionPoints": [
+          "Dense text blocks may require extensive scrolling",
+          "Multiple technical concepts presented without progressive disclosure",
+          "Timestamp 'Last updated: 17 Mar 2022' is quite old, may reduce trust"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Risk warning",
+        "subheadline": "Understanding the dangers in cryptocurrencies",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 17 Mar 2022",
+            "context": "Below subheadline",
+            "purpose": "Indicates document freshness and transparency"
+          },
+          {
+            "text": "Section 1: The risks associated with cryptocurrencies",
+            "context": "Above main body",
+            "purpose": "Organizes content into scannable sections"
+          }
+        ],
+        "tone": "professional-technical, cautionary, educational",
+        "dataFormatting": [
+          "Numbered lists (1, 2, 3, 4)",
+          "Hyperlinked key terms in blue",
+          "Standard paragraph formatting"
+        ],
+        "trustSignals": [
+          "Explicit risk disclosure framework",
+          "Reference to regulatory compliance and government-backed deposit insurance",
+          "Clear statements about Luno's limitations and lack of liability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-6-open-source-libraries.png",
+      "label": "Open source libraries",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#F5F7FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (~32px), dark gray/black",
+          "bodyStyle": "Regular sans-serif, monospace for technical package names and versions",
+          "dataStyle": "Monospace font for library names, version numbers, and license types in table"
+        },
+        "components": [
+          {
+            "type": "table",
+            "description": "4-column table (Name, License Type, Installed Version, Author) with 10+ rows of open-source dependencies",
+            "position": "left-main",
+            "notable": "Clean table with alternating row backgrounds for scannability; all MIT licenses shown"
+          },
+          {
+            "type": "sidebar",
+            "description": "Right-side Legal menu with 'Open source libraries' highlighted in blue",
+            "position": "right",
+            "notable": "Consistent navigation pattern across legal/settings pages"
+          },
+          {
+            "type": "header",
+            "description": "Top navigation identical to risk warning page",
+            "position": "top",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Table dominates visual attention; heading and update date provide context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse / transparency",
+        "userIntent": "Review open-source libraries used in Luno app; verify licenses and versions",
+        "entryPoints": [
+          "Legal sidebar menu item 'Open source libraries'",
+          "Learn & Support section",
+          "Security/compliance verification"
+        ],
+        "exitPoints": [
+          "Other Legal menu items",
+          "Return to settings or main app",
+          "Top navigation items (Explore, Invest, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar Legal menu items",
+            "action": "Switch between compliance documents"
+          },
+          {
+            "element": "Table rows",
+            "action": "Could be expandable for more details (not visible but potential)"
+          },
+          {
+            "element": "Sign in / Sign up buttons",
+            "action": "Initiate authentication"
+          }
+        ],
+        "informationArchitecture": "Simple tabular display of structured data (library metadata) with sidebar navigation for related legal/compliance pages",
+        "frictionPoints": [
+          "No search/filter functionality visible for 10+ libraries",
+          "No link to library repositories or license text",
+          "Some 'n/a' values in Author column reduce utility"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Open source libraries",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 08 Jul 2025",
+            "context": "Below headline",
+            "purpose": "Indicates document freshness; more recent than Risk warning page"
+          }
+        ],
+        "tone": "professional-technical, transparent",
+        "dataFormatting": [
+          "Package names with @ scope (e.g., @amplitude/analytics-browser)",
+          "License types (MIT)",
+          "Semantic versioning (e.g., 2.16.0, 1.16.1)",
+          "Author names or 'n/a'"
+        ],
+        "trustSignals": [
+          "Complete transparency on dependencies",
+          "MIT license prevalence signals open-source commitment",
+          "Last updated timestamp shows active maintenance"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-7-terms-of-use.png",
+      "label": "Terms of use",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#F5F7FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (~32px) for main heading; ALL CAPS section headers (~20px)",
+          "bodyStyle": "Regular sans-serif (~16px), left-aligned, generous line spacing",
+          "dataStyle": "Bold text for emphasis on key legal terms; italic for important notes"
+        },
+        "components": [
+          {
+            "type": "legal-content",
+            "description": "Structured legal document with numbered sections, inline hyperlinks, and emphasizing typography",
+            "position": "left-main",
+            "notable": "Multiple hyperlinks in blue to related documents (Privacy Policy, Luno Staking Terms); inline references to key terms"
+          },
+          {
+            "type": "sidebar",
+            "description": "Persistent Legal menu; current page not visually highlighted but context clear from content",
+            "position": "right",
+            "notable": "Consistent navigation across all settings/legal pages"
+          },
+          {
+            "type": "header",
+            "description": "Standard top navigation with Luno logo, main menu, auth buttons",
+            "position": "top",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading at top draws attention; section headers in ALL CAPS create visual breaks; body text is dense but readable",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse / legal-document",
+        "userIntent": "Read and understand Luno's Terms of Use before or after account creation; verify obligations and compliance",
+        "entryPoints": [
+          "Legal sidebar menu",
+          "Onboarding flow (before account creation)",
+          "Settings/Account page",
+          "Direct link from privacy or other legal pages"
+        ],
+        "exitPoints": [
+          "Other Legal menu items",
+          "Related documents via inline hyperlinks (Privacy Policy, Luno Staking Terms)",
+          "Main app navigation",
+          "Account settings or dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinks (blue text)",
+            "action": "Navigate to Privacy Policy, Luno Staking Terms, or Luno.com"
+          },
+          {
+            "element": "Sidebar Legal menu",
+            "action": "Switch between legal documents"
+          },
+          {
+            "element": "Sign in / Sign up buttons",
+            "action": "Initiate authentication flow"
+          }
+        ],
+        "informationArchitecture": "Linear legal document flow; numbered sections with supporting paragraphs; inline links to related policies for context",
+        "frictionPoints": [
+          "Very dense text blocks may overwhelm users",
+          "No table of contents or jump-to-section navigation",
+          "Long scrolling required to read full document",
+          "Legal language is complex despite good formatting"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of use",
+        "subheadline": "Know the rules for using Luno",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 13 Nov 2024",
+            "context": "Below subheadline",
+            "purpose": "Indicates current document version; recent timestamp builds trust"
+          },
+          {
+            "text": "Thank you for choosing Luno.",
+            "context": "Opening sentence",
+            "purpose": "Friendly, personalized tone to legal content"
+          },
+          {
+            "text": "Importantly, the helpful summaries in the drop down section below each clause are just that—helpful summaries...",
+            "context": "Italicized note within body text",
+            "purpose": "Manages expectations about summary content; signals legal precision"
+          }
+        ],
+        "tone": "professional-legal, somewhat friendly, formal",
+        "dataFormatting": [
+          "Section headers in ALL CAPS (1. ACCEPTANCE OF TERMS)",
+          "Numbered sections",
+          "Hyperlinked key documents in blue",
+          "Entity names in quotes ('Terms', 'Luno Site')"
+        ],
+        "trustSignals": [
+          "Comprehensive legal framework references (Privacy Policy, Luno Staking Terms)",
+          "Explicit jurisdictional clarity (South Africa incorporation)",
+          "Recent update date (Nov 2024)",
+          "Detailed compliance language about local laws and export/import restrictions"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-8-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray (#1a1a1a), 32px+ for main heading",
+          "bodyStyle": "Medium gray (#424245), 16px line-height 1.6, comfortable readability",
+          "dataStyle": "Date stamp in smaller blue-gray text (#6c757d)"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top nav with Luno logo, main menu (Explore, Invest, Why Luno?, Learn & Support), and auth buttons",
+            "position": "top full-width",
+            "notable": "Clean horizontal layout with balanced sign-in/sign-up buttons"
+          },
+          {
+            "type": "Two-column Content Area",
+            "description": "Main privacy policy text on left (~60%), Legal links sidebar on right (~30%)",
+            "position": "center",
+            "notable": "Right sidebar provides quick navigation to related legal docs without leaving page"
+          },
+          {
+            "type": "Bulleted List",
+            "description": "Jump navigation links for privacy notice sections",
+            "position": "left column, mid-page",
+            "notable": "Anchor links for long-form document navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading dominates; subheadings guide through sections; blue accent links in sidebar create navigation hierarchy",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read and understand Luno's privacy practices and data handling policies",
+        "entryPoints": [
+          "Link from settings/legal menu",
+          "Direct URL navigation",
+          "Footer link from main site"
+        ],
+        "exitPoints": [
+          "Related legal documents via sidebar links",
+          "Navigate back to main site",
+          "Contact privacy@luno.com"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Anchor links in bulleted list",
+            "action": "Jump to specific privacy policy sections"
+          },
+          {
+            "element": "Sidebar legal document links",
+            "action": "Navigate to related legal pages"
+          }
+        ],
+        "informationArchitecture": "Long-form document with table of contents navigation; sidebar provides related legal links; clear chronological update date",
+        "frictionPoints": [
+          "Long scrolling document may fatigue users",
+          "Text-heavy, no visual breaks or graphics",
+          "Legal jargon without simplified explanations"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy policy",
+        "subheadline": "Luno Global Customer Privacy Notice",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 01 Mar 2025",
+            "context": "Below main headline",
+            "purpose": "Transparency about document freshness"
+          },
+          {
+            "text": "This privacy notice explains the 'what', the 'why' and the 'how' of our personal data processing.",
+            "context": "Opening paragraph",
+            "purpose": "Set expectations for document scope"
+          },
+          {
+            "text": "Click on one of these links to jump to the section explaining:",
+            "context": "Before navigation list",
+            "purpose": "Guide user to use jump links for navigation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "01 Mar 2025"
+        ],
+        "trustSignals": [
+          "Regular review and update notice",
+          "Clear explanation of data rights",
+          "Specific contact information for questions"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-9-hiring-privacy.png",
+      "label": "Hiring privacy",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 32px+ for main heading; 'Hiring privacy policy' as subheading",
+          "bodyStyle": "Medium gray (#424245), 16px line-height 1.6",
+          "dataStyle": "Blue inline links (#0052cc) for language options and document names"
+        },
+        "components": [
+          {
+            "type": "Language Toggle",
+            "description": "Notice available in Malay and Bahasa Indonesia",
+            "position": "Below main headline",
+            "notable": "Blue hyperlinks enable multi-language access without page reload"
+          },
+          {
+            "type": "Update Date",
+            "description": "Last updated timestamp",
+            "position": "Below subheading",
+            "notable": "Dated 12 Mar 2025 (more recent than privacy policy)"
+          },
+          {
+            "type": "Explanatory Paragraph",
+            "description": "Clear summary of document scope for job applicants",
+            "position": "After date",
+            "notable": "Defines Luno as data controller and explains regulatory responsibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title → Update date → Multi-language note → Body text; Section headings organize content flow",
+        "innovativeElements": [
+          "Multi-language accessibility noted upfront with blue hyperlinks"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand how Luno handles job applicant personal data and recruitment process",
+        "entryPoints": [
+          "Link from legal sidebar",
+          "Careers page",
+          "Job application flow"
+        ],
+        "exitPoints": [
+          "Other legal documents via sidebar",
+          "Return to careers page",
+          "Apply for position"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Malay and Bahasa Indonesia language links",
+            "action": "Switch document language"
+          },
+          {
+            "element": "Sidebar legal links",
+            "action": "Navigate to other legal documents"
+          }
+        ],
+        "informationArchitecture": "Specialized privacy notice for hiring context; sections explain recruitment process, data handling, and rights",
+        "frictionPoints": [
+          "Language switcher may not persist on navigation",
+          "Long document focused on HR process details",
+          "Complex recruitment system references (Greenhouse, ATS, LinkedIn)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Luno Job Candidate Privacy Notice",
+        "subheadline": "Hiring privacy policy",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This notice is also available in Malay and Bahasa Indonesia.",
+            "context": "Immediately after headline",
+            "purpose": "Announce language accessibility for international candidates"
+          },
+          {
+            "text": "Last updated: 12 Mar 2025",
+            "context": "Below subheadline",
+            "purpose": "Build confidence in current document accuracy"
+          },
+          {
+            "text": "An overview of our recruitment process",
+            "context": "Section heading",
+            "purpose": "Introduce detailed explanation of hiring workflow"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "12 Mar 2025"
+        ],
+        "trustSignals": [
+          "Regular document reviews and updates",
+          "Clear explanation of data controller responsibility",
+          "Multi-language availability signals international compliance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-10-cookie-policy.png",
+      "label": "Cookie Policy",
+      "flowType": "Settings",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 32px+ for main heading",
+          "bodyStyle": "Medium gray (#424245), 16px line-height 1.6; bold emphasis on key sentences",
+          "dataStyle": "Email link (privacy@luno.com) in blue (#0052cc)"
+        },
+        "components": [
+          {
+            "type": "Main Heading",
+            "description": "Cookie Notice",
+            "position": "Top of content area",
+            "notable": "Simple, descriptive heading"
+          },
+          {
+            "type": "Subheading",
+            "description": "How we use cookies and similar technology",
+            "position": "Below main heading",
+            "notable": "Clarifies scope immediately"
+          },
+          {
+            "type": "Bold Summary Paragraph",
+            "description": "Opening statement about cookie purposes",
+            "position": "After date",
+            "notable": "Bold text emphasizes key message about user experience and service improvement"
+          },
+          {
+            "type": "Section Heading",
+            "description": "About cookies",
+            "position": "Mid-page",
+            "notable": "Introduces educational content about cookie technology"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading → descriptive subheading → bold value statement → body text → section headings; strategic bolding guides attention",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand how Luno uses cookies and tracking technology on its website",
+        "entryPoints": [
+          "Link from legal sidebar",
+          "Cookie consent banner",
+          "Settings/Legal section"
+        ],
+        "exitPoints": [
+          "Other legal documents via sidebar",
+          "Contact privacy@luno.com",
+          "Return to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email link (privacy@luno.com)",
+            "action": "Open email client to contact privacy team"
+          },
+          {
+            "element": "Sidebar legal links",
+            "action": "Navigate to related policies"
+          }
+        ],
+        "informationArchitecture": "Educational approach with clear purpose statement first; detailed explanations of cookie types and usage follow; contact info for questions",
+        "frictionPoints": [
+          "Technical terminology (local storage, web storage) without simplification",
+          "Long text blocks may overwhelm non-technical users",
+          "No visual examples or diagrams explaining cookies"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cookie Notice",
+        "subheadline": "How we use cookies and similar technology",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 01 Sept 2024",
+            "context": "Below subheadline",
+            "purpose": "Indicate document currency"
+          },
+          {
+            "text": "We use cookies and similar technology to provide a better experience, improve our services and understand how visitors engage with our websites and apps",
+            "context": "First paragraph in bold",
+            "purpose": "Lead with clear value proposition for cookie usage"
+          },
+          {
+            "text": "If you have any questions please contact us at privacy@luno.com",
+            "context": "Within opening explanation paragraph",
+            "purpose": "Provide immediate escalation path for user concerns"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "01 Sept 2024"
+        ],
+        "trustSignals": [
+          "Clear explanation of cookie purposes",
+          "Regular review and update process",
+          "Direct contact email for questions",
+          "Transparent privacy commitment"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-14-antibribery-and-anticorruption.png",
+      "label": "Anti-Bribery and Anti-Corruption",
+      "flowType": "Settings",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#667085"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif headlines (32px+) in dark gray/charcoal, high contrast",
+          "bodyStyle": "Medium weight body text (16px) in dark gray (#333), comfortable line-height for readability",
+          "dataStyle": "Timestamp in smaller gray text (12px) for metadata"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal bar with Luno logo, main nav items (Explore, Invest, Why Luno?, Learn & Support), and auth buttons",
+            "position": "top",
+            "notable": "Clean, minimal design with clear information hierarchy"
+          },
+          {
+            "type": "content-panel",
+            "description": "Left-aligned main content area with article text and section headings",
+            "position": "left 60%",
+            "notable": "White background with generous padding, easy to scan"
+          },
+          {
+            "type": "sidebar",
+            "description": "Right-aligned legal links navigation panel",
+            "position": "right 40%",
+            "notable": "Sticky sidebar with related legal documents as text links in blue"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content dominates left side; sidebar provides secondary navigation. Large heading draws eye first, body text structured with subheadings for scannability.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings / legal disclosure page",
+        "userIntent": "User is reading or researching Luno's anti-bribery and anti-corruption policies for compliance, trust-building, or regulatory understanding",
+        "entryPoints": [
+          "Clicked 'Our Commitment to Anti-Bribery and Anti-Corruption' from sidebar menu",
+          "Navigated from Learn & Support section",
+          "Direct link from compliance/legal documentation"
+        ],
+        "exitPoints": [
+          "Click sidebar links to other legal documents (Privacy Policy, Terms & Conditions, etc.)",
+          "Return to main navigation via top menu",
+          "Click related legal links within the sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Top navigation menu items",
+            "action": "Navigate to Explore, Invest, Why Luno?, or Learn & Support sections"
+          },
+          {
+            "element": "Sign in / Sign up buttons",
+            "action": "Authentication entry points"
+          },
+          {
+            "element": "Sidebar legal links",
+            "action": "Navigate to related compliance documents"
+          }
+        ],
+        "informationArchitecture": "Content organized hierarchically: main heading → policy overview → commitment statement → compliance details → policies & standards section. Sidebar provides parallel navigation to related legal documents.",
+        "frictionPoints": [
+          "Long-form content may require scrolling for full review",
+          "Sidebar links don't appear to have visual affordance for expansion/collapse"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Our Commitment to Anti-Bribery and Anti-Corruption",
+        "subheadline": "Our Commitment to Anti-Bribery and Anti-Corruption",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 04 Sept 2024",
+            "context": "Below main heading",
+            "purpose": "Establishes document freshness and credibility"
+          }
+        ],
+        "tone": "professional-technical, formal, compliance-focused",
+        "dataFormatting": [
+          "Last updated date format: DD Mmmm YYYY",
+          "Currency/regulation names in full: 'UK Bribery Act 2010', 'Criminal Finances Act 2017'"
+        ],
+        "trustSignals": [
+          "Zero tolerance policy statement",
+          "Mentions Board oversight",
+          "References risk assessments and assurance programs",
+          "Cites specific legislation (UK Bribery Act 2010, Criminal Finances Act 2017)",
+          "Updates timestamp showing active maintenance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-11-licenses-and-registrations.png",
+      "label": "Licenses and registrations",
+      "flowType": "Settings",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052CC"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold (32px+), dark gray/black",
+          "bodyStyle": "Regular sans-serif (16px), medium gray for body text",
+          "dataStyle": "Inline registration numbers and codes in regular weight"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with Luno logo and main menu items",
+            "position": "top",
+            "notable": "Clean minimal design with Sign in/Sign up buttons"
+          },
+          {
+            "type": "main-content-panel",
+            "description": "Left-aligned content area with full-width text blocks",
+            "position": "left-center",
+            "notable": "Generous left margin, stacked section headings"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Right sidebar with Legal link categories",
+            "position": "right",
+            "notable": "Nested links in blue, maintains persistent context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Section headings (Australia, Indonesia, Malaysia) create clear scanning paths; registration details in body text below each",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review Luno's regulatory registrations and licensing information across jurisdictions",
+        "entryPoints": [
+          "Legal sidebar navigation",
+          "Internal link from other legal pages"
+        ],
+        "exitPoints": [
+          "Other legal links in sidebar",
+          "Main navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links (Bundles Terms, Cookie Notice, FAIS Disclosure, etc.)",
+            "action": "Navigate to related legal documents"
+          }
+        ],
+        "informationArchitecture": "Geographic grouping (Australia, Indonesia, Malaysia) with registration details nested under each region; sidebar provides hierarchical legal content menu",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Last updated: 21 Mar 2025"
+        ]
+      },
+      "copy": {
+        "headline": "Licenses and registrations",
+        "subheadline": "Our license information",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 21 Mar 2025",
+            "context": "Below subheadline",
+            "purpose": "Establishes currency and trustworthiness of information"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "ACN 631 915 476",
+          "DCE registration number 10062419",
+          "Registration No. 4014111731102609",
+          "Registration No. 20150101592 (1136927-A)"
+        ],
+        "trustSignals": [
+          "Digital Currency Exchange Provider with AUSTRAC",
+          "Crypto Asset Physical Trader with BAPPEBTI (Indonesia)",
+          "Recognized Market Operator (Digital Asset Exchange) by Securities Commission Malaysia"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-12-information-request.png",
+      "label": "Information request",
+      "flowType": "Settings",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052CC"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold (32px+), dark gray",
+          "bodyStyle": "Regular sans-serif (16px), medium gray",
+          "dataStyle": "Email addresses highlighted in blue, bold for emphasis on requirements"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation consistent with previous screen",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "email-highlight",
+            "description": "Prominent blue hyperlink for legal@luno.com",
+            "position": "upper-middle content",
+            "notable": "Key contact point stands out visually"
+          },
+          {
+            "type": "bullet-list",
+            "description": "Two-item list with specific request requirements",
+            "position": "lower content area",
+            "notable": "Clear procedural instructions with technical specifications"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Right sidebar Legal links",
+            "position": "right",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading draws attention; email contact and procedural text hierarchically ordered; italicized notes provide supporting context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand how to submit law enforcement information requests to Luno",
+        "entryPoints": [
+          "Legal sidebar navigation"
+        ],
+        "exitPoints": [
+          "Other legal links in sidebar",
+          "External email links (legal@luno.com, support@luno.com)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "legal@luno.com hyperlink",
+            "action": "Open email client to contact legal team"
+          },
+          {
+            "element": "support@luno.com hyperlink",
+            "action": "Open email client to contact customer support"
+          },
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to related legal pages"
+          }
+        ],
+        "informationArchitecture": "Purpose statement → contact method → disclaimer note → explanation of Luno's experience → procedural requirements → formatting specifications",
+        "frictionPoints": [
+          "Multiple email addresses and their distinct purposes may confuse users",
+          "Complex procedural requirements might need clarification"
+        ],
+        "progressIndicators": [
+          "Last updated: 03 Jul 2025"
+        ]
+      },
+      "copy": {
+        "headline": "Submitting information requests to Luno",
+        "subheadline": "A guide for law enforcement authorities",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 03 Jul 2025",
+            "context": "Below subheadline",
+            "purpose": "Currency indicator"
+          },
+          {
+            "text": "Please note: the legal@luno.com email address is only meant for law enforcement and regulator information requests. Customers seeking to close their Luno accounts or who have any account-related queries, should please contact our Customer Success Team at support@luno.com.",
+            "context": "After main contact instruction",
+            "purpose": "Clarifies scope and redirects non-LEA inquiries"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Email addresses: legal@luno.com, support@luno.com",
+          "File formats: .xls format, word document format"
+        ],
+        "trustSignals": [
+          "Luno has experience assisting law enforcement authorities around the world",
+          "Requests must be valid written requests from official government domain"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/luno-settings-13-privacy-and-data-protection.png",
+      "label": "Privacy and data protection",
+      "flowType": "Settings",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052CC"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold (32px+), dark gray",
+          "bodyStyle": "Regular sans-serif (16px), medium gray",
+          "dataStyle": "Inline hyperlinks in blue for cross-references"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation consistent across pages",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "introductory-text-block",
+            "description": "Opening paragraph explaining page purpose and form submission option",
+            "position": "upper content",
+            "notable": "Sets expectations for user interaction"
+          },
+          {
+            "type": "hyperlinked-references",
+            "description": "Blue links to 'privacy notice', 'here', and 'Customer Success Team here'",
+            "position": "inline throughout",
+            "notable": "Multiple exit points to detailed resources"
+          },
+          {
+            "type": "bullet-list",
+            "description": "Three-item list of data handling practices and user rights",
+            "position": "lower content area",
+            "notable": "Important distinctions about account closure process"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Right sidebar Legal links",
+            "position": "right",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading → introductory summary → detailed explanations → bulleted key points; blue hyperlinks draw attention to actionable items",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Luno's privacy practices and learn how to exercise data subject rights or close an account",
+        "entryPoints": [
+          "Legal sidebar navigation",
+          "Internal link from other settings"
+        ],
+        "exitPoints": [
+          "External links to privacy notice",
+          "Form submission (implied below fold)",
+          "Customer Success Team contact",
+          "Other legal sidebar links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "privacy notice hyperlink",
+            "action": "Navigate to full privacy policy"
+          },
+          {
+            "element": "here hyperlink (security)",
+            "action": "Navigate to security information page"
+          },
+          {
+            "element": "Customer Success Team here hyperlink",
+            "action": "Navigate to or open contact method for account closure"
+          },
+          {
+            "element": "See Need help updating your personal details hyperlink",
+            "action": "Navigate to help documentation"
+          },
+          {
+            "element": "Sidebar navigation",
+            "action": "Navigate to related legal content"
+          }
+        ],
+        "informationArchitecture": "Overview → transparency commitment with policy reference → data storage/security reassurance → account management info → key user rights (erasure, data modification, account closure) with procedural guidance",
+        "frictionPoints": [
+          "Account closure requires separate contact method (not via form below), creating multi-step process",
+          "Multiple hyperlinks scattered throughout may dilute focus"
+        ],
+        "progressIndicators": [
+          "Last updated: 03 Jul 2025"
+        ]
+      },
+      "copy": {
+        "headline": "Privacy & Data Protection",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 03 Jul 2025",
+            "context": "Below headline",
+            "purpose": "Currency indicator"
+          },
+          {
+            "text": "Remember:",
+            "context": "Before bulleted list",
+            "purpose": "Introduces important user information"
+          },
+          {
+            "text": "Note: If you wish to close your account, please submit your request to our Customer Success Team here and not via the form below.",
+            "context": "Final bullet point",
+            "purpose": "Critical procedural clarification to prevent user error"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent data collection and usage practices",
+          "Cloud services meeting strict infrastructure security requirements",
+          "Automated handling of erasure requests (deletes only unnecessary data)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

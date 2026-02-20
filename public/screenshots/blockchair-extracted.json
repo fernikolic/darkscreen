@@ -1,0 +1,1472 @@
+{
+  "slug": "blockchair",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T10:53:18.173Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 16,
+  "screens": [
+    {
+      "image": "/screenshots/blockchair-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Unable to determine - blank page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View landing page content",
+        "entryPoints": [
+          "Direct URL navigation"
+        ],
+        "exitPoints": [],
+        "interactiveElements": [],
+        "informationArchitecture": "Content not loaded or unavailable",
+        "frictionPoints": [
+          "Page appears blank or failed to load"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "Unable to determine",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-home-2-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif (appears to be system font)",
+          "bodyStyle": "Regular weight sans-serif, dark gray text",
+          "dataStyle": "Monospaced font for technical debug info"
+        },
+        "components": [
+          {
+            "type": "Error heading",
+            "description": "Large bold '403 Error' text",
+            "position": "Top left",
+            "notable": "Prominent error code display"
+          },
+          {
+            "type": "Error subheading",
+            "description": "'Forbidden' subtitle",
+            "position": "Below main heading",
+            "notable": "Clear status indicator"
+          },
+          {
+            "type": "Error explanation text",
+            "description": "Two lines of descriptive text explaining the access denial",
+            "position": "Middle content area",
+            "notable": "User-friendly explanation with action guidance"
+          },
+          {
+            "type": "Debug information",
+            "description": "Technical metadata including IP, request details, and meditation string",
+            "position": "Bottom of page",
+            "notable": "Shows technical backend details in light gray"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error code dominates, followed by explanation text, with debug info de-emphasized at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why access is denied and determine next steps",
+        "entryPoints": [
+          "Attempted direct navigation to blockchair.com"
+        ],
+        "exitPoints": [
+          "Retry later",
+          "Contact site administration",
+          "Leave site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Hierarchical error presentation: code → status → explanation → technical details",
+        "frictionPoints": [
+          "Access is completely blocked with no apparent resolution path",
+          "No visible action buttons or clickable recovery options",
+          "Technical debug info may confuse non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Main error explanation",
+            "purpose": "Clearly state the problem"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Below primary message",
+            "purpose": "Suggest remedial actions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bWw=",
+          "Guru meditation: a3FzDVpBdKVFRlZQMUZBJBMd052dEJtT2VOODY1MTY="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-home-3-signin-page.png",
+      "label": "signin page",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif",
+          "bodyStyle": "Regular weight sans-serif, dark gray text",
+          "dataStyle": "Monospaced font for technical information"
+        },
+        "components": [
+          {
+            "type": "Error heading",
+            "description": "Large bold '403 Error' text",
+            "position": "Top left",
+            "notable": "Identical error display to previous screen"
+          },
+          {
+            "type": "Error subheading",
+            "description": "'Forbidden' subtitle",
+            "position": "Below main heading",
+            "notable": "Same status indicator"
+          },
+          {
+            "type": "Explanatory text",
+            "description": "Description of access denial",
+            "position": "Middle content area",
+            "notable": "Actionable guidance provided"
+          },
+          {
+            "type": "Debug metadata",
+            "description": "Technical request and meditation data",
+            "position": "Bottom",
+            "notable": "Different guru meditation hash than previous error"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Same as previous error page - error-dominant layout",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access sign-in page or account area",
+        "entryPoints": [
+          "Attempted navigation to signin page"
+        ],
+        "exitPoints": [
+          "Retry later",
+          "Contact administration",
+          "Leave site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Same error-first structure as 404 page",
+        "frictionPoints": [
+          "Sign-in functionality is completely blocked",
+          "No fallback authentication method offered",
+          "No viable recovery action available to user"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "State the access denial clearly"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Recovery guidance",
+            "purpose": "Provide next steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bWM=",
+          "Guru meditation: ZldhSUFvNUI5zMDbPJFVTNSJJRzko5czJUzA4MzM="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-settings-1-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (403 Error heading), followed by smaller subheading",
+          "bodyStyle": "Regular sans-serif, medium weight, black text on white",
+          "dataStyle": "Monospace, very small gray text for technical debugging info"
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large '403 Error' heading with 'Forbidden' subheading",
+            "position": "top-left",
+            "notable": "Oversized typography emphasizes the error state"
+          },
+          {
+            "type": "error-explanation",
+            "description": "Primary error message explaining access denial",
+            "position": "below heading",
+            "notable": "Two-line explanation with actionable guidance"
+          },
+          {
+            "type": "debug-info",
+            "description": "Technical metadata including IP, request type, and Guru meditation hash",
+            "position": "bottom-left",
+            "notable": "Light gray monospace text—likely for developers/admins only"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates; explanation secondary; debug info tertiary and de-emphasized",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access settings but was blocked by access control",
+        "entryPoints": [
+          "Direct navigation to settings page",
+          "Settings link from main navigation"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate elsewhere (implied)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear—error explanation followed by troubleshooting advice, then debug metadata",
+        "frictionPoints": [
+          "No interactive recovery actions provided",
+          "No CTA buttons to guide next steps",
+          "Access completely forbidden with no alternative paths suggested"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains the immediate problem"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary message below headline",
+            "purpose": "Provides two actionable remedies"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IlNDAzLmh0bW=",
+          "Guru meditation: QkJScUl..."
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error — Forbidden",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-settings-2-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (403 Error heading)",
+          "bodyStyle": "Regular sans-serif, medium weight, black text on white",
+          "dataStyle": "Monospace, very small gray text for technical debugging info"
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large '403 Error' heading with 'Forbidden' subheading",
+            "position": "top-left",
+            "notable": "Identical error state to settings page"
+          },
+          {
+            "type": "error-explanation",
+            "description": "Primary error message with retry instructions",
+            "position": "below heading",
+            "notable": "Same messaging structure as settings page"
+          },
+          {
+            "type": "debug-info",
+            "description": "Technical metadata with different Guru meditation hash",
+            "position": "bottom-left",
+            "notable": "Different request ID indicates separate access attempt"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to settings page—error code dominates",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access help documentation but was blocked",
+        "entryPoints": [
+          "Help/FAQ navigation link",
+          "Direct URL access to help section"
+        ],
+        "exitPoints": [
+          "Retry help access later",
+          "Contact administration",
+          "Navigate to accessible sections"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear error presentation—no alternative help navigation provided",
+        "frictionPoints": [
+          "Complete access denial blocks user from help resources",
+          "No fallback or alternative help options",
+          "No CTA or recovery path"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary message",
+            "purpose": "Provides remediation steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IlNDAzLmh0bW=",
+          "Guru meditation: c0lUdUJPd2RvNa..."
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error — Forbidden"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-settings-3-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (403 Error heading)",
+          "bodyStyle": "Regular sans-serif, medium weight, black text on white",
+          "dataStyle": "Monospace, very small gray text for debug metadata"
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large '403 Error' heading with 'Forbidden' subheading",
+            "position": "top-left",
+            "notable": "Consistent error state across all blocked pages"
+          },
+          {
+            "type": "error-explanation",
+            "description": "Standard access denied message with recovery guidance",
+            "position": "below heading",
+            "notable": "Replicated copy structure across pages"
+          },
+          {
+            "type": "debug-info",
+            "description": "Technical metadata with unique Guru meditation hash",
+            "position": "bottom-left",
+            "notable": "Third unique request ID shows separate access attempt"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code is dominant focal point",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access FAQ page but encountered access control block",
+        "entryPoints": [
+          "FAQ navigation link",
+          "Direct URL to FAQ section"
+        ],
+        "exitPoints": [
+          "Retry later",
+          "Contact support/administration",
+          "Navigate to public sections"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Single-purpose error state—no alternative navigation or FAQ content available",
+        "frictionPoints": [
+          "Critical user support resource (FAQ) is inaccessible",
+          "No CTA buttons or recovery mechanisms",
+          "User cannot access help to understand why access is denied"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Communicates access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary message",
+            "purpose": "Suggests retry or escalation path"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IlNDAzLmh0bW=",
+          "Guru meditation: bExsWG82zmxKeUVyN0t2N3R3PJaOFFyWFpjOTM3TA=="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error — Forbidden",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-settings-4-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#cccccc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (appears to be 32-36px), high contrast black on white",
+          "bodyStyle": "Regular sans-serif, 16px, black text on white background",
+          "dataStyle": "Monospace font for technical identifiers (IP, request, meditation data), light gray color for reduced emphasis"
+        },
+        "components": [
+          {
+            "type": "heading",
+            "description": "Large error code and status (403 Error, Forbidden)",
+            "position": "top-left",
+            "notable": "Stacked layout with error code above status"
+          },
+          {
+            "type": "body text",
+            "description": "Primary error explanation and recovery instructions",
+            "position": "upper-left content area",
+            "notable": null
+          },
+          {
+            "type": "technical metadata",
+            "description": "IP address, request details, and guru meditation reference",
+            "position": "bottom-left",
+            "notable": "Includes whimsical 'guru meditation' easter egg, typical of classic error pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates top, explanation follows, technical details relegated to footer in muted gray",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why access is blocked and what to do next",
+        "entryPoints": [
+          "Attempted navigation to about page in settings"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact administration",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error code → explanation → recovery options → technical debugging info",
+        "frictionPoints": [
+          "Access completely blocked with no alternative action available",
+          "No navigation UI to escape error state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Clear, direct explanation of the issue"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Recovery instruction",
+            "purpose": "Guides user toward resolution path"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IVNDAzLmh0bW==",
+          "Guru meditation: c0h0YjNLNmdrY1TJcTUxUUUVFVZmE4ZiVWMjc3MTEc"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Forbidden",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#cccccc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32-36px, black text",
+          "bodyStyle": "Regular sans-serif, 16px, black text",
+          "dataStyle": "Monospace for technical identifiers, light gray"
+        },
+        "components": [
+          {
+            "type": "error heading",
+            "description": "403 Error status",
+            "position": "top-left",
+            "notable": "Same error page template as settings page"
+          },
+          {
+            "type": "error body",
+            "description": "Access forbidden explanation",
+            "position": "upper content area",
+            "notable": null
+          },
+          {
+            "type": "technical footer",
+            "description": "Debugging information with IP and request data",
+            "position": "bottom",
+            "notable": "Includes guru meditation identifier"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code → explanation → metadata",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Attempt to log in but blocked by access restriction",
+        "entryPoints": [
+          "Onboarding flow → login page route"
+        ],
+        "exitPoints": [
+          "Retry later",
+          "Contact support",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error status → explanation → recovery guidance → technical details",
+        "frictionPoints": [
+          "Complete access block prevents login progression",
+          "No alternative authentication method offered",
+          "No back/home button to escape"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains the root cause"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Remediation guidance",
+            "purpose": "Suggests two paths forward"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IVNDAzLmh0bW==",
+          "Guru meditation: cnhoR0Swn1.jlR3pkHUcyVHsanIOSmyQTh6MzYxNTU="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Forbidden",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-onboarding-2-signup-page.png",
+      "label": "signup page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#cccccc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32-36px, black, high contrast",
+          "bodyStyle": "Regular sans-serif, 16px, black",
+          "dataStyle": "Monospace font, light gray color for technical strings"
+        },
+        "components": [
+          {
+            "type": "error heading",
+            "description": "403 Error Forbidden status",
+            "position": "top-left",
+            "notable": "Reused error template across multiple flows"
+          },
+          {
+            "type": "error explanation",
+            "description": "Access forbidden message with recovery guidance",
+            "position": "upper-left section",
+            "notable": null
+          },
+          {
+            "type": "technical metadata footer",
+            "description": "IP, request ID, and guru meditation identifier",
+            "position": "bottom-left",
+            "notable": "Easter egg reference continues across error pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code → explanation → technical debugging info at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Create new account via signup but blocked",
+        "entryPoints": [
+          "Onboarding signup route"
+        ],
+        "exitPoints": [
+          "Retry access",
+          "Contact admin",
+          "Navigate away"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error status → explanation → recovery options → technical footer",
+        "frictionPoints": [
+          "Complete access denial prevents account creation",
+          "No signup form presented",
+          "No alternate signup method available",
+          "No navigation controls visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Main error statement",
+            "purpose": "States the problem clearly"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Recovery instructions",
+            "purpose": "Provides two remediation paths"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3IVNDAzLmh0bW==",
+          "Guru meditation: cnhoR0Swn1.jlR3pkHUcyVHsanIOSmyQTh6MzYxNTU="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Forbidden",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-swap-4-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#CCCCCC"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (error code 403 prominent)",
+          "bodyStyle": "Regular sans-serif, medium size for explanatory text",
+          "dataStyle": "Monospace, light gray for technical details (IP, request IDs)"
+        },
+        "components": [
+          {
+            "type": "error-header",
+            "description": "Large '403 Error' heading with 'Forbidden' subheading",
+            "position": "top-left",
+            "notable": "Minimal, clean error presentation without icons"
+          },
+          {
+            "type": "error-message",
+            "description": "Primary explanation text about access being forbidden",
+            "position": "upper-left content area",
+            "notable": null
+          },
+          {
+            "type": "technical-metadata",
+            "description": "IP address, request ID, and guru meditation reference",
+            "position": "bottom-left, light gray text",
+            "notable": "Shows technical debugging info, suggests infrastructure (possibly Cloudflare or similar)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates top, followed by explanation, with technical details de-emphasized at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access blockchair.com but was denied; needs to understand why and next steps",
+        "entryPoints": [
+          "Direct navigation to blockchair.com",
+          "Referral link from blocked region"
+        ],
+        "exitPoints": [
+          "Contact site administration",
+          "Retry access later",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error code → Error type → Primary message → Secondary instructions → Technical metadata",
+        "frictionPoints": [
+          "No actionable CTA buttons provided",
+          "Generic instructions to 'contact administration' without contact method",
+          "No retry button or clear timeline for when access might be restored",
+          "Geographic restriction not explicitly mentioned"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Clearly states the problem"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary instruction",
+            "purpose": "Suggests remediation steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lVDAzLmh0bWx=",
+          "Guru meditation: QXMxTkRa03NCTDl2PhyWXp45rJYZm1WUENgNC5OTQ="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "403 Error",
+          "Forbidden",
+          "Access to blockchair.com is forbidden"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-staking-1-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif for error code (403 Error)",
+          "bodyStyle": "Regular sans-serif, medium weight for explanatory text",
+          "dataStyle": "Monospace for technical details (IP, request, meditation)"
+        },
+        "components": [
+          {
+            "type": "error-heading",
+            "description": "403 Error - Forbidden status code in bold",
+            "position": "top-left",
+            "notable": "Prominent error state indicator"
+          },
+          {
+            "type": "subheading",
+            "description": "Forbidden subtitle below main heading",
+            "position": "below heading",
+            "notable": null
+          },
+          {
+            "type": "error-explanation",
+            "description": "Primary error message with domain context",
+            "position": "mid-page left",
+            "notable": "Clearly identifies blockchair.com as forbidden resource"
+          },
+          {
+            "type": "technical-details",
+            "description": "IP, request, and guru meditation metadata in gray monospace",
+            "position": "bottom-left",
+            "notable": "Debug information for technical troubleshooting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates top, explanation in middle, technical details recede to bottom in lighter gray",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access earn/staking page but faced access restriction",
+        "entryPoints": [
+          "Direct navigation to blockchair.com earn page",
+          "Link from main navigation"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate away from site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error-first presentation with escalating detail (headline → explanation → technical)",
+        "frictionPoints": [
+          "Complete access denial with no workaround",
+          "Vague explanation of why access is forbidden",
+          "No clear path to resolution or alternative action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains the access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary explanation",
+            "purpose": "Suggests remedial actions"
+          }
+        ],
+        "tone": "technical-professional, matter-of-fact",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW0W="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-staking-2-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif for error code (403 Error)",
+          "bodyStyle": "Regular sans-serif, medium weight for explanatory text",
+          "dataStyle": "Monospace for technical details (IP, request, meditation)"
+        },
+        "components": [
+          {
+            "type": "error-heading",
+            "description": "403 Error - Forbidden status code in bold",
+            "position": "top-left",
+            "notable": "Identical to earn page error state"
+          },
+          {
+            "type": "error-explanation",
+            "description": "Primary error message with domain context",
+            "position": "mid-page left",
+            "notable": "References blockchair.com access restriction"
+          },
+          {
+            "type": "technical-details",
+            "description": "IP, request, and guru meditation metadata in gray monospace",
+            "position": "bottom-left",
+            "notable": "Different meditation value than earn page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates top, explanation in middle, technical details recede to bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access stake page but faced access restriction",
+        "entryPoints": [
+          "Navigation from earn page",
+          "Direct link to stake page"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error-first with technical metadata",
+        "frictionPoints": [
+          "Complete access denial across all staking pages",
+          "No alternative navigation paths offered",
+          "Repetitive error across multiple sections suggests systemic issue"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Communicates access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary instruction",
+            "purpose": "Provides recovery suggestions"
+          }
+        ],
+        "tone": "technical-professional, neutral",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW0W="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-staking-3-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif for error code (403 Error)",
+          "bodyStyle": "Regular sans-serif, medium weight for explanatory text",
+          "dataStyle": "Monospace for technical metadata"
+        },
+        "components": [
+          {
+            "type": "error-heading",
+            "description": "403 Error - Forbidden status code in bold",
+            "position": "top-left",
+            "notable": "Consistent error presentation across staking flow"
+          },
+          {
+            "type": "error-explanation",
+            "description": "Primary error message",
+            "position": "mid-page left",
+            "notable": "Standard forbidden access message"
+          },
+          {
+            "type": "technical-details",
+            "description": "IP, request, and guru meditation data in gray monospace",
+            "position": "bottom-left",
+            "notable": "Different meditation hash again suggesting separate request attempts"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error-first hierarchy with technical details as tertiary information",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempting to access active staking page encounters access denial",
+        "entryPoints": [
+          "Navigation from stake page",
+          "Direct staking flow continuation"
+        ],
+        "exitPoints": [
+          "Retry access",
+          "Contact administration",
+          "Leave site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal—only error state presented with no recovery options",
+        "frictionPoints": [
+          "Third consecutive 403 error in staking flow",
+          "Complete inaccessibility of staking product",
+          "No fallback or alternative access method",
+          "No indication of when access will be restored"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Communicates denied access"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary action guidance",
+            "purpose": "Suggests retry or escalation"
+          }
+        ],
+        "tone": "technical-professional, direct",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW0W="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), black text",
+          "dataStyle": "Monospace font for technical identifiers and hashes"
+        },
+        "components": [
+          {
+            "type": "error-state-heading",
+            "description": "Large '403 Error' title with 'Forbidden' subtext",
+            "position": "top-left",
+            "notable": "Minimal, direct error communication"
+          },
+          {
+            "type": "error-description",
+            "description": "Two-line explanation of access denial",
+            "position": "upper-left below heading",
+            "notable": null
+          },
+          {
+            "type": "technical-metadata",
+            "description": "IP address, request details, and guru meditation hash in light gray text",
+            "position": "lower-left",
+            "notable": "Typical server error format, likely Cloudflare origin error"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, explanation follows, technical details relegated to footer",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access blockchair.com swap functionality but encountered access restriction",
+        "entryPoints": [
+          "Direct navigation to blockchair.com/swap",
+          "Link from marketing material or navigation menu"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate away from site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear: error code → explanation → technical details",
+        "frictionPoints": [
+          "Complete access denial blocks user from swap functionality",
+          "No alternative action provided or retry mechanism visible",
+          "No clear next steps for resolution"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains the access denial clearly"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary error message",
+            "purpose": "Suggests remediation actions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW=",
+          "Guru meditation: c0N5c0FNRG1uSGRPNVZMbG1HG1T2N1NndsZ2dLOTu4NDk="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), black text",
+          "dataStyle": "Monospace font for technical identifiers"
+        },
+        "components": [
+          {
+            "type": "error-state-heading",
+            "description": "Large '403 Error' title with 'Forbidden' subtext",
+            "position": "top-left",
+            "notable": "Identical to swap page error state"
+          },
+          {
+            "type": "error-description",
+            "description": "Two-line explanation of access denial",
+            "position": "upper-left below heading",
+            "notable": null
+          },
+          {
+            "type": "technical-metadata",
+            "description": "IP address, request details, and guru meditation hash",
+            "position": "lower-left",
+            "notable": "Different guru meditation hash than swap page indicates separate request"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, explanation follows, technical details at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access blockchair.com trade functionality but encountered access restriction",
+        "entryPoints": [
+          "Direct navigation to blockchair.com/trade",
+          "Link from swap page or navigation menu"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate away from site"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear: error code → explanation → technical details",
+        "frictionPoints": [
+          "Complete access denial blocks user from trade functionality",
+          "No alternative action or retry mechanism",
+          "Unclear resolution path"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Explains access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary error message",
+            "purpose": "Suggests remediation steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW=",
+          "Guru meditation: YYpZU2xnNTFNNWdkkemtSLhJTT1iUVRliWdSNjczODc="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockchair-swap-3-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), black text",
+          "dataStyle": "Monospace font for technical identifiers and hashes"
+        },
+        "components": [
+          {
+            "type": "error-state-heading",
+            "description": "Large '403 Error' title with 'Forbidden' subtext",
+            "position": "top-left",
+            "notable": "Consistent error presentation across all three pages"
+          },
+          {
+            "type": "error-description",
+            "description": "Two-line explanation of access denial",
+            "position": "upper-left below heading",
+            "notable": null
+          },
+          {
+            "type": "technical-metadata",
+            "description": "IP address, request details, and guru meditation hash in light gray",
+            "position": "lower-left",
+            "notable": "Third unique guru meditation hash, indicating separate request attempt"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, explanation follows, technical details relegated to footer",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access blockchair.com exchange functionality but encountered access restriction",
+        "entryPoints": [
+          "Direct navigation to blockchair.com/exchange",
+          "Link from trade or swap pages"
+        ],
+        "exitPoints": [
+          "Retry access later",
+          "Contact site administration",
+          "Navigate away"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear: error code → explanation → technical details",
+        "frictionPoints": [
+          "Access completely blocked across all swap/trade/exchange pages",
+          "No guidance on geographic restrictions or account requirements",
+          "No clear resolution timeline"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "403 Error",
+        "subheadline": "Forbidden",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Access to blockchair.com is forbidden.",
+            "context": "Primary error message",
+            "purpose": "Communicates access denial"
+          },
+          {
+            "text": "Try accessing the site blockchair.com later or contact administration of the site.",
+            "context": "Secondary error message",
+            "purpose": "Provides next steps"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "IP: 85.184.226.136",
+          "Request: GET L3FyZXJyb3lNDAzLmh0bW=",
+          "Guru meditation: V1dlR0c0aMXzlM0d0c0b3BVpQTdlNEpMZRa0c0b3BVmDowNDM="
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "403 Error",
+          "Access to blockchair.com is forbidden."
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

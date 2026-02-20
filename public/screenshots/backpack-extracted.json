@@ -1,0 +1,485 @@
+{
+  "slug": "backpack",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:13:48.610Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 4,
+  "screens": [
+    {
+      "image": "/screenshots/backpack-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#CCCCCC"
+        ],
+        "typography": {
+          "headingStyle": "large sans-serif, bold, centered",
+          "bodyStyle": "small sans-serif, regular, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large '404' error code displayed prominently",
+            "position": "center-left",
+            "notable": "Uses monospace weight and scale to create visual impact"
+          },
+          {
+            "type": "divider",
+            "description": "Vertical line separating error code from message",
+            "position": "center",
+            "notable": "Subtle separator between code and text"
+          },
+          {
+            "type": "error-message",
+            "description": "Text message 'This page could not be found.'",
+            "position": "center-right",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates attention, with supporting text secondary. Centered composition draws eye to middle of screen.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a page that does not exist or is unavailable",
+        "entryPoints": [
+          "broken link",
+          "invalid URL",
+          "expired session redirect"
+        ],
+        "exitPoints": [
+          "navigate back",
+          "return to home",
+          "retry navigation"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state page with minimal information. No navigation options visible, suggesting this may be a static error page.",
+        "frictionPoints": [
+          "No visible action buttons or navigation options to recover from error",
+          "No explanation of why page could not be found",
+          "No suggestions for next steps or alternative pages"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "404",
+            "context": "large error code",
+            "purpose": "identifies error type to user"
+          },
+          {
+            "text": "This page could not be found.",
+            "context": "error message",
+            "purpose": "explains what went wrong in plain language"
+          }
+        ],
+        "tone": "neutral-informational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/backpack-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold, centered (60-70px)",
+          "bodyStyle": "Medium gray sans-serif, 16-18px, centered",
+          "dataStyle": "Monospace, white text on colored backgrounds for currency values"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, nav items, and download CTA",
+            "position": "Top fixed",
+            "notable": "Minimal, left-aligned logo with right-aligned download button in accent blue"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with subheading and download buttons",
+            "position": "Left side, center-vertical",
+            "notable": "Left-aligned text contrasts with centered phone mockup"
+          },
+          {
+            "type": "Phone mockup",
+            "description": "3D rendered iOS device showing app interface",
+            "position": "Right side, floating",
+            "notable": "Shows actual product UI with network selector and portfolio data"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left column guides eye top-to-bottom (headline → subheading → CTAs), right mockup draws attention as visual proof",
+        "innovativeElements": [
+          "3D perspective phone mockup embedded in landing page",
+          "Functional UI preview within marketing asset",
+          "Network multi-selector visible in mockup (Solana, Eclipse, Ethereum, etc.)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Backpack capabilities and download the app",
+        "entryPoints": [
+          "Direct homepage visit",
+          "External marketing link",
+          "Search result"
+        ],
+        "exitPoints": [
+          "iOS download",
+          "Google Play download",
+          "Chrome Extension download",
+          "Navigation to Exchange, News, Learn, Support, About sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "iOS button",
+            "action": "Redirect to App Store"
+          },
+          {
+            "element": "Google Play button",
+            "action": "Redirect to Google Play Store"
+          },
+          {
+            "element": "Chrome Extension button",
+            "action": "Redirect to Chrome Web Store"
+          },
+          {
+            "element": "More Downloads link",
+            "action": "Navigate to expanded downloads page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Hero-driven with clear value proposition at top, multiple download paths, secondary navigation for content discovery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The All-in-One Crypto App",
+        "subheadline": "Futures, spot, lending, and a crypto wallet.",
+        "ctas": [
+          {
+            "text": "iOS",
+            "style": "primary-button",
+            "placement": "Left column, below headline"
+          },
+          {
+            "text": "Google Play",
+            "style": "primary-button",
+            "placement": "Left column, below iOS"
+          },
+          {
+            "text": "Chrome Extension",
+            "style": "secondary-button",
+            "placement": "Left column, below Google Play"
+          },
+          {
+            "text": "More Downloads",
+            "style": "text-link",
+            "placement": "Left column, bottom of CTA group"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Token",
+            "context": "Network selector in phone mockup",
+            "purpose": "Label for active tab showing token view"
+          },
+          {
+            "text": "Activity",
+            "context": "Right side of phone header",
+            "purpose": "Navigation indicator for recent transactions"
+          },
+          {
+            "text": "Portfolio",
+            "context": "Bottom tab in phone UI",
+            "purpose": "Primary navigation to holdings view"
+          }
+        ],
+        "tone": "professional-technical, direct, confidence-driven",
+        "dataFormatting": [
+          "$49,351.72 (portfolio balance)",
+          "$15,312.38 (token value)",
+          "$2,663.6 (asset value)",
+          "$937.25 (stablecoin)",
+          "$358.97 (token value)"
+        ],
+        "trustSignals": [
+          "Multi-chain support (Solana, Ethereum, Polygon, Base, Arbitrum, Optimism, Monad)",
+          "Real portfolio data in mockup",
+          "Established app platforms (App Store, Google Play)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/backpack-home-2-download.png",
+      "label": "Download",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold, centered (50-60px)",
+          "bodyStyle": "Medium gray sans-serif, 18px, centered",
+          "dataStyle": "Monospace for version numbers (2.69.0) and APK details"
+        },
+        "components": [
+          {
+            "type": "Page heading",
+            "description": "Large centered title with subheading",
+            "position": "Top center",
+            "notable": "Clear, scannable hierarchy"
+          },
+          {
+            "type": "Device mockups",
+            "description": "Two 3D rendered phones showing app interfaces side-by-side",
+            "position": "Left center, floating perspective",
+            "notable": "Portfolio balances and trading data visible on screens"
+          },
+          {
+            "type": "Download option cards",
+            "description": "Three vertically stacked download options with icons and descriptions",
+            "position": "Right side",
+            "notable": "QR codes on right edge, version info included"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered heading draws focus, mockups provide visual credibility, right column presents actionable options",
+        "innovativeElements": [
+          "Dual phone mockup showing different app screens in perspective",
+          "QR code integration for quick download (visible on right)",
+          "Version number transparency (2.69.0)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Download the mobile app via preferred platform",
+        "entryPoints": [
+          "Download button from landing page",
+          "Navigation menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "App Store (iOS)",
+          "Google Play (Android)",
+          "Direct APK download",
+          "Back to landing/navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App Store button",
+            "action": "Redirect to Apple App Store"
+          },
+          {
+            "element": "Google Play button",
+            "action": "Redirect to Google Play Store"
+          },
+          {
+            "element": "Android APK button",
+            "action": "Direct download of APK file"
+          },
+          {
+            "element": "QR codes",
+            "action": "Scan to download from respective platform"
+          }
+        ],
+        "informationArchitecture": "Platform-focused with visual proof on left, explicit download paths on right, version/build info provided",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Download Backpack",
+        "subheadline": "Available for iOS, Android, and select browsers",
+        "ctas": [
+          {
+            "text": "App Store",
+            "style": "primary-button",
+            "placement": "Right column, first option"
+          },
+          {
+            "text": "Google Play",
+            "style": "primary-button",
+            "placement": "Right column, second option"
+          },
+          {
+            "text": "Android APK",
+            "style": "primary-button",
+            "placement": "Right column, third option"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mobile app",
+            "context": "Right section heading",
+            "purpose": "Section label"
+          },
+          {
+            "text": "Spot, futures, lending, and a crypto wallet.",
+            "context": "Subheading for mobile section",
+            "purpose": "Reinforces value proposition"
+          },
+          {
+            "text": "Download 2.69.0 (349)",
+            "context": "Below Android APK option",
+            "purpose": "Version and build number transparency"
+          }
+        ],
+        "tone": "professional-technical, clear, action-oriented",
+        "dataFormatting": [
+          "2.69.0 (version number)",
+          "(349) (build number)"
+        ],
+        "trustSignals": [
+          "Official app store listings",
+          "Version transparency",
+          "Multi-platform availability",
+          "Real portfolio data in mockup ($49,351.72)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/backpack-settings-1-terms.png",
+      "label": "Terms",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold, centered (50-60px)",
+          "bodyStyle": "Medium gray sans-serif, 16px, centered",
+          "dataStyle": "Gray metadata text for timestamps"
+        },
+        "components": [
+          {
+            "type": "Page header",
+            "description": "Centered title with subtitle",
+            "position": "Top center",
+            "notable": "Clean, minimal presentation"
+          },
+          {
+            "type": "Last updated timestamp",
+            "description": "Metadata showing document recency",
+            "position": "Below heading",
+            "notable": "Builds trust through transparency"
+          },
+          {
+            "type": "CTA button group",
+            "description": "Two horizontally arranged buttons",
+            "position": "Center, below timestamp",
+            "notable": "Primary (white) and secondary (blue) button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical centering with generous whitespace, emphasis on primary action (View)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Terms of Service document",
+        "entryPoints": [
+          "Footer link (Terms)",
+          "Navigation menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "View terms (likely scrollable modal or new page)",
+          "Download terms (PDF or document)",
+          "Back to previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "View button",
+            "action": "Open full Terms of Service document"
+          },
+          {
+            "element": "Download button",
+            "action": "Download Terms of Service as file"
+          }
+        ],
+        "informationArchitecture": "Simple document access page with dual interaction options (view in-app vs. download)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View",
+            "style": "primary-button",
+            "placement": "Center, left of pair"
+          },
+          {
+            "text": "Download",
+            "style": "secondary-button",
+            "placement": "Center, right of pair"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: June 20, 2023",
+            "context": "Below headline",
+            "purpose": "Document freshness and credibility signal"
+          }
+        ],
+        "tone": "professional-technical, formal, compliance-focused",
+        "dataFormatting": [
+          "June 20, 2023 (date format)"
+        ],
+        "trustSignals": [
+          "Explicit last-updated date",
+          "Official legal document availability"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

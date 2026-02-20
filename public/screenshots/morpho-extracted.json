@@ -1,0 +1,4641 @@
+{
+  "slug": "morpho",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:35:58.091Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 35,
+  "screens": [
+    {
+      "image": "/screenshots/morpho-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#4A90E2",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large, centered, light-weight sans-serif with generous line-height",
+          "bodyStyle": "Medium-sized, gray-toned sans-serif with moderate line-height",
+          "dataStyle": "Large, bold numbers with dollar signs and comma separators in light gray"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top navigation with logo, product links, and primary CTA button",
+            "position": "Top",
+            "notable": "Blue 'Launch App' button creates clear focal point"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered text with headline, subheadline, and supporting paragraph",
+            "position": "Upper-middle",
+            "notable": "Minimal design focuses entirely on copy messaging"
+          },
+          {
+            "type": "Data cards",
+            "description": "Two side-by-side statistics blocks showing Deposits and Loans",
+            "position": "Bottom-left",
+            "notable": "Large, immediately visible metrics establish protocol scale"
+          },
+          {
+            "type": "Scroll prompt",
+            "description": "Text encouraging further exploration",
+            "position": "Bottom-right",
+            "notable": "Subtle engagement signal"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eyes drawn upward to headline, then down to financial metrics, with CTA button anchoring top-right",
+        "innovativeElements": [
+          "Negative space usage creates emphasis on core value proposition",
+          "Dual metrics (Deposits vs Loans) immediately communicate protocol dual-sided model"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Morpho is and access the application",
+        "entryPoints": [
+          "Direct URL visit",
+          "External marketing links"
+        ],
+        "exitPoints": [
+          "Launch App button (top-right)",
+          "Navigation menu items (Products, Solutions, Customers, Resources, Contact)",
+          "Scroll to explore"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application or login"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Reveal submenu options"
+          },
+          {
+            "element": "Scroll prompt",
+            "action": "Trigger scroll-based content reveal"
+          }
+        ],
+        "informationArchitecture": "Hero-centric with immediate value messaging followed by social proof (TVL metrics)",
+        "frictionPoints": [
+          "No visible secondary CTA besides top navigation",
+          "Requires scrolling to see additional information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect to the universal lending network",
+        "subheadline": "Access global liquidity at the best possible terms powered by open infrastructure that serves, not extracts.",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Deposits",
+            "context": "Data card label",
+            "purpose": "Identify metric type"
+          },
+          {
+            "text": "Loans",
+            "context": "Data card label",
+            "purpose": "Identify metric type"
+          },
+          {
+            "text": "Scroll to explore",
+            "context": "Bottom-right",
+            "purpose": "Encourage content discovery"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "$9,194,413,564",
+          "$3,300,148,770"
+        ],
+        "trustSignals": [
+          "Large deposit TVL: $9.1B+",
+          "Large loans TVL: $3.3B+",
+          "Open infrastructure positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-2-jobs.png",
+      "label": "Jobs",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#4A90E2",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large, gradient blue, light-weight centered sans-serif",
+          "bodyStyle": "Large, gray-toned sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent header with logo and CTA button",
+            "position": "Top",
+            "notable": "Maintains branding consistency"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered vertical stack of headline, subheadline, and button",
+            "position": "Center",
+            "notable": "Large blue gradient text creates visual impact"
+          },
+          {
+            "type": "CTA button",
+            "description": "See jobs button",
+            "position": "Center, below text",
+            "notable": "Rounded pill-style button in brand blue"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates visual plane with blue color drawing focus, subheadline provides context, button offers clear action",
+        "innovativeElements": [
+          "Gradient blue text treatment for headline creates premium feel"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about career opportunities at Morpho",
+        "entryPoints": [
+          "Navigation menu click from main landing",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "See jobs button (navigate to careers page)",
+          "Navigation links (back to main nav options)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "See jobs button",
+            "action": "Navigate to careers/jobs listing page"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Minimal funnel focused on single conversion point",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join Morpho",
+        "subheadline": "Power human ambition with open access to capital",
+        "ctas": [
+          {
+            "text": "See jobs",
+            "style": "primary-button",
+            "placement": "Center below text"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, inspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Mission-driven messaging appeals to purpose-aligned talent"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-3-home.png",
+      "label": "home",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4A90E2",
+          "#FFFFFF",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, left-aligned sans-serif",
+          "bodyStyle": "Medium, dark gray sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top bar with logo, links to app/landing/documentation, language selector, and help icon",
+            "position": "Top",
+            "notable": "Includes language selector and direct app navigation"
+          },
+          {
+            "type": "Search bar",
+            "description": "Prominent search input for article discovery",
+            "position": "Upper-middle",
+            "notable": "Full-width search with placeholder text"
+          },
+          {
+            "type": "Card grid",
+            "description": "Four stacked knowledge base category cards",
+            "position": "Below search",
+            "notable": "Each card has icon, title, description, and article count"
+          },
+          {
+            "type": "Help button",
+            "description": "Floating action button",
+            "position": "Bottom-right",
+            "notable": "Blue rounded circle with message icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Search bar leads eye, cards provide secondary navigation with icons creating visual anchors",
+        "innovativeElements": [
+          "Category-based knowledge organization with article counts",
+          "Floating help button for quick support access"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find help articles and documentation",
+        "entryPoints": [
+          "Help/Support link from main app",
+          "Direct documentation URL"
+        ],
+        "exitPoints": [
+          "Search results page",
+          "Individual article pages via card clicks",
+          "Morpho App link in top nav",
+          "Landing page link",
+          "Help chat via floating button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Search knowledge base articles"
+          },
+          {
+            "element": "Category cards",
+            "action": "Filter by topic and view article list"
+          },
+          {
+            "element": "Help button",
+            "action": "Open support chat"
+          },
+          {
+            "element": "Language selector",
+            "action": "Switch interface language"
+          }
+        ],
+        "informationArchitecture": "Top-level categorization (What is Morpho, Features, Troubleshooting, Changelog) with full-text search as alternative path",
+        "frictionPoints": [
+          "Requires clicking cards to access article lists",
+          "Search function not yet showing results in screenshot"
+        ],
+        "progressIndicators": [
+          "Article count displayed on each card (e.g., '9 articles', '4 articles')"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome to Morpho Help Page",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search for articles...",
+            "context": "Search bar placeholder",
+            "purpose": "Guide user input"
+          },
+          {
+            "text": "Protocol description",
+            "context": "What is Morpho card subtitle",
+            "purpose": "Clarify category content"
+          },
+          {
+            "text": "Feature that improve your experience on the Morpho app.",
+            "context": "Morpho Features card",
+            "purpose": "Explain category scope"
+          },
+          {
+            "text": "Solutions to common problems.",
+            "context": "Troubleshooting card",
+            "purpose": "Set expectation for support content"
+          },
+          {
+            "text": "List of Morpho API and SDKs major changes",
+            "context": "Integrators changelog card",
+            "purpose": "Describe changelog content"
+          }
+        ],
+        "tone": "professional-technical, helpful, straightforward",
+        "dataFormatting": [
+          "9 articles",
+          "4 articles",
+          "2 articles"
+        ],
+        "trustSignals": [
+          "Comprehensive documentation coverage",
+          "Organized support structure",
+          "Developer-focused resources (Integrators changelog)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-4-curate.png",
+      "label": "Curate",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#4a90e2"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, centered, ~48px",
+          "bodyStyle": "Medium sans-serif, medium gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-logo",
+            "description": "Curator branding with butterfly icon",
+            "position": "top-left",
+            "notable": "Minimal, clean branding"
+          },
+          {
+            "type": "card",
+            "description": "Vault V1 option card with CTA button",
+            "position": "center-left",
+            "notable": "Equal visual weight with V2, subtle rounded border"
+          },
+          {
+            "type": "card",
+            "description": "Vault V2 option card with CTA button",
+            "position": "center-right",
+            "notable": "Mirror layout to V1"
+          },
+          {
+            "type": "button",
+            "description": "Primary blue pill buttons with arrow icon",
+            "position": "center of each card",
+            "notable": "Consistent styling, external link affordance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered title draws eye, two equal cards below create decision fork",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Select which version of Vault to access or manage",
+        "entryPoints": [
+          "Navigation from main Curator menu",
+          "Direct link from Curator dashboard"
+        ],
+        "exitPoints": [
+          "Go to Vault V1",
+          "Go to Vault V2"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Vault V1 button",
+            "action": "Navigate to Vault V1 interface"
+          },
+          {
+            "element": "Go to Vault V2 button",
+            "action": "Navigate to Vault V2 interface"
+          }
+        ],
+        "informationArchitecture": "Simple binary choice presented as two equal options",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Curator App Directory",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to Vault V1 ↗",
+            "style": "primary-button",
+            "placement": "center of V1 card"
+          },
+          {
+            "text": "Go to Vault V2 ↗",
+            "style": "primary-button",
+            "placement": "center of V2 card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Vault V1",
+            "context": "Left card heading",
+            "purpose": "Identify version"
+          },
+          {
+            "text": "Vault V2",
+            "context": "Right card heading",
+            "purpose": "Identify version"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-5-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a90e2",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, ~32px, dark hero background",
+          "bodyStyle": "Regular sans-serif, light gray, medium size",
+          "dataStyle": "Monospace or bold sans-serif for numbers (4.89%, $203.1M, $27.19K)"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with Morpho logo, menu links, Connect button",
+            "position": "top",
+            "notable": "Sticky nav, light text on dark"
+          },
+          {
+            "type": "hero-banner",
+            "description": "Blue gradient background with headline and subheadline",
+            "position": "top section",
+            "notable": "Vibrant blue gradient, establishing opportunities theme"
+          },
+          {
+            "type": "filter-bar",
+            "description": "Tabs (All, Tokens, Pre TGE), search, chain/action selectors, advanced filters",
+            "position": "below hero",
+            "notable": "Comprehensive filtering with multiple entry points"
+          },
+          {
+            "type": "data-table",
+            "description": "List of opportunities with icons, names, tags, APR, TVL, daily rewards",
+            "position": "main content area",
+            "notable": "Rich metadata per row, action buttons on right"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Privacy notification with Allow/Dismiss buttons",
+            "position": "bottom",
+            "notable": "Semi-transparent background, unobtrusive placement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero banner → filters → opportunity list; financial metrics right-aligned for scanning",
+        "innovativeElements": [
+          "Token/protocol badges within opportunity rows",
+          "Multi-dimensional filtering (chain, action, Pre-TGE status)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse, filter, and compare DeFi yield opportunities; understand rewards and protocols",
+        "entryPoints": [
+          "Opportunities navigation link",
+          "Dashboard shortcut",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click arrow to view opportunity details",
+          "Connect wallet to transact",
+          "Filter and refine list"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab navigation (All, Tokens, Pre TGE)",
+            "action": "Filter opportunities by category"
+          },
+          {
+            "element": "Search box",
+            "action": "Search opportunities by name/token"
+          },
+          {
+            "element": "Chain selector dropdown",
+            "action": "Filter by blockchain"
+          },
+          {
+            "element": "Advanced filters button",
+            "action": "Open advanced filtering modal"
+          },
+          {
+            "element": "Arrow buttons on each row",
+            "action": "View/interact with specific opportunity"
+          },
+          {
+            "element": "Allow/Dismiss buttons",
+            "action": "Accept or reject analytics tracking"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: category filters → chain/action filters → sortable table of opportunities",
+        "frictionPoints": [
+          "Cookie banner overlays content briefly",
+          "Multiple filter layers may overwhelm new users"
+        ],
+        "progressIndicators": [
+          "555 OPPORTUNITIES count",
+          "Sort indicator (By Daily Rewards ↓)"
+        ]
+      },
+      "copy": {
+        "headline": "Explore Opportunities",
+        "subheadline": "Browse opportunities, compare rewards, and earn tokens",
+        "ctas": [
+          {
+            "text": "Allow",
+            "style": "primary-button",
+            "placement": "cookie banner bottom-right"
+          },
+          {
+            "text": "Dismiss",
+            "style": "ghost-button",
+            "placement": "cookie banner bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "555 OPPORTUNITIES",
+            "context": "Above opportunity list",
+            "purpose": "Show volume of available options"
+          },
+          {
+            "text": "We may collect logs of your interactions to improve our products. See privacy notice →",
+            "context": "Cookie banner",
+            "purpose": "Disclose data collection practice"
+          },
+          {
+            "text": "Stablecoin",
+            "context": "Default filter badge",
+            "purpose": "Indicate current filter preset"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "4.89% (APR)",
+          "$203.1M (TVL)",
+          "$27.19K (Daily rewards)",
+          "~$10.82K",
+          "6.52%"
+        ],
+        "trustSignals": [
+          "TVL amounts shown ($203.1M, $60.54M, $1.09B)",
+          "Multiple protocol badges (Ethereum, Morpho, Lend, Base)",
+          "Pre-TGE designation for early-stage opportunities"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-6-sdk.png",
+      "label": "SDK",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f8f9fa",
+          "#4a90e2",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, ~36px for main heading, smaller for subheadings",
+          "bodyStyle": "Regular sans-serif, medium gray, body text with code snippets",
+          "dataStyle": "Monospace for package names and code examples"
+        },
+        "components": [
+          {
+            "type": "sidebar-nav",
+            "description": "Left navigation menu with categorized documentation links",
+            "position": "left side",
+            "notable": "Nested structure with active state (blue), community links at bottom with icons"
+          },
+          {
+            "type": "top-nav",
+            "description": "Global navigation with menu items, search, Launch App button",
+            "position": "top",
+            "notable": "Clean horizontal layout with action CTA on right"
+          },
+          {
+            "type": "content-area",
+            "description": "Main documentation body with headings, paragraphs, and code blocks",
+            "position": "center/right",
+            "notable": "Long-form content with visual breaks"
+          },
+          {
+            "type": "info-callout",
+            "description": "Blue highlighted box with icon, directing to other SDK section",
+            "position": "middle of content",
+            "notable": "Navigation aid within documentation"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "On-this-page navigation with anchors to sections",
+            "position": "far right",
+            "notable": "Three-column layout for complex documentation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left nav anchors location, top nav provides global context, main content dominates center, right nav aids scanning",
+        "innovativeElements": [
+          "Three-column layout for documentation",
+          "Integrated 'Ask ChatGPT' quick help",
+          "Code package names as inline links"
+        ]
+      },
+      "flow": {
+        "screenType": "educational",
+        "userIntent": "Learn about Morpho SDKs, understand architecture, find integration paths",
+        "entryPoints": [
+          "Developers Hub navigation",
+          "Sidebar SDK link",
+          "Search results",
+          "External documentation link"
+        ],
+        "exitPoints": [
+          "Click on Get Started (sidebar)",
+          "Blue SDK button",
+          "View integration package pages",
+          "Navigate to other documentation sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Jump to different documentation sections"
+          },
+          {
+            "element": "Search box (top nav)",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          },
+          {
+            "element": "Blue callout box",
+            "action": "Jump to SDK Stack section"
+          },
+          {
+            "element": "Right sidebar anchors",
+            "action": "Scroll to section on page"
+          },
+          {
+            "element": "Code package names (@morpho-org/blue-sdk)",
+            "action": "Link to package details or repo"
+          }
+        ],
+        "informationArchitecture": "Hierarchical docs: SDKs overview → SDK Stack (organized layers) → Core Packages → specific implementations",
+        "frictionPoints": [
+          "Large content volume may require navigation aids",
+          "Mixed navigation patterns (sidebar + right nav)"
+        ],
+        "progressIndicators": [
+          "Active sidebar link highlighting",
+          "Right sidebar 'On this page' section markers"
+        ]
+      },
+      "copy": {
+        "headline": "Morpho SDKs",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App ↗",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Get Started",
+            "style": "text-link",
+            "placement": "sidebar, under SDKs section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "An entire SDK section is dedicated; if you know what you are doing go there directly, otherwise read what's below",
+            "context": "Blue info callout mid-content",
+            "purpose": "Guide users with different expertise levels"
+          },
+          {
+            "text": "The SDK Stack",
+            "context": "Right sidebar section anchor",
+            "purpose": "Navigate to architecture explanation"
+          },
+          {
+            "text": "Core Packages",
+            "context": "Right sidebar section anchor",
+            "purpose": "Navigate to package documentation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "@morpho-org/blue-sdk",
+          "@morpho-org/simulation-sdk",
+          "TypeScript"
+        ],
+        "trustSignals": [
+          "Comprehensive SDK documentation",
+          "Multiple integration options (Viem, Wagmi)",
+          "Well-organized modular architecture"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-7-customers.png",
+      "label": "Customers",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f3a",
+          "#4a9eff",
+          "#c9e4ff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, blue gradient or solid blue, centered, 80px+ size",
+          "bodyStyle": "Medium weight sans-serif, dark navy text on light blue cards, 16px",
+          "dataStyle": "$1.5B, 1.5 years — large readable numbers in card descriptions"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Top fixed nav with Morpho logo, dropdown menus (Products, Solutions, Resources), Customers link, Contact, Launch App button",
+            "position": "Top",
+            "notable": "Launch App button is bright blue, stands out as primary CTA"
+          },
+          {
+            "type": "Headline Section",
+            "description": "Centered blue text 'Customer Stories' with logo grid below (Kraken, Coinbase, Crypto.com, Gauntlet, Gemini, Ledger, Lido)",
+            "position": "Top-center, mid-page",
+            "notable": "Logos are muted gray, showing established institutional trust"
+          },
+          {
+            "type": "Case Study Cards",
+            "description": "Three horizontal cards (Steakhouse Financial, Coinbase, Société Générale) with light blue gradient background, company logo, description text, and 'Read story' button",
+            "position": "Bottom third",
+            "notable": "Cards have blur effect background imagery, button has arrow icon"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline draws eye first, then logo credibility row, then case study cards with clear contrast",
+        "innovativeElements": [
+          "Blurred background imagery on cards creates depth",
+          "Logo grid as trust signal section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-showcase",
+        "userIntent": "Browse successful customer implementations to build trust",
+        "entryPoints": [
+          "Customers navigation link from main nav"
+        ],
+        "exitPoints": [
+          "Read story button on cards",
+          "Logo clicks to customer details",
+          "Back to main nav sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read story button",
+            "action": "Navigate to full case study"
+          },
+          {
+            "element": "Customer logos",
+            "action": "Navigate to customer profile or case study"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Social proof section with prestigious customers, followed by detailed case studies showing measurable impact",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Customer Stories",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read story",
+            "style": "ghost-button with arrow",
+            "placement": "Bottom of case study cards"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Steakhouse Financial grows their curation businesses to $1.5B in 1.5 years",
+            "context": "Left card description",
+            "purpose": "Demonstrate measurable business impact"
+          },
+          {
+            "text": "Coinbase in the front, Morpho in the back",
+            "context": "Center card description",
+            "purpose": "Explain partnership/integration model"
+          },
+          {
+            "text": "Société Générale, via SG Forge, enables lending and borrowing of MiCA compliant stablecoins using DeFi infrastructure",
+            "context": "Right card description",
+            "purpose": "Show regulatory compliance and enterprise use case"
+          }
+        ],
+        "tone": "professional-technical, achievement-focused",
+        "dataFormatting": [
+          "$1.5B",
+          "1.5 years"
+        ],
+        "trustSignals": [
+          "Coinbase logo",
+          "Crypto.com logo",
+          "Gauntlet logo",
+          "Gemini logo",
+          "Ledger logo",
+          "Société Générale logo",
+          "Kraken logo"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-8-developers.png",
+      "label": "Developers",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#4a9eff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text, 48px+",
+          "bodyStyle": "Regular weight sans-serif, dark gray text, 16px line-height comfortable",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Vertical navigation with sections: Introduction (Morpho, Products, Use Cases), Developers (Quick Start), Resources (Addresses, Contracts, Morpho Apps Ecosystem, Audits, etc.), social icons at bottom",
+            "position": "Left side, full height",
+            "notable": "Light gray background, blue active state indicator, hierarchical nesting"
+          },
+          {
+            "type": "Top Navigation",
+            "description": "Horizontal nav with Get Started, Build Products, Developers Hub, Learn, Curate. Launch App button top-right, search bar, help dropdown",
+            "position": "Top",
+            "notable": "Get Started is highlighted in blue, indicating current context"
+          },
+          {
+            "type": "Three-Column Card Grid",
+            "description": "Build, Curate, Learn cards with icon illustrations (layered stack, sphere, stacked pages), descriptions, and blue arrow buttons",
+            "position": "Center-right main content",
+            "notable": "Minimal line-drawn icons, consistent spacing, clear hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws attention, three equal-weight cards below guide user to three core pathways",
+        "innovativeElements": [
+          "Minimalist line-drawn icon style",
+          "Keyboard navigation hints (Shift, Next at bottom right)"
+        ]
+      },
+      "flow": {
+        "screenType": "hub-landing",
+        "userIntent": "Explore developer documentation and learning resources for building with Morpho",
+        "entryPoints": [
+          "Developers Hub from top nav",
+          "Get Started from top nav",
+          "Developers section from sidebar"
+        ],
+        "exitPoints": [
+          "Build arrow button",
+          "Curate arrow button",
+          "Learn arrow button",
+          "Products link at bottom",
+          "Sidebar navigation links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Build card with arrow",
+            "action": "Navigate to SDK/API documentation"
+          },
+          {
+            "element": "Curate card with arrow",
+            "action": "Navigate to vault curation guides"
+          },
+          {
+            "element": "Learn card with arrow",
+            "action": "Navigate to educational content"
+          },
+          {
+            "element": "Sidebar items",
+            "action": "Navigate to specific resource pages"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-site search"
+          }
+        ],
+        "informationArchitecture": "Hub page with three primary user paths (Build, Curate, Learn) supported by detailed sidebar navigation for deeper exploration",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Next / Shift navigation hint at bottom right"
+        ]
+      },
+      "copy": {
+        "headline": "Open infrastructure for onchain loans",
+        "subheadline": "Connect to the most trusted lending network",
+        "ctas": [
+          {
+            "text": "→ (on Build card)",
+            "style": "blue-circle-button",
+            "placement": "Bottom of Build card"
+          },
+          {
+            "text": "→ (on Curate card)",
+            "style": "blue-circle-button",
+            "placement": "Bottom of Curate card"
+          },
+          {
+            "text": "→ (on Learn card)",
+            "style": "blue-circle-button",
+            "placement": "Bottom of Learn card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Create DeFi applications with Morpho Vaults and Markets using our SDKs and APIs.",
+            "context": "Build card description",
+            "purpose": "Explain developer capabilities"
+          },
+          {
+            "text": "Curate vault performance by balancing stakeholder needs and optimizing liquidity allocation.",
+            "context": "Curate card description",
+            "purpose": "Explain curator role and responsibilities"
+          },
+          {
+            "text": "Understand Morpho's decentralized lending protocol concepts and ecosystem fundamentals.",
+            "context": "Learn card description",
+            "purpose": "Explain educational pathway"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-9-audits.png",
+      "label": "Audits",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#4a9eff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text, 40px+",
+          "bodyStyle": "Regular weight sans-serif, dark gray text, 16px line-height",
+          "dataStyle": "Blue hyperlinks for auditor names and report links, date format YYYY-MM-DD"
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Vertical navigation with Introduction, Developers, Resources sections. Audits is highlighted/active in blue.",
+            "position": "Left side, full height",
+            "notable": "Active state clearly indicated, hierarchical structure"
+          },
+          {
+            "type": "Top Navigation",
+            "description": "Consistent horizontal nav bar with Get Started, Build Products, Developers Hub, Learn, Curate, Launch App, Help, Search",
+            "position": "Top",
+            "notable": "Chat GPT integration available (Ask in ChatGPT button top-right)"
+          },
+          {
+            "type": "Data Table",
+            "description": "Four-column table: Auditors, Scope, Date, Report. Rows include Certora, Spearbit, Blackthorn with linked names and report links",
+            "position": "Bottom half of main content",
+            "notable": "Clean tabular format, blue hyperlinks for actions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and introductory paragraphs establish context, body text explains security practices with embedded links, table provides scannable audit data",
+        "innovativeElements": [
+          "Ask in ChatGPT integration for documentation",
+          "Embedded links to security framework and GitHub repositories"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation",
+        "userIntent": "Review security audits and trust certifications for Morpho protocol",
+        "entryPoints": [
+          "Audits from sidebar Resources section",
+          "Security Framework link from body text",
+          "Github repositories link from body text"
+        ],
+        "exitPoints": [
+          "Auditor name links (Certora, Spearbit, Blackthorn)",
+          "Report links",
+          "Back to sidebar navigation",
+          "Github repositories link",
+          "Ask in ChatGPT button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Auditor names (blue links)",
+            "action": "Navigate to auditor profile or details"
+          },
+          {
+            "element": "Report links (blue links)",
+            "action": "Download or view audit report"
+          },
+          {
+            "element": "Github repositories link",
+            "action": "Navigate to external GitHub page"
+          },
+          {
+            "element": "Morpho Security Framework link",
+            "action": "Navigate to security framework documentation"
+          },
+          {
+            "element": "Ask in ChatGPT button",
+            "action": "Open ChatGPT with documentation context"
+          }
+        ],
+        "informationArchitecture": "Security-focused page with narrative explanation of practices (formal verification, mutation tests, fuzzing, peer reviews) followed by table of comprehensive external audits",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Audits - Security Reviews",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Github repositories",
+            "style": "text-link",
+            "placement": "Body text, end of first paragraph"
+          },
+          {
+            "text": "Morpho Security Framework",
+            "style": "text-link",
+            "placement": "Body text, second paragraph"
+          },
+          {
+            "text": "Ask in ChatGPT",
+            "style": "dropdown-button",
+            "placement": "Top right corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Morpho is known for its industry-leading security practices and follows a multi-faceted approach to security.",
+            "context": "Opening paragraph",
+            "purpose": "Establish credibility and security commitment"
+          },
+          {
+            "text": "Morpho security practices include formal verification, mutation tests, fuzzing, unit testing, and peer reviews that can be found within respective Github repositories. External measures include professional security reviews, contests, and pre/post-deployment bounties.",
+            "context": "Second paragraph",
+            "purpose": "Detail internal and external security measures"
+          },
+          {
+            "text": "The Morpho apps and smart contracts have been audited extensively by a wide range of security firms, with every new app and feature undergoing audits before release. The full list of audits is available below.",
+            "context": "Third paragraph",
+            "purpose": "Emphasize comprehensive audit coverage"
+          }
+        ],
+        "tone": "professional-technical, trust-focused",
+        "dataFormatting": [
+          "2025-15-12",
+          "2025-04-12",
+          "Vaults V2 - MarketV1AdapterV2",
+          "Vaults V2 - MarketV1AdapterV2 Registry"
+        ],
+        "trustSignals": [
+          "Audited by Certora",
+          "Audited by Spearbit",
+          "Audited by Blackthorn",
+          "Formal verification mentioned",
+          "Pre/post-deployment bounties",
+          "Professional security reviews"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-13-stories-gemini.png",
+      "label": "stories - gemini",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f172a",
+          "#6366f1",
+          "#c7d2fe"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, high contrast, 60+ px",
+          "bodyStyle": "Light gray, medium weight, 14-16px for body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories / Gemini navigation",
+            "position": "top-left",
+            "notable": "Subtle gray text with back arrow"
+          },
+          {
+            "type": "logo-block",
+            "description": "Gemini logo and branding",
+            "position": "top-right",
+            "notable": "Clean white logo with icon"
+          },
+          {
+            "type": "quote-block",
+            "description": "Italicized testimonial from Raad Beirouty",
+            "position": "left-center",
+            "notable": "Indented quote styling with attribution"
+          },
+          {
+            "type": "product-image",
+            "description": "Mobile app screenshot showing Risk assessment UI",
+            "position": "bottom-center",
+            "notable": "Light blue background container, phone mockup"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left third, supporting details and image fill remaining space; right sidebar contains metadata",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "case-study",
+        "userIntent": "Understand how Gemini uses Morpho's Embedded Earn solution",
+        "entryPoints": [
+          "Customer stories section",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App CTA",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to Customer stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Left: narrative and testimonial; Right: structured metadata (Company, Solutions, Industry, About)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Gemini offers access to noncustodial onchain rewards to millions of users via Gemini Wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Gemini has been on a mission to provide noncustodial rewards to our customers in the most transparent way without sacrificing ease of use.",
+            "context": "Testimonial attribution",
+            "purpose": "Establish credibility and product vision alignment"
+          },
+          {
+            "text": "Raad Beirouty, Principle Product Manager at Gemini",
+            "context": "Quote attribution",
+            "purpose": "Lend authority to the testimonial"
+          },
+          {
+            "text": "Embedded Earn",
+            "context": "Solutions used section",
+            "purpose": "Label the Morpho product being used"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Gemini logo and branding",
+          "Regulated Exchange / Fintech industry tag",
+          "Named executive testimonial"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-14-stories-bitget.png",
+      "label": "stories - bitget",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f172a",
+          "#3b82f6",
+          "#93c5fd"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, 50+ px, bold weight",
+          "bodyStyle": "Light gray, 14-16px, medium weight",
+          "dataStyle": "Blue accent color, large numeric values with labels below"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories / Bitget navigation",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "logo-block",
+            "description": "Bitget lightning bolt logo",
+            "position": "top-right",
+            "notable": "Minimalist white icon with text"
+          },
+          {
+            "type": "metric-group",
+            "description": "Two key stats: $100M+ and 5%+",
+            "position": "left-center",
+            "notable": "Large blue numbers with descriptive labels"
+          },
+          {
+            "type": "product-image",
+            "description": "Mobile app mockup on light blue background",
+            "position": "bottom-center",
+            "notable": "Rounded corners, dark phone frame"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline first, metric callouts second, image and sidebar metadata anchor bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "case-study",
+        "userIntent": "Learn how Bitget integrates Morpho lending to enable onchain lending",
+        "entryPoints": [
+          "Customer stories section",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App",
+          "Navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to Customer stories"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Left: headline, metrics, product image; Right: structured company metadata (About, Solutions, Industry)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitget takes one step closer towards its Universal Exchange vision by integrating onchain lending powered by Morpho",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Stablecoins Earn Deposits",
+            "context": "First metric label",
+            "purpose": "Describe the $100M+ figure"
+          },
+          {
+            "text": "Benchmark Rate",
+            "context": "Second metric label",
+            "purpose": "Describe the 5%+ yield metric"
+          },
+          {
+            "text": "Bitget is positioning itself as a 'Universal Exchange (UEX)': a single platform designed to bring together trading, asset management, and access to a wider array of financial instruments...",
+            "context": "About section",
+            "purpose": "Provide detailed context on Bitget's vision and Morpho's role"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$100M+",
+          "5%+"
+        ],
+        "trustSignals": [
+          "Bitget branding",
+          "Crypto Exchange industry tag",
+          "Quantified metrics ($100M deposits, 5%+ rates)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-15-stories-trustwallet.png",
+      "label": "stories - trust-wallet",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f172a",
+          "#93c5fd",
+          "#c7d2fe"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, 50+ px, bold weight",
+          "bodyStyle": "Light gray, 14-16px, regular weight",
+          "dataStyle": "Blue accent color for numeric metrics with labels"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories / Trust Wallet navigation",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "logo-block",
+            "description": "Trust Wallet shield logo",
+            "position": "top-right",
+            "notable": "Shield icon with text, clean white styling"
+          },
+          {
+            "type": "metric-group",
+            "description": "Three metrics: 8, $60M+, 5,000+",
+            "position": "left-center",
+            "notable": "Large blue numbers with descriptive labels below"
+          },
+          {
+            "type": "product-image",
+            "description": "Mobile app mockup on light blue background",
+            "position": "bottom-center",
+            "notable": "Rounded phone frame, dark interior"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, three metric callouts provide evidence, image anchors bottom, sidebar holds secondary info",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "case-study",
+        "userIntent": "Understand how Trust Wallet launched Stablecoin Earn using Morpho",
+        "entryPoints": [
+          "Customer stories section",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to Customer stories"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Left: narrative headline, three supporting metrics, product visual; Right: company info (Company, Solutions, Industry, About)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trust Wallet launches Stablecoin Earn, with Morpho as the default lending solution",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Vaults Integrated",
+            "context": "First metric label",
+            "purpose": "Quantify integration depth (8 vaults)"
+          },
+          {
+            "text": "Deposits",
+            "context": "Second metric label",
+            "purpose": "Show capital attracted ($60M+)"
+          },
+          {
+            "text": "Unique Depositors",
+            "context": "Third metric label",
+            "purpose": "Show user adoption (5,000+)"
+          },
+          {
+            "text": "Trust Wallet is a leading self-custody wallet serving over 200 million users, offering onchain access directly in wallet to NFTs, staking, swap, and earn.",
+            "context": "About section",
+            "purpose": "Establish Trust Wallet's scale and product focus"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "8",
+          "$60M+",
+          "5,000+"
+        ],
+        "trustSignals": [
+          "Trust Wallet branding and shield logo",
+          "Self-custody Wallet industry tag",
+          "200 million users mentioned",
+          "Quantified metrics (vaults, deposits, depositors)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-10-disclaimers.png",
+      "label": "Disclaimers",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a9eff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large blue sans-serif heading (48px+) with high contrast against dark background",
+          "bodyStyle": "Medium gray body text, justified alignment, generous line-height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top navigation with Morpho logo, menu items (Products, Solutions, Customers, Resources, Contact), and Launch App CTA",
+            "position": "Top",
+            "notable": "Standard SaaS header layout with dropdown indicators on menu items"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Back arrow link to previous page",
+            "position": "Top-left below header",
+            "notable": null
+          },
+          {
+            "type": "Text block",
+            "description": "Large disclaimer text organized under 'General Disclaimer' section",
+            "position": "Main content area",
+            "notable": "Dense legal text with careful typography to ensure readability"
+          },
+          {
+            "type": "Button",
+            "description": "'Terms of Use' ghost button with arrow icon",
+            "position": "Below headline, left side",
+            "notable": "Dark background with lighter border, minimal styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline draws attention, then directs to dense body text; Terms of Use button provides escape route",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "static-content",
+        "userIntent": "Read and understand Morpho's legal disclaimers before using the platform",
+        "entryPoints": [
+          "Footer link from main site",
+          "Legal/compliance section navigation"
+        ],
+        "exitPoints": [
+          "Terms of Use button",
+          "Back navigation arrow",
+          "Main navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Use button",
+            "action": "Navigate to full Terms of Use document"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to Products, Solutions, Customers, Resources, or Contact pages"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Linear reading experience with single section (General Disclaimer) containing comprehensive legal text",
+        "frictionPoints": [
+          "Dense legal language may be difficult for non-expert users",
+          "Long scrolling text with no section breaks or visual relief"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Disclaimers",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Terms of Use",
+            "style": "ghost-button",
+            "placement": "Below headline, left-aligned"
+          },
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right, navigation bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "General Disclaimer",
+            "context": "Section heading",
+            "purpose": "Organize content and signal what follows"
+          }
+        ],
+        "tone": "professional-technical, formal legal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit disclaimer about third-party information sources",
+          "Waiver of liability language",
+          "Transparency about best-effort basis of information provision"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-11-stories-coinbase.png",
+      "label": "stories - coinbase",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a9eff",
+          "#c5d9ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif heading (48px+), left-aligned on main content area",
+          "bodyStyle": "Medium gray body text for supporting information",
+          "dataStyle": "Large blue metric numbers with smaller gray labels below"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top header with Morpho logo, menu navigation, and Launch App button",
+            "position": "Top",
+            "notable": "Consistent with other site pages"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "'Customer stories / Coinbase' with back arrow",
+            "position": "Top-left below header",
+            "notable": "Hierarchical navigation showing page context"
+          },
+          {
+            "type": "Headline",
+            "description": "Main value proposition for Coinbase partnership",
+            "position": "Left column, main area",
+            "notable": "Large white text on dark background for maximum contrast"
+          },
+          {
+            "type": "Metric cards",
+            "description": "Four stat cards displaying $1B+, $1.6B+, $500M+, 90K+ with labels",
+            "position": "Left column, below headline",
+            "notable": "Blue metric numbers create visual interest and quantifiable proof"
+          },
+          {
+            "type": "Visual mockup",
+            "description": "Two mobile phone mockups showing Morpho-powered lending UI with light blue background",
+            "position": "Left column, lower half",
+            "notable": "Product-in-context visualization with cohesive color treatment"
+          },
+          {
+            "type": "Sidebar card",
+            "description": "Right column containing Coinbase logo, industry, solutions used, and about section",
+            "position": "Right column",
+            "notable": "Clean information hierarchy with icons for solutions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and metrics drive attention on left; logo and details on right guide secondary reading",
+        "innovativeElements": [
+          "Two phone mockups stacked and slightly offset for depth",
+          "Light blue accent background behind phone mockups creates layered visual interest"
+        ]
+      },
+      "flow": {
+        "screenType": "case-study",
+        "userIntent": "Learn how Coinbase uses Morpho's solutions for lending and borrowing products",
+        "entryPoints": [
+          "Customer stories section navigation",
+          "Link from main site",
+          "Marketing collateral"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Main navigation (Products, Solutions, Customers, Resources)",
+          "Launch App button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to customer stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          },
+          {
+            "element": "Main navigation",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Left column tells narrative with headline + metrics + visual proof; right column provides metadata (industry, solutions, company info)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Coinbase offers noncustodial lending and borrowing products to millions of users",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Active Loans",
+            "context": "Label under $1B+ metric",
+            "purpose": "Contextualize metric value"
+          },
+          {
+            "text": "Total Origination",
+            "context": "Label under $1.6B+ metric",
+            "purpose": "Contextualize metric value"
+          },
+          {
+            "text": "Active Lending Deposits",
+            "context": "Label under $500M+ metric",
+            "purpose": "Contextualize metric value"
+          },
+          {
+            "text": "Active Users",
+            "context": "Label under 90K+ metric",
+            "purpose": "Contextualize metric value"
+          },
+          {
+            "text": "Industry: Regulated Exchange / Fintech",
+            "context": "Right sidebar",
+            "purpose": "Categorize customer vertically"
+          },
+          {
+            "text": "Solutions used: Embedded Earn, Crypto-Backed Loans",
+            "context": "Right sidebar",
+            "purpose": "Highlight specific Morpho products leveraged"
+          },
+          {
+            "text": "Coinbase is one of the world's leading crypto-exchange, as well as one of leading consumer-facing fintech apps. With 100M+ users, it's the biggest regulated exchange in the US.",
+            "context": "Right sidebar about section",
+            "purpose": "Build credibility by highlighting customer scale and reputation"
+          }
+        ],
+        "tone": "professional-technical, business-focused",
+        "dataFormatting": [
+          "$1B+",
+          "$1.6B+",
+          "$500M+",
+          "90K+"
+        ],
+        "trustSignals": [
+          "Coinbase partnership (major regulated exchange)",
+          "Millions of users served",
+          "$1B+ active loans metric",
+          "100M+ users at Coinbase"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-12-stories-ledger.png",
+      "label": "stories - ledger",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a9eff",
+          "#c5d9ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif heading (48px+), left-aligned",
+          "bodyStyle": "Medium gray body text for supporting information",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top header with Morpho logo, menu items, and Launch App button",
+            "position": "Top",
+            "notable": "Consistent site header"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "'Customer stories / Ledger' with back arrow",
+            "position": "Top-left below header",
+            "notable": "Hierarchical navigation showing page context"
+          },
+          {
+            "type": "Headline",
+            "description": "Main value proposition for Ledger partnership",
+            "position": "Left column, main area",
+            "notable": "Large white text conveying partnership impact (yield for 8M users)"
+          },
+          {
+            "type": "Visual mockup",
+            "description": "Single dark mobile phone mockup on light blue background",
+            "position": "Left column, lower half",
+            "notable": "Product-in-context visualization with high contrast dark phone"
+          },
+          {
+            "type": "Sidebar card",
+            "description": "Right column containing Ledger logo, solutions used, company info, industry, and about section",
+            "position": "Right column",
+            "notable": "Clean metadata presentation with icon indicators"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates left; metrics absent; visual mockup provides proof; sidebar details support credibility",
+        "innovativeElements": [
+          "Single phone mockup with stark contrast against light blue background",
+          "Ledger logo positioned in top right, creating visual anchor"
+        ]
+      },
+      "flow": {
+        "screenType": "case-study",
+        "userIntent": "Learn how Ledger integrates Morpho to provide yield to 8M self-custody users",
+        "entryPoints": [
+          "Customer stories section navigation",
+          "Link from main site",
+          "Marketing or partnership pages"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Main navigation (Products, Solutions, Customers, Resources)",
+          "Launch App button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to customer stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          },
+          {
+            "element": "Main navigation",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Left column emphasizes partnership impact and product integration; right sidebar provides credibility signals through company details and solution list",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Ledger integrates Morpho to provide in-app yield to 8 millions of self-custody users",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Solutions used",
+            "context": "Right sidebar section header",
+            "purpose": "Label the solutions list"
+          },
+          {
+            "text": "Embedded Earn",
+            "context": "Right sidebar solutions list",
+            "purpose": "Specify which Morpho solution is used"
+          },
+          {
+            "text": "Company: Ledger",
+            "context": "Right sidebar",
+            "purpose": "Reinforce customer identity"
+          },
+          {
+            "text": "Industry: Self-custody Solutions",
+            "context": "Right sidebar",
+            "purpose": "Categorize customer vertically"
+          },
+          {
+            "text": "About: Ledger is the world's leading self-custody solution with 8M+ devices sold. Ledger Wallet (formerly known as Ledger Live) is the companion app to Ledger devices as the gateway to the onchain world.",
+            "context": "Right sidebar about section",
+            "purpose": "Build credibility through market leadership and product explanation"
+          }
+        ],
+        "tone": "professional-technical, partnership-focused",
+        "dataFormatting": [
+          "8 million users",
+          "8M+ devices sold"
+        ],
+        "trustSignals": [
+          "Ledger partnership (world's leading self-custody solution)",
+          "8M+ devices sold metric",
+          "Integration with major hardware wallet provider"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-16-stories-safe.png",
+      "label": "stories - safe",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#4a9eff",
+          "#00d084"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all caps or title case, high contrast white on dark background",
+          "bodyStyle": "Medium weight sans-serif, gray secondary text for supporting information",
+          "dataStyle": "Large blue numbers with metric labels below in gray"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top nav with Morpho logo, product/solution dropdowns, and blue Launch App button",
+            "position": "top",
+            "notable": "Persistent header across all customer story pages"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories > Safe navigation trail with back arrow",
+            "position": "top-left",
+            "notable": "Quick escape route to return to stories listing"
+          },
+          {
+            "type": "metrics-grid",
+            "description": "Three highlighted statistics: 9 Vaults, 3 Assets, $25M+ Deposits",
+            "position": "left-center",
+            "notable": "Blue accent color emphasizes numeric values"
+          },
+          {
+            "type": "product-screenshot",
+            "description": "Embedded Safe Wallet interface showing dashboard with earnings popup modal",
+            "position": "bottom-left",
+            "notable": "Green CTA buttons (Send, Buy crypto) create visual interest in dark interface"
+          },
+          {
+            "type": "sidebar-details",
+            "description": "Company name, Solutions used (Embedded Earn), Industry, About section",
+            "position": "right",
+            "notable": "Structured metadata format for quick scannability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws eye first, metrics provide quantifiable proof, embedded product screenshot anchors the integration story visually",
+        "innovativeElements": [
+          "Light blue background container for product screenshot creates visual separation",
+          "Green accent colors (matching product UI) used strategically in embedded modal"
+        ]
+      },
+      "flow": {
+        "screenType": "customer-story-detail",
+        "userIntent": "Understand how Safe uses Morpho's Embedded Earn to provide institutional yields",
+        "entryPoints": [
+          "Customer stories page",
+          "Products/Solutions browse",
+          "Direct link from marketing campaign"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App button",
+          "Navigation to other products/solutions"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow / Breadcrumb",
+            "action": "Returns to Customer stories listing"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Opens Morpho application in new context"
+          },
+          {
+            "element": "Product screenshot area",
+            "action": "Displays real-world usage of Safe + Morpho integration"
+          }
+        ],
+        "informationArchitecture": "Left side: narrative + proof (headline + metrics); Center: visual proof (product); Right side: metadata (company, solution, industry, details)",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Breadcrumb shows current position in customer stories section"
+        ]
+      },
+      "copy": {
+        "headline": "Safe integrates Morpho to provide institution-grade yields for DAOs, treasuries and onchain organizations",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Try now",
+            "style": "primary-button",
+            "placement": "embedded product screenshot modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Customer stories / Safe",
+            "context": "Breadcrumb navigation",
+            "purpose": "Contextual location marker"
+          },
+          {
+            "text": "Vaults Integrated",
+            "context": "Metric label under 9",
+            "purpose": "Explains the significance of the 9 vaults statistic"
+          },
+          {
+            "text": "Try enterprise-grade yields with up to 8.10% APY*",
+            "context": "Embedded popup modal in screenshot",
+            "purpose": "Specific yield offer with disclaimer asterisk"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "9 (vaults)",
+          "3 (assets)",
+          "$25M+ (deposits)",
+          "8.10% APY"
+        ],
+        "trustSignals": [
+          "$25M+ in deposits through Safe",
+          "9 vaults integrated",
+          "Institution-grade yields mentioned",
+          "Real product screenshot showing actual integration"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-17-stories-lemon.png",
+      "label": "stories - lemon",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#4a9eff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, title case, high contrast white on dark",
+          "bodyStyle": "Medium weight sans-serif, gray secondary text",
+          "dataStyle": "Large blue numbers with metric labels below in gray"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top nav with Morpho branding and primary CTA",
+            "position": "top",
+            "notable": "Consistent with Safe story above"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories > Lemon navigation",
+            "position": "top-left",
+            "notable": "Pattern consistency across story pages"
+          },
+          {
+            "type": "metrics-grid",
+            "description": "Three statistics: 70,000+ Unique Depositors, $16M+ Value Deposited, 70%+ Deposits in Stablecoins",
+            "position": "left-center",
+            "notable": "Focuses on user adoption and stablecoin concentration"
+          },
+          {
+            "type": "company-logo",
+            "description": "Lemon branding with circular icon",
+            "position": "top-right",
+            "notable": "Clear visual identification of featured customer"
+          },
+          {
+            "type": "product-image-placeholder",
+            "description": "Light blue container with dark rounded rectangle (image not loaded)",
+            "position": "bottom-left",
+            "notable": "Maintains layout consistency despite missing visual content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates left side, metrics provide proof, right sidebar contains company metadata, product image anchors bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "customer-story-detail",
+        "userIntent": "Learn how Lemon uses Morpho to offer DeFi yields to LATAM users",
+        "entryPoints": [
+          "Customer stories page",
+          "LATAM fintech category browse",
+          "Direct marketing link"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Breadcrumb with back arrow",
+            "action": "Navigate back to stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Opens application"
+          }
+        ],
+        "informationArchitecture": "Left: narrative-driven headline with supporting metrics; Right: company metadata; Bottom: visual content area",
+        "frictionPoints": [
+          "Product image not loaded/visible in this screenshot - reduces credibility of integration story"
+        ],
+        "progressIndicators": [
+          "Breadcrumb navigation"
+        ]
+      },
+      "copy": {
+        "headline": "Lemon brings DeFi-powered USD savings account to millions of LATAM users",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "header-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Customer stories / Lemon",
+            "context": "Breadcrumb",
+            "purpose": "Navigation context"
+          },
+          {
+            "text": "Unique Depositors",
+            "context": "Metric label",
+            "purpose": "Explains user adoption scale"
+          },
+          {
+            "text": "Deposits in Stablecoins",
+            "context": "Metric label",
+            "purpose": "Highlights stablecoin concentration in user deposits"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "70,000+",
+          "$16M+",
+          "70%+"
+        ],
+        "trustSignals": [
+          "70,000+ unique depositors",
+          "$16M+ in deposits",
+          "70%+ deposits in stablecoins indicates user trust in stable assets",
+          "Positioned as Latin America's leading crypto app"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-18-stories-farcaster.png",
+      "label": "stories - farcaster",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#4a9eff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, quoted narrative style, high contrast white",
+          "bodyStyle": "Medium weight sans-serif, gray secondary text",
+          "dataStyle": "Large blue numbers with metric labels below in gray"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Consistent top navigation with Launch App button",
+            "position": "top",
+            "notable": "Same header template as other stories"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Customer stories > Farcaster",
+            "position": "top-left",
+            "notable": "Consistent navigation pattern"
+          },
+          {
+            "type": "company-logo",
+            "description": "Farcaster logo with distinctive geometric icon",
+            "position": "top-right",
+            "notable": "Clear brand identification in sidebar"
+          },
+          {
+            "type": "metrics-grid",
+            "description": "Two metrics: $1M+ USDC Lending deposits, 5%+ Yield on USDC",
+            "position": "left-center",
+            "notable": "Focused on lending product rather than user adoption"
+          },
+          {
+            "type": "product-image-placeholder",
+            "description": "Light blue container with dark rounded rectangle",
+            "position": "bottom-left",
+            "notable": "Same placeholder pattern as Lemon story"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Quoted headline immediately draws attention, metrics provide proof points, sidebar contains categorization metadata",
+        "innovativeElements": [
+          "Headline uses quotation marks to emphasize Farcaster's own messaging about network value"
+        ]
+      },
+      "flow": {
+        "screenType": "customer-story-detail",
+        "userIntent": "Understand Farcaster's 'flywheel' mechanism for user retention powered by Morpho yields",
+        "entryPoints": [
+          "Customer stories carousel/list",
+          "Social network + wallet product category",
+          "Morpho partnerships page"
+        ],
+        "exitPoints": [
+          "Back to Customer stories",
+          "Launch App",
+          "Top navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow/breadcrumb",
+            "action": "Return to stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Opens Morpho application"
+          }
+        ],
+        "informationArchitecture": "Left side: narrative headline (quoted strategy) + minimal metrics; Right side: company identity + solutions + industry + about description",
+        "frictionPoints": [
+          "Product screenshot/image missing - makes integration feel less concrete"
+        ],
+        "progressIndicators": [
+          "Breadcrumb showing current story"
+        ]
+      },
+      "copy": {
+        "headline": "Farcaster builds its \"come for the earnings, stay for the network\" flywheel powered by Morpho",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "header-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Customer stories / Farcaster",
+            "context": "Breadcrumb",
+            "purpose": "Location context"
+          },
+          {
+            "text": "USDC Lending deposits",
+            "context": "Metric label",
+            "purpose": "Clarifies the nature of deposits"
+          },
+          {
+            "text": "Yield on USDC",
+            "context": "Metric label",
+            "purpose": "Emphasizes the earnings component"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1M+",
+          "5%+"
+        ],
+        "trustSignals": [
+          "$1M+ in USDC lending deposits",
+          "5%+ yield on USDC",
+          "Positioned as building a social product with economic incentives",
+          "Explicitly mentions \"consumer network\" and embedded wallet functionality"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-19-stories-steakhouse.png",
+      "label": "stories - steakhouse",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#5b9cff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, ~60px weight, left-aligned",
+          "bodyStyle": "Light gray, medium weight, ~16px",
+          "dataStyle": "Large bold numbers in blue (#5b9cff) with gray labels below"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky top bar with Morpho logo, nav menu, and Launch App button",
+            "position": "top",
+            "notable": "Dropdown menus on Products, Solutions, Resources"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Customer stories / Steakhouse Financial navigation",
+            "position": "top-left",
+            "notable": "Back arrow included for navigation"
+          },
+          {
+            "type": "Metric Cards",
+            "description": "Two large stats: 51 Vaults and $1.5B Total Deposits",
+            "position": "left-center",
+            "notable": "Blue accent color on numbers for visual emphasis"
+          },
+          {
+            "type": "Logo Card",
+            "description": "Company logo and branding",
+            "position": "right-top",
+            "notable": "Steakhouse Financial logo with horns icon"
+          },
+          {
+            "type": "Info Panel",
+            "description": "Right sidebar with Company, Solutions, Industry, About metadata",
+            "position": "right",
+            "notable": "Checkbox icon next to 'Curation' solution"
+          },
+          {
+            "type": "Screenshot Container",
+            "description": "Light blue background with embedded dark screenshot",
+            "position": "bottom-left",
+            "notable": "Frames product UI within promotional context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates left; key metrics underneath; right sidebar provides context; screenshot anchors bottom",
+        "innovativeElements": [
+          "Split-screen case study layout with live app screenshot",
+          "Color-coded metric display with blue numbers",
+          "Right-aligned metadata panel in sidebar format"
+        ]
+      },
+      "flow": {
+        "screenType": "case-study/customer-story",
+        "userIntent": "Learn how Steakhouse Financial uses Morpho's Curation solution",
+        "entryPoints": [
+          "Customer stories section",
+          "Direct link from marketing"
+        ],
+        "exitPoints": [
+          "Back to customer stories",
+          "Launch App button",
+          "Contact",
+          "Resources dropdown"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Navigate back to customer stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          },
+          {
+            "element": "Dropdown menus",
+            "action": "Reveal submenu items"
+          }
+        ],
+        "informationArchitecture": "Hero headline + metric proof points on left; company metadata + about text on right; embedded screenshot validates use case",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Steakhouse Financial grows their curation businesses to $1.5B in 1.5 years",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "51",
+            "context": "Below headline on left",
+            "purpose": "Quantify number of vaults managed"
+          },
+          {
+            "text": "$1.5B",
+            "context": "Next to vault count",
+            "purpose": "Demonstrate scale of total deposits"
+          },
+          {
+            "text": "Vaults",
+            "context": "Label under 51",
+            "purpose": "Define what the number represents"
+          },
+          {
+            "text": "Total Deposits",
+            "context": "Label under $1.5B",
+            "purpose": "Define what the currency represents"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.5B",
+          "51"
+        ],
+        "trustSignals": [
+          "$1.5B in deposits",
+          "Steakhouse Financial brand",
+          "Institutional-grade positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-20-stories-gauntlet.png",
+      "label": "stories - gauntlet",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#5b9cff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, ~60px weight, left-aligned",
+          "bodyStyle": "Light gray, medium weight, ~16px",
+          "dataStyle": "Large bold numbers in blue (#5b9cff) with gray labels below"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky top bar with Morpho logo, nav menu, and Launch App button",
+            "position": "top",
+            "notable": "Consistent with Steakhouse page"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Customer stories / Gauntlet navigation",
+            "position": "top-left",
+            "notable": "Back arrow for navigation"
+          },
+          {
+            "type": "Metric Cards",
+            "description": "63 Vaults and $1B+ Total Deposits",
+            "position": "left-center",
+            "notable": "Plus symbol on $1B indicates \"and more\""
+          },
+          {
+            "type": "Logo Card",
+            "description": "Company branding",
+            "position": "right-top",
+            "notable": "Gauntlet logo with geometric icon"
+          },
+          {
+            "type": "Info Panel",
+            "description": "Right sidebar with Company, Solutions, Industry, About",
+            "position": "right",
+            "notable": "Checkbox icon next to 'Curation' solution"
+          },
+          {
+            "type": "Screenshot Container",
+            "description": "Light blue background with embedded dark screenshot",
+            "position": "bottom-left",
+            "notable": "Shows Gauntlet product interface"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to Steakhouse page; left-heavy hero with metrics, right sidebar metadata",
+        "innovativeElements": [
+          "Consistent case study template applied across customers",
+          "Metric comparison across different clients (51 vs 63 vaults)"
+        ]
+      },
+      "flow": {
+        "screenType": "case-study/customer-story",
+        "userIntent": "Learn how Gauntlet leveraged risk management to build institutional-grade yield vaults",
+        "entryPoints": [
+          "Customer stories section",
+          "Direct link from marketing"
+        ],
+        "exitPoints": [
+          "Back to customer stories",
+          "Launch App button",
+          "Contact",
+          "Resources dropdown"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Navigate back to customer stories list"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Same template as Steakhouse: hero + metrics left; metadata + description right; screenshot validates",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How Gauntlet Leveraged Its Risk Management Expertise to Curate Institutional-Grade Yield Vaults",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "63",
+            "context": "Below headline on left",
+            "purpose": "Quantify number of vaults"
+          },
+          {
+            "text": "$1B+",
+            "context": "Next to vault count",
+            "purpose": "Demonstrate minimum scale threshold"
+          },
+          {
+            "text": "Vaults",
+            "context": "Label under 63",
+            "purpose": "Define the metric"
+          },
+          {
+            "text": "Total Deposits",
+            "context": "Label under $1B+",
+            "purpose": "Define the deposit amount"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1B+",
+          "63"
+        ],
+        "trustSignals": [
+          "$1B+ in deposits",
+          "Gauntlet brand",
+          "Risk management expertise",
+          "Institutional-grade positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-home-21-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Massive 3D serif numbers, gray, ~200px+",
+          "bodyStyle": "Light gray body text, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky top bar with Morpho logo and menu",
+            "position": "top",
+            "notable": "Visible even on error page for navigation escape"
+          },
+          {
+            "type": "404 Error Code",
+            "description": "Large 3D rendered numbers '404'",
+            "position": "center",
+            "notable": "High contrast gray with 3D depth effect; dominant visual element"
+          },
+          {
+            "type": "Error Message Text",
+            "description": "Explanation of error condition",
+            "position": "center-bottom",
+            "notable": "Plain, non-technical language"
+          },
+          {
+            "type": "Recovery Link",
+            "description": "Text link to return home",
+            "position": "center-bottom",
+            "notable": "Underlined text link in blue color"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "404 number is overwhelming visual anchor; error text underneath; recovery link at bottom",
+        "innovativeElements": [
+          "3D rendered error code for visual interest on error state"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from a 404 page not found error",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link from external source"
+        ],
+        "exitPoints": [
+          "Go back to the home page link",
+          "Header navigation menu",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back to the home page link",
+            "action": "Navigate to home"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to any section"
+          }
+        ],
+        "informationArchitecture": "Centered vertical layout; error code first to indicate problem; explanation second; recovery action at bottom",
+        "frictionPoints": [
+          "User arrived at invalid page",
+          "May need explicit help to find what they were looking for"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go back to the home page",
+            "style": "text-link",
+            "placement": "center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Oops! This page doesn't exist or has been moved.",
+            "context": "Below 404 number",
+            "purpose": "Explain the error in plain language"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Oops! This page doesn't exist or has been moved."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-1-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052CC",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, dark gray/black, left-aligned",
+          "bodyStyle": "Medium weight sans-serif, light gray, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with dropdowns, logo, and CTA button",
+            "position": "Top fixed",
+            "notable": "Clean hierarchy with prominent 'Launch App' button in blue"
+          },
+          {
+            "type": "Featured content block",
+            "description": "Left-aligned text with 'Featured' label, headline, and category badge",
+            "position": "Left half, center vertical",
+            "notable": "Large typography with generous white space"
+          },
+          {
+            "type": "3D illustration",
+            "description": "Glowing blue geometric cube with QR code and circular overlay",
+            "position": "Right half",
+            "notable": "Modern tech aesthetic with deep blue tones contrasting light background"
+          },
+          {
+            "type": "Filter pills",
+            "description": "Category filter buttons (All, 101 Content, General, Governance, etc.)",
+            "position": "Bottom left",
+            "notable": "Outlined pills with neutral styling"
+          },
+          {
+            "type": "Search bar",
+            "description": "Placeholder 'Search an article' with magnifying icon",
+            "position": "Bottom right",
+            "notable": "Integrated search with minimalist design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn from headline to 3D illustration, then down to filter/search controls",
+        "innovativeElements": [
+          "3D rendered cube with glow effects emphasizes product sophistication",
+          "Asymmetric layout balances text weight with visual impact"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover featured product content and browse blog articles",
+        "entryPoints": [
+          "Navigation menu - Resources/Blog section",
+          "Direct URL visit to blog hub"
+        ],
+        "exitPoints": [
+          "Click featured article headline",
+          "Select category filter to browse",
+          "Search for specific topics",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Featured headline",
+            "action": "Navigate to article detail"
+          },
+          {
+            "element": "Category pills",
+            "action": "Filter articles by topic"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query articles by keyword"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Open crypto app"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Access product/solution pages"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: featured content first, then categorized browsing via filters or search",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Morpho Vaults V2: A new standard for asset curation",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Featured",
+            "context": "Label above headline",
+            "purpose": "Indicates this is a special/promoted article"
+          },
+          {
+            "text": "Product",
+            "context": "Category badge below headline",
+            "purpose": "Tags article category"
+          },
+          {
+            "text": "Search an article",
+            "context": "Search bar placeholder",
+            "purpose": "Instructs user on search functionality"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-2-contact.png",
+      "label": "Contact",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0A0E27",
+          "#0052CC",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, center-aligned, 48px+",
+          "bodyStyle": "Medium sans-serif, light gray, center-aligned, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Dark navbar with logo, menu items, and Launch App button",
+            "position": "Top fixed",
+            "notable": "Consistent branding across both light and dark contexts"
+          },
+          {
+            "type": "Heading section",
+            "description": "Centered question headline in white",
+            "position": "Above card grid",
+            "notable": "Conversational tone with question mark"
+          },
+          {
+            "type": "Support cards",
+            "description": "Three equal-width dark cards with title, description, and CTA button",
+            "position": "Grid layout, center of page",
+            "notable": "Clear segmentation of support paths with distinct CTAs"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, cards below provide three equally-weighted options",
+        "innovativeElements": [
+          "Dark theme with high contrast blue buttons creates modern fintech aesthetic",
+          "Three-column symmetrical layout provides balanced choice architecture"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find appropriate support channel (general, business, or media)",
+        "entryPoints": [
+          "Navigation - Contact link",
+          "Support/Help section from blog or product pages"
+        ],
+        "exitPoints": [
+          "Get help → support portal",
+          "Submit request → contact form",
+          "Press inquiries → media contact page",
+          "Back via navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get help button",
+            "action": "Navigate to support/FAQ"
+          },
+          {
+            "element": "Submit request button",
+            "action": "Open business inquiry form"
+          },
+          {
+            "element": "Press inquiries button",
+            "action": "Navigate to media contact page"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access other sections"
+          }
+        ],
+        "informationArchitecture": "Choice architecture with three distinct pathways based on user type",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How can we help?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get help →",
+            "style": "primary-button",
+            "placement": "General support card"
+          },
+          {
+            "text": "Submit request →",
+            "style": "primary-button",
+            "placement": "Business Solutions card"
+          },
+          {
+            "text": "Press inquiries",
+            "style": "primary-button",
+            "placement": "Media & Press card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get support or find answers to your questions.",
+            "context": "Below 'General support' title",
+            "purpose": "Clarifies what users can expect from this path"
+          },
+          {
+            "text": "Inquiry about a specific solution or integration for your business.",
+            "context": "Below 'Business Solutions' title",
+            "purpose": "Defines scope of business support"
+          },
+          {
+            "text": "Contact us for all media and press inquiries.",
+            "context": "Below 'Media & Press' title",
+            "purpose": "Sets expectations for press contact"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-3-terms-of-use.png",
+      "label": "Terms of Use",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0A0E27",
+          "#4DA3FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bright blue (#4DA3FF), 48px+",
+          "bodyStyle": "Regular sans-serif, light gray, 16px line-height 1.6",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Dark navbar consistent with contact page",
+            "position": "Top fixed",
+            "notable": "Maintains visual consistency"
+          },
+          {
+            "type": "Heading",
+            "description": "Bright blue 'Terms of use' title",
+            "position": "Top of content area",
+            "notable": "Blue color creates distinction from body text"
+          },
+          {
+            "type": "Version date",
+            "description": "Italicized gray text with version timestamp",
+            "position": "Below heading",
+            "notable": "Provides transparency on document currency"
+          },
+          {
+            "type": "Body text with bullets",
+            "description": "Legal prose with bullet-pointed definitions",
+            "position": "Main content area",
+            "notable": "Structured legal language with proper attribution"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading draws attention, version date signals importance, body text hierarchical with bullets",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review legal terms and conditions",
+        "entryPoints": [
+          "Footer legal links",
+          "Onboarding requirement before app launch",
+          "Navigation menu"
+        ],
+        "exitPoints": [
+          "Accept terms (if onboarding flow)",
+          "Back to navigation",
+          "Scroll to find specific clause",
+          "Contact for clarification"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Exit to other pages"
+          },
+          {
+            "element": "Scrollable content",
+            "action": "Browse full terms document"
+          }
+        ],
+        "informationArchitecture": "Linear legal document with definitions upfront, followed by detailed terms",
+        "frictionPoints": [
+          "Dense legal text may be difficult for non-legal users",
+          "No search or anchor navigation visible for long document"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of use",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Version dated November 3, 2025",
+            "context": "Below headline",
+            "purpose": "Establishes document version and currency"
+          },
+          {
+            "text": "These Terms of Use (hereinafter referred to as the \"TOU\") are concluded between:",
+            "context": "Opening of terms definition",
+            "purpose": "Introduces parties and scope"
+          },
+          {
+            "text": "Morpho Association",
+            "context": "In bold within bullet points",
+            "purpose": "Highlights entity name for legal clarity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Registration numbers: W751263773, FR-449115693, 911.156.933",
+          "Date format: November 3, 2025",
+          "Entity references in quotes: \"TOU\", \"User\", \"You\", \"Association\""
+        ],
+        "trustSignals": [
+          "Specific legal registration details (SIREN, VAT, registry numbers)",
+          "Formal legal language and structure",
+          "Explicit versioning with date"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-4-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0A0E27",
+          "#4B9EFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bright blue (#4B9EFF), left-aligned",
+          "bodyStyle": "Light gray sans-serif, medium weight, generous line-height for readability",
+          "dataStyle": "Italicized gray text for metadata (dates/revision info)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "top",
+            "notable": "Persistent across all pages"
+          },
+          {
+            "type": "Page Heading",
+            "description": "Large blue 'Privacy Policy' heading",
+            "position": "center-top",
+            "notable": "Prominent visual hierarchy"
+          },
+          {
+            "type": "Section Headers",
+            "description": "White text headers like 'Introduction'",
+            "position": "left-aligned, spaced content",
+            "notable": "Clear document structure"
+          },
+          {
+            "type": "Body Text",
+            "description": "Multi-paragraph legal content with inline emphasis",
+            "position": "left-aligned column",
+            "notable": "Terms in quotes and bold for key definitions"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Blue heading anchors attention, white section headers organize flow, body text in light gray creates readable rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Morpho's data privacy practices and obligations",
+        "entryPoints": [
+          "Footer link from main site",
+          "Settings/Legal navigation",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Back to previous page",
+          "Launch App button",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Linear document structure with Introduction section followed by detailed legal terms. Organized by topic with clear section headers.",
+        "frictionPoints": [
+          "Long blocks of legal text may be dense for casual readers",
+          "No table of contents or quick navigation anchors visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": "Introduction",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last Revised on September 19, 2025",
+            "context": "Below Introduction header",
+            "purpose": "Build trust by showing current compliance date"
+          },
+          {
+            "text": "\"Policy\", \"Association\", \"we\", \"our\", \"us\", \"Sites\", \"Services\", \"you\", \"your\"",
+            "context": "Inline in body text",
+            "purpose": "Define key terms for legal clarity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "September 19, 2025 (date format)"
+        ],
+        "trustSignals": [
+          "Formal Privacy Policy document",
+          "Explicit revision date showing current version"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-5-legal-notice.png",
+      "label": "Legal Notice",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0A0E27",
+          "#4B9EFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bright blue (#4B9EFF), left-aligned",
+          "bodyStyle": "Light gray sans-serif, medium weight, multi-line paragraphs",
+          "dataStyle": "Italicized text for website references"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Consistent top navigation with Morpho logo and CTA",
+            "position": "top",
+            "notable": "Identical to privacy policy page"
+          },
+          {
+            "type": "Page Heading",
+            "description": "Large blue 'Legal Notice' heading",
+            "position": "center-top",
+            "notable": "Consistent styling with privacy policy"
+          },
+          {
+            "type": "Section Headers",
+            "description": "White text headers 'Introduction' and 'Presentation'",
+            "position": "left-aligned",
+            "notable": "Clear document segmentation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Blue heading establishes page identity, white subheadings organize sections, gray body text maintains readability",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand legal disclaimers and important notices about Morpho services",
+        "entryPoints": [
+          "Footer link",
+          "Settings/Legal navigation",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Navigation menu",
+          "Launch App button",
+          "Back navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "www.morpho.org link",
+            "action": "Navigate to website"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Structured legal document with introduction explaining non-contractual nature of content, followed by disclaimers about financial advice and service limitations",
+        "frictionPoints": [
+          "Dense legal language with minimal visual breaks",
+          "Multiple nested parenthetical clarifications reduce scannability"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Legal Notice",
+        "subheadline": "Introduction",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "www.morpho.org",
+            "context": "Hyperlinked in body text",
+            "purpose": "Reference to official website"
+          },
+          {
+            "text": "\"Website\", \"ADDMO\", \"users\"",
+            "context": "Inline terminology",
+            "purpose": "Establish definitions for legal document"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal Legal Notice document",
+          "Explicit disclaimers about investment advice",
+          "Clear statement about regulatory limitations"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-6-read-more.png",
+      "label": "Read More",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052CC",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray (#1A1A1A), 24-28px",
+          "bodyStyle": "Regular sans-serif, dark gray (#4A4A4A), 15-16px line-height",
+          "dataStyle": "Table cells with left-aligned text and blue hyperlinks"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with Concepts, Governance, Resources sections",
+            "position": "left side, 250px width",
+            "notable": "Hierarchical organization with collapsible sections"
+          },
+          {
+            "type": "Top Navigation",
+            "description": "Horizontal nav with navigation items and search",
+            "position": "top",
+            "notable": "Light theme with blue Launch App button"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Documentation content with heading, intro text, and data table",
+            "position": "right of sidebar",
+            "notable": "Right sidebar with page contents and ChatGPT integration"
+          },
+          {
+            "type": "Data Table",
+            "description": "Four-column table showing formal verifications with links",
+            "position": "main content area, below intro text",
+            "notable": "Hyperlinked project names and verification tools"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Page contents navigation and ChatGPT helper",
+            "position": "right side",
+            "notable": "Floating 'Ask in ChatGPT' button in corner"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading draws focus, intro paragraph provides context, table presents structured data with key metrics as links. Left nav provides navigation context.",
+        "innovativeElements": [
+          "Integrated ChatGPT helper in floating button",
+          "Right sidebar 'On this page' quick navigation",
+          "Hyperlinked table cells directing to relevant resources"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Morpho's formal verification practices and view verification audit history",
+        "entryPoints": [
+          "Sidebar Resources > Audits > Formal Verification",
+          "Search for 'formal verification'",
+          "Developer documentation"
+        ],
+        "exitPoints": [
+          "Click project links to view audits",
+          "Click tool links (Certora, Halmos)",
+          "Navigation to other documentation sections",
+          "Launch App button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to related documentation"
+          },
+          {
+            "element": "Hyperlinked project names in table",
+            "action": "Navigate to detailed audit information"
+          },
+          {
+            "element": "Tool links (Certora, Halmos)",
+            "action": "Open verification tool information"
+          },
+          {
+            "element": "Github repositories link",
+            "action": "Navigate to external repository"
+          },
+          {
+            "element": "Morpho Security Framework link",
+            "action": "Open security framework document"
+          },
+          {
+            "element": "Ask in ChatGPT button",
+            "action": "Open AI assistant to ask questions"
+          }
+        ],
+        "informationArchitecture": "Left sidebar provides navigation hierarchy, main content features intro paragraph followed by data table. Right sidebar offers quick page navigation. Design supports both deep learning and rapid reference.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Current page highlighted in sidebar ('Formal Verification')"
+        ]
+      },
+      "copy": {
+        "headline": "Formal Verification",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "Github repositories",
+            "style": "text-link",
+            "placement": "body paragraph"
+          },
+          {
+            "text": "Morpho Security Framework",
+            "style": "text-link",
+            "placement": "body paragraph"
+          },
+          {
+            "text": "Ask in ChatGPT",
+            "style": "ghost-button",
+            "placement": "right sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "On this page",
+            "context": "Right sidebar header",
+            "purpose": "Quick navigation anchor"
+          },
+          {
+            "text": "Morpho is known for its industry-leading security practices and follows a multi-faceted approach to security.",
+            "context": "Opening paragraph",
+            "purpose": "Establish credibility and security focus"
+          },
+          {
+            "text": "External measures include professional security reviews, contests, and pre/post-deployment bounties.",
+            "context": "Body paragraph",
+            "purpose": "List additional security measures beyond formal verification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date formats: March 2024, April 2024, December 2024, etc.",
+          "Project names with version numbers: Morpho V1, Morpho V2 (new), Vaults V1.0",
+          "Tool names: Certora, Halmos, custom checker"
+        ],
+        "trustSignals": [
+          "Industry-leading security practices",
+          "Multiple formal verifications listed with dates",
+          "Professional security reviews and bounty programs",
+          "Third-party verification tools (Certora, Halmos)",
+          "Mutation tests, fuzzing, unit testing mentioned"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-settings-7-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a9eff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "large, bold, bright blue (#4a9eff), left-aligned, generous line-height",
+          "bodyStyle": "medium weight, light gray text, clean sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal nav with Morpho logo, dropdown menus (Products, Solutions, Resources), and Launch App button",
+            "position": "top",
+            "notable": "Clean horizontal menu with CTA button right-aligned in blue"
+          },
+          {
+            "type": "accordion-list",
+            "description": "Expandable FAQ items with '+' icons for open/close",
+            "position": "left-center",
+            "notable": "Minimal design with question text and expand affordance"
+          },
+          {
+            "type": "category-sidebar",
+            "description": "Right sidebar with General, Earn, Borrow, Liquidations, Curation labels",
+            "position": "right",
+            "notable": "Vertical category filtering for FAQ sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominates upper-left, accordion questions below, sidebar categorization on right, minimal visual clutter",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to common questions about Morpho protocol",
+        "entryPoints": [
+          "Resources menu",
+          "Contact/Help link",
+          "Direct FAQ URL"
+        ],
+        "exitPoints": [
+          "Launch App button",
+          "Navigate to Products/Solutions",
+          "Expand FAQ item to read answer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion items",
+            "action": "Expand/collapse to reveal answer"
+          },
+          {
+            "element": "Category labels (General, Earn, Borrow, etc.)",
+            "action": "Filter FAQ by category"
+          },
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: header nav > hero headline > categorized FAQ list organized by topic",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Common questions, clear answers.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "General",
+            "context": "sidebar category label",
+            "purpose": "Categorize FAQ sections"
+          },
+          {
+            "text": "What is Morpho?",
+            "context": "first FAQ question",
+            "purpose": "Introduce protocol functionality"
+          },
+          {
+            "text": "What are the risks of using Morpho?",
+            "context": "third FAQ question",
+            "purpose": "Address risk awareness"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-1-earn.png",
+      "label": "Earn",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f7fb",
+          "#2563eb",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "large sans-serif (72px+), black, bold, left-aligned",
+          "bodyStyle": "medium weight, dark gray, clean sans-serif",
+          "dataStyle": "monospace-like for currency values ($9,194,413,564)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top nav with Morpho logo, tab menu (Dashboard, Earn, Borrow, Explore, Migrate), Connect Wallet button",
+            "position": "top",
+            "notable": "Pill-shaped tab container, secondary action buttons on right"
+          },
+          {
+            "type": "metric-badge",
+            "description": "Total Deposits with large USD value",
+            "position": "top-left of main content",
+            "notable": "Subtle gray pill background, minimal styling"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Blue 3D isometric user/avatar shape",
+            "position": "right side, center-aligned",
+            "notable": "Soft gradients, modern 3D visual accent"
+          },
+          {
+            "type": "button",
+            "description": "Connect Wallet CTA",
+            "position": "left-center",
+            "notable": "Large primary blue button with rounded corners"
+          },
+          {
+            "type": "tab-section",
+            "description": "Your positions / Vaults tabs with filter controls",
+            "position": "bottom",
+            "notable": "Sortable table section with All/Filter controls"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates left side, 3D illustration balances right, supporting metrics and CTAs nested below, tab content at bottom",
+        "innovativeElements": [
+          "3D isometric user illustration",
+          "Spacious asymmetrical layout with visual asset on right",
+          "Pill-shaped metric badges"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand earn functionality and deposit funds into vaults",
+        "entryPoints": [
+          "Dashboard nav",
+          "Earn tab",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Connect Wallet (to authenticate)",
+          "View vaults/positions",
+          "Navigate to other sections via tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Open wallet connection modal"
+          },
+          {
+            "element": "Tab navigation (Your positions / Vaults)",
+            "action": "Switch between position and vault views"
+          },
+          {
+            "element": "Filter/Sort controls",
+            "action": "Refine vault display"
+          },
+          {
+            "element": "Tab menu (Dashboard, Earn, Borrow, etc.)",
+            "action": "Navigate to different protocol sections"
+          }
+        ],
+        "informationArchitecture": "Linear: hero value prop > TVL metric > CTA > content tabs with data tables",
+        "frictionPoints": [
+          "Wallet connection required to proceed",
+          "No vault data visible until authenticated"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Earn on your terms",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "left-center"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Deposits",
+            "context": "metric label above TVL value",
+            "purpose": "Trust signal, show protocol scale"
+          },
+          {
+            "text": "Your positions",
+            "context": "tab label",
+            "purpose": "Navigate to user portfolio view"
+          },
+          {
+            "text": "Vaults",
+            "context": "tab label",
+            "purpose": "Navigate to available vault opportunities"
+          }
+        ],
+        "tone": "friendly-casual, accessible",
+        "dataFormatting": [
+          "$9,194,413,564 (currency with comma formatting)"
+        ],
+        "trustSignals": [
+          "Total Deposits metric ($9.1B+)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-2-borrow.png",
+      "label": "Borrow",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f7fb",
+          "#2563eb",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "large sans-serif (72px+), black, bold, left-aligned",
+          "bodyStyle": "medium weight, dark gray, clean sans-serif",
+          "dataStyle": "monospace-like for currency values ($3,300,148,770)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top nav with Morpho logo, tab menu (Dashboard, Earn, Borrow, Explore, Migrate), Connect Wallet button",
+            "position": "top",
+            "notable": "Pill-shaped tab container with Borrow tab active"
+          },
+          {
+            "type": "metric-badge",
+            "description": "Total Active Loans with large USD value",
+            "position": "top-left",
+            "notable": "Subtle gray pill background"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Blue 3D isometric collateral/loan visualization with checkmark",
+            "position": "right side, center-aligned",
+            "notable": "Soft gradients, abstract shape suggesting lending concept"
+          },
+          {
+            "type": "button",
+            "description": "Connect Wallet CTA",
+            "position": "left-center",
+            "notable": "Large primary blue button with rounded corners"
+          },
+          {
+            "type": "tab-section",
+            "description": "Your positions / Markets tabs with filter controls",
+            "position": "bottom",
+            "notable": "Collateral/Loan filter dropdowns and sort controls"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates left, 3D illustration balances right, TVL metric top-left, CTA and bottom data table create vertical flow",
+        "innovativeElements": [
+          "3D isometric collateral illustration",
+          "Abstract geometric shapes suggesting lending/borrowing concepts",
+          "Asymmetrical balance with visual asset anchoring right side"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand borrowing mechanics and explore available lending markets",
+        "entryPoints": [
+          "Dashboard nav",
+          "Borrow tab",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Connect Wallet (to authenticate)",
+          "View market data",
+          "Navigate to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Open wallet connection modal"
+          },
+          {
+            "element": "Tab navigation (Your positions / Markets)",
+            "action": "Switch between position and market views"
+          },
+          {
+            "element": "Collateral/Loan filter dropdowns",
+            "action": "Filter markets by asset type"
+          },
+          {
+            "element": "Sort controls",
+            "action": "Order markets by metrics (Total Market Size)"
+          },
+          {
+            "element": "Tab menu (Dashboard, Earn, Borrow, Explore, Migrate)",
+            "action": "Navigate protocol sections"
+          }
+        ],
+        "informationArchitecture": "Linear: hero value prop > TVL metric > CTA > market discovery tabs with filterable data",
+        "frictionPoints": [
+          "Wallet connection required to proceed",
+          "Markets data hidden until authentication"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Provide collateral to borrow any asset",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "left-center"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Active Loans",
+            "context": "metric label above TVL value",
+            "purpose": "Trust signal, show protocol lending volume"
+          },
+          {
+            "text": "Your positions",
+            "context": "tab label",
+            "purpose": "Navigate to user active loans"
+          },
+          {
+            "text": "Markets",
+            "context": "tab label",
+            "purpose": "Discover available borrowing markets"
+          },
+          {
+            "text": "Collateral",
+            "context": "filter label",
+            "purpose": "Filter markets by collateral asset"
+          },
+          {
+            "text": "Loan",
+            "context": "filter label",
+            "purpose": "Filter markets by borrowed asset"
+          }
+        ],
+        "tone": "friendly-casual, accessible",
+        "dataFormatting": [
+          "$3,300,148,770 (currency with comma formatting)"
+        ],
+        "trustSignals": [
+          "Total Active Loans metric ($3.3B+)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-6-vault-curationbuild-lending-products-that-scale.png",
+      "label": "Vault CurationBuild lending products that scale",
+      "flowType": "Staking",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4A90E2",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Monospace or slightly distinct for labels/values in info boxes"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Vertical menu with hierarchical sections (Overview, Concepts, Tutorials)",
+            "position": "left",
+            "notable": "Organized by feature depth with collapsible sections"
+          },
+          {
+            "type": "3d-isometric-diagram",
+            "description": "Interactive 3D illustration of vaults, markets, and roles with labeled actors",
+            "position": "center-top",
+            "notable": "Uses bright blue for active elements (vault), enhances understanding of architecture"
+          },
+          {
+            "type": "role-mapping-cards",
+            "description": "Four outlined cards showing Owner, Curator, Allocator, Guardian roles with descriptions",
+            "position": "center-right",
+            "notable": "Paired with diagram elements to explain stakeholder responsibilities"
+          },
+          {
+            "type": "info-banner",
+            "description": "Blue background banner with info icon and descriptive text",
+            "position": "center-bottom",
+            "notable": "Provides context about the Curation section's purpose"
+          },
+          {
+            "type": "right-sidebar-toc",
+            "description": "Table of contents with linked section titles",
+            "position": "right",
+            "notable": "Quick navigation to relevant topics on the page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "3D diagram anchors attention, roles radiate outward, text content below provides depth",
+        "innovativeElements": [
+          "3D isometric vault visualization with role assignments",
+          "Spatial relationship diagram connecting stakeholders to vault components"
+        ]
+      },
+      "flow": {
+        "screenType": "educational-documentation",
+        "userIntent": "Learn about Morpho curation roles and vault structure",
+        "entryPoints": [
+          "Clicked 'Curate' in top nav",
+          "Searched for curation documentation",
+          "Navigated from sidebar Concepts section"
+        ],
+        "exitPoints": [
+          "Click sidebar links (Roles, Liquidity Curation, etc.)",
+          "Scroll to 'Introduction to Curation' section",
+          "Jump to table of contents items (right sidebar)",
+          "Ask in ChatGPT button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to related documentation sections"
+          },
+          {
+            "element": "Right sidebar TOC links",
+            "action": "Jump to specific section on page"
+          },
+          {
+            "element": "Ask in ChatGPT button",
+            "action": "Open ChatGPT with page context"
+          },
+          {
+            "element": "Search bar (top right)",
+            "action": "Search documentation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Overview → Concepts → Role-specific details. Visual explanation supports textual learning.",
+        "frictionPoints": [
+          "Dense sidebar navigation may require scrolling",
+          "3D diagram complexity might need explanation for beginners"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Morpho Curation",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Ask in ChatGPT",
+            "style": "secondary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Own the vault",
+            "context": "Owner role label",
+            "purpose": "Describe Owner responsibility"
+          },
+          {
+            "text": "Assess the risk",
+            "context": "Curator role label",
+            "purpose": "Describe Curator responsibility"
+          },
+          {
+            "text": "Allocates liquidity",
+            "context": "Allocator role label",
+            "purpose": "Describe Allocator responsibility"
+          },
+          {
+            "text": "Protect the vault from malicious behavior",
+            "context": "Guardian role label",
+            "purpose": "Describe Guardian responsibility"
+          },
+          {
+            "text": "This section serves as the definitive resource for Morpho Vault curators. It provides essential information to create, manage, and optimize vaults within the Morpho ecosystem.",
+            "context": "Info banner (blue box)",
+            "purpose": "Set context and expectation for documentation content"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Morpho branding and logo",
+          "Structured documentation hierarchy"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-7-launch-app.png",
+      "label": "Launch App",
+      "flowType": "Staking",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4A90E2",
+          "#FFFFFF",
+          "#F0F4F8"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, very large (60px+), black",
+          "bodyStyle": "Medium weight sans-serif, dark gray, 14-16px",
+          "dataStyle": "Bold monospace for large numbers ($9,194,413,564)"
+        },
+        "components": [
+          {
+            "type": "top-navigation-bar",
+            "description": "Horizontal nav with logo, tabs (Dashboard, Earn, Borrow, Explore, Migrate), wallet connection",
+            "position": "top",
+            "notable": "Clean, minimal design with 'Earn' tab highlighted (active state)"
+          },
+          {
+            "type": "announcement-banner",
+            "description": "Blue gradient banner with promotional message about V2 rewards",
+            "position": "below-nav",
+            "notable": "High contrast, dismissible with X button"
+          },
+          {
+            "type": "stats-badge",
+            "description": "Rounded gray box showing 'Total Deposits' with large dollar amount",
+            "position": "top-left-main",
+            "notable": "Demonstrates TVL/credibility"
+          },
+          {
+            "type": "hero-heading",
+            "description": "Large left-aligned text 'Earn on your terms'",
+            "position": "left-center",
+            "notable": "Primary value proposition, prominent positioning"
+          },
+          {
+            "type": "primary-cta-button",
+            "description": "Rounded blue button 'Connect Wallet'",
+            "position": "left-center-below-heading",
+            "notable": "Clear, large target for conversion"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Light blue 3D user avatar/person figure",
+            "position": "right-side",
+            "notable": "Humanizing visual, balances text-heavy left side"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Two tabs: 'Your positions' and 'Vaults'",
+            "position": "bottom-left",
+            "notable": "Shows content structure, currently on 'Your positions' (underlined)"
+          },
+          {
+            "type": "filter-controls",
+            "description": "Dropdowns and sort options for vault filtering",
+            "position": "bottom-right",
+            "notable": "Advanced filtering for power users"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero text dominates left side, supporting stats above, 3D visual balances right, navigation anchors bottom",
+        "innovativeElements": [
+          "Light blue gradient background with subtle star/sparkle elements",
+          "3D isometric user illustration as design accent"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-dashboard-hybrid",
+        "userIntent": "Understand Morpho earning opportunity and connect wallet to begin",
+        "entryPoints": [
+          "Direct app launch",
+          "Clicked 'Launch App' from docs/marketing",
+          "Navigated from external marketing"
+        ],
+        "exitPoints": [
+          "Click 'Connect Wallet' to authenticate",
+          "Click navigation tabs (Dashboard, Earn, Borrow, Explore, Migrate)",
+          "Browse vaults via bottom tabs/filters",
+          "Click wallet icon (top-right) for account options"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Open wallet connection modal/flow"
+          },
+          {
+            "element": "Tab navigation (Dashboard, Earn, Borrow, etc.)",
+            "action": "Switch between app sections"
+          },
+          {
+            "element": "Your positions / Vaults tabs",
+            "action": "Toggle between portfolio view and available vaults"
+          },
+          {
+            "element": "Filter dropdowns",
+            "action": "Filter/sort vaults by criteria"
+          },
+          {
+            "element": "Close button on announcement banner",
+            "action": "Dismiss promotional message"
+          },
+          {
+            "element": "Wallet dropdown (top-right)",
+            "action": "Account settings/network selection"
+          }
+        ],
+        "informationArchitecture": "Hero CTA-focused landing with app navigation, vault browsing below fold, clear onboarding path",
+        "frictionPoints": [
+          "User must connect wallet to explore vaults in detail",
+          "Content below fold may not be visible without scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Earn on your terms",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "hero-section-left"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "secondary-button",
+            "placement": "top-right-nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "V2 rewards are live. Deposit in Morpho Vaults V2 and earn a boosted APY.",
+            "context": "Blue announcement banner",
+            "purpose": "Urgency and promotion for V2 rewards program"
+          },
+          {
+            "text": "Total Deposits",
+            "context": "Stats badge label",
+            "purpose": "Identify TVL metric"
+          },
+          {
+            "text": "Your positions",
+            "context": "Bottom-left tab",
+            "purpose": "Portfolio view label"
+          },
+          {
+            "text": "Vaults",
+            "context": "Bottom-left tab",
+            "purpose": "Available products view label"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "$9,194,413,564 (TVL in US dollars)"
+        ],
+        "trustSignals": [
+          "$9B+ total deposits (TVL indicator)",
+          "V2 rewards program announcement",
+          "Multiple navigation options suggest mature product"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-3-rewards.png",
+      "label": "Rewards",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "card-grid with sidebar filters",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#4a9eff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, high contrast on gradient background",
+          "bodyStyle": "Medium sans-serif, muted gray for secondary text",
+          "dataStyle": "Monospace or tabular numbers, color-coded (blue for positive metrics)"
+        },
+        "components": [
+          {
+            "type": "Header with gradient",
+            "description": "Blue gradient background with main headline and subheadline",
+            "position": "top",
+            "notable": "Prominent gradient establishes visual hierarchy"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "All, Tokens, Pre TGE filter tabs with active state",
+            "position": "below header",
+            "notable": "Clear active state indicator with underline"
+          },
+          {
+            "type": "Search and filter bar",
+            "description": "Search input, Stablecoin filter, dropdown selectors, Advanced filters",
+            "position": "above list",
+            "notable": "Multiple filter layers enable power-user exploration"
+          },
+          {
+            "type": "Opportunity list rows",
+            "description": "Each opportunity shows protocol badges, APR, TVL, daily rewards with directional arrow",
+            "position": "main content area",
+            "notable": "Right-aligned action arrow button draws eye to next action"
+          },
+          {
+            "type": "Privacy notice banner",
+            "description": "Bottom tooltip about log collection with Allow/Dismiss buttons",
+            "position": "footer",
+            "notable": "Non-intrusive but visible consent management"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down: headline → filters → opportunity list with rightward flow to CTAs",
+        "innovativeElements": [
+          "Color-coded reward badges (blue indicator with upward arrow)",
+          "Protocol ecosystem badges showing integration chain (Ethereum, Morpho, Lend, Pre-TGE)",
+          "Numbered opportunity count (555 OPPORTUNITIES) establishes scale"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with filtering",
+        "userIntent": "Discover and compare yield opportunities across different DeFi protocols and assets",
+        "entryPoints": [
+          "Opportunities navigation link from header",
+          "Dashboard navigation",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click opportunity row to drill into details",
+          "Click blue arrow button to deposit/interact",
+          "Navigation to Dashboard or FAQ"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Filter opportunities by keyword/asset name"
+          },
+          {
+            "element": "Stablecoin badge filter",
+            "action": "Toggle filter for stablecoin-only opportunities"
+          },
+          {
+            "element": "Chain dropdown",
+            "action": "Filter by blockchain network"
+          },
+          {
+            "element": "Action dropdown",
+            "action": "Filter by interaction type (Supply, Borrow, etc.)"
+          },
+          {
+            "element": "Advanced filters button",
+            "action": "Open expanded filter panel"
+          },
+          {
+            "element": "Sort dropdown (By Daily Rewards)",
+            "action": "Reorder list by selected metric"
+          },
+          {
+            "element": "Blue arrow button (per row)",
+            "action": "Navigate to opportunity details/execution"
+          }
+        ],
+        "informationArchitecture": "Horizontal browsing model with vertical scrolling; filters at top narrow supply, chain, action; sorting controls ordering; each row is a self-contained opportunity card",
+        "frictionPoints": [
+          "Multiple dropdown menus require clicks to explore options",
+          "Abbreviations (APR, TVL) assume financial literacy",
+          "Privacy notice at bottom may distract from content"
+        ],
+        "progressIndicators": [
+          "555 OPPORTUNITIES count shows dataset size",
+          "Numbered badges on opportunities (2+, 1+) suggest multiplayer or variant versions"
+        ]
+      },
+      "copy": {
+        "headline": "Explore Opportunities",
+        "subheadline": "Browse opportunities, compare rewards, and earn tokens",
+        "ctas": [
+          {
+            "text": "→ (arrow)",
+            "style": "primary-button",
+            "placement": "right edge of each opportunity row"
+          },
+          {
+            "text": "Advanced filters",
+            "style": "secondary-button",
+            "placement": "filter bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "555 OPPORTUNITIES",
+            "context": "above opportunity list",
+            "purpose": "Signal abundance of choices and platform scale"
+          },
+          {
+            "text": "We may collect logs of your interactions to improve our products. See privacy notice",
+            "context": "bottom banner",
+            "purpose": "Transparent data collection disclosure with escape hatch"
+          }
+        ],
+        "tone": "professional-technical, data-driven, action-oriented",
+        "dataFormatting": [
+          "4.89% (APR as percentage)",
+          "$203.1M (TVL in millions)",
+          "$27.18K (daily rewards in currency format with emoji indicator)"
+        ],
+        "trustSignals": [
+          "TVL amounts ($203.1M, $60.54M, $1.09B) establish liquidity and security",
+          "Protocol badges (Ethereum, Morpho, Lend, Coinbase) show integrations with known brands",
+          "Numbered badges suggest audited or verified opportunity variants"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-4-embedded-earn-offer-yield-on-any-asset.png",
+      "label": "Embedded Earn Offer yield on any asset",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "split-panel (left text, right image showcase)",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#d4e5ff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, black text on white",
+          "bodyStyle": "Regular sans-serif, medium gray body copy with multiple paragraphs",
+          "dataStyle": "Tabular numbers in chart format (800m visible)"
+        },
+        "components": [
+          {
+            "type": "Main headline",
+            "description": "Enterprise-Grade Earn Products",
+            "position": "top-left",
+            "notable": "Oversized typography signals B2B focus and premium positioning"
+          },
+          {
+            "type": "Integration partner logos",
+            "description": "Coinbase, Kraken, Gemini, Ledger, Crypto.com, Binance, Trust Wallet with Powered by Morpho badge",
+            "position": "below headline",
+            "notable": "Social proof through recognized brand partnerships; right-aligned Morpho branding"
+          },
+          {
+            "type": "Left content panel",
+            "description": "Main value proposition headline, 3 paragraphs of body copy explaining features",
+            "position": "left 50% of screen",
+            "notable": "Educational narrative structure builds trust through explanation"
+          },
+          {
+            "type": "Right showcase panel",
+            "description": "Blue gradient background with carousel showing mobile app interface and navigation arrows",
+            "position": "right 50% of screen",
+            "notable": "Light blue background contrasts with main white area; carousel interaction pattern"
+          },
+          {
+            "type": "Earn Deposits chart",
+            "description": "Partial chart visible showing 800m scale on y-axis",
+            "position": "bottom-left",
+            "notable": "Data visualization partially visible to drive curiosity"
+          },
+          {
+            "type": "Carousel navigation",
+            "description": "Left/right arrow buttons in circles on blue panel",
+            "position": "sides of showcase panel",
+            "notable": "Subtle navigation invites exploration of multiple product variations"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates top; integration badges provide credibility; body copy guides narrative; right panel provides visual break and product showcase",
+        "innovativeElements": [
+          "Split-panel layout balances educational copy with interactive product showcase",
+          "Integration logos showcase breadth of distribution without sales language",
+          "Partial chart reveal (Earn Deposits) creates sense of deeper analytics available"
+        ]
+      },
+      "flow": {
+        "screenType": "product-feature landing",
+        "userIntent": "Understand how enterprise clients can embed Morpho yield products into their platforms",
+        "entryPoints": [
+          "Navigation from main site or product section",
+          "Partner deep-link from integration page",
+          "Direct marketing campaign"
+        ],
+        "exitPoints": [
+          "Click through carousel to explore product variations",
+          "Scroll to view full Earn Deposits chart",
+          "Navigate to technical documentation or sales contact"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left carousel arrow",
+            "action": "Show previous product variation in right panel"
+          },
+          {
+            "element": "Right carousel arrow",
+            "action": "Show next product variation in right panel"
+          },
+          {
+            "element": "Integration partner logos",
+            "action": "Potentially link to partner case studies (not confirmed)"
+          }
+        ],
+        "informationArchitecture": "Narrative-driven education: value prop → detailed benefits → social proof (partner logos) → visual product demonstration → analytics tease",
+        "frictionPoints": [
+          "Limited visible CTAs; unclear how to proceed after reading",
+          "Carousel requires active interaction; default state only shows one product variant",
+          "Body copy is dense with three full paragraphs before visual break"
+        ],
+        "progressIndicators": [
+          "Carousel position indicator (implicit; left/right arrows suggest more content)"
+        ]
+      },
+      "copy": {
+        "headline": "Enterprise-Grade Earn Products",
+        "subheadline": "Deliver the best-risk adjusted yields to your users.",
+        "ctas": [
+          {
+            "text": "← → (carousel navigation)",
+            "style": "ghost-button",
+            "placement": "sides of right panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "As integrated by",
+            "context": "above partner logos",
+            "purpose": "Introduce social proof section and establish credibility"
+          },
+          {
+            "text": "Powered by Morpho",
+            "context": "right side of partner logo section",
+            "purpose": "Reinforce Morpho as underlying technology provider"
+          }
+        ],
+        "tone": "professional-technical, educational, enterprise-focused",
+        "dataFormatting": [
+          "800m (scale label on partial chart, suggests TVL or deposits in millions)"
+        ],
+        "trustSignals": [
+          "Seven major brand partnerships (Coinbase, Kraken, Gemini, Ledger, Crypto.com, Binance, Trust Wallet) demonstrate market adoption",
+          "January 2025 launch timeline builds credibility through specific, recent milestone",
+          "Scale metrics (\"millions of users\", \"hundreds of millions in USDC liquidity\") establish size and stability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/morpho-staking-5-cryptobacked-loansaccess-global-liquidity-and-ins.png",
+      "label": "Crypto-Backed LoansAccess global liquidity and ins",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "split-panel (left text, right mobile mockup showcase)",
+        "colorScheme": "light with bright blue accent",
+        "primaryColors": [
+          "#ffffff",
+          "#0052ff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, black text, reads as stacked lines",
+          "bodyStyle": "Regular sans-serif, medium gray, multiple paragraph blocks",
+          "dataStyle": "N/A on visible portion"
+        },
+        "components": [
+          {
+            "type": "Main headline",
+            "description": "Bitcoin-Backed Loans with Morpho (stacked layout)",
+            "position": "top-left",
+            "notable": "Large headline with 'Morpho' as critical keyword; stacked for mobile-first reading"
+          },
+          {
+            "type": "Partner branding (Coinbase)",
+            "description": "Coinbase logo and 'As integrated by' text positioned top-right",
+            "position": "top-right with Morpho butterfly logo",
+            "notable": "Right-aligned partner credit establishes co-brand narrative"
+          },
+          {
+            "type": "Left content panel",
+            "description": "Subheadline + 3 body paragraphs explaining product mechanism and benefits",
+            "position": "left 50%",
+            "notable": "Dense educational copy builds trust through detailed explanation"
+          },
+          {
+            "type": "Right mobile mockup",
+            "description": "iPhone mockup on bright blue background showing crypto loan interface with coin icons and CTA",
+            "position": "right 50%",
+            "notable": "Vibrant blue gradient background creates visual pop and product differentiation"
+          },
+          {
+            "type": "Mobile app interface preview",
+            "description": "Shows 'Get a USDC loan with your Bitcoin' headline, coin icons (BTC, Morpho, USDC), and 'Powered by Morpho' badge",
+            "position": "within right panel",
+            "notable": "Product value prop clearly visible in mockup; visual hierarchy mirrors main page"
+          },
+          {
+            "type": "How does it work section",
+            "description": "Section headline visible at bottom suggesting expandable/scrollable content",
+            "position": "bottom-left",
+            "notable": "Promises deeper explanation below fold"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates; partner logo adds credibility in top-right; body copy educates; right panel provides visual interest and product showcase with bright blue background creating focal point",
+        "innovativeElements": [
+          "Stacked headline layout optimizes for mobile and scannability",
+          "Bright blue mobile mockup background stands out against white page",
+          "Coin icon animation hint (circular arrangement of BTC, Morpho, USDC) suggests interactive product",
+          "Co-branding approach (Coinbase integration) positions Morpho as enabling technology"
+        ]
+      },
+      "flow": {
+        "screenType": "product-feature landing / case study",
+        "userIntent": "Understand how Coinbase users can access Bitcoin-backed USDC loans via Morpho integration",
+        "entryPoints": [
+          "Product feature page navigation",
+          "Case study section",
+          "Coinbase partnership announcement page",
+          "Direct link from Coinbase app"
+        ],
+        "exitPoints": [
+          "Scroll to 'How does it work' section",
+          "Scroll to additional details below fold",
+          "Navigate to related products (Enterprise-Grade Earn Products)",
+          "External link to Coinbase or Morpho documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Mobile mockup",
+            "action": "Tappable/interactive element showing actual product flow (not confirmed from static view)"
+          },
+          {
+            "element": "Partner logos",
+            "action": "Potentially link to partner details"
+          }
+        ],
+        "informationArchitecture": "Headline-first introduction → partner credibility → detailed benefit explanation → visual product demonstration → call to explore (How does it work)",
+        "frictionPoints": [
+          "Heavy body copy (3 paragraphs) before visual break requires sustained reading attention",
+          "No explicit CTA button visible; next action is implicit (scroll or click on mockup)",
+          "Mobile mockup may not be interactive from static view; creates ambiguity about next step"
+        ],
+        "progressIndicators": [
+          "Section headline 'How does it work' signals expandable content below"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin-Backed Loans with Morpho",
+        "subheadline": "Launch scalable, efficient & transparent financial products faster",
+        "ctas": [
+          {
+            "text": "Implicit (scroll or tap mockup)",
+            "style": "interactive-element",
+            "placement": "right panel mobile mockup"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "As integrated by",
+            "context": "top-right before Coinbase logo",
+            "purpose": "Introduce partner branding and establish credibility"
+          },
+          {
+            "text": "Powered by Morpho",
+            "context": "badge on mobile mockup app screen",
+            "purpose": "Reinforce Morpho as technology backbone even within partner products"
+          },
+          {
+            "text": "Get a USDC loan with your Bitcoin",
+            "context": "headline within mobile mockup",
+            "purpose": "Concise value prop targeting the primary user action"
+          },
+          {
+            "text": "Need cash to pay bills or send to family? Now you don't have to sell your bitcoin. Instead, you can use it as collateral for an onchain loan.",
+            "context": "body copy within mockup (partial visible)",
+            "purpose": "Relatable use-case narrative and benefit statement"
+          }
+        ],
+        "tone": "professional-technical, accessible, use-case focused, educational",
+        "dataFormatting": [
+          "January 2025 (specific product launch date builds credibility)"
+        ],
+        "trustSignals": [
+          "Coinbase partnership and branding (major exchange credibility)",
+          "\"largest-scale DeFi integration to date\" claim establishes scale and security",
+          "Specific product details (\"USDC loans\", \"BTC collateral\", \"onchain\") demonstrate technical depth",
+          "Explanation of liquidity mechanism (\"hundreds of millions in USDC liquidity\") provides transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

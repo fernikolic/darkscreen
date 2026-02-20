@@ -1,0 +1,2614 @@
+{
+  "slug": "ens",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:40:51.357Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 21,
+  "screens": [
+    {
+      "image": "/screenshots/ens-home-7-unieth.png",
+      "label": "uni.eth",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Top navigation with logo, search bar, menu icon, and Connect button",
+            "position": "top",
+            "notable": "Prominent blue Connect CTA in top right"
+          },
+          {
+            "type": "loading-skeleton",
+            "description": "Multiple placeholder blocks indicating content is loading",
+            "position": "center",
+            "notable": "Smooth skeleton screens suggest progressive content reveal"
+          },
+          {
+            "type": "floating-action-button",
+            "description": "Blue circular button with icon in bottom right corner",
+            "position": "bottom-right",
+            "notable": "Has red notification badge indicator"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header anchors top, main content area is centered and wide",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View details for a specific ENS domain (uni.eth)",
+        "entryPoints": [
+          "Search result click",
+          "Direct URL navigation",
+          "Domain list selection"
+        ],
+        "exitPoints": [
+          "Back to search",
+          "Connect wallet",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect button",
+            "action": "Initiates wallet connection flow"
+          },
+          {
+            "element": "Search bar",
+            "action": "Navigate to different ENS domain"
+          },
+          {
+            "element": "Menu icon",
+            "action": "Opens navigation menu"
+          }
+        ],
+        "informationArchitecture": "Profile-focused view with tabbed sections (implied by structure)",
+        "frictionPoints": [
+          "Loading state obscures content",
+          "No visible progress indication"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for a name",
+            "context": "Search bar placeholder",
+            "purpose": "Guides user input"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-8-baseeth.png",
+      "label": "base.eth",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#6b7aff",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for domain name",
+          "bodyStyle": "Regular sans-serif for section labels and content",
+          "dataStyle": "Monospace for addresses and technical data"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Navigation bar with logo, search, menu, and Connect",
+            "position": "top",
+            "notable": "Sticky positioning likely"
+          },
+          {
+            "type": "domain-hero",
+            "description": "Large domain name with copy icon and Etherscan link",
+            "position": "top-center",
+            "notable": "Gradient blue background spans width"
+          },
+          {
+            "type": "avatar-card",
+            "description": "Circular avatar with gradient background and domain name below",
+            "position": "center",
+            "notable": "Custom generated avatar for domain"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Profile | Records | Ownership | Subnames | More",
+            "position": "below-hero",
+            "notable": "Profile tab is active (blue text)"
+          },
+          {
+            "type": "information-sections",
+            "description": "Accounts, Addresses, Other Records, Ownership fields",
+            "position": "main-content",
+            "notable": "Cards with subtle backgrounds for each section"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Domain name > Avatar > Tabs > Content sections, left-aligned text",
+        "innovativeElements": [
+          "Gradient hero background",
+          "Generated avatar system",
+          "Copy-to-clipboard icons"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View complete profile and technical details for base.eth domain",
+        "entryPoints": [
+          "Search for domain",
+          "Direct URL",
+          "Domain discovery"
+        ],
+        "exitPoints": [
+          "Switch tab",
+          "Search new domain",
+          "View Etherscan",
+          "Navigate menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Profile tab",
+            "action": "Shows avatar and linked accounts"
+          },
+          {
+            "element": "Records tab",
+            "action": "Displays DNS/record information"
+          },
+          {
+            "element": "Ownership tab",
+            "action": "Shows manager, owner, expiry details"
+          },
+          {
+            "element": "Copy icons",
+            "action": "Copies address or value to clipboard"
+          },
+          {
+            "element": "External links",
+            "action": "Opens Etherscan, Twitter, GitHub in new window"
+          }
+        ],
+        "informationArchitecture": "Tabbed interface organizing domain metadata into logical sections",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "base.eth",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Etherscan",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Accounts",
+            "context": "Section header",
+            "purpose": "Labels linked social/web3 accounts"
+          },
+          {
+            "text": "Addresses",
+            "context": "Section header",
+            "purpose": "Labels blockchain addresses"
+          },
+          {
+            "text": "Other Records",
+            "context": "Section header",
+            "purpose": "Labels additional metadata (avatar, etc)"
+          },
+          {
+            "text": "Ownership",
+            "context": "Section header",
+            "purpose": "Labels ownership and expiry info"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0x145...6E056 (truncated address with ellipsis)",
+          "eip155:1/erc721... (protocol notation)",
+          "November 10, 2034 (expiry date format)"
+        ],
+        "trustSignals": [
+          "Etherscan verification link"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-10-lineaeth.png",
+      "label": "linea.eth",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#6b7aff",
+          "#0052cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large for domain name",
+          "bodyStyle": "Regular sans-serif for labels",
+          "dataStyle": "Monospace for addresses and technical values"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Navigation with logo, search, menu, Connect button",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "domain-hero",
+            "description": "Domain name linea.eth with copy icon and Etherscan link",
+            "position": "top-center",
+            "notable": null
+          },
+          {
+            "type": "avatar-card",
+            "description": "Circular blue gradient avatar",
+            "position": "center-left",
+            "notable": "Simpler gradient compared to base.eth"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Profile | Records | Ownership | Subnames | More",
+            "position": "below-hero",
+            "notable": "Active tab is Profile (blue)"
+          },
+          {
+            "type": "data-cards",
+            "description": "Accounts, Addresses, and Ownership sections with interactive elements",
+            "position": "main-content",
+            "notable": "Multiple addresses shown, external icon links"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Domain name prominence > Avatar > Tab navigation > Grouped content sections",
+        "innovativeElements": [
+          "External link indicators on accounts",
+          "Multiple address display with network icons"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Inspect linea.eth domain profile and ownership metadata",
+        "entryPoints": [
+          "Domain search",
+          "Direct URL",
+          "Referral link"
+        ],
+        "exitPoints": [
+          "Tab switch",
+          "New search",
+          "External link click",
+          "Menu navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab buttons",
+            "action": "Switch between Profile, Records, Ownership, Subnames, More"
+          },
+          {
+            "element": "External account links",
+            "action": "Navigate to Twitter (@LineaBuild), GitHub (Consensys/linea-monorepo), Discord (linea)"
+          },
+          {
+            "element": "Copy icons",
+            "action": "Copy address or value to clipboard"
+          },
+          {
+            "element": "Cross-chain address icon",
+            "action": "Indicates multi-chain address support"
+          }
+        ],
+        "informationArchitecture": "Tab-based organization with Profile showing accounts, addresses, and ownership at a glance",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "linea.eth",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Etherscan",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Accounts",
+            "context": "Section header",
+            "purpose": "Groups social/web3 account links"
+          },
+          {
+            "text": "Addresses",
+            "context": "Section header",
+            "purpose": "Lists associated blockchain addresses"
+          },
+          {
+            "text": "Ownership",
+            "context": "Section header with link",
+            "purpose": "Shows manager, owner, expiry with View action"
+          },
+          {
+            "text": "manager",
+            "context": "Ownership field label",
+            "purpose": "Identifies account that manages domain"
+          },
+          {
+            "text": "owner",
+            "context": "Ownership field label",
+            "purpose": "Identifies domain owner"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0xf5c...AA0bD (truncated address with ellipsis)",
+          "0x892...91DD3 (manager/owner address)",
+          "February 26, 2034 (expiry date)"
+        ],
+        "trustSignals": [
+          "Etherscan link",
+          "Multi-chain address support"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-4-developers.png",
+      "label": "Developers",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF1493",
+          "#0088CC",
+          "#FFB6D9"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, magenta/pink color, very large display size (72px+)",
+          "bodyStyle": "Dark navy serif font, medium weight, standard line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "Pink pill-shaped label reading 'Developers'",
+            "position": "above headline, center",
+            "notable": "Acts as section indicator and visual anchor"
+          },
+          {
+            "type": "geometric-shape",
+            "description": "Two large rotated pink/light-pink striped rectangles flanking the headline",
+            "position": "left and right sides",
+            "notable": "Creates dynamic visual balance without symmetry; suggests movement"
+          },
+          {
+            "type": "button",
+            "description": "Full-width dark pink/magenta button with white text",
+            "position": "bottom-left of CTA group",
+            "notable": "Primary action with strong visual weight"
+          },
+          {
+            "type": "button",
+            "description": "Full-width light pink button with magenta text",
+            "position": "bottom-right of CTA group",
+            "notable": "Secondary action with softer appearance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center with supporting geometric shapes; body text and CTAs positioned below with clear separation",
+        "innovativeElements": [
+          "Rotated striped rectangles create dynamic asymmetrical framing",
+          "Color blocking with pink/magenta and blue palette stands out from typical crypto design"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore developer-focused ENS features and tools",
+        "entryPoints": [
+          "Navigation menu 'Developers' link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Developer Docs button",
+          "GitHub button",
+          "Back to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Developer Docs button",
+            "action": "Navigate to developer documentation"
+          },
+          {
+            "element": "GitHub button",
+            "action": "Navigate to GitHub repository"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections (Ecosystem, Governance, Blog, ENSv2)"
+          }
+        ],
+        "informationArchitecture": "Hero section with clear value proposition followed by dual CTA buttons for documentation and source code access",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Build in good company",
+        "subheadline": "Join a community of innovators and developers crafting a better internet. Whether you're new to Web3 or a seasoned pro, ENS is your gateway to a trustless web.",
+        "ctas": [
+          {
+            "text": "Developer Docs",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Github",
+            "style": "secondary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Developers",
+            "context": "Badge above headline",
+            "purpose": "Section identification and visual interest"
+          }
+        ],
+        "tone": "friendly-casual, community-oriented, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Community of innovators",
+          "Better internet messaging"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-5-ecosystem.png",
+      "label": "Ecosystem",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0077B6",
+          "#E0F2FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark teal/blue color, large display size with semi-transparent overlay effect on alternating words",
+          "bodyStyle": "Dark navy serif, medium weight, standard line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "Light blue pill-shaped label reading 'Ecosystem'",
+            "position": "above headline, center",
+            "notable": "Section identifier matching color scheme"
+          },
+          {
+            "type": "geometric-shape",
+            "description": "Two large rounded-corner brackets/frames in dark teal, partially visible on left and right edges",
+            "position": "flanking edges of content",
+            "notable": "Creates frame-within-frame effect suggesting containment and ecosystem boundedness"
+          },
+          {
+            "type": "logo-carousel",
+            "description": "Five partner/ecosystem logos in circular containers",
+            "position": "center, below subheadline",
+            "notable": "Includes major fintech/crypto brands showing ecosystem partnerships"
+          },
+          {
+            "type": "button",
+            "description": "Dark teal button with white text",
+            "position": "bottom-left",
+            "notable": "Primary action aligned with color scheme"
+          },
+          {
+            "type": "button",
+            "description": "Light blue button with teal text",
+            "position": "bottom-right",
+            "notable": "Secondary action with lower visual weight"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline with mixed opacity creates visual interest; partner logos provide credibility; CTAs clearly defined at bottom",
+        "innovativeElements": [
+          "Mixed opacity text effect (semi-transparent alternating words in headline)",
+          "Large decorative bracket frames suggest ecosystem as contained system",
+          "Partner logo display builds trust through association"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand ENS ecosystem, see partner integrations, and access integration resources",
+        "entryPoints": [
+          "Navigation menu 'Ecosystem' link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Learn More button",
+          "Integration Docs button",
+          "Back to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Learn More button",
+            "action": "Navigate to detailed ecosystem information"
+          },
+          {
+            "element": "Integration Docs button",
+            "action": "Navigate to integration documentation"
+          },
+          {
+            "element": "Partner logos",
+            "action": "Potentially link to partner information"
+          }
+        ],
+        "informationArchitecture": "Hero with brand promise, partner logos as social proof, clear CTA pathway for learning and integration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trusted by the New Internet",
+        "subheadline": "ENS is a community of pioneers, collectively shaping a more intuitive and trustworthy internet. It's not just about being part of Web3; it's about leading it.",
+        "ctas": [
+          {
+            "text": "Learn More",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Integration Docs",
+            "style": "secondary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ecosystem",
+            "context": "Badge above headline",
+            "purpose": "Section identification"
+          }
+        ],
+        "tone": "professional-technical, leadership-focused, community-driven",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Community of pioneers",
+          "Partner logos (PayPal, Coinbase, etc.)",
+          "Trustworthy internet positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-6-ensv2.png",
+      "label": "ENSv2",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0077B6",
+          "#1B4965",
+          "#FF1493",
+          "#4CAF50",
+          "#00CED1"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark navy/teal, large display size with strong geometric presence",
+          "bodyStyle": "Dark gray sans-serif, standard weight, good readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "badge",
+            "description": "Bordered square badge with ENS logo and 'V2' text",
+            "position": "above headline, center",
+            "notable": "Minimalist design emphasizes version significance"
+          },
+          {
+            "type": "geometric-illustration",
+            "description": "Layered, stacked rounded rectangles in green, magenta, blue, and purple with thin white dividing lines",
+            "position": "left side, occupying ~40% of width",
+            "notable": "Abstract representation suggesting layers, stacking, or protocol versioning; highly distinctive visual style"
+          },
+          {
+            "type": "button",
+            "description": "Full-width dark teal button with white text",
+            "position": "bottom-right area",
+            "notable": "Single, clear primary action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left side dominated by colorful illustration creating visual interest; right side contains text hierarchy with headline, subheadline, body, and CTA",
+        "innovativeElements": [
+          "Layered striped rectangles create unique visual metaphor for protocol versioning",
+          "Multi-color palette (green, magenta, blue, purple) more vibrant than other sections",
+          "Split layout balances abstract visual with technical content"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about ENS V2 protocol features and updates, access FAQ",
+        "entryPoints": [
+          "Navigation menu 'ENSv2' link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "FAQ button",
+          "Back to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "FAQ button",
+            "action": "Navigate to frequently asked questions about ENSv2"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Hero with version badge, left-side visual metaphor, right-side text explanation, single CTA for FAQ",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The next generation of naming",
+        "subheadline": "New use cases and networks demand a more flexible ENS protocol that helps make the web3 ecosystem more legible. ENSv2 includes new apps, an improved ownership model, and more flexibility.",
+        "ctas": [
+          {
+            "text": "FAQ",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ENS V2",
+            "context": "Badge above headline",
+            "purpose": "Version identification and section header"
+          }
+        ],
+        "tone": "professional-technical, forward-thinking, feature-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Protocol improvement emphasis",
+          "Flexibility and legibility messaging"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered hero and floating elements",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0073B1",
+          "#FF1B8D"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (appears to be 60-80px), dark navy color, centered",
+          "bodyStyle": "Medium weight sans-serif, dark navy, centered, serif serif serif alternative",
+          "dataStyle": ".eth domain labels in colored rounded rectangles with monospace font"
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Horizontal menu with Developers, Ecosystem, Governance, Blog, ENSv2 links + blue Launch App button",
+            "position": "Top bar",
+            "notable": "Clean horizontal layout with primary CTA button on right"
+          },
+          {
+            "type": "Floating Domain Labels",
+            "description": "Colored rounded rectangles with domain names (uni.eth, dao.eth, nba.eth, vitalik.eth, linea.eth, base.eth)",
+            "position": "Scattered around hero text",
+            "notable": "Asymmetric playful positioning creates visual interest and demonstrates use cases"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Large light blue input field with placeholder 'Register your name' and search icon",
+            "position": "Bottom of fold",
+            "notable": "Prominent CTA leading to name registration flow"
+          },
+          {
+            "type": "Decorative Graphics",
+            "description": "Abstract geometric shapes in pink/magenta and green",
+            "position": "Left and bottom left",
+            "notable": "Adds visual dynamism without cluttering the interface"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates center with supporting description below; floating labels create secondary focal points; search bar anchors bottom",
+        "innovativeElements": [
+          "Floating domain name labels positioned around hero text create an ecosystem feel",
+          "Multi-colored label system (pink, green, blue) makes different chains/use cases visually distinct",
+          "Organic scattered positioning suggests a decentralized, open network"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what ENS is and register a domain name",
+        "entryPoints": [
+          "Direct visit to ens.eth site",
+          "Marketing campaign landing"
+        ],
+        "exitPoints": [
+          "Click Launch App button to connect wallet",
+          "Click Register your name search bar to begin registration",
+          "Navigate to Developers, Ecosystem, Governance, Blog via menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to app dashboard with wallet connection"
+          },
+          {
+            "element": "Navigation links (Developers, Ecosystem, etc.)",
+            "action": "Navigate to respective resource pages"
+          },
+          {
+            "element": "Register your name search bar",
+            "action": "Begin domain name search and registration flow"
+          }
+        ],
+        "informationArchitecture": "Top-down funnel: headline value prop → descriptive subtext → demonstration via domain labels → call to action (search bar)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to the New Internet",
+        "subheadline": "For every dreamer, creator, and change-maker tired of the old internet, Web3 is here. ENS is more than a protocol - it's a commitment to a better web, built for everyone.",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Register your name",
+            "style": "search-input-placeholder",
+            "placement": "Bottom search bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "uni.eth, dao.eth, nba.eth, vitalik.eth, linea.eth, base.eth",
+            "context": "Floating domain labels throughout hero section",
+            "purpose": "Demonstrate real-world examples and create visual interest showing diverse ecosystem"
+          }
+        ],
+        "tone": "professional-technical with inspirational undertone; aspirational language ('dreamer, creator, change-maker')",
+        "dataFormatting": [
+          "Domain names formatted as .eth labels in colored rectangles"
+        ],
+        "trustSignals": [
+          "Real domain examples (vitalik.eth, nba.eth) demonstrate adoption by notable entities"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "centered modal with cookie consent overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#5B7EF5",
+          "#999999"
+        ],
+        "typography": {
+          "headingStyle": "Large bold blue sans-serif, center-aligned, 40-50px",
+          "bodyStyle": "Medium gray sans-serif, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Centered Content Block",
+            "description": "Main headline 'Your web3 username' with descriptive subtext",
+            "position": "Center top",
+            "notable": "Clean hierarchy with supporting description clarifying the value proposition"
+          },
+          {
+            "type": "Search Input",
+            "description": "Large white input field with 'Search for a name' placeholder",
+            "position": "Center",
+            "notable": "Prominent search control as primary interaction"
+          },
+          {
+            "type": "Promotional Banner",
+            "description": "White card with icon, 'ENSv2 is coming!' headline, supporting text, and green button",
+            "position": "Below search input",
+            "notable": "Informs users of upcoming feature while maintaining focus on primary task"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "White rounded card with privacy notice, Decline and Accept buttons",
+            "position": "Bottom left",
+            "notable": "Non-intrusive placement; blue primary button for acceptance"
+          },
+          {
+            "type": "Help Button",
+            "description": "Blue circular button with icon",
+            "position": "Bottom right",
+            "notable": "Floating help/support button for user assistance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and search dominate; promotional banner secondary; cookie notice tertiary in bottom corner; help button persistent",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing with cookie consent overlay and promotional banner",
+        "userIntent": "Search for and register an ENS domain name; handle cookie consent",
+        "entryPoints": [
+          "Direct visit to homepage",
+          "From landing page after dismissing initial view"
+        ],
+        "exitPoints": [
+          "Search for a name via input field",
+          "Click ENSv2 hub button for information",
+          "Connect wallet via top-right button",
+          "Accept or decline cookie consent"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search for a name input",
+            "action": "Begin name search and availability check"
+          },
+          {
+            "element": "ENSv2 hub button",
+            "action": "Navigate to ENSv2 development information"
+          },
+          {
+            "element": "Accept button (cookie)",
+            "action": "Accept cookie policy and dismiss modal"
+          },
+          {
+            "element": "Decline button (cookie)",
+            "action": "Reject non-essential cookies"
+          },
+          {
+            "element": "Connect button (top right)",
+            "action": "Open wallet connection modal"
+          },
+          {
+            "element": "Help button (bottom right)",
+            "action": "Open support/help menu"
+          }
+        ],
+        "informationArchitecture": "Primary focus on search input; secondary promotional feature for ENSv2; tertiary cookie consent in corner",
+        "frictionPoints": [
+          "Cookie consent modal requires action (though bottom-left placement minimizes friction)",
+          "Multiple CTAs compete for attention (search, ENSv2 button, Connect button)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your web3 username",
+        "subheadline": "Your identity across web3, one name for all your crypto addresses, and your decentralised website.",
+        "ctas": [
+          {
+            "text": "Search for a name",
+            "style": "text-input-placeholder",
+            "placement": "Center input field"
+          },
+          {
+            "text": "ENSv2 hub",
+            "style": "primary-button",
+            "placement": "Promotional banner, right side"
+          },
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Cookie consent modal, right button"
+          },
+          {
+            "text": "Decline",
+            "style": "ghost-button",
+            "placement": "Cookie consent modal, left button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ENSv2 is coming! Keep up with ENSv2 development",
+            "context": "Promotional banner below search",
+            "purpose": "Inform users of upcoming feature and drive engagement with development updates"
+          },
+          {
+            "text": "ENS uses a single in-house cookie to enhance your experience. We don't use any third-party tracking cookies.",
+            "context": "Cookie consent modal",
+            "purpose": "Explain cookie policy and build trust around privacy"
+          }
+        ],
+        "tone": "professional-technical with friendly assurance (especially around privacy)",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit privacy statement: 'We don't use any third-party tracking cookies'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-3-launch-app.png",
+      "label": "Launch App",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "centered modal with cookie consent overlay dismissed",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#5B7EF5",
+          "#999999"
+        ],
+        "typography": {
+          "headingStyle": "Large bold blue sans-serif, center-aligned, 40-50px",
+          "bodyStyle": "Medium gray sans-serif, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with ENS logo, hamburger menu, and Connect button",
+            "position": "Top",
+            "notable": "Minimal header design keeps focus on central content"
+          },
+          {
+            "type": "Centered Content Block",
+            "description": "Headline 'Your web3 username' with subtext about identity and decentralized websites",
+            "position": "Upper center",
+            "notable": "Same value proposition as previous screen"
+          },
+          {
+            "type": "Search Input",
+            "description": "Large white input field with 'Search for a name' placeholder",
+            "position": "Center",
+            "notable": "Primary interactive element"
+          },
+          {
+            "type": "Promotional Banner",
+            "description": "White card with 'ENSv2 is coming!' and green 'ENSv2 hub' button",
+            "position": "Below search",
+            "notable": "Consistent secondary promotion"
+          },
+          {
+            "type": "Help Button",
+            "description": "Blue circular icon button with notification badge",
+            "position": "Bottom right",
+            "notable": "Red badge suggests unread notifications or alerts"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → description → search input → promotional banner, with persistent help button",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing with cookie consent dismissed",
+        "userIntent": "Search for and register ENS domain after accepting cookies",
+        "entryPoints": [
+          "From previous screen after accepting cookies",
+          "Fresh page load with cookie already stored"
+        ],
+        "exitPoints": [
+          "Input text in search field to find domain",
+          "Click ENSv2 hub button",
+          "Click Connect button to link wallet",
+          "Click help button for support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search for a name input",
+            "action": "Enter domain name to search availability"
+          },
+          {
+            "element": "ENSv2 hub button",
+            "action": "Navigate to ENSv2 information page"
+          },
+          {
+            "element": "Connect button",
+            "action": "Open wallet connection interface"
+          },
+          {
+            "element": "Help button",
+            "action": "Open support or notification panel"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Open mobile navigation menu"
+          }
+        ],
+        "informationArchitecture": "Identical to previous screen but with cookie modal dismissed; focus remains on primary search function",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Red notification badge on help button suggests unread messages or alerts"
+        ]
+      },
+      "copy": {
+        "headline": "Your web3 username",
+        "subheadline": "Your identity across web3, one name for all your crypto addresses, and your decentralised website.",
+        "ctas": [
+          {
+            "text": "Search for a name",
+            "style": "text-input-placeholder",
+            "placement": "Center input field"
+          },
+          {
+            "text": "ENSv2 hub",
+            "style": "primary-button",
+            "placement": "Promotional banner"
+          },
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ENSv2 is coming! Keep up with ENSv2 development",
+            "context": "Promotional banner",
+            "purpose": "Notify users of upcoming feature release"
+          }
+        ],
+        "tone": "professional-technical with forward-looking optimism",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit mention of decentralization: 'decentralised website'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-14-brand.png",
+      "label": "Brand",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#001a33",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, very large (80-100px), all-caps, dark navy",
+          "bodyStyle": "Serif, regular weight, dark teal/navy text, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, menu items, and CTA button",
+            "position": "top",
+            "notable": "Clean, minimal design with 'Launch App' as prominent call-to-action"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Left-aligned vertical menu with three options",
+            "position": "left-middle",
+            "notable": "Simple bullet list with dark navy checkboxes/bullets"
+          },
+          {
+            "type": "content-panel",
+            "description": "Right-aligned text content with legal/brand guidelines",
+            "position": "right-middle",
+            "notable": "Two paragraphs with embedded hyperlink on 'guidelines and instructions'"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, menu anchors bottom-left, body text flows on right, creating asymmetrical balance",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about ENS brand assets and understand trademark licensing requirements",
+        "entryPoints": [
+          "Navigation menu from main site",
+          "Direct link to Brand section"
+        ],
+        "exitPoints": [
+          "Click 'Symbols', 'Palettes', or 'Guidelines' links",
+          "Navigate to other site sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items (Symbols, Palettes, Guidelines)",
+            "action": "Navigate to brand asset sections"
+          },
+          {
+            "element": "Hyperlinked text 'guidelines and instructions'",
+            "action": "Opens detailed brand guidelines document"
+          },
+          {
+            "element": "Email link 'alex@ens[.]domains'",
+            "action": "Opens email client to request trademark license"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: headline context > key action items (left nav) > detailed requirements and legal text",
+        "frictionPoints": [
+          "Email contact requirement for license approval may be slow",
+          "Legal jargon density in body text"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ENS Brand",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You're free to use the ENS brand in the ecosystem, but you must obtain a license first.",
+            "context": "Opening paragraph, right content panel",
+            "purpose": "Immediately clarifies licensing requirement"
+          },
+          {
+            "text": "Reach out to our General Counsel, Alexander Urbelis, at alex@ens[.]domains to request a trademark license agreement.",
+            "context": "First paragraph, right panel",
+            "purpose": "Provides clear path to action"
+          },
+          {
+            "text": "Do not use the marks to impersonate ENS, ENS DAO, or ENS Labs, or to imply sponsorship, endorsement, or a partnership that doesn't exist.",
+            "context": "Second paragraph, right panel",
+            "purpose": "Sets clear boundaries on acceptable use"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Founded 2018 reference",
+          "Non-profit organization mention",
+          "General Counsel contact provided"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-15-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "centered-minimal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, very large (72px+), black text",
+          "bodyStyle": "Sans-serif, regular weight, medium gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-display",
+            "description": "Large error code with separator line and message",
+            "position": "center",
+            "notable": "Minimalist design using vertical separator line for visual division"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates visually on left, message balances right, centered on page",
+        "innovativeElements": [
+          "Vertical separator line between code and message instead of traditional layout"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand that the requested page does not exist",
+        "entryPoints": [
+          "Direct navigation to non-existent URL"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Navigation menu (if visible)",
+          "Home link (if provided)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal: error code + explanation message only",
+        "frictionPoints": [
+          "No clear next action or navigation options provided",
+          "No back button or home link visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "This page could not be found.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral-informative",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-16-about-page.png",
+      "label": "about page",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "full-width-centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Serif, italic, very large (64-80px), black text",
+          "bodyStyle": "Serif, regular weight, justified, black text, generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "ENS Labs wordmark in sans-serif",
+            "position": "top-left",
+            "notable": "Minimal, black text logo"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with About (underlined), Contributions, Contact, Careers",
+            "position": "top-right",
+            "notable": "Clean inline menu with current page underlined"
+          },
+          {
+            "type": "hero-heading",
+            "description": "Large italic serif headline",
+            "position": "center-top",
+            "notable": "Poetic, elegant italic treatment uncommon in tech"
+          },
+          {
+            "type": "body-text",
+            "description": "Multi-paragraph explanation of ENS Labs",
+            "position": "center",
+            "notable": "Justified serif text with classical typography treatment"
+          },
+          {
+            "type": "footer-text",
+            "description": "Copyright notice",
+            "position": "bottom-left",
+            "notable": "Small, light copyright text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates through size and italic style, body text flows naturally below with generous breathing room",
+        "innovativeElements": [
+          "Italic serif headline for organizational about page is elegant and distinctive"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about ENS Labs organization, its mission, and history",
+        "entryPoints": [
+          "Navigation menu 'About' link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click other nav items (Contributions, Contact, Careers)",
+          "Navigate back to main ENS site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links (About, Contributions, Contact, Careers)",
+            "action": "Navigate to respective pages"
+          }
+        ],
+        "informationArchitecture": "Simple: logo + nav > headline > body content > footer",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Current page underlined in navigation (About)"
+        ]
+      },
+      "copy": {
+        "headline": "Name everything",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "2018 (founding year)"
+        ],
+        "trustSignals": [
+          "Non-profit organization status",
+          "Founded 2018",
+          "Core software development responsibility",
+          "Leading protocol claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-11-vitaliketh.png",
+      "label": "vitalik.eth",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B8DEF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large sizing for domain name (vitalik.eth)",
+          "bodyStyle": "Regular sans-serif for bio and labels",
+          "dataStyle": "Monospace or condensed font for addresses and hex values"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Tabbed navigation with Profile, Records, Ownership, Subnames, More",
+            "position": "Below domain name heading",
+            "notable": "Active tab (Profile) highlighted in blue"
+          },
+          {
+            "type": "Profile Card",
+            "description": "Hero section with gradient blue background, circular avatar overlay, name and bio",
+            "position": "Top of content area",
+            "notable": "Avatar positioned to overlap background gradient"
+          },
+          {
+            "type": "Accounts Section",
+            "description": "Social accounts (Twitter, GitHub) with icons and external links",
+            "position": "Middle of card",
+            "notable": "External link icons indicate navigation away"
+          },
+          {
+            "type": "Address Display",
+            "description": "Ethereum address shown with truncation (0xd8d...96045) and copy/menu icon",
+            "position": "Below accounts",
+            "notable": "Abbreviated address for brevity, menu icon for actions"
+          },
+          {
+            "type": "Records Section",
+            "description": "Avatar, header, PGP, and contenthash records as labeled badges",
+            "position": "Lower section",
+            "notable": "Multiple record types displayed horizontally with URLs"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Profile card dominates top; sections flow vertically with clear label headers; secondary elements grayed out",
+        "innovativeElements": [
+          "Gradient blue background on profile card creates visual interest",
+          "Avatar overlap technique merges profile photo with background",
+          "Record badges allow quick scanning of linked identities"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View ENS domain profile and associated records/accounts",
+        "entryPoints": [
+          "Search result from domain lookup",
+          "Direct URL navigation to vitalik.eth",
+          "Link shared from another user"
+        ],
+        "exitPoints": [
+          "Click on Etherscan link",
+          "Click on social account links (Twitter, GitHub)",
+          "Click on Records tab for detailed view",
+          "Click on Ownership tab",
+          "Connect wallet button (top right)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Profile tabs (Profile, Records, Ownership, Subnames, More)",
+            "action": "Switches between different profile information views"
+          },
+          {
+            "element": "External link icons on accounts",
+            "action": "Opens social profile in new window"
+          },
+          {
+            "element": "Copy icon on address",
+            "action": "Copies address to clipboard"
+          },
+          {
+            "element": "Etherscan link",
+            "action": "Opens blockchain explorer for this address"
+          },
+          {
+            "element": "Record URLs (avatar, header, pgp, contenthash)",
+            "action": "Opens or copies linked resource"
+          }
+        ],
+        "informationArchitecture": "Identity-centric: top-level profile info, then related accounts, then technical records; organized by category labels",
+        "frictionPoints": [
+          "Address truncation may require clicking to see full value",
+          "Multiple external links could cause navigation confusion",
+          "Record types not immediately obvious to non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "vitalik.eth",
+        "subheadline": "mi pinxe lo crino tcati",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right corner"
+          },
+          {
+            "text": "Etherscan",
+            "style": "text-link",
+            "placement": "Right of domain name"
+          },
+          {
+            "text": "View",
+            "style": "text-link",
+            "placement": "Ownership section footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Accounts",
+            "context": "Section header",
+            "purpose": "Categorizes social/platform accounts"
+          },
+          {
+            "text": "Addresses",
+            "context": "Section header",
+            "purpose": "Groups blockchain addresses"
+          },
+          {
+            "text": "Other Records",
+            "context": "Section header",
+            "purpose": "Labels additional ENS record types"
+          },
+          {
+            "text": "Ownership",
+            "context": "Section header and link",
+            "purpose": "Navigation to ownership details"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0xd8d...96045 (truncated address)",
+          "https://euc.li/... (shortened URLs)",
+          "ipfs://bafybeid... (protocol-prefixed hash)"
+        ],
+        "trustSignals": [
+          "Etherscan link for on-chain verification",
+          "GitHub account verification",
+          "Multiple confirmed record types"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-12-developer-docsyoure-a-developer-and-you-want-to.png",
+      "label": "Developer DocsYou're a developer, and you want to",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B8DEF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (ENS Documentation), smaller bold for section headers",
+          "bodyStyle": "Regular sans-serif for descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header",
+            "description": "Logo, search bar, and responsive menu icon",
+            "position": "Top of page",
+            "notable": "Sticky header with search functionality"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large heading with subheading and two CTAs",
+            "position": "Below header, full width",
+            "notable": "Light gray background separates from content"
+          },
+          {
+            "type": "Documentation Grid",
+            "description": "5-column layout of categorized links and documentation paths",
+            "position": "Main content area",
+            "notable": "Organized into Get Started, Use ENS, Registries, Resolvers, Governance, Extra"
+          },
+          {
+            "type": "Videos Section",
+            "description": "Horizontal scrollable or grid of video content",
+            "position": "Bottom of page",
+            "notable": "Shows embedded video thumbnails"
+          },
+          {
+            "type": "AI Chat Widget",
+            "description": "Floating action button with 'Ask AI' label",
+            "position": "Bottom right corner",
+            "notable": "Persistent chat interface access"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero section draws eye first; documentation organized in clear columnar hierarchy; videos and AI chat are secondary discovery paths",
+        "innovativeElements": [
+          "Categorized documentation grid provides multiple entry points for different user types",
+          "AI chat widget offers contextual help without leaving page",
+          "Multi-column layout maximizes information density while maintaining scannability"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find ENS documentation and learn how to build with ENS infrastructure",
+        "entryPoints": [
+          "Direct navigation to docs.ens.domains",
+          "Link from ENS main website",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Click Protocol Docs, Resolution, Tools and Libraries, etc.",
+          "Click Get Started button",
+          "Click Learn about ENS button",
+          "Click video content",
+          "Interact with AI chat"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filters or searches documentation pages"
+          },
+          {
+            "element": "Get Started button",
+            "action": "Navigates to quickstart/onboarding content"
+          },
+          {
+            "element": "Learn about ENS button",
+            "action": "Navigates to educational/overview content"
+          },
+          {
+            "element": "All documentation links (blue text)",
+            "action": "Navigate to specific documentation pages"
+          },
+          {
+            "element": "Ask AI widget",
+            "action": "Opens conversational AI assistant"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke model: hero section funnels to 6 documentation categories (Get Started, Use ENS, Registries, Resolvers, Governance, Extra), plus supplementary videos and AI help",
+        "frictionPoints": [
+          "Large number of options could overwhelm new users",
+          "Categorization may not match mental models of all audiences",
+          "No clear 'most popular' or 'recommended' starting point"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ENS Documentation",
+        "subheadline": "Build applications with decentralized self-sovereign identity.",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "Left of subheading"
+          },
+          {
+            "text": "Learn about ENS",
+            "style": "ghost-button",
+            "placement": "Right of subheading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get Started",
+            "context": "Section header",
+            "purpose": "Categorizes onboarding content"
+          },
+          {
+            "text": "Use ENS",
+            "context": "Section header",
+            "purpose": "Categorizes implementation guides"
+          },
+          {
+            "text": "Registries",
+            "context": "Section header",
+            "purpose": "Groups registrar and registry documentation"
+          },
+          {
+            "text": "Resolvers",
+            "context": "Section header",
+            "purpose": "Groups resolver-specific docs"
+          },
+          {
+            "text": "Governance",
+            "context": "Section header",
+            "purpose": "Categorizes governance and DAO information"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official ENS brand and logo",
+          "Comprehensive documentation structure",
+          "Multiple learning pathways (docs, videos, AI chat)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-home-13-discord.png",
+      "label": "Discord",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B8DEF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main headline",
+          "bodyStyle": "Regular sans-serif for instructional text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "ENS diamond logo in blue circle",
+            "position": "Top center",
+            "notable": "Large prominent placement creates focal point"
+          },
+          {
+            "type": "Modal Card",
+            "description": "White rounded card with heading, subheading, and reCAPTCHA",
+            "position": "Center of screen",
+            "notable": "Overlays light background with subtle shadow"
+          },
+          {
+            "type": "reCAPTCHA Widget",
+            "description": "Google reCAPTCHA v2 checkbox",
+            "position": "Inside modal, below text",
+            "notable": "Standard captcha implementation with external branding"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "ENS logo dominates; modal card centered below; captcha is final interactive element",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "confirmation",
+        "userIntent": "Complete verification to join ENS Discord community",
+        "entryPoints": [
+          "Click to join Discord link",
+          "Redirect from Discord invite page"
+        ],
+        "exitPoints": [
+          "Complete reCAPTCHA and proceed to Discord",
+          "Close modal/leave page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "reCAPTCHA checkbox",
+            "action": "Verifies user is human; enables progression"
+          }
+        ],
+        "informationArchitecture": "Linear: single screen with focused action; minimal cognitive load",
+        "frictionPoints": [
+          "Bot verification adds friction to community entry",
+          "No alternative verification methods shown",
+          "reCAPTCHA can be problematic for accessibility"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join our Discord",
+        "subheadline": "Solve the captcha below to join",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official ENS branding",
+          "Google reCAPTCHA for security"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-staking-1-governance.png",
+      "label": "Governance",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1B8C3D",
+          "#C8E6C9",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (60+ px), dark green, center-aligned",
+          "bodyStyle": "Serif font, medium weight, dark gray, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, menu items (Developers, Ecosystem, Governance, Blog, ENSv2), and CTA button",
+            "position": "Top",
+            "notable": "Governance menu item highlighted in green"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large centered headline with supporting paragraph text",
+            "position": "Center",
+            "notable": "Geometric decorative elements in green and light mint"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Two action buttons: primary dark green and secondary light green",
+            "position": "Below hero text",
+            "notable": "Contrasting button styles"
+          },
+          {
+            "type": "Decorative Graphics",
+            "description": "Abstract geometric shapes with green and mint gradients",
+            "position": "Left and right edges",
+            "notable": "Modern, minimalist aesthetic"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates, supporting text below, CTAs at bottom, decorative elements frame the content",
+        "innovativeElements": [
+          "Diagonal geometric decorative elements create visual interest",
+          "Color gradient transitions in accent shapes",
+          "Asymmetrical layout with geometric framing"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand the ENS DAO and governance system, then take action (visit DAO or proposals)",
+        "entryPoints": [
+          "Navigation from main site",
+          "Direct governance section link"
+        ],
+        "exitPoints": [
+          "Launch App button (top right)",
+          "ENS DAO button",
+          "Proposals button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App",
+            "action": "Opens the main application"
+          },
+          {
+            "element": "ENS DAO",
+            "action": "Navigates to DAO details"
+          },
+          {
+            "element": "Proposals",
+            "action": "Navigates to governance proposals"
+          }
+        ],
+        "informationArchitecture": "Top-down: intro → explanation → call-to-action",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your platform for change",
+        "subheadline": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right"
+          },
+          {
+            "text": "ENS DAO",
+            "style": "primary-button",
+            "placement": "Center bottom"
+          },
+          {
+            "text": "Proposals",
+            "style": "secondary-button",
+            "placement": "Center bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Governance",
+            "context": "Badge above headline",
+            "purpose": "Indicates section context"
+          }
+        ],
+        "tone": "professional-technical, inspirational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-staking-2-daoeth.png",
+      "label": "dao.eth",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#DBEAFE",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (28px+), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium (14px), gray",
+          "dataStyle": "Monospace font, addresses in abbreviated form with copy icons"
+        },
+        "components": [
+          {
+            "type": "Search Bar",
+            "description": "Search field with placeholder 'Search for a name'",
+            "position": "Top left",
+            "notable": null
+          },
+          {
+            "type": "Connect Button",
+            "description": "Rounded blue button in top right",
+            "position": "Top right",
+            "notable": "High contrast primary action"
+          },
+          {
+            "type": "Domain Profile Card",
+            "description": "Large card with gradient header, avatar, and domain name",
+            "position": "Center",
+            "notable": "Blue gradient banner with circular avatar overlay"
+          },
+          {
+            "type": "Tabs",
+            "description": "Profile, Records, Ownership, Subnames, More",
+            "position": "Below domain name",
+            "notable": "Profile tab active and highlighted in blue"
+          },
+          {
+            "type": "Ownership Info",
+            "description": "Key-value pairs for manager, owner, expiry, parent",
+            "position": "Below tabs in card",
+            "notable": "Addresses truncated with copy functionality"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Domain name and avatar are focal point, tabs guide secondary navigation, ownership details below",
+        "innovativeElements": [
+          "Circular avatar profile picture integrated into gradient header",
+          "Copyable address fields with icons"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View ENS domain details, specifically the dao.eth domain ownership information",
+        "entryPoints": [
+          "Search results",
+          "Direct domain link"
+        ],
+        "exitPoints": [
+          "Connect button (wallet)",
+          "Tab navigation (Records, Ownership, Subnames)",
+          "Search for another name"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search Bar",
+            "action": "Search for an ENS name"
+          },
+          {
+            "element": "Connect Button",
+            "action": "Connect wallet"
+          },
+          {
+            "element": "Profile Tabs",
+            "action": "Switch between different domain information views"
+          },
+          {
+            "element": "Copy Icons",
+            "action": "Copy address to clipboard"
+          },
+          {
+            "element": "View Link",
+            "action": "Expand or navigate to detailed ownership view"
+          }
+        ],
+        "informationArchitecture": "Domain details organized into tabs; ownership info displayed as key-value pairs with abbreviated addresses",
+        "frictionPoints": [
+          "Addresses are truncated (Oxfb6...Aea3e), may require clicking to copy or expand",
+          "Multiple tabs require clicking to see full information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "dao.eth",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right"
+          },
+          {
+            "text": "View",
+            "style": "text-link",
+            "placement": "Next to Ownership label"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "manager",
+            "context": "Ownership info label",
+            "purpose": "Identifies address type"
+          },
+          {
+            "text": "owner",
+            "context": "Ownership info label",
+            "purpose": "Identifies address type"
+          },
+          {
+            "text": "expiry",
+            "context": "Ownership info label",
+            "purpose": "Shows domain expiration"
+          },
+          {
+            "text": "parent",
+            "context": "Ownership info label",
+            "purpose": "Shows parent domain (.eth)"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Oxfb6...Aea3e (truncated address)",
+          "October 30, 2028 (date format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-staking-3-learn-about-ens-governance.png",
+      "label": "Learn about ENS Governance",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F3F4F6",
+          "#1E40AF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium (14-16px), dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with collapsible menu items and nested links",
+            "position": "Left side",
+            "notable": "Hierarchical navigation with Governance section expanded"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search field at top of main content",
+            "position": "Top center",
+            "notable": null
+          },
+          {
+            "type": "AI Assistant Button",
+            "description": "'Ask in ChatGPT' button in top right",
+            "position": "Top right",
+            "notable": "Contextual AI assistance"
+          },
+          {
+            "type": "Content Sections",
+            "description": "Heading + paragraph + bulleted links",
+            "position": "Main content area",
+            "notable": "Multiple context sections with external links"
+          },
+          {
+            "type": "On This Page Widget",
+            "description": "Right sidebar with anchor links to page sections",
+            "position": "Right side",
+            "notable": "Quick navigation to page sections"
+          },
+          {
+            "type": "GitHub Link",
+            "description": "Edit on GitHub link at bottom",
+            "position": "Bottom left",
+            "notable": "Community contribution encouraged"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominates, bulleted links in blue guide the eye, sidebar navigation provides context, right panel offers quick navigation",
+        "innovativeElements": [
+          "Three-column layout with navigation, content, and contextual jumping",
+          "AI assistant integration for contextual help",
+          "GitHub editing link encourages community contribution"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about ENS DAO governance structure, access governance resources and tools",
+        "entryPoints": [
+          "Governance section link",
+          "Search results",
+          "Main navigation"
+        ],
+        "exitPoints": [
+          "External links (Forum, Snapshot, Agora, etc.)",
+          "Sidebar navigation to other pages",
+          "Search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search Bar",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Sidebar Menu Items",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Blue Links (Forum, Snapshot, Agora, etc.)",
+            "action": "Navigate to external governance tools"
+          },
+          {
+            "element": "On This Page Links",
+            "action": "Jump to page sections"
+          },
+          {
+            "element": "Ask in ChatGPT",
+            "action": "Get AI-powered help with context"
+          },
+          {
+            "element": "Edit on GitHub",
+            "action": "Contribute or suggest edits"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sidebar navigation leading to detailed content sections; content organized by context (ENS vs Governance)",
+        "frictionPoints": [
+          "Multiple external tool links require understanding which platform to use",
+          "Long list of governance tools may overwhelm newcomers"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to ENS DAO",
+        "subheadline": "The ENS DAO governs the ENS protocol and treasury",
+        "ctas": [
+          {
+            "text": "Forum",
+            "style": "text-link",
+            "placement": "Context for Governance section"
+          },
+          {
+            "text": "Snapshot",
+            "style": "text-link",
+            "placement": "Context for Governance section"
+          },
+          {
+            "text": "Agora",
+            "style": "text-link",
+            "placement": "Context for Governance section"
+          },
+          {
+            "text": "Tally",
+            "style": "text-link",
+            "placement": "Context for Governance section"
+          },
+          {
+            "text": "DeGov",
+            "style": "text-link",
+            "placement": "Context for Governance section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Context for ENS",
+            "context": "Right sidebar section",
+            "purpose": "Groups ENS-related resource links"
+          },
+          {
+            "text": "Context for Governance",
+            "context": "Right sidebar section",
+            "purpose": "Groups governance-specific resource links"
+          },
+          {
+            "text": "Last updated: 2/13/26, 8:02 AM",
+            "context": "Bottom of content",
+            "purpose": "Indicates content freshness"
+          },
+          {
+            "text": "For discussion on governance proposals and working group operations.",
+            "context": "Forum description",
+            "purpose": "Explains tool purpose"
+          },
+          {
+            "text": "For onchain proposals and token delegation.",
+            "context": "Multiple tool descriptions",
+            "purpose": "Explains tool functionality"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "EP 6.34, EP 6.33, EP 6.32 (proposal numbering in sidebar)"
+        ],
+        "trustSignals": [
+          "Multiple official governance tool integrations (Forum, Snapshot, Agora, Tally, DeGov)",
+          "GitHub contribution link signals transparency"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-settings-1-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#FF1493",
+          "#0077B6"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif in bright magenta (#FF1493), center-aligned",
+          "bodyStyle": "Medium-weight dark gray sans-serif for body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, menu items (Developers, Ecosystem, Governance, Blog, ENSv2), and primary CTA button",
+            "position": "top",
+            "notable": "Blog link highlighted in blue, Launch App button is prominent blue call-to-action"
+          },
+          {
+            "type": "search-input",
+            "description": "Pink-bordered search field with placeholder text 'Search for a post'",
+            "position": "center",
+            "notable": "Soft pink styling matches accent color scheme"
+          },
+          {
+            "type": "hero-graphic",
+            "description": "Colorful 3D geometric illustration with magenta, green, and blue arrow elements",
+            "position": "bottom-left",
+            "notable": "Vibrant, modern design with gradient blur effects"
+          },
+          {
+            "type": "content-preview",
+            "description": "Article headline 'ENS is staying on Ethereum' with preview text",
+            "position": "bottom-right",
+            "notable": "Bold black headline with supporting paragraph text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Giant magenta headline dominates, search bar creates secondary focus, illustration and article preview balanced at bottom",
+        "innovativeElements": [
+          "Colorful 3D geometric illustration with gradient blur effects",
+          "Pink-outlined search field as design accent"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Browse latest blog articles related to ENS protocol and services",
+        "entryPoints": [
+          "Click Blog in main navigation",
+          "Direct link to blog subdomain"
+        ],
+        "exitPoints": [
+          "Search for specific post",
+          "Navigate to article via preview text",
+          "Return to main nav (Developers, Ecosystem, Governance, ENSv2)",
+          "Launch App"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Filter blog posts by keyword"
+          },
+          {
+            "element": "Article preview",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Hero landing with search functionality and featured article preview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Newest articles",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for a post",
+            "context": "search input placeholder",
+            "purpose": "Guide user to search functionality"
+          },
+          {
+            "text": "Blog",
+            "context": "navigation and pink label badge",
+            "purpose": "Identify current section"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-settings-2-support.png",
+      "label": "Support",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0077B6",
+          "#FFFFFF",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif heading on blue background for main headline; bold dark headings for category cards",
+          "bodyStyle": "Medium-weight dark gray body text with generous line spacing",
+          "dataStyle": "Small gray text showing article counts (e.g., '6 articles', '7 articles')"
+        },
+        "components": [
+          {
+            "type": "header-section",
+            "description": "Full-width blue background with white headline 'Hi there, how can we help?' and search bar",
+            "position": "top",
+            "notable": "Inviting tone with search input integrated into hero section"
+          },
+          {
+            "type": "quick-links",
+            "description": "2x2 grid of inline text links with right-arrow indicators",
+            "position": "below-header",
+            "notable": "How to Register, Set Primary Name, How to Edit Profile, Extend Multiple Names"
+          },
+          {
+            "type": "category-cards",
+            "description": "6 white cards in 3-column grid layout with titles, descriptions, and article counts",
+            "position": "main-content",
+            "notable": "Clear visual hierarchy with card shadows and consistent sizing"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Blue circular button with message icon in bottom-right corner",
+            "position": "bottom-right",
+            "notable": "Notification badge showing unread count"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Blue hero banner with white text draws attention, quick-link options provide rapid navigation, category cards organize content by topic",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find help articles organized by topic or search for specific support content",
+        "entryPoints": [
+          "Click from main navigation or App",
+          "Direct link to support/help center"
+        ],
+        "exitPoints": [
+          "Click any quick-link (How to Register, Set Primary Name, etc.)",
+          "Click category card to view articles",
+          "Search for specific topic",
+          "Open chat widget for real-time support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filter articles by keyword"
+          },
+          {
+            "element": "Quick-links",
+            "action": "Jump to specific help topic"
+          },
+          {
+            "element": "Category cards",
+            "action": "Browse articles within a category"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open real-time support chat"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Hero search > Quick common tasks > Topic-based categories > Article lists",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hi there, how can we help?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "How to Register a .eth Name",
+            "style": "text-link",
+            "placement": "quick-links row 1"
+          },
+          {
+            "text": "Set Your Primary Name",
+            "style": "text-link",
+            "placement": "quick-links row 1"
+          },
+          {
+            "text": "How to Edit Profile",
+            "style": "text-link",
+            "placement": "quick-links row 2"
+          },
+          {
+            "text": "Extend Multiple Names at Once",
+            "style": "text-link",
+            "placement": "quick-links row 2"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for articles...",
+            "context": "search input placeholder",
+            "purpose": "Guide user to search functionality"
+          },
+          {
+            "text": "New to ENS? Start here. Learn what ENS is, how it works, and register your first name.",
+            "context": "Getting Started card",
+            "purpose": "Describe card category and value proposition"
+          },
+          {
+            "text": "Register, extend, and understand the lifecycle of your .eth names.",
+            "context": "Registration & Renewals card",
+            "purpose": "Describe card category and value proposition"
+          },
+          {
+            "text": "6 articles",
+            "context": "Each category card footer",
+            "purpose": "Show article count within category"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "6 articles",
+          "7 articles",
+          "11 articles",
+          "5 articles",
+          "2 articles"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ens-settings-3-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#0077B6"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif centered headline; numbered section headings in bold",
+          "bodyStyle": "Medium-weight dark gray body text with generous line spacing and justified alignment",
+          "dataStyle": "Monospace date formatting for last updated timestamp"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, menu items, and primary CTA button",
+            "position": "top",
+            "notable": "Consistent with other pages in design system"
+          },
+          {
+            "type": "page-header",
+            "description": "Large centered headline 'Privacy Policy' with last updated date below",
+            "position": "above-content",
+            "notable": "Monospace date formatting adds formality"
+          },
+          {
+            "type": "legal-content",
+            "description": "Numbered sections with hierarchical structure and bold key terms",
+            "position": "main-content",
+            "notable": "Hyperlinked domain reference (https://ens.domains/) provides transparency"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws attention, section numbering and bold terms guide scanning, body text provides detailed information",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Review legal privacy policy and data handling practices",
+        "entryPoints": [
+          "Footer link from main website",
+          "Direct navigation",
+          "Regulatory compliance reference"
+        ],
+        "exitPoints": [
+          "Return to main nav",
+          "Navigate to other legal pages",
+          "Click external links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinked domain reference",
+            "action": "Navigate to referenced website"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Linear legal document with numbered sections and subsections for detailed information architecture",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": "Last updated: 11/11/2022",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 11/11/2022",
+            "context": "below headline",
+            "purpose": "Show policy recency and trustworthiness"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "11/11/2022",
+          "Section numbering (1, 1.1, 1.2, etc.)"
+        ],
+        "trustSignals": [
+          "Last updated date shown",
+          "Detailed legal policy document",
+          "Reference to ENS Foundation entity",
+          "Specific domain references"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1598 @@
+{
+  "slug": "hodlhodl",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:53:12.584Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/hodlhodl-home-4-log-in.png",
+      "label": "Log in",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#00B074",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, ~32px, dark grey/black",
+          "bodyStyle": "Regular sans-serif, ~14px, medium grey for descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "tab-selector",
+            "description": "HODLHODL and LEND tabs with icons",
+            "position": "top-center of form",
+            "notable": "Clean toggle between trading and lending products"
+          },
+          {
+            "type": "text-input",
+            "description": "Email and Password fields with subtle borders",
+            "position": "center form area",
+            "notable": "Password field has eye-toggle visibility icon"
+          },
+          {
+            "type": "primary-button",
+            "description": "Blue full-width 'Log in' button",
+            "position": "bottom of form",
+            "notable": "Prominent, high-contrast styling"
+          },
+          {
+            "type": "text-link",
+            "description": "'Forgot your password?' recovery link",
+            "position": "below password field",
+            "notable": "Blue link, professional recovery flow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Form card centered with abstract blue flowing lines background creating visual depth; brand assets (logos) guide eye to product selection first, then form credentials",
+        "innovativeElements": [
+          "Abstract flowing blue ribbon background creates dynamic energy while maintaining readability",
+          "Dual-product tab interface (HODL vs LEND) elegantly positioned above form"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Authenticate and access account dashboard",
+        "entryPoints": [
+          "From landing page via Log in button",
+          "Direct URL navigation",
+          "Session timeout redirect"
+        ],
+        "exitPoints": [
+          "Submit form → dashboard",
+          "Forgot password link → password reset flow",
+          "Sign up link → registration form"
+        ],
+        "interactiveElements": [
+          {
+            "element": "HODLHODL/LEND tabs",
+            "action": "Switch between trading and lending account logins"
+          },
+          {
+            "element": "Password visibility toggle",
+            "action": "Show/hide password characters"
+          },
+          {
+            "element": "Log in button",
+            "action": "Submit credentials and authenticate"
+          },
+          {
+            "element": "Forgot your password? link",
+            "action": "Navigate to password recovery"
+          },
+          {
+            "element": "Sign up link",
+            "action": "Navigate to account creation form"
+          }
+        ],
+        "informationArchitecture": "Single-column vertical form with product selection at top, credentials in middle, recovery/signup options below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LOG IN",
+        "subheadline": "Account for Hodl Hodl P2P Bitcoin trading and lending platform",
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "primary-button",
+            "placement": "bottom of form"
+          },
+          {
+            "text": "Sign up",
+            "style": "text-link",
+            "placement": "below primary button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Forgot your password?",
+            "context": "Below password field",
+            "purpose": "Account recovery pathway"
+          },
+          {
+            "text": "Do not have account?",
+            "context": "Bottom of form",
+            "purpose": "Conversion funnel for new users"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-home-5-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#FFFFFF",
+          "#F0F4F8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, ~48px, black",
+          "bodyStyle": "Regular sans-serif, ~16px, dark grey",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "illustration",
+            "description": "3D isometric broken screen/device graphic in blue/pink palette",
+            "position": "left side of screen",
+            "notable": "Visually engaging error state representation"
+          },
+          {
+            "type": "error-message-block",
+            "description": "Large 'PAGE NOT FOUND' heading with explanatory text",
+            "position": "right side, center-aligned",
+            "notable": "Clear, contextual guidance for user next steps"
+          },
+          {
+            "type": "button-group",
+            "description": "Log in and Sign up buttons side-by-side",
+            "position": "below error message",
+            "notable": "Dark/black buttons for error state styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left illustration draws attention, right text hierarchy guides to action buttons; generous white space maintains clarity",
+        "innovativeElements": [
+          "Stylized 3D broken device illustration communicates error state creatively",
+          "Horizontal layout split efficiently uses full screen width"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why page doesn't exist and find correct navigation",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken internal link",
+          "Expired page reference"
+        ],
+        "exitPoints": [
+          "Log in button → authentication flow",
+          "Sign up button → registration flow",
+          "Footer navigation → site structure"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log in button",
+            "action": "Navigate to login form"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Navigate to registration form"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to About, Blog, Terms, Help, Products"
+          }
+        ],
+        "informationArchitecture": "Error state centered on screen with prominent call-to-action buttons and comprehensive footer navigation recovery options",
+        "frictionPoints": [
+          "User arrived at wrong URL and must restart navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PAGE NOT FOUND",
+        "subheadline": "We couldn't find the page you are looking for. Please log in to view your contract details or discover offers that suit your needs.",
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "center, right of Log in button"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "We couldn't find the page you are looking for."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-onboarding-1-sign-up.png",
+      "label": "Sign up",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#00B074",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, ~32px, dark grey/black",
+          "bodyStyle": "Regular sans-serif, ~14px, medium grey",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "tab-selector",
+            "description": "HODLHODL and LEND product tabs",
+            "position": "top-center",
+            "notable": "Consistent product selection interface"
+          },
+          {
+            "type": "text-input",
+            "description": "Stacked vertically with subtle borders",
+            "position": "center form area",
+            "notable": "Password fields include visibility toggles; password strength indicator bars"
+          },
+          {
+            "type": "info-icon",
+            "description": "Help icons next to Username and password fields",
+            "position": "field labels",
+            "notable": "Contextual guidance for field requirements"
+          },
+          {
+            "type": "expandable-section",
+            "description": "'Have a referral code?' collapsible dropdown",
+            "position": "below confirm password",
+            "notable": "Optional field presented compactly"
+          },
+          {
+            "type": "checkbox",
+            "description": "Terms and Conditions + Privacy Policy agreement",
+            "position": "bottom of form",
+            "notable": "Linked legal text, required before submission"
+          },
+          {
+            "type": "primary-button",
+            "description": "Blue full-width 'Sign up' button",
+            "position": "bottom of form",
+            "notable": "Prominent call-to-action"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Abstract flowing blue background (matching login screen) frames centered form card; field hierarchy guides through email → username → password → confirmation → terms → submit",
+        "innovativeElements": [
+          "Password strength indicator visualization (horizontal bars) provides real-time feedback",
+          "Consistent design language with login page reduces cognitive load"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create new account for P2P trading/lending platform",
+        "entryPoints": [
+          "Sign up link from login page",
+          "Direct URL navigation",
+          "Landing page CTA"
+        ],
+        "exitPoints": [
+          "Submit form → email verification",
+          "Back to login flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input",
+            "action": "Enter email address for account"
+          },
+          {
+            "element": "Username input",
+            "action": "Set public display name with info tooltip"
+          },
+          {
+            "element": "Create password input",
+            "action": "Enter password with strength indicator and visibility toggle"
+          },
+          {
+            "element": "Confirm password input",
+            "action": "Verify password match with visibility toggle"
+          },
+          {
+            "element": "Have a referral code? dropdown",
+            "action": "Expand to enter optional referral code"
+          },
+          {
+            "element": "Terms/Privacy checkbox",
+            "action": "Required acknowledgment before signup"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Submit registration form"
+          }
+        ],
+        "informationArchitecture": "Linear multi-step form progressing: credentials (email) → identity (username) → authentication (password/confirm) → optional incentives (referral) → legal agreement → submission",
+        "frictionPoints": [
+          "Multiple required fields increase form completion time",
+          "Password confirmation field adds step but improves UX reliability",
+          "Required legal agreement checkbox may slow conversion"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "SIGN UP",
+        "subheadline": "Create account for HodlHodl P2P Bitcoin trading and lending platform",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "bottom of form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Have a referral code?",
+            "context": "Expandable section label",
+            "purpose": "Optional promotional incentive entry"
+          },
+          {
+            "text": "I agree to Terms and Conditions and Privacy Policy",
+            "context": "Checkbox label with linked terms",
+            "purpose": "Legal requirement and user acknowledgment"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link",
+          "Terms and Conditions link"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-1-trading-fee.png",
+      "label": "Trading fee",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066CC",
+          "#FFFFFF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36px+) for main section headings",
+          "bodyStyle": "Regular sans-serif, 16px for body text with generous line height",
+          "dataStyle": "Inline with body text, no special formatting"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Home > Help Center > FAQ navigation trail",
+            "position": "top left below header",
+            "notable": null
+          },
+          {
+            "type": "sidebar navigation",
+            "description": "Right-side structure panel with numbered sections and blue links",
+            "position": "right side",
+            "notable": "Links are organized hierarchically with numbered sections (1. Basics, 2. Security & Privacy)"
+          },
+          {
+            "type": "content section",
+            "description": "Main left column with Q&A pairs and bullet points",
+            "position": "left two-thirds of screen",
+            "notable": "Clear visual separation between questions and answers"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye guided from left main content to right sidebar; H2 headings anchor major sections; links in sidebar provide scannable structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to frequently asked questions about Hodl Hodl platform basics and features",
+        "entryPoints": [
+          "From Help Center link in main navigation",
+          "From search results",
+          "Direct FAQ URL"
+        ],
+        "exitPoints": [
+          "Click sidebar links to jump to other sections",
+          "Log in or Sign up buttons in header",
+          "Navigate to main trading pages via Buy/Sell BTC links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links (blue text)",
+            "action": "Jump to specific FAQ section on page"
+          },
+          {
+            "element": "Buy BTC / Sell BTC navigation buttons",
+            "action": "Navigate to main trading interface"
+          },
+          {
+            "element": "Log in / Sign up buttons",
+            "action": "Initiate authentication flow"
+          }
+        ],
+        "informationArchitecture": "Hierarchical Q&A structure organized by topic (Basics, Security & Privacy); sidebar provides jump-links to major sections; breadcrumbs show location in help system",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Breadcrumb trail showing current location"
+        ]
+      },
+      "copy": {
+        "headline": "FAQ",
+        "subheadline": "BASICS",
+        "ctas": [
+          {
+            "text": "Buy BTC",
+            "style": "text-link",
+            "placement": "header navigation"
+          },
+          {
+            "text": "Sell BTC",
+            "style": "text-link",
+            "placement": "header navigation"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "header top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "STRUCTURE",
+            "context": "Right sidebar section header",
+            "purpose": "Labels the navigation menu for page sections"
+          },
+          {
+            "text": "What is Hodl Hodl?",
+            "context": "First Q&A heading in Basics section",
+            "purpose": "Introduces core product definition"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Max 0.5% per trade",
+          "P2P (peer-to-peer) format",
+          "Multisig contracts"
+        ],
+        "trustSignals": [
+          "Multisig escrow (P2SH) contracts mentioned",
+          "Direct wallet-to-wallet trades",
+          "No KYC/AML required for global trades"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-2-escrow.png",
+      "label": "escrow",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066CC",
+          "#FFFFFF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32px+ for main title (HOW TO BUY BITCOIN)",
+          "bodyStyle": "Regular sans-serif, 16px for body with numbered lists",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Home > Help Center > Help guides",
+            "position": "top left",
+            "notable": null
+          },
+          {
+            "type": "metadata",
+            "description": "Last updated: 23 May 2024 timestamp",
+            "position": "below breadcrumb, above main heading",
+            "notable": "Shows content freshness"
+          },
+          {
+            "type": "numbered list",
+            "description": "8-step guide for buying Bitcoin process",
+            "position": "main content area, left two-thirds",
+            "notable": "Clear sequential steps with detailed explanations"
+          },
+          {
+            "type": "sidebar navigation",
+            "description": "Right sidebar with structured topic links",
+            "position": "right side",
+            "notable": "Sub-topics with indented links under main sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large main heading draws attention; numbered list provides clear step progression; sidebar offers alternative navigation paths",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn step-by-step process for buying Bitcoin on Hodl Hodl platform",
+        "entryPoints": [
+          "From Help Center",
+          "From FAQ page",
+          "From 'How to buy Bitcoin' link in sidebar"
+        ],
+        "exitPoints": [
+          "Click sidebar links to jump to related help topics",
+          "Navigate to Buy BTC main interface",
+          "Return to Help Center"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar topic links (blue text)",
+            "action": "Jump to related help section"
+          },
+          {
+            "element": "Sub-section links under main topics",
+            "action": "Navigate to specific sub-topic details"
+          }
+        ],
+        "informationArchitecture": "Sequential numbered guide (8 steps) in main content; sidebar provides related topics grouped under categories (How to sell Bitcoin, Security features, Multisig escrow); left-right reading pattern",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Step numbers (1-8) show progression through buying process"
+        ]
+      },
+      "copy": {
+        "headline": "HOW TO BUY BITCOIN",
+        "subheadline": "To buy Bitcoin, you need your own Bitcoin wallet.",
+        "ctas": [
+          {
+            "text": "Buy BTC",
+            "style": "text-link",
+            "placement": "header navigation"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "header top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pay special attention to the following, on the offer and contract pages:",
+            "context": "Under 'How to buy Bitcoin' and 'How to sell Bitcoin' in sidebar",
+            "purpose": "Alerts user to critical steps in transaction flow"
+          },
+          {
+            "text": "Last updated: 23 May 2024",
+            "context": "Below breadcrumb",
+            "purpose": "Indicates content freshness"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Step numbers (1-8)",
+          "Button labels (Generate escrow, I've sent the payment)"
+        ],
+        "trustSignals": [
+          "Multisig escrow process explained in detail",
+          "Reputation System mentioned",
+          "Two-Factor Authentication listed",
+          "Dispute resolution system referenced"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-3-faq.png",
+      "label": "FAQ",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066CC",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 44px+ for main headline; 18px+ for section headings",
+          "bodyStyle": "Regular sans-serif, 16px for labels and descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "decorative illustration",
+            "description": "Large abstract blue and pink flowing shapes/ribbons on left and right sides",
+            "position": "background, left and right margins",
+            "notable": "Creates visual interest and brand personality"
+          },
+          {
+            "type": "card grid",
+            "description": "6 topic cards in 3x2 grid layout",
+            "position": "center, below headline",
+            "notable": "Each card has icon, label, and heading with hover states implied"
+          },
+          {
+            "type": "section heading",
+            "description": "CHECK OUR VIDEO TUTORIALS",
+            "position": "bottom of screen",
+            "notable": "Suggests video content availability below visible area"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main question headline is focal point; decorative elements frame content; card grid below provides entry points to topics; bottom CTA suggests more content",
+        "innovativeElements": [
+          "Abstract flowing graphic design element with brand colors",
+          "Icon-based topic cards with circular badge styling"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Browse popular help topics or access detailed guides and video tutorials",
+        "entryPoints": [
+          "From Help Center main navigation",
+          "Direct URL to help hub",
+          "From main site navigation"
+        ],
+        "exitPoints": [
+          "Click topic cards to access detailed guides",
+          "Scroll down to video tutorials section",
+          "Return to main trading interface"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Topic cards",
+            "action": "Navigate to detailed trading guide for that topic"
+          },
+          {
+            "element": "Trading guide labels",
+            "action": "Indicates card content type"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke model: central question with 6 popular topic cards leading to detailed guides; video tutorials section below; all organized around common user questions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How can we help you?",
+        "subheadline": "Hodl Hodl Help Center",
+        "ctas": [
+          {
+            "text": "How to buy Bitcoin?",
+            "style": "card-link",
+            "placement": "top-left card"
+          },
+          {
+            "text": "How to sell Bitcoin?",
+            "style": "card-link",
+            "placement": "top-center card"
+          },
+          {
+            "text": "How can I create my own offer?",
+            "style": "card-link",
+            "placement": "top-right card"
+          },
+          {
+            "text": "How do I set the fee for the release transaction?",
+            "style": "card-link",
+            "placement": "bottom-left card"
+          },
+          {
+            "text": "Why is trading on Hodl Hodl secure?",
+            "style": "card-link",
+            "placement": "bottom-center card"
+          },
+          {
+            "text": "What is multisig escrow?",
+            "style": "card-link",
+            "placement": "bottom-right card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trading guide",
+            "context": "Above each card heading",
+            "purpose": "Categorizes content type"
+          },
+          {
+            "text": "POPULAR TOPICS:",
+            "context": "Section heading above card grid",
+            "purpose": "Introduces most-accessed help content"
+          },
+          {
+            "text": "CHECK OUR VIDEO TUTORIALS",
+            "context": "Bottom section heading",
+            "purpose": "Calls attention to video content below"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Help Center branding",
+          "Multiple security-focused topics (multisig escrow, secure trading)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#FFFFFF",
+          "#E8F0FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large cap headlines (P2P BITCOIN TRADING PLATFORM), 48-60px",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px for descriptions",
+          "dataStyle": "Bold sans-serif numbers with colored labels (8 YEARS, 100+ currencies, 100,000+ deals closed)"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Left-aligned text with headline, subheadline, CTAs, and trust metrics",
+            "position": "top-left",
+            "notable": "Large abstract blue/pink flowing Bitcoin illustration dominates right half"
+          },
+          {
+            "type": "trust-badges",
+            "description": "Four metric cards with pipe separators (8 YEARS, 100+ currencies, 100,000+ deals, 300,000+ users)",
+            "position": "mid-left",
+            "notable": "Vertical bar dividers create scannable layout"
+          },
+          {
+            "type": "secondary-hero",
+            "description": "WELCOME TO HODL HODL section with supporting copy and CTA",
+            "position": "bottom-center",
+            "notable": "Centered text with prominent 'View all available offers' link"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn from left headline to right illustration, then down to trust metrics and bottom CTA. Blue accent color guides focus to primary actions.",
+        "innovativeElements": [
+          "Animated-style layered abstract illustration with Bitcoin integrated into flowing shapes",
+          "Dual hero sections (upper and lower) creating scroll momentum"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Hodl Hodl is and decide whether to sign up or learn more",
+        "entryPoints": [
+          "Direct URL access",
+          "Logo click from navigation"
+        ],
+        "exitPoints": [
+          "Sign up button",
+          "Log in link",
+          "Buy BTC / Sell BTC nav links",
+          "P2P Lending nav link",
+          "What is Hodl Hodl? link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to registration flow"
+          },
+          {
+            "element": "What is Hodl Hodl? link",
+            "action": "Opens information modal or dedicated page"
+          },
+          {
+            "element": "View all available offers link",
+            "action": "Navigate to Buy BTC or Sell BTC page"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login form"
+          }
+        ],
+        "informationArchitecture": "Value proposition first (headline), social proof second (metrics), secondary call-to-action and educational path below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "P2P BITCOIN TRADING PLATFORM",
+        "subheadline": "Non-custodial Bitcoin trading solution, we don't hold your funds.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "below-subheadline"
+          },
+          {
+            "text": "What is Hodl Hodl?",
+            "style": "text-link-with-play-icon",
+            "placement": "below-subheadline"
+          },
+          {
+            "text": "View all available offers",
+            "style": "text-link",
+            "placement": "bottom-section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100+ currencies",
+            "context": "Trust metric card",
+            "purpose": "Demonstrates platform scale and accessibility"
+          },
+          {
+            "text": "Anonymous P2P deals on your terms. Trade globally. Using any payment system. For any currency.",
+            "context": "Bottom hero section",
+            "purpose": "Reinforces core value propositions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "8 YEARS",
+          "100+ currencies",
+          "100,000+ deals closed",
+          "300,000+ registered users"
+        ],
+        "trustSignals": [
+          "8 YEARS in business",
+          "100,000+ deals closed",
+          "300,000+ registered users",
+          "Non-custodial positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-home-2-buy-btc.png",
+      "label": "Buy BTC",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#FFFFFF",
+          "#F5F7FA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black uppercase heading (BUY BITCOIN), 36px",
+          "bodyStyle": "Regular gray sans-serif, 14-16px for descriptions and labels",
+          "dataStyle": "Monospace or bold sans-serif for prices (59,986.80 EUR), percentages (+0.98%), and trade counts"
+        },
+        "components": [
+          {
+            "type": "filter-bar",
+            "description": "Currency dropdown, amount input, payment type dropdown, payment method dropdown, country dropdown",
+            "position": "top-center",
+            "notable": "Five filter options in single horizontal row with white backgrounds"
+          },
+          {
+            "type": "table-header",
+            "description": "Column headers: Seller, Price, Limits, Payment methods, Offer details",
+            "position": "below-filters",
+            "notable": "Sortable columns with light gray background"
+          },
+          {
+            "type": "offer-rows",
+            "description": "Each row displays seller avatar/name, rating, price, limits, payment options as badges, and offer summary",
+            "position": "main-content",
+            "notable": "Avatar with initials, color-coded rating percentages, colored payment badges"
+          },
+          {
+            "type": "cta-group",
+            "description": "How to start? link and Create offer button",
+            "position": "top-right",
+            "notable": "Light blue text link paired with dark button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Filters at top establish search context, table structure organizes offers by importance (seller, price, limits), payment methods and details in right columns",
+        "innovativeElements": [
+          "Multi-row offer display with inline badges for payment methods",
+          "Green checkmarks in offer details for KYC-free and crypto highlights"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Search for and evaluate Bitcoin buy offers from different sellers with specific payment preferences",
+        "entryPoints": [
+          "Buy BTC nav link",
+          "Sign up flow completion",
+          "Search from landing page"
+        ],
+        "exitPoints": [
+          "Click on specific seller offer row to initiate trade",
+          "Create offer button to post demand",
+          "How to start? for educational content",
+          "Navigate to Sell BTC or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Currency dropdown",
+            "action": "Filter offers by currency (EUR selected)"
+          },
+          {
+            "element": "Amount input",
+            "action": "Enter desired purchase amount"
+          },
+          {
+            "element": "Payment type dropdown",
+            "action": "Filter by payment type (All selected)"
+          },
+          {
+            "element": "Payment methods dropdown",
+            "action": "Filter by specific payment method (All selected)"
+          },
+          {
+            "element": "Country dropdown",
+            "action": "Filter by seller location (All selected)"
+          },
+          {
+            "element": "Seller offer row",
+            "action": "Opens offer details and trade initiation"
+          },
+          {
+            "element": "Create offer button",
+            "action": "Opens form to post a buy request"
+          }
+        ],
+        "informationArchitecture": "Filters enable progressive narrowing of offers, table displays results sorted by price/relevance, each row contains all decision-making data",
+        "frictionPoints": [
+          "No visible search by price range in filters",
+          "Amount input shown but unclear if active filter"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BUY BITCOIN",
+        "subheadline": "Buy Bitcoin from other users using any payment method and currency",
+        "ctas": [
+          {
+            "text": "Create offer",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "How to start?",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100% rate, 232 trades",
+            "context": "Seller row beneath name",
+            "purpose": "Displays seller reliability and experience"
+          },
+          {
+            "text": "+0.98 %",
+            "context": "Price column next to exchange",
+            "purpose": "Shows price premium/discount vs market rate"
+          },
+          {
+            "text": "0.00050011 - 0.01000220 BTC",
+            "context": "Limits column",
+            "purpose": "Clarifies transaction size in BTC terms"
+          },
+          {
+            "text": "Buy BTC with stable coins or any other crypto.",
+            "context": "Offer details column",
+            "purpose": "Summarizes transaction specifics"
+          },
+          {
+            "text": "KYC-FREE ::: Take your BTC and pay with stablecoins :::",
+            "context": "Offer details with green checkmark",
+            "purpose": "Highlights key offer attributes"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "59,986.80 EUR",
+          "30 - 600 EUR",
+          "+0.98 %",
+          "0.00050011 - 0.01000220 BTC",
+          "100% rate, 232 trades"
+        ],
+        "trustSignals": [
+          "100% rate, 232 trades (seller reliability)",
+          "KYC-FREE badges (privacy emphasis)",
+          "Exchange name indicators (Binance, Coinbase, OKX)",
+          "Price premium/discount percentages"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-home-3-sell-btc.png",
+      "label": "Sell BTC",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052CC",
+          "#FFFFFF",
+          "#F5F7FA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black uppercase heading (SELL BITCOIN), 36px",
+          "bodyStyle": "Regular gray sans-serif, 14-16px for descriptions and labels",
+          "dataStyle": "Monospace or bold sans-serif for prices (65,965.44 EUR), percentages (+11%), and trade counts"
+        },
+        "components": [
+          {
+            "type": "filter-bar",
+            "description": "Currency dropdown, amount input, payment type dropdown, payment method dropdown, country dropdown",
+            "position": "top-center",
+            "notable": "Identical layout to Buy BTC page, ensures consistency"
+          },
+          {
+            "type": "table-header",
+            "description": "Column headers: Buyer, Price, Limits, Payment methods, Offer details",
+            "position": "below-filters",
+            "notable": "Mirrors Buy BTC structure with Buyer instead of Seller"
+          },
+          {
+            "type": "offer-rows",
+            "description": "Each row displays buyer avatar/name, rating, price, limits, accepted payment methods as badges, and offer summary",
+            "position": "main-content",
+            "notable": "Parallel structure to Buy page with buyer-centric information"
+          },
+          {
+            "type": "cta-group",
+            "description": "How to start? link and Create offer button",
+            "position": "top-right",
+            "notable": "Same positioning and styling as Buy BTC page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Filters establish search context, table rows organized by buyer credibility and price, payment acceptance and offer details in right columns",
+        "innovativeElements": [
+          "Identical UX to Buy BTC page but flipped seller/buyer perspective",
+          "Green checkmarks for special offer attributes (rocket emoji for Advanced cash)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Search for and evaluate Bitcoin sell offers to specific buyers with preferred payment methods",
+        "entryPoints": [
+          "Sell BTC nav link",
+          "Sign up flow completion",
+          "Switch from Buy BTC page"
+        ],
+        "exitPoints": [
+          "Click on specific buyer offer row to initiate trade",
+          "Create offer button to post supply",
+          "How to start? for educational content",
+          "Navigate to Buy BTC or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Currency dropdown",
+            "action": "Filter offers by currency (EUR selected)"
+          },
+          {
+            "element": "Amount input",
+            "action": "Enter desired sale amount"
+          },
+          {
+            "element": "Payment type dropdown",
+            "action": "Filter by accepted payment type"
+          },
+          {
+            "element": "Payment methods dropdown",
+            "action": "Filter by specific payment method"
+          },
+          {
+            "element": "Country dropdown",
+            "action": "Filter by buyer location"
+          },
+          {
+            "element": "Buyer offer row",
+            "action": "Opens offer details and trade initiation"
+          },
+          {
+            "element": "Create offer button",
+            "action": "Opens form to post a sell offer"
+          }
+        ],
+        "informationArchitecture": "Filters mirror Buy page for consistency, table displays buyer offers sorted by price/relevance, each row contains all decision-making data",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "SELL BITCOIN",
+        "subheadline": "Sell Bitcoin to other users using any payment method and currency.",
+        "ctas": [
+          {
+            "text": "Create offer",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "How to start?",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100% rate, 4 trades",
+            "context": "Buyer row beneath name",
+            "purpose": "Displays buyer reliability and transaction history"
+          },
+          {
+            "text": "+11 %",
+            "context": "Price column next to exchange",
+            "purpose": "Shows price premium buyer is willing to pay vs market"
+          },
+          {
+            "text": "2,000 - 60,000 EUR",
+            "context": "Limits column",
+            "purpose": "Defines acceptable transaction size range"
+          },
+          {
+            "text": "WebMoney",
+            "context": "Payment methods badges",
+            "purpose": "Lists accepted payment methods"
+          },
+          {
+            "text": "200 EUR Amazon Gift Card ready to use",
+            "context": "Offer details column",
+            "purpose": "Describes specific transaction terms"
+          },
+          {
+            "text": "Advanced cash 🚀 Fast transfer of almost any crypto.",
+            "context": "Offer details with checkmark",
+            "purpose": "Highlights speed and flexibility advantage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "65,965.44 EUR",
+          "2,000 - 60,000 EUR",
+          "+11 %",
+          "0.03031891 - 0.90956726 BTC",
+          "100% rate, 4 trades"
+        ],
+        "trustSignals": [
+          "100% rate, trade counts (buyer reliability)",
+          "Exchange names (Binance, Bitpay, Crypto, OKX)",
+          "Price premium percentages (market competitiveness)",
+          "Green checkmarks for verified offer attributes"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-7-terms-and-conditions.png",
+      "label": "Terms and Conditions",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066cc",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all caps, 32px+ for main heading; smaller bold for section headers",
+          "bodyStyle": "Regular sans-serif, 16px, high line-height for readability of legal text",
+          "dataStyle": "Date formatted as '22 May 2024' in gray text"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Accounts > Terms and Conditions navigation path",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "side navigation",
+            "description": "Numbered table of contents with blue links to sections",
+            "position": "right sidebar",
+            "notable": "Sticky/fixed positioning allows quick access to all sections"
+          },
+          {
+            "type": "main content area",
+            "description": "Legal text with bullet points and linked terms",
+            "position": "left 70% of page",
+            "notable": "Terms like 'Hodl Hodl' and 'Lend at Hodl Hodl' are hyperlinked in blue"
+          },
+          {
+            "type": "metadata",
+            "description": "Last updated date",
+            "position": "above main content",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-to-right reading flow with right sidebar as secondary reference; heading dominates top section",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document-browse",
+        "userIntent": "Review terms and conditions before using the platform",
+        "entryPoints": [
+          "Settings menu",
+          "Sign-up flow",
+          "Account security check"
+        ],
+        "exitPoints": [
+          "Return to Accounts",
+          "Navigate to other T&C sections via sidebar",
+          "Log out"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar section links",
+            "action": "Scroll to corresponding section in main content"
+          },
+          {
+            "element": "Hyperlinked service names",
+            "action": "Navigate to service-specific terms"
+          },
+          {
+            "element": "Breadcrumb",
+            "action": "Return to Accounts page"
+          }
+        ],
+        "informationArchitecture": "Document outline structure with numbered sections in sidebar mirroring content hierarchy; linked references within body",
+        "frictionPoints": [
+          "Long scrolling required to read all content",
+          "No search functionality visible for finding specific terms",
+          "Print/download option not visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "TERMS AND CONDITIONS",
+        "subheadline": "INTRODUCTION",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 22 May 2024",
+            "context": "Above main content",
+            "purpose": "Indicates currency and recency of legal document"
+          },
+          {
+            "text": "This is an agreement between you or the entity that you represent...",
+            "context": "Opening paragraph",
+            "purpose": "Establishes parties to the agreement and scope"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "22 May 2024"
+        ],
+        "trustSignals": [
+          "Specific company name: Hodlex Ltd",
+          "Comprehensive legal structure with numbered sections",
+          "Service-specific terms mentioned (Hodl Hodl, Lend at Hodl Hodl)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-8-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066cc",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all caps, 32px+ for main heading; bold for section headers like 'INTRODUCTION'",
+          "bodyStyle": "Regular sans-serif, 16px, high line-height optimized for legal document readability",
+          "dataStyle": "Date formatted as '25 February 2024' in gray text"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Accounts > Privacy policy navigation path",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "side navigation",
+            "description": "Numbered table of contents with blue hyperlinked sections",
+            "position": "right sidebar",
+            "notable": "Comprehensive structure with 9+ sections plus subsections"
+          },
+          {
+            "type": "main content area",
+            "description": "Privacy policy text organized by section with detailed explanations",
+            "position": "left 70% of page",
+            "notable": "Clear paragraph separation and bold subsection headers"
+          },
+          {
+            "type": "metadata",
+            "description": "Last updated date indicator",
+            "position": "above main content",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading dominates; two-column layout separates navigation from content; blue links create visual emphasis on navigable elements",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document-browse",
+        "userIntent": "Understand how personal data is collected, used, and protected",
+        "entryPoints": [
+          "Settings menu",
+          "Account footer link",
+          "Pre-registration disclosure"
+        ],
+        "exitPoints": [
+          "Return to Accounts",
+          "Navigate between T&C and Privacy Policy",
+          "Cookie policy section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar section links",
+            "action": "Jump to relevant section in main document"
+          },
+          {
+            "element": "Cookie policy subsection link",
+            "action": "Navigate to cookie-specific information"
+          },
+          {
+            "element": "Breadcrumb",
+            "action": "Return to Accounts"
+          }
+        ],
+        "informationArchitecture": "Hierarchical outline with 9 main sections and subsections; sidebar acts as persistent navigation index; logical flow from data collection to user rights",
+        "frictionPoints": [
+          "Dense legal text requires careful reading",
+          "No FAQ or plain-language summary provided",
+          "Lengthy document requires significant scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PRIVACY POLICY",
+        "subheadline": "INTRODUCTION",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated: 25 February 2024",
+            "context": "Below headline",
+            "purpose": "Signals document currency and legal compliance"
+          },
+          {
+            "text": "Our Privacy Policy explains how your personal data is collected, stored, used, removed and disclosed...",
+            "context": "Opening paragraph",
+            "purpose": "Summarizes document scope and purpose"
+          },
+          {
+            "text": "Please note that any provision of this Privacy Policy may be revised and reissued unilaterally by us without notice...",
+            "context": "Second paragraph",
+            "purpose": "Warns users of potential changes and need for regular review"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "25 February 2024"
+        ],
+        "trustSignals": [
+          "Explicit data protection disclosures",
+          "Detailed consent and rights sections",
+          "Platform name explicitly stated: Hodlex Ltd",
+          "Global data transfer transparency"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hodlhodl-settings-9-contact-us.png",
+      "label": "Contact us",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066cc",
+          "#1e90ff",
+          "#f0f4f8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all caps, 32px+ for main heading; bold 16px for subheadings",
+          "bodyStyle": "Regular sans-serif, 16px for labels and section titles",
+          "dataStyle": "Email addresses and Twitter handles in blue (#0066cc) with @-prefix for socials"
+        },
+        "components": [
+          {
+            "type": "breadcrumb",
+            "description": "Home > Contact us navigation",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "accordion section",
+            "description": "FAQ-style expandable sections for common issues",
+            "position": "right 50% of page, upper section",
+            "notable": "Chevron icons indicate expandable content"
+          },
+          {
+            "type": "social media cards",
+            "description": "Three contact method cards: Twitter, Telegram, Email",
+            "position": "center-bottom",
+            "notable": "Light blue background (#f0f4f8) cards with icons and multiple channel links per platform"
+          },
+          {
+            "type": "contact method grid",
+            "description": "Organized by platform with specific accounts and purposes",
+            "position": "lower section",
+            "notable": "Clear labels like 'Main twitter', 'Spanish Twitter', 'Newest and best offers'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side emphasizes topic selection; right side shows accordion FAQs; bottom section showcases multiple contact methods with visual prominence on branded icons",
+        "innovativeElements": [
+          "Multi-channel contact approach with language-specific and purpose-specific accounts",
+          "Visual separation of contact methods by platform-specific color coding"
+        ]
+      },
+      "flow": {
+        "screenType": "support-hub",
+        "userIntent": "Find appropriate contact method for their specific issue",
+        "entryPoints": [
+          "Footer support link",
+          "Settings/Help menu",
+          "Error message redirect"
+        ],
+        "exitPoints": [
+          "Open Twitter account via link",
+          "Open Telegram via link",
+          "Send email to support address",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion sections",
+            "action": "Expand/collapse to reveal FAQ answers"
+          },
+          {
+            "element": "Twitter handle links (@hodlhodl, @hodlhodlspanish, @offershodlhodl)",
+            "action": "Navigate to Twitter profile"
+          },
+          {
+            "element": "Telegram links",
+            "action": "Navigate to Telegram channel/bot"
+          },
+          {
+            "element": "Email links (support, dispute, marketing)",
+            "action": "Open email client with pre-filled recipient"
+          }
+        ],
+        "informationArchitecture": "Primary support path: FAQ accordion for self-service; Secondary: social media for community support; Tertiary: email for specific departments (support, dispute, marketing)",
+        "frictionPoints": [
+          "Accordion titles may not clearly indicate which category matches user issue",
+          "Multiple Telegram and Twitter channels could confuse users on which to contact"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CONTACT US",
+        "subheadline": "TELL US WHAT IS YOUR ISSUE?",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Choose a topic:",
+            "context": "Below subheading",
+            "purpose": "Instructs user to select from accordion options"
+          },
+          {
+            "text": "Trouble signing up or logging in?",
+            "context": "First accordion item",
+            "purpose": "FAQ category for authentication issues"
+          },
+          {
+            "text": "Getting started with trading on Hodl Hodl",
+            "context": "Second accordion item",
+            "purpose": "Onboarding FAQ category"
+          },
+          {
+            "text": "I can't buy bitcoin",
+            "context": "Third accordion item",
+            "purpose": "Transaction issue category"
+          },
+          {
+            "text": "How to trade secure",
+            "context": "Fourth accordion item",
+            "purpose": "Security/best practices category"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "@hodlhodl",
+          "@hodlhodlspanish",
+          "@offershodlhodl",
+          "@hodlhodlrussian",
+          "@hodlhodlespanol",
+          "@lendathh",
+          "support@hodlhodl.com",
+          "dispute@hodlhodl.com",
+          "marketing@hodlhodl.com"
+        ],
+        "trustSignals": [
+          "Multiple contact channels demonstrating accessibility",
+          "Language-specific support (Spanish, Russian)",
+          "Dedicated department emails (Support, Dispute, Marketing)",
+          "Active social media presence across platforms"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

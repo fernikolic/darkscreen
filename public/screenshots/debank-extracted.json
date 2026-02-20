@@ -1,0 +1,3862 @@
+{
+  "slug": "debank",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T11:31:09.072Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 28,
+  "screens": [
+    {
+      "image": "/screenshots/debank-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered content and card grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#1A1A2E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif (appears to be 48-56px), dark navy color for main headline",
+          "bodyStyle": "Regular weight sans-serif, 14-16px, gray/muted tone for secondary text",
+          "dataStyle": "Large bold numbers in dark navy, with smaller metric labels and percentage changes in gray"
+        },
+        "components": [
+          {
+            "type": "Hero illustration",
+            "description": "Isometric 3D artwork showing blockchain/finance imagery with computer, coins, and charts",
+            "position": "top center",
+            "notable": "Warm color palette (orange/coral) matches brand accent color"
+          },
+          {
+            "type": "Search bar",
+            "description": "Rounded input field with placeholder 'Search address/Web3 ID' and magnifying glass icon",
+            "position": "center",
+            "notable": "Paired with prominent 'Connect Wallet' CTA button"
+          },
+          {
+            "type": "Profile cards",
+            "description": "Horizontal scrolling cards showing whale portfolios with avatar, address, TVF value, followers, earnings",
+            "position": "lower section",
+            "notable": "Multiple crypto asset icons displayed as badges at bottom of each card"
+          },
+          {
+            "type": "Watermark icons",
+            "description": "Large outlined anchor/dollar sign symbols on left and right edges",
+            "position": "background left/right",
+            "notable": "Subtle decorative elements that frame the content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn to hero image first, then headline, then search interface, finally to whale portfolio cards below",
+        "innovativeElements": [
+          "Isometric 3D hero illustration in warm brand colors",
+          "Horizontal scrolling whale portfolio cards with rich metadata display",
+          "Search + CTA combination in single zone"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Discover portfolio tracking capabilities and browse notable whale portfolios, or connect wallet to track own portfolio",
+        "entryPoints": [
+          "Direct visit to debank.com",
+          "Navigation from community or other sections via header menu"
+        ],
+        "exitPoints": [
+          "Click 'Connect Wallet' button (top right or center)",
+          "Search for specific address/Web3 ID",
+          "Click on whale portfolio card to view details",
+          "Navigate to Portfolio, Community, or API sections via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Opens wallet selection modal for authentication"
+          },
+          {
+            "element": "Search input field",
+            "action": "Allows search for wallet address or Web3 ID"
+          },
+          {
+            "element": "Whale portfolio cards",
+            "action": "Likely navigates to detailed portfolio view when clicked"
+          },
+          {
+            "element": "Navigation menu (Portfolio, Community, Portfolio API, More)",
+            "action": "Routes to different sections of application"
+          }
+        ],
+        "informationArchitecture": "Hero value prop at top → Search interface → Example whale portfolios → Call-to-action throughout",
+        "frictionPoints": [
+          "Must scroll to see full whale portfolio list (only 3 visible cards on first view)",
+          "No clear differentiation between viewing public data vs. requiring wallet connection"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your go-to portfolio tracker for Ethereum and EVM",
+        "subheadline": "Whale Asset Tracking, Paid Consultations, and Web3 Dynamic Community",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "top right header and center of hero section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Concise View of Portfolio Tracking",
+            "context": "Above search bar",
+            "purpose": "Sets context for what user can do with search"
+          },
+          {
+            "text": "Search address/Web3 ID",
+            "context": "Search input placeholder",
+            "purpose": "Guides user input format"
+          },
+          {
+            "text": "Tracking any Whale's Portfolio",
+            "context": "Section heading above whale cards",
+            "purpose": "Explains content below"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [
+          "$210,873 (portfolio value with comma formatting)",
+          "$936.1M, 14.1k, 2,195.8 (TVF, followers, earnings metrics)",
+          "70.3%, 1,864.4 (percentage and numeric metrics)"
+        ],
+        "trustSignals": [
+          "Display of real whale portfolio data with verified accounts",
+          "Multi-chain support indicators (multiple crypto asset icons)",
+          "Follower counts and earnings data showing active community"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "card grid with tabbed interface",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#1A1A2E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif for section title 'Real Web3 Social Community'",
+          "bodyStyle": "Regular sans-serif for descriptions and metrics",
+          "dataStyle": "Large bold values with colored icons and percentage changes in smaller text"
+        },
+        "components": [
+          {
+            "type": "User profile header",
+            "description": "Shows TVF value, followers, following, earnings with stat badges",
+            "position": "top of scroll view",
+            "notable": "VIP badge indicator on user; interactive 'Follow' button and pricing info"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "Horizontal tabs: Stream, Portfolio (active), NFTs, Transactions, Badge 6",
+            "position": "below profile header",
+            "notable": "Active tab underlined in coral/orange, chain selector dropdown on right"
+          },
+          {
+            "type": "Asset grid",
+            "description": "Multi-column display of blockchain assets across different chains with values and percentages",
+            "position": "main content area",
+            "notable": "Colorful chain-specific icons (Ethereum purple, Arbitrum blue, Base blue, etc.)"
+          },
+          {
+            "type": "View more link",
+            "description": "Text link with pointing hand emoji to expand asset list",
+            "position": "below asset grid",
+            "notable": "Casual emoji use for affordance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "User stats → Navigation tabs → Asset portfolio grid with consistent card styling",
+        "innovativeElements": [
+          "Emoji-enhanced CTAs (pointing hand on 'View more')",
+          "Chain-specific color coding and iconography",
+          "Multi-chain asset aggregation in single view"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / portfolio detail",
+        "userIntent": "Examine a specific whale/user's portfolio composition across multiple chains and asset types",
+        "entryPoints": [
+          "Click on whale portfolio card from landing page",
+          "Search for address from search bar",
+          "Direct link to user address"
+        ],
+        "exitPoints": [
+          "Click on different tabs (NFTs, Transactions, Badges)",
+          "Navigate back to landing via header",
+          "Click on individual asset to drill down",
+          "Click 'Read More' link to community section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab navigation (Portfolio, NFTs, Transactions, etc.)",
+            "action": "Switches between different portfolio views"
+          },
+          {
+            "element": "All Chains dropdown",
+            "action": "Filters assets by blockchain"
+          },
+          {
+            "element": "Follow button",
+            "action": "Follows user in community"
+          },
+          {
+            "element": "Asset cards",
+            "action": "Likely opens asset detail or transaction history"
+          },
+          {
+            "element": "View more link",
+            "action": "Expands asset list below fold"
+          }
+        ],
+        "informationArchitecture": "User profile overview → Content tabs → Detailed asset breakdown organized by chain",
+        "frictionPoints": [
+          "Asset grid is dense with many small icons; could be overwhelming",
+          "Need to use dropdown to filter by specific chain if only interested in one"
+        ],
+        "progressIndicators": [
+          "Active tab indicator (Portfolio tab highlighted)",
+          "VIP badge on user profile showing special status"
+        ]
+      },
+      "copy": {
+        "headline": "Real Web3 Social Community",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View more 🔥",
+            "style": "text-link with emoji",
+            "placement": "below asset grid"
+          },
+          {
+            "text": "Read More 🔥",
+            "style": "text-link with emoji",
+            "placement": "bottom right"
+          },
+          {
+            "text": "Follow",
+            "style": "primary-button",
+            "placement": "top right of profile"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "TVF",
+            "context": "Profile stat label",
+            "purpose": "Identifies metric type"
+          },
+          {
+            "text": "Followers",
+            "context": "Profile stat label",
+            "purpose": "Shows community engagement"
+          },
+          {
+            "text": "Hi offer price $15.00",
+            "context": "Below profile stats",
+            "purpose": "Shows user's offered price for consultation"
+          },
+          {
+            "text": "Answered 2",
+            "context": "Profile stats",
+            "purpose": "Shows consultation engagement"
+          }
+        ],
+        "tone": "professional-technical with casual emoji usage",
+        "dataFormatting": [
+          "$936.1M (TVF value)",
+          "14.1k (followers with k abbreviation)",
+          "$74,305 37% (asset value with percentage change)",
+          "$56,950 28% (asset value across chains)"
+        ],
+        "trustSignals": [
+          "VIP badge on profile",
+          "Follower counts showing community validation",
+          "Paid consultation offering with price display",
+          "Multi-chain asset display showing transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-3-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "modal overlay / dialog",
+        "colorScheme": "light with white modal",
+        "primaryColors": [
+          "#FF6B35",
+          "#1A1A2E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 20-24px, dark navy for 'Select your wallet to login'",
+          "bodyStyle": "Regular sans-serif, 14px, gray for explanatory text on right panel",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal container",
+            "description": "Centered white dialog box with dark overlay background",
+            "position": "center of screen",
+            "notable": "Close button (X) in top right corner"
+          },
+          {
+            "type": "Wallet list",
+            "description": "Vertical stack of 8+ wallet options with icons and labels",
+            "position": "left side of modal",
+            "notable": "Each option is a clickable button with consistent styling and brand-colored icons"
+          },
+          {
+            "type": "Right panel content",
+            "description": "DeBank orange logo, heading, explanatory text, and footer links",
+            "position": "right side of modal",
+            "notable": "Provides context and reassurance about wallet connection"
+          },
+          {
+            "type": "Footer text",
+            "description": "Small gray text with Terms of service link and RabbyKit credit",
+            "position": "bottom of right panel",
+            "notable": "Attribution to RabbyKit (underlying wallet integration service)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal title → Wallet selection options on left → Reassurance message on right → Footer disclaimers",
+        "innovativeElements": [
+          "Two-column modal design with wallet options on left, value proposition on right",
+          "Clean separation between action (wallet list) and education (right panel)"
+        ]
+      },
+      "flow": {
+        "screenType": "modal / authentication gateway",
+        "userIntent": "Select a wallet provider to connect and authenticate with DeBank",
+        "entryPoints": [
+          "Click 'Connect Wallet' button on landing page or header",
+          "Attempt to access portfolio features requiring authentication"
+        ],
+        "exitPoints": [
+          "Select a wallet option to proceed with connection flow",
+          "Click X button to close modal and return to landing",
+          "Click Terms of service link (external)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Wallet option buttons (Bitget, Coin98, Coinbase, Core, Encrypt, Frame, MetaMask)",
+            "action": "Initiates wallet connection flow for selected provider"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses modal and returns to previous state"
+          },
+          {
+            "element": "Terms of service link",
+            "action": "Opens external terms page"
+          }
+        ],
+        "informationArchitecture": "Modal prompt → Wallet selection menu → Reassurance copy → Legal footer",
+        "frictionPoints": [
+          "User must choose from 8+ wallet options; decision paralysis possible",
+          "Not clear which wallet is recommended or most popular",
+          "Some wallets listed as 'not available' (note at top of list)"
+        ],
+        "progressIndicators": [
+          "Note 'The following wallets are not available' suggesting previous state or system limitations"
+        ]
+      },
+      "copy": {
+        "headline": "Select your wallet to login",
+        "subheadline": "The following wallets are not available",
+        "ctas": [
+          {
+            "text": "[Wallet names: Bitget Wallet, Coin98 Wallet, Coinbase Wallet, Core, Encrypt Wallet, Frame, MetaMask]",
+            "style": "primary-button",
+            "placement": "left column as list options"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Connecting your wallet is like 'logging in' to Web3. Select your wallet from the options to get started",
+            "context": "Right panel of modal",
+            "purpose": "Explains wallet connection concept to users unfamiliar with Web3 auth"
+          },
+          {
+            "text": "Terms of service",
+            "context": "Bottom left of modal",
+            "purpose": "Legal compliance and transparency"
+          },
+          {
+            "text": "Powered by RabbyKit",
+            "context": "Bottom right of modal",
+            "purpose": "Credits underlying technical infrastructure"
+          }
+        ],
+        "tone": "professional-technical with educational overtones, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Well-known wallet providers listed (MetaMask, Coinbase, Bitget)",
+          "Clear Terms of service link",
+          "Attribution to RabbyKit (established wallet integration service)",
+          "Professional modal design with clear security messaging"
+        ],
+        "jargonLevel": "beginner-intermediate (explains Web3 login concept for newcomers)",
+        "errorMessages": [
+          "The following wallets are not available"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-4-community.png",
+      "label": "Community",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main with right sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#1A202C",
+          "#00D4AA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px for post titles",
+          "bodyStyle": "Regular sans-serif, 14px for post content",
+          "dataStyle": "Semi-bold, teal colored metrics (6, 53, 6.6K)"
+        },
+        "components": [
+          {
+            "type": "Post Card",
+            "description": "User-generated post with avatar, username, date, content, and engagement metrics",
+            "position": "center main feed",
+            "notable": "Rich media support with carousel-style promotional imagery"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "For you / Following tabs with orange underline indicator",
+            "position": "top of feed",
+            "notable": "Clean dual-tab structure for feed filtering"
+          },
+          {
+            "type": "Who to follow Sidebar",
+            "description": "List of suggested accounts with follow buttons",
+            "position": "right sidebar",
+            "notable": "Avatar-driven with outline follow CTAs"
+          },
+          {
+            "type": "Engagement Metrics",
+            "description": "Comments, retweets, likes, view counts displayed inline",
+            "position": "bottom of post card",
+            "notable": "Icon + number format with thousands abbreviation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Post content dominates center, sidebar provides secondary recommendations, metrics weighted equally across post",
+        "innovativeElements": [
+          "Creative post with 3-card carousel layout (Gain vaults dating profiles concept)",
+          "Integration of both text posts and promotional visual content in single feed"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed",
+        "userIntent": "Discover community posts, see trending discussions, follow interesting crypto personalities",
+        "entryPoints": [
+          "Community navigation tab from main header",
+          "Direct link from onboarding or homepage"
+        ],
+        "exitPoints": [
+          "Click post to expand thread",
+          "Click Follow on suggested user",
+          "Search via top search bar",
+          "Navigate to Portfolio or other main sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button (Who to follow sidebar)",
+            "action": "Subscribe to user's posts in feed"
+          },
+          {
+            "element": "Post engagement icons (reply, retweet, like)",
+            "action": "Like, share, or reply to post"
+          },
+          {
+            "element": "New Post button (left sidebar)",
+            "action": "Create and publish new post"
+          },
+          {
+            "element": "For you / Following tabs",
+            "action": "Switch between personalized and following feeds"
+          },
+          {
+            "element": "View full thread link",
+            "action": "Expand thread to see replies and full conversation"
+          }
+        ],
+        "informationArchitecture": "Chronological feed with tabbed filtering (For you / Following); right sidebar surfaces recommendations; left sidebar contains creation and navigation tools",
+        "frictionPoints": [
+          "No apparent way to search within posts from main feed",
+          "Unclear if pressing X removes post permanently or just from current view",
+          "No sorting options (recent, trending, most engaged)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outline-button",
+            "placement": "who-to-follow sidebar, next to each user"
+          },
+          {
+            "text": "New Post",
+            "style": "primary-button-rounded",
+            "placement": "left sidebar, bottom"
+          },
+          {
+            "text": "View full thread >",
+            "style": "text-link",
+            "placement": "below post content"
+          },
+          {
+            "text": "Translate Post",
+            "style": "text-link-gray",
+            "placement": "below post content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This Valentine's Day, we made our Gain vaults set up dating profiles 💝",
+            "context": "Post content from Kelp DAO",
+            "purpose": "Engaging, casual announcement of new feature with emoji"
+          },
+          {
+            "text": "Here's who's on the market 📊",
+            "context": "Secondary post content",
+            "purpose": "Call-to-action text encouraging engagement with promotional content"
+          }
+        ],
+        "tone": "friendly-casual, playful, community-driven",
+        "dataFormatting": [
+          "3 vaults. 3 profiles (count format)",
+          "6 (replies/comments)",
+          "53 (likes)",
+          "6.6K (views with K abbreviation)"
+        ],
+        "trustSignals": [
+          "Verified badge (checkmark) on Kelp DAO account",
+          "Engagement metrics visible (53 likes, 6.6K views) indicating post credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-5-community-scrolled-1.png",
+      "label": "Community — scrolled 1",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main with right sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#1A202C",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14px for poll/post title",
+          "bodyStyle": "Regular sans-serif, 13px for poll options",
+          "dataStyle": "Semi-bold blue for links ($BTC), percentages for poll results"
+        },
+        "components": [
+          {
+            "type": "Poll Card",
+            "description": "Created by BetFury, shows multiple numbered options with percentage vote tallies and countdown timer",
+            "position": "top of feed",
+            "notable": "Visual progress bars with percentages; 'In Progress' status badge"
+          },
+          {
+            "type": "Trust Warning",
+            "description": "Dark tooltip warning about account identity verification",
+            "position": "overlaid on post card",
+            "notable": "Proactive security message for official accounts"
+          },
+          {
+            "type": "Embedded Tweet",
+            "description": "Quote tweet from Robert Kiyosaki with follow button and engagement metrics",
+            "position": "middle of feed",
+            "notable": "Cross-platform content integration within feed"
+          },
+          {
+            "type": "Poll Restriction Badge",
+            "description": "'1 restriction' indicator with info icon",
+            "position": "poll card footer",
+            "notable": "Subtle transparency about poll limitations"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Poll dominates top with high color contrast; warning overlay draws attention; tweet content secondary; metrics distributed across components",
+        "innovativeElements": [
+          "Native poll widget with live percentage results",
+          "Security warning overlay protecting against impersonation",
+          "Hybrid social feed combining original posts and external tweets"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed-with-interactive-content",
+        "userIntent": "Participate in community polls, read market perspectives, vote on questions",
+        "entryPoints": [
+          "Community tab from main navigation",
+          "Scroll down from previous posts"
+        ],
+        "exitPoints": [
+          "Click poll option to vote",
+          "Click tweet to expand",
+          "Scroll to more posts",
+          "Navigate away from Community section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Poll option (numbered list item)",
+            "action": "Cast vote and see updated results"
+          },
+          {
+            "element": "Follow button (on tweet)",
+            "action": "Subscribe to tweeter's content"
+          },
+          {
+            "element": "Engagement icons (reply, retweet, like on tweet)",
+            "action": "Interact with embedded tweet content"
+          },
+          {
+            "element": "Info icon next to '1 restriction'",
+            "action": "Explain poll limitation"
+          }
+        ],
+        "informationArchitecture": "Chronological social feed with mixed content types (native posts, polls, embedded tweets); trust/security overlays appear contextually",
+        "frictionPoints": [
+          "Trust warning modal may obscure poll options temporarily",
+          "Unclear if users must be logged in to vote on polls",
+          "No apparent way to filter by content type (polls only, tweets only, etc.)"
+        ],
+        "progressIndicators": [
+          "Poll countdown timer ('2 days left')",
+          "Vote count ('28 votes')",
+          "'In Progress' status badge on poll"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "solid-button",
+            "placement": "embedded tweet card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Poll created by BetFury",
+            "context": "Poll header",
+            "purpose": "Attribution of poll creator"
+          },
+          {
+            "text": "In Progress",
+            "context": "Poll status badge",
+            "purpose": "Indicates poll is active and accepting votes"
+          },
+          {
+            "text": "2 days left",
+            "context": "Poll timer",
+            "purpose": "Urgency and time remaining indicator"
+          },
+          {
+            "text": "This Official Account is not impersonated other projects' identity. Please make your own risk assessment on its published information. apply official account >",
+            "context": "Trust warning overlay",
+            "purpose": "Security disclaimer protecting against phishing/impersonation"
+          }
+        ],
+        "tone": "professional-technical with trust-focused messaging",
+        "dataFormatting": [
+          "Break above 21 EMA (option text)",
+          "14% (poll vote percentage)",
+          "32% (poll vote percentage)",
+          "28 votes (vote count with icon)",
+          "3.4K (engagement metric, thousands abbreviated)",
+          "$BTC (ticker link with dollar prefix)"
+        ],
+        "trustSignals": [
+          "Verified badge (checkmark) on MetaverseSG",
+          "Official account warning/disclaimer visible",
+          "'apply official account' link for verification process",
+          "High engagement numbers (28 votes, 3.4K views)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-6-community-scrolled-2.png",
+      "label": "Community — scrolled 2",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main with right sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#1A202C",
+          "#00D4AA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14px for post header / username",
+          "bodyStyle": "Regular sans-serif, 13-14px for post content paragraphs",
+          "dataStyle": "Regular gray for timestamps, semi-bold for view counts"
+        },
+        "components": [
+          {
+            "type": "Tweet/Post Card",
+            "description": "Detailed Robert Kiyosaki post with multi-paragraph content, timestamp, engagement metrics",
+            "position": "top of feed",
+            "notable": "Long-form text content with view count (890.8K views)"
+          },
+          {
+            "type": "Embedded Content Post",
+            "description": "Malda's post about bridging solutions with inline illustration/diagram",
+            "position": "middle of feed",
+            "notable": "Educational content with supporting visual asset (bridge diagram)"
+          },
+          {
+            "type": "Post Metadata",
+            "description": "Author avatar, verified badge, handle, timestamp, engagement counts",
+            "position": "post header",
+            "notable": "Consistent schema across posts for trust and attribution"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Post header (avatar + author) most prominent; content body secondary; supporting visuals third; metrics at bottom; orange accent line on active tab draws attention to 'For you'",
+        "innovativeElements": [
+          "Long-form text posts supporting 500+ word content",
+          "Educational diagrams embedded within social feed content",
+          "High view count transparency (890.8K) showing content reach"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed-with-long-form-content",
+        "userIntent": "Read detailed market analysis, learn about DeFi topics (bridging), follow influential voices",
+        "entryPoints": [
+          "Community tab from main navigation",
+          "Scroll down from previous feed items"
+        ],
+        "exitPoints": [
+          "Click Follow button to subscribe",
+          "Click post for full thread/replies",
+          "Scroll for more posts",
+          "Click linked topics/hashtags"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button",
+            "action": "Subscribe to user's future posts"
+          },
+          {
+            "element": "Engagement icons (reply, retweet, like)",
+            "action": "Interact with post"
+          },
+          {
+            "element": "Inline links ($117K coin references)",
+            "action": "Navigate to asset or market data"
+          },
+          {
+            "element": "More menu (...)",
+            "action": "Additional post options (share, bookmark, etc.)"
+          },
+          {
+            "element": "Translate Post link",
+            "context": "Below post content",
+            "action": "Translate post to user's language"
+          }
+        ],
+        "informationArchitecture": "Chronological feed prioritizing text-heavy posts from followed/suggested accounts; supports long-form educational content alongside casual market chatter",
+        "frictionPoints": [
+          "Very long posts may require scrolling within feed to see full content",
+          "No apparent way to save/bookmark posts for later",
+          "Limited filtering options for content type or topic"
+        ],
+        "progressIndicators": [
+          "View count (890.8K Views) showing post popularity"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "solid-button",
+            "placement": "post header right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "YAY:",
+            "context": "Opening of Robert Kiyosaki post",
+            "purpose": "Casual, enthusiastic tone setter"
+          },
+          {
+            "text": "Bitcoin over $117 K a coin. Going to buy one more Bitcoin asap.",
+            "context": "Post content",
+            "purpose": "Market commentary with personal action statement"
+          },
+          {
+            "text": "It's never been easier to become rich.... even a millionaire.",
+            "context": "Post content",
+            "purpose": "Aspirational, motivational language"
+          },
+          {
+            "text": "Please study, learn, and find out if Bitcoin is your path to becoming a millionaire.",
+            "context": "Post content",
+            "purpose": "Educational call-to-action; hedged disclaimer"
+          },
+          {
+            "text": "Take care. I love my BiTCOINS.... all of them.",
+            "context": "Post closing",
+            "purpose": "Personal sign-off with humor (typo in BITCOINS)"
+          },
+          {
+            "text": "How many times have you already bridged this year? 5 times, a dozen, two dozen times?",
+            "context": "Malda post opening",
+            "purpose": "Rhetorical engagement question to hook reader"
+          },
+          {
+            "text": "That's why today, we're comparing top bridging solutions so you can make better decisions in DeFi.",
+            "context": "Malda post content",
+            "purpose": "Value proposition and educational framing"
+          }
+        ],
+        "tone": "friendly-casual mixed with educational-professional; aspirational and motivational",
+        "dataFormatting": [
+          "$117K (price with K abbreviation)",
+          "$6,000 (specific price point)",
+          "890.8K Views (view count with K abbreviation)",
+          "2:46 PM · Jul 13, 2025 (timestamp format with time and date)"
+        ],
+        "trustSignals": [
+          "Verified badges (checkmarks) on Robert Kiyosaki and Malda accounts",
+          "High engagement numbers (72 likes, 890.8K views) demonstrating credibility",
+          "Established personality (Robert Kiyosaki, known financial educator)"
+        ],
+        "jargonLevel": "beginner-to-intermediate (Bitcoin explained, DeFi concepts introduced)",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-7-community-scrolled-3.png",
+      "label": "Community — scrolled 3",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main with right panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFFFFF",
+          "#F5F7FA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, medium weight for post titles",
+          "bodyStyle": "Regular sans-serif, medium gray, clean and readable",
+          "dataStyle": "Numeric engagement metrics (5, 12, 67, 3.7K) in lighter gray with icon indicators"
+        },
+        "components": [
+          {
+            "type": "Social Feed Post",
+            "description": "Tweet-like card with verified user avatar, text content, engagement metrics, and rich media (banner image)",
+            "position": "Center column, stacked vertically",
+            "notable": "Features promotional badge and bookmark icon; includes embedded rich image with gradient background"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "For you / Following tabs with search icon",
+            "position": "Top of feed",
+            "notable": "Underline accent on active tab in brand orange"
+          },
+          {
+            "type": "Right Sidebar Widget",
+            "description": "'Who to follow' panel with user avatars and follow buttons",
+            "position": "Right column",
+            "notable": "Stacked user cards with orange outline follow buttons; shows profile pictures and names"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with icons and labels (Stream, Profile, L2 Wallet, Notification, etc.)",
+            "position": "Left column",
+            "notable": "Persistent navigation with 'New Post' CTA button at bottom in orange"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Feed post imagery dominates center, metrics subtle below, sidebar navigation on left with right discovery panel creating three-column flow",
+        "innovativeElements": [
+          "Community-centric social feed embedded in crypto dashboard (unusual blend)",
+          "Real-time engagement metrics (3.7K views, promotion badges)",
+          "Integration of crypto protocol announcements with social UX"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / social feed",
+        "userIntent": "Discover crypto protocol news, follow community members, engage with announcements from projects like GMX and SquadSwap",
+        "entryPoints": [
+          "Community tab navigation from header",
+          "Direct link to community feed"
+        ],
+        "exitPoints": [
+          "Click 'Follow' button on user card",
+          "Click post to view full thread",
+          "Click protocol announcement to learn more",
+          "Navigate to Portfolio, Profile, or other sidebar sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button",
+            "action": "Follow/unfollow community member"
+          },
+          {
+            "element": "Like, retweet, reply icons",
+            "action": "Engage with post (5 likes, 12 retweets shown)"
+          },
+          {
+            "element": "Bookmark icon",
+            "action": "Save post for later"
+          },
+          {
+            "element": "Search icon",
+            "action": "Search community posts"
+          },
+          {
+            "element": "View full thread link",
+            "action": "Expand post details"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: navigation sidebar → chronological feed of announcements/posts → discovery sidebar (who to follow); content organized as social cards with metadata",
+        "frictionPoints": [
+          "Small engagement metric text could be hard to scan quickly",
+          "Promotion badge might create cognitive load distinguishing ads from organic content"
+        ],
+        "progressIndicators": [
+          "Timestamp (Feb 13, 2026, 16h ago) on posts",
+          "View count indicator (3.7K)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "For you | Following (tab labels)",
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outline-button with orange border",
+            "placement": "Right sidebar, next to each user card"
+          },
+          {
+            "text": "View full thread >",
+            "style": "text-link",
+            "placement": "Below post preview text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Translate Post",
+            "context": "Below post body text",
+            "purpose": "Allow non-English speaker to translate community post"
+          },
+          {
+            "text": "30.1 Promotion",
+            "context": "Badge on post",
+            "purpose": "Signal promoted/sponsored content"
+          },
+          {
+            "text": "Data updated 1 sec ago",
+            "context": "Bottom right of portfolio section",
+            "purpose": "Indicate real-time data freshness"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones (Twitter-like social tone)",
+        "dataFormatting": [
+          "Engagement counts: 5, 12, 67, 3.7K",
+          "Timestamp: Feb 13, 2026, 16h"
+        ],
+        "trustSignals": [
+          "Verified badges on accounts (GMX_IO, SquadSwap checkmarks)",
+          "Real protocol announcements (GMX, SquadSwap official accounts)",
+          "Follower counts and engagement metrics visible"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-8-portfolio-api.png",
+      "label": "Portfolio API",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width hero with split sections",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1F4D",
+          "#5B5FFF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif/sans blend, white, centered hero headline (70+ px)",
+          "bodyStyle": "Regular sans-serif, light gray/blue, medium size body copy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Full-width background with geometric 3D isometric pattern (dark blue-purple gradient), centered white headline",
+            "position": "Top 50% of viewport",
+            "notable": "Sophisticated 3D tessellated background creates depth and tech credibility; very polished B2B SaaS aesthetic"
+          },
+          {
+            "type": "Feature Card",
+            "description": "Light section below hero with heading, description, and code snippet preview",
+            "position": "Bottom 50%",
+            "notable": "Icon (blue document/API icon) on left, text on right, code block in light background"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Minimal header with logo, links (Documents, Console, Login), and Sign up button",
+            "position": "Top of page",
+            "notable": "Clean minimal design, not sticky; simple sans-serif navigation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates first fold, secondary feature section below with supporting icon and code, minimal chrome focuses attention on content",
+        "innovativeElements": [
+          "3D isometric geometric background pattern (modern, premium feel)",
+          "API landing page positioned as main product feature (developer-first positioning)",
+          "Subtle color coding (blue icon, blue button) creating visual continuity"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / api-product-page",
+        "userIntent": "Learn about DeBank Cloud's Web3 Developer Services and Real-time OpenAPI; evaluate for integration or signup",
+        "entryPoints": [
+          "Portfolio API tab from main navigation",
+          "External marketing link to DeBank Cloud product"
+        ],
+        "exitPoints": [
+          "Sign up button (top right)",
+          "Login button (top right)",
+          "Documents link (top nav)",
+          "Console link (top nav)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to signup flow"
+          },
+          {
+            "element": "Login button",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Browse documents or access console"
+          }
+        ],
+        "informationArchitecture": "Single column, top-to-bottom: header nav → hero section with main value prop → feature deep-dive section with supporting details and code sample",
+        "frictionPoints": [
+          "Minimal CTA below fold—user must scroll or click top-right button",
+          "No immediate 'Try Demo' or 'Get API Key' button in hero"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Web3 Developer Services",
+        "subheadline": "Real-time OpenAPI",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button with blue border outline",
+            "placement": "Top right navigation bar"
+          },
+          {
+            "text": "Login",
+            "style": "text-link",
+            "placement": "Top right navigation bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get real-time data of users, protocols, tokens, and more.",
+            "context": "Below 'Real-time OpenAPI' subheading",
+            "purpose": "Explain API capability in one sentence"
+          }
+        ],
+        "tone": "professional-technical, enterprise-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "DeBank Cloud branding (established product line)",
+          "Real-time API positioning (modern infrastructure signal)",
+          "Multi-chain data (Ethereum, Arbitrum, Base, BNB implied)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-9-view-more.png",
+      "label": "View more👉",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "stacked sections with card grid below",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFFFFF",
+          "#F5F7FA",
+          "#1A202C"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, used for section headers (Portfolio, NFTs, Transactions, Badge)",
+          "bodyStyle": "Regular sans-serif, medium gray, body text and protocol names",
+          "dataStyle": "Large bold numbers ($52,845, $29,278, 65%) in dark gray with percentage change in green"
+        },
+        "components": [
+          {
+            "type": "Profile Header",
+            "description": "User avatar (NFT-styled), username, wallet address, bio, social badges (X, Discord, etc.), and quick stats",
+            "position": "Top of page",
+            "notable": "Multi-colored avatar (unique profile badge), Dewhales member badge, follow/Say Hi/AskPro buttons"
+          },
+          {
+            "type": "Stats Row",
+            "description": "Quick stats display: TVF, Followers, Following, Earnings, Hi offer price, Say Hi, Answered count, AskPro",
+            "position": "Below bio",
+            "notable": "Mix of social metrics and crypto-specific metrics (TVF, Earnings); labeled with info icons"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Stream, Portfolio (active), NFTs, Transactions, Badge tabs with underline indicator",
+            "position": "Below stats",
+            "notable": "Orange underline on active tab; Portfolio tab shows asset breakdown"
+          },
+          {
+            "type": "Asset Grid",
+            "description": "Grid of protocol/chain holdings with logo, name, dollar amount, and percentage of portfolio",
+            "position": "Center, Portfolio section",
+            "notable": "Multi-column grid (5 columns visible): Base, Sonic, Ethereum, Linea, Arbitrum in top row; organized by chain/protocol; 'Unfold 29 chains' link shows expandable content"
+          },
+          {
+            "type": "Protocol Cards",
+            "description": "Smaller cards below main grid showing secondary holdings and positions (Aave V3, ZyFAI, Stargate, Uniswap V3, Synthetix V3, Sonic Airdrop)",
+            "position": "Below main grid",
+            "notable": "Consistent branding with icons; amount in bold, smaller cards than primary holdings"
+          },
+          {
+            "type": "Wallet Section",
+            "description": "Bottom table showing token holdings with columns for Token, Price, Amount, USD Value",
+            "position": "Bottom of visible area",
+            "notable": "Classic data table; wallet balance ($7,115) shown in footer"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Profile/stats at top → portfolio total dominates right side ($52,845 in large green text) → tabbed content below with grid of holdings organized by size/importance → expandable sections show depth",
+        "innovativeElements": [
+          "Portfolio composition visualization via card grid organized by chain/protocol",
+          "Real-time portfolio value with percent change indicator",
+          "Social-financial hybrid metrics (followers, earnings, TVF all visible)",
+          "'VIP history' badge in bottom right corner suggests gamification/reputation system"
+        ]
+      },
+      "flow": {
+        "screenType": "profile / portfolio-dashboard",
+        "userIntent": "View a user's complete DeFi portfolio, asset allocation across chains/protocols, holdings breakdown, and social metrics",
+        "entryPoints": [
+          "Direct link from Community member card (Follow button clicked)",
+          "Search by wallet address or username",
+          "Click on user profile from earlier screens"
+        ],
+        "exitPoints": [
+          "Click on individual protocol card to drill down",
+          "Click 'Unfold 29 chains' to expand full chain list",
+          "Navigate to NFTs, Transactions, or Badge tabs",
+          "View portfolio in different views (Default, Change, Summary, Time Machine)",
+          "Back to Community or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button",
+            "action": "Follow this user"
+          },
+          {
+            "element": "Say Hi button",
+            "action": "Send message/greeting"
+          },
+          {
+            "element": "AskPro button",
+            "action": "Ask professional question (paid service implied)"
+          },
+          {
+            "element": "Portfolio tabs (Stream, Portfolio, NFTs, Transactions, Badge)",
+            "action": "Switch between different data views"
+          },
+          {
+            "element": "View options (Default, Change, Summary, Time Machine)",
+            "action": "Change portfolio visualization"
+          },
+          {
+            "element": "Protocol cards",
+            "action": "Likely drill down into specific position"
+          },
+          {
+            "element": "Unfold 29 chains link",
+            "action": "Expand hidden chains/protocols"
+          },
+          {
+            "element": "All Chain dropdown",
+            "action": "Filter by specific blockchain"
+          }
+        ],
+        "informationArchitecture": "Vertical hierarchy: identity/social → summary metrics → tabbed content areas → detailed grid of holdings → wallet table; modular design allows toggling between views",
+        "frictionPoints": [
+          "Many metrics and tabs could overwhelm new users",
+          "Small percentage values (0%, 2%) might indicate precision issues or placeholder data",
+          "Bottom wallet table requires scrolling—important data partially hidden"
+        ],
+        "progressIndicators": [
+          "Data updated 1 sec ago (real-time indicator)",
+          "Portfolio change indicator (+2.90% in green)"
+        ]
+      },
+      "copy": {
+        "headline": "nmstarchild (username header)",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "primary-button with orange background",
+            "placement": "Top right of header"
+          },
+          {
+            "text": "Say Hi",
+            "style": "secondary-button with pink/magenta border",
+            "placement": "Top right of header"
+          },
+          {
+            "text": "AskPro",
+            "style": "secondary-button with pink/magenta background",
+            "placement": "Top right of header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Leave a good comment and i will check out your good content. Member of @Dewhales.",
+            "context": "User bio below username",
+            "purpose": "User self-description; shows engagement philosophy"
+          },
+          {
+            "text": "Data updated 1 sec ago",
+            "context": "Right side below portfolio value",
+            "purpose": "Indicate real-time refresh rate"
+          },
+          {
+            "text": "Protocols with small deposits are not displayed. Show all",
+            "context": "Footer below protocol grid",
+            "purpose": "Explain why some data is hidden; offer expansion option"
+          },
+          {
+            "text": "Unfold 29 chains",
+            "context": "After visible chain list",
+            "purpose": "Indicate expandable hidden content"
+          }
+        ],
+        "tone": "professional-technical with social-casual undertones (DeFi analytics with community features)",
+        "dataFormatting": [
+          "$52,845 (large portfolio total with +2.90% change in green)",
+          "$29,278 55% (amount with percentage of portfolio)",
+          "$447.3M (TVF total value field)",
+          "14.6K (Followers count)",
+          "3018 days (membership tenure)",
+          "$2,759.93 (Earnings total)"
+        ],
+        "trustSignals": [
+          "Member of @Dewhales (community badge)",
+          "Verified holdings across 30+ chains",
+          "Real-time data updates (1 sec ago)",
+          "Long membership duration (3018 days = 8+ years implied reputation)",
+          "AskPro feature (pay-for-advice implies verified expertise)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-10-view-more-scrolled-1.png",
+      "label": "View more👉 — scrolled 1",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, medium weight, 14-16px for token names",
+          "bodyStyle": "Sans-serif, regular weight, 12-14px for numeric values",
+          "dataStyle": "Monospace-like numeric display with right alignment, bold for USD values"
+        },
+        "components": [
+          {
+            "type": "token-row",
+            "description": "Horizontal list item showing token icon, name, price, balance, and USD value",
+            "position": "main content area",
+            "notable": "Colored badge icons next to some tokens indicating different addresses/wallets"
+          },
+          {
+            "type": "protocol-tabs",
+            "description": "Horizontal scrollable tabs for different protocols/dapps",
+            "position": "top section below main nav",
+            "notable": "Active tab (Wallet) highlighted in coral/salmon color"
+          },
+          {
+            "type": "vip-badge",
+            "description": "Circular dark badge in bottom right",
+            "position": "bottom right corner",
+            "notable": "Floating badge indicating premium/VIP status"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-to-bottom scrolling list with consistent row height; USD values (rightmost) in bold to draw attention to portfolio value; token icons and symbols anchor left side",
+        "innovativeElements": [
+          "Multi-colored wallet indicator badges (small numbered circles) showing multiple addresses for same token",
+          "Seamless protocol tab switching maintaining same list view"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed portfolio holdings across multiple tokens and protocols",
+        "entryPoints": [
+          "Portfolio section selection",
+          "Protocol tab click (viewing Wallet holdings)"
+        ],
+        "exitPoints": [
+          "Click on individual token for details",
+          "Switch to different protocol tab",
+          "Navigate to other main sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Protocol tabs (Aave V3, Beets, PancakeSwap, etc.)",
+            "action": "Filter portfolio view by protocol"
+          },
+          {
+            "element": "Token rows",
+            "action": "Likely clickable to view token details or transaction history"
+          },
+          {
+            "element": "Search bar (top right)",
+            "action": "Search by address, memo, or Web3 ID"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Portfolio > Protocol > Token Holdings; each row shows token metadata (icon, name, price, quantity, USD value)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$2,061.0500 (price with 4 decimals)",
+          "0.4659 (balance quantity)",
+          "$960.33 (USD value with 2 decimals)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-11-view-more-scrolled-2.png",
+      "label": "View more👉 — scrolled 2",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, medium weight, 14-16px",
+          "bodyStyle": "Sans-serif, regular weight, 12-14px",
+          "dataStyle": "Right-aligned numeric values in monospace-like treatment"
+        },
+        "components": [
+          {
+            "type": "token-row",
+            "description": "Repeating list item for each token holding",
+            "position": "scrollable main area",
+            "notable": "Consistent visual pattern with wallet badge indicators"
+          },
+          {
+            "type": "info-message",
+            "description": "Contextual message about small balances",
+            "position": "middle of list",
+            "notable": "'Tokens with small balances are not displayed. Show all' link for transparency"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Consistent row structure maintains predictability; message insertion breaks monotony and provides helpful context",
+        "innovativeElements": [
+          "Show all/Hide toggle for small balance tokens - transparency feature"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue scrolling through portfolio holdings, discover hidden balances",
+        "entryPoints": [
+          "Scrolling down from previous portfolio view"
+        ],
+        "exitPoints": [
+          "Click 'Show all' to reveal small balance tokens",
+          "Click on token row",
+          "Switch protocol tabs",
+          "Scroll to next section (protocols/strategies)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Show all link",
+            "action": "Expand view to show tokens with small balances"
+          },
+          {
+            "element": "Token rows",
+            "action": "Select token for details"
+          }
+        ],
+        "informationArchitecture": "Continued hierarchical list with contextual helper message",
+        "frictionPoints": [
+          "Small balance tokens hidden by default (requires user action to reveal)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Show all",
+            "style": "text-link",
+            "placement": "center of list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Tokens with small balances are not displayed.",
+            "context": "Message between token rows",
+            "purpose": "Explain why some holdings may not be visible"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0.0501 (very small prices)",
+          "180,136.8844 (large quantities)",
+          "$49.85 (USD value)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-12-view-more-scrolled-3.png",
+      "label": "View more👉 — scrolled 3",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFFFFF",
+          "#7B8BA8",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, 16-18px for protocol names with linked external icon",
+          "bodyStyle": "Sans-serif, regular, 13-14px for category labels",
+          "dataStyle": "Monospace-like, right-aligned, bold for USD totals; lighter for secondary metrics"
+        },
+        "components": [
+          {
+            "type": "protocol-card",
+            "description": "Expanded protocol section showing supplied/borrowed balances with health metrics",
+            "position": "lower content area",
+            "notable": "Labeled sections (Lending, Health Rate, Supplied, Borrowed) with nested data rows"
+          },
+          {
+            "type": "category-badge",
+            "description": "Gray label badge indicating transaction type",
+            "position": "within protocol cards",
+            "notable": "'Lending' and 'Staked' badges as protocol activity types"
+          },
+          {
+            "type": "data-row",
+            "description": "Structured three-column row for token details",
+            "position": "within protocol cards",
+            "notable": "Token icon + symbol | Balance with decimals | USD Value"
+          },
+          {
+            "type": "metric-label",
+            "description": "Light gray label with info icon",
+            "position": "within protocol cards",
+            "notable": "Health Rate 3.33 with tooltip indicator"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Protocol name + value anchors top; category badges organize sections; supplied/borrowed split visually separates assets and liabilities; USD values emphasized in bold",
+        "innovativeElements": [
+          "Health Rate metric with info tooltip for lending protocols",
+          "Multi-level nesting showing protocol > activity type > positions",
+          "Supplied/Borrowed dual-column layout for DeFi lending visualization"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed DeFi protocol positions including lending/borrowing metrics and collateral ratios",
+        "entryPoints": [
+          "Scroll past token list to protocol details",
+          "Click on protocol tab from earlier section"
+        ],
+        "exitPoints": [
+          "Click on protocol name (external link to protocol site)",
+          "Click on individual position tokens",
+          "Scroll to next protocol card (Beets staking)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Protocol name with external link icon",
+            "action": "Navigate to protocol website"
+          },
+          {
+            "element": "Health Rate info icon",
+            "action": "Show tooltip explaining health/liquidation risk"
+          },
+          {
+            "element": "Token rows within protocol",
+            "action": "View position details or history"
+          }
+        ],
+        "informationArchitecture": "Portfolio > Protocols > Strategies; nested structure shows protocol > activity type > positions, with contextual metrics (health rate for lending, balance for staking)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Aave V3",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "External link icon (unnamed)",
+            "style": "icon-link",
+            "placement": "next to Aave V3 heading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Health Rate",
+            "context": "Label with info icon in Aave V3 section",
+            "purpose": "Indicate lending protocol health metric"
+          },
+          {
+            "text": "Supplied",
+            "context": "Section header in Aave V3 card",
+            "purpose": "Label collateral assets provided"
+          },
+          {
+            "text": "Borrowed",
+            "context": "Section header in Aave V3 card",
+            "purpose": "Label borrowed assets"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$21,239 (protocol total value)",
+          "3.33 (health rate ratio)",
+          "13.7064 WETH (balance with token symbol)",
+          "$28,249.67 (USD value)",
+          "7,008.1911 USDC (large quantity with decimals)"
+        ],
+        "trustSignals": [
+          "Aave V3 protocol branding with icon",
+          "Lending category indication",
+          "Health rate metric (3.33 = good health)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-13-view-more-scrolled-4.png",
+      "label": "View more👉 — scrolled 4",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px, dark gray/black",
+          "bodyStyle": "Regular sans-serif, 13-14px, medium gray",
+          "dataStyle": "Monospace/numeric, 14-16px, bold, aligned right"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Protocol selection tabs (Wallet, Aave V3, Beets, PancakeSwap, etc.)",
+            "position": "Top horizontal scroll",
+            "notable": "Active tab (Beets) highlighted in coral/salmon"
+          },
+          {
+            "type": "Position Card",
+            "description": "Expandable protocol position showing pool, balance, rewards, USD value",
+            "position": "Stacked vertically",
+            "notable": "Each card has distinct protocol icon and styling"
+          },
+          {
+            "type": "Action Button",
+            "description": "Withdraw/Claim buttons in coral outline style",
+            "position": "Bottom right of relevant rows",
+            "notable": "Light coral background with text, consistent placement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Protocol headers and icons draw attention first, followed by numeric values (USD Value) on right, then detailed holdings below",
+        "innovativeElements": [
+          "Protocol icons integrated with section headers",
+          "Right-aligned USD value creates visual anchor point",
+          "Badge labels (Farming, Vesting) categorize position types"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review multiple protocol positions and their holdings, manage individual positions",
+        "entryPoints": [
+          "Portfolio tab navigation",
+          "Scrolling from previous protocol positions"
+        ],
+        "exitPoints": [
+          "Click Withdraw button to initiate withdrawal",
+          "Click Claim button to claim rewards",
+          "Switch to different protocol tab",
+          "Navigate to different main section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Protocol tabs",
+            "action": "Switch between different protocol positions"
+          },
+          {
+            "element": "Withdraw button",
+            "action": "Initiate withdrawal flow"
+          },
+          {
+            "element": "Claim button",
+            "action": "Claim available rewards"
+          }
+        ],
+        "informationArchitecture": "Hierarchical by protocol, then by position within each protocol (Pool/Balance/Rewards columns), with cumulative USD value prominently displayed",
+        "frictionPoints": [
+          "Horizontal scroll needed for protocol tabs may not be obvious",
+          "Multiple nested data points per position could overwhelm new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Withdraw",
+            "style": "ghost-button",
+            "placement": "Right side of balance row"
+          },
+          {
+            "text": "Claim",
+            "style": "ghost-button",
+            "placement": "Right side of rewards row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pool",
+            "context": "Column header",
+            "purpose": "Identifies the liquidity pool or asset"
+          },
+          {
+            "text": "Balance",
+            "context": "Column header",
+            "purpose": "Shows user's holding in the position"
+          },
+          {
+            "text": "Rewards",
+            "context": "Column header",
+            "purpose": "Displays claimable rewards"
+          },
+          {
+            "text": "USD Value",
+            "context": "Right-aligned column",
+            "purpose": "Converts all positions to USD for comparison"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$13,782.35",
+          "$7,291.38",
+          "275,371.5850 S",
+          "1.7448 WETH",
+          "3,620.4464 USDC",
+          "0.0122 WETH ($25.23)"
+        ],
+        "trustSignals": [
+          "Named protocols (PancakeSwap, CoW Swap, Synthetix)",
+          "Precise numeric values suggesting live data",
+          "Multiple positions showing established account"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-14-read-more.png",
+      "label": "Read More👉",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px, dark gray",
+          "bodyStyle": "Regular sans-serif, 13-14px, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with menu items: Stream, Profile, L2 Wallet, Notification, Bookmarks, Hi, XP, Vote, More",
+            "position": "Left edge, fixed",
+            "notable": "Clean icon + label layout, New Post button highlighted in coral at bottom"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search field for filtering posts by topics, keywords, users",
+            "position": "Top of main content area",
+            "notable": "Placeholder text clearly indicates search scope"
+          },
+          {
+            "type": "Filter Controls",
+            "description": "All types, Poster assets, Time dropdowns",
+            "position": "Below search, horizontal layout",
+            "notable": "Tab-style filters with Latest/Trending/Hot selection"
+          },
+          {
+            "type": "Post Card",
+            "description": "User post with avatar, name, timestamp, content image, engagement metrics",
+            "position": "Center column, stacked",
+            "notable": "Image-heavy design with visual post content as focal point"
+          },
+          {
+            "type": "Who to Follow Panel",
+            "description": "Right sidebar with suggested users and Follow buttons",
+            "position": "Right edge",
+            "notable": "User avatars with Follow CTAs in coral outline buttons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Post content (visual) dominates center, sidebar navigation anchors left interactions, follow suggestions occupy right",
+        "innovativeElements": [
+          "Twitter-like social feed within crypto portfolio app",
+          "Post image as primary content focus rather than text",
+          "Engagement metrics (0, 0, 0, 0) displayed below posts"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse community posts and discover users to follow",
+        "entryPoints": [
+          "Community tab from main navigation",
+          "Stream menu item in sidebar"
+        ],
+        "exitPoints": [
+          "Click Follow button to follow user",
+          "Click post to view details",
+          "Create new post via New Post button",
+          "Navigate to Profile, Bookmarks, or other sidebar items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button",
+            "action": "Follow the suggested user"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter posts by keywords, topics, or users"
+          },
+          {
+            "element": "Filter tabs (Latest/Trending/Hot)",
+            "action": "Sort posts by engagement or recency"
+          },
+          {
+            "element": "Post card",
+            "action": "Click to view full post and comments"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: navigation + discovery (left), main feed (center), social proof/recommendations (right)",
+        "frictionPoints": [
+          "Post image content is not immediately readable",
+          "No visible comment count or interaction feedback on posts",
+          "Engagement metrics showing all zeros may indicate low activity"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Who to follow",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "ghost-button",
+            "placement": "Right side of each user card in Who to follow panel"
+          },
+          {
+            "text": "New Post",
+            "style": "primary-button",
+            "placement": "Bottom left sidebar"
+          },
+          {
+            "text": "Cancel",
+            "style": "text-link",
+            "placement": "Top right of search area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search stream posted by topics, keywords or users",
+            "context": "Search bar placeholder",
+            "purpose": "Guides user on search capabilities"
+          },
+          {
+            "text": "Translate Post",
+            "context": "Link above post content",
+            "purpose": "Allows translation of non-English posts"
+          },
+          {
+            "text": "Log in to Start",
+            "context": "Button at bottom left",
+            "purpose": "Encourages user authentication to participate"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "now (timestamp)",
+          "0 (engagement metrics)"
+        ],
+        "trustSignals": [
+          "Named users (StellarMind, DeFiWhale, Gekko, Transhumanist)",
+          "VIP badge on some users",
+          "Post timestamp showing real-time activity"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-15-read-more-scrolled-1.png",
+      "label": "Read More👉 — scrolled 1",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14-16px, dark gray",
+          "bodyStyle": "Regular sans-serif, 12-13px, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left navigation menu unchanged from previous screen",
+            "position": "Left edge, fixed",
+            "notable": "Consistent with previous community view"
+          },
+          {
+            "type": "Post Card (Japanese)",
+            "description": "Post with Japanese text content and avatar",
+            "position": "Center top",
+            "notable": "Showing language diversity in community content"
+          },
+          {
+            "type": "Post Card (Image)",
+            "description": "Large image post with neon red Asian characters/signage",
+            "position": "Center middle",
+            "notable": "Rich visual content with geolocation indicator"
+          },
+          {
+            "type": "Engagement Metrics",
+            "description": "Comment, retweet, like, share counts below posts",
+            "position": "Below each post",
+            "notable": "Shows 0-4 interactions, indicating emerging community"
+          },
+          {
+            "type": "Who to Follow Panel",
+            "description": "Right sidebar maintained from previous view",
+            "position": "Right edge",
+            "notable": "Social proof cards with Follow buttons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large image posts dominate visual attention, user badges (VIP) prominent, engagement metrics subtle below",
+        "innovativeElements": [
+          "Supports multi-language content (Japanese text visible)",
+          "High-quality imagery integrated into feed",
+          "VIP badges indicate tiered user status"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue scrolling through community feed, discover international content",
+        "entryPoints": [
+          "Scrolled down from previous post (StellarMind Sunday Routine)"
+        ],
+        "exitPoints": [
+          "Continue scrolling to more posts",
+          "Click on user profile (inukun, ordi)",
+          "Click Follow button",
+          "Navigate away from Community section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post image",
+            "action": "Click to view in full resolution or open post detail"
+          },
+          {
+            "element": "VIP badge",
+            "action": "Indicates premium user status"
+          },
+          {
+            "element": "Translate Post link",
+            "context": "Above Japanese post",
+            "action": "Translate post to user's language"
+          }
+        ],
+        "informationArchitecture": "Continuous vertical scroll through posts, each post is self-contained with engagement metrics and user info",
+        "frictionPoints": [
+          "Japanese text without translation visible initially",
+          "Engagement metrics very low (0-4 interactions) may discourage interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "ghost-button",
+            "placement": "Who to follow panel, right sidebar"
+          },
+          {
+            "text": "Translate Post",
+            "style": "text-link",
+            "placement": "Above Japanese text post"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Translate Post",
+            "context": "Link above first post",
+            "purpose": "Offers translation of non-English content"
+          },
+          {
+            "text": "VIP",
+            "context": "Badge on user names (inukun, ordi)",
+            "purpose": "Indicates verified or premium user status"
+          },
+          {
+            "text": "now",
+            "context": "Post timestamp",
+            "purpose": "Shows post recency"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "now (relative timestamp)",
+          "0, 0, 1, 1 (engagement counts)"
+        ],
+        "trustSignals": [
+          "VIP badges on users (inukun, ordi)",
+          "Real user posts with images",
+          "Translated post links"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-16-read-more-scrolled-2.png",
+      "label": "Read More👉 — scrolled 2",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main with right panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#FFFFFF",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px for post titles",
+          "bodyStyle": "Regular sans-serif, 14px gray text for descriptions",
+          "dataStyle": "Small gray text for interaction counts (0, 1, 2)"
+        },
+        "components": [
+          {
+            "type": "Post Card",
+            "description": "Large featured image with title, description, and engagement metrics",
+            "position": "Center main feed",
+            "notable": "Rich media with overlay text and engagement buttons"
+          },
+          {
+            "type": "User Follow Widget",
+            "description": "Right sidebar showing 5 users with follow buttons",
+            "position": "Right panel",
+            "notable": "Avatar, username, and orange 'Follow' button pattern"
+          },
+          {
+            "type": "Engagement Bar",
+            "description": "Reply, retweet, like, and analytics icons with counts",
+            "position": "Below post image",
+            "notable": "Hollow icons with gray text counts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large imagery dominates with text hierarchy below; sidebar is secondary",
+        "innovativeElements": [
+          "Illustration-driven post cards with thematic visuals",
+          "Promotion badge on bookmarked posts"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and read crypto news from community members",
+        "entryPoints": [
+          "Community tab navigation",
+          "Stream sidebar link"
+        ],
+        "exitPoints": [
+          "Post details page",
+          "User profile",
+          "External link click",
+          "Follow action"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post image",
+            "action": "Navigate to full post"
+          },
+          {
+            "element": "Like button",
+            "action": "Like the post"
+          },
+          {
+            "element": "Follow button",
+            "action": "Follow user account"
+          },
+          {
+            "element": "Translate Post link",
+            "action": "Show translated version"
+          }
+        ],
+        "informationArchitecture": "Chronological feed with user-generated posts; sidebar shows suggested accounts",
+        "frictionPoints": [
+          "Translation link is subtle gray text",
+          "Promotion badge context unclear"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Here's what happened in crypto today",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outline-button",
+            "placement": "Right sidebar next to usernames"
+          },
+          {
+            "text": "Like",
+            "style": "text-link",
+            "placement": "Below post card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Translate Post",
+            "context": "Below post description",
+            "purpose": "Offer translation of user-generated content"
+          },
+          {
+            "text": "$0.05 Promotion",
+            "context": "Top right of post",
+            "purpose": "Indicate paid promotion status"
+          },
+          {
+            "text": "now",
+            "context": "Next to username",
+            "purpose": "Show post recency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0 replies",
+          "1 retweet",
+          "1 like",
+          "2 analytics"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-17-read-more-scrolled-3.png",
+      "label": "Read More👉 — scrolled 3",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "sidebar-main with right panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#FFFFFF",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px for headline",
+          "bodyStyle": "Regular 14px gray for description text, truncated with ellipsis",
+          "dataStyle": "Small gray counts for engagement metrics"
+        },
+        "components": [
+          {
+            "type": "Featured Post Card",
+            "description": "Large colorful illustration with headline and description text",
+            "position": "Center feed",
+            "notable": "Cartoon-style artwork with crypto theme (character at computer)"
+          },
+          {
+            "type": "User Follow Widget",
+            "description": "Same right sidebar with 5 users and follow buttons",
+            "position": "Right panel",
+            "notable": "Consistent across all scrolled states"
+          },
+          {
+            "type": "Secondary Posts",
+            "description": "Smaller post cards below main card with avatar, username, text",
+            "position": "Below featured post",
+            "notable": "Compact layout with minimal engagement metrics"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Primary post image dominates; secondary posts below are smaller; sidebar is tertiary",
+        "innovativeElements": [
+          "Colorful thematic illustrations for news stories",
+          "Mixed content types (articles with imagery)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue scrolling through crypto news feed",
+        "entryPoints": [
+          "Continuous scroll from previous state"
+        ],
+        "exitPoints": [
+          "Click post title to expand",
+          "Follow user",
+          "Bookmark post",
+          "Translate"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post image/title",
+            "action": "Expand to full article view"
+          },
+          {
+            "element": "User avatar",
+            "action": "Navigate to user profile"
+          },
+          {
+            "element": "Follow button",
+            "action": "Follow user"
+          },
+          {
+            "element": "Engagement icons",
+            "action": "Like, reply, or share"
+          }
+        ],
+        "informationArchitecture": "Vertical feed with stacked posts; primary post enlarged, secondary posts smaller",
+        "frictionPoints": [
+          "Long descriptions are truncated with no 'read more' visible",
+          "External links noted but unclear how to access"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Today in Crypto: ARK Invest Adds $15M in Coinbase Stock After Selling",
+        "subheadline": "Today in crypto: ARK Invest added nearly $15.2 million in Coinbase stock, Bitcoiners are being tested on...",
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outline-button",
+            "placement": "Right sidebar"
+          },
+          {
+            "text": "Like",
+            "style": "text-link",
+            "placement": "Below posts"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "cointelegraph.com",
+            "context": "Above headline",
+            "purpose": "Show source domain"
+          },
+          {
+            "text": "Translate Post",
+            "context": "Below post text",
+            "purpose": "Offer translation"
+          },
+          {
+            "text": "now",
+            "context": "Timestamp",
+            "purpose": "Indicate recency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$15M",
+          "$15.2 million",
+          "0 replies",
+          "0 retweets",
+          "0 likes",
+          "2 analytics"
+        ],
+        "trustSignals": [
+          "cointelegraph.com source attribution"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-18-read-more-scrolled-4.png",
+      "label": "Read More👉 — scrolled 4",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "sidebar-main with right panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#FFFFFF",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px for post titles",
+          "bodyStyle": "Regular 14px gray for descriptions",
+          "dataStyle": "Small gray text for metrics"
+        },
+        "components": [
+          {
+            "type": "Featured Post Card",
+            "description": "Large illustration showing crypto character at desk with trading theme",
+            "position": "Center feed top",
+            "notable": "Cyan and turquoise color scheme, highly detailed cartoon"
+          },
+          {
+            "type": "Post Title/Description",
+            "description": "Headline with source attribution and multi-line description",
+            "position": "Below image",
+            "notable": "Source clearly shown; description provides context"
+          },
+          {
+            "type": "Follow Widget",
+            "description": "Right sidebar with 5 users",
+            "position": "Right panel",
+            "notable": "Consistent position across all screens"
+          },
+          {
+            "type": "Secondary Post",
+            "description": "Smaller post below with avatar and text content",
+            "position": "Center feed bottom",
+            "notable": "Link to external article included"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large image with clear title hierarchy; source attribution above title",
+        "innovativeElements": [
+          "Detailed crypto-themed illustrations",
+          "Source attribution prominently placed"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue browsing news; decide to click through or follow",
+        "entryPoints": [
+          "Continuous scroll from above"
+        ],
+        "exitPoints": [
+          "Click post to read full article",
+          "Click source link",
+          "Follow user",
+          "Bookmark"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post headline",
+            "action": "Navigate to article detail or external link"
+          },
+          {
+            "element": "Source link (cointelegraph.com)",
+            "action": "Open external article"
+          },
+          {
+            "element": "Follow button",
+            "action": "Follow user"
+          },
+          {
+            "element": "Engagement metrics",
+            "action": "Like or interact"
+          }
+        ],
+        "informationArchitecture": "Vertical chronological feed; prominent source attribution; secondary posts below",
+        "frictionPoints": [
+          "No clear CTA to read more or visit external link",
+          "Metrics very small and low priority visually"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Nikita Bier: In-App Trading coming to X in a 'Couple' of Weeks",
+        "subheadline": "The head of product for social media platform X, Nikita Bier, says that the upcoming Smart Cashtags will allow users to trade stocks and crypto inside the app.",
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outline-button",
+            "placement": "Right sidebar"
+          },
+          {
+            "text": "https://cointelegraph.com/...",
+            "style": "text-link",
+            "placement": "Below post"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "cointelegraph.com",
+            "context": "Above headline",
+            "purpose": "Source attribution"
+          },
+          {
+            "text": "Translate Post",
+            "context": "Below post description",
+            "purpose": "Translation option"
+          },
+          {
+            "text": "now",
+            "context": "Timestamp",
+            "purpose": "Post recency"
+          },
+          {
+            "text": "Prediction markets should become hedging platforms, says Buterin",
+            "context": "Secondary post title",
+            "purpose": "Alternative post headline"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0 likes",
+          "0 retweets",
+          "0 replies",
+          "1 analytics"
+        ],
+        "trustSignals": [
+          "cointelegraph.com source",
+          "Named source (Nikita Bier)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-20-credita-comprehensive-system-to-measure-the-authen.png",
+      "label": "CreditA comprehensive system to measure the authen",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#4A90E2",
+          "#F5F7FA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 24px+",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Numeric values right-aligned, bold, orange accent for credits (+0)"
+        },
+        "components": [
+          {
+            "type": "circular-progress",
+            "description": "Credit score visualization with gradient ring (orange to green)",
+            "position": "top-left of main content",
+            "notable": "Animated gradient ring with 'Current Value' label in center"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "5 horizontal tabs: Identity Verification (active/orange), Asset Certification, DeBank Behavior, User Relationship, Negative Behavior",
+            "position": "below progress ring",
+            "notable": "Active tab has orange underline; inactive tabs grayed out"
+          },
+          {
+            "type": "list-rows",
+            "description": "Stacked rows for Passport, Web3ID, Twitter, Discord, Telegram, CEX address",
+            "position": "main content area",
+            "notable": "Each row has action button (outline button) and credit value on right"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Left navigation with 9 menu items + New Post button",
+            "position": "left side",
+            "notable": "Primary CTA (New Post) in orange rounded button at bottom"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Credit heading dominates top; circular visualization draws eye; tabs create secondary layer; rows provide scannable list",
+        "innovativeElements": [
+          "Gradient donut chart for credit score (animated appearance)",
+          "Tab-based credit category breakdown",
+          "Connected verification row items with individual action buttons"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand credit score composition and connect identity verification sources",
+        "entryPoints": [
+          "Clicked 'Credit' from main navigation",
+          "Navigated from Portfolio view"
+        ],
+        "exitPoints": [
+          "Click individual 'Add' / 'Mint' / 'Claim' buttons to add verification",
+          "Click other sidebar menu items (Profile, L2 Wallet, etc.)",
+          "Return to Portfolio via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab navigation (5 tabs)",
+            "action": "Switch between different credit category breakdowns"
+          },
+          {
+            "element": "Action buttons (Mint Web3 Id, Add Twitter, etc.)",
+            "action": "Initiate verification or connection flow"
+          },
+          {
+            "element": "Info icon next to 'Current Value'",
+            "action": "Show tooltip explaining credit calculation"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different user sections"
+          }
+        ],
+        "informationArchitecture": "Credit overview → category tabs → individual verification items → actionable connections",
+        "frictionPoints": [
+          "Multiple steps required to complete all verifications",
+          "No clear indication of benefit for adding each verification",
+          "Tab switching requires clicking vs. scrolling"
+        ],
+        "progressIndicators": [
+          "Credit score ring (visual representation of current value)",
+          "Credit value displayed as '--' until calculated",
+          "Connected vs. disconnected verification items"
+        ]
+      },
+      "copy": {
+        "headline": "Credit",
+        "subheadline": "Credit serves as a comprehensive measure of user authenticity, activity, and value.",
+        "ctas": [
+          {
+            "text": "Mint Web3 Id",
+            "style": "outline-button",
+            "placement": "Web3ID row"
+          },
+          {
+            "text": "Add Twitter",
+            "style": "outline-button",
+            "placement": "Twitter row"
+          },
+          {
+            "text": "Add Discord",
+            "style": "outline-button",
+            "placement": "Discord row"
+          },
+          {
+            "text": "New Post",
+            "style": "primary-button",
+            "placement": "Bottom of sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Higher Credit scores indicate greater user authenticity, value, and activity, with a strong credit record.",
+            "context": "Below main headline",
+            "purpose": "Explain credit score meaning and benefits"
+          },
+          {
+            "text": "DeBank Passport",
+            "context": "First item in verification list",
+            "purpose": "Label primary identity verification"
+          },
+          {
+            "text": "+ 0",
+            "context": "Right side of each row",
+            "purpose": "Show credit impact (or lack thereof) of connecting each source"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "+0 (credit values for unconnected items)",
+          "-- (placeholder for credit ring value)"
+        ],
+        "trustSignals": [
+          "DeBank Passport as official identity verification",
+          "Web3ID as decentralized identity",
+          "Multiple verification sources (Twitter, Discord, Telegram)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "You have not activated the paid features yet (on VIP card)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-21-web3-badgesreflects-the-unique-achievements-accomp.png",
+      "label": "Web3 BadgesReflects the unique achievements accomp",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#F5F7FA",
+          "#667085",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, 28px, 'Web3 Badges'",
+          "bodyStyle": "Regular sans-serif, gray (#667085), 14px",
+          "dataStyle": "Numeric values (badge counts) right-aligned, bold black, 16px"
+        },
+        "components": [
+          {
+            "type": "table-header",
+            "description": "Column headers: Badge, Name, Description, Total minted, Minted",
+            "position": "top of content area",
+            "notable": "Light blue background on header row; sticky or emphasized"
+          },
+          {
+            "type": "table-rows",
+            "description": "12+ rows of badge data with circular badge icons on left",
+            "position": "below header",
+            "notable": "Each badge has custom artwork; counts right-aligned; alternating subtle row backgrounds"
+          },
+          {
+            "type": "badge-icon",
+            "description": "Circular badge icons (32x32px approx) with airdrop-themed artwork",
+            "position": "left column of each row",
+            "notable": "Colorful, illustrative style; 'AIRDROP HUNTER' text visible on most"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title at top; table structure with left-anchored icons, center text content, right-aligned numbers; clear column separation",
+        "innovativeElements": [
+          "Large collection of visually distinct badge designs",
+          "Illustrative badge icons (not generic)",
+          "Clear minting statistics per badge"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View all available Web3 badges, understand badge criteria, and see adoption metrics",
+        "entryPoints": [
+          "Clicked 'Web3 Badges' from main navigation or section menu",
+          "Scrolled down from Credit page"
+        ],
+        "exitPoints": [
+          "Click individual badge row to view details",
+          "Navigate to other sections via top nav",
+          "Scroll down to see more badges"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Badge table rows",
+            "action": "Likely clickable to view individual badge details"
+          },
+          {
+            "element": "Column headers (Badge, Name, etc.)",
+            "action": "Possibly sortable/filterable"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Navigate away from badges page"
+          }
+        ],
+        "informationArchitecture": "Web3 Badges listing → badge icon | name | description | adoption metrics (total minted, user minted)",
+        "frictionPoints": [
+          "Long scrolling list with no visible pagination or load-more",
+          "No filtering or search mechanism visible",
+          "No obvious way to claim or mint badges from this view"
+        ],
+        "progressIndicators": [
+          "Total minted count per badge (showing popularity/distribution)",
+          "'Minted' column potentially shows user's personal badge status"
+        ]
+      },
+      "copy": {
+        "headline": "Web3 Badges",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Badge",
+            "context": "Table column header",
+            "purpose": "Label icon column"
+          },
+          {
+            "text": "Name",
+            "context": "Table column header",
+            "purpose": "Badge name column"
+          },
+          {
+            "text": "Description",
+            "context": "Table column header",
+            "purpose": "Explain badge criteria/meaning"
+          },
+          {
+            "text": "Total minted",
+            "context": "Table column header",
+            "purpose": "Show total badges issued"
+          },
+          {
+            "text": "Users who received OBT airdrop and are verified non-Sybil.",
+            "context": "Description column for 'OBT Airdrop Hunter'",
+            "purpose": "Explain badge qualification criteria"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "42,343 (total minted count)",
+          "27,469 (individual badge distribution)",
+          "621 (lower adoption badges)"
+        ],
+        "trustSignals": [
+          "Sybil-resistance verification mentioned in descriptions",
+          "Specific airdrop source attribution (OBT, IP, KAITO, BERA, SOLV, etc.)",
+          "Large total minted numbers (42K+ for popular badges)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-22-subscribe-now.png",
+      "label": "Subscribe Now👉",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E8D4B0",
+          "#8B4513",
+          "#FF6B4A",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif/accent font, deep brown (#8B4513), 32px, 'Subscribe to VIP...'",
+          "bodyStyle": "Regular sans-serif, dark gray, 14-16px",
+          "dataStyle": "Feature descriptions in smaller gray text, 12-13px"
+        },
+        "components": [
+          {
+            "type": "hero-banner",
+            "description": "Large beige/tan rounded banner with dark brown heading and call-to-action context",
+            "position": "top of main content",
+            "notable": "Gradient background; asymmetric design with wave pattern; VIP badge icon displayed"
+          },
+          {
+            "type": "feature-grid",
+            "description": "Grid layout with consistent spacing; cards have white background on tan parent",
+            "position": "below hero banner"
+          },
+          {
+            "type": "card",
+            "description": "Individual feature card with illustrative icon, bold title, and gray descriptive text",
+            "position": "within feature grid",
+            "notable": "Icons are colorful and illustrative (not minimalist); consistent card height"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Left navigation with same menu structure as previous screens",
+            "position": "left side",
+            "notable": "'New Post' button present at bottom"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero banner dominates upper area with large dark text; feature grid below provides visual rhythm with icons and titles; descriptions provide scannable secondary information",
+        "innovativeElements": [
+          "Tan/beige gradient hero banner with serif heading font (stands out from rest of app)",
+          "Illustrative feature icons (Time Machine with clock/gear, coins for transaction history, etc.)",
+          "2x4 grid layout with equal visual weight"
+        ]
+      },
+      "flow": {
+        "screenType": "upsell",
+        "userIntent": "Learn about premium VIP features and subscribe to unlock them",
+        "entryPoints": [
+          "Clicked 'Paid Features' from navigation",
+          "Redirected from Credit or other premium-locked feature"
+        ],
+        "exitPoints": [
+          "Click 'Subscribe to VIP' button (implied, not visible in screenshot)",
+          "View individual feature details (card click)",
+          "Navigate away via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hero banner CTA",
+            "action": "Initiate VIP subscription flow"
+          },
+          {
+            "element": "Feature cards",
+            "action": "Likely expandable or clickable for more details"
+          },
+          {
+            "element": "Sidebar menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Upsell hero → feature benefits grid → navigation to subscription flow",
+        "frictionPoints": [
+          "No visible 'Subscribe' button in this view (requires scrolling or interaction)",
+          "Features listed but no clear pricing displayed",
+          "8 features shown; may be information overload for quick decision"
+        ],
+        "progressIndicators": [
+          "VIP badge icon in hero banner",
+          "'You have not activated the paid features yet' message (status indicator)"
+        ]
+      },
+      "copy": {
+        "headline": "Subscribe to VIP to unlock more exclusive features",
+        "subheadline": "A user's total active subscription cannot exceed one year.",
+        "ctas": [
+          {
+            "text": "Subscribe to VIP to unlock more exclusive features",
+            "style": "hero-text",
+            "placement": "Hero banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Enrich your Web3 experience with DeBank Paid Features",
+            "context": "Above hero banner",
+            "purpose": "Intro tagline for paid features section"
+          },
+          {
+            "text": "You have not activated the paid features yet",
+            "context": "Within hero banner",
+            "purpose": "Status message; current user state"
+          },
+          {
+            "text": "Compare asset changes between any two dates",
+            "context": "Time Machine feature description",
+            "purpose": "Explain feature benefit in user-friendly terms"
+          },
+          {
+            "text": "User-friendly transaction data summaries and record filter",
+            "context": "Transaction History Analysis Mode description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "View 24-hour asset changes of any address",
+            "context": "'Change View' feature description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "Compare asset changes between any two dates",
+            "context": "'Summary View' feature description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "Set any custom picture as profile avatar",
+            "context": "Set Non-NFT Avatar description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "Set a cover picture for your profile page",
+            "context": "Set Cover Picture description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "Increase the follow limit on DeBank",
+            "context": "Follow up to 3,000 Users description",
+            "purpose": "Explain feature benefit"
+          },
+          {
+            "text": "Increase the official account follow limit",
+            "context": "Follow up to 300 Official Accounts description",
+            "purpose": "Explain feature benefit"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "3,000 Users (follow limit)",
+          "300 Official Accounts (follow limit)",
+          "One year (max subscription length)"
+        ],
+        "trustSignals": [
+          "VIP badge (official status marker)",
+          "Multiple premium features (shows value)",
+          "Clear feature descriptions (transparency)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "You have not activated the paid features yet"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/debank-settings-2-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B54",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, medium weight, dark gray, centered",
+          "bodyStyle": "Sans-serif, regular weight, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top navigation with logo, menu items (Portfolio, Community, Portfolio API, More), search bar, and wallet connection",
+            "position": "Top",
+            "notable": "Clean minimalist design with orange accent color on logo and CTA"
+          },
+          {
+            "type": "Appearance Toggle",
+            "description": "Radio button group for theme selection (Light, System, Dark)",
+            "position": "Top center",
+            "notable": "Light theme pre-selected, minimal visual hierarchy"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Rounded coral-orange button with 'Login' text",
+            "position": "Center",
+            "notable": "Large, prominent, stretched width for emphasis"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Login button anchors attention in center with significant whitespace above and below; appearance settings float above as secondary concern",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-gated",
+        "userIntent": "Access additional settings or account preferences",
+        "entryPoints": [
+          "Settings menu item",
+          "Settings icon",
+          "Navigation menu"
+        ],
+        "exitPoints": [
+          "Login button",
+          "Connect Wallet button",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Theme Toggle (Light/System/Dark)",
+            "action": "Switch application appearance theme"
+          },
+          {
+            "element": "Login Button",
+            "action": "Redirect to authentication flow"
+          },
+          {
+            "element": "Connect Wallet Button",
+            "action": "Initiate wallet connection"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to Portfolio, Community, or API sections"
+          }
+        ],
+        "informationArchitecture": "Settings page with authentication gate—appearance preference toggle visible without login, but deeper settings require authentication",
+        "frictionPoints": [
+          "Login required for accessing remaining settings creates friction for unauthenticated users",
+          "Minimal context about what settings exist beyond appearance"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Appearance",
+        "ctas": [
+          {
+            "text": "Login",
+            "style": "primary-button",
+            "placement": "Center of page"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "text-link",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Please login for other settings",
+            "context": "Above Login button",
+            "purpose": "Explains why login is needed and manages expectations"
+          }
+        ],
+        "tone": "professional-technical, direct, matter-of-fact",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please login for other settings"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-23-official-debank.png",
+      "label": "official - DeBank",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#1A202C",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 18-20px for profile names, checkmark badge alongside",
+          "bodyStyle": "Regular sans-serif, 14px for descriptions and post content",
+          "dataStyle": "Bold sans-serif for metrics (43.4K followers, $698.4M TVL), smaller font for labels"
+        },
+        "components": [
+          {
+            "type": "Profile Header Card",
+            "description": "Orange rounded square with DeBank logo, name, verification badge, follower count, TVL, Follow/Say Hi buttons",
+            "position": "Top left, spanning left column",
+            "notable": "Verification badge and dual CTA buttons (Follow + Say Hi) establish credibility and engagement"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Horizontal tabs: Stream (active), Quest 1, Leaderboard, Badge, Team member 2, Protocols",
+            "position": "Below profile header",
+            "notable": "Orange underline accent on active tab, extensive feature set"
+          },
+          {
+            "type": "Post Feed",
+            "description": "Stacked cards with author avatar, verified badge, timestamp, post text with embedded link, quote image preview",
+            "position": "Left column main content area",
+            "notable": "Multi-component posts with embedded rich media previews showing product features"
+          },
+          {
+            "type": "Sidebar Links",
+            "description": "Official Links section with Site and Twitter",
+            "position": "Right column",
+            "notable": "Minimal sidebar focused on external verification"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Profile header dominates top; post feed draws eye downward with contrasting white cards; sidebar secondary",
+        "innovativeElements": [
+          "Embedded product preview cards within social posts showing UI mockups",
+          "TVL display as trust signal alongside follower metrics",
+          "Verification badge + official links sidebar for institutional credibility"
+        ]
+      },
+      "flow": {
+        "screenType": "social-profile-stream",
+        "userIntent": "View official DeBank updates, announcements, and community engagement; learn about new features",
+        "entryPoints": [
+          "Navigation click from main DeBank app",
+          "Direct link to community profile",
+          "Search for DeBank account"
+        ],
+        "exitPoints": [
+          "Follow button to subscribe to updates",
+          "Say Hi button for direct messaging",
+          "External links to website and Twitter",
+          "Click on post links to product features",
+          "Tab navigation to other sections (Quest 1, Badge, etc)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Follow button",
+            "action": "Subscribe to account updates"
+          },
+          {
+            "element": "Say Hi button",
+            "action": "Open messaging/contact interface"
+          },
+          {
+            "element": "Posted/Reposted toggle",
+            "action": "Filter feed content"
+          },
+          {
+            "element": "Post engagement metrics (likes, reposts, views)",
+            "action": "Display interaction statistics"
+          },
+          {
+            "element": "Embedded links in posts",
+            "action": "Navigate to features (e.g., https://debank.com/swap)"
+          }
+        ],
+        "informationArchitecture": "Profile metadata at top; chronological post feed in center; official links sidebar; tab-based feature access below header",
+        "frictionPoints": [
+          "Multiple engagement metrics (likes, reposts, views) may overwhelm casual users",
+          "External links open new tabs, breaking flow",
+          "Rich media previews take vertical space, requiring scrolling to see more posts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "DeBank",
+        "subheadline": "Feel free to let us know about your questions about DeBank.",
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "ghost-button",
+            "placement": "Profile header right"
+          },
+          {
+            "text": "Say Hi",
+            "style": "primary-button",
+            "placement": "Profile header right"
+          },
+          {
+            "text": "Swap now: https://debank.com/swap",
+            "style": "text-link",
+            "placement": "Within post content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Followers",
+            "context": "Profile metric label",
+            "purpose": "Identify engagement metric"
+          },
+          {
+            "text": "TVF",
+            "context": "Profile metric label",
+            "purpose": "Display total value (TVL equivalent for DeBank ecosystem)"
+          },
+          {
+            "text": "Feel free to let us know about your questions about DeBank.",
+            "context": "Profile bio",
+            "purpose": "Invite community engagement and support"
+          },
+          {
+            "text": "Posted",
+            "context": "Tab label",
+            "purpose": "Filter feed to original content only"
+          },
+          {
+            "text": "No guesswork. Just DeBank-level reliable.",
+            "context": "Post content",
+            "purpose": "Emphasize reliability and trustworthiness"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual in invitation; confident in reliability claims",
+        "dataFormatting": [
+          "43.4K (followers with K suffix)",
+          "$698.4M (monetary value with $ prefix and M suffix)",
+          "Jul 18, 2025 (date format)",
+          "54.1K (engagement metric with K suffix)"
+        ],
+        "trustSignals": [
+          "Verification badge (blue checkmark) next to profile name",
+          "$698.4M TVL metric indicating ecosystem scale",
+          "43.4K followers demonstrating user base",
+          "Official Links section with website and Twitter",
+          "'DeBank-level reliable' confidence claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-24-official-debank-scrolled-2.png",
+      "label": "official - DeBank — scrolled 2",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#1A202C",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px for post titles, meta description text",
+          "bodyStyle": "Regular sans-serif, 14px for post body, link text in blue",
+          "dataStyle": "Bold for engagement metrics, red badge text for promotions"
+        },
+        "components": [
+          {
+            "type": "Meta Preview Card",
+            "description": "URL preview with title, description, and engagement metrics at top of feed",
+            "position": "Top of scrolled content",
+            "notable": "Shows link preview for shared content before main post text"
+          },
+          {
+            "type": "Post Card",
+            "description": "Verified author avatar, name, date, body text, links, engagement metrics",
+            "position": "Main feed content",
+            "notable": "Promotion badge showing '$0.26 Promotion' in red outline"
+          },
+          {
+            "type": "Engagement Footer",
+            "description": "Icons and counts for likes, reposts, views, with view count displayed with chart icon",
+            "position": "Bottom of each post",
+            "notable": "View metric shows 54.1K with chart icon, indicating growth/reach"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Post content and links dominate center; engagement metrics below; sidebar secondary with official links",
+        "innovativeElements": [
+          "Promotion badge indicating sponsored/promoted content with dollar value",
+          "Chart icon accompanying view counts to suggest growth metrics"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed-scrolled",
+        "userIntent": "Browse community updates about badge launches, rewards programs, and protocol announcements",
+        "entryPoints": [
+          "Scroll down from profile view",
+          "Direct navigation to Community section"
+        ],
+        "exitPoints": [
+          "Click on external links (e.g., debank.com/badge/7)",
+          "Translate post to other languages",
+          "Navigate to other tabs or sections",
+          "Bookmark posts"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Translate Post link",
+            "action": "Show translation options"
+          },
+          {
+            "element": "Engagement metrics (likes, reposts, views)",
+            "action": "Display interaction statistics"
+          },
+          {
+            "element": "Embedded links in post text",
+            "action": "Navigate to debank.com features"
+          },
+          {
+            "element": "View full thread arrow",
+            "action": "Expand threaded posts"
+          }
+        ],
+        "informationArchitecture": "Chronological post feed with metadata (author, date, engagement) and rich text content including links and external references",
+        "frictionPoints": [
+          "Multiple clickable elements (links, translate, engagement metrics) create decision paralysis",
+          "Promotion badges may reduce post credibility perception",
+          "External links interrupt reading flow"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "https://debank.com/badge/7...",
+            "style": "text-link",
+            "placement": "Within post content"
+          },
+          {
+            "text": "Translate Post",
+            "style": "text-link",
+            "placement": "Below post content"
+          },
+          {
+            "text": "View full thread >",
+            "style": "text-link",
+            "placement": "Below post image card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "New Web3 Badge is here to mint now!",
+            "context": "Post headline",
+            "purpose": "Create urgency around new feature launch"
+          },
+          {
+            "text": "IP Airdrop Hunter: Users who received $IP airdrop and are verified non-Sybil can mint this badge.",
+            "context": "Post description",
+            "purpose": "Explain eligibility criteria"
+          },
+          {
+            "text": "Mint start time: 07th-Mar 0:00:00 (UTC+0)",
+            "context": "Post meta information",
+            "purpose": "Provide specific launch timing"
+          },
+          {
+            "text": "Don't forget to claim your badge on DeBank!",
+            "context": "Post call-to-action",
+            "purpose": "Encourage user action"
+          },
+          {
+            "text": "$0.26 Promotion",
+            "context": "Badge label",
+            "purpose": "Indicate promoted/sponsored post"
+          }
+        ],
+        "tone": "professional-technical, urgent (time-based launch), educational (explaining badge mechanics)",
+        "dataFormatting": [
+          "Jul 18, 2025 (date)",
+          "Mar 7, 2025 (launch date)",
+          "07th-Mar 0:00:00 (UTC+0) (timestamp with timezone)",
+          "54.1K (view count with K suffix)",
+          "$0.26 (promotion value with $ prefix)"
+        ],
+        "trustSignals": [
+          "Verification badge on author profile",
+          "Specific eligibility criteria (verified non-Sybil users)",
+          "Exact launch timestamp provided",
+          "Reference to $IP airdrop (token legitimacy)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-25-official-debank-scrolled-3.png",
+      "label": "official - DeBank — scrolled 3",
+      "flowType": "Home",
+      "step": 25,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B4A",
+          "#FFD700",
+          "#1A202C"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, 28-32px on orange banner for campaign title",
+          "bodyStyle": "Bold white sans-serif for reward amounts, regular for description text",
+          "dataStyle": "Yellow/gold (#FFD700) for monetary values and numbers on colored background"
+        },
+        "components": [
+          {
+            "type": "Campaign Banner Card",
+            "description": "Large orange diagonal-cut card with white heading, yellow large-text reward amount and metrics, DeBank logo bottom right",
+            "position": "Upper left in feed",
+            "notable": "Angled cut design adds visual interest; high contrast yellow numbers draw attention to reward amounts"
+          },
+          {
+            "type": "Post Card",
+            "description": "Standard verified author profile, text content with inline links, timestamp",
+            "position": "Below banner",
+            "notable": "KAITO airdrop reference with blue colored token symbol"
+          },
+          {
+            "type": "Engagement Footer",
+            "description": "Likes, reposts, views, and promotion badge",
+            "position": "Bottom of post",
+            "notable": "Promotion badge shows '$0.01 Promotion' indicating lower cost"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large orange campaign card dominates visual attention; reward amounts ($1,000, 57, 38) in gold create secondary focal points; post content below",
+        "innovativeElements": [
+          "Diagonal cut/skew design on campaign card creates visual hierarchy and movement",
+          "Yellow/gold color highlighting on dark background for maximum contrast on key metrics",
+          "Embedded brand logo in campaign card corner for consistent branding"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed-campaign-promotion",
+        "userIntent": "Discover and learn about reward campaigns, content creation programs, and community initiatives",
+        "entryPoints": [
+          "Scroll from previous feed position",
+          "Direct navigation to Community/Stream tab"
+        ],
+        "exitPoints": [
+          "Click campaign card for details",
+          "Follow posted links to full campaign page",
+          "Navigate to stream page view",
+          "Engage with post (like, repost, view)",
+          "View full thread"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Campaign banner card",
+            "action": "Navigate to campaign details or full thread"
+          },
+          {
+            "element": "Translate Post link",
+            "action": "Show translation options"
+          },
+          {
+            "element": "View full thread > arrow",
+            "action": "Expand threaded discussion"
+          },
+          {
+            "element": "Engagement metrics",
+            "action": "Display interaction statistics"
+          },
+          {
+            "element": "External links",
+            "action": "Navigate to campaign pages"
+          }
+        ],
+        "informationArchitecture": "Visual campaign announcement card followed by narrative explanation posts, with supporting details and next steps embedded in post text",
+        "frictionPoints": [
+          "Campaign card may be mistaken for advertisement rather than organic content",
+          "Promotion badge reduces perceived authenticity",
+          "Multiple layers of information (card + post text) require careful reading"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Quality content creation & PrimePost Reward - Issue 38",
+        "subheadline": "$1,000 rewarded to 57 quality posts from 38 creators",
+        "ctas": [
+          {
+            "text": "View full thread >",
+            "style": "text-link",
+            "placement": "Below campaign card"
+          },
+          {
+            "text": "https://debank.com/stream?...",
+            "style": "text-link",
+            "placement": "Within post content"
+          },
+          {
+            "text": "Translate Post",
+            "style": "text-link",
+            "placement": "Below post content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "In PrimePost Issue 38, we had 57 quality posts, with 22 of them nominated for PrimePost voting.",
+            "context": "Campaign announcement",
+            "purpose": "Provide context on campaign metrics"
+          },
+          {
+            "text": "A total of $1,000 has been distributed to 38 excellent creators as a reward!",
+            "context": "Campaign result",
+            "purpose": "Highlight reward distribution"
+          },
+          {
+            "text": "Congrats!",
+            "context": "Congratulatory message",
+            "purpose": "Celebrate creators"
+          },
+          {
+            "text": "This is the last issue of the PrimPost activity series.",
+            "context": "Status update",
+            "purpose": "Communicate program conclusion"
+          },
+          {
+            "text": "Thank you for your continued support and hard work. Stay tuned for new activities we'd be launching in the future!",
+            "context": "Closing message",
+            "purpose": "Build community loyalty and anticipation"
+          }
+        ],
+        "tone": "professional-technical, celebratory, appreciative; forward-looking and optimistic",
+        "dataFormatting": [
+          "$1,000 (reward pool with $ prefix)",
+          "57 (post count)",
+          "22 (nomination count)",
+          "38 (creator count)",
+          "Mar 5, 2025 (post date)",
+          "$0.01 Promotion (promotion cost)"
+        ],
+        "trustSignals": [
+          "Verification badge on author",
+          "Specific reward distribution metrics ($1,000 to 38 creators)",
+          "Named program 'PrimePost Issue 38' suggests established, repeating program",
+          "Transparent participant and post counts",
+          "Congratulatory tone reinforces legitimacy"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-26-official-debank-scrolled-4.png",
+      "label": "official - DeBank — scrolled 4",
+      "flowType": "Home",
+      "step": 26,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#FF6B4A",
+          "#3D4557"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, high contrast dark gray/navy",
+          "bodyStyle": "Regular sans-serif, medium gray, readable line length",
+          "dataStyle": "Metric-focused with engagement counts (12, 34, 132, 4.7K) and monetary badges ($0.03)"
+        },
+        "components": [
+          {
+            "type": "Hero Card",
+            "description": "KAITO Airdrop Hunter promotional badge with orange gradient background, badge icon, and CTA button",
+            "position": "top center",
+            "notable": "Vibrant orange gradient with mint accent on badge; 'Mint Badge' button in contrasting white"
+          },
+          {
+            "type": "Social Proof Card",
+            "description": "DeFi project description with engagement metrics, retweets, likes, impressions, and promotion label",
+            "position": "center",
+            "notable": "$0.03 Promotion badge in coral outline; clean engagement row layout"
+          },
+          {
+            "type": "Community Post",
+            "description": "Official DeBankverified post with avatar, timestamp, multi-paragraph text, link, and translation option",
+            "position": "bottom",
+            "notable": "Blue checkmark verification; structured narrative about PrimePost voting; timestamp precision"
+          },
+          {
+            "type": "Navigation Sidebar",
+            "description": "Right-aligned links panel with Site and Twitter social links",
+            "position": "right side",
+            "notable": "Chevron indicators; minimal but clean CTAs to external properties"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero card dominates top; project card anchors middle; community post extends flow; right sidebar provides secondary navigation",
+        "innovativeElements": [
+          "Badge-within-badge design (K icon nested in KAITO badge)",
+          "Promotion price tag styling ($0.03) as overlay badge",
+          "Community post with integrated link preview and translation toggle"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with community feed",
+        "userIntent": "Discover featured projects, track airdrop opportunities, engage with community content, verify project legitimacy",
+        "entryPoints": [
+          "Homepage link",
+          "Portfolio section navigation",
+          "Community tab"
+        ],
+        "exitPoints": [
+          "Mint Badge button → airdrop campaign",
+          "Site link → external project page",
+          "Twitter link → community social",
+          "Stream link → full event details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Mint Badge button",
+            "action": "Initiates airdrop badge minting flow"
+          },
+          {
+            "element": "Site link (right sidebar)",
+            "action": "Routes to project website"
+          },
+          {
+            "element": "Twitter link (right sidebar)",
+            "action": "Opens DeBankDeFi Twitter profile"
+          },
+          {
+            "element": "Stream link in post",
+            "action": "Expands to full PrimePost voting details"
+          },
+          {
+            "element": "Engagement metrics row",
+            "action": "Likely expandable to show interaction details"
+          }
+        ],
+        "informationArchitecture": "Horizontal flow: hero promotional unit → project card with metadata → community narrative updates, with secondary sidebar for project links",
+        "frictionPoints": [
+          "Translation link at bottom of post suggests non-English content or user language settings",
+          "Unclear whether engagement counts are clickable or display-only",
+          "Community post text is dense; may require scrolling to read full content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "KAITO Airdrop Hunter",
+        "subheadline": "Users who received KAITO airdrop and are verified non-Sybil.",
+        "ctas": [
+          {
+            "text": "Mint Badge",
+            "style": "primary-button",
+            "placement": "hero card center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "debank.com",
+            "context": "URL domain above project title",
+            "purpose": "Source attribution"
+          },
+          {
+            "text": "The real Web3-native messenger and the best web3 portfolio tracker that covers all your tokens, DeFi protocols, NFTs across all EVM chains.",
+            "context": "Project description",
+            "purpose": "Value proposition summary"
+          },
+          {
+            "text": "$0.03 Promotion",
+            "context": "Inline badge",
+            "purpose": "Signals promotional or sponsored content"
+          },
+          {
+            "text": "Feb 26, 2025",
+            "context": "Post metadata",
+            "purpose": "Temporal context for community updates"
+          },
+          {
+            "text": "In PrimePost Issue 37, we had 45 quality posts, with 20 of them nominated for PrimePost voting. A total of $1,000 has been distributed to 30 excellent creators as a reward! Congrats!",
+            "context": "Community post body",
+            "purpose": "Event announcement with gamification/reward signaling"
+          }
+        ],
+        "tone": "professional-technical with community-friendly enthusiasm",
+        "dataFormatting": [
+          "12 (likes)",
+          "34 (retweets)",
+          "132 (favorites)",
+          "4.7K (impressions)",
+          "$1,000 (reward distribution)",
+          "30 (creator count)",
+          "45 (post count)"
+        ],
+        "trustSignals": [
+          "Verified checkmark on DeBankofficial post",
+          "Specific reward distribution ($1,000 to 30 creators) demonstrates ecosystem activity",
+          "Multiple engagement metrics suggest organic community participation",
+          "Airdrop verification clause ('verified non-Sybil') adds credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-home-27-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 27,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#D4D8E3"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, light gray (very low contrast), minimal weight",
+          "bodyStyle": "Medium sans-serif, very light gray, centered",
+          "dataStyle": "Large numeric display in ultra-light color"
+        },
+        "components": [
+          {
+            "type": "Error Code Display",
+            "description": "Large '404' number centered on page",
+            "position": "center-upper",
+            "notable": "Extremely minimal styling; ultra-light color creates almost invisible presence"
+          },
+          {
+            "type": "Error Message Text",
+            "description": "'Nothing to see here' subtext",
+            "position": "center-lower",
+            "notable": "Same ultra-light color as code; poetic/casual tone"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal hierarchy; all elements have equal visual weight due to light coloring; relies on size difference between '404' and text",
+        "innovativeElements": [
+          "Ultra-minimalist error page with near-invisible color palette",
+          "Poetic messaging ('Nothing to see here') instead of technical error language",
+          "Use of whitespace as primary design element"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User navigated to non-existent or invalid URL; needs to understand error occurred and return to valid navigation",
+        "entryPoints": [
+          "Direct URL navigation to invalid path",
+          "Broken internal link",
+          "Expired or removed page"
+        ],
+        "exitPoints": [
+          "Click browser back button",
+          "Click header logo to return to homepage (implied)",
+          "Navigate using top navigation menu (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Header navigation (implied)",
+            "action": "Return to main site sections"
+          }
+        ],
+        "informationArchitecture": "Centered error message with minimal context; relies on user understanding of 404 convention",
+        "frictionPoints": [
+          "No explicit navigation CTA or button to return home",
+          "Extremely light color may cause visibility issues for some users",
+          "No suggested next steps or site map alternative"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "Nothing to see here",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "casual-poetic",
+        "dataFormatting": [
+          "404"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "Nothing to see here"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/debank-settings-1-terms-of-service.png",
+      "label": "Terms of service",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#2D3748",
+          "#3B82F6"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark navy/charcoal",
+          "bodyStyle": "Regular sans-serif, dark gray, justified alignment, generous line height for legal readability",
+          "dataStyle": "Inline date formatting (Mar.5, 2025)"
+        },
+        "components": [
+          {
+            "type": "Header",
+            "description": "Logo, theme toggle, and search icon in minimal top bar",
+            "position": "top left and right",
+            "notable": "Clean minimal header; theme toggle accessible"
+          },
+          {
+            "type": "Page Title",
+            "description": "'Terms of Service' heading",
+            "position": "content top",
+            "notable": "Prominent but not oversized; centers user attention on content"
+          },
+          {
+            "type": "Update Metadata",
+            "description": "'Last Updated: Mar.5, 2025'",
+            "position": "below title",
+            "notable": "Establishes credibility and recency"
+          },
+          {
+            "type": "Legal Body Text",
+            "description": "Multi-paragraph legal prose with emphasis (all-caps sections) and inline links",
+            "position": "main content area",
+            "notable": "Blue hyperlinks; strategic ALL-CAPS for key disclaimers (non-custodial, no fiduciary duty)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title dominates; update date provides secondary context; body text organized by paragraph breaks; ALL-CAPS creates visual emphasis on critical legal points",
+        "innovativeElements": [
+          "Strategic use of ALL-CAPS for key legal disclaimers rather than underline or bold",
+          "Inline hyperlink (https://debank.com) maintains flow while providing reference",
+          "Clean separation of document metadata from content"
+        ]
+      },
+      "flow": {
+        "screenType": "legal documentation",
+        "userIntent": "User needs to read and understand service terms before signing up or using platform; verify compliance and legal obligations",
+        "entryPoints": [
+          "Settings/More menu",
+          "Link from signup flow",
+          "Footer legal links"
+        ],
+        "exitPoints": [
+          "Back to home (implicit header logo click)",
+          "Navigate to other legal docs (Privacy Policy, etc.)",
+          "Scroll to end and accept terms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Theme toggle button (top right)",
+            "action": "Switches light/dark mode for reading preference"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search within terms document"
+          },
+          {
+            "element": "Inline links (e.g., https://debank.com)",
+            "action": "Navigate to referenced external pages"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to homepage"
+          }
+        ],
+        "informationArchitecture": "Linear document structure; introduction → service definitions → user obligations → disclaimer (non-custodial status) → service description. Content organized by logical legal sections",
+        "frictionPoints": [
+          "Dense legal text may require multiple readings",
+          "No table of contents or section navigation for long document",
+          "No search function visible (only icon hint)",
+          "No explicit 'I Accept' CTA at visible scroll position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": "Last Updated: Mar.5, 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last Updated: Mar.5, 2025",
+            "context": "Below headline",
+            "purpose": "Establishes document currency and credibility"
+          }
+        ],
+        "tone": "professional-technical legal",
+        "dataFormatting": [
+          "Mar.5, 2025"
+        ],
+        "trustSignals": [
+          "Explicit disclaimer: 'DEBANK IS NOT A BROKER, FINANCIAL INSTITUTION OR INTERMEDIARY'",
+          "Clear statement: 'DEBANK IS A NON-CUSTODIAL PLATFORM'",
+          "Legal company attribution: 'OPCODE LABS PTE. LTD.'",
+          "Emphasis on user responsibility and authority verification"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,2088 @@
+{
+  "slug": "gate-io",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T11:48:10.973Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 15,
+  "screens": [
+    {
+      "image": "/screenshots/gate-io-home-8-profile-page.png",
+      "label": "profile page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#007bff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), high contrast white on dark",
+          "bodyStyle": "Regular sans-serif, 14-16px, gray text for secondary content",
+          "dataStyle": "Numeric data shown with popularity metrics (e.g., '88.47K Popularity'), light gray labels"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left panel with Square, Latest, Hot, News, Profile options",
+            "position": "Left edge",
+            "notable": "Dark background with icon+text combos, Primary 'Post' button at bottom"
+          },
+          {
+            "type": "Community Feed Card",
+            "description": "Central content card showing festival event with red banner image",
+            "position": "Center main area",
+            "notable": "Large promotional image with text overlay, linked content, expandable details"
+          },
+          {
+            "type": "Trending Topics Sidebar",
+            "description": "Right sidebar showing hashtag trends with popularity scores",
+            "position": "Right edge",
+            "notable": "Flame icons indicate trending status, popularity percentages, 'View More' link"
+          },
+          {
+            "type": "Community CTA Card",
+            "description": "Right sidebar card with '49M users' headline and Sign up/Login buttons",
+            "position": "Top right",
+            "notable": "Bold value proposition with emoji icons for engagement messaging"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors navigation, center feed dominates visual weight, right panels provide secondary actions and discovery",
+        "innovativeElements": [
+          "Gamified trending topics with flame emoji and popularity scores",
+          "Split integration of community CTA and trending discovery on right",
+          "Content mining yield concept in post input placeholder"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Browse community content, discover trending topics, join community engagement",
+        "entryPoints": [
+          "From main navigation 'Community' link",
+          "From profile section",
+          "Deep link from shared community post"
+        ],
+        "exitPoints": [
+          "Click trending topic hashtag",
+          "Click 'Write an Article' link",
+          "Click 'Sign up' or 'Login' CTAs",
+          "Navigate to other sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post content card",
+            "action": "Expand to view full details, click user profile, follow content creator"
+          },
+          {
+            "element": "Trending Topics",
+            "action": "Click hashtag to filter/view related posts"
+          },
+          {
+            "element": "Write an Article",
+            "action": "Opens article creation modal"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for content, users, or topics"
+          }
+        ],
+        "informationArchitecture": "Primary navigation (sidebar) → content feed (center) with engagement options → discovery sidebar (trending + community CTA). Supports both content consumption and community joining flows.",
+        "frictionPoints": [
+          "Sign up/Login required to post or write articles",
+          "Unclear what 'content mining yield' entails without clicking",
+          "Multiple call-to-actions (Sign up button appears twice on right)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join 49M users in our growing community",
+        "subheadline": "Join 49M users in the crypto craze discussion",
+        "ctas": [
+          {
+            "text": "Write an Article",
+            "style": "text-link",
+            "placement": "Center feed toolbar"
+          },
+          {
+            "text": "Post",
+            "style": "primary-button",
+            "placement": "Center feed toolbar"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Right sidebar community card"
+          },
+          {
+            "text": "Login",
+            "style": "text-link",
+            "placement": "Right sidebar community card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Post content & earn content mining yield",
+            "context": "Post input placeholder",
+            "purpose": "Educate on rewards mechanism for participation"
+          },
+          {
+            "text": "Just Now",
+            "context": "Below creator name",
+            "purpose": "Temporal context for post freshness"
+          },
+          {
+            "text": "Engage with your favorite top creators",
+            "context": "Community CTA card",
+            "purpose": "Value prop for joining community"
+          },
+          {
+            "text": "See what interests you",
+            "context": "Community CTA card",
+            "purpose": "Value prop for discovery experience"
+          }
+        ],
+        "tone": "friendly-casual, community-focused, gamified engagement",
+        "dataFormatting": [
+          "88.47K Popularity",
+          "7.2K Popularity",
+          "7.95K Popularity",
+          "54.94K Popularity"
+        ],
+        "trustSignals": [
+          "49M users in community",
+          "Rewards Hub mention in main navigation",
+          "User verification badges (e.g., 'VIP0')"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-9-activity-page.png",
+      "label": "activity page",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Serif bold, large (48px+), centered, black",
+          "bodyStyle": "Regular serif, small (14px)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error Page Header",
+            "description": "Large '404 Not Found' heading",
+            "position": "Top center",
+            "notable": "Serif typography, minimal styling"
+          },
+          {
+            "type": "Server Info",
+            "description": "Small 'nginx' text",
+            "position": "Center",
+            "notable": "Indicates server-level error page, not branded Gate interface"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal hierarchy — focused on error message with minimal supporting context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User navigated to unavailable or broken link",
+        "entryPoints": [
+          "Broken navigation link from main site",
+          "Invalid URL path",
+          "Expired or removed activity page"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Manual navigation to home",
+          "Search function"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Bare nginx error response — not integrated with Gate's design system",
+        "frictionPoints": [
+          "No helpful error messaging or next steps",
+          "No branding or context (appears to be server error page, not app error page)",
+          "No navigation options or recovery CTAs",
+          "User stranded with no clear way to proceed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "nginx",
+            "context": "Below headline",
+            "purpose": "Indicates server/infrastructure"
+          }
+        ],
+        "tone": "technical, minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404 Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-onboarding-1-landing-sign-up-modal.png",
+      "label": "Landing — Sign up modal",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#0066ff",
+          "#ff0000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 36px+, black on white",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Image Panel",
+            "description": "Left side with Red Bull Racing F1 car on blue dynamic background",
+            "position": "Left 45% of screen",
+            "notable": "High-impact sports sponsorship imagery with Oracle Red Bull Racing partnership badge, creates premium perception"
+          },
+          {
+            "type": "Sign Up Form Panel",
+            "description": "Right side with form inputs and CTAs on white background",
+            "position": "Right 55% of screen",
+            "notable": "Clean, minimal form with country dropdown, checkbox agreement, prominent primary CTA"
+          },
+          {
+            "type": "CTA Button",
+            "description": "'Sign Up to Claim 20 USDT' button",
+            "position": "Center of form panel",
+            "notable": "Dark background, white text, wallet icon, value proposition in button text"
+          },
+          {
+            "type": "Legal Agreement Checkbox",
+            "description": "Terms/Privacy acceptance",
+            "position": "Below country dropdown",
+            "notable": "Linked text to User Agreement and Privacy Policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image draws eye left, form hierarchy flows top-to-bottom with CTA as focal point right side",
+        "innovativeElements": [
+          "Sports partnership co-branding (Oracle Red Bull Racing) on hero image",
+          "Integrated welcome message with offer in headline area",
+          "Dynamic blue background suggests speed/energy matching brand"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create account and claim signup bonus (20 USDT)",
+        "entryPoints": [
+          "Landing page visit",
+          "Sign Up button from navigation",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Complete sign up form → account creation",
+          "Click 'Log In' link → login page",
+          "Close modal → return to marketing site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Country/Region Dropdown",
+            "action": "Select user location for regional product availability"
+          },
+          {
+            "element": "Terms Checkbox",
+            "action": "Accept User Agreement and Privacy Policy before signup enabled"
+          },
+          {
+            "element": "Sign Up to Claim 20 USDT Button",
+            "action": "Submit form and initiate account creation flow"
+          },
+          {
+            "element": "Log In Link",
+            "action": "Switch to login flow for existing users"
+          }
+        ],
+        "informationArchitecture": "Hero image (left) establishes brand trust via sports partnership. Form (right) captures essential info (location) and agreement. Single CTA dominates with clear value exchange (sign up → 20 USDT).",
+        "frictionPoints": [
+          "Requires country selection before proceeding (potential friction if location is misdetected)",
+          "Must accept legal agreements to proceed",
+          "No password strength guidance visible (likely on next step)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Gate",
+        "subheadline": "Country/Region",
+        "ctas": [
+          {
+            "text": "Sign Up to Claim 20 USDT",
+            "style": "primary-button",
+            "placement": "Center form panel"
+          },
+          {
+            "text": "Log In",
+            "style": "text-link",
+            "placement": "Below primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By creating an account, I agree to the User Agreement and Privacy Policy",
+            "context": "Legal checkbox",
+            "purpose": "Establish consent for account creation and data handling"
+          },
+          {
+            "text": "Already have an account?",
+            "context": "Above Log In link",
+            "purpose": "Account recovery path for returning users"
+          }
+        ],
+        "tone": "professional-technical, welcoming, incentive-driven",
+        "dataFormatting": [
+          "20 USDT (signup bonus)"
+        ],
+        "trustSignals": [
+          "Oracle Red Bull Racing partnership badge",
+          "Premium sports sponsorship co-branding",
+          "User Agreement and Privacy Policy links"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#0066FF",
+          "#00FF00"
+        ],
+        "typography": {
+          "headingStyle": "Extra bold sans-serif, high contrast with neon green highlight on key words",
+          "bodyStyle": "Regular weight sans-serif, light gray on dark background",
+          "dataStyle": "Monospace-like treatment for prices and percentages in teal/green color"
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Large 'GATEWAY TO CRYPTO' headline with neon green highlight on 'CRYPTO'",
+            "position": "Left side, upper portion",
+            "notable": "Aggressive color contrast creates memorable brand moment"
+          },
+          {
+            "type": "Sign-up Form",
+            "description": "Email/phone input field with blue 'Sign Up' button",
+            "position": "Left side, below headline",
+            "notable": "Primary CTA is prominent and actionable"
+          },
+          {
+            "type": "Social Login Options",
+            "description": "Five icon buttons for Apple, Google, MetaMask, Telegram, and QR code",
+            "position": "Left side, lower section",
+            "notable": "Multiple entry pathways reduce friction"
+          },
+          {
+            "type": "Crypto Ticker Panel",
+            "description": "Right-side card showing spot trading pairs with prices and 24h change percentages",
+            "position": "Right side, full height",
+            "notable": "Real-time market data visible immediately, drives engagement"
+          },
+          {
+            "type": "Chart Widget",
+            "description": "Mini candlestick chart showing BTC price movement",
+            "position": "Center of right panel",
+            "notable": "Visual market activity indicator in hero section"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side guides user toward signup (warm path), right side showcases product value (market data and ticker), hierarchy flows top-to-bottom on left then eye drawn rightward to active data",
+        "innovativeElements": [
+          "Neon green highlight treatment for brand emphasis",
+          "Real-time ticker integrated into landing page hero",
+          "Dual-panel design that balances CTAs with product showcase"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand the platform, evaluate if it's trustworthy, sign up",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign",
+          "Search result"
+        ],
+        "exitPoints": [
+          "Sign Up button",
+          "Social login options",
+          "Markets navigation",
+          "View All for ticker"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign Up Button",
+            "action": "Initiates account creation flow"
+          },
+          {
+            "element": "Social Login Icons",
+            "action": "Alternative signup paths"
+          },
+          {
+            "element": "Crypto Ticker Items",
+            "action": "Likely navigates to individual trading pages"
+          },
+          {
+            "element": "View All Link",
+            "action": "Expands ticker to full list"
+          }
+        ],
+        "informationArchitecture": "Left side dedicated to conversion (sign up), right side dedicated to proof points (live market data and social proof via 49M traders stat). Navigation bar emphasizes product depth (Markets, Trade, Community).",
+        "frictionPoints": [
+          "Modal dialog about Web3 renaming and EU site redirect creates cognitive load",
+          "Site region disclaimer banner at top reduces clarity"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "GATEWAY TO CRYPTO",
+        "subheadline": "49M Traders' Trusted Choice",
+        "ctas": [
+          {
+            "text": "Sign Up",
+            "style": "primary-button",
+            "placement": "Below email input field"
+          },
+          {
+            "text": "View All",
+            "style": "text-link",
+            "placement": "Right panel, ticker section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email or Phone",
+            "context": "Input field placeholder",
+            "purpose": "Clarifies input field accepts multiple formats"
+          },
+          {
+            "text": "Or Continue With",
+            "context": "Above social login options",
+            "purpose": "Introduces alternative signup methods"
+          },
+          {
+            "text": "Download App",
+            "context": "Below social icons",
+            "purpose": "Directs to mobile application"
+          },
+          {
+            "text": "Spot / Futures / New",
+            "context": "Ticker section tabs",
+            "purpose": "Segments trading pair types"
+          }
+        ],
+        "tone": "professional-technical with casual confidence",
+        "dataFormatting": [
+          "$7.27",
+          "+2.83%",
+          "$2,087.3",
+          "$69,816.1",
+          "90,843.7"
+        ],
+        "trustSignals": [
+          "49M Traders' Trusted Choice",
+          "Official Crypto Partner branding (Oracle, Red Bull Racing, Inter)",
+          "Real-time market data display"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "overlay-modal",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066FF",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Not present in modal",
+          "bodyStyle": "Small regular weight sans-serif, light text on semi-transparent dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Alert Modal",
+            "description": "White-bordered dialog box with warning icon (orange circle with exclamation)",
+            "position": "Center of screen, above other content",
+            "notable": "Warning severity indicated by orange color and icon placement"
+          },
+          {
+            "type": "Text Content",
+            "description": "Information about Web3 renaming and Trade section relocation",
+            "position": "Inside modal, main body",
+            "notable": "Contextual message explains platform changes"
+          },
+          {
+            "type": "Action Button",
+            "description": "Dark 'OK' button to dismiss modal",
+            "position": "Bottom of modal",
+            "notable": "Single action path, required confirmation"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Icon draws eye first, text explains context, button enables dismissal",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Acknowledge platform changes and proceed",
+        "entryPoints": [
+          "Automatic display on page load"
+        ],
+        "exitPoints": [
+          "OK button to dismiss and return to landing page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "OK Button",
+            "action": "Closes modal and dismisses alert"
+          }
+        ],
+        "informationArchitecture": "Interrupting but necessary information delivery. Modal blocks underlying content until dismissed.",
+        "frictionPoints": [
+          "Modal interrupts user flow to landing page",
+          "Requires explicit acknowledgment before proceeding",
+          "Message about Web3 renaming may confuse users unfamiliar with platform history"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "OK",
+            "style": "primary-button",
+            "placement": "Bottom of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "It seems that you're accessing our website from the EU region. Please switch to the EU site to view the products supported in your current region.",
+            "context": "Modal body text (combined informational message)",
+            "purpose": "Informs user of regional product differences and suggests action"
+          },
+          {
+            "text": "Web3 has been renamed to DEX and moved to the Trade section.",
+            "context": "Modal body text (informational message)",
+            "purpose": "Explains platform navigation changes"
+          }
+        ],
+        "tone": "informational-formal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-4-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#0066FF",
+          "#00FF00",
+          "#17D4A0"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black text on light/white background for sections",
+          "bodyStyle": "Regular weight sans-serif for body text and labels",
+          "dataStyle": "Monospace numbers in teal/green color for prices, red/green for gains/losses"
+        },
+        "components": [
+          {
+            "type": "Trading Chart Panel",
+            "description": "Left-side advanced candlestick chart with multiple timeframe tabs and technical analysis tools",
+            "position": "Left side, upper portion (approximately 60% width)",
+            "notable": "Professional trading terminal aesthetic with full suite of analysis tools"
+          },
+          {
+            "type": "Asset Sidebar",
+            "description": "Left sidebar list showing BTC, GT, ETH, SOL, XRP, DOGE with prices",
+            "position": "Far left edge",
+            "notable": "Quick-access favorites list integrated within chart view"
+          },
+          {
+            "type": "App Download Section",
+            "description": "Right-side promotional panel with QR code and download links for iOS, Android, Mac, Windows, and API",
+            "position": "Right side, occupies ~40% width",
+            "notable": "Multi-platform distribution prominently featured in trading context"
+          },
+          {
+            "type": "Call-to-action Elements",
+            "description": "Download buttons for each platform with distinctive icons",
+            "position": "Right side, lower section",
+            "notable": "Icon-based presentation reduces cognitive load"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left dominates with chart (product showcase), right provides download pathways (conversion funnel). Headline 'Trade Crypto Anywhere, Anytime' anchors the value proposition.",
+        "innovativeElements": [
+          "Integration of trading terminal directly into landing page scroll experience",
+          "Multi-platform download options presented contextually during product demonstration",
+          "QR code for immediate app access"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-scrolled",
+        "userIntent": "Explore trading capabilities, understand product depth, download mobile app",
+        "entryPoints": [
+          "Scrolled from initial landing page",
+          "Direct landing on this section via campaign links"
+        ],
+        "exitPoints": [
+          "QR code scan to app",
+          "Platform-specific download buttons (iOS, Android, Mac, Windows, API)",
+          "Chart interaction to begin trading",
+          "Crypto ticker click-through"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Candlestick Chart",
+            "action": "Interactive charting with zoom, pan, drawing tools"
+          },
+          {
+            "element": "Timeframe Tabs (1m, 15m, 1h, 1D, More)",
+            "action": "Changes chart data resolution"
+          },
+          {
+            "element": "Asset List Items",
+            "action": "Likely switches chart to that asset"
+          },
+          {
+            "element": "Download Buttons",
+            "action": "Initiates platform-specific app downloads"
+          },
+          {
+            "element": "QR Code",
+            "action": "Mobile scan for immediate app access"
+          },
+          {
+            "element": "More Download Options Link",
+            "action": "Expands list of available downloads"
+          }
+        ],
+        "informationArchitecture": "Demonstrates product in use (left) while providing immediate action paths (right). Creates narrative arc: see what traders do → download the app to do it yourself.",
+        "frictionPoints": [
+          "Chart complexity may overwhelm non-expert users",
+          "Multiple download options could create decision paralysis"
+        ],
+        "progressIndicators": [
+          "Timeframe selector indicates chart granularity",
+          "Asset list shows available trading pairs"
+        ]
+      },
+      "copy": {
+        "headline": "Trade Crypto Anywhere, Anytime",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Scan to Download App",
+            "style": "informational",
+            "placement": "Above QR code"
+          },
+          {
+            "text": "iOS & Android",
+            "style": "text-link",
+            "placement": "Below QR code"
+          },
+          {
+            "text": "More Download Options",
+            "style": "text-link",
+            "placement": "Below platform buttons"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "iOS & Android",
+            "context": "QR code section",
+            "purpose": "Clarifies supported mobile platforms"
+          },
+          {
+            "text": "Mac OS / Windows / API",
+            "context": "Download options row",
+            "purpose": "Presents alternative platform options"
+          },
+          {
+            "text": "Chart / Overview / Data / Square / Copy / Bots",
+            "context": "Chart tool tabs",
+            "purpose": "Lists available chart analysis and interaction modes"
+          },
+          {
+            "text": "All / New / Stocks / Trump / Market Cap",
+            "context": "Asset filter tabs",
+            "purpose": "Segments available trading pairs by category"
+          }
+        ],
+        "tone": "confident-motivational",
+        "dataFormatting": [
+          "90,843.7",
+          "-4.34%",
+          "2.82",
+          "11",
+          "0.11"
+        ],
+        "trustSignals": [
+          "Professional trading interface demonstration",
+          "Multi-platform availability signal",
+          "Real-time market data display"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-5-landing-page-scrolled-2.png",
+      "label": "Landing page — scrolled 2",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), black text for main headline",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px for descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "numbered-list",
+            "description": "3-step onboarding flow with large numerals and action CTAs",
+            "position": "left side, stacked vertically",
+            "notable": "Each step has supporting descriptive text and a soft-background CTA button"
+          },
+          {
+            "type": "illustration",
+            "description": "Playful line-art and geometric illustration with gift box, coins, shapes",
+            "position": "right side, centered",
+            "notable": "Bright accent colors (blue diamond, green circles, star shapes) break up minimalist design"
+          },
+          {
+            "type": "banner-alert",
+            "description": "Regional compliance notice with orange warning icon",
+            "position": "top, sticky",
+            "notable": "Non-intrusive but visible, includes 'Switch Site' and close button"
+          },
+          {
+            "type": "floating-widget",
+            "description": "Download/deposit incentive badge showing '10,000+ USDT'",
+            "position": "bottom-right corner",
+            "notable": "Bright blue button with arrow icon creates urgency for secondary CTA"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-aligned text content dominates upper portion; eye draws from headline → numbered steps → CTAs, balanced by right-side illustration",
+        "innovativeElements": [
+          "Numbered progression steps paired with minimalist inline CTAs rather than large block buttons",
+          "Playful geometric illustration style contrasts with professional headings"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Understand how to get started as a new crypto user on Gate.io",
+        "entryPoints": [
+          "Landing page initial visit",
+          "Marketing link for new users",
+          "Navigation menu 'How to Get Started'"
+        ],
+        "exitPoints": [
+          "Register Now button → Account creation flow",
+          "Buy Crypto button → Quick purchase flow",
+          "Trade Now button → Trading interface",
+          "Switch Site button → Regional variant",
+          "Navigation to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Register Now button",
+            "action": "Navigate to account creation/signup form"
+          },
+          {
+            "element": "Buy Crypto button",
+            "action": "Navigate to quick purchase interface"
+          },
+          {
+            "element": "Trade Now button",
+            "action": "Navigate to trading dashboard or pre-login trading view"
+          },
+          {
+            "element": "Switch Site button",
+            "action": "Redirect to EU-compliant regional site"
+          },
+          {
+            "element": "Download badge",
+            "action": "Initiate app download or deposit flow"
+          }
+        ],
+        "informationArchitecture": "Linear progression: Account → Purchase → Trade. Each step logically builds on previous without requiring backtracking",
+        "frictionPoints": [
+          "Regional compliance banner may confuse users unfamiliar with regional restrictions",
+          "Three separate CTAs compete for attention (Register, Buy, Trade)",
+          "Users must choose their entry point; no single recommended path highlighted"
+        ],
+        "progressIndicators": [
+          "Numeric step indicators (1, 2, 3) signal progression"
+        ]
+      },
+      "copy": {
+        "headline": "How to Get Started",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Register Now →",
+            "style": "primary-button",
+            "placement": "Under step 1 (Create an Account)"
+          },
+          {
+            "text": "Buy Crypto →",
+            "style": "secondary-button",
+            "placement": "Under step 2 (Quick Buy)"
+          },
+          {
+            "text": "Trade Now →",
+            "style": "secondary-button",
+            "placement": "Under step 3 (Start Trading)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Register and claim exclusive newcomer rewards.",
+            "context": "Under 'Create an Account' step",
+            "purpose": "Incentivize account creation with rewards mention"
+          },
+          {
+            "text": "Buy crypto in a few, easy steps.",
+            "context": "Under 'Quick Buy' step",
+            "purpose": "Reduce perceived friction; emphasize simplicity"
+          },
+          {
+            "text": "Buy and sell crypto, copy trade, and more.",
+            "context": "Under 'Start Trading' step",
+            "purpose": "Highlight feature breadth beyond simple trading"
+          },
+          {
+            "text": "It seems that you're accessing our website from the EU region. Please switch to the EU site to view the products supported in your current region.",
+            "context": "Top banner alert",
+            "purpose": "Compliance notification; encourage region-appropriate access"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Exclusive newcomer rewards mentioned",
+          "Regional compliance framework displayed (EU regulation adherence)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-6-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#E0E7FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (56px+), black text centered",
+          "bodyStyle": "Regular sans-serif, dark gray, 14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "404-illustration",
+            "description": "Large '404' numbers with rocket ship, clouds, and crypto coin iconography",
+            "position": "center, above fold",
+            "notable": "Playful, not alarming; includes Bitcoin and Tether icons to maintain product identity"
+          },
+          {
+            "type": "primary-cta",
+            "description": "'Back to Homepage' button in bright blue",
+            "position": "center, below headline",
+            "notable": "Single clear exit path; rounded pill shape for friendliness"
+          },
+          {
+            "type": "helpful-links-section",
+            "description": "Two-column grid: 'Here are some helpful links' and 'Trending stories that might interest you'",
+            "position": "bottom half of page",
+            "notable": "Converts dead-end into navigation hub; links organized by category"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered 404 dominates; eye moves down to CTA, then to helpful links grid below",
+        "innovativeElements": [
+          "404 page converted to content discovery hub with trending stories and multiple navigation paths",
+          "Crypto-themed illustration (Bitcoin, Tether coins) maintains brand identity despite error state"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User arrived at non-existent page; needs to recover and find relevant content",
+        "entryPoints": [
+          "Broken or outdated link",
+          "Mistyped URL",
+          "Deleted page previously bookmarked"
+        ],
+        "exitPoints": [
+          "Back to Homepage button",
+          "Spot, Futures, Alpha, Leveraged Tokens links (trading modules)",
+          "Markets, Big Data, Price Prediction, How to Buy (research/education)",
+          "News, Gate Learn, Gate Blog, Crypto Wiki, Glossary (content)",
+          "Trending stories links (trending articles)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back to Homepage button",
+            "action": "Navigate to site homepage"
+          },
+          {
+            "element": "Left column links (Spot, Futures, Alpha, Leveraged Tokens, Buy & Sell)",
+            "action": "Navigate to trading/purchasing modules"
+          },
+          {
+            "element": "Middle column links (Markets, Big Data, Price Prediction, How to Buy, Fiat-Crypto Converter)",
+            "action": "Navigate to research and conversion tools"
+          },
+          {
+            "element": "Right column links (News, Gate Learn, Gate Blog, Crypto Wiki, Glossary)",
+            "action": "Navigate to educational content"
+          },
+          {
+            "element": "Trending stories (article titles, right section)",
+            "action": "Navigate to specific blog articles"
+          }
+        ],
+        "informationArchitecture": "Error recovery page organized into: Primary action (Homepage), Secondary navigation (product modules + tools), Tertiary navigation (content discovery + trending)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sorry, page not found",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Back to Homepage",
+            "style": "primary-button",
+            "placement": "Center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Here are some helpful links",
+            "context": "Section header, left side",
+            "purpose": "Introduce alternative navigation paths"
+          },
+          {
+            "text": "Trending stories that might interest you",
+            "context": "Section header, right side",
+            "purpose": "Suggest relevant content to keep user engaged"
+          }
+        ],
+        "tone": "professional-casual, empathetic",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Sorry, page not found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-home-7-explore-page.png",
+      "label": "explore page",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#E3F2FD"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (48px+), black text on left; stacked multi-line",
+          "bodyStyle": "Regular sans-serif, dark gray, 16px for body copy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Split layout with bold headline on left, large illustration on right showing search interface",
+            "position": "top, full-width",
+            "notable": "Light blue gradient background; illustration contains crypto icons (Bitcoin, Ethereum, Tether) in search results"
+          },
+          {
+            "type": "descriptive-text",
+            "description": "3-line body copy explaining Gate Explore's value proposition",
+            "position": "left side, below headline",
+            "notable": "Emphasizes speed ('few minutes') and trend-following capability"
+          },
+          {
+            "type": "card-grid",
+            "description": "Horizontal scrollable grid of research/article cards with images and titles",
+            "position": "bottom, 'Latest Research' section",
+            "notable": "Cards have distinct illustrations (coins with downtrend, atomic symbol, golden pie chart); titles are truncated"
+          },
+          {
+            "type": "floating-widget",
+            "description": "Download badge '10,000+ USDT' with blue download button",
+            "position": "bottom-right corner",
+            "notable": "Consistent placement across multiple pages; creates multi-page affordance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates; eye moves to illustration, then down to descriptive copy, then to card grid below",
+        "innovativeElements": [
+          "Illustration integrates product UI mockup (search interface) with crypto symbols, showing end-user benefit",
+          "Card grid suggests horizontal scrolling without visible scroll indicators"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and browse crypto research, news, and educational content",
+        "entryPoints": [
+          "Navigation menu (likely 'Explore' or 'Research' link)",
+          "Direct URL navigation",
+          "Internal link from homepage or other pages"
+        ],
+        "exitPoints": [
+          "Card grid items → Individual article pages",
+          "Top navigation menu → Other sections (Markets, Trade, Futures, etc.)",
+          "Download badge → App download or deposit flow",
+          "Scroll down → More research articles (below fold)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Research cards",
+            "action": "Navigate to full article view"
+          },
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Download badge",
+            "action": "Initiate app download or deposit flow"
+          },
+          {
+            "element": "Card grid scroll",
+            "action": "Reveal additional research articles"
+          }
+        ],
+        "informationArchitecture": "Hero introduction to research purpose → Grid of latest articles organized by topic/type. No explicit filtering visible; suggests either algorithmic ranking or chronological ordering",
+        "frictionPoints": [
+          "Article card titles are truncated; full titles unclear without hover/click",
+          "No visible search functionality despite 'research' framing",
+          "No obvious filtering or sorting controls for research discovery"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "One - Stop\nBlockchain & Crypto Research",
+        "subheadline": "Catch up with the hottest blockchain & crypto topics in just a few minutes. Stay in trend with the rapidly developing digital asset ecosystem. Brought to you by the Gate Explore research team.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Latest Research",
+            "context": "Section heading, above card grid",
+            "purpose": "Identify content type and section purpose"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Gate Explore research team attribution (credibility signal)",
+          "Focus on 'hottest' and 'trending' topics (relevance signal)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-onboarding-2-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Black, sans-serif, large (48px+), centered, bold",
+          "bodyStyle": "Gray, sans-serif, medium (14-16px), centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, menu items (Buy Crypto, Markets, Trade, Community, More, Rewards Hub), search, and auth buttons",
+            "position": "top",
+            "notable": "Dark background with white text, persistent across screens"
+          },
+          {
+            "type": "regional-alert",
+            "description": "Orange banner warning about EU region access with Switch Site CTA",
+            "position": "top, below nav",
+            "notable": "Dismissible, warning tone"
+          },
+          {
+            "type": "tab-group",
+            "description": "Three login method tabs: Email/Username, Phone, QR Code",
+            "position": "upper-center",
+            "notable": "QR Code tab actively selected with underline"
+          },
+          {
+            "type": "qr-code-display",
+            "description": "Large QR code with Gate logo overlay and phone mockup showing app interface",
+            "position": "center",
+            "notable": "Visual representation of mobile-first authentication flow"
+          },
+          {
+            "type": "checkbox",
+            "description": "Bind IP (Security option) toggle",
+            "position": "below QR code",
+            "notable": "Optional security enhancement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline > Tab selector > QR code visual > Instructions > Checkbox, eye drawn to center QR code",
+        "innovativeElements": [
+          "QR code login with phone mockup visualization",
+          "Multi-method authentication tabs"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Authenticate and access Gate.io platform via QR code scanning",
+        "entryPoints": [
+          "Log In button from nav",
+          "Sign Up redirect",
+          "Deep link from mobile app"
+        ],
+        "exitPoints": [
+          "Scan QR with Gate App",
+          "Switch to Email/Username tab",
+          "Switch to Phone tab"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email/Username tab",
+            "action": "Switches login method to email/username form"
+          },
+          {
+            "element": "Phone tab",
+            "action": "Switches login method to phone number form"
+          },
+          {
+            "element": "QR Code tab",
+            "action": "Displays QR code for mobile app scanning"
+          },
+          {
+            "element": "Bind IP checkbox",
+            "action": "Enables IP binding security feature"
+          }
+        ],
+        "informationArchitecture": "Top-level authentication method selector leading to QR code display with security option",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Log In",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Switch Site",
+            "style": "secondary-button",
+            "placement": "top-right in regional alert"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "It seems that you're accessing our website from the EU region. Please switch to the EU site to view the products supported in your current region.",
+            "context": "Regional alert banner",
+            "purpose": "Inform user of region-specific access restrictions"
+          },
+          {
+            "text": "Log in with QR code",
+            "context": "Below QR code display",
+            "purpose": "Describes primary action"
+          },
+          {
+            "text": "Scan this code with your Gate App",
+            "context": "Below QR code",
+            "purpose": "Instructional guidance"
+          },
+          {
+            "text": "Bind IP (Security option)",
+            "context": "Checkbox label",
+            "purpose": "Explains optional security feature"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-settings-1-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Black, sans-serif, extra-large (48px+), left-aligned, bold",
+          "bodyStyle": "Black, sans-serif, medium (16px), centered within cards",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "search-bar",
+            "description": "Full-width search input with magnifying glass icon",
+            "position": "upper-center, below headline",
+            "notable": "Light gray background, placeholder text 'Search'"
+          },
+          {
+            "type": "card-grid",
+            "description": "2x4 grid of self-service action cards with icons",
+            "position": "center, below search",
+            "notable": "Each card has icon, label, and light border"
+          },
+          {
+            "type": "icon-set",
+            "description": "8 icons representing different account management functions",
+            "position": "within cards",
+            "notable": "Simple, flat design with colored accents (lock, clipboard, phone, envelope, authenticator, rocket, badge, shield icons)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline (left-aligned) > Search bar (center) > 8 equal-weight action cards in grid, user can select any option",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find self-service support solutions for account security and settings",
+        "entryPoints": [
+          "Help/Support menu",
+          "Settings page",
+          "Account menu"
+        ],
+        "exitPoints": [
+          "Reset Login Password",
+          "Change Funds Password",
+          "Change Phone Number",
+          "Email Setup",
+          "Change Google Authenticator",
+          "Self-Help Acceleration",
+          "Token Recovery",
+          "Official Verification Channel"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filters available help topics"
+          },
+          {
+            "element": "Reset Login Password card",
+            "action": "Navigates to password reset flow"
+          },
+          {
+            "element": "Change Funds Password card",
+            "action": "Navigates to funds password change"
+          },
+          {
+            "element": "Change Phone Number card",
+            "action": "Navigates to phone number update"
+          },
+          {
+            "element": "Email Setup card",
+            "action": "Navigates to email configuration"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: main question 'What can we do for you?' leads to 8 equally-accessible self-service tasks",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "What can we do for you?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Reset Login Password",
+            "style": "card-button",
+            "placement": "card in grid"
+          },
+          {
+            "text": "Change Funds Password",
+            "style": "card-button",
+            "placement": "card in grid"
+          },
+          {
+            "text": "Change Phone Number",
+            "style": "card-button",
+            "placement": "card in grid"
+          },
+          {
+            "text": "Email Setup",
+            "style": "card-button",
+            "placement": "card in grid"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Change Google Authenticator",
+            "context": "Card label",
+            "purpose": "Describes action"
+          },
+          {
+            "text": "Self-Help Acceleration",
+            "context": "Card label",
+            "purpose": "Describes support service"
+          },
+          {
+            "text": "Token Recovery",
+            "context": "Card label",
+            "purpose": "Describes recovery service"
+          },
+          {
+            "text": "Official Verification Channel",
+            "context": "Card label",
+            "purpose": "Describes verification service"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Verification Channel"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-staking-1-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f0f0f0"
+        ],
+        "typography": {
+          "headingStyle": "Black, sans-serif, large (32px+), centered, bold",
+          "bodyStyle": "Gray, sans-serif, medium (14-16px), centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "illustration",
+            "description": "Colorful SVG showing interconnected service icons (location pin, heart, cross, lightning bolt, dollar sign, phone) with dotted paths on light background",
+            "position": "center, upper half",
+            "notable": "Represents multi-service ecosystem or geographic availability"
+          },
+          {
+            "type": "error-state-heading",
+            "description": "Bold black headline 'Service Limited to Specific Regions'",
+            "position": "center, below illustration",
+            "notable": "Clear, prominent messaging"
+          },
+          {
+            "type": "error-message",
+            "description": "Gray explanatory text about regional restrictions",
+            "position": "center, below heading",
+            "notable": "Empathetic tone acknowledging inconvenience"
+          },
+          {
+            "type": "primary-cta",
+            "description": "Dark rounded button 'Go to homepage'",
+            "position": "center, below message",
+            "notable": "Clear exit path from error state"
+          },
+          {
+            "type": "footer",
+            "description": "Dark footer with 4-column link structure: About, Products, Services, Learn",
+            "position": "bottom",
+            "notable": "Persistent site navigation with tagline 'Trade Crypto Anywhere Anytime' and QR code"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration (eye-catching) > Heading (urgency) > Message (explanation) > CTA (action) > Footer (site navigation)",
+        "innovativeElements": [
+          "Animated-style illustration representing multi-service offerings"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access staking services but encountering geo-blocking",
+        "entryPoints": [
+          "Direct navigation to staking page",
+          "Staking link from main menu"
+        ],
+        "exitPoints": [
+          "Go to homepage"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to homepage button",
+            "action": "Returns user to main site"
+          },
+          {
+            "element": "Footer links (About, Products, Services, Learn)",
+            "action": "Navigate to respective pages"
+          }
+        ],
+        "informationArchitecture": "Error state with explanation and redirect path; persistent footer allows site exploration",
+        "frictionPoints": [
+          "Service unavailable in user's region",
+          "Blocked from intended feature"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Service Limited to Specific Regions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to homepage",
+            "style": "primary-button",
+            "placement": "center, below error message"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Please note that this service is not available in your region. We apologize for any inconvenience caused.",
+            "context": "Error message",
+            "purpose": "Explains geo-restriction and expresses empathy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Service Limited to Specific Regions",
+          "Please note that this service is not available in your region. We apologize for any inconvenience caused."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-staking-2-referral-page.png",
+      "label": "referral page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width with card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#8B0000",
+          "#FF3B30",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (50 USDT in gold/cream), hierarchical sizing",
+          "bodyStyle": "Medium-weight sans-serif, light gray text on dark background",
+          "dataStyle": "Large numeric values in contrasting colors (gold for rewards, red for CTAs)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top nav with logo, dropdown menus (Buy Crypto, Markets, Trade, Community), Rewards Hub, search, and auth buttons",
+            "position": "top",
+            "notable": "Dark background with white text, compact spacing"
+          },
+          {
+            "type": "Regional Alert Banner",
+            "description": "Orange warning banner indicating EU region detection with 'Switch Site' CTA",
+            "position": "below navigation",
+            "notable": "Dismissible alert with urgency indicator"
+          },
+          {
+            "type": "Promo Cards (3x)",
+            "description": "Three horizontal cards for Token Crew referral, Earn Voucher, and Super Commission programs",
+            "position": "upper center, above main hero",
+            "notable": "White rounded cards with icons, concise value propositions"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large dark red/maroon background with left-aligned text and right-aligned illustrated reward gift graphic",
+            "position": "center-full width",
+            "notable": "Strong visual contrast with festive reward illustration and countdown timer"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Bright red rounded button labeled 'Invite Now'",
+            "position": "bottom-left of hero",
+            "notable": "High contrast, clear focal point"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Draws eye from top nav → promo cards → hero section with 50 USDT reward promise → CTA button. Illustration and numerical value create secondary emphasis.",
+        "innovativeElements": [
+          "Countdown timer (8D : 13 : 20 : 36) creating urgency",
+          "Illustrated reward gift with stacked currency icons",
+          "Layered promo card display above main hero"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-promotion / referral-page",
+        "userIntent": "Understand referral program benefits and initiate invite process",
+        "entryPoints": [
+          "Rewards Hub menu link",
+          "Direct referral program URL",
+          "Marketing email or promo banner"
+        ],
+        "exitPoints": [
+          "Click 'Invite Now' → referral link share modal",
+          "Click promo cards → specific program details",
+          "Navigate to Markets, Trade, or other main sections via nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Invite Now button",
+            "action": "Opens referral link/sharing interface"
+          },
+          {
+            "element": "Promo cards (Token Crew, Earn Voucher, Super Commission)",
+            "action": "Navigate to detailed program pages"
+          },
+          {
+            "element": "Switch Site button",
+            "action": "Redirect to EU-compliant site variant"
+          },
+          {
+            "element": "Buy Crypto, Markets, Trade, Community dropdowns",
+            "action": "Navigate to respective platform sections"
+          }
+        ],
+        "informationArchitecture": "Value-first (reward amount) → context (max reward per invite) → urgency (countdown) → action (invite button). Three complementary programs presented as equal options above hero.",
+        "frictionPoints": [
+          "Regional banner may distract from main message",
+          "Countdown timer may create artificial urgency and skepticism",
+          "Three different referral programs presented without clear differentiation on which to choose"
+        ],
+        "progressIndicators": [
+          "Countdown timer (8D : 13 : 20 : 36) indicates promotion window"
+        ]
+      },
+      "copy": {
+        "headline": "50 USDT — Max Reward per Invite",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Invite Now",
+            "style": "primary-button",
+            "placement": "bottom-left of hero section"
+          },
+          {
+            "text": "Switch Site",
+            "style": "secondary-button",
+            "placement": "top-right alert banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "It seems that you're accessing our website from the EU region. Please switch to the EU site to view the products supported in your current region.",
+            "context": "Orange banner below nav",
+            "purpose": "Compliance notification and site routing"
+          },
+          {
+            "text": "Rewards Up To",
+            "context": "Label on gift card illustration",
+            "purpose": "Clarifies the 50 USDT is a maximum, not guaranteed"
+          },
+          {
+            "text": "Invite friends to share 1,000,000 USDT",
+            "context": "Token Crew promo card",
+            "purpose": "Highlights total pool reward"
+          },
+          {
+            "text": "Get up to $200, friend gets up to $100",
+            "context": "Earn Voucher card",
+            "purpose": "Mutual benefit value prop"
+          },
+          {
+            "text": "Earn up to 40% commission",
+            "context": "Super Commission card",
+            "purpose": "Ongoing earning benefit"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual promotional flair; urgency-driven",
+        "dataFormatting": [
+          "50 USDT (large, gold/cream colored)",
+          "8D : 13 : 20 : 36 (countdown format)",
+          "1,000,000 USDT (program pool)",
+          "$200 / $100 (currency notation with forward slash)",
+          "40% commission (percentage)"
+        ],
+        "trustSignals": [
+          "Specific reward amounts ($200, $100, 50 USDT) create credibility",
+          "Large referral pool (1,000,000 USDT) demonstrates scale",
+          "Multiple program tiers suggest established program infrastructure"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel with left sidebar, central chart, and right sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#26A369",
+          "#FF3B30",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for section titles (Charts, Info, Trading Data), medium weight",
+          "bodyStyle": "Regular sans-serif for labels and secondary info, gray text",
+          "dataStyle": "Large green/red numbers for prices and percentages; white labels on colored badges"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Horizontal dark bar with Gate.io logo, dropdown menus, Rewards Hub, search, account buttons",
+            "position": "top",
+            "notable": "Consistent with referral page; clean white-on-dark layout"
+          },
+          {
+            "type": "Regional Alert Banner",
+            "description": "Orange compliance banner identical to referral page",
+            "position": "below navigation",
+            "notable": "Same styling as previous screen for consistency"
+          },
+          {
+            "type": "Horizontal Ticker",
+            "description": "Scrollable crypto ticker showing Hot, GT, PIPPIN, ZEC, BEAT, etc. with 24h change percentages",
+            "position": "below alert, full width",
+            "notable": "Color-coded gains (green) and losses (red); compact layout"
+          },
+          {
+            "type": "Left Sidebar",
+            "description": "Vertical icon menu with trading tools (line chart, pattern tools, analysis, etc.)",
+            "position": "left edge",
+            "notable": "Minimalist icon-only design with hover tooltips"
+          },
+          {
+            "type": "Main Trading Chart",
+            "description": "Large candlestick chart with volume bars below; grid overlay; multiple timeframe buttons (1m, 15m, 1h, 4h, 1D)",
+            "position": "center-left, dominates screen",
+            "notable": "Red/green candles; AI pattern reader tooltip visible"
+          },
+          {
+            "type": "Chart Controls Toolbar",
+            "description": "Buttons for drawing tools, indicators (SRL, MA, EMA, Volume, MACD, etc.), and additional analysis features",
+            "position": "below chart",
+            "notable": "Professional trader-grade toolbar"
+          },
+          {
+            "type": "Right Sidebar - Order Book",
+            "description": "Tabbed interface showing Order Book, Trades, Top Movers with price list and depth visualization",
+            "position": "right edge",
+            "notable": "Color-coded buy/sell orders; red/green visual hierarchy"
+          },
+          {
+            "type": "Right Sidebar - Trading Panel",
+            "description": "Buy/Sell buttons, Limit/Market/Conditional toggles, price input, amount input, order controls",
+            "position": "top-right",
+            "notable": "Green 'Buy' button is primary action; clean input form"
+          },
+          {
+            "type": "Info Sections",
+            "description": "24h High, 24h Low, 24h Volume, 24h Turnover displayed above chart",
+            "position": "above main chart area",
+            "notable": "Concise metrics; large green price display (69,828.5)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Navigation bar → alert banner → ticker → main chart dominates center with sidebars flanking. Right panel controls (Buy/Sell) positioned at top for quick access. Chart is visual focal point.",
+        "innovativeElements": [
+          "AI Pattern Reader tooltip (real-time feature announcement)",
+          "Compact left sidebar icon menu (space-efficient tool access)",
+          "Integrated order book + trades + top movers in tabbed right panel"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / trading-dashboard",
+        "userIntent": "Monitor BTC/USDT price, analyze chart patterns, place buy/sell orders",
+        "entryPoints": [
+          "Click BTC/USDT in Markets section",
+          "Click trade link in top nav",
+          "Direct URL to trading pair page"
+        ],
+        "exitPoints": [
+          "Click Buy/Sell → confirm order modal",
+          "Switch pairs via dropdown (BTC/USDT shown at top-left)",
+          "Navigate to Markets, Community, or other sections via nav",
+          "Access account/orders via right sidebar buttons"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy button (green, top-right)",
+            "action": "Opens buy order form with pre-filled pair"
+          },
+          {
+            "element": "Sell button (gray, top-right)",
+            "action": "Opens sell order form"
+          },
+          {
+            "element": "Limit/Market/Conditional toggles",
+            "action": "Changes order type and form fields"
+          },
+          {
+            "element": "Timeframe buttons (1m, 15m, 1h, 4h, 1D)",
+            "action": "Rescales candlestick chart"
+          },
+          {
+            "element": "Left sidebar icons",
+            "action": "Activate drawing tools and technical indicators"
+          },
+          {
+            "element": "Order Book / Trades / Top Movers tabs",
+            "action": "Switch right panel content"
+          },
+          {
+            "element": "BTC/USDT dropdown",
+            "action": "Navigate to different trading pair"
+          },
+          {
+            "element": "Chart indicators (SRL, MA, EMA, MACD, etc.)",
+            "action": "Overlay analysis tools on chart"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Global crypto activity (ticker) → specific pair focus (BTC/USDT) → detailed chart analysis (center) → market depth & execution (order book + buy/sell panel). Left tools are secondary analysis layer.",
+        "frictionPoints": [
+          "Dense UI may overwhelm casual traders; professional-grade complexity",
+          "Right sidebar toggles (Limit/Market/Conditional) require understanding of order types",
+          "Multiple chart tools and indicators require trading knowledge",
+          "Regional banner still present and distracting"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BTC/USDT",
+        "subheadline": "Bitcoin",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "top-right trading panel"
+          },
+          {
+            "text": "Sell",
+            "style": "secondary-button",
+            "placement": "top-right trading panel"
+          },
+          {
+            "text": "Log In",
+            "style": "ghost-button",
+            "placement": "bottom-right (in trading panel)"
+          },
+          {
+            "text": "Sign Up",
+            "style": "ghost-button",
+            "placement": "bottom-right (in trading panel)"
+          },
+          {
+            "text": "Switch Site",
+            "style": "secondary-button",
+            "placement": "top-right alert banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Added AI Pattern Reader. Instantly detect candlestick patterns.",
+            "context": "Dark tooltip overlay on chart",
+            "purpose": "Feature announcement; encourages exploration of new tool"
+          },
+          {
+            "text": "Change%",
+            "context": "Column header in ticker",
+            "purpose": "Clarifies percentage-based sorting/display"
+          },
+          {
+            "text": "24h High / 24h Low / 24h Volume (BTC) / 24h Turnover (USDT)",
+            "context": "Labels above chart",
+            "purpose": "Provides context for metric values"
+          },
+          {
+            "text": "Price(USDT) / Amount(BTC) / Total(USDT) =",
+            "context": "Order book column headers",
+            "purpose": "Clarifies order book data structure"
+          },
+          {
+            "text": "It seems that you're accessing our website from the EU region...",
+            "context": "Orange banner",
+            "purpose": "Compliance notification"
+          }
+        ],
+        "tone": "professional-technical; data-driven; neutral",
+        "dataFormatting": [
+          "69,828.5 (price in USDT, large green text)",
+          "$69,828.5 (currency notation with dollar sign)",
+          "943.7 (+1.37%) (change with plus sign and percentage)",
+          "70,569.8 (no currency symbol, numeric only)",
+          "9.24K (abbreviated thousands)",
+          "643.19M (abbreviated millions)",
+          "8D : 13 : 20 : 36 (countdown from referral page, now absent)",
+          "236.3 (+0.34%) (smaller change indicators in chart area)"
+        ],
+        "trustSignals": [
+          "24-hour high/low/volume data demonstrates transparency",
+          "Order book depth with specific ask/bid prices builds confidence",
+          "AI Pattern Reader feature signals innovation and advanced tooling",
+          "Multiple timeframe options (1m to 1D) suit various trading strategies"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gate-io-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with left sidebar, central chart, and right sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#26A369",
+          "#FF3B30",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for section titles (Charts, Info, Trading Data), consistent with previous screen",
+          "bodyStyle": "Regular sans-serif for labels, gray text on white background",
+          "dataStyle": "Large green/red numbers for prices; white text on color badges"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Identical to previous trading screen",
+            "position": "top",
+            "notable": "Consistent UI across platform"
+          },
+          {
+            "type": "Regional Alert Banner",
+            "description": "Orange EU compliance banner",
+            "position": "below navigation",
+            "notable": "Persistent across multiple screens"
+          },
+          {
+            "type": "Horizontal Ticker",
+            "description": "Same hot ticker with crypto pairs and 24h changes",
+            "position": "below alert",
+            "notable": "Scrollable, real-time updates visible"
+          },
+          {
+            "type": "Left Sidebar",
+            "description": "Icon-only trading tools menu",
+            "position": "left edge",
+            "notable": "Identical to previous screen"
+          },
+          {
+            "type": "Main Trading Chart",
+            "description": "Candlestick chart with volume bars; AI Pattern Reader tooltip still visible; chart state appears to show different price data than screenshot 1",
+            "position": "center-left",
+            "notable": "Real-time chart update evident (price changed, volume increased)"
+          },
+          {
+            "type": "Right Sidebar - Buy/Sell Panel",
+            "description": "Green 'Buy' button, gray 'Sell' button, Limit/Market/Conditional toggles, price/amount inputs",
+            "position": "top-right",
+            "notable": "Same trading execution interface"
+          },
+          {
+            "type": "Right Sidebar - Order Book",
+            "description": "Order Book tab with buy/sell depth visualization and trade list",
+            "position": "center-right",
+            "notable": "Color-coded order ladder (red for sell, green for buy)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Identical to swap-1 screen; chart-centric with flanking control panels",
+        "innovativeElements": [
+          "Real-time chart updates shown across two screenshots",
+          "AI Pattern Reader remains visible across trading sessions"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / trading-dashboard",
+        "userIntent": "Monitor live BTC/USDT price action and execute trades in real-time",
+        "entryPoints": [
+          "Same as swap-1 screen",
+          "Continued session from previous screen"
+        ],
+        "exitPoints": [
+          "Buy/Sell order execution",
+          "Switch trading pairs",
+          "Navigate away from trading section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy / Sell buttons",
+            "action": "Open/confirm order placement"
+          },
+          {
+            "element": "Price and Amount input fields",
+            "action": "Specify order parameters"
+          },
+          {
+            "element": "Limit / Market / Conditional toggles",
+            "action": "Change order execution type"
+          },
+          {
+            "element": "Chart timeframes",
+            "action": "Rescale price action view"
+          },
+          {
+            "element": "Order Book depth visualization",
+            "action": "Show live market buy/sell interest"
+          }
+        ],
+        "informationArchitecture": "Identical to swap-1; real-time updates only",
+        "frictionPoints": [
+          "Chart complexity remains barrier for casual users",
+          "Multiple order type options require trader expertise"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BTC/USDT",
+        "subheadline": "Bitcoin",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Sell",
+            "style": "secondary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Added AI Pattern Reader. Instantly detect candlestick patterns.",
+            "context": "Chart tooltip (persistent across both screenshots)",
+            "purpose": "Feature discovery; highlights innovation"
+          },
+          {
+            "text": "Price / Amount / Total",
+            "context": "Order book column headers",
+            "purpose": "Clarifies order data structure"
+          }
+        ],
+        "tone": "professional-technical; data-driven",
+        "dataFormatting": [
+          "69,828.5 (unchanged from swap-1, but nearby orders show slight variation)",
+          "236.3 (+0.34%) (chart area indicator)",
+          "Price(USDT) / Amount(BTC) / Total(USDT) format in order book",
+          "Individual order prices shown in order book ladder (69,827.6, 69,827.5, 69,826.9, etc.)"
+        ],
+        "trustSignals": [
+          "Order book depth visible with specific prices and amounts",
+          "Real-time updates across multiple screenshots build confidence in data freshness",
+          "AI-powered feature signals technological sophistication"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

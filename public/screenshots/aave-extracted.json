@@ -1,0 +1,2140 @@
+{
+  "slug": "aave",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:02:09.348Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 15,
+  "screens": [
+    {
+      "image": "/screenshots/aave-home-4-savings.png",
+      "label": "Savings",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2d3142",
+          "#1a1d2e",
+          "#00d4d4",
+          "#a855f7"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif (40px+) with icon prefix",
+          "bodyStyle": "Medium gray sans-serif (14-16px) for descriptions",
+          "dataStyle": "Large bold white numbers with smaller gray labels above, currency symbols in white"
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Purple-to-teal gradient banner with mobile app promotion",
+            "position": "top",
+            "notable": "Closeable dismissal pattern with X button"
+          },
+          {
+            "type": "metric-card",
+            "description": "Four key metrics displayed horizontally (APY, Total Deposited, Price, Weekly Rewards)",
+            "position": "below heading",
+            "notable": "Large numbers with info tooltip icons"
+          },
+          {
+            "type": "chart-card",
+            "description": "Line chart showing APY trend over time with time filters (1w, 1m, 6m)",
+            "position": "left panel, lower section",
+            "notable": "Turquoise line with light background, average rate labeled"
+          },
+          {
+            "type": "info-panel",
+            "description": "Right sidebar with wallet connection prompt and privacy notice",
+            "position": "right side",
+            "notable": "Two-action modal with analytics consent buttons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Metrics highlighted first (large white numbers), chart secondary, info panel tertiary with modal overlay",
+        "innovativeElements": [
+          "Gradient header banner with product announcement integration",
+          "Side-by-side comparison of key metrics with contextual labeling",
+          "Floating analytics consent modal with Privacy Policy link"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View Savings GHO product details, APY rates, deposit totals, and performance trends",
+        "entryPoints": [
+          "Click Savings nav item",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Connect wallet button",
+          "Markets/Governance/Staking nav",
+          "Bridge GHO button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time period filters",
+            "action": "Switch chart view between 1w, 1m, 6m timeframes"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Trigger wallet connection flow to view personal balance"
+          },
+          {
+            "element": "Info icon (Weekly Rewards)",
+            "action": "Display tooltip explanation"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Navigate to privacy documentation"
+          }
+        ],
+        "informationArchitecture": "Product overview (top) > Key metrics (middle) > Performance chart (bottom-left) > User action area (right)",
+        "frictionPoints": [
+          "Analytics consent modal blocks view of main content",
+          "Wallet not connected, limiting personal data visibility",
+          "Weekly Rewards showing as dashes (loading state or no data)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Savings GHO",
+        "subheadline": "Deposit GHO into savings GHO (sGHO) and earn 5.41% APY on your GHO holdings. There are no lockups, no rehypothecation, and you can withdraw anytime. Simply deposit GHO, receive sGHO tokens representing your balance, and watch your savings grow earning claimable rewards from merit.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "right sidebar main action"
+          },
+          {
+            "text": "Allow analytics",
+            "style": "primary-button",
+            "placement": "privacy modal"
+          },
+          {
+            "text": "Opt-out",
+            "style": "ghost-button",
+            "placement": "privacy modal secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "GHO APY",
+            "context": "Chart legend",
+            "purpose": "Identify metric being charted"
+          },
+          {
+            "text": "Avg 5.25%",
+            "context": "Below chart line",
+            "purpose": "Show historical average rate"
+          },
+          {
+            "text": "Please connect a wallet to view your balance here.",
+            "context": "Info panel",
+            "purpose": "Explain empty state and next action"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "5.41% (percentage with decimal)",
+          "$261.71M (currency with millions abbreviation)",
+          "$1.00 (currency standard format)",
+          "Sat 07, Mon 09, Wed 11 (date labels on x-axis)"
+        ],
+        "trustSignals": [
+          "5.41% APY displayed prominently",
+          "$261.71M Total Deposited (TVL proxy)",
+          "No lockups, no rehypothecation messaging",
+          "Withdraw anytime flexibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please connect a wallet to view your balance here.",
+          "We couldn't detect a wallet. Connect a wallet to stake and view your balance."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-5-details.png",
+      "label": "Details",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2d3142",
+          "#1a1d2e",
+          "#a855f7"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif headings",
+          "bodyStyle": "Medium gray sans-serif body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Purple-to-teal gradient banner with mobile app promotion",
+            "position": "top",
+            "notable": "Persistent across page transitions"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with main sections",
+            "position": "below banner",
+            "notable": "Savings tab underlined showing active state"
+          },
+          {
+            "type": "floating-modal",
+            "description": "Privacy consent modal with tracking information",
+            "position": "bottom-right",
+            "notable": "Persistent overlay blocking page interaction"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Banner > Nav > Large empty content area > Modal",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed information about a specific savings product or feature",
+        "entryPoints": [
+          "Click on details/expand option from savings dashboard"
+        ],
+        "exitPoints": [
+          "Back navigation",
+          "Other nav items",
+          "Modal dismissal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Modal buttons",
+            "action": "Consent or opt-out of analytics"
+          }
+        ],
+        "informationArchitecture": "Content appears to be loading or blank page state",
+        "frictionPoints": [
+          "Blank page with no visible content",
+          "Modal blocking primary interaction",
+          "Unclear what details should display"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Allow analytics",
+            "style": "primary-button",
+            "placement": "privacy modal"
+          },
+          {
+            "text": "Opt-out",
+            "style": "text-link",
+            "placement": "privacy modal secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.",
+            "context": "Privacy modal body",
+            "purpose": "Inform user of data collection practices"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link (legal compliance signal)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-6-safety-module.png",
+      "label": "Safety Module",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2d3142",
+          "#1a1d2e",
+          "#00d4d4",
+          "#a855f7"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif (36-48px) with chain/network indicator above",
+          "bodyStyle": "Medium gray sans-serif (14-16px) with hyperlink accents",
+          "dataStyle": "Large bold white numbers with gray labels above, currency/token symbols inline"
+        },
+        "components": [
+          {
+            "type": "chain-indicator",
+            "description": "Ethereum Mainnet badge with icon",
+            "position": "top-left",
+            "notable": "Network context label with blue Ethereum logo"
+          },
+          {
+            "type": "heading-block",
+            "description": "Safety Module title with descriptive text",
+            "position": "above metrics",
+            "notable": "Hyperlinked terms (Umbrella, Learn more about risks) for context"
+          },
+          {
+            "type": "metric-pair",
+            "description": "Two key metrics: Funds in Safety Module and Total emission per day",
+            "position": "middle section",
+            "notable": "Large numbers with descriptive labels"
+          },
+          {
+            "type": "empty-state-card",
+            "description": "White card with centered call-to-action for wallet connection",
+            "position": "lower section",
+            "notable": "Gradient button, contextual messaging"
+          },
+          {
+            "type": "token-cards",
+            "description": "Two horizontal token option cards (AAVE, ABPT V2) with staking APR",
+            "position": "bottom of empty state",
+            "notable": "Icon, token name, APR percentage side-by-side"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Network badge > Heading > Metrics > Empty state modal > Token options",
+        "innovativeElements": [
+          "Chain availability indicator at top",
+          "Hyperlinked product terminology for education",
+          "Token option cards displaying alternative staking choices inline"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Learn about Safety Module and stake assets to earn safety incentives",
+        "entryPoints": [
+          "Click Staking menu",
+          "Navigate from dashboard"
+        ],
+        "exitPoints": [
+          "Connect wallet button",
+          "Other nav sections",
+          "Learn more links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Umbrella link",
+            "action": "Navigate to Umbrella system documentation"
+          },
+          {
+            "element": "Learn more about risks link",
+            "action": "Display risk disclosure information"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Trigger wallet connection to enable staking"
+          }
+        ],
+        "informationArchitecture": "Product education > Metrics overview > Action prompt > Token selection options",
+        "frictionPoints": [
+          "Wallet connection required before staking",
+          "Multiple hyperlinks could distract from primary CTA",
+          "Token options visible but not actionable without wallet"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Safety Module",
+        "subheadline": "The Safety Module has been upgraded to Umbrella, a new system that introduces automated slashing, aToken staking, and improved incentives design.\n\nAAVE and ABPT holders (Ethereum network only) can stake their assets in the Safety Module to add more security to the protocol and earn Safety incentives. In the case of a shortfall event, your stake can be slashed to cover the deficit, providing an additional layer of protection for the protocol.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "empty state card center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Funds in the Safety Module",
+            "context": "Metric label",
+            "purpose": "Identify TVL metric"
+          },
+          {
+            "text": "Total emission per day",
+            "context": "Metric label",
+            "purpose": "Identify daily reward rate"
+          },
+          {
+            "text": "We couldn't detect a wallet. Connect a wallet to stake and view your balance.",
+            "context": "Empty state card",
+            "purpose": "Explain barrier to interaction"
+          },
+          {
+            "text": "Staking APR",
+            "context": "Token card headers",
+            "purpose": "Identify APR metric on options"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$377.59M (currency with millions)",
+          "300.00 AAVE (token amount with symbol)",
+          "3.70% (APR percentage)",
+          "3.55% (APR percentage)"
+        ],
+        "trustSignals": [
+          "$377.59M in Safety Module (TVL signal)",
+          "Security/protection messaging for protocol",
+          "Automated slashing mechanism mentioned",
+          "Official system upgrade (Umbrella) referenced"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please, connect your wallet",
+          "We couldn't detect a wallet. Connect a wallet to stake and view your balance."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-7-migrate-to-aave-v3.png",
+      "label": "Migrate to Aave V3",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#2D2E5F",
+          "#FFFFFF",
+          "#00D4AA",
+          "#9D4EDD"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, dark gray serif or sans-serif, centered",
+          "bodyStyle": "Medium weight, gray, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "illustration",
+            "description": "Cartoon ghost character wearing a cap",
+            "position": "center of screen",
+            "notable": "Friendly, approachable mascot used to soften wallet-connection request"
+          },
+          {
+            "type": "primary button",
+            "description": "Teal gradient 'Connect wallet' CTA",
+            "position": "center below text",
+            "notable": "High contrast, rounded corners, matches brand accent"
+          },
+          {
+            "type": "analytics consent panel",
+            "description": "White card with privacy text and dual action buttons",
+            "position": "bottom right",
+            "notable": "Non-dismissible, persistent privacy notice with Allow/Opt-out options"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration anchors eye, headline below, CTA follows naturally",
+        "innovativeElements": [
+          "Playful ghost mascot reduces friction of Web3 interaction",
+          "Analytics consent embedded as persistent card rather than modal overlay"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Understand what to do next; prepare to connect wallet for migration",
+        "entryPoints": [
+          "Navigation to migration flow",
+          "Direct link to migration tool"
+        ],
+        "exitPoints": [
+          "Connect wallet button → wallet selection",
+          "Go Back button → previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Initiates wallet connection flow for migration"
+          },
+          {
+            "element": "Go Back button",
+            "action": "Returns to previous screen"
+          },
+          {
+            "element": "Allow analytics / Opt-out toggles",
+            "action": "Manages analytics consent"
+          }
+        ],
+        "informationArchitecture": "Single CTA hierarchy: primary action (connect) with secondary navigation (back) and tertiary consent management",
+        "frictionPoints": [
+          "Mandatory analytics consent requires explicit choice before proceeding",
+          "No skip option for wallet connection - blocking action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Please, connect your wallet",
+        "subheadline": "Please connect your wallet to see migration tool.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services.",
+            "context": "Analytics consent card",
+            "purpose": "Explains data collection practices in compliance with privacy regulations"
+          }
+        ],
+        "tone": "friendly-casual with professional-technical elements",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link in analytics notice",
+          "Explicit consent options (Allow/Opt-out)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please, connect your wallet",
+          "Please connect your wallet to see migration tool."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-8-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#2D2E5F",
+          "#FFFFFF",
+          "#4A90E2",
+          "#9D4EDD"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif heading with oversized numerals (404), dark navy",
+          "bodyStyle": "Medium weight gray text, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "404 display",
+            "description": "Oversized 404 numerals with ghost illustration integrated in the 0",
+            "position": "center-top of content area",
+            "notable": "Playful visual treating error as design feature, not failure state"
+          },
+          {
+            "type": "error heading",
+            "description": "'Page not found' in large bold type",
+            "position": "below 404 graphic",
+            "notable": "Direct, clear error message"
+          },
+          {
+            "type": "secondary button",
+            "description": "'Back home' CTA in outline style",
+            "position": "center below explanatory text",
+            "notable": "Ghost-button style, less prominent than primary CTAs"
+          },
+          {
+            "type": "analytics consent panel",
+            "description": "White card with privacy text",
+            "position": "bottom right",
+            "notable": "Same persistent consent panel as migration screen"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large 404 graphic draws attention, headline explains, CTA provides escape route",
+        "innovativeElements": [
+          "Integrated ghost mascot into 404 numerals for brand consistency",
+          "Error page designed as friendly communication rather than user failure"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand page doesn't exist; find way back to valid content",
+        "entryPoints": [
+          "Mistyped URL",
+          "Broken internal link",
+          "Expired/deleted page reference"
+        ],
+        "exitPoints": [
+          "Back home button → dashboard or home",
+          "Navigation menu → any section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back home button",
+            "action": "Returns to home/dashboard"
+          },
+          {
+            "element": "Navigation menu (top)",
+            "action": "Access any main section"
+          }
+        ],
+        "informationArchitecture": "Error acknowledgment → explanation → recovery path (single primary CTA)",
+        "frictionPoints": [
+          "Only one primary exit path (Back home) - limited navigation options on error"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "Sorry, we couldn't find the page you were looking for. We suggest you go back to the home page.",
+        "ctas": [
+          {
+            "text": "Back home",
+            "style": "ghost-button",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services.",
+            "context": "Analytics consent card",
+            "purpose": "Privacy compliance notice"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "Sorry, we couldn't find the page you were looking for."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-swap-1-markets.png",
+      "label": "Markets",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel with card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2E5F",
+          "#FFFFFF",
+          "#00D4AA",
+          "#1A1B3F"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headers with version badges and dropdown indicators",
+          "bodyStyle": "Medium gray body text, left-aligned with icon labels",
+          "dataStyle": "Large bold figures for TVL metrics, smaller figures for USD equivalents in gray, percentage APY in white"
+        },
+        "components": [
+          {
+            "type": "market header",
+            "description": "'Core Instance V3' title with version badge and dropdown",
+            "position": "top left",
+            "notable": "Version indicator (V3) in badge form, shows market selection capability"
+          },
+          {
+            "type": "metric cards",
+            "description": "Three large stat cards showing Total market size, Total available, Total borrows",
+            "position": "header area below title",
+            "notable": "Clean separation of key metrics with bold typography"
+          },
+          {
+            "type": "featured product card",
+            "description": "'Save with sGHO' card with gradient icon, APY, TVL, and View details button",
+            "position": "horizontal row above table",
+            "notable": "Gradient icon treatment, multi-column layout within card"
+          },
+          {
+            "type": "data table",
+            "description": "Asset rows with columns: Asset, Total supplied, Supply APY, Total borrowed, Borrow APY, Details button",
+            "position": "main content area",
+            "notable": "Sortable columns indicated by up/down arrow icons, Details CTA per row"
+          },
+          {
+            "type": "search bar",
+            "description": "Search by asset name, symbol, or address",
+            "position": "top right of table",
+            "notable": "Placeholder text shows searchable dimensions"
+          },
+          {
+            "type": "category filter",
+            "description": "'All Categories' dropdown",
+            "position": "left of search bar",
+            "notable": "Asset filtering capability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Market name/version anchors top → key metrics draw attention → featured product breaks visual flow → data table provides deep dive",
+        "innovativeElements": [
+          "Featured product (sGHO savings) elevated in layout with distinct card treatment",
+          "Nested data hierarchy: large TVL/APY figures with smaller USD breakdown below",
+          "Favorite star icon in top right for market bookmarking"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse available assets, compare supply/borrow rates, identify yield opportunities",
+        "entryPoints": [
+          "Markets tab in main navigation",
+          "Dashboard overview cards"
+        ],
+        "exitPoints": [
+          "View details button on featured sGHO product → detailed view",
+          "Details button on table rows → asset details page",
+          "Navigation tabs (Dashboard, Governance, Savings) → other sections",
+          "Favorite star → save market"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market selector (Core Instance V3 dropdown)",
+            "action": "Switch between different market instances"
+          },
+          {
+            "element": "View details button (sGHO card)",
+            "action": "Navigate to featured product details"
+          },
+          {
+            "element": "Category filter dropdown",
+            "action": "Filter assets by category"
+          },
+          {
+            "element": "Search bar",
+            "action": "Find specific asset by name, symbol, or address"
+          },
+          {
+            "element": "Details buttons (table rows)",
+            "action": "View asset-specific details and interaction options"
+          },
+          {
+            "element": "Column headers with sort arrows",
+            "action": "Sort by Total supplied, APY, Total borrowed, etc."
+          },
+          {
+            "element": "Favorite star",
+            "action": "Bookmark market for quick access"
+          }
+        ],
+        "informationArchitecture": "Market overview (header) → featured opportunity (promotional card) → comprehensive asset directory (sortable/searchable table) → detailed views (per-asset drill-down)",
+        "frictionPoints": [
+          "Multiple filter/search dimensions could be overwhelming for new users",
+          "No clear indication of default sort order for table",
+          "Persistent analytics consent panel overlays right side of content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Core Instance V3",
+        "subheadline": "Main Ethereum market with the largest selection of assets and yield options",
+        "ctas": [
+          {
+            "text": "View details",
+            "style": "primary-button",
+            "placement": "featured product card (sGHO)"
+          },
+          {
+            "text": "Details",
+            "style": "secondary-button",
+            "placement": "table rows (per asset)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Save with sGHO",
+            "context": "Featured product card title",
+            "purpose": "Names the featured savings product"
+          },
+          {
+            "text": "GHO yield with instant withdrawals.",
+            "context": "Featured product card subtitle",
+            "purpose": "Value proposition: instant liquidity advantage"
+          },
+          {
+            "text": "Total deposited",
+            "context": "Featured product card metric label",
+            "purpose": "Clarifies $261.62M figure represents user deposits"
+          },
+          {
+            "text": "Supply APY, variable",
+            "context": "Table column header with info icon",
+            "purpose": "Indicates rate variability with tooltip context"
+          },
+          {
+            "text": "Search asset name, symbol, or address",
+            "context": "Search bar placeholder",
+            "purpose": "Educates users on searchable fields"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$36.27B (total market size)",
+          "$21.04B (total available)",
+          "$13.93B (total borrows)",
+          "$261.62M (featured product TVL)",
+          "5.41% (APY)",
+          "1.94% (supply APY)",
+          "2.46% (borrow APY)",
+          "< 0.01% (minimal APY with 3x multiplier indicator)"
+        ],
+        "trustSignals": [
+          "TVL figures ($36.27B, $261.62M) demonstrate significant user deposits",
+          "Version indicator (V3) signals active maintenance and updates",
+          "Core Instance designation implies primary/established market"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with sidebar navigation and data table",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1e2e",
+          "#00d4aa",
+          "#7b68ee"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold (Core Instance title ~28px)",
+          "bodyStyle": "Medium sans-serif, neutral gray, regular weight (~14px)",
+          "dataStyle": "Monospace or bold sans-serif for numerical values with subtle secondary text in smaller font and lighter gray"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Sticky top bar with Aave logo, main nav (Dashboard, Markets, Governance, Savings, Staking), action buttons",
+            "position": "Top full-width",
+            "notable": "Promotional banner above with 'Join Waitlist' CTA for mobile app"
+          },
+          {
+            "type": "Pool Header Card",
+            "description": "Core Instance (v3) with version badge and description; displays three KPI metrics (Total market size, Available, Borrows)",
+            "position": "Below nav, above table",
+            "notable": "Dropdown selector for pool variation, star favorite icon, large bold dollar amounts"
+          },
+          {
+            "type": "Data Table",
+            "description": "Sortable asset rows with columns for Asset name, Total supplied, Supply APY, Total borrowed, Borrow APY; each row has Details CTA",
+            "position": "Center main content",
+            "notable": "Inline asset icons with colored circles, small percentage badges, linked asset names"
+          },
+          {
+            "type": "Search/Filter Bar",
+            "description": "Dropdown for 'All Categories' and search input for asset name/symbol/address",
+            "position": "Above table",
+            "notable": "Magnifying glass icon, placeholder text clearly describes filtering capability"
+          },
+          {
+            "type": "Analytics Consent Modal",
+            "description": "Right side overlay with privacy policy explanation and Allow/Opt-out buttons",
+            "position": "Bottom right overlay",
+            "notable": "Non-blocking, secondary concern positioning"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header section with KPIs draws eye first, then table dominates; row-level details are secondary; modal overlay is tertiary",
+        "innovativeElements": [
+          "Gradient circular icon design for pool (purple to teal)",
+          "Inline APY badges with small icon indicators for positive/neutral positions",
+          "Color-coded supply/borrow pairs in single row for comparison at a glance"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with dashboard elements",
+        "userIntent": "Review available lending pools, compare APY rates, understand market depth and borrowing availability",
+        "entryPoints": [
+          "Dashboard nav link",
+          "Direct landing via Markets section",
+          "Pool selection after login"
+        ],
+        "exitPoints": [
+          "Click Details to drill into specific asset",
+          "Search and filter to narrow assets",
+          "Connect wallet button (top right)",
+          "Navigate to other main sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Core Instance dropdown",
+            "action": "Switch between different pool versions/instances"
+          },
+          {
+            "element": "All Categories dropdown",
+            "action": "Filter assets by category (stablecoins, governance tokens, etc.)"
+          },
+          {
+            "element": "Search input",
+            "action": "Real-time filter/search asset table"
+          },
+          {
+            "element": "Details button",
+            "action": "Navigate to detailed asset page with supply/borrow mechanics"
+          },
+          {
+            "element": "Star icon",
+            "action": "Toggle favorite/watch status for pool"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: global nav → pool selection → asset list → asset detail. Parallel display of supply and borrow metrics for comparison.",
+        "frictionPoints": [
+          "Long scrolling table requires horizontal scroll awareness on smaller screens",
+          "Analytics consent modal may distract from primary task",
+          "No obvious 'supply' or 'borrow' CTAs in main table; requires Details click"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Core Instance",
+        "subheadline": "Main Ethereum market with the largest selection of assets and yield options",
+        "ctas": [
+          {
+            "text": "View details",
+            "style": "secondary-button",
+            "placement": "Inline right of sGHO card"
+          },
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Details",
+            "style": "text-link",
+            "placement": "End of each table row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "GHO yield with instant withdraws.",
+            "context": "Below sGHO asset name in featured card",
+            "purpose": "Quick value prop for the highlighted asset"
+          },
+          {
+            "text": "Total deposited",
+            "context": "Label above $261.62M in sGHO card",
+            "purpose": "Clarify metric meaning"
+          },
+          {
+            "text": "Supply APY",
+            "context": "Column header in asset table",
+            "purpose": "Label for lending rate metric"
+          },
+          {
+            "text": "Borrow APY, variable",
+            "context": "Column header with info icon in asset table",
+            "purpose": "Label for borrowing rate, note about variable nature"
+          },
+          {
+            "text": "We may employ on-the-spot tracking techniques during your browsing session...",
+            "context": "Analytics consent modal bottom right",
+            "purpose": "Privacy disclosure with link to policy"
+          }
+        ],
+        "tone": "professional-technical, neutral, data-focused",
+        "dataFormatting": [
+          "$36.30B (total market size with B suffix for billions)",
+          "$261.62M (dollar amounts with millions suffix)",
+          "5.41% (APY percentages with % symbol)",
+          "3.07M (asset quantities without currency prefix)"
+        ],
+        "trustSignals": [
+          "Core Instance v3 badge signifies mature version",
+          "$36.30B total market size emphasizes liquidity",
+          "APY rates transparently displayed for comparison",
+          "Privacy Policy link in consent modal"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width data table continuation",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1e2e",
+          "#00d4aa",
+          "#7b68ee"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in scrolled view",
+          "bodyStyle": "Medium sans-serif, neutral gray, regular weight (~14px)",
+          "dataStyle": "Bold sans-serif for token amounts, lighter gray for USD equivalents, percentages in smaller font"
+        },
+        "components": [
+          {
+            "type": "Asset Row",
+            "description": "Repeating rows showing asset name/symbol, icon, total supplied (with USD equiv), supply APY (with risk indicator), total borrowed, borrow APY",
+            "position": "Full width scrollable table",
+            "notable": "Risk indicator badges (red circle for negative yield), hover states implied, Details link at end"
+          },
+          {
+            "type": "Status Indicators",
+            "description": "Small badges and icons inline with APY rates (disabled labels, info circles for warnings)",
+            "position": "Inline within table cells",
+            "notable": "Red badge on rsETH row signals disabled borrowing; multiple risk/info icons consistent"
+          },
+          {
+            "type": "Analytics Modal",
+            "description": "Same privacy consent overlay as previous screen",
+            "position": "Bottom right",
+            "notable": "Persistent across scrolling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Rows are uniform in visual weight; inline indicators (badges, icons) break uniformity for special cases; modal sits above content",
+        "innovativeElements": [
+          "Risk indicator icons (red circle) inline with APY to flag dangerous yields",
+          "Disabled state notation ('(Disabled)') for assets with restrictions",
+          "Varied iconography per asset (Ethereum diamond, Tether T, BTC circle, etc.) aids quick scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse continuation",
+        "userIntent": "Continue reviewing asset options, compare APY rates, identify risk factors (disabled assets, volatile yields)",
+        "entryPoints": [
+          "Scroll down from previous view",
+          "Direct table navigation"
+        ],
+        "exitPoints": [
+          "Click Details link to drill into specific asset",
+          "Scroll back up to header/pool selection",
+          "Navigate away via nav bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Details button",
+            "action": "Navigate to asset detail view"
+          },
+          {
+            "element": "Info icon (next to APY columns)",
+            "action": "Likely shows tooltip explaining APY calculation or risk"
+          },
+          {
+            "element": "Risk badges (red circle)",
+            "action": "Visual alert for special conditions"
+          }
+        ],
+        "informationArchitecture": "Flat table list; users scan vertically to compare metrics across assets; no hierarchical grouping visible",
+        "frictionPoints": [
+          "Many columns require horizontal scrolling on mobile; desktop-optimized layout",
+          "Risk indicators (red badges, disabled labels) may require explanation",
+          "No sorting visual affordance (unclear if columns are sortable)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "text-link",
+            "placement": "Right end of each table row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "(Disabled)",
+            "context": "Next to borrow APY for rsETH",
+            "purpose": "Indicate asset is not available for borrowing"
+          },
+          {
+            "text": "Supply APY",
+            "context": "Column header",
+            "purpose": "Label metric"
+          },
+          {
+            "text": "Borrow APY, variable",
+            "context": "Column header",
+            "purpose": "Label metric and note variability"
+          },
+          {
+            "text": "< 0.01%",
+            "context": "Very low APY values",
+            "purpose": "Indicate near-zero or rounding yields"
+          }
+        ],
+        "tone": "professional-technical, neutral, data-focused",
+        "dataFormatting": [
+          "42.54K (large quantities abbreviated with K)",
+          "$2.97B (USD equivalents in billions)",
+          "< 0.01% (very small percentages with less-than symbol)",
+          "217.90 (integer quantities)",
+          "3x (multiplier notation for some metrics)"
+        ],
+        "trustSignals": [
+          "Transparent APY display across all assets",
+          "Risk indicator badges for user protection",
+          "Disabled borrowing flags for restricted assets"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-home-3-dashboard.png",
+      "label": "Dashboard",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width centered card with empty state",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1e2e",
+          "#00d4aa",
+          "#7b68ee"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark navy/black, centered (~24px) - 'Please, connect your wallet'",
+          "bodyStyle": "Medium sans-serif, medium gray, regular (~16px) - explanation text",
+          "dataStyle": "N/A (no data displayed)"
+        },
+        "components": [
+          {
+            "type": "Empty State Illustration",
+            "description": "Cartoon ghost character with cap/visor, outlined style, centered above text",
+            "position": "Center screen, upper half",
+            "notable": "Friendly, approachable mascot; simple line art design; floating animation implied"
+          },
+          {
+            "type": "Empty State Copy",
+            "description": "Headline and supporting text explaining wallet connection requirement",
+            "position": "Center, below illustration",
+            "notable": "Clear hierarchy: headline in dark color, subtext in lighter gray"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Prominent 'Connect wallet' button with gradient background",
+            "position": "Center, below text",
+            "notable": "Teal-to-purple gradient, large clickable target; matches header Connect wallet button"
+          },
+          {
+            "type": "Header/Navigation",
+            "description": "Same sticky header as previous screens; Dashboard tab active/underlined",
+            "position": "Top full-width",
+            "notable": "Consistent navigation pattern"
+          },
+          {
+            "type": "Pool Header Placeholder",
+            "description": "Core Instance (v3) shown with empty 'Net worth' and 'Net APY' metric labels",
+            "position": "Below nav, above main content",
+            "notable": "Dashes ('—') instead of values indicate no wallet data available"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration dominates upper third, headline anchors center, subtext provides context, CTA button closes the loop; header navigation is secondary",
+        "innovativeElements": [
+          "Friendly mascot character for empty state (reduces friction of incomplete state)",
+          "Gradient CTA button with high contrast for clear action intent",
+          "Placeholder metric labels (Net worth, Net APY) previewed even without wallet connection"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state with onboarding affordance",
+        "userIntent": "First-time user reviewing dashboard experience; prompted to connect wallet to populate data",
+        "entryPoints": [
+          "Click Dashboard nav link without wallet connected",
+          "Fresh session landing"
+        ],
+        "exitPoints": [
+          "Click 'Connect wallet' button to initiate web3 connection flow",
+          "Navigate to Markets, Governance, or other nav sections",
+          "Close app"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Trigger wallet connection modal (e.g., MetaMask, WalletConnect)"
+          },
+          {
+            "element": "Dashboard nav link",
+            "action": "Highlight/activate current section"
+          },
+          {
+            "element": "Top-right Connect wallet button",
+            "action": "Same wallet connection flow as center button"
+          }
+        ],
+        "informationArchitecture": "Linear funnel: awareness (empty state copy) → intent (explain why) → action (prominent CTA button)",
+        "frictionPoints": [
+          "User must understand what 'connect wallet' means (assumes Web3 literacy)",
+          "No alternative pathway visible; only one action available",
+          "Previewed metrics (Net worth, Net APY) are empty placeholders that may confuse"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Please, connect your wallet",
+        "subheadline": "Please connect your wallet to see your supplies, borrowings, and open positions.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Center of empty state card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Core Instance",
+            "context": "Pool name at top",
+            "purpose": "Identify the market context"
+          },
+          {
+            "text": "Net worth",
+            "context": "Metric label above dash",
+            "purpose": "Preview what data will appear"
+          },
+          {
+            "text": "Net APY",
+            "context": "Metric label with info icon",
+            "purpose": "Preview what data will appear"
+          }
+        ],
+        "tone": "friendly-casual, encouraging, non-threatening",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Clear explanation of what wallet connection enables (supplies, borrowings, positions visibility)",
+          "Consistent branding and UI across connect button placements"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please, connect your wallet",
+          "Please connect your wallet to see your supplies, borrowings, and open positions."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-staking-3-umbrella.png",
+      "label": "Umbrella",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2E4E",
+          "#00D4AA",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (Staking Core headline), with supporting icon badge",
+          "bodyStyle": "Medium-weight gray text for explanatory copy with embedded hyperlinks",
+          "dataStyle": "Large bold white numbers ($262.73M) with smaller gray labels above"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Page title 'Staking Core' with dropdown and explanatory paragraph",
+            "position": "Top of page, below nav",
+            "notable": "Uses inline hyperlinks ('Learn more about the risks') for contextual help"
+          },
+          {
+            "type": "Data card",
+            "description": "Total amount staked ($262.73M) with large typography",
+            "position": "Below hero, left-aligned",
+            "notable": "Emphasizes TVL as trust signal"
+          },
+          {
+            "type": "Table",
+            "description": "Assets to stake with Asset name, Total staked, and APY columns",
+            "position": "Main content area",
+            "notable": "Four staking options (USDC, USDT, WETH, GHO) with icon badges and external link icons"
+          },
+          {
+            "type": "Analytics consent modal",
+            "description": "Privacy notice with Allow/Opt-out buttons",
+            "position": "Bottom right overlay",
+            "notable": "Non-intrusive placement; links to Privacy Policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Guides eye from headline → TVL metric → staking options table; modal sits outside primary flow",
+        "innovativeElements": [
+          "Contextual risk disclaimer with embedded link rather than separate page",
+          "Inline info icons next to total staked amounts for tooltips"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review available staking options and their APY returns, understand staking mechanics",
+        "entryPoints": [
+          "Click 'Staking' in main nav",
+          "Upgrade from Safety Module to Umbrella"
+        ],
+        "exitPoints": [
+          "Click individual asset row to stake",
+          "Navigate via top nav (Dashboard, Markets, Governance, Savings)",
+          "Click 'here' link to manage previously staked assets"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dropdown next to 'Core Instance'",
+            "action": "Switch between staking instances"
+          },
+          {
+            "element": "External link icons next to asset names",
+            "action": "Open asset details in new tab"
+          },
+          {
+            "element": "Info icons next to Total staked amounts",
+            "action": "Display tooltip with additional details"
+          },
+          {
+            "element": "Asset rows in table",
+            "action": "Navigate to staking form for that asset"
+          }
+        ],
+        "informationArchitecture": "Staking options organized by asset type; data hierarchy: headline context → TVL metric → individual options with yield data",
+        "frictionPoints": [
+          "Risk disclaimer requires reading to understand slashing potential",
+          "Analytics modal blocks view (though dismissible)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Staking Core",
+        "subheadline": "Umbrella is the upgraded version of the Safety Module. Manage your previously staked assets here.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Stake your Aave aTokens or underlying assets to earn rewards. In case of a shortfall event, your stake may be slashed to cover the deficit.",
+            "context": "Below subheadline",
+            "purpose": "Explains staking mechanics and risks in plain language"
+          },
+          {
+            "text": "Learn more about the risks.",
+            "context": "End of risk explanation paragraph",
+            "purpose": "Directs to detailed risk documentation"
+          },
+          {
+            "text": "Total amount staked",
+            "context": "Label above $262.73M figure",
+            "purpose": "Identifies the metric being displayed"
+          }
+        ],
+        "tone": "professional-technical with educational elements",
+        "dataFormatting": [
+          "$262.73M",
+          "$ 98.18M",
+          "$ 112.22M",
+          "4.27 %",
+          "4.98 %"
+        ],
+        "trustSignals": [
+          "$262.73M total amount staked (TVL metric)",
+          "Detailed risk disclaimers and learning resources"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-onboarding-1-landing-connect-wallet-modal.png",
+      "label": "Landing — Connect Wallet modal",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#00D4AA",
+          "#2D2E4E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for 'Connect Wallet' modal title",
+          "bodyStyle": "Medium gray text for instructional copy ('or select a wallet from the list below')",
+          "dataStyle": "Large bold numbers for market metrics in background"
+        },
+        "components": [
+          {
+            "type": "Modal dialog",
+            "description": "Centered wallet selection dialog with 'Connect Wallet' title and help icon",
+            "position": "Center of screen, overlay",
+            "notable": "Prominent 'Continue with Family' button (Family.finance integration); clean close button (X)"
+          },
+          {
+            "type": "Primary CTA button",
+            "description": "'Continue with Family' with family icon",
+            "position": "Top of wallet list",
+            "notable": "Turquoise/cyan gradient background; positioned before other options"
+          },
+          {
+            "type": "Wallet option row",
+            "description": "MetaMask, Coinbase Wallet, Other Wallets with logos and icons",
+            "position": "Below primary CTA in list",
+            "notable": "Recognizable wallet branding; 'Other Wallets' has multi-logo display"
+          },
+          {
+            "type": "Fallback text",
+            "description": "'I don't have a wallet' checkbox/link",
+            "position": "Bottom of list",
+            "notable": "Accessibility option for first-time users"
+          },
+          {
+            "type": "Core Instance header",
+            "description": "Background shows staking/yield UI with 'Save with sGHO' card visible",
+            "position": "Behind modal",
+            "notable": "Provides context of where user will land after connecting"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal sits atop background; 'Continue with Family' is primary attention-getter; secondary options below",
+        "innovativeElements": [
+          "Prominent Family.finance wallet integration as primary path",
+          "Background shows destination screen to orient user"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Connect Web3 wallet to access Aave platform and view personal yield opportunities",
+        "entryPoints": [
+          "Click 'Connect wallet' button in top right of header",
+          "Arrive at Core Instance page without wallet connection"
+        ],
+        "exitPoints": [
+          "Select wallet provider to proceed to wallet connection flow",
+          "Click X to close modal and return to previous state",
+          "Click 'I don't have a wallet' for onboarding new users"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'Continue with Family' button",
+            "action": "Initialize Family.finance wallet connection"
+          },
+          {
+            "element": "MetaMask, Coinbase Wallet, Other Wallets rows",
+            "action": "Launch respective wallet connection protocol"
+          },
+          {
+            "element": "X close button",
+            "action": "Dismiss modal"
+          },
+          {
+            "element": "'I don't have a wallet' link",
+            "action": "Route to wallet creation/onboarding flow"
+          }
+        ],
+        "informationArchitecture": "Single-purpose modal with wallet options ranked by integration priority; fallback path for new users",
+        "frictionPoints": [
+          "Modal blocks view of product; user must decide wallet before exploring",
+          "Long list of 'Other Wallets' may require scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect Wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue with Family",
+            "style": "primary-button",
+            "placement": "Top of wallet list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "or select a wallet from the list below",
+            "context": "Below 'Continue with Family' button",
+            "purpose": "Directs user to alternative options"
+          },
+          {
+            "text": "I don't have a wallet",
+            "context": "Bottom of wallet list",
+            "purpose": "Provides pathway for users without existing wallet"
+          }
+        ],
+        "tone": "friendly-casual and action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Recognizable wallet brands (MetaMask, Coinbase, Family)",
+          "Background shows real staking yields and market data"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-send-1-bridge-page.png",
+      "label": "bridge page",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2E4E",
+          "#00D4AA",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for 'Bridge history' page title",
+          "bodyStyle": "Medium bold sans-serif for empty state message ('Please connect your wallet')",
+          "dataStyle": "Centered, large bold typography for call-to-action"
+        },
+        "components": [
+          {
+            "type": "Page header",
+            "description": "'Bridge history' title",
+            "position": "Top left of content area",
+            "notable": "Simple, minimal styling; introduces transaction history context"
+          },
+          {
+            "type": "Empty state container",
+            "description": "Centered layout with ghost icon, headline, description, and CTA",
+            "position": "Center of main content area",
+            "notable": "Large icon; generous vertical spacing; gradient CTA button"
+          },
+          {
+            "type": "Illustration",
+            "description": "Ghost character wearing a cap",
+            "position": "Above headline, centered",
+            "notable": "Friendly, non-threatening mascot; adds personality to empty state"
+          },
+          {
+            "type": "CTA Button",
+            "description": "'Connect wallet' button",
+            "position": "Below explanatory text",
+            "notable": "Turquoise-to-magenta gradient; matches primary brand button"
+          },
+          {
+            "type": "Analytics consent modal",
+            "description": "Privacy notice in lower right",
+            "position": "Bottom right overlay",
+            "notable": "Consistent with other pages; non-intrusive placement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Ghost icon → headline → subtext → CTA; large whitespace emphasizes emptiness and calls focus to button",
+        "innovativeElements": [
+          "Friendly ghost mascot for empty state (vs. generic blank message)",
+          "Centered composition with ample breathing room"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View past bridge transactions (but wallet not yet connected)",
+        "entryPoints": [
+          "Navigate to Bridge section via 'Bridge GHO' button in header",
+          "Click 'Bridge' in main nav (if available)",
+          "User arrives here when not yet authenticated"
+        ],
+        "exitPoints": [
+          "Click 'Connect wallet' to proceed to wallet selection modal",
+          "Navigate via top nav (Dashboard, Markets, Governance, Savings)",
+          "Click 'Bridge GHO' header button for quick bridge action"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'Connect wallet' button",
+            "action": "Launch wallet connection modal"
+          },
+          {
+            "element": "Top nav items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Empty state is primary content; all navigation paths available in header and footer",
+        "frictionPoints": [
+          "User cannot view any bridge history without connecting wallet first",
+          "Single call-to-action requires wallet connection step"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Please, connect your wallet",
+        "subheadline": "Please connect your wallet to view transaction history.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Below subheadline, centered"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please, connect your wallet",
+          "Please connect your wallet to view transaction history."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-swap-2-markets-scrolled-1.png",
+      "label": "Markets — scrolled 1",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#3B82F6"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, 14-16px for asset names",
+          "bodyStyle": "Sans-serif, regular, 12-14px for secondary labels",
+          "dataStyle": "Monospace or tabular figures, bold for large numbers (e.g., 42.54K), smaller weight for percentages and USD values"
+        },
+        "components": [
+          {
+            "type": "asset-row",
+            "description": "Horizontal card with asset icon, name, ticker, and metrics across multiple columns",
+            "position": "left-to-right, repeating vertically",
+            "notable": "Icon badges with network colors (blue for Ethereum), truncated asset names with ellipsis"
+          },
+          {
+            "type": "metric-column",
+            "description": "Six standardized columns: Total Supplied, Supply APY, Total Borrowed, Borrow APY Variable, with Details button",
+            "position": "right of asset info",
+            "notable": "Conditional badges (red alert for rsETH, disabled state indicator), percentage symbols, USD equivalents in smaller text"
+          },
+          {
+            "type": "analytics-modal",
+            "description": "Privacy consent dialog overlay",
+            "position": "bottom-right corner",
+            "notable": "Dark background with contrast text, 'Allow analytics' primary button and 'Opt-out' text link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-aligned asset names draw eye first, metrics columns create scannable data grid, Details buttons provide drill-down",
+        "innovativeElements": [
+          "Conditional status badges integrated into data rows (red alert for risky assets)",
+          "Supply/Borrow APY indicators with small circular toggle controls for quick comparison"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse available assets, compare supply/borrow metrics, identify yield opportunities",
+        "entryPoints": [
+          "Markets tab in main navigation",
+          "Asset discovery from dashboard"
+        ],
+        "exitPoints": [
+          "Click Details button to open asset detail modal",
+          "Click asset row to drill into specific market",
+          "Navigate to other tabs (Dashboard, Governance, Savings, Staking)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Details button",
+            "action": "Opens asset detail panel with deeper metrics and manage options"
+          },
+          {
+            "element": "APY percentage with circular toggle",
+            "action": "Likely toggles between supply and borrow rates or comparison mode"
+          },
+          {
+            "element": "Allow analytics / Opt-out buttons",
+            "action": "Consent management for tracking"
+          },
+          {
+            "element": "Asset row",
+            "action": "Likely clickable to drill into full asset detail page"
+          }
+        ],
+        "informationArchitecture": "Flat list sorted by asset prominence, consistent columnar data layout, secondary actions (Details) grouped on right",
+        "frictionPoints": [
+          "Privacy modal overlays content, may obscure asset details",
+          "Column headers not visible in scrolled view, reducing scannability",
+          "Truncated asset names (e.g., 'Wrapped liquid sta...') require hover or click to see full name"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "ghost-button",
+            "placement": "right side of each asset row"
+          },
+          {
+            "text": "Allow analytics",
+            "style": "primary-button",
+            "placement": "privacy modal"
+          },
+          {
+            "text": "Opt-out",
+            "style": "text-link",
+            "placement": "privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Asset",
+            "context": "column header",
+            "purpose": "Label for asset name and symbol column"
+          },
+          {
+            "text": "Total supplied",
+            "context": "column header",
+            "purpose": "Indicates supplied amount metric"
+          },
+          {
+            "text": "Supply APY",
+            "context": "column header",
+            "purpose": "Annual percentage yield for supplied assets"
+          },
+          {
+            "text": "Total borrowed",
+            "context": "column header",
+            "purpose": "Indicates borrowed amount metric"
+          },
+          {
+            "text": "Borrow APY, variable",
+            "context": "column header",
+            "purpose": "Variable rate label for borrowing costs"
+          },
+          {
+            "text": "(Disabled)",
+            "context": "rsETH borrow rate",
+            "purpose": "Indicates borrowing is not available for this asset"
+          },
+          {
+            "text": "We may employ on-the-spot tracking techniques during your browsing session...",
+            "context": "privacy modal",
+            "purpose": "Consent disclosure for analytics"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "42.54K (supply amount)",
+          "$2.96B (USD equivalent)",
+          "< 0.01 % (APY below threshold)",
+          "4.55 % (APY percentage)",
+          "5x (multiplier indicator with dot)"
+        ],
+        "trustSignals": [
+          "Specific TVL numbers (e.g., $3.71B for wstETH)",
+          "Governance badge and icons for major protocols (Wrapped BTC, Coinbase Wrapped)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aave-staking-1-governance.png",
+      "label": "Governance",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2E48",
+          "#FFFFFF",
+          "#1DD1A1"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold (32px+) for 'Aave Governance' page title, smaller bold (20px) for section headings",
+          "bodyStyle": "Regular sans-serif 14-16px for description text and proposal summaries",
+          "dataStyle": "Tabular figures for vote counts and percentages with colored bars"
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Promotional banner at top with gradient background (purple to teal)",
+            "position": "top of page",
+            "notable": "Contains 'Introducing Aave mobile app' messaging with 'JOIN WAITLIST' button and close icon"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with tabs: Dashboard, Markets, Governance, Savings, Staking, More",
+            "position": "top below banner",
+            "notable": "Governance tab underlined, indicating current view; secondary actions (Bridge GHO, Swap, Connect wallet, settings) on right"
+          },
+          {
+            "type": "governance-intro",
+            "description": "Hero section with 'Aave Governance' heading, description text, and action buttons",
+            "position": "main content area top",
+            "notable": "Links to Snapshots, Forum, FAQ, and Governance V2 documentation"
+          },
+          {
+            "type": "two-column-layout",
+            "description": "Left column for Proposals list, right column for 'Your info' panel",
+            "position": "main content below intro",
+            "notable": "Left panel has Filter dropdown and search, right panel prompts wallet connection"
+          },
+          {
+            "type": "proposal-card",
+            "description": "White card with status badge (green: Open for voting, Passed, Executed), proposal title, author, summary, and vote counts with percentage bars",
+            "position": "repeating in left column",
+            "notable": "Vote bars color-coded (green for YAE, gray for NAY), percentage labels aligned right"
+          },
+          {
+            "type": "analytics-modal",
+            "description": "Privacy consent overlay",
+            "position": "bottom-right",
+            "notable": "Consistent design with Markets screen"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Banner draws attention first, nav anchors user location, hero section establishes governance context, proposal list becomes primary focus, right sidebar provides secondary info",
+        "innovativeElements": [
+          "Status badges (Open for voting, Passed, Executed) provide quick visual governance state",
+          "Vote visualization with stacked percentage bars (YAE/NAY) integrated into proposal cards",
+          "Two-column layout separating proposals from user-specific information"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review governance proposals, understand voting outcomes, participate in DAO governance",
+        "entryPoints": [
+          "Governance tab in main navigation",
+          "Navigation from Dashboard or Staking section"
+        ],
+        "exitPoints": [
+          "Click proposal card to view full proposal details and vote",
+          "Click external links (Snapshots, Forum, FAQ, Governance V2)",
+          "Connect wallet button to enable voting",
+          "Navigate to other sections via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter dropdown",
+            "action": "Filter proposals by status (All proposals, Open, Passed, Executed)"
+          },
+          {
+            "element": "Search field",
+            "action": "Search proposals by title or keyword"
+          },
+          {
+            "element": "Proposal card",
+            "action": "Expand or navigate to proposal detail and voting interface"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Initiate wallet connection to enable governance participation"
+          },
+          {
+            "element": "Documentation links (SNAPSHOTS, FORUM, FAQ, GOVERNANCE V2)",
+            "action": "Navigate to external documentation or governance resources"
+          },
+          {
+            "element": "Allow analytics / Opt-out",
+            "action": "Manage tracking preferences"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: intro section > filtered proposal list (ordered by status priority: Open > Passed > Executed) > proposal details on card click",
+        "frictionPoints": [
+          "Right sidebar prompts wallet connection before showing personal voting history or stakes",
+          "Privacy modal can obscure proposal details during browsing",
+          "Truncated proposal summary text requires click to see full content",
+          "Filter and search not visible in current view (may require sidebar collapse)"
+        ],
+        "progressIndicators": [
+          "Status badges (Open for voting, Passed, Executed) indicate proposal lifecycle stage",
+          "Vote percentage visualization shows proposal outcome progress"
+        ]
+      },
+      "copy": {
+        "headline": "Aave Governance",
+        "subheadline": "Aave is a fully decentralized, community governed protocol by the AAVE token-holders. AAVE token-holders collectively discuss, propose, and vote on upgrades to the protocol...",
+        "ctas": [
+          {
+            "text": "JOIN WAITLIST",
+            "style": "primary-button",
+            "placement": "top promotional banner"
+          },
+          {
+            "text": "SNAPSHOTS",
+            "style": "primary-button",
+            "placement": "governance intro section"
+          },
+          {
+            "text": "FORUM",
+            "style": "primary-button",
+            "placement": "governance intro section"
+          },
+          {
+            "text": "FAQ",
+            "style": "primary-button",
+            "placement": "governance intro section"
+          },
+          {
+            "text": "GOVERNANCE V2",
+            "style": "primary-button",
+            "placement": "governance intro section"
+          },
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "'Your info' right sidebar"
+          },
+          {
+            "text": "Allow analytics",
+            "style": "primary-button",
+            "placement": "privacy modal"
+          },
+          {
+            "text": "Opt-out",
+            "style": "text-link",
+            "placement": "privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Proposals",
+            "context": "left column header",
+            "purpose": "Label for proposals list section"
+          },
+          {
+            "text": "Filter",
+            "context": "above proposals list",
+            "purpose": "Toggle to reveal filter options"
+          },
+          {
+            "text": "All proposals",
+            "context": "filter dropdown",
+            "purpose": "Default filter showing all governance proposals"
+          },
+          {
+            "text": "Open for voting",
+            "context": "proposal status badge",
+            "purpose": "Indicates proposal is active and accepting votes"
+          },
+          {
+            "text": "Passed",
+            "context": "proposal status badge",
+            "purpose": "Indicates proposal achieved quorum and passed voting"
+          },
+          {
+            "text": "Executed",
+            "context": "proposal status badge",
+            "purpose": "Indicates proposal has been implemented onchain"
+          },
+          {
+            "text": "Author: Aavechan Initiative @aci",
+            "context": "proposal card metadata",
+            "purpose": "Credits proposal creator"
+          },
+          {
+            "text": "Simple Summary",
+            "context": "proposal card",
+            "purpose": "Brief description of proposal intent"
+          },
+          {
+            "text": "Please connect a wallet to view your personal information here.",
+            "context": "'Your info' sidebar",
+            "purpose": "Prompts user action to access voting history"
+          },
+          {
+            "text": "YAE 86K 100.00 %",
+            "context": "proposal vote display",
+            "purpose": "Shows vote count and approval percentage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "YAE 86K (vote count with label)",
+          "100.00 % (approval percentage)",
+          "NAY 0 (opposition count)",
+          "0 % (rejection percentage)"
+        ],
+        "trustSignals": [
+          "Links to Snapshots and Forum for transparent governance discussion",
+          "Reference to 'fully decentralized, community governed protocol'",
+          "Named governance initiatives (e.g., 'Aavechan Initiative', 'BGD Labs')"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please connect a wallet to view your personal information here."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aave-staking-2-governance-scrolled-1.png",
+      "label": "Governance — scrolled 1",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "single-column-list",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#1DD1A1"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif 18-20px for proposal titles",
+          "bodyStyle": "Regular sans-serif 14px for proposal authors and summaries",
+          "dataStyle": "Tabular figures with percentage bars for vote counts and outcomes"
+        },
+        "components": [
+          {
+            "type": "proposal-card",
+            "description": "Repeating white card containing: status badge, proposal title, author info, summary text, and vote results with percentage bars",
+            "position": "full width, stacked vertically",
+            "notable": "Status badges vary by proposal state (Executed, Passed); vote bars show YAE (green) and NAY (gray) with percentages; bar fills are proportional to vote share"
+          },
+          {
+            "type": "status-badge",
+            "description": "Small pill-shaped badge with text label",
+            "position": "top-left of proposal card",
+            "notable": "Color-coded: green for active/positive states (Executed, Passed), gray for inactive"
+          },
+          {
+            "type": "vote-bar-chart",
+            "description": "Horizontal stacked bar showing YAE and NAY proportions",
+            "position": "right side of vote data",
+            "notable": "Green for YAE, gray for NAY; percentage labels right-aligned; 100%+ bars indicate supermajority or overflow"
+          },
+          {
+            "type": "analytics-modal",
+            "description": "Privacy consent overlay",
+            "position": "bottom-right",
+            "notable": "Consistent styling with previous screens"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Proposal titles dominate each card, author and summary provide supporting detail, vote data clusters on right with visual bar representations, status badges provide quick state identification",
+        "innovativeElements": [
+          "Proportional vote bar visualization with integrated percentages and vote counts",
+          "Color-coded status progression (Executed → Passed terminology) establishes governance state at a glance"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review historical and active governance proposals, understand voting outcomes and proposal progression",
+        "entryPoints": [
+          "Scroll down from Governance landing page",
+          "Direct link to governance history"
+        ],
+        "exitPoints": [
+          "Click proposal card to view full details and participate (if active)",
+          "Scroll up to return to filter/search",
+          "Navigate away via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Proposal card",
+            "action": "Click to expand full proposal details, voting interface, or historical record"
+          },
+          {
+            "element": "Vote bar chart",
+            "action": "Likely non-interactive; displays outcome data"
+          },
+          {
+            "element": "Allow analytics / Opt-out",
+            "action": "Manage privacy and tracking consent"
+          }
+        ],
+        "informationArchitecture": "Chronological or status-ordered list of completed/executing proposals, consistent card layout for scannable comparison",
+        "frictionPoints": [
+          "No visible scroll indicator showing position in list",
+          "Large number of cards may require significant scrolling to reach older proposals",
+          "Privacy modal overlay may obscure proposal details during browse",
+          "Truncated proposal summaries require click to see full content"
+        ],
+        "progressIndicators": [
+          "Status badges indicate proposal execution state (Executed, Passed)",
+          "Vote percentage completion shown in bars and numeric format"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Allow analytics",
+            "style": "primary-button",
+            "placement": "privacy modal"
+          },
+          {
+            "text": "Opt-out",
+            "style": "text-link",
+            "placement": "privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Aave V3.6 Mantle Activation",
+            "context": "proposal title",
+            "purpose": "Identifies specific proposal for governance action"
+          },
+          {
+            "text": "Author: BGD Labs (@bgdlabs)",
+            "context": "proposal card metadata",
+            "purpose": "Credits proposal creator and organization"
+          },
+          {
+            "text": "Simple Summary This proposal allows the Aave governance to activate the Aave V3 Mantle pool (3.6) by completing all the initial setup and listing...",
+            "context": "proposal description",
+            "purpose": "Provides executive summary of proposal intent and scope"
+          },
+          {
+            "text": "YAE 721K 99.97 %",
+            "context": "proposal vote result",
+            "purpose": "Shows affirmative votes and approval percentage"
+          },
+          {
+            "text": "NAY 208 0.03 %",
+            "context": "proposal vote result",
+            "purpose": "Shows opposing votes and opposition percentage"
+          },
+          {
+            "text": "Executed",
+            "context": "status badge",
+            "purpose": "Indicates proposal has been implemented onchain"
+          },
+          {
+            "text": "We may employ on-the-spot tracking techniques...",
+            "context": "privacy modal",
+            "purpose": "Disclosure of analytics and data collection practices"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "YAE 721K (vote count with token symbol equivalent)",
+          "99.97 % (approval supermajority percentage)",
+          "NAY 208 (opposition vote count)",
+          "0.03 % (opposition percentage)",
+          "1M (shorthand for million votes)"
+        ],
+        "trustSignals": [
+          "Named author organizations (BGD Labs, Chaos Labs, Aavechan Initiative)",
+          "Precise vote counts demonstrating actual governance participation",
+          "Execution status confirmation for completed proposals"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

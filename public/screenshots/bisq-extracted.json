@@ -1,0 +1,2140 @@
+{
+  "slug": "bisq",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:24:52.726Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 17,
+  "screens": [
+    {
+      "image": "/screenshots/bisq-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FBC47",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, ~48px, black text",
+          "bodyStyle": "Medium sans-serif regular, ~16px, dark gray, 60-70 character line length",
+          "dataStyle": "Monospace for price data and version numbers in smaller text"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with Get Started, Bisq Easy, FAQ, Downloads, language selector, search, and theme toggle",
+            "position": "Top of page",
+            "notable": "Clean, minimal design with language localization support"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with value proposition and download CTA",
+            "position": "Above fold, centered",
+            "notable": "Green primary button with macOS detection and secondary gray button"
+          },
+          {
+            "type": "Trading interface preview",
+            "description": "Screenshot of Bisq desktop app with green navigation tabs, trading charts, and price data",
+            "position": "Below hero, full-width",
+            "notable": "Real product screenshot showing BTC/USD market with candlestick charts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero headline dominates, value prop below, CTAs prominently placed, product screenshot anchors page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bisq and download the desktop application",
+        "entryPoints": [
+          "Direct to homepage",
+          "Navigation from other pages"
+        ],
+        "exitPoints": [
+          "Download macOS",
+          "Get Started flow",
+          "Browse documentation/FAQ",
+          "Market data exploration"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for macOS button",
+            "action": "Initiates .dmg file download with system detection"
+          },
+          {
+            "element": "Get Started button",
+            "action": "Navigates to onboarding flow"
+          },
+          {
+            "element": "All Downloads link",
+            "action": "Shows available downloads for other operating systems"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Routes to various sections: Bisq Easy, FAQ, Downloads"
+          }
+        ],
+        "informationArchitecture": "Hero section establishing value prop → Download CTA → Product preview demonstrating functionality",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Exchange, Decentralized.",
+        "subheadline": "Buy and sell bitcoin for fiat (or other cryptocurrencies) privately and securely using Bisq's peer-to-peer network and open-source desktop software. No registration required.",
+        "ctas": [
+          {
+            "text": "Download for macOS",
+            "style": "primary-button",
+            "placement": "Left of center, below headline"
+          },
+          {
+            "text": "Get Started",
+            "style": "ghost-button",
+            "placement": "Right of center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "All Downloads",
+            "context": "Below primary CTA",
+            "purpose": "Reveal multi-platform options"
+          },
+          {
+            "text": "v1.9.22 You appear to be using macOS",
+            "context": "Below download button",
+            "purpose": "System detection and version transparency"
+          },
+          {
+            "text": "Market price by BitcoinAverage",
+            "context": "Below price display",
+            "purpose": "Data source attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "BTC/USD: 9260.70",
+          "0.07356221 (Available balance)",
+          "0.038480 BTC (Reserved)",
+          "0.0060 BTC (Locked)"
+        ],
+        "trustSignals": [
+          "Open-source desktop software",
+          "Peer-to-peer network",
+          "No registration required",
+          "Live market data via BitcoinAverage"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-2-screenshot-2.png",
+      "label": "Screenshot 2",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FBC47",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, ~48px, black text",
+          "bodyStyle": "Medium sans-serif regular, ~16px, dark gray, German language text",
+          "dataStyle": "Monospace for version and system indicators"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with localized German text (Erste Schritte, Downloads, De language selector)",
+            "position": "Top of page",
+            "notable": "Internationalized with German language support"
+          },
+          {
+            "type": "Hero section",
+            "description": "German translation of value proposition with OS detection",
+            "position": "Above fold, centered",
+            "notable": "Same layout as English version but localized copy"
+          },
+          {
+            "type": "Trading interface preview",
+            "description": "Identical Bisq desktop app screenshot with market data",
+            "position": "Below hero, full-width",
+            "notable": "Consistent product presentation across languages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to English version; visual consistency maintained",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bisq in German and initiate download/onboarding",
+        "entryPoints": [
+          "Direct navigation via language selector",
+          "German regional traffic"
+        ],
+        "exitPoints": [
+          "Download for macOS",
+          "Erste Schritte (Get Started)",
+          "Documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Für macOS herunterladen button",
+            "action": "Initiates .dmg download with German localization"
+          },
+          {
+            "element": "Erste Schritte button",
+            "action": "Routes to German onboarding flow"
+          },
+          {
+            "element": "Language selector",
+            "action": "Toggles between language variants"
+          }
+        ],
+        "informationArchitecture": "Identical structure to English; localization at copy level only",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Exchange, Dezentralisiert.",
+        "subheadline": "Bisq ist eine Open-Source-Peer-to-Peer-Anwendung, mit der Sie Kryptowährungen im Austausch gegen nationale Währungen kaufen und verkaufen können. Eine Registrierung ist nicht erforderlich.",
+        "ctas": [
+          {
+            "text": "Für macOS herunterladen",
+            "style": "primary-button",
+            "placement": "Left of center, below headline"
+          },
+          {
+            "text": "Erste Schritte",
+            "style": "ghost-button",
+            "placement": "Right of center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Alle Downloads",
+            "context": "Below primary CTA",
+            "purpose": "Multi-platform options in German"
+          },
+          {
+            "text": "Sie scheinen macOS zu benutzen",
+            "context": "Below download button",
+            "purpose": "German system detection message"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "v1.9.22",
+          "BTC/USD: 9260.70"
+        ],
+        "trustSignals": [
+          "Open-Source-Peer-to-Peer-Anwendung",
+          "No registration required (universal)",
+          "Live market data"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-3-screenshot-3.png",
+      "label": "Screenshot 3",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FBC47",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, ~48px, black text",
+          "bodyStyle": "Medium sans-serif regular, ~16px, dark gray, Spanish language",
+          "dataStyle": "Monospace for version info"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Spanish navigation (Empezando, Descargas, Es language selector)",
+            "position": "Top of page",
+            "notable": "Spanish language variant with localized navigation"
+          },
+          {
+            "type": "Hero section",
+            "description": "Spanish translation of Bisq value proposition and features",
+            "position": "Above fold, centered",
+            "notable": "Maintains visual consistency across language variants"
+          },
+          {
+            "type": "Trading interface preview",
+            "description": "Bisq desktop interface showing market trading features",
+            "position": "Below hero, full-width",
+            "notable": "Product screenshot remains unchanged across localizations"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Consistent three-tier layout: headline → value prop → CTA → product preview",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bisq in Spanish and download or begin onboarding",
+        "entryPoints": [
+          "Language selector",
+          "Spanish regional traffic",
+          "Direct Spanish URL"
+        ],
+        "exitPoints": [
+          "Descargar para macOS",
+          "Comenzar onboarding",
+          "Help resources"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Descargar para macOS button",
+            "action": "Downloads .dmg with Spanish system message"
+          },
+          {
+            "element": "Comenzar button",
+            "action": "Routes to Spanish-language getting started flow"
+          },
+          {
+            "element": "Todas las descargas link",
+            "action": "Shows all OS download options"
+          }
+        ],
+        "informationArchitecture": "Template-based: English structure applied to Spanish content",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Exchange, Descentralizado.",
+        "subheadline": "Bisq es una aplicación de código abierto P2P que le permite comprar y vender criptomonedas a cambio de monedas nacionales. No es necesario registrarse.",
+        "ctas": [
+          {
+            "text": "Descargar para macOS",
+            "style": "primary-button",
+            "placement": "Left of center, below headline"
+          },
+          {
+            "text": "Comenzar",
+            "style": "ghost-button",
+            "placement": "Right of center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Todas las descargas",
+            "context": "Below primary CTA",
+            "purpose": "Multi-platform selection in Spanish"
+          },
+          {
+            "text": "Parece que está ejecutando macOS",
+            "context": "Below download button",
+            "purpose": "Spanish system detection message"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "v1.9.22",
+          "BTC/USD: 9260.70"
+        ],
+        "trustSignals": [
+          "Código abierto P2P (Open-source P2P)",
+          "No registration required",
+          "Comprar y vender criptomonedas"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-4-screenshot-4.png",
+      "label": "Screenshot 4",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width with hero section above embedded app preview",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1DBF60",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, left-aligned (64px+ equivalent)",
+          "bodyStyle": "Medium-weight sans-serif, dark gray, generous line height",
+          "dataStyle": "Monospace font in trading interface; candlestick chart with green/red candles"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, menu items (Mise en route, Bisq Easy, FAQ), language/downloads dropdown, search, theme toggle",
+            "position": "Top fixed",
+            "notable": "Clean, minimalist design with language support"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline, descriptive paragraph, two CTAs (primary green button, secondary gray button)",
+            "position": "Top center, above fold",
+            "notable": "Value proposition clearly stated without jargon"
+          },
+          {
+            "type": "Download button",
+            "description": "Prominent green button with Apple logo, .dmg file format, version number below",
+            "position": "Left of secondary CTA",
+            "notable": "Includes version number and platform hint"
+          },
+          {
+            "type": "App preview / trading interface",
+            "description": "Full embedded trading dashboard showing market data, candlestick chart, order book tabs, wallet info",
+            "position": "Below fold, spanning full width",
+            "notable": "Live product preview builds credibility"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates; subheadline supports; CTAs are focal points; app preview anchors bottom",
+        "innovativeElements": [
+          "Embedded live trading interface as proof of product",
+          "Multi-language page variants shown in sequence"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page with product showcase",
+        "userIntent": "Understand what Bisq is and download the application",
+        "entryPoints": [
+          "Direct URL visit",
+          "Search engine landing",
+          "Social media link"
+        ],
+        "exitPoints": [
+          "Download macOS via primary button",
+          "Click 'Commencer' (Start) secondary button",
+          "Navigate to Mise en route, Bisq Easy, or FAQ",
+          "Search wiki"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Primary download button",
+            "action": "Initiates download of Bisq macOS version"
+          },
+          {
+            "element": "Secondary 'Commencer' button",
+            "action": "Navigates to getting started guide"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to feature pages or support"
+          },
+          {
+            "element": "Language/region dropdown",
+            "action": "Switch language and region"
+          }
+        ],
+        "informationArchitecture": "Value prop → Download CTA → Visual proof (live trading interface)",
+        "frictionPoints": [
+          "macOS-only primary button may alienate Windows/Linux users initially",
+          "Limited CTA options above fold (only 2 buttons)",
+          "App preview may be overwhelming for non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Plateforme d'échange, Décentralisée.",
+        "subheadline": "Bisq est une application pair-à-pair open-source qui vous permet d'acheter et de vendre des cryptomonnaies en échange de devises nationales. Aucune inscription n'est requise.",
+        "ctas": [
+          {
+            "text": "Obtenir pour macOS",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side"
+          },
+          {
+            "text": "Commencer →",
+            "style": "secondary-button",
+            "placement": "Below subheadline, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Téléchargements",
+            "context": "Below download button",
+            "purpose": "Link to all platform downloads"
+          },
+          {
+            "text": "v1.9.22",
+            "context": "Below download button",
+            "purpose": "Shows current version number"
+          },
+          {
+            "text": "vous sembler utiliser un macOS",
+            "context": "Below version",
+            "purpose": "Device detection feedback"
+          }
+        ],
+        "tone": "professional-technical, direct, confident",
+        "dataFormatting": [
+          "BTC/USD: 9260.70 (price pair format)",
+          "0.07356221 (available balance)",
+          "0.038480 BTC (reserved amount)",
+          "0.0060 BTC (locked amount)"
+        ],
+        "trustSignals": [
+          "Open-source mention",
+          "No registration required",
+          "Peer-to-peer architecture emphasized",
+          "Version number displayed (v1.9.22)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-5-screenshot-5.png",
+      "label": "Screenshot 5",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width with hero section above embedded app preview",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1DBF60",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, left-aligned, slightly smaller than French version",
+          "bodyStyle": "Medium-weight sans-serif, dark gray, generous line height",
+          "dataStyle": "Monospace font in trading interface; candlestick chart with green/red candles"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Portuguese variant: Começar, Bisq Easy, FAQ, Downloads dropdown, language selector (Pt)",
+            "position": "Top fixed",
+            "notable": "Language-specific navigation labels"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline, descriptive paragraph in Portuguese, two CTAs",
+            "position": "Top center",
+            "notable": "Identical layout to French version but Portuguese copy"
+          },
+          {
+            "type": "Download button",
+            "description": "Green button with Apple logo, .dmg file format, version v1.9.22",
+            "position": "Left of secondary CTA",
+            "notable": "Consistent design across language variants"
+          },
+          {
+            "type": "App preview",
+            "description": "Trading dashboard with identical layout to French version",
+            "position": "Below fold",
+            "notable": "Demonstrates cross-platform UI consistency"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to French version; headline > subheadline > CTAs > app preview",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing page (Portuguese localization)",
+        "userIntent": "Understand Bisq offering and download for Portuguese-speaking users",
+        "entryPoints": [
+          "Language selector from main site",
+          "Direct Portuguese URL",
+          "Search engine (Portuguese locale)"
+        ],
+        "exitPoints": [
+          "Download button",
+          "Começar (Start) button",
+          "Navigation items",
+          "Search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download para macOS",
+            "action": "Initiate macOS download"
+          },
+          {
+            "element": "Começar →",
+            "action": "Navigate to getting started"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to localized pages"
+          }
+        ],
+        "informationArchitecture": "Identical to French version; localization-only variant",
+        "frictionPoints": [
+          "macOS-only primary CTA",
+          "Trading interface may intimidate non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Exchange, Descentralizada.",
+        "subheadline": "Bisq é uma aplicação open-source, peer-to-peer que permite comprar e vender criptomoedas com moedas nacionais. Sem necessidade de registro.",
+        "ctas": [
+          {
+            "text": "Download para macOS",
+            "style": "primary-button",
+            "placement": "Below subheadline, left"
+          },
+          {
+            "text": "Começar →",
+            "style": "secondary-button",
+            "placement": "Below subheadline, right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Todos os Woownloads",
+            "context": "Below download button",
+            "purpose": "Link to all platform options"
+          },
+          {
+            "text": "v1.9.22",
+            "context": "Below downloads link",
+            "purpose": "Version number"
+          },
+          {
+            "text": "Você parece estar a utilizar macOS",
+            "context": "Below version",
+            "purpose": "Device detection feedback (Portuguese)"
+          }
+        ],
+        "tone": "professional-technical, direct, confidence",
+        "dataFormatting": [
+          "BTC/USD: 9260.70",
+          "0.07356221",
+          "0.038480 BTC",
+          "0.0060 BTC"
+        ],
+        "trustSignals": [
+          "Open-source explicitly mentioned",
+          "No registration required",
+          "Peer-to-peer model highlighted",
+          "Version number visible"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-6-.png",
+      "label": "简体中文",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width with hero section above embedded app preview",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1DBF60",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, left-aligned, Chinese characters (Simplified)",
+          "bodyStyle": "Medium sans-serif, dark gray, optimized for Chinese line breaks",
+          "dataStyle": "Monospace font in charts; candlestick visualization"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top nav with Chinese labels: 快速入门 (Quick Start), Bisq Easy, FAQ, 下载 (Downloads), 简体中文 (Simplified Chinese)",
+            "position": "Top fixed",
+            "notable": "Full Chinese localization in navigation"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large Chinese headline, Chinese description paragraph, two CTAs",
+            "position": "Top center",
+            "notable": "Complete Chinese language support"
+          },
+          {
+            "type": "Download button",
+            "description": "Green button: 下载 macOS 版 (Download macOS version), v1.9.22",
+            "position": "Left side",
+            "notable": "Localized button text with platform specification"
+          },
+          {
+            "type": "App preview",
+            "description": "Trading interface with identical functionality to other language versions",
+            "position": "Below fold",
+            "notable": "UI remains consistent across localizations"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → subheadline → CTAs → app preview (consistent across languages)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing page (Simplified Chinese localization)",
+        "userIntent": "Chinese speakers understand Bisq and download the application",
+        "entryPoints": [
+          "Language selector to Chinese",
+          "Direct Chinese URL",
+          "Regional search engine results"
+        ],
+        "exitPoints": [
+          "macOS download button",
+          "现在开始 (Start Now) button",
+          "Navigation to localized pages",
+          "Search wiki"
+        ],
+        "interactiveElements": [
+          {
+            "element": "下载 macOS 版",
+            "action": "Initiate macOS application download"
+          },
+          {
+            "element": "现在开始 →",
+            "action": "Navigate to Chinese quick-start guide"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Browse Chinese-language resources"
+          }
+        ],
+        "informationArchitecture": "Value proposition → Download CTA → Live product demonstration",
+        "frictionPoints": [
+          "macOS-only primary option limits Windows/Linux users",
+          "App interface itself may not be fully localized to Chinese"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "交易、去中心化。",
+        "subheadline": "Bisq 是一个开源的点对点应用程序，允许你买卖加密货币，以换取国家货币。不需要注册。",
+        "ctas": [
+          {
+            "text": "下载 macOS 版",
+            "style": "primary-button",
+            "placement": "Below subheadline, left"
+          },
+          {
+            "text": "现在开始 →",
+            "style": "secondary-button",
+            "placement": "Below subheadline, right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "所有下载",
+            "context": "Below download button",
+            "purpose": "Link to all platform downloads in Chinese"
+          },
+          {
+            "text": "v1.9.22",
+            "context": "Below downloads link",
+            "purpose": "Version number"
+          },
+          {
+            "text": "你似乎在使用 macOS",
+            "context": "Below version",
+            "purpose": "Device detection message in Chinese"
+          }
+        ],
+        "tone": "professional-technical, direct, informative",
+        "dataFormatting": [
+          "BTC/USD: 9260.70",
+          "0.07356221",
+          "0.038480 BTC",
+          "0.0060 BTC"
+        ],
+        "trustSignals": [
+          "开源 (open-source) emphasized",
+          "No registration required",
+          "点对点 (peer-to-peer) model highlighted",
+          "Current version displayed"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-7-get-started.png",
+      "label": "Get Started",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1EC659",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast black on white, 2-3rem size",
+          "bodyStyle": "Regular sans-serif, medium gray, 1rem line-height",
+          "dataStyle": "Monospace or structured for technical details (bitcoin amounts, security deposits)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top horizontal nav with Get Started underlined, Bisq Easy, FAQ, Downloads, search",
+            "position": "Header",
+            "notable": "Green underline on active tab"
+          },
+          {
+            "type": "Call-to-action box",
+            "description": "Green button for Windows, secondary macOS/Linux option",
+            "position": "Right side, lower half",
+            "notable": "Video embed below with 'BISQ DISTILLED' branding"
+          },
+          {
+            "type": "Information callout",
+            "description": "Light gray background box with italic text explaining bitcoin security deposit requirements",
+            "position": "Center, mid-page",
+            "notable": "Green hyperlink 'Here are some tips' for emphasis"
+          },
+          {
+            "type": "Numbered section header",
+            "description": "Large '1' prefix for Download and Install Bisq section",
+            "position": "Left side",
+            "notable": "Sequential numbering suggests multi-step process"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear top-to-bottom flow: headline → subheadline → benefits list → callout box → numbered steps → CTA buttons",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Understand how to get started with Bisq trading and download the application",
+        "entryPoints": [
+          "Clicked 'Get Started' from main navigation",
+          "Landing page entry"
+        ],
+        "exitPoints": [
+          "Download button (Windows/macOS/Linux)",
+          "Support link",
+          "Internal links to documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Windows / macOS or Linux toggle",
+            "action": "Switch between platform-specific download instructions"
+          },
+          {
+            "element": "Support link (green text)",
+            "action": "Navigate to support resources"
+          },
+          {
+            "element": "Here are some tips link (green text)",
+            "action": "Jump to section on acquiring bitcoin without KYC"
+          }
+        ],
+        "informationArchitecture": "Linear progression: intro → prerequisites (security deposit) → step 1 (download) with branching platform options → additional guidance",
+        "frictionPoints": [
+          "Requires 0.01 BTC security deposit - may deter new users without bitcoin",
+          "Multiple platforms require user to select correct version"
+        ],
+        "progressIndicators": [
+          "Numbered section '1' indicates multi-step process ahead"
+        ]
+      },
+      "copy": {
+        "headline": "Getting Started",
+        "subheadline": "This guide covers just what you need to get trading quickly!",
+        "ctas": [
+          {
+            "text": "Windows",
+            "style": "primary-button",
+            "placement": "Right side, mid-page"
+          },
+          {
+            "text": "macOS or Linux",
+            "style": "secondary-button",
+            "placement": "Right side, mid-page"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Most videos below are just about 2 minutes long.",
+            "context": "Bullet point under subheadline",
+            "purpose": "Set expectation about time commitment"
+          },
+          {
+            "text": "Support is never too far away.",
+            "context": "Bullet point with green hyperlink",
+            "purpose": "Reassure users about help availability"
+          },
+          {
+            "text": "Before you can start trading on Bisq, you'll need a little bitcoin for a security deposit and fees (0.01 BTC should be enough).",
+            "context": "Callout box",
+            "purpose": "Explain prerequisite requirement clearly"
+          }
+        ],
+        "tone": "professional-technical, reassuring, action-oriented",
+        "dataFormatting": [
+          "0.01 BTC"
+        ],
+        "trustSignals": [
+          "Multisignature escrow mentioned",
+          "Security emphasis on locked bitcoin in escrow"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-8-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#0366D6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white on dark, hierarchical structure",
+          "bodyStyle": "Regular sans-serif, light gray, readable on dark background",
+          "dataStyle": "Code-style monospace for version numbers (v1.9.22, cf887dd), bold for headings"
+        },
+        "components": [
+          {
+            "type": "Header navigation",
+            "description": "GitHub-style dark nav with Platform, Solutions, Resources, Open Source, Enterprise, Pricing dropdowns",
+            "position": "Top fixed",
+            "notable": "Search bar, Sign in/Sign up buttons, light/dark theme toggle"
+          },
+          {
+            "type": "Repository breadcrumb",
+            "description": "bisq-network/bisq with Public label and standard GitHub tabs (Code, Issues, Pull requests, etc.)",
+            "position": "Below header",
+            "notable": "Issue count (156), PR count (6), fork count (1.3k), star count (5k)"
+          },
+          {
+            "type": "Release card",
+            "description": "Large v1.9.22 heading with 'Latest' badge, release date, committer avatar, commit hash",
+            "position": "Main content area",
+            "notable": "Green checkmark on commit hash indicating verification"
+          },
+          {
+            "type": "Release notes section",
+            "description": "Technical description of hotfix for Bitcoin bug affecting block height 928,895",
+            "position": "Below release header",
+            "notable": "Links to upstream bug and SPV resync instructions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "GitHub standard: header → repo info → tabs → version prominent → metadata → detailed notes",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review latest Bisq release notes and download/install instructions",
+        "entryPoints": [
+          "GitHub Releases page link from main site",
+          "Direct GitHub access"
+        ],
+        "exitPoints": [
+          "Installation instructions (macOS section visible)",
+          "Code tab",
+          "Security tab",
+          "Other releases via Compare dropdown"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Compare dropdown",
+            "action": "Compare release versions"
+          },
+          {
+            "element": "HenrikJannsen avatar/link",
+            "action": "View release manager profile"
+          },
+          {
+            "element": "cf887dd commit hash link",
+            "action": "View commit details"
+          },
+          {
+            "element": "bug link (blue text)",
+            "action": "Link to upstream Bitcoin bug report"
+          }
+        ],
+        "informationArchitecture": "Standard GitHub release pattern: version metadata → release notes summary → platform-specific installation sections",
+        "frictionPoints": [
+          "macOS notarization alert requires user understanding of developer controls",
+          "SPV resync instruction may be unclear to non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "v1.9.22",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Latest",
+            "context": "Badge next to version number",
+            "purpose": "Indicate current stable release"
+          },
+          {
+            "text": "This is a hotfix release that applies the upstream Bitcoin fix for the chainwork bug.",
+            "context": "First sentence of release notes",
+            "purpose": "Quickly explain release purpose"
+          },
+          {
+            "text": "If you experience any wallet-related issues, you may perform an SPV resync, although this should not be necessary.",
+            "context": "Release notes body",
+            "purpose": "Provide troubleshooting guidance"
+          }
+        ],
+        "tone": "professional-technical, informative",
+        "dataFormatting": [
+          "v1.9.22",
+          "Dec 23, 2025",
+          "cf887dd",
+          "block height 928,895"
+        ],
+        "trustSignals": [
+          "Green checkmark on commit hash (GPG verification)",
+          "Named release manager (HenrikJannsen)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-9-benefactors.png",
+      "label": "Benefactors",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1EC659",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black, ~2.5rem",
+          "bodyStyle": "Regular sans-serif gray, 1rem-1.25rem line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with Get Started, Bisq Easy, FAQ, Downloads, search, theme toggle",
+            "position": "Header fixed",
+            "notable": "Consistent with other Bisq pages"
+          },
+          {
+            "type": "Page heading",
+            "description": "Large 'Benefactors' text",
+            "position": "Top of content",
+            "notable": "Simple, minimal styling"
+          },
+          {
+            "type": "Description paragraph",
+            "description": "Explains purpose: entities contributing open-source licenses and in-kind support",
+            "position": "Below heading",
+            "notable": "Neutral tone, no emphasis"
+          },
+          {
+            "type": "Hyperlink list",
+            "description": "Two green linked items: ej-technologies JProfiler, JetBrains IntelliJ IDEA with license type",
+            "position": "Center content",
+            "notable": "Green color matches primary brand, indicates interactive elements"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal: headline → explanation → simple list of sponsors",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "information-page",
+        "userIntent": "Learn about organizations supporting Bisq project with free tools and licenses",
+        "entryPoints": [
+          "Navigation from main site",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "JProfiler link (external)",
+          "IntelliJ IDEA link (external)",
+          "Back to other nav sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "ej-technologies JProfiler link",
+            "action": "Navigate to external ej-technologies website"
+          },
+          {
+            "element": "JetBrains IntelliJ IDEA link",
+            "action": "Navigate to external JetBrains website"
+          }
+        ],
+        "informationArchitecture": "Single-column, minimal structure: intro statement → sponsorship list with external links",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Benefactors",
+        "subheadline": "The following entities help Bisq with gratis open-source licenses and other in-kind contributions.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Thank you!",
+            "context": "Bottom of page",
+            "purpose": "Express gratitude to sponsors"
+          }
+        ],
+        "tone": "professional, grateful, formal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Named corporate sponsors",
+          "Open-source license acknowledgment"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-settings-4-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1abc9c",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, left-aligned, teal accent for blog post titles",
+          "bodyStyle": "Medium gray, regular weight, generous line height for readability",
+          "dataStyle": "Dates displayed in small gray text above each article"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, main menu items (Get Started, Bisq Easy, FAQ, Downloads), search, and theme toggle",
+            "position": "Top of page",
+            "notable": "Search bar with wiki scope, external link icon on FAQ"
+          },
+          {
+            "type": "Blog Post Card",
+            "description": "Date, teal title, gray description text, 'Read More' link",
+            "position": "Main content area, stacked vertically",
+            "notable": "Minimal card design with horizontal divider between posts"
+          },
+          {
+            "type": "RSS Feed Icon",
+            "description": "Green RSS icon in top right",
+            "position": "Top right of blog section",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Date anchors the eye first, followed by teal headline, then gray body text and link",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-browse",
+        "userIntent": "Discover recent updates and announcements about Bisq platform developments",
+        "entryPoints": [
+          "Settings navigation",
+          "Main menu link to blog"
+        ],
+        "exitPoints": [
+          "Click 'Read More' to full article",
+          "Navigation to other top-level pages (Get Started, FAQ, Downloads)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read More link",
+            "action": "Navigate to full blog post"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search wiki content"
+          },
+          {
+            "element": "Downloads dropdown",
+            "action": "Reveal download options"
+          }
+        ],
+        "informationArchitecture": "Chronological list of blog posts with dates, titles, and preview text",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bisq Blog",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read More »",
+            "style": "text-link",
+            "placement": "End of each blog preview"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "17 May 2025",
+            "context": "Above first blog post",
+            "purpose": "Provides publication date context"
+          },
+          {
+            "text": "Presentation of the results from our recent survey",
+            "context": "Description under 'Mobile App Survey Results' title",
+            "purpose": "Summarizes post content"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "17 May 2025",
+          "1 May 2025",
+          "27 April 2025"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-settings-5-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1abc9c",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main heading, smaller green sans-serif for section links",
+          "bodyStyle": "Regular gray text, medium line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left Sidebar",
+            "description": "Navigation menu with Main page, Recent changes, Random page, Help links under top section; Tools section below with specialized wiki features",
+            "position": "Left side, fixed width",
+            "notable": "Green accent color on links, hierarchical organization with section headers"
+          },
+          {
+            "type": "Wiki Tabs",
+            "description": "Page and Discussion tabs above main content",
+            "position": "Below main heading, left-aligned",
+            "notable": "Simple tab navigation with View source, View history, and search in top right"
+          },
+          {
+            "type": "Info Box",
+            "description": "Yellow lightbulb icon with version context about Bisq v1, v2, and Bisq Easy",
+            "position": "Below main heading, spanning page width",
+            "notable": "Callout design with icon and colored background for important context"
+          },
+          {
+            "type": "Table of Contents",
+            "description": "Numbered outline with collapsible sections and subsections",
+            "position": "Main content, roughly 40% down page",
+            "notable": "Numbered hierarchical structure with [hide] toggle, all items are green links"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading draws eye, version context box provides critical information, ToC organizes subsections visually",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to common questions about Bisq functionality, security, trading mechanics, and getting started",
+        "entryPoints": [
+          "FAQ link from main navigation",
+          "Search results",
+          "Sidebar 'Help about MediaWiki' link"
+        ],
+        "exitPoints": [
+          "Click specific FAQ question to jump to answer",
+          "Use sidebar navigation to other pages",
+          "Search for specific terms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Table of Contents links",
+            "action": "Jump to specific section within page"
+          },
+          {
+            "element": "Green question links (e.g., '1.1 How is Bisq different...')",
+            "action": "Navigate to anchor within FAQ content"
+          },
+          {
+            "element": "[hide] toggle",
+            "action": "Collapse/expand table of contents"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search Bisq Wiki"
+          }
+        ],
+        "informationArchitecture": "Hierarchical FAQ organized by topic (About, Getting started, Trading mechanics, etc.) with numbered questions and subsections",
+        "frictionPoints": [
+          "Large page may require scrolling to find specific answer",
+          "No visible search-within-page feature"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Frequently asked questions",
+        "subheadline": "Below is a compilation of frequently-asked questions (FAQ) about Bisq, how to use it, and how to help the project.",
+        "ctas": [
+          {
+            "text": "View source",
+            "style": "text-link",
+            "placement": "Top right of page"
+          },
+          {
+            "text": "View history",
+            "style": "text-link",
+            "placement": "Top right of page"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Version Context: Bisq is evolving software. While many principles here are general, specific examples regarding trade mechanics, limits, and security often refer to the classic Bisq v1 trading protocol unless stated otherwise. The current platform is Bisq 2, which supports multiple protocols including Bisq Easy (which may have different rules, e.g., using Reputation instead of security deposits).",
+            "context": "Yellow info box below headline",
+            "purpose": "Clarifies version differences and provides crucial context for understanding content"
+          },
+          {
+            "text": "Feel free to ask further questions on any of Bisq's many outreach channels linked at the bottom of this page.",
+            "context": "Below version context box",
+            "purpose": "Encourages user engagement and directs to support channels"
+          },
+          {
+            "text": "1.1 How is Bisq different from other decentralized exchanges?",
+            "context": "Table of contents numbered list",
+            "purpose": "Organizes and previews FAQ topics for quick scanning"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bisq v1",
+          "Bisq 2",
+          "Bisq Easy",
+          "open-source",
+          "Reputation",
+          "security deposits"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-settings-1-talented-developers.png",
+      "label": "talented developers",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1abc9c",
+          "#ffffff",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif headings in brand green (#1abc9c), 32-36px weight",
+          "bodyStyle": "Dark gray body text, 16px, comfortable line-height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top navigation with logo, primary nav items (Get Started, Bisq Easy, FAQ, Downloads), search bar, and theme toggle",
+            "position": "top",
+            "notable": "Clean, minimal navbar with external link indicator on FAQ"
+          },
+          {
+            "type": "post-metadata",
+            "description": "Author name, date, and RSS icon",
+            "position": "below headline",
+            "notable": "RSS feed icon positioned right-aligned for syndication"
+          },
+          {
+            "type": "bullet-list",
+            "description": "Multiple bulleted sections (What You'll Do, Who You Are)",
+            "position": "main content",
+            "notable": "Organized into semantic sections with subsection headings"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Green headline draws eye immediately, followed by metadata, then body text with subsections guiding reader through job requirements progressively",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-page",
+        "userIntent": "Review job posting for Senior Java Developer position at Bisq",
+        "entryPoints": [
+          "From careers page or external link",
+          "From navigation menu"
+        ],
+        "exitPoints": [
+          "Apply for position (not visible in screenshot)",
+          "Browse other openings",
+          "Return to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Bisq 2 link (green text)",
+            "action": "Navigate to Bisq 2 product page"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search wiki documentation"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: headline → metadata → overview paragraph → What You'll Do → Who You Are → Bonus Points (implied below fold)",
+        "frictionPoints": [
+          "No visible CTA button to apply directly",
+          "Job requirements are extensive (may overwhelm candidates)",
+          "No salary/compensation visible in screenshot"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bisq needs Senior Java Developers",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Bisq 2",
+            "style": "text-link",
+            "placement": "inline in main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Posted by HenrikJannsen on 10 February 2025",
+            "context": "below headline",
+            "purpose": "Establish recency and credibility of posting"
+          },
+          {
+            "text": "We operate without project managers, embrace open-source collaboration, and focus on security, privacy, and decentralization",
+            "context": "opening paragraph",
+            "purpose": "Communicate company culture and values"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Dates in format: '10 February 2025'"
+        ],
+        "trustSignals": [
+          "Posted by named individual (HenrikJannsen)",
+          "References to open-source collaboration",
+          "Focus on security, privacy, and decentralization",
+          "Specific product mention (Bisq 2)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-settings-2-roadmap.png",
+      "label": "roadmap",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1abc9c",
+          "#ffffff",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif heading in brand green, 32-36px",
+          "bodyStyle": "Dark gray body text, 16px, comfortable leading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Consistent top navigation across pages",
+            "position": "top",
+            "notable": "Same structure as previous page for consistency"
+          },
+          {
+            "type": "embedded-video",
+            "description": "YouTube video player with 'Introducing Bisq 2' title and call-to-action checkmarks",
+            "position": "main content",
+            "notable": "Video overlaid with specific action items (get Bisq 2, try trading, give feedback) with linked text in green"
+          },
+          {
+            "type": "numbered-list",
+            "description": "Three numbered steps for getting started",
+            "position": "below video",
+            "notable": "Green-linked text for calls-to-action within list items"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline → metadata → explanatory paragraph → large video element (dominant focal point) → numbered steps",
+        "innovativeElements": [
+          "Video embed with overlaid action items and text links",
+          "Integration of video CTAs directly into video frame"
+        ]
+      },
+      "flow": {
+        "screenType": "announcement-page",
+        "userIntent": "Learn about Bisq 2 beta release and how to get started",
+        "entryPoints": [
+          "Blog or news section",
+          "Navigation link",
+          "External promotion"
+        ],
+        "exitPoints": [
+          "Watch full video on YouTube",
+          "Download Bisq 2",
+          "Try Bisq Easy",
+          "Give feedback"
+        ],
+        "interactiveElements": [
+          {
+            "element": "YouTube video player",
+            "action": "Play/pause video about Bisq 2"
+          },
+          {
+            "element": "downloads page link (green text)",
+            "action": "Navigate to downloads section"
+          },
+          {
+            "element": "Bisq Easy link (green text)",
+            "action": "Navigate to Bisq Easy trading protocol"
+          },
+          {
+            "element": "Discussions > Bisq link",
+            "action": "Navigate to feedback community"
+          }
+        ],
+        "informationArchitecture": "Linear: announcement → video explanation → three sequential getting-started steps",
+        "frictionPoints": [
+          "Video is large and may load slowly on poor connections",
+          "Multiple external navigation required to complete onboarding"
+        ],
+        "progressIndicators": [
+          "Numbered steps (1, 2, 3) indicate progression"
+        ]
+      },
+      "copy": {
+        "headline": "Bisq 2: Now in Beta",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get Bisq 2 at bisq.network/downloads",
+            "style": "text-link",
+            "placement": "in video overlay and step 1"
+          },
+          {
+            "text": "try trading with Bisq Easy",
+            "style": "text-link",
+            "placement": "in video overlay and step 2"
+          },
+          {
+            "text": "give feedback in Discussions > Bisq",
+            "style": "text-link",
+            "placement": "in video overlay and step 3"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Posted by cbeams on 16 March 2024",
+            "context": "below headline",
+            "purpose": "Establish recency and attribution"
+          },
+          {
+            "text": "After nearly three years in development, we're thrilled to announce the first in a series of Bisq 2 beta releases.",
+            "context": "opening paragraph",
+            "purpose": "Build anticipation and communicate development effort"
+          },
+          {
+            "text": "Getting started with Bisq 2 is easy:",
+            "context": "before numbered list",
+            "purpose": "Reduce perceived friction and encourage action"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "Date format: '16 March 2024'"
+        ],
+        "trustSignals": [
+          "3 years of development mentioned",
+          "Video content with product demonstration",
+          "Community feedback integration mentioned"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-settings-3-bisq-hackathon.png",
+      "label": "Bisq Hackathon",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1abc9c",
+          "#ffffff",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif headings in brand green, 32-36px for main sections",
+          "bodyStyle": "Dark gray body text, 16px, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Consistent top navigation",
+            "position": "top",
+            "notable": "Maintains design consistency across content pages"
+          },
+          {
+            "type": "post-metadata",
+            "description": "Author and date information",
+            "position": "below headline",
+            "notable": "Consistent styling with previous pages"
+          },
+          {
+            "type": "section-heading",
+            "description": "Multiple section headings (Why Are We Launching, Why Participate, Challenges & Ideas)",
+            "position": "main content",
+            "notable": "Progressive disclosure of information via semantic sections"
+          },
+          {
+            "type": "bullet-list",
+            "description": "Bulleted benefits and features",
+            "position": "Why Participate section",
+            "notable": "Short, scannable statements for event participation benefits"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Green headline → metadata → opening narrative → section headings → supporting details, guiding reader from 'what' to 'why' to 'how'",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "event-announcement-page",
+        "userIntent": "Learn about Bisq Hackathon event, understand participation criteria and benefits",
+        "entryPoints": [
+          "Blog or events section",
+          "Navigation link",
+          "Social media promotion",
+          "Community announcement"
+        ],
+        "exitPoints": [
+          "Register for hackathon (not visible)",
+          "Navigate to roadmap",
+          "Return to main nav",
+          "View challenges details (implied below fold)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "roadmap link (green text)",
+            "action": "Navigate to project roadmap"
+          },
+          {
+            "element": "Section navigation (implicit)",
+            "action": "Scroll to explore more content below"
+          }
+        ],
+        "informationArchitecture": "Narrative flow: event announcement → context/why → benefits to participate → challenges (implied). Uses progressive disclosure with multiple headings.",
+        "frictionPoints": [
+          "No visible registration CTA button",
+          "Challenges section appears to continue below fold",
+          "Hackathon dates are in opening but may be overlooked",
+          "No deadline information visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bisq Hackathon",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "roadmap",
+            "style": "text-link",
+            "placement": "inline in 'Why Are We Launching' section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Posted by HenrikJannsen on 1 April 2025",
+            "context": "below headline",
+            "purpose": "Establish publication date and authority"
+          },
+          {
+            "text": "Bisq is launching its first-ever Hackathon from April 10–13—an open, collaborative space",
+            "context": "opening paragraph",
+            "purpose": "Establish event dates and positioning immediately"
+          },
+          {
+            "text": "innovative developers passionate about privacy and decentralization",
+            "context": "opening paragraph",
+            "purpose": "Define target audience and values alignment"
+          },
+          {
+            "text": "With its open-ended format, the event encourages creativity, welcomes fresh ideas, and leaves room for unexpected breakthroughs",
+            "context": "Why Are We Launching section",
+            "purpose": "Communicate event philosophy and positioning"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: '1 April 2025'",
+          "Date range: 'April 10–13'"
+        ],
+        "trustSignals": [
+          "Specific event dates provided (April 10-13)",
+          "Reference to published roadmap",
+          "Mention of core Bisq developer collaboration",
+          "Focus on privacy and decentralization alignment",
+          "Promise of compensation for meaningful contributions"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-10-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#00b34d"
+        ],
+        "typography": {
+          "headingStyle": "Ultra-thin, very large sans-serif (404 number) with regular weight for 'Page Not Found'",
+          "bodyStyle": "Light gray, regular weight sans-serif for explanatory text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with logo, menu items, search, and theme toggle",
+            "position": "top",
+            "notable": "Clean, minimal design with green accent logo"
+          },
+          {
+            "type": "error-content",
+            "description": "Large 404 number, heading, quote, explanation text, and action links",
+            "position": "left-side center",
+            "notable": "Uses inspirational Buckminster Fuller quote to contextualize error"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Oversized error code dominates, followed by heading, inspirational quote, then explanation and recovery links",
+        "innovativeElements": [
+          "Incorporates meaningful quote rather than generic error message",
+          "Links are colored green (#00b34d) to draw attention to recovery paths"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User landed on non-existent page; needs guidance to recover",
+        "entryPoints": [
+          "Broken link navigation",
+          "Manual URL entry",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Downloads link",
+          "Community link",
+          "Logo home button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Downloads link (green text)",
+            "action": "Navigate to Downloads page"
+          },
+          {
+            "element": "Community link (green text)",
+            "action": "Navigate to Community section"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home"
+          }
+        ],
+        "informationArchitecture": "Error message at top level, recovery actions embedded in explanatory text, main navigation available at top",
+        "frictionPoints": [
+          "User had to encounter 404 in first place",
+          "Recovery links are text-based rather than prominent buttons"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Downloads",
+            "style": "text-link",
+            "placement": "inline in explanatory text"
+          },
+          {
+            "text": "Community",
+            "style": "text-link",
+            "placement": "inline in explanatory text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "To change something, build a new model that makes the existing model obsolete. —Buckminster Fuller",
+            "context": "Between error code and explanation",
+            "purpose": "Reframes error as opportunity, adds character and philosophy to error page"
+          },
+          {
+            "text": "Sorry, the page you're looking for is not available.",
+            "context": "Main explanation",
+            "purpose": "Acknowledges user's issue with empathy"
+          },
+          {
+            "text": "Got to [Downloads] to start trading with Bisq, or join the [Community].",
+            "context": "Recovery instructions",
+            "purpose": "Guides user toward next action"
+          }
+        ],
+        "tone": "friendly-casual, philosophical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "Page Not Found"
+        ],
+        "emptyStateText": [
+          "Sorry, the page you're looking for is not available."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bisq-home-11-dashboard-page.png",
+      "label": "dashboard page",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#1db949"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif for section headings (Dashboard, BSQ Supply, Cycle Results)",
+          "bodyStyle": "Regular weight gray sans-serif for descriptive text",
+          "dataStyle": "Numeric values in light gray on chart axis, cycle labels in muted gray"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Navigation bar with logo, menu items, search wiki, and theme toggle",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "page-title",
+            "description": "'Dashboard' heading with italicized subheading directing to external link",
+            "position": "top of main content",
+            "notable": "Contextual link to 'https://bisq.markets' for trading data"
+          },
+          {
+            "type": "section-heading",
+            "description": "'BSQ Supply' section with description of metric",
+            "position": "upper content area",
+            "notable": null
+          },
+          {
+            "type": "line-chart",
+            "description": "Time-series chart showing BSQ supply growth from Oct '17 to Cycle 34, ranging 2.5M to 5M",
+            "position": "center of page",
+            "notable": "Green line with light gray background, dual axis (values on right, labels on bottom)"
+          },
+          {
+            "type": "section-heading",
+            "description": "'Cycle Results' with instructional text about clickable cycles",
+            "position": "below chart",
+            "notable": "Mentions 'colored bitcoin unit of account' as green hyperlink"
+          },
+          {
+            "type": "card-grid",
+            "description": "Green cards displaying Cycle 35, 34, 33 data",
+            "position": "bottom of visible area",
+            "notable": "Cards are bright green with white text, appear to be horizontally scrollable"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title dominates, followed by major sections (BSQ Supply, Cycle Results), with chart as focal point, cards as secondary focus",
+        "innovativeElements": [
+          "Links embedded in descriptive text rather than standalone buttons",
+          "Time-series chart uses both date ranges and cycle nomenclature",
+          "Card design uses brand green with clear contrast"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, dashboard",
+        "userIntent": "User wants to review DAO health metrics, BSQ supply trends, and cycle performance data",
+        "entryPoints": [
+          "Navigation from main menu",
+          "Direct URL access to /dashboard"
+        ],
+        "exitPoints": [
+          "External link to https://bisq.markets for trading data",
+          "Click on cycle cards for detailed cycle information",
+          "Navigation to other pages via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chart",
+            "action": "Likely reveals detailed data on hover or click (not visible in screenshot)"
+          },
+          {
+            "element": "Cycle cards (35, 34, 33)",
+            "action": "Click for detailed cycle results"
+          },
+          {
+            "element": "External link to bisq.markets",
+            "action": "Navigate to external trading dashboard"
+          },
+          {
+            "element": "'colored bitcoin unit of account' link",
+            "action": "Navigate to explanation of BSQ terminology"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Page intro → Supply metric overview + chart → Cycle results cards. Information flows from broad (supply overview) to specific (individual cycles)",
+        "frictionPoints": [
+          "Users must scroll to see all cycle cards if more than 3 visible",
+          "External link to trading data requires context switch",
+          "Chart interactivity not immediately clear"
+        ],
+        "progressIndicators": [
+          "Time-series progression visible in chart (Oct '17 through Cycle 34)",
+          "Cycle numbering (Cycle 35, 34, 33) indicates recency/progression"
+        ]
+      },
+      "copy": {
+        "headline": "Dashboard",
+        "subheadline": "This page covers health and performance of the Bisq DAO. For trading data, see https://bisq.markets.",
+        "ctas": [
+          {
+            "text": "https://bisq.markets",
+            "style": "text-link",
+            "placement": "in subheadline"
+          },
+          {
+            "text": "colored bitcoin unit of account",
+            "style": "text-link",
+            "placement": "in Cycle Results description"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total BSQ issued net of BSQ burned for fees.",
+            "context": "Below 'BSQ Supply' heading",
+            "purpose": "Defines the metric being visualized"
+          },
+          {
+            "text": "Click on a cycle for further details. Burn and issuance is denominated in BSQ, Bisq's colored bitcoin unit of account.",
+            "context": "Below 'Cycle Results' heading",
+            "purpose": "Instructions for interaction and explanation of BSQ denomination"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "5M, 4.5M, 4M, 3.5M, 3M, 2.5M (numeric values on chart)",
+          "Oct '17, Jan '18, Apr '18, Jul '18, Oct '18, Jan '19, Cycle 1-34 (date/cycle labels)",
+          "Cycle 35, Cycle 34, Cycle 33 (cycle card titles)"
+        ],
+        "trustSignals": [
+          "DAO structure indicates decentralized governance",
+          "Supply transparency through public dashboard",
+          "Cycle-based structure suggests organized, systematic approach"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bisq-staking-1-learn-more-here.png",
+      "label": "Learn more here",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light and dark (mixed)",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#1db949"
+        ],
+        "typography": {
+          "headingStyle": "Very large, thin-weight sans-serif heading 'The Bisq DAO' in light color on left panel",
+          "bodyStyle": "Regular weight sans-serif for body copy on left; white sans-serif labels on right green panel",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with logo, menu items, language selector, search, and theme toggle",
+            "position": "top",
+            "notable": "Language dropdown visible (En)"
+          },
+          {
+            "type": "split-left-panel",
+            "description": "Left side contains headline, subheadline, body copy, and 'See more' button",
+            "position": "left 40% of screen",
+            "notable": "White background, vertical scrollable content, muted color scheme"
+          },
+          {
+            "type": "split-right-panel",
+            "description": "Right side features circular node diagram with 'BSQ COLORED BITCOIN' at center",
+            "position": "right 60% of screen",
+            "notable": "Bright green (#1db949) background, interactive diagram showing DAO relationships"
+          },
+          {
+            "type": "diagram-nodes",
+            "description": "Circular nodes labeled Contributor, Compensation, Bisq Network, Trading Fees, Trader, Improvements, connected to central BSQ node",
+            "position": "right panel center",
+            "notable": "Clean line connections showing ecosystem flow and relationships"
+          },
+          {
+            "type": "button-ghost",
+            "description": "'See more ↓' button at bottom of left panel",
+            "position": "bottom left",
+            "notable": "Gray button with down arrow, inviting scroll/exploration"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left panel: headline dominates, followed by body copy; right panel: central BSQ node with orbiting concepts; color contrast guides eye rightward",
+        "innovativeElements": [
+          "Split-panel design with complementary text and visual diagram",
+          "Circular node diagram visualizes DAO ecosystem holistically",
+          "Vibrant green right panel creates strong visual anchor and brand emphasis",
+          "Lines connecting nodes suggest flow and relationships in the system"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, onboarding-step",
+        "userIntent": "User is learning about Bisq DAO structure, governance, and how the ecosystem works",
+        "entryPoints": [
+          "Navigation menu click to 'DAO' or staking section",
+          "Direct URL to DAO information page",
+          "Scroll from previous section"
+        ],
+        "exitPoints": [
+          "Click 'See more ↓' to scroll to additional content",
+          "Navigation menu to other pages",
+          "Explore interactive diagram elements (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Diagram nodes",
+            "action": "Likely clickable to reveal more details (implied but not confirmed)"
+          },
+          {
+            "element": "'See more ↓' button",
+            "action": "Scroll page down to reveal additional DAO information"
+          },
+          {
+            "element": "Language selector (En)",
+            "action": "Change interface language"
+          }
+        ],
+        "informationArchitecture": "Introductory section with headline, value proposition, and supporting visual. Design supports progressive disclosure with 'See more' pattern. Left-to-right reading flow complemented by visual reinforcement on right.",
+        "frictionPoints": [
+          "Not immediately clear that diagram nodes are interactive",
+          "Split panel design may be challenging on smaller screens",
+          "'See more' CTA could be more prominent/explicit"
+        ],
+        "progressIndicators": [
+          "'See more ↓' suggests additional content below"
+        ]
+      },
+      "copy": {
+        "headline": "The Bisq DAO",
+        "subheadline": "Decentralizing funding and governance to make Bisq self-sustaining and censorship-resistant.",
+        "ctas": [
+          {
+            "text": "See more ↓",
+            "style": "ghost-button",
+            "placement": "bottom left of left panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bisq's DAO (decentralized autonomous organization) is built on Bitcoin.",
+            "context": "Below subheadline on left panel",
+            "purpose": "Provides technical context and emphasizes Bitcoin foundation"
+          },
+          {
+            "text": "Contributor, Compensation, Improvements, Trader, Trading Fees, Bisq Network",
+            "context": "Circular node labels on right diagram",
+            "purpose": "Identifies key DAO stakeholders and value flows"
+          },
+          {
+            "text": "BSQ COLORED BITCOIN",
+            "context": "Center node of diagram",
+            "purpose": "Identifies the core governance and economic unit"
+          }
+        ],
+        "tone": "professional-technical, educational, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "DAO structure indicates decentralized governance",
+          "Bitcoin-based foundation",
+          "Self-sustaining model emphasis",
+          "Censorship-resistant framing"
+        ],
+        "jargonLevel": "beginner-to-intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

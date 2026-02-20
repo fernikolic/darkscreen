@@ -1,0 +1,3969 @@
+{
+  "slug": "l2beat",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T12:06:29.728Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 37,
+  "screens": [
+    {
+      "image": "/screenshots/l2beat-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E91E8C",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 24-28px for main headings",
+          "bodyStyle": "Regular sans-serif, 14px, medium gray for descriptions",
+          "dataStyle": "Monospace or bold for currency values ($40.00B), percentage changes in red/green"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with collapsible menu, active state highlighted in magenta",
+            "position": "Left edge",
+            "notable": "Compact categorization of L2 metrics (Summary, Risk Analysis, Value Secured, Activity, etc.)"
+          },
+          {
+            "type": "Chart Card",
+            "description": "Area chart showing Value Secured over time with stacked breakdown (Rollups, Validiums, Others)",
+            "position": "Top-left main area",
+            "notable": "Dual-axis visualization with month labels and gradient fill"
+          },
+          {
+            "type": "Data Table",
+            "description": "Sortable table with L2 protocols listed with metrics (risks, proof system, stage, TVL, UOPS)",
+            "position": "Bottom-right main area",
+            "notable": "Color-coded status badges (STAGE 0/1), icon indicators for protocol type"
+          },
+          {
+            "type": "Metric Badge",
+            "description": "Purple/magenta badge pills showing counts (e.g., '25' for Rollups)",
+            "position": "Above table section",
+            "notable": "Clickable filter buttons with category breakdown"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Dashboard hierarchy: top charts for trends, bottom table for detailed comparison. Sidebar navigation anchors left side. Right-aligned metrics draw attention.",
+        "innovativeElements": [
+          "Stacked area chart with multiple protocol types visualized together",
+          "Icon + badge system for protocol identification",
+          "Real-time UOPS metric tracking in Activity chart"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Get overview of Layer 2 ecosystem health, TVL distribution, and protocol comparison",
+        "entryPoints": [
+          "Direct landing page visit",
+          "Navigating from external L2Beat links"
+        ],
+        "exitPoints": [
+          "Click 'View details' to drill into specific metrics",
+          "Click protocol row to view individual L2 details",
+          "Sidebar navigation to Risk Analysis, Value Secured, Activity, etc.",
+          "Search functionality to find specific protocols"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different L2 analysis views (Summary, Risk, Value, Activity, etc.)"
+          },
+          {
+            "element": "View details links",
+            "action": "Expand detail panels for Value Secured and Activity metrics"
+          },
+          {
+            "element": "Table rows",
+            "action": "Click to view protocol-specific data"
+          },
+          {
+            "element": "Category badges (Rollups, Validiums, Others)",
+            "action": "Filter/toggle chart and table display by protocol type"
+          },
+          {
+            "element": "Column headers",
+            "action": "Sort table by selected metric"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: Summary dashboard is center, with specialized views (Risk, Value, Activity) accessible via sidebar. Table shows comparable data across all protocols.",
+        "frictionPoints": [
+          "Dense table with many columns may require horizontal scrolling on smaller screens",
+          "Multiple metric units (USD, UOPS) requires familiarity with L2 terminology",
+          "Chart legend requires manual hover/click to understand color meanings"
+        ],
+        "progressIndicators": [
+          "Current selected menu item highlighted in magenta sidebar",
+          "Time range labels on charts (Mar '25 to Jan '26)"
+        ]
+      },
+      "copy": {
+        "headline": "Summary",
+        "subheadline": "Value Secured / Activity metrics",
+        "ctas": [
+          {
+            "text": "View details",
+            "style": "text-link",
+            "placement": "Right of Value Secured and Activity metric cards"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "↓ 12.9% / 1 year",
+            "context": "Below $40.00B TVL figure",
+            "purpose": "Show period-over-period change in total value secured"
+          },
+          {
+            "text": "Rollups • Validiums & Optimiums • Others",
+            "context": "Chart legend",
+            "purpose": "Identify color-coded categories in stacked area chart"
+          },
+          {
+            "text": "STAGE 1",
+            "context": "Yellow badge in table",
+            "purpose": "Indicate protocol maturity/governance stage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$40.00B (currency with 2 decimals, billion shorthand)",
+          "↓ 12.9% / 1 year (change indicator with percentage)",
+          "1.96K UOPS (thousand units with abbreviation)",
+          "42.94 → 40.1% (numeric with directional change)"
+        ],
+        "trustSignals": [
+          "Total Value Secured: $40.00B (demonstrated ecosystem scale)",
+          "Risk analysis metrics with proof system labels",
+          "Stage classification for protocol governance maturity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-2-risks.png",
+      "label": "Risks",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E91E8C",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24px, dark for 'Risk Analysis'",
+          "bodyStyle": "Regular 14px, medium gray for descriptions and cell content",
+          "dataStyle": "Bold for column headers, varied colors for risk indicators (red/orange/gray)"
+        },
+        "components": [
+          {
+            "type": "Category Filter Tabs",
+            "description": "Horizontal pill buttons (Rollups, Validiums & Optimiums, Others, Not reviewed) with count badges",
+            "position": "Below Filters button",
+            "notable": "Magenta badge shows count, currently Rollups selected"
+          },
+          {
+            "type": "Informational Callout",
+            "description": "Gray panel explaining what Rollups are with technical details",
+            "position": "Below filter tabs",
+            "notable": "Educational content about mechanism and fraud proofs"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column table detailing risk parameters for each L2 (State Validation, Data Availability, Exit Window, Sequencer Failure, Proposer Failure)",
+            "position": "Main content area",
+            "notable": "Risk indicators use red for 'None', orange for delays, bold text for critical fields"
+          },
+          {
+            "type": "Info Icon",
+            "description": "Tooltip icon next to column headers",
+            "position": "Right of each column header",
+            "notable": "Provides detailed explanation of technical risk parameters"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Filter tabs prominent at top, educational callout provides context, table follows. Row icons (protocol logos) guide eye down left side.",
+        "innovativeElements": [
+          "Color-coded risk indicators (red 'None', orange delays) instead of simple text",
+          "Contextual help icons on every column header",
+          "Educational callout explaining protocol types inline with data"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand security and operational risks of different Layer 2 protocols",
+        "entryPoints": [
+          "Click 'Risk Analysis' in sidebar from Summary",
+          "Direct URL navigation to /risk"
+        ],
+        "exitPoints": [
+          "Click protocol name/row to view full details",
+          "Switch to different category via filter tabs",
+          "Return to Summary or other sidebar sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category filter tabs (Rollups, Validiums, Others, Not reviewed)",
+            "action": "Filter table to show only protocols in selected category"
+          },
+          {
+            "element": "Info icons (?) on column headers",
+            "action": "Display tooltip explaining technical risk parameter"
+          },
+          {
+            "element": "Column headers",
+            "action": "Sort table by selected risk metric"
+          },
+          {
+            "element": "Filters button with count",
+            "action": "Open advanced filtering panel"
+          }
+        ],
+        "informationArchitecture": "Filtered categorical view. Educational explanation precedes data table. Columns represent specific risk dimensions (validation method, data availability, exit mechanism, failure scenarios).",
+        "frictionPoints": [
+          "Many columns with technical terminology requires domain knowledge",
+          "Color coding (red/orange) requires color perception to distinguish risks",
+          "Small info icons may be easy to miss on first viewing"
+        ],
+        "progressIndicators": [
+          "Selected filter tab highlighted",
+          "Category count badges show number of protocols per type"
+        ]
+      },
+      "copy": {
+        "headline": "Risk Analysis",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Columns",
+            "style": "ghost-button",
+            "placement": "Below filter tabs"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Rollups are L2s that periodically post state commitments to Ethereum. These commitments are validated by either Validity Proofs or are accepted optimistically and can be challenged via Fraud Proof mechanism within a certain fraud proof window. Additionally L2 data is also posted to Ethereum, hence there are no additional trust assumptions introduced.",
+            "context": "Educational callout below filter tabs",
+            "purpose": "Educate users about Rollups before viewing risk data"
+          },
+          {
+            "text": "None",
+            "context": "Exit Window and Sequencer Failure columns",
+            "purpose": "Indicate no delay/failure mechanism for this parameter"
+          },
+          {
+            "text": "Self sequence / 1d delay",
+            "context": "Sequencer Failure column",
+            "purpose": "Explain mechanism and timeout for sequencer failure recovery"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "8d 8h challenge + execution delay (time format)",
+          "7d challenge + execution delay (duration abbreviation)",
+          "1d delay (single unit time)",
+          "None (absence indicator)",
+          "Color indicators: Red 'None', Orange '7d', Normal black text"
+        ],
+        "trustSignals": [
+          "Detailed security mechanism descriptions (Fraud proofs, Validity proofs)",
+          "Specific timing parameters for each protocol",
+          "Clear labeling of execution delays and challenge windows"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-3-screenshot-4.png",
+      "label": "Screenshot 4",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E91E8C",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24px, dark gray for 'Data Availability'",
+          "bodyStyle": "Regular 14px, medium gray for descriptions",
+          "dataStyle": "Bold for column headers, green bars for visual data type indicators"
+        },
+        "components": [
+          {
+            "type": "Category Filter Tabs",
+            "description": "Horizontal pill buttons (Rollups, Validiums & Optimiums, Others) with count badges",
+            "position": "Below Filters button",
+            "notable": "Magenta badge, Rollups currently selected"
+          },
+          {
+            "type": "Informational Callout",
+            "description": "Gray panel explaining Rollups and data availability",
+            "position": "Below filter tabs",
+            "notable": "Same educational content as Risk Analysis view"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column table showing data availability characteristics (Proof System, DA Layer, DA Bridge, Risks, Type of Data)",
+            "position": "Main content area",
+            "notable": "Green bar visualization in 'Risks' column, consistent row styling"
+          },
+          {
+            "type": "Visual Indicator Bar",
+            "description": "Green vertical bar chart elements in Risks column",
+            "position": "Right side of Risks column",
+            "notable": "Visual abstraction of risk level without numeric values"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Filter tabs guide category selection, callout provides context, table details characteristics. Green bar indicators in Risks column create secondary visual focus.",
+        "innovativeElements": [
+          "Green bar indicator system for visual risk representation",
+          "Data Layer type clearly labeled (Ethereum, Ethereum SD, etc.)",
+          "DA Bridge mechanism explicitly called out as column"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Compare data availability approaches across Layer 2 protocols",
+        "entryPoints": [
+          "Click 'Data Availability' in sidebar",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click protocol row for details",
+          "Switch categories via filter tabs",
+          "Navigate to other sidebar sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category filter tabs",
+            "action": "Filter table by protocol type (Rollups, Validiums, Others)"
+          },
+          {
+            "element": "Info icons on column headers",
+            "action": "Tooltip explanation of column meaning"
+          },
+          {
+            "element": "Column headers",
+            "action": "Sort table by selected column"
+          },
+          {
+            "element": "Filters button",
+            "action": "Open advanced filtering options"
+          }
+        ],
+        "informationArchitecture": "Categorical filtered view focused on data availability infrastructure. Columns represent: proof system type, which blockchain stores data, bridge mechanism, associated risks, and data format.",
+        "frictionPoints": [
+          "Green bar visualization lacks numeric scale or legend",
+          "Technical terminology (Blobs, Calldata, Enshrined) requires explanation",
+          "Multiple proof system variants (Optimistic BLoD, Optimistic OFPP) may confuse users"
+        ],
+        "progressIndicators": [
+          "Selected filter tab highlighted",
+          "Count badges on category tabs"
+        ]
+      },
+      "copy": {
+        "headline": "Data Availability",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Columns",
+            "style": "ghost-button",
+            "placement": "Below filter tabs"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Rollups are L2s that periodically post state commitments to Ethereum. These commitments are validated by either Validity Proofs or are accepted optimistically and can be challenged via Fraud Proof mechanism within a certain fraud proof window. Additionally L2 data is also posted to Ethereum, hence there are no additional trust assumptions introduced.",
+            "context": "Educational callout",
+            "purpose": "Explain Rollup data availability model before showing details"
+          },
+          {
+            "text": "Ethereum / Blobs or Calldata",
+            "context": "DA Layer column",
+            "purpose": "Specify where and in what format data is posted"
+          },
+          {
+            "text": "Enshrined",
+            "context": "DA Bridge column",
+            "purpose": "Indicate native/built-in data availability mechanism"
+          },
+          {
+            "text": "Transaction data / Compressed",
+            "context": "Type of Data column",
+            "purpose": "Describe what data is stored and if compressed"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Optimistic BLoD (protocol variant labeling)",
+          "Ethereum / Blobs or Calldata (dual option notation)",
+          "State diffs / Compressed (data type with processing indicator)"
+        ],
+        "trustSignals": [
+          "Explicit DA Bridge mechanisms (Enshrined, built-in security)",
+          "Data type transparency (Transaction data, State diffs)",
+          "Proof system variants (Optimistic, Validity) clearly labeled"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-4-da-validiums-optimiums-5-tab.png",
+      "label": "DA — Validiums & Optimiums 5 tab",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E600B0",
+          "#F5F5F7",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 20px+, high contrast",
+          "bodyStyle": "Regular sans-serif, 14px, dark gray on light",
+          "dataStyle": "Monospace or system font for columns; color-coded status (orange, red, green)"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Three category tabs: Rollups (25), Validiums & Optimiums (5), Others (98)",
+            "position": "Below Filters, above table",
+            "notable": "Badge numbers indicate count per category; active tab highlighted in purple"
+          },
+          {
+            "type": "Info Panel",
+            "description": "Explanatory text about Validiums & Optimiums L2s",
+            "position": "Above table",
+            "notable": "Contextual educational content for the selected category"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column table with risk indicators as colored bars",
+            "position": "Main content area",
+            "notable": "Risk column uses stacked bar chart visualization (yellow/orange/red/green)"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with menu items including Summary, Risk Analysis, Data Availability, etc.",
+            "position": "Left edge",
+            "notable": "Data Availability highlighted in purple (active state)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors left; tabs organize content horizontally; risk bars in table draw attention with color",
+        "innovativeElements": [
+          "Stacked bar charts for risk visualization inline within table cells",
+          "Categorical tabs with count badges for quick segmentation",
+          "Inline educational context above filtered data"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Compare data availability solutions, specifically Validiums and Optimiums L2s",
+        "entryPoints": [
+          "Clicked 'Data Availability' in sidebar",
+          "Selected 'Validiums & Optimiums' tab from category list"
+        ],
+        "exitPoints": [
+          "Click another tab (Rollups, Others)",
+          "Click row to view L2 details",
+          "Navigate to different section via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category Tab",
+            "action": "Switch between Rollups, Validiums & Optimiums, Others"
+          },
+          {
+            "element": "Filters Button",
+            "action": "Open filter panel to refine table results"
+          },
+          {
+            "element": "Search Box",
+            "action": "Search within current data view"
+          },
+          {
+            "element": "Column Headers",
+            "action": "Likely sort/organize data by column"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Main section (Data Availability) > Category tabs (Validiums & Optimiums) > Tabular data organized by columns (Proof System, DA Layer, DA Bridge, Risks, Type)",
+        "frictionPoints": [
+          "Info panel text is dense; may require reading to understand differences",
+          "No visible indication of how many results are shown vs total"
+        ],
+        "progressIndicators": [
+          "Active tab indicator (purple background on 'Validiums & Optimiums')",
+          "Badge counts showing items per category"
+        ]
+      },
+      "copy": {
+        "headline": "Data Availability",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Validiums and Optimiums are L2s that, similarly to Rollups, periodically post state commitments to Ethereum that are validated by it, however data is not posted to Ethereum. This means that additional trust assumptions, external to Ethereum, are introduced to prevent data withholding attacks.",
+            "context": "Info panel above Validiums & Optimiums tab",
+            "purpose": "Educate user on the distinction and risks of this L2 category"
+          },
+          {
+            "text": "Columns",
+            "context": "Section header above table",
+            "purpose": "Introduce column definitions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Text labels: 'Optimistic', 'Validity', 'EigenDA', 'DAcert Verifier'",
+          "Badge counts: '25', '5', '98'",
+          "Column names: uppercase with icons (# NAME PROOF SYSTEM DA LAYER DA BRIDGE RISKS TYPE OF DATA)"
+        ],
+        "trustSignals": [
+          "Explicit trust assumption disclosure in microcopy",
+          "Categorization into Rollups, Validiums/Optimiums, Others (implied risk tiers)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-5-da-others-98-tab.png",
+      "label": "DA — Others 98 tab",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E600B0",
+          "#F5F5F7",
+          "#FFE600",
+          "#FF0000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 20px+, high contrast",
+          "bodyStyle": "Regular sans-serif, 14px, dark gray on light",
+          "dataStyle": "Mixed: orange/yellow for labels (DA Layer), red for warnings (None/low count), green for success"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Three category tabs: Rollups (25), Validiums & Optimiums (5), Others (98)",
+            "position": "Below Filters",
+            "notable": "Others tab active; badge shows 98 items"
+          },
+          {
+            "type": "Info Panel",
+            "description": "Explanatory text about 'Others' L2 category and inclusion criteria",
+            "position": "Above table",
+            "notable": "Highlights lack of working proof system or insufficient DA guarantees"
+          },
+          {
+            "type": "Data Table",
+            "description": "10+ rows of L2 projects with DA Layer, DA Bridge, and Risks columns",
+            "position": "Main content area",
+            "notable": "Row backgrounds vary (white, light yellow, light pink) for visual differentiation"
+          },
+          {
+            "type": "Risk Indicator Bars",
+            "description": "Stacked colored bars (red, orange, yellow, green) in RISKS column",
+            "position": "Right side of each row",
+            "notable": "Visual severity indicator; some rows show 'N/A' (blue badge)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Tab selection leads eye to correct data; row background colors alternate subtly; DA Bridge values in red/orange for critical info",
+        "innovativeElements": [
+          "Row-level background coloring (subtle pink for rows with 'None' DA Bridge)",
+          "Color-coded DA Bridge status (orange labels, red text for 'None')",
+          "Dual tier visualization: text labels + bar charts for risk"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Examine L2 projects lacking robust data availability, assess their risks and DA mechanisms",
+        "entryPoints": [
+          "Clicked 'Others' tab from Data Availability section",
+          "Filtered or searched for risky L2 solutions"
+        ],
+        "exitPoints": [
+          "Switch to Rollups or Validiums tabs",
+          "Click a project row to view detailed risk assessment",
+          "Use Filters to narrow results"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category Tab (Others)",
+            "action": "Display 98 L2 projects with lower DA guarantees"
+          },
+          {
+            "element": "Filters Button",
+            "action": "Open filters for risk, DA type, etc."
+          },
+          {
+            "element": "Row Click",
+            "action": "Navigate to individual L2 project details"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Data Availability > Others (98 items) > Individual L2 rows with attributes (DA Layer, DA Bridge, Risks, Type of Data)",
+        "frictionPoints": [
+          "98 items in one view may require scrolling; no visible pagination",
+          "Dense explanatory text above table; unclear inclusion threshold"
+        ],
+        "progressIndicators": [
+          "Others tab active (highlighted)",
+          "Badge shows '98' items in category"
+        ]
+      },
+      "copy": {
+        "headline": "Data Availability",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Others are L2s that either lack a working proof system or don't provide sufficient external DA guarantees (i.e. at least 5 independent attesters, a high enough threshold, or a proper DA bridge). To be listed in this category, the L2 must enshrine deposits from L1.",
+            "context": "Info panel above Others tab",
+            "purpose": "Define risk criteria and inclusion threshold for this category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Color-coded statuses: 'EigenDA' (orange), 'None' (red), 'Enshrined' (orange)",
+          "Data types: 'Transaction data', 'State diffs', mixed compression flags",
+          "Risk indicators: visual bar charts with 4-color palette"
+        ],
+        "trustSignals": [
+          "Transparent risk disclosure: rows with 'None' DA Bridge highlighted visually",
+          "Specific threshold language: '5 independent attesters', 'high enough threshold'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-6-liveness.png",
+      "label": "Liveness",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E600B0",
+          "#27AE60",
+          "#F5F5F7",
+          "#3B82F6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24px, dark gray",
+          "bodyStyle": "Regular sans-serif, 14px, dark gray",
+          "dataStyle": "Monospace or system font for time intervals (1 minute, 36 seconds, 4 minutes); color coding (green, orange)"
+        },
+        "components": [
+          {
+            "type": "Status Banner",
+            "description": "Green checkmark with 'No recent anomalies detected' message",
+            "position": "Top of main content, full width",
+            "notable": "High-visibility trust signal; prominent green color conveys health"
+          },
+          {
+            "type": "Time Range Buttons",
+            "description": "Quick filter options: 30D, 90D, MAX",
+            "position": "Top right above tabs",
+            "notable": "Allows temporal filtering of liveness data"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Three tabs: Rollups (23), Validiums & Optimiums (5), Others (66)",
+            "position": "Below filters",
+            "notable": "Same categorization as Data Availability; Rollups tab appears active"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column table with time intervals, proof submissions, state updates, and sparkline charts",
+            "position": "Main content area",
+            "notable": "Right-aligned 30-day anomaly sparklines; mini warning icons"
+          },
+          {
+            "type": "Sparkline Charts",
+            "description": "Small inline bar charts showing 30-day anomaly trends",
+            "position": "Last column of each row",
+            "notable": "Blue bars with orange highlights; info icons for tooltip access"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Status banner dominates top; tabs organize content; time values left-aligned, proof system right-aligned; sparklines draw eye to trends",
+        "innovativeElements": [
+          "Sparkline charts integrated directly into table cells for micro-trend visualization",
+          "Color-coded time intervals (green for normal, orange for warnings)",
+          "Info icons with tooltips on every column header",
+          "Inline proof system badges with labels (e.g., 'Optimistic BoLD')"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor L2 operator liveness, check submission frequency and anomalies over time",
+        "entryPoints": [
+          "Clicked 'Liveness' in sidebar navigation",
+          "Viewed overall health status"
+        ],
+        "exitPoints": [
+          "Switch tabs (Validiums & Optimiums, Others)",
+          "Adjust time range (30D, 90D, MAX)",
+          "Click row or sparkline for detailed L2 history",
+          "Navigate to related section (Data Availability, Risk Analysis)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time Range Button (30D/90D/MAX)",
+            "action": "Filter liveness data by time period"
+          },
+          {
+            "element": "Category Tab",
+            "action": "Switch between Rollups, Validiums & Optimiums, Others"
+          },
+          {
+            "element": "Info Icon",
+            "action": "Display tooltip explaining column definition"
+          },
+          {
+            "element": "Row/Sparkline",
+            "action": "Likely navigate to detailed L2 liveness history"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Liveness (health status) > Time range filter > Category tabs > Individual L2 rows with submission metrics and trend sparklines",
+        "frictionPoints": [
+          "Dense table with many columns; requires horizontal scrolling on small screens",
+          "Color coding of time intervals may not be immediately intuitive (orange = warning?)",
+          "Sparkline micro-charts require close examination to interpret"
+        ],
+        "progressIndicators": [
+          "Green banner with checkmark: 'No recent anomalies detected'",
+          "Active tab indicator (Rollups)",
+          "Time range selector (defaults to 30D)"
+        ]
+      },
+      "copy": {
+        "headline": "Liveness",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Show more",
+            "style": "text-link",
+            "placement": "End of introductory text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Liveness shows how actively different operators are posting data to Ethereum and whether there are any significant deviations from their usual submission schedule. Please … Show more",
+            "context": "Below page headline",
+            "purpose": "Explain what Liveness metric measures and its importance"
+          },
+          {
+            "text": "30-DAY AVERAGE INTERVALS",
+            "context": "Section header within table",
+            "purpose": "Indicate the time bucket for aggregated metrics below"
+          },
+          {
+            "text": "TX DATA SUBMISSIONS / PROOF SUBMISSIONS / STATE UPDATES / PROOF SYSTEM / 30-DAY ANOMALIES",
+            "context": "Column headers",
+            "purpose": "Define each data dimension"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Time intervals: '1 minute', '36 seconds', '4 minutes', '1 hour', '6 hours'",
+          "Status badges: 'N/A', 'No data'",
+          "Proof systems: 'Optimistic BoLD', 'Optimistic OFFP', 'Validity Lighter', 'Validity Stwo'",
+          "Color-coded intervals: orange (warning), green (normal)"
+        ],
+        "trustSignals": [
+          "Green banner: 'No recent anomalies detected' with checkmark",
+          "Explicit anomaly detection over 30-day window",
+          "Time interval transparency (e.g., 1-minute submission frequency)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-7-costs.png",
+      "label": "Costs",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#A100F2",
+          "#FF1493",
+          "#2E3338"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large 28-32px for main title 'Costs'",
+          "bodyStyle": "Regular 14-16px gray text for descriptions and labels",
+          "dataStyle": "Monospace or proportional font for numerical values like $0.000003, displayed in table cells with color coding"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Three category tabs: Rollups (23), Validiums & Optimiums (5), Others (66) with badge counts",
+            "position": "Below main heading, horizontal",
+            "notable": "Numeric badges indicate filtered result counts"
+          },
+          {
+            "type": "Area Chart",
+            "description": "Stacked area chart showing onchain costs over time with four colored layers (Calldata, Blobs, Compute, Overhead)",
+            "position": "Central content area, large",
+            "notable": "Pink/magenta dominant color creates visual pop; date range 2026 Jan 14 - Feb 14 shown"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column table showing Lighter, Ethscriptions, Base Chain with cost metrics by column",
+            "position": "Below chart, full-width",
+            "notable": "Sortable columns with info icons; alternating row backgrounds for readability"
+          },
+          {
+            "type": "Time Period Selector",
+            "description": "Buttons for 1D, 7D, 30D, 90D, 180D, 1Y, MAX time ranges",
+            "position": "Right side above table",
+            "notable": "Clean segmented control layout; 30D appears selected"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Chart dominates visual space; table provides detailed breakdown below; sidebar navigation provides context",
+        "innovativeElements": [
+          "Stacked area chart with multiple colored cost categories for granular fee breakdown",
+          "Badge counts on category tabs showing filtered result distribution",
+          "Info icons throughout for contextual help without cluttering interface"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand L2 onchain posting costs over time, broken down by type and individual solutions",
+        "entryPoints": [
+          "From Costs sidebar navigation item",
+          "From ecosystem comparison dashboard"
+        ],
+        "exitPoints": [
+          "Click individual L2 name to view project details",
+          "Navigate to other metrics (Risk Analysis, Value Secured, Activity)",
+          "Filter using Filters button to narrow data"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category Tabs (Rollups, Validiums, Others)",
+            "action": "Filter table and chart by solution type"
+          },
+          {
+            "element": "Time Period Buttons (1D, 7D, 30D, etc.)",
+            "action": "Change chart and data granularity to different timeframes"
+          },
+          {
+            "element": "Sortable Table Columns",
+            "action": "Click column headers to sort data ascending/descending"
+          },
+          {
+            "element": "Filters Button",
+            "action": "Open filter panel to refine displayed data"
+          },
+          {
+            "element": "Info Icons",
+            "action": "Display tooltips explaining metrics and methodology"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Overview paragraph → Tabs (categorization) → Stacked chart (temporal view) → Table (detailed row-by-row comparison)",
+        "frictionPoints": [
+          "Dense explanatory text at top requires reading to understand context",
+          "Large number of table columns may require horizontal scrolling on smaller screens",
+          "Chart uses 4 color categories that could be difficult for colorblind users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Costs",
+        "subheadline": "Onchain Costs tracks the fees paid by L2s to Ethereum for posting transaction data, proofs, and state updates. These costs provide insights into the economic efficiency of different solutions.",
+        "ctas": [
+          {
+            "text": "Show more",
+            "style": "text-link",
+            "placement": "End of descriptive paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Rollups are L2s that periodically post state commitments to Ethereum...",
+            "context": "Under Rollups tab",
+            "purpose": "Educational: explains what rollups are and how they post data"
+          },
+          {
+            "text": "Filters",
+            "context": "Button above table",
+            "purpose": "Action label for filtering controls"
+          },
+          {
+            "text": "AVG PER L2 USER OP",
+            "context": "Table column header",
+            "purpose": "Describes metric being displayed"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$7.00K, $3.50K (large rounded currency values on chart axis)",
+          "$0.000003, $0.000008 (scientific notation for very small per-unit costs)",
+          "5.78B, 1.36M, 340.36M (millions/billions in count format)",
+          "2026 Jan 14 — Feb 14 (date range format)"
+        ],
+        "trustSignals": [
+          "Detailed methodology explanation in descriptive paragraph",
+          "Multiple cost categories broken out (Calldata, Blobs, Compute, Overhead) for transparency",
+          "Time-series data visualization showing trends over specific date range"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-8-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#A100F2",
+          "#2E3338"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif 24px for 'Upcoming' title",
+          "bodyStyle": "Regular 14px for table content and labels",
+          "dataStyle": "Monospace for status indicators (checkmark/X icons) and text labels"
+        },
+        "components": [
+          {
+            "type": "Data Table",
+            "description": "Multi-column table listing upcoming L2 projects with rank, name, proof system, purpose, and testnet status",
+            "position": "Full width main content area",
+            "notable": "Status column uses green checkmarks and red X marks for visual quick-scanning; project logos/icons in name column"
+          },
+          {
+            "type": "Icon Indicators",
+            "description": "Small colored icons next to each project name (e.g., purple square for Junctin, orange circle for SANDchain)",
+            "position": "Left side of name column",
+            "notable": "Provides quick visual identification of each project"
+          },
+          {
+            "type": "Badge Labels",
+            "description": "Red 'Beta' badges next to proof system names (Optimistic, Validity)",
+            "position": "Proof System column",
+            "notable": "Indicates experimental or beta status of certain solutions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Simple horizontal scan pattern: # → Project Icon/Name → Proof System → Purpose → Has Testnet status",
+        "innovativeElements": [
+          "Color-coded status indicators (green/red X marks) for quick project readiness assessment",
+          "Beta badges on proof systems to flag experimental technology",
+          "Consistent icon/logo display for project identification"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and assess upcoming L2 projects, their proof systems, purposes, and testnet availability",
+        "entryPoints": [
+          "From Upcoming sidebar navigation item",
+          "From Scaling dropdown menu"
+        ],
+        "exitPoints": [
+          "Click project name to view full details",
+          "Navigate to other sections (Archived, Costs, Risk Analysis)",
+          "Use search functionality at top"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Columns Button",
+            "action": "Customize visible table columns"
+          },
+          {
+            "element": "Project Name/Row",
+            "action": "Navigate to project detail page"
+          },
+          {
+            "element": "Filters Button",
+            "action": "Filter upcoming projects by criteria"
+          }
+        ],
+        "informationArchitecture": "Simple list view with multiple filterable columns; sorted by ranking number",
+        "frictionPoints": [
+          "Red X marks indicate projects without testnet, which may be discouraging",
+          "Status column primarily negative (missing testnet) rather than positive indicators"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Upcoming",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Columns",
+            "style": "ghost-button",
+            "placement": "Above table"
+          },
+          {
+            "text": "Filters",
+            "style": "ghost-button",
+            "placement": "Above table (implied, not visible)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "#",
+            "context": "Table column header",
+            "purpose": "Project rank/order number"
+          },
+          {
+            "text": "NAME",
+            "context": "Table column header",
+            "purpose": "Project name identifier"
+          },
+          {
+            "text": "PROOF SYSTEM",
+            "context": "Table column header with info icon",
+            "purpose": "Identifies the validation/proof mechanism used"
+          },
+          {
+            "text": "PURPOSE",
+            "context": "Table column header",
+            "purpose": "Intended use case (e.g., AI, Universal, Gaming)"
+          },
+          {
+            "text": "HAS TESTNET?",
+            "context": "Table column header",
+            "purpose": "Indicates whether testnet is available"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Numeric ranking 1-12",
+          "Text labels: Optimistic, Validity, Universal, AI, Gaming",
+          "Boolean indicators: Green checkmark, Red X"
+        ],
+        "trustSignals": [
+          "Clear categorization of projects by development stage (Upcoming vs Archived)",
+          "Proof system transparency showing validation mechanisms",
+          "Testnet availability as development maturity indicator"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-9-upcoming.png",
+      "label": "Upcoming",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#5B4FFF",
+          "#A100F2",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif 32px, 'Okto' project name with icon",
+          "bodyStyle": "Regular 14-16px for labels and descriptive text",
+          "dataStyle": "Bold for status states ('No data', 'Universal'), regular for section headers ('ABOUT')"
+        },
+        "components": [
+          {
+            "type": "Hero Banner",
+            "description": "Gradient purple/blue background with project name 'Okto' and search bar",
+            "position": "Top of page",
+            "notable": "Large gradient background creates premium feel; project icon displayed prominently"
+          },
+          {
+            "type": "Info Alert Box",
+            "description": "Light blue box stating 'This is an upcoming project. Stay tuned!'",
+            "position": "Below hero, full width",
+            "notable": "Sets expectations that project is not yet live"
+          },
+          {
+            "type": "Action Links",
+            "description": "Buttons for Website, Docs, Repository, and Social dropdown",
+            "position": "Below alert, horizontal layout",
+            "notable": "External link icons indicate navigation out of app"
+          },
+          {
+            "type": "Summary Card",
+            "description": "Right sidebar card showing data availability status with circular diagram",
+            "position": "Right side, floating position",
+            "notable": "Data Availability diagram shows 'Coming soon' status with checkmarks and X marks around circle"
+          },
+          {
+            "type": "Metric Grid",
+            "description": "Three metrics: Total Value Secured, Past day UOPS, Proof system",
+            "position": "Main content area, top section",
+            "notable": "'No data' placeholder shows project not yet launched or tracked"
+          },
+          {
+            "type": "Breakdown Charts",
+            "description": "Two gray placeholder bars for 'Tokens breakdown' and 'Value secured breakdown'",
+            "position": "Main content area, middle section",
+            "notable": "Empty/disabled state indicates data not yet available"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large gradient hero dominates; alert box ensures user understands status; summary card floats right for quick overview; content below is sparse and placeholder-filled",
+        "innovativeElements": [
+          "Gradient purple-to-blue background for visual distinction from live projects",
+          "Circular Data Availability diagram with radial labels and status indicators",
+          "Prominent 'This is an upcoming project' messaging prevents user confusion"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review details about an upcoming L2 project that is not yet live or tracked",
+        "entryPoints": [
+          "From Upcoming projects list",
+          "Direct link to project detail page"
+        ],
+        "exitPoints": [
+          "Click Website, Docs, or Repository links to external resources",
+          "Navigate back to Upcoming projects list",
+          "Click Social dropdown for community links",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Website Button",
+            "action": "Navigate to project website (external)"
+          },
+          {
+            "element": "Docs Button",
+            "action": "Navigate to documentation (external)"
+          },
+          {
+            "element": "Repository Button",
+            "action": "Navigate to code repository (external)"
+          },
+          {
+            "element": "Social Dropdown",
+            "action": "Show social media links options"
+          },
+          {
+            "element": "Search Projects Field",
+            "context": "Top right search bar",
+            "action": "Search for other projects"
+          }
+        ],
+        "informationArchitecture": "Top-down: Hero → Status Alert → Links → Metrics (mostly empty) → Breakdowns (empty) → About description → Development warning",
+        "frictionPoints": [
+          "Heavy use of placeholder/empty states may feel incomplete or discouraging",
+          "All metric cards show 'No data' limiting user insights",
+          "Two information boxes at bottom provide good guidance but indicate limited functionality"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Okto",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Website",
+            "style": "primary-button",
+            "placement": "Top action bar"
+          },
+          {
+            "text": "Docs",
+            "style": "primary-button",
+            "placement": "Top action bar"
+          },
+          {
+            "text": "Repository",
+            "style": "primary-button",
+            "placement": "Top action bar"
+          },
+          {
+            "text": "Social",
+            "style": "primary-button",
+            "placement": "Top action bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This is an upcoming project. Stay tuned!",
+            "context": "Blue info box below header",
+            "purpose": "Sets expectations; prevents confusion about live status"
+          },
+          {
+            "text": "Total Value Secured",
+            "context": "Metric label in grid",
+            "purpose": "Identifies metric (shows 'No data')"
+          },
+          {
+            "text": "No data",
+            "context": "Multiple metric cards",
+            "purpose": "Explains why metrics are unavailable"
+          },
+          {
+            "text": "ABOUT",
+            "context": "Section header before description",
+            "purpose": "Introduces project description section"
+          },
+          {
+            "text": "An L2 designed to streamline blockchain complexity across multiple layers, including wallet, transactions, chain, data, and liquidity.",
+            "context": "Below ABOUT header",
+            "purpose": "High-level project description"
+          },
+          {
+            "text": "This project is currently in development. Once live, it will be listed along with comprehensive information about the risks and the technology. Follow us on Twitter to stay updated on the latest news regarding this and other projects.",
+            "context": "Blue info box at bottom",
+            "purpose": "Educational: explains roadmap and directs to updates channel"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [
+          "Status labels: 'No data', 'Universal'",
+          "Timeframe indicators: 'Coming soon'",
+          "Proof system: 'Validity'"
+        ],
+        "trustSignals": [
+          "Clear 'upcoming' status messaging prevents misleading impression of live product",
+          "Links to external resources (Website, Docs, Repository) build credibility",
+          "Detailed description of project purpose shows substance",
+          "Transparent communication about development status and roadmap"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No data (displayed in metric cards)",
+          "Coming soon (displayed in Data Availability diagram)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-16-donate.png",
+      "label": "Donate",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f3e5ff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (24-28px), high contrast black on white",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), dark gray on white with good readability",
+          "dataStyle": "Monospace font for wallet addresses, displayed as hex strings in light pink background"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with expandable menu items including Scaling, Bridges, Data Availability, ZK Catalog, Ecosystems, and footer links",
+            "position": "left",
+            "notable": "Sticky navigation with nested hierarchies and visual indicators (chevrons) for expandable sections"
+          },
+          {
+            "type": "qr-code",
+            "description": "Large QR code for wallet address donation",
+            "position": "right side, upper half",
+            "notable": "Positioned prominently next to donation methods, paired with wallet address below"
+          },
+          {
+            "type": "donation-methods",
+            "description": "Four clickable buttons for different blockchain networks (Ethereum, Arbitrum One, OP Mainnet, ZKsync Lite)",
+            "position": "center, below mission statement",
+            "notable": "Light blue background buttons with external link icons, organized horizontally"
+          },
+          {
+            "type": "partner-cards",
+            "description": "Colorful cards displaying ecosystem partners in tiers (Arbitrum, Elastic Network, Superchain, Agglayer, etc.)",
+            "position": "lower section",
+            "notable": "Each card has distinct primary color (blue, purple, red) with white typography and partner logos"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Mission statement at top draws attention, QR code and donation buttons guide secondary focus, partners section emphasizes ecosystem relationships",
+        "innovativeElements": [
+          "QR code paired with hex address for dual donation paths",
+          "Color-coded partner cards matching ecosystem branding"
+        ]
+      },
+      "flow": {
+        "screenType": "donation-landing",
+        "userIntent": "Understand L2BEAT's mission and contribute financially via multiple blockchain networks",
+        "entryPoints": [
+          "Donate link from main navigation",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "External donation links (Ethereum, Arbitrum One, OP Mainnet, ZKsync Lite)",
+          "Navigation to other pages via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Donation method buttons",
+            "action": "Redirect to wallet address or donation interface for specific blockchain"
+          },
+          {
+            "element": "Sidebar navigation items",
+            "action": "Expand/collapse or navigate to related pages"
+          },
+          {
+            "element": "Search box",
+            "action": "Search across site content"
+          }
+        ],
+        "informationArchitecture": "Mission statement and commitment first, followed by multiple donation pathways (buttons and QR), then partnership section showing ecosystem credibility",
+        "frictionPoints": [
+          "Multiple donation options could cause decision paralysis",
+          "QR code requires mobile camera access, less convenient than direct buttons"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Donate",
+        "subheadline": "Thank you for supporting L2BEAT's mission to bring education and transparency to the blockchain space.",
+        "ctas": [
+          {
+            "text": "Ethereum",
+            "style": "light-button",
+            "placement": "Donation methods section"
+          },
+          {
+            "text": "Arbitrum One",
+            "style": "light-button",
+            "placement": "Donation methods section"
+          },
+          {
+            "text": "OP Mainnet",
+            "style": "light-button",
+            "placement": "Donation methods section"
+          },
+          {
+            "text": "ZKsync Lite",
+            "style": "light-button",
+            "placement": "Donation methods section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "DONATE THROUGH",
+            "context": "Above donation method buttons",
+            "purpose": "Label and organize donation options"
+          },
+          {
+            "text": "ECOSYSTEMS TIER",
+            "context": "Above partner cards",
+            "purpose": "Categorize and explain partnership levels"
+          },
+          {
+            "text": "PARTNER:",
+            "context": "Within each partner card",
+            "purpose": "Identify secondary partnership within ecosystem"
+          }
+        ],
+        "tone": "professional-technical, grateful, mission-driven",
+        "dataFormatting": [
+          "0x41626BA92c0C2a1aD38fc8392030043408B1870 (wallet address in monospace)"
+        ],
+        "trustSignals": [
+          "Mission statement emphasizing education and transparency",
+          "Partnership with major ecosystems (Arbitrum, Elastic Network, Superchain, Agglayer)",
+          "Multi-blockchain donation support demonstrating ecosystem reach"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-17-tools.png",
+      "label": "Tools",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#ff6633"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white color on dark background, hierarchical sizing",
+          "bodyStyle": "Monospace font for code/technical text, light gray on dark background for high contrast",
+          "dataStyle": "Code-style formatting with syntax highlighting placeholder text (e.g., '0x1337dead...')"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with tool menu items (decoder, decoder-new, simulator, discolupe, logo-generator, etc.)",
+            "position": "left",
+            "notable": "Orange underline highlighting active tool (decoder), monospace font for technical names"
+          },
+          {
+            "type": "text-input",
+            "description": "Large textarea for hex encoded transaction data input",
+            "position": "center-right, upper area",
+            "notable": "Dark background with light placeholder text, substantial size for multi-line input"
+          },
+          {
+            "type": "action-button",
+            "description": "Decode button for processing input",
+            "position": "Below textarea",
+            "notable": "Simple gray button, minimal styling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Tool name prominent at top, input area takes center focus, sidebar provides context-switching capability",
+        "innovativeElements": [
+          "Developer-focused dark theme for eye comfort during extended use",
+          "Sidebar tool menu enables quick context switching without page reloads"
+        ]
+      },
+      "flow": {
+        "screenType": "tool-interface",
+        "userIntent": "Decode recursive calldata from hex-encoded transaction data for debugging/analysis",
+        "entryPoints": [
+          "Tools navigation link from main menu",
+          "Direct URL to specific tool"
+        ],
+        "exitPoints": [
+          "Switch to different tool via sidebar",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Text input field",
+            "action": "Accept paste/type of hex transaction data"
+          },
+          {
+            "element": "Decode button",
+            "action": "Process input and display decoded calldata"
+          },
+          {
+            "element": "Tool menu links",
+            "action": "Switch to different developer tool"
+          }
+        ],
+        "informationArchitecture": "Tool name and description at top, input form in center, sidebar provides tool catalog",
+        "frictionPoints": [
+          "No visible output area shown in screenshot - unclear where results appear",
+          "No validation feedback or error handling visible",
+          "No help text or documentation linked from interface"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Recursive calldata decoder",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Decode",
+            "style": "secondary-button",
+            "placement": "Below input textarea"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hex encoded transaction data. e.g. 0x1337dead...",
+            "context": "Placeholder text in textarea",
+            "purpose": "Guide user on expected input format"
+          }
+        ],
+        "tone": "professional-technical, minimal",
+        "dataFormatting": [
+          "0x1337dead... (hex string format example)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-18-glossary.png",
+      "label": "Glossary",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#ff6633"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black color, large size (20-24px) for term definitions",
+          "bodyStyle": "Regular sans-serif, dark gray, medium size (14-16px) for explanatory text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left navigation with main menu items, Glossary highlighted",
+            "position": "left",
+            "notable": "Active state clearly indicated with orange accent"
+          },
+          {
+            "type": "alpha-filter",
+            "description": "Alphabetical letter buttons (#, A-Z) for filtering glossary terms",
+            "position": "center, below introduction",
+            "notable": "Full alphabet with navigation arrows, visual distinction for currently selected letter (J appears selected)"
+          },
+          {
+            "type": "definition-list",
+            "description": "Main content area with stacked term definitions",
+            "position": "center-left, main content area",
+            "notable": "Multiple definitions visible, each with heading and paragraph body"
+          },
+          {
+            "type": "related-terms-sidebar",
+            "description": "Right sidebar showing related glossary terms with visual indicators",
+            "position": "right side",
+            "notable": "Scrollable list with orange highlights for certain terms (e.g., 'Bytecode-compatible (EVM-...', 'Bytecode-equivalent ZK-EVM')"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Introduction at top explains purpose, alphabet filters draw eyes to browsing controls, main definitions in center column, related terms on right enable discovery",
+        "innovativeElements": [
+          "Three-column layout balances main content with discovery mechanisms",
+          "Alphabetical filtering provides multiple browsing patterns",
+          "Related terms sidebar enables non-linear exploration"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Look up or explore L2 and blockchain-related terminology",
+        "entryPoints": [
+          "Glossary link from main navigation",
+          "Search functionality",
+          "External links to specific glossary entries"
+        ],
+        "exitPoints": [
+          "Click related terms to jump to definitions",
+          "Click alphabet letters to filter by starting letter",
+          "Return to other navigation sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Alphabet filter buttons",
+            "action": "Filter glossary terms by first letter"
+          },
+          {
+            "element": "Related terms links",
+            "action": "Jump to related glossary entry"
+          },
+          {
+            "element": "Search box",
+            "action": "Search for specific terms"
+          }
+        ],
+        "informationArchitecture": "Purpose statement, alphabetical browse, definitions organized by letter, related terms sidebar for cross-referencing",
+        "frictionPoints": [
+          "Multiple browsing methods (search, alpha filter, related terms) could be overwhelming",
+          "Right sidebar terms are truncated with ellipsis, requiring hover to see full text"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Glossary",
+        "subheadline": "Explore the L2BEAT Glossary, your comprehensive resource for understanding the terms and concepts of the L2 ecosystem. Find here all essential definitions and insights.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Designed for everyone from developers to enthusiasts, this resource simplifies the complexities of L2, helping you navigate Ethereum's advanced landscape with ease.",
+            "context": "Below main headline",
+            "purpose": "Clarify audience and educational value"
+          }
+        ],
+        "tone": "educational, inclusive, professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive resource positioning",
+          "Multi-audience messaging (developers to enthusiasts)"
+        ],
+        "jargonLevel": "beginner-to-intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-13-data-availability.png",
+      "label": "Data Availability",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#7c3aed"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large for section titles (e.g., 'Total Value Secured')",
+          "bodyStyle": "Regular sans-serif, gray text for descriptions and labels",
+          "dataStyle": "Bold sans-serif for large numbers ($34.17B), smaller percentage changes in green/red"
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "Total Value Secured showing Ethereum and Alt-DAx values with progress bar",
+            "position": "top-left",
+            "notable": "Dual metric display with horizontal bar chart showing proportion"
+          },
+          {
+            "type": "metric-card",
+            "description": "Past Day Data Size with breakdown by scaling solutions",
+            "position": "top-right",
+            "notable": "Multi-colored bar chart with detailed breakdown link"
+          },
+          {
+            "type": "data-table",
+            "description": "Split table showing DA Layer and DA Bridge data with TVS, risks, and bridge integrations",
+            "position": "bottom",
+            "notable": "Rich data columns with icon badges for 'Used By' showing ecosystem integrations"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Public (6) and Custom (38) tabs",
+            "position": "middle",
+            "notable": "Badge counts indicate availability of different configuration types"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Summary metrics at top, detailed tables below; left sidebar navigation anchors the page",
+        "innovativeElements": [
+          "Stacked metric cards with dual breakdowns (Ethereum/Alt-DAx)",
+          "Icon-based 'Used By' column showing ecosystem logos compactly",
+          "Color-coded risk indicators (green/red/orange bars)"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-data-browse",
+        "userIntent": "Understand data availability solutions, their security metrics, and ecosystem adoption",
+        "entryPoints": [
+          "Sidebar 'Data Availability' menu item",
+          "Homepage navigation",
+          "Direct link to DA summary"
+        ],
+        "exitPoints": [
+          "Click 'View details' for Past Day Data Size",
+          "Click individual table rows for detailed layer/bridge info",
+          "Navigate to Scaling or Bridges via sidebar",
+          "Click 'Columns' to customize table view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "View details link",
+            "action": "Expand or navigate to detailed Past Day Data Size breakdown"
+          },
+          {
+            "element": "Tab navigation (Public/Custom)",
+            "action": "Filter DA solutions by public vs custom type"
+          },
+          {
+            "element": "Columns button",
+            "action": "Open column configuration modal"
+          },
+          {
+            "element": "Table rows",
+            "action": "Navigate to individual DA layer/bridge detail page"
+          },
+          {
+            "element": "Info icons (ℹ️)",
+            "action": "Display tooltips explaining metrics"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: summary metrics → split tabs (Public/Custom) → detailed comparison table → ecosystem integration badges",
+        "frictionPoints": [
+          "Many columns in table may require horizontal scrolling on smaller screens",
+          "Dense data presentation with numerous metric definitions",
+          "Info icons require hover to understand metrics"
+        ],
+        "progressIndicators": [
+          "Badge counts on Public (6) and Custom (38) tabs",
+          "Percentage changes in red/green indicate momentum"
+        ]
+      },
+      "copy": {
+        "headline": "Summary",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View details",
+            "style": "text-link",
+            "placement": "Past Day Data Size card, top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By Ethereum",
+            "context": "Total Value Secured metric",
+            "purpose": "Clarify which blockchain the value is secured on"
+          },
+          {
+            "text": "By Alt-DAx",
+            "context": "Total Value Secured metric",
+            "purpose": "Show alternative DA solutions breakdown"
+          },
+          {
+            "text": "Scaling projects' past day data posted to DA Layers with public APIs",
+            "context": "Past Day Data Size description",
+            "purpose": "Explain what the metric measures"
+          },
+          {
+            "text": "Public DA layers are data availability solutions designed for broad, general use across multiple scaling projects.",
+            "context": "Public tab description",
+            "purpose": "Educate on public vs custom DA solutions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$34.17B",
+          "$1.83B",
+          "2.13%",
+          "-5.45%",
+          "6.65 GiB",
+          "-21.6%"
+        ],
+        "trustSignals": [
+          "TVS (Total Value Secured) metrics displayed prominently",
+          "Ecosystem adoption shown via 'Used By' logos (Aave, Lido, etc.)",
+          "Risk assessment data included for each bridge"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-14-zk-catalog.png",
+      "label": "ZK Catalog",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#7c3aed"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large for 'ZK Catalog'",
+          "bodyStyle": "Regular sans-serif for descriptions; smaller for secondary info",
+          "dataStyle": "Bold for TVS values ($2.41B), smaller for project counts"
+        },
+        "components": [
+          {
+            "type": "description-banner",
+            "description": "Explanatory text about ZK Catalog with 'Show more' link",
+            "position": "top",
+            "notable": "Collapsible educational content about the catalog purpose"
+          },
+          {
+            "type": "filter-control",
+            "description": "Filters button with indicator badge",
+            "position": "top-left of table",
+            "notable": "Compact filter UI with badge showing active filters"
+          },
+          {
+            "type": "column-selector",
+            "description": "Columns button for table customization",
+            "position": "above table",
+            "notable": "Allows user control over visible metrics"
+          },
+          {
+            "type": "data-table",
+            "description": "Detailed ZK setup registry with columns for Name, TVS, Trusted Setups, Verifiers, Tech Stack",
+            "position": "bottom",
+            "notable": "Complex multi-column layout with color-coded badges and trust framework link"
+          },
+          {
+            "type": "badge-system",
+            "description": "Colored badges for Plonk, STARK, Field, ISA, and setup names",
+            "position": "throughout table",
+            "notable": "Rich visual encoding of technical components"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Title → description → filters → compact table headers → data rows with colorful badge components",
+        "innovativeElements": [
+          "Trusted Setups Risk Framework button positioned prominently top-right",
+          "Color-coded technical component badges (orange, pink, green)",
+          "Dual verification system showing trusted setups and individual verifiers",
+          "Logo-based project identification with verification checkmarks"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse-catalog",
+        "userIntent": "Explore zero-knowledge proofs, their implementations, and technical components used by blockchain projects",
+        "entryPoints": [
+          "Sidebar 'ZK Catalog' menu item",
+          "Governance or research navigation",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click 'Trusted Setups Risk Framework' button (top-right)",
+          "Click 'Show more' to expand description",
+          "Apply filters to narrow results",
+          "Click individual rows to view ZK setup details",
+          "Navigate to different sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trusted Setups Risk Framework button",
+            "action": "Navigate to detailed risk assessment framework"
+          },
+          {
+            "element": "Show more link",
+            "action": "Expand full description of ZK Catalog"
+          },
+          {
+            "element": "Filters button",
+            "action": "Open filter panel to narrow ZK implementations"
+          },
+          {
+            "element": "Columns button",
+            "action": "Customize visible table columns"
+          },
+          {
+            "element": "Table rows",
+            "action": "Navigate to individual ZK setup detail page"
+          },
+          {
+            "element": "Tech stack badges",
+            "action": "Display information about components (hover/click)"
+          }
+        ],
+        "informationArchitecture": "Catalog → Filters → Table rows (ranked by TVS) → Technical component breakdown via badges",
+        "frictionPoints": [
+          "Dense badge systems may be overwhelming for non-technical users",
+          "Multiple columns require significant horizontal space",
+          "Technical jargon (Plonk, SNARK, STARK) not explained inline",
+          "Verification trust indicators require understanding of the framework"
+        ],
+        "progressIndicators": [
+          "Row numbers (1-5 visible) indicate position in ranked list",
+          "TVS values act as popularity/adoption indicator"
+        ]
+      },
+      "copy": {
+        "headline": "ZK Catalog",
+        "subheadline": "ZK Catalog by L2BEAT is a community-driven resource offering detailed insights into the ZK technology utilized by various blockchain projects.",
+        "ctas": [
+          {
+            "text": "Show more",
+            "style": "text-link",
+            "placement": "end of description paragraph"
+          },
+          {
+            "text": "Trusted Setups Risk Framework",
+            "style": "primary-button",
+            "placement": "top-right corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "It aims to enhance transparency...",
+            "context": "Description excerpt",
+            "purpose": "Explain catalog mission (truncated with Show more)"
+          },
+          {
+            "text": "Filters",
+            "context": "Control button above table",
+            "purpose": "Indicate filtering capability"
+          },
+          {
+            "text": "TRUSTED SETUPS",
+            "context": "Column header with info icon",
+            "purpose": "Explain trust model for ZK setup ceremonies"
+          },
+          {
+            "text": "+20 more",
+            "context": "Used In column, Boojum row",
+            "purpose": "Indicate additional projects using this ZK setup"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$2.41B",
+          "$1.27B",
+          "$782.85M",
+          "$567.62M",
+          "31 projects",
+          "1 project"
+        ],
+        "trustSignals": [
+          "Verified badge icons (green checkmarks) next to trusted setups",
+          "L2BEAT branding as curator of the resource",
+          "Risk framework link indicating transparent security assessment",
+          "Verification count and trusted setup verification status"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-15-publications.png",
+      "label": "Publications",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f7",
+          "#7c3aed"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large italic for article titles",
+          "bodyStyle": "Regular sans-serif for publication dates and descriptions",
+          "dataStyle": "Tag labels in color-coded boxes (GOVERNANCE, MONTHLY UPDATE)"
+        },
+        "components": [
+          {
+            "type": "description-banner",
+            "description": "Explanatory text about publications hub with 'Show more' link",
+            "position": "top",
+            "notable": "Context-setting copy for publication types"
+          },
+          {
+            "type": "filter-control",
+            "description": "Filters button with indicator badge",
+            "position": "top-left below description",
+            "notable": "Allows filtering of publication types"
+          },
+          {
+            "type": "card-grid",
+            "description": "3-column grid of publication cards with hero images",
+            "position": "main content area",
+            "notable": "Large hero images with brand architectural graphics, elegant design"
+          },
+          {
+            "type": "publication-card",
+            "description": "Individual card with image, category tag, date, title, description, and 'Read now' link",
+            "position": "within grid",
+            "notable": "Rich visual presentation with visual hierarchy and consistent styling"
+          },
+          {
+            "type": "cta-section",
+            "description": "Newsletter subscription prompt with dark background and white button",
+            "position": "between article grid sections",
+            "notable": "Contrasting design to draw attention to conversion"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero images dominate, titles are large and bold, descriptions are secondary, call-to-action is clearly separated",
+        "innovativeElements": [
+          "Large hero images with architectural/design elements",
+          "Color-coded category tags (magenta for governance, cyan for monthly update)",
+          "Date-based organization with consistent card styling",
+          "High-contrast newsletter subscription section with black background",
+          "Magazine-style layout with generous whitespace"
+        ]
+      },
+      "flow": {
+        "screenType": "content-hub-browse",
+        "userIntent": "Discover and read L2BEAT publications including research, governance updates, and ecosystem insights",
+        "entryPoints": [
+          "Sidebar 'Publications' menu item",
+          "Homepage navigation",
+          "External link from social/newsletter"
+        ],
+        "exitPoints": [
+          "Click 'Show more' to expand description",
+          "Apply filters to narrow publication types",
+          "Click 'Read now' to navigate to article",
+          "Click 'Subscribe to our newsletter' to sign up",
+          "Navigate to other sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Show more link",
+            "action": "Expand full description of publications hub"
+          },
+          {
+            "element": "Filters button",
+            "action": "Open filter panel to narrow by publication type"
+          },
+          {
+            "element": "Publication card",
+            "action": "Clickable card to navigate to full article"
+          },
+          {
+            "element": "Read now link",
+            "action": "Navigate to individual publication page"
+          },
+          {
+            "element": "Subscribe to our newsletter button",
+            "action": "Open newsletter signup form or redirect"
+          }
+        ],
+        "informationArchitecture": "Hub description → Filters → Card grid organized by publication date (newest first) → Newsletter CTA → Additional articles below",
+        "frictionPoints": [
+          "Card-only layout may not show publication metadata clearly on first glance",
+          "Requires scrolling to see more than 3 articles",
+          "No clear sorting or date range filtering visible",
+          "Newsletter CTA interrupts content flow"
+        ],
+        "progressIndicators": [
+          "Publication dates on each card (e.g., '2 Feb 2026')",
+          "Category tags indicate publication type"
+        ]
+      },
+      "copy": {
+        "headline": "Publications",
+        "subheadline": "Your hub for everything we publish: research-driven blog posts, must-read explainers, Medium essays, YouTube interviews, and curated social highlights. Stay current on Ether...",
+        "ctas": [
+          {
+            "text": "Show more",
+            "style": "text-link",
+            "placement": "end of description"
+          },
+          {
+            "text": "Read now",
+            "style": "text-link",
+            "placement": "bottom of each publication card"
+          },
+          {
+            "text": "Subscribe to our newsletter",
+            "style": "primary-button",
+            "placement": "newsletter CTA section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "GOVERNANCE",
+            "context": "Publication category tag",
+            "purpose": "Indicate article category/topic"
+          },
+          {
+            "text": "MONTHLY UPDATE",
+            "context": "Publication category tag",
+            "purpose": "Indicate recurring publication series"
+          },
+          {
+            "text": "2 Feb 2026",
+            "context": "Publication date label",
+            "purpose": "Show publication recency"
+          },
+          {
+            "text": "February is here, and the forums are already buzzing.",
+            "context": "Article description excerpt",
+            "purpose": "Entice reader with preview content"
+          },
+          {
+            "text": "Get the latest insights - covering Ethereum Layer 2 ecosystem updates, in-depth research and transparency reports, governance proposals, and more.",
+            "context": "Newsletter CTA section",
+            "purpose": "Describe value proposition of newsletter"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "2 Feb 2026",
+          "31 Jan 2026",
+          "25 Jan 2026"
+        ],
+        "trustSignals": [
+          "L2BEAT branding on each publication card",
+          "Consistent, professional design indicating editorial quality",
+          "Category tags (GOVERNANCE, MONTHLY UPDATE) indicating regular, organized publishing"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-46-signin-page.png",
+      "label": "signin page",
+      "flowType": "Home",
+      "step": 46,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "monospace system font, minimal",
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - plain text error message only",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access signin endpoint but encountered error",
+        "entryPoints": [
+          "direct URL navigation to /signin"
+        ],
+        "exitPoints": [
+          "back navigation",
+          "redirect to home"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state display",
+        "frictionPoints": [
+          "endpoint not accessible",
+          "no fallback UI provided"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /signin",
+            "context": "full page",
+            "purpose": "communicate HTTP error state"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /signin"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-47-explore-page.png",
+      "label": "explore page",
+      "flowType": "Home",
+      "step": 47,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "system font, minimal",
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - blank page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access explore section but encountered error",
+        "entryPoints": [
+          "direct URL navigation to /explore"
+        ],
+        "exitPoints": [
+          "back navigation",
+          "redirect to home"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state display",
+        "frictionPoints": [
+          "endpoint not accessible",
+          "no content loaded"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /explore",
+            "context": "full page",
+            "purpose": "communicate HTTP error state"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /explore"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-send-1-bridges.png",
+      "label": "Bridges",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#E0E0E0",
+          "#FF1493",
+          "#9C3FF0"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 20-24px for main titles",
+          "bodyStyle": "regular sans-serif, 14px for body content",
+          "dataStyle": "monospace or bold for monetary values ($) and percentages (%)"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "left panel with collapsible menu including Scaling, Bridges, Data Availability, ZK Catalog, Ecosystems",
+            "position": "left side, ~200px width",
+            "notable": "color-coded category buttons (purple for active Bridges)"
+          },
+          {
+            "type": "chart-graph",
+            "description": "area chart showing 'Value Secured' over time with pink fill",
+            "position": "center-top, occupies 60% width",
+            "notable": "displays 12-month trend with interactive axis labels"
+          },
+          {
+            "type": "data-table",
+            "description": "sortable table listing bridges with columns for rank, name, TVS, validation mechanism, liveness, governance, upgrades",
+            "position": "center-bottom, full width",
+            "notable": "color-coded badges for security status (red, green, yellow)"
+          },
+          {
+            "type": "alert-banner",
+            "description": "yellow banner at top with info icon and link to Discord",
+            "position": "top of content area",
+            "notable": "warning that L2BEAT Bridges is work in progress"
+          },
+          {
+            "type": "time-range-selector",
+            "description": "buttons for 7D, 30D, 90D, 180D, 1Y, MAX timeframes",
+            "position": "right side of chart",
+            "notable": "quick selection for data granularity"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "strong hierarchy: metric header → chart → table, with left nav always visible",
+        "innovativeElements": [
+          "color-coded risk indicators (Red/Yellow/Green) for bridge security status",
+          "expandable filter system with numbered badge counts",
+          "dual-currency display (USD/ETH toggle)",
+          "categorized table grouping (Single-chain vs Others with count badges)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "explore and compare cryptocurrency bridges by security metrics and TVL",
+        "entryPoints": [
+          "click Bridges from main navigation",
+          "direct URL to bridges summary page",
+          "search function in top right"
+        ],
+        "exitPoints": [
+          "click individual bridge row to view details",
+          "navigate to different sections (Scaling, Data Availability)",
+          "use search to filter bridges",
+          "adjust time range to view historical data"
+        ],
+        "interactiveElements": [
+          {
+            "element": "category toggle buttons",
+            "action": "filter bridges by Single-chain or Others category"
+          },
+          {
+            "element": "sortable table headers",
+            "action": "sort by TVS, name, validation mechanism, etc."
+          },
+          {
+            "element": "time range selector (7D, 30D, 90D, etc.)",
+            "action": "zoom chart to different time periods"
+          },
+          {
+            "element": "USD/ETH toggle",
+            "action": "change currency display on chart"
+          },
+          {
+            "element": "Columns button",
+            "action": "customize visible table columns"
+          },
+          {
+            "element": "Filters button",
+            "action": "apply advanced filtering options"
+          }
+        ],
+        "informationArchitecture": "hierarchical: overview chart at top → categorical tabs → detailed table rows. Left nav provides section context.",
+        "frictionPoints": [
+          "many columns in table may cause horizontal scroll on smaller screens",
+          "color-coded status indicators require legend familiarity",
+          "disclaimer banner about incomplete research may create doubt",
+          "multiple filter/sort options could overwhelm casual users"
+        ],
+        "progressIndicators": [
+          "category badge counts (Single-chain 8, Others 29)",
+          "filter count indicator (0 active)"
+        ]
+      },
+      "copy": {
+        "headline": "Summary",
+        "subheadline": "2025 Feb 14 — 2026 Feb 14",
+        "ctas": [
+          {
+            "text": "Discord",
+            "style": "text-link",
+            "placement": "yellow banner, end of text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "L2BEAT Bridges is a work in progress. You might find incomplete research and inconsistent naming.",
+            "context": "yellow alert banner",
+            "purpose": "set expectations about data completeness"
+          },
+          {
+            "text": "Value Secured",
+            "context": "chart title",
+            "purpose": "label primary metric"
+          },
+          {
+            "text": "$9.90B",
+            "context": "top right of chart",
+            "purpose": "highlight current total value"
+          },
+          {
+            "text": "27.0% / 1 year",
+            "context": "next to main metric",
+            "purpose": "show year-over-year change"
+          },
+          {
+            "text": "Upgrades: Not upgradeable",
+            "context": "governance column",
+            "purpose": "communicate upgrade status"
+          },
+          {
+            "text": "Pause: Multisig (2/5)",
+            "context": "governance column",
+            "purpose": "explain pause mechanism details"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$9.90B (total value in billions)",
+          "27.0% / 1 year (percentage with time period)",
+          "$3.90B + 1.79% (individual bridge value with change)",
+          "Multisig (3/4), Multisig (4/7), EOA (security mechanisms)"
+        ],
+        "trustSignals": [
+          "$9.90B total value secured (TVL metric)",
+          "year-over-year performance data (+27.0%)",
+          "detailed validation mechanisms documented",
+          "governance structure transparency (Multisig ratios)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-19-jobswere-hiring.png",
+      "label": "JobsWe're hiring",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF1493",
+          "#8B008B",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large and prominent (Junior Software Engineer title)",
+          "bodyStyle": "Regular sans-serif, dark gray on white background, comfortable line height",
+          "dataStyle": "Purple badges for status (Open), plain text for job metadata (Remote • Europe • Full time)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "L2BEAT logo with pink heart icon and hiring announcement",
+            "position": "top",
+            "notable": "Heart icon emoji reinforces company culture messaging"
+          },
+          {
+            "type": "job-header",
+            "description": "Job title with Open status badge and metadata tags",
+            "position": "upper-content",
+            "notable": "Purple Open badge stands out against light background"
+          },
+          {
+            "type": "content-section",
+            "description": "Multiple sections with About L2BEAT, The role, and What you'll do",
+            "position": "main-content",
+            "notable": "Structured sections with bullet points for clarity"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong top-to-bottom flow: headline → metadata → body sections with clear section breaks",
+        "innovativeElements": [
+          "Heart icon branding",
+          "Purple accent color for hiring call-to-action"
+        ]
+      },
+      "flow": {
+        "screenType": "job-posting-detail",
+        "userIntent": "Review detailed job position and requirements for Junior Software Engineer role",
+        "entryPoints": [
+          "Jobs page navigation",
+          "Hiring banner from homepage",
+          "Search results"
+        ],
+        "exitPoints": [
+          "Apply button (not visible)",
+          "Navigate to other jobs",
+          "Return to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Open status badge",
+            "action": "Visual indicator of active job posting"
+          },
+          {
+            "element": "Section headings (About L2BEAT, The role, What you'll do)",
+            "action": "Guide user through job posting narrative"
+          }
+        ],
+        "informationArchitecture": "Linear narrative flow: company context → role overview → specific responsibilities, building candidate understanding progressively",
+        "frictionPoints": [
+          "No visible Apply button or CTA visible in screenshot",
+          "Lengthy text blocks without visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Junior Software Engineer",
+        "subheadline": "Remote • Europe • Full time",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "We are hiring! Work with us ❤️",
+            "context": "Header announcement",
+            "purpose": "Establish immediate hiring intent and company personality"
+          },
+          {
+            "text": "Open",
+            "context": "Status badge",
+            "purpose": "Clearly indicate position is actively accepting applications"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones (heart emoji, emphasis on learning)",
+        "dataFormatting": [
+          "Remote • Europe • Full time",
+          "l2beat.com"
+        ],
+        "trustSignals": [
+          "Open-source platform",
+          "Commitment to accuracy and neutrality",
+          "Established product (l2beat.com)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-44-scaling-projects-ethscriptions.png",
+      "label": "scaling - projects - ethscriptions",
+      "flowType": "Home",
+      "step": 44,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF1493",
+          "#00AA00",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium-large (Ethscriptions title with icon)",
+          "bodyStyle": "Regular sans-serif for labels and descriptions",
+          "dataStyle": "Large numerical values with down/up indicators (0.10, 10.5%), metric labels in smaller text"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with primary navigation (Scaling, Bridges, Data Availability, ZK Catalog, Ecosystems)",
+            "position": "left",
+            "notable": "Pink 'We're hiring' badge on Jobs link; expandable sections with > indicators"
+          },
+          {
+            "type": "top-navigation-bar",
+            "description": "Horizontal menu with Website, Docs, Explorer, Repository, Social links and DISCO button",
+            "position": "top",
+            "notable": "Orange DISCO button stands out; external link icons for reference transparency"
+          },
+          {
+            "type": "metric-cards",
+            "description": "Key metrics displayed in grid: Total Value Secured, Past day UOPS, Stage, Gas token",
+            "position": "upper-content",
+            "notable": "Red down-arrow indicator for negative percentage change (10.5%)"
+          },
+          {
+            "type": "data-visualization",
+            "description": "Pie chart showing Data Availability breakdown with colored segments",
+            "position": "right-panel",
+            "notable": "Large green circular pie chart with labeled segments"
+          },
+          {
+            "type": "badge-grid",
+            "description": "Governance and chain badges (Appchain, EVM, Validator, Facet, Based Rollup Modifier)",
+            "position": "content-section",
+            "notable": "Colorful square badges with icons and text labels"
+          },
+          {
+            "type": "right-sidebar-menu",
+            "description": "Numbered list of analysis sections (1-13: Activity, Onchain costs, Liveness, etc.)",
+            "position": "right",
+            "notable": "Tabbed navigation for detailed analysis views"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Guiding eye through: key metrics → visual breakdown → detailed badges → narrative description → full data visualization",
+        "innovativeElements": [
+          "Color-coded percentage indicators with directional arrows",
+          "Pie chart with curved labels",
+          "Numbered analysis tabs on right sidebar"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Analyze detailed metrics and risk assessment for Ethscriptions Layer 2 scaling solution",
+        "entryPoints": [
+          "Scaling section navigation",
+          "Search projects",
+          "Direct project link"
+        ],
+        "exitPoints": [
+          "Explore other projects",
+          "Navigate to different analysis tabs (Activity, Onchain costs, etc.)",
+          "Access external links (Website, Docs, Explorer)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time range selector (30D, 90D, 180D, 1Y, MAX)",
+            "action": "Filter activity chart by time period"
+          },
+          {
+            "element": "Right sidebar numbered sections",
+            "action": "Navigate between different risk analysis and operational metrics"
+          },
+          {
+            "element": "External link buttons (Website, Docs, Explorer, Repository, Social, DISCO)",
+            "action": "Navigate to project resources"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: navigation sidebar (left) → primary content with metrics and visualization (center) → analysis index sidebar (right). Information organized by risk and operational metrics rather than chronological.",
+        "frictionPoints": [
+          "Dense information layout may overwhelm new users",
+          "Multiple navigation systems (top bar, left sidebar, right index) could cause confusion",
+          "Chart visualization partially cut off in screenshot"
+        ],
+        "progressIndicators": [
+          "Numbered section index (1-13) showing available analysis views"
+        ]
+      },
+      "copy": {
+        "headline": "Ethscriptions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Website",
+            "style": "text-link",
+            "placement": "top-navigation"
+          },
+          {
+            "text": "Docs",
+            "style": "text-link",
+            "placement": "top-navigation"
+          },
+          {
+            "text": "Explorer",
+            "style": "text-link",
+            "placement": "top-navigation"
+          },
+          {
+            "text": "Repository",
+            "style": "ghost-button",
+            "placement": "top-navigation"
+          },
+          {
+            "text": "DISCO",
+            "style": "primary-button",
+            "placement": "top-navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Value Secured",
+            "context": "Metric label",
+            "purpose": "Identify key security metric"
+          },
+          {
+            "text": "Past day UOPS",
+            "context": "Metric label with info tooltip",
+            "purpose": "Explain daily transaction metric"
+          },
+          {
+            "text": "Stage 2 - Appchain",
+            "context": "Badge grouping",
+            "purpose": "Classify project stage and type"
+          },
+          {
+            "text": "Ethscriptions is a biased rollup that provides cryptographic state and EVM compatibility for ethscriptions...",
+            "context": "About section",
+            "purpose": "Educational description of project functionality"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.10 (numeric value)",
+          "10.5% (percentage with red down-indicator)",
+          "STAGE 2",
+          "45 UOPS",
+          "30 UOPS",
+          "Chain ID: 61166"
+        ],
+        "trustSignals": [
+          "Biased rollup classification",
+          "EVM compatibility mention",
+          "Cryptographic state notation",
+          "Risk assessment analysis framework"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No data (shown in Total Value Secured field)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-home-45-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 45,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Monospace font (Courier-like) for error message",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-text",
+            "description": "Plain text error message in monospace font",
+            "position": "top-left",
+            "notable": "Minimal technical error output, no styling or UI treatment"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single element (error text) dominates nearly blank page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why page failed to load",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link click",
+          "Direct URL attempt"
+        ],
+        "exitPoints": [
+          "Navigation via back button",
+          "Manual URL entry",
+          "Home page link (if rendered)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Raw error output displayed without UX wrapper or helpful guidance",
+        "frictionPoints": [
+          "No navigation options visible",
+          "No user-friendly error message",
+          "Technical error code without explanation",
+          "No suggested next steps or home link"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /this-page-does-not-exist-404-test",
+            "context": "Full page",
+            "purpose": "Display HTTP error code and requested path"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [
+          "HTTP method: GET",
+          "Path: /this-page-does-not-exist-404-test"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /this-page-does-not-exist-404-test"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-1-about-us.png",
+      "label": "About Us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#E91E63"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar navigation",
+            "description": "Left sidebar with hierarchical menu items including Scaling, Bridges, Data Availability, etc.",
+            "position": "left",
+            "notable": "Current section (About Us) highlighted in magenta/pink with submenu items in text below"
+          },
+          {
+            "type": "Header",
+            "description": "L2BEAT logo, dark mode toggle, search bar with keyboard shortcut indicator",
+            "position": "top",
+            "notable": "Search functionality prominently accessible with '/'' shortcut label"
+          },
+          {
+            "type": "Main content area",
+            "description": "Two-column text layout with heading and descriptive paragraphs",
+            "position": "center-right",
+            "notable": "Bullet points organize key responsibilities in right column"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading anchors attention, left sidebar provides navigation context, main text organized in two columns with bullets for scanning",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "informational",
+        "userIntent": "Learn about L2BEAT organization, mission, and focus areas",
+        "entryPoints": [
+          "About Us link in sidebar",
+          "Footer links",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Publications",
+          "Forum",
+          "Governance",
+          "other sidebar menu items",
+          "Search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search across site content"
+          }
+        ],
+        "informationArchitecture": "Mission statement followed by detailed explanation of approach, then work areas as bulleted list, then funding sources and partnerships",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Learn about L2BEAT and its mission",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "We are a public goods company dedicated to providing onchain transparency.",
+            "context": "Opening paragraph",
+            "purpose": "Establishes organizational identity and mission"
+          },
+          {
+            "text": "Our work spans a wide range of areas, including:",
+            "context": "Before bulleted list",
+            "purpose": "Introduces scope of work"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Recognition and solid reputation in industry",
+          "Praise from global Ethereum community",
+          "Funding from Gitcoin and Ethereum Foundation",
+          "Collaboration with leading companies"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-2-faq.png",
+      "label": "FAQ",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main with two-column content",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#5B5BFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for main Q&A headings, blue hyperlinks integrated",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray with good line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Introduction section",
+            "description": "Friendly greeting with context-setting subtext",
+            "position": "top",
+            "notable": "Casual tone ('Hi!' + exclamation) contrasts with technical content below"
+          },
+          {
+            "type": "Q&A content",
+            "description": "Left column contains expanded Q&A with full answers, right sidebar lists all questions as clickable anchors",
+            "position": "main and right",
+            "notable": "Two-column layout allows scanning questions on right while reading answers on left"
+          },
+          {
+            "type": "Hyperlinks",
+            "description": "Blue underlined links to related concepts (TVS, liveness, etc.)",
+            "position": "inline within body text",
+            "notable": "Contextual linking provides deeper educational paths"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Friendly introduction at top, bold Q headings anchor each section, right sidebar acts as table of contents",
+        "innovativeElements": [
+          "Dual-column FAQ with sidebar index",
+          "Inline hyperlinks to related technical concepts for depth"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to common questions about L2BEAT functionality and differentiation",
+        "entryPoints": [
+          "FAQ link in sidebar",
+          "Search query",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Other FAQ items via sidebar",
+          "Hyperlinked resources",
+          "Main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Right sidebar question links",
+            "action": "Jump to specific Q&A section"
+          },
+          {
+            "element": "Blue hyperlinks",
+            "action": "Navigate to related technical definitions or pages"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search FAQ content"
+          }
+        ],
+        "informationArchitecture": "Questions organized by topic (purpose, differentiation from competitors, technical terminology, security). Right sidebar provides quick navigation.",
+        "frictionPoints": [
+          "Multiple columns require horizontal scanning",
+          "Dense technical content may require multiple reads"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hi! We are glad you've made it to FAQs!",
+        "subheadline": "Below, you will find answers to the most frequently asked questions to help you better understand our website.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "L2BEAT was created to provide transparent and verifiable insights into emerging layer two (L2) technologies",
+            "context": "First Q&A answer",
+            "purpose": "Establishes core mission concisely"
+          },
+          {
+            "text": "L2BEAT focuses exclusively on the decentralization and trust assumptions of Ethereum scaling projects",
+            "context": "Competitive differentiation Q&A",
+            "purpose": "Clarifies unique value proposition vs. competitors"
+          }
+        ],
+        "tone": "friendly-casual to professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent methodology explanation",
+          "Detailed comparison vs. established platforms (DeFiLlama)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-3-terms-of-service.png",
+      "label": "Terms of Service",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, numbered sections (1., 2., 1.1, etc.), progressively smaller sizes for subsections",
+          "bodyStyle": "Serif font (appears to be Georgia or similar), regular weight, black text on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Update timestamp",
+            "description": "Purple text indicating last update date",
+            "position": "top",
+            "notable": "Establishes currency and legal credibility"
+          },
+          {
+            "type": "Hierarchical section structure",
+            "description": "Numbered headings with clear nesting (1. > 1.1 > 1.2, etc.)",
+            "position": "main content",
+            "notable": "Legal document structure with formal outline"
+          },
+          {
+            "type": "Body text",
+            "description": "Dense paragraphs with legal terminology and organization details",
+            "position": "main content",
+            "notable": "Serif typography supports legal document authenticity"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Numbered section headings provide clear document structure, serif body text maintains legal formality",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-reference",
+        "userIntent": "Review L2BEAT terms of service and legal obligations",
+        "entryPoints": [
+          "Footer link",
+          "Direct URL",
+          "Legal compliance check"
+        ],
+        "exitPoints": [
+          "Other sidebar menu items",
+          "Search",
+          "Home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search terms content"
+          }
+        ],
+        "informationArchitecture": "Linear document structure with numbered sections: General Information → Description of Services → (presumably continues below fold)",
+        "frictionPoints": [
+          "Dense legal text may be difficult to scan",
+          "No visible table of contents or jump links",
+          "Long-form reading required for full compliance understanding"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "LAST UPDATED ON 28 OCT 2024",
+            "context": "Top of document",
+            "purpose": "Establishes legal document recency and validity"
+          },
+          {
+            "text": "These Terms of Service ('Terms') govern your access to and use of the L2BEAT website - l2beat.com ('the Website'), operated by L2BEAT, a limited liability company",
+            "context": "Section 1.1 About Us",
+            "purpose": "Defines scope and operator of service"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "KRS No 0000920990",
+          "Address: Poznańska 16/4, 00-680 Warsaw, Poland"
+        ],
+        "trustSignals": [
+          "Official legal registration details provided",
+          "Dated update stamp for currency",
+          "Formal organizational structure disclosed"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-4-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "monospace, system font stack, all caps",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - only header text visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access settings page",
+        "entryPoints": [
+          "direct navigation to /settings"
+        ],
+        "exitPoints": [
+          "back to main navigation",
+          "refresh page"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state",
+        "frictionPoints": [
+          "page failed to load - API error prevents access to settings"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /settings",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /settings"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-5-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "monospace, system font stack, all caps",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - only header text visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access help page",
+        "entryPoints": [
+          "direct navigation to /help"
+        ],
+        "exitPoints": [
+          "back to main navigation",
+          "refresh page"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state",
+        "frictionPoints": [
+          "page failed to load - API error prevents access to help documentation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /help",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /help"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-settings-6-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "monospace, system font stack, all caps",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - only header text visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access about page",
+        "entryPoints": [
+          "direct navigation to /about"
+        ],
+        "exitPoints": [
+          "back to main navigation",
+          "refresh page"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state",
+        "frictionPoints": [
+          "page failed to load - API error prevents access to about information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /about",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /about"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-staking-4-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "null",
+          "bodyStyle": "null",
+          "dataStyle": "null"
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Unable to determine - content not visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access staking information or functionality",
+        "entryPoints": [
+          "Direct navigation to /staking route",
+          "Menu link from main navigation"
+        ],
+        "exitPoints": [
+          "Return to home",
+          "Navigate to alternative section"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state - resource unavailable",
+        "frictionPoints": [
+          "Cannot GET /staking - complete access failure"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /staking",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /staking",
+            "context": "Top-left error message",
+            "purpose": "Communicate API/routing error to user"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /staking"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "null",
+          "bodyStyle": "null",
+          "dataStyle": "null"
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Unable to determine - content not visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Log in to account or access login form",
+        "entryPoints": [
+          "Direct navigation to /login",
+          "Login button from homepage",
+          "Session timeout redirect"
+        ],
+        "exitPoints": [
+          "Return to home",
+          "Proceed to signup"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state - page failed to load",
+        "frictionPoints": [
+          "Cannot GET /login - complete access failure"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /login",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /login",
+            "context": "Top-left error message",
+            "purpose": "Communicate API/routing error to user"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /login"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-onboarding-2-signup-page.png",
+      "label": "signup page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "null",
+          "bodyStyle": "null",
+          "dataStyle": "null"
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Unable to determine - content not visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Create new account or access signup form",
+        "entryPoints": [
+          "Direct navigation to /signup",
+          "Signup button from homepage",
+          "Link from login page"
+        ],
+        "exitPoints": [
+          "Return to home",
+          "Proceed to login"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state - page failed to load",
+        "frictionPoints": [
+          "Cannot GET /signup - complete access failure"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /signup",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /signup",
+            "context": "Top-left error message",
+            "purpose": "Communicate API/routing error to user"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /signup"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "monospace, small caps, technical",
+          "bodyStyle": "monospace system font",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-message",
+            "description": "Cannot GET /swap error text",
+            "position": "top-left",
+            "notable": "Displays raw API error rather than user-friendly messaging"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - single error message dominates",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access swap functionality but encountered API failure",
+        "entryPoints": [
+          "direct navigation to /swap route"
+        ],
+        "exitPoints": [
+          "browser back button",
+          "navigate to different route"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state only",
+        "frictionPoints": [
+          "Technical error exposed to user without remediation path",
+          "No clear next steps or recovery options",
+          "API endpoint failure blocking entire swap feature"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /swap",
+            "context": "top-left corner",
+            "purpose": "communicates API error directly"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /swap"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "monospace, small caps, technical",
+          "bodyStyle": "monospace system font",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-message",
+            "description": "Cannot GET /trade error text",
+            "position": "top-left",
+            "notable": "Similar to swap error - raw API error messaging"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - single error message",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access trading functionality but encountered API failure",
+        "entryPoints": [
+          "direct navigation to /trade route"
+        ],
+        "exitPoints": [
+          "browser back button",
+          "navigate to different route"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state only",
+        "frictionPoints": [
+          "Technical error exposed without user-friendly context",
+          "No alternative actions or contact support options",
+          "Feature completely blocked by API unavailability"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /trade",
+            "context": "top-left corner",
+            "purpose": "communicates API error directly"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /trade"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-swap-3-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "monospace, small caps, technical",
+          "bodyStyle": "monospace system font",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-message",
+            "description": "Cannot GET /exchange error text",
+            "position": "top-left",
+            "notable": "Consistent error pattern across all three swap flow pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal - single error message",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "access exchange functionality but encountered API failure",
+        "entryPoints": [
+          "direct navigation to /exchange route"
+        ],
+        "exitPoints": [
+          "browser back button",
+          "navigate to different route"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error state only",
+        "frictionPoints": [
+          "Raw API errors exposed to end users",
+          "No fallback UI or graceful degradation",
+          "Entire exchange feature unavailable"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /exchange",
+            "context": "top-left corner",
+            "purpose": "communicates API error directly"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /exchange"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-swap-4-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "monospace, all-caps, minimal weight",
+          "bodyStyle": "monospace, minimal decoration",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Monospace text reading 'Cannot GET /markets'",
+            "position": "top-left",
+            "notable": "Displays HTTP error message in developer-style formatting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single error message anchors top-left, rest of screen is blank white space",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access /markets endpoint but received 404 error",
+        "entryPoints": [
+          "Direct URL navigation to /markets",
+          "Failed navigation from swap interface"
+        ],
+        "exitPoints": [
+          "Back to previous screen",
+          "Navigate to valid route",
+          "Home/dashboard"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state with no additional guidance or recovery options",
+        "frictionPoints": [
+          "No explanation of what happened",
+          "No recovery options or helpful links provided",
+          "Blank screen with only error code",
+          "No suggestion for next steps"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cannot GET /markets",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /markets"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-staking-1-governance.png",
+      "label": "Governance",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E91E63",
+          "#7C3AED",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray",
+          "dataStyle": "Inline protocol badges with icons and external link indicators"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left vertical menu with expandable sections (Scaling, Bridges, Data Availability, ZK Catalog, Ecosystems) plus footer links (About Us, Publications, Forum, Governance, etc.)",
+            "position": "left edge",
+            "notable": "Hiring badge on 'Jobs' item with bright purple background"
+          },
+          {
+            "type": "delegation-buttons",
+            "description": "Grid of 9 protocol badge buttons (Arbitrum, Everclear, Hop, Lisk, Obol, Optimism, Polygon, Scroll, Starknet, Uniswap, ZKsync)",
+            "position": "center-left, mid-page",
+            "notable": "Each button shows protocol icon, name, and external link icon; mixed pastel backgrounds (blue, purple, pink, gray)"
+          },
+          {
+            "type": "publication-cards",
+            "description": "Recent governance review articles with thumbnail images, dates, titles, descriptions, and 'Read now' links",
+            "position": "center-bottom",
+            "notable": "Consistent governance review icon/illustration, organized chronologically"
+          },
+          {
+            "type": "info-panel",
+            "description": "Purple highlighted box titled 'Office hours' with white text, calendar icon, and delegate names as underlined links",
+            "position": "right side",
+            "notable": "High-contrast purple (#7C3AED) background, prominent call-to-action for community engagement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye drawn first to headline, then to purple 'DELEGATE YOUR TOKENS' section, then to protocol buttons, finally to publication feed and side panel",
+        "innovativeElements": [
+          "Parliament building illustration as visual metaphor for governance",
+          "Protocol button grid provides clear delegation destinations with visual consistency",
+          "Dual-column layout combining educational content (left) with engagement mechanisms (right)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hub",
+        "userIntent": "Understand governance delegation options and stay informed about governance updates",
+        "entryPoints": [
+          "Governance link in sidebar navigation",
+          "Direct URL navigation to governance section"
+        ],
+        "exitPoints": [
+          "Delegate tokens via protocol buttons (external links)",
+          "Read governance reviews via 'Read now' links",
+          "Access office hours via calendar link",
+          "Navigate to other sections via sidebar menu",
+          "Search using top-right search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Protocol delegation buttons",
+            "action": "Opens external link to delegate tokens to selected protocol"
+          },
+          {
+            "element": "Read now links",
+            "action": "Navigates to full governance review article"
+          },
+          {
+            "element": "Calendar icon",
+            "action": "Links to governance office hours schedule"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Expands sub-sections or navigates to related pages"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filters or searches governance-related content"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: central messaging about delegation mission, radial options for protocol delegation, chronological feed of governance updates, sidebar for broader platform navigation",
+        "frictionPoints": [
+          "Multiple external links may require re-entry to site after delegation",
+          "Governance review titles/descriptions are brief; users may need to click 'Read now' for full context",
+          "Office hours information requires clicking through to calendar"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Governance",
+        "subheadline": "By delegating your governance votes to L2BEAT, you're supporting our mission to protect the interests of the Ethereum community and uphold our shared values. Together, we can lead the L2 ecosystem towards a safer, more secure decentralized future.",
+        "ctas": [
+          {
+            "text": "DELEGATE YOUR TOKENS",
+            "style": "section-header-label",
+            "placement": "center-left, above protocol buttons"
+          },
+          {
+            "text": "Read now",
+            "style": "text-link",
+            "placement": "below each governance review card"
+          },
+          {
+            "text": "Explore all publications",
+            "style": "secondary-button",
+            "placement": "right of 'Recent publications' heading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you'd like to see us act as a delegate in another protocol, please let us know and we'll see what we can do.",
+            "context": "Below protocol delegation buttons",
+            "purpose": "Invites community feedback and suggests openness to expanding delegation scope"
+          },
+          {
+            "text": "To promote transparency and communication as delegates, we're hosting recurring Office Hours on Google Meets.",
+            "context": "Inside purple 'Office hours' panel",
+            "purpose": "Explains value proposition of attending office hours"
+          },
+          {
+            "text": "During the Office Hours, anyone is able to reach L2BEAT's governance team...",
+            "context": "Below office hours heading",
+            "purpose": "Sets expectations for what users can accomplish during office hours"
+          }
+        ],
+        "tone": "professional-technical, mission-driven, community-focused",
+        "dataFormatting": [
+          "Protocol names with icons",
+          "Dates formatted as 'D MMM YYYY' (e.g., '3 Feb 2026')",
+          "Article titles in bold sans-serif"
+        ],
+        "trustSignals": [
+          "Mission statement about protecting Ethereum community interests",
+          "Explicit list of protocols trusting L2BEAT as delegate",
+          "Named governance team members (Kaereste, Manugotsuka)",
+          "Regular office hours commitment"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-staking-2-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": null,
+        "visualHierarchy": null,
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error-state",
+        "userIntent": "Access the earn/staking information page",
+        "entryPoints": [
+          "Navigation to /earn route"
+        ],
+        "exitPoints": [
+          "Back to previous page",
+          "Navigate via sidebar to different section"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state - content failed to load",
+        "frictionPoints": [
+          "Page failed to load completely - shows only error message"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /earn",
+            "context": "Top-left of page",
+            "purpose": "Indicates HTTP error - resource not found or page under development"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /earn"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/l2beat-staking-3-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": null,
+        "visualHierarchy": null,
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error-state",
+        "userIntent": "Access the stake page for staking information",
+        "entryPoints": [
+          "Navigation to /stake route"
+        ],
+        "exitPoints": [
+          "Back to previous page",
+          "Navigate via sidebar to different section"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error state - content failed to load",
+        "frictionPoints": [
+          "Page failed to load completely - shows only error message"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Cannot GET /stake",
+            "context": "Top-left of page",
+            "purpose": "Indicates HTTP error - resource not found or page under development"
+          }
+        ],
+        "tone": "technical-error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Cannot GET /stake"
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

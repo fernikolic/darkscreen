@@ -1,0 +1,327 @@
+{
+  "slug": "minibits",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:33:34.949Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 3,
+  "screens": [
+    {
+      "image": "/screenshots/minibits-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#4A9D6F",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, playful rounded letterforms, large cap treatment",
+          "bodyStyle": "regular gray sans-serif, justified alignment, readable line length",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Minibits wordmark in bold playful font",
+            "position": "top center",
+            "notable": "distinctive rounded letterforms suggest approachability"
+          },
+          {
+            "type": "device carousel",
+            "description": "four iPhone mockups showing different wallet screens in sequence",
+            "position": "center above fold",
+            "notable": "hardware-realistic mockups with detailed UI visible, shows functional breadth"
+          },
+          {
+            "type": "descriptive text blocks",
+            "description": "two paragraphs explaining product features and use cases",
+            "position": "center below devices",
+            "notable": "includes hyperlinked 'Cashu protocol' for deeper learning"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "two download buttons (Google Play, Apple App Store)",
+            "position": "bottom",
+            "notable": "standard platform-specific badges, prominent black background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "logo → device showcase → explanation → CTAs; visual weight concentrated in device mockups",
+        "innovativeElements": [
+          "responsive iPhone mockup carousel demonstrating multiple app states simultaneously",
+          "playful rounded typography differentiates from typical crypto wallet designs"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "learn about Minibits wallet and download the app",
+        "entryPoints": [
+          "direct URL visit",
+          "marketing link from social media",
+          "search result for Bitcoin Lightning wallet"
+        ],
+        "exitPoints": [
+          "Google Play Store link",
+          "Apple App Store link",
+          "back to external source"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cashu protocol hyperlink",
+            "action": "opens additional educational resource"
+          },
+          {
+            "element": "GET IT ON button",
+            "action": "navigates to Google Play Store"
+          },
+          {
+            "element": "Download on the App Store button",
+            "action": "navigates to Apple App Store"
+          }
+        ],
+        "informationArchitecture": "brand introduction → product showcase → feature explanation → download options; linear scrolling experience",
+        "frictionPoints": [
+          "no direct in-browser wallet demo or trial",
+          "requires external store navigation to use product"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Minibits",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "GET IT ON",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button",
+            "placement": "bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Minibits is a Bitcoin Lightning and ecash wallet that enables instant, low-cost, and private value transfers.",
+            "context": "main product description",
+            "purpose": "establishes core value proposition"
+          },
+          {
+            "text": "Ecash is issued by mints and backed by Bitcoin via the Cashu protocol and the Lightning Network.",
+            "context": "technical explanation",
+            "purpose": "builds credibility through technical grounding"
+          },
+          {
+            "text": "Minibits wallet also provides you with a free Lightning address, and with Nostr Wallet Connect built in, it's perfect for sending small tips—known as \"zaps\"—on Nostr social networks.",
+            "context": "secondary feature highlight",
+            "purpose": "introduces social/networking use case"
+          },
+          {
+            "text": "Minibits is available in open beta testing on Google Play and on iOS App Store!",
+            "context": "product status",
+            "purpose": "communicates availability and beta stage"
+          }
+        ],
+        "tone": "professional-technical with friendly accessibility",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin-backed security",
+          "Cashu protocol reference",
+          "Lightning Network integration",
+          "Open beta availability on established app stores"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/minibits-home-2-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "bold serif, large cap",
+          "bodyStyle": "regular serif, minimal styling",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error heading",
+            "description": "Not Found in bold serif",
+            "position": "top left",
+            "notable": null
+          },
+          {
+            "type": "error message",
+            "description": "The requested URL was not found on this server.",
+            "position": "below heading",
+            "notable": "generic browser default error page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "heading → error message; minimal visual content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error page",
+        "userIntent": "navigate to a page (unintentionally hitting 404)",
+        "entryPoints": [
+          "direct URL navigation",
+          "broken link from email or external source"
+        ],
+        "exitPoints": [
+          "back button",
+          "manual navigation to valid URL"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error code → explanation; minimal guidance",
+        "frictionPoints": [
+          "no recovery path offered (no home link, no search, no suggestions)",
+          "generic error messaging provides no context",
+          "poor user experience for invalid navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The requested URL was not found on this server.",
+            "context": "error message",
+            "purpose": "explains the 404 error condition"
+          }
+        ],
+        "tone": "technical-robotic",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "The requested URL was not found on this server."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/minibits-settings-1-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "bold serif, numbered section headers",
+          "bodyStyle": "regular serif with bullet points, dense text blocks",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "page heading",
+            "description": "Privacy policy",
+            "position": "top",
+            "notable": "bold serif emphasis"
+          },
+          {
+            "type": "numbered sections",
+            "description": "10 major policy sections with subsections and bullet points",
+            "position": "full page",
+            "notable": "hierarchical organization with numbered and bulleted lists"
+          },
+          {
+            "type": "company details",
+            "description": "Bitango Technologies legal registration information",
+            "position": "section 1",
+            "notable": "includes specific company registry details for legal compliance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "page title → numbered sections → body text with bullets; clear sectional breakdown",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal documentation page",
+        "userIntent": "review privacy practices and data handling policies",
+        "entryPoints": [
+          "footer link on website",
+          "in-app settings/legal section",
+          "direct URL navigation"
+        ],
+        "exitPoints": [
+          "back to home or settings",
+          "external link to external privacy resources"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "overview → data collection → data processing types → device storage → data usage → legal grounds → third-party sharing → data retention → user rights; comprehensive linear document",
+        "frictionPoints": [
+          "very dense text blocks with minimal white space",
+          "no interactive table of contents or anchor links",
+          "extensive legal jargon may overwhelm non-legal users",
+          "no summary or quick-read version"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This Privacy Policy applies to personal information processed by or on behalf of Bitango Technologies, s.r.o., registered address Brnianska 43, 811 04 Bratislava, Slovak republic, reg. no.: 51 299 631",
+            "context": "policy introduction",
+            "purpose": "establishes legal entity and jurisdiction"
+          },
+          {
+            "text": "We only collect limited information from you when you use the App. We do not purchase information from third parties.",
+            "context": "data collection statement",
+            "purpose": "builds trust through transparency"
+          },
+          {
+            "text": "randomly generated wallet identificator, shareable wallet name and linked public key, shareable random picture linked to your wallet name, anonymous diagnostics and error reporting data",
+            "context": "types of collected data",
+            "purpose": "lists specific data categories processed"
+          },
+          {
+            "text": "your secure key generated on your device if you choose to use secure application storage; eCash tokens issued by the mint of your choice; private key linked to your wallet name; history of your transactions; your contacts as shareable wallet names of your peers",
+            "context": "device-stored data",
+            "purpose": "clarifies what stays on-device vs. shared"
+          }
+        ],
+        "tone": "professional-technical, legal-compliance focused",
+        "dataFormatting": [
+          "numbered sections (1-10)",
+          "bullet-point lists for data categories",
+          "registry numbers (51 299 631)"
+        ],
+        "trustSignals": [
+          "specific legal registration details",
+          "transparent data collection practices",
+          "device-local storage of sensitive keys",
+          "explicit statement on not purchasing third-party data",
+          "GDPR-compliant rights enumeration"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

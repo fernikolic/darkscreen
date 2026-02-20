@@ -1,0 +1,1601 @@
+{
+  "slug": "exodus",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:45:02.430Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/exodus-home-7-exodus-pay.png",
+      "label": "Exodus Pay",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width hero with centered content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00C853",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, split color (white + bright green accent on 'human')",
+          "bodyStyle": "Medium weight sans-serif, white text on dark",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "phone mockup",
+            "description": "iPhone displaying Exodus Pay app interface with dollar sign icon and green gradient background",
+            "position": "center, elevated above text",
+            "notable": "3D perspective rendering creates product depth and appeal"
+          },
+          {
+            "type": "tagline badge",
+            "description": "Green rounded pill with dollar icon and text 'A new standard for money'",
+            "position": "below phone mockup",
+            "notable": "Subtle but reinforces value proposition"
+          },
+          {
+            "type": "primary CTA button",
+            "description": "Bright green rounded button with white text",
+            "position": "below headline",
+            "notable": "High contrast ensures visibility against dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Phone mockup draws eye first, then headline below reinforces messaging, CTA button positioned for natural reading flow",
+        "innovativeElements": [
+          "Bright green color (#00C853) breaks dark palette dramatically",
+          "Phone mockup positioned as hero visual rather than secondary element",
+          "Text layering effect with large 'Exod' and 'Pay' words flanking the phone creates integrated composition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / hero section",
+        "userIntent": "Discover and sign up for Exodus Pay cryptocurrency payment product",
+        "entryPoints": [
+          "Main website navigation click on 'Products'",
+          "Direct link from marketing campaign"
+        ],
+        "exitPoints": [
+          "Join the waitlist button",
+          "Navigation menu to other products",
+          "Back to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Join the waitlist button",
+            "action": "Likely opens signup form or modal to request early access"
+          },
+          {
+            "element": "Navigation menu items (Products, Support, Learn, Company)",
+            "action": "Navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Product showcase (hero image) → Value proposition → Call to action, minimal copy to maintain focus on visual",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Money, made human.",
+        "subheadline": "A new standard for money",
+        "ctas": [
+          {
+            "text": "Join the waitlist",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Exodus Pay",
+            "context": "On phone mockup screen",
+            "purpose": "Product name labeling"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-8-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "centered full-screen error page with modal-like cookie banner at bottom",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a2e",
+          "#7c3aed",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif white text, error code '404' in muted gray above",
+          "bodyStyle": "Medium sans-serif, gray descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error code display",
+            "description": "Very large '404' in muted gray",
+            "position": "center-top of viewport",
+            "notable": "Subtle but clearly indicates error state"
+          },
+          {
+            "type": "error heading",
+            "description": "'Page Not Found' white text",
+            "position": "center, below error code",
+            "notable": "Clear, reassuring language"
+          },
+          {
+            "type": "error description",
+            "description": "Explanatory text about broken link or invalid URL",
+            "position": "center, below heading",
+            "notable": "Helpful context for user confusion"
+          },
+          {
+            "type": "dual CTA buttons",
+            "description": "Two action buttons - outline style left, gradient purple-blue right",
+            "position": "center, below description",
+            "notable": "Secondary and primary distinction clear through styling"
+          },
+          {
+            "type": "cookie consent banner",
+            "description": "Bottom bar with privacy/cookie notice and action buttons",
+            "position": "bottom of screen, overlaying content",
+            "notable": "GDPR/privacy compliance element, slightly intrusive"
+          }
+        ],
+        "spacing": "spacious with generous padding",
+        "visualHierarchy": "Error code → heading → description → CTAs, with cookie banner as independent footer element",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error page with modal overlay (cookie consent)",
+        "userIntent": "Understand why they reached dead page and navigate back to valid content",
+        "entryPoints": [
+          "Broken link click",
+          "Invalid URL entry",
+          "Expired page reference"
+        ],
+        "exitPoints": [
+          "Support page via VISIT OUR SUPPORT PAGE button",
+          "Home page via GO TO EXODUS HOME PAGE button",
+          "Back navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "VISIT OUR SUPPORT PAGE",
+            "action": "Navigate to support section"
+          },
+          {
+            "element": "GO TO EXODUS HOME PAGE",
+            "action": "Return to home page"
+          },
+          {
+            "element": "Back to the main website",
+            "action": "Navigate back to previous section"
+          },
+          {
+            "element": "PRIVACY POLICY button (cookie banner)",
+            "action": "Open privacy policy document"
+          },
+          {
+            "element": "ACCEPT button (cookie banner)",
+            "action": "Accept cookie tracking"
+          }
+        ],
+        "informationArchitecture": "Primary error content centered with clear exit paths, cookie notice separated at bottom as compliance element",
+        "frictionPoints": [
+          "Cookie banner overlays primary content and CTAs",
+          "Two buttons with similar visual weight may cause slight decision paralysis"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "VISIT OUR SUPPORT PAGE",
+            "style": "ghost-button / outline",
+            "placement": "center-left of button pair"
+          },
+          {
+            "text": "GO TO EXODUS HOME PAGE",
+            "style": "primary-button / gradient",
+            "placement": "center-right of button pair"
+          },
+          {
+            "text": "Back to the main website",
+            "style": "text-link",
+            "placement": "top-left corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Looks like you've followed a broken link or entered a URL that doesn't exist on this site.",
+            "context": "Error page body",
+            "purpose": "Reassure user and explain issue clearly"
+          },
+          {
+            "text": "Allow us to use cookies to give you the best experience on our website?",
+            "context": "Cookie consent banner at bottom",
+            "purpose": "GDPR/privacy compliance request"
+          }
+        ],
+        "tone": "professional-technical, helpful, non-condescending",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link available in cookie banner"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/exodus-swap-1-icon-desktopdesktop-walletswap-and-transfer-digita.png",
+      "label": "Icon desktopDesktop WalletSwap and transfer digita",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with product mockup showcase below fold",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6b5b95",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif white text, with uppercase label 'EXODUS DESKTOP' above in smaller gray",
+          "bodyStyle": "Medium sans-serif gray text, descriptive",
+          "dataStyle": "Dollar amounts displayed in bright yellow/gold (#FFD700) in portfolio view"
+        },
+        "components": [
+          {
+            "type": "navigation header",
+            "description": "Top bar with Exodus logo, dropdown menu items (Products, Support, Learn, Company), and Download CTA",
+            "position": "top of page",
+            "notable": "Download button is white pill, stands out against dark background as primary action"
+          },
+          {
+            "type": "hero heading",
+            "description": "'Effortless portfolio management' in large white text",
+            "position": "center, above fold",
+            "notable": "Clear value proposition in simple language"
+          },
+          {
+            "type": "subheading",
+            "description": "'Engineered for security, designed for ease. Manage your crypto with confidence.'",
+            "position": "below hero heading",
+            "notable": "Emphasizes both technical credibility and UX focus"
+          },
+          {
+            "type": "platform-specific download button",
+            "description": "White rounded button with Apple icon and 'Download for Mac' text, dropdown arrow",
+            "position": "below subheading",
+            "notable": "Platform detection/selection shown, increases conversion likelihood"
+          },
+          {
+            "type": "secondary links",
+            "description": "'Version History' and 'Release Hashes' underlined text links",
+            "position": "below download button",
+            "notable": "Build trust with transparency (version control, cryptographic verification)"
+          },
+          {
+            "type": "desktop app mockup",
+            "description": "Dark-themed desktop wallet interface with portfolio circle chart, navigation icons, and $12,048.23 balance display",
+            "position": "lower half, visually prominent",
+            "notable": "Real data example with vibrant orange/blue gradient chart on dark background"
+          }
+        ],
+        "spacing": "comfortable to spacious",
+        "visualHierarchy": "Navigation → Headline → Subheadline → Download CTA → App mockup, with each element leading naturally to next",
+        "innovativeElements": [
+          "Purple gradient background (#6b5b95 tones) creates modern, premium feel",
+          "App mockup shows realistic portfolio state with actual dollar amounts",
+          "Rounded corners on desktop mockup soften corporate feel"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / product hero",
+        "userIntent": "Learn about Exodus Desktop wallet and download the application",
+        "entryPoints": [
+          "Main website navigation",
+          "Products dropdown menu",
+          "Direct marketing link"
+        ],
+        "exitPoints": [
+          "Download for Mac/Windows/Linux",
+          "Products menu navigation",
+          "Support, Learn, or Company sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Mac button (with dropdown)",
+            "action": "Opens platform selection or initiates Mac app download"
+          },
+          {
+            "element": "Version History link",
+            "action": "Opens version history page"
+          },
+          {
+            "element": "Release Hashes link",
+            "action": "Opens cryptographic hash verification for security"
+          },
+          {
+            "element": "Navigation dropdowns (Products, Support, Learn, Company)",
+            "action": "Navigate to respective product/info sections"
+          }
+        ],
+        "informationArchitecture": "Product positioning (headline/subheading) → Call to action (download) → Social proof/security signals → Visual product showcase",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Effortless portfolio management",
+        "subheadline": "Engineered for security, designed for ease. Manage your crypto with confidence.",
+        "ctas": [
+          {
+            "text": "Download for Mac",
+            "style": "primary-button",
+            "placement": "center, below subheading"
+          },
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "EXODUS DESKTOP",
+            "context": "Above main headline",
+            "purpose": "Product category label"
+          },
+          {
+            "text": "Version History",
+            "context": "Below download button",
+            "purpose": "Build trust through transparency"
+          },
+          {
+            "text": "Release Hashes",
+            "context": "Below download button",
+            "purpose": "Security verification signal for technical users"
+          }
+        ],
+        "tone": "professional-friendly, confident, security-focused",
+        "dataFormatting": [
+          "$12,048.23 (portfolio balance in mockup)"
+        ],
+        "trustSignals": [
+          "Version History link",
+          "Release Hashes (cryptographic verification)",
+          "Security-first language in subheadline"
+        ],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-4-icon-ledgerledger-hardware-walletadvanced-security.png",
+      "label": "Icon ledgerLedger Hardware WalletAdvanced security",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FF6B35",
+          "#FFD700"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, white, centered, large scale (60-80px)",
+          "bodyStyle": "Regular sans-serif, light gray, centered, medium weight",
+          "dataStyle": "$12,048.23 displayed prominently in white on mobile mockup"
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Horizontal menu with logo, dropdown nav items (Products, Support, Learn, Company), and Download CTA",
+            "position": "top",
+            "notable": "Clean, minimal styling with white text on dark background"
+          },
+          {
+            "type": "hero section",
+            "description": "Centered headline, subheadline, and primary CTA button",
+            "position": "center",
+            "notable": "Large white heading with orange/gold gradient glow in background"
+          },
+          {
+            "type": "product mockup",
+            "description": "Three device images (phone, hardware wallet, Ledger device) arranged horizontally with orange/yellow radial gradient",
+            "position": "bottom-center",
+            "notable": "Warm glow effect creates depth and highlights hardware integration"
+          },
+          {
+            "type": "badge",
+            "description": "Ledger + Exodus Mobile partnership callout",
+            "position": "above headline",
+            "notable": "Small lock icon emphasizes security"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eyes drawn upward from devices → headline → CTA button via size and white-on-black contrast",
+        "innovativeElements": [
+          "Radial orange/yellow glow effect emanating from device mockups",
+          "Hardware wallet integration visualization with three complementary devices",
+          "Gradient stroke on circular balance display"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page hero",
+        "userIntent": "Understand Ledger + Exodus integration and download the wallet",
+        "entryPoints": [
+          "Marketing campaign",
+          "Direct URL",
+          "Navigation from homepage"
+        ],
+        "exitPoints": [
+          "Download CTA",
+          "Navigation menu items",
+          "Logo to homepage"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download Exodus Wallet button",
+            "action": "Initiates download or app store navigation"
+          },
+          {
+            "element": "Navigation dropdown menus",
+            "action": "Expand to show submenu items"
+          },
+          {
+            "element": "Download button (top-right)",
+            "action": "Alternate download entry point"
+          }
+        ],
+        "informationArchitecture": "Single-focus hero with partnership callout at top, supporting visual below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Secure crypto storage on the go",
+        "subheadline": "Fortify your Exodus experience with Ledger hardware wallet protection. Enhanced security meets intuitive design for next-level crypto management.",
+        "ctas": [
+          {
+            "text": "Download Exodus Wallet",
+            "style": "primary-button",
+            "placement": "center below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ledger + Exodus Mobile",
+            "context": "Badge above headline",
+            "purpose": "Partnership validation and product context"
+          }
+        ],
+        "tone": "professional-technical, trust-focused",
+        "dataFormatting": [
+          "$12,048.23"
+        ],
+        "trustSignals": [
+          "Ledger hardware wallet partnership",
+          "Hardware wallet integration imagery",
+          "Security-first positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-5-icon-trezortrezor-hardware-walletadvanced-security.png",
+      "label": "Icon trezorTrezor Hardware WalletAdvanced security",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D084",
+          "#FFD700"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, white, centered, large scale (60-80px)",
+          "bodyStyle": "Regular sans-serif, light gray/green, centered",
+          "dataStyle": "$12,048.23 in white with orange progress ring on desktop mockup"
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Same structure as Ledger variant with darker background",
+            "position": "top",
+            "notable": "Slightly transparent/frosted appearance"
+          },
+          {
+            "type": "hero section",
+            "description": "Centered headline, subheadline, platform-specific CTA",
+            "position": "center",
+            "notable": "Green accent color differentiates from Ledger variant"
+          },
+          {
+            "type": "product mockup",
+            "description": "Desktop client (left), mobile view (center), partially visible second desktop (right) with green radial gradient",
+            "position": "bottom-center",
+            "notable": "Green glow replaces orange; shows cross-platform integration"
+          },
+          {
+            "type": "compatibility badge",
+            "description": "Links showing supported Trezor models (Model T, One, Safe 3, Safe 5, Safe 7)",
+            "position": "below CTA",
+            "notable": "Underlined text links for additional context"
+          },
+          {
+            "type": "feature pills",
+            "description": "New Safe 7 Support and Exodus Mobile Support badges",
+            "position": "bottom corners of mockups",
+            "notable": "Green badges with lock icons highlight new integrations"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Similar to Ledger variant but green accents create distinct brand separation",
+        "innovativeElements": [
+          "Green radial glow effect (vs. orange in Ledger variant)",
+          "Cross-platform device display (desktop + mobile prominently)",
+          "Feature pill notifications on mockups themselves",
+          "Model compatibility list below CTA"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page hero",
+        "userIntent": "Understand Trezor + Exodus integration benefits and download for chosen platform",
+        "entryPoints": [
+          "Marketing campaign",
+          "Direct URL",
+          "Navigation from homepage"
+        ],
+        "exitPoints": [
+          "Download for Mac (or platform selector)",
+          "Navigation menu items",
+          "Compatibility links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Mac button with dropdown",
+            "action": "Shows platform options (Mac, Windows, Linux implied)"
+          },
+          {
+            "element": "Trezor model links",
+            "action": "Navigation to specifications or compatibility details"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Expand submenu"
+          }
+        ],
+        "informationArchitecture": "Hero headline → subheadline → platform CTA → compatibility details → cross-platform mockups",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Boost crypto security with pro-level protection",
+        "subheadline": "Integrate your Trezor hardware wallet with Exodus Desktop or Mobile for an advanced defense stack.",
+        "ctas": [
+          {
+            "text": "Download for Mac",
+            "style": "primary-button-with-dropdown",
+            "placement": "center below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Compatible with Trezor Model T, One, Safe 3, Safe 5, and Safe 7",
+            "context": "Below CTA button",
+            "purpose": "Clarify hardware compatibility and feature breadth"
+          },
+          {
+            "text": "New Exodus Mobile Support",
+            "context": "Green pill badge on mobile mockup",
+            "purpose": "Highlight latest feature addition"
+          },
+          {
+            "text": "Safe 7 Support",
+            "context": "Green pill badge on desktop mockup",
+            "purpose": "Call out latest hardware support"
+          }
+        ],
+        "tone": "professional-technical, feature-focused",
+        "dataFormatting": [
+          "$12,048.23"
+        ],
+        "trustSignals": [
+          "Trezor hardware wallet partnership",
+          "Multi-device cross-platform integration",
+          "Explicit model compatibility list",
+          "Feature support badges"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-6-download.png",
+      "label": "Download",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "card-grid (3-column)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#6366F1",
+          "#0EA5E9",
+          "#FF6B35"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, white, left-aligned per card, 48-56px",
+          "bodyStyle": "Regular sans-serif, light gray, left-aligned per card, smaller scale",
+          "dataStyle": "$12,048.23, $14,762.50 USD, cryptocurrency amounts with percentages"
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Logo, product dropdown, support, learn, company dropdowns",
+            "position": "top",
+            "notable": "Frosted/glassmorphism effect with rounded corners; darker than previous variants"
+          },
+          {
+            "type": "card grid",
+            "description": "Three equal-width cards: Desktop, Mobile, Web3",
+            "position": "center",
+            "notable": "Each card shows product screenshot and has associated download CTA"
+          },
+          {
+            "type": "product screenshot overlay",
+            "description": "Real application interfaces shown in each card (desktop app, mobile app, web extension)",
+            "position": "background of each card",
+            "notable": "Screenshots are slightly darkened/overlaid to maintain text readability"
+          },
+          {
+            "type": "download button",
+            "description": "Platform-specific download CTAs below each product heading",
+            "position": "bottom of each card",
+            "notable": "Desktop has dropdown; Mobile shows App Store and Google Play with ratings (4.7, 4.6)"
+          },
+          {
+            "type": "description text",
+            "description": "2-3 line feature summaries under each heading",
+            "position": "middle-bottom of each card",
+            "notable": "Concise benefits statement rather than full feature list"
+          },
+          {
+            "type": "footer links",
+            "description": "Version History and Release Hashes for Desktop card",
+            "position": "bottom-left of Desktop card",
+            "notable": "Light gray underlined text for secondary actions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large product labels draw eyes first → screenshots provide visual context → CTAs are prominent → descriptions add detail",
+        "innovativeElements": [
+          "Live product screenshots integrated as card backgrounds",
+          "App store ratings displayed inline with download buttons",
+          "Platform-specific dropdown on Desktop CTA",
+          "Glassmorphic navigation header"
+        ]
+      },
+      "flow": {
+        "screenType": "product selection / download hub",
+        "userIntent": "Choose which Exodus product to download (Desktop, Mobile, or Web3) and initiate download",
+        "entryPoints": [
+          "Navigation from homepage or marketing campaign",
+          "Direct link to /download",
+          "CTA from hardware wallet integration pages"
+        ],
+        "exitPoints": [
+          "Download Exodus (Desktop with platform selector)",
+          "App Store link",
+          "Google Play link",
+          "Download for Chrome and Brave",
+          "Version History / Release Hashes",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download Exodus dropdown",
+            "action": "Shows Windows/Mac/Linux options"
+          },
+          {
+            "element": "Download on the App Store button",
+            "action": "Navigate to Apple App Store"
+          },
+          {
+            "element": "GET IT ON Google Play button",
+            "action": "Navigate to Google Play Store"
+          },
+          {
+            "element": "Download for Chrome and Brave button",
+            "action": "Navigate to browser extension store or direct download"
+          },
+          {
+            "element": "Version History / Release Hashes links",
+            "action": "Show version information and cryptographic signatures"
+          },
+          {
+            "element": "Navigation menu dropdowns",
+            "action": "Expand submenu"
+          }
+        ],
+        "informationArchitecture": "Three primary product options presented equally; supporting details (ratings, features) contextualize each choice",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download Exodus",
+            "style": "primary-button-with-dropdown",
+            "placement": "center-bottom of Desktop card"
+          },
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button-with-app-badge",
+            "placement": "left of Mobile card footer"
+          },
+          {
+            "text": "GET IT ON Google Play",
+            "style": "primary-button-with-app-badge",
+            "placement": "right of Mobile card footer"
+          },
+          {
+            "text": "Download for Chrome and Brave",
+            "style": "primary-button",
+            "placement": "center-bottom of Web3 card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "4.7",
+            "context": "App Store rating badge on Mobile card",
+            "purpose": "Build trust via user ratings"
+          },
+          {
+            "text": "4.6",
+            "context": "Google Play rating badge on Mobile card",
+            "purpose": "Build trust via user ratings"
+          },
+          {
+            "text": "Version History",
+            "context": "Underlined link below Desktop card",
+            "purpose": "Access historical release information"
+          },
+          {
+            "text": "Release Hashes",
+            "context": "Underlined link below Desktop card",
+            "purpose": "Verify download integrity via cryptographic signatures"
+          }
+        ],
+        "tone": "professional-technical, feature-focused",
+        "dataFormatting": [
+          "$12,048.23",
+          "$14,762.50 USD",
+          "4.7 / 4.6 (ratings)"
+        ],
+        "trustSignals": [
+          "App Store 4.7 rating",
+          "Google Play 4.6 rating",
+          "Release Hashes link (security verification)",
+          "Version History (transparency)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B1FFF",
+          "#00D9FF",
+          "#1A0F3D",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, white, bold, centered. ~80px+ for main headline",
+          "bodyStyle": "Medium weight sans-serif, light purple/gray, centered, ~18px",
+          "dataStyle": "$12,040.23 displayed prominently in circular portfolio visualization"
+        },
+        "components": [
+          {
+            "type": "Sticky Header",
+            "description": "Navigation bar with logo, dropdown menus (Products, Support, Learn, Company), and Download CTA",
+            "position": "Top fixed",
+            "notable": "Minimal, clean navigation with white Download button for contrast"
+          },
+          {
+            "type": "Announcement Banner",
+            "description": "Exodus Pay coming soon with Join waitlist button and floating coin graphics",
+            "position": "Top above header",
+            "notable": "Animated green coin icons create brand personality and draw attention to new product"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Lock icon with 'Trusted by millions of customers since 2015'",
+            "position": "Above main headline",
+            "notable": "Security reassurance positioned early in visual hierarchy"
+          },
+          {
+            "type": "Device Mockups",
+            "description": "Desktop and mobile phone showing app interface with portfolio visualization",
+            "position": "Bottom half",
+            "notable": "Dual-device display demonstrates cross-platform capability"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Trust badge → Headline → Subheadline → CTA button → Device mockups. Eyes drawn upward then down through contrast and sizing",
+        "innovativeElements": [
+          "Animated floating coin graphics in header",
+          "Gradient purple-to-teal background with subtle depth",
+          "Portfolio donut chart visualization in device mockup"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Exodus is and download the wallet application",
+        "entryPoints": [
+          "Direct web visit",
+          "Marketing campaign link",
+          "Brand search"
+        ],
+        "exitPoints": [
+          "Download for Mac (dropdown for other OS)",
+          "Products dropdown navigation",
+          "Learn section for education"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Mac button",
+            "action": "Dropdown menu to select OS or initiate download"
+          },
+          {
+            "element": "Products, Support, Learn, Company dropdowns",
+            "action": "Reveal submenu options"
+          },
+          {
+            "element": "Join the waitlist button",
+            "action": "Navigate to Exodus Pay waitlist signup"
+          }
+        ],
+        "informationArchitecture": "Hero-first approach: lead with value proposition (Bitcoin and crypto wallet), trust signals, then product showcase via device mockups. Navigation organized by company structure (Products, Support, Learn, Company)",
+        "frictionPoints": [
+          "Multiple platform options require selection",
+          "Need to scroll to see full device mockups",
+          "No immediate feature details on landing—must explore Products section"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin and crypto wallet",
+        "subheadline": "Seamless, secure, self-custodial. Swap, buy, and manage a diverse portfolio in one place.",
+        "ctas": [
+          {
+            "text": "Download for Mac",
+            "style": "primary-button",
+            "placement": "Center, below subheadline"
+          },
+          {
+            "text": "Join the waitlist",
+            "style": "primary-button",
+            "placement": "Top banner, top-right"
+          },
+          {
+            "text": "Available on other devices",
+            "style": "text-link",
+            "placement": "Below Download button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Coming soon...",
+            "context": "Top announcement banner next to Exodus Pay",
+            "purpose": "Signal upcoming product feature"
+          },
+          {
+            "text": "Trusted by millions of customers since 2015",
+            "context": "Above main headline with lock icon",
+            "purpose": "Build credibility and trust"
+          }
+        ],
+        "tone": "professional-technical, confident, inclusive",
+        "dataFormatting": [
+          "$12,040.23 (portfolio total in device mockup)",
+          "0.056998 ETH (token amount)",
+          "$150.37 (fiat equivalent)"
+        ],
+        "trustSignals": [
+          "Trusted by millions of customers since 2015",
+          "Lock icon indicating security",
+          "Self-custodial messaging"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-2-icon-mobilemobile-walletcontrol-your-wealth-anywhe.png",
+      "label": "Icon mobileMobile WalletControl your wealth anywhe",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with three-device carousel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B1FFF",
+          "#FF6B35",
+          "#00D9FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, white, bold, centered. ~70px for section headline",
+          "bodyStyle": "Medium sans-serif, light gray, centered, ~18px",
+          "dataStyle": "Large figures for crypto amounts ($150.37, 0.056998 ETH, 0.001512 BTC) and portfolio value ($12,048.23) in circular visualization"
+        },
+        "components": [
+          {
+            "type": "Section Label",
+            "description": "EXODUS MOBILE text in small caps above headline",
+            "position": "Top center",
+            "notable": "Product tier identifier for clarity"
+          },
+          {
+            "type": "Three-Device Mockup Carousel",
+            "description": "Left phone showing holdings (ETH/BTC), center phone showing portfolio donut ($12,048.23), right phone showing send interface (SOL)",
+            "position": "Bottom 60% of screen",
+            "notable": "Demonstrates key user journeys: view holdings, track portfolio, execute transactions"
+          },
+          {
+            "type": "Navigation Icons",
+            "description": "Bottom tab bar in mockups showing portfolio, wallet, staking, charts, security icons",
+            "position": "Within device mockups",
+            "notable": "Clear IA communicated through icon-based navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Product label → Bold headline → Subheadline → CTA → Device mockups. Device layout creates three focal points showing progression of use cases",
+        "innovativeElements": [
+          "Three coordinated device mockups showing different app states simultaneously",
+          "Gradient circular portfolio visualization with multi-color progress indicator",
+          "Icon-based mobile navigation bar preview"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product-section",
+        "userIntent": "Understand Exodus mobile wallet capabilities and features",
+        "entryPoints": [
+          "Scroll from main landing",
+          "Products → Mobile Wallet"
+        ],
+        "exitPoints": [
+          "Download Exodus Wallet CTA",
+          "Scroll to next section",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download Exodus Wallet button",
+            "action": "Initiate download or redirect to download page"
+          },
+          {
+            "element": "Device mockup carousel",
+            "action": "May be swipeable/clickable to show different phone features (implied)"
+          }
+        ],
+        "informationArchitecture": "Product feature showcase: headline → subheadline explaining value prop → visual proof through device mockups showing real interface states",
+        "frictionPoints": [
+          "No explicit feature list—understanding comes from visual inspection of mockups",
+          "Can't interact with mockup features, only view them",
+          "Unclear if user should scroll or if mockups are carousel"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Simple, secure, smart",
+        "subheadline": "Access millions of tokens, swap instantly, and stay in control.",
+        "ctas": [
+          {
+            "text": "Download Exodus Wallet",
+            "style": "primary-button",
+            "placement": "Center, above device mockups"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "EXODUS MOBILE",
+            "context": "Product label above headline",
+            "purpose": "Identify specific product offering"
+          },
+          {
+            "text": "I have 0.056998 Ethereum",
+            "context": "Left phone holdings section",
+            "purpose": "Example user data showing real portfolio"
+          },
+          {
+            "text": "I want Bitcoin",
+            "context": "Left phone purchase intent",
+            "purpose": "Demonstrate buy functionality"
+          },
+          {
+            "text": "Receive 0.238867 SOL",
+            "context": "Right phone transaction details",
+            "purpose": "Show transaction capability"
+          }
+        ],
+        "tone": "professional-technical, confident, action-oriented",
+        "dataFormatting": [
+          "$12,048.23 (portfolio total)",
+          "$150.37 (ETH fiat value)",
+          "0.056998 (ETH holdings)",
+          "0.001512 (BTC holdings)",
+          "$150.00 (transaction amount)"
+        ],
+        "trustSignals": [
+          "Security icon in navigation bar",
+          "Self-custodial implied by 'stay in control'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-home-3-icon-web3web3-walletexplore-the-world-of-web3-and.png",
+      "label": "Icon web3Web3 WalletExplore the world of web3 and",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width with integrated product mockups",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B1FFF",
+          "#00D9FF",
+          "#1A7F7E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, white, bold, centered. ~70px for main headline",
+          "bodyStyle": "Medium sans-serif, light gray, centered, ~18px",
+          "dataStyle": "$14,782.50 USD displayed prominently in portfolio card header with gradient background"
+        },
+        "components": [
+          {
+            "type": "Section Label",
+            "description": "EXODUS WEB3 WALLET in small caps above headline",
+            "position": "Top center",
+            "notable": "Product tier differentiation"
+          },
+          {
+            "type": "Multi-Product Mockup Grid",
+            "description": "Three mockups: left showing Buy/Sell interface with $100 input, center showing portfolio card ($14,782.50 USD) with Send/Receive buttons, right showing Earn Cardano staking rewards",
+            "position": "Bottom 60% of screen",
+            "notable": "Showcases trading, portfolio management, and staking features in coordinated views"
+          },
+          {
+            "type": "Gradient Background Container",
+            "description": "Teal-to-blue gradient encasing device mockups",
+            "position": "Behind mockups",
+            "notable": "Visual separation and depth creation"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "Staking rewards card with icon and descriptive text",
+            "position": "Right side in right mockup",
+            "notable": "Educational component showing earning potential"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Product label → Bold headline → Subheadline → CTA → Three coordinated mockups showing different core features. Left-to-right progression implies workflow",
+        "innovativeElements": [
+          "Three-panel mockup grid showing ecosystem of services (trading, portfolio, staking)",
+          "Gradient card backgrounds within mockups (blue-to-purple on center portfolio)",
+          "Toggle buttons (BUY/SELL tabs) visible in trading mockup",
+          "Staking rewards education integrated into product demo"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product-section",
+        "userIntent": "Understand Exodus Web3 wallet capabilities including trading, portfolio management, and staking",
+        "entryPoints": [
+          "Scroll from main landing",
+          "Products → Web3 Wallet"
+        ],
+        "exitPoints": [
+          "Download for Chrome and Brave CTA",
+          "Scroll to next section",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Chrome and Brave button",
+            "action": "Initiate browser extension download"
+          },
+          {
+            "element": "BUY/SELL toggle in left mockup",
+            "action": "Switch between trading modes (visual only)"
+          },
+          {
+            "element": "SEND/RECEIVE buttons in center mockup",
+            "action": "Initiate transaction flow (visual only)"
+          }
+        ],
+        "informationArchitecture": "Product feature showcase organized as three use cases: acquire crypto (buy/sell), manage portfolio (track holdings), earn returns (staking). Mockups progress from transaction initiation to outcome visualization",
+        "frictionPoints": [
+          "Web3 concept may not be immediately clear to all users",
+          "Multiple features crammed into three mockups—each could use deeper explanation",
+          "Browser extension download differs from mobile/desktop app (different platform experience)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The only web3 wallet you'll ever need",
+        "subheadline": "Your gateway to the world wide web3 on your phone or computer.",
+        "ctas": [
+          {
+            "text": "Download for Chrome and Brave",
+            "style": "primary-button",
+            "placement": "Center, above mockups"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "EXODUS WEB3 WALLET",
+            "context": "Product label above headline",
+            "purpose": "Identify product tier"
+          },
+          {
+            "text": "PORTFOLIO",
+            "context": "Center mockup header with dropdown indicator",
+            "purpose": "Navigation label and portfolio feature callout"
+          },
+          {
+            "text": "$14,782.50 USD",
+            "context": "Portfolio total in center mockup",
+            "purpose": "Show total asset value"
+          },
+          {
+            "text": "EARN CARDANO",
+            "context": "Right mockup section header",
+            "purpose": "Feature identifier for staking"
+          },
+          {
+            "text": "By staking your ADA, you'll be rewarded",
+            "context": "Right mockup description text",
+            "purpose": "Explain staking benefit"
+          }
+        ],
+        "tone": "professional-technical, confident, educational",
+        "dataFormatting": [
+          "$14,782.50 USD (portfolio total)",
+          "$100 (buy amount example)",
+          "$500, MAX (buy limit options)"
+        ],
+        "trustSignals": [
+          "Specific mention of support for millions of tokens",
+          "Established platform (same 2015 founding as mobile)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-staking-1-icon-rewardsstaking-rewardsearn-crypto-rewards-for.png",
+      "label": "Icon rewardsStaking RewardsEarn crypto rewards for",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B4BA8",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white text, centered, hierarchical sizing",
+          "bodyStyle": "Medium weight sans-serif, light gray text, centered, supporting the headline",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, dropdown menus (Products, Support, Learn, Company), and Download button",
+            "position": "top",
+            "notable": "Clean horizontal layout with white text on dark background, right-aligned CTA button"
+          },
+          {
+            "type": "hero-icon",
+            "description": "Hexagonal badge with gradient (cyan-to-blue) containing white plus symbol",
+            "position": "center-top",
+            "notable": "3D-style depth effect with layered geometric design"
+          },
+          {
+            "type": "hero-cta",
+            "description": "Large rounded pill button with dark text on white background",
+            "position": "center",
+            "notable": "Platform selector dropdown (Download for Mac) with chevron icon"
+          },
+          {
+            "type": "section-preview",
+            "description": "Text snippet starting 'Track and earn' below fold",
+            "position": "bottom",
+            "notable": "Action button 'Calculate Potential Rewards' in complementary purple"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon > Headline > Subheadline > CTA, with ample whitespace guiding focus downward",
+        "innovativeElements": [
+          "Gradient hexagonal icon with depth layering",
+          "Purple gradient background with curved geometric shapes",
+          "Floating hero section with dark navy container"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about and download Exodus staking features",
+        "entryPoints": [
+          "Direct navigation to staking page",
+          "From Products menu dropdown",
+          "From homepage hero section"
+        ],
+        "exitPoints": [
+          "Download for Mac/other platforms",
+          "Navigate to Products, Support, Learn, or Company",
+          "Scroll to 'Calculate Potential Rewards' button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Mac button",
+            "action": "Opens platform selection dropdown or initiates download"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to different sections (Products, Support, Learn, Company)"
+          },
+          {
+            "element": "Calculate Potential Rewards",
+            "action": "Opens calculator or form to estimate staking returns"
+          }
+        ],
+        "informationArchitecture": "Hero-first layout: value proposition → CTA → supporting details below fold",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Stake crypto, earn rewards",
+        "subheadline": "Earn crypto rewards directly in Exodus and manage your portfolio's growth. Simple, easy, automatic.",
+        "ctas": [
+          {
+            "text": "Download for Mac",
+            "style": "primary-button",
+            "placement": "center"
+          },
+          {
+            "text": "Calculate Potential Rewards",
+            "style": "secondary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Simple, easy, automatic",
+            "context": "Subheadline",
+            "purpose": "Emphasize ease of use and passive nature of staking"
+          }
+        ],
+        "tone": "professional-technical, confident, benefit-focused",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-settings-1-icon-assetscrypto-assetsinfo-on-supported-assets.png",
+      "label": "Icon assetsCrypto AssetsInfo on supported assets,",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B4BA8",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white text, centered",
+          "bodyStyle": "Medium weight sans-serif, light gray text, centered",
+          "dataStyle": "Monospace for APY percentages, checkmarks for feature availability"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Same as previous: logo, dropdown menus, Download button",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "trust-badge",
+            "description": "Lock icon with text 'Trusted by millions of customers since 2015'",
+            "position": "top-center",
+            "notable": "Subtle security messaging above headline"
+          },
+          {
+            "type": "search-bar",
+            "description": "Full-width search field with placeholder 'Search by asset name or shortcut'",
+            "position": "center",
+            "notable": "Translucent overlay style within purple background"
+          },
+          {
+            "type": "data-table",
+            "description": "White card with rows for Bitcoin, Ethereum, Tether USD showing asset info, APY, and feature availability",
+            "position": "center-bottom",
+            "notable": "Horizontal scroll for features (Mobile, Desktop, Web3, Trezor, Ledger, Buy/Sell, Swap); checkmarks and colored badges for APY"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Trust signal → Headline → Subheadline → Search → Data table with sorting controls",
+        "innovativeElements": [
+          "Trust badge positioned as micro-credential above headline",
+          "Sortable table with CoinMarketCap Index default",
+          "Feature availability matrix using checkmarks and greyed-out icons"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore supported crypto assets, earning potential, and available features",
+        "entryPoints": [
+          "From settings or dashboard",
+          "From Products menu",
+          "From navigation link"
+        ],
+        "exitPoints": [
+          "Search for specific asset",
+          "Click asset row for details",
+          "Sort by different criteria",
+          "Navigate to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filters asset list by name or ticker"
+          },
+          {
+            "element": "Sort by dropdown",
+            "action": "Changes table sort order (CoinMarketCap Index selected)"
+          },
+          {
+            "element": "Asset rows",
+            "action": "Likely expands to show details or navigate to asset page"
+          },
+          {
+            "element": "APY badge",
+            "action": "May display additional reward details"
+          }
+        ],
+        "informationArchitecture": "Search/filter at top, sortable feature matrix below, consistent row structure with icon, name, symbol, and feature support",
+        "frictionPoints": [
+          "Horizontal scrolling required to see all features on smaller screens",
+          "Unclear if rows are clickable without additional affordance"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Crypto assets support",
+        "subheadline": "Explore the assets you can hold in Exodus, earn rewards on, and everything in between.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Supported Crypto Assets",
+            "context": "Table header",
+            "purpose": "Identifies the section as a comprehensive asset list"
+          },
+          {
+            "text": "Sort by CoinMarketCap Index",
+            "context": "Sort dropdown",
+            "purpose": "Indicates current sorting method and allows change"
+          },
+          {
+            "text": "APY Rewards, Mobile, Desktop, Web3, Trezor, Ledger, Buy / Sell, Swap",
+            "context": "Column headers",
+            "purpose": "Defines feature categories and earning options"
+          }
+        ],
+        "tone": "professional-technical, exploratory",
+        "dataFormatting": [
+          "3.09% (APY in purple badge)",
+          "BTC, ETH, USDT (ticker symbols)",
+          "Bitcoin (ETH) — asset name with network identifier"
+        ],
+        "trustSignals": [
+          "Trusted by millions of customers since 2015",
+          "Lock icon security badge"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/exodus-settings-2-learn-more-about-buying-crypto-with-xo-payarrow-ri.png",
+      "label": "Learn More about buying crypto with XO PayArrow ri",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1A1A2E",
+          "#FFFFFF",
+          "#5B4BA8"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (H1), dark text on white background",
+          "bodyStyle": "Regular weight sans-serif, gray body text with inline hyperlinks in blue",
+          "dataStyle": "Gray metadata (Updated over 4 months ago)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top bar with logo, Download button (purple), and language selector",
+            "position": "top",
+            "notable": "Dark background with white Download CTA and language dropdown"
+          },
+          {
+            "type": "search-bar",
+            "description": "Full-width search field with placeholder 'Search for articles...'",
+            "position": "top-center",
+            "notable": "Magnifying glass icon, translucent dark background"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation path: All Collections > Buy & sell Bitcoin & crypto > Current page",
+            "position": "above-headline",
+            "notable": "Gray text with right-arrow separators"
+          },
+          {
+            "type": "main-content",
+            "description": "Left column with article headline, subheadline, update timestamp, body text, and nested bulleted links",
+            "position": "left-main",
+            "notable": "Clear hierarchy with H1, body copy, and blue hyperlinked questions"
+          },
+          {
+            "type": "sidebar-toc",
+            "description": "Right-aligned table of contents titled 'In this article:' with linked section headings",
+            "position": "right",
+            "notable": "Sticky navigation for long-form content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Breadcrumb → H1 headline → update timestamp → body → nested link hierarchy → right sidebar toc",
+        "innovativeElements": [
+          "Sticky sidebar TOC for easy navigation in long-form help articles",
+          "Nested bulleted link structure for multi-level topics",
+          "Color-coded CTAs (purple Download vs blue article links)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find detailed information about buying crypto with XO Pay in Exodus",
+        "entryPoints": [
+          "Search from articles page",
+          "From breadcrumb collection navigation",
+          "From 'Buy & sell' category"
+        ],
+        "exitPoints": [
+          "Click blue hyperlinked questions in main content",
+          "Click sidebar TOC links to jump sections",
+          "Use breadcrumb to go back",
+          "Search for new articles",
+          "Download app"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blue hyperlinked questions",
+            "action": "Navigate to detailed sub-sections or related articles"
+          },
+          {
+            "element": "Sidebar TOC links",
+            "action": "Scroll to or navigate to corresponding section in main content"
+          },
+          {
+            "element": "Breadcrumb links",
+            "action": "Navigate back to category or collection view"
+          },
+          {
+            "element": "Search bar",
+            "action": "New search across help center"
+          },
+          {
+            "element": "Download button",
+            "action": "Opens platform download options"
+          }
+        ],
+        "informationArchitecture": "Breadcrumb → Headline + metadata → Introduction → Nested FAQ-style questions → Right sidebar toc for quick navigation",
+        "frictionPoints": [
+          "Small font for nested sub-questions might require zooming",
+          "Sidebar TOC and main content split may require horizontal scrolling on narrow screens",
+          "No visible 'back to search' or 'related articles' section"
+        ],
+        "progressIndicators": [
+          "Breadcrumb showing current location in taxonomy",
+          "Update timestamp indicating content freshness"
+        ]
+      },
+      "copy": {
+        "headline": "How do I buy crypto with XO Pay in Exodus?",
+        "subheadline": "How to buy Bitcoin and other crypto with XO Pay in Exodus. Buy crypto in Exodus Mobile with XO Pay.",
+        "ctas": [
+          {
+            "text": "DOWNLOAD",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Updated over 4 months ago",
+            "context": "Below headline",
+            "purpose": "Signals content freshness and trust"
+          },
+          {
+            "text": "In this article:",
+            "context": "Sidebar header",
+            "purpose": "Introduces table of contents"
+          },
+          {
+            "text": "What is XO Pay?",
+            "context": "First bullet-point link",
+            "purpose": "Directs users to foundational explanation"
+          }
+        ],
+        "tone": "professional-technical, educational, helpful",
+        "dataFormatting": [
+          "Updated over 4 months ago (gray timestamp)"
+        ],
+        "trustSignals": [
+          "Update timestamp indicating ongoing maintenance",
+          "Clear citation of Exodus product and platform (Mobile)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "slug": "eigenlayer",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:39:07.937Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 1,
+  "screens": [
+    {
+      "image": "/screenshots/eigenlayer-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered hero and card-grid product showcase",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E8F0FF",
+          "#1E1B4B",
+          "#3B82F6"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, dark navy (1E1B4B), large size for main nav items and product names",
+          "bodyStyle": "Sans-serif, regular weight, dark navy, smaller for descriptions and supporting text",
+          "dataStyle": "Feature descriptions in sentence case, action text in uppercase for buttons"
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Purple banner at top with announcement text and linked headline",
+            "position": "top-fixed",
+            "notable": "High contrast color draw attention to product launch news"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with Explore, Build, Learn dropdowns plus social icons",
+            "position": "header",
+            "notable": "Clean, minimal design with social media integration on right"
+          },
+          {
+            "type": "hero-image",
+            "description": "Large 3D rendered abstract shape with blue/white gradient",
+            "position": "center-above-fold",
+            "notable": "Modern, clean 3D aesthetic that conveys technology and innovation"
+          },
+          {
+            "type": "product-card",
+            "description": "Four equal-width cards describing EigenAI, EigenCompute, EigenDA, EigenLayer",
+            "position": "below-hero",
+            "notable": "Vertical dividers between cards create distinct sections; consistent button styling"
+          },
+          {
+            "type": "footer",
+            "description": "Dark background with logo, links organized in columns, copyright",
+            "position": "bottom",
+            "notable": "Simple layout with navigational links and legal links separated"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero image dominates center, product cards arranged horizontally below create secondary focus, footer grounds page",
+        "innovativeElements": [
+          "3D rendered product image with glossy, modern aesthetic",
+          "Vertical dividers between product cards create visual separation without hard borders"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Eigen Cloud products and services, understand what each product does, take action to try/explore",
+        "entryPoints": [
+          "Direct navigation to homepage",
+          "Link from announcement banner"
+        ],
+        "exitPoints": [
+          "TRY EIGENAI button",
+          "TRY EIGENCOMPUTE button",
+          "EXPLORE EIGENDA button",
+          "RESTAKE NOW button",
+          "Explore, Build, Learn nav items",
+          "Footer links to docs, foundation, careers, press",
+          "Social media icons (Twitter, Discord, GitHub, YouTube)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Product cards",
+            "action": "Each card has a dedicated CTA button to explore that product"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Explore, Build, Learn dropdowns likely reveal submenu items"
+          },
+          {
+            "element": "Social media icons",
+            "action": "Navigate to external social platforms"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to documentation, legal pages, career pages, external resources"
+          }
+        ],
+        "informationArchitecture": "Top-level nav for primary sections; hero section orients user to brand; product grid presents four distinct offerings with descriptions and individual CTAs; footer provides secondary navigation and legal compliance",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "EigenCloud",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "TRY EIGENAI",
+            "style": "ghost-button",
+            "placement": "EigenAI product card"
+          },
+          {
+            "text": "TRY EIGENCOMPUTE",
+            "style": "ghost-button",
+            "placement": "EigenCompute product card"
+          },
+          {
+            "text": "EXPLORE EIGENDA",
+            "style": "ghost-button",
+            "placement": "EigenDA product card"
+          },
+          {
+            "text": "RESTAKE NOW",
+            "style": "ghost-button",
+            "placement": "EigenLayer product card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "EigenCompute & EigenAI are in Mainnet Alpha",
+            "context": "Announcement banner at top",
+            "purpose": "Signal product maturity status to users"
+          },
+          {
+            "text": "Verifiable LLM inference",
+            "context": "EigenAI card subtitle",
+            "purpose": "Concisely describe the product's core capability"
+          },
+          {
+            "text": "Deterministic AI with drop-in OpenAI API compatibility",
+            "context": "EigenAI card description",
+            "purpose": "Explain technical benefit and integration ease"
+          },
+          {
+            "text": "Verifiable workloads",
+            "context": "EigenCompute card subtitle",
+            "purpose": "Core value prop in simple terms"
+          },
+          {
+            "text": "Run any code in containers with cryptographic proof of execution",
+            "context": "EigenCompute card description",
+            "purpose": "Explain how the product works"
+          }
+        ],
+        "tone": "professional-technical, confident, educational",
+        "dataFormatting": [
+          "Product names in CamelCase with color coding",
+          "Feature descriptions in sentence case",
+          "Button text in UPPERCASE"
+        ],
+        "trustSignals": [
+          "Mainnet Alpha status announcement",
+          "Specific technical capabilities mentioned (cryptographic proof, verifiable workloads)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

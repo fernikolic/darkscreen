@@ -1,0 +1,901 @@
+{
+  "slug": "curve",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:29:04.327Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/curve-pools.png",
+      "label": "Pools",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width with horizontal data table and filtering sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#2E5BF8",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, pool names in dark gray",
+          "bodyStyle": "Regular sans-serif, medium contrast for secondary text",
+          "dataStyle": "Monospace or tabular numbers in right-aligned columns, green/neutral tone for APY percentages"
+        },
+        "components": [
+          {
+            "type": "warning banner",
+            "description": "Yellow top banner with domain verification alert",
+            "position": "top full-width",
+            "notable": "High-contrast security alert with close button"
+          },
+          {
+            "type": "tab navigation",
+            "description": "SWAP, POOLS, POOL CREATION, DASHBOARD tabs",
+            "position": "left side below header",
+            "notable": "POOLS tab active with blue underline"
+          },
+          {
+            "type": "token filter chips",
+            "description": "ALL 370, USD, BTC, ETH, CRVUSD, TRICRYPTO, CRYPTO, STABLE NG",
+            "position": "horizontal below search bar",
+            "notable": "ALL 370 highlighted in blue, others outlined"
+          },
+          {
+            "type": "data table",
+            "description": "Pool, Base vAPY, Rewards tAPR, Volume, TVL columns",
+            "position": "main content area",
+            "notable": "Pool icons on left, right-aligned numeric data, hoverable rows"
+          },
+          {
+            "type": "sort dropdown",
+            "description": "Sort by Volume (desc)",
+            "position": "top right above table",
+            "notable": "Paired with checkbox 'Hide very small pools'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top banner draws attention first, header navigation establishes context, search and filters guide exploration, table dominates main space with icon+name on left anchoring each row",
+        "innovativeElements": [
+          "Info icons (ⓘ) next to column headers for explainers",
+          "Token pair icons stacked in circular badges with overlapping design",
+          "Dynamic pool metrics updated in real-time (Daily Volume: $131.28m)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore liquidity pools, compare APY and TVL, select pool to deposit into",
+        "entryPoints": [
+          "POOLS tab navigation from main header",
+          "Direct URL to pools view"
+        ],
+        "exitPoints": [
+          "Click pool row to view/deposit",
+          "POOL CREATION tab to add liquidity",
+          "Other nav tabs (SWAP, DASHBOARD, GOVERNANCE)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token filter chips",
+            "action": "Filter pools by asset type (ALL, USD, BTC, ETH, etc.)"
+          },
+          {
+            "element": "Search bar",
+            "action": "Find pools by token name or address"
+          },
+          {
+            "element": "Sort dropdown",
+            "action": "Reorder pools by Volume, TVL, or APY"
+          },
+          {
+            "element": "Hide very small pools checkbox",
+            "action": "Toggle display of low-liquidity pools"
+          },
+          {
+            "element": "Pool row",
+            "action": "Navigate to pool detail/deposit screen"
+          }
+        ],
+        "informationArchitecture": "Pools listed in filterable/searchable table with key metrics (yield, rewards, volume, TVL) per row; token icons for quick visual identification; hierarchical sorting and filtering above content",
+        "frictionPoints": [
+          "No obvious 'deposit' button per row—requires row click to proceed",
+          "Info icons (ⓘ) require hover/click to understand column meanings",
+          "Many numeric columns may be overwhelming for new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "CONNECT WALLET",
+            "style": "primary-button",
+            "placement": "top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Always carefully check that your URL is https://www.curve.finance.",
+            "context": "Yellow warning banner",
+            "purpose": "Security guidance to prevent phishing"
+          },
+          {
+            "text": "Base vAPY",
+            "context": "Column header with info icon",
+            "purpose": "Label for base annual percentage yield"
+          },
+          {
+            "text": "Rewards tAPR CRV + Incentives",
+            "context": "Column header with info icon",
+            "purpose": "Explain incentive structure"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.17% (base APY)",
+          "$45.86m (Volume)",
+          "$99.98m (TVL)",
+          "$1.84b (Total Deposits)",
+          "$131.28m (Daily Volume)",
+          "8.55% (Crypto Volume Share)"
+        ],
+        "trustSignals": [
+          "Total Deposits: $1.84b",
+          "Daily Volume: $131.28m",
+          "TVL displayed per pool (up to $162.31m)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/curve-lending.png",
+      "label": "Lending",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "centered modal/card form overlaid on content",
+        "colorScheme": "light with accent blue",
+        "primaryColors": [
+          "#2E5BF8",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif 'Swap' centered in gray header bar",
+          "bodyStyle": "Regular sans-serif for form labels, medium gray",
+          "dataStyle": "Large light gray numbers (0.00) in input areas, monospace for amounts"
+        },
+        "components": [
+          {
+            "type": "warning banner",
+            "description": "Yellow top banner with domain verification",
+            "position": "top full-width",
+            "notable": "Persistent security alert"
+          },
+          {
+            "type": "modal card",
+            "description": "Swap form with Sell/Buy fields and token selectors",
+            "position": "centered in viewport",
+            "notable": "Dark border/shadow creates modal emphasis, white background"
+          },
+          {
+            "type": "input field",
+            "description": "Sell section with amount (0.00) and token selector (ETH)",
+            "position": "top section of modal",
+            "notable": "Light gray background, right-aligned token dropdown with icon"
+          },
+          {
+            "type": "swap icon",
+            "description": "Vertical arrow icon (↑↓) between buy/sell sections",
+            "position": "center divider",
+            "notable": "Simple line icon, likely clickable to reverse trade"
+          },
+          {
+            "type": "token selector dropdown",
+            "description": "ETH and WETH buttons with icons",
+            "position": "right side of input fields",
+            "notable": "Icon + label format, appears expanded showing options"
+          },
+          {
+            "type": "metrics display",
+            "description": "Exchange rate, Price impact, Trade routed through, Slippage tolerance",
+            "position": "below Buy field",
+            "notable": "Dashes (-) indicate no values entered yet; slippage shows 0.10% with settings icon"
+          },
+          {
+            "type": "primary button",
+            "description": "Connect Wallet",
+            "position": "bottom full-width",
+            "notable": "Blue background, disabled/blocked state until wallet connected"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal card dominates, Swap heading centers attention, input fields guide top-to-bottom flow (Sell → arrow → Buy), metrics provide detail below, CTA button anchors bottom",
+        "innovativeElements": [
+          "Minimal swap interface with token icon badges",
+          "Settings icon next to slippage for advanced options",
+          "Real-time metrics display (Exchange rate, Price impact)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Execute a token swap (ETH → WETH in this case)",
+        "entryPoints": [
+          "SWAP tab from main navigation",
+          "Direct form pre-filled with token pair"
+        ],
+        "exitPoints": [
+          "Click swap arrow to reverse trade direction",
+          "Close modal (X button, likely)",
+          "Connect Wallet to proceed to transaction",
+          "Navigate to other tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sell amount input",
+            "action": "Enter amount to swap out"
+          },
+          {
+            "element": "Buy amount input",
+            "action": "View or manually set amount to receive"
+          },
+          {
+            "element": "Sell token selector (ETH dropdown)",
+            "action": "Choose token to sell"
+          },
+          {
+            "element": "Buy token selector (WETH dropdown)",
+            "action": "Choose token to buy"
+          },
+          {
+            "element": "Swap arrow icon",
+            "action": "Reverse Sell/Buy tokens"
+          },
+          {
+            "element": "Slippage settings icon",
+            "action": "Open advanced slippage/tolerance options"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Authenticate wallet to execute swap"
+          }
+        ],
+        "informationArchitecture": "Two-step form (Sell section → Buy section) with real-time preview metrics below; token selector sidebars; settings access in footer metrics",
+        "frictionPoints": [
+          "No wallet connected—CTA button is blocked",
+          "All metrics show dashes (no amounts entered) which may confuse new users",
+          "Token selector UI (checkbox next to icon) is minimal and may not be obvious"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom full-width of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sell",
+            "context": "Label above first input",
+            "purpose": "Identify what token user is selling"
+          },
+          {
+            "text": "Buy",
+            "context": "Label above second input",
+            "purpose": "Identify what token user is buying"
+          },
+          {
+            "text": "Exchange rate (incl. fees):",
+            "context": "Metric label below Buy field",
+            "purpose": "Explain pricing calculation"
+          },
+          {
+            "text": "Price impact:",
+            "context": "Metric label",
+            "purpose": "Show slippage effect on price"
+          },
+          {
+            "text": "Trade routed through:",
+            "context": "Metric label",
+            "purpose": "Show which pool/protocol executes trade"
+          },
+          {
+            "text": "Slippage tolerance",
+            "context": "Metric with settings icon",
+            "purpose": "Show user's tolerance for price movement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (placeholder amount)",
+          "0.10% (slippage tolerance)",
+          "ETH, WETH (token symbols)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/curve-swap-2-settings-page.png",
+      "label": "Settings",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width error page with centered content",
+        "colorScheme": "light with grayscale background image",
+        "primaryColors": [
+          "#2E5BF8",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large '404' centered",
+          "bodyStyle": "Regular sans-serif, 'Page Not Found' subtitle",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "warning banner",
+            "description": "Yellow top banner with domain verification",
+            "position": "top full-width",
+            "notable": "Persistent security alert"
+          },
+          {
+            "type": "header navigation",
+            "description": "Tab navigation and global controls",
+            "position": "top below banner",
+            "notable": "Visible but not primary focus"
+          },
+          {
+            "type": "error code display",
+            "description": "Large '404' text",
+            "position": "center of viewport",
+            "notable": "Extra-large bold typography, grayscale background with llama/alpaca photo"
+          },
+          {
+            "type": "error message",
+            "description": "'Page Not Found' subtitle",
+            "position": "below 404 code",
+            "notable": "Smaller than code, centered, neutral tone"
+          },
+          {
+            "type": "action buttons",
+            "description": "Three buttons: CONTINUE, GO TO HOMEPAGE, SUBMIT ERROR REPORT",
+            "position": "below error message, centered horizontally",
+            "notable": "CONTINUE and GO TO HOMEPAGE are blue (primary), SUBMIT ERROR REPORT is dark/black (secondary)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Full-width background image creates dramatic entry, large 404 code dominates center, buttons anchored below provide clear escape routes",
+        "innovativeElements": [
+          "Whimsical llama/alpaca background image for 404 page (brand personality)",
+          "Colored eyes/LED effect on animal character (playful detail)"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand error and navigate away from broken page",
+        "entryPoints": [
+          "Broken URL navigation",
+          "Invalid page request"
+        ],
+        "exitPoints": [
+          "CONTINUE button (back/previous page)",
+          "GO TO HOMEPAGE button (main dashboard)",
+          "SUBMIT ERROR REPORT link (error reporting form)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "CONTINUE button",
+            "action": "Navigate back to previous page or refresh"
+          },
+          {
+            "element": "GO TO HOMEPAGE button",
+            "action": "Navigate to main Curve.fi homepage/dashboard"
+          },
+          {
+            "element": "SUBMIT ERROR REPORT button",
+            "action": "Open form to report 404 error to support"
+          }
+        ],
+        "informationArchitecture": "Error state with three escape routes: continue (undo), home (reset), or escalate (report)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "Page Not Found",
+        "ctas": [
+          {
+            "text": "CONTINUE",
+            "style": "primary-button",
+            "placement": "bottom left of button group"
+          },
+          {
+            "text": "GO TO HOMEPAGE",
+            "style": "primary-button",
+            "placement": "bottom center of button group"
+          },
+          {
+            "text": "SUBMIT ERROR REPORT",
+            "style": "secondary-button",
+            "placement": "bottom right of button group"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "Page Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/curve-swap-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4453FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered, minimal decoration",
+          "bodyStyle": "Medium-weight sans-serif for labels and microcopy",
+          "dataStyle": "Large monospace numbers (0.00) in light gray for input fields"
+        },
+        "components": [
+          {
+            "type": "Warning Banner",
+            "description": "Yellow banner at top warning about domain verification",
+            "position": "Top full-width",
+            "notable": "Prominent security-first messaging with icon and close button"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with DEX, LLAMALEND, GOVERNANCE, BRIDGE sections plus user profile and wallet connect",
+            "position": "Top secondary",
+            "notable": "Blue CONNECT WALLET button positioned right, status metrics displayed inline"
+          },
+          {
+            "type": "Swap Card",
+            "description": "Central card with Sell/Buy input fields, token selectors with dropdowns, exchange details",
+            "position": "Center",
+            "notable": "Vertical dual-input layout with exchange arrow icon between fields, dark border frame"
+          },
+          {
+            "type": "Token Selector",
+            "description": "Dropdown components showing ETH and WETH with icons and labels",
+            "position": "Right side of inputs",
+            "notable": "Token icon, symbol, and expandable dropdown arrows"
+          },
+          {
+            "type": "Settings Section",
+            "description": "Exchange rate, price impact, trade routing, and slippage tolerance display",
+            "position": "Bottom of card",
+            "notable": "Settings icon next to slippage tolerance, dashes for unavailable data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top warning critical, header navigation secondary, central swap card primary focus, metrics as tertiary context",
+        "innovativeElements": [
+          "Domain verification warning positioned prominently to address phishing concerns",
+          "Live TVL/volume metrics in top bar showing protocol health at a glance",
+          "Token selector dropdown with icon and symbol pairing"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a token swap transaction by selecting assets and reviewing exchange terms",
+        "entryPoints": [
+          "Direct navigation to swap tab",
+          "Landing from homepage",
+          "DEX navigation from header"
+        ],
+        "exitPoints": [
+          "Connect Wallet to proceed with transaction",
+          "Navigate to Pools, Dashboard, or other sections via header",
+          "Close domain warning"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sell/Buy input fields",
+            "action": "Enter token amounts for swap"
+          },
+          {
+            "element": "Token selector dropdowns",
+            "action": "Select which tokens to swap between"
+          },
+          {
+            "element": "Exchange arrow icon",
+            "action": "Reverse sell/buy direction"
+          },
+          {
+            "element": "Slippage tolerance settings",
+            "action": "Adjust slippage tolerance with gear icon"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Authenticate user to execute swap"
+          }
+        ],
+        "informationArchitecture": "Form-centric with inputs at top, helper text and settings below, action button at bottom",
+        "frictionPoints": [
+          "Must connect wallet before executing any swap",
+          "No token amounts entered (shows 0.00), preventing preview of actual rates",
+          "Domain verification warning may distract from primary task"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Bottom of swap card, full width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sell",
+            "context": "Top input field label",
+            "purpose": "Identify asset being sold"
+          },
+          {
+            "text": "Buy",
+            "context": "Bottom input field label",
+            "purpose": "Identify asset being bought"
+          },
+          {
+            "text": "Exchange rate (incl. fees):",
+            "context": "Below inputs",
+            "purpose": "Explain what rate metric shows"
+          },
+          {
+            "text": "Price impact:",
+            "context": "Below inputs",
+            "purpose": "Warn of slippage impact"
+          },
+          {
+            "text": "Trade routed through:",
+            "context": "Below inputs",
+            "purpose": "Transparency on execution path"
+          },
+          {
+            "text": "Slippage tolerance",
+            "context": "Bottom of details section",
+            "purpose": "Editable parameter with gear icon"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.90b (Total Deposits)",
+          "$114.26m (Daily Volume)",
+          "7.02% (Crypto Volume Share)",
+          "0.10% (Slippage tolerance)"
+        ],
+        "trustSignals": [
+          "Domain verification warning (phishing prevention)",
+          "Live TVL metric ($1.90b total deposits)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect wallet to view dashboard (shown on dashboard screen)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/curve-dashboard.png",
+      "label": "Dashboard",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4453FF",
+          "#FFFFFF",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "Extra large bold sans-serif (120px+), black, centered",
+          "bodyStyle": "Medium sans-serif for descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Warning Banner",
+            "description": "Yellow security warning at top about domain verification",
+            "position": "Top full-width",
+            "notable": "Close button on right, consistent with swap page"
+          },
+          {
+            "type": "Navigation Header",
+            "description": "Branding, section tabs (SWAP, POOLS, POOL CREATION, DASHBOARD), user menu, network selector, wallet button",
+            "position": "Top secondary",
+            "notable": "DASHBOARD tab is active/highlighted, status metrics displayed right-aligned"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large centered area with rainbow gradient logo, 'Enter Curve' headline, call-to-action",
+            "position": "Center of viewport, 60% height",
+            "notable": "Animated-looking gradient logo above text, minimalist design"
+          },
+          {
+            "type": "Footer Grid",
+            "description": "Three-column layout with Curve branding, Community links, Documentation links, Security links",
+            "position": "Bottom full-width",
+            "notable": "Colored icons (Twitter, Discord, etc.) for each link category, llama mascot illustration far right"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero logo and headline dominate center, navigation secondary, footer links tertiary",
+        "innovativeElements": [
+          "Hero page design uses radial gradient background pattern to create depth",
+          "Curve DAO mission statement in footer adds credibility and context",
+          "Footer organized into three semantic categories with icons for scannability"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-onboarding",
+        "userIntent": "Connect wallet to access Curve dashboard and begin interacting with protocol",
+        "entryPoints": [
+          "Direct navigation to dashboard tab",
+          "First visit to Curve when not authenticated"
+        ],
+        "exitPoints": [
+          "Click CONNECT button to authenticate",
+          "Navigate to SWAP, POOLS, POOL CREATION via tabs",
+          "Access external links (Twitter, Discord, Docs, etc.) via footer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "CONNECT button",
+            "action": "Trigger wallet connection modal"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Switch between SWAP, POOLS, POOL CREATION, DASHBOARD"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to external community, documentation, and security resources"
+          },
+          {
+            "element": "User profile icon (top right)",
+            "action": "Open user menu"
+          },
+          {
+            "element": "Network selector",
+            "action": "Switch blockchain networks"
+          }
+        ],
+        "informationArchitecture": "Hero-centric landing with prominent CTA, footer as secondary navigation and trust/resource links",
+        "frictionPoints": [
+          "Requires wallet connection before accessing any dashboard features",
+          "No preview of what dashboard contains before connecting"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Enter Curve",
+        "subheadline": "Connect wallet to view dashboard",
+        "ctas": [
+          {
+            "text": "CONNECT",
+            "style": "primary-button",
+            "placement": "Center, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Curve DAO is building the software and community to power the new web economy: decentralised, trustless, inclusive and autonomous.",
+            "context": "Footer left section",
+            "purpose": "Establish mission and trust"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "$1.84b (Total Deposits)",
+          "$137.16m (Daily Volume)",
+          "8.02% (Crypto Volume Share)"
+        ],
+        "trustSignals": [
+          "DAO mission statement in footer",
+          "Multiple community channels (Twitter, Discord, YouTube, Telegram variants)",
+          "Documentation resources (News, User Docs, Technical Docs, Github, Legal)",
+          "Security focus with Audits, Bug Bounty, Curve Monitor, CrvHub, Dune Analytics"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect wallet to view dashboard"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/curve-swap.png",
+      "label": "Swap",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4453FF",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered, minimal decoration",
+          "bodyStyle": "Medium-weight sans-serif for labels and microcopy",
+          "dataStyle": "Large monospace numbers (0.00) in light gray for input fields"
+        },
+        "components": [
+          {
+            "type": "Warning Banner",
+            "description": "Yellow banner at top warning about domain verification",
+            "position": "Top full-width",
+            "notable": "Consistent with first screenshot, emphasizes security"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with DEX, LLAMALEND, GOVERNANCE, BRIDGE plus metrics and controls",
+            "position": "Top secondary",
+            "notable": "SWAP tab is active, metrics show updated TVL and volume vs. first screenshot"
+          },
+          {
+            "type": "Swap Card",
+            "description": "Central card with identical layout: Sell/Buy inputs, token selectors, exchange details",
+            "position": "Center",
+            "notable": "Identical structure to first swap screenshot, suggests consistent form design"
+          },
+          {
+            "type": "Token Selector",
+            "description": "Dropdown components showing ETH and WETH with icons and labels",
+            "position": "Right side of inputs",
+            "notable": "Same as first screenshot, demonstrates consistent component design"
+          },
+          {
+            "type": "Exchange Details",
+            "description": "Settings for rate, price impact, routing, slippage",
+            "position": "Bottom of card",
+            "notable": "All fields show '-' except slippage (0.10%), indicating form is in initial state"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to first swap screenshot - warning critical, header secondary, swap card primary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Execute a token swap by inputting amounts and confirming token pairs",
+        "entryPoints": [
+          "Click SWAP tab from any page",
+          "Direct URL navigation to swap interface"
+        ],
+        "exitPoints": [
+          "Click Connect Wallet to authenticate and proceed",
+          "Navigate to other sections via header tabs",
+          "Review and adjust token selections via dropdowns"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sell input field",
+            "action": "Enter amount of token to sell"
+          },
+          {
+            "element": "Buy input field",
+            "action": "View or enter amount of token to receive"
+          },
+          {
+            "element": "Sell token selector (ETH)",
+            "action": "Open dropdown to select different token to sell"
+          },
+          {
+            "element": "Buy token selector (WETH)",
+            "action": "Open dropdown to select different token to receive"
+          },
+          {
+            "element": "Exchange arrow",
+            "action": "Reverse sell/buy pairs"
+          },
+          {
+            "element": "Slippage tolerance gear icon",
+            "action": "Open settings to adjust slippage"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Authenticate and submit swap"
+          }
+        ],
+        "informationArchitecture": "Form-driven with labeled inputs, exchange parameters, and authentication gate",
+        "frictionPoints": [
+          "Empty state - no amounts entered means no rate preview",
+          "Requires wallet connection before proceeding",
+          "Multiple settings (exchange rate, price impact, routing) hidden until user enters amounts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Full-width button at bottom of swap card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sell",
+            "context": "Top input label",
+            "purpose": "Identify field purpose"
+          },
+          {
+            "text": "Buy",
+            "context": "Bottom input label",
+            "purpose": "Identify field purpose"
+          },
+          {
+            "text": "Exchange rate (incl. fees):",
+            "context": "Parameter row",
+            "purpose": "Explain metric"
+          },
+          {
+            "text": "Price impact:",
+            "context": "Parameter row",
+            "purpose": "Warn of execution cost"
+          },
+          {
+            "text": "Trade routed through:",
+            "context": "Parameter row",
+            "purpose": "Transparency on path"
+          },
+          {
+            "text": "Slippage tolerance",
+            "context": "Bottom parameter with gear icon",
+            "purpose": "User-adjustable protection setting"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.84b (Total Deposits - updated from $1.90b)",
+          "$131.28m (Daily Volume - updated from $114.26m)",
+          "8.55% (Crypto Volume Share - updated from 7.02%)",
+          "0.10% (Slippage tolerance)"
+        ],
+        "trustSignals": [
+          "Live protocol metrics demonstrating active usage",
+          "Domain verification warning as security measure"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

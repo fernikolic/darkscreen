@@ -1,0 +1,454 @@
+{
+  "slug": "orbiter",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T12:47:12.944Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 3,
+  "screens": [
+    {
+      "image": "/screenshots/orbiter-home-2-referral-page.png",
+      "label": "referral page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with modal overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c41e3a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, all-caps for section headers (e.g., 'My commission')",
+          "bodyStyle": "Regular light gray sans-serif for descriptive text",
+          "dataStyle": "Bold red/white text for numeric values and transaction ranges"
+        },
+        "components": [
+          {
+            "type": "modal-dropdown",
+            "description": "More menu with 3 sections: User (Referral, Blog, Docs, Collector, Airdrop, Terms), Developer (Explore, Testnet, Brand Assets, Github), Media (Twitter, Medium, Discord)",
+            "position": "top-center overlay",
+            "notable": "Clean icon-text pairs organized by user type"
+          },
+          {
+            "type": "chart",
+            "description": "Red gradient curve showing commission trajectory across transaction ranges",
+            "position": "top-right",
+            "notable": "Interactive range buttons (0-50TX, 50-500TX, 500-2000TX, 2000-10000TX, >10000TX) with selected state styling"
+          },
+          {
+            "type": "empty-state-card",
+            "description": "Centered inbox icon with 'No data available' message",
+            "position": "bottom-left in My commission section",
+            "notable": "Subtle line-icon design consistent with platform aesthetic"
+          },
+          {
+            "type": "button",
+            "description": "Connect Wallet primary CTA in red",
+            "position": "modal footer",
+            "notable": "Full-width, high contrast against dark background"
+          },
+          {
+            "type": "secondary-button",
+            "description": "Claimed Record button with icon",
+            "position": "top-right of commission section",
+            "notable": "Ghost/outline style, smaller visual weight"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye drawn to: 1) Referral modal on left, 2) Commission chart on right, 3) Empty commission state below, 4) Section headers create clear breaks",
+        "innovativeElements": [
+          "Curved red-gradient chart visualization for commission scaling",
+          "Contextual range selection buttons overlaying the chart",
+          "Three-column categorized More menu (User/Developer/Media)"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard with referral-program focus",
+        "userIntent": "View referral commission structure, understand earning potential, connect wallet to start referring",
+        "entryPoints": [
+          "Clicked 'More' nav menu",
+          "Navigated to referral program section",
+          "Landing on account settings or rewards area"
+        ],
+        "exitPoints": [
+          "Connect Wallet button → wallet connection flow",
+          "Claimed Record button → historical referral data",
+          "Navigation menu items (Trade, Market, Quests, etc.) → other sections",
+          "External links (Twitter, Medium, Discord, Github, Docs)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction range buttons",
+            "action": "Filter/highlight commission curve for selected TX volume"
+          },
+          {
+            "element": "More menu dropdown",
+            "action": "Reveal secondary navigation with 9 options"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet authentication to enable referral program"
+          },
+          {
+            "element": "Claimed Record button",
+            "action": "Navigate to historical commission claims"
+          }
+        ],
+        "informationArchitecture": "Referral mechanics → Visual commission structure → Commission history → Related resources; structured as: overview (chart + ranges) → settled commissions section → transaction history section",
+        "frictionPoints": [
+          "Wallet must be connected before accessing referral data",
+          "Empty state provides no guidance on next steps or how to generate referrals",
+          "Settlement date note (5th of every month) is small and yellow, could be missed"
+        ],
+        "progressIndicators": [
+          "Settlement date information (before 5th every month)",
+          "Transaction volume thresholds shown on chart",
+          "Claimed Record button suggests past activity tracking"
+        ]
+      },
+      "copy": {
+        "headline": "My commission",
+        "subheadline": "My referral transactions",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "modal footer"
+          },
+          {
+            "text": "Claimed Record",
+            "style": "ghost-button",
+            "placement": "top-right of commission section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Settlement date: before 5th every month",
+            "context": "Above My commission empty state",
+            "purpose": "Sets expectation for when commissions are paid out"
+          },
+          {
+            "text": "No data available",
+            "context": "Centered in empty commission card",
+            "purpose": "Indicates user hasn't generated referral volume yet"
+          },
+          {
+            "text": "0-50 TX / 50-500 TX / 500-2000 TX / 2000-10000 TX / >10000 TX",
+            "context": "Range buttons below commission chart",
+            "purpose": "Breaks down commission tiers by transaction volume"
+          }
+        ],
+        "tone": "professional-technical with subtle guidance",
+        "dataFormatting": [
+          "Transaction ranges: '0-50 TX', '>10000 TX'",
+          "Temporal: 'before 5th every month'"
+        ],
+        "trustSignals": [
+          "Monthly settlement schedule (predictability)",
+          "Claimed Record tracking (transparency of payouts)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No data available"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/orbiter-swap-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "centered-card",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FF5757",
+          "#1a1a1a",
+          "#2d5f5f"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, white, medium weight, minimal caps",
+          "bodyStyle": "Sans-serif, light gray, regular weight for labels",
+          "dataStyle": "Large monospace numbers in white/gray for amounts, smaller gray text for estimated values"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Horizontal navigation with logo and menu items (Trade, Market, Quests, More)",
+            "position": "top-left",
+            "notable": "Clean minimalist nav with Connect Wallet CTA on top-right"
+          },
+          {
+            "type": "swap-card",
+            "description": "Centered card with deposit flow visualization (USDC → Hyperliquid)",
+            "position": "center-top",
+            "notable": "Teal/green badge styling with arrow flow indicator showing token pair"
+          },
+          {
+            "type": "trade-form",
+            "description": "Two-section form with Sell and Buy fields, token selectors, and value displays",
+            "position": "center-main",
+            "notable": "Dark gray form sections with clear visual separation between sell/buy"
+          },
+          {
+            "type": "cta-button",
+            "description": "Full-width coral/red button for wallet connection",
+            "position": "center-bottom",
+            "notable": "High contrast color draws attention, disabled state until wallet connects"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye enters at top with nav, flows to centered swap card, then down through form inputs to CTA button. Starfield background creates depth.",
+        "innovativeElements": [
+          "Animated particle/starfield background in dark red/orange gradient",
+          "Flow visualization with directional arrow between token pairs",
+          "Swap direction indicator with chevron/toggle icon between sell/buy sections"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a token swap from USDC to Hyperliquid",
+        "entryPoints": [
+          "Landing page visit",
+          "Trade menu selection",
+          "Direct navigation to swap interface"
+        ],
+        "exitPoints": [
+          "Connect Wallet (primary CTA)",
+          "Trade menu items (alternative navigation)",
+          "Market, Quests, More menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sell amount field",
+            "action": "Input numeric value for amount to sell"
+          },
+          {
+            "element": "Token selector (Sell)",
+            "action": "Dropdown to select token being sold (currently Arbitrum)"
+          },
+          {
+            "element": "Swap direction toggle",
+            "action": "Chevron button to reverse sell/buy directions"
+          },
+          {
+            "element": "Buy token selector",
+            "action": "Dropdown to select token being purchased (currently Not Selected)"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Opens wallet connection flow"
+          }
+        ],
+        "informationArchitecture": "Linear flow: select sell token → enter amount → select buy token → enter amount → connect wallet. Information grouped by transaction sides (Sell/Buy).",
+        "frictionPoints": [
+          "Buy token must be manually selected (Not Selected state)",
+          "Wallet connection required before proceeding",
+          "Form appears locked/disabled until wallet connects"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center-bottom, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Deposit",
+            "context": "Top flow badge",
+            "purpose": "Labels the action type"
+          },
+          {
+            "text": "Sell",
+            "context": "Form section header",
+            "purpose": "Labels the sell section"
+          },
+          {
+            "text": "Buy",
+            "context": "Form section header",
+            "purpose": "Labels the buy section"
+          },
+          {
+            "text": "Est. Value: $0",
+            "context": "Below amount fields",
+            "purpose": "Shows estimated transaction value"
+          },
+          {
+            "text": "Token",
+            "context": "Token selector labels",
+            "purpose": "Identifies token selection field"
+          },
+          {
+            "text": "Not Selected",
+            "context": "Buy token selector state",
+            "purpose": "Indicates missing required selection"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0 (amount display)",
+          "Est. Value: $0 (currency format)",
+          "Token names (Arbitrum, etc.)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orbiter-swap-2-landing-more-menu.png",
+      "label": "Landing — More menu",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "centered-card with overlay-menu",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FF5757",
+          "#1a1a1a",
+          "#2d5f5f"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, white, regular weight for menu categories",
+          "bodyStyle": "Sans-serif, light gray, regular weight for menu items with icons",
+          "dataStyle": "Not applicable"
+        },
+        "components": [
+          {
+            "type": "dropdown-menu",
+            "description": "Three-column menu overlay showing User, Developer, and Media sections with icon+text items",
+            "position": "center-top-overlay",
+            "notable": "Dark semi-transparent background with organized icon+text pairs, clear categorization"
+          },
+          {
+            "type": "menu-sections",
+            "description": "User section (Referral, Blog, Docs, Collector, Airdrop, Terms of Use), Developer section (Explore, Testnet, Brand Assets, Github), Media section (Twitter, Medium, Discord)",
+            "position": "within-menu",
+            "notable": "Six menu items per column for balanced visual weight"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Menu overlays main swap form. Column headers establish hierarchy. Icons + text provide quick scanning.",
+        "innovativeElements": [
+          "Three-column categorical menu layout within single dropdown",
+          "Icon-text pairing for each menu item for visual scanning",
+          "Semi-transparent overlay preserves background context"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Access additional resources, community links, and developer tools",
+        "entryPoints": [
+          "More menu button click from top navigation"
+        ],
+        "exitPoints": [
+          "Any menu item selection (Referral, Blog, Docs, Collector, Airdrop, Terms of Use, Explore, Testnet, Brand Assets, Github, Twitter, Medium, Discord)",
+          "Click outside menu to close",
+          "Navigation to other top-level items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Referral link",
+            "action": "Opens referral program"
+          },
+          {
+            "element": "Blog link",
+            "action": "Navigates to blog"
+          },
+          {
+            "element": "Docs link",
+            "action": "Opens documentation"
+          },
+          {
+            "element": "Collector link",
+            "action": "Opens collector feature"
+          },
+          {
+            "element": "Social links (Twitter, Discord, Github, etc.)",
+            "action": "Navigates to external social profiles"
+          }
+        ],
+        "informationArchitecture": "Menu items grouped into three contextual categories: User (account/community), Developer (tools/resources), Media (social channels). Flat hierarchy within each column.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Referral",
+            "style": "text-link",
+            "placement": "menu-user-column"
+          },
+          {
+            "text": "Blog",
+            "style": "text-link",
+            "placement": "menu-user-column"
+          },
+          {
+            "text": "Docs",
+            "style": "text-link",
+            "placement": "menu-user-column"
+          },
+          {
+            "text": "Explore",
+            "style": "text-link",
+            "placement": "menu-developer-column"
+          },
+          {
+            "text": "Github",
+            "style": "text-link",
+            "placement": "menu-developer-column"
+          },
+          {
+            "text": "Twitter",
+            "style": "text-link",
+            "placement": "menu-media-column"
+          },
+          {
+            "text": "Discord",
+            "style": "text-link",
+            "placement": "menu-media-column"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "User",
+            "context": "Menu column header",
+            "purpose": "Categorizes user-focused resources"
+          },
+          {
+            "text": "Developer",
+            "context": "Menu column header",
+            "purpose": "Categorizes developer-focused resources"
+          },
+          {
+            "text": "Media",
+            "context": "Menu column header",
+            "purpose": "Categorizes social/media channels"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Docs link signals accessible documentation",
+          "Github link signals open-source transparency",
+          "Social channels (Twitter, Discord) signal community"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

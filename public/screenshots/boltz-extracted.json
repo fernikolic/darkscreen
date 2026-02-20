@@ -1,0 +1,1143 @@
+{
+  "slug": "boltz",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T11:02:50.768Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/boltz-home-7-status.png",
+      "label": "Status",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFD700",
+          "#1a1f3a",
+          "#00d084"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), yellow accent color",
+          "bodyStyle": "Regular sans-serif, medium gray (#9ca3af), 16px",
+          "dataStyle": "Monospace or sans-serif for status values"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Boltz logo with yellow lightning bolt + horizontal tab navigation (Status, Maintenance, Previous incidents)",
+            "position": "top",
+            "notable": "Status tab is active/highlighted"
+          },
+          {
+            "type": "status-alert",
+            "description": "Prominent green checkmark badge with 'All services are online' message",
+            "position": "upper-center, large padding",
+            "notable": "High contrast green (#00d084) with white text, reassuring design"
+          },
+          {
+            "type": "status-card",
+            "description": "API status row showing 'API status' label and green 'Operational' badge with dropdown",
+            "position": "center",
+            "notable": "Expandable/collapsible with chevron icon"
+          },
+          {
+            "type": "footer",
+            "description": "Powered by Better Stack attribution",
+            "position": "bottom-center",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eyes drawn to green checkmark and headline first, then details card below. Large whitespace emphasizes calm/stability.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "status-dashboard",
+        "userIntent": "Check if Boltz services are operational without friction",
+        "entryPoints": [
+          "Direct status page URL",
+          "Navigation from main site"
+        ],
+        "exitPoints": [
+          "Click Maintenance or Previous incidents tabs",
+          "Navigate away via header links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Status dropdown",
+            "action": "Expand/collapse API status details"
+          },
+          {
+            "element": "Tab navigation",
+            "action": "Switch between Status, Maintenance, Previous incidents views"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Overall system status at top, then service-level details below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "All services are online",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "API status",
+            "context": "Service name label",
+            "purpose": "Identifies which service is being reported"
+          },
+          {
+            "text": "Operational",
+            "context": "Status badge",
+            "purpose": "Clear indicator of healthy state"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "All services are online",
+          "Operational status",
+          "Better Stack powered"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-home-8-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width, centered stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFD700",
+          "#1a1f3a",
+          "#5dd9ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif gradient (yellow to cyan), 72px+",
+          "bodyStyle": "Regular sans-serif, light gray (#d1d5db), 18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Boltz logo with language selector and horizontal navigation (Swap, Rescue, History, Products, Help, Docs)",
+            "position": "top",
+            "notable": "Swap is highlighted in yellow"
+          },
+          {
+            "type": "error-heading",
+            "description": "Large gradient heading '404 - Not Found' with yellow to cyan gradient",
+            "position": "upper-center",
+            "notable": "Distinctive gradient effect builds brand personality into error state"
+          },
+          {
+            "type": "descriptive-text",
+            "description": "Subheading 'This page seems to have vanished.'",
+            "position": "below heading",
+            "notable": "Playful tone matches the humorous image below"
+          },
+          {
+            "type": "hero-image",
+            "description": "Humorous photo of a metal box with holes (looks like something 'vanished')",
+            "position": "center, prominent",
+            "notable": "Visual metaphor reinforces the 'vanished' copy—clever UX humor"
+          },
+          {
+            "type": "primary-button",
+            "description": "Yellow 'BACK TO HOME' button",
+            "position": "bottom-center",
+            "notable": "High contrast, clear recovery path"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Gradient heading draws eye first, image provides visual interest and humor, button provides clear exit path",
+        "innovativeElements": [
+          "Gradient text effect in error heading",
+          "Humorous image with metaphorical connection to 'vanished' messaging",
+          "Personalized error page instead of generic 404"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand they've reached a broken/missing page and find way back",
+        "entryPoints": [
+          "Clicking broken link",
+          "Typing invalid URL"
+        ],
+        "exitPoints": [
+          "Click 'BACK TO HOME' button",
+          "Use header navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BACK TO HOME button",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Header navigation links",
+            "action": "Navigate to main sections"
+          }
+        ],
+        "informationArchitecture": "Linear: Error explanation → Visual reinforcement → Recovery action",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 - Not Found",
+        "subheadline": "This page seems to have vanished.",
+        "ctas": [
+          {
+            "text": "BACK TO HOME",
+            "style": "primary-button",
+            "placement": "bottom-center"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual, humorous, playful",
+        "dataFormatting": [
+          "404"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "This page seems to have vanished."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-swap-1-swap.png",
+      "label": "Swap",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered modal/card",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFD700",
+          "#1a1f3a",
+          "#4f46e5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, 20px",
+          "bodyStyle": "Regular sans-serif, light gray (#d1d5db), 14px",
+          "dataStyle": "Large numeric values in white (exchange amounts), smaller gray secondary text"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Boltz logo with language selector and navigation (Swap highlighted, Rescue, History, Products, Help, Docs)",
+            "position": "top",
+            "notable": "Swap is active/yellow underline"
+          },
+          {
+            "type": "swap-form-card",
+            "description": "Centered card with 'Create Atomic Swap' title and settings gear icon",
+            "position": "upper-center",
+            "notable": "Dark background with dotted borders around input fields"
+          },
+          {
+            "type": "token-selector",
+            "description": "Two token selectors (LIGHTNING and BITCOIN) with dropdown icons and amount displays (0)",
+            "position": "in card, stacked vertically",
+            "notable": "Lightning bolt icon for LIGHTNING, orange circle with B for BITCOIN"
+          },
+          {
+            "type": "swap-direction-icon",
+            "description": "Vertical arrow icon between token selectors",
+            "position": "between LIGHTNING and BITCOIN rows",
+            "notable": "Suggests reversible/directional swap"
+          },
+          {
+            "type": "unit-selector",
+            "description": "BTC/sats toggle buttons with icons",
+            "position": "right side below selectors",
+            "notable": "Allows unit denomination choice"
+          },
+          {
+            "type": "fee-display",
+            "description": "Network Fee: 530 sats and Boltz Fee (0.5%): 0 display",
+            "position": "right aligned, small text",
+            "notable": "Transparent fee breakdown"
+          },
+          {
+            "type": "address-input",
+            "description": "Placeholder text 'Enter BTC address to receive funds'",
+            "position": "below token selectors",
+            "notable": "Contextual instruction text"
+          },
+          {
+            "type": "disabled-button",
+            "description": "Gray button with 'MINIMUM AMOUNT IS 25 000 SATS'",
+            "position": "bottom of card",
+            "notable": "Validation error state shown before user can proceed"
+          },
+          {
+            "type": "footer-links",
+            "description": "Social icons (GitHub, Twitter, Telegram, YouTube, Email) + links (Blog, Branding, Status, Reqtest, Onion, Terms, Privacy)",
+            "position": "bottom",
+            "notable": "Comprehensive footer with multiple trust/community signals"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card centered with clear focus on token selectors and amounts, fees secondary, footer links de-emphasized",
+        "innovativeElements": [
+          "Dotted border styling for input fields (unconventional but distinctive)",
+          "Bidirectional swap arrow icon",
+          "Inline fee transparency"
+        ]
+      },
+      "flow": {
+        "screenType": "form, data-entry",
+        "userIntent": "Create an atomic swap between Lightning and Bitcoin",
+        "entryPoints": [
+          "Click Swap in header navigation",
+          "Arrive from landing page"
+        ],
+        "exitPoints": [
+          "Complete swap and go to confirmation",
+          "Navigate to other sections via header",
+          "Click footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "LIGHTNING dropdown",
+            "action": "Select/change token"
+          },
+          {
+            "element": "BITCOIN dropdown",
+            "action": "Select/change token"
+          },
+          {
+            "element": "Swap direction arrow",
+            "action": "Reverse swap direction (presumed)"
+          },
+          {
+            "element": "BTC/sats toggle",
+            "action": "Change denomination display"
+          },
+          {
+            "element": "Address input field",
+            "action": "Enter receiving Bitcoin address"
+          },
+          {
+            "element": "Settings gear icon",
+            "action": "Open advanced settings (presumed)"
+          }
+        ],
+        "informationArchitecture": "Linear form flow: Select from token → Select to token → Enter recipient address → Review fees → Proceed",
+        "frictionPoints": [
+          "Minimum amount validation preventing progress (25,000 sats required)",
+          "User must enter recipient address before proceeding"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Create Atomic Swap",
+        "subheadline": "Payment includes Network and Boltz Fee",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Send Min: 25 000  Max: 25 000 000",
+            "context": "Below headline",
+            "purpose": "Set user expectations for transaction limits"
+          },
+          {
+            "text": "Enter BTC address to receive funds",
+            "context": "Address input placeholder",
+            "purpose": "Guide user action for required field"
+          },
+          {
+            "text": "Network Fee: 530  Boltz Fee (0.5%): 0",
+            "context": "Right side of form",
+            "purpose": "Transparent fee breakdown builds trust"
+          },
+          {
+            "text": "MINIMUM AMOUNT IS 25 000 SATS",
+            "context": "Disabled button state",
+            "purpose": "Validation error message"
+          }
+        ],
+        "tone": "professional-technical, transactional",
+        "dataFormatting": [
+          "25 000 SATS",
+          "25 000 000",
+          "530 sats",
+          "0.5%",
+          "0.00 USD"
+        ],
+        "trustSignals": [
+          "Network Fee: 530",
+          "Boltz Fee (0.5%)",
+          "Transparent fee display",
+          "Status link in footer",
+          "GitHub/social links"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "MINIMUM AMOUNT IS 25 000 SATS"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a2332",
+          "#ffd700",
+          "#00d4ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, gradient effect (yellow to cyan), centered",
+          "bodyStyle": "Medium-weight sans-serif, light gray, centered subtext",
+          "dataStyle": "Monospace numeric display with USD values, right-aligned within input fields"
+        },
+        "components": [
+          {
+            "type": "modal-card",
+            "description": "Create Atomic Swap form with token inputs, fee display, and address field",
+            "position": "upper-center",
+            "notable": "Glowing border effect, settings icon, dual-token dropdown selectors"
+          },
+          {
+            "type": "primary-button",
+            "description": "START SWAPPING call-to-action",
+            "position": "center-bottom",
+            "notable": "Bright yellow button with rounded corners, high contrast"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal menu with Swap, Rescue, History, Products, Help, Docs",
+            "position": "top",
+            "notable": "Logo with lightning bolt icon, globe icon for language/chain selection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal card draws focus at top, headline and subheadline center attention below, CTA anchors bottom flow",
+        "innovativeElements": [
+          "Glowing border effect on swap card suggests active state",
+          "Dual-token swap interface with directional arrows",
+          "Fee breakdown transparency (Network Fee + Boltz Fee) integrated into form"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Boltz value proposition and initiate a Bitcoin layer swap",
+        "entryPoints": [
+          "Direct URL visit",
+          "External marketing link",
+          "Navigation from other Boltz pages"
+        ],
+        "exitPoints": [
+          "START SWAPPING button leads to active swap flow",
+          "Navigation menu items (Swap, Rescue, History, Products)",
+          "Help, Docs, or external links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Lightning dropdown (LIGHTNING)",
+            "action": "Select source token/layer"
+          },
+          {
+            "element": "Bitcoin dropdown (BITCOIN)",
+            "action": "Select destination token/layer"
+          },
+          {
+            "element": "Swap arrow icon",
+            "action": "Reverse token direction"
+          },
+          {
+            "element": "Settings icon (gear)",
+            "action": "Open advanced swap options"
+          },
+          {
+            "element": "START SWAPPING button",
+            "action": "Initiate swap workflow"
+          }
+        ],
+        "informationArchitecture": "Hero section with value prop → Live form example → CTA. Navigation provides access to secondary features (Rescue, History).",
+        "frictionPoints": [
+          "Minimum amount requirement (25,000 sats) may not be visible until interaction",
+          "Address input field shows placeholder text rather than clear label",
+          "Fee calculation only visible after form engagement"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Non-Custodial Bitcoin Bridge",
+        "subheadline": "Swap between different Bitcoin layers while staying in full control.",
+        "ctas": [
+          {
+            "text": "START SWAPPING",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Create Atomic Swap",
+            "context": "Modal title",
+            "purpose": "Labels the primary action"
+          },
+          {
+            "text": "Payment includes Network and Boltz Fee",
+            "context": "Subtext under modal title",
+            "purpose": "Sets expectations for fee structure"
+          },
+          {
+            "text": "Send Min: 25 000",
+            "context": "Below Create Atomic Swap title",
+            "purpose": "Communicates minimum transaction amount"
+          },
+          {
+            "text": "Max: 25 000 000",
+            "context": "Below Create Atomic Swap title",
+            "purpose": "Communicates maximum transaction amount"
+          },
+          {
+            "text": "Network Fee: 530 sats",
+            "context": "Right side of form",
+            "purpose": "Discloses network costs"
+          },
+          {
+            "text": "Boltz Fee (0.5%): 0",
+            "context": "Right side of form",
+            "purpose": "Discloses platform fee and rate"
+          },
+          {
+            "text": "MINIMUM AMOUNT IS 25 000 SATS",
+            "context": "Disabled button state",
+            "purpose": "Explains why button is inactive"
+          }
+        ],
+        "tone": "professional-technical, confident, clear",
+        "dataFormatting": [
+          "0 ≡ 0.00 USD",
+          "Network Fee: 530 sats",
+          "Boltz Fee (0.5%): 0"
+        ],
+        "trustSignals": [
+          "Non-custodial claim emphasizes user control",
+          "Fee transparency (Network + Boltz breakdown)",
+          "Lightning Network and Bitcoin support"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-home-2-rescue.png",
+      "label": "Rescue",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a2332",
+          "#ffd700",
+          "#4a7c8c"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, centered",
+          "bodyStyle": "Medium-weight sans-serif, light gray, centered text",
+          "dataStyle": "Version/commit hash in small monospace font, footer"
+        },
+        "components": [
+          {
+            "type": "empty-state-card",
+            "description": "Rescue Swap empty state with messaging and CTA",
+            "position": "upper-center",
+            "notable": "No active rescues found, explanatory text provided"
+          },
+          {
+            "type": "primary-button",
+            "description": "RESCUE EXTERNAL SWAP call-to-action",
+            "position": "card-center",
+            "notable": "Bright yellow button, prominent positioning"
+          },
+          {
+            "type": "social-icons",
+            "description": "GitHub, Twitter, Telegram, YouTube, Email links",
+            "position": "center",
+            "notable": "Five social platforms, circular icon design"
+          },
+          {
+            "type": "footer-links",
+            "description": "Blog, Branding, Status, Request, Onion; Terms, Privacy; Version info",
+            "position": "bottom",
+            "notable": "Comprehensive footer with version and commit hash"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Empty state card at top, CTA prominent, social icons middle, footer information at bottom",
+        "innovativeElements": [
+          "Onion address link indicates Tor support for privacy"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Recover a failed or stuck swap using rescue functionality",
+        "entryPoints": [
+          "Rescue navigation menu item",
+          "Help/support redirection"
+        ],
+        "exitPoints": [
+          "RESCUE EXTERNAL SWAP button initiates rescue flow",
+          "Social icons link to external communities",
+          "Footer links to documentation and community resources"
+        ],
+        "interactiveElements": [
+          {
+            "element": "RESCUE EXTERNAL SWAP button",
+            "action": "Open rescue swap workflow with external swap key input"
+          },
+          {
+            "element": "Social media icons",
+            "action": "Navigate to external platforms (GitHub, Twitter, Telegram, YouTube, Email)"
+          },
+          {
+            "element": "Footer links (Blog, Status, Request, etc.)",
+            "action": "Navigate to documentation and status pages"
+          }
+        ],
+        "informationArchitecture": "Empty state message → Educational text → Primary CTA → Community engagement (social) → Documentation (footer)",
+        "frictionPoints": [
+          "Empty state may confuse first-time users unfamiliar with rescue concept",
+          "Link to 'rescue key' is not embedded in the messaging"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Rescue Swap",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "RESCUE EXTERNAL SWAP",
+            "style": "primary-button",
+            "placement": "card-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "No rescuable swaps found in your browser history",
+            "context": "Primary empty state message",
+            "purpose": "Explains why list is empty"
+          },
+          {
+            "text": "Can't find your swap?",
+            "context": "Secondary heading in empty state",
+            "purpose": "Acknowledges user friction and transitions to solution"
+          },
+          {
+            "text": "Try rescuing an external swap via rescue key and other emergency methods.",
+            "context": "Explanatory text under secondary heading",
+            "purpose": "Educates on rescue capabilities and available methods"
+          }
+        ],
+        "tone": "professional-technical, supportive, solution-oriented",
+        "dataFormatting": [
+          "Version: 1.8.16",
+          "Commit Hash: dddleef"
+        ],
+        "trustSignals": [
+          "Version and commit hash transparency",
+          "Multiple community channels (GitHub, Twitter, Telegram, Email)",
+          "Onion address availability (privacy-conscious infrastructure)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No rescuable swaps found in your browser history",
+          "Looks like you didn't do any swaps yet.",
+          "Can't find your swap?",
+          "Try rescuing an external swap via rescue key and other emergency methods."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/boltz-home-3-history.png",
+      "label": "History",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a2332",
+          "#ffd700",
+          "#2d5a3d"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, centered",
+          "bodyStyle": "Medium-weight sans-serif, light gray, centered text",
+          "dataStyle": "Version/commit hash in small monospace font, footer"
+        },
+        "components": [
+          {
+            "type": "empty-state-card",
+            "description": "Past swaps empty state with messaging and dual CTAs",
+            "position": "upper-center",
+            "notable": "No historical swaps found, two action buttons provided"
+          },
+          {
+            "type": "primary-button",
+            "description": "NEW SWAP call-to-action",
+            "position": "card-center",
+            "notable": "Bright yellow button, initiates swap flow"
+          },
+          {
+            "type": "secondary-button",
+            "description": "IMPORT BACKUP call-to-action",
+            "position": "card-center",
+            "notable": "Green button, restores previous swap history"
+          },
+          {
+            "type": "social-icons",
+            "description": "GitHub, Twitter, Telegram, YouTube, Email links",
+            "position": "center",
+            "notable": "Five social platforms, circular icon design"
+          },
+          {
+            "type": "footer-links",
+            "description": "Blog, Branding, Status, Request, Onion; Terms, Privacy; Version info",
+            "position": "bottom",
+            "notable": "Comprehensive footer with version and commit hash"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Empty state card at top with dual CTAs, social icons middle, footer information at bottom",
+        "innovativeElements": [
+          "Dual-button design (yellow primary + green secondary) provides two distinct user paths",
+          "Import Backup feature suggests data persistence and recovery capability"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View past swap transactions or initiate new swap/restore history",
+        "entryPoints": [
+          "History navigation menu item",
+          "First-time user entering History section"
+        ],
+        "exitPoints": [
+          "NEW SWAP button initiates new swap workflow",
+          "IMPORT BACKUP button opens file upload for backup restoration",
+          "Social icons link to external communities",
+          "Footer links to documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "NEW SWAP button",
+            "action": "Navigate to swap creation flow"
+          },
+          {
+            "element": "IMPORT BACKUP button",
+            "action": "Open file picker to restore swap history from backup"
+          },
+          {
+            "element": "Social media icons",
+            "action": "Navigate to external platforms"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to documentation and resources"
+          }
+        ],
+        "informationArchitecture": "Empty state message → Dual CTAs (NEW SWAP / IMPORT BACKUP) → Community engagement → Documentation",
+        "frictionPoints": [
+          "Empty state may cause confusion for new users unfamiliar with local browser storage",
+          "IMPORT BACKUP functionality requires knowledge of backup file format",
+          "No guidance on where to find or create backup files"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Past swaps",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "NEW SWAP",
+            "style": "primary-button",
+            "placement": "card-center"
+          },
+          {
+            "text": "IMPORT BACKUP",
+            "style": "secondary-button",
+            "placement": "card-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Swaps that got saved into your browsers storage",
+            "context": "Subtext under modal title",
+            "purpose": "Explains data storage location and limitations"
+          },
+          {
+            "text": "Looks like you didn't do any swaps yet.",
+            "context": "Primary empty state message",
+            "purpose": "Explains why history list is empty"
+          }
+        ],
+        "tone": "professional-technical, helpful, action-oriented",
+        "dataFormatting": [
+          "Version: 1.8.16",
+          "Commit Hash: dddleef"
+        ],
+        "trustSignals": [
+          "Version and commit hash transparency",
+          "Multiple community channels (GitHub, Twitter, Telegram, Email)",
+          "Onion address availability",
+          "Data persistence via browser storage mentioned"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Past swaps",
+          "Swaps that got saved into your browsers storage",
+          "Looks like you didn't do any swaps yet."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/boltz-settings-1-help.png",
+      "label": "Help",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, center-aligned headline with high contrast",
+          "bodyStyle": "Medium gray sans-serif for subheadings and descriptions",
+          "dataStyle": "Small gray text for metadata (author count, article count)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Boltz logo with lightning bolt icon and 'User Support Center' text",
+            "position": "top-left",
+            "notable": "Consistent branding with system selector dropdown on right"
+          },
+          {
+            "type": "search-bar",
+            "description": "Full-width search input with magnifying glass icon",
+            "position": "center, below headline",
+            "notable": "Placeholder text guides users on search functionality"
+          },
+          {
+            "type": "card",
+            "description": "Category card with star icon, title 'Common', description, and expandable FAQ items",
+            "position": "left-center",
+            "notable": "Each FAQ item is a clickable link with right-arrow indicator"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline anchors attention, search bar is secondary focus, category cards below provide browse path",
+        "innovativeElements": [
+          "Star icon for 'Common' category creates visual distinction",
+          "Metadata footer showing author and article count creates credibility"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find help or support answers for Boltz platform issues",
+        "entryPoints": [
+          "Help menu link from navigation",
+          "Settings or support access point"
+        ],
+        "exitPoints": [
+          "Click FAQ item to view full article",
+          "Use search to find specific topics",
+          "View all link to see full category"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filter articles by title or body content"
+          },
+          {
+            "element": "FAQ item links",
+            "action": "Navigate to detailed article page"
+          },
+          {
+            "element": "View all link",
+            "action": "Expand category to show all articles"
+          }
+        ],
+        "informationArchitecture": "Dual-path discovery: search-driven and category-browsing; Common section featured prominently",
+        "frictionPoints": [
+          "Single category visible, may require clicking 'View all' to explore other categories",
+          "Search requires users to know what to search for"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Boltz Support Squad is here to help!",
+        "subheadline": "Search for the articles here or browse the categories below.",
+        "ctas": [
+          {
+            "text": "View all",
+            "style": "text-link",
+            "placement": "bottom-right of category card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for article by title or body...",
+            "context": "search input placeholder",
+            "purpose": "Instructs user on search capability"
+          },
+          {
+            "text": "Common issues/questions",
+            "context": "category subtitle",
+            "purpose": "Describes category content"
+          },
+          {
+            "text": "1 author • 5 articles",
+            "context": "category footer",
+            "purpose": "Provides context on content volume and authority"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "1 author",
+          "5 articles"
+        ],
+        "trustSignals": [
+          "Authored content attribution",
+          "Article count showing resource depth"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-settings-2-terms.png",
+      "label": "Terms",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F1B2E",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif headings with hierarchical numbering (1., 2., 3.)",
+          "bodyStyle": "Medium-length paragraph text in light gray, justified alignment",
+          "dataStyle": "Inline mentions of specific terms (e.g., 'non-custodial', 'Lightning invoices')"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Navigation bar with Boltz logo, main navigation links, and external link icons",
+            "position": "top",
+            "notable": "External link icons for Help and Docs indicate off-site navigation"
+          },
+          {
+            "type": "content-block",
+            "description": "Numbered section with heading and body paragraphs",
+            "position": "center, full-width",
+            "notable": "Consistent section numbering creates visual structure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading anchors page, numbered sections create scannable structure, body text explains terms",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read and understand Boltz Terms of Service",
+        "entryPoints": [
+          "Help navigation menu",
+          "Direct link from website footer"
+        ],
+        "exitPoints": [
+          "Navigate to other sections via numbered headings",
+          "Access Privacy Policy or other legal docs",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links (Swap, Rescue, History, Products, Help, Docs)",
+            "action": "Navigate to different app sections"
+          },
+          {
+            "element": "External link icons",
+            "action": "Open Help and Docs in new windows"
+          }
+        ],
+        "informationArchitecture": "Linear document structure with numbered sections, content flows top-to-bottom",
+        "frictionPoints": [
+          "No table of contents or jump-to-section links for long document",
+          "Dense paragraph text may be difficult to scan"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "1. Introduction",
+            "context": "section heading",
+            "purpose": "Introduces terms structure and entity information"
+          },
+          {
+            "text": "2. Enforcement & Amendments",
+            "context": "section heading",
+            "purpose": "Explains modification rights and user agreement"
+          },
+          {
+            "text": "3. Service Description",
+            "context": "section heading",
+            "purpose": "Describes core functionality and user responsibilities"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Entity references (Boltz S.A. de C.V., El Salvador)",
+          "Service types (Boltz, APIs, related software)",
+          "Technical terms (Lightning, Bitcoin layers)"
+        ],
+        "trustSignals": [
+          "Specific legal entity registration (Boltz S.A. de C.V., El Salvador)",
+          "Mention of non-custodial architecture and user control",
+          "Clear disclosure of amendment rights"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/boltz-settings-3-privacy.png",
+      "label": "Privacy",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F1B2E",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif headings with numbered hierarchy",
+          "bodyStyle": "Medium-length gray paragraph text with section numbers for sub-points",
+          "dataStyle": "Inline data categories (Swap Destination, Swap Origin, IP Address)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Navigation bar with Boltz logo and main navigation",
+            "position": "top",
+            "notable": "Consistent with Terms page"
+          },
+          {
+            "type": "content-block",
+            "description": "Numbered section with heading and detailed paragraphs",
+            "position": "center, full-width",
+            "notable": "Sub-sections use decimal notation (2.1, 2.2, 2.3)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title anchors attention, numbered sections structure content, body text explains policies",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review Boltz data collection and privacy practices",
+        "entryPoints": [
+          "Help navigation",
+          "Website footer legal links",
+          "Direct privacy policy access"
+        ],
+        "exitPoints": [
+          "Navigate to Terms of Service",
+          "Access other policy documents",
+          "Return to main application"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "Switch between policy documents or app sections"
+          },
+          {
+            "element": "External link icons on Help and Docs",
+            "action": "Open resources in new windows"
+          }
+        ],
+        "informationArchitecture": "Sequential numbered sections covering information collection, usage, and third-party handling",
+        "frictionPoints": [
+          "Long-form document without navigation aids",
+          "Technical privacy concepts may require legal expertise to understand",
+          "No visual emphasis on key data collection points"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "1. Introduction",
+            "context": "section heading",
+            "purpose": "Establishes scope and binding nature of policy"
+          },
+          {
+            "text": "2. Information We Collect",
+            "context": "section heading",
+            "purpose": "Details data collection practices"
+          },
+          {
+            "text": "3. Information Third Parties May Collect",
+            "context": "section heading",
+            "purpose": "Explains external data collection"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Entity identifier (Boltz S.A. de C.V., El Salvador)",
+          "Data types (transaction destinations, origins, IP addresses)",
+          "Specific terms (Bitcoin addresses, Lightning invoices)",
+          "Policy context (taxation compliance, geo-restriction enforcement)"
+        ],
+        "trustSignals": [
+          "Explicit non-permanent IP handling statement",
+          "Clear disclosure of no data sharing with third parties without legal compulsion",
+          "Mention of specific legal requirements (law enforcement, fraud investigation)",
+          "Non-custodial service model emphasis"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

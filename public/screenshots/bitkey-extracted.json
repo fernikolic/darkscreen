@@ -1,0 +1,1166 @@
+{
+  "slug": "bitkey",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:35:37.086Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/bitkey-settings-3-cookie-policy.png",
+      "label": "Cookie Policy",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large uppercase title (BIKEY COOKIE POLICY), secondary headings in bold sentence case",
+          "bodyStyle": "Regular sans-serif, medium line-height, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Bitkey logo and BUY NOW button in top navigation",
+            "position": "top-left and top-right",
+            "notable": "Persistent sticky header with action button"
+          },
+          {
+            "type": "content-section",
+            "description": "Main policy text with multiple paragraphs and bullet points",
+            "position": "center, main content area",
+            "notable": "Hierarchical use of bold text to highlight key terms"
+          },
+          {
+            "type": "jump-navigation",
+            "description": "'Jump to' section for quick navigation",
+            "position": "below headline",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Bold headline anchors attention, 'Last Updated' provides secondary information, 'Jump to' enables scanability, body text provides detailed explanation with bolded technical terms",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand cookie usage and data collection practices",
+        "entryPoints": [
+          "Settings menu",
+          "Legal links footer",
+          "Privacy-related navigation"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "BUY NOW CTA",
+          "Return to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Jump to navigation",
+            "action": "Scroll to specific policy sections"
+          },
+          {
+            "element": "BUY NOW button",
+            "action": "Navigate to purchase flow"
+          }
+        ],
+        "informationArchitecture": "Hierarchical legal document with introduction, 'Jump to' nav, then detailed explanations with sub-sections and bullet points for technical definitions",
+        "frictionPoints": [
+          "Long-form legal text may be difficult to scan",
+          "No collapsible sections for easier reading",
+          "Dense paragraphs without visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BIKEY COOKIE POLICY",
+        "subheadline": "Last Updated: February 1, 2024",
+        "ctas": [
+          {
+            "text": "BUY NOW",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Jump to",
+            "context": "below subheadline",
+            "purpose": "Quick navigation aid"
+          },
+          {
+            "text": "Last Updated: February 1, 2024",
+            "context": "below headline",
+            "purpose": "Trust signal showing recent policy updates"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit 'Last Updated' date showing current policy",
+          "Detailed technical explanations of cookie types",
+          "Clear description of data collection practices"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-settings-4-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F0F0F0",
+          "#0088AA"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium size",
+          "bodyStyle": "Regular sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Bitkey brand mark centered on page",
+            "position": "center-top",
+            "notable": "Emphasizes brand presence on error state"
+          },
+          {
+            "type": "error-message",
+            "description": "404 error with explanatory text",
+            "position": "center",
+            "notable": "Clean, minimalist error presentation with helpful link"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered logo draws focus, error code (404) immediately identifies issue, explanatory text clarifies situation, hyperlinked action provides next step",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why requested page doesn't exist and find way back",
+        "entryPoints": [
+          "Invalid URL",
+          "Broken link",
+          "Deleted content"
+        ],
+        "exitPoints": [
+          "Return to Home page (via link)",
+          "Back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Return to our Home page link",
+            "action": "Navigate to homepage"
+          }
+        ],
+        "informationArchitecture": "Simple error presentation with clear identification and recovery path",
+        "frictionPoints": [
+          "User encountered a broken path",
+          "FAQ content expected but not found"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Return to our Home page",
+            "style": "text-link",
+            "placement": "inline after error message"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "404 | The page you requested does not exist.",
+            "context": "center of screen",
+            "purpose": "Clear error identification and explanation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 | The page you requested does not exist."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-swap-1-your-orders.png",
+      "label": "Your orders",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F8F8F8",
+          "#0088AA",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium size sentence case",
+          "bodyStyle": "Regular sans-serif, medium weight, gray tone for descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Bitkey logo left, BUY NOW button right, light gray background bar",
+            "position": "top",
+            "notable": "Sticky persistent header with clear action CTA"
+          },
+          {
+            "type": "modal-card",
+            "description": "Centered white card with form inputs and submit button",
+            "position": "center of screen",
+            "notable": "Clean modal-style container with rounded corners, shadow, and teal primary button"
+          },
+          {
+            "type": "form-input",
+            "description": "Two text input fields for Email address and Order number",
+            "position": "stacked inside card",
+            "notable": "Placeholder text provides clear field guidance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header anchors top, large centered card draws focus, heading explains purpose, descriptive text provides context, stacked inputs guide eye downward, teal button commands action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Locate and access existing orders using email and order number",
+        "entryPoints": [
+          "Orders menu",
+          "Navigation from main dashboard",
+          "Order tracking link"
+        ],
+        "exitPoints": [
+          "Continue to order details after submission",
+          "BUY NOW to purchase",
+          "Return to dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email address input",
+            "action": "Accept user email for order lookup"
+          },
+          {
+            "element": "Order number input",
+            "action": "Accept order ID for retrieval"
+          },
+          {
+            "element": "Continue button",
+            "action": "Submit form and retrieve order"
+          },
+          {
+            "element": "BUY NOW button",
+            "action": "Navigate to purchase flow"
+          }
+        ],
+        "informationArchitecture": "Simple form-based interface with title, description, two required inputs, and primary action",
+        "frictionPoints": [
+          "User must remember exact order number",
+          "No order search by other methods visible",
+          "No guest order lookup alternative shown"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitkey orders",
+        "subheadline": "Find and manage your Bitkey orders. Enter your order number and email address to get started.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "bottom of card, full width"
+          },
+          {
+            "text": "BUY NOW",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email address",
+            "context": "form input placeholder",
+            "purpose": "Field label"
+          },
+          {
+            "text": "Order number",
+            "context": "form input placeholder",
+            "purpose": "Field label"
+          },
+          {
+            "text": "Find and manage your Bitkey orders. Enter your order number and email address to get started.",
+            "context": "below headline",
+            "purpose": "Instructional text explaining form purpose"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-home-6-release-notes.png",
+      "label": "Release notes",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (h1 at ~36px), black text",
+          "bodyStyle": "Regular sans-serif, medium gray text (~16px)",
+          "dataStyle": "Bold version numbers (e.g., 2026.0.1) paired with lighter gray descriptors"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Bitkey logo with BUY NOW CTA button",
+            "position": "top fixed",
+            "notable": "Teal primary button persistent in top-right"
+          },
+          {
+            "type": "release-entry",
+            "description": "Date + version number + app name + bullet list of changes",
+            "position": "main content area",
+            "notable": "Left-aligned dates create visual timeline, right-aligned content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dates anchor left column as timeline markers; version numbers and descriptions flow right in chronological descending order",
+        "innovativeElements": [
+          "Timeline-style release notes with date column alignment",
+          "Consistent version number formatting (YYYY.MM.V pattern)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review app/firmware update history and changes",
+        "entryPoints": [
+          "Settings navigation",
+          "Help/Support section",
+          "Direct link from app store"
+        ],
+        "exitPoints": [
+          "Download/Update button (inferred from context)",
+          "Back to Home",
+          "BUY NOW CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BUY NOW button",
+            "action": "Navigate to purchase page"
+          },
+          {
+            "element": "Release entries",
+            "action": "Likely expandable to show full changelog (not confirmed in image)"
+          }
+        ],
+        "informationArchitecture": "Reverse chronological release timeline; grouped by version and date; minimalist bullet-point descriptions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitkey Release Notes",
+        "subheadline": "The latest updates to Bitkey app and firmware.",
+        "ctas": [
+          {
+            "text": "BUY NOW",
+            "style": "primary-button",
+            "placement": "top-right fixed header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bug fixes and improvements",
+            "context": "Release entry descriptions",
+            "purpose": "Generic summary of changes for all versions shown"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "YYYY.MM.V version pattern (2026.0.1, 2025.25.0)",
+          "MMM DD, YYYY date format (Jan 30, 2026)",
+          "Version · Product Type labeling (2026.0.1 · Bitkey App)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-settings-1-customer-support.png",
+      "label": "Customer Support",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#00897B"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif on dark image overlay (~48px)",
+          "bodyStyle": "Regular white text on dark background; link-styled text in teal/cyan",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Full-width background image with dark overlay, centered text",
+            "position": "top half",
+            "notable": "Hand holding Bitkey device creates contextual visual; dark overlay ensures text readability"
+          },
+          {
+            "type": "search-bar",
+            "description": "Rounded white input field with magnifying glass icon",
+            "position": "center of hero",
+            "notable": "Prominent search-first pattern for support discovery"
+          },
+          {
+            "type": "tag-list",
+            "description": "Inline popular search tags",
+            "position": "below search bar",
+            "notable": "Underlined teal text links suggest clickable shortcuts"
+          },
+          {
+            "type": "content-section",
+            "description": "Stacked list of trending articles and help categories",
+            "position": "below fold",
+            "notable": "Link-style arrows (→) indicate navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates; search bar is central focal point; trending articles guide secondary discovery",
+        "innovativeElements": [
+          "Contextual hero image showing product in use",
+          "Popular tags as pre-filled search shortcuts"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / support-hub",
+        "userIntent": "Find help or support for Bitkey product issues",
+        "entryPoints": [
+          "Settings > Support/Help menu",
+          "Navigation menu link",
+          "In-app help button",
+          "External support link"
+        ],
+        "exitPoints": [
+          "Search results page",
+          "Article detail page",
+          "Tagged article list",
+          "Back to app/home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Query support knowledge base"
+          },
+          {
+            "element": "Popular tag links",
+            "action": "Filter articles by tag (Trusted Contacts, Fingerprint, Customs/Duties/Import Taxes)"
+          },
+          {
+            "element": "Trending article links",
+            "action": "Navigate to full article content"
+          }
+        ],
+        "informationArchitecture": "Search-first pattern with curated trending articles and category shortcuts; progressive disclosure (hero > search > tags > articles)",
+        "frictionPoints": [
+          "Only generic trending articles shown; no categorization visible below fold"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hi, how can we help?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Trusted Contacts",
+            "style": "text-link",
+            "placement": "popular tags row"
+          },
+          {
+            "text": "Fingerprint",
+            "style": "text-link",
+            "placement": "popular tags row"
+          },
+          {
+            "text": "Customs/Duties/Import Taxes",
+            "style": "text-link",
+            "placement": "popular tags row"
+          },
+          {
+            "text": "How do I receive bitcoin?",
+            "style": "text-link",
+            "placement": "trending articles section"
+          },
+          {
+            "text": "How do I set up my Bitkey wallet?",
+            "style": "text-link",
+            "placement": "trending articles section"
+          },
+          {
+            "text": "What is recovery and how does it work?",
+            "style": "text-link",
+            "placement": "trending articles section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Tell us what you are looking for",
+            "context": "Search input placeholder",
+            "purpose": "Guide user input"
+          },
+          {
+            "text": "Popular:",
+            "context": "Before tag list",
+            "purpose": "Label quick-access shortcuts"
+          },
+          {
+            "text": "Trending articles",
+            "context": "Section header",
+            "purpose": "Signal curated content"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-settings-2-privacy-notice.png",
+      "label": "Privacy Notice",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#00897B"
+        ],
+        "typography": {
+          "headingStyle": "Bold all-caps sans-serif, very large (~48px), black",
+          "bodyStyle": "Regular sans-serif, medium body text (~16px), dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Fixed top bar with Bitkey logo, BUY NOW button, cart icon, menu",
+            "position": "top sticky",
+            "notable": "Minimal header maintains focus on content"
+          },
+          {
+            "type": "page-title",
+            "description": "All-caps bold heading",
+            "position": "top of content",
+            "notable": "Emphasis through capitalization"
+          },
+          {
+            "type": "anchor-navigation",
+            "description": "Two teal inline links (Privacy Notice, Cookie policy)",
+            "position": "below title",
+            "notable": "Jump-to-section navigation for long legal document"
+          },
+          {
+            "type": "section-divider",
+            "description": "Horizontal line separating policy sections",
+            "position": "between sections",
+            "notable": "Clean visual break for scannability"
+          },
+          {
+            "type": "body-content",
+            "description": "Paragraphs of legal/policy text with bolded subsection headers",
+            "position": "main content area",
+            "notable": "Standard legal document formatting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Title commands attention; anchor links provide escape routes; subsection headers break dense text; horizontal rules provide visual breathing room",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal / static-content",
+        "userIntent": "Review privacy and cookie policies for compliance or trust verification",
+        "entryPoints": [
+          "Footer link",
+          "Settings menu",
+          "Account/Legal section",
+          "Pre-signup compliance",
+          "External search/legal database"
+        ],
+        "exitPoints": [
+          "Cookie policy section",
+          "Back to home/previous page",
+          "External link (if any)",
+          "Contact/support link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Privacy Notice link",
+            "action": "Anchor jump to privacy section"
+          },
+          {
+            "element": "Cookie policy link",
+            "action": "Anchor jump to cookie section"
+          },
+          {
+            "element": "BUY NOW button",
+            "action": "Navigate to purchase"
+          }
+        ],
+        "informationArchitecture": "Long-form legal document; jump-to-section anchors for navigation; chunked by subsection headers for scannability",
+        "frictionPoints": [
+          "Dense legal text may be difficult to skim",
+          "No visible table of contents or side navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PRIVACY NOTICE & COOKIE POLICY",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Privacy Notice",
+            "style": "text-link",
+            "placement": "Jump to section"
+          },
+          {
+            "text": "Cookie policy",
+            "style": "text-link",
+            "placement": "Jump to section"
+          },
+          {
+            "text": "BUY NOW",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Jump to",
+            "context": "Above anchor links",
+            "purpose": "Guide user to navigation options"
+          },
+          {
+            "text": "Our commitment to transparency and data privacy",
+            "context": "Subsection header",
+            "purpose": "Introduce policy section theme"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit commitment to transparency language",
+          "Detailed privacy/data handling disclosure",
+          "Open communication messaging in body text"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with modal overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#a64d79"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif caps, high contrast white on dark, bold weight",
+          "bodyStyle": "Small to medium sans-serif, gray/muted tones for secondary text",
+          "dataStyle": "Monospace or numeric font for currency amounts ($150, $10,990.12)"
+        },
+        "components": [
+          {
+            "type": "Cookie consent modal",
+            "description": "Centered white card overlaying hero with cookie policy text and three action buttons",
+            "position": "Center of viewport",
+            "notable": "High-contrast modal breaks immersion but legally necessary; links embedded in body text"
+          },
+          {
+            "type": "Header navigation",
+            "description": "Bitkey logo left, BUY NOW button + cart + menu icons right",
+            "position": "Top bar, sticky",
+            "notable": "Minimal navigation, e-commerce focused"
+          },
+          {
+            "type": "Hero product showcase",
+            "description": "Physical Bitkey device image (top-left) with iPhone mockup (bottom-right) showing transaction data",
+            "position": "Full-width background",
+            "notable": "Product imagery is lifestyle/functional, shows real use case"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "Two primary actions: filled button ($150 ADD TO CART) and outlined button (LEARN MORE)",
+            "position": "Center, below headline",
+            "notable": "Price point visible immediately, clear commerce intent"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero image dominates, headline centers attention, modal interrupts but is unavoidable, secondary CTAs below fold",
+        "innovativeElements": [
+          "Product device shown in realistic context with actual app screen mockup",
+          "Price integration into primary CTA button",
+          "Subtle green glow on device suggesting active/secure state"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page with required consent overlay",
+        "userIntent": "Browse Bitkey product offering and decide whether to purchase or learn more",
+        "entryPoints": [
+          "Direct landing from marketing link",
+          "Organic search for 'bitcoin wallet hardware'",
+          "Social media campaign"
+        ],
+        "exitPoints": [
+          "Accept/Reject cookies → dismiss modal and continue browsing",
+          "BUY NOW button → e-commerce checkout",
+          "LEARN MORE button → product details page",
+          "Cart icon → shopping cart",
+          "Menu icon → navigation drawer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "COOKIE SETTINGS button",
+            "action": "Open granular cookie preference panel"
+          },
+          {
+            "element": "REJECT ALL button",
+            "action": "Dismiss cookie consent, apply minimal cookies, proceed to landing"
+          },
+          {
+            "element": "ACCEPT COOKIES button",
+            "action": "Accept all cookies, dismiss modal, proceed to landing"
+          },
+          {
+            "element": "$150 – ADD TO CART button",
+            "action": "Add device to shopping cart, likely trigger mini-cart or redirect to checkout"
+          },
+          {
+            "element": "LEARN MORE button",
+            "action": "Navigate to product details, specifications, or features page"
+          }
+        ],
+        "informationArchitecture": "Hero-driven single value prop (security/self-custody) with immediate commerce option and educational alternative",
+        "frictionPoints": [
+          "Mandatory cookie consent modal blocks interaction before landing is fully visible",
+          "Modal text is dense and small, requires reading to engage",
+          "Two different CTAs might create decision paralysis (buy vs. learn)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "COLD STORAGE [implied, partially visible behind modal]",
+        "subheadline": "KEEP YOUR BITCOIN",
+        "ctas": [
+          {
+            "text": "$150 – ADD TO CART",
+            "style": "primary-button (filled, rounded)",
+            "placement": "Center, below subheadline"
+          },
+          {
+            "text": "LEARN MORE",
+            "style": "secondary-button (outlined, rounded)",
+            "placement": "Center, right of primary CTA"
+          },
+          {
+            "text": "BUY NOW",
+            "style": "primary-button (filled, pill-shaped)",
+            "placement": "Top-right header"
+          },
+          {
+            "text": "COOKIE SETTINGS",
+            "style": "ghost-button (outlined)",
+            "placement": "Modal footer, left"
+          },
+          {
+            "text": "REJECT ALL",
+            "style": "secondary-button (filled, dark)",
+            "placement": "Modal footer, center"
+          },
+          {
+            "text": "ACCEPT COOKIES",
+            "style": "primary-button (filled, dark)",
+            "placement": "Modal footer, right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Manage Cookies",
+            "context": "Modal title",
+            "purpose": "Explain purpose of overlay"
+          },
+          {
+            "text": "Bitkey and third parties use cookies (and similar technologies) to keep our websites secure, to support functionality, measure their performance, deliver personalized ads outside of our website, and measure effectiveness of our marketing.",
+            "context": "Modal body text",
+            "purpose": "Legally required disclosure of cookie usage"
+          },
+          {
+            "text": "FROM THE MAKERS OF [Square + Cash App logos]",
+            "context": "Footer, bottom-left",
+            "purpose": "Build trust via parent company brand recognition"
+          }
+        ],
+        "tone": "professional-technical with trust-building authority (Square/Cash App affiliation)",
+        "dataFormatting": [
+          "$150 (price point)",
+          "$13.03, $20.60, $201.36, $10.00 (transaction amounts on iPhone mockup)",
+          "Feb 7, Feb 5, Yesterday (transaction dates)",
+          "19,411 sats, 30,645 sats, 300,189 sats, 14,856 sats (satoshi amounts)"
+        ],
+        "trustSignals": [
+          "Backing by Square and Cash App (major fintech brands)",
+          "Real transaction history shown in mockup",
+          "Explicit mention of security in subheadline context"
+        ],
+        "jargonLevel": "beginner to intermediate (sats/satoshis shown but product positioning is accessible)",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "modal overlay on full-width hero",
+        "colorScheme": "mixed (dark background + white modal)",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 18-20px, dark text on white background",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray body copy with embedded hyperlinks in blue",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal card",
+            "description": "White rounded rectangle overlaying entire background, 80% width viewport max",
+            "position": "Centered on screen",
+            "notable": "High contrast, semi-transparent scrim darkens background for focus"
+          },
+          {
+            "type": "Hyperlinked text",
+            "description": "Blue underlined links within body copy (Cookie Policy, Privacy Policy)",
+            "position": "Embedded within paragraphs",
+            "notable": "Links are discoverable but not prominent; requires active reading"
+          },
+          {
+            "type": "Button group",
+            "description": "Three buttons stacked or side-by-side at modal footer",
+            "position": "Bottom of modal card",
+            "notable": "Left button (outline), two right buttons (filled) create visual hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title anchors attention, body text secondary, buttons provide clear action hierarchy with ACCEPT COOKIES as strongest signal",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal confirmation / compliance overlay",
+        "userIntent": "Acknowledge and resolve mandatory cookie consent to proceed to landing page content",
+        "entryPoints": [
+          "Landing page load triggers modal automatically"
+        ],
+        "exitPoints": [
+          "COOKIE SETTINGS → granular preference panel",
+          "REJECT ALL → minimal cookies, close modal",
+          "ACCEPT COOKIES → full tracking, close modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie Policy link",
+            "action": "Open Cookie Policy page in new tab/window"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Open Privacy Policy page in new tab/window"
+          },
+          {
+            "element": "COOKIE SETTINGS button",
+            "action": "Expand modal or navigate to cookie preferences interface"
+          },
+          {
+            "element": "REJECT ALL button",
+            "action": "Set minimal necessary cookies, dismiss modal, return to landing"
+          },
+          {
+            "element": "ACCEPT COOKIES button",
+            "action": "Set all cookie categories, dismiss modal, return to landing"
+          }
+        ],
+        "informationArchitecture": "Legal compliance-first; information flows from policy explanation to user choice",
+        "frictionPoints": [
+          "Dense body text requires careful reading to understand implications",
+          "Three distinct options may cause decision fatigue",
+          "Links open new windows, breaking user flow if explored",
+          "Modal is blocking and cannot be dismissed by clicking outside"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Manage Cookies",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "COOKIE SETTINGS",
+            "style": "ghost-button (outlined, neutral)",
+            "placement": "Modal footer, left"
+          },
+          {
+            "text": "REJECT ALL",
+            "style": "primary-button (filled, dark/black)",
+            "placement": "Modal footer, center"
+          },
+          {
+            "text": "ACCEPT COOKIES",
+            "style": "primary-button (filled, dark/black)",
+            "placement": "Modal footer, right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitkey and third parties use cookies (and similar technologies) to keep our websites secure, to support functionality, measure their performance, deliver personalized ads outside of our website, and measure effectiveness of our marketing.",
+            "context": "First paragraph of modal body",
+            "purpose": "High-level explanation of cookie purposes (security, functionality, analytics, advertising)"
+          },
+          {
+            "text": "If you select Accept all cookies, you consent to the use of cookies for all of these purposes and agree that we may store and access cookies on your device, and that we may share your information with third parties, such as our analytics and ad providers.",
+            "context": "Second paragraph, consequences of acceptance",
+            "purpose": "Transparent disclosure of data sharing implications"
+          },
+          {
+            "text": "If you select Reject all, we will only use strictly necessary cookies. Select Cookie Settings for more details and to manage your cookie preferences.",
+            "context": "Third paragraph, alternative path",
+            "purpose": "Explain minimal cookie option and granular control"
+          },
+          {
+            "text": "You may visit our Cookie Policy to learn more about how we and third parties use cookies and how to adjust your cookie preferences if you change your mind about cookies.",
+            "context": "Fourth paragraph, ongoing control",
+            "purpose": "Reassure user of ability to change preferences later"
+          },
+          {
+            "text": "For more information on how we process your personal data, please visit our Privacy Policy.",
+            "context": "Final paragraph, additional resources",
+            "purpose": "Direct to privacy documentation"
+          }
+        ],
+        "tone": "professional-legal, transparent, slightly defensive (emphasizing user control)",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit mention of security as a cookie purpose",
+          "Clear distinction between Accept All and Reject All options",
+          "Links to detailed policies (Cookie Policy, Privacy Policy)",
+          "Emphasis on user choice and ability to change preferences"
+        ],
+        "jargonLevel": "beginner (accessible explanation of cookie purposes, avoids technical jargon)",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitkey-home-5-landing-page-scrolled-2.png",
+      "label": "Landing page — scrolled 2",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width hero with floating product card",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#6b7280"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif caps (80-100px+), white, bold, high contrast",
+          "bodyStyle": "Medium sans-serif, light gray (#d1d5db or similar), centered",
+          "dataStyle": "Monospace for transaction amounts on card mockup"
+        },
+        "components": [
+          {
+            "type": "Hero background text",
+            "description": "Large repeating watermark-style text ('SELF CUSTODY' pattern) behind main content",
+            "position": "Full-width background",
+            "notable": "Typographic texture creates depth without distracting; reinforces key message"
+          },
+          {
+            "type": "Primary headline",
+            "description": "Large caps text 'RECOVERY WITHOUT THE WORRY'",
+            "position": "Center of viewport, middle",
+            "notable": "Positioned directly above iPhone mockup; emotional benefit-driven messaging"
+          },
+          {
+            "type": "Subheadline",
+            "description": "Single line centered, light gray text",
+            "position": "Below headline, above fold",
+            "notable": "Short, punchy, reinforces product promise"
+          },
+          {
+            "type": "iPhone mockup card",
+            "description": "Realistic phone frame showing transaction list (Cash App transfer, Coinbase purchase, Bitcoin transactions)",
+            "position": "Upper-right, floating effect",
+            "notable": "Color-coded transaction types with icons; shows actual app interface"
+          },
+          {
+            "type": "Key icon",
+            "description": "Simple white icon in rounded circle",
+            "position": "Top-left corner",
+            "notable": "Security/custody theme symbol"
+          },
+          {
+            "type": "Header navigation",
+            "description": "Top bar with BUY NOW button, cart, menu",
+            "position": "Sticky top",
+            "notable": "Same minimalist header as previous screenshot"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates viewport, subheadline provides context, iPhone mockup adds credibility via real UI preview, watermark text adds visual interest without competing",
+        "innovativeElements": [
+          "Repeating typographic background pattern creates visual hierarchy without imagery",
+          "iPhone mockup floats above background, creating depth and 3D effect",
+          "Transaction list in mockup uses color coding (green for gains, white for neutral) to show real use case",
+          "Emotional benefit messaging ('Recovery without the worry') distinct from product spec messaging"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page hero section (scrolled view)",
+        "userIntent": "Understand Bitkey's key value proposition (recovery/self-custody) and see product in action",
+        "entryPoints": [
+          "User scrolled down from top of landing page"
+        ],
+        "exitPoints": [
+          "Continue scrolling down for more content",
+          "BUY NOW button (top header) → checkout",
+          "Menu → navigation",
+          "Cart icon → shopping cart"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BUY NOW button",
+            "action": "Navigate to e-commerce checkout or product purchase flow"
+          },
+          {
+            "element": "Cart icon",
+            "action": "Open shopping cart view"
+          },
+          {
+            "element": "Menu icon",
+            "action": "Open navigation menu/drawer"
+          }
+        ],
+        "informationArchitecture": "Benefit-first messaging (recovery = peace of mind) with product proof (real transaction interface) and continued purchase path via persistent header",
+        "frictionPoints": [
+          "No direct CTA on this section; users must scroll further or use header button",
+          "Large typography may truncate on smaller screens without responsive adjustment",
+          "iPhone mockup position may not be fully visible on all viewport sizes"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "RECOVERY WITHOUT THE WORRY",
+        "subheadline": "Bitkey's recovery system is built for real life.",
+        "ctas": [
+          {
+            "text": "BUY NOW",
+            "style": "primary-button (filled, pill-shaped)",
+            "placement": "Header, top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Cash App transfer",
+            "context": "Transaction label in mockup",
+            "purpose": "Demonstrate integration with existing fintech ecosystem"
+          },
+          {
+            "text": "Coinbase purchase",
+            "context": "Transaction label in mockup",
+            "purpose": "Show multi-source Bitcoin acquisition"
+          },
+          {
+            "text": "Btia...XxWw, Btia...XxWw",
+            "context": "Bitcoin transaction identifiers in mockup",
+            "purpose": "Display actual blockchain addresses for authenticity"
+          },
+          {
+            "text": "$13.03, $20.60, $201.36, $10.00",
+            "context": "Dollar amounts in transaction list",
+            "purpose": "Show transaction values in familiar currency"
+          },
+          {
+            "text": "19,411 sats, 30,645 sats, 300,189 sats, 14,856 sats",
+            "context": "Satoshi amounts in transaction list",
+            "purpose": "Display Bitcoin-native units for crypto-savvy users"
+          }
+        ],
+        "tone": "friendly-casual with professional confidence (emotional benefit + functional proof)",
+        "dataFormatting": [
+          "$13.03 (USD)",
+          "19,411 sats (Bitcoin denominator)",
+          "Feb 7, Feb 5, Yesterday (relative dates)",
+          "+$20.60, +$201.36, $10.00 (transaction directions/amounts)"
+        ],
+        "trustSignals": [
+          "Real-world transaction examples (Cash App, Coinbase integration)",
+          "Actual Bitcoin addresses displayed (shows blockchain authenticity)",
+          "Satoshi-denominated amounts (appeals to crypto-native users)",
+          "Benefit-driven messaging (recovery system built for 'real life')"
+        ],
+        "jargonLevel": "intermediate (assumes familiarity with sats, addresses, multi-source purchasing)",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

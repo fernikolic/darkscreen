@@ -1,0 +1,1864 @@
+{
+  "slug": "nansen",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T12:37:28.110Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 14,
+  "screens": [
+    {
+      "image": "/screenshots/nansen-home-4-portfolio-trackertrack-your-crypto-portfolio-acros.png",
+      "label": "Portfolio TrackerTrack your crypto portfolio acros",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width with stacked sections",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold white headlines (70-80px), center-aligned",
+          "bodyStyle": "Medium gray sans-serif, 16-18px, center-aligned for introductory copy",
+          "dataStyle": "Bold white numbers with smaller gray labels, currency symbols and percentages in lighter color"
+        },
+        "components": [
+          {
+            "type": "notification-banner",
+            "description": "Green banner at top with NX8 product announcement",
+            "position": "top-center",
+            "notable": "High visibility placement to promote new feature"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav with logo, product/learn/company dropdowns, and prominent CTA",
+            "position": "top",
+            "notable": "Clean minimalist header with primary CTA in teal outline"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered headline with supporting subheader and primary CTA button",
+            "position": "center-upper",
+            "notable": "Statement positioning with 'Reimagined' creating brand emphasis"
+          },
+          {
+            "type": "dashboard-preview",
+            "description": "Partially visible dark dashboard interface showing wallet overview and chain allocation pie chart",
+            "position": "bottom-right, semi-transparent",
+            "notable": "Product preview builds trust through visual demonstration"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down flow from announcement to hero headline to supporting copy to CTA, with dashboard preview anchoring visual interest at bottom",
+        "innovativeElements": [
+          "Gradient teal-to-dark background creates depth",
+          "Semi-transparent product preview integrated into hero section",
+          "Announcement banner creates sense of product momentum"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand value proposition of portfolio tracking feature and initiate product usage",
+        "entryPoints": [
+          "Direct landing from marketing campaign",
+          "Navigation from main website",
+          "NX8 announcement link"
+        ],
+        "exitPoints": [
+          "Track Your Crypto CTA to app/signup",
+          "Navigation menu items (Products, Learn, Company)",
+          "Explore Nansen primary navigation button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Track Your Crypto →",
+            "action": "Primary conversion action, likely leads to signup or app entry"
+          },
+          {
+            "element": "Learn More link (NX8 banner)",
+            "action": "Secondary discovery of product news"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Access product categories, learning resources, company info"
+          }
+        ],
+        "informationArchitecture": "Hero-first with problem statement in subheading, solution in main headline, supported by product preview visual proof",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your Complete Crypto Portfolio, Reimagined",
+        "subheadline": "Track multiple crypto assets, wallets, and transactions, all in one place.",
+        "ctas": [
+          {
+            "text": "Track Your Crypto →",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          },
+          {
+            "text": "Learn More",
+            "style": "text-link",
+            "placement": "top announcement banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Best Crypto Portfolio Tracker for Investors & Traders",
+            "context": "above main headline",
+            "purpose": "Sets category and target audience expectations"
+          },
+          {
+            "text": "Introducing NX8:",
+            "context": "top banner",
+            "purpose": "Introduces new product version, builds urgency"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "$6,630,450 (+7.11%)",
+          "$38,879,270",
+          "$32,248,821",
+          "Sol Luna, Lido allocations with percentages"
+        ],
+        "trustSignals": [
+          "Product preview showing real dashboard interface",
+          "Specific capability statements (multiple assets, wallets, transactions)",
+          "NX8 product version signaling active development"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-5-validator-servicesenterprisegrade-validator-suppo.png",
+      "label": "Validator ServicesEnterprise-grade validator suppo",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width stacked with footer",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large white sans-serif, bold, center-aligned (60-70px)",
+          "bodyStyle": "Medium gray sans-serif, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-state",
+            "description": "404 error page with large centered headline and descriptive message",
+            "position": "center-upper",
+            "notable": "Clean, minimal error handling"
+          },
+          {
+            "type": "recovery-cta",
+            "description": "Teal outlined button for navigation back to home",
+            "position": "center, below error message",
+            "notable": "Single clear recovery path"
+          },
+          {
+            "type": "footer",
+            "description": "Multi-column footer with company links, resources, contact, and social",
+            "position": "bottom",
+            "notable": "Full footer preserved on error page for navigation options"
+          },
+          {
+            "type": "app-download-buttons",
+            "description": "App Store and Google Play badges",
+            "position": "footer left",
+            "notable": "Mobile app promotion even on error pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered error content with large vertical spacing, footer anchored at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from broken link or invalid URL navigation",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken internal link",
+          "Expired page reference"
+        ],
+        "exitPoints": [
+          "Go Back to Home Page button",
+          "Footer navigation links (Products, Learn, Company, etc.)",
+          "App download links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go Back to Home Page",
+            "action": "Navigate to homepage"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to specific sections (About Us, Pricing, Blog, etc.)"
+          },
+          {
+            "element": "App Store / Google Play buttons",
+            "action": "External navigation to app stores"
+          }
+        ],
+        "informationArchitecture": "Error message centered with single recovery action, footer provides alternative navigation paths",
+        "frictionPoints": [
+          "User hit error page, needs to recover context",
+          "Single CTA might not match all user needs"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": "The page you are looking for doesn't exist or has been moved.",
+        "ctas": [
+          {
+            "text": "Go Back to Home Page",
+            "style": "ghost-button",
+            "placement": "center, below message"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional, helpful",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "The page you are looking for doesn't exist or has been moved."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-6-affiliatesbecome-a-nansen-affiliate-and-turn-insi.png",
+      "label": "AffiliatesBecome a Nansen Affiliate, and turn insi",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width stacked sections",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large white sans-serif, bold, center-aligned (70-80px), emphasizes key words",
+          "bodyStyle": "Medium gray sans-serif, center-aligned, 16-18px",
+          "dataStyle": "Bold white numbers (10%, 20%) inline with descriptive text"
+        },
+        "components": [
+          {
+            "type": "notification-banner",
+            "description": "Top teal banner with NX8 announcement",
+            "position": "top-center",
+            "notable": "Consistent with other pages, reinforces product suite"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered headline with supporting paragraph and dual CTAs",
+            "position": "center-upper",
+            "notable": "Split CTA approach: primary action and secondary information gathering"
+          },
+          {
+            "type": "process-steps",
+            "description": "Three-column step layout with underline dividers",
+            "position": "center-lower",
+            "notable": "Visual progression with top dividers creating visual hierarchy"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline draws eye, body copy provides context, dual CTA with primary emphasis, step-by-step process explains how",
+        "innovativeElements": [
+          "Reward positioning combined with partnership opportunity",
+          "Three-step visual progression with top border accent",
+          "Percentage highlights (10%, 20%) create specific value communication"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand affiliate program benefits and sign up as affiliate partner",
+        "entryPoints": [
+          "Direct navigation from affiliate program link",
+          "Marketing campaign for partner recruitment",
+          "Footer Affiliates link"
+        ],
+        "exitPoints": [
+          "Become an Affiliate → (primary signup CTA)",
+          "Learn More button (secondary information)",
+          "Navigation menu",
+          "Footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Become an Affiliate →",
+            "action": "Primary conversion to affiliate signup form"
+          },
+          {
+            "element": "Learn More",
+            "action": "Secondary action to detailed affiliate documentation"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Access other product areas or company information"
+          }
+        ],
+        "informationArchitecture": "Value proposition headline → benefit explanation → dual CTAs (action and learning) → three-step process breakdown",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Step 1, Step 2, Step 3 numeric indicators",
+          "Process divider lines show progression"
+        ]
+      },
+      "copy": {
+        "headline": "Share the Signal. Get Rewarded.",
+        "subheadline": "Nansen makes it easy to discover, decide, track, and trade onchain. As an Affiliate, surface the signal, share it with your audience, and get rewarded.",
+        "ctas": [
+          {
+            "text": "Become an Affiliate →",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          },
+          {
+            "text": "Learn More",
+            "style": "ghost-button",
+            "placement": "center-right, adjacent to primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "How Does it Work?",
+            "context": "above step section",
+            "purpose": "Transitions from value prop to implementation details"
+          }
+        ],
+        "tone": "professional-technical, opportunity-focused, aspirational",
+        "dataFormatting": [
+          "10% commission",
+          "20% commission",
+          "Percentage-based rewards structure"
+        ],
+        "trustSignals": [
+          "Specific commission percentages (10%, 20%)",
+          "Clear three-step process",
+          "Emphasis on community distribution (audience sharing)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D084",
+          "#0A1628",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra large, bold sans-serif, white text (80-100px). Two-tier hierarchy with cyan accent subheading",
+          "bodyStyle": "Medium-weight gray text, 16-18px, supporting copy below headlines",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, dropdown menus (Products, Learn, Company), and CTA button",
+            "position": "top fixed",
+            "notable": "Minimalist, right-aligned navigation with bright cyan CTA button"
+          },
+          {
+            "type": "banner",
+            "description": "Dark teal announcement banner about NX8 product launch",
+            "position": "very top",
+            "notable": "Persistent banner with 'Learn More' link"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered text with two CTA buttons and platform availability badges",
+            "position": "center-top",
+            "notable": "Dual CTA approach (Mobile vs Web) with app store badges"
+          },
+          {
+            "type": "device-mockups",
+            "description": "Mobile phone and desktop screen previews showing product interface",
+            "position": "lower half",
+            "notable": "Realistic device mockups with actual UI content visible"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong top-to-bottom flow: banner → headline → subheadline → description → CTAs → device mockups. White and cyan colors draw eye to key elements",
+        "innovativeElements": [
+          "Dual-action CTA buttons for different platform entry points",
+          "Real device mockups with product UI visible inside",
+          "Cyan accent color creates strong visual distinction against dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Nansen offers and choose how to access the platform (mobile or web)",
+        "entryPoints": [
+          "Direct URL",
+          "Ad campaign",
+          "Marketing email"
+        ],
+        "exitPoints": [
+          "Try on Mobile",
+          "Try on Web",
+          "Learn More (NX8 banner)",
+          "Explore Nansen (nav)",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Try on Mobile button",
+            "action": "Navigate to mobile app download or install flow"
+          },
+          {
+            "element": "Try on Web button",
+            "action": "Launch web application"
+          },
+          {
+            "element": "Learn More (NX8 banner)",
+            "action": "Navigate to NX8 product details"
+          },
+          {
+            "element": "Navigation dropdowns (Products, Learn, Company)",
+            "action": "Expand to show submenu options"
+          }
+        ],
+        "informationArchitecture": "Linear narrative: introduce product value prop → show it's free/open → present dual access options → display working product",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Become Smart Money",
+        "subheadline": "A New Way to Trade",
+        "ctas": [
+          {
+            "text": "Try on Mobile →",
+            "style": "primary-button-solid",
+            "placement": "center, below description"
+          },
+          {
+            "text": "Try on Web →",
+            "style": "primary-button-outline",
+            "placement": "center, beside Mobile CTA"
+          },
+          {
+            "text": "Explore Nansen",
+            "style": "primary-button-outline",
+            "placement": "top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trading Now Open to All Users",
+            "context": "Below subheadline with rocket emoji",
+            "purpose": "Emphasize recent product release and accessibility"
+          },
+          {
+            "text": "Available on",
+            "context": "Before app store logos",
+            "purpose": "Explain platform availability"
+          },
+          {
+            "text": "Introducing NX8:",
+            "context": "Top banner",
+            "purpose": "Tease new product feature"
+          }
+        ],
+        "tone": "professional-technical with friendly confidence",
+        "dataFormatting": [],
+        "trustSignals": [
+          "App store badges (Apple, Google Play, Microsoft)",
+          "Mention of 'Open to All Users' suggests broad availability"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-2-nansen-prothe-most-powerful-version-of-nansen-for.png",
+      "label": "Nansen ProThe most powerful version of Nansen for",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked with sidebar preview",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D084",
+          "#0A1628",
+          "#FFFFFF",
+          "#1A2A3A"
+        ],
+        "typography": {
+          "headingStyle": "Extra large bold sans-serif, white text. Main heading is 70-80px, secondary tag in cyan above",
+          "bodyStyle": "Medium gray text, 16-18px for supporting descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "product-badge",
+            "description": "Rounded teal badge with Nansen logo saying 'Nansen 2 is now available for everyone'",
+            "position": "above headline",
+            "notable": "Soft green background with icon, indicates product update status"
+          },
+          {
+            "type": "hero-heading",
+            "description": "Multi-line headline describing the core value proposition",
+            "position": "center",
+            "notable": "Three-line layout with large point size"
+          },
+          {
+            "type": "description-text",
+            "description": "Supporting paragraph explaining key benefit",
+            "position": "center, below headline",
+            "notable": "Gray text provides additional context"
+          },
+          {
+            "type": "primary-cta",
+            "description": "Single centered button with arrow",
+            "position": "center",
+            "notable": "Solid cyan background indicates primary action"
+          },
+          {
+            "type": "sidebar-preview",
+            "description": "Dark card showing app interface with tabs and search",
+            "position": "bottom left",
+            "notable": "Includes navigation with 'Nansen Spotlight' and 'My Dashboard' tabs"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Product announcement badge → large multi-line headline → supporting text → single prominent CTA → sidebar preview below. Cyan color guides to CTA",
+        "innovativeElements": [
+          "Product announcement badge integrated into hero",
+          "Sidebar interface preview showing multiple navigation tabs"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Nansen Pro offering and launch the application",
+        "entryPoints": [
+          "Navigation from primary landing",
+          "Direct URL",
+          "Marketing campaign"
+        ],
+        "exitPoints": [
+          "Launch App button",
+          "Navigation menu",
+          "Sidebar tabs (Home, Signals)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Open main application dashboard"
+          },
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different app sections"
+          },
+          {
+            "element": "Search bar (in sidebar)",
+            "action": "Open search functionality"
+          }
+        ],
+        "informationArchitecture": "Feature announcement → value proposition → direct access path → interface preview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Onchain Analytics Platform Designed For Investors",
+        "subheadline": "Nansen 2 is now available for everyone",
+        "ctas": [
+          {
+            "text": "Launch App →",
+            "style": "primary-button-solid",
+            "placement": "center, below description"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Effortlessly Analyze and Track Key Movements and Metrics to Navigate the Market More Effectively",
+            "context": "Below main headline",
+            "purpose": "Elaborate on platform value"
+          },
+          {
+            "text": "My Dashboard",
+            "context": "Sidebar tab",
+            "purpose": "Show app section names"
+          },
+          {
+            "text": "Search for anything on Nansen",
+            "context": "In sidebar search",
+            "purpose": "Indicate search capability"
+          }
+        ],
+        "tone": "professional-technical, authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "'Nansen 2' branding suggests mature product iteration",
+          "Focus on 'investors' as target audience"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-3-solana-on-nansenall-the-solana-onchain-data-avail.png",
+      "label": "Solana on NansenAll the Solana onchain data, avail",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width stacked with feature list",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D084",
+          "#0A1628",
+          "#FFFFFF",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Very large bold sans-serif, white text. Tiered: small tag → large main headline. Main text 70-80px",
+          "bodyStyle": "Medium gray text, 16-18px for supporting copy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "icon-badge",
+            "description": "Circular icon with Solana-themed design",
+            "position": "above headline, center",
+            "notable": "Purple/gradient circular badge with layered design"
+          },
+          {
+            "type": "subheading-tag",
+            "description": "Small gray text introducing main topic",
+            "position": "above main headline",
+            "notable": "Light gray color, 14-16px size"
+          },
+          {
+            "type": "main-headline",
+            "description": "Large bold text split across multiple lines",
+            "position": "center",
+            "notable": "Two-part structure with large point size"
+          },
+          {
+            "type": "dual-cta",
+            "description": "Two buttons side by side",
+            "position": "center, below headline",
+            "notable": "Primary solid cyan button and secondary outline button"
+          },
+          {
+            "type": "feature-list",
+            "description": "Vertical list with checkmark icons and descriptions",
+            "position": "lower left and right",
+            "notable": "Green checkmark icons with cyan text labels"
+          },
+          {
+            "type": "feature-section",
+            "description": "Left column with subheading and additional benefit description",
+            "position": "lower left",
+            "notable": "Explains the specific edge/advantage of platform"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon → small tag → large headline → dual CTAs → feature benefits. Checkmarks and cyan text draw eye to feature details",
+        "innovativeElements": [
+          "Solana-specific icon design",
+          "Feature benefits with checkmark icons",
+          "Two-column lower section for extended value proposition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Solana-specific analytics capabilities and begin tracking wallets",
+        "entryPoints": [
+          "Navigation from primary landing",
+          "Solana-specific marketing link",
+          "Product dropdown menu"
+        ],
+        "exitPoints": [
+          "Track Solana Wallets button",
+          "Learn More button",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Track Solana Wallets button",
+            "action": "Navigate to Solana wallet tracking interface"
+          },
+          {
+            "element": "Learn More button",
+            "action": "Open detailed information page"
+          }
+        ],
+        "informationArchitecture": "Blockchain-specific intro tag → unique selling proposition → dual call-to-action → feature benefits list with details",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Solana Onchain Data, Free for All Users",
+        "subheadline": "The Most Detailed Solana Analytics",
+        "ctas": [
+          {
+            "text": "Track Solana Wallets →",
+            "style": "primary-button-solid",
+            "placement": "center, below headline"
+          },
+          {
+            "text": "Learn More",
+            "style": "primary-button-outline",
+            "placement": "center, beside primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Your Edge in Solana's Fast-Moving Market",
+            "context": "Section heading, lower left",
+            "purpose": "Introduce competitive advantage messaging"
+          },
+          {
+            "text": "Track Solana wallets like never before with NFT, DeFi, and Raydium insights",
+            "context": "Below section heading",
+            "purpose": "Explain specific Solana capabilities"
+          },
+          {
+            "text": "Analyze any Solana wallet's PnL performance",
+            "context": "Feature list item with checkmark",
+            "purpose": "Highlight key feature"
+          },
+          {
+            "text": "Track Smart Money movements in real time (leaderboard, profitable addresses)",
+            "context": "Feature list item with checkmark",
+            "purpose": "Highlight real-time tracking capability"
+          }
+        ],
+        "tone": "professional-technical, confident, competitive",
+        "dataFormatting": [],
+        "trustSignals": [
+          "'Free for All Users' emphasizes accessibility",
+          "Blockchain-specific terminology shows expertise"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-7-research.png",
+      "label": "Research",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1929",
+          "#00d084",
+          "#1a3a4a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all-caps section labels (Featured, Latest), prominent 40+ px headlines",
+          "bodyStyle": "Medium weight, 14-16px body text in light gray",
+          "dataStyle": "Dates shown as small gray text, report titles in white, category tags in teal"
+        },
+        "components": [
+          {
+            "type": "Hero Illustration",
+            "description": "Large character with backpack analyzing charts and financial data",
+            "position": "Left featured section",
+            "notable": "Animated, friendly illustration style makes crypto research feel accessible"
+          },
+          {
+            "type": "Content Cards",
+            "description": "Grid of report cards with preview images and metadata",
+            "position": "Right sidebar (Latest section)",
+            "notable": "Dark cards with glowing neon accents, thumbnail previews"
+          },
+          {
+            "type": "Category Navigation",
+            "description": "Horizontal tabs (DeFi, Gaming & Metaverse, Infrastructure, Markets, NFTs)",
+            "position": "Below logo/search",
+            "notable": "Monospace font styling gives technical feel"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Featured content dominates left (70%), latest content stacked right (30%), clear separation between sections",
+        "innovativeElements": [
+          "Neon glow effects on cards and accent colors",
+          "Character illustration with accessible design language",
+          "Split-view balancing featured depth with latest browsing"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, data-browse",
+        "userIntent": "Discover featured research reports and browse latest analysis across crypto categories",
+        "entryPoints": [
+          "Logo click from other Nansen sections",
+          "Direct navigation to Research section"
+        ],
+        "exitPoints": [
+          "Click featured article (Fluid: An Update...)",
+          "Click any Latest card",
+          "Click category tabs (DeFi, Markets, etc)",
+          "Click More Articles in Latest section",
+          "Click Trending or Briefings sections below"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category tabs",
+            "action": "Filter research by topic"
+          },
+          {
+            "element": "Featured article",
+            "action": "Navigate to full report"
+          },
+          {
+            "element": "Latest cards",
+            "action": "Navigate to individual report"
+          },
+          {
+            "element": "More Articles dropdown",
+            "action": "Expand Latest section or navigate to all articles"
+          }
+        ],
+        "informationArchitecture": "Primary distinction between featured (deep-dive) and latest (quick browse), category filtering at top, secondary sections (Trending, Briefings) below fold",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Layer 1, Layer 2 labels in Latest section indicate content organization"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Featured | Latest",
+        "ctas": [
+          {
+            "text": "More Articles",
+            "style": "text-link",
+            "placement": "Bottom right of Latest section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Markets",
+            "context": "Category label on featured card",
+            "purpose": "Categorize report topic"
+          },
+          {
+            "text": "Layer 1, Layer 2",
+            "context": "Latest section cards",
+            "purpose": "Quick classification of report depth"
+          },
+          {
+            "text": "Jan 28, 2026",
+            "context": "Below report titles",
+            "purpose": "Publication date signal"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Aug 4, 2025 (publication dates)",
+          "Layer 1, Layer 2 (category shorthand)"
+        ],
+        "trustSignals": [
+          "Nansen branding prominent",
+          "Specific report titles suggest depth",
+          "Dated content shows active publishing"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-8-research-scrolled-1.png",
+      "label": "Research — scrolled 1",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "stacked, card-based",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1929",
+          "#00d084",
+          "#ff4757",
+          "#5b7cff"
+        ],
+        "typography": {
+          "headingStyle": "Section label 'Data insights' followed by bold headline with quoted phrase",
+          "bodyStyle": "14-16px descriptive text, light gray",
+          "dataStyle": "Area chart with stacked regions, axis labels in small text"
+        },
+        "components": [
+          {
+            "type": "Data Insight Card",
+            "description": "Large section with quoted headline and explanatory text",
+            "position": "Top center",
+            "notable": "Quote marks and bolded phrase draw attention to key finding"
+          },
+          {
+            "type": "Area Chart",
+            "description": "Multi-layered stacked area chart showing stablecoin market trends",
+            "position": "Center, takes ~60% of width",
+            "notable": "Color-coded layers (pink, orange, blue, yellow) with smooth gradient fill"
+          },
+          {
+            "type": "Insight Text Block",
+            "description": "Callout box explaining chart implications",
+            "position": "Right side of chart",
+            "notable": "Semi-transparent background, contrasts with dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Chart dominates with supporting narrative on sides, navigation controls subtle (arrows left/right)",
+        "innovativeElements": [
+          "Large-scale data visualization as primary content",
+          "Integrated narrative commentary alongside chart",
+          "Carousel design with prev/next controls for browsing related insights"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, carousel",
+        "userIntent": "Explore detailed market data and trend analysis with supporting narrative",
+        "entryPoints": [
+          "Scroll down from Featured/Latest section",
+          "Click More Articles link"
+        ],
+        "exitPoints": [
+          "Click navigation arrows to browse other insights",
+          "Scroll down to Trending/Briefings sections",
+          "Click See More link (bottom right)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left/Right arrows",
+            "action": "Navigate between different data insights"
+          },
+          {
+            "element": "See More link",
+            "action": "Navigate to full insight or related content"
+          },
+          {
+            "element": "Carousel dots",
+            "action": "Jump to specific insight in carousel"
+          }
+        ],
+        "informationArchitecture": "Carousel-based browsing of individual market insights, each containing headline, chart, and explanation",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Carousel dots at bottom showing current position"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Data insights \"Pump, baby pump\": The stables market cap has troughed in Nov 2023 and kept rising",
+        "ctas": [
+          {
+            "text": "See More",
+            "style": "text-link",
+            "placement": "Bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sep 18, 2023",
+            "context": "Top right timestamp in first insight card",
+            "purpose": "Date reference for content"
+          },
+          {
+            "text": "Today On-Chain",
+            "context": "Label on first insight",
+            "purpose": "Categorize insight type"
+          },
+          {
+            "text": "The crypto ecosystem is receiving new inflows. USDC and Ethena USDE are gaining shares vs. USDT.",
+            "context": "Narrative box on right side of chart",
+            "purpose": "Explain chart implications for less technical users"
+          }
+        ],
+        "tone": "professional-technical, educational, conversational",
+        "dataFormatting": [
+          "Sep 18, 2023 (date format)",
+          "Stacked percentage areas in chart (visual data)"
+        ],
+        "trustSignals": [
+          "Nansen branding",
+          "Specific dated market data",
+          "Named protocols (USDC, USDT, Ethena USDE)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-home-9-discord.png",
+      "label": "Discord",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "modal, full-width centered",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#36393f",
+          "#5865f2",
+          "#43b581"
+        ],
+        "typography": {
+          "headingStyle": "White sans-serif heading 'Nansen (Legacy)' with medium weight",
+          "bodyStyle": "Gray body text 14-16px, descriptive helper text smaller",
+          "dataStyle": "Numeric values for online/member counts shown in light text with status indicator dots"
+        },
+        "components": [
+          {
+            "type": "Icon Badge",
+            "description": "Large teal rounded square with stylized atom logo",
+            "position": "Top center of modal",
+            "notable": "Brand mark doubles as server/community identifier"
+          },
+          {
+            "type": "Text Input",
+            "description": "Bordered text field for display name entry",
+            "position": "Center, below server name",
+            "notable": "Placeholder text frames the purpose clearly"
+          },
+          {
+            "type": "Dropdown Selectors",
+            "description": "Three dropdown menus for Month, Day, Year",
+            "position": "Below display name field",
+            "notable": "Standard Discord UI components"
+          },
+          {
+            "type": "Checkbox",
+            "description": "Terms of Service agreement checkbox",
+            "position": "Below date dropdowns",
+            "notable": "Links to legal documents in teal"
+          },
+          {
+            "type": "Primary Button",
+            "description": "Create Account button",
+            "position": "Bottom center",
+            "notable": "Purple/blue Discord brand color, full width"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Icon and server name establish context at top, form fields occupy center with clear reading flow top-to-bottom, action button emphasizes primary CTA",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step, form, modal",
+        "userIntent": "Create a Discord account to join Nansen (Legacy) server",
+        "entryPoints": [
+          "Invite link from external source",
+          "Shared server invitation"
+        ],
+        "exitPoints": [
+          "Complete form and click Create Account (primary)",
+          "Click Log in link if already has account",
+          "Close modal/go back (assumed)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Display Name input",
+            "action": "Enter custom user display name"
+          },
+          {
+            "element": "Month/Day/Year dropdowns",
+            "action": "Select date of birth"
+          },
+          {
+            "element": "Terms checkbox",
+            "action": "Agree to Discord ToS and Privacy Policy"
+          },
+          {
+            "element": "Create Account button",
+            "action": "Submit form and create account"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login if existing user"
+          }
+        ],
+        "informationArchitecture": "Linear form progression: context (server name) → profile setup (name) → verification (DOB) → terms acknowledgement → submit",
+        "frictionPoints": [
+          "Requires date of birth entry (additional friction)",
+          "Must check terms to proceed",
+          "Three separate dropdowns for date (could be single input)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Nansen (Legacy)",
+        "subheadline": "Alex Svanevik | Nansen (svanevik) invited you to join",
+        "ctas": [
+          {
+            "text": "Create Account",
+            "style": "primary-button",
+            "placement": "Bottom center of modal"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "Below Create Account button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Display Name",
+            "context": "Label above text input",
+            "purpose": "Field identification"
+          },
+          {
+            "text": "What should everyone call you?",
+            "context": "Placeholder text in input field",
+            "purpose": "Clarify purpose of display name field"
+          },
+          {
+            "text": "This is how others see you. You can use special characters and emoji.",
+            "context": "Helper text below input",
+            "purpose": "Explain display name flexibility"
+          },
+          {
+            "text": "Date of Birth",
+            "context": "Label above dropdowns",
+            "purpose": "Field identification"
+          },
+          {
+            "text": "I have read and agree to Discord's Terms of Service and Privacy Policy.",
+            "context": "Checkbox label",
+            "purpose": "Legal agreement acknowledgement"
+          },
+          {
+            "text": "1,554 Online • 51,186 Members",
+            "context": "Below server name",
+            "purpose": "Server activity metrics"
+          }
+        ],
+        "tone": "professional-friendly, straightforward",
+        "dataFormatting": [
+          "1,554 Online (membership metric)",
+          "51,186 Members (community size)"
+        ],
+        "trustSignals": [
+          "Discord branding and official UI",
+          "Named inviter (Alex Svanevik)",
+          "Large member count (51,186)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-settings-3-legal.png",
+      "label": "Legal",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D084",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (40px+), white text, centered main headline",
+          "bodyStyle": "Medium-weight sans-serif, gray text (#999 range), centered alignment for descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Top bar with Nansen logo, product dropdown menu, Learn/Company dropdowns, and primary CTA button",
+            "position": "top",
+            "notable": "Bright teal 'Explore Nansen' button contrasts against dark background"
+          },
+          {
+            "type": "Information Banner",
+            "description": "NX8 announcement banner with 'Learn More' link",
+            "position": "top-center",
+            "notable": "Checkmark icon emphasizes product announcement"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with Legal, API, Affiliate Marketing, MSA, Nansen Points, Privacy Policy, Terms of Services",
+            "position": "left",
+            "notable": "Vertical divider line separates sidebar from main content"
+          },
+          {
+            "type": "Card Grid",
+            "description": "Three equal-width cards for API, Affiliate Marketing, MSA with descriptions and 'Learn More' links",
+            "position": "main-content-right",
+            "notable": "Semi-transparent dark backgrounds on cards create depth"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main headline dominates, descriptive subheading centers attention, sidebar provides navigation context, card grid organizes detailed content",
+        "innovativeElements": [
+          "Vertical divider line between sidebar and main content creates clear information separation",
+          "Teal accent color (#00D084) used strategically for links and primary action"
+        ]
+      },
+      "flow": {
+        "screenType": "settings / information-browse",
+        "userIntent": "Find and review legal documents, policies, and terms applicable to Nansen products and services",
+        "entryPoints": [
+          "Settings menu",
+          "Company footer link",
+          "Navigation menu"
+        ],
+        "exitPoints": [
+          "Learn More links to detailed legal docs",
+          "Back to Products/Learn/Company navigation",
+          "Explore Nansen primary CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate between different legal document categories"
+          },
+          {
+            "element": "Learn More links (teal text)",
+            "action": "Deep link to full legal document or detailed information"
+          },
+          {
+            "element": "Products/Learn/Company dropdowns",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Explore Nansen button",
+            "action": "Primary CTA leading to main product experience"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - main categories in sidebar, detailed cards in main area, each card has its own 'Learn More' for deeper access",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Legal Information",
+        "subheadline": "What can you find here?",
+        "ctas": [
+          {
+            "text": "Learn More",
+            "style": "text-link",
+            "placement": "Under each card (API, Affiliate Marketing, MSA)"
+          },
+          {
+            "text": "Explore Nansen",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Learn More",
+            "style": "text-link",
+            "placement": "NX8 announcement banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Here you can find the important terms, policies, and disclaimers which apply to the products and/or services we provide to our customers and partners.",
+            "context": "Under 'What can you find here?' subheading",
+            "purpose": "Explains purpose of the legal page section"
+          },
+          {
+            "text": "These terms and conditions govern our Nansen API",
+            "context": "API card description",
+            "purpose": "Clarifies scope of API legal terms"
+          },
+          {
+            "text": "These terms and conditions govern our affiliate marketing program",
+            "context": "Affiliate Marketing card description",
+            "purpose": "Clarifies scope of affiliate program terms"
+          },
+          {
+            "text": "Our standard agreement for customers who purchase products and/or services from us using an Order Form.",
+            "context": "MSA card description",
+            "purpose": "Explains Master Service Agreement scope"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive legal documentation available",
+          "Clear separation of API, Affiliate, and Service Agreement terms",
+          "Privacy Policy and Terms of Service prominently listed"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-onboarding-1-faqs.png",
+      "label": "FAQs",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052CC",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (32px+), dark navy text, centered",
+          "bodyStyle": "Regular sans-serif, dark gray text, centered alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Form Card",
+            "description": "Centered white card container with form fields and controls",
+            "position": "center",
+            "notable": "Subtle border/shadow creates containment on light background"
+          },
+          {
+            "type": "Form Header",
+            "description": "Heading with secondary link option",
+            "position": "card-top",
+            "notable": "'Switch to agent sign-in' link provides alternative access path"
+          },
+          {
+            "type": "Form Fields",
+            "description": "Email and Password input fields with labels and visibility toggle",
+            "position": "card-middle",
+            "notable": "Email field has blue focus state, Password field has eye icon toggle"
+          },
+          {
+            "type": "Primary Button",
+            "description": "'Sign in' button spanning full field width",
+            "position": "card-center",
+            "notable": "Solid blue background, white text, strong visual prominence"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card-based layout centers focus on form, heading dominates, secondary options appear below primary CTA",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step / login-form",
+        "userIntent": "Authenticate into Nansen account using email and password credentials",
+        "entryPoints": [
+          "Direct landing from login URL",
+          "Sign up flow redirect",
+          "Session expiration"
+        ],
+        "exitPoints": [
+          "Sign in button to authenticated dashboard",
+          "Forgot password recovery flow",
+          "Sign up link for new users",
+          "Agent sign-in alternative path"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Capture user email address"
+          },
+          {
+            "element": "Password input field with eye icon",
+            "action": "Capture password, toggle visibility"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Submit credentials and authenticate user"
+          },
+          {
+            "element": "Forgot password? link",
+            "action": "Initiate password recovery flow"
+          },
+          {
+            "element": "Sign up link",
+            "action": "Navigate to account creation flow"
+          },
+          {
+            "element": "Switch to agent sign-in link",
+            "action": "Change authentication method"
+          }
+        ],
+        "informationArchitecture": "Linear form with primary action (Sign in) and secondary recovery/signup options",
+        "frictionPoints": [
+          "Required field validation not visible until submission",
+          "No inline field validation feedback shown",
+          "No visual indication of loading/processing state during sign in"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sign in to Nansen",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "primary-button",
+            "placement": "Center of form card"
+          },
+          {
+            "text": "Switch to agent sign-in",
+            "style": "text-link",
+            "placement": "Form header, right side"
+          },
+          {
+            "text": "Forgot password?",
+            "style": "text-link",
+            "placement": "Below password field"
+          },
+          {
+            "text": "Sign up",
+            "style": "text-link",
+            "placement": "Bottom of form"
+          },
+          {
+            "text": "Request password",
+            "style": "text-link",
+            "placement": "Bottom of form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email* (required)",
+            "context": "Form field label",
+            "purpose": "Indicates field is required"
+          },
+          {
+            "text": "Password*",
+            "context": "Form field label",
+            "purpose": "Indicates password field required"
+          },
+          {
+            "text": "Emailed us for support?",
+            "context": "Below password field, before Request password link",
+            "purpose": "Contextual help for users who contacted support"
+          },
+          {
+            "text": "New to Nansen?",
+            "context": "Below Sign in button",
+            "purpose": "Prompts new user signup"
+          }
+        ],
+        "tone": "professional-friendly",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-staking-1-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra bold, sans-serif, large-scale hero text (appears to be 60-80px+), white",
+          "bodyStyle": "Light gray, medium weight, readable at smaller scale",
+          "dataStyle": "Cyan/turquoise accent color for highlights and dates"
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Teal top banner promoting NX8 with Learn More link",
+            "position": "top-full-width",
+            "notable": "Fixed positioning with green accent link"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Primary navigation with Products, Learn, Company dropdowns and CTA button",
+            "position": "top-nav",
+            "notable": "Explore Nansen button with bright cyan border/glow effect"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with supporting sidebar callout and social share buttons",
+            "position": "left-center",
+            "notable": "Asymmetrical layout with text on left, white space/imagery on right"
+          },
+          {
+            "type": "logo-display",
+            "description": "Large NX8 branding with cyan and white logo treatment",
+            "position": "bottom-right",
+            "notable": "Gradient teal background with geometric shapes"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates (white, massive), subheading on right as secondary focus, metadata and author below, logo brand treatment at bottom",
+        "innovativeElements": [
+          "Gradient teal background treatment with geometric shapes",
+          "Asymmetrical split layout mixing text-heavy and visual-heavy zones",
+          "Glowing cyan border effect on primary CTA button"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about the new NX8 tokenized index and explore product offering",
+        "entryPoints": [
+          "Top banner announcement with Learn More link",
+          "Direct navigation from navbar Products section",
+          "External referral links to NX8 announcement"
+        ],
+        "exitPoints": [
+          "Explore Nansen primary button (top-right)",
+          "Start for free button (right sidebar)",
+          "Social share links (email, Twitter, Facebook, LinkedIn)",
+          "Author profile link (Nansen Intern)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Learn More link in banner",
+            "action": "Navigate to detailed NX8 information"
+          },
+          {
+            "element": "Explore Nansen button",
+            "action": "Direct to platform signup or product exploration"
+          },
+          {
+            "element": "Start for free button",
+            "action": "Begin NX8 staking or product onboarding"
+          },
+          {
+            "element": "Social share buttons",
+            "action": "Share article to external platforms"
+          },
+          {
+            "element": "Author profile link",
+            "action": "View author details or other content"
+          }
+        ],
+        "informationArchitecture": "Hero announcement layout: headline → context (date/read time) → metadata (author) → visual branding → promotional sidebar with statistics",
+        "frictionPoints": [
+          "Right sidebar CTA positioning may compete with main Explore button",
+          "Large visual asset may slow page load on slower connections"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Introducing NX8: A Tokenized Layer-1 Index Built for the Future of Finance",
+        "subheadline": "Join 100,000+ Investors Getting Their Trading Edge From Nansen",
+        "ctas": [
+          {
+            "text": "Explore Nansen",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Start for free",
+            "style": "primary-button",
+            "placement": "right-sidebar"
+          },
+          {
+            "text": "Learn More",
+            "style": "text-link",
+            "placement": "top-banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Published on Feb 3, 2026",
+            "context": "Below headline",
+            "purpose": "Establish content freshness and credibility"
+          },
+          {
+            "text": "3 mins",
+            "context": "Metadata area",
+            "purpose": "Set reading time expectation"
+          },
+          {
+            "text": "Nansen Intern",
+            "context": "Author credit",
+            "purpose": "Attribution and source transparency"
+          }
+        ],
+        "tone": "professional-technical mixed with aspirational-visionary",
+        "dataFormatting": [
+          "100,000+ (large number with plus modifier)",
+          "Feb 3, 2026 (full date format)",
+          "3 mins (simplified time estimate)"
+        ],
+        "trustSignals": [
+          "100,000+ investors stat",
+          "Named product launch (NX8)",
+          "Specific publication date",
+          "Author attribution"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-settings-1-about-us.png",
+      "label": "About Us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large hero heading (50-60px), white",
+          "bodyStyle": "Light gray, regular weight, comfortable line-height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Top teal banner with NX8 announcement",
+            "position": "top-full-width",
+            "notable": "Consistent branding element across pages"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Primary nav with dropdown menus",
+            "position": "top-nav",
+            "notable": "Same visual treatment as previous screen"
+          },
+          {
+            "type": "about-section",
+            "description": "Left-aligned text content with illustrated figure on right",
+            "position": "center-main",
+            "notable": "Illustrated character with telescope and upward trajectory visual metaphor"
+          },
+          {
+            "type": "investor-logos",
+            "description": "Grid of investor/partner logos",
+            "position": "bottom-section",
+            "notable": "Prestige signaling with recognizable names: ACCEL, GIC, TigerGlobal, a16z, etc."
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "About headline dominates, body text secondary, illustration adds visual interest on right, investor logos section grounds credibility at bottom",
+        "innovativeElements": [
+          "Character illustration with upward growth trajectory metaphor",
+          "Logo grid treatment for social proof"
+        ]
+      },
+      "flow": {
+        "screenType": "informational-about",
+        "userIntent": "Understand what Nansen is, its mission, and credibility through investor backing",
+        "entryPoints": [
+          "Settings/Company navigation from header",
+          "Footer links to About page",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Explore Nansen button (top-right nav)",
+          "Other Products/Learn/Company sections via nav",
+          "Investor logos potentially clickable to external sites"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Navigate to product offerings"
+          },
+          {
+            "element": "Learn dropdown",
+            "action": "Access educational content"
+          },
+          {
+            "element": "Company dropdown",
+            "action": "Browse company-related pages"
+          },
+          {
+            "element": "Explore Nansen button",
+            "action": "Direct to platform or signup"
+          }
+        ],
+        "informationArchitecture": "Top-level nav → Hero heading → Body description → Visual metaphor → Investor credibility section",
+        "frictionPoints": [
+          "Investor logos may not be interactive, reducing engagement potential",
+          "No clear call-to-action specifically for About page content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About Nansen",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Explore Nansen",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Backed by the best",
+            "context": "Section header above investor logos",
+            "purpose": "Introduce credibility/social proof section"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "ACCEL, GIC, TigerGlobal, a16z, Mechanism Capital, SCB, Coinbase Ventures, Skyfall partnerships listed",
+          "Description of blockchain analytics platform with on-chain data",
+          "References to dashboards and alerts capabilities"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nansen-settings-2-career.png",
+      "label": "Career",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0A1929",
+          "#FFFFFF",
+          "#4E3FDB"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large hero text (60-70px), white with broken-up line breaks",
+          "bodyStyle": "Light gray, regular weight, medium length for supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "NX8 promotional banner at top",
+            "position": "top-full-width",
+            "notable": "Consistent across all pages"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Primary navigation",
+            "position": "top-nav",
+            "notable": "Same treatment across site"
+          },
+          {
+            "type": "career-hero",
+            "description": "Large headline split across multiple lines with supporting body text and CTA button",
+            "position": "left-center",
+            "notable": "Asymmetrical layout with illustrated figures on right"
+          },
+          {
+            "type": "core-values-section",
+            "description": "Section heading for values cards",
+            "position": "bottom-center",
+            "notable": "Appears to lead into card-based layout (cut off in screenshot)"
+          },
+          {
+            "type": "illustration",
+            "description": "Two illustrated characters with dashboard/chart elements and upward arrows",
+            "position": "right-side",
+            "notable": "Growth and analytics metaphor reinforcing platform focus"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline text dominates left side (white, bold), supporting body beneath, CTA button below, Core Values section anchors bottom, illustrations on right provide visual balance",
+        "innovativeElements": [
+          "Multi-line headline treatment with staggered layout",
+          "Illustrated characters with data visualization metaphors integrated",
+          "Section progression from hero to values cards"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-recruitment",
+        "userIntent": "Learn about Nansen company culture and explore job opportunities",
+        "entryPoints": [
+          "Company dropdown → Careers section in navigation",
+          "Footer careers link",
+          "Direct URL to careers page"
+        ],
+        "exitPoints": [
+          "See Open Positions button (ghost button style)",
+          "Explore Nansen (top-right nav)",
+          "Other navigation sections",
+          "Core Values cards (below, off-screen)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "See Open Positions button",
+            "action": "Navigate to job listings"
+          },
+          {
+            "element": "Products dropdown",
+            "action": "Browse products"
+          },
+          {
+            "element": "Learn dropdown",
+            "action": "Access learning resources"
+          },
+          {
+            "element": "Company dropdown",
+            "action": "View other company pages"
+          }
+        ],
+        "informationArchitecture": "Hero recruitment message → Mission statement → CTA to jobs → Core Values preview section",
+        "frictionPoints": [
+          "Core Values section cut off, may not be fully visible without scrolling",
+          "Single CTA button may limit exploration of full careers page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We want the Future of Finance to Become Reality",
+        "subheadline": "Pioneers in the web3 space are building the pipeline to a brighter future. Join us at Nansen as we trailblaze through uncharted territory, and create the winners of tomorrow.",
+        "ctas": [
+          {
+            "text": "See Open Positions",
+            "style": "ghost-button",
+            "placement": "left-content-area"
+          },
+          {
+            "text": "Explore Nansen",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Core Values",
+            "context": "Section heading",
+            "purpose": "Introduce company values cards section"
+          }
+        ],
+        "tone": "inspirational-visionary mixed with professional",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Positioning as web3 pioneer",
+          "References to creating future winners",
+          "Emphasis on trailblazing and innovation"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1065 @@
+{
+  "slug": "osmosis",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:48:31.461Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/osmosis-home-7-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a0f3d",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large numeric display (404) in light weight, minimal serif treatment",
+          "bodyStyle": "Clean sans-serif, white text on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal navigation with logo, menu items (Trade, Assets, Learn, More), and Get started CTA",
+            "position": "top",
+            "notable": "Purple gradient CTA button contrasts with minimal dark design"
+          },
+          {
+            "type": "error-display",
+            "description": "404 error code with explanatory text centered on page",
+            "position": "center",
+            "notable": "Minimal, direct communication without visual embellishment"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Center-focused with large negative space, drawing immediate attention to error message",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User navigated to non-existent page and needs to understand what happened",
+        "entryPoints": [
+          "Invalid URL link",
+          "Broken navigation",
+          "Direct URL entry"
+        ],
+        "exitPoints": [
+          "Navigate using top menu (Trade, Assets, Learn)",
+          "Click logo to return home",
+          "Get started CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Navigate to onboarding flow"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home"
+          }
+        ],
+        "informationArchitecture": "Error state presented prominently with global navigation intact for recovery",
+        "frictionPoints": [
+          "No specific suggestion for where to go next",
+          "No visual recovery path or suggested links"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "This page could not be found.",
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This page could not be found.",
+            "context": "Center of page next to 404 code",
+            "purpose": "Clearly communicate error state"
+          }
+        ],
+        "tone": "professional-technical, straightforward",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-settings-1-supportnew-to-it-all-need-help-our-support-team.png",
+      "label": "SupportNew to it all? Need help? Our support team",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width with asymmetric split (text left, 3D imagery right)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a0f3d",
+          "#7c3aed",
+          "#00d4ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white text with generous line height",
+          "bodyStyle": "Medium weight sans-serif, lighter gray text for secondary content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Navigation with logo, Quick start guide, Library, Blog, and Enter the lab CTA with arrow",
+            "position": "top",
+            "notable": "Right-aligned navigation with gradient text on 'Enter the lab' link"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with subheadline and dual CTA buttons",
+            "position": "left-center",
+            "notable": "Primary button (Start learning) uses vibrant purple, secondary uses outline style"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Stylized 3D robot/laboratory equipment with liquid, pipes, and glowing elements",
+            "position": "right-center",
+            "notable": "Bold use of cyan, magenta, and purple neon colors; highly engaging visual metaphor"
+          },
+          {
+            "type": "content-cards",
+            "description": "Three informational cards below fold",
+            "position": "bottom",
+            "notable": "Partial visibility suggesting scroll content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong visual weight on headline, dual CTAs guide user attention downward, 3D asset balances composition",
+        "innovativeElements": [
+          "3D rendered laboratory equipment with animated liquid and neon accents",
+          "Gradient text treatment on secondary navigation link",
+          "Metaphorical design connecting 'lab' concept to platform learning features"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "User seeking educational resources and support for learning platform",
+        "entryPoints": [
+          "Navigation from main site",
+          "Help/Support menu",
+          "First-time visitor redirect"
+        ],
+        "exitPoints": [
+          "Start learning button",
+          "Get live support button",
+          "Blog link",
+          "Library link",
+          "Quick start guide"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start learning button",
+            "action": "Navigate to learning content/tutorials"
+          },
+          {
+            "element": "Get live support button",
+            "action": "Open support chat or support system"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to respective sections"
+          },
+          {
+            "element": "Enter the lab link",
+            "action": "Navigate to advanced features or trading tools"
+          }
+        ],
+        "informationArchitecture": "Hero-driven landing with clear dual pathways (self-serve learning vs. live support), content cards expand below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to the Support Lab",
+        "subheadline": "Dig into the library. Chat with our live support team. Learn to trade on Osmosis.",
+        "ctas": [
+          {
+            "text": "Start learning",
+            "style": "primary-button",
+            "placement": "left-center"
+          },
+          {
+            "text": "Get live support",
+            "style": "ghost-button",
+            "placement": "left-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Osmosis Dex",
+            "context": "Large subheading above content cards",
+            "purpose": "Introduce section about DEX functionality"
+          },
+          {
+            "text": "Get started in minutes. Start trading in three simple steps.",
+            "context": "Below Osmosis Dex heading",
+            "purpose": "Promise quick onboarding and easy trading"
+          }
+        ],
+        "tone": "friendly-casual, encouraging, educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-settings-2-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a0f3d",
+          "#ffffff",
+          "#a0a0a0"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main sections, white text",
+          "bodyStyle": "Medium sans-serif body text in light gray with strong line spacing",
+          "dataStyle": "Bold text for metric names followed by lighter descriptive text"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Standard header with logo, main navigation (Trade, Assets, Learn, More), and Get started CTA",
+            "position": "top",
+            "notable": "Consistent header pattern across site"
+          },
+          {
+            "type": "page-title",
+            "description": "Large heading introducing page content",
+            "position": "top-content",
+            "notable": "White on dark background, generous size"
+          },
+          {
+            "type": "text-content",
+            "description": "Multi-paragraph descriptive sections with numbered list items",
+            "position": "main",
+            "notable": "Numbered list with bold metric names and gray explanatory text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title dominates, body sections are visually consistent, numbered items create rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "User seeking detailed information about Osmosis platform, features, and performance metrics",
+        "entryPoints": [
+          "About link in navigation",
+          "Company information search",
+          "Research before signup"
+        ],
+        "exitPoints": [
+          "Trade",
+          "Assets",
+          "Learn",
+          "Get started CTA",
+          "Scroll to view more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Navigate to onboarding"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Vertical flow with sections: main overview, metrics and features, structure; content organized by topic with supporting details",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About Osmosis and Osmurica",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Osmosis",
+            "context": "Section subheading",
+            "purpose": "Introduce Osmosis section"
+          },
+          {
+            "text": "Metrics and Features:",
+            "context": "Section subheading",
+            "purpose": "Introduce achievement and capability metrics"
+          },
+          {
+            "text": "Structure",
+            "context": "Section subheading",
+            "purpose": "Introduce organizational information"
+          }
+        ],
+        "tone": "professional-technical, educational, authoritative",
+        "dataFormatting": [
+          "$38 billion in total trading volume",
+          "$10.5 million in 2024 revenue",
+          "$3 million in 2023 revenue",
+          "over 140 different blockchain networks",
+          "300 million total transactions"
+        ],
+        "trustSignals": [
+          "Over $38 billion in total trading volume",
+          "Connected to 140+ blockchain networks via IBC protocol",
+          "Community-centric governance model",
+          "Advanced security features",
+          "$10.5 million revenue in 2024 (threefold increase from 2023)",
+          "300+ million transactions processed"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-4-developers-docsroll-up-your-sleeves-and-start-buil.png",
+      "label": "Developers DocsRoll up your sleeves and start buil",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a2e",
+          "#6366f1",
+          "#a78bfa"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white text, prominent hierarchy",
+          "bodyStyle": "Medium-weight sans-serif, light gray for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal/Dialog",
+            "description": "Center-aligned modal with gradient background overlay, containing community signup form",
+            "position": "Center-right of screen",
+            "notable": "Large headline with decorative gradient orb icon"
+          },
+          {
+            "type": "Form",
+            "description": "Multi-choice form asking about development experience with radio button options",
+            "position": "Lower portion of modal",
+            "notable": "Segmented experience levels with checkbox icons"
+          },
+          {
+            "type": "Navigation",
+            "description": "Left sidebar with collapsed menu items, partially visible",
+            "position": "Left side",
+            "notable": "Visible menu sections like 'What's this' and 'Learn about'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal-centric design draws focus to community signup; sidebar content supports secondary browsing",
+        "innovativeElements": [
+          "Floating gradient orb illustration",
+          "Animated emoji (waving hand) in section heading"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Join the Osmosis developer community",
+        "entryPoints": [
+          "Clicked from Developers tab",
+          "Scrolled down on developer docs page"
+        ],
+        "exitPoints": [
+          "Close modal (X button)",
+          "Submit form via survey",
+          "Navigate back to main content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started button",
+            "action": "Scroll or navigate to community signup section"
+          },
+          {
+            "element": "Radio buttons (experience level)",
+            "action": "Select development experience tier"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismiss modal and return to page"
+          }
+        ],
+        "informationArchitecture": "Modal hierarchy: headline > benefit statement > form questions > form submission",
+        "frictionPoints": [
+          "Unclear how form submits after selection",
+          "Limited context on what happens next after joining"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join Osmosis' developer community",
+        "subheadline": "If you're building in the Cosmos or on Osmosis, you should join our tight-knit, highly-curated Slack community.",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "Upper left sidebar area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You'll have access to the Osmosis core development team and can ask us questions directly. You'll also have the chance to meet other relevant founders + developers.",
+            "context": "Modal body text",
+            "purpose": "Explain community benefits and reduce friction"
+          },
+          {
+            "text": "How many years of development experience do you have? *",
+            "context": "Form question label",
+            "purpose": "Qualify community members; asterisk indicates required field"
+          }
+        ],
+        "tone": "professional-technical, community-focused, welcoming",
+        "dataFormatting": [
+          "Experience tiers: 'Less than 6 months', '6 months - 2 years', '2-5 years'"
+        ],
+        "trustSignals": [
+          "Core development team access",
+          "Curated Slack community"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-5-grantsget-funding-to-build-something.png",
+      "label": "GrantsGet funding to build something.",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#d946ef",
+          "#a78bfa",
+          "#fbbf24",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large, bold sans-serif (100+ px), black text, spans multiple lines",
+          "bodyStyle": "Medium weight sans-serif, dark text on light background, high contrast",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Full-width gradient background transitioning from pink/purple to yellow, with large headline",
+            "position": "Center-left of viewport",
+            "notable": "Vibrant gradient backdrop with soft color transitions"
+          },
+          {
+            "type": "Illustration",
+            "description": "Rounded gradient orb with pink-to-blue color flow",
+            "position": "Right side, center vertically",
+            "notable": "Branded style with glowing white border"
+          },
+          {
+            "type": "Text Block",
+            "description": "Descriptive paragraphs about grant program goals",
+            "position": "Lower right quadrant",
+            "notable": "Linked inline text (underlined in accent color)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates; supporting illustration on right; explanatory text below",
+        "innovativeElements": [
+          "Gradient background with soft pastel transitions",
+          "Floating branded orb illustration"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Osmosis Grants Program",
+        "entryPoints": [
+          "Clicked Grants nav item",
+          "Scrolled from developer home"
+        ],
+        "exitPoints": [
+          "Scroll down for more details",
+          "Click external links in body text",
+          "Navigate to Grant Recipients page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Inline links (e.g. 'Osmosis and', 'ecosystem projects')",
+            "action": "Navigate to related pages or external resources"
+          },
+          {
+            "element": "Navigation links at top (Grant Recipients, Resources, Blog, RFPs, Dashboard)",
+            "action": "Navigate to section-specific pages"
+          }
+        ],
+        "informationArchitecture": "Hero headline → illustrative graphic → detailed explanation of program goals → call-to-action links",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Funding community projects that help Osmosis grow",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The goal of the Osmosis Grants Program is to improve the long-term utility of Osmosis and to create a robust ecosystem of incentivized contributors.",
+            "context": "Body paragraph 1",
+            "purpose": "Establish program mission and credibility"
+          },
+          {
+            "text": "Grants will be awarded to teams and individuals who are building value-add projects, such as analytics, tooling, infrastructure, and ecosystem projects that are complementary to the core AMM.",
+            "context": "Body paragraph 2",
+            "purpose": "Define eligible project types and set expectations"
+          }
+        ],
+        "tone": "professional-technical, aspirational, community-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal grants program structure",
+          "Ecosystem growth focus"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-6-landing-more-menu.png",
+      "label": "Landing — More menu",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width with dropdown menu",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f0f1e",
+          "#6366f1",
+          "#ec4899",
+          "#f97316"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif, white text (left side); medium weight for menu items",
+          "bodyStyle": "Medium sans-serif, light gray for supporting text and subheadlines",
+          "dataStyle": "Monospace or data-specific font for prices and percentages (green for gains)"
+        },
+        "components": [
+          {
+            "type": "Dropdown Menu",
+            "description": "Grid-based menu with 3 columns (Network, Developers, Resources/Help) containing 10+ navigation items",
+            "position": "Center-top, overlaying content",
+            "notable": "Dark semi-transparent background with curved gradient border accents (pink to orange)"
+          },
+          {
+            "type": "Feature Card",
+            "description": "Rounded card showcasing USDC and Cosmos Hub assets with trading amount and swap button",
+            "position": "Right side within dropdown area",
+            "notable": "Gradient border treatment with pink-to-orange accent"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Left side large headline with illustration and descriptive subtext",
+            "position": "Left side, background of menu",
+            "notable": "Atom icon illustration integrated with headline text"
+          },
+          {
+            "type": "Data Table",
+            "description": "Grid showing Top Volume, New, and Upcoming assets with prices and percentage changes",
+            "position": "Bottom of viewport",
+            "notable": "Tab-based layout with color-coded icons for each category"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Menu dominates center; hero headline visible on left; bottom asset data supports secondary discovery",
+        "innovativeElements": [
+          "Gradient-bordered dropdown menu with curved edges",
+          "Integrated feature card within dropdown",
+          "Illustration-text combination in headline"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore Osmosis platform features and navigate to specific sections",
+        "entryPoints": [
+          "Clicked More dropdown in nav",
+          "Landed on homepage"
+        ],
+        "exitPoints": [
+          "Click any menu item (Network, Developers, Governance, etc.)",
+          "Click Start Trading button",
+          "Click asset cards at bottom",
+          "Close menu by clicking elsewhere"
+        ],
+        "interactiveElements": [
+          {
+            "element": "More dropdown",
+            "action": "Expand menu showing navigation categories"
+          },
+          {
+            "element": "Menu items (Governance, Analytics, Documentation, Contribute, etc.)",
+            "action": "Navigate to respective pages"
+          },
+          {
+            "element": "Start Trading button",
+            "action": "Initiate trading experience or navigate to trading interface"
+          },
+          {
+            "element": "Asset cards (Bitcoin, GenesisL1)",
+            "action": "View asset details or initiate swap"
+          },
+          {
+            "element": "Social icons (X, Reddit, Telegram)",
+            "action": "Navigate to external social media"
+          }
+        ],
+        "informationArchitecture": "Navigation menu (primary) → Featured asset promo (secondary) → Asset discovery grid (tertiary)",
+        "frictionPoints": [
+          "Menu may obscure important content behind semi-transparent overlay",
+          "Multiple CTAs (menu items + Start Trading + asset cards) could distract users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Discover and trade ATC on Osmosis",
+        "subheadline": "The premier decentralized crypto exchange. Powered by Cosmos.",
+        "ctas": [
+          {
+            "text": "Start Trading",
+            "style": "primary-button",
+            "placement": "Feature card (right side of menu)"
+          },
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "Top-right corner of page"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Network",
+            "context": "Dropdown menu column header",
+            "purpose": "Categorize navigation items"
+          },
+          {
+            "text": "USDC - USD Coin - 1000 = $1000",
+            "context": "Feature card",
+            "purpose": "Display trading pair and value"
+          },
+          {
+            "text": "No upcoming asset launches. Stay tuned for more.",
+            "context": "Upcoming assets tab",
+            "purpose": "Set expectations for future launches"
+          }
+        ],
+        "tone": "professional-technical, confident, accessible",
+        "dataFormatting": [
+          "$70,091.283",
+          "2.95%",
+          "$0.019",
+          "0.019%",
+          "1000 = $1000"
+        ],
+        "trustSignals": [
+          "Decentralized exchange positioning",
+          "Cosmos integration",
+          "Active trading volume display"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No upcoming asset launches. Stay tuned for more."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel with hero on left, featured asset card on right",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a3e",
+          "#8b5cf6",
+          "#ec4899",
+          "#f97316"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif (72px+) with color-coded tokens (ATOM in bright cyan)",
+          "bodyStyle": "Medium weight, light gray on dark background, ~16px",
+          "dataStyle": "Large numeric values in white, percentage changes in green/red, right-aligned in cards"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal nav with logo, main sections (Trade, Assets, Learn, More), and CTA button",
+            "position": "Top bar, sticky",
+            "notable": "Clean semantic structure with dropdown indicator on 'More'"
+          },
+          {
+            "type": "Featured Trading Card",
+            "description": "Right-side card showing USDC and Cosmos Hub asset pair with Start Trading button",
+            "position": "Right side, center vertically",
+            "notable": "Gradient border (pink to orange), animated or static accent"
+          },
+          {
+            "type": "Asset List (Bottom Section)",
+            "description": "Three-column tabbed view showing Top Volume, New, and Upcoming assets with prices and changes",
+            "position": "Bottom half of viewport",
+            "notable": "Color-coded tabs with icons; empty state message for Upcoming section"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero headline dominates left side, featured card on right creates visual balance, asset grid below provides secondary information",
+        "innovativeElements": [
+          "Gradient-bordered card with subtle glow effect",
+          "Color-coded token icons in trading card",
+          "Multi-tab asset browsing system with visual categorization"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Osmosis DEX and learn about ATOM trading opportunities",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Get started button (top right)",
+          "Start Trading button (featured card)",
+          "Trade/Assets/Learn nav links",
+          "Asset click (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Initiates onboarding or account creation flow"
+          },
+          {
+            "element": "Start Trading button",
+            "action": "Navigates to trading interface with USDC/ATOM pre-selected"
+          },
+          {
+            "element": "Asset tabs",
+            "action": "Filters asset list by volume, newness, or upcoming launches"
+          },
+          {
+            "element": "Asset rows",
+            "action": "Likely navigates to asset detail or trading page"
+          }
+        ],
+        "informationArchitecture": "Hero section → featured trading pair → browsable asset categories → call to action",
+        "frictionPoints": [
+          "No visible search for specific assets in hero",
+          "Asset grid requires scrolling to see all options"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Discover and trade ATOM on Osmosis.",
+        "subheadline": "The premier decentralized crypto exchange. Powered by Cosmos.",
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "Top right corner"
+          },
+          {
+            "text": "Start Trading",
+            "style": "primary-button",
+            "placement": "Bottom of featured card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "USD Coin",
+            "context": "Asset descriptor under USDC token",
+            "purpose": "Clarifies token symbol meaning"
+          },
+          {
+            "text": "Cosmos Hub",
+            "context": "Network name under ATOM",
+            "purpose": "Provides context for token network"
+          },
+          {
+            "text": "No upcoming asset launches. Stay tuned for more.",
+            "context": "Empty state message in Upcoming tab",
+            "purpose": "Sets expectations and encourages return visits"
+          }
+        ],
+        "tone": "professional-technical with friendly undertones",
+        "dataFormatting": [
+          "$69,338.596 BTC (price with decimal precision)",
+          "↑ 0.74% (percentage change with directional arrow)",
+          "1000 USDC = $1000 (conversion display)"
+        ],
+        "trustSignals": [
+          "Premier decentralized crypto exchange positioning",
+          "Cosmos ecosystem partnership emphasis"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No upcoming asset launches. Stay tuned for more."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "card-grid with floating asset bubbles and top asset panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a3e",
+          "#8b5cf6",
+          "#ec4899",
+          "#f97316"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this section",
+          "bodyStyle": "Medium weight, light gray, ~14px",
+          "dataStyle": "Large numeric values in white, percentage badges in colored pills (green/red/orange)"
+        },
+        "components": [
+          {
+            "type": "Asset Card Panel",
+            "description": "Top section with 4 asset cards showing token, price, and change percentage",
+            "position": "Top of viewport",
+            "notable": "Horizontal scrollable layout with subtle loading placeholder on right"
+          },
+          {
+            "type": "Floating Asset Bubbles",
+            "description": "Large grid of circular token icons with percentage change badges",
+            "position": "Center and lower portions, scattered layout",
+            "notable": "Organic, bubble-like arrangement with varying icon sizes; percentage badges positioned on edges"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Asset cards at top provide primary focus, bubble grid creates secondary visual interest and encourages exploration",
+        "innovativeElements": [
+          "Floating bubble layout for asset discovery (non-traditional grid)",
+          "Size variation in bubbles suggests importance or volume",
+          "Contextual percentage badges overlay on each asset icon"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore available assets and their current performance metrics",
+        "entryPoints": [
+          "Scroll from hero section",
+          "Direct navigation from Assets link"
+        ],
+        "exitPoints": [
+          "Click on any asset bubble or card",
+          "Scroll back to hero or down to testimonials",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Asset cards (top)",
+            "action": "Likely navigates to asset detail or trading pair"
+          },
+          {
+            "element": "Floating bubbles",
+            "action": "Likely navigates to asset detail or initiates trade"
+          },
+          {
+            "element": "Horizontal scroll (implied)",
+            "action": "Reveals more assets in top card panel"
+          }
+        ],
+        "informationArchitecture": "Featured assets at top → all available assets in discoverable bubble format",
+        "frictionPoints": [
+          "No search or filter mechanism visible for large asset list",
+          "Bubble layout may obscure asset names for some items"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "WBTC",
+            "context": "Asset label under Wrapped Bitcoin icon",
+            "purpose": "Identifies asset type"
+          },
+          {
+            "text": "EPIX.epix",
+            "context": "New asset label in top card section",
+            "purpose": "Distinguishes network-specific version"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$69,329.936 (large prices with 3 decimal precision)",
+          "↑ 0.73% (green percentage for positive change)",
+          "↓ 1.05% (red percentage for negative change)",
+          "$0.038 (small value pricing)"
+        ],
+        "trustSignals": [
+          "Extensive asset list demonstrating market coverage",
+          "Real-time price and change data"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/osmosis-home-3-landing-page-scrolled-3.png",
+      "label": "Landing page — scrolled 3",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "stacked with three stat cards and testimonial carousel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a3e",
+          "#3b82f6",
+          "#ec4899",
+          "#f97316"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, ~48px, white text with colored inline word (Trusted)",
+          "bodyStyle": "Medium weight, light gray, ~16px",
+          "dataStyle": "Very large numeric values (48px+) in white, displayed prominently on colored card backgrounds"
+        },
+        "components": [
+          {
+            "type": "Trust Stat Cards",
+            "description": "Three large cards showing All Time Volume, Assets on Platform, and 24h Trading Volume",
+            "position": "Center, three columns",
+            "notable": "Each card has distinct gradient background (blue, pink, purple) with decorative liquid/potion bottle illustration"
+          },
+          {
+            "type": "Testimonial Carousel",
+            "description": "User testimonials displayed in cards with profile info",
+            "position": "Bottom section, scrollable horizontally",
+            "notable": "Close buttons on each testimonial, profile picture and handle visible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Trust headline dominates, large stat cards follow, testimonials provide social proof below",
+        "innovativeElements": [
+          "Liquid/potion bottle illustrations on stat cards (whimsical design language)",
+          "Gradient card backgrounds with distinct color identities",
+          "Profile-based testimonial cards with dismissible option"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-social-proof",
+        "userIntent": "Build trust by viewing platform statistics and user testimonials",
+        "entryPoints": [
+          "Scroll from asset discovery section"
+        ],
+        "exitPoints": [
+          "Continue scrolling for more content",
+          "Navigate via top menu",
+          "Potentially click testimonials for more detail"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Testimonial close button",
+            "action": "Dismisses individual testimonial card"
+          },
+          {
+            "element": "Testimonial cards",
+            "action": "Likely scrollable or clickable for more info"
+          }
+        ],
+        "informationArchitecture": "Trust positioning → quantitative proof (statistics) → qualitative proof (testimonials)",
+        "frictionPoints": [
+          "Testimonial section requires horizontal scrolling to see all reviews"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trusted by 1+ million users and counting.",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "All Time Volume",
+            "context": "Label on first stat card",
+            "purpose": "Describes metric being displayed"
+          },
+          {
+            "text": "Assets on the Platform",
+            "context": "Label on second stat card",
+            "purpose": "Clarifies platform breadth"
+          },
+          {
+            "text": "24h trading volume",
+            "context": "Label on third stat card",
+            "purpose": "Shows recent activity"
+          },
+          {
+            "text": "Don't just take it from us...",
+            "context": "Section subheading above testimonials",
+            "purpose": "Transition to social proof"
+          },
+          {
+            "text": "Real users show real love for Osmosis.",
+            "context": "Descriptive text below section heading",
+            "purpose": "Reinforces authenticity of testimonials"
+          }
+        ],
+        "tone": "professional-technical with conversational undertones (slight humor in 'don't just take it from us')",
+        "dataFormatting": [
+          "$43,626,746,445 (large numbers with commas, full precision)",
+          "$115,341,042 (total assets value)",
+          "$3,329,815 (24h volume)"
+        ],
+        "trustSignals": [
+          "1+ million users",
+          "All time volume statistic ($43.6B+)",
+          "Assets on platform count",
+          "User testimonials with real handles",
+          "High 24h trading volume"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

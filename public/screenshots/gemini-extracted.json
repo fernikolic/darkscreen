@@ -1,0 +1,771 @@
+{
+  "slug": "gemini",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T11:48:46.476Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 5,
+  "screens": [
+    {
+      "image": "/screenshots/gemini-home-5-nifty-gateway.png",
+      "label": "Nifty Gateway",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large and prominent for shutdown notice",
+          "bodyStyle": "Regular sans-serif, medium weight for instructional text",
+          "dataStyle": "Regular text for dates and critical information"
+        },
+        "components": [
+          {
+            "type": "alert-banner",
+            "description": "High-visibility shutdown notice at top with black background",
+            "position": "header",
+            "notable": "Critical information design - dark background with white text creates urgency"
+          },
+          {
+            "type": "expandable-section",
+            "description": "Collapsible details about closure process",
+            "position": "below headline",
+            "notable": "Helps manage information density for crisis communication"
+          },
+          {
+            "type": "form-card",
+            "description": "White card containing sign-in form on dark background",
+            "position": "center-lower",
+            "notable": "Contrast-heavy design makes form stand out despite shutdown context"
+          },
+          {
+            "type": "dual-cta-buttons",
+            "description": "Two action buttons: filled 'Sign in' and outlined 'Connect Wallet'",
+            "position": "form-footer",
+            "notable": "Primary vs secondary button hierarchy maintained despite platform closure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Shutdown message dominates top section; form card centers lower portion with high contrast against black background",
+        "innovativeElements": [
+          "Dark overlay background focusing attention on critical shutdown notice",
+          "Information architecture balances crisis communication with functional form"
+        ]
+      },
+      "flow": {
+        "screenType": "crisis-communication + authentication",
+        "userIntent": "User needs to sign in while being informed of platform closure and asset withdrawal deadline",
+        "entryPoints": [
+          "Direct navigation to Nifty Gateway",
+          "Bookmark or email notification about shutdown"
+        ],
+        "exitPoints": [
+          "Complete sign-in to access account for withdrawal",
+          "Connect wallet as alternative authentication",
+          "Leave platform entirely"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email Address input",
+            "action": "Accept and validate email for sign-in"
+          },
+          {
+            "element": "Password input with visibility toggle",
+            "action": "Secure password entry with show/hide icon"
+          },
+          {
+            "element": "Forgot password? link",
+            "action": "Navigate to password recovery flow"
+          },
+          {
+            "element": "Expandable closure details section",
+            "action": "Reveal additional information about shutdown timeline"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Submit credentials and authenticate"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Alternative Web3 authentication method"
+          }
+        ],
+        "informationArchitecture": "Crisis notice → account access requirement → authentication form → terms agreement",
+        "frictionPoints": [
+          "Users must read and process shutdown message before accessing account",
+          "Possible concern about whether sign-in is still functional given closure",
+          "Date-driven urgency may cause panic in some users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Nifty Gateway Studio is shutting down.",
+        "subheadline": "Nifty Gateway platform will be closing on April 23, 2026 and has entered withdrawal-only mode. Please withdraw your assets by this date.",
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "primary-button",
+            "placement": "form-footer-left"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "secondary-button",
+            "placement": "form-footer-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email Address",
+            "context": "form field label",
+            "purpose": "Identify input field purpose"
+          },
+          {
+            "text": "Password",
+            "context": "form field label",
+            "purpose": "Identify input field purpose"
+          },
+          {
+            "text": "Forgot password?",
+            "context": "inline link below password field",
+            "purpose": "Offer recovery path for users unable to sign in"
+          },
+          {
+            "text": "By clicking the 'Sign in' button below, I agree to Nifty Gateway's updated TERMS OF USE, including the Dispute Resolution provision, and PRIVACY POLICY.",
+            "context": "below form fields",
+            "purpose": "Legal compliance and consent gathering"
+          },
+          {
+            "text": "Below is an update on the closure process:",
+            "context": "expandable section header",
+            "purpose": "Set expectation for additional information availability"
+          }
+        ],
+        "tone": "professional-urgent, with balance between critical information delivery and procedural normality",
+        "dataFormatting": [
+          "April 23, 2026 (specific future date)",
+          "withdrawal-only mode (status descriptor)"
+        ],
+        "trustSignals": [
+          "Reference to updated TERMS OF USE",
+          "PRIVACY POLICY link",
+          "Structured closure process with planned timeline"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gemini-home-6-predict-page.png",
+      "label": "predict page",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FFA500",
+          "#1F2937"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px for card titles",
+          "bodyStyle": "Regular sans-serif, 14px for body text and options",
+          "dataStyle": "Bold sans-serif with multiplier notation (1.0x, odds in oval badges)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal navigation with category tabs",
+            "position": "header",
+            "notable": "Live indicator in red; Active filter with dropdown"
+          },
+          {
+            "type": "filter-tabs",
+            "description": "Horizontal scrollable category filters: All, Live, Trending, Sports, Crypto, Economics, Politics",
+            "position": "below navbar",
+            "notable": "Clean segmentation of prediction market categories"
+          },
+          {
+            "type": "prediction-card",
+            "description": "Individual market card showing binary or multiple-choice outcomes with odds",
+            "position": "card-grid",
+            "notable": "Visual consistency across crypto, sports, economics, and political markets"
+          },
+          {
+            "type": "odds-display",
+            "description": "Green multiplier (1.0x, 16.7x) paired with probability badge (99%, 6%)",
+            "position": "card-content",
+            "notable": "Compact odds presentation with visual separation between payout and probability"
+          },
+          {
+            "type": "expand-action",
+            "description": "'Show more' links to reveal additional options within card",
+            "position": "card-footer",
+            "notable": "Progressive disclosure prevents card overflow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header → filters → grid of prediction cards with outcomes ordered by popularity; multipliers highlighted in green text",
+        "innovativeElements": [
+          "Unified prediction market interface spanning sports, crypto, economics, and politics",
+          "Color-coded category badges (Bitcoin orange, Ethereum purple, sports red/orange)",
+          "Compact odds display combining payout multiplier with implied probability"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / prediction-market-dashboard",
+        "userIntent": "Browse available prediction markets, compare odds, and identify trading opportunities across multiple categories",
+        "entryPoints": [
+          "Navigation from main site",
+          "Direct link to predict section",
+          "Category filter selection"
+        ],
+        "exitPoints": [
+          "Click market card to view details and place prediction",
+          "Search for specific events",
+          "Navigate to Prices, Perpetuals, or other main nav sections",
+          "Sign in to complete prediction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category filter tabs",
+            "action": "Filter displayed markets by category (Sports, Crypto, Economics, Politics)"
+          },
+          {
+            "element": "Active dropdown",
+            "action": "Filter markets by status (Active, Resolved, Upcoming)"
+          },
+          {
+            "element": "Search events field",
+            "action": "Text search to find specific markets"
+          },
+          {
+            "element": "Market card",
+            "action": "Click to view full details and place prediction"
+          },
+          {
+            "element": "Show more links",
+            "action": "Expand collapsed outcomes within card"
+          },
+          {
+            "element": "Outcome button (colored badge)",
+            "action": "Select specific prediction outcome"
+          }
+        ],
+        "informationArchitecture": "Categories → Markets (grouped by popularity/volume) → Outcomes with odds → Trade execution",
+        "frictionPoints": [
+          "Multiple outcomes per card may require expansion to see all options",
+          "Small probability percentages might be hard to read at a glance",
+          "Time remaining not immediately visible on all cards"
+        ],
+        "progressIndicators": [
+          "Time remaining shown at bottom right of each card (e.g., '1w 1d 12h', '18h 5m 41s')",
+          "Volume indicators ($XX,XXX vol.) provide market liquidity signals"
+        ]
+      },
+      "copy": {
+        "headline": "GEMINI (implied from page context; no explicit headline on screenshot)",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button-orange",
+            "placement": "top-right navbar"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "top-right navbar"
+          },
+          {
+            "text": "Show X more",
+            "style": "text-link-with-arrow",
+            "placement": "card-footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Norway",
+            "context": "under 'Winter Olympics: Most Gold Medals'",
+            "purpose": "Display market option/country name"
+          },
+          {
+            "text": "1.0x",
+            "context": "green multiplier badge next to outcome",
+            "purpose": "Show potential payout multiple if prediction is correct"
+          },
+          {
+            "text": "99%",
+            "context": "oval probability badge next to outcome",
+            "purpose": "Display implied probability of outcome"
+          },
+          {
+            "text": "$34,360 vol.",
+            "context": "bottom-left of card",
+            "purpose": "Indicate trading volume and market liquidity"
+          },
+          {
+            "text": "1w 1d 12h",
+            "context": "bottom-right of card",
+            "purpose": "Show time remaining until market resolution"
+          }
+        ],
+        "tone": "professional-technical, neutral and data-focused",
+        "dataFormatting": [
+          "$34,360 vol. (volume in USD)",
+          "1.0x, 16.7x (payout multipliers)",
+          "99%, 6% (implied probabilities)",
+          "1w 1d 12h (time remaining formatted as weeks, days, hours)",
+          "BTC > $65,000 (price threshold format)",
+          "Damian Lillard (personal name format)"
+        ],
+        "trustSignals": [
+          "Volume indicators on every market showing liquidity ($17,422 vol., $48,711 vol., etc.)",
+          "Clear odds and probability displays suggest transparent pricing",
+          "Diverse market categories (Crypto, Sports, Economics, Politics) demonstrate range"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gemini-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF8C00",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display size (48-56px), white text on orange background",
+          "bodyStyle": "Regular sans-serif, medium weight, white text, 16-18px",
+          "dataStyle": "Euro currency with decimal precision (€128,494.49), green positive change indicator, percentage gains in smaller text"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, section links (Prices, Perpetuals, Products, Institutions, Resources), Sign In button",
+            "position": "top fixed",
+            "notable": "Clean minimalist header with high contrast against gray background"
+          },
+          {
+            "type": "alert-banner",
+            "description": "Cyan/turquoise banner with regulatory notice about account closures in European Economic Area",
+            "position": "below header",
+            "notable": "High visibility alert with FAQ link for compliance communication"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large heading with subheading and product image showcase on right side",
+            "position": "center-left with phone mockup right",
+            "notable": "Phone mockup shows live trading interface with portfolio value, candlestick chart, and action buttons"
+          },
+          {
+            "type": "payment-methods-section",
+            "description": "Four payment method icons (Bank transfer, Apple Pay, Google Pay, Debit)",
+            "position": "bottom of hero section",
+            "notable": "Clean icon row showing accessible entry points for purchasing crypto"
+          },
+          {
+            "type": "modal-overlay",
+            "description": "Cookie consent dialog with white background, explanation text, and action buttons",
+            "position": "bottom-right corner",
+            "notable": "Standard consent pattern with 'Accept all' primary action and 'Reject non-essential' secondary action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Bold orange hero section dominates viewport, white large text pulls attention to headline, product mockup on right provides visual proof, cookie modal overlays at bottom-right",
+        "innovativeElements": [
+          "Angled phone mockup shows real trading UI with live data",
+          "Regulatory banner integrated as non-intrusive alert vs typical modal",
+          "Two-tier CTA approach (Continue vs Sign In at top)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Gemini's value proposition and get started with crypto trading",
+        "entryPoints": [
+          "Direct URL visit",
+          "External marketing campaigns",
+          "Search engine results"
+        ],
+        "exitPoints": [
+          "Sign In (existing users)",
+          "Create account (new users via bottom CTA)",
+          "Navigation links to Prices, Products, Institutions, Resources",
+          "Accept/Reject cookie consent decisions"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Collects user email for account creation flow"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceeds to next authentication step"
+          },
+          {
+            "element": "Sign in with passkey button",
+            "action": "Alternative authentication method"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to product pages or sections"
+          },
+          {
+            "element": "Accept all / Reject cookies buttons",
+            "action": "Cookie preference management"
+          }
+        ],
+        "informationArchitecture": "Hero messaging → Payment method options → Social proof via product UI → Account creation entry point; Secondary navigation provides escape routes to product details",
+        "frictionPoints": [
+          "Cookie modal blocks bottom portion of page until dismissed",
+          "Multiple CTAs (Sign In top-right, Create Account bottom) may cause decision paralysis",
+          "Regulatory warning banner immediately signals restrictions for EU users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Europe, meet your bridge to the future of money",
+        "subheadline": "A crypto super app for crypto trading, investing, and earning.",
+        "ctas": [
+          {
+            "text": "Sign In",
+            "style": "text-link",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "Create a new account",
+            "style": "primary-button",
+            "placement": "top-right of page"
+          },
+          {
+            "text": "Accept all",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Reject non-essential cookies",
+            "style": "secondary-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Buy crypto in seconds",
+            "context": "Section heading above payment method options",
+            "purpose": "Emphasizes speed/ease of onboarding"
+          },
+          {
+            "text": "As of 6 April 2026, Gemini will close all customer accounts in the European Economic Area. For more information, see our FAQ.",
+            "context": "Cyan alert banner",
+            "purpose": "Regulatory compliance notification with escape hatch"
+          },
+          {
+            "text": "Cookies help us to enhance your experience, tailor ads to your interests, and improve our website.",
+            "context": "Cookie consent modal explanation",
+            "purpose": "Transparent cookie policy disclosure"
+          },
+          {
+            "text": "Don't have a Gemini account?",
+            "context": "Top-right corner",
+            "purpose": "Prompts new user signup"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual elements",
+        "dataFormatting": [
+          "€128,494.49 (portfolio value with 2 decimal precision)",
+          "€68,711.93 (gain amount in green with euro symbol)",
+          "8.78% (percentage gain in smaller text)",
+          "in past 24 hours (time context label)"
+        ],
+        "trustSignals": [
+          "Product mockup showing real trading interface with live data",
+          "Multi-payment method support (Apple Pay, Google Pay, Bank Transfer, Debit)",
+          "Regulatory compliance messaging in prominent banner"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gemini-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with modal overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF8C00",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, display size, white text",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray text on white modal",
+          "dataStyle": "Currency with euro symbol and decimal precision"
+        },
+        "components": [
+          {
+            "type": "background-layer",
+            "description": "Full landing page visible beneath modal",
+            "position": "back",
+            "notable": "Slight blur/opacity reduction implied to focus attention on modal"
+          },
+          {
+            "type": "cookie-modal",
+            "description": "White rounded card with heading, explanation text, and two action buttons",
+            "position": "bottom-right corner, floating",
+            "notable": "High contrast white modal stands out against orange background; underlined link for 'Learn more and manage'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dialog takes precedence over background content; heading at top, explanatory text below, action buttons anchored at bottom",
+        "innovativeElements": [
+          "Modal positioned at corner rather than center-screen for less intrusive UX",
+          "Underlined link embedded in microcopy allows immediate access to detailed settings"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Make cookie preference decision before proceeding with platform exploration",
+        "entryPoints": [
+          "Page load triggers modal display"
+        ],
+        "exitPoints": [
+          "Accept all (default choice, business-friendly)",
+          "Reject non-essential cookies (privacy-conscious path)",
+          "Click 'Learn more and manage' link (detailed settings)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept all button",
+            "action": "Closes modal, enables all cookie tracking, proceeds to main experience"
+          },
+          {
+            "element": "Reject non-essential cookies button",
+            "action": "Closes modal, limits tracking to essential cookies only"
+          },
+          {
+            "element": "Learn more and manage link",
+            "action": "Routes to detailed cookie preference management page"
+          }
+        ],
+        "informationArchitecture": "Simple binary choice with escape hatch to granular controls; transparent explanation of data usage purpose",
+        "frictionPoints": [
+          "Modal blocks bottom portion of page content until dismissed",
+          "Choice between accept/reject may feel coercive (common dark pattern concern)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Choose your cookies",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept all",
+            "style": "primary-button",
+            "placement": "modal bottom, full-width"
+          },
+          {
+            "text": "Reject non-essential cookies",
+            "style": "secondary-button",
+            "placement": "modal bottom, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Cookies help us to enhance your experience, tailor ads to your interests, and improve our website. Learn more and manage",
+            "context": "Modal body text with embedded link",
+            "purpose": "Explain cookie purpose and provide access to detailed preferences"
+          }
+        ],
+        "tone": "professional-friendly with transparent compliance language",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent explanation of cookie usage purposes",
+          "Opt-out option provided (not just accept-all)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gemini-home-4-sign-in.png",
+      "label": "Sign in",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width centered form",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large heading size (36-42px), black text, centered",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray text for labels and helper text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Small Gemini logo in top-left corner",
+            "position": "top-left",
+            "notable": "Minimalist icon only, no wordmark visible on this page"
+          },
+          {
+            "type": "account-creation-cta",
+            "description": "Right-aligned text link and button combination",
+            "position": "top-right",
+            "notable": "Secondary action clearly separated from sign-in flow"
+          },
+          {
+            "type": "form-container",
+            "description": "Centered white form with email input and two authentication buttons",
+            "position": "center of screen",
+            "notable": "Large vertical spacing between buttons suggests sequential workflow"
+          },
+          {
+            "type": "email-input",
+            "description": "Text input field with placeholder 'Email address'",
+            "position": "form center, top",
+            "notable": "Large tap target with generous padding"
+          },
+          {
+            "type": "continue-button",
+            "description": "Full-width black button with high contrast",
+            "position": "below email input",
+            "notable": "Primary action with maximum visual weight"
+          },
+          {
+            "type": "or-divider",
+            "description": "Lightweight text divider",
+            "position": "between primary and secondary auth",
+            "notable": "Clearly signals alternative authentication method"
+          },
+          {
+            "type": "passkey-button",
+            "description": "Full-width gray button with passkey icon",
+            "position": "below divider",
+            "notable": "Modern biometric/passwordless authentication option"
+          },
+          {
+            "type": "recaptcha",
+            "description": "Google reCAPTCHA widget visible in bottom-right",
+            "position": "bottom-right corner",
+            "notable": "Standard bot protection integrated subtly"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered heading dominates; email input and Continue button form primary action path; divider creates clear secondary path to passkey authentication",
+        "innovativeElements": [
+          "Passwordless/passkey authentication offered as primary alternative to email",
+          "Minimal visual design with maximum focus on authentication inputs",
+          "Inverted CTA approach: 'Don't have account?' link at top rather than bottom (assumes existing user base)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Authenticate and access Gemini trading platform",
+        "entryPoints": [
+          "Sign In link from landing page",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Continue with email (proceeds to password/2FA)",
+          "Sign in with passkey (biometric/device authentication)",
+          "Create new account link (routes to signup flow)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email address input",
+            "action": "Accepts email input for sign-in attempt"
+          },
+          {
+            "element": "Continue button",
+            "action": "Submits email and proceeds to next auth step"
+          },
+          {
+            "element": "Sign in with passkey button",
+            "action": "Initiates passwordless authentication flow"
+          },
+          {
+            "element": "Create a new account link",
+            "action": "Routes to account creation form"
+          }
+        ],
+        "informationArchitecture": "Linear single-step form optimized for email collection; dual authentication paths (traditional + passwordless); clear escape route to account creation",
+        "frictionPoints": [
+          "Email-first approach assumes user remembers their registered email",
+          "No email recovery/lookup option visible on this page",
+          "Two separate buttons require additional decision-making"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sign in",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "center form, below email input"
+          },
+          {
+            "text": "Sign in with passkey",
+            "style": "secondary-button",
+            "placement": "center form, below divider"
+          },
+          {
+            "text": "Create a new account",
+            "style": "text-link",
+            "placement": "top-right corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email address",
+            "context": "Input field placeholder",
+            "purpose": "Labels the email input field"
+          },
+          {
+            "text": "OR",
+            "context": "Text divider between buttons",
+            "purpose": "Separates two authentication methods clearly"
+          },
+          {
+            "text": "Don't have a Gemini account?",
+            "context": "Text before 'Create a new account' link",
+            "purpose": "Acknowledges new users and provides signup path"
+          }
+        ],
+        "tone": "professional-technical, minimal and direct",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Passkey/biometric authentication option signals modern security practices",
+          "Google reCAPTCHA badge indicates bot protection"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

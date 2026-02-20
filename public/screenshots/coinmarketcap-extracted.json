@@ -1,0 +1,1589 @@
+{
+  "slug": "coinmarketcap",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T11:21:53.969Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 11,
+  "screens": [
+    {
+      "image": "/screenshots/coinmarketcap-home-45-trending-scrolled-3.png",
+      "label": "Trending — scrolled 3",
+      "flowType": "Home",
+      "step": 45,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052FF",
+          "#FF8C00"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 16px, dark gray",
+          "bodyStyle": "regular sans-serif, 12-14px, medium gray",
+          "dataStyle": "bold sans-serif, 14-16px, with percentage indicators and colored bars"
+        },
+        "components": [
+          {
+            "type": "prediction-card",
+            "description": "4-column grid showing trending prediction markets with title, options, vote percentages, volume data",
+            "position": "center-main",
+            "notable": "Blue progress bars showing probability consensus, time-to-resolution indicators (2d, 7d, 13d, 231d)"
+          },
+          {
+            "type": "volume-footer",
+            "description": "Total Volume and 24h Volume metrics",
+            "position": "bottom of each card",
+            "notable": "Small copy icon for sharing/exporting data"
+          },
+          {
+            "type": "privacy-modal",
+            "description": "Dark overlay with cookie consent messaging",
+            "position": "bottom-full-width",
+            "notable": "Two-button CTA pattern with 'Accept' and 'Reject' options"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card titles and percentages dominate, followed by prediction options, with volume data de-emphasized at bottom",
+        "innovativeElements": [
+          "Visual progress bars showing real-time consensus probability",
+          "Time-remaining badges (2d, 7d, 13d, 231d) for market resolution",
+          "Side-by-side comparison of volume metrics (Total Vol vs 24h Vol)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore trending crypto prediction markets and see community forecasts",
+        "entryPoints": [
+          "Navigation to Trending section",
+          "Home page scroll down"
+        ],
+        "exitPoints": [
+          "Click on individual prediction card to view details",
+          "Navigate to different tab/section",
+          "Cookie consent acceptance/rejection"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Prediction card",
+            "action": "Click to expand or view full market details"
+          },
+          {
+            "element": "Copy icon (volume footer)",
+            "action": "Copy volume data to clipboard"
+          },
+          {
+            "element": "Accept/Reject buttons (privacy modal)",
+            "action": "Manage cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Trending markets organized as equal-weight cards, each showing market title, prediction options with vote percentages, volume metrics, and time remaining",
+        "frictionPoints": [
+          "Privacy modal overlay blocks primary content interaction",
+          "Multiple statistics per card may overwhelm first-time users",
+          "No clear 'learn more' indicator for understanding how predictions work"
+        ],
+        "progressIndicators": [
+          "Time remaining until resolution (e.g., '2d', '231d')",
+          "Percentage probability shown with blue progress bars",
+          "Status indicator ('Ended' for resolved markets)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "bottom-right of privacy modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "bottom-right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "What price will Bitcoin hit February 9-15?",
+            "context": "Prediction market title",
+            "purpose": "Clearly communicate the market question"
+          },
+          {
+            "text": "Total Vol | 24h Vol",
+            "context": "Bottom of each card",
+            "purpose": "Label volume metrics"
+          },
+          {
+            "text": "↑ 72,000 | 37.5%",
+            "context": "Prediction option with vote share",
+            "purpose": "Show threshold and community confidence"
+          }
+        ],
+        "tone": "professional-technical, data-driven, neutral",
+        "dataFormatting": [
+          "$685.72K (Total Volume)",
+          "$624.51K (24h Volume)",
+          "37.5%, 9.2%, 2.3% (vote percentages)",
+          "2d, 7d, 13d, 231d (time remaining)"
+        ],
+        "trustSignals": [
+          "Volume metrics displayed transparently",
+          "Community voting percentages showing consensus",
+          "Time remaining for market resolution provides accountability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-52-upcoming-sales-scrolled-2.png",
+      "label": "Upcoming Sales — scrolled 2",
+      "flowType": "Home",
+      "step": 52,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#FF8C00",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 14-16px, dark gray",
+          "bodyStyle": "regular sans-serif, 12px, medium gray",
+          "dataStyle": "bold sans-serif, 13px, dark gray"
+        },
+        "components": [
+          {
+            "type": "nft-collection-card",
+            "description": "5-column grid showing NFT collections with preview image, name, blockchain indicator, start date, and mint price",
+            "position": "center-main",
+            "notable": "Colored badges (Ordinals, Ethereum) distinguish blockchain and standard type"
+          },
+          {
+            "type": "blockchain-badge",
+            "description": "Small icon with blockchain name",
+            "position": "top-left of collection image",
+            "notable": "Orange for Ordinals, purple for Ethereum"
+          },
+          {
+            "type": "privacy-modal",
+            "description": "Dark overlay with cookie and data processing consent",
+            "position": "bottom-full-width",
+            "notable": "Extensive text explaining data usage and partner list"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large preview images dominate, followed by collection names, blockchain type, and metadata in consistent order",
+        "innovativeElements": [
+          "Color-coded blockchain badges for quick visual identification",
+          "Consistent card layout for NFT and Ordinals collections",
+          "Grid displays both upcoming and active sales in unified view"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover upcoming NFT and Ordinals sales across different blockchains",
+        "entryPoints": [
+          "Navigation to Upcoming Sales section",
+          "Home page scroll down"
+        ],
+        "exitPoints": [
+          "Click on individual NFT card for collection details",
+          "Navigate to different section/tab",
+          "Accept/Reject cookies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "NFT collection card",
+            "action": "Click to view full collection details and mint"
+          },
+          {
+            "element": "Privacy modal buttons",
+            "action": "Accept or reject data processing consent"
+          }
+        ],
+        "informationArchitecture": "NFT collections displayed as uniform cards in 5-column grid, organized by upcoming start date, each showing blockchain, title, price, and start date",
+        "frictionPoints": [
+          "Privacy modal blocks interaction with content",
+          "TBA (To Be Announced) values for start date and mint price reduce ability to plan purchases",
+          "No filtering or sorting visible for large NFT catalog"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "bottom-right of privacy modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "bottom-right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Starts",
+            "context": "Card metadata label",
+            "purpose": "Indicate mint start date"
+          },
+          {
+            "text": "Mint Price",
+            "context": "Card metadata label",
+            "purpose": "Show collection mint price"
+          },
+          {
+            "text": "TBA",
+            "context": "Value for Starts and Mint Price",
+            "purpose": "Communicate unannounced details"
+          },
+          {
+            "text": "Free",
+            "context": "Mint Price value",
+            "purpose": "Indicate zero-cost minting"
+          }
+        ],
+        "tone": "friendly-casual, discovery-focused",
+        "dataFormatting": [
+          "TBA (placeholder for unreleased data)",
+          "Free (zero cost)",
+          "5 USD, 110 USD (specific prices)",
+          "0.0001 BTC (cryptocurrency denominations)"
+        ],
+        "trustSignals": [
+          "Blockchain identification (Ordinals, Ethereum labels)",
+          "Creator attribution on each collection"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-53-upcoming-sales-scrolled-3.png",
+      "label": "Upcoming Sales — scrolled 3",
+      "flowType": "Home",
+      "step": 53,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#FF8C00",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 14-16px, dark gray",
+          "bodyStyle": "regular sans-serif, 12px, medium gray",
+          "dataStyle": "bold sans-serif, 13px, dark gray"
+        },
+        "components": [
+          {
+            "type": "nft-collection-card",
+            "description": "5-column grid showing NFT collections with large preview image, collection name, blockchain indicator, start date, mint price",
+            "position": "center-main",
+            "notable": "Preview images are highly visual with distinct art styles; blockchain badges provide quick identification"
+          },
+          {
+            "type": "blockchain-badge",
+            "description": "Icon with blockchain name (Ethereum or Ordinals)",
+            "position": "top-left of collection preview",
+            "notable": "Orange for Ordinals (Bitcoin), purple icon for Ethereum"
+          },
+          {
+            "type": "privacy-modal",
+            "description": "Dark overlay with cookie consent and data usage disclosure",
+            "position": "bottom-full-width",
+            "notable": "Large text block with multi-column layout and extensive explanation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large colorful preview images are primary focal point, followed by collection titles and metadata in consistent vertical order",
+        "innovativeElements": [
+          "Diverse visual styles in NFT previews create visual interest",
+          "Blockchain identification through consistent color coding",
+          "Uniform card structure allows easy comparison across collections"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse more upcoming NFT sales and discover new collections to potentially mint",
+        "entryPoints": [
+          "Scrolling down in Upcoming Sales section",
+          "Continued browsing from previous card grid"
+        ],
+        "exitPoints": [
+          "Click collection card to view mint details",
+          "Navigate away from section",
+          "Interact with privacy modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Collection card",
+            "action": "Navigate to collection page"
+          },
+          {
+            "element": "Blockchain badge",
+            "action": "Possibly filter by blockchain (implied)"
+          },
+          {
+            "element": "Privacy modal buttons",
+            "action": "Manage cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Continued grid layout from previous screen; collections organized by upcoming status with consistent metadata display",
+        "frictionPoints": [
+          "Privacy modal overlay blocks immediate interaction",
+          "Many TBA values limit transaction planning",
+          "Prices range widely (Free to 5000 USD) with different denominations (USD, BTC) making comparison difficult"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "bottom-right of privacy modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "bottom-right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Starts",
+            "context": "Metadata label",
+            "purpose": "Indicate when minting begins"
+          },
+          {
+            "text": "Mint Price",
+            "context": "Metadata label",
+            "purpose": "Show cost to mint"
+          },
+          {
+            "text": "TBA",
+            "context": "Value placeholder",
+            "purpose": "Indicate unreleased details"
+          },
+          {
+            "text": "Free",
+            "context": "Mint Price value",
+            "purpose": "Indicate zero cost"
+          }
+        ],
+        "tone": "friendly-casual, discovery-oriented",
+        "dataFormatting": [
+          "TBA (to be announced)",
+          "Free (zero cost)",
+          "5,000 USD",
+          "0.0001 BTC",
+          "110 USD"
+        ],
+        "trustSignals": [
+          "Blockchain labels (Ethereum, Ordinals)",
+          "Creator attribution"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-27-recently-added-scrolled-1.png",
+      "label": "Recently Added — scrolled 1",
+      "flowType": "Home",
+      "step": 27,
+      "design": {
+        "layout": "full-width table with horizontal scroll capability",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, uppercase labels for column headers",
+          "bodyStyle": "Regular sans-serif for token names and data",
+          "dataStyle": "Monospace for prices and numbers; green/red color-coded percentages with directional indicators"
+        },
+        "components": [
+          {
+            "type": "Data Table",
+            "description": "13-column sortable table displaying recently added cryptocurrencies",
+            "position": "Full width center",
+            "notable": "Combines price, market data, blockchain info, and time-since-listing in compact tabular format"
+          },
+          {
+            "type": "Star Icon",
+            "description": "Favorite/watchlist toggle per row",
+            "position": "Left-most column before rank",
+            "notable": "Persistent action for each cryptocurrency"
+          },
+          {
+            "type": "Token Icon Badge",
+            "description": "Colored circular icon with token symbol",
+            "position": "Name column",
+            "notable": "Visual differentiation for each token"
+          },
+          {
+            "type": "Privacy Modal",
+            "description": "Full-width cookie/privacy consent overlay",
+            "position": "Bottom of screen",
+            "notable": "Dark navy background, white text, dual CTA buttons"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Guided by column headers with emphasis on price and percentage changes through color coding; rank number provides quick scanning",
+        "innovativeElements": [
+          "Dual percentage display (1h and 24h) for quick trend assessment",
+          "Blockchain and time-since-listing columns provide context for new tokens",
+          "Color-coded directional arrows (up/down) combined with percentage colors"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore recently listed cryptocurrencies and identify trading opportunities based on price, volume, and market metrics",
+        "entryPoints": [
+          "Navigation to 'Recently Added' section from main menu",
+          "Link from trending or watchlist view"
+        ],
+        "exitPoints": [
+          "Click token name to view detail page",
+          "Click star to add to watchlist",
+          "Navigate to different data sections via table headers",
+          "Close or dismiss privacy modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Column header",
+            "action": "Sort table by that column (ascending/descending)"
+          },
+          {
+            "element": "Star icon",
+            "action": "Add/remove token from watchlist"
+          },
+          {
+            "element": "Token name",
+            "action": "Navigate to token detail page"
+          },
+          {
+            "element": "Privacy buttons",
+            "action": "Accept or reject cookie tracking"
+          }
+        ],
+        "informationArchitecture": "Flat grid of cryptocurrency data sorted by rank; columns group related metrics (price, 1h/24h changes, market cap, volume, blockchain)",
+        "frictionPoints": [
+          "Large table may require horizontal scrolling on smaller screens",
+          "Privacy modal blocks interaction with main content",
+          "No visible search/filter interface in screenshot"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "Bottom right of privacy modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "Bottom right of privacy modal"
+          },
+          {
+            "text": "Privacy Preferences",
+            "style": "text-link",
+            "placement": "Bottom right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We Care About Your Privacy",
+            "context": "Privacy modal headline",
+            "purpose": "Sets empathetic tone for data usage disclosure"
+          },
+          {
+            "text": "We and our 966 partners store and access personal data...",
+            "context": "Privacy modal body",
+            "purpose": "Transparency about data practices and partners"
+          },
+          {
+            "text": "We and our partners process data to provide:",
+            "context": "Privacy modal second section",
+            "purpose": "Explains specific use cases (geolocation, device ID, advertising)"
+          }
+        ],
+        "tone": "professional-technical with empathetic privacy disclosure",
+        "dataFormatting": [
+          "$0.01866 (price with 5 decimals)",
+          "↓0.23% (red down arrow with percentage)",
+          "↑2.11% (green up arrow with percentage)",
+          "$18,786,079 (fully diluted market cap)",
+          "$40,440 (24h volume)",
+          "3 days (time since listing)"
+        ],
+        "trustSignals": [
+          "Blockchain attribution (Hyperliquid, Solana, Own Blockchain, BNB, Ethereum, Base)",
+          "Specific market cap and volume figures",
+          "Ranking system (#16-28 visible)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-43-trending-scrolled-1.png",
+      "label": "Trending — scrolled 1",
+      "flowType": "Home",
+      "step": 43,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#1E1E2E"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium weight for card titles",
+          "bodyStyle": "Regular sans-serif for item names and labels",
+          "dataStyle": "Blue percentage indicators with horizontal bar charts; age labels in smaller text (3d, 7d, 13d, 105d, etc.)"
+        },
+        "components": [
+          {
+            "type": "Prediction Card",
+            "description": "4-column grid of prediction/betting cards with topic, predictions, and metadata",
+            "position": "Full width center, scrollable horizontally",
+            "notable": "Each card shows 2-3 top prediction options with percentage bars and absolute numbers"
+          },
+          {
+            "type": "Flag/Icon Badge",
+            "description": "Country flags or entity icons for each prediction item",
+            "position": "Left of item name within each card",
+            "notable": "Visual quick-reference for prediction subjects"
+          },
+          {
+            "type": "Percentage Bar Chart",
+            "description": "Horizontal blue bars representing prediction confidence",
+            "position": "Right of each prediction item",
+            "notable": "Length indicates market consensus percentage"
+          },
+          {
+            "type": "Age Label",
+            "description": "Time elapsed since prediction was created",
+            "position": "Top right of each card",
+            "notable": "Indicates recency and relevance of prediction data"
+          },
+          {
+            "type": "Volume Footer",
+            "description": "Total Volume and 24h Volume metrics",
+            "position": "Bottom of each card",
+            "notable": "Shows prediction market activity"
+          },
+          {
+            "type": "Privacy Modal",
+            "description": "Dark overlay with cookie/privacy information",
+            "position": "Bottom of screen",
+            "notable": "Matching design to first screenshot"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card titles and age labels draw eye first; percentage bars create visual weight; volume footer provides secondary context",
+        "innovativeElements": [
+          "Prediction market integration with real-time percentage consensus",
+          "Age indicators show freshness of prediction data",
+          "Mixing sports, politics, tech, and entertainment predictions in single view",
+          "Volume metrics indicate market activity for each prediction"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse trending prediction markets and see crowd consensus on various outcomes",
+        "entryPoints": [
+          "Navigation to 'Trending' section from main menu",
+          "Link from home page"
+        ],
+        "exitPoints": [
+          "Click prediction card to view full market details",
+          "Click individual prediction to drill into market",
+          "Scroll to see more predictions",
+          "Dismiss privacy modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Prediction card",
+            "action": "Navigate to full prediction market details"
+          },
+          {
+            "element": "Individual prediction item",
+            "action": "Place bet or view order book"
+          },
+          {
+            "element": "Privacy modal buttons",
+            "action": "Consent/reject data usage"
+          }
+        ],
+        "informationArchitecture": "Grid of prediction markets organized by topic/category; each card shows top contenders with their market odds; footer shows aggregate volume",
+        "frictionPoints": [
+          "Privacy modal blocks main content interaction",
+          "Horizontal scroll required to see all cards",
+          "No visible filtering or search mechanism"
+        ],
+        "progressIndicators": [
+          "Age labels (3d, 7d, 13d, 105d) indicate prediction timeline"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "Bottom right of privacy modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "Bottom right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We Care About Your Privacy",
+            "context": "Privacy modal header",
+            "purpose": "Empathetic framing of data collection"
+          },
+          {
+            "text": "List of Partners (vendors)",
+            "context": "Privacy modal",
+            "purpose": "Transparency about data sharing"
+          }
+        ],
+        "tone": "professional-technical with prediction market language",
+        "dataFormatting": [
+          "15.5% (prediction confidence)",
+          "↑75,000 (directional volume change)",
+          "50.5% (total consensus percentage)",
+          "3d, 7d, 13d, 104d (age of prediction)",
+          "Total Vol $146.61M / 24h Vol $3.08M"
+        ],
+        "trustSignals": [
+          "Specific percentage predictions from crowd",
+          "Volume metrics showing market liquidity",
+          "Named entities (countries, teams, companies) for each prediction"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-44-trending-scrolled-2.png",
+      "label": "Trending — scrolled 2",
+      "flowType": "Home",
+      "step": 44,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FA",
+          "#1E1E2E"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium weight for prediction titles",
+          "bodyStyle": "Regular sans-serif for item names",
+          "dataStyle": "Blue percentage indicators with horizontal bar charts; age labels in muted text"
+        },
+        "components": [
+          {
+            "type": "Prediction Card",
+            "description": "4-column grid of sports, government, and tech prediction cards",
+            "position": "Full width, horizontally scrollable",
+            "notable": "Consistent card design showing prediction title, top options with percentages, and volume metrics"
+          },
+          {
+            "type": "Icon Avatar",
+            "description": "Team logos, country flags, or profile photos",
+            "position": "Left of each prediction item",
+            "notable": "Visual identifier for entities being predicted on"
+          },
+          {
+            "type": "Volume Indicator",
+            "description": "Total and 24h volume in card footer",
+            "position": "Bottom of each card",
+            "notable": "Metric showing market liquidity and interest"
+          },
+          {
+            "type": "Privacy Modal",
+            "description": "Persistent consent overlay",
+            "position": "Bottom of screen",
+            "notable": "Dark background with structured text sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Card titles draw attention; percentage bars and logos create visual interest; volume footer provides market context",
+        "innovativeElements": [
+          "Cross-category prediction aggregation (sports, politics, entertainment, business)",
+          "Real-time percentage consensus from betting markets",
+          "Volume metrics show crowd interest level"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore various trending predictions across categories and assess crowd consensus",
+        "entryPoints": [
+          "Continuation from previous trending view (scroll down)",
+          "Navigation to Trending section"
+        ],
+        "exitPoints": [
+          "Click prediction card to view details",
+          "Click individual prediction to place bet",
+          "Continue scrolling for more predictions",
+          "Dismiss privacy modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Prediction card",
+            "action": "Open full market view"
+          },
+          {
+            "element": "Individual prediction row",
+            "action": "Drill into market details or place order"
+          },
+          {
+            "element": "Privacy modal CTA",
+            "action": "Manage consent preferences"
+          }
+        ],
+        "informationArchitecture": "Continuation of prediction market grid; categories include sports (La Liga, Premier League, NHL, NBA), politics (Hungary Prime Minister, Iran), business (Olympics, Government Shutdown, AI Models)",
+        "frictionPoints": [
+          "Privacy modal remains on screen blocking content",
+          "Horizontal scrolling required for all cards",
+          "No visible search or filtering options"
+        ],
+        "progressIndicators": [
+          "Age labels (56d, 7d, 27d, 13d, 115d, 20d) indicate prediction timeline"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "Bottom right of modal"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "Bottom right of modal"
+          },
+          {
+            "text": "Privacy Preferences",
+            "style": "text-link",
+            "placement": "Bottom right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We Care About Your Privacy",
+            "context": "Modal header",
+            "purpose": "Trust-building opening"
+          },
+          {
+            "text": "We and our 966 partners store and access personal data...",
+            "context": "Modal body",
+            "purpose": "Transparency about data collection practices"
+          }
+        ],
+        "tone": "professional-technical with sports/betting vernacular",
+        "dataFormatting": [
+          "60.5% (prediction confidence)",
+          "56.5% (top choice percentage)",
+          "56d, 7d, 27d, 13d (prediction age)",
+          "Total Vol $87.33M / 24h Vol $1.23M",
+          "Named entities: Barcelona, Arsenal, Peter Magyar, Norway, NVIDIA, Bad Bunny"
+        ],
+        "trustSignals": [
+          "Specific crowd consensus percentages",
+          "Volume metrics indicating active markets",
+          "Named sports teams, politicians, companies",
+          "Age of prediction shows data freshness"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with horizontal card grid above data table",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1652F0",
+          "#FFFFFF",
+          "#F3F5F7"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14-16px for section headers",
+          "bodyStyle": "Regular sans-serif, 12-14px for table data",
+          "dataStyle": "Monospace-like treatment with green/red colored percentage changes; large bold numbers for prices and market caps"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, main nav (Cryptocurrencies, Dashboards, DexScan, Exchanges), Portfolio/Watchlist shortcuts, search, and Log In button",
+            "position": "top",
+            "notable": "Clean separation of primary navigation and user actions"
+          },
+          {
+            "type": "KPI Cards",
+            "description": "Four metric cards showing Market Cap, CMC20, Fear & Greed, Altcoin Season with inline sparkline charts",
+            "position": "upper left",
+            "notable": "Combines text KPIs with micro visualizations; color-coded sentiment indicators"
+          },
+          {
+            "type": "Alert/Topic Pills",
+            "description": "Horizontal scrollable row of tagged topics (Will BTC close above $70k, Trump Media files BTC ETH staking ETFs, etc.) with dismiss buttons",
+            "position": "center",
+            "notable": "Timely news hooks with AI alert and discussion prompts"
+          },
+          {
+            "type": "Data Table",
+            "description": "Sortable table with 8+ columns showing crypto rankings, prices, % changes, market cap, volume, supply, and 7-day charts",
+            "position": "lower half",
+            "notable": "Right-aligned sparkline charts provide at-a-glance trend visualization for every asset"
+          },
+          {
+            "type": "Modal Overlay",
+            "description": "'Chat With CMC AI' promotional modal with call-to-action",
+            "position": "center-overlay",
+            "notable": "Non-intrusive design with X dismiss and Ask CMC AI alternative button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top KPIs establish market context, alert row highlights news momentum, table dominates with rank-ordered crypto data; charts on right provide quick pattern recognition",
+        "innovativeElements": [
+          "Inline sparkline charts in table rows for instant price trend comparison",
+          "Fear & Greed gauge with radial progress indicator",
+          "Altcoin Season slider widget showing Bitcoin vs Altcoin dominance"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / data-browse",
+        "userIntent": "Monitor cryptocurrency market rankings, prices, and trends at a glance",
+        "entryPoints": [
+          "Direct visit to CoinMarketCap home",
+          "Navigation from main menu 'Cryptocurrencies'"
+        ],
+        "exitPoints": [
+          "Click on any crypto name/row to view detail page",
+          "Click 'Buy' buttons to exchange integrations",
+          "Navigate to Portfolio, Watchlist, Dashboards, or DexScan",
+          "Follow alert pills to news/discussion pages",
+          "Search for specific asset"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Table Headers",
+            "action": "Sort by column (Price, Market Cap, Volume, % changes)"
+          },
+          {
+            "element": "Network Filter Pills",
+            "action": "Filter results by blockchain (All Networks, BSC, Solana, Base, Ethereum)"
+          },
+          {
+            "element": "Buy Buttons",
+            "action": "Route to exchange trading interface"
+          },
+          {
+            "element": "Star Icons (left of rows)",
+            "action": "Add/remove asset from Watchlist"
+          },
+          {
+            "element": "Alert Pills",
+            "action": "Navigate to discussion or alert management"
+          },
+          {
+            "element": "Filters/Columns Dropdown",
+            "action": "Customize visible columns and apply advanced filters"
+          }
+        ],
+        "informationArchitecture": "Market overview (KPIs) → News/trending topics → Ranked table of all cryptocurrencies with detailed metrics; secondary nav for filter/sort options",
+        "frictionPoints": [
+          "Modal overlay (Chat With CMC AI) interrupts table viewing but is easily dismissable",
+          "Large number of columns may require horizontal scrolling on smaller screens",
+          "Multiple filter options could be overwhelming for beginners"
+        ],
+        "progressIndicators": [
+          "Rank position (#) in leftmost column",
+          "Alert badge ('Top') on highlighted discussions"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Top / Trending / Watchlist / Prediction Markets / Most Visited / New",
+        "ctas": [
+          {
+            "text": "Log In",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Buy",
+            "style": "secondary-button",
+            "placement": "inline with each crypto row"
+          },
+          {
+            "text": "Add AI alert",
+            "style": "text-link with icon",
+            "placement": "alert pills row"
+          },
+          {
+            "text": "Ask CMC AI",
+            "style": "secondary-button",
+            "placement": "bottom of Chat modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Top",
+            "context": "Badge on alert pill",
+            "purpose": "Indicates trending/featured topic"
+          },
+          {
+            "text": "New",
+            "context": "Badge on CMC AI modal",
+            "purpose": "Highlights new feature"
+          },
+          {
+            "text": "Overbought",
+            "context": "RSI indicator label",
+            "purpose": "Market condition indicator"
+          },
+          {
+            "text": "Extreme fear",
+            "context": "Fear & Greed gauge",
+            "purpose": "Sentiment label"
+          }
+        ],
+        "tone": "professional-technical with friendly approachability",
+        "dataFormatting": [
+          "$2.4T (Market Cap, large format)",
+          "5.05% (green upward, percentage change)",
+          "$70,398.83 (price with 2 decimals)",
+          "1h % / 24h % / 7d % (column headers with directional arrows)",
+          "$1,407,214,781,615 (market cap in full notation)",
+          "19.98M BTC (circulating supply with abbreviation)"
+        ],
+        "trustSignals": [
+          "Market Cap: $2.4T (establishes scale)",
+          "CMC20 Index (proprietary index builds credibility)",
+          "Fear & Greed Index (recognized market sentiment tool)",
+          "Exchanges: 923 (liquidity/market coverage)",
+          "Dominance: BTC 58.5%, ETH 10.5% (market structure transparency)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width overlay on existing page content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1D2438",
+          "#FFFFFF",
+          "#1652F0"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, 18-20px",
+          "bodyStyle": "Regular white sans-serif, 13-14px with good line spacing",
+          "dataStyle": "Standard text, no data formatting"
+        },
+        "components": [
+          {
+            "type": "Privacy Banner",
+            "description": "Full-width dark overlay covering bottom 40% of page with privacy policy details and consent options",
+            "position": "bottom overlay",
+            "notable": "Three-column layout separating heading, data processing details, and action buttons"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Two prominent buttons: 'Accept Cookies & Continue' (primary) and 'Reject Additional Cookies' (secondary), plus tertiary 'Privacy Preferences' link",
+            "position": "right column of banner",
+            "notable": "Clear hierarchy with primary action emphasized in light background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading draws attention, three-column text layout provides structure, CTA buttons on right create natural eye progression",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal / privacy consent",
+        "userIntent": "Understand and consent to data processing practices before continuing",
+        "entryPoints": [
+          "Automatic display on page load (GDPR/CCPA requirement)"
+        ],
+        "exitPoints": [
+          "Accept Cookies & Continue (proceed with all tracking)",
+          "Reject Additional Cookies (proceed with minimal tracking)",
+          "Privacy Preferences (customize consent settings)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept Cookies & Continue",
+            "action": "Confirm all tracking and dismiss banner"
+          },
+          {
+            "element": "Reject Additional Cookies",
+            "action": "Decline non-essential tracking and dismiss"
+          },
+          {
+            "element": "Privacy Preferences",
+            "action": "Open detailed cookie management interface"
+          }
+        ],
+        "informationArchitecture": "Privacy disclosure → data usage explanation → consent buttons; three-column layout balances legal compliance with UX",
+        "frictionPoints": [
+          "Large text block may deter reading on mobile",
+          "Modal covers functional content, blocking interaction until resolved"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We Care About Your Privacy",
+        "subheadline": "We and our partners process data to provide:",
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "right column, top"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "right column, below primary"
+          },
+          {
+            "text": "Privacy Preferences",
+            "style": "text-link",
+            "placement": "bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We and our 966 partners store and access personal data...",
+            "context": "Left column explanatory text",
+            "purpose": "Disclose tracking scope and partner count"
+          },
+          {
+            "text": "Use precise geolocation data. Actively scan device characteristics for identification.",
+            "context": "Center column bullet points",
+            "purpose": "List specific data processing activities"
+          },
+          {
+            "text": "Personalised advertising and content, advertising and content measurement, audience research and services development.",
+            "context": "Center column use cases",
+            "purpose": "Explain data utilization"
+          },
+          {
+            "text": "List of Partners (vendors)",
+            "context": "Hyperlink at bottom of center column",
+            "purpose": "Direct to partner transparency information"
+          }
+        ],
+        "tone": "legal-compliant but conversational",
+        "dataFormatting": [
+          "966 partners (quantifies scope)"
+        ],
+        "trustSignals": [
+          "Reference to Privacy Policy (legal backing)",
+          "Detailed listing of data uses (transparency)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-5-landing-page-scrolled-3.png",
+      "label": "Landing page — scrolled 3",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width data table with privacy banner overlay",
+        "colorScheme": "light with dark overlay footer",
+        "primaryColors": [
+          "#1D2438",
+          "#FFFFFF",
+          "#F3F5F7"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 18-20px (privacy heading)",
+          "bodyStyle": "Regular sans-serif, 12-13px for table rows; 12-14px for privacy text",
+          "dataStyle": "Monospace-aligned numbers with color-coded percentage changes (green up, red down)"
+        },
+        "components": [
+          {
+            "type": "Continuation Data Table",
+            "description": "Sorted cryptocurrency rankings (rows 38-49 visible) with Name, Price, percentage changes, Market Cap, Volume, Supply, and 7-day charts",
+            "position": "upper portion",
+            "notable": "Continuation of full table with same column structure; rows are consistently formatted with icon + name + ticker + metrics"
+          },
+          {
+            "type": "Privacy Banner",
+            "description": "Full-width dark footer overlay with three-column privacy disclosure",
+            "position": "bottom overlay (40% of screen height)",
+            "notable": "Divides information into left policy explanation, center data processing details, and right action buttons"
+          }
+        ],
+        "spacing": "compact in table, comfortable in banner",
+        "visualHierarchy": "Table rows recede in importance; privacy banner dominates with dark background and light text for contrast; right-column buttons guide final action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse with modal overlay",
+        "userIntent": "Browse extended cryptocurrency rankings while managing privacy consent",
+        "entryPoints": [
+          "Scroll down from homepage",
+          "Automatic privacy banner display on load"
+        ],
+        "exitPoints": [
+          "Accept Cookies & Continue (dismiss banner, continue browsing)",
+          "Reject Additional Cookies (dismiss with limited tracking)",
+          "Privacy Preferences (detailed consent settings)",
+          "Click individual crypto rows to view details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Table rows",
+            "action": "Click to navigate to crypto detail page"
+          },
+          {
+            "element": "Star icons in rows",
+            "action": "Add/remove from watchlist"
+          },
+          {
+            "element": "Privacy banner buttons",
+            "action": "Consent/reject tracking and dismiss overlay"
+          }
+        ],
+        "informationArchitecture": "Scrollable market data table (sequential asset list) with modal privacy control overlaid",
+        "frictionPoints": [
+          "Privacy banner obscures ~40% of table, blocking continued scrolling",
+          "Modal requires immediate action before data browsing can resume"
+        ],
+        "progressIndicators": [
+          "Row numbers (38-49) indicate position in full 200+ asset list"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "We Care About Your Privacy (banner heading)",
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "privacy banner right column"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "privacy banner right column"
+          },
+          {
+            "text": "Privacy Preferences",
+            "style": "text-link",
+            "placement": "privacy banner bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We and our 966 partners store and access personal data, like browsing data or unique identifiers, on your device...",
+            "context": "Privacy banner left column",
+            "purpose": "Explain data storage and access"
+          },
+          {
+            "text": "Use precise geolocation data. Actively scan device characteristics for identification. Store and/or access information on a device.",
+            "context": "Privacy banner center column",
+            "purpose": "List specific tracking methods"
+          }
+        ],
+        "tone": "professional-legal for privacy section; technical-professional for market data",
+        "dataFormatting": [
+          "$0.7128 (price with 4 decimals for low-value assets)",
+          "↓1.23% / ↑7.27% (directional changes with color coding)",
+          "$1,704,797,103 (market cap in full numeric format)",
+          "212.97M (supply in abbreviated millions/billions)"
+        ],
+        "trustSignals": [
+          "Detailed partner list disclosure (966 partners)",
+          "Reference to Privacy Policy",
+          "Specific data processing use cases listed"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-home-54-upcoming-sales-scrolled-4.png",
+      "label": "Upcoming Sales — scrolled 4",
+      "flowType": "Home",
+      "step": 54,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14-16px for card titles",
+          "bodyStyle": "Regular sans-serif, 12px for metadata labels",
+          "dataStyle": "Bold sans-serif, 14px for TBA/price values; smaller for chain indicators"
+        },
+        "components": [
+          {
+            "type": "NFT Card",
+            "description": "Grid cards with hero image, title, chain badge, start/mint price info",
+            "position": "Main grid area",
+            "notable": "Diverse visual styles (geometric logos, illustrated characters, gradients) create brand differentiation"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Dark overlay with privacy policy text and action buttons",
+            "position": "Bottom overlay covering content",
+            "notable": "Uses split-panel layout with detailed explanation on left, partner list on right, buttons on far right"
+          },
+          {
+            "type": "Chain Badge",
+            "description": "Ethereum indicator with chain icon",
+            "position": "Below card title",
+            "notable": "Consistent small icon + text pattern across all cards"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates each card; title and metadata stacked below; cookie modal dominates full screen",
+        "innovativeElements": [
+          "Diverse NFT artwork creates visual distinction between projects",
+          "TBA (To Be Announced) placeholder reinforces upcoming nature",
+          "Cookie consent split into three distinct information zones"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with modal overlay",
+        "userIntent": "Browse upcoming NFT/token sales and cookie preferences",
+        "entryPoints": [
+          "Home page scrolled to upcoming sales section",
+          "Automatic modal trigger on page load"
+        ],
+        "exitPoints": [
+          "Accept Cookies & Continue",
+          "Reject Additional Cookies",
+          "Click privacy preferences link",
+          "Click on individual NFT cards"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept Cookies & Continue button",
+            "action": "Confirm cookie consent and dismiss modal"
+          },
+          {
+            "element": "Reject Additional Cookies button",
+            "action": "Minimize tracking and dismiss modal"
+          },
+          {
+            "element": "Privacy Preferences link",
+            "action": "Open detailed privacy settings"
+          },
+          {
+            "element": "NFT Cards",
+            "action": "Navigate to individual project details"
+          },
+          {
+            "element": "List of Partners (vendors) link",
+            "action": "Expand to show tracking partners"
+          }
+        ],
+        "informationArchitecture": "Grid of upcoming sales projects with consistent card structure; modal provides privacy choices with detailed explanation and vendor transparency",
+        "frictionPoints": [
+          "Large modal overlay blocks content discovery during browsing",
+          "Dense privacy text requires scrolling to read full terms",
+          "TBA values provide no concrete pricing information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept Cookies & Continue",
+            "style": "primary-button",
+            "placement": "Cookie modal bottom-right"
+          },
+          {
+            "text": "Reject Additional Cookies",
+            "style": "secondary-button",
+            "placement": "Cookie modal bottom-right"
+          },
+          {
+            "text": "Privacy Preferences",
+            "style": "text-link",
+            "placement": "Cookie modal bottom-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We Care About Your Privacy",
+            "context": "Cookie modal heading",
+            "purpose": "Sets privacy-first tone"
+          },
+          {
+            "text": "We and our 966 partners store and access personal data",
+            "context": "Cookie modal body",
+            "purpose": "Establishes transparency about data practices"
+          },
+          {
+            "text": "Use precise geolocation data. Actively scan device characteristics for identification.",
+            "context": "Cookie modal left panel",
+            "purpose": "Explains specific tracking methods"
+          },
+          {
+            "text": "Starts",
+            "context": "Card metadata label",
+            "purpose": "Indicates when sale begins"
+          },
+          {
+            "text": "Mint Price",
+            "context": "Card metadata label",
+            "purpose": "Indicates pricing availability"
+          }
+        ],
+        "tone": "professional-technical with privacy-conscious emphasis",
+        "dataFormatting": [
+          "TBA (placeholder for unknown values)",
+          "0.01 ETH (cryptocurrency pricing)",
+          "Free (when no cost)"
+        ],
+        "trustSignals": [
+          "Specific partner count: 966 partners",
+          "Privacy Policy reference",
+          "List of Partners (vendors) transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinmarketcap-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width table with stacked metadata",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0052CC",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24px for 'Explore Yield Products'",
+          "bodyStyle": "Regular sans-serif, 14px for table content and descriptions",
+          "dataStyle": "Bold sans-serif, 14-16px for APY percentages and coin names; icon + text pattern for chain badges"
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Title 'Explore Yield Products' with descriptive subtext",
+            "position": "Top of page",
+            "notable": "Educational subheading explains APY and fee comparison purpose"
+          },
+          {
+            "type": "Filter Bar",
+            "description": "Pill buttons for All, CeFi, DeFi; dropdown for All Types",
+            "position": "Above table",
+            "notable": "Clean segmentation of yield product categories"
+          },
+          {
+            "type": "Data Table",
+            "description": "Sortable columns: #, Yield Coin, Service Providers, Net APY, Yield Type, DeFi/CeFi",
+            "position": "Main content area",
+            "notable": "Multiple provider logos per coin; APY ranges with percentage; rich taxonomy of yield types"
+          },
+          {
+            "type": "Footer Stats Bar",
+            "description": "Cryptocurrency metrics: market cap, 24h change, dominance percentages",
+            "position": "Bottom of page",
+            "notable": "Real-time data with color-coded changes (green/red)"
+          },
+          {
+            "type": "Navigation Header",
+            "description": "CMC logo, main nav (Cryptocurrencies, Dashboards, DexScan, Exchanges, More), Portfolio/Watchlist, Search, Log In",
+            "position": "Top of page",
+            "notable": "Blue 'Log In' button draws attention; compact dense layout"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation anchors top; header with filters draws focus; table dominates center with alternating row backgrounds; footer stats reinforce market data",
+        "innovativeElements": [
+          "Multiple service provider logos in single cell show ecosystem richness",
+          "APY ranges display volatility and options",
+          "Yield Type taxonomy (Earn Flexi, Locked, Staking, Lending) shows product diversity",
+          "Footer statistics tie page to broader market context"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse dashboard",
+        "userIntent": "Discover and compare yield-generating crypto products by APY, provider, and asset type",
+        "entryPoints": [
+          "Navigation menu from home or main dashboard",
+          "Direct link from marketing materials",
+          "Portfolio optimization workflows"
+        ],
+        "exitPoints": [
+          "Click individual coin rows to view provider details",
+          "Use filter tabs (All, CeFi, DeFi) to refine view",
+          "Search for specific assets",
+          "Navigate to Portfolio/Watchlist via header",
+          "Access provider links via Service Provider logos"
+        ],
+        "interactiveElements": [
+          {
+            "element": "All / CeFi / DeFi filter pills",
+            "action": "Toggle product category filter"
+          },
+          {
+            "element": "All Types dropdown",
+            "action": "Filter by specific yield product type"
+          },
+          {
+            "element": "Column headers (Net APY, etc.)",
+            "action": "Sort table by selected column"
+          },
+          {
+            "element": "Service Provider logos",
+            "action": "Navigate to provider details or external link"
+          },
+          {
+            "element": "Coin row",
+            "action": "Drill down to detailed yield options for that coin"
+          },
+          {
+            "element": "Search box",
+            "action": "Quick find specific cryptocurrency"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: global filters → table rows (assets) → columns (metrics: APY, providers, yield type). Data is scannable with clear visual separation.",
+        "frictionPoints": [
+          "No clear CTA for users to start earning (links are data-driven, not action-driven)",
+          "Service provider logos are small and may be hard to tap on mobile",
+          "APY ranges are wide (e.g., <0.01%-600.00%) making comparison difficult without clicking",
+          "No obvious 'Get Started' or 'Connect Wallet' affordance on this view"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Explore Yield Products",
+        "subheadline": "Discover yield assets information. Check the Annual Percentage Yield (APY) and the fees of providers to find the highest APY crypto staking and earn products.",
+        "ctas": [
+          {
+            "text": "Log In",
+            "style": "primary-button",
+            "placement": "Top-right navigation"
+          },
+          {
+            "text": "Get listed",
+            "style": "secondary-button",
+            "placement": "Bottom-right footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Net APY",
+            "context": "Table column header",
+            "purpose": "Labels percentage yield metric"
+          },
+          {
+            "text": "Service Providers",
+            "context": "Table column header",
+            "purpose": "Shows which platforms offer each yield"
+          },
+          {
+            "text": "Yield Type",
+            "context": "Table column header",
+            "purpose": "Distinguishes flexible vs. locked vs. staking"
+          },
+          {
+            "text": "DeFi/CeFi",
+            "context": "Table column header",
+            "purpose": "Categorizes product by custody model"
+          },
+          {
+            "text": "+ 9, + 10, + 11, etc.",
+            "context": "Service Providers cell",
+            "purpose": "Indicates additional providers beyond visible logos"
+          }
+        ],
+        "tone": "professional-technical, educational, data-driven",
+        "dataFormatting": [
+          "0.01%-15.00% (APY ranges with percentage signs)",
+          "0.49%-20.00% (multi-digit percentage ranges)",
+          "<0.01%-600.00% (ranges with less-than symbol for precision)",
+          "BTC, ETH, USDT (cryptocurrency ticker symbols)",
+          "$2.41T (market cap in trillions)",
+          "5.04% (24h change in green)",
+          "-7.39% (24h change in red)",
+          "58.5% / 10.5% (dominance percentages)"
+        ],
+        "trustSignals": [
+          "APY disclosures from multiple providers",
+          "Service provider logos (Aave, Compound, Curve, etc.) establish credibility",
+          "Fee transparency callout in subheadline",
+          "Market cap and dominance data in footer reinforce platform authority"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

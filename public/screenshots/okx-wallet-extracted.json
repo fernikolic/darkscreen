@@ -1,0 +1,1398 @@
+{
+  "slug": "okx-wallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:42:05.952Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 10,
+  "screens": [
+    {
+      "image": "/screenshots/okx-wallet-onboarding-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#CCFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size, black text",
+          "bodyStyle": "Regular sans-serif, medium gray, supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "illustration",
+            "description": "404 error with animated 3D boxes and robotic character, lime green numbers with black outline",
+            "position": "center-top",
+            "notable": "Playful, branded error state with crypto-themed visual metaphor"
+          },
+          {
+            "type": "button",
+            "description": "Outlined rounded button with black border",
+            "position": "center-bottom",
+            "notable": "Ghost-style CTA with minimal styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration dominates center, headline below, supporting text, then CTA",
+        "innovativeElements": [
+          "Playful error state illustration with moving robot character",
+          "Crypto-themed visual pun in error messaging"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why the page isn't loading and find alternative path",
+        "entryPoints": [
+          "User navigates to non-existent URL",
+          "Broken link from navigation"
+        ],
+        "exitPoints": [
+          "Click 'Go to homepage' button",
+          "Use navigation menu",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to homepage button",
+            "action": "Navigates user back to homepage"
+          }
+        ],
+        "informationArchitecture": "Error message centered with single recovery path",
+        "frictionPoints": [
+          "User is blocked from desired content",
+          "No search suggestion or related pages offered"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "This page can't be hashed out",
+        "subheadline": "We couldn't find what you're looking for, but we've got you covered on our homepage.",
+        "ctas": [
+          {
+            "text": "Go to homepage",
+            "style": "ghost-button",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We couldn't find what you're looking for, but we've got you covered on our homepage.",
+            "context": "Error message body",
+            "purpose": "Reassure user and explain situation clearly"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "This page can't be hashed out"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-onboarding-3-rewards-page.png",
+      "label": "rewards page",
+      "flowType": "Onboarding",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#31A24C"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white on dark background for left panel, black on light for right",
+          "bodyStyle": "Regular sans-serif, gray text for descriptions",
+          "dataStyle": "Monospace-like for financial figures with green accent for positive metrics"
+        },
+        "components": [
+          {
+            "type": "mobile mockup",
+            "description": "iPhone showing OKX wallet dashboard with portfolio overview",
+            "position": "left panel",
+            "notable": "Displays real portfolio data: $34k+ balance with daily gains highlighted in green"
+          },
+          {
+            "type": "login form",
+            "description": "Multi-tab authentication with phone/email/QR options",
+            "position": "right panel",
+            "notable": "Primary tab selection with country code input"
+          },
+          {
+            "type": "social login buttons",
+            "description": "Five wide buttons for Passkey, Google, Apple, Telegram, Wallet",
+            "position": "right panel below form",
+            "notable": "Multiple authentication pathways for frictionless onboarding"
+          },
+          {
+            "type": "promotional card",
+            "description": "Dark background card promoting Telegram community",
+            "position": "left panel bottom",
+            "notable": "Community engagement CTA integrated into onboarding flow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side establishes trust with real portfolio demo; right side focuses on entry point",
+        "innovativeElements": [
+          "Split-screen comparison of wallet benefits vs. login mechanics",
+          "Multiple social login providers prominently featured",
+          "Live portfolio data displayed in mockup to reduce friction"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create account or log in with preference for frictionless authentication",
+        "entryPoints": [
+          "Clicked 'Log in' or 'Sign up' from navigation",
+          "First-time visitor to platform"
+        ],
+        "exitPoints": [
+          "Complete phone verification",
+          "Sign up via social provider",
+          "Click 'Sign up' link to create new account"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Phone/Email/QR tabs",
+            "action": "Switch authentication method"
+          },
+          {
+            "element": "Country code dropdown",
+            "action": "Select phone prefix"
+          },
+          {
+            "element": "Next button",
+            "action": "Proceed to verification step"
+          },
+          {
+            "element": "Social login buttons",
+            "action": "Authenticate via third-party provider"
+          },
+          {
+            "element": "Sign up link",
+            "action": "Navigate to account creation"
+          }
+        ],
+        "informationArchitecture": "Left side builds confidence with portfolio demonstration; right side isolates login mechanics for focus",
+        "frictionPoints": [
+          "Multiple authentication options could overwhelm new users",
+          "Country code dropdown requires input before proceeding",
+          "No guest/demo mode for exploration before login"
+        ],
+        "progressIndicators": [
+          "Tab selection shows current authentication method"
+        ]
+      },
+      "copy": {
+        "headline": "Trade with confidence",
+        "subheadline": "We don't lend out customer funds, which is verified through our regularly published Proof of Reserves audits.",
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "right panel below phone input"
+          },
+          {
+            "text": "Sign up",
+            "style": "text-link",
+            "placement": "right panel, inline with 'Don't have an account?'"
+          },
+          {
+            "text": "Passkey",
+            "style": "outline-button",
+            "placement": "right panel social login section"
+          },
+          {
+            "text": "Google",
+            "style": "outline-button",
+            "placement": "right panel social login section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We don't lend out customer funds, which is verified through our regularly published Proof of Reserves audits.",
+            "context": "Left panel subheadline",
+            "purpose": "Establish trust and security positioning"
+          },
+          {
+            "text": "Don't have an account? Sign up",
+            "context": "Right panel below Next button",
+            "purpose": "Provide alternative path for new users"
+          },
+          {
+            "text": "Or continue with",
+            "context": "Right panel before social buttons",
+            "purpose": "Introduce alternative login methods"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$34,489.16 (portfolio balance)",
+          "+$1,379.57 (+4.02%) Today (gains)"
+        ],
+        "trustSignals": [
+          "Proof of Reserves audits mentioned",
+          "Real portfolio data displayed",
+          "Established partnerships (Google, Apple, Telegram)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00FF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large white text on dark background",
+          "bodyStyle": "Regular sans-serif, light gray on dark background",
+          "dataStyle": "Bold sans-serif for APY percentages in right column"
+        },
+        "components": [
+          {
+            "type": "hero illustration",
+            "description": "Isometric 3D rendered cylinder with crypto tokens orbiting, green ETH symbol highlighted",
+            "position": "right side of screen",
+            "notable": "Bright neon green accent on Ethereum symbol creates visual interest"
+          },
+          {
+            "type": "text block",
+            "description": "Headline and subheadline on left side",
+            "position": "left-top",
+            "notable": "Clear value proposition for staking feature"
+          },
+          {
+            "type": "data table",
+            "description": "Sortable table with Token, Market APY, Term, and Action columns",
+            "position": "bottom section",
+            "notable": "BTC shown with 3.00% APY and Flexible term option"
+          },
+          {
+            "type": "filter dropdowns",
+            "description": "'All products' and 'All terms' dropdowns",
+            "position": "above table",
+            "notable": "Allows filtering of staking options"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero section dominates upper half with illustration; Products section below with table as focal point",
+        "innovativeElements": [
+          "Neon green highlight accent on crypto icon creates energy",
+          "Isometric 3D illustration blends technical and modern aesthetic",
+          "Seamless transition from marketing message to product table"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore staking products and understand earning opportunities",
+        "entryPoints": [
+          "Clicked 'Grow' or 'Staking' from main navigation",
+          "Looking to earn passive income on holdings"
+        ],
+        "exitPoints": [
+          "Click on specific token row to stake",
+          "Filter by product type or term length",
+          "Navigate away via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "All products dropdown",
+            "action": "Filter staking products by type"
+          },
+          {
+            "element": "All terms dropdown",
+            "action": "Filter by flexible/fixed term options"
+          },
+          {
+            "element": "Search crypto input",
+            "action": "Search for specific token"
+          },
+          {
+            "element": "Token rows",
+            "action": "Navigate to staking details/execution"
+          },
+          {
+            "element": "Market APY header",
+            "action": "Sort table by APY value"
+          }
+        ],
+        "informationArchitecture": "Hero messaging establishes value, table provides product comparison, filters enable customization",
+        "frictionPoints": [
+          "Table only shows one token (BTC) - user must scroll or filter to see others",
+          "No minimum staking amount or risk indicators visible in preview",
+          "Action column behavior unclear without interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Put your crypto to work",
+        "subheadline": "Earn daily rewards on more than 20 tokens.",
+        "ctas": [
+          {
+            "text": "Search crypto",
+            "style": "search-input",
+            "placement": "right of filter dropdowns"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Earn daily rewards on more than 20 tokens.",
+            "context": "Hero section subheadline",
+            "purpose": "Communicate breadth of staking opportunities"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "3.00% (Market APY)",
+          "Flexible (Term option)",
+          "BTC (Token symbol)"
+        ],
+        "trustSignals": [
+          "20+ tokens available for staking",
+          "Published APY rates (3.00% example)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with modal overlay and stacked cookie consent",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#7AFF00",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "large bold sans-serif, gray color (#999999), uppercase-style",
+          "bodyStyle": "medium sans-serif, gray text for secondary copy",
+          "dataStyle": "technical font for chart labels, small white text for data points"
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Feature showcase modal with candlestick chart and limit orders explanation",
+            "position": "center overlay",
+            "notable": "Embeds live trading UI mockup with colorful candlestick visualization"
+          },
+          {
+            "type": "cookie-consent-modal",
+            "description": "White cookie acceptance dialog with accept/reject options",
+            "position": "bottom-right overlay on top of main modal",
+            "notable": "Stacked modals create visual depth, cookie consent appears above feature modal"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with Market, Meme Pump, Tracker, Signal, Copy trading, Swap, Portfolio, Referral",
+            "position": "top of page",
+            "notable": "Green 'Connect wallet' button and 'Boost' action in top-right"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline about wallet functionality partially obscured by modals",
+            "position": "left side background",
+            "notable": "Background shows blurred trading data and charts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates left side, but modal overlays capture immediate attention; trading chart visualization is focal point within modal",
+        "innovativeElements": [
+          "Stacked modal hierarchy demonstrates feature context within trading interface",
+          "Embedded live chart data in feature showcase creates immersive product demo",
+          "Lime green accent color (#7AFF00) used strategically for CTAs and highlights"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page with feature-showcase-modal and cookie-consent-modal",
+        "userIntent": "Understand wallet capabilities and trading features before connecting",
+        "entryPoints": [
+          "Direct landing from marketing site",
+          "Initial app load before authentication"
+        ],
+        "exitPoints": [
+          "Connect wallet button",
+          "Next button in feature modal",
+          "Cookie acceptance to dismiss overlays"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Initiates wallet connection flow"
+          },
+          {
+            "element": "Next button in feature modal",
+            "action": "Advance to next feature showcase"
+          },
+          {
+            "element": "Accept All Cookies button",
+            "action": "Accept all cookie policies and dismiss consent modal"
+          },
+          {
+            "element": "Reject All button",
+            "action": "Reject non-essential cookies"
+          },
+          {
+            "element": "Close (X) button on modals",
+            "action": "Dismiss modals"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: landing headline → feature showcase (limit orders) → wallet connection CTA; cookie consent overlaid as required compliance layer",
+        "frictionPoints": [
+          "Double modal stacking creates cognitive load and visual confusion",
+          "Cannot interact with landing content until modals dismissed",
+          "Cookie consent blocks view of feature modal copy"
+        ],
+        "progressIndicators": [
+          "Feature carousel implied by 'Next' button and numbered modals"
+        ]
+      },
+      "copy": {
+        "headline": "One crypto wallet, 130+ native chains",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button-bright-green",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "Boost",
+            "style": "secondary-button-green",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "Next",
+            "style": "primary-button-white",
+            "placement": "feature modal bottom-right"
+          },
+          {
+            "text": "Accept All Cookies",
+            "style": "primary-button-black",
+            "placement": "cookie modal center"
+          },
+          {
+            "text": "Reject All",
+            "style": "secondary-button-black",
+            "placement": "cookie modal center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Limit orders on candlestick charts",
+            "context": "Feature modal headline",
+            "purpose": "Highlight specific advanced trading feature"
+          },
+          {
+            "text": "View your limit orders directly on the candlestick chart, with flexible positioning and extended price lines for better visibility.",
+            "context": "Feature modal body text",
+            "purpose": "Explain feature benefit and use case"
+          },
+          {
+            "text": "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie modal body text",
+            "purpose": "Legal transparency for cookie usage"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual for feature descriptions",
+        "dataFormatting": [
+          "$0.00034284 (price with decimals)",
+          "Market cap: $382.84K",
+          "+41.26% (percentage change in bright green)",
+          "1d 6d 1m time period indicators"
+        ],
+        "trustSignals": [
+          "130+ native chains supported",
+          "Advanced trading features (limit orders)",
+          "Professional exchange-grade interface"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with modal overlay and cookie consent stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#7AFF00",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "large bold sans-serif, gray (#999999)",
+          "bodyStyle": "medium sans-serif, light gray",
+          "dataStyle": "monospace for chart tickers and price data"
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Feature showcase for limit orders with embedded trading interface preview",
+            "position": "center overlay",
+            "notable": "Contains live candlestick chart with interactive elements, volume data, trading UI controls"
+          },
+          {
+            "type": "cookie-consent-modal",
+            "description": "Cookie acceptance dialog with three action options",
+            "position": "lower-right overlay",
+            "notable": "Maintains white background for contrast against dark page"
+          },
+          {
+            "type": "background-animation",
+            "description": "Animated chart visualization with moving candlesticks and price data",
+            "position": "full-page background",
+            "notable": "Parallax or subtle animation of trading data creates sense of live market activity"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Background activity draws eye, modal hierarchy guides focus: feature modal → cookie consent; bright green accents highlight interactive states",
+        "innovativeElements": [
+          "Animated candlestick background creates living market visualization",
+          "Nested modals demonstrate context-aware feature discovery",
+          "Color-coded trading signals (green buy/sell, pink highlights) embedded in preview"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page with feature-showcase-modal and cookie-consent",
+        "userIntent": "Learn about advanced trading features while managing privacy preferences",
+        "entryPoints": [
+          "Landing page initial load",
+          "Returning user seeing feature tour"
+        ],
+        "exitPoints": [
+          "Connect wallet button",
+          "Next in feature carousel",
+          "Cookie decision buttons",
+          "Close modal X button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Next button",
+            "action": "Advance feature carousel to next item"
+          },
+          {
+            "element": "Accept All Cookies",
+            "action": "Consent to all cookies and proceed"
+          },
+          {
+            "element": "Reject All",
+            "action": "Refuse non-essential cookies"
+          },
+          {
+            "element": "Cookies Settings",
+            "action": "Open granular cookie preferences"
+          },
+          {
+            "element": "X close button",
+            "action": "Dismiss modals"
+          }
+        ],
+        "informationArchitecture": "Landing content → feature showcase → wallet connection gate; compliance layer (cookie consent) required before progression",
+        "frictionPoints": [
+          "Multiple overlays require dismissal before accessing main content",
+          "Cookie modal visual hierarchy competes with feature modal",
+          "No preview of other features visible until scrolling through carousel"
+        ],
+        "progressIndicators": [
+          "Feature carousel (Next button implies multi-step)"
+        ]
+      },
+      "copy": {
+        "headline": "One crypto wallet, 130+ native chains",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button-white",
+            "placement": "feature modal bottom-right"
+          },
+          {
+            "text": "Accept All Cookies",
+            "style": "primary-button-black",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Reject All",
+            "style": "secondary-button-black",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Cookies Settings",
+            "style": "text-link-underline",
+            "placement": "cookie modal bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Limit orders on candlestick charts",
+            "context": "Feature modal headline",
+            "purpose": "Feature title and value proposition"
+          },
+          {
+            "text": "View your limit orders directly on the candlestick chart, with flexible positioning and extended price lines for better visibility.",
+            "context": "Feature modal description",
+            "purpose": "Explain specific feature benefit"
+          },
+          {
+            "text": "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie modal body",
+            "purpose": "Legal disclosure for cookie policy"
+          }
+        ],
+        "tone": "professional-technical with friendly educational tone",
+        "dataFormatting": [
+          "$0.00034284 USD (price in decimal notation)",
+          "Volume data: 0 SOL",
+          "Percentage changes with color coding (+/- )",
+          "Time indicators: 15m, 1h, 4h, 1d, 1w, 1M"
+        ],
+        "trustSignals": [
+          "130+ native chains",
+          "Advanced trading interface visible",
+          "Professional-grade charting tools"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-settings-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered with hero section",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#7AFF00",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "large bold sans-serif black text, centered",
+          "bodyStyle": "medium sans-serif gray text (#666666), centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top navigation with dropdown menus and auth buttons",
+            "position": "top of page",
+            "notable": "Minimalist design with Buy crypto, Markets, Trade, Grow, Institutional, Learn, More dropdowns"
+          },
+          {
+            "type": "error-illustration",
+            "description": "Robot/character illustration with construction-themed iconography (boxes, machinery)",
+            "position": "center of page"
+          },
+          {
+            "type": "footer",
+            "description": "Black footer with OKX logo, copyright, language selector, and chat widget",
+            "position": "bottom of page",
+            "notable": "Green chat bubble in bottom-right corner"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "404 illustration dominates center; headline below guides eye downward; footer grounds page bottom",
+        "innovativeElements": [
+          "Bright lime green (#7AFF00) used in error state creates contrast and brand continuity",
+          "Illustration style matches OKX design system with minimalist line work",
+          "Centered layout with symmetrical composition for error recovery flow"
+        ]
+      },
+      "flow": {
+        "screenType": "error-page 404-not-found",
+        "userIntent": "Recover from attempting to access non-existent page",
+        "entryPoints": [
+          "Dead link from another page",
+          "Manual URL typo",
+          "Broken navigation path"
+        ],
+        "exitPoints": [
+          "Go to homepage button",
+          "Top navigation menu items",
+          "OKX logo back to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to homepage",
+            "action": "Navigate back to homepage"
+          },
+          {
+            "element": "Navigation dropdowns (Buy crypto, Markets, etc.)",
+            "action": "Navigate to main product sections"
+          },
+          {
+            "element": "OKX logo",
+            "action": "Return to home"
+          },
+          {
+            "element": "Green chat bubble",
+            "action": "Open support chat"
+          },
+          {
+            "element": "Log in / Sign up",
+            "action": "Account authentication"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation remains accessible; error messaging centered; recovery CTA prominent",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "This page can't be hashed out",
+        "subheadline": "We couldn't find what you're looking for, but we've got you covered on our homepage.",
+        "ctas": [
+          {
+            "text": "Go to homepage",
+            "style": "ghost-button-black-outline",
+            "placement": "center below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Buy crypto",
+            "context": "Top navigation",
+            "purpose": "Primary action for user acquisition"
+          },
+          {
+            "text": "Markets",
+            "context": "Top navigation",
+            "purpose": "Browse crypto assets"
+          },
+          {
+            "text": "Trade",
+            "context": "Top navigation",
+            "purpose": "Execute trades"
+          },
+          {
+            "text": "Grow",
+            "context": "Top navigation",
+            "purpose": "Yield/staking products"
+          },
+          {
+            "text": "©2017 - 2026 OKX.COM",
+            "context": "Footer",
+            "purpose": "Copyright and domain"
+          }
+        ],
+        "tone": "friendly-casual with crypto-specific humor",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OKX branding and copyright consistency",
+          "Professional navigation structure",
+          "Support chat availability"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "This page can't be hashed out"
+        ],
+        "emptyStateText": [
+          "We couldn't find what you're looking for, but we've got you covered on our homepage."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-staking-2-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (60-70px), white on black, left-aligned",
+          "bodyStyle": "Medium sans-serif, white/light gray, supporting text",
+          "dataStyle": "Percentage values in large font, sortable table headers with arrow indicators"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Full-width dark banner with headline, subheadline, and illustrated crypto earning graphic",
+            "position": "top half of viewport",
+            "notable": "Neon green glowing accent on central Ethereum icon creates focal point"
+          },
+          {
+            "type": "filter-controls",
+            "description": "Dropdown filters for product type and terms with search bar",
+            "position": "above product table",
+            "notable": "Clean dropdown UI with light background for contrast"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-column table with Token, Market APY, Term, and Action columns",
+            "position": "lower section",
+            "notable": "Sortable headers, expandable rows, green action button (CTA)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero message dominates upper half; product list subordinate below; dark-to-light color transition guides focus downward",
+        "innovativeElements": [
+          "Neon green glow effect on crypto icons in hero illustration",
+          "3D isometric product showcase with layered cylindrical design"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-with-product-browse",
+        "userIntent": "Discover staking/earning opportunities and compare APY rates across tokens",
+        "entryPoints": [
+          "From 'Grow' dropdown menu",
+          "Direct navigation from dashboard"
+        ],
+        "exitPoints": [
+          "Click token row to expand details",
+          "Click green action button to initiate staking",
+          "Navigate to other earn products via filters",
+          "Return to main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Product filter dropdowns",
+            "action": "Toggle between product types and term lengths"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter crypto tokens by name/symbol"
+          },
+          {
+            "element": "Table header arrows",
+            "action": "Sort by Market APY or other metrics"
+          },
+          {
+            "element": "Row expand chevron",
+            "action": "Reveal additional token details"
+          }
+        ],
+        "informationArchitecture": "Hero pitch → product category filters → comparable data table; supports both casual browsers (hero msg) and detail-seekers (table)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Put your crypto to work",
+        "subheadline": "Earn daily rewards on more than 20 tokens.",
+        "ctas": [
+          {
+            "text": "Action button (in table row)",
+            "style": "primary-button",
+            "placement": "rightmost column of each token row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Token",
+            "context": "Table column header",
+            "purpose": "Label asset name column"
+          },
+          {
+            "text": "Market APY",
+            "context": "Table column header",
+            "purpose": "Label yield percentage column"
+          },
+          {
+            "text": "Flexible",
+            "context": "Term column value",
+            "purpose": "Indicate staking term type"
+          }
+        ],
+        "tone": "professional-technical, action-oriented",
+        "dataFormatting": [
+          "2.33% (percentage APY)",
+          "Market APY values with sortable indicator"
+        ],
+        "trustSignals": [
+          "20+ tokens supported",
+          "Daily rewards messaging"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#CCFF00"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (48px), black text, center-aligned",
+          "bodyStyle": "Medium sans-serif, gray text, center-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-illustration",
+            "description": "Large centered 404 graphic with neon lime 4s and stylized robot/delivery character",
+            "position": "center of screen",
+            "notable": "Bright neon lime (#CCFF00) numerals contrast sharply with light background; playful anthropomorphic robot mascot"
+          },
+          {
+            "type": "error-heading",
+            "description": "Main error message text",
+            "position": "below illustration",
+            "notable": "Bold, direct language with crypto metaphor ('hashed out')"
+          },
+          {
+            "type": "error-subtext",
+            "description": "Supportive explanation message",
+            "position": "below heading",
+            "notable": "Reassuring tone, acknowledges page exists"
+          },
+          {
+            "type": "cta-button",
+            "description": "Ghost button with border styling",
+            "position": "below subtext",
+            "notable": "High contrast outline button for recovery action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration dominates visual space; heading anchors message; CTA provides recovery path",
+        "innovativeElements": [
+          "Crypto-specific error message ('hashed out' pun)",
+          "Branded error page with custom mascot character"
+        ]
+      },
+      "flow": {
+        "screenType": "error-404",
+        "userIntent": "Understand why requested page is unavailable and find way back to functional areas",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken internal link"
+        ],
+        "exitPoints": [
+          "Click 'Go to homepage' button",
+          "Use browser back button",
+          "Use header navigation (visible at top)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to homepage button",
+            "action": "Navigate to homepage/main dashboard"
+          }
+        ],
+        "informationArchitecture": "Error state presented with empathy; single clear recovery path; maintains header navigation for alternative escape routes",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "This page can't be hashed out",
+        "subheadline": "We couldn't find what you're looking for, but we've got you covered on our homepage.",
+        "ctas": [
+          {
+            "text": "Go to homepage",
+            "style": "ghost-button",
+            "placement": "center, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "©2017 - 2026 OKX.COM",
+            "context": "Footer",
+            "purpose": "Copyright and brand attribution"
+          }
+        ],
+        "tone": "friendly-casual, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Copyright notice indicates established company"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "This page can't be hashed out"
+        ],
+        "emptyStateText": [
+          "We couldn't find what you're looking for, but we've got you covered on our homepage."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1A1A1A",
+          "#00D084",
+          "#FF6B6B"
+        ],
+        "typography": {
+          "headingStyle": "Medium bold sans-serif for section labels; price data in large monospace font",
+          "bodyStyle": "Small sans-serif for table data and labels",
+          "dataStyle": "Large monospace numbers for prices/amounts; green/red for positive/negative values; percentage values color-coded"
+        },
+        "components": [
+          {
+            "type": "price-header",
+            "description": "Trading pair selector, current price, 24h metrics, and price change stats",
+            "position": "top left area",
+            "notable": "Color-coded metrics (green up, red down), clickable price link, multiple timeframe indicators"
+          },
+          {
+            "type": "candlestick-chart",
+            "description": "TradingView-style interactive candlestick chart with volume subplot",
+            "position": "left panel, main area",
+            "notable": "Green/red candlesticks, volume bars below, time axis with multiple zoom levels, technical indicators"
+          },
+          {
+            "type": "toolbar",
+            "description": "Left sidebar with drawing tools, indicators, and chart settings icons",
+            "position": "left edge",
+            "notable": "Vertical icon stack for professional chart manipulation"
+          },
+          {
+            "type": "order-book",
+            "description": "Real-time bid/ask pricing grid with color-coded price levels",
+            "position": "right panel, top section",
+            "notable": "Green bids, red asks, quantity and total columns, scrollable depth view"
+          },
+          {
+            "type": "trade-input-panel",
+            "description": "Buy/Sell toggle with limit/market order options and price/amount inputs",
+            "position": "right panel, upper middle",
+            "notable": "Green Buy button, gray Sell button, toggle controls for order type and asset"
+          },
+          {
+            "type": "modal-overlay",
+            "description": "Workspace introduction modal with semi-transparent dark background",
+            "position": "center-right overlay",
+            "notable": "Educational tooltip about interface features; login prompt integrated"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Bottom left tabs for Open orders, Order history, Position history, etc.",
+            "position": "bottom left",
+            "notable": "Underline indicator for active tab"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates left 60%; order book and trade controls right 40%; header metrics anchor top; tabs anchor bottom",
+        "innovativeElements": [
+          "Dual-axis layout balancing chart and order/trade panels",
+          "Real-time order book depth visualization with color coding",
+          "Integrated workspace tutorial modal"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse-with-trading-form",
+        "userIntent": "Monitor price action, analyze technicals, place limit/market orders in real-time",
+        "entryPoints": [
+          "From Markets page",
+          "From Trade dropdown menu",
+          "Direct trading pair URL"
+        ],
+        "exitPoints": [
+          "Switch trading pairs via header dropdown",
+          "Navigate to other sections via main menu",
+          "View order history/positions via tabs",
+          "Click Log in/Sign up to authenticate"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trading pair selector (BTC/EUR)",
+            "action": "Switch between trading pairs"
+          },
+          {
+            "element": "Chart timeframe buttons (1s, 1m, 5m, 15m, etc.)",
+            "action": "Change candlestick resolution"
+          },
+          {
+            "element": "Chart drawing tools (left sidebar)",
+            "action": "Draw trend lines, annotations, and technical analysis shapes"
+          },
+          {
+            "element": "Chart indicator menu",
+            "action": "Add MACD, RSI, Bollinger Bands, and other overlays"
+          },
+          {
+            "element": "Buy/Sell toggle",
+            "action": "Switch order side"
+          },
+          {
+            "element": "Limit/Market toggle",
+            "action": "Change order type"
+          },
+          {
+            "element": "Price and Amount input fields",
+            "action": "Specify order parameters"
+          },
+          {
+            "element": "Log in/Sign up button",
+            "action": "Authenticate to execute orders"
+          },
+          {
+            "element": "Bottom tabs (Open orders, Order history, etc.)",
+            "action": "View order and position history"
+          }
+        ],
+        "informationArchitecture": "Price action (chart) paired with execution controls (trade panel); order book provides liquidity context; order history tracks past activity; organized for rapid decision-making",
+        "frictionPoints": [
+          "Modal overlay blocks access to trade controls temporarily",
+          "Multiple small UI elements (indicators, tools) may be hard to discover",
+          "Order book data density may be overwhelming for new traders",
+          "Must authenticate before executing trades (requires click-through)"
+        ],
+        "progressIndicators": [
+          "Active timeframe indicator in chart",
+          "Active tab underline in bottom navigation"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "right panel, trade input section"
+          },
+          {
+            "text": "Sell",
+            "style": "ghost-button",
+            "placement": "right panel, trade input section"
+          },
+          {
+            "text": "Log in/Sign up",
+            "style": "primary-button",
+            "placement": "right panel, below order controls"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Workspace introduction",
+            "context": "Modal overlay title",
+            "purpose": "Introduce new interface features"
+          },
+          {
+            "text": "Your workspaces have been upgraded. Learn how to build and customize your trading interface.",
+            "context": "Modal overlay body",
+            "purpose": "Educate user on workspace capabilities"
+          },
+          {
+            "text": "Price (EUR)",
+            "context": "Input label in trade panel",
+            "purpose": "Clarify currency denomination"
+          },
+          {
+            "text": "Amount (BTC)",
+            "context": "Input label in trade panel",
+            "purpose": "Clarify asset quantity field"
+          },
+          {
+            "text": "Available -- EUR",
+            "context": "Below Amount field",
+            "purpose": "Show available balance"
+          },
+          {
+            "text": "Max buy -- BTC",
+            "context": "Below Amount field",
+            "purpose": "Show maximum purchasable quantity"
+          },
+          {
+            "text": "TP/SL",
+            "context": "Checkbox label",
+            "purpose": "Enable take-profit/stop-loss orders"
+          },
+          {
+            "text": "Max price €59,239.1",
+            "context": "Below trade inputs",
+            "purpose": "Show price ceiling"
+          },
+          {
+            "text": "% Fees",
+            "context": "Right panel bottom",
+            "purpose": "Disclose trading commission"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$69,792.18 (price in USD)",
+          "58,906.3 (price in EUR)",
+          "0.0195 (order amount in BTC)",
+          "2.33% (24h change percentage, color-coded)",
+          "7,62 (24h volume)",
+          "1.6601 (volume indicator)"
+        ],
+        "trustSignals": [
+          "Real-time market data (timestamp visible: 14:43:35 UTC-5)",
+          "Professional charting platform (TradingView)",
+          "Historical order/position tracking tabs"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-wallet-send-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#CCFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32-40px), center-aligned, high contrast black on white",
+          "bodyStyle": "Regular sans-serif, medium gray, center-aligned, smaller than heading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "illustration",
+            "description": "404 error visual with stylized '404' numbers and character interacting with boxes using bright lime-green accent color",
+            "position": "center, above headline",
+            "notable": "Uses brand color (lime-green) to make error state engaging rather than frustrating"
+          },
+          {
+            "type": "navigation bar",
+            "description": "Horizontal top nav with logo, dropdown menus (Buy crypto, Markets, Trade, Grow, Institutional, Learn, More), search bar, and auth buttons",
+            "position": "top, full-width",
+            "notable": "Persistent across error page; maintains navigation context"
+          },
+          {
+            "type": "button",
+            "description": "Ghost/outline button with rounded border",
+            "position": "center, below subheading",
+            "notable": "Single clear CTA with minimal visual weight"
+          },
+          {
+            "type": "footer",
+            "description": "Black background footer with logo, copyright, language selector, and social links",
+            "position": "bottom, full-width",
+            "notable": "Inverted color scheme creates clear separation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Illustration draws eye first (size + color), followed by headline (bold black), then subtext (gray), then CTA button",
+        "innovativeElements": [
+          "Crypto-themed 404 error illustration (boxes/containers reference blockchain/storage concept)",
+          "Lime-green accent color makes error state feel brand-aligned rather than generic"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from attempting to access a non-existent page",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link from marketing material",
+          "Expired session redirect"
+        ],
+        "exitPoints": [
+          "Go to homepage button",
+          "Navigation menu items (Buy crypto, Markets, Trade, etc.)",
+          "Logo click to homepage"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to homepage button",
+            "action": "Returns user to homepage/dashboard"
+          },
+          {
+            "element": "Top navigation dropdown menus",
+            "action": "Navigate to major app sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for specific assets/content"
+          },
+          {
+            "element": "Language selector (English/USD)",
+            "action": "Change UI language and currency display"
+          }
+        ],
+        "informationArchitecture": "Error explanation (headline + supporting text) with clear recovery path; full nav preserved to minimize frustration",
+        "frictionPoints": [
+          "User must navigate back manually—no automatic redirect",
+          "Doesn't explain *why* page doesn't exist (wrong URL, deprecated feature, etc.)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "This page can't be hashed out",
+        "subheadline": "We couldn't find what you're looking for, but we've got you covered on our homepage.",
+        "ctas": [
+          {
+            "text": "Go to homepage",
+            "style": "ghost-button",
+            "placement": "center, below subheading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "©2017 - 2026 OKX.COM",
+            "context": "footer",
+            "purpose": "Copyright/ownership signal"
+          },
+          {
+            "text": "English/USD",
+            "context": "footer bottom-left",
+            "purpose": "Localization indicator and selector"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Copyright notice with future date (2026) suggests longevity",
+          "OKX branding visible throughout"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "This page can't be hashed out"
+        ],
+        "emptyStateText": [
+          "We couldn't find what you're looking for, but we've got you covered on our homepage."
+        ]
+      }
+    }
+  ]
+}

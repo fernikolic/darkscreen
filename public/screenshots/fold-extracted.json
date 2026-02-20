@@ -1,0 +1,1293 @@
+{
+  "slug": "fold",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T11:45:45.640Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 10,
+  "screens": [
+    {
+      "image": "/screenshots/fold-home-7-shop.png",
+      "label": "Shop",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "serif, large, bold (e.g., 'Limited Edition', 'Stacked Logo')",
+          "bodyStyle": "sans-serif, regular weight, dark text on light backgrounds",
+          "dataStyle": "sans-serif, regular, dollar amounts in standard format ($30.00 USD)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Fold logo, location/currency selector, search, account, cart icons",
+            "position": "top",
+            "notable": "Minimalist header with iconography-only navigation on right"
+          },
+          {
+            "type": "product-card",
+            "description": "Image, product name, price with 'From' prefix or static price",
+            "position": "grid layout below sections",
+            "notable": "Cards have soft light gray backgrounds; products alternate between apparel and accessories"
+          },
+          {
+            "type": "section-header",
+            "description": "Large serif heading for product categories",
+            "position": "above each product grid",
+            "notable": "Serif typography creates premium, editorial feel"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Section headers establish clear category grouping; product cards draw eyes downward in grid pattern",
+        "innovativeElements": [
+          "Crypto branding on apparel (Bitcoin Toxic design, Fold Bicorn logo) positioned as lifestyle merch",
+          "Mix of limited edition and standard logo products to create scarcity perception"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and discover crypto-themed merchandise and limited edition products",
+        "entryPoints": [
+          "Shop link in main navigation",
+          "Product discovery from home page"
+        ],
+        "exitPoints": [
+          "Product detail view (click card)",
+          "Cart (click cart icon)",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Product card",
+            "action": "Navigate to product detail page"
+          },
+          {
+            "element": "Cart icon",
+            "action": "Open shopping cart"
+          },
+          {
+            "element": "Search icon",
+            "action": "Open search interface"
+          }
+        ],
+        "informationArchitecture": "Categorical browsing (Limited Edition, then Stacked Logo sections); horizontal scrolling suggested for second row of Stacked Logo items",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Limited Edition",
+        "subheadline": "Stacked Logo",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "From $30.00 USD",
+            "context": "Bitcoin Toxic product card",
+            "purpose": "Indicates price range for variant products"
+          },
+          {
+            "text": "$30.00 USD",
+            "context": "Five Panel Cap product card",
+            "purpose": "Fixed price for single SKU"
+          }
+        ],
+        "tone": "professional-technical with lifestyle aspirations",
+        "dataFormatting": [
+          "$30.00 USD",
+          "From $30.00 USD"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-staking-1-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "serif, large, high contrast white on dark (Fold Bitcoin Credit Card™)",
+          "bodyStyle": "sans-serif, light weight, white/light gray on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Fold logo and horizontal navigation menu",
+            "position": "top",
+            "notable": "White text on black; minimal, premium aesthetic"
+          },
+          {
+            "type": "hero-image",
+            "description": "Large 3D render of black credit card with gold Fold logo outline and glow effect",
+            "position": "left/center of screen",
+            "notable": "Dramatic lighting with golden accent edges creates luxury positioning; tilted perspective suggests depth"
+          },
+          {
+            "type": "cta-card",
+            "description": "Dark slate panel with headline, description, email input, button, and info banner",
+            "position": "right side",
+            "notable": "Semi-transparent dark background creates layering effect; info banner signals time-limited opportunity"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero image dominates left; call-to-action panel anchors right; white headline pops against dark background",
+        "innovativeElements": [
+          "3D product rendering with dramatic lighting emphasizes premium hardware positioning",
+          "Split-screen layout balances visual asset with conversion funnel",
+          "Gold accent lighting creates crypto/luxury association"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Fold Bitcoin Credit Card and join waitlist",
+        "entryPoints": [
+          "Navigation click (Debit Card or Credit Card link)",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Email subscription confirmation",
+          "Back to previous page via navigation",
+          "Click on other nav items (Pricing, Buy Bitcoin, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Capture user email for waitlist"
+          },
+          {
+            "element": "Get Notified button",
+            "action": "Submit email and join waitlist"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to other product/info pages"
+          }
+        ],
+        "informationArchitecture": "Single-purpose page focused on email capture; minimal information hierarchy; all elements support conversion goal",
+        "frictionPoints": [
+          "Email-only signup (no phone option)",
+          "Info banner about ended waitlist may create urgency anxiety"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Fold Bitcoin Credit Card™",
+        "subheadline": "Introducing the bitcoin credit card you've been waiting for. Spend dollars, earn bitcoin. Reserve your spot today!",
+        "ctas": [
+          {
+            "text": "Get Notified",
+            "style": "primary-button",
+            "placement": "below email input field"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Enter your email",
+            "context": "Email input field placeholder",
+            "purpose": "Guide user action"
+          },
+          {
+            "text": "The waitlist sweepstakes has ended.",
+            "context": "Info banner below CTA",
+            "purpose": "Clarify status of previous campaign while maintaining interest"
+          }
+        ],
+        "tone": "friendly-casual with aspirational urgency",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Trademark symbol (™) on product name suggests legitimacy and legal backing",
+          "Emphasis on 'been waiting for' creates exclusivity perception"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-settings-1-standard-fees-may-apply.png",
+      "label": "standard fees may apply.",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "serif, very large, bold (e.g., 'Fold Card Issued by Sutton Bank')",
+          "bodyStyle": "sans-serif, regular, dark on light",
+          "dataStyle": "sans-serif, monospace-like alignment in table format; currency symbols with dollar amounts"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Fold logo and horizontal navigation with yellow Sign up CTA",
+            "position": "top",
+            "notable": "Yellow button creates strong visual anchor; full nav bar maintains context"
+          },
+          {
+            "type": "page-heading",
+            "description": "Large serif headline with effective date subtext",
+            "position": "below header",
+            "notable": "Serif typography reinforces legal/official document status"
+          },
+          {
+            "type": "subheading",
+            "description": "'Short Form Disclosure' section header",
+            "position": "above data table",
+            "notable": "Clear hierarchy signals document structure"
+          },
+          {
+            "type": "comparison-table",
+            "description": "Two-column table comparing Fold Card vs Fold+ fees",
+            "position": "center",
+            "notable": "Black header row with white text; alternating row backgrounds; clear tier differentiation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large serif heading establishes importance; table structure with black header creates scan-friendly format; comparisons easy to read",
+        "innovativeElements": [
+          "Side-by-side fee comparison table emphasizes value proposition of Fold+ tier",
+          "Official disclosure formatting builds trust through transparency"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review and understand fee structure for Fold Card products",
+        "entryPoints": [
+          "Link from Debit Card or Credit Card product pages",
+          "Navigation from Settings/Legal section",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Sign up button (primary conversion)",
+          "Back to product pages via navigation",
+          "Other nav items (Pricing, Blog, Shop, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to account creation flow"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to other pages"
+          }
+        ],
+        "informationArchitecture": "Linear document flow: heading → subheading → comparison table; facilitates understanding of two product tiers",
+        "frictionPoints": [
+          "Dense table format may overwhelm non-technical users",
+          "No visual highlighting of Fold+ advantages in table"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Fold Card Issued by Sutton Bank",
+        "subheadline": "This agreement is effective December 9th, 2024.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Short Form Disclosure",
+            "context": "Section subheading above fee table",
+            "purpose": "Signal regulatory compliance and document type"
+          },
+          {
+            "text": "$100 per yr. or $10 per mo.*",
+            "context": "Fold+ Annual or Monthly Fee row",
+            "purpose": "Present flexible payment options with asterisk for fine print"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0",
+          "$3.50",
+          "N/A",
+          "$100 per yr. or $10 per mo.*"
+        ],
+        "trustSignals": [
+          "Official bank name (Sutton Bank) establishes regulatory legitimacy",
+          "Effective date (December 9th, 2024) provides transparency and compliance",
+          "Detailed fee disclosure demonstrates consumer protection compliance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-4-bitcoin-gift-cards.png",
+      "label": "Bitcoin Gift Cards",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFF9E6",
+          "#FFD700",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large serif font (appears to be Georgia or similar), dark color, left-aligned",
+          "bodyStyle": "Small sans-serif, dark gray, comfortable line-height",
+          "dataStyle": "Dollar amount emphasized with uppercase label above"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, menu items, and bright yellow CTA button",
+            "position": "top",
+            "notable": "Stark contrast with yellow 'Sign up' button draws attention"
+          },
+          {
+            "type": "product-image",
+            "description": "3D perspective view of two stacked orange gift cards",
+            "position": "right side",
+            "notable": "High-quality product visualization with shadows and depth"
+          },
+          {
+            "type": "primary-button",
+            "description": "Yellow button with arrow icon",
+            "position": "left side below copy",
+            "notable": "Matches navigation CTA color for consistency"
+          },
+          {
+            "type": "secondary-link",
+            "description": "Teal colored text link for in-store purchase",
+            "position": "below primary button",
+            "notable": "Offers alternative path without strong visual emphasis"
+          },
+          {
+            "type": "trust-badges",
+            "description": "Grayscale logos of Forbes, Bloomberg, Fortune",
+            "position": "bottom left",
+            "notable": "Subtle credibility signals without color distraction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left panel drives primary narrative (headline → description → CTA), right panel provides aspirational product visualization",
+        "innovativeElements": [
+          "3D card perspective with realistic shadow effects",
+          "Cohesive yellow accent color system across CTAs"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand and purchase Bitcoin gift cards",
+        "entryPoints": [
+          "Direct navigation from 'Bitcoin Gift Cards' menu item",
+          "Landing page for gift card campaigns"
+        ],
+        "exitPoints": [
+          "Buy gift card CTA leads to checkout",
+          "Locate a retailer link for offline purchase",
+          "Navigation menu for other product exploration"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy gift card button",
+            "action": "Navigate to gift card purchase flow"
+          },
+          {
+            "element": "Locate a retailer link",
+            "action": "Open retailer locator or directory"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different product sections"
+          }
+        ],
+        "informationArchitecture": "Problem (introducing bitcoin) → Solution (gift card) → Action (buy now or find in store) → Social proof (press mentions)",
+        "frictionPoints": [
+          "Cookie policy modal overlays primary content",
+          "No clear indication of what happens after 'Buy gift card' click"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin gift card",
+        "subheadline": "Gift the best-performing asset of the last decade. The Fold bitcoin gift card is an easy and convenient way to buy bitcoin for friends, family, and anyone you want to introduce to bitcoin.",
+        "ctas": [
+          {
+            "text": "Buy gift card →",
+            "style": "primary-button",
+            "placement": "left panel, below subheadline"
+          },
+          {
+            "text": "Locate a retailer >",
+            "style": "text-link",
+            "placement": "left panel, below primary button"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "CHOOSE A DOLLAR AMOUNT UP TO $500",
+            "context": "Above primary CTA",
+            "purpose": "Sets expectation for purchase range"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual",
+        "dataFormatting": [
+          "$500 (maximum gift card amount)"
+        ],
+        "trustSignals": [
+          "Forbes mention",
+          "Bloomberg mention",
+          "Fortune mention"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-5-debit-card.png",
+      "label": "Debit Card",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFF9E6",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large serif font, centered, dark color, prominent scale",
+          "bodyStyle": "Medium sans-serif, center-aligned, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Same horizontal layout as previous screen with consistent styling",
+            "position": "top",
+            "notable": "Maintains design consistency across pages"
+          },
+          {
+            "type": "headline-section",
+            "description": "Centered text block with large serif heading and explanatory paragraph",
+            "position": "center of screen",
+            "notable": "Minimal visual clutter, focus on messaging"
+          },
+          {
+            "type": "trust-badges",
+            "description": "Grayscale publication logos",
+            "position": "lower center",
+            "notable": "Consistent placement and styling with gift card page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single focal point: centered headline commanding attention, supported by descriptive copy below, trust signals at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Fold's debit card offering",
+        "entryPoints": [
+          "Navigation menu 'Debit Card' link",
+          "Internal navigation from other product pages"
+        ],
+        "exitPoints": [
+          "Sign up button (top right)",
+          "Navigation to other product sections",
+          "Shop or Blog sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to signup/registration flow"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Hero headline → descriptive benefit statement → social proof",
+        "frictionPoints": [
+          "No primary CTA visible on this screen (only navigation-level signup)",
+          "No clear next action for user interested in debit card",
+          "Cookie modal blocks view"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your everyday bitcoin debit card",
+        "subheadline": "The Fold Card bridges bitcoin savings with the familiarity of a legacy checking account, allowing you to integrate bitcoin into your life—whether you're just getting started or fully adopting a bitcoin standard.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "AS SEEN IN",
+            "context": "Above publication logos",
+            "purpose": "Introduce credibility signals"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Forbes mention",
+          "Bloomberg mention",
+          "Fortune mention"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-6-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFD700",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color, left-aligned within cards",
+          "bodyStyle": "Small sans-serif gray text for dates and metadata",
+          "dataStyle": "Dollar amounts in large serif font with small sat notation above"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Simplified nav with search icon and Subscribe CTA in black button",
+            "position": "top",
+            "notable": "Black button instead of yellow; darker overall aesthetic than home pages"
+          },
+          {
+            "type": "carousel",
+            "description": "Horizontal scrolling grid of article cards with yellow backgrounds",
+            "position": "upper section",
+            "notable": "Left/right arrow navigation with smooth scrolling pattern"
+          },
+          {
+            "type": "article-card",
+            "description": "Featured image with title, date metadata, and visual preview",
+            "position": "within carousel",
+            "notable": "Bold yellow background creates strong visual rhythm"
+          },
+          {
+            "type": "product-showcase",
+            "description": "Bottom section showing three card product offerings with dollar amounts",
+            "position": "lower half",
+            "notable": "Integrates product pricing with blog content context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Featured blog carousel commands attention with bright yellow, product cards below demonstrate value propositions",
+        "innovativeElements": [
+          "Integration of blog content with product promotion",
+          "Consistent yellow brand color creates visual continuity across sections"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore blog content and learn about products",
+        "entryPoints": [
+          "'Blog' navigation link from main menu",
+          "Direct blog URL",
+          "Internal links from other pages"
+        ],
+        "exitPoints": [
+          "Click individual blog cards to read full articles",
+          "Subscribe button for email signup",
+          "Sign in for registered users",
+          "Explore other navigation sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Carousel arrows",
+            "action": "Scroll featured articles left/right"
+          },
+          {
+            "element": "Article cards",
+            "action": "Navigate to full article page"
+          },
+          {
+            "element": "Subscribe button",
+            "action": "Open email subscription form"
+          },
+          {
+            "element": "Sign in link",
+            "action": "Navigate to authentication"
+          }
+        ],
+        "informationArchitecture": "Featured recent content in carousel → product offerings with pricing below → navigation for further exploration",
+        "frictionPoints": [
+          "No clear CTA to read full articles on cards",
+          "Product section at bottom lacks obvious action buttons",
+          "Mixed messaging between blog content and product promotion"
+        ],
+        "progressIndicators": [
+          "Card date metadata shows publication freshness"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "04 FEB 2026",
+            "context": "Below article title",
+            "purpose": "Shows content recency"
+          },
+          {
+            "text": "~10,000 sats",
+            "context": "Above dollar amount",
+            "purpose": "Shows bitcoin denomination alongside fiat"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "$100 (product pricing)",
+          "~10,000 sats (bitcoin satoshi equivalent)",
+          "DATE MONTH YEAR (publication dates)"
+        ],
+        "trustSignals": [
+          "Official Fold blog content",
+          "Recent publication dates suggest active content strategy"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFE600",
+          "#1a1a1a",
+          "#f5f1e8"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headlines (48-64px), dark charcoal, high contrast against cream background",
+          "bodyStyle": "Sans-serif body text, smaller scale, dark gray, readable but secondary to headline",
+          "dataStyle": "$10,000.00 format with decimals, bold dark text paired with available amounts in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Horizontal top nav with logo, 6 main nav items, and prominent yellow Sign up button",
+            "position": "top",
+            "notable": "Yellow CTA creates strong visual anchor; balanced menu spacing"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left side contains large serif headline with supporting trust signals (FDIC, BitGo, Visa)",
+            "position": "left-center",
+            "notable": "Trust badges displayed with icons and asterisks for fine print links"
+          },
+          {
+            "type": "phone-mockup",
+            "description": "Realistic iPhone displaying wallet dashboard with $10K total, Bitcoin/Cash/Credit breakdown",
+            "position": "right",
+            "notable": "Shows actual product UI with action buttons (Deposit, Buy bitcoin, Sell bitcoin) in yellow"
+          },
+          {
+            "type": "cta-button",
+            "description": "Yellow button with arrow, high contrast against cream",
+            "position": "below headline",
+            "notable": "Large touch target, arrow indicates progression"
+          },
+          {
+            "type": "cookie-modal",
+            "description": "Overlay consent dialog with Accept All/Reject All buttons",
+            "position": "bottom-right",
+            "notable": "Uses same yellow for primary action, maintains brand consistency"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, secondary copy supports, phone mockup provides visual proof, small legal text at bottom",
+        "innovativeElements": [
+          "Phone mockup integrated as key visual element showing real wallet interface",
+          "Use of cream/beige background provides warm, approachable feel vs typical crypto dark themes",
+          "Trust signal badges (FDIC, BitGo, Visa) use icons for quick recognition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Fold is and get started with bitcoin/crypto finance",
+        "entryPoints": [
+          "Direct URL visit",
+          "Ad click",
+          "Navigation from other Fold pages"
+        ],
+        "exitPoints": [
+          "Sign up button (top-right)",
+          "Get started button (below headline)",
+          "Navigation menu items",
+          "Phone mockup exploration"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to signup flow"
+          },
+          {
+            "element": "Get started in minutes button",
+            "action": "Navigate to signup or onboarding"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective pages (Pricing, Buy Bitcoin, etc.)"
+          },
+          {
+            "element": "Cookie consent buttons",
+            "action": "Accept or reject analytics/advertising cookies"
+          }
+        ],
+        "informationArchitecture": "Hero statement → Trust signals → Product benefit (phone mockup) → Call to action → Legal fine print",
+        "frictionPoints": [
+          "Cookie modal overlays content and requires interaction before proceeding",
+          "Legal disclaimers at bottom use small text and multiple asterisks, reducing scannability",
+          "Multiple trust badges with asterisks suggest fine print dependencies"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Personal finance powered by bitcoin",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get started in minutes",
+            "style": "primary-button",
+            "placement": "below headline"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Reject All",
+            "style": "secondary-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "$ USD may be FDIC Insured*",
+            "context": "Below headline",
+            "purpose": "Trust signal - explains deposit protection"
+          },
+          {
+            "text": "₿ BitGo Insured**",
+            "context": "Below headline",
+            "purpose": "Trust signal - explains bitcoin custody insurance"
+          },
+          {
+            "text": "Visa Rewards Card",
+            "context": "Below headline",
+            "purpose": "Trust signal - explains payment method benefits"
+          },
+          {
+            "text": "GET $20 IN SATS WITH YOUR FIRST FOLD CARD PURCHASE†",
+            "context": "Above CTA button",
+            "purpose": "Promotional incentive - encourages action"
+          },
+          {
+            "text": "Fold is a financial services platform and not a FDIC insured bank...",
+            "context": "Bottom of page",
+            "purpose": "Legal disclaimer - manages expectations and compliance"
+          }
+        ],
+        "tone": "professional-technical with friendly, approachable undertones",
+        "dataFormatting": [
+          "$10,000.00",
+          "$5,100.00 ₿",
+          "$4,900.00",
+          "$10,000.00 available",
+          "$4,750 available"
+        ],
+        "trustSignals": [
+          "USD may be FDIC Insured*",
+          "BitGo Insured** (for bitcoin)",
+          "Visa Rewards Card",
+          "As seen in: Forbes, Bloomberg, Fortune (shown on later scroll)",
+          "$20 SATs offer for new users"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-2-pricing.png",
+      "label": "Pricing",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFE600",
+          "#1a1a1a",
+          "#f5f1e8",
+          "#2d2d2d"
+        ],
+        "typography": {
+          "headingStyle": "Large serif centered headline (48-56px), dark charcoal, spans full width",
+          "bodyStyle": "Serif body copy, centered, explaining value proposition in readable paragraph form",
+          "dataStyle": "Large pricing numbers ('Free', '$8/month' style) in serif font, bold"
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Same top nav as landing page",
+            "position": "top",
+            "notable": "Consistent branding across pages"
+          },
+          {
+            "type": "hero-section",
+            "description": "Centered, full-width headline with supporting paragraph explaining product positioning",
+            "position": "center-top",
+            "notable": "Centered layout vs left-aligned on landing, creates different visual emphasis"
+          },
+          {
+            "type": "pricing-toggle",
+            "description": "Monthly/Annual toggle switch with yellow accent, shows 18% savings callout",
+            "position": "center",
+            "notable": "Interactive toggle with immediate visual feedback, savings badge drives annual selection"
+          },
+          {
+            "type": "pricing-cards",
+            "description": "Two tier cards visible (Fold Member Free, Fold+ $8+), likely 3 tiers total",
+            "position": "below toggle",
+            "notable": "Light card on left, dark card on right, creates visual separation"
+          },
+          {
+            "type": "cookie-modal",
+            "description": "Same overlay consent dialog",
+            "position": "bottom-right",
+            "notable": "Consistent across pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered headline → explanation → toggle → pricing cards below",
+        "innovativeElements": [
+          "Monthly/Annual toggle with savings badge prominently displayed",
+          "Two-tone pricing card design (light vs dark) for tier differentiation",
+          "Centered layout creates different reading pattern vs asymmetrical landing page"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Compare pricing tiers and decide which membership level suits them",
+        "entryPoints": [
+          "Pricing nav item",
+          "Link from landing page"
+        ],
+        "exitPoints": [
+          "Sign up button (top-right)",
+          "Navigation menu",
+          "Pricing card CTA (likely)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Monthly/Annual toggle",
+            "action": "Switch pricing view and pricing amounts update with savings indicator"
+          },
+          {
+            "element": "Pricing cards",
+            "action": "Likely expand or navigate to detail pages"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Navigate to signup flow"
+          }
+        ],
+        "informationArchitecture": "Headline → Value explanation → Billing frequency selector → Tier comparison cards",
+        "frictionPoints": [
+          "Cookie modal overlays content",
+          "Not all three pricing tiers visible in current view (likely requires scroll)",
+          "No direct comparison table visible - must click/hover on cards to see full details"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "More than a bitcoin card",
+        "subheadline": "Fold obsoletes legacy checking accounts. It's not just a bitcoin card or rewards app—it's a personal finance platform. Buy bitcoin, get paid in bitcoin, manage a cash balance and bitcoin savings, and earn cashback rewards—paid in bitcoin.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Monthly",
+            "context": "Toggle switch left",
+            "purpose": "Billing frequency option"
+          },
+          {
+            "text": "Annual",
+            "context": "Toggle switch right",
+            "purpose": "Billing frequency option"
+          },
+          {
+            "text": "save 18% with an annual plan",
+            "context": "Badge below toggle",
+            "purpose": "Incentivizes annual commitment with specific savings percentage"
+          },
+          {
+            "text": "Fold Member",
+            "context": "Light pricing card",
+            "purpose": "Tier name"
+          },
+          {
+            "text": "Get started with bitcoin",
+            "context": "Light pricing card subtitle",
+            "purpose": "Tier benefit summary"
+          },
+          {
+            "text": "Free",
+            "context": "Light pricing card price",
+            "purpose": "Removes price barrier for entry tier"
+          }
+        ],
+        "tone": "professional-educational, explaining value not just price",
+        "dataFormatting": [
+          "Free (no decimals)",
+          "$8/month (or annual equivalent)",
+          "18% savings callout"
+        ],
+        "trustSignals": [
+          "Personal finance platform positioning (vs 'just' a card)",
+          "Bitcoin earning and rewards emphasis"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-home-3-buy-bitcoin.png",
+      "label": "Buy Bitcoin",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFE600",
+          "#1a1a1a",
+          "#f5f1e8"
+        ],
+        "typography": {
+          "headingStyle": "Large serif centered headline (48-56px), dark charcoal",
+          "bodyStyle": "Serif body copy, centered, explaining bitcoin buying approach",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Same top nav as previous pages",
+            "position": "top",
+            "notable": "Consistent cross-page navigation"
+          },
+          {
+            "type": "hero-section",
+            "description": "Centered full-width headline with multi-line explanation of bitcoin buying benefits",
+            "position": "center-top",
+            "notable": "Longer body copy than pricing page, focused on education vs features"
+          },
+          {
+            "type": "trust-badges",
+            "description": "'As Seen In' section with Forbes, Bloomberg, Fortune logos",
+            "position": "lower-center",
+            "notable": "Builds credibility through major media publications"
+          },
+          {
+            "type": "pricing-section",
+            "description": "Partial view of 'Zero fees with Fold' section at bottom",
+            "position": "bottom",
+            "notable": "Teases next content section below fold"
+          },
+          {
+            "type": "cookie-modal",
+            "description": "Same overlay consent dialog",
+            "position": "bottom-right",
+            "notable": "Consistent across all pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates → supporting explanation → trust badges → teaser content below",
+        "innovativeElements": [
+          "Extended educational copy positioning Fold as alternative to traditional exchanges",
+          "Media credibility section emphasizes third-party validation",
+          "Consistent use of serif font for headlines creates elegant, sophisticated feel"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Fold's bitcoin buying offering and understand how it differs from other exchanges",
+        "entryPoints": [
+          "Buy Bitcoin nav item",
+          "Link from landing/pricing pages"
+        ],
+        "exitPoints": [
+          "Sign up button (top-right)",
+          "Navigation menu",
+          "Scroll down to pricing/features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Navigate to signup flow"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Trust badges",
+            "action": "Likely link to articles/mentions (inferred)"
+          }
+        ],
+        "informationArchitecture": "Headline → Value proposition explanation → Trust validation → Feature tease",
+        "frictionPoints": [
+          "Cookie modal requires interaction",
+          "Content appears to continue below fold, requires scrolling to see full offering"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A better way to buy bitcoin",
+        "subheadline": "Avoid the noise of speculative trading exchanges and embrace simplified bitcoin accumulation with Fold. We've streamlined bitcoin buying methods into a unified platform, making integrating bitcoin into your personal finances and long-term savings strategy easy.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          },
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "AS SEEN IN",
+            "context": "Above trust badges",
+            "purpose": "Label for credibility section"
+          }
+        ],
+        "tone": "professional-educational, positioning Fold as thoughtful alternative to chaotic exchanges",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Forbes mention",
+          "Bloomberg mention",
+          "Fortune mention",
+          "Emphasis on 'streamlined' and 'simplified' bitcoin buying (vs complex trading)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fold-settings-2-support.png",
+      "label": "Support",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width with hero section and stacked accordion below",
+        "colorScheme": "light with vibrant accent",
+        "primaryColors": [
+          "#FFD700",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large 48px+ for main headline, all-caps emphasis",
+          "bodyStyle": "Regular sans-serif, medium weight for body text and labels",
+          "dataStyle": "Inline text labels with commas for helpful search terms"
+        },
+        "components": [
+          {
+            "type": "Hero section with gradient background",
+            "description": "Full-width yellow-orange gradient banner with centered search and illustrative graphics (question mark icon, robot mascot)",
+            "position": "top 0-500px",
+            "notable": "Playful 3D illustrations (magenta question mark box, teal robot with spinning wheel) create friendly, approachable tone"
+          },
+          {
+            "type": "Search bar",
+            "description": "Centered white search input with magnifying glass icon and placeholder 'Search'",
+            "position": "center of hero",
+            "notable": "Prominent placement suggests search-first interaction pattern"
+          },
+          {
+            "type": "Accordion menu items",
+            "description": "Six expandable sections with chevron icons (right-pointing when closed)",
+            "position": "below hero section, full-width white background",
+            "notable": "Clean, minimal design with consistent spacing between items"
+          },
+          {
+            "type": "Chat widget",
+            "description": "Yellow circular button with chat icon in bottom right corner",
+            "position": "bottom-right corner",
+            "notable": "Persistent, always-available support access point"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero banner dominates visual attention with bold yellow color and centered search, supporting illustrations flank search, accordion sections below create secondary importance",
+        "innovativeElements": [
+          "Curved wave divider between hero section and white background content",
+          "3D mascot character (robot) as visual support accent rather than generic icons",
+          "Color-coded helpful search terms inline with copy"
+        ]
+      },
+      "flow": {
+        "screenType": "support landing / help center hub",
+        "userIntent": "Find answers to support questions or submit a request for help",
+        "entryPoints": [
+          "Settings/Help menu navigation",
+          "Support link in header",
+          "Direct URL to support portal"
+        ],
+        "exitPoints": [
+          "Search results for a specific query",
+          "Expanded accordion section with answer",
+          "Submit a request button (top-right)",
+          "Sign in (top-right if not authenticated)",
+          "Chat widget for live support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filter and surface relevant support articles based on keyword"
+          },
+          {
+            "element": "Accordion items (Promotions, Your Fold app account, etc.)",
+            "action": "Expand/collapse to reveal nested FAQ or documentation"
+          },
+          {
+            "element": "Chat widget button",
+            "action": "Open live chat support conversation"
+          },
+          {
+            "element": "Submit a request link",
+            "action": "Navigate to support ticket creation form"
+          }
+        ],
+        "informationArchitecture": "Category-first organization with six topic sections (Promotions, Account, Debit Card, Bitcoin Buying, Gift Cards, Rewards); search cross-cuts hierarchy for keyword discovery",
+        "frictionPoints": [
+          "User must choose between search and browsing accordion categories",
+          "Accordion structure requires clicking to expand, adding steps to find answers"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How can we help you?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Submit a request",
+            "style": "text-link",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Helpful search terms: bitcoin buying, withdrawals, gift cards",
+            "context": "Below search bar",
+            "purpose": "Guide users toward common search queries and reduce search friction"
+          },
+          {
+            "text": "Hi. Need any help?",
+            "context": "Chat widget greeting",
+            "purpose": "Proactive engagement prompt for live support"
+          }
+        ],
+        "tone": "friendly-casual with professional undertones; approachable and helpful without being condescending",
+        "dataFormatting": [
+          "Plain text labels for accordion categories (title-case, single words or short phrases)"
+        ],
+        "trustSignals": [
+          "Branded 'Fold Support' header establishes official support channel",
+          "Structured FAQ categories suggest comprehensive documentation",
+          "Live chat availability signals responsive support"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "slug": "gmx",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:50:47.966Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/gmx-settings-1-docs.png",
+      "label": "Docs",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f7fb",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Bold, sans-serif, large (48px+), all-caps 'GMX'",
+          "bodyStyle": "Regular, sans-serif, 16px line-height, dark gray text (#333)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "Vertical menu with collapsible sections (Tokenomics, API, SDK, Security, etc.)",
+            "position": "left edge",
+            "notable": "Expandable menu items with chevron icons, current selection highlighted"
+          },
+          {
+            "type": "header bar",
+            "description": "Logo, search input, theme toggle, documentation title",
+            "position": "top",
+            "notable": "Search bar with placeholder text, dark/light mode toggle"
+          },
+          {
+            "type": "navigation breadcrumb",
+            "description": "Shows 'GMX' as current section",
+            "position": "above main heading",
+            "notable": "Blue colored tag"
+          },
+          {
+            "type": "content area",
+            "description": "Educational text about GMX protocol features",
+            "position": "main content region",
+            "notable": "Multiple paragraphs with inline hyperlinks in blue"
+          },
+          {
+            "type": "pagination footer",
+            "description": "Next button linking to Tokenomics",
+            "position": "bottom right",
+            "notable": "Border-style button with right arrow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear hierarchy: large heading draws attention, body text organized in logical paragraphs, inline links direct to related topics, footer navigation encourages progression",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Understand GMX protocol fundamentals and navigate to relevant documentation sections",
+        "entryPoints": [
+          "Direct navigation from sidebar",
+          "Link from external source"
+        ],
+        "exitPoints": [
+          "Click next button to Tokenomics",
+          "Click sidebar links",
+          "Search documentation",
+          "Click inline links for GMX Token/Rewards, GM/GLV, Trading on GMX"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Inline hyperlinks (GMX Token, Rewards, GM/GLV, Trading on GMX)",
+            "action": "Jump to related documentation pages"
+          },
+          {
+            "element": "Next button",
+            "action": "Progress to Tokenomics section"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search documentation content"
+          }
+        ],
+        "informationArchitecture": "Linear progression through protocol documentation; sidebar provides non-linear access to major sections; inline links allow contextual jumps",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "GMX",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Next: Tokenomics »",
+            "style": "border-button",
+            "placement": "bottom right"
+          },
+          {
+            "text": "GMX Token / Rewards",
+            "style": "text-link",
+            "placement": "inline, paragraph 3"
+          },
+          {
+            "text": "GM/GLV",
+            "style": "text-link",
+            "placement": "inline, paragraph 4"
+          },
+          {
+            "text": "Trading on GMX",
+            "style": "text-link",
+            "placement": "inline, paragraph 5"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For token holders:",
+            "context": "Before first inline link",
+            "purpose": "Segment audience and clarify link relevance"
+          },
+          {
+            "text": "For liquidity providers:",
+            "context": "Before second inline link",
+            "purpose": "Segment audience by user role"
+          },
+          {
+            "text": "For traders:",
+            "context": "Before third inline link",
+            "purpose": "Segment audience by user role"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "100x leverage",
+          "low swap fees"
+        ],
+        "trustSignals": [
+          "Chainlink Data Stream oracles",
+          "fair market prices"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gmx-settings-2-gmx-developer-docs.png",
+      "label": "GMX Developer Docs",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f7fb",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Bold, sans-serif, 48px+, all-caps 'API'",
+          "bodyStyle": "Regular, sans-serif, 16px, dark gray (#333)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "Expanded API section showing sub-items: Updates and Support, REST, Subsquid, Contracts",
+            "position": "left",
+            "notable": "Current section (API) highlighted in blue, child items visible"
+          },
+          {
+            "type": "card grid",
+            "description": "Four cards in 2x2 grid layout",
+            "position": "main content area",
+            "notable": "Each card has folder icon, title, brief description; clickable navigation cards"
+          },
+          {
+            "type": "pagination",
+            "description": "Previous and Next buttons with navigation text",
+            "position": "bottom",
+            "notable": "Two-way navigation: '« Frontends' and 'Updates and Support »'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large API heading establishes context, card grid presents equal-weight options, footer navigation guides next steps",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "index-page",
+        "userIntent": "Explore API documentation sections and choose relevant resource",
+        "entryPoints": [
+          "Click API in sidebar",
+          "Previous navigation from Frontends page"
+        ],
+        "exitPoints": [
+          "Click any of 4 cards",
+          "Click Previous to Frontends",
+          "Click Next to Updates and Support",
+          "Click sidebar items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Updates and Support card",
+            "action": "Navigate to updates/support section"
+          },
+          {
+            "element": "REST card",
+            "action": "Navigate to REST endpoints documentation"
+          },
+          {
+            "element": "Subsquid card",
+            "action": "Navigate to Subsquid documentation"
+          },
+          {
+            "element": "Contracts card",
+            "action": "Navigate to smart contract documentation"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke pattern; API serves as hub with 4 distinct spokes (Updates, REST, Subsquid, Contracts); sidebar allows non-linear navigation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "API",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "« Frontends",
+            "style": "text-link",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Updates and Support »",
+            "style": "text-link",
+            "placement": "bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For contract and API updates please subscribe to the ...",
+            "context": "Updates and Support card",
+            "purpose": "Call to action preview text"
+          },
+          {
+            "text": "REST endpoints for protocol information.",
+            "context": "REST card",
+            "purpose": "Brief description of card content"
+          },
+          {
+            "text": "| Network | URL |",
+            "context": "Subsquid card",
+            "purpose": "Hint at structured data format"
+          },
+          {
+            "text": "Docs for the GMX contracts.",
+            "context": "Contracts card",
+            "purpose": "Brief description of card content"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gmx-settings-3-media-kit.png",
+      "label": "Media Kit",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f7fb",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Bold, sans-serif, 48px+, 'Media Kit'",
+          "bodyStyle": "Regular, sans-serif, 16px, dark gray (#333)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "Expanded Community section showing: Updates, Groups, Media Kit (current, highlighted), Courses",
+            "position": "left",
+            "notable": "Media Kit highlighted in blue background, nested under Community"
+          },
+          {
+            "type": "breadcrumb navigation",
+            "description": "Community > Media Kit",
+            "position": "above heading",
+            "notable": "Shows hierarchy and current location"
+          },
+          {
+            "type": "content area",
+            "description": "Simple text paragraph with inline link",
+            "position": "main content",
+            "notable": "Minimal content, primarily directional"
+          },
+          {
+            "type": "pagination",
+            "description": "Previous and Next buttons",
+            "position": "bottom",
+            "notable": "« Groups and Courses »"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading anchors page, minimal body text focuses attention on inline link, navigation buttons guide next steps",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-page",
+        "userIntent": "Access media assets (logos) for GMX and GLP; learn where to find branding materials",
+        "entryPoints": [
+          "Click Media Kit in sidebar",
+          "Previous navigation from Courses"
+        ],
+        "exitPoints": [
+          "Click assets repository link",
+          "Click Previous to Groups",
+          "Click Next to Courses",
+          "Navigate via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "assets repository link",
+            "action": "Navigate to external asset repository"
+          },
+          {
+            "element": "« Groups button",
+            "action": "Navigate to Groups documentation"
+          },
+          {
+            "element": "Courses » button",
+            "action": "Navigate to Courses documentation"
+          }
+        ],
+        "informationArchitecture": "Linear progression through Community section; breadcrumb shows hierarchy; minimal content delegates to external link",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Media Kit",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "assets repository",
+            "style": "text-link",
+            "placement": "inline, body text"
+          },
+          {
+            "text": "« Groups",
+            "style": "text-link",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Courses »",
+            "style": "text-link",
+            "placement": "bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "in SVG and PNG formats",
+            "context": "Body paragraph",
+            "purpose": "Specifies file formats available"
+          },
+          {
+            "text": "can be found in the",
+            "context": "Body paragraph",
+            "purpose": "Transitional language leading to link"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "SVG",
+          "PNG"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gmx-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with split content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D1B2A",
+          "#6366F1",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold, white, ~80px, high contrast against dark background",
+          "bodyStyle": "Medium weight sans-serif, gray-white, supporting text beneath heading",
+          "dataStyle": "Large monospace numerals with currency symbols, right-aligned in stats section"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, center-aligned links (Protocol, Governance, Voting, Docs), right-aligned CTA",
+            "position": "Top fixed",
+            "notable": "Sticky nav with high contrast blue button for immediate app access"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with supporting copy and trust statement",
+            "position": "Center-left, full viewport height",
+            "notable": "Gradient glow effect in background (purple to blue), creates depth"
+          },
+          {
+            "type": "Stats Card Row",
+            "description": "Three stat blocks showing Traders (740K), Open Interest ($73M), Total Volume ($358B)",
+            "position": "Bottom right of hero",
+            "notable": "Large data numbers with subtle labels, builds social proof"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Primary action button with icon indicator",
+            "position": "Left side near bottom",
+            "notable": "Solid blue with rounded corners, high visibility"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates upper-left, supporting copy and stats guide eye rightward and downward, gradient background focuses attention on center",
+        "innovativeElements": [
+          "Animated gradient glow effect in background (purple-blue radial gradient)",
+          "Asymmetrical layout with stats positioned lower-right",
+          "Large scale typography creates dramatic entrance"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about GMX trading capabilities and decide to enter the app",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Marketing campaign links"
+        ],
+        "exitPoints": [
+          "Trade Now button",
+          "Open App button (nav)",
+          "Protocol/Governance/Voting links",
+          "External documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade Now button",
+            "action": "Navigate to trading interface or app entry"
+          },
+          {
+            "element": "Open App button",
+            "action": "Launch main application"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to secondary pages (Protocol, Governance, etc.)"
+          }
+        ],
+        "informationArchitecture": "Hero-first with immediate value prop, supporting trust metrics at bottom, navigation options across top",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trade 100+ crypto tokens from your wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Trade Now",
+            "style": "primary-button",
+            "placement": "Left side, mid-height"
+          },
+          {
+            "text": "Open App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Decentralised permissionless on-chain exchange with deep liquidity and low costs, live since 2021",
+            "context": "Below headline, left side",
+            "purpose": "Establish credibility with key differentiators and longevity"
+          },
+          {
+            "text": "Traders",
+            "context": "Stats label, bottom right",
+            "purpose": "Identify metric category"
+          },
+          {
+            "text": "Open Interest",
+            "context": "Stats label, bottom right",
+            "purpose": "Identify metric category"
+          },
+          {
+            "text": "Total Volume",
+            "context": "Stats label with arrow, bottom right",
+            "purpose": "Identify metric category, arrow implies expandability"
+          }
+        ],
+        "tone": "professional-technical, confident, feature-focused",
+        "dataFormatting": [
+          "740K (traders count)",
+          "$73M (open interest)",
+          "$358B (total volume)"
+        ],
+        "trustSignals": [
+          "Live since 2021 (operational history)",
+          "740K traders (user base)",
+          "$358B total volume (liquidity proof)",
+          "$73M open interest (market size)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gmx-home-2-landing-page-scrolled-3.png",
+      "label": "Landing page — scrolled 3",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "card-grid with header section",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A2847",
+          "#6366F1"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold black, ~60px",
+          "bodyStyle": "Medium sans-serif, dark gray on light background",
+          "dataStyle": "Very large sans-serif numerals with % symbol in colored cards, high contrast"
+        },
+        "components": [
+          {
+            "type": "Header Section",
+            "description": "Large headline about liquidity with user count social proof",
+            "position": "Top, full width",
+            "notable": "Light background creates contrast break from dark landing page"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Secondary action button (Start Earning)",
+            "position": "Top right",
+            "notable": "Bright blue matches brand, positioned for secondary conversion"
+          },
+          {
+            "type": "Product Card Grid",
+            "description": "Three cards (GMX, GLV, GM) with token icons, descriptions, and APR rates",
+            "position": "Center, 3-column layout",
+            "notable": "Dark cards with gradient icons and animated background shapes, high visual interest"
+          },
+          {
+            "type": "Badge Section",
+            "description": "Trust indicators showing partnerships/supporters",
+            "position": "Bottom left, partially visible",
+            "notable": "Grayscale logos from Chainlink, LayerZero, Chaos Labs, Guardian"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline anchors top, three equal-weight product cards dominate center, stats flow left-to-right",
+        "innovativeElements": [
+          "Three-product comparison cards with individual brand treatment",
+          "Gradient geometric shapes within dark cards suggest depth/animation",
+          "APR prominently displayed as primary data point per product",
+          "User count (91599) in supporting copy builds social proof"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product-comparison",
+        "userIntent": "Understand yield/earning options and choose between GMX, GLV, or GM products",
+        "entryPoints": [
+          "Scroll down from hero",
+          "Direct navigation to earn section"
+        ],
+        "exitPoints": [
+          "Start Earning button",
+          "Individual product selection (implied clickable cards)",
+          "Continue scroll"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start Earning button",
+            "action": "Navigate to earning/staking interface"
+          },
+          {
+            "element": "Product Cards (GMX/GLV/GM)",
+            "action": "Likely expand or navigate to product-specific details"
+          },
+          {
+            "element": "Supported partner logos",
+            "action": "Likely link to external resources or partnerships"
+          }
+        ],
+        "informationArchitecture": "Sequential flow: headline → user validation → product options → trust signals",
+        "frictionPoints": [
+          "Three choices may create decision paralysis for new users",
+          "APR percentages shown without clear explanation of differences"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$240 000 000 in liquidity",
+        "subheadline": "Join 91599 users earning real yield.",
+        "ctas": [
+          {
+            "text": "Start Earning",
+            "style": "primary-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Stake for rewards and governance rights",
+            "context": "GMX card, under token name",
+            "purpose": "Explain GMX product value"
+          },
+          {
+            "text": "Steady returns without management",
+            "context": "GLV card, under token name",
+            "purpose": "Explain GLV product value"
+          },
+          {
+            "text": "Invest with control over risk and reward",
+            "context": "GM card, under token name",
+            "purpose": "Explain GM product value"
+          },
+          {
+            "text": "Annually",
+            "context": "APR label on each card",
+            "purpose": "Clarify APR compounding frequency"
+          }
+        ],
+        "tone": "professional-technical, inclusive, opportunity-focused",
+        "dataFormatting": [
+          "$240 000 000 (liquidity amount with spaces)",
+          "91599 (user count)",
+          "36.40% APR",
+          "12.09% APR",
+          "24.47% APR"
+        ],
+        "trustSignals": [
+          "91599 users (community size)",
+          "$240M liquidity (protocol scale)",
+          "Partnership logos (Chainlink, LayerZero, Chaos Labs, Guardian)",
+          "APR rates published (transparency)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/gmx-home-3-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width hero with split content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D1B2A",
+          "#6366F1",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold, white, ~80px",
+          "bodyStyle": "Medium weight sans-serif, gray-white, supporting text",
+          "dataStyle": "Large monospace numerals with currency symbols"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Identical to screenshot 1 - logo, center links, right CTA",
+            "position": "Top fixed",
+            "notable": "Consistent branding across pages"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline variant focusing on leverage feature",
+            "position": "Center-left, full viewport height",
+            "notable": "Same gradient glow background treatment as screenshot 1"
+          },
+          {
+            "type": "Stats Card Row",
+            "description": "Identical stats to screenshot 1 (740K, $73M, $358B)",
+            "position": "Bottom right",
+            "notable": "Consistent metrics across pages"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Trade Now button with icon",
+            "position": "Left side near bottom",
+            "notable": "Same styling as screenshot 1"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to screenshot 1 - headline-dominant upper-left layout",
+        "innovativeElements": [
+          "Gradient glow effect (same as screenshot 1)",
+          "Asymmetrical layout (same as screenshot 1)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about leverage trading capabilities",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Marketing campaign links"
+        ],
+        "exitPoints": [
+          "Trade Now button",
+          "Open App button",
+          "Protocol/Governance/Voting links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade Now button",
+            "action": "Navigate to trading interface"
+          },
+          {
+            "element": "Open App button",
+            "action": "Launch application"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to secondary pages"
+          }
+        ],
+        "informationArchitecture": "Identical to screenshot 1",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trade with 100x leverage from your wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Trade Now",
+            "style": "primary-button",
+            "placement": "Left side, mid-height"
+          },
+          {
+            "text": "Open App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Decentralised permissionless on-chain exchange with deep liquidity and low costs, live since 2021",
+            "context": "Below headline",
+            "purpose": "Establish credibility and differentiation"
+          },
+          {
+            "text": "Traders",
+            "context": "Stats label",
+            "purpose": "Identify metric"
+          },
+          {
+            "text": "Open Interest",
+            "context": "Stats label",
+            "purpose": "Identify metric"
+          },
+          {
+            "text": "Total Volume",
+            "context": "Stats label",
+            "purpose": "Identify metric"
+          }
+        ],
+        "tone": "professional-technical, confident, feature-focused",
+        "dataFormatting": [
+          "100x (leverage multiplier)",
+          "740K (traders)",
+          "$73M (open interest)",
+          "$358B (total volume)"
+        ],
+        "trustSignals": [
+          "Live since 2021",
+          "740K traders",
+          "$358B total volume",
+          "$73M open interest"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

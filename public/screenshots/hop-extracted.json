@@ -1,0 +1,1335 @@
+{
+  "slug": "hop",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T11:53:51.252Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 10,
+  "screens": [
+    {
+      "image": "/screenshots/hop-home-4-view-documentation.png",
+      "label": "View Documentation→",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#D946EF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1: ~40px), black color",
+          "bodyStyle": "Regular sans-serif, medium size (~16px), gray text (#666)",
+          "dataStyle": "Monospace font in code blocks, syntax highlighting (green/orange/red)"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with hierarchical documentation menu organized by sections (Developer Docs, JavaScript SDK, API, HOP NODE, SUBGRAPHS, SMART CONTRACTS)",
+            "position": "left",
+            "notable": "Active page highlighted in magenta (#D946EF), collapsible sections"
+          },
+          {
+            "type": "search-bar",
+            "description": "Horizontal search input with keyboard shortcuts (⌘ K)",
+            "position": "top-center",
+            "notable": "Prominent placement, command-based shortcut indication"
+          },
+          {
+            "type": "code-block",
+            "description": "Syntax-highlighted code snippets for npm, yarn, and script tags",
+            "position": "main-content",
+            "notable": "Multiple installation methods shown side-by-side, easy copy"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Table of contents with linked headings and related examples",
+            "position": "right",
+            "notable": "Sticky navigation showing document structure with gray text links"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear vertical hierarchy with magenta accent for active nav; code blocks visually separated with light backgrounds",
+        "innovativeElements": [
+          "Split-view documentation with synchronized TOC sidebar",
+          "Multi-language installation instructions (npm/yarn) in same section"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-browse",
+        "userIntent": "Developer learning how to install and get started with Hop Protocol SDK",
+        "entryPoints": [
+          "Search bar navigation",
+          "Sidebar menu click",
+          "Direct link to Getting Started section"
+        ],
+        "exitPoints": [
+          "Click other sidebar sections (Welcome, API Reference, etc.)",
+          "Click example links in right sidebar",
+          "Search for different topic",
+          "Edit button to contribute docs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-text search across documentation"
+          },
+          {
+            "element": "Edit button",
+            "action": "Open documentation in edit mode (likely GitHub)"
+          },
+          {
+            "element": "Right sidebar links",
+            "action": "Jump to specific sections or related examples"
+          }
+        ],
+        "informationArchitecture": "Hierarchical menu structure with primary sections (SDK, API, NODE, SUBGRAPHS, CONTRACTS) containing subsections; main content area shows progressive detail",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Getting started",
+        "subheadline": "Install module",
+        "ctas": [
+          {
+            "text": "Install module",
+            "style": "section-heading",
+            "placement": "right sidebar"
+          },
+          {
+            "text": "Edit",
+            "style": "icon-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Using NPM:",
+            "context": "Above npm command block",
+            "purpose": "Introduces installation method"
+          },
+          {
+            "text": "Using Yarn:",
+            "context": "Above yarn command block",
+            "purpose": "Introduces alternative installation method"
+          },
+          {
+            "text": "JAVASCRIPT SDK",
+            "context": "Top of main content area",
+            "purpose": "Breadcrumb/section indicator in magenta"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "npm install @hop-protocol/sdk",
+          "yarn add @hop-protocol/sdk",
+          "https://cdn.jsdelivr.net/npm/@hop-protocol/sdk@latest/hop.js"
+        ],
+        "trustSignals": [
+          "Official Hop Protocol branding",
+          "Powered by GitBook footer",
+          "Multiple distribution methods (npm, yarn, CDN)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-home-5-explorer-v1.png",
+      "label": "Explorer V1",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2D3D",
+          "#C71585",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Light sans-serif, medium size (~24px), white text",
+          "bodyStyle": "Regular sans-serif, small-medium size (~14px), light gray (#9CA3AF)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Logo with 'Hop Explorer' text and theme toggle button (sun icon)",
+            "position": "top-left",
+            "notable": "Magenta accent on logo, theme toggle in top-right"
+          },
+          {
+            "type": "chart-selector",
+            "description": "Dropdown menu labeled 'Chart' with expand controls",
+            "position": "top-left below header",
+            "notable": "Primary interaction point for switching visualization types"
+          },
+          {
+            "type": "flow-diagram",
+            "description": "Central visualization showing Source → Destination flow with arrow connector",
+            "position": "center",
+            "notable": "Minimalist design with large empty space for interaction"
+          },
+          {
+            "type": "filter-panel",
+            "description": "Collapsible 'Filters' section at bottom with checkbox options (Amount size)",
+            "position": "bottom-left",
+            "notable": "Expandable controls for data refinement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered flow diagram dominates screen; headers and filters are secondary; large negative space emphasizes data visualization area",
+        "innovativeElements": [
+          "Minimalist explorer interface with dominant negative space",
+          "Source-to-Destination flow visualization pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore transaction flows, routes, and liquidity patterns between Hop Protocol source and destination chains",
+        "entryPoints": [
+          "Navigation from main app menu",
+          "Direct URL link to explorer"
+        ],
+        "exitPoints": [
+          "Select different chart type",
+          "Apply filters",
+          "Return to main navigation",
+          "Toggle theme"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chart dropdown",
+            "action": "Switch between different visualization types"
+          },
+          {
+            "element": "Source/Destination areas",
+            "action": "Likely clickable to select chains or tokens"
+          },
+          {
+            "element": "Amount size checkbox",
+            "action": "Toggle sizing visualization by transaction amount"
+          },
+          {
+            "element": "Filters dropdown",
+            "action": "Expand/collapse additional filter options"
+          }
+        ],
+        "informationArchitecture": "Flat structure with primary control (Chart selector) at top and secondary controls (Filters) at bottom; main content area dominates center",
+        "frictionPoints": [
+          "Empty state provides no guidance on what data would appear",
+          "No visible selection state for Source/Destination",
+          "Unclear what clicking center area does"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Chart",
+            "style": "dropdown-button",
+            "placement": "top-left"
+          },
+          {
+            "text": "Filters",
+            "style": "dropdown-button",
+            "placement": "bottom-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Source",
+            "context": "Left side of flow diagram",
+            "purpose": "Labels flow starting point"
+          },
+          {
+            "text": "Destination",
+            "context": "Right side of flow diagram",
+            "purpose": "Labels flow endpoint"
+          },
+          {
+            "text": "Amount size",
+            "context": "Filter checkbox",
+            "purpose": "Describes filter option for visualization"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Hop Protocol branding"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Source",
+          "Destination"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/hop-home-6-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D2D3D",
+          "#1A1A2E"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": null,
+        "visualHierarchy": "Blank/empty page with minimal visual content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User arrived at non-existent page or test route",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Broken link"
+        ],
+        "exitPoints": [
+          "Back button",
+          "Navigation menu"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Not applicable - page appears to be blank/loading",
+        "frictionPoints": [
+          "No visible error message or guidance",
+          "No clear path back to valid content",
+          "Completely blank state creates confusion"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "error",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#DA1FFF",
+          "#FF69D1",
+          "#2A2A3E"
+        ],
+        "typography": {
+          "headingStyle": "Large gradient magenta to pink, bold sans-serif, center-aligned",
+          "bodyStyle": "Medium gray sans-serif, center-aligned, readable contrast",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Logo, Docs link, Launch App button, theme toggle",
+            "position": "top",
+            "notable": "Minimal nav with prominent Launch App CTA"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with gradient, subheadline, primary CTA",
+            "position": "center-upper",
+            "notable": "Centered composition with emoji accent (🐰)"
+          },
+          {
+            "type": "feature-cards",
+            "description": "3-column card grid with icons, titles, descriptions",
+            "position": "center-lower",
+            "notable": "Icon-driven cards with consistent visual language"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down flow: nav → hero headline → subheadline → CTA → feature cards, strong use of whitespace and vertical rhythm",
+        "innovativeElements": [
+          "Gradient text effect on headline (magenta to pink)",
+          "Emoji integration in copy for visual interest",
+          "Purple lightning bolt and shield icons as visual metaphors"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Hop is and start using the cross-chain bridge protocol",
+        "entryPoints": [
+          "Direct web traffic",
+          "Marketing campaigns"
+        ],
+        "exitPoints": [
+          "Launch App button",
+          "Docs link",
+          "Start Hopping CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button (top-right)",
+            "action": "Navigate to app interface"
+          },
+          {
+            "element": "Start Hopping button (center)",
+            "action": "Primary engagement path to bridge interface"
+          },
+          {
+            "element": "Docs link",
+            "action": "Navigate to documentation"
+          },
+          {
+            "element": "Theme toggle (top-right)",
+            "action": "Switch light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Hero-driven with feature discovery below; messaging progression from problem statement to value propositions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Cross-Chain Bridge Protocol",
+        "subheadline": "Fast, secure, and cost-effective token transfers between Ethereum rollups 🐰",
+        "ctas": [
+          {
+            "text": "Start Hopping",
+            "style": "primary-button",
+            "placement": "center-hero"
+          },
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right-nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hop Faster, Safer, and Cheaper",
+            "context": "Section subheading above features",
+            "purpose": "Reinforce value proposition with rhythm"
+          },
+          {
+            "text": "Send tokens between networks almost immediately without waiting for challenge periods.",
+            "context": "Fast Transfers card",
+            "purpose": "Explain speed benefit"
+          },
+          {
+            "text": "Fully trustless cross-chain bridging with no central authority or validator set.",
+            "context": "Secure & Trustless card",
+            "purpose": "Address security and decentralization"
+          },
+          {
+            "text": "Save on gas fees with optimized bridging and competitive rates.",
+            "context": "Cost Effective card",
+            "purpose": "Highlight economic advantage"
+          }
+        ],
+        "tone": "professional-technical with friendly casual elements",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Trustless cross-chain bridging emphasis",
+          "Decentralization messaging (no central authority)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-home-2-docs.png",
+      "label": "Docs",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#DA1FFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black text, large for page title",
+          "bodyStyle": "Regular gray sans-serif for body, smaller for navigation",
+          "dataStyle": "Light gray for timestamps, muted for metadata"
+        },
+        "components": [
+          {
+            "type": "header-search",
+            "description": "Search bar with keyboard shortcut hints (⌘ K)",
+            "position": "top",
+            "notable": "Prominent search with accessibility hints"
+          },
+          {
+            "type": "sidebar-nav",
+            "description": "Left navigation with expandable sections (Basics, Governance), nested links",
+            "position": "left",
+            "notable": "Hierarchical documentation structure with color-coded active states (magenta)"
+          },
+          {
+            "type": "main-content",
+            "description": "Welcome content with topic cards and links",
+            "position": "right",
+            "notable": "Card-based discovery with right-arrow indicators"
+          },
+          {
+            "type": "user-selector",
+            "description": "Dropdown for 'User Docs' vs other doc types",
+            "position": "left-top",
+            "notable": "Context switching for different documentation audiences"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors navigation; main content uses card patterns with right-arrow calls-to-action for progressive disclosure",
+        "innovativeElements": [
+          "GitBook integration badge at sidebar bottom",
+          "Keyboard shortcut display (⌘ K) for search discoverability"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore documentation topics and find specific information about Hop",
+        "entryPoints": [
+          "Docs link from landing page",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Topic cards (Basics, Governance, FAQ, Developer Docs)",
+          "Sidebar navigation links",
+          "Search results"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to nested documentation pages"
+          },
+          {
+            "element": "Topic cards (Basics, Governance, FAQ)",
+            "action": "Expand or navigate to category pages"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter documentation by keyword"
+          },
+          {
+            "element": "User Docs dropdown",
+            "action": "Switch documentation context/version"
+          },
+          {
+            "element": "Copy button (top-right)",
+            "action": "Copy page URL"
+          }
+        ],
+        "informationArchitecture": "Left-aligned hierarchical navigation with main content area; progressive disclosure via nested cards and expandable sections",
+        "frictionPoints": [
+          "Multiple versions of docs (v1 vs v2) may confuse users",
+          "Last updated 10 months ago note suggests potential staleness"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome",
+        "subheadline": "Welcome to the Hop User Documentation!",
+        "ctas": [
+          {
+            "text": "Basics",
+            "style": "card-link",
+            "placement": "main-content"
+          },
+          {
+            "text": "Governance",
+            "style": "card-link",
+            "placement": "main-content"
+          },
+          {
+            "text": "FAQ",
+            "style": "card-link",
+            "placement": "main-content"
+          },
+          {
+            "text": "Developer Docs",
+            "style": "card-link",
+            "placement": "main-content"
+          },
+          {
+            "text": "Developer Docs v2",
+            "style": "card-link",
+            "placement": "main-content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get started with these topics:",
+            "context": "Main content section header",
+            "purpose": "Guide user to key entry points"
+          },
+          {
+            "text": "Check out the v1 docs for the current version of Hop.",
+            "context": "Below Developer Docs section",
+            "purpose": "Clarify version information"
+          },
+          {
+            "text": "The Hop v2 protocol and docs are still a work-in-progress and only on testnet.",
+            "context": "Below Developer Docs v2",
+            "purpose": "Set expectations about v2 status"
+          },
+          {
+            "text": "Last updated 10 months ago",
+            "context": "Page footer",
+            "purpose": "Indicate documentation freshness"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "GitBook backing",
+          "Structured documentation organization"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-home-3-launch-app.png",
+      "label": "Launch App",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#DA1FFF",
+          "#FF69D1",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, large heading for 'Send'",
+          "bodyStyle": "Regular gray sans-serif, readable body text",
+          "dataStyle": "Monospace or bold for numeric values (0.0 ETH), gray labels"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Logo, navigation tabs (Send, Pool, Convert, Rewards), settings/time toggle, Connect Wallet button",
+            "position": "top",
+            "notable": "Tab-based navigation with primary CTA consistently in top-right"
+          },
+          {
+            "type": "form-container",
+            "description": "From/To network selector with amount display",
+            "position": "center",
+            "notable": "Two-step form with directional arrow and minimal labels"
+          },
+          {
+            "type": "info-display",
+            "description": "Fees and Estimated Received fields with info icons",
+            "position": "center-lower",
+            "notable": "Calculated fields with placeholder dashes"
+          },
+          {
+            "type": "dropdown-selector",
+            "description": "Select Network buttons with magenta background",
+            "position": "form-left",
+            "notable": "Interactive dropdowns with chevron indicators"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top nav anchors page; center form dominates with clear From → To flow; supporting info (fees) below; full-width CTA at bottom",
+        "innovativeElements": [
+          "Directional arrow (↓) between From/To fields for visual flow clarity",
+          "Options menu expandable control for advanced settings",
+          "Gentle gradient background behind form (beige tint)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a token transfer between Ethereum rollup networks",
+        "entryPoints": [
+          "Launch App button from landing page",
+          "Docs link navigation",
+          "Direct app URL"
+        ],
+        "exitPoints": [
+          "Connect A Wallet button (wallet connection required)",
+          "Pool tab",
+          "Convert tab",
+          "Rewards tab",
+          "Settings menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Select Network (From)",
+            "action": "Open dropdown to choose source network"
+          },
+          {
+            "element": "Select Network (To)",
+            "action": "Open dropdown to choose destination network"
+          },
+          {
+            "element": "Amount input fields",
+            "action": "Enter or edit transfer amount"
+          },
+          {
+            "element": "Options menu",
+            "action": "Reveal advanced settings"
+          },
+          {
+            "element": "Connect A Wallet button",
+            "action": "Trigger wallet connection flow"
+          },
+          {
+            "element": "Navigation tabs (Send, Pool, Convert, Rewards)",
+            "action": "Switch between app features"
+          }
+        ],
+        "informationArchitecture": "Single-purpose form view; top navigation provides feature switching; form follows From → To logical flow with supporting calculations below",
+        "frictionPoints": [
+          "Must connect wallet before proceeding (blocking action)",
+          "Network selection requires interaction before amount can be meaningful",
+          "No visible fee estimate until networks are selected"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect A Wallet",
+            "style": "primary-button",
+            "placement": "bottom-center (full-width)"
+          },
+          {
+            "text": "Connect A Wallet",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Form section label",
+            "purpose": "Identify source network selector"
+          },
+          {
+            "text": "To (estimated)",
+            "context": "Form section label",
+            "purpose": "Indicate destination and that amount is calculated/estimated"
+          },
+          {
+            "text": "Select Network",
+            "context": "Button text inside From/To sections",
+            "purpose": "Call user to action for network selection"
+          },
+          {
+            "text": "0.0 ETH",
+            "context": "Amount display (right side of form)",
+            "purpose": "Show token amount and type"
+          },
+          {
+            "text": "Options",
+            "context": "Expandable menu",
+            "purpose": "Indicate advanced settings availability"
+          },
+          {
+            "text": "Fees",
+            "context": "Form field label with info icon",
+            "purpose": "Display transaction fee estimate"
+          },
+          {
+            "text": "Estimated Received",
+            "context": "Form field label with info icon",
+            "purpose": "Show expected amount after fees and slippage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.0 ETH",
+          "Placeholder dashes (-) for unfilled fields"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-staking-1-launch-app-pool-tab.png",
+      "label": "Launch App — Pool tab",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#A855F7",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), dark gray",
+          "dataStyle": "Monospace or numeric font, right-aligned in table cells, prices in bold"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top nav with logo, main tabs (Send/Pool/Convert/Rewards), settings, and wallet connection button",
+            "position": "Top fixed",
+            "notable": "Active 'Pool' tab highlighted in purple; gradient purple-pink wallet button"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-column sortable table listing liquidity pools with TVL, APR, and action buttons",
+            "position": "Main content area",
+            "notable": "Token and network filter icons displayed inline; compact yet information-dense layout"
+          },
+          {
+            "type": "Pool Row Items",
+            "description": "Each pool has icon badge, name, TVL value, APR percentage, and 'Add Liquidity' CTA",
+            "position": "Table rows",
+            "notable": "Color-coded protocol badges (Polygon purple, Arbitrum orange, etc.)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws attention to value prop; navigation horizontal flow; table content organized by columns with clear left-to-right progression",
+        "innovativeElements": [
+          "Token/network filter icons displayed as inline chips rather than traditional dropdowns",
+          "Protocol badges with distinctive colors integrated into pool name cells",
+          "Contextual info icons (?) next to column headers for tooltip guidance"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore available liquidity pools and understand APR/TVL metrics before adding liquidity",
+        "entryPoints": [
+          "User clicks 'Pool' tab from main navigation",
+          "User navigates to app after connecting wallet",
+          "User returns from another tab"
+        ],
+        "exitPoints": [
+          "Click 'Add Liquidity' on a specific pool row",
+          "Click another nav tab (Send/Convert/Rewards)",
+          "Click settings or wallet menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pool Row",
+            "action": "Click 'Add Liquidity' to open pool detail/deposit flow"
+          },
+          {
+            "element": "Token/Network Filter Icons",
+            "action": "Click to filter pools by supported token or network"
+          },
+          {
+            "element": "Column Headers",
+            "action": "Click info icons to see tooltip explanations of TVL, APR, etc."
+          },
+          {
+            "element": "Connect A Wallet Button",
+            "action": "Prompts wallet connection modal if user not yet authenticated"
+          }
+        ],
+        "informationArchitecture": "Linear table structure with pools as primary entities; filtering and sorting available at top; action buttons (Add Liquidity) in rightmost column",
+        "frictionPoints": [
+          "User must scroll horizontally if viewing on narrow screens (many columns)",
+          "No pagination or 'load more' visible, assumes all pools fit on one view",
+          "APR/TVL numbers require understanding of DeFi metrics; no beginner explanation inline"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Add liquidity to earn trading fees and rewards.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Add Liquidity",
+            "style": "text-link",
+            "placement": "Rightmost column of each pool row"
+          },
+          {
+            "text": "Connect A Wallet",
+            "style": "primary-button",
+            "placement": "Top right of header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "All Pools",
+            "context": "Left side of filter section",
+            "purpose": "Labels the main content area"
+          },
+          {
+            "text": "Tokens: [icons]",
+            "context": "Filter chips at top",
+            "purpose": "Indicates available token filters"
+          },
+          {
+            "text": "Networks: [icons]",
+            "context": "Filter chips at top",
+            "purpose": "Indicates available network filters"
+          },
+          {
+            "text": "Pool / My Liquidity / TVL / Total APR / Action",
+            "context": "Column headers in table",
+            "purpose": "Defines data columns for scannability"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$120,015.51 (TVL)",
+          "0.03% (APR)",
+          "0.0 WETH (user liquidity placeholder)"
+        ],
+        "trustSignals": [
+          "Named protocol pools (zEVM, Linea, Base, Arbitrum Nova, Gnosis, Optimism)",
+          "Large TVL numbers displayed prominently (up to $1.5M+)",
+          "Multi-network support shown via logo badges"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-staking-2-launch-app-rewards-tab.png",
+      "label": "Launch App — Rewards tab",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#A855F7",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "None prominent on this screen",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray/black",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Same horizontal nav as Pool tab; Rewards tab now active (purple highlight)",
+            "position": "Top fixed",
+            "notable": "Rewards tab highlighted in purple; consistent header styling"
+          },
+          {
+            "type": "Empty State Message",
+            "description": "Centered text placeholder message",
+            "position": "Center of viewport",
+            "notable": "Repeated message indicates this is intentional empty state, not content-loading state"
+          },
+          {
+            "type": "Footer",
+            "description": "Bottom footer with doc links, transaction info, and support",
+            "position": "Bottom",
+            "notable": "Includes FAQ, Docs, Forum links and transaction hash reference"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation dominates top; message centered in white space; footer anchors bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View claimed/claimable rewards (user not yet connected or no rewards available)",
+        "entryPoints": [
+          "User clicks 'Rewards' tab from main navigation",
+          "User returns to Rewards tab after visiting another section"
+        ],
+        "exitPoints": [
+          "Click 'Connect A Wallet' button in header",
+          "Click another nav tab (Send/Pool/Convert)",
+          "Click FAQ, Docs, or Forum links in footer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Rewards Tab",
+            "action": "Already active; shows this screen"
+          },
+          {
+            "element": "Connect A Wallet Button",
+            "action": "Opens wallet connection modal to authenticate user"
+          },
+          {
+            "element": "Footer Links",
+            "action": "Navigate to external resources (FAQ, Docs, Forum)"
+          }
+        ],
+        "informationArchitecture": "Simple structure: authenticated content hidden behind wallet connection; empty state message serves as CTA",
+        "frictionPoints": [
+          "No indication of what rewards user will see once connected",
+          "Repeated message ('Please connect wallet to claim rewards' appears twice) suggests possible layout/content issue",
+          "No progress indication or timeline for when rewards become available"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect A Wallet",
+            "style": "primary-button",
+            "placement": "Top right of header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Please connect wallet to claim rewards",
+            "context": "Center of screen (repeated twice)",
+            "purpose": "Instructs user on required action to view rewards"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transaction hash visible in footer (24459675, rev-772b8e3) — indicates real system operation"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Please connect wallet to claim rewards"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/hop-swap-1-launch-app-convert-tab.png",
+      "label": "Launch App — Convert tab",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#A855F7",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36px+), black, centered",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray",
+          "dataStyle": "Numeric display in input fields (0.0 WETH / 0.0 hETH) in light gray"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top nav with logo, main tabs, settings, and wallet button",
+            "position": "Top fixed",
+            "notable": "Convert tab now active (purple); consistent with other screens"
+          },
+          {
+            "type": "Heading",
+            "description": "Large centered 'Convert' heading",
+            "position": "Top of main content",
+            "notable": "Clear page title establishing purpose"
+          },
+          {
+            "type": "Selector Buttons",
+            "description": "Three horizontal selector buttons: 'Polygon', 'ETH', 'via AMM'",
+            "position": "Below heading",
+            "notable": "Selectors have icon badges and dropdown indicators; 'via AMM' shows optional route"
+          },
+          {
+            "type": "From Field",
+            "description": "Input card with 'From' label, Polygon token selector, and 0.0 WETH display",
+            "position": "Upper third of content",
+            "notable": "Light gray background; token icon integrated; value right-aligned"
+          },
+          {
+            "type": "Swap Direction Toggle",
+            "description": "Centered purple downward arrow with 'click to switch direction' hover text",
+            "position": "Between From and To fields",
+            "notable": "Interactive toggle to reverse swap direction"
+          },
+          {
+            "type": "To Field",
+            "description": "Input card with 'To' label, Polygon token selector, and 0.0 hETH display",
+            "position": "Lower third of content",
+            "notable": "Mirrored from layout; shows output token/amount"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Large primary button 'Connect A Wallet'",
+            "position": "Bottom of form",
+            "notable": "Gradient purple-pink; full-width; disabled state until wallet connected"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Heading commands attention; selector buttons guide route choice; form fields organized vertically with clear From/To progression; CTA anchors bottom",
+        "innovativeElements": [
+          "Selector buttons with route options (Polygon, ETH, via AMM) suggest multiple conversion paths",
+          "Swap direction toggle (arrow) positioned prominently between inputs",
+          "Field styling with token icon integration and right-aligned numeric display"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Convert between different token representations (e.g., WETH ↔ hETH) on Polygon or via AMM route",
+        "entryPoints": [
+          "User clicks 'Convert' tab from main navigation",
+          "User navigates to Convert after exploring Pools or other sections"
+        ],
+        "exitPoints": [
+          "Click 'Connect A Wallet' to authenticate and proceed with conversion",
+          "Click another nav tab",
+          "Click settings or wallet menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Polygon / ETH / via AMM Buttons",
+            "action": "Select conversion route; likely changes which tokens/networks are available in From/To selectors"
+          },
+          {
+            "element": "From Token Selector",
+            "action": "Click to open token/network picker dropdown"
+          },
+          {
+            "element": "To Token Selector",
+            "action": "Click to open token/network picker dropdown"
+          },
+          {
+            "element": "Swap Direction Arrow",
+            "action": "Click to reverse From/To fields"
+          },
+          {
+            "element": "Connect A Wallet Button",
+            "action": "Initiates wallet connection; enables conversion execution once connected"
+          }
+        ],
+        "informationArchitecture": "Linear form flow: route selection → input field → output field → submit button. Clear input → output progression with directional toggle.",
+        "frictionPoints": [
+          "User cannot enter amounts or proceed without wallet connection",
+          "No visual indication of conversion rate or slippage before connecting wallet",
+          "Route selection (Polygon/ETH/AMM) may be unclear to users unfamiliar with Hop's routing options",
+          "Placeholder values (0.0) provide no sense of typical conversion amounts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Convert",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect A Wallet",
+            "style": "primary-button",
+            "placement": "Bottom center of form (full-width)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Label above first input field",
+            "purpose": "Identifies input field purpose"
+          },
+          {
+            "text": "To",
+            "context": "Label above second input field",
+            "purpose": "Identifies output field purpose"
+          },
+          {
+            "text": "click to switch direction",
+            "context": "Hover text on swap toggle arrow",
+            "purpose": "Explains arrow icon interaction"
+          },
+          {
+            "text": "0.0 WETH / 0.0 hETH",
+            "context": "Value displays in input fields",
+            "purpose": "Shows current/placeholder token amounts"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.0 WETH (token amount with symbol)",
+          "0.0 hETH (token amount with symbol)"
+        ],
+        "trustSignals": [
+          "Polygon and Ethereum logos in selectors indicate supported networks",
+          "Named route options (via AMM) suggest multiple, tested conversion paths"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/hop-settings-1-faq.png",
+      "label": "FAQ",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#DA62C4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1: ~48px), black text for main questions, magenta/pink for category labels",
+          "bodyStyle": "Regular sans-serif, medium size (~16px), dark gray body text with good line-height for readability",
+          "dataStyle": "Inline bold text for key terms (e.g., 'trustless and decentralized', 'interact with the contracts directly')"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with collapsible sections (BASICS, FAQ) containing nested link items",
+            "position": "Left edge, fixed width ~280px",
+            "notable": "Pink/magenta accent color for active 'FAQ' section; clear hierarchy with sub-items indented"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search input with keyboard shortcuts (⌘K shown)",
+            "position": "Top center, spanning ~60% of width",
+            "notable": "Clean, minimal design with placeholder text and keyboard hint"
+          },
+          {
+            "type": "Content Panel",
+            "description": "Main FAQ article with nested Q&A structure",
+            "position": "Center-right, takes up majority of main area",
+            "notable": "Questions styled as h2 headings; answers use paragraph text with occasional bold emphasis"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Table of contents/related questions sidebar",
+            "position": "Right edge, ~350px wide",
+            "notable": "Pink heading 'Which interfaces can I use to use Hop Protocol?' at top; gray text for related FAQs below"
+          },
+          {
+            "type": "Copy Button",
+            "description": "Button to copy current section",
+            "position": "Top right of main content area",
+            "notable": "Icon + text button with dropdown arrow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar acts as navigation anchor; main content dominates center; right sidebar provides context. Pink/magenta accents draw attention to key sections. Bold text highlights important concepts within body copy.",
+        "innovativeElements": [
+          "Three-panel layout (sidebar + main + toc) maximizes information density while maintaining scanability",
+          "Pink accent color for interactive elements and category labels creates visual consistency across crypto-native design"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to frequently asked questions about Hop Protocol, including interfaces, rewards, and technical details",
+        "entryPoints": [
+          "Direct link to FAQ section from navigation",
+          "Search query returning FAQ result",
+          "From 'More FAQs' link on related questions sidebar"
+        ],
+        "exitPoints": [
+          "Click internal links (IPFS, Swing, Movr, Li Finance)",
+          "Navigate to other sidebar sections (BASICS, other FAQ items)",
+          "Use search to find different topics",
+          "Click related questions in right sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to different documentation sections or FAQ items"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search across documentation with ⌘K shortcut"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy current section URL or text to clipboard"
+          },
+          {
+            "element": "External links (IPFS, Swing, etc.)",
+            "action": "Open bridge interfaces in new window"
+          },
+          {
+            "element": "Right sidebar question links",
+            "action": "Jump to related FAQ sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Top-level category (BASICS) → Sub-sections (FAQ) → Individual FAQ items (questions) → Detailed answers with embedded links. Right sidebar provides lateral navigation to related questions at same hierarchy level.",
+        "frictionPoints": [
+          "Multiple nested navigation paths might cause users to get lost",
+          "Right sidebar links are small text and could be harder to scan quickly",
+          "No breadcrumb trail visible to show current location in hierarchy"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "FAQ",
+        "subheadline": "Which interfaces can I use to use Hop Protocol?",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "Top right of main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BASICS",
+            "context": "Left sidebar section header",
+            "purpose": "Category label to organize documentation"
+          },
+          {
+            "text": "A Short Explainer",
+            "context": "First item under BASICS in left sidebar",
+            "purpose": "Descriptive label for introductory content"
+          },
+          {
+            "text": "⌘K",
+            "context": "Search bar keyboard shortcut indicator",
+            "purpose": "Teach power users quick search access"
+          },
+          {
+            "text": "More FAQs",
+            "context": "Right sidebar bottom",
+            "purpose": "Call user to view additional questions"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [
+          "$OP tokens",
+          "80% bridging cost subsidies",
+          "1m $OP token grants",
+          "Ethereum on-chain references"
+        ],
+        "trustSignals": [
+          "Official Hop Protocol documentation",
+          "References to Optimism Foundation grants",
+          "Links to established bridge aggregators (Swing, Movr, Li Finance)",
+          "Emphasis on 'trustless and decentralized' protocol design"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

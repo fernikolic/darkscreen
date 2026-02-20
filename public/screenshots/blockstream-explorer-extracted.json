@@ -1,0 +1,2855 @@
+{
+  "slug": "blockstream-explorer",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T10:54:33.236Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 24,
+  "screens": [
+    {
+      "image": "/screenshots/blockstream-explorer-home-7-broadcast-transactions.png",
+      "label": "Broadcast Transactions",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#f7931a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold (40px+), high contrast against dark background",
+          "bodyStyle": "Medium sans-serif, light gray, standard weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "text-input",
+            "description": "Large white textarea for hex transaction input",
+            "position": "center, below headline",
+            "notable": "Generous height (120px+) for pasting long hex strings"
+          },
+          {
+            "type": "button",
+            "description": "Dark button with light text 'Broadcast transaction'",
+            "position": "below textarea",
+            "notable": "Minimal styling, subtle call-to-action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, input field is focal point, button is secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Broadcast a raw transaction to the Bitcoin network",
+        "entryPoints": [
+          "From Explorer API tab or navigation menu"
+        ],
+        "exitPoints": [
+          "Submit transaction",
+          "Navigate to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Textarea input",
+            "action": "Accept hex-encoded transaction data"
+          },
+          {
+            "element": "Broadcast transaction button",
+            "action": "Submit transaction to network"
+          }
+        ],
+        "informationArchitecture": "Single-purpose form with clear labeling of expected input format",
+        "frictionPoints": [
+          "No input validation preview or hints visible",
+          "No example transaction shown for reference",
+          "Unclear error handling if invalid hex is submitted"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Broadcast raw transaction (hex)",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Broadcast transaction",
+            "style": "secondary-button",
+            "placement": "below textarea"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-8-scan-qr.png",
+      "label": "Scan QR",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#f7931a"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal—mostly blank dark canvas",
+        "innovativeElements": [
+          "Appears to be camera/QR scan interface placeholder or loading state"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Scan a QR code to look up blockchain data or transactions",
+        "entryPoints": [
+          "QR code icon in search bar or navigation"
+        ],
+        "exitPoints": [
+          "Back to previous screen",
+          "Search results after successful scan"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Camera view",
+            "action": "Activate device camera to scan QR codes"
+          }
+        ],
+        "informationArchitecture": "Single-function modal overlay",
+        "frictionPoints": [
+          "Content not clearly visible—may be loading or placeholder",
+          "No obvious back button or close affordance"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-9-blocks.png",
+      "label": "Blocks",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#00d4ff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white, bold (28px+)",
+          "bodyStyle": "Monospace light gray for data rows, standard sans-serif for headers",
+          "dataStyle": "Cyan/turquoise links for block heights, white numerals with decimal precision (e.g., 1770.05, 3993.524)"
+        },
+        "components": [
+          {
+            "type": "table",
+            "description": "Multi-column data grid showing latest blocks with Height, Timestamp, Transactions, Size (KB), Weight (kWU)",
+            "position": "full-width below headline",
+            "notable": "Clickable block heights in cyan, monospace-style numeric alignment, alternating row opacity"
+          },
+          {
+            "type": "nav-tab",
+            "description": "Blocks tab is active with underline indicator",
+            "position": "horizontal navigation bar",
+            "notable": "Gold/orange underline on active state"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline first, then table dominates with clickable links drawing eye to block identifiers",
+        "innovativeElements": [
+          "Real-time block data with future timestamps (2026 dates suggest test/staging data)",
+          "Monospace alignment for numeric precision suitable for blockchain data"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View and explore the latest mined blocks on the Bitcoin network",
+        "entryPoints": [
+          "Blocks tab from main navigation",
+          "Previous screen navigation"
+        ],
+        "exitPoints": [
+          "Click block height to view block details",
+          "Navigate to Dashboard, Transactions, or Explorer API",
+          "Search via search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Block height (cyan links)",
+            "action": "Navigate to individual block details page"
+          },
+          {
+            "element": "Blocks tab",
+            "action": "Filter or focus on blocks view"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search by block height, hash, transaction, or address"
+          }
+        ],
+        "informationArchitecture": "Chronological list of latest blocks (descending), sortable by Height, Timestamp, Transactions, Size, Weight",
+        "frictionPoints": [
+          "No pagination controls visible—unclear if more rows exist",
+          "No sort indicators or ability to reorder columns shown",
+          "Timestamps use future dates, suggesting staging environment"
+        ],
+        "progressIndicators": [
+          "Active 'Blocks' tab with underline",
+          "Row numbering implicit via Height column"
+        ]
+      },
+      "copy": {
+        "headline": "Latest Blocks",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Height",
+            "context": "Column header",
+            "purpose": "Identify block sequence number"
+          },
+          {
+            "text": "Timestamp",
+            "context": "Column header",
+            "purpose": "Show when block was mined"
+          },
+          {
+            "text": "Transactions",
+            "context": "Column header",
+            "purpose": "Count of TXs in block"
+          },
+          {
+            "text": "Size (KB)",
+            "context": "Column header",
+            "purpose": "Block data size in kilobytes"
+          },
+          {
+            "text": "Weight (kWU)",
+            "context": "Column header",
+            "purpose": "Block weight in weight units (SegWit metric)"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height as cyan-colored integers: 936544, 936543, 936542",
+          "Timestamps in ISO format: 2026-02-14 06:54:38",
+          "Transaction counts as integers: 4315, 1905, 1081",
+          "Size in decimal with 2 decimals: 1770.05, 1895.491",
+          "Weight in decimal with 3 decimals: 3993.524, 3993.826, 1545.905"
+        ],
+        "trustSignals": [
+          "Real blockchain data (block heights, hashes, transaction counts)",
+          "Precision metrics (size KB, weight kWU) signal technical authenticity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with card-based sections",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFB800"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large caps for section titles (Latest Blocks, Latest Transactions)",
+          "bodyStyle": "Regular sans-serif for column headers and row data",
+          "dataStyle": "Monospace-like numeric values, cyan hyperlinks for block heights"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Dashboard, Blocks, Transactions, Explorer API tabs",
+            "position": "Top below logo/header",
+            "notable": "Active tab underlined in cyan; Bitcoin/Liquid network selector in top right"
+          },
+          {
+            "type": "Search bar",
+            "description": "Global search for block height, hash, transaction, or address",
+            "position": "Top right of navigation",
+            "notable": "Integrated QR scanner icon on right"
+          },
+          {
+            "type": "Data table",
+            "description": "Latest Blocks table with Height, Timestamp, Transactions, Size, Weight columns",
+            "position": "Main content area",
+            "notable": "Block heights are clickable cyan links; rows have subtle borders"
+          },
+          {
+            "type": "Call-to-action link",
+            "description": "View more blocks text link with arrow",
+            "position": "Below Latest Blocks table",
+            "notable": "Cyan text, right-aligned arrow indicator"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo and navigation establish top hierarchy; main content tables dominate; CTAs draw eye downward",
+        "innovativeElements": [
+          "Dual-network toggle (Bitcoin/Liquid) in header",
+          "Integrated QR code scanner in search bar",
+          "Real-time block data updates with clean typography"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View latest Bitcoin blocks and transactions, search for blockchain data",
+        "entryPoints": [
+          "Direct navigation to explorer home",
+          "Search bar for specific query"
+        ],
+        "exitPoints": [
+          "Click block height to view block details",
+          "Click Blocks/Transactions/Explorer API tabs",
+          "Use search bar to jump to specific data",
+          "View more blocks link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Block height (e.g., 936544)",
+            "action": "Navigate to block detail page"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Switch between Dashboard, Blocks, Transactions, Explorer API sections"
+          },
+          {
+            "element": "Bitcoin/Liquid toggle",
+            "action": "Switch between Bitcoin and Liquid networks"
+          },
+          {
+            "element": "Search bar with QR scanner",
+            "action": "Search or scan to find specific blockchain data"
+          },
+          {
+            "element": "View more blocks link",
+            "action": "Navigate to full blocks list page"
+          }
+        ],
+        "informationArchitecture": "Two-level hierarchy: Latest Blocks and Latest Transactions sections display most recent data; navigation tabs allow switching between data types",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Blocks",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View more blocks →",
+            "style": "text-link",
+            "placement": "Below Latest Blocks table"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for block height, hash, transaction, or address",
+            "context": "Search bar placeholder",
+            "purpose": "Guide users on what can be searched"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height: 936544",
+          "Timestamp: 2026-02-14 06:54:38",
+          "Size in KB: 1770.05",
+          "Weight in KWU: 3993.524",
+          "Transaction count: 4315"
+        ],
+        "trustSignals": [
+          "Blockstream Corporation branding",
+          "Live blockchain data display"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width card-based section",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, section title",
+          "bodyStyle": "Regular sans-serif for column headers",
+          "dataStyle": "Cyan hyperlinks for transaction IDs, standard text for values"
+        },
+        "components": [
+          {
+            "type": "Data table",
+            "description": "Latest Transactions with Transaction ID, Value, Size, Fee columns",
+            "position": "Main content area",
+            "notable": "Long transaction hashes as clickable cyan links"
+          },
+          {
+            "type": "Call-to-action link",
+            "description": "View more transactions text link with arrow",
+            "position": "Below Latest Transactions table",
+            "notable": "Cyan text, centered"
+          },
+          {
+            "type": "Footer",
+            "description": "Social links, language selector, copyright, Onion V3 address",
+            "position": "Bottom of page",
+            "notable": "Language dropdown, Tor onion service indicator"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Table dominates; CTA link draws eye; footer provides supplementary info",
+        "innovativeElements": [
+          "Onion V3 Tor address indicator in footer (privacy-focused feature)",
+          "Social media integration in footer"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse latest transactions, explore blockchain activity",
+        "entryPoints": [
+          "Scroll down from Latest Blocks section",
+          "Direct navigation to Transactions tab"
+        ],
+        "exitPoints": [
+          "Click transaction ID to view transaction details",
+          "Click View more transactions",
+          "Use footer social links or language selector"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction ID (hash)",
+            "action": "Navigate to transaction detail page"
+          },
+          {
+            "element": "View more transactions →",
+            "action": "Navigate to full transactions list"
+          },
+          {
+            "element": "Language selector (English)",
+            "action": "Change interface language"
+          },
+          {
+            "element": "Social icons (X, LinkedIn, Facebook, GitHub)",
+            "action": "Navigate to Blockstream social profiles"
+          }
+        ],
+        "informationArchitecture": "Single-section display of recent transactions with detailed metadata; footer provides global utilities",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Transactions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View more transactions →",
+            "style": "text-link",
+            "placement": "Below Latest Transactions table, centered"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "English",
+            "context": "Language selector dropdown in footer",
+            "purpose": "Language selection"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Transaction value: 0.00300518 BTC",
+          "Size: 141 vB",
+          "Fee rate: 2.0 sat/vB",
+          "Transaction hash: 276453197f378ab4fbd3062c25e68e00790990d6d6c7a3cc69c78ebba92a5bc5"
+        ],
+        "trustSignals": [
+          "© 2025 Blockstream Corporation Inc. All rights reserved.",
+          "Onion V3 service availability indicator"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-3-liquid.png",
+      "label": "Liquid",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width with card-based sections",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFB800"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large caps for section titles",
+          "bodyStyle": "Regular sans-serif for column headers and row data",
+          "dataStyle": "Cyan hyperlinks for block heights, standard numeric values"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Dashboard, Blocks, Transactions, Assets (new), Explorer API tabs",
+            "position": "Top below logo/header",
+            "notable": "Assets tab has cyan asterisk indicator; Liquid network selected (green border)"
+          },
+          {
+            "type": "Network toggle",
+            "description": "Bitcoin and Liquid network selector",
+            "position": "Top right, next to logo",
+            "notable": "Liquid has green border indicating active selection"
+          },
+          {
+            "type": "Data table",
+            "description": "Latest Blocks table with Height, Timestamp, Transactions, Size, Weight",
+            "position": "Main content area",
+            "notable": "Block heights are clickable cyan links; lower block numbers indicate Liquid testnet/different chain"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Network toggle and navigation establish context; Latest Blocks table dominates main content area",
+        "innovativeElements": [
+          "Assets tab with asterisk indicator (new feature notification)",
+          "Multi-network support with visual toggle (Bitcoin/Liquid)",
+          "Context-aware data display based on selected network"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View latest Liquid blocks, explore Liquid network data",
+        "entryPoints": [
+          "Switch network toggle from Bitcoin to Liquid",
+          "Direct navigation to Liquid Explorer home"
+        ],
+        "exitPoints": [
+          "Click block height to view block details",
+          "Switch back to Bitcoin tab",
+          "Click Assets/Transactions/Blocks tabs",
+          "Use search bar for specific queries"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Bitcoin/Liquid network toggle",
+            "action": "Switch between Bitcoin and Liquid network views"
+          },
+          {
+            "element": "Assets tab",
+            "action": "Navigate to Liquid assets section"
+          },
+          {
+            "element": "Block height (e.g., 3756797)",
+            "action": "Navigate to block detail page"
+          },
+          {
+            "element": "Navigation tabs (Dashboard, Blocks, Transactions, Assets, Explorer API)",
+            "action": "Switch between different data sections"
+          }
+        ],
+        "informationArchitecture": "Network-aware dashboard: same layout as Bitcoin view but displays Liquid-specific block data; Assets tab appears exclusively on Liquid network",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Blocks",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View more blocks →",
+            "style": "text-link",
+            "placement": "Below Latest Blocks table"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Assets*",
+            "context": "Navigation tab",
+            "purpose": "Indicate new/Liquid-specific feature"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height: 3756797",
+          "Timestamp: 2026-02-14 07:00:10",
+          "Transactions: 7",
+          "Size in KB: 69.546",
+          "Weight in KWU: 87.558"
+        ],
+        "trustSignals": [
+          "Blockstream Liquid network branding",
+          "Live Liquid blockchain data"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-4-bitcoin-testnet.png",
+      "label": "Bitcoin Testnet",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4ff",
+          "#ff6b00",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large caps (e.g., 'Latest Blocks'), with secondary label badges",
+          "bodyStyle": "Medium-weight sans-serif for column headers, regular for data rows",
+          "dataStyle": "Monospace or numeric font for block heights, hashes, timestamps, and metrics"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Logo, network selector tabs (Bitcoin Testnet / Liquid Testnet), hamburger menu",
+            "position": "Top bar",
+            "notable": "Network switcher uses bordered button style with icon indicators"
+          },
+          {
+            "type": "Warning Banner",
+            "description": "Red banner stating 'Bitcoin Testnet is used for testing. Funds have no value!'",
+            "position": "Below header",
+            "notable": "High-contrast red (#d32f2f or similar) to emphasize testnet disclaimer"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Dashboard, Blocks, Transactions, Explorer API",
+            "position": "Secondary nav, left side",
+            "notable": "Active tab underlined in white; clean horizontal layout"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Input field with placeholder 'Search for block height, hash, transaction, or address'",
+            "position": "Right side of secondary nav",
+            "notable": "QR code icon and search icon; bordered input with dark background"
+          },
+          {
+            "type": "Data Table",
+            "description": "5 rows showing Latest Blocks with Height, Timestamp, Transactions, Size, Weight",
+            "position": "Main content area",
+            "notable": "Block heights are cyan/turquoise links; consistent row spacing with subtle borders"
+          },
+          {
+            "type": "CTA Link",
+            "description": "'View more blocks' with arrow",
+            "position": "Below table",
+            "notable": "Cyan text link with right-pointing arrow; centered alignment"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo and network selector dominate top; warning banner draws attention; main table data is organized with clear column headers and alternating row emphasis via link color",
+        "innovativeElements": [
+          "Network switching via header tabs with badge indicators",
+          "Cyan link colors for interactive data elements stand out against dark background",
+          "QR code scanner integration in search bar"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View recent blockchain activity, search for specific blocks/transactions, switch between testnet environments",
+        "entryPoints": [
+          "Landing page / home URL",
+          "Network selector dropdown"
+        ],
+        "exitPoints": [
+          "Click block height to view details",
+          "Click 'View more blocks' to see full list",
+          "Navigate to Transactions or Blocks tabs",
+          "Use search to find specific data",
+          "Switch to Liquid Testnet via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Bitcoin Testnet / Liquid Testnet tabs",
+            "action": "Switch between network environments"
+          },
+          {
+            "element": "Block height links (e.g., 4841437)",
+            "action": "Navigate to block detail page"
+          },
+          {
+            "element": "Search input",
+            "action": "Query blockchain data by block height, hash, transaction ID, or address"
+          },
+          {
+            "element": "View more blocks link",
+            "action": "Expand to show full list of latest blocks"
+          },
+          {
+            "element": "Tab navigation (Dashboard, Blocks, Transactions, Explorer API)",
+            "action": "Switch main content sections"
+          }
+        ],
+        "informationArchitecture": "Two-tier navigation (primary network selector + secondary section tabs) leading to a focused data table widget showing the most recent blockchain activity; search available for deep exploration",
+        "frictionPoints": [
+          "Long block hashes and transaction IDs may be difficult to read/copy on small screens",
+          "No obvious pagination or filtering controls visible on the table",
+          "Testnet warning might be redundant for experienced users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Blocks",
+        "subheadline": "Testnet",
+        "ctas": [
+          {
+            "text": "View more blocks",
+            "style": "text-link",
+            "placement": "Below table, centered"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Testnet is used for testing. Funds have no value!",
+            "context": "Red warning banner below header",
+            "purpose": "Inform users that they are on a testnet environment with no real value"
+          },
+          {
+            "text": "Search for block height, hash, transaction, or address",
+            "context": "Search input placeholder",
+            "purpose": "Guide user on acceptable search query types"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height as plain number (e.g., 4841437)",
+          "Timestamp in ISO format (e.g., 2026-02-14 06:41:02)",
+          "Transaction count as plain integer (e.g., 3)",
+          "Size in KB with decimal (e.g., 0.827)",
+          "Weight in KWU with decimal (e.g., 2.873)"
+        ],
+        "trustSignals": [
+          "Blockstream branding and official explorer label",
+          "Clear testnet disclaimer to set expectations",
+          "Structured data presentation with recognized metrics (Size, Weight, Transactions)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-5-bitcoin-testnet-scrolled-1.png",
+      "label": "Bitcoin Testnet — scrolled 1",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 'Latest Transactions' with secondary 'Testnet' badge",
+          "bodyStyle": "Medium-weight sans-serif for column headers",
+          "dataStyle": "Monospace for transaction IDs and hex values; numeric font for tBTC amounts and sat/vB rates"
+        },
+        "components": [
+          {
+            "type": "Data Table",
+            "description": "5 rows of Latest Transactions showing ID, Value, Size, Fee",
+            "position": "Main content area",
+            "notable": "Transaction IDs are cyan links; data is densely packed but scannable"
+          },
+          {
+            "type": "CTA Link",
+            "description": "'View more transactions' with arrow",
+            "position": "Below table, centered",
+            "notable": "Cyan text link matching block height link style"
+          },
+          {
+            "type": "Footer",
+            "description": "Social icons (X, LinkedIn, Facebook, GitHub), language selector, Onion V3 address, copyright",
+            "position": "Bottom of page",
+            "notable": "Social links in simple icon format; privacy-focused Onion URL displayed"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Transaction table dominates center; footer provides secondary navigation and legal info; cyan links guide eye to interactive elements",
+        "innovativeElements": [
+          "Onion V3 address displayed in footer for privacy-conscious users",
+          "Social media integration in footer with minimalist icon style",
+          "Language selector (English dropdown) in lower right"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View recent transactions, explore transaction details, access footer navigation/legal",
+        "entryPoints": [
+          "Scroll down from Latest Blocks section",
+          "Direct navigation from Transactions tab"
+        ],
+        "exitPoints": [
+          "Click transaction ID to view details",
+          "Click 'View more transactions' to expand list",
+          "Click social icons to external sites",
+          "Access language selector",
+          "Copy Onion address for privacy browsing"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction ID links (cyan hex strings)",
+            "action": "Navigate to transaction detail page"
+          },
+          {
+            "element": "View more transactions link",
+            "action": "Expand to show full transaction list"
+          },
+          {
+            "element": "Social media icons (X, LinkedIn, Facebook, GitHub)",
+            "action": "Open external social profiles"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Change interface language"
+          }
+        ],
+        "informationArchitecture": "Transaction list widget followed by footer navigation; footer separates main content from secondary utility functions",
+        "frictionPoints": [
+          "Very long transaction IDs difficult to scan quickly",
+          "No obvious visual distinction between high-value and low-value transactions",
+          "Footer is quite dense with multiple element types"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Transactions",
+        "subheadline": "Testnet",
+        "ctas": [
+          {
+            "text": "View more transactions",
+            "style": "text-link",
+            "placement": "Below table, centered"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Terms & Privacy",
+            "context": "Footer left side",
+            "purpose": "Link to legal documents"
+          },
+          {
+            "text": "© 2025 Blockstream Corporation Inc. All rights reserved.",
+            "context": "Footer right side",
+            "purpose": "Copyright notice"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Transaction ID as lowercase hex (e.g., ebcc8612a9defc65ca44c8534a61ff4842b02b62bb7585d124e6fc86aff12b5a)",
+          "Value in tBTC with 8 decimal places (e.g., 0.00122396 tBTC)",
+          "Size in vB (virtual bytes, e.g., 266 vB)",
+          "Fee rate as sat/vB (e.g., 1.9 sat/vB)"
+        ],
+        "trustSignals": [
+          "Blockstream Corporation copyright and brand authority",
+          "Onion V3 privacy service for users seeking anonymity",
+          "Privacy-focused navigation options (Terms & Privacy link)",
+          "Official social media presence"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-6-liquid-testnet.png",
+      "label": "Liquid Testnet",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4ff",
+          "#ff6b00",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large caps ('Latest Blocks'), with secondary 'Testnet' badge",
+          "bodyStyle": "Medium-weight sans-serif for column headers, regular for data rows",
+          "dataStyle": "Monospace or numeric font for block heights, timestamps, and metrics"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Logo, network selector (Liquid Testnet now active/highlighted), hamburger menu",
+            "position": "Top bar",
+            "notable": "Liquid Testnet button now shows as active/focused with border highlight"
+          },
+          {
+            "type": "Warning Banner",
+            "description": "Red banner stating 'Liquid Testnet is used for testing. Funds have no value!'",
+            "position": "Below header",
+            "notable": "Same warning style as Bitcoin Testnet, text updated for Liquid"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Dashboard, Blocks, Transactions, Assets, Explorer API",
+            "position": "Secondary nav, left side",
+            "notable": "New 'Assets' tab appears (unique to Liquid); active Dashboard tab underlined"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Input field with same placeholder text",
+            "position": "Right side of secondary nav",
+            "notable": "Identical to Bitcoin Testnet version"
+          },
+          {
+            "type": "Data Table",
+            "description": "5 rows showing Latest Blocks with Height, Timestamp, Transactions, Size, Weight",
+            "position": "Main content area",
+            "notable": "Different block height numbers (2311988 vs 4841437) showing Liquid chain data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to Bitcoin Testnet layout; network identifier and warning banner are primary focal points; table data secondary",
+        "innovativeElements": [
+          "Dynamic tab navigation that changes based on network (Assets tab appears for Liquid)",
+          "Consistent design language across different blockchain networks"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View recent Liquid blockchain activity, switch between Bitcoin and Liquid testnets, explore network-specific features",
+        "entryPoints": [
+          "Click Liquid Testnet tab from Bitcoin Testnet view",
+          "Direct navigation to Liquid Testnet URL",
+          "Return from other sections when on Liquid network"
+        ],
+        "exitPoints": [
+          "Click block height to view Liquid block details",
+          "Click 'View more blocks' to expand list",
+          "Navigate to Assets tab (unique to Liquid)",
+          "Switch back to Bitcoin Testnet",
+          "Use search to find data",
+          "Navigate to Transactions tab"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Liquid Testnet tab",
+            "action": "Switch from Bitcoin Testnet to Liquid Testnet"
+          },
+          {
+            "element": "Block height links (e.g., 2311988)",
+            "action": "Navigate to Liquid block detail page"
+          },
+          {
+            "element": "Assets tab",
+            "action": "View Liquid-specific asset information"
+          },
+          {
+            "element": "Search input",
+            "action": "Query Liquid blockchain data"
+          },
+          {
+            "element": "View more blocks link",
+            "action": "Expand to full block list"
+          }
+        ],
+        "informationArchitecture": "Parallel structure to Bitcoin Testnet with added Assets section; network selector at top level allows seamless switching",
+        "frictionPoints": [
+          "Users must understand difference between Bitcoin and Liquid testnets",
+          "Block height numbers are completely different, no context provided for comparison",
+          "Assets tab may be unfamiliar to Bitcoin-only users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Blocks",
+        "subheadline": "Testnet",
+        "ctas": [
+          {
+            "text": "View more blocks",
+            "style": "text-link",
+            "placement": "Below table, centered"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Liquid Testnet is used for testing. Funds have no value!",
+            "context": "Red warning banner below header",
+            "purpose": "Inform users they are on Liquid Testnet with no real value"
+          },
+          {
+            "text": "Search for block height, hash, transaction, or address",
+            "context": "Search input placeholder",
+            "purpose": "Guide user on acceptable Liquid search query types"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height as plain number (e.g., 2311988)",
+          "Timestamp in ISO format (e.g., 2026-02-14 07:02:06)",
+          "Transaction count as plain integer (e.g., 1)",
+          "Size in KB with decimal (e.g., 0.488)",
+          "Weight in KWU with decimal (e.g., 1.829)"
+        ],
+        "trustSignals": [
+          "Blockstream branding and official explorer",
+          "Network-specific warning disclaimer",
+          "Structured block data with recognized metrics"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-10-transactions.png",
+      "label": "Transactions",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "card-grid with tabular data",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#00d4ff",
+          "#ffa500",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, large cap treatment (e.g., 'Latest Transactions')",
+          "bodyStyle": "Regular monospace for transaction IDs and hashes, proportional for numeric values",
+          "dataStyle": "Right-aligned numeric values with unit labels (e.g., '0.00001530 BTC', '169 vB', '5.8 sat/vB')"
+        },
+        "components": [
+          {
+            "type": "Data Table",
+            "description": "Horizontal scrollable table with transaction data rows",
+            "position": "Center, full-width within card",
+            "notable": "Cyan-colored transaction ID links with monospace font for easy copying"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Dashboard, Blocks, Transactions, Explorer API tabs",
+            "position": "Top, below main nav",
+            "notable": "Active tab (Transactions) underlined in yellow/orange"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search for block height, hash, transaction, or address",
+            "position": "Top right, integrated into header",
+            "notable": "QR code icon and magnifying glass button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Section heading anchors the eye, table rows maintain consistent visual weight with alternating background subtle variations, cyan links draw attention",
+        "innovativeElements": [
+          "Monospace transaction hashes with cyan coloring for scannability",
+          "Compact column headers with technical units integrated (vB, sat/vB)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review recent Bitcoin transactions with key metrics like value, size, and fees",
+        "entryPoints": [
+          "Dashboard tab",
+          "Direct navigation from home",
+          "Search results"
+        ],
+        "exitPoints": [
+          "Click transaction ID to view details",
+          "Switch to Blocks or Explorer API tabs",
+          "Search for specific data"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction ID (cyan link)",
+            "action": "Navigate to detailed transaction view"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query by block height, hash, transaction, or address"
+          },
+          {
+            "element": "Tab navigation",
+            "action": "Switch between Dashboard, Blocks, Transactions, Explorer API"
+          }
+        ],
+        "informationArchitecture": "Latest transactions displayed in reverse chronological order with comparable metrics (Value, Size, Fee) in adjacent columns for quick comparison",
+        "frictionPoints": [
+          "Transaction IDs are long hexadecimal strings; truncation or copy-button would improve UX",
+          "No pagination or 'load more' visible; unclear if more transactions are available"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest Transactions",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Transaction ID",
+            "context": "Column header",
+            "purpose": "Label for first column containing transaction hashes"
+          },
+          {
+            "text": "Value, Size, Fee",
+            "context": "Column headers",
+            "purpose": "Identify metrics for each transaction"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00001530 BTC",
+          "0.43637224 BTC",
+          "169 vB",
+          "184 vB",
+          "5.8 sat/vB",
+          "2.0 sat/vB"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-11-transactions-scrolled-1.png",
+      "label": "Transactions — scrolled 1",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "card-grid with tabular data (continued from previous scroll state)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#00d4ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Regular monospace for transaction hashes, proportional sans-serif for numeric data",
+          "dataStyle": "Right-aligned numeric values with crypto units and fee metrics"
+        },
+        "components": [
+          {
+            "type": "Data Table (scrolled)",
+            "description": "Additional transaction rows visible after vertical scroll",
+            "position": "Full-width card",
+            "notable": "Consistent row styling with cyan transaction links"
+          },
+          {
+            "type": "Footer",
+            "description": "Social links, language selector, copyright",
+            "position": "Bottom of page",
+            "notable": "Onion V3 and 'Onion' branding badge visible; social icons for X, LinkedIn, Facebook, GitHub"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Table rows maintain equal weight; footer is visually recessed",
+        "innovativeElements": [
+          "Language selector (English dropdown) in bottom right",
+          "Onion V3 reference indicating Tor support"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse (continuation)",
+        "userIntent": "Continue reviewing transaction list after scrolling",
+        "entryPoints": [
+          "Scroll down from previous transaction list"
+        ],
+        "exitPoints": [
+          "Click transaction for details",
+          "Scroll further",
+          "Click footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction IDs (cyan)",
+            "action": "Deep-link to transaction detail page"
+          },
+          {
+            "element": "Social icons (X, LinkedIn, Facebook, GitHub)",
+            "action": "Navigate to external social profiles"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change interface language"
+          }
+        ],
+        "informationArchitecture": "Continued list of transactions in same columnar format; footer provides access to external resources and legal info",
+        "frictionPoints": [
+          "No 'back to top' button visible after scroll",
+          "No indication of total transaction count or pagination"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Terms & Privacy",
+            "context": "Footer",
+            "purpose": "Legal navigation link"
+          },
+          {
+            "text": "© 2025 Blockstream Corporation Inc. All rights reserved.",
+            "context": "Footer",
+            "purpose": "Copyright notice and branding"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.43637224 BTC",
+          "0.00575443 BTC",
+          "0.08024724 BTC",
+          "184 vB",
+          "313 vB",
+          "771 vB"
+        ],
+        "trustSignals": [
+          "Blockstream Corporation branding",
+          "Onion V3 (Tor support indicator)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-12-explorer-api.png",
+      "label": "Explorer API",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel (text left, visual right)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#ffa500",
+          "#00d4ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold white sans-serif, multi-line (e.g., 'Build on Bitcoin at Scale')",
+          "bodyStyle": "Regular light gray sans-serif, generous line height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "CTA Button",
+            "description": "GET YOUR API KEY",
+            "position": "Left panel, below body text",
+            "notable": "High-contrast orange/yellow background, all-caps serif font"
+          },
+          {
+            "type": "Compass/Network Illustration",
+            "description": "Central visual with Bitcoin logo and concentric circles, grid background",
+            "position": "Right 60% of screen",
+            "notable": "Orange, cyan, and green accents with perspective grid creating depth; 'BLOCKSTREAM EXPLORER API' text overlay"
+          },
+          {
+            "type": "Logo Row",
+            "description": "Partner/integrator logos (SideSwap, Blockstream, LWK, AQUA, Bitcoin Dev Kit, Nunchuk)",
+            "position": "Bottom center",
+            "notable": "Monochrome white logos on dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates upper left, body text in secondary size below, CTA button draws focus, illustration provides visual weight on right, logo row anchors bottom",
+        "innovativeElements": [
+          "3D perspective grid background with golden/cyan accent lines",
+          "Compass rose illustration centered on Bitcoin symbol",
+          "Partner logo carousel at bottom suggesting ecosystem integration"
+        ]
+      },
+      "flow": {
+        "screenType": "landing (API/developer signup)",
+        "userIntent": "Learn about Blockstream Explorer API and sign up for access",
+        "entryPoints": [
+          "Click Explorer API tab from transaction view",
+          "Direct navigation to API landing",
+          "External link"
+        ],
+        "exitPoints": [
+          "GET YOUR API KEY button",
+          "Click partner logos for integrations",
+          "Back to Transactions or other tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "GET YOUR API KEY button",
+            "action": "Navigate to API signup/key generation flow"
+          },
+          {
+            "element": "Partner logos",
+            "action": "Potentially navigate to integration partners (behavior not confirmed)"
+          }
+        ],
+        "informationArchitecture": "Value proposition headline + supporting copy on left; visual illustration anchors engagement on right; partner logos build credibility at bottom",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Build on Bitcoin at Scale",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "GET YOUR API KEY",
+            "style": "primary-button",
+            "placement": "Left panel, below body text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Let the Blockstream Explorer API handle the blockchain backend for you. Faster, always available, and easy to integrate into wallets, exchanges, and fintech platforms.",
+            "context": "Below headline, left panel",
+            "purpose": "Elevator pitch explaining API benefits and use cases"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Partner logos: SideSwap, Blockstream, LWK, AQUA, Bitcoin Dev Kit, Nunchuk",
+          "'Always available' reliability claim",
+          "Blockstream branding (established company)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-13-93654420260214-06543843151770053993524.png",
+      "label": "9365442026-02-14 06:54:3843151770.053993.524",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main with horizontal tabs",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (appears to be 36-40px) with bold weight, white text",
+          "bodyStyle": "Medium sans-serif (14-16px) gray text for labels, white for values",
+          "dataStyle": "Monospace or fixed-width font for hash values; right-aligned numeric data in cyan"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Logo, network selector (Bitcoin/Liquid tabs), search bar with QR scanner",
+            "position": "top-sticky",
+            "notable": "Gold outline on Bitcoin button indicates active selection"
+          },
+          {
+            "type": "breadcrumb-nav",
+            "description": "Dashboard, Blocks, Transactions, Explorer API tabs",
+            "position": "below header",
+            "notable": "Blocks has underline indicator showing current section"
+          },
+          {
+            "type": "block-header",
+            "description": "Block number with icon, hash string with copy button",
+            "position": "top of content",
+            "notable": "Hash is truncated/scrollable for long strings"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "Previous button with arrow",
+            "position": "left side below header",
+            "notable": "Only PREVIOUS visible; no NEXT in this view"
+          },
+          {
+            "type": "data-table",
+            "description": "Key-value pairs in grid layout (HEIGHT, STATUS, TIMESTAMP, SIZE, VIRTUAL SIZE, WEIGHT UNITS)",
+            "position": "main content area",
+            "notable": "Labels left-aligned gray, values right-aligned cyan; alternating row backgrounds"
+          },
+          {
+            "type": "details-button",
+            "description": "Yellow CTA button with plus icon",
+            "position": "top-right of data section",
+            "notable": "High contrast gold background against dark theme"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Block number dominates (large heading), hash provides context, data table organized into clear label-value pairs with strong right alignment and cyan highlights for values",
+        "innovativeElements": [
+          "Hash string with integrated copy button icon",
+          "Navigation between sequential blocks (PREVIOUS/NEXT) at block level",
+          "Cyan color coding for numeric data values stands out from gray labels"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed information about a specific block on the Bitcoin blockchain",
+        "entryPoints": [
+          "Search for block by height or hash",
+          "Navigate from Blocks list view",
+          "Direct URL with block identifier"
+        ],
+        "exitPoints": [
+          "Click Details button to expand more information",
+          "Click PREVIOUS to view prior block",
+          "Navigate to Transactions tab for block transactions",
+          "Search bar to find different block/address/transaction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button (hash)",
+            "action": "Copy block hash to clipboard"
+          },
+          {
+            "element": "PREVIOUS button",
+            "action": "Navigate to previous block (936543)"
+          },
+          {
+            "element": "Details button",
+            "action": "Expand or navigate to full block details view"
+          },
+          {
+            "element": "Network selector tabs",
+            "action": "Switch between Bitcoin and Liquid networks"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query block height, hash, transaction, or address"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Network selection → Section navigation (Blocks) → Block details → Key metrics in organized table format",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Block 936544",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "primary-button",
+            "placement": "top-right of data section"
+          },
+          {
+            "text": "PREVIOUS",
+            "style": "text-link",
+            "placement": "left side below block header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for block height, hash, transaction, or address",
+            "context": "search input placeholder",
+            "purpose": "Guide user on acceptable search queries"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "936544 (block height, numeric)",
+          "2026-02-14 06:54:38 GMT -5 (ISO 8601 timestamp with timezone)",
+          "1770.05 KB (file size)",
+          "999 vKB (virtual kilobytes)",
+          "3993.524 KWU (kiloweight units)"
+        ],
+        "trustSignals": [
+          "Block status: In best chain (1 confirmation)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-14-93654320260214-064809190518954913993826.png",
+      "label": "9365432026-02-14 06:48:0919051895.4913993.826",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "sidebar-main with horizontal tabs",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (36-40px) bold white text",
+          "bodyStyle": "Medium sans-serif (14-16px) gray text for labels, white for values",
+          "dataStyle": "Monospace for hash; right-aligned cyan numeric data"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Logo, network selector, search bar",
+            "position": "top-sticky",
+            "notable": "Consistent header across all block views"
+          },
+          {
+            "type": "block-header",
+            "description": "Block 936543 with hash",
+            "position": "top of content",
+            "notable": "Sequential block numbering (one lower than previous screenshot)"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "PREVIOUS and NEXT buttons with arrows",
+            "position": "left and right sides below block header",
+            "notable": "NEXT button now visible, enabling forward navigation"
+          },
+          {
+            "type": "data-table",
+            "description": "Block metadata (HEIGHT, STATUS, TIMESTAMP, SIZE, VIRTUAL SIZE, WEIGHT UNITS)",
+            "position": "main content area",
+            "notable": "Same structure as previous; values updated for block 936543"
+          },
+          {
+            "type": "details-button",
+            "description": "Yellow CTA with plus icon",
+            "position": "top-right of data",
+            "notable": "Consistent placement and styling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to previous; block number prominent, data organized in label-value pairs with cyan highlights",
+        "innovativeElements": [
+          "Bidirectional block navigation (PREVIOUS/NEXT) enables sequential exploration",
+          "Status field shows confirmation count incrementally (2 confirmations here vs 1 in previous)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View block details with ability to navigate sequentially through blockchain blocks",
+        "entryPoints": [
+          "Click PREVIOUS from block 936544",
+          "Direct search for block 936543",
+          "Sequential navigation through blocks list"
+        ],
+        "exitPoints": [
+          "Click NEXT to advance to block 936542",
+          "Click PREVIOUS to return to block 936544",
+          "Click Details for expanded view",
+          "Use search to jump to different block"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button (hash)",
+            "action": "Copy block hash"
+          },
+          {
+            "element": "PREVIOUS button",
+            "action": "Navigate to block 936544"
+          },
+          {
+            "element": "NEXT button",
+            "action": "Navigate to block 936542"
+          },
+          {
+            "element": "Details button",
+            "action": "Expand block details"
+          }
+        ],
+        "informationArchitecture": "Same as previous view; hierarchical drill-down from blocks to specific block data",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Block 936543",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "PREVIOUS",
+            "style": "text-link",
+            "placement": "left"
+          },
+          {
+            "text": "NEXT",
+            "style": "text-link",
+            "placement": "right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "936543 (block height)",
+          "2026-02-14 06:48:09 GMT -5 (timestamp)",
+          "1895.491 KB (block size)",
+          "999 vKB (virtual size)",
+          "3993.826 KWU (weight units)"
+        ],
+        "trustSignals": [
+          "Block status: In best chain (2 confirmations)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-15-93654220260214-06385110816435141545905.png",
+      "label": "9365422026-02-14 06:38:511081643.5141545.905",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main with horizontal tabs",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (36-40px) bold white",
+          "bodyStyle": "Medium sans-serif gray labels, white values",
+          "dataStyle": "Monospace hash; cyan right-aligned numeric data"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Persistent navigation header",
+            "position": "top-sticky",
+            "notable": "Same across all three screenshots"
+          },
+          {
+            "type": "block-header",
+            "description": "Block 936542",
+            "position": "top of content",
+            "notable": "Continuing sequential block display"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "PREVIOUS and NEXT arrows",
+            "position": "left and right",
+            "notable": "Enables continued sequential navigation through blocks"
+          },
+          {
+            "type": "data-table",
+            "description": "Standard block metadata fields",
+            "position": "main content",
+            "notable": "Values vary by block; same layout maintained"
+          },
+          {
+            "type": "details-button",
+            "description": "Yellow primary CTA",
+            "position": "top-right",
+            "notable": "Consistent styling and placement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Consistent with previous two views; established pattern for block exploration",
+        "innovativeElements": [
+          "Seamless block-to-block navigation maintains context and browsing momentum"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue sequential exploration of blockchain blocks with real-time confirmation updates",
+        "entryPoints": [
+          "Click NEXT from block 936543",
+          "Direct search for block 936542"
+        ],
+        "exitPoints": [
+          "Click NEXT to continue to block 936541",
+          "Click PREVIOUS to return to block 936543",
+          "Click Details button",
+          "Use search bar for non-sequential navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button",
+            "action": "Copy block hash"
+          },
+          {
+            "element": "PREVIOUS button",
+            "action": "Navigate to block 936543"
+          },
+          {
+            "element": "NEXT button",
+            "action": "Navigate to block 936541"
+          },
+          {
+            "element": "Details button",
+            "action": "Expand detailed view"
+          }
+        ],
+        "informationArchitecture": "Consistent hierarchical navigation; single block detail view with sequential browsing",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Block 936542",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "PREVIOUS",
+            "style": "text-link",
+            "placement": "left"
+          },
+          {
+            "text": "NEXT",
+            "style": "text-link",
+            "placement": "right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "936542 (block height)",
+          "2026-02-14 06:38:51 GMT -5 (timestamp)",
+          "643.514 KB (block size)",
+          "387 vKB (virtual size)",
+          "1545.905 KWU (weight units)"
+        ],
+        "trustSignals": [
+          "Block status: In best chain (3 confirmations)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-16-93654120260214-063301484160764422499.png",
+      "label": "9365412026-02-14 06:33:01484160.764422.499",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, large size (36-48px) with icon prefix",
+          "bodyStyle": "Regular sans-serif, light gray text (12-14px)",
+          "dataStyle": "Monospace/sans-serif, cyan accent color (#06b6d4) for numeric values, right-aligned"
+        },
+        "components": [
+          {
+            "type": "header-bar",
+            "description": "Fixed top navigation with logo, network toggle (Bitcoin/Liquid), search bar",
+            "position": "top",
+            "notable": "Golden border around Bitcoin button indicates active selection"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Horizontal tabs: Dashboard, Blocks, Transactions, Explorer API",
+            "position": "below header",
+            "notable": "Golden underline on active 'Blocks' tab"
+          },
+          {
+            "type": "data-table",
+            "description": "Two-column layout with labels on left, values on right",
+            "position": "center/lower",
+            "notable": "Dark background cards with subtle borders, cyan highlight for key numbers"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "PREVIOUS and NEXT buttons with arrow icons",
+            "position": "center",
+            "notable": "Ghost button style with cyan arrows"
+          },
+          {
+            "type": "action-button",
+            "description": "Details button with plus icon",
+            "position": "top right of data section",
+            "notable": "Bright golden/yellow (#fbbf24) with dark text, high contrast"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Block number is dominant focal point (large white heading with icon), hash displayed below in muted gray, data fields organized with labels left and values right, navigation elements frame the section",
+        "innovativeElements": [
+          "Monospace hash with copy button seamlessly integrated",
+          "Color-coded status information (cyan for live data points)",
+          "Navigation buttons integrated within content rather than page edges"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed information about a specific Bitcoin block (936541)",
+        "entryPoints": [
+          "Direct link/search result for block number",
+          "Navigation from previous block",
+          "Navigation from blocks list view"
+        ],
+        "exitPoints": [
+          "Click PREVIOUS to view earlier block",
+          "Click NEXT to view later block",
+          "Click Details button to expand more information",
+          "Search for different block/transaction",
+          "Navigate to Transactions or Dashboard tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "PREVIOUS button",
+            "action": "Navigate to block 936540"
+          },
+          {
+            "element": "NEXT button",
+            "action": "Navigate to block 936542"
+          },
+          {
+            "element": "Details button",
+            "action": "Expand detailed block metadata"
+          },
+          {
+            "element": "Copy icon next to hash",
+            "action": "Copy block hash to clipboard"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for other blocks, transactions, or addresses"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Block identifier (number + hash) at top, key metrics organized as label-value pairs below, navigation controls flanking the content",
+        "frictionPoints": [
+          "Long hash display may require horizontal scrolling on mobile",
+          "Multiple fields of varying importance not visually prioritized beyond position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Block 936541",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "PREVIOUS",
+            "style": "ghost-button",
+            "placement": "left-center"
+          },
+          {
+            "text": "NEXT",
+            "style": "ghost-button",
+            "placement": "right-center"
+          },
+          {
+            "text": "Details +",
+            "style": "primary-button",
+            "placement": "top-right of data card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "HEIGHT",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "STATUS",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "TIMESTAMP",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "In best chain (4 confirmations)",
+            "context": "STATUS value",
+            "purpose": "Indicates block finality and consensus state"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height: 936541 (cyan numeric)",
+          "Timestamp: 2026-02-14 06:33:01 GMT -5 (ISO format with timezone)",
+          "Size: 160.764 KB (decimal with units)",
+          "Virtual Size: 106 vKB",
+          "Weight Units: 422.499 KWU"
+        ],
+        "trustSignals": [
+          "Confirmation count explicitly stated (4 confirmations)",
+          "Chain status: 'In best chain' signals validity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-17-93654020260214-063058326217585323993664.png",
+      "label": "9365402026-02-14 06:30:5832621758.5323993.664",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, large size (36-48px) with block icon",
+          "bodyStyle": "Regular sans-serif, light gray text (12-14px)",
+          "dataStyle": "Monospace/sans-serif, cyan accent color (#06b6d4) for numeric values, right-aligned"
+        },
+        "components": [
+          {
+            "type": "header-bar",
+            "description": "Fixed top navigation with logo, network toggle, search bar",
+            "position": "top",
+            "notable": "Consistent golden border on Bitcoin button"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Horizontal tabs: Dashboard, Blocks, Transactions, Explorer API",
+            "position": "below header",
+            "notable": "Golden underline on active 'Blocks' tab"
+          },
+          {
+            "type": "data-table",
+            "description": "Two-column layout with labels on left (gray), values on right (white/cyan)",
+            "position": "center/lower",
+            "notable": "Identical structure to previous screen but with different block data"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "PREVIOUS and NEXT buttons with arrow icons",
+            "position": "center",
+            "notable": "Ghost button style with cyan arrows, full width spacing"
+          },
+          {
+            "type": "action-button",
+            "description": "Details button with plus icon",
+            "position": "top right of data section",
+            "notable": "Golden/yellow primary button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to previous screen; block number is dominant focal point, data organized with clear label-value separation, navigation controls frame content",
+        "innovativeElements": [
+          "Consistent design pattern for block exploration",
+          "Sequential navigation enables block browsing without page reload"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed information about Bitcoin block 936540 (sequential/adjacent block)",
+        "entryPoints": [
+          "Click PREVIOUS from block 936541",
+          "Direct block number search",
+          "Navigation from block list"
+        ],
+        "exitPoints": [
+          "Click PREVIOUS to view block 936539",
+          "Click NEXT to return to block 936541",
+          "Click Details to expand metadata",
+          "Use search bar for different block/transaction",
+          "Navigate to other tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "PREVIOUS button",
+            "action": "Navigate to block 936539"
+          },
+          {
+            "element": "NEXT button",
+            "action": "Navigate back to block 936541"
+          },
+          {
+            "element": "Details button",
+            "action": "Expand detailed block metadata"
+          },
+          {
+            "element": "Copy icon next to hash",
+            "action": "Copy block hash to clipboard"
+          }
+        ],
+        "informationArchitecture": "Identical to previous: Block ID top, metrics in labeled pairs below, navigation controls for sequential browsing",
+        "frictionPoints": [
+          "Long hash may require scrolling on small screens",
+          "Data fields of different importance not visually distinguished beyond position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Block 936540",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "PREVIOUS",
+            "style": "ghost-button",
+            "placement": "left-center"
+          },
+          {
+            "text": "NEXT",
+            "style": "ghost-button",
+            "placement": "right-center"
+          },
+          {
+            "text": "Details +",
+            "style": "primary-button",
+            "placement": "top-right of data card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "HEIGHT",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "STATUS",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "In best chain (5 confirmations)",
+            "context": "STATUS value",
+            "purpose": "Indicates block finality with confirmation count"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Block height: 936540 (cyan numeric)",
+          "Timestamp: 2026-02-14 06:30:58 GMT -5",
+          "Size: 1758.532 KB",
+          "Virtual Size: 999 vKB",
+          "Weight Units: 3993.664 KWU"
+        ],
+        "trustSignals": [
+          "5 confirmations (higher than previous block, indicates blockchain progress)",
+          "In best chain status"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-18-3443ca67c61a28a72dc3c4f31954d3dd761e904aa886b57394.png",
+      "label": "3443ca67c61a28a72dc3c4f31954d3dd761e904aa886b57394",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#fbbf24",
+          "#06b6d4",
+          "#10b981"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, large size (36-48px) with Bitcoin icon",
+          "bodyStyle": "Regular sans-serif, light gray text (12-14px)",
+          "dataStyle": "Monospace/sans-serif with mixed colors: white for normal values, cyan (#06b6d4) for key numbers, green (#10b981) for positive information"
+        },
+        "components": [
+          {
+            "type": "header-bar",
+            "description": "Fixed top navigation with logo, Bitcoin/Liquid toggle, search bar",
+            "position": "top",
+            "notable": "Golden border on Bitcoin button"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Horizontal tabs: Dashboard, Blocks, Transactions, Explorer API",
+            "position": "below header",
+            "notable": "Golden underline on active 'Transactions' tab (differs from previous screens)"
+          },
+          {
+            "type": "data-table",
+            "description": "Two-column label-value pairs for transaction metadata",
+            "position": "center/lower",
+            "notable": "Expanded field set (10+ fields visible), green highlighting for fee savings information"
+          },
+          {
+            "type": "status-badge",
+            "description": "'Unconfirmed' status indicator",
+            "position": "right of STATUS field",
+            "notable": "White text, indicates pending transaction"
+          },
+          {
+            "type": "info-message",
+            "description": "Green text callout about SegWit fee savings",
+            "position": "bottom of visible area",
+            "notable": "Highlights 36% fee savings benefit"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Transaction hash ID is dominant focal point (large white heading), status immediately visible, transaction fees and technical metrics organized below, important benefit highlighted in green at bottom",
+        "innovativeElements": [
+          "Green accent color for positive/beneficial information (SegWit savings)",
+          "Expanded technical field set specific to transaction type",
+          "Real-time status indicator (Unconfirmed)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed information about a specific Bitcoin transaction",
+        "entryPoints": [
+          "Search for transaction by hash",
+          "Click transaction link from block details",
+          "Click transaction link from dashboard",
+          "Navigation from previous/next transaction"
+        ],
+        "exitPoints": [
+          "Search bar for different transaction/block/address",
+          "Navigate to other tabs (Dashboard, Blocks, Transactions list)",
+          "Transaction inputs/outputs likely clickable to view addresses"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy icon next to transaction hash",
+            "action": "Copy transaction ID to clipboard"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for other transactions, blocks, or addresses"
+          },
+          {
+            "element": "Tab navigation",
+            "action": "Switch between different explorer views"
+          }
+        ],
+        "informationArchitecture": "Transaction ID (hash) at top, status immediately below, transaction-specific metrics organized as label-value pairs, technical details (size, weight, version) in lower section, educational callout about SegWit benefits at bottom",
+        "frictionPoints": [
+          "Long transaction hash may require horizontal scroll on mobile",
+          "Multiple technical fields (LOCK TIME, REPLACE BY FEE, SEGWIT SAVINGS) may confuse non-technical users",
+          "Screen cuts off at bottom, implying more content requires scrolling"
+        ],
+        "progressIndicators": [
+          "STATUS field shows 'Unconfirmed', indicating transaction is pending"
+        ]
+      },
+      "copy": {
+        "headline": "Transaction",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "STATUS",
+            "context": "data table label",
+            "purpose": "Field identifier"
+          },
+          {
+            "text": "TRANSACTION FEES",
+            "context": "data table label",
+            "purpose": "Field identifier for cost information"
+          },
+          {
+            "text": "SEGWIT FEE SAVINGS",
+            "context": "data table label",
+            "purpose": "Educational field showing benefit of SegWit upgrade"
+          },
+          {
+            "text": "Unconfirmed",
+            "context": "STATUS value",
+            "purpose": "Indicates transaction is pending confirmation"
+          },
+          {
+            "text": "unknown (1.09 vMB from tip)",
+            "context": "ETA value",
+            "purpose": "Estimated time to confirmation with fee rate context"
+          },
+          {
+            "text": "This transaction saved 36% on fees by upgrading to native SegWit-",
+            "context": "bottom of data card (green text)",
+            "purpose": "Educational/marketing message highlighting transaction efficiency"
+          }
+        ],
+        "tone": "professional-technical with educational undertones",
+        "dataFormatting": [
+          "Transaction hash: 3443ca67c61a28a72dc3c4f31954d3dd761e904aa886b5739... (monospace, truncated)",
+          "Status: Unconfirmed (white text)",
+          "Transaction fees: 0.00000019 BTC (0.14 sat/vB) (cyan numbers with unit conversion)",
+          "Size: 221 B (white numeric with unit)",
+          "Virtual Size: 140 vB (white numeric with unit)",
+          "Weight Units: 557 WU (white numeric with unit)",
+          "Version: 2 (white numeric)",
+          "Fee savings: 36% (green text with percentage)"
+        ],
+        "trustSignals": [
+          "Technical detail completeness (fee rate, size, weight shown)",
+          "SegWit upgrade benefits highlighted (36% savings)",
+          "Explicit fee calculation transparency (sat/vB rate disclosed)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-22-37a37dfb5b2b93fb4343e40b3e0cea1894f51a70e9a0bfaefb.png",
+      "label": "37a37dfb5b2b93fb4343e40b3e0cea1894f51a70e9a0bfaefb",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#f7931a",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif with icon prefix (Bitcoin symbol)",
+          "bodyStyle": "Medium gray monospace for transaction hash, regular sans-serif for labels",
+          "dataStyle": "Right-aligned white text with technical units in parentheses (e.g., BTC, sat/vB, vB, WU)"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Logo, blockchain selector (Bitcoin highlighted), Liquid option, hamburger menu",
+            "position": "top-left to top-right",
+            "notable": "Bitcoin tab has orange border accent"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Placeholder text for block height/hash/transaction/address search with QR scanner icon",
+            "position": "top-center-right",
+            "notable": "Integrated QR scanner button"
+          },
+          {
+            "type": "Breadcrumb Navigation",
+            "description": "Dashboard, Blocks, Transactions (active), Explorer API tabs",
+            "position": "below header",
+            "notable": "Transactions tab underlined in orange"
+          },
+          {
+            "type": "Data Table",
+            "description": "Two-column layout with labels on left, values on right in gray card",
+            "position": "center",
+            "notable": "Monospace hash display with copy icon; warning message in red at bottom"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Icon + title anchors attention, hash provides context, data fields organized vertically with emphasis on status and fees",
+        "innovativeElements": [
+          "Contextual optimization suggestion (SegWit fee savings) displayed at bottom in red",
+          "Copy icon integrated next to transaction hash",
+          "Fee breakdown showing BTC and sat/vB dual units"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View detailed transaction information and technical metrics",
+        "entryPoints": [
+          "Search for transaction hash/ID",
+          "Link from transactions list",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Search new transaction",
+          "Navigate to Dashboard/Blocks/Transactions tabs",
+          "Click logo to return home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy icon next to transaction hash",
+            "action": "Copy full transaction ID to clipboard"
+          },
+          {
+            "element": "Search bar",
+            "action": "Enter new query to find different block/transaction"
+          },
+          {
+            "element": "Tab navigation",
+            "action": "Switch between Dashboard, Blocks, Transactions, API sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Title identifies entity type and ID, status/ETA elevated, transaction-specific metrics organized alphabetically by field name",
+        "frictionPoints": [
+          "No visible back button to previous search results",
+          "Technical jargon may confuse non-expert users",
+          "SegWit suggestion appears truncated at bottom"
+        ],
+        "progressIndicators": [
+          "STATUS field shows 'Unconfirmed'"
+        ]
+      },
+      "copy": {
+        "headline": "Transaction",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "unknown (0.73 vMB from tip)",
+            "context": "ETA field",
+            "purpose": "Explain estimated time to confirmation and mempool position"
+          },
+          {
+            "text": "This transaction could save 28% on fees by upgrading to native SegWit-",
+            "context": "Bottom warning in red",
+            "purpose": "Educational nudge toward fee optimization"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00000046 BTC (0.16 sat/vB)",
+          "283 B",
+          "283 vB",
+          "1132 WU"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-23-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif, centered, minimal styling",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Blockstream Explorer logo, blockchain selector, navigation tabs, search bar",
+            "position": "top",
+            "notable": "Consistent with previous screen, contextual to error page"
+          },
+          {
+            "type": "Error Message",
+            "description": "Large centered text 'Page Not Found'",
+            "position": "center-screen",
+            "notable": "Minimal design, no additional context or suggestions"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation remains visible and functional, error message dominates center with substantial whitespace",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand that requested page does not exist and find alternative navigation",
+        "entryPoints": [
+          "Typing invalid URL",
+          "Following broken link",
+          "Direct navigation to non-existent resource"
+        ],
+        "exitPoints": [
+          "Use search bar to find valid content",
+          "Click navigation tabs (Dashboard, Blocks, Transactions, API)",
+          "Return to home via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Header navigation tabs",
+            "action": "Navigate to valid sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for specific transaction/block"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home page"
+          }
+        ],
+        "informationArchitecture": "Error state with minimal content; relies on persistent navigation for recovery",
+        "frictionPoints": [
+          "No explanation of why page not found",
+          "No suggestions for next steps",
+          "No search shortcuts or example links",
+          "Generic error message with no context"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-settings-1-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif, centered, minimal styling",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Blockstream Explorer logo, blockchain selector, navigation tabs, search bar",
+            "position": "top",
+            "notable": "Consistent with other screens"
+          },
+          {
+            "type": "Empty Content Area",
+            "description": "Large centered text 'No results found'",
+            "position": "center-screen",
+            "notable": "Minimal design with substantial whitespace"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors top, empty state dominates center with symmetric whitespace",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Access application settings or view search results",
+        "entryPoints": [
+          "Clicking settings/options menu",
+          "Submitting search query with no matches"
+        ],
+        "exitPoints": [
+          "Search bar for new query",
+          "Navigation tabs to main sections",
+          "Logo to home page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Modify search terms to find matching content"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Browse main application sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home"
+          }
+        ],
+        "informationArchitecture": "Empty state with persistent navigation header; no contextual guidance",
+        "frictionPoints": [
+          "No suggestions for valid search terms",
+          "No explanation of why results are empty",
+          "No fallback actions or recommendations",
+          "Unclear if this is settings page or search result"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "No results found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No results found"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-19-be1f01d11856f6a1dd8137ca3213ef69fab295da2f5224f9d7.png",
+      "label": "be1f01d11856f6a1dd8137ca3213ef69fab295da2f5224f9d7",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#f7931a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white heading with Bitcoin icon accent (40px+)",
+          "bodyStyle": "Small gray labels on left, aligned right values in white monospace",
+          "dataStyle": "Right-aligned monospace values; red highlighting for warnings/errors; green for positive signals"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with logo, network selector (Bitcoin/Liquid tabs), and search bar",
+            "position": "top",
+            "notable": "Sticky header with orange underline on active tab"
+          },
+          {
+            "type": "breadcrumb-heading",
+            "description": "Transaction title with Bitcoin icon and transaction hash with copy button",
+            "position": "top-left below nav",
+            "notable": "Hash is fully visible and copyable"
+          },
+          {
+            "type": "data-panel",
+            "description": "Left-aligned labels with right-aligned values in grid format",
+            "position": "center-main",
+            "notable": "Field-value pairs stretch full width; warning message in red at bottom"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Labels (small gray) guide left-to-right eye flow; values float right with emphasis; critical warnings in red at bottom",
+        "innovativeElements": [
+          "Inline fee optimization warnings with specific percentage savings",
+          "Colored microcopy (red/green) to highlight problematic vs. optimized transactions"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Inspect detailed transaction metadata and fee information",
+        "entryPoints": [
+          "Search from top search bar",
+          "Link from transactions list",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Back to Transactions tab",
+          "Back to Dashboard",
+          "Search for another transaction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button (clipboard icon)",
+            "action": "Copies transaction hash to clipboard"
+          },
+          {
+            "element": "Search bar",
+            "action": "Navigate to different transaction or block"
+          },
+          {
+            "element": "Tab navigation",
+            "action": "Switch between Dashboard, Blocks, Transactions, Explorer API"
+          }
+        ],
+        "informationArchitecture": "Sequential field-value layout; essential metadata (status, ETA) at top; technical details (size, version) below; optimization insights at bottom",
+        "frictionPoints": [
+          "Long transaction hash may require horizontal scroll on mobile",
+          "No direct action buttons (e.g., to view inputs/outputs)"
+        ],
+        "progressIndicators": [
+          "STATUS field shows 'Unconfirmed'",
+          "ETA displays block confirmation estimate"
+        ]
+      },
+      "copy": {
+        "headline": "Transaction",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This transaction could save 31% on fees by upgrading to native SegWit-Bech32 or 23% by upgrading to SegWit-P2SH",
+            "context": "Bottom of transaction details",
+            "purpose": "Educational nudge about fee optimization strategies"
+          },
+          {
+            "text": "overpaying by 1903%",
+            "context": "Next to transaction fee value in red",
+            "purpose": "Alerts user to significantly above-market fees"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "0.00005200 BTC (20.31 sat/vB)",
+          "in 1 blocks (0.00 vMB from tip)",
+          "256 B, 256 vB, 1024 WU",
+          "Percentage overpayment: 1903%"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "overpaying by 1903%"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-20-519ef35a09ab346f443cc0ed894a7b73dc3c1bb8d425630d64.png",
+      "label": "519ef35a09ab346f443cc0ed894a7b73dc3c1bb8d425630d64",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#f7931a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif heading with Bitcoin icon (40px+)",
+          "bodyStyle": "Consistent gray labels left, white values right in monospace",
+          "dataStyle": "Right-aligned monospace; green highlighting for positive outcomes; red for overpayment"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Persistent top bar with logo, network toggles, search, menu",
+            "position": "top",
+            "notable": "Orange underline indicates 'Transactions' is active section"
+          },
+          {
+            "type": "transaction-title",
+            "description": "Bitcoin icon + 'Transaction' heading with transaction hash and copy icon",
+            "position": "upper-left",
+            "notable": "Hash is visible and copyable in single line"
+          },
+          {
+            "type": "metadata-grid",
+            "description": "Vertical field list with left labels and right-aligned values",
+            "position": "center-main",
+            "notable": "Consistent spacing; status badges and fee warnings integrated"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading draws eye; field labels maintain visual rhythm; green success message at bottom dominates closing visual",
+        "innovativeElements": [
+          "Green positive signal for successful SegWit upgrade savings",
+          "Dynamic fee-savings messaging changes color based on outcome (red warning vs. green achievement)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review transaction details and verify fee efficiency",
+        "entryPoints": [
+          "Direct hash lookup",
+          "Click from transaction history",
+          "Search navigation"
+        ],
+        "exitPoints": [
+          "Navigate to another transaction",
+          "Return to Transactions list",
+          "Switch to Blocks or Dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy icon next to hash",
+            "action": "Copy transaction hash"
+          },
+          {
+            "element": "Network toggle buttons (Bitcoin/Liquid)",
+            "action": "Switch blockchain view"
+          },
+          {
+            "element": "Search input",
+            "action": "Navigate to new transaction/block"
+          }
+        ],
+        "informationArchitecture": "Status-first layout (Unconfirmed at top); temporal data (ETA) follows; fee and size metrics in middle; technical version info at bottom; outcome messaging concludes",
+        "frictionPoints": [
+          "No clear call-to-action for related data (inputs, outputs, related transactions)",
+          "Hash length requires responsive design consideration"
+        ],
+        "progressIndicators": [
+          "STATUS: Unconfirmed",
+          "ETA: in 1 blocks",
+          "Fee savings calculation shown at bottom"
+        ]
+      },
+      "copy": {
+        "headline": "Transaction",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This transaction saved 35% on fees by upgrading to native SegWit-Bech32",
+            "context": "Bottom of panel in green",
+            "purpose": "Celebrate successful fee optimization"
+          },
+          {
+            "text": "overpaying by 812%",
+            "context": "Fee value line in red",
+            "purpose": "Alert to above-market fee rates"
+          }
+        ],
+        "tone": "professional-technical, congratulatory",
+        "dataFormatting": [
+          "0.00001420 BTC (9.25 sat/vB)",
+          "in 1 blocks (0.00 vMB from tip)",
+          "239 B, 154 vB, 614 WU",
+          "35% savings metric"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "overpaying by 812%"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blockstream-explorer-home-21-43f28453ea12bf043388fad4d0c1d8ef239754b59a6a4aa085.png",
+      "label": "43f28453ea12bf043388fad4d0c1d8ef239754b59a6a4aa085",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#f7931a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif heading with Bitcoin icon (40px+)",
+          "bodyStyle": "Small gray uppercase labels left, right-aligned white values in monospace",
+          "dataStyle": "Right-aligned values; green microcopy for success states; minimal warning color in this example"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Sticky navigation with Blockstream logo, network selector, search, hamburger menu",
+            "position": "top",
+            "notable": "Golden/orange underline on 'Transactions' active tab"
+          },
+          {
+            "type": "transaction-header",
+            "description": "Bitcoin icon + 'Transaction' title with hash and copy button",
+            "position": "upper-left",
+            "notable": "Transaction hash displayed in full with easy-access copy"
+          },
+          {
+            "type": "details-panel",
+            "description": "Left-labeled, right-valued metadata rows with consistent spacing",
+            "position": "center-full",
+            "notable": "Includes new field 'REPLACE BY FEE' not visible in prior examples"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title anchors attention; labels create left scanning path; values right-align for quick comparison; green message at bottom reinforces value",
+        "innovativeElements": [
+          "REPLACE BY FEE field added (transaction flexibility indicator)",
+          "Consistent green microcopy for fee optimization messaging"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Examine transaction metadata and identify fee optimization opportunities",
+        "entryPoints": [
+          "Hash search from search bar",
+          "Previous transaction navigation",
+          "Direct bookmark/link"
+        ],
+        "exitPoints": [
+          "Search another hash",
+          "Navigate back to Transactions list",
+          "Switch sections (Dashboard, Blocks, API)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button",
+            "action": "Copies transaction hash to clipboard"
+          },
+          {
+            "element": "Network tabs (Bitcoin/Liquid)",
+            "action": "Switch to Liquid sidechain or Bitcoin data"
+          },
+          {
+            "element": "Search input with QR scanner icon",
+            "action": "Search for blocks, hashes, or addresses"
+          }
+        ],
+        "informationArchitecture": "Status metadata at top (Unconfirmed, ETA); core transaction data (fees, size) in middle; advanced options (RBF, SegWit savings) at bottom; advisory messaging concludes section",
+        "frictionPoints": [
+          "No expandable sections for inputs/outputs on this detail page",
+          "REPLACE BY FEE shows 'Opted in' but no action button to exercise the option"
+        ],
+        "progressIndicators": [
+          "STATUS: Unconfirmed",
+          "ETA: unknown (1.13 vMB from tip)",
+          "SegWit savings estimation at bottom"
+        ]
+      },
+      "copy": {
+        "headline": "Transaction",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This transaction saved 36% on fees by upgrading to native SegWit-Bech32",
+            "context": "Bottom of details in green",
+            "purpose": "Educate on successful fee optimization post-transaction"
+          }
+        ],
+        "tone": "professional-technical, informative",
+        "dataFormatting": [
+          "0.00000019 BTC (0.14 sat/vB)",
+          "unknown (1.13 vMB from tip)",
+          "221 B, 140 vB, 557 WU",
+          "36% savings potential"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

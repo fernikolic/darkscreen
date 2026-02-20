@@ -1,0 +1,165 @@
+{
+  "slug": "aqua",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:12:14.800Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 1,
+  "screens": [
+    {
+      "image": "/screenshots/aqua-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#00B4D8",
+          "#0096C7",
+          "#FFFFFF",
+          "#003D5C"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, all caps, high contrast white on blue",
+          "bodyStyle": "Medium weight sans-serif, white text, comfortable line height",
+          "dataStyle": "Monospace numbers with currency symbols, color-coded values (green for gains)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, menu items, language selector, and CTA button",
+            "position": "Top fixed",
+            "notable": "Active Home state with pill-style background, right-aligned Download CTA"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Left column with headline, subheadline, and primary CTA",
+            "position": "Left 40%",
+            "notable": "Large typography hierarchy with arrow-style CTA button"
+          },
+          {
+            "type": "iPhone Mockup",
+            "description": "Mobile app interface showing wallet, portfolio, and account details",
+            "position": "Right 60%",
+            "notable": "Realistic phone frame with rounded corners, displays live data visualization and account balances"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat support interface",
+            "position": "Bottom right",
+            "notable": "Conversational prompt 'Hi. Need any help?'"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates left side, eyes drawn to iPhone mockup on right showing the actual product, then to CTA button",
+        "innovativeElements": [
+          "Layered gradient background with particle/bokeh effects",
+          "Phone mockup with interactive-looking live charts embedded",
+          "Split-screen comparison of marketing message + product reality"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what AQUA is and download the app",
+        "entryPoints": [
+          "Direct traffic",
+          "Navigation link from Features/Contact/FAQ",
+          "External referral"
+        ],
+        "exitPoints": [
+          "Download AQUA button",
+          "Get The App CTA",
+          "Features link",
+          "Contact Us link",
+          "FAQ link",
+          "Chat support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download AQUA button",
+            "action": "Triggers app download or app store redirect"
+          },
+          {
+            "element": "Get The App button",
+            "action": "Same download action as header button"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Scroll to sections or navigate to different pages"
+          },
+          {
+            "element": "Language selector globe icon",
+            "action": "Opens language/region menu"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Opens support chat interface"
+          }
+        ],
+        "informationArchitecture": "Top-level positioning of core value prop (Bitcoin superapp) with product visual proof-of-concept on same screen. Navigation defers deeper exploration to secondary pages.",
+        "frictionPoints": [
+          "Primary CTA ('Get The App') is not in header, requires scrolling for mobile users",
+          "iPhone mockup is right-aligned, may require horizontal scrolling on tablets",
+          "No immediate social proof or trust badges visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "THE BITCOIN SUPERAPP",
+        "subheadline": "AQUA is your global passport to financial inclusion, designed for Latin America and embraced by Bitcoiners everywhere.",
+        "ctas": [
+          {
+            "text": "Get The App →",
+            "style": "primary-button",
+            "placement": "Left column, below subheadline"
+          },
+          {
+            "text": "Download AQUA",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Wallet 1",
+            "context": "iPhone mockup, account label",
+            "purpose": "Identifies the wallet container"
+          },
+          {
+            "text": "Savings Account",
+            "context": "iPhone mockup, section header",
+            "purpose": "Categorizes account type"
+          },
+          {
+            "text": "Spending Accounts",
+            "context": "iPhone mockup, section header",
+            "purpose": "Categorizes account type"
+          },
+          {
+            "text": "Bitcoin Price",
+            "context": "iPhone mockup, data label",
+            "purpose": "Identifies the price ticker"
+          }
+        ],
+        "tone": "professional-technical, aspirational, inclusive",
+        "dataFormatting": [
+          "$222,475.48",
+          "$895,649.29",
+          "+$43,821.52 (+4.9%)",
+          "0.22838451 BTC",
+          "$204,558.51",
+          "0.00489438 L-BTC",
+          "11.0° USDT"
+        ],
+        "trustSignals": [
+          "Specific BTC holdings displayed ($895K+)",
+          "Multi-asset support (Bitcoin, L2 Bitcoin, Tether)",
+          "Professional mobile UI suggesting production-ready app"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

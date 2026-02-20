@@ -1,0 +1,1118 @@
+{
+  "slug": "fountain",
+  "category": "Payment",
+  "extractedAt": "2026-02-20T11:46:22.861Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/fountain-home-7-landing-search-modal.png",
+      "label": "Landing — Search modal",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFC107",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold white text for podcast titles",
+          "bodyStyle": "Regular weight gray text for descriptions and metadata",
+          "dataStyle": "Small text with icons showing collaborator counts (e.g., '+13 others')"
+        },
+        "components": [
+          {
+            "type": "modal-overlay",
+            "description": "Full-screen search modal with dark background and centered search input",
+            "position": "center",
+            "notable": "Clean, minimal modal design with close button in top right"
+          },
+          {
+            "type": "search-input",
+            "description": "Text input field with magnifying glass icon",
+            "position": "top of modal",
+            "notable": "Large hit area, placeholder text 'Search...'"
+          },
+          {
+            "type": "episode-card",
+            "description": "Grid of podcast episodes with thumbnail, title, show name, and collaborator metadata",
+            "position": "background behind modal",
+            "notable": "Rich preview showing trending and featured content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal layer dominates; background content visible but deprioritized through overlay",
+        "innovativeElements": [
+          "Contextual search modal that doesn't hide underlying content completely",
+          "Promoted episode badges indicating sponsored content"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Search for podcasts, episodes, or creators within Fountain",
+        "entryPoints": [
+          "Search icon in top navigation",
+          "Click search functionality from home page"
+        ],
+        "exitPoints": [
+          "Close button (X) in top right",
+          "Click outside modal",
+          "Submit search query and view results"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input field",
+            "action": "Type to filter podcasts/episodes in real-time"
+          },
+          {
+            "element": "Close button",
+            "action": "Dismiss modal and return to previous view"
+          }
+        ],
+        "informationArchitecture": "Search-first interaction; modal overlays home feed showing trending episodes and featured shows",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Search Fountain",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search...",
+            "context": "Input placeholder",
+            "purpose": "Guides user to type search query"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "'+13 others' — collaborator count badge",
+          "Episode title with show attribution"
+        ],
+        "trustSignals": [
+          "Verified show names",
+          "Collaborator counts showing community participation"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-8-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFC107",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Massive bold sans-serif number (404) in bright yellow",
+          "bodyStyle": "Regular white text for error message",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large 404 number prominently displayed",
+            "position": "center-top",
+            "notable": "Uses brand yellow color for high visibility"
+          },
+          {
+            "type": "error-message",
+            "description": "Text explaining page not found",
+            "position": "center",
+            "notable": "Friendly, casual tone"
+          },
+          {
+            "type": "navigation-link",
+            "description": "Text link to return home",
+            "position": "center-bottom",
+            "notable": "Simple text link without button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates visually; message provides context; action link offers recovery path",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and navigate back to valid content",
+        "entryPoints": [
+          "Direct navigation to non-existent URL",
+          "Broken link from another page"
+        ],
+        "exitPoints": [
+          "Return Home link",
+          "Browser back button",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Return Home link",
+            "action": "Navigate back to home page"
+          }
+        ],
+        "informationArchitecture": "Minimal, focused on error recovery with single clear exit path",
+        "frictionPoints": [
+          "No search box to help user find content",
+          "No additional suggestions or site navigation visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "Oops! That page can't be found",
+        "ctas": [
+          {
+            "text": "Return Home",
+            "style": "text-link",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Oops! That page can't be found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif white text centered",
+          "bodyStyle": "Regular gray body text with clear hierarchy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "text-input",
+            "description": "Email address input field with border and placeholder",
+            "position": "center",
+            "notable": "Rounded border, generous padding, clear visual affordance"
+          },
+          {
+            "type": "primary-button",
+            "description": "White background button for sending verification email",
+            "position": "below input",
+            "notable": "High contrast, full-width design"
+          },
+          {
+            "type": "secondary-link",
+            "description": "Text link for account creation",
+            "position": "below button",
+            "notable": "Links to signup flow for new users"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws attention; input field secondary; button tertiary action; signup link lowest priority",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Verify email address to log into Fountain account",
+        "entryPoints": [
+          "Clicked login from home page",
+          "Visited login URL directly"
+        ],
+        "exitPoints": [
+          "Submit email and receive verification link",
+          "Create an account (new user path)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Enter email address registered to account"
+          },
+          {
+            "element": "Send verification email button",
+            "action": "Trigger verification email to submitted address"
+          },
+          {
+            "element": "Create an account link",
+            "action": "Navigate to signup flow"
+          }
+        ],
+        "informationArchitecture": "Single-field form with clear primary action and alternative path for new users",
+        "frictionPoints": [
+          "Requires email verification (adds step to login flow)",
+          "No password entry visible (different auth approach)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Enter your email",
+        "subheadline": "Enter the email address registered to your Fountain account to verify it's you.",
+        "ctas": [
+          {
+            "text": "Send verification email",
+            "style": "primary-button",
+            "placement": "full-width below input"
+          },
+          {
+            "text": "Create an account",
+            "style": "text-link",
+            "placement": "below button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Enter your email address",
+            "context": "Input placeholder",
+            "purpose": "Guide user to email entry"
+          },
+          {
+            "text": "Don't have an account yet?",
+            "context": "Above signup link",
+            "purpose": "Signal alternative path for new users"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Email verification process indicates security-conscious design",
+          "Account verification language builds trust"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-4-artists.png",
+      "label": "Artists",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large serif font (Georgia-like) for hero headline, all-caps sans-serif for subheading",
+          "bodyStyle": "Clean sans-serif for supporting text and navigation labels",
+          "dataStyle": "Large bold numbers with smaller green percentage badges next to them; sparkline charts below metrics"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Centered text with large serif headline, supporting text, and dual CTAs",
+            "position": "top-center",
+            "notable": "Serif typography creates premium tone; split button treatment (secondary + primary)"
+          },
+          {
+            "type": "sidebar",
+            "description": "Left navigation with artist profile, section labels (Dashboard, Releases, Audience, Monetization, Settings)",
+            "position": "left",
+            "notable": "Two-tier structure with 'VISIBLE TO YOU' and 'VISIBLE TO EVERYONE' separations"
+          },
+          {
+            "type": "metric-card",
+            "description": "Four cards displaying 30-day stats: listeners (5,174), supporters (258), revenue ($447.12), active subscribers (72)",
+            "position": "right-main",
+            "notable": "Gold/yellow sparkline charts show trends; percentage changes in green indicate positive growth"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero content centered and elevated, sidebar provides secondary navigation, dashboard metrics arranged in 2x2 grid below",
+        "innovativeElements": [
+          "Dual-tier sidebar navigation distinguishing artist-private vs public sections",
+          "Gold accent color for numbers creating visual pop against dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "landing + dashboard hybrid",
+        "userIntent": "Artist evaluates Fountain's value proposition and views their performance dashboard",
+        "entryPoints": [
+          "Direct navigation from 'Artists' top menu",
+          "Landing page for artist segment"
+        ],
+        "exitPoints": [
+          "Schedule a demo button",
+          "Get started button",
+          "Dashboard link in sidebar",
+          "Releases/Audience/Monetization navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Schedule a demo",
+            "action": "Opens demo booking form"
+          },
+          {
+            "element": "Get started",
+            "action": "Navigates to signup/onboarding"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to corresponding dashboard sections"
+          },
+          {
+            "element": "More menu (three dots)",
+            "action": "Additional artist profile actions"
+          }
+        ],
+        "informationArchitecture": "Top-level value prop → Artist section navigation → Performance metrics organized by time period and metric type",
+        "frictionPoints": [
+          "Two competing CTAs may cause decision paralysis",
+          "Sidebar hidden metrics may require scrolling for full dashboard view"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Convert listeners into supporters",
+        "subheadline": "Fountain helps artists publish their music and get paid directly by their fans.",
+        "ctas": [
+          {
+            "text": "Schedule a demo",
+            "style": "secondary-button",
+            "placement": "hero-section left"
+          },
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "hero-section right"
+          },
+          {
+            "text": "New release",
+            "style": "primary-button",
+            "placement": "top-right dashboard"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "30 day listens",
+            "context": "metric label above 5,174",
+            "purpose": "Clarifies time period and metric type"
+          },
+          {
+            "text": "VISIBLE TO YOU",
+            "context": "sidebar section divider",
+            "purpose": "Distinguishes private artist features from public"
+          },
+          {
+            "text": "↑ 5%",
+            "context": "next to listener count",
+            "purpose": "Quick trend indicator showing week-over-week growth"
+          }
+        ],
+        "tone": "professional-technical with premium undertones",
+        "dataFormatting": [
+          "5,174 (comma-separated integers)",
+          "↑ 5% (arrow + percentage)",
+          "$447.12 (currency format with cents)"
+        ],
+        "trustSignals": [
+          "Real performance metrics displayed (5,174 listeners, $447.12 revenue)",
+          "Active subscriber count (72) showing platform traction"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-5-feed.png",
+      "label": "feed",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Medium-weight sans-serif for post titles and usernames",
+          "bodyStyle": "Regular weight sans-serif for body text and comments; line-height appears generous",
+          "dataStyle": "Gold lightning bolt icon next to numeric boosts (212,120, 133,700, 88,888); dates in muted gray"
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Trending, Podcasts, Music filter tabs",
+            "position": "top-left",
+            "notable": "Trending is selected/active state"
+          },
+          {
+            "type": "feed-post",
+            "description": "User avatar, name, boost count (gold icon), date, commentary text, embedded episode card with artwork",
+            "position": "main-content",
+            "notable": "Episode cards have distinct thumbnail artwork and metadata (show name, episode number, air date)"
+          },
+          {
+            "type": "engagement-metrics",
+            "description": "Comment icon, lightning bolt (boosts), heart, retweet icons at bottom of post",
+            "position": "post-footer",
+            "notable": "Metrics shown as counts (100, 2, 1) with small icons"
+          },
+          {
+            "type": "sidebar",
+            "description": "Left vertical navigation with home, calendar, chart, message, profile icons",
+            "position": "left-edge",
+            "notable": "Minimalist icon-only design"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "User/boost count most prominent, followed by post text, then embedded episode, then engagement metrics at bottom",
+        "innovativeElements": [
+          "Boost system with lightning bolt icon and numeric values showing listener monetization",
+          "Embedded episode cards within social feed showing podcast metadata"
+        ]
+      },
+      "flow": {
+        "screenType": "feed / data-browse",
+        "userIntent": "Discover trending podcast content and social activity around episodes",
+        "entryPoints": [
+          "Home navigation click",
+          "Direct URL to feed"
+        ],
+        "exitPoints": [
+          "Tab navigation (Trending/Podcasts/Music)",
+          "Click into individual posts",
+          "Sidebar navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab filters",
+            "action": "Switch between Trending, Podcasts, Music content"
+          },
+          {
+            "element": "Episode card",
+            "action": "Navigate to full episode page"
+          },
+          {
+            "element": "User avatar/name",
+            "action": "Navigate to user profile"
+          },
+          {
+            "element": "Engagement icons",
+            "action": "Comment, boost, like, or share"
+          },
+          {
+            "element": "Three-dot menu",
+            "action": "More options for the post"
+          }
+        ],
+        "informationArchitecture": "Feed organized chronologically by recency; content categorized by tab; posts display social proof via boosts and engagement",
+        "frictionPoints": [
+          "No visible load-more button or infinite scroll indicator at bottom",
+          "Engagement metrics could be more prominent (currently small icons)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "BIP47 > Silent Payment BIP47= serverless Evert Dojo is Soroba! Make every Dojo a Coordinator! 100% Reject BIP110 that's what Tdev would say...",
+            "context": "Post body by Anonymous",
+            "purpose": "Crypto/Bitcoin technical commentary showing community discussion"
+          },
+          {
+            "text": "Feb 10",
+            "context": "Post timestamp",
+            "purpose": "Shows post recency"
+          },
+          {
+            "text": "#FREESAMOURAI #PARDONSAMOURAI",
+            "context": "Hashtags in post",
+            "purpose": "Topic categorization and discoverability"
+          }
+        ],
+        "tone": "friendly-casual, community-driven",
+        "dataFormatting": [
+          "212,120 (boost count with lightning icon)",
+          "Feb 10 (date format)",
+          "100 (engagement count without commas)"
+        ],
+        "trustSignals": [
+          "Real boost counts showing genuine community support",
+          "Verified checkmark visible on some profiles"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-6-charts.png",
+      "label": "charts",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Medium-weight sans-serif for section titles (Episodes, Shows, Tracks, Top Boosts)",
+          "bodyStyle": "Regular sans-serif for episode/show titles and metadata",
+          "dataStyle": "Large bold numbers for boost amounts (212,120, 133,700); gold lightning icons; small gray text for supplementary info"
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Episodes, Shows, Tracks tabs",
+            "position": "top-left",
+            "notable": "Episodes tab is active/selected"
+          },
+          {
+            "type": "ranked-list",
+            "description": "Numbered episodes (1-9+) with thumbnail, title, artist/show name, three-dot menu",
+            "position": "left-main",
+            "notable": "Ranking numbers prominently displayed; colored thumbnails create visual distinction"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "'Top Boosts' section showing top boosters with profile info, boost counts, dates, and comments",
+            "position": "right",
+            "notable": "Mirrors social feed structure with boost metrics and quoted commentary"
+          },
+          {
+            "type": "engagement-metrics",
+            "description": "Comment, boost, heart, retweet counts at bottom of boosts",
+            "position": "boosts-footer",
+            "notable": "Consistent icon treatment with feed view"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Ranking number draws eye first, then episode thumbnail, title prominence hierarchy (show > episode details), right sidebar creates secondary focus on top boosters",
+        "innovativeElements": [
+          "Dual-view ranking + social proof showing both episode popularity and booster profiles",
+          "Numbered ranking system (1-9) creates competitive/gamified feel"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / leaderboard",
+        "userIntent": "Browse top-ranked episodes and see who is boosting them (social proof + discovery)",
+        "entryPoints": [
+          "Tab navigation from feed",
+          "Chart icon in sidebar",
+          "Direct URL to charts view"
+        ],
+        "exitPoints": [
+          "Click episode to view details/play",
+          "Click booster profile to view user",
+          "Switch tabs (Episodes/Shows/Tracks)",
+          "Navigate back to feed or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Episodes/Shows/Tracks tabs",
+            "action": "Switch ranking view by content type"
+          },
+          {
+            "element": "Episode row",
+            "action": "Navigate to episode details page"
+          },
+          {
+            "element": "Three-dot menu",
+            "action": "Post options (share, report, etc)"
+          },
+          {
+            "element": "Booster name/avatar",
+            "action": "Navigate to booster profile"
+          },
+          {
+            "element": "Boost count/engagement icons",
+            "action": "View or interact with boost details"
+          }
+        ],
+        "informationArchitecture": "Left side shows hierarchical ranking (by episode); right side shows social activity (by booster). Tab filter allows switching by content type. Dual-panel design connects supply (content) with demand (community support).",
+        "frictionPoints": [
+          "Right sidebar may feel disconnected from left ranking if user expects single-column focus",
+          "No indication of how rankings are calculated (recency vs. total boosts)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Top Boosts",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Defending Bitcoin Privacy | THE UNBOUNDED SERIES: Diverter",
+            "context": "Episode title (#1 ranked)",
+            "purpose": "Primary content discovery label"
+          },
+          {
+            "text": "Ungovernable Misfits",
+            "context": "Show/podcast name",
+            "purpose": "Content source attribution"
+          },
+          {
+            "text": "What a time to be alive. You two Rock! See you both soon. Love Sil & Tony 🧡🧡🧡🧡🧡",
+            "context": "Booster commentary in right panel",
+            "purpose": "Social proof through authentic user testimonials"
+          },
+          {
+            "text": "Feb 10",
+            "context": "Boost date",
+            "purpose": "Recency indicator"
+          }
+        ],
+        "tone": "professional-technical with authentic community sentiment",
+        "dataFormatting": [
+          "212,120 (large boost count with lightning icon)",
+          "Feb 10 (date format)",
+          "100, 2, 1 (engagement counts)"
+        ],
+        "trustSignals": [
+          "Top boost amounts (212,120 from Anonymous, 133,700 from Bon, 88,888 from PringleMac) showing significant community investment",
+          "Numbered ranking (1-9) creates perceived editorial curation",
+          "Authentic user commentary with emojis showing genuine engagement"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFA500",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (48px+), white text on dark background",
+          "bodyStyle": "Medium regular sans-serif (16px), light gray text",
+          "dataStyle": "Bold sans-serif with supporting icons and user avatars"
+        },
+        "components": [
+          {
+            "type": "Left navigation sidebar",
+            "description": "Vertical icon-based navigation with home, calendar, analytics, and profile icons",
+            "position": "Left edge, full height",
+            "notable": "Minimalist vertical nav with subtle iconography"
+          },
+          {
+            "type": "Hero image carousel",
+            "description": "Full-width background image with artist (Milzy) featured, carousel dots at bottom",
+            "position": "Center-right, background",
+            "notable": "Atmospheric photography with overlay text, carousel controls integrated"
+          },
+          {
+            "type": "Episode cards grid",
+            "description": "4-column horizontal scroll of podcast episode cards with thumbnails, titles, and subscriber counts",
+            "position": "Below featured artist, two sections (Trending episodes, Featured shows)",
+            "notable": "Cards show promoted badges, subscriber counts with '+X others' notation"
+          },
+          {
+            "type": "Primary CTA button",
+            "description": "White button with play icon and 'Play' text",
+            "position": "Left side, mid-screen over hero",
+            "notable": "High contrast against dark background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates upper half, featured content (Milzy) prominent on left, scrollable episode grids below create secondary engagement zones",
+        "innovativeElements": [
+          "Horizontal scrollable episode cards within content sections",
+          "Integrated carousel with dot indicators showing multiple featured artists",
+          "Subscriber/contributor count badges showing community participation",
+          "Promoted badge system for sponsored content"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / dashboard hybrid",
+        "userIntent": "Discover and browse podcasts, discover featured artists, view trending content",
+        "entryPoints": [
+          "Direct app load",
+          "Navigation from main menu",
+          "Deep link from external promotion"
+        ],
+        "exitPoints": [
+          "Click Play button to start listening",
+          "Click episode card to view details",
+          "Navigate via sidebar to Podcasters, Artists, or Resources",
+          "Search via top-right search icon"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Play button",
+            "action": "Initiates playback of featured artist/show"
+          },
+          {
+            "element": "Episode cards",
+            "action": "Navigate to episode detail page"
+          },
+          {
+            "element": "Carousel dots",
+            "action": "Navigate between featured artists"
+          },
+          {
+            "element": "Sidebar icons",
+            "action": "Navigate to different app sections"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search interface"
+          }
+        ],
+        "informationArchitecture": "Featured content dominates, trending episodes organized horizontally below, secondary featured shows at bottom. Sidebar provides constant navigation access.",
+        "frictionPoints": [
+          "Horizontal scroll discovery may not be obvious to new users",
+          "Heavy reliance on carousel navigation for featured content",
+          "No clear call-to-action above the fold (Play button is secondary to hero image)"
+        ],
+        "progressIndicators": [
+          "Carousel dots indicating featured artist progression"
+        ]
+      },
+      "copy": {
+        "headline": "Milzy",
+        "subheadline": "One half of the masterminds behind Psyked, Milzy is a true genre-bending talent, creating and playing dance music across the broadest of spectrums.",
+        "ctas": [
+          {
+            "text": "Play",
+            "style": "primary-button",
+            "placement": "Left side, mid-screen"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Promoted",
+            "context": "Episode card badge (393: Panama episode)",
+            "purpose": "Indicates sponsored/promoted content"
+          },
+          {
+            "text": "+15 others, +13 others, +12 others",
+            "context": "Episode cards throughout",
+            "purpose": "Shows additional contributor/supporter count without cluttering UI"
+          },
+          {
+            "text": "Trending episodes",
+            "context": "Section header",
+            "purpose": "Categorizes content type"
+          }
+        ],
+        "tone": "Professional-technical with friendly casual undertones, music/culture-focused",
+        "dataFormatting": [
+          "+15 others, +13 others",
+          "Episode titles like '393: Panama: Why Timing...', '92: Bears Smell Blood'",
+          "Show names: 'The Expat Money Show', 'This Week in Bitcoin', 'Citadel Dispatch'"
+        ],
+        "trustSignals": [
+          "Verified badges on creator profiles",
+          "Explicit subscriber/supporter counts on episodes",
+          "Multi-show platform presence"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-2-fountain-app.png",
+      "label": "Fountain App",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFA500",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Serif font (Georgia-style), very large (56px+), centered, white",
+          "bodyStyle": "Regular sans-serif (16px), centered, light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Eyebrow label",
+            "description": "Small caps text 'FOUNTAIN APP' above headline",
+            "position": "Top center",
+            "notable": "Sets context for the screen section"
+          },
+          {
+            "type": "Device mockups carousel",
+            "description": "5 mobile device mockups arranged in carousel showing app screens with various podcast players and content",
+            "position": "Bottom half, spanning full width",
+            "notable": "Mockups show real app UI with colored overlays (brown, gray, purple tones) indicating different content states or themes"
+          },
+          {
+            "type": "QR code + CTA",
+            "description": "QR code with 'Download Fountain' text and platform availability text",
+            "position": "Center, between headline and device mockups",
+            "notable": "Scannable download link with explicit platform mention (iOS/Android)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered headline draws eye first, QR code provides clear action, device mockups demonstrate product visually below",
+        "innovativeElements": [
+          "Combination of QR code for immediate mobile access with traditional CTA",
+          "Device mockup carousel showing multiple app states and use cases",
+          "Serif typography for headline creates premium, editorial feel"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / app-promotion",
+        "userIntent": "Download and understand the Fountain mobile app capabilities",
+        "entryPoints": [
+          "Navigation from main menu (Fountain App link)",
+          "Direct URL navigation to app page"
+        ],
+        "exitPoints": [
+          "Scan QR code to download app",
+          "Click 'Download Fountain' CTA to app store",
+          "Navigate back via header menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "QR code",
+            "action": "Opens app store download page when scanned"
+          },
+          {
+            "element": "Device mockup carousel",
+            "action": "Visual demonstration (may be auto-rotating or manual navigation)"
+          },
+          {
+            "element": "Download Fountain button/text",
+            "action": "Directs to iOS/Android app stores"
+          }
+        ],
+        "informationArchitecture": "Single-focus page: headline explains value prop, QR code enables immediate action, device mockups provide social proof and visual education",
+        "frictionPoints": [
+          "QR code requires physical device to scan",
+          "No explicit button text visible (appears to be QR code primary CTA)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Discover podcasts and music worth supporting",
+        "subheadline": "Discover millions of podcasts and emerging artists worth supporting",
+        "ctas": [
+          {
+            "text": "Download Fountain",
+            "style": "text-link",
+            "placement": "Below QR code"
+          },
+          {
+            "text": "Available on iOS/Android",
+            "style": "text-link",
+            "placement": "Below QR code"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FOUNTAIN APP",
+            "context": "Eyebrow above headline",
+            "purpose": "Contextualizes the screen and value proposition"
+          },
+          {
+            "text": "Recently played, Following, Supported",
+            "context": "Visible in device mockup UI",
+            "purpose": "Shows app features and content organization"
+          }
+        ],
+        "tone": "Friendly-casual, lifestyle-focused, inspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Multiple device mockups showing polished, functional app UI",
+          "Explicit platform availability (iOS/Android)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/fountain-home-3-podcasters.png",
+      "label": "Podcasters",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel with sidebar",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFA500",
+          "#FFFFFF",
+          "#FFD700"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (40px+), white, centered above fold",
+          "bodyStyle": "Regular sans-serif (14-16px), light gray",
+          "dataStyle": "Large bold numbers (24-36px) with percentage deltas in green (+5%, +8%, +14%, +12%), supporting line charts"
+        },
+        "components": [
+          {
+            "type": "Left sidebar panel",
+            "description": "Dark gray container with podcast info, navigation menu (Dashboard, Episodes, Audience, Monetization, Settings)",
+            "position": "Left side, full height",
+            "notable": "Divided into 'VISIBLE TO YOU' and 'VISIBLE TO EVERYONE' sections"
+          },
+          {
+            "type": "Dashboard metric cards",
+            "description": "2x2 grid of KPI cards showing 30-day metrics with line charts (orange/gold colored)",
+            "position": "Right side, main content area",
+            "notable": "Charts integrate baseline data visualization with metric cards"
+          },
+          {
+            "type": "Primary podcast info card",
+            "description": "Chronicles of Time show card with description, show/host names, verified badge",
+            "position": "Top left in sidebar",
+            "notable": "Verified checkmark, expandable 'Read more' text"
+          },
+          {
+            "type": "New episode button",
+            "description": "White button with plus icon 'New episode'",
+            "position": "Top right",
+            "notable": "Floating CTA for quick content creation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides show context and navigation, main content area emphasizes KPI metrics with large numbers and charts, floating CTA for primary action",
+        "innovativeElements": [
+          "Split view combining show management sidebar with analytics dashboard",
+          "Percentage deltas with directional indicators (green for positive growth)",
+          "Orange/gold accent color for chart lines creating visual consistency with brand",
+          "Section-based navigation dividing public-facing vs. creator-only views"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard / analytics",
+        "userIntent": "Monitor podcast performance metrics, manage episodes and audience engagement",
+        "entryPoints": [
+          "Login as podcaster",
+          "Navigation from podcaster menu",
+          "Direct link to podcaster dashboard"
+        ],
+        "exitPoints": [
+          "Click 'New episode' to create content",
+          "Click sidebar menu items (Episodes, Audience, Monetization, Settings)",
+          "Click show card to view details",
+          "Navigate away via top navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "New episode button",
+            "action": "Opens episode creation form"
+          },
+          {
+            "element": "Dashboard menu items",
+            "action": "Navigate to Episodes, Audience, Monetization, or Settings views"
+          },
+          {
+            "element": "Metric cards",
+            "action": "May provide drill-down into detailed analytics (implied)"
+          },
+          {
+            "element": "Info icons on metrics",
+            "action": "Show tooltips explaining metric calculation"
+          }
+        ],
+        "informationArchitecture": "Sidebar provides persistent show context and navigation, main area displays time-windowed (30-day) KPIs in card grid, header offers quick-action button",
+        "frictionPoints": [
+          "Sidebar navigation reduces main content width",
+          "Multiple nested menu items (Monetization, Settings) not yet visible without clicking"
+        ],
+        "progressIndicators": [
+          "30-day time window indicator on all metrics",
+          "Growth percentage deltas showing period-over-period change"
+        ]
+      },
+      "copy": {
+        "headline": "Convert listeners into supporters",
+        "subheadline": "Seriously powerful podcast hosting that makes monetization simple",
+        "ctas": [
+          {
+            "text": "Schedule a demo",
+            "style": "primary-button",
+            "placement": "Center, below headline"
+          },
+          {
+            "text": "New episode",
+            "style": "primary-button",
+            "placement": "Top right floating button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "30 day downloads",
+            "context": "Metric card label",
+            "purpose": "Clarifies time window for KPI"
+          },
+          {
+            "text": "30 day supporters",
+            "context": "Metric card label",
+            "purpose": "Shows active supporter count metric"
+          },
+          {
+            "text": "VISIBLE TO YOU",
+            "context": "Sidebar section header",
+            "purpose": "Indicates private creator-only navigation"
+          },
+          {
+            "text": "VISIBLE TO EVERYONE",
+            "context": "Sidebar section header",
+            "purpose": "Indicates public-facing podcast navigation"
+          },
+          {
+            "text": "Chronicles of Time is your gateway to the ancient world — a journey through the rise and fall of civilizations, the myths... Read more",
+            "context": "Sidebar show description",
+            "purpose": "Teases show description with expansion option"
+          }
+        ],
+        "tone": "Professional-technical, business-focused, results-oriented",
+        "dataFormatting": [
+          "21,359 (downloads with +5% delta)",
+          "480 (supporters with +8% delta)",
+          "$2,378.32 (revenue with +14% delta)",
+          "189 (active subscribers with +12% delta)"
+        ],
+        "trustSignals": [
+          "Real podcast data displayed (Chronicles of Time show)",
+          "Verified creator badge on show card",
+          "Concrete revenue metrics ($2,378.32) demonstrating monetization capability"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

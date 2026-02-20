@@ -1,0 +1,4354 @@
+{
+  "title": "Onboarding Flow Patterns",
+  "totalApps": 36,
+  "totalScreens": 62,
+  "apps": [
+    "aave",
+    "aerodrome",
+    "alchemy",
+    "amboss",
+    "backpack",
+    "balancer",
+    "binance",
+    "bingx",
+    "bitfinex",
+    "bitpay",
+    "bitso",
+    "bitvavo",
+    "blitz",
+    "blockchair",
+    "btcpay",
+    "coinex",
+    "crypto",
+    "dune",
+    "fountain",
+    "gate",
+    "hodlhodl",
+    "htx",
+    "jito",
+    "jupiter",
+    "kraken",
+    "l2beat",
+    "layerswap",
+    "lnbits",
+    "luno",
+    "magic",
+    "mempool",
+    "metamask",
+    "nansen",
+    "nutstash",
+    "okx",
+    "opensea"
+  ],
+  "screenTypes": [
+    {
+      "name": "onboarding-step",
+      "value": "onboarding-step",
+      "count": 20,
+      "totalOccurrences": 32,
+      "adoptionRate": 0.556,
+      "classification": "common",
+      "apps": [
+        "aerodrome",
+        "alchemy",
+        "balancer",
+        "binance",
+        "bingx",
+        "bitpay",
+        "bitso",
+        "blitz",
+        "coinex",
+        "crypto",
+        "dune",
+        "fountain",
+        "gate",
+        "hodlhodl",
+        "htx",
+        "layerswap",
+        "lnbits",
+        "luno",
+        "mempool",
+        "okx"
+      ]
+    },
+    {
+      "name": "error",
+      "value": "error",
+      "count": 9,
+      "totalOccurrences": 12,
+      "adoptionRate": 0.25,
+      "classification": "emerging",
+      "apps": [
+        "backpack",
+        "bitfinex",
+        "bitvavo",
+        "blockchair",
+        "l2beat",
+        "magic",
+        "metamask",
+        "nutstash",
+        "okx"
+      ]
+    },
+    {
+      "name": "landing",
+      "value": "landing",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "modal",
+      "value": "modal",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "onboarding-step, modal",
+      "value": "onboarding-step, modal",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "amboss"
+      ]
+    },
+    {
+      "name": "onboarding-signup",
+      "value": "onboarding-signup",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "landing + onboarding-step + modal",
+      "value": "landing + onboarding-step + modal",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "authentication",
+      "value": "authentication",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "blank/loading",
+      "value": "blank/loading",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "form-with-security-warning-and-cookie-consent",
+      "value": "form-with-security-warning-and-cookie-consent",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "form-with-security-warning",
+      "value": "form-with-security-warning",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "onboarding-step / login",
+      "value": "onboarding-step / login",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "btcpay"
+      ]
+    },
+    {
+      "name": "landing-with-auth-and-consent",
+      "value": "landing-with-auth-and-consent",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "error + modal - consent gate on 404",
+      "value": "error + modal - consent gate on 404",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "modal-onboarding",
+      "value": "modal-onboarding",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "modal-onboarding-expanded",
+      "value": "modal-onboarding-expanded",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "blank",
+      "value": "blank",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "kraken"
+      ]
+    },
+    {
+      "name": "onboarding-step / login-form",
+      "value": "onboarding-step / login-form",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "error-state",
+      "value": "error-state",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    }
+  ],
+  "userIntents": [
+    {
+      "name": "Connect Web3 wallet to access Aave platform and view personal yield opportunities",
+      "value": "Connect Web3 wallet to access Aave platform and view personal yield opportunities",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Connect wallet to access Aerodrome platform",
+      "value": "Connect wallet to access Aerodrome platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Create a new Alchemy account to access developer platform",
+      "value": "Create a new Alchemy account to access developer platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "User is logging in or creating account as part of onboarding flow",
+      "value": "User is logging in or creating account as part of onboarding flow",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "amboss"
+      ]
+    },
+    {
+      "name": "User attempted to access a page that does not exist or is unavailable",
+      "value": "User attempted to access a page that does not exist or is unavailable",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "backpack"
+      ]
+    },
+    {
+      "name": "Learn about partner onboarding process and Balancer technology features",
+      "value": "Learn about partner onboarding process and Balancer technology features",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Create new Binance account to access trading platform and earn welcome bonus",
+      "value": "Create new Binance account to access trading platform and earn welcome bonus",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Log in to existing Binance account or create new account",
+      "value": "Log in to existing Binance account or create new account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Log back into BingX account or explore if returning user",
+      "value": "Log back into BingX account or explore if returning user",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Access Partner Hub features, typically as referring partner or affiliate",
+      "value": "Access Partner Hub features, typically as referring partner or affiliate",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Create new BingX account to access trading and claim welcome bonus",
+      "value": "Create new BingX account to access trading and claim welcome bonus",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Create account quickly with minimal friction; understand core value prop (zero fees)",
+      "value": "Create account quickly with minimal friction; understand core value prop (zero fees)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Understand what went wrong; get back to valid content quickly",
+      "value": "Understand what went wrong; get back to valid content quickly",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Authenticate or create account to access BitPay",
+      "value": "Authenticate or create account to access BitPay",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Choose account type and begin account creation with basic info",
+      "value": "Choose account type and begin account creation with basic info",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Create a personal crypto trading account",
+      "value": "Create a personal crypto trading account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Log in to existing personal account",
+      "value": "Log in to existing personal account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Unable to determine - page content not visible",
+      "value": "Unable to determine - page content not visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Log in to personal account while accepting cookie policy",
+      "value": "Log in to personal account while accepting cookie policy",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Authenticate user credentials to access personal trading account",
+      "value": "Authenticate user credentials to access personal trading account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Understand why access is blocked and how to resolve it",
+      "value": "Understand why access is blocked and how to resolve it",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Authenticate and access wallet for payment or transaction",
+      "value": "Authenticate and access wallet for payment or transaction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Create new wallet account and register for service",
+      "value": "Create new wallet account and register for service",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Attempt to log in but blocked by access restriction",
+      "value": "Attempt to log in but blocked by access restriction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "Create new account via signup but blocked",
+      "value": "Create new account via signup but blocked",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "Sign into BTCPay Server account",
+      "value": "Sign into BTCPay Server account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "btcpay"
+      ]
+    },
+    {
+      "name": "Create new account to access crypto trading platform",
+      "value": "Create new account to access crypto trading platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Explore crypto exchange platform and optionally sign up",
+      "value": "Explore crypto exchange platform and optionally sign up",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Sign up for exchange account or explore market data before committing",
+      "value": "Sign up for exchange account or explore market data before committing",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Access Crypto.com services; authenticate or create account; comply with cookie policy",
+      "value": "Access Crypto.com services; authenticate or create account; comply with cookie policy",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Authenticate using private key/seed phrase",
+      "value": "Authenticate using private key/seed phrase",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Authenticate or sign up using email address",
+      "value": "Authenticate or sign up using email address",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Create new account with email and account type selection",
+      "value": "Create new account with email and account type selection",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Access account or view login options",
+      "value": "Access account or view login options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Create new account for Dune platform",
+      "value": "Create new account for Dune platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Verify email address to log into Fountain account",
+      "value": "Verify email address to log into Fountain account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "fountain"
+      ]
+    },
+    {
+      "name": "Create account and claim signup bonus (20 USDT)",
+      "value": "Create account and claim signup bonus (20 USDT)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Authenticate and access Gate.io platform via QR code scanning",
+      "value": "Authenticate and access Gate.io platform via QR code scanning",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Create new account for P2P trading/lending platform",
+      "value": "Create new account for P2P trading/lending platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Enter HTX account credentials or scan mobile app QR code to access platform",
+      "value": "Enter HTX account credentials or scan mobile app QR code to access platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "htx"
+      ]
+    },
+    {
+      "name": "User navigated to invalid URL or onboarding endpoint but encounters consent modal before seeing error",
+      "value": "User navigated to invalid URL or onboarding endpoint but encounters consent modal before seeing error",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Connect wallet to Jupiter protocol to begin trading",
+      "value": "Connect wallet to Jupiter protocol to begin trading",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Browse and select from comprehensive list of wallet options",
+      "value": "Browse and select from comprehensive list of wallet options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Log in to account or access login form",
+      "value": "Log in to account or access login form",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Create new account or access signup form",
+      "value": "Create new account or access signup form",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Authenticate and access dashboard",
+      "value": "Authenticate and access dashboard",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "layerswap"
+      ]
+    },
+    {
+      "name": "User needs to authenticate to access LNbits dashboard or create new account",
+      "value": "User needs to authenticate to access LNbits dashboard or create new account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Sign into existing Luno account via email",
+      "value": "Sign into existing Luno account via email",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "Create new Luno account with email address",
+      "value": "Create new Luno account with email address",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "Recover from a missing/invalid page",
+      "value": "Recover from a missing/invalid page",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "magic"
+      ]
+    },
+    {
+      "name": "Authenticate into mempool.space account, establish session to access premium features or saved preferences",
+      "value": "Authenticate into mempool.space account, establish session to access premium features or saved preferences",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "User encountered invalid page during onboarding flow",
+      "value": "User encountered invalid page during onboarding flow",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Authenticate into Nansen account using email and password credentials",
+      "value": "Authenticate into Nansen account using email and password credentials",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "User attempted to access login page but encountered a 404 NOT_FOUND error",
+      "value": "User attempted to access login page but encountered a 404 NOT_FOUND error",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "User attempted to access signup page but encountered a 404 NOT_FOUND error",
+      "value": "User attempted to access signup page but encountered a 404 NOT_FOUND error",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Authenticate and access trading account",
+      "value": "Authenticate and access trading account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Authenticate via email instead of phone",
+      "value": "Authenticate via email instead of phone",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Log in to OKX account using QR code for quick mobile-to-web authentication",
+      "value": "Log in to OKX account using QR code for quick mobile-to-web authentication",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Understand why the page isn't loading and find alternative path",
+      "value": "Understand why the page isn't loading and find alternative path",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Create account or log in with preference for frictionless authentication",
+      "value": "Create account or log in with preference for frictionless authentication",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "User attempted to navigate to a non-existent page within OpenSea platform",
+      "value": "User attempted to navigate to a non-existent page within OpenSea platform",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    }
+  ],
+  "interactiveElements": [
+    {
+      "name": "Email input field",
+      "value": "Email input field",
+      "count": 6,
+      "totalOccurrences": 10,
+      "adoptionRate": 0.167,
+      "classification": "emerging",
+      "apps": [
+        "bingx",
+        "btcpay",
+        "crypto",
+        "fountain",
+        "luno",
+        "nansen"
+      ]
+    },
+    {
+      "name": "Sign up button",
+      "value": "Sign up button",
+      "count": 6,
+      "totalOccurrences": 7,
+      "adoptionRate": 0.167,
+      "classification": "emerging",
+      "apps": [
+        "alchemy",
+        "bingx",
+        "bitfinex",
+        "coinex",
+        "dune",
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Sign Up link",
+      "value": "Sign Up link",
+      "count": 5,
+      "totalOccurrences": 6,
+      "adoptionRate": 0.139,
+      "classification": "emerging",
+      "apps": [
+        "bingx",
+        "htx",
+        "mempool",
+        "nansen",
+        "okx"
+      ]
+    },
+    {
+      "name": "Password input",
+      "value": "Password input",
+      "count": 5,
+      "totalOccurrences": 5,
+      "adoptionRate": 0.139,
+      "classification": "emerging",
+      "apps": [
+        "bitpay",
+        "bitso",
+        "coinex",
+        "lnbits",
+        "mempool"
+      ]
+    },
+    {
+      "name": "Continue button",
+      "value": "Continue button",
+      "count": 4,
+      "totalOccurrences": 6,
+      "adoptionRate": 0.111,
+      "classification": "emerging",
+      "apps": [
+        "binance",
+        "bitpay",
+        "blitz",
+        "jito"
+      ]
+    },
+    {
+      "name": "Log In link",
+      "value": "Log In link",
+      "count": 4,
+      "totalOccurrences": 4,
+      "adoptionRate": 0.111,
+      "classification": "emerging",
+      "apps": [
+        "binance",
+        "bingx",
+        "gate",
+        "luno"
+      ]
+    },
+    {
+      "name": "Email input",
+      "value": "Email input",
+      "count": 4,
+      "totalOccurrences": 4,
+      "adoptionRate": 0.111,
+      "classification": "emerging",
+      "apps": [
+        "bitpay",
+        "coinex",
+        "hodlhodl",
+        "layerswap"
+      ]
+    },
+    {
+      "name": "Next button",
+      "value": "Next button",
+      "count": 3,
+      "totalOccurrences": 6,
+      "adoptionRate": 0.083,
+      "classification": "emerging",
+      "apps": [
+        "htx",
+        "luno",
+        "okx"
+      ]
+    },
+    {
+      "name": "Log In button",
+      "value": "Log In button",
+      "count": 3,
+      "totalOccurrences": 5,
+      "adoptionRate": 0.083,
+      "classification": "emerging",
+      "apps": [
+        "bingx",
+        "bitso",
+        "dune"
+      ]
+    },
+    {
+      "name": "Phone tab",
+      "value": "Phone tab",
+      "count": 3,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.083,
+      "classification": "emerging",
+      "apps": [
+        "bingx",
+        "gate",
+        "okx"
+      ]
+    },
+    {
+      "name": "QR code",
+      "value": "QR code",
+      "count": 3,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.083,
+      "classification": "emerging",
+      "apps": [
+        "bitso",
+        "crypto",
+        "okx"
+      ]
+    },
+    {
+      "name": "Sign in button",
+      "value": "Sign in button",
+      "count": 3,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.083,
+      "classification": "emerging",
+      "apps": [
+        "btcpay",
+        "mempool",
+        "nansen"
+      ]
+    },
+    {
+      "name": "Continue with Google",
+      "value": "Continue with Google",
+      "count": 2,
+      "totalOccurrences": 4,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "luno"
+      ]
+    },
+    {
+      "name": "Continue with Apple",
+      "value": "Continue with Apple",
+      "count": 2,
+      "totalOccurrences": 4,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "luno"
+      ]
+    },
+    {
+      "name": "Password input field",
+      "value": "Password input field",
+      "count": 2,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "btcpay"
+      ]
+    },
+    {
+      "name": "Password visibility toggle",
+      "value": "Password visibility toggle",
+      "count": 2,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex",
+        "bitso"
+      ]
+    },
+    {
+      "name": "Continue with Google button",
+      "value": "Continue with Google button",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "alchemy",
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Referral Code dropdown",
+      "value": "Referral Code dropdown",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "coinex"
+      ]
+    },
+    {
+      "name": "Terms checkbox",
+      "value": "Terms checkbox",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "gate"
+      ]
+    },
+    {
+      "name": "Email Address input",
+      "value": "Email Address input",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "bitpay",
+        "mempool"
+      ]
+    },
+    {
+      "name": "Forgot password? link",
+      "value": "Forgot password? link",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "btcpay",
+        "nansen"
+      ]
+    },
+    {
+      "name": "Navigation menu items",
+      "value": "Navigation menu items",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "coinex",
+        "dune"
+      ]
+    },
+    {
+      "name": "Privacy policy link",
+      "value": "Privacy policy link",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "crypto",
+        "luno"
+      ]
+    },
+    {
+      "name": "Username input",
+      "value": "Username input",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl",
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Navigation menu",
+      "value": "Navigation menu",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.056,
+      "classification": "outlier",
+      "apps": [
+        "jito",
+        "metamask"
+      ]
+    },
+    {
+      "name": "reCAPTCHA checkbox",
+      "value": "reCAPTCHA checkbox",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Continue with Google/Apple/Telegram",
+      "value": "Continue with Google/Apple/Telegram",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Email or ID field",
+      "value": "Email or ID field",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Switch Currency button",
+      "value": "Switch Currency button",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Email input + Sign Up button",
+      "value": "Email input + Sign Up button",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Crypto ticker cards",
+      "value": "Crypto ticker cards",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Close button (X)",
+      "value": "Close button (X)",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Documentation link button",
+      "value": "Documentation link button",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Phone / Email / QR tabs",
+      "value": "Phone / Email / QR tabs",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Social login buttons",
+      "value": "Social login buttons",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "'Continue with Family' button",
+      "value": "'Continue with Family' button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "MetaMask, Coinbase Wallet, Other Wallets rows",
+      "value": "MetaMask, Coinbase Wallet, Other Wallets rows",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "X close button",
+      "value": "X close button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "'I don't have a wallet' link",
+      "value": "'I don't have a wallet' link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Browser Wallet button",
+      "value": "Browser Wallet button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "WalletConnect button",
+      "value": "WalletConnect button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Coinbase Wallet button",
+      "value": "Coinbase Wallet button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Binance Wallet button",
+      "value": "Binance Wallet button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Back to app link",
+      "value": "Back to app link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Log in here link",
+      "value": "Log in here link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Form input fields",
+      "value": "Form input fields",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Modal form (content not visible)",
+      "value": "Modal form (content not visible)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "amboss"
+      ]
+    },
+    {
+      "name": "Modal close (implied)",
+      "value": "Modal close (implied)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "amboss"
+      ]
+    },
+    {
+      "name": "Sidebar navigation links",
+      "value": "Sidebar navigation links",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Page contents links",
+      "value": "Page contents links",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "'here' link in Tips",
+      "value": "'here' link in Tips",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Colored links (Boosted Pools, Yield-Bearing liquidity pools, veBAL/Governance Tokenomics)",
+      "value": "Colored links (Boosted Pools, Yield-Bearing liquidity pools, veBAL/Governance Tokenomics)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Email/Phone input field",
+      "value": "Email/Phone input field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Privacy Notice checkbox",
+      "value": "Privacy Notice checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Email/Phone input",
+      "value": "Email/Phone input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Continue with Passkey",
+      "value": "Continue with Passkey",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "QR code icon",
+      "value": "QR code icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Log In button (primary blue)",
+      "value": "Log In button (primary blue)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Login with Subaccount",
+      "value": "Login with Subaccount",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Forgot Password?",
+      "value": "Forgot Password?",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Email tab",
+      "value": "Email tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Email/Username/Password fields",
+      "value": "Email/Username/Password fields",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Country dropdown",
+      "value": "Country dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "'Log in' link",
+      "value": "'Log in' link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Go back to the Bitfinex Home Page button",
+      "value": "Go back to the Bitfinex Home Page button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Navigation menu (Trade/Earn/Learn/More)",
+      "value": "Navigation menu (Trade/Earn/Learn/More)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Chat widget",
+      "value": "Chat widget",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Login with Passkey",
+      "value": "Login with Passkey",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Create an Account",
+      "value": "Create an Account",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Personal Use toggle",
+      "value": "Personal Use toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Business Use toggle",
+      "value": "Business Use toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "First Name input",
+      "value": "First Name input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Last Name input",
+      "value": "Last Name input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Country of residence dropdown",
+      "value": "Country of residence dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Legal checkbox",
+      "value": "Legal checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Newsletter checkbox",
+      "value": "Newsletter checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Password field with visibility toggle",
+      "value": "Password field with visibility toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Forgot your password? link",
+      "value": "Forgot your password? link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Password field",
+      "value": "Password field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Forgot your password link",
+      "value": "Forgot your password link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Got it button (cookie modal)",
+      "value": "Got it button (cookie modal)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Email or ID input",
+      "value": "Email or ID input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Password visibility toggle icon",
+      "value": "Password visibility toggle icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Remember me checkbox",
+      "value": "Remember me checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "btcpay"
+      ]
+    },
+    {
+      "name": "Create your account link",
+      "value": "Create your account link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "btcpay"
+      ]
+    },
+    {
+      "name": "Log In NOW link",
+      "value": "Log In NOW link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Apple/Google buttons",
+      "value": "Apple/Google buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Rankings tabs (Hot, New, Gainers, Losers, Leaders, Market Cap)",
+      "value": "Rankings tabs (Hot, New, Gainers, Losers, Leaders, Market Cap)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Rankings table rows",
+      "value": "Rankings table rows",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Breaking news items",
+      "value": "Breaking news items",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "News tabs (News, Insight, Announcements)",
+      "value": "News tabs (News, Insight, Announcements)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "More links",
+      "value": "More links",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Rankings filter tabs",
+      "value": "Rankings filter tabs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "News category tabs",
+      "value": "News category tabs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Conectar tab",
+      "value": "Conectar tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Registrarse tab",
+      "value": "Registrarse tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Clave / Correo electrónico tabs",
+      "value": "Clave / Correo electrónico tabs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Aceptar todas las cookies button",
+      "value": "Aceptar todas las cookies button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Rechazarlas todas button",
+      "value": "Rechazarlas todas button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Clave tab",
+      "value": "Clave tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Inténtalo de nuevo button",
+      "value": "Inténtalo de nuevo button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Error modal X button",
+      "value": "Error modal X button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Conectar button",
+      "value": "Conectar button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Continuar con Google button",
+      "value": "Continuar con Google button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Continuar con Apple button",
+      "value": "Continuar con Apple button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Particular account type button",
+      "value": "Particular account type button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Empresa account type button",
+      "value": "Empresa account type button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Código de recomendación dropdown",
+      "value": "Código de recomendación dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Marketing opt-in checkbox",
+      "value": "Marketing opt-in checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Crear cuenta button",
+      "value": "Crear cuenta button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Social buttons",
+      "value": "Social buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Navigation items",
+      "value": "Navigation items",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Send verification email button",
+      "value": "Send verification email button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "fountain"
+      ]
+    },
+    {
+      "name": "Create an account link",
+      "value": "Create an account link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "fountain"
+      ]
+    },
+    {
+      "name": "Country/Region Dropdown",
+      "value": "Country/Region Dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Sign Up to Claim 20 USDT Button",
+      "value": "Sign Up to Claim 20 USDT Button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Email/Username tab",
+      "value": "Email/Username tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "QR Code tab",
+      "value": "QR Code tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Bind IP checkbox",
+      "value": "Bind IP checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Create password input",
+      "value": "Create password input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Confirm password input",
+      "value": "Confirm password input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Have a referral code? dropdown",
+      "value": "Have a referral code? dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Terms/Privacy checkbox",
+      "value": "Terms/Privacy checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Text input field",
+      "value": "Text input field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "htx"
+      ]
+    },
+    {
+      "name": "Social auth buttons",
+      "value": "Social auth buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "htx"
+      ]
+    },
+    {
+      "name": "Terms of Service checkbox",
+      "value": "Terms of Service checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Analytics toggle",
+      "value": "Analytics toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Cookie toggle",
+      "value": "Cookie toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Jupiter Extension card",
+      "value": "Jupiter Extension card",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Jupiter Mobile card",
+      "value": "Jupiter Mobile card",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "View More Wallets",
+      "value": "View More Wallets",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Any wallet option card",
+      "value": "Any wallet option card",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "View Less Wallets",
+      "value": "View Less Wallets",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Sign In with Email button",
+      "value": "Sign In with Email button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "layerswap"
+      ]
+    },
+    {
+      "name": "Theme toggle",
+      "value": "Theme toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "layerswap"
+      ]
+    },
+    {
+      "name": "LOGIN button",
+      "value": "LOGIN button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "REGISTER button",
+      "value": "REGISTER button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "HAVING TROUBLE link",
+      "value": "HAVING TROUBLE link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "Sign up here link",
+      "value": "Sign up here link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "terms of use link",
+      "value": "terms of use link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "Go to Home Page button",
+      "value": "Go to Home Page button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "magic"
+      ]
+    },
+    {
+      "name": "Top icon navigation",
+      "value": "Top icon navigation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "magic"
+      ]
+    },
+    {
+      "name": "Sign in with X button",
+      "value": "Sign in with X button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "Sign in with GitHub button",
+      "value": "Sign in with GitHub button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "Reset password link",
+      "value": "Reset password link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "GO HOME button",
+      "value": "GO HOME button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "DOWNLOAD METAMASK button",
+      "value": "DOWNLOAD METAMASK button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Password input field with eye icon",
+      "value": "Password input field with eye icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "Switch to agent sign-in link",
+      "value": "Switch to agent sign-in link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "Country code dropdown (+34)",
+      "value": "Country code dropdown (+34)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Social login buttons (Passkey, Google, Apple, Telegram, Wallet)",
+      "value": "Social login buttons (Passkey, Google, Apple, Telegram, Wallet)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Email / Sub-account input field",
+      "value": "Email / Sub-account input field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Email/Sub-account tab",
+      "value": "Email/Sub-account tab",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Refresh icon",
+      "value": "Refresh icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Go to homepage button",
+      "value": "Go to homepage button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Country code dropdown",
+      "value": "Country code dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Head Home button",
+      "value": "Head Home button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    },
+    {
+      "name": "Sidebar icons",
+      "value": "Sidebar icons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    },
+    {
+      "name": "Search bar",
+      "value": "Search bar",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    },
+    {
+      "name": "Connect Wallet",
+      "value": "Connect Wallet",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    }
+  ],
+  "frictionPoints": [
+    {
+      "name": "Modal blocks view of product; user must decide wallet before exploring",
+      "value": "Modal blocks view of product; user must decide wallet before exploring",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Long list of 'Other Wallets' may require scrolling",
+      "value": "Long list of 'Other Wallets' may require scrolling",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Four wallet options may create decision paralysis for new users",
+      "value": "Four wallet options may create decision paralysis for new users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "No indication of which wallet option is recommended",
+      "value": "No indication of which wallet option is recommended",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "aerodrome"
+      ]
+    },
+    {
+      "name": "Password field requires typing rather than single-click OAuth",
+      "value": "Password field requires typing rather than single-click OAuth",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Four separate form fields (vs. single-click Google auth)",
+      "value": "Four separate form fields (vs. single-click Google auth)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Legal text at bottom may require reading before signup",
+      "value": "Legal text at bottom may require reading before signup",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Form content not visible in screenshot, unclear what fields exist",
+      "value": "Form content not visible in screenshot, unclear what fields exist",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "amboss"
+      ]
+    },
+    {
+      "name": "No visible action buttons or navigation options to recover from error",
+      "value": "No visible action buttons or navigation options to recover from error",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "backpack"
+      ]
+    },
+    {
+      "name": "No explanation of why page could not be found",
+      "value": "No explanation of why page could not be found",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "backpack"
+      ]
+    },
+    {
+      "name": "No suggestions for next steps or alternative pages",
+      "value": "No suggestions for next steps or alternative pages",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "backpack"
+      ]
+    },
+    {
+      "name": "Multiple navigation options might confuse users about which to use",
+      "value": "Multiple navigation options might confuse users about which to use",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Dense text blocks could benefit from more visual breaks",
+      "value": "Dense text blocks could benefit from more visual breaks",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "balancer"
+      ]
+    },
+    {
+      "name": "Checkbox requires explicit agreement before continuing",
+      "value": "Checkbox requires explicit agreement before continuing",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Country code not pre-selected in phone field",
+      "value": "Country code not pre-selected in phone field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Privacy Notice link may require additional click to understand",
+      "value": "Privacy Notice link may require additional click to understand",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "No immediate feedback on input validity until Continue clicked",
+      "value": "No immediate feedback on input validity until Continue clicked",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Placeholder text unclear whether phone must include country code",
+      "value": "Placeholder text unclear whether phone must include country code",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Multiple authentication paths may confuse new users",
+      "value": "Multiple authentication paths may confuse new users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "binance"
+      ]
+    },
+    {
+      "name": "Password field not visible in screenshot but likely required",
+      "value": "Password field not visible in screenshot but likely required",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Three different login method tabs may confuse new users about which to use",
+      "value": "Three different login method tabs may confuse new users about which to use",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Partner Hub not explained for unfamiliar users",
+      "value": "Partner Hub not explained for unfamiliar users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "No clear indication of what Partner Hub enables before login",
+      "value": "No clear indication of what Partner Hub enables before login",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Terms agreement requires reading linked documents before signup",
+      "value": "Terms agreement requires reading linked documents before signup",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Referral code field may confuse new users unfamiliar with BingX referral program",
+      "value": "Referral code field may confuse new users unfamiliar with BingX referral program",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Two-tab auth method selection (Email vs Phone) adds one decision point",
+      "value": "Two-tab auth method selection (Email vs Phone) adds one decision point",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Multiple form fields required (email, username, password, country)",
+      "value": "Multiple form fields required (email, username, password, country)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Mandatory password strength requirement",
+      "value": "Mandatory password strength requirement",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Marketing email opt-in toggle adds extra step",
+      "value": "Marketing email opt-in toggle adds extra step",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Legal links require clicking away to read full terms",
+      "value": "Legal links require clicking away to read full terms",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Button initially disabled until email entered",
+      "value": "Button initially disabled until email entered",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "No 'Forgot password?' link visible",
+      "value": "No 'Forgot password?' link visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Form is long and requires scrolling",
+      "value": "Form is long and requires scrolling",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Account type selection may need clearer differentiation between options",
+      "value": "Account type selection may need clearer differentiation between options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Password must meet specific criteria (8+ chars with numbers/symbols)",
+      "value": "Password must meet specific criteria (8+ chars with numbers/symbols)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Multiple legal links to review",
+      "value": "Multiple legal links to review",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Confirmation password field requires re-entry",
+      "value": "Confirmation password field requires re-entry",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "reCAPTCHA verification adds friction",
+      "value": "reCAPTCHA verification adds friction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Warning about phishing creates slight concern but improves security awareness",
+      "value": "Warning about phishing creates slight concern but improves security awareness",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Two authentication methods (email/ID) may confuse new users",
+      "value": "Two authentication methods (email/ID) may confuse new users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Security warning may create confusion or concern for new users",
+      "value": "Security warning may create confusion or concern for new users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "reCAPTCHA adds additional validation step",
+      "value": "reCAPTCHA adds additional validation step",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Cookie modal blocks interaction until dismissed",
+      "value": "Cookie modal blocks interaction until dismissed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Multiple account type options may confuse users",
+      "value": "Multiple account type options may confuse users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Required reCAPTCHA validation may slow login process",
+      "value": "Required reCAPTCHA validation may slow login process",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Security warning, while important, may create user anxiety",
+      "value": "Security warning, while important, may create user anxiety",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Multiple account type options at bottom may distract from primary action",
+      "value": "Multiple account type options at bottom may distract from primary action",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "User is blocked from accessing service",
+      "value": "User is blocked from accessing service",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Requires external action (emailing site owner)",
+      "value": "Requires external action (emailing site owner)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "No visible email/password input fields",
+      "value": "No visible email/password input fields",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Continue button disabled—missing form validation",
+      "value": "Continue button disabled—missing form validation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Unclear what credentials user needs to enter",
+      "value": "Unclear what credentials user needs to enter",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Amount display ($0) may confuse user about purpose of screen",
+      "value": "Amount display ($0) may confuse user about purpose of screen",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "No visible form fields for name, email, password",
+      "value": "No visible form fields for name, email, password",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Continue button disabled—form appears incomplete",
+      "value": "Continue button disabled—form appears incomplete",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Payment form template used for signup is confusing UX",
+      "value": "Payment form template used for signup is confusing UX",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "No indication of required fields or validation rules",
+      "value": "No indication of required fields or validation rules",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blitz"
+      ]
+    },
+    {
+      "name": "Complete access block prevents login progression",
+      "value": "Complete access block prevents login progression",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "No alternative authentication method offered",
+      "value": "No alternative authentication method offered",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "No back/home button to escape",
+      "value": "No back/home button to escape",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "Complete access denial prevents account creation",
+      "value": "Complete access denial prevents account creation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "No signup form presented",
+      "value": "No signup form presented",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "No alternate signup method available",
+      "value": "No alternate signup method available",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "No navigation controls visible",
+      "value": "No navigation controls visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "blockchair"
+      ]
+    },
+    {
+      "name": "Terms of Service link at bottom may require reading before signup",
+      "value": "Terms of Service link at bottom may require reading before signup",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "No inline validation feedback shown",
+      "value": "No inline validation feedback shown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Email/password combination still required despite OAuth options",
+      "value": "Email/password combination still required despite OAuth options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "No clear indication of logged-out vs. logged-in state benefits",
+      "value": "No clear indication of logged-out vs. logged-in state benefits",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Market data density may overwhelm new users unfamiliar with crypto terminology",
+      "value": "Market data density may overwhelm new users unfamiliar with crypto terminology",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "News section preview text is truncated and hard to read at this scale",
+      "value": "News section preview text is truncated and hard to read at this scale",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Repetition of login page may confuse users about whether they've progressed",
+      "value": "Repetition of login page may confuse users about whether they've progressed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "No visual indication of onboarding step position",
+      "value": "No visual indication of onboarding step position",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Market data complexity for first-time crypto users",
+      "value": "Market data complexity for first-time crypto users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "coinex"
+      ]
+    },
+    {
+      "name": "Cookie modal interrupts primary flow but is legally required",
+      "value": "Cookie modal interrupts primary flow but is legally required",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Dense compliance text in modal may not be read by users",
+      "value": "Dense compliance text in modal may not be read by users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Multiple authentication options may create choice paralysis",
+      "value": "Multiple authentication options may create choice paralysis",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Error state displayed prevents progress; unclear how to resolve credential issue",
+      "value": "Error state displayed prevents progress; unclear how to resolve credential issue",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Instructions state 'Sigue las instrucciones que aparezcan en el navegador' but no such instructions visible",
+      "value": "Instructions state 'Sigue las instrucciones que aparezcan en el navegador' but no such instructions visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Tab structure adds cognitive load for users unfamiliar with QR/Key/Email differences",
+      "value": "Tab structure adds cognitive load for users unfamiliar with QR/Key/Email differences",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Checkbox must be checked before proceeding (compliance requirement creates extra step)",
+      "value": "Checkbox must be checked before proceeding (compliance requirement creates extra step)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Privacy policy text is small and might be overlooked",
+      "value": "Privacy policy text is small and might be overlooked",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "No explanation of what happens after email submission",
+      "value": "No explanation of what happens after email submission",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Account type choice adds cognitive load upfront; no clear differentiation between Particular and Empresa features",
+      "value": "Account type choice adds cognitive load upfront; no clear differentiation between Particular and Empresa features",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Referral code field is optional and dropdown-based, reducing visibility",
+      "value": "Referral code field is optional and dropdown-based, reducing visibility",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Legal compliance checkbox appears missing (unlike login flow)",
+      "value": "Legal compliance checkbox appears missing (unlike login flow)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Main content area is blank, unclear what form or instructions are below navigation",
+      "value": "Main content area is blank, unclear what form or instructions are below navigation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Main content blank or not loaded, unclear signup form layout",
+      "value": "Main content blank or not loaded, unclear signup form layout",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "No visible progress indication for multi-step signup",
+      "value": "No visible progress indication for multi-step signup",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Requires email verification (adds step to login flow)",
+      "value": "Requires email verification (adds step to login flow)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "fountain"
+      ]
+    },
+    {
+      "name": "No password entry visible (different auth approach)",
+      "value": "No password entry visible (different auth approach)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "fountain"
+      ]
+    },
+    {
+      "name": "Requires country selection before proceeding (potential friction if location is misdetected)",
+      "value": "Requires country selection before proceeding (potential friction if location is misdetected)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Must accept legal agreements to proceed",
+      "value": "Must accept legal agreements to proceed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "No password strength guidance visible (likely on next step)",
+      "value": "No password strength guidance visible (likely on next step)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "gate"
+      ]
+    },
+    {
+      "name": "Multiple required fields increase form completion time",
+      "value": "Multiple required fields increase form completion time",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Password confirmation field adds step but improves UX reliability",
+      "value": "Password confirmation field adds step but improves UX reliability",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "Required legal agreement checkbox may slow conversion",
+      "value": "Required legal agreement checkbox may slow conversion",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "hodlhodl"
+      ]
+    },
+    {
+      "name": "User cannot access 404 error information until consenting",
+      "value": "User cannot access 404 error information until consenting",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Forces consent collection even for users who accidentally landed on wrong page",
+      "value": "Forces consent collection even for users who accidentally landed on wrong page",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Creates additional friction on already-problematic error state",
+      "value": "Creates additional friction on already-problematic error state",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Must expand to see all wallet options",
+      "value": "Must expand to see all wallet options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Two-step process if choosing less-recommended option",
+      "value": "Two-step process if choosing less-recommended option",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Must navigate potentially long list to find specific wallet",
+      "value": "Must navigate potentially long list to find specific wallet",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "No search/filter functionality visible",
+      "value": "No search/filter functionality visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "jupiter"
+      ]
+    },
+    {
+      "name": "Cannot GET /login - complete access failure",
+      "value": "Cannot GET /login - complete access failure",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Cannot GET /signup - complete access failure",
+      "value": "Cannot GET /signup - complete access failure",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "No password option shown",
+      "value": "No password option shown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "layerswap"
+      ]
+    },
+    {
+      "name": "No social auth alternatives visible",
+      "value": "No social auth alternatives visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "layerswap"
+      ]
+    },
+    {
+      "name": "Single entry path without password reset visible",
+      "value": "Single entry path without password reset visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "No social login options shown",
+      "value": "No social login options shown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Two-step email/password entry (not one-step)",
+      "value": "Two-step email/password entry (not one-step)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "No password recovery visible upfront",
+      "value": "No password recovery visible upfront",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "Dense legal text may deter some users",
+      "value": "Dense legal text may deter some users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "No indication of next steps after clicking Next",
+      "value": "No indication of next steps after clicking Next",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "luno"
+      ]
+    },
+    {
+      "name": "User must click CTA to recover; no auto-redirect",
+      "value": "User must click CTA to recover; no auto-redirect",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "magic"
+      ]
+    },
+    {
+      "name": "Three authentication paths (X, GitHub, email) may create decision paralysis",
+      "value": "Three authentication paths (X, GitHub, email) may create decision paralysis",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "No indication of which OAuth providers are recommended",
+      "value": "No indication of which OAuth providers are recommended",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "Password reset and signup links are small and easy to miss",
+      "value": "Password reset and signup links are small and easy to miss",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "mempool"
+      ]
+    },
+    {
+      "name": "User diverted from onboarding flow",
+      "value": "User diverted from onboarding flow",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "No contextual error explanation",
+      "value": "No contextual error explanation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Required field validation not visible until submission",
+      "value": "Required field validation not visible until submission",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "No inline field validation feedback shown",
+      "value": "No inline field validation feedback shown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "No visual indication of loading/processing state during sign in",
+      "value": "No visual indication of loading/processing state during sign in",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nansen"
+      ]
+    },
+    {
+      "name": "Page not found blocks access to login functionality",
+      "value": "Page not found blocks access to login functionality",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "No alternative navigation options visible",
+      "value": "No alternative navigation options visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Technical error details may confuse non-technical users",
+      "value": "Technical error details may confuse non-technical users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Page not found blocks access to signup functionality",
+      "value": "Page not found blocks access to signup functionality",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "No alternative navigation options",
+      "value": "No alternative navigation options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Users cannot progress in onboarding",
+      "value": "Users cannot progress in onboarding",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "nutstash"
+      ]
+    },
+    {
+      "name": "Multiple authentication methods may confuse first-time users",
+      "value": "Multiple authentication methods may confuse first-time users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Passkey as primary option assumes web3/tech literacy",
+      "value": "Passkey as primary option assumes web3/tech literacy",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Empty email field may cause validation errors if user clicks Next",
+      "value": "Empty email field may cause validation errors if user clicks Next",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "User must have phone/camera ready or OKX app installed",
+      "value": "User must have phone/camera ready or OKX app installed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "QR code requires version 6.150.0+ of OKX app",
+      "value": "QR code requires version 6.150.0+ of OKX app",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "User is blocked from desired content",
+      "value": "User is blocked from desired content",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "No search suggestion or related pages offered",
+      "value": "No search suggestion or related pages offered",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Multiple authentication options could overwhelm new users",
+      "value": "Multiple authentication options could overwhelm new users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Country code dropdown requires input before proceeding",
+      "value": "Country code dropdown requires input before proceeding",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "No guest/demo mode for exploration before login",
+      "value": "No guest/demo mode for exploration before login",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "User must click recovery button rather than having suggestions",
+      "value": "User must click recovery button rather than having suggestions",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    },
+    {
+      "name": "No breadcrumb or context about how user arrived here",
+      "value": "No breadcrumb or context about how user arrived here",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "opensea"
+      ]
+    }
+  ],
+  "progressIndicators": [
+    {
+      "name": "Active tab state (Conectar vs Registrarse) shows selected auth method",
+      "value": "Active tab state (Conectar vs Registrarse) shows selected auth method",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "crypto"
+      ]
+    },
+    {
+      "name": "Active tab indicator shows selected auth method",
+      "value": "Active tab indicator shows selected auth method",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Email/Sub-account tab shows as active",
+      "value": "Email/Sub-account tab shows as active",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Tab selection shows current authentication method",
+      "value": "Tab selection shows current authentication method",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.028,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    }
+  ]
+}

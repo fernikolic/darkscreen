@@ -1,0 +1,3590 @@
+{
+  "slug": "edge-wallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:38:52.111Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 34,
+  "screens": [
+    {
+      "image": "/screenshots/edge-wallet-home-4-get-started.png",
+      "label": "Get Started",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00d084",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, right-aligned, white text on dark background",
+          "bodyStyle": "Not clearly visible in this view",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Edge wallet logo with teal accent",
+            "position": "top-right",
+            "notable": "Minimal branding presence"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Rocket icon with chat bubble prompting user interaction",
+            "position": "bottom-right",
+            "notable": "Floating chat prompt with 'Hello, tap to start a chat.'"
+          },
+          {
+            "type": "Decorative Element",
+            "description": "Four-pointed star accent",
+            "position": "left-center",
+            "notable": "Subtle animated accent suggesting motion"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Text positioned top-right dominates screen; decorative elements and chat widget support secondary focus",
+        "innovativeElements": [
+          "Animated four-pointed star as decorative accent",
+          "Rocket icon with chat integration",
+          "Right-aligned text layout creating asymmetric composition"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Begin getting started with the Edge wallet",
+        "entryPoints": [
+          "Landing page navigation",
+          "App launch for new users"
+        ],
+        "exitPoints": [
+          "Chat widget interaction",
+          "Scroll down for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat Widget",
+            "action": "Opens customer support chat"
+          },
+          {
+            "element": "Headline/Content Area",
+            "action": "Likely scrollable to reveal additional onboarding steps"
+          }
+        ],
+        "informationArchitecture": "Vertical scroll pattern with hero content at top, supporting elements embedded",
+        "frictionPoints": [
+          "Text is partially cut off on right side",
+          "No clear primary CTA button visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Let's set up your E[dge wallet]",
+        "subheadline": "HOW TO GET",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget bubble",
+            "purpose": "Encourages user to engage with support"
+          }
+        ],
+        "tone": "friendly-casual, welcoming",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-5-get-started-scrolled-2.png",
+      "label": "Get Started — scrolled 2",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#4a4a4a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in scrolled state",
+          "bodyStyle": "Not visible in scrolled state",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Decorative Background",
+            "description": "Flowing curved lines suggesting motion/energy",
+            "position": "top-center to right",
+            "notable": "Abstract wave pattern with subtle gradient variation"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Same rocket icon and chat bubble",
+            "position": "bottom-right",
+            "notable": "Persistent across scroll states"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Decorative flowing lines create sense of movement and progression",
+        "innovativeElements": [
+          "Flowing curved line animations",
+          "Gradient wave effect suggesting momentum",
+          "Persistent floating chat widget across scroll states"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Continue through onboarding sequence by scrolling",
+        "entryPoints": [
+          "Scrolled from initial 'Get Started' view"
+        ],
+        "exitPoints": [
+          "Continue scrolling",
+          "Interact with chat widget"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Page Content",
+            "action": "Scrolls to reveal next onboarding content"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Persistent access to support"
+          }
+        ],
+        "informationArchitecture": "Vertical scrollable content with decorative visual progression",
+        "frictionPoints": [
+          "Minimal visible content in this scroll position",
+          "No clear indicator of how much more content remains"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Support access"
+          }
+        ],
+        "tone": "visual-focused, minimal text",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-6-get-started-scrolled-4.png",
+      "label": "Get Started — scrolled 4",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1a3a3a",
+          "#2a5a5a",
+          "#f0a500",
+          "#4a4a4a"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in current scroll position",
+          "bodyStyle": "Not visible in current scroll position",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Decorative Background",
+            "description": "Concentric circular patterns with orange/gold accent ring",
+            "position": "bottom-center",
+            "notable": "Layered circular design with warm color accent breaking the cool palette"
+          },
+          {
+            "type": "Color Gradient",
+            "description": "Teal-to-dark transition in upper portion",
+            "position": "top-half",
+            "notable": "Smooth vertical gradient creating depth"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Persistent rocket and chat bubble",
+            "position": "bottom-right",
+            "notable": "Maintained throughout all scroll states"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Concentric circles draw eye downward to center-bottom; warm orange accent provides focal point",
+        "innovativeElements": [
+          "Concentric circle animation/illustration",
+          "Gold/orange accent breaking dark theme",
+          "Smooth gradient transitions between color zones",
+          "Layered circular depth effect"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Continue through multi-step onboarding experience",
+        "entryPoints": [
+          "Scrolled from previous onboarding steps"
+        ],
+        "exitPoints": [
+          "Continue scrolling for more steps",
+          "Chat widget"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Scrollable Content Area",
+            "action": "Reveals next onboarding step"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Provides support access"
+          }
+        ],
+        "informationArchitecture": "Multi-step vertical scrolling experience with visual progression indicators",
+        "frictionPoints": [
+          "No visible progress indicator showing current step",
+          "No visible text/copy in this scroll position to guide user"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Support access during onboarding"
+          }
+        ],
+        "tone": "visual-storytelling, minimal text",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#00d4aa",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, right-aligned sans-serif (appears to be 48-64px)",
+          "bodyStyle": "Regular weight sans-serif, right-aligned, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Edge branding with green accent square",
+            "position": "top-right",
+            "notable": "Minimal, modern mark positioning"
+          },
+          {
+            "type": "QR Code",
+            "description": "QR code with green accent corner for app download",
+            "position": "right side, center-right",
+            "notable": "Physical call-to-action overlay integrated into landing flow"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Dark button with chat icon in bottom-right corner",
+            "position": "bottom-right fixed",
+            "notable": "Always-visible support access"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right-aligned content creates unconventional but eye-catching vertical hierarchy; whitespace dominates",
+        "innovativeElements": [
+          "Right-aligned headline breaking conventional left-to-right reading patterns",
+          "QR code placed prominently as primary CTA rather than secondary"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Edge wallet and download the app",
+        "entryPoints": [
+          "Direct landing page visit",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Scan QR code to download app",
+          "Scroll to see more content",
+          "Chat support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "QR Code",
+            "action": "Scan or tap to download Edge app"
+          },
+          {
+            "element": "Chat Widget Button",
+            "action": "Open support chat"
+          }
+        ],
+        "informationArchitecture": "Hero section with value proposition on right, minimal visual on left allows focus on messaging",
+        "frictionPoints": [
+          "QR code requires device camera or app store navigation",
+          "Text is truncated/cut off at edges suggesting responsive design issues"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Get out of [...] (text cut off, appears to be 'Get out of' + something about crypto)",
+        "subheadline": "The most [...]and trade [...]",
+        "ctas": [
+          {
+            "text": "Scan or tap to [download]",
+            "style": "text-link",
+            "placement": "below QR code"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Invites user engagement with support"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#00d4aa",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, appears right-aligned",
+          "bodyStyle": "Regular sans-serif text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Text Block",
+            "description": "Privacy & Security messaging in gray box",
+            "position": "top-right",
+            "notable": "Highlighted trust messaging"
+          },
+          {
+            "type": "Illustration",
+            "description": "Abstract security/shield icon with green accent",
+            "position": "right side, upper-middle",
+            "notable": "Minimalist line illustration style"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Fixed support button",
+            "position": "bottom-right",
+            "notable": "Persistent across all views"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large whitespace with right-aligned content blocks; visual elements create vertical flow",
+        "innovativeElements": [
+          "Floating illustration with green accent maintains brand color through scroll"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Edge security features while scrolling through value prop",
+        "entryPoints": [
+          "Scroll from previous hero section"
+        ],
+        "exitPoints": [
+          "Continue scrolling down",
+          "Chat support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat Widget",
+            "action": "Open support chat"
+          }
+        ],
+        "informationArchitecture": "Sequential trust-building section emphasizing privacy and security credentials",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy & Security (partial text visible)",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Support access"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy & Security messaging prominently displayed"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-3-events.png",
+      "label": "Events",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#ff6b35",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, right-aligned, large",
+          "bodyStyle": "Regular sans-serif, right-aligned",
+          "dataStyle": "Small gray text for dates and times; emoji for trending indicator"
+        },
+        "components": [
+          {
+            "type": "Search Bar",
+            "description": "Search input field placeholder 'Search eve...'",
+            "position": "top-right",
+            "notable": "Contextual to events section"
+          },
+          {
+            "type": "Event Card",
+            "description": "Event listing with fire emoji indicator showing trending/popularity",
+            "position": "right side, center-right",
+            "notable": "Fire emoji suggests trending or hot events"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Fixed support button",
+            "position": "bottom-right",
+            "notable": "Persistent component"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading with event details below; fire emoji draws attention; right-aligned design continues",
+        "innovativeElements": [
+          "Emoji usage (fire icon) for non-text trending indicators",
+          "Right-side content orientation as consistent design pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and search for crypto events or market happenings",
+        "entryPoints": [
+          "Scroll from previous sections",
+          "Navigation from header"
+        ],
+        "exitPoints": [
+          "Search for specific events",
+          "Click event card",
+          "Chat support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search Bar",
+            "action": "Filter events by keyword"
+          },
+          {
+            "element": "Event Card",
+            "action": "View event details"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Open support"
+          }
+        ],
+        "informationArchitecture": "Events section with search and discovery; listing shows date, time, trending status",
+        "frictionPoints": [
+          "Search bar placeholder is truncated (shows 'Search eve...')"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Events (partial, visible as 'Even')",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search eve...",
+            "context": "Search input placeholder",
+            "purpose": "Guides user to search functionality"
+          },
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Support invitation"
+          }
+        ],
+        "tone": "professional-technical, informational",
+        "dataFormatting": [
+          "Date format: 02/[date]",
+          "Time format: 9:00 [time]",
+          "Event ranking: Fire emoji (🔥) with number (4)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-7-web.png",
+      "label": "web",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00d084",
+          "#ff9966"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, sans-serif (80-100px) - 'Download Edge'",
+          "bodyStyle": "Medium weight, readable sans-serif at 16-18px for descriptions",
+          "dataStyle": "Bold white text for currency amounts and wallet balances"
+        },
+        "components": [
+          {
+            "type": "Download buttons",
+            "description": "Google Play, App Store, and APK download options stacked vertically",
+            "position": "Left side, below headline",
+            "notable": "Three distinct download paths with branded buttons"
+          },
+          {
+            "type": "QR code",
+            "description": "Large black and white QR code with 'Scan to download' text",
+            "position": "Center-left area",
+            "notable": "High contrast, scannable from distance"
+          },
+          {
+            "type": "Mobile mockup",
+            "description": "iPhone frame showing Edge wallet interface with balance and asset list",
+            "position": "Right side, centered",
+            "notable": "Realistic phone mockup with hand holding device for engagement"
+          },
+          {
+            "type": "Social icons",
+            "description": "LinkedIn, YouTube, GitHub, Twitter icons in circles",
+            "position": "Bottom left",
+            "notable": "Minimal dark styling with hover states implied"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right reading flow: headline → description → CTAs → QR, with phone mockup as visual anchor on right",
+        "innovativeElements": [
+          "Animated hand holding phone mockup creates tactile engagement",
+          "Gradient teal-to-dark background suggests depth and premium feel",
+          "Multiple download options reduce friction across platforms"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Download the Edge Wallet app across available platforms",
+        "entryPoints": [
+          "Direct URL visit to edge.app",
+          "Marketing materials or social links",
+          "Google/App Store search results"
+        ],
+        "exitPoints": [
+          "Google Play Store",
+          "Apple App Store",
+          "APK direct download",
+          "Learn more link (https://edge.app)",
+          "Social media profiles"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Google Play button",
+            "action": "Opens Google Play Store to Edge Wallet listing"
+          },
+          {
+            "element": "App Store button",
+            "action": "Opens Apple App Store to Edge Wallet listing"
+          },
+          {
+            "element": "APK Download button",
+            "action": "Initiates direct APK file download"
+          },
+          {
+            "element": "QR code",
+            "action": "Scannable link to app store listings"
+          },
+          {
+            "element": "Learn more link",
+            "action": "Navigates to https://edge.app for additional info"
+          }
+        ],
+        "informationArchitecture": "Linear: headline → value props → download options → optional learn more",
+        "frictionPoints": [
+          "Multiple download paths may create confusion about which to choose",
+          "No direct app store links visible (requires QR or button click)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Download Edge",
+        "subheadline": "The only self-custody, open source crypto wallet you need.",
+        "ctas": [
+          {
+            "text": "GET IT ON Google Play",
+            "style": "branded-button",
+            "placement": "Left panel, primary CTA"
+          },
+          {
+            "text": "Download on the App Store",
+            "style": "branded-button",
+            "placement": "Left panel, secondary CTA"
+          },
+          {
+            "text": "Android Direct Download APK",
+            "style": "branded-button",
+            "placement": "Left panel, tertiary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get started in a matter of seconds. No personal information or manual key backup required.",
+            "context": "Below subheadline",
+            "purpose": "Reduces perceived friction and builds confidence"
+          },
+          {
+            "text": "Visit https://edge.app to learn more",
+            "context": "Below main copy",
+            "purpose": "Directs users to additional resources"
+          },
+          {
+            "text": "Scan to download",
+            "context": "Below QR code",
+            "purpose": "Instructional copy for QR engagement"
+          }
+        ],
+        "tone": "professional-technical, friendly, confidence-building",
+        "dataFormatting": [
+          "$143.22 USD (total balance shown in mockup)",
+          "8 0.00075768 BTC (wallet asset with decimal precision)"
+        ],
+        "trustSignals": [
+          "Self-custody emphasized in headline",
+          "Open source mentioned as key differentiator",
+          "No manual key backup required (simplicity signal)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-8-how-to-use-duress-mode-in-edge.png",
+      "label": "How To Use Duress Mode in Edge",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#00d084"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold serif headlines (h1 ~36-48px) for article title",
+          "bodyStyle": "Regular sans-serif, 16px line-height ~1.6 for readability",
+          "dataStyle": "Monospace or code-style for technical terms and PIN references"
+        },
+        "components": [
+          {
+            "type": "Header navigation",
+            "description": "Edge logo, main nav (About, Education, Support, Events, Get Started), Submit Ticket CTA",
+            "position": "Top fixed bar",
+            "notable": "Clean horizontal navigation with prominent CTA on right"
+          },
+          {
+            "type": "Breadcrumb navigation",
+            "description": "Edge > Resources > Reference",
+            "position": "Below header",
+            "notable": "Helps users understand content location"
+          },
+          {
+            "type": "Left sidebar",
+            "description": "Nested article list under 'Articles in this section' heading",
+            "position": "Left 25% of page",
+            "notable": "Organized with multiple related articles linking to each other"
+          },
+          {
+            "type": "Main content area",
+            "description": "Article with heading, metadata (8 months ago, Updated), Follow button, and formatted body",
+            "position": "Main 75% area",
+            "notable": "Clean typography with bullet points and emphasis for scannability"
+          },
+          {
+            "type": "Chat widget",
+            "description": "Live chat support interface",
+            "position": "Bottom right corner",
+            "notable": "Unobtrusive but accessible for help"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header > Breadcrumb > Article Title > Metadata > Body text with emphasized sections",
+        "innovativeElements": [
+          "Left sidebar article contextual navigation reduces navigation friction",
+          "Updated timestamp indicates actively maintained docs",
+          "Follow button for article-specific subscriptions"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Learn how to enable and use Duress Mode for wallet security",
+        "entryPoints": [
+          "Sidebar navigation from other articles",
+          "Search results for 'duress mode'",
+          "Direct link from help or support sections",
+          "Navigation from main Edge website"
+        ],
+        "exitPoints": [
+          "Related articles in left sidebar",
+          "Submit Ticket button (for support)",
+          "Main navigation links",
+          "Chat widget for live support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar articles",
+            "action": "Navigate to related documentation"
+          },
+          {
+            "element": "Follow button",
+            "action": "Subscribe to updates for this article"
+          },
+          {
+            "element": "Search box",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open live support conversation"
+          }
+        ],
+        "informationArchitecture": "Question-answer format: What is Duress Mode? → How it works → When to use it, with supporting bullet points and warnings",
+        "frictionPoints": [
+          "Long sidebar list may require scrolling on small screens",
+          "Important warning embedded in body text (could be highlighted box)"
+        ],
+        "progressIndicators": [
+          "Update timestamp (8 months ago)"
+        ]
+      },
+      "copy": {
+        "headline": "How to Use Duress Mode in Edge Wallet: Your Safety Net in High-Risk Situations",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "outlined-button",
+            "placement": "Top right of article title"
+          },
+          {
+            "text": "SUBMIT TICKET",
+            "style": "primary-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "8 months ago • Updated",
+            "context": "Below article title",
+            "purpose": "Indicates article freshness and maintenance"
+          },
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Encourages engagement with support"
+          }
+        ],
+        "tone": "professional-technical, educational, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Security-focused content demonstrates Edge prioritizes user safety",
+          "Detailed explanation of decoy account functionality",
+          "Warning about irreversible transactions shows transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-9-bitcoin.png",
+      "label": "Bitcoin",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#00d084"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header logo",
+            "description": "Edge logo with green accent",
+            "position": "Top right",
+            "notable": "Minimal, clean branding"
+          },
+          {
+            "type": "Chat widget",
+            "description": "Live chat support interface",
+            "position": "Bottom right corner",
+            "notable": "Same as previous screenshot, available for help"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal content area with focus on whitespace",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "loading | empty-state",
+        "userIntent": "User is loading Bitcoin-specific information or page content",
+        "entryPoints": [
+          "Navigation click to Bitcoin section",
+          "Direct URL to Bitcoin resource page"
+        ],
+        "exitPoints": [
+          "Chat widget for support",
+          "Back navigation",
+          "Logo click to return home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Open live support"
+          }
+        ],
+        "informationArchitecture": "Page appears to be loading or in transition state",
+        "frictionPoints": [
+          "Blank page with no content visible",
+          "No indication of what content should appear"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Provides support access on empty state"
+          }
+        ],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears to be loading or is intentionally blank - no content displayed"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-10-ethereum.png",
+      "label": "Ethereum",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00C853"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet branding in top right",
+            "position": "top-right",
+            "notable": "Minimalist placement"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Conversational support bubble with message",
+            "position": "bottom-right",
+            "notable": "Dark navy button with chat icon, inviting engagement"
+          },
+          {
+            "type": "close-button",
+            "description": "X icon to dismiss chat",
+            "position": "bottom-right near chat",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal content hierarchy; chat widget is primary focal point in lower right",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access wallet or navigate to Ethereum wallet dashboard",
+        "entryPoints": [
+          "App launch",
+          "Direct link to home"
+        ],
+        "exitPoints": [
+          "Chat widget interaction",
+          "Tap to access wallet features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget button",
+            "action": "Opens conversational support interface"
+          },
+          {
+            "element": "Close button",
+            "action": "Dismisses chat widget"
+          }
+        ],
+        "informationArchitecture": "Mostly empty state with persistent support chat; content likely loads dynamically",
+        "frictionPoints": [
+          "Blank screen may confuse users about what to do next",
+          "No visible navigation or account balance information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-chat-prompt",
+            "placement": "chat-widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget invitation",
+            "purpose": "Encourages user engagement with support"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-11-litecoin.png",
+      "label": "Litecoin",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00C853"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet branding in top right",
+            "position": "top-right",
+            "notable": "Consistent placement across screens"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Conversational support bubble with message",
+            "position": "bottom-right",
+            "notable": "Dark navy button, consistent with Ethereum screen"
+          },
+          {
+            "type": "close-button",
+            "description": "X icon to dismiss chat",
+            "position": "bottom-right near chat",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal; chat widget is primary element",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Litecoin wallet dashboard",
+        "entryPoints": [
+          "App navigation to Litecoin",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Chat widget interaction",
+          "Navigate to wallet features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget button",
+            "action": "Opens support chat"
+          },
+          {
+            "element": "Close button",
+            "action": "Dismisses chat widget"
+          }
+        ],
+        "informationArchitecture": "Empty state with persistent chat support; screen appears to be loading or minimal content view",
+        "frictionPoints": [
+          "No visible wallet data or account information",
+          "Unclear primary action for user"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-chat-prompt",
+            "placement": "chat-widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Invite user engagement with support"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-12-stellar.png",
+      "label": "Stellar",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00C853"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet branding in top right",
+            "position": "top-right",
+            "notable": "Consistent brand placement"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Conversational support bubble",
+            "position": "bottom-right",
+            "notable": "Dark navy button with consistent styling"
+          },
+          {
+            "type": "close-button",
+            "description": "X icon to dismiss chat",
+            "position": "bottom-right",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual hierarchy; chat widget is focal point",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Stellar wallet or navigate crypto holdings",
+        "entryPoints": [
+          "App navigation to Stellar",
+          "Direct deep link"
+        ],
+        "exitPoints": [
+          "Chat widget interaction",
+          "Tap to access wallet data"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget button",
+            "action": "Opens support conversation"
+          },
+          {
+            "element": "Close button",
+            "action": "Dismisses chat"
+          }
+        ],
+        "informationArchitecture": "Minimal/empty state with persistent support; content appears to be loading or delayed",
+        "frictionPoints": [
+          "Blank canvas with no visible account data",
+          "No clear primary action path"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-chat-prompt",
+            "placement": "chat-widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget invitation",
+            "purpose": "Engage users with customer support"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-13-xrp.png",
+      "label": "XRP",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00D4AA"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet branding in top right",
+            "position": "top-right",
+            "notable": "Minimal positioning suggests app header"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat bubble with message prompt",
+            "position": "bottom-right",
+            "notable": "Dark navy button with rounded chat icon, persistent UI element"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimalist design with chat widget as primary focal point",
+        "innovativeElements": [
+          "Floating chat widget with dismissible close button"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access wallet dashboard or explore app features",
+        "entryPoints": [
+          "App home launch",
+          "Back navigation from other screens"
+        ],
+        "exitPoints": [
+          "Chat widget activation",
+          "Navigation to other wallet sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget button",
+            "action": "Opens live chat support conversation"
+          },
+          {
+            "element": "Close (X) button",
+            "action": "Dismisses chat widget prompt"
+          }
+        ],
+        "informationArchitecture": "Clean, content-sparse home screen with support overlay",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-prompt",
+            "placement": "chat-widget-bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget prompt",
+            "purpose": "Invites user to engage with support"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-14-dash.png",
+      "label": "Dash",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00D4AA"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet branding in top right",
+            "position": "top-right",
+            "notable": "Consistent with XRP screen"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat bubble with message prompt",
+            "position": "bottom-right",
+            "notable": "Identical chat widget to previous screen"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimalist design with focus on clean interface",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View Dash wallet or access dashboard",
+        "entryPoints": [
+          "App home launch",
+          "Navigation from portfolio"
+        ],
+        "exitPoints": [
+          "Chat widget activation",
+          "Back to previous screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens support chat"
+          }
+        ],
+        "informationArchitecture": "Nearly identical to XRP screen - appears to be asset-specific view",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-prompt",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Support engagement prompt"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-15-submit-ticket.png",
+      "label": "Submit Ticket",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00D4AA"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold (H1 style)",
+          "bodyStyle": "Regular weight, standard line-height paragraph text",
+          "dataStyle": "Monospace for contact numbers and technical identifiers"
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav bar with logo and menu items",
+            "position": "top",
+            "notable": "Sticky header with prominent SUBMIT TICKET CTA"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Edge > Submit a request navigation trail",
+            "position": "top-left below header",
+            "notable": "Links to previous page context"
+          },
+          {
+            "type": "search-bar",
+            "description": "Search field for finding help articles",
+            "position": "top-right",
+            "notable": "Integrated into main content area"
+          },
+          {
+            "type": "form-dropdown",
+            "description": "Select option dropdown with placeholder dash",
+            "position": "main-content-left",
+            "notable": "Empty state - requires category selection"
+          },
+          {
+            "type": "footer",
+            "description": "Multi-column footer with contact info and resources",
+            "position": "bottom",
+            "notable": "Spans full width with language selector"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "H1 heading draws attention, content flows down, dropdown is clear focal point",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Submit a support request or ticket to Edge team",
+        "entryPoints": [
+          "SUPPORT menu item",
+          "Help section navigation",
+          "Chat widget escalation"
+        ],
+        "exitPoints": [
+          "Form submission",
+          "Navigation to other support sections",
+          "Footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category dropdown",
+            "action": "Select issue type to categorize request"
+          },
+          {
+            "element": "Search bar",
+            "action": "Find relevant support articles before submitting"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to ABOUT, EDGE-UCATION, SUPPORT, EVENTS, GET STARTED"
+          },
+          {
+            "element": "Footer links",
+            "action": "Access Submit Ticket, contact info, Download Edge, language settings"
+          }
+        ],
+        "informationArchitecture": "Linear form flow: select category → fill fields → submit. Trust information upfront.",
+        "frictionPoints": [
+          "Dropdown shows only dash/placeholder - unclear what options exist",
+          "Form appears incomplete - likely multiple steps not shown",
+          "Required to fill all fields before submission"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Submit a request",
+        "subheadline": "Select an option below to let us know how we can help. Please fill out all fields to the best of your ability. Edge will never ask for password or private key information.",
+        "ctas": [
+          {
+            "text": "SUBMIT TICKET",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Edge will never ask for password or private key information.",
+            "context": "Subheadline text",
+            "purpose": "Security/trust signal - reassures user about privacy"
+          },
+          {
+            "text": "Please fill out all fields to the best of your ability.",
+            "context": "Subheadline",
+            "purpose": "Sets expectations for form completion"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Call: +1.855.346.4974",
+          "Text: +1.619.777.5688",
+          "@edge.14 (Signal handle)"
+        ],
+        "trustSignals": [
+          "Multiple contact methods provided (phone, text, Signal, ticket system)",
+          "Clear security pledge about password/key non-collection",
+          "Professional support structure"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-home-16-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, right-aligned",
+          "bodyStyle": "Regular sans-serif, medium size, right-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge app logo in top right corner",
+            "position": "top-right",
+            "notable": "Consistent brand placement"
+          },
+          {
+            "type": "email-form",
+            "description": "Email subscription form with captcha",
+            "position": "right side",
+            "notable": "Newsletter signup despite 404 error context"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Live chat button with dark background",
+            "position": "bottom-right",
+            "notable": "Always accessible, proactive support"
+          },
+          {
+            "type": "placeholder-text",
+            "description": "Repeated 'word' text filling left side",
+            "position": "left and bottom",
+            "notable": "Debug/placeholder content visible in production"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right-aligned content dominates; left side is filler/debug content",
+        "innovativeElements": [
+          "Chat widget prominently placed even on error page",
+          "Newsletter signup conversion attempt on 404"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User encountered a non-existent page",
+        "entryPoints": [
+          "Direct navigation to invalid URL",
+          "Broken link from internal page"
+        ],
+        "exitPoints": [
+          "Email signup submission",
+          "Chat widget launch",
+          "Back navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Capture email for newsletter"
+          },
+          {
+            "element": "CAPTCHA verification",
+            "action": "Verify human user"
+          },
+          {
+            "element": "Chat widget button",
+            "action": "Initiate live support conversation"
+          },
+          {
+            "element": "X button on chat widget",
+            "action": "Close chat prompt"
+          }
+        ],
+        "informationArchitecture": "Error recovery with conversion funnel (newsletter signup) and support access",
+        "frictionPoints": [
+          "Placeholder 'word' text cluttering interface suggests unfinished page",
+          "No visible 'Go Home' or navigation button",
+          "404 message appears cut off at top"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "It looks like nothing was found at this location",
+        "subheadline": "Get the latest Edge news — Sign up for our newsletter",
+        "ctas": [
+          {
+            "text": "Submit email form",
+            "style": "primary-button",
+            "placement": "below email input"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Email",
+            "context": "Form label",
+            "purpose": "Identify input field"
+          },
+          {
+            "text": "CAPTCHA",
+            "context": "Form security",
+            "purpose": "Indicate verification requirement"
+          },
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget tooltip",
+            "purpose": "Encourage live support engagement"
+          },
+          {
+            "text": "© Edge App 202[X]",
+            "context": "Footer",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "friendly-casual, service-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "CAPTCHA verification for form security",
+          "Copyright notice establishing legitimacy"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "It looks like nothing was found at this location"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-1-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, right-aligned, substantial size",
+          "bodyStyle": "Regular sans-serif, medium size, right-aligned, line-height generous",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge app logo",
+            "position": "top-right",
+            "notable": "Consistent placement across app"
+          },
+          {
+            "type": "text-block",
+            "description": "Mission, Vision, and beliefs statements",
+            "position": "right side, upper-middle",
+            "notable": "Left-heavy whitespace; content positioned to right"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Live chat button",
+            "position": "bottom-right",
+            "notable": "Persistent support access"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headings in bold draw attention; body text secondary; right-aligned layout creates asymmetry",
+        "innovativeElements": [
+          "Mission/Vision/Beliefs structure as company storytelling",
+          "Substantial whitespace emphasizes brand confidence"
+        ]
+      },
+      "flow": {
+        "screenType": "informational",
+        "userIntent": "Learn about Edge's mission, vision, and company values",
+        "entryPoints": [
+          "Settings menu > About option",
+          "Direct navigation to about page"
+        ],
+        "exitPoints": [
+          "Chat widget",
+          "Settings menu back",
+          "Other navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget button",
+            "action": "Launch live support"
+          },
+          {
+            "element": "X close button",
+            "context": "Chat widget",
+            "action": "Close chat prompt"
+          }
+        ],
+        "informationArchitecture": "Branded storytelling through Mission/Vision/Beliefs sections, centered on company purpose and values",
+        "frictionPoints": [
+          "Text is cut off on right side (screenshot partial)",
+          "No visible navigation back to settings"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hey there!",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Chat with support",
+            "style": "ghost-button",
+            "placement": "bottom-right widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Our Mission:",
+            "context": "Section heading",
+            "purpose": "Introduce mission statement"
+          },
+          {
+            "text": "Our Vision:",
+            "context": "Section heading",
+            "purpose": "Introduce vision statement"
+          },
+          {
+            "text": "We believe empowered individuals with the right tools to control their digital information will thrive everywhere, for everyone.",
+            "context": "Vision text",
+            "purpose": "Express company philosophy"
+          },
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Encourage support engagement"
+          }
+        ],
+        "tone": "professional-technical, mission-driven, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit mission and vision statements build credibility",
+          "Philosophical commitment to user empowerment"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-2-about-scrolled-1.png",
+      "label": "About — scrolled 1",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "chat-widget",
+            "description": "Live chat button",
+            "position": "bottom-right",
+            "notable": "Persistent across scroll states"
+          },
+          {
+            "type": "close-button",
+            "description": "X button for chat widget",
+            "position": "bottom-left of chat area",
+            "notable": "Dismiss option available"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visible content; primarily whitespace",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "informational",
+        "userIntent": "Continue reading about page content after scrolling",
+        "entryPoints": [
+          "Scroll down from previous about screen"
+        ],
+        "exitPoints": [
+          "Chat widget",
+          "Continue scrolling",
+          "Navigate back"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Launch support chat"
+          },
+          {
+            "element": "X close button",
+            "action": "Dismiss chat prompt"
+          }
+        ],
+        "informationArchitecture": "Scrollable content page with persistent support access",
+        "frictionPoints": [
+          "Content appears to be minimal or sparse on this scroll position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "ghost-button",
+            "placement": "bottom-right widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget tooltip",
+            "purpose": "Encourage support engagement"
+          }
+        ],
+        "tone": "neutral",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-3-edgeucation.png",
+      "label": "Edge-ucation",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1ABC9C",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for main heading with icon",
+          "bodyStyle": "Regular sans-serif for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo-header",
+            "description": "Edge logo in top-right corner",
+            "position": "top-right",
+            "notable": "Brand consistency across settings screens"
+          },
+          {
+            "type": "branded-card",
+            "description": "Dark card with teal/blue accent showing education content preview",
+            "position": "right-side",
+            "notable": "Gradient accent from teal to blue indicates interactive content"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Chat initiation widget with 'Hello, tap to start a chat' message",
+            "position": "bottom-right",
+            "notable": "Always-visible support access with friendly greeting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right-aligned content dominates; chat widget anchors bottom interaction",
+        "innovativeElements": [
+          "Integrated chat widget with context-aware greeting",
+          "Card-based preview of educational content with gradient accent"
+        ]
+      },
+      "flow": {
+        "screenType": "settings-subsection",
+        "userIntent": "Access educational resources and guided content about Edge wallet",
+        "entryPoints": [
+          "Settings menu",
+          "Help/Education link"
+        ],
+        "exitPoints": [
+          "Chat widget",
+          "Educational content card",
+          "Back to settings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens chat interface for support"
+          },
+          {
+            "element": "Card with preview",
+            "action": "Navigates to beginner guides content"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses or closes current view"
+          }
+        ],
+        "informationArchitecture": "Single feature promotion with support access; minimal cognitive load",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Beginner guides",
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-widget",
+            "placement": "bottom-right fixed"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Beginner guides",
+            "context": "Right sidebar, below logo",
+            "purpose": "Describes educational content available"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-4-terms-of-service.png",
+      "label": "Terms of Service",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1ABC9C",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color for primary heading",
+          "bodyStyle": "Regular sans-serif for body text, numbered list format",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo-header",
+            "description": "Edge logo in top-right",
+            "position": "top-right",
+            "notable": null
+          },
+          {
+            "type": "dark-header-bar",
+            "description": "Black bar with white 'Terms' text",
+            "position": "top-right",
+            "notable": "Clear section indicator for legal content"
+          },
+          {
+            "type": "navigation-arrows",
+            "description": "Left and right arrows for document navigation",
+            "position": "right-center",
+            "notable": "Allows browsing through multi-section legal document"
+          },
+          {
+            "type": "numbered-list",
+            "description": "Numbered legal clauses with bold headings",
+            "position": "right-main",
+            "notable": "Structured legal text with visual scanning support"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Chat initiation widget",
+            "position": "bottom-right",
+            "notable": "Persistent support access during legal document review"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Document title dominates; numbered sections guide scanning; arrows enable navigation",
+        "innovativeElements": [
+          "Navigation arrows for multi-section document traversal",
+          "Chat support available during legal document review"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-document-browser",
+        "userIntent": "Review terms of service and legal agreements",
+        "entryPoints": [
+          "Settings menu",
+          "Legal/Compliance link"
+        ],
+        "exitPoints": [
+          "Navigation arrows to next/previous section",
+          "Chat support",
+          "Close button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left arrow",
+            "action": "Navigate to previous section of terms"
+          },
+          {
+            "element": "Right arrow",
+            "action": "Navigate to next section of terms"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Opens chat for clarification on terms"
+          }
+        ],
+        "informationArchitecture": "Sequential document sections with arrow-based navigation",
+        "frictionPoints": [
+          "Dense legal text may require multiple reads",
+          "No search/find functionality visible for quick reference"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms",
+        "subheadline": "Edge",
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-widget",
+            "placement": "bottom-right fixed"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The software",
+            "context": "Opening clause in document",
+            "purpose": "Introduces scope of terms"
+          },
+          {
+            "text": "IF YOU LOSE SEPARATELY AGREE THAT INACCESSIBL...",
+            "context": "Visible terms excerpt",
+            "purpose": "Highlights key liability disclaimers"
+          },
+          {
+            "text": "1. All outbo... 2. The softw intermediari... 3. While th source use...",
+            "context": "Numbered clause list",
+            "purpose": "Provides scannable outline of major sections"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-5-edge-now-supports-botanix-unlocking-evm-smart-con.png",
+      "label": "Edge Now Supports Botanix: Unlocking EVM Smart Con",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1ABC9C",
+          "#FDB813",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for main title",
+          "bodyStyle": "Regular sans-serif for metadata",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo-header",
+            "description": "Edge logo in top-right",
+            "position": "top-right",
+            "notable": null
+          },
+          {
+            "type": "company-badge",
+            "description": "Yellow circular badge labeled 'COMPANY'",
+            "position": "top-right, above title",
+            "notable": "Indicates announcement/news category"
+          },
+          {
+            "type": "announcement-card",
+            "description": "Card with announcement title, metadata, and gradient accent",
+            "position": "right-main",
+            "notable": "Gradient from black to gold suggests importance and blockchain theme"
+          },
+          {
+            "type": "metadata-date",
+            "description": "Date stamp 'August 5, 20...'",
+            "position": "right-main, below title",
+            "notable": "Provides recency indicator"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Chat initiation widget",
+            "position": "bottom-right",
+            "notable": "Always-available support context"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Badge draws attention; title commands focus; gradient card emphasizes feature announcement; date provides context",
+        "innovativeElements": [
+          "Category badge system for content classification",
+          "Black-to-gold gradient suggesting blockchain/crypto wealth themes",
+          "Announcement-style card layout for feature updates"
+        ]
+      },
+      "flow": {
+        "screenType": "announcements-browser",
+        "userIntent": "View product announcements and network support updates",
+        "entryPoints": [
+          "Settings menu",
+          "News/Announcements section"
+        ],
+        "exitPoints": [
+          "Chat support",
+          "Close button",
+          "Return to settings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Open support chat for questions about feature"
+          },
+          {
+            "element": "Announcement card",
+            "action": "Likely expands or navigates to full announcement details"
+          }
+        ],
+        "informationArchitecture": "Card-based announcement display with category badges and date stamps",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Edge Now Supports Botanix: Unlocking EVM Smart Con...",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-widget",
+            "placement": "bottom-right fixed"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "COMPANY",
+            "context": "Yellow badge",
+            "purpose": "Categorizes content type for quick scanning"
+          },
+          {
+            "text": "August 5, 20...",
+            "context": "Below headline",
+            "purpose": "Provides publication date for context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month DD, YYYY"
+        ],
+        "trustSignals": [
+          "Dated announcement shows active product development",
+          "Botanix network support indicates expanding blockchain compatibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-6-new-zano-features-private-view-key-tokens-and-a.png",
+      "label": "New Zano Features: Private View Key, Tokens, and A",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#D4AF37"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, right-aligned, truncated (New Aliaso)",
+          "bodyStyle": "Regular sans-serif, small size for metadata",
+          "dataStyle": "Date format MM/DD/YYYY in grey text"
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet logo top right",
+            "position": "top-right",
+            "notable": "Teal/green color, consistent branding"
+          },
+          {
+            "type": "company-badge",
+            "description": "Yellow circle with 'COMPANY' text",
+            "position": "top-right above headline",
+            "notable": "Indicates content type or source"
+          },
+          {
+            "type": "gradient-card",
+            "description": "Tall vertical card with brown-to-black gradient",
+            "position": "right side, full height",
+            "notable": "Rich color transition, likely featured content"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat button with message bubble",
+            "position": "bottom-right",
+            "notable": "Persistent support entry point"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left side emphasizes headline/content area; right side showcases featured visual/gradient; chat widget anchors bottom",
+        "innovativeElements": [
+          "Asymmetric split layout with whitespace on left",
+          "Tall vertical gradient card as secondary focal point",
+          "Floating chat widget with conversational prompt"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Read about new Zano features and announcements",
+        "entryPoints": [
+          "Navigation from settings or news/blog section",
+          "Direct link from announcement"
+        ],
+        "exitPoints": [
+          "Click chat widget to start conversation",
+          "Close article via X button",
+          "Navigate back to main content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens chat conversation with prompt 'Hello, tap to start a chat'"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses content panel or returns to previous view"
+          }
+        ],
+        "informationArchitecture": "Article metadata (date, category) in header; main content in right-side gradient card; support access via persistent chat widget",
+        "frictionPoints": [
+          "Headline text appears truncated, may require scrolling to read full title",
+          "Large whitespace on left suggests incomplete content load"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "New Aliaso",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-prompt",
+            "placement": "floating widget bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "COMPANY",
+            "context": "Above headline",
+            "purpose": "Content categorization/source indicator"
+          },
+          {
+            "text": "July 22, 2025",
+            "context": "Below headline",
+            "purpose": "Publication date"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month DD, YYYY"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-7-built-for-speed-made-to-scale-sui-now-available.png",
+      "label": "Built for Speed, Made to Scale: SUI Now Available",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, right-aligned, truncated (Built / Edge)",
+          "bodyStyle": "Regular sans-serif, small for metadata",
+          "dataStyle": "Date format MM/DD/YYYY in grey text"
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet logo top right",
+            "position": "top-right",
+            "notable": "Teal/green branding consistency"
+          },
+          {
+            "type": "company-badge",
+            "description": "Yellow circle with 'COMPANY' text",
+            "position": "top-right above headline",
+            "notable": "Content categorization"
+          },
+          {
+            "type": "gradient-card",
+            "description": "Tall vertical card with teal-to-purple gradient",
+            "position": "right side, full height",
+            "notable": "Cooler color palette than previous, modern gradient"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat button with message bubble",
+            "position": "bottom-right",
+            "notable": "Consistent placement across screens"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left side whitespace draws focus to headline; right gradient card provides visual interest and feature showcase area",
+        "innovativeElements": [
+          "Dynamic gradient transitions (teal → purple)",
+          "Consistent floating chat integration",
+          "Minimalist left-side layout"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Learn about SUI availability and Edge wallet capabilities",
+        "entryPoints": [
+          "Settings/announcements navigation",
+          "Direct link from feature notification"
+        ],
+        "exitPoints": [
+          "Initiate chat support",
+          "Close article",
+          "Navigate back"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Initiates customer support conversation"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Exits article view"
+          }
+        ],
+        "informationArchitecture": "Metadata (category, date) header; headline right-aligned; visual content in gradient card; support widget persistent",
+        "frictionPoints": [
+          "Truncated headline requires scrolling or interaction to read full content",
+          "Large blank left area may confuse users expecting more content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Built / Edge",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-prompt",
+            "placement": "floating widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "COMPANY",
+            "context": "Content category badge",
+            "purpose": "Source identification"
+          },
+          {
+            "text": "July 8, 2025",
+            "context": "Publication timestamp",
+            "purpose": "Recency indicator"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month DD, YYYY"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-8-encrypted-customer-support-is-now-available-via-si.png",
+      "label": "Encrypted Customer Support Is Now Available Via Si",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#2D1B4E"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, right-aligned, truncated (Encryp / Signc)",
+          "bodyStyle": "Regular sans-serif, small for metadata",
+          "dataStyle": "Date format MM/DD/YYYY in grey text"
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge wallet logo top right",
+            "position": "top-right",
+            "notable": "Consistent brand presence"
+          },
+          {
+            "type": "company-badge",
+            "description": "Yellow circle with 'COMPANY' text",
+            "position": "top-right above headline",
+            "notable": "Uniform categorization"
+          },
+          {
+            "type": "gradient-card",
+            "description": "Tall vertical card with dark-to-purple gradient",
+            "position": "right side, full height",
+            "notable": "Darker, more sophisticated color palette emphasizing privacy/security"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat button",
+            "position": "bottom-right",
+            "notable": "Persistent across all announcement screens"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right-aligned headline on left; gradient card dominates right side; chat widget anchors interaction",
+        "innovativeElements": [
+          "Dark gradient palette aligns with security/encryption messaging",
+          "Consistent template reduces cognitive load across announcements",
+          "Floating chat widget as ever-present support",
+          "Visual color psychology (dark purple) for sensitive topics"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Understand new encrypted support features",
+        "entryPoints": [
+          "Settings/features navigation",
+          "Security-focused content discovery"
+        ],
+        "exitPoints": [
+          "Start encrypted chat",
+          "Close article",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens encrypted customer support conversation"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses article panel"
+          }
+        ],
+        "informationArchitecture": "Metadata header (category, date); headline right-aligned; feature card on right; persistent support widget",
+        "frictionPoints": [
+          "Text truncation requires interaction to view full headline",
+          "Asymmetric layout may confuse users expecting centered content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Encryp / Signc",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-prompt",
+            "placement": "floating widget bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "COMPANY",
+            "context": "Category badge",
+            "purpose": "Content source identification"
+          },
+          {
+            "text": "June 25, 202",
+            "context": "Publication date",
+            "purpose": "Timestamp indicator (appears truncated)"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month DD, YYYY (partially visible)"
+        ],
+        "trustSignals": [
+          "Encrypted/secure messaging support implies security audit and privacy compliance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-9-private-crypto-made-easy-zano-is-now-live-in-edge.png",
+      "label": "Private Crypto Made Easy: Zano Is Now Live in Edge",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A4D6D",
+          "#26D07C"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text, left-aligned in right sidebar",
+          "bodyStyle": "Medium sans-serif for date information",
+          "dataStyle": "Date formatted as 'May 27, 2025'"
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Edge logo with green accent in top-right corner",
+            "position": "top-right",
+            "notable": "Consistent branding presence"
+          },
+          {
+            "type": "Category Badge",
+            "description": "BASICS label in rounded pill with teal/cyan background",
+            "position": "top-right above headline",
+            "notable": "Content categorization via compact badge"
+          },
+          {
+            "type": "Article Card",
+            "description": "Right-aligned content card with gradient background from teal to dark navy",
+            "position": "right sidebar, full height",
+            "notable": "Gradient overlay creates visual interest and hierarchy"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat bubble in bottom-right corner with dark background",
+            "position": "bottom-right",
+            "notable": "Persistent engagement element with friendly microcopy"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Content card on right attracts immediate attention; white space on left balances the composition; chat widget placed for easy discovery without obstruction",
+        "innovativeElements": [
+          "Gradient-fade design on content card (teal to navy to black)",
+          "Right-aligned asymmetric layout emphasizes featured content",
+          "Floating chat widget with 'Hello, tap to start a chat' microcopy"
+        ]
+      },
+      "flow": {
+        "screenType": "content-feature",
+        "userIntent": "Discover and learn about Zano cryptocurrency integration in Edge wallet",
+        "entryPoints": [
+          "Settings or Features section navigation",
+          "Direct link from email or marketing campaign",
+          "In-app notification or carousel"
+        ],
+        "exitPoints": [
+          "Click to read full article",
+          "Navigate back to main settings",
+          "Open chat support via floating widget"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article Card",
+            "action": "Tap to expand or navigate to full article"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Tap to open support conversation"
+          },
+          {
+            "element": "Close Button (X)",
+            "action": "Dismiss this content card"
+          }
+        ],
+        "informationArchitecture": "Promotional/educational content highlighted in featured card with date context; chat support immediately accessible",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Private Crypto Made Easy: Zano Is Now Live in Edge",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "Chat widget floating button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget tooltip",
+            "purpose": "Encourage user engagement and support access"
+          },
+          {
+            "text": "BASICS",
+            "context": "Content category badge",
+            "purpose": "Categorize and contextualize article type"
+          }
+        ],
+        "tone": "friendly-casual, informative",
+        "dataFormatting": [
+          "May 27, 2025 (date format)"
+        ],
+        "trustSignals": [
+          "Edge branding and logo",
+          "Native content within wallet app"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-10-how-to-migrate-from-mymonero-to-edge-before-the-sh.png",
+      "label": "How to Migrate from MyMonero to Edge Before the Sh",
+      "flowType": "Settings",
+      "step": 10,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#FFB800"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text, left-aligned in right sidebar",
+          "bodyStyle": "Medium sans-serif for date information",
+          "dataStyle": "Date formatted as 'December 30'"
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Edge logo with green accent in top-right",
+            "position": "top-right",
+            "notable": "Consistent placement across screens"
+          },
+          {
+            "type": "Category Badge",
+            "description": "TIPS label in rounded pill with cyan background",
+            "position": "top-right above headline",
+            "notable": "Different category badge (TIPS vs BASICS) indicates content type variation"
+          },
+          {
+            "type": "Article Card",
+            "description": "Right-aligned content card with gradient background from dark to yellow/gold",
+            "position": "right sidebar, full height",
+            "notable": "Gradient uses warm colors (black to golden yellow) versus cool tones in previous screen"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat bubble in bottom-right corner",
+            "position": "bottom-right",
+            "notable": "Consistent placement and functionality"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Content card dominates right side with distinctive gradient; headline partially visible indicating scrollable content; white space creates clean composition",
+        "innovativeElements": [
+          "Gradient fade from black to golden yellow (warmer palette than first screen)",
+          "Suggests content categorization through color gradient choice",
+          "Asymmetric right-aligned layout consistent across feature articles"
+        ]
+      },
+      "flow": {
+        "screenType": "content-feature",
+        "userIntent": "Learn how to migrate from MyMonero wallet to Edge wallet",
+        "entryPoints": [
+          "Settings or help section",
+          "Direct link from announcement",
+          "Search for migration instructions"
+        ],
+        "exitPoints": [
+          "Tap to read full article",
+          "Close and return to settings",
+          "Open chat for migration support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article Card",
+            "action": "Tap to expand/navigate to full migration guide"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Initiate support conversation for migration help"
+          },
+          {
+            "element": "Close Button (X)",
+            "action": "Dismiss this feature card"
+          }
+        ],
+        "informationArchitecture": "Time-sensitive migration guide presented as featured content with date visibility; support access available for complications",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How to Migrate from MyMonero to Edge Before the Sh...",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "Chat widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Enable support for migration questions"
+          },
+          {
+            "text": "TIPS",
+            "context": "Category badge",
+            "purpose": "Indicate this is a tips/how-to article"
+          }
+        ],
+        "tone": "educational, helpful, time-sensitive",
+        "dataFormatting": [
+          "December 30 (date, truncated year)"
+        ],
+        "trustSignals": [
+          "Edge wallet branding",
+          "Official in-app educational content",
+          "Support chat availability"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-11-edge-now-offers-private-zcash-swaps-through-maya-p.png",
+      "label": "Edge Now Offers Private Zcash Swaps Through Maya P",
+      "flowType": "Settings",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#8B6F00"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text, left-aligned in right sidebar",
+          "bodyStyle": "Medium sans-serif for date information",
+          "dataStyle": "Date formatted as 'December 8'"
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Edge logo in top-right",
+            "position": "top-right",
+            "notable": "Consistent navigation anchor"
+          },
+          {
+            "type": "Category Badge",
+            "description": "COMPANY label in rounded pill with yellow/gold background",
+            "position": "top-right above headline",
+            "notable": "Third category type (COMPANY) indicates announcement/news classification"
+          },
+          {
+            "type": "Article Card",
+            "description": "Right-aligned content card with gradient from olive/brown to dark base",
+            "position": "right sidebar, full height",
+            "notable": "Gradient uses earthy muted tones differentiating from TIPS and BASICS color schemes"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat interface in bottom-right",
+            "position": "bottom-right",
+            "notable": "Persistent engagement tool"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Content card with distinctive gradient anchors right side; main content area left mostly empty; headline text suggests rich media (image showing 'Z' character visible) below fold",
+        "innovativeElements": [
+          "Gradient palette shifts to earthy brown/olive tones for company news",
+          "Color-coding system for content types (BASICS=teal, TIPS=gold, COMPANY=yellow)",
+          "Partially visible image content suggests scrollable article with rich media"
+        ]
+      },
+      "flow": {
+        "screenType": "content-feature",
+        "userIntent": "Learn about new Zcash swap functionality through Maya protocol",
+        "entryPoints": [
+          "Settings or announcements section",
+          "Email notification about new features",
+          "In-app feature highlights"
+        ],
+        "exitPoints": [
+          "Read full feature announcement",
+          "Dismiss and return to main settings",
+          "Contact support via chat"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article Card with image preview",
+            "action": "Tap to expand full feature announcement"
+          },
+          {
+            "element": "Chat Widget",
+            "action": "Open support dialog"
+          },
+          {
+            "element": "Close Button (X)",
+            "action": "Dismiss announcement"
+          }
+        ],
+        "informationArchitecture": "Company announcement presented with date context and visual preview; structured as discoverable in-app feature to drive awareness",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Edge Now Offers Private Zcash Swaps Through Maya P...",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "Chat widget floating button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget",
+            "purpose": "Enable user support inquiry about new feature"
+          },
+          {
+            "text": "COMPANY",
+            "context": "Category badge",
+            "purpose": "Classify as company announcement/news"
+          }
+        ],
+        "tone": "professional-technical, feature-focused",
+        "dataFormatting": [
+          "December 8 (date format)"
+        ],
+        "trustSignals": [
+          "Edge wallet official branding",
+          "Featured in native app interface",
+          "Protocol partnership mention (Maya)",
+          "Zcash integration validation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-12-privacy-coins-and-dexs-the-foundation-of-financia.png",
+      "label": "Privacy Coins and DEXs: The Foundation of Financia",
+      "flowType": "Settings",
+      "step": 12,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark text on light background",
+          "bodyStyle": "Medium-weight sans-serif for body content",
+          "dataStyle": "Date text in regular weight gray"
+        },
+        "components": [
+          {
+            "type": "Tag/Badge",
+            "description": "BASICS label in teal circle",
+            "position": "top-right",
+            "notable": "Categorization badge for content organization"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat bubble with dark background and message input",
+            "position": "bottom-right",
+            "notable": "Persistent engagement tool with clear CTA"
+          },
+          {
+            "type": "Gradient Block",
+            "description": "Dark-to-purple gradient vertical panel",
+            "position": "right side, full height",
+            "notable": "Visual content container with gradient treatment"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right sidebar dominates with large heading text (Priva/Freed - partially visible), date below, content area below",
+        "innovativeElements": [
+          "Gradient color transition from black to purple on content panel",
+          "Floating chat widget with distinct dark styling"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Read educational content about privacy coins and DEXs",
+        "entryPoints": [
+          "Settings menu navigation",
+          "Content library or education section"
+        ],
+        "exitPoints": [
+          "Close button (X) in chat widget",
+          "Navigate to different article via tag",
+          "Back to settings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens messaging interface with 'Hello, tap to start a chat'"
+          },
+          {
+            "element": "Close button",
+            "action": "Dismisses chat widget"
+          }
+        ],
+        "informationArchitecture": "Vertical article layout with category tag at top, headline and date, content below in gradient panel",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Priva[cy Coins and DEX]s: The Foundation of Financia[l Freedom]",
+        "subheadline": "November 10[...]",
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "chat widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BASICS",
+            "context": "category tag top-right",
+            "purpose": "Content categorization"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: November 10"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-13-edge-launches-direct-revolut-integration.png",
+      "label": "Edge Launches Direct Revolut Integration",
+      "flowType": "Settings",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#2A5F7F"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark text",
+          "bodyStyle": "Medium-weight sans-serif",
+          "dataStyle": "Regular weight gray text for metadata"
+        },
+        "components": [
+          {
+            "type": "Tag/Badge",
+            "description": "COMPANY label with yellow/gold circle",
+            "position": "top-right",
+            "notable": "Different category from previous screen, company-focused"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating chat bubble with dark background",
+            "position": "bottom-right",
+            "notable": "Consistent persistent UI element"
+          },
+          {
+            "type": "Gradient Block",
+            "description": "Dark teal-to-blue gradient vertical panel",
+            "position": "right side, full height",
+            "notable": "Different color scheme from privacy article"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right sidebar with 'Edge' heading and date below, gradient content area",
+        "innovativeElements": [
+          "Context-aware color gradient based on content type",
+          "Consistent modular sidebar design across content types"
+        ]
+      },
+      "flow": {
+        "screenType": "content-article",
+        "userIntent": "Learn about Edge's Revolut integration feature",
+        "entryPoints": [
+          "Settings menu",
+          "News or updates section",
+          "Company information area"
+        ],
+        "exitPoints": [
+          "Close chat widget",
+          "Navigate to different article",
+          "Back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens chat interface"
+          },
+          {
+            "element": "Company tag",
+            "action": "Likely filters to company news"
+          }
+        ],
+        "informationArchitecture": "Vertical article with category badge, headline, date, and gradient content panel",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Edge [Launches Direct Revolut Integration]",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "chat widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "COMPANY",
+            "context": "category tag",
+            "purpose": "Content type indicator"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-settings-14-privacy-manifesto.png",
+      "label": "Privacy Manifesto",
+      "flowType": "Settings",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#00D99F"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, white, centered",
+          "bodyStyle": "Regular weight light text, justified alignment, generous line-height",
+          "dataStyle": "Large bold green number (1) for section markers"
+        },
+        "components": [
+          {
+            "type": "Horizontal Divider",
+            "description": "Teal/cyan horizontal line under main heading",
+            "position": "below headline",
+            "notable": "Elegant separator with brand color"
+          },
+          {
+            "type": "Section Header",
+            "description": "Introduction heading in white text",
+            "position": "mid-left",
+            "notable": "Clean left-aligned text hierarchy"
+          },
+          {
+            "type": "Numbered Marker",
+            "description": "Large green number '1' at bottom",
+            "position": "bottom-left",
+            "notable": "Indicates section progression and visual anchor"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Floating dark chat bubble",
+            "position": "bottom-right",
+            "notable": "Consistent across all screens"
+          },
+          {
+            "type": "Hyperlink",
+            "description": "Cyan-colored GitHub link embedded in text",
+            "position": "in-body text",
+            "notable": "Brand color used for interactive elements"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered heading draws focus; Introduction section creates hierarchy; body text blocks are well-separated; numbered sections guide reading",
+        "innovativeElements": [
+          "Manifesto-style layout with philosophical prose",
+          "Dark mode with high contrast white text",
+          "Brand-colored accent divider and hyperlinks",
+          "Numbered section markers for document structure"
+        ]
+      },
+      "flow": {
+        "screenType": "content-editorial",
+        "userIntent": "Understand Edge's privacy philosophy and core values",
+        "entryPoints": [
+          "Settings/About section",
+          "Company philosophy/manifesto link",
+          "Content education area"
+        ],
+        "exitPoints": [
+          "Close chat widget",
+          "Scroll to next section (implied)",
+          "Click GitHub link to external resource",
+          "Back to settings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "GitHub hyperlink",
+            "action": "Opens external GitHub repository (https://github.com/EdgeApp)"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Initiates messaging"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses chat widget"
+          }
+        ],
+        "informationArchitecture": "Long-form editorial with clear section headers, paragraph breaks, and interactive hyperlinks. Manifesto structure with numbered sections",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Numbered section markers (section 1 visible)"
+        ]
+      },
+      "copy": {
+        "headline": "The Edge Privacy Manifesto",
+        "subheadline": "Introduction",
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "text-link",
+            "placement": "chat widget"
+          },
+          {
+            "text": "https://github.com/EdgeApp",
+            "style": "text-link",
+            "placement": "in-body, blue hyperlink"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "\"Why? Leave them behind!\" you say.",
+            "context": "opening rhetorical question in introduction",
+            "purpose": "Engagement and perspective challenge"
+          },
+          {
+            "text": "But! You can't forget one of the core principles of privacy: Privacy increases with an increase in the anonymity set.",
+            "context": "key principle paragraph",
+            "purpose": "Educational assertion of privacy axiom"
+          }
+        ],
+        "tone": "professional-technical, philosophical, conviction-driven",
+        "dataFormatting": [
+          "Year reference: 2013"
+        ],
+        "trustSignals": [
+          "Open source code repository mention",
+          "Founded date established (2013)",
+          "Transparency claims about data access"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-swap-1-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "icon-button",
+            "description": "Swap exchange arrows icon (left and right arrows stacked vertically)",
+            "position": "center of screen",
+            "notable": "Minimalist green arrow design suggesting bidirectional token exchange"
+          },
+          {
+            "type": "white-card",
+            "description": "Light background container holding the swap icon",
+            "position": "center",
+            "notable": "High contrast against dark background, minimal visual noise"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single focal point centered on screen with maximum negative space",
+        "innovativeElements": [
+          "Extreme minimalism - loading or transition state with only icon visible",
+          "High contrast white card against black background for emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "transition-state",
+        "userIntent": "Initiate or process a token swap/exchange transaction",
+        "entryPoints": [
+          "From wallet dashboard or portfolio view",
+          "From swap/exchange menu selection"
+        ],
+        "exitPoints": [
+          "To swap input form",
+          "To exchange confirmation",
+          "Back to previous screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap icon card",
+            "action": "Likely tappable to proceed to swap form or reverse swap direction"
+          }
+        ],
+        "informationArchitecture": "Single focused element - likely a loading screen or empty state before form population",
+        "frictionPoints": [
+          "Minimal context about what happens next",
+          "No visible call-to-action or instruction text"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "minimalist-modern",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-send-1-bringing-true-privacy-to-btc-edge-integrates-brid.png",
+      "label": "Bringing True Privacy to BTC: Edge Integrates Brid",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A202C",
+          "#10B981"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, minimal hierarchy",
+          "bodyStyle": "Clean sans-serif, small size for dates",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Edge branding in top-right corner",
+            "position": "top-right",
+            "notable": "Teal/green color distinguishes it from white background"
+          },
+          {
+            "type": "card",
+            "description": "Company info card with logo, heading, and date",
+            "position": "right sidebar",
+            "notable": "Minimal vertical card layout with yellow circle avatar"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Chat support bubble with greeting text",
+            "position": "bottom-right",
+            "notable": "Dark navy container with white message bubble, encourages engagement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right sidebar is focal point; chat widget draws eye to bottom-right action",
+        "innovativeElements": [
+          "Minimalist white-space design with content relegated to right edge",
+          "Chat widget uses contrasting dark container to stand out against light background"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Edge's privacy features and Bridge integration",
+        "entryPoints": [
+          "Direct link from announcement or press release",
+          "Navigation from Edge wallet main site"
+        ],
+        "exitPoints": [
+          "Click chat widget to start support conversation",
+          "Navigate via Edge logo back to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chat widget",
+            "action": "Opens chat support interface"
+          },
+          {
+            "element": "Edge logo",
+            "action": "Returns to main site or dashboard"
+          }
+        ],
+        "informationArchitecture": "Sparse layout; content appears to be loaded dynamically or in right panel",
+        "frictionPoints": [
+          "Majority of screen is empty white space, unclear what main content is",
+          "No visible call-to-action buttons or next steps beyond chat"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "style": "chat-widget",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Hello, tap to start a chat.",
+            "context": "Chat widget bubble",
+            "purpose": "Invites user to engage with support"
+          },
+          {
+            "text": "September 2",
+            "context": "Card metadata",
+            "purpose": "Dates announcement or article"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-staking-1-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#FF6B35",
+          "#FFD700"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif with high contrast, dramatic sizing",
+          "bodyStyle": "White sans-serif, medium weight for subheading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-image",
+            "description": "Person in orange shirt against gradient background",
+            "position": "left-center",
+            "notable": "Warm orange/gold color scheme creates visual interest and emotion"
+          },
+          {
+            "type": "text-overlay",
+            "description": "Large white typography overlaid on image",
+            "position": "center-right",
+            "notable": "Bold sans-serif 'STAKING' with warm-to-cool gradient background strip"
+          },
+          {
+            "type": "logo",
+            "description": "Edge branding in bottom-right",
+            "position": "bottom-right",
+            "notable": "Teal/green color maintains brand consistency"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Text dominates; human figure adds warmth and relatability; tagline is secondary",
+        "innovativeElements": [
+          "Warm color temperature (orange/gold) unusual for crypto UIs, builds approachability",
+          "Person's gesture (pointing outward) creates engagement and instruction feeling",
+          "Gradient background strip behind text adds modern depth"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Understand and learn about staking as an introductory concept",
+        "entryPoints": [
+          "Navigation to staking section from Edge wallet dashboard",
+          "Tutorial or educational content flow"
+        ],
+        "exitPoints": [
+          "Proceed to staking details or setup",
+          "Navigate back to wallet dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Page content area",
+            "action": "Scroll or tap to proceed to next step"
+          }
+        ],
+        "informationArchitecture": "Educational hero-driven layout; title, subtitle, and presenter create narrative flow",
+        "frictionPoints": [
+          "No visible buttons or clear CTA; interaction method is ambiguous",
+          "Static image may not indicate it's clickable or scrollable"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "STAKING",
+        "subheadline": "A Beginner's Guide",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Make Your Crypto Work for You",
+            "context": "Secondary tagline below subheading",
+            "purpose": "Value proposition for staking benefits"
+          }
+        ],
+        "tone": "friendly-casual, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Edge branding and logo present, establishes credibility"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/edge-wallet-staking-2-rewards-page.png",
+      "label": "rewards page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0F3A7D",
+          "#10B981"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Medium sans-serif, centered, red color for error state",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-bar",
+            "description": "Navy blue bar with Edge logo centered",
+            "position": "top",
+            "notable": "Solid dark blue creates strong brand frame"
+          },
+          {
+            "type": "error-message",
+            "description": "Centered red text displaying error state",
+            "position": "center",
+            "notable": "High visibility through color contrast and centered placement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header anchors top; error message dominates center area; rest is empty white space",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "View rewards information but encountered system error",
+        "entryPoints": [
+          "Navigation from staking dashboard or onboarding",
+          "Attempting to load rewards data"
+        ],
+        "exitPoints": [
+          "Retry loading page",
+          "Navigate back via header or browser"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Logo in header",
+            "action": "Likely returns to dashboard or home"
+          }
+        ],
+        "informationArchitecture": "Error state layout; minimal content due to failed data load",
+        "frictionPoints": [
+          "No error recovery options or retry button visible",
+          "Missing troubleshooting guidance or support contact",
+          "User stuck with no clear next action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Invalid URL: Missing reward data",
+            "context": "Centered page content area",
+            "purpose": "Communicates specific error to user"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "Invalid URL: Missing reward data"
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

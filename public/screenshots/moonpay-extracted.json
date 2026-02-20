@@ -1,0 +1,295 @@
+{
+  "slug": "moonpay",
+  "category": "Payment",
+  "extractedAt": "2026-02-20T12:33:57.042Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/moonpay-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with overlay modal",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#7c3aed",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold (60+ px), white text on dark background",
+          "bodyStyle": "Medium weight sans-serif (16px), white text with good contrast",
+          "dataStyle": "$300 displayed prominently on mobile mockup in light text"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navbar with logo, primary nav items (Individuals, Business, Buy, Sell, Swap), language selector, and Get Started CTA",
+            "position": "top of page",
+            "notable": "Clean dark design with purple accent on Swap, grid icon for additional menu"
+          },
+          {
+            "type": "hero-section",
+            "description": "Full-width background image showing phone in hand with orange fabric, overlaid with headline and subheadline",
+            "position": "center-left of viewport",
+            "notable": "Real-world product photography creates authenticity and trust"
+          },
+          {
+            "type": "trust-badge",
+            "description": "Dark rounded pill showing 'Trusted by millions of customers' and 'Since 2019'",
+            "position": "upper left of hero text",
+            "notable": "Establishes credibility before main value prop"
+          },
+          {
+            "type": "modal-dialog",
+            "description": "Cookie consent modal with white background, three action buttons",
+            "position": "center-bottom overlay",
+            "notable": "Purple primary button (Accept) with strong contrast against white background"
+          },
+          {
+            "type": "qr-code",
+            "description": "Scannable QR code in bottom right corner",
+            "position": "bottom-right",
+            "notable": "Links directly to mobile experience without friction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates (largest, white, bold) → Subheadline provides context → Trust badge adds credibility → CTA button anchors action → Modal overlays secondary concern (cookies)",
+        "innovativeElements": [
+          "Real product mockup integrated into hero photography",
+          "QR code for direct mobile access in corner",
+          "Purple accent color provides crypto-native personality"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page with modal overlay",
+        "userIntent": "Understand what MoonPay is and begin crypto purchase journey",
+        "entryPoints": [
+          "Direct URL",
+          "Marketing campaign",
+          "QR code scan",
+          "Search engine"
+        ],
+        "exitPoints": [
+          "Buy Crypto button (primary)",
+          "Get Started button (top-right)",
+          "Navbar navigation items (secondary)",
+          "Accept/Reject cookies (modal resolution)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy Crypto button",
+            "action": "Initiates purchase flow"
+          },
+          {
+            "element": "Get Started button",
+            "action": "Onboarding entry point"
+          },
+          {
+            "element": "Accept button (modal)",
+            "action": "Accepts all cookies and closes modal"
+          },
+          {
+            "element": "Reject button (modal)",
+            "action": "Rejects optional cookies"
+          },
+          {
+            "element": "Manage cookies link",
+            "action": "Opens cookie preferences"
+          },
+          {
+            "element": "Learn More link (top banner)",
+            "action": "NY Trust Charter information"
+          }
+        ],
+        "informationArchitecture": "Value proposition first (headline) → Supporting details (subheadline + trust signals) → Product visualization (mockup) → Secondary navigation (navbar) → Call-to-action → Cookie compliance (modal)",
+        "frictionPoints": [
+          "Cookie modal requires interaction before dismissal",
+          "Multiple CTAs could cause decision paralysis (Buy Crypto vs Get Started)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your passport to crypto",
+        "subheadline": "The easiest way to buy, sell and use crypto - everywhere.",
+        "ctas": [
+          {
+            "text": "Buy Crypto",
+            "style": "primary-button",
+            "placement": "below subheadline on hero"
+          },
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "top-right navbar"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Reject",
+            "style": "secondary-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trusted by millions of customers Since 2019",
+            "context": "Trust badge above headline",
+            "purpose": "Build credibility and social proof"
+          },
+          {
+            "text": "They let us give you a better experience, improve our products, and keep our marketing costs down. We won't turn them on unless you accept.",
+            "context": "Cookie modal explanation",
+            "purpose": "Transparent cookie policy explanation"
+          },
+          {
+            "text": "Learn more in our cookie policy",
+            "context": "Cookie modal footer",
+            "purpose": "Provide legal documentation link"
+          }
+        ],
+        "tone": "friendly-casual with professional-technical undertones",
+        "dataFormatting": [
+          "$300 (displayed on mobile mockup)",
+          "Since 2019 (year-based credibility)"
+        ],
+        "trustSignals": [
+          "Trusted by millions of customers",
+          "Since 2019 (7+ years operating)",
+          "NY Trust Charter (top banner)",
+          "Real product photography"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/moonpay-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width hero with persistent cookie modal overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#7c3aed",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, white text",
+          "bodyStyle": "Medium weight sans-serif, dark text on white modal",
+          "dataStyle": "Not applicable on this screen"
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "White background modal with cookie consent options",
+            "position": "center-bottom overlay",
+            "notable": "Three distinct action buttons with clear hierarchy (purple primary, purple secondary, outlined tertiary)"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Dark horizontal navbar with branding and navigation items",
+            "position": "top (partially obscured behind modal)",
+            "notable": "Visible but non-interactive while modal is active"
+          },
+          {
+            "type": "hero-background",
+            "description": "Hero section with phone mockup and orange fabric (same as previous screen)",
+            "position": "background (partially visible)",
+            "notable": "Dimmed/faded due to modal overlay"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal heading (bold, dark) → Explanation text → Primary Accept button → Secondary Reject button → Tertiary Manage cookies → Link to policy",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal overlay - cookie consent",
+        "userIntent": "Resolve cookie preferences to proceed with site interaction",
+        "entryPoints": [
+          "Automatic on page load"
+        ],
+        "exitPoints": [
+          "Accept button (full cookie acceptance)",
+          "Reject button (minimal cookies)",
+          "Manage cookies button (granular control)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept button",
+            "action": "Accept all cookies and dismiss modal"
+          },
+          {
+            "element": "Reject button",
+            "action": "Reject optional cookies and dismiss modal"
+          },
+          {
+            "element": "Manage cookies button",
+            "action": "Open cookie preferences interface"
+          },
+          {
+            "element": "Learn more in our cookie policy link",
+            "action": "Navigate to full cookie policy document"
+          }
+        ],
+        "informationArchitecture": "Question (Are you ok with optional cookies?) → Explanation (why cookies matter) → Policy link (for full details) → Action buttons (Accept > Reject > Manage) arranged by priority",
+        "frictionPoints": [
+          "Modal blocks access to page until dismissed",
+          "Three options might overwhelm some users",
+          "Purple colors used for both positive and negative actions (Accept and Reject) could reduce visual distinction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Are you ok with optional cookies?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "modal center"
+          },
+          {
+            "text": "Reject",
+            "style": "secondary-button",
+            "placement": "modal center"
+          },
+          {
+            "text": "Manage cookies",
+            "style": "ghost-button",
+            "placement": "modal center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "They let us give you a better experience, improve our products, and keep our marketing costs down. We won't turn them on unless you accept.",
+            "context": "Modal body text",
+            "purpose": "Explain cookie value and transparency"
+          },
+          {
+            "text": "Learn more in our cookie policy",
+            "context": "Modal footer link",
+            "purpose": "Link to legal documentation"
+          }
+        ],
+        "tone": "professional-technical, transparent, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent cookie policy",
+          "User control offered (Accept, Reject, Manage)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1894 @@
+{
+  "slug": "across",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T10:03:02.271Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 13,
+  "screens": [
+    {
+      "image": "/screenshots/across-send-1-bridge-now.png",
+      "label": "Bridge now",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps labels (From, To) in teal accent color",
+          "bodyStyle": "Large monospace numbers (0.00) in light gray, smaller secondary text in muted gray",
+          "dataStyle": "Large primary values (0.00) with smaller unit labels (฿ $0.00) and balance indicators below"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Bridge & Swap, Pool, Rewards, Transactions tabs with underline indicator",
+            "position": "Header",
+            "notable": "Minimalist, only primary tab highlighted in teal"
+          },
+          {
+            "type": "Input Section",
+            "description": "From/To amount inputs with token selector dropdowns showing icons and network names",
+            "position": "Center-top",
+            "notable": "Dual-field layout with swap arrow between them, balance displayed right-aligned"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Green checkmark with 'Fast & Secure' label and 'Across V4' with info icon",
+            "position": "Above CTA",
+            "notable": "Prominent security signal positioned above action button"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Full-width bright teal button with wallet icon and 'Connect Wallet' text",
+            "position": "Center-bottom",
+            "notable": "High contrast, rounded corners, large tap target"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye drawn from header nav → input fields → security badge → CTA button; blank space emphasizes form dominance",
+        "innovativeElements": [
+          "Vertical swap arrow indicator between From/To fields creates clear visual flow",
+          "Token selector integration with network badges (Base, Arbitrum) shows destination context",
+          "Teal accent color used strategically for labels and primary interaction"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a cross-chain token bridge transaction from Base network",
+        "entryPoints": [
+          "Clicked 'Bridge & Swap' tab from navigation",
+          "Direct link to bridge interface"
+        ],
+        "exitPoints": [
+          "Connect Wallet button → wallet connection flow",
+          "Navigate to other tabs (Pool, Rewards, Transactions)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "From amount input",
+            "action": "Enter or adjust USDC amount on Base"
+          },
+          {
+            "element": "Token selector dropdown (From)",
+            "action": "Switch source token type"
+          },
+          {
+            "element": "Token selector dropdown (To)",
+            "action": "Select destination network (Arbitrum shown)"
+          },
+          {
+            "element": "Swap arrow icon",
+            "action": "Likely reverses From/To selections"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Triggers wallet connection modal"
+          }
+        ],
+        "informationArchitecture": "Form-driven with two primary input sections (source and destination), security affirmation, and blocking CTA requiring wallet connection",
+        "frictionPoints": [
+          "Must connect wallet before proceeding—blocks transaction initiation",
+          "Zero balance display may confuse new users about whether funds are required first",
+          "'Set Recipient' link on To field adds optional complexity that may go unnoticed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Full-width button center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Label above source amount input",
+            "purpose": "Clearly designates input as transaction origin"
+          },
+          {
+            "text": "To",
+            "context": "Label above destination amount input",
+            "purpose": "Clearly designates input as transaction destination"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "Text link on To section",
+            "purpose": "Allows advanced configuration for different recipient address"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "Right side of input fields",
+            "purpose": "Displays current balance on selected network/token"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "Badge above CTA with checkmark icon",
+            "purpose": "Trust signal affirming transaction safety"
+          },
+          {
+            "text": "Across V4",
+            "context": "Badge label with info icon",
+            "purpose": "Version identifier with clickable details"
+          }
+        ],
+        "tone": "professional-technical, minimal and functional",
+        "dataFormatting": [
+          "0.00 (large numeric display for amounts)",
+          "฿ $0.00 (unit symbol with USD equivalent)",
+          "Balance: 0 (simple balance display)"
+        ],
+        "trustSignals": [
+          "Fast & Secure checkmark badge",
+          "Across V4 protocol version indicator",
+          "Network names and token icons (USDC) establish legitimacy"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-2-bridge-to-solana.png",
+      "label": "Bridge to Solana",
+      "flowType": "Send",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps labels (From, To) in teal accent color",
+          "bodyStyle": "Large monospace numbers (0.00) in light gray, smaller secondary text in muted gray",
+          "dataStyle": "Large primary values (0.00) with smaller unit labels (฿ $0.00) and balance indicators"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Bridge & Swap, Pool, Rewards, Transactions tabs with underline indicator",
+            "position": "Header",
+            "notable": "Same minimalist style as first screenshot"
+          },
+          {
+            "type": "Input Section",
+            "description": "From USDC Base / To USDC Solana with token selector showing network name change",
+            "position": "Center-top",
+            "notable": "Destination changed to Solana network, visual consistency maintained"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Green checkmark with 'Fast & Secure' label and 'Across V4' with info icon",
+            "position": "Above CTA",
+            "notable": "Identical to first screenshot, consistent positioning"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Full-width bright teal button with wallet icon and 'Connect Wallet' text",
+            "position": "Center-bottom",
+            "notable": "Unchanged from first screenshot"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to first screenshot—input fields dominate visual attention",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a cross-chain token bridge transaction from Base to Solana",
+        "entryPoints": [
+          "User changed destination network from Arbitrum to Solana",
+          "Direct selection via To dropdown"
+        ],
+        "exitPoints": [
+          "Connect Wallet button → wallet connection flow",
+          "Navigate to other tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "To token selector",
+            "action": "Changed from Arbitrum to Solana"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Triggers wallet connection modal"
+          }
+        ],
+        "informationArchitecture": "Identical structure to first screenshot, only destination network differs",
+        "frictionPoints": [
+          "Must connect wallet before proceeding",
+          "No indication of different fees or timelines for Solana vs other chains"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Full-width button center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Label above source amount input",
+            "purpose": "Designates source as Base network"
+          },
+          {
+            "text": "To",
+            "context": "Label above destination amount input showing Solana",
+            "purpose": "Designates destination as Solana network"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "Right side of input fields",
+            "purpose": "Displays current balance"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "Badge above CTA",
+            "purpose": "Trust signal"
+          }
+        ],
+        "tone": "professional-technical, minimal and functional",
+        "dataFormatting": [
+          "0.00 (large numeric display)",
+          "฿ $0.00 (unit with USD equivalent)",
+          "Balance: 0"
+        ],
+        "trustSignals": [
+          "Fast & Secure checkmark badge",
+          "Across V4 protocol version"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-3-bridge-to-unichain.png",
+      "label": "Bridge to Unichain",
+      "flowType": "Send",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps labels in teal",
+          "bodyStyle": "Large monospace numbers in light gray with muted secondary text",
+          "dataStyle": "Large primary values with unit labels and balance indicators"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Bridge & Swap, Pool, Rewards, Transactions tabs",
+            "position": "Header",
+            "notable": "Consistent header across all three screenshots"
+          },
+          {
+            "type": "Input Section",
+            "description": "From USDC Base / To USDC Unichain with token selector showing Unichain network",
+            "position": "Center-top",
+            "notable": "Destination changed to Unichain, demonstrates multi-chain flexibility"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Green checkmark with 'Fast & Secure' and 'Across V4'",
+            "position": "Above CTA",
+            "notable": "Consistent across all three screenshots"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Full-width bright teal button with 'Connect Wallet'",
+            "position": "Center-bottom",
+            "notable": "Identical to previous screenshots"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical layout pattern across all three screenshots",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a cross-chain token bridge transaction from Base to Unichain",
+        "entryPoints": [
+          "User changed destination network to Unichain",
+          "Selection via To dropdown"
+        ],
+        "exitPoints": [
+          "Connect Wallet button",
+          "Navigate to other tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "To token selector",
+            "action": "Changed to Unichain"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Triggers wallet connection"
+          }
+        ],
+        "informationArchitecture": "Identical form structure with only destination network varying",
+        "frictionPoints": [
+          "Wallet connection requirement blocks transaction initiation",
+          "No chain-specific information displayed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Full-width button center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Source network label",
+            "purpose": "Designates Base as source"
+          },
+          {
+            "text": "To",
+            "context": "Destination network label showing Unichain",
+            "purpose": "Designates Unichain as destination"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "Right side of fields",
+            "purpose": "Current balance display"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "Badge above CTA",
+            "purpose": "Trust affirmation"
+          }
+        ],
+        "tone": "professional-technical, minimal",
+        "dataFormatting": [
+          "0.00",
+          "฿ $0.00",
+          "Balance: 0"
+        ],
+        "trustSignals": [
+          "Fast & Secure badge",
+          "Across V4 protocol identifier"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-4-bridge-to-optimism.png",
+      "label": "Bridge to Optimism",
+      "flowType": "Send",
+      "step": 4,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#26d0ce",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "All-caps labels in teal (#26d0ce), uppercase treatment for section markers",
+          "bodyStyle": "Medium-weight sans-serif for amounts and secondary text in light gray",
+          "dataStyle": "Large monospace numbers (0.00) with lighter subtext showing USD conversion ($0.00)"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal nav bar with logo (teal X), main sections, and Connect button",
+            "position": "top",
+            "notable": "Persistent green-outlined Connect button suggests wallet integration state"
+          },
+          {
+            "type": "Input Field Pair",
+            "description": "From/To transaction fields with amount entry and token selector dropdowns",
+            "position": "center-upper",
+            "notable": "Stacked vertical layout with chevron separator between fields; token badges show logo + name + network"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Shield icon with 'Fast & Secure' text alongside 'Across V4' branding",
+            "position": "center-lower",
+            "notable": "Positioned directly above CTA; reassures before commitment"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Full-width button with bright teal background and wallet icon",
+            "position": "bottom-center",
+            "notable": "High contrast, dominant visual weight; disabled/inactive state requiring wallet connection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye naturally flows from header → amount inputs → trust signal → CTA; teal accent color guides attention",
+        "innovativeElements": [
+          "Token pair visualization with network-specific variants shown in adjacent screenshots",
+          "Chevron icon as visual affordance between From/To fields"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge USDC from Ethereum Base to Optimism using Across protocol",
+        "entryPoints": [
+          "Bridge & Swap nav section",
+          "previous transaction context"
+        ],
+        "exitPoints": [
+          "Connect Wallet button (triggers wallet connection modal)",
+          "token selector dropdowns (may open token choice screen)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token Selector (From)",
+            "action": "Opens dropdown to choose source token/chain (Base shown)"
+          },
+          {
+            "element": "Token Selector (To)",
+            "action": "Opens dropdown to choose destination token/chain (Optimism shown)"
+          },
+          {
+            "element": "Amount Input Field",
+            "action": "Allows manual entry or paste of transaction amount"
+          },
+          {
+            "element": "Set Recipient Link",
+            "action": "Opens interface to specify destination address or use connected wallet"
+          },
+          {
+            "element": "Connect Wallet Button",
+            "action": "Initiates wallet connection flow; blocks transaction until completed"
+          }
+        ],
+        "informationArchitecture": "Linear form: source amount → destination amount → network pair confirmation → wallet auth → execution",
+        "frictionPoints": [
+          "Wallet connection required before any transaction",
+          "Balance showing 0 USDC creates initial barrier",
+          "No visible amount validation or fee preview before wallet connection"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom-center, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "section label above source amount",
+            "purpose": "Identifies transaction origin"
+          },
+          {
+            "text": "To",
+            "context": "section label above destination amount",
+            "purpose": "Identifies transaction destination"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "inline link within To section",
+            "purpose": "Indicates customizable recipient address"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "right-aligned subtext in From field",
+            "purpose": "Shows current wallet balance for selected token"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "trust badge above CTA",
+            "purpose": "Security/speed assurance"
+          },
+          {
+            "text": "Across V4",
+            "context": "protocol version label in trust badge",
+            "purpose": "Version transparency and credibility marker"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (large, leading amount display)",
+          "$0.00 (smaller USD conversion)",
+          "Balance: 0 (current holdings indicator)"
+        ],
+        "trustSignals": [
+          "Shield icon with 'Fast & Secure' messaging",
+          "Across V4 protocol branding",
+          "Network badges (USDC Base, USDC Optimism) showing established token standards"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-5-bridge-to-linea.png",
+      "label": "Bridge to Linea",
+      "flowType": "Send",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#26d0ce",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "All-caps labels in teal (#26d0ce)",
+          "bodyStyle": "Medium-weight sans-serif for amounts and secondary text in light gray",
+          "dataStyle": "Large monospace numbers (0.00) with lighter subtext showing USD conversion"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal nav bar with logo, main sections, and Connect button",
+            "position": "top",
+            "notable": "Consistent with previous screenshot; persistent state"
+          },
+          {
+            "type": "Input Field Pair",
+            "description": "From/To fields with USDC Base → USDC Linea configuration",
+            "position": "center-upper",
+            "notable": "Destination network changed to Linea (same layout pattern)"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Shield + 'Fast & Secure' + 'Across V4'",
+            "position": "center-lower",
+            "notable": "Identical positioning and styling"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Connect Wallet button",
+            "position": "bottom-center",
+            "notable": "Unchanged styling and state"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to Optimism variant",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge USDC from Ethereum Base to Linea (different destination than Optimism version)",
+        "entryPoints": [
+          "Bridge & Swap nav section with Linea selection"
+        ],
+        "exitPoints": [
+          "Connect Wallet button",
+          "token selector dropdowns"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token Selector (From)",
+            "action": "Source token/chain selector (Base USDC)"
+          },
+          {
+            "element": "Token Selector (To)",
+            "action": "Destination selector now set to Linea USDC"
+          },
+          {
+            "element": "Amount Input",
+            "action": "Manual amount entry"
+          },
+          {
+            "element": "Set Recipient Link",
+            "action": "Custom recipient specification"
+          },
+          {
+            "element": "Connect Wallet Button",
+            "action": "Wallet authentication"
+          }
+        ],
+        "informationArchitecture": "Identical linear form structure; only destination network differs",
+        "frictionPoints": [
+          "Same as Optimism variant: wallet requirement, zero balance shown, no fee preview"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom-center, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "section label",
+            "purpose": "Identifies source"
+          },
+          {
+            "text": "To",
+            "context": "section label",
+            "purpose": "Identifies destination"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "inline link",
+            "purpose": "Recipient customization"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "right-aligned in From field",
+            "purpose": "Wallet balance indicator"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "trust badge",
+            "purpose": "Security messaging"
+          },
+          {
+            "text": "Across V4",
+            "context": "protocol version in trust badge",
+            "purpose": "Version identification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00",
+          "$0.00",
+          "Balance: 0"
+        ],
+        "trustSignals": [
+          "Shield icon + 'Fast & Secure'",
+          "Across V4 branding",
+          "USDC Base and USDC Linea token badges"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-6-bridge-to-polygon.png",
+      "label": "Bridge to Polygon",
+      "flowType": "Send",
+      "step": 6,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#26d0ce",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "All-caps labels in teal (#26d0ce)",
+          "bodyStyle": "Medium-weight sans-serif for amounts and secondary text in light gray",
+          "dataStyle": "Large monospace numbers (0.00) with USD conversion subtext"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal nav bar consistent across all variants",
+            "position": "top",
+            "notable": "Persistent, unchanged state"
+          },
+          {
+            "type": "Input Field Pair",
+            "description": "From/To with USDC Base → USDC Polygon configuration",
+            "position": "center-upper",
+            "notable": "Destination network now Polygon; consistent form layout"
+          },
+          {
+            "type": "Trust Badge",
+            "description": "Shield + security messaging + protocol version",
+            "position": "center-lower",
+            "notable": "Standard positioning"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Connect Wallet button",
+            "position": "bottom-center",
+            "notable": "Identical styling across all three variants"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Consistent with other variants",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge USDC from Ethereum Base to Polygon (third destination variant)",
+        "entryPoints": [
+          "Bridge & Swap nav with Polygon selection"
+        ],
+        "exitPoints": [
+          "Connect Wallet",
+          "token selectors"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token Selector (From)",
+            "action": "Base USDC source selection"
+          },
+          {
+            "element": "Token Selector (To)",
+            "action": "Polygon USDC destination selection"
+          },
+          {
+            "element": "Amount Input",
+            "action": "Transaction amount entry"
+          },
+          {
+            "element": "Set Recipient Link",
+            "action": "Recipient address configuration"
+          },
+          {
+            "element": "Connect Wallet Button",
+            "action": "Wallet connection trigger"
+          }
+        ],
+        "informationArchitecture": "Linear form; destination network changed to Polygon; otherwise identical structure",
+        "frictionPoints": [
+          "Same barriers as prior variants: wallet connection required, zero balance, no fees shown"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom-center, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "section label",
+            "purpose": "Source identification"
+          },
+          {
+            "text": "To",
+            "context": "section label",
+            "purpose": "Destination identification"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "inline link",
+            "purpose": "Recipient customization"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "right-aligned",
+            "purpose": "Wallet balance display"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "trust badge",
+            "purpose": "Security assurance"
+          },
+          {
+            "text": "Across V4",
+            "context": "protocol version label",
+            "purpose": "Version credibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00",
+          "$0.00",
+          "Balance: 0"
+        ],
+        "trustSignals": [
+          "Shield + 'Fast & Secure'",
+          "Across V4 protocol version",
+          "USDC Base and USDC Polygon token badges"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9FF",
+          "#2D3748",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, mixed case with accent color on key words (Interoperability, Intents)",
+          "bodyStyle": "Regular weight sans-serif, light gray on dark background",
+          "dataStyle": "Labels on component cards with cyan badges (REQUEST FOR QUOTE, RELAYER NETWORK, SETTLEMENT)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, menu items, and prominent BRIDGE NOW CTA",
+            "position": "top",
+            "notable": "Sticky positioning with minimalist design"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Left-aligned text with headline split across lines with color accent",
+            "position": "left-center",
+            "notable": "Two-tier CTA with BRIDGE NOW and START BUILDING with emoji icon"
+          },
+          {
+            "type": "Architecture Diagram",
+            "description": "Isometric 3D visualization of interconnected components with glowing cyan accents",
+            "position": "right-center",
+            "notable": "Animated glowing effect on icons, hierarchical flow showing Ethereum, Relayer Network, and Settlement layers"
+          },
+          {
+            "type": "Trust Bar",
+            "description": "Horizontal row of partner logos with TRUSTED BY label",
+            "position": "bottom",
+            "notable": "Swing, MetaMask, Balancer, Bungee, ChainHop logos in muted gray"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left panel text draws eye first with large cyan headings; right panel architecture diagram provides visual balance and breaks monotony",
+        "innovativeElements": [
+          "Isometric 3D component visualization with glowing cyan neon effect",
+          "Color gradient accent on headline (cyan for Interoperability, white for Powered By, cyan for Intents)",
+          "Layered architecture shown with connective lines and labeled nodes"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Across is and decide whether to bridge assets or build with the protocol",
+        "entryPoints": [
+          "Direct visit to home domain",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "BRIDGE NOW (top right or left section)",
+          "START BUILDING link",
+          "Navigation to Blog, Products, Community"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BRIDGE NOW button",
+            "action": "Navigate to bridge interface"
+          },
+          {
+            "element": "START BUILDING link",
+            "action": "Navigate to developer docs or integration guide"
+          },
+          {
+            "element": "Products dropdown",
+            "action": "Expand menu of product offerings"
+          },
+          {
+            "element": "Community dropdown",
+            "action": "Expand community resources"
+          }
+        ],
+        "informationArchitecture": "Value prop → visual proof → architecture explanation → trust signals → dual CTAs for different user types",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Interoperability Powered By Intents",
+        "subheadline": "A new paradigm in crosschain experiences, seamlessly connecting users with applications.",
+        "ctas": [
+          {
+            "text": "BRIDGE NOW",
+            "style": "primary-button",
+            "placement": "top-right and left-center"
+          },
+          {
+            "text": "START BUILDING",
+            "style": "text-link",
+            "placement": "left-center below primary CTA"
+          },
+          {
+            "text": "REQUEST FOR QUOTE",
+            "style": "ghost-button",
+            "placement": "right panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This is how others see you. You can use special characters and emoji.",
+            "context": "Display Name input field",
+            "purpose": "Explain field purpose"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Card labels: REQUEST FOR QUOTE, RELAYER NETWORK, SETTLEMENT"
+        ],
+        "trustSignals": [
+          "TRUSTED BY TOP TIER APPLICATIONS",
+          "Partner logos: Swing, MetaMask, Balancer, Bungee, ChainHop"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F0F9FF",
+          "#00D9FF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for section titles (What is Across?)",
+          "bodyStyle": "Regular weight body text in dark gray on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Collapsible navigation menu with sections: INTRODUCTION, DEVELOPER QUICKSTART, CONCEPTS",
+            "position": "left",
+            "notable": "Expandable sections with arrow indicators; selected items highlighted in cyan link color"
+          },
+          {
+            "type": "Header Banner",
+            "description": "Green banner at top with checkmark, promotional text about bridging USDC, and close button",
+            "position": "top-full-width",
+            "notable": "Promotional call-out with direct action link"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Central search input with Ask or search... placeholder",
+            "position": "top-center",
+            "notable": "Keyboard shortcuts displayed (⌘ K)"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Documentation article with headings, body text, bold emphasis on key terms",
+            "position": "center",
+            "notable": "Linked text in cyan, hierarchical heading structure"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Table of contents with related topics and navigation links",
+            "position": "right",
+            "notable": "Cyan link styling for navigation"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Dark overlay modal at bottom with cookie policy text and Accept/Reject buttons",
+            "position": "bottom-right",
+            "notable": "Non-blocking but prominent placement; privacy policy link included"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content centered with supporting navigation on both sides; banner at top draws attention; cookie modal floats to ensure visibility",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read documentation and understand the Across protocol in detail; manage privacy preferences",
+        "entryPoints": [
+          "Documentation link from main site",
+          "Search engine for 'Across documentation'",
+          "Direct link from onboarding flow"
+        ],
+        "exitPoints": [
+          "Navigation to related topics in right sidebar",
+          "Sidebar navigation to different sections",
+          "Search to find specific topic",
+          "Close banner to dismiss promotional notice",
+          "Accept/Reject cookie consent"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar expandable sections",
+            "action": "Toggle to show/hide subsections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query documentation content"
+          },
+          {
+            "element": "Right sidebar links",
+            "action": "Navigate to related articles"
+          },
+          {
+            "element": "Inline cyan links",
+            "action": "Jump to related documentation"
+          },
+          {
+            "element": "Close button on banner",
+            "action": "Dismiss promotional banner"
+          },
+          {
+            "element": "Accept/Reject buttons",
+            "action": "Set cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Left sidebar provides topic hierarchy; main content area displays selected article; right sidebar provides local navigation within topic; banner and modal are persistent but dismissible",
+        "frictionPoints": [
+          "Cookie consent modal blocks some content until interaction",
+          "Multiple navigation systems (sidebar, inline links, search) may overwhelm new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "What is Across?",
+        "subheadline": "Interoperability by Passing Messages",
+        "ctas": [
+          {
+            "text": "Bridge Now!",
+            "style": "text-link",
+            "placement": "top banner"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie modal"
+          },
+          {
+            "text": "Reject",
+            "style": "ghost-button",
+            "placement": "cookie modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bridge USDC from major chains to USDC on Hyperliquid for Free!",
+            "context": "Top green banner",
+            "purpose": "Promote current promotional offer"
+          },
+          {
+            "text": "This site uses cookies to deliver its service and to analyze traffic. By browsing this site, you accept the privacy policy.",
+            "context": "Cookie consent modal",
+            "purpose": "Inform user of data practices and obtain consent"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Production deployment mention (ERC-7683 in Production)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-home-3-discord.png",
+      "label": "Discord",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2F3136",
+          "#00D9FF",
+          "#5865F2",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium size for community name",
+          "bodyStyle": "Regular sans-serif for instructional text",
+          "dataStyle": "Numeric stats with colored dot indicators (green online, white total members)"
+        },
+        "components": [
+          {
+            "type": "Modal Overlay",
+            "description": "Centered dark card over animated gradient background with geometric shapes",
+            "position": "center",
+            "notable": "Semi-transparent dark background with vibrant animated elements"
+          },
+          {
+            "type": "Icon Badge",
+            "description": "Cyan X-icon in rounded square at top of modal",
+            "position": "top-center",
+            "notable": "Brand identifier matching main site color scheme"
+          },
+          {
+            "type": "Community Stats",
+            "description": "Inline stats showing online count and total member count with colored indicators",
+            "position": "below icon",
+            "notable": "Green dot for online, white dot for total members; numeric display"
+          },
+          {
+            "type": "Form Inputs",
+            "description": "Text input for Display Name and three dropdown selects for Date of Birth",
+            "position": "middle",
+            "notable": "Cyan border focus state; placeholder text descriptive"
+          },
+          {
+            "type": "Checkbox",
+            "description": "Terms of Service and Privacy Policy agreement checkbox",
+            "position": "below date inputs",
+            "notable": "Links styled in cyan"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Large Create Account button in blue-purple gradient",
+            "position": "bottom-center",
+            "notable": "Full-width button; high visual priority"
+          },
+          {
+            "type": "Secondary Link",
+            "description": "Already have an account? Log in text link",
+            "position": "bottom-left",
+            "notable": "Cyan link styling for consistency"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Icon and community name draw eye first; form fields organized logically; large CTA button dominates bottom; animated background provides visual interest without distraction",
+        "innovativeElements": [
+          "Animated gradient geometric shapes in background (circles, gradient lines in rainbow colors)",
+          "Glowing effect on background elements creating depth",
+          "Grid pattern overlay on dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create a Discord account to join the Across community server",
+        "entryPoints": [
+          "Community link from main site",
+          "Invitation link from community member",
+          "Community section navigation"
+        ],
+        "exitPoints": [
+          "Create Account button to complete signup",
+          "Log in link if user already has account",
+          "Close modal (implied via overlay click)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Display Name input",
+            "action": "Enter custom display name for community"
+          },
+          {
+            "element": "Month dropdown",
+            "action": "Select birth month"
+          },
+          {
+            "element": "Day dropdown",
+            "action": "Select birth day"
+          },
+          {
+            "element": "Year dropdown",
+            "action": "Select birth year"
+          },
+          {
+            "element": "Terms agreement checkbox",
+            "action": "Acknowledge terms and privacy policy"
+          },
+          {
+            "element": "Create Account button",
+            "action": "Submit form and create account"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login for existing users"
+          }
+        ],
+        "informationArchitecture": "Identity collection (display name) → verification (date of birth) → legal agreement → account creation action → fallback to login",
+        "frictionPoints": [
+          "Date of Birth dropdowns are cumbersome (three separate selects instead of date picker)",
+          "Terms/Privacy Policy links open in new context (may break user flow)",
+          "No loading state visible on Create Account button"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Across",
+        "subheadline": "Clayton (claytonroche) invited you to join",
+        "ctas": [
+          {
+            "text": "Create Account",
+            "style": "primary-button",
+            "placement": "bottom-center"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "bottom-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "1,210 Online",
+            "context": "Community stats",
+            "purpose": "Show live community activity"
+          },
+          {
+            "text": "64,547 Members",
+            "context": "Community stats",
+            "purpose": "Show total community size"
+          },
+          {
+            "text": "What should everyone call you?",
+            "context": "Display Name input placeholder",
+            "purpose": "Prompt for username selection"
+          },
+          {
+            "text": "This is how others see you. You can use special characters and emoji.",
+            "context": "Below Display Name input",
+            "purpose": "Explain field rules and personality"
+          },
+          {
+            "text": "I have read and agree to Discord's Terms of Service and Privacy Policy.",
+            "context": "Checkbox label",
+            "purpose": "Legal requirement for account creation"
+          },
+          {
+            "text": "Already have an account?",
+            "context": "Below Create Account button",
+            "purpose": "Offer alternative for existing users"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "1,210 Online (with green indicator)",
+          "64,547 Members (with white indicator)"
+        ],
+        "trustSignals": [
+          "Discord platform (established, trusted service)",
+          "Explicit reference to Terms of Service and Privacy Policy"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-staking-2-pool-page.png",
+      "label": "pool page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width card-based",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00d9b5",
+          "#2d2d2d"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, medium weight, centered, uppercase letter-spacing",
+          "bodyStyle": "sans-serif, light weight, gray text on dark background",
+          "dataStyle": "monospace-like figures with large scale for metrics, smaller gray labels above"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal navigation with logo, menu items (Bridge & Swap, Pool, Rewards, Transactions), Connect button, and hamburger menu",
+            "position": "top",
+            "notable": "Teal accent color on Connect button and active tab indicator"
+          },
+          {
+            "type": "tab-switcher",
+            "description": "Add/Remove toggle tabs with underline indicator",
+            "position": "upper-middle",
+            "notable": "Minimal style with thin line separator"
+          },
+          {
+            "type": "dropdown-selector",
+            "description": "ETH Pool selector with icon and chevron",
+            "position": "center-top",
+            "notable": "Dark background with subtle border, Ethereum icon on left"
+          },
+          {
+            "type": "metrics-grid",
+            "description": "Three key metrics (Pool size, Pool utilization, Pool APY) displayed in columns",
+            "position": "center",
+            "notable": "Labels in gray, data in white, arranged horizontally"
+          },
+          {
+            "type": "expandable-rows",
+            "description": "Position size and Fees earned with chevron icons indicating expandable state",
+            "position": "center-lower",
+            "notable": "Blue Ethereum icon indicators on right side"
+          },
+          {
+            "type": "promotional-banner",
+            "description": "Teal-bordered box with earning opportunity text and right arrow",
+            "position": "lower-center",
+            "notable": "High contrast with teal outline, calls out specific APY earning"
+          },
+          {
+            "type": "primary-button",
+            "description": "Full-width bright teal button with text",
+            "position": "bottom-center",
+            "notable": "Dominant color, high contrast, clear CTA"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Metrics at top draw attention first, then action-oriented content (Add/Remove), followed by secondary details (Position size, Fees), with promotional banner and CTA at bottom driving conversion",
+        "innovativeElements": [
+          "Thin underline tab indicator creates minimal, modern appearance",
+          "Floating icon badges on right side of expandable rows for visual texture",
+          "Color-coded promotional banner with border instead of solid background"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-detail",
+        "userIntent": "Understand pool performance, decide whether to add liquidity or remove position, and manage staking position",
+        "entryPoints": [
+          "Clicked Pool tab from main navigation",
+          "Navigated from dashboard overview"
+        ],
+        "exitPoints": [
+          "Click Connect Wallet to initiate transaction",
+          "Click Add or Remove to switch between actions",
+          "Click through promotional banner for staking details",
+          "Navigate to different section via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Add/Remove tabs",
+            "action": "Switch between adding liquidity and removing position views"
+          },
+          {
+            "element": "ETH Pool dropdown",
+            "action": "Select different pool types if available"
+          },
+          {
+            "element": "Position size / Fees earned rows",
+            "action": "Expand to reveal additional details"
+          },
+          {
+            "element": "Promotional banner with arrow",
+            "action": "Navigate to staking opportunity details"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet connection and transaction flow"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Overview metrics → Current position details → Earning opportunity → Action (Connect Wallet). Information flows from informational (pool stats) to actionable (CTA).",
+        "frictionPoints": [
+          "Position size and Fees earned are collapsed by default, requiring extra click to view details",
+          "No indication of current wallet connection status before clicking Connect Wallet",
+          "Pool selection shows only one option (ETH Pool) – unclear if others exist without interacting"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Pool",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom-center, full-width"
+          },
+          {
+            "text": "Earn +0.964% by staking ETH-LP",
+            "style": "text-link with icon",
+            "placement": "lower-center, banner format"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pool size",
+            "context": "Above metric value",
+            "purpose": "Label for total liquidity in pool"
+          },
+          {
+            "text": "Pool utilization",
+            "context": "Above metric value",
+            "purpose": "Label for percentage of pool in use"
+          },
+          {
+            "text": "Pool APY",
+            "context": "Above metric value",
+            "purpose": "Label for annual percentage yield"
+          },
+          {
+            "text": "Position size",
+            "context": "Expandable row label",
+            "purpose": "Indicates user's individual stake size"
+          },
+          {
+            "text": "Fees earned",
+            "context": "Expandable row label",
+            "purpose": "Indicates accumulated earnings from position"
+          }
+        ],
+        "tone": "professional-technical with friendly accessibility (approachable CTAs)",
+        "dataFormatting": [
+          "5,518.477 ETH",
+          "56.134%",
+          "2.009%",
+          "+0.964%"
+        ],
+        "trustSignals": [
+          "Specific APY percentages provided",
+          "Transparent pool metrics (size, utilization)",
+          "ETH-LP token notation suggests legitimate LP token system"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-7-bridge-to-world-chain.png",
+      "label": "Bridge to World Chain",
+      "flowType": "Send",
+      "step": 7,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Small caps, teal color, uppercase labels (From, To)",
+          "bodyStyle": "Light gray body text, monospace numbers in teal",
+          "dataStyle": "Large monospace numbers (0.00) in teal with smaller gray secondary text below"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Top navigation with logo, section tabs, and Connect button",
+            "position": "top",
+            "notable": "Minimal design with clear primary action (Connect)"
+          },
+          {
+            "type": "input-card",
+            "description": "From/To input fields with amount display and token selector dropdown",
+            "position": "center",
+            "notable": "Token selectors show chain context (Base, World Chain)"
+          },
+          {
+            "type": "cta-button",
+            "description": "Large teal 'Connect Wallet' button with shield icon",
+            "position": "bottom-center",
+            "notable": "Full-width button dominates call-to-action"
+          },
+          {
+            "type": "badge",
+            "description": "Fast & Secure badge with checkmark icon",
+            "position": "above-cta",
+            "notable": "Trust signal emphasizing speed and security"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eyes drawn from top nav → amount inputs → trust badge → CTA button; vertical flow",
+        "innovativeElements": [
+          "Bidirectional swap flow with dual token selectors",
+          "Chain-specific token notation (USDC Base, USDC World Chain)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge tokens from Base to World Chain",
+        "entryPoints": [
+          "Bridge & Swap tab navigation",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Connect Wallet button leads to wallet connection flow",
+          "Navigation to other sections (Pool, Rewards, Transactions)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token dropdown selector (From)",
+            "action": "Opens token/chain selection for source"
+          },
+          {
+            "element": "Token dropdown selector (To)",
+            "action": "Opens token/chain selection for destination"
+          },
+          {
+            "element": "Amount input fields",
+            "action": "Allow user to enter or modify bridge amount"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiates wallet connection for transaction"
+          }
+        ],
+        "informationArchitecture": "Linear top-to-bottom: source amount → destination amount → action; no branching until wallet connection",
+        "frictionPoints": [
+          "User must have a connected wallet to proceed",
+          "Balance displays as 0 (empty state friction)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Source amount label",
+            "purpose": "Clarify input field purpose"
+          },
+          {
+            "text": "To",
+            "context": "Destination amount label",
+            "purpose": "Clarify input field purpose"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "Destination field",
+            "purpose": "Allow custom recipient address specification"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "Token balance display",
+            "purpose": "Show wallet balance for transaction validation"
+          },
+          {
+            "text": "Fast & Secure",
+            "context": "Badge above CTA",
+            "purpose": "Build confidence in bridge mechanism"
+          },
+          {
+            "text": "Across V4",
+            "context": "Right side of badge",
+            "purpose": "Version identifier and protocol credibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (large monospace)",
+          "⇅ $0.00 (exchange rate notation)"
+        ],
+        "trustSignals": [
+          "Fast & Secure badge",
+          "Across V4 version identifier",
+          "Chain-specific token notation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-send-8-bridge-to-zksync.png",
+      "label": "Bridge to zkSync",
+      "flowType": "Send",
+      "step": 8,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Small caps, teal color, uppercase labels",
+          "bodyStyle": "Light gray body text, monospace numbers in teal",
+          "dataStyle": "Large monospace numbers with gray secondary text"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Consistent top navigation",
+            "position": "top",
+            "notable": "Identical to previous screen"
+          },
+          {
+            "type": "input-card",
+            "description": "From/To token inputs with chain context",
+            "position": "center",
+            "notable": "Destination changed to WETH on zkSync (different token than source)"
+          },
+          {
+            "type": "cta-button",
+            "description": "Connect Wallet button",
+            "position": "bottom-center",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to previous screen",
+        "innovativeElements": [
+          "Cross-chain token swapping (USDC Base → WETH zkSync)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge USDC from Base and receive WETH on zkSync",
+        "entryPoints": [
+          "Bridge & Swap tab",
+          "Token selection change from previous screen"
+        ],
+        "exitPoints": [
+          "Connect Wallet button",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Source token selector",
+            "action": "Opens token selection (currently USDC Base)"
+          },
+          {
+            "element": "Destination token selector",
+            "action": "Opens token selection (currently WETH zkSync)"
+          },
+          {
+            "element": "Amount inputs",
+            "action": "Enter bridge amount"
+          },
+          {
+            "element": "Connect Wallet",
+            "action": "Begin transaction flow"
+          }
+        ],
+        "informationArchitecture": "Identical linear flow to previous screen",
+        "frictionPoints": [
+          "Cross-chain token conversion may confuse users",
+          "No visible exchange rate for USDC→WETH conversion"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Source label",
+            "purpose": "Clarify input purpose"
+          },
+          {
+            "text": "To",
+            "context": "Destination label",
+            "purpose": "Clarify input purpose"
+          },
+          {
+            "text": "Set Recipient",
+            "context": "Destination field",
+            "purpose": "Specify custom recipient"
+          },
+          {
+            "text": "Balance: 0",
+            "context": "Token balance",
+            "purpose": "Show available balance"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (monospace)",
+          "⇅ $0.00"
+        ],
+        "trustSignals": [
+          "Fast & Secure badge",
+          "Across V4 identifier"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/across-staking-1-rewards-page.png",
+      "label": "rewards page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#6366f1"
+        ],
+        "typography": {
+          "headingStyle": "Medium weight, white, section headers (Rewards, Overview, All pools)",
+          "bodyStyle": "Small light gray text for labels and secondary info",
+          "dataStyle": "Monospace for APY percentages, left-aligned amounts with token symbols"
+        },
+        "components": [
+          {
+            "type": "page-header",
+            "description": "Rewards section title with underline accent",
+            "position": "top-left",
+            "notable": "Minimal styling, text-only header"
+          },
+          {
+            "type": "overview-cards",
+            "description": "Three stat cards showing Total rewards (ACX, OP, ARB tokens)",
+            "position": "center-top",
+            "notable": "Circular token icons with amounts; multi-token display"
+          },
+          {
+            "type": "info-card",
+            "description": "Right-side card showing LP token staking and top pool info",
+            "position": "center-right",
+            "notable": "Dash placeholders for empty data states"
+          },
+          {
+            "type": "table",
+            "description": "All pools table with 6 columns (Pool, Staked LP, APY, Multiplier, Age, Rewards, Add)",
+            "position": "center-bottom",
+            "notable": "Compact table with inline action buttons; info icons for tooltips"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Header → overview metrics → detailed pool table; left-to-right progression with table as focal point",
+        "innovativeElements": [
+          "Multi-token reward aggregation in single overview",
+          "Inline APY breakdown showing pool vs rewards contribution",
+          "Multiplier visualization (horizontal bars)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review reward positions, track staking performance, add to new pools",
+        "entryPoints": [
+          "Rewards tab from main navigation",
+          "Deep link from rewards URL"
+        ],
+        "exitPoints": [
+          "Add button in table (add liquidity)",
+          "Other nav sections (Bridge & Swap, Pool, Transactions)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Info icons (ⓘ)",
+            "action": "Show tooltips explaining APY, Multiplier, etc."
+          },
+          {
+            "element": "Add buttons (right column)",
+            "action": "Navigate to liquidity provision form for specific pool"
+          },
+          {
+            "element": "Pool name links (likely)",
+            "action": "Show pool details or position details"
+          }
+        ],
+        "informationArchitecture": "Three-tier: summary metrics → account overview → detailed pool breakdown by token",
+        "frictionPoints": [
+          "Empty state with all balances at 0 (no data to show)",
+          "Dense table may be hard to scan on mobile",
+          "Info icons require extra click to understand metrics"
+        ],
+        "progressIndicators": [
+          "Age of Capital column (0 Days, shows position freshness)"
+        ]
+      },
+      "copy": {
+        "headline": "Rewards",
+        "subheadline": "Overview",
+        "ctas": [
+          {
+            "text": "Add",
+            "style": "primary-button",
+            "placement": "right column of each pool row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total rewards",
+            "context": "Overview card label",
+            "purpose": "Identify reward aggregation metric"
+          },
+          {
+            "text": "$ in staked LP tokens",
+            "context": "Right column header",
+            "purpose": "Clarify TVL metric"
+          },
+          {
+            "text": "Top pool",
+            "context": "Right column subheader",
+            "purpose": "Highlight best-performing pool"
+          },
+          {
+            "text": "Position size: 0",
+            "context": "Pool row, under pool name",
+            "purpose": "Show user's stake amount"
+          },
+          {
+            "text": "2.97% / Max 3.94%",
+            "context": "APY column",
+            "purpose": "Show current and maximum APY"
+          },
+          {
+            "text": "Pool: 2.01% | Rewards: 0.86%",
+            "context": "APY breakdown (expandable/hover)",
+            "purpose": "Decompose APY sources"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0 ACX, 0 OP, 0 ARB (token amounts)",
+          "2.97% / Max 3.94% (APY range)",
+          "0.00x (multiplier decimal)",
+          "0 Days (capital age)"
+        ],
+        "trustSignals": [
+          "Explicit APY breakdowns (pool + rewards)",
+          "Max APY shown for transparency",
+          "Protocol names (WETH-LP, USDC-LP)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "- (placeholder dashes indicating no data)"
+        ]
+      }
+    }
+  ]
+}

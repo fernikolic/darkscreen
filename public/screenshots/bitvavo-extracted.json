@@ -1,0 +1,1168 @@
+{
+  "slug": "bitvavo",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T10:49:48.885Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/bitvavo-onboarding-1-login.png",
+      "label": "Login",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#CC3333"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark gray, 48px+ for main error headline",
+          "bodyStyle": "Medium gray sans-serif, 16px, generous line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-icon",
+            "description": "Large red circle with white X mark",
+            "position": "center of browser mockup",
+            "notable": "Bold visual indicator using danger color"
+          },
+          {
+            "type": "browser-frame",
+            "description": "Mockup of browser window with gray header",
+            "position": "center, takes up 70% of viewport width",
+            "notable": "Adds context that this is a web-based block"
+          },
+          {
+            "type": "two-column-info",
+            "description": "FAQ-style sections with headings and explanatory text",
+            "position": "below browser mockup",
+            "notable": "Provides both problem context and resolution path"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error icon anchors attention, headline dominates, subtext explains situation, columns provide next steps",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why access is blocked and how to resolve it",
+        "entryPoints": [
+          "Attempting to access bitvavo.com",
+          "Triggered by security service"
+        ],
+        "exitPoints": [
+          "Contact site owner via email",
+          "Find Cloudflare Ray ID for support"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Hierarchical: headline → context → explanation → resolution path split into two columns",
+        "frictionPoints": [
+          "User is blocked from accessing service",
+          "Requires external action (emailing site owner)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sorry, you have been blocked",
+        "subheadline": "You are unable to access bitvavo.com",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution.",
+            "context": "Why have I been blocked? section",
+            "purpose": "Explain the blocking mechanism"
+          },
+          {
+            "text": "You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.",
+            "context": "What can I do to resolve this? section",
+            "purpose": "Provide actionable resolution steps"
+          }
+        ],
+        "tone": "professional-technical, apologetic",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Cloudflare security service mention",
+          "Ray ID reference"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Sorry, you have been blocked",
+          "You are unable to access bitvavo.com"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-staking-1-learn.png",
+      "label": "Learn",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0052FF",
+          "#4A7C8C",
+          "#FFA500"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, 48px+ for main heading; medium weight for section headings",
+          "bodyStyle": "Regular gray sans-serif, 16px, medium line height",
+          "dataStyle": "Blue arrow links with lesson counts"
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Logo and horizontal menu with dropdown sections",
+            "position": "top of page",
+            "notable": "Standard navbar with Sign Up CTA in bright blue"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large card overlay on illustrated background showing Bitvavo Learn value proposition",
+            "position": "upper-middle",
+            "notable": "Styled as modal/card floating over teal gradient background with educational icons"
+          },
+          {
+            "type": "card-grid",
+            "description": "Four learning path cards with lesson counts and descriptions",
+            "position": "bottom half",
+            "notable": "Grid layout showing progressive difficulty levels (Beginner → Intermediate → Expert → Guidance)"
+          },
+          {
+            "type": "illustration",
+            "description": "Teal/blue illustrated background with blockchain and education icons",
+            "position": "background behind hero card",
+            "notable": "Layered geometric shapes with floating icons (globe, graduation cap, Bitcoin symbol, balance scale)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero card with 'Bitvavo Learn' dominates; blue CTA button draws attention; four cards below provide progressive exploration",
+        "innovativeElements": [
+          "Floating hero card design on illustrated background",
+          "Color-coded difficulty progression (visual arrow indicators)",
+          "Blend of educational icon system with blockchain imagery"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Browse educational content and choose learning path appropriate to skill level",
+        "entryPoints": [
+          "From main navigation Learn menu",
+          "Direct link to learning hub"
+        ],
+        "exitPoints": [
+          "Click 'Start here' to begin Beginner track",
+          "Click lesson count link to access specific difficulty level",
+          "Browse 'Where should I start?' guidance"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start here button",
+            "action": "Initiates Bitvavo Learn onboarding/course selection"
+          },
+          {
+            "element": "Four learning path cards",
+            "action": "Each card links to distinct learning track with associated lesson count"
+          },
+          {
+            "element": "Lesson count links with arrows",
+            "action": "Navigate to specific learning difficulty level"
+          }
+        ],
+        "informationArchitecture": "Hierarchical progression: Value prop → Difficulty selection → Learner guidance. Cards organize content by skill level (4 tracks total)",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "14 lessons",
+          "16 lessons",
+          "2 lessons",
+          "Difficulty level labels"
+        ]
+      },
+      "copy": {
+        "headline": "Bitvavo Learn",
+        "subheadline": "From beginner to expert: Discover digital assets and blockchain with our tracks, pratical tips and more.",
+        "ctas": [
+          {
+            "text": "Start here",
+            "style": "primary-button",
+            "placement": "Hero card center"
+          },
+          {
+            "text": "14 lessons →",
+            "style": "text-link",
+            "placement": "Beginner card"
+          },
+          {
+            "text": "16 lessons →",
+            "style": "text-link",
+            "placement": "Intermediate card"
+          },
+          {
+            "text": "2 lessons →",
+            "style": "text-link",
+            "placement": "Expert card"
+          },
+          {
+            "text": "Start here →",
+            "style": "text-link",
+            "placement": "Guidance card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "New to the crypto world? Learn the fundamentals with these 14 articles.",
+            "context": "Beginner card description",
+            "purpose": "Explain beginner track value"
+          },
+          {
+            "text": "Learn more about investing in digital currencies and other advanced concepts.",
+            "context": "Intermediate card description",
+            "purpose": "Set expectations for intermediate content"
+          },
+          {
+            "text": "Deepdives for the true connoisseur.",
+            "context": "Expert card description",
+            "purpose": "Appeal to advanced learners with sophisticated language"
+          },
+          {
+            "text": "No worries. Our beginners guide will help you!",
+            "context": "Where should I start? card",
+            "purpose": "Reduce anxiety, encourage exploration"
+          }
+        ],
+        "tone": "friendly-casual, educational, encouraging",
+        "dataFormatting": [
+          "14 lessons",
+          "16 lessons",
+          "2 lessons"
+        ],
+        "trustSignals": [
+          "Structured curriculum with lesson counts"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-send-1-bridge-page.png",
+      "label": "bridge page",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, 56px+, centered",
+          "bodyStyle": "Regular gray sans-serif, 18px, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "headline",
+            "description": "Large centered error message",
+            "position": "upper-center, 30% from top",
+            "notable": "Minimalist approach, dominates visual space"
+          },
+          {
+            "type": "subheading",
+            "description": "Explanatory text below headline",
+            "position": "center",
+            "notable": "Medium gray color provides soft contrast"
+          },
+          {
+            "type": "primary-button",
+            "description": "Bright blue CTA button",
+            "position": "center, 15% below subheading",
+            "notable": "Only interactive element on page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal design: headline dominates, subtext provides context, single button offers clear next action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why page is not found and return to main site",
+        "entryPoints": [
+          "Broken link navigation",
+          "Direct URL to non-existent page"
+        ],
+        "exitPoints": [
+          "Click 'Back to bitvavo.com' button to return to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back to bitvavo.com button",
+            "action": "Navigate user back to main domain"
+          }
+        ],
+        "informationArchitecture": "Simple linear: Error notification → Explanation → Recovery action",
+        "frictionPoints": [
+          "User cannot find intended content",
+          "Requires clicking button to navigate away"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": "We can't seem to find the page you're looking for...",
+        "ctas": [
+          {
+            "text": "Back to bitvavo.com",
+            "style": "primary-button",
+            "placement": "Center of page"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-friendly, apologetic",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page Not Found"
+        ],
+        "emptyStateText": [
+          "We can't seem to find the page you're looking for..."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif (60-70px), black color, strong presence",
+          "bodyStyle": "Medium-weight sans-serif, gray text (#666-888), 16-18px",
+          "dataStyle": "Tabular layout with inline sparklines, EUR/crypto prices in bold, percentage changes in red/green"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, menu items (Assets, Solutions, Information, Support), Login/Sign up buttons",
+            "position": "Top fixed",
+            "notable": "Minimalist design with language selector; bright blue CTA button"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with subheading and CTA button",
+            "position": "Left side, 50% width",
+            "notable": "Dominant left-aligned text with strong visual hierarchy"
+          },
+          {
+            "type": "Product mockup card",
+            "description": "Wallet interface showing crypto assets with live prices and charts",
+            "position": "Right side, 50% width",
+            "notable": "Floating card with shadow, shows real trading interface with BTC, ETH, SOL, ADA, XRP listings"
+          },
+          {
+            "type": "Asset table preview",
+            "description": "Bottom section showing column headers for Asset, Price, Change, Chart",
+            "position": "Bottom",
+            "notable": "Subtle preview suggesting more content below"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left content anchors attention; right mockup provides visual proof; warning text de-emphasized at bottom",
+        "innovativeElements": [
+          "Embedded live trading interface mockup in landing hero",
+          "Floating card design with depth for product showcase"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bitvavo's value proposition and begin trading crypto",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign click",
+          "Organic search"
+        ],
+        "exitPoints": [
+          "Sign up button",
+          "Start trading button",
+          "Navigation menu items (Assets, Solutions)",
+          "Login"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start trading button",
+            "action": "Navigate to registration/login flow"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Begin account creation"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Browse solutions, assets, information, support"
+          },
+          {
+            "element": "Product mockup card",
+            "action": "Visual demonstration of trading interface"
+          }
+        ],
+        "informationArchitecture": "Problem (headline) → Solution (subheadline + mockup) → CTA → Additional context (asset preview) → Risk disclosure",
+        "frictionPoints": [
+          "Risk warning at bottom may deter new users",
+          "No immediate security/trust indicators above fold"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Where Europe trades crypto.",
+        "subheadline": "Buy, sell, and store over 400 digital assets at one of Europe's leading exchanges.",
+        "ctas": [
+          {
+            "text": "Start trading →",
+            "style": "primary-button",
+            "placement": "Left column, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Explore assets",
+            "context": "Header of mockup card",
+            "purpose": "Directs attention to product feature"
+          },
+          {
+            "text": "Wallet",
+            "context": "Mockup card section label",
+            "purpose": "Identifies wallet functionality"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "€3,567.89",
+          "+4.30%",
+          "€95,909.56",
+          "+4.29%",
+          "24h, 7d, 1m, 6m, 1y"
+        ],
+        "trustSignals": [
+          "Over 400 digital assets",
+          "Europe's leading exchanges"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-home-2-careers.png",
+      "label": "Careers",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0052FF",
+          "#0A1428"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large, bold, white sans-serif (80-100px), dramatic presence",
+          "bodyStyle": "Medium-weight sans-serif, light gray text, 16-18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Dark navigation bar",
+            "description": "Minimal nav with logo and footer-style links (Jobs, About Us, Life at Bitvavo)",
+            "position": "Top",
+            "notable": "Sparse design, emphasizes dark aesthetic"
+          },
+          {
+            "type": "Hero section with image",
+            "description": "Large headline on left with professional office photo on right",
+            "position": "Left/Right split",
+            "notable": "Lifestyle photography showing team collaboration and positive work culture"
+          },
+          {
+            "type": "Secondary section",
+            "description": "'Meet the team' headline with descriptive paragraph and CTA",
+            "position": "Full width below hero",
+            "notable": "White text on dark background transitions to light background"
+          },
+          {
+            "type": "CTA button",
+            "description": "Bright blue button labeled 'About Us'",
+            "position": "Below 'Meet the team' section",
+            "notable": "High contrast against dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates; supporting image balances visual weight; secondary content flows naturally below",
+        "innovativeElements": [
+          "Full-height dark hero with integrated lifestyle imagery",
+          "Stark contrast between dark hero and light content sections"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-recruitment",
+        "userIntent": "Learn about Bitvavo as an employer and explore career opportunities",
+        "entryPoints": [
+          "Careers link from main nav",
+          "Direct URL",
+          "Job posting referral"
+        ],
+        "exitPoints": [
+          "Join us button",
+          "About Us link",
+          "Jobs link",
+          "Life at Bitvavo link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Join us button",
+            "action": "Navigate to job listings"
+          },
+          {
+            "element": "About Us button",
+            "action": "Learn company mission and values"
+          },
+          {
+            "element": "Jobs/Life at Bitvavo links",
+            "action": "Browse careers or culture content"
+          }
+        ],
+        "informationArchitecture": "Headline + lifestyle image (emotional connection) → Company culture narrative → CTA to learn more → Navigation to related pages",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Start your crypto career with Bitvavo",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Join us",
+            "style": "ghost-button",
+            "placement": "Below headline"
+          },
+          {
+            "text": "About Us",
+            "style": "primary-button",
+            "placement": "Below 'Meet the team' section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Meet the team",
+            "context": "Section heading",
+            "purpose": "Humanizes company"
+          },
+          {
+            "text": "From engineering and product to risk, compliance and support, we offer exciting opportunities across every corner of Bitvavo. We welcome collaborative driven, reliable and collaborative driven people from all around the world, with diverse backgrounds and experience levels.",
+            "context": "Body text below 'Meet the team'",
+            "purpose": "Describes job diversity and company values"
+          }
+        ],
+        "tone": "friendly-casual, inclusive, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Team collaboration imagery",
+          "Diverse backgrounds mentioned"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-home-3-api-docs.png",
+      "label": "API Docs",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif (48-56px), black, clear hierarchy",
+          "bodyStyle": "Regular weight sans-serif, dark gray (#333-555), 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Top navigation bar",
+            "description": "Horizontal nav with Docs, Trading APIs, Market Data APIs, Releases, FAQs, plus Status page, Postman, SDKs, theme toggle, search",
+            "position": "Top fixed",
+            "notable": "Developer-focused tools prominently displayed; search and theme toggle suggest technical audience"
+          },
+          {
+            "type": "Page heading",
+            "description": "Main title 'Bitvavo API Docs' with descriptive subtitle",
+            "position": "Top of content",
+            "notable": "Clear, minimal introduction"
+          },
+          {
+            "type": "Feature cards grid",
+            "description": "5 cards in 3-2 layout showing API categories with icons and descriptions",
+            "position": "Main content area",
+            "notable": "Icons are large, bold, and use primary blue color; clean card design with subtle shadow"
+          },
+          {
+            "type": "Footer section",
+            "description": "4-column footer with Docs, Community, Legal, More headings",
+            "position": "Bottom",
+            "notable": "Feedback button floats in bottom right (blue, rounded)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation anchors top; title/subtitle introduce content; cards dominate visual attention; footer provides navigation",
+        "innovativeElements": [
+          "Bold, colorful API category icons with modern geometric design",
+          "Developer-centric navigation (APIs, Status page, Postman, SDKs) integrated into top bar"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover API options and find documentation to integrate with Bitvavo",
+        "entryPoints": [
+          "Docs link from main nav",
+          "Direct documentation URL",
+          "Developer search"
+        ],
+        "exitPoints": [
+          "Click any feature card",
+          "Use search",
+          "Browse API sub-menus",
+          "Visit Status page/Postman/SDKs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature cards",
+            "action": "Navigate to specific API documentation"
+          },
+          {
+            "element": "Trading APIs dropdown",
+            "action": "Show REST/WebSocket API options"
+          },
+          {
+            "element": "Market Data APIs dropdown",
+            "action": "Show market data API options"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query documentation"
+          },
+          {
+            "element": "Feedback button",
+            "action": "Submit feedback on documentation"
+          }
+        ],
+        "informationArchitecture": "Navigation (primary APIs) → Introduction → Feature categories → Footer links (supporting resources)",
+        "frictionPoints": [
+          "Dropdown menus may require additional clicks",
+          "5 cards might overwhelm; no filtering/search within docs overview"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitvavo API Docs",
+        "subheadline": "Use our APIs and guides to build trading apps at the leading European exchange",
+        "ctas": [
+          {
+            "text": "Get started with Bitvavo",
+            "style": "card-link",
+            "placement": "Feature card 1"
+          },
+          {
+            "text": "Exchange REST API",
+            "style": "card-link",
+            "placement": "Feature card 2"
+          },
+          {
+            "text": "Exchange WebSocket API",
+            "style": "card-link",
+            "placement": "Feature card 3"
+          },
+          {
+            "text": "Market Data Pro WebSocket API",
+            "style": "card-link",
+            "placement": "Feature card 4"
+          },
+          {
+            "text": "Releases",
+            "style": "card-link",
+            "placement": "Feature card 5"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Use our guides, examples, and references to integrate with Bitvavo.",
+            "context": "Card 1 description",
+            "purpose": "Explains onboarding entry point"
+          },
+          {
+            "text": "Trade using request-response messaging over HTTP.",
+            "context": "Card 2 description",
+            "purpose": "Describes REST API functionality"
+          },
+          {
+            "text": "Trade seamlessly using a two-way, event-driven protocol.",
+            "context": "Card 3 description",
+            "purpose": "Describes WebSocket API benefits"
+          },
+          {
+            "text": "Stream low-latency, full-fidelity market data.",
+            "context": "Card 4 description",
+            "purpose": "Describes market data capabilities"
+          },
+          {
+            "text": "Check out the latest API release notes and version history.",
+            "context": "Card 5 description",
+            "purpose": "Directs to changelog"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Status page link",
+          "Postman integration",
+          "SDKs available"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-home-4-status.png",
+      "label": "Status",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px, dark gray/black",
+          "bodyStyle": "Regular sans-serif, 14px, medium gray",
+          "dataStyle": "Regular sans-serif, 14px, dark text with green checkmarks for operational status"
+        },
+        "components": [
+          {
+            "type": "status-banner",
+            "description": "Mint green banner with checkmark indicating full operational status",
+            "position": "top of content area",
+            "notable": "Prominent positive affirmation with rounded corners and icon"
+          },
+          {
+            "type": "system-status-list",
+            "description": "Vertical list of service items with green checkmarks",
+            "position": "main content area",
+            "notable": "Comprehensive service inventory (13 items) organized in single column with consistent spacing"
+          },
+          {
+            "type": "info-icon",
+            "description": "Small circular info icon next to 'Crypto Deposits or Withdrawals'",
+            "position": "inline with list item",
+            "notable": "Provides additional context without clutter"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Green checkmarks create clear visual pattern; banner at top commands attention; secondary information (maintenance) appears right-aligned",
+        "innovativeElements": [
+          "Full operational status banner with confidence-building design"
+        ]
+      },
+      "flow": {
+        "screenType": "status-page",
+        "userIntent": "Verify service health and platform availability before conducting transactions",
+        "entryPoints": [
+          "Home page link",
+          "Support/help section"
+        ],
+        "exitPoints": [
+          "Go to Support button",
+          "Subscribe to updates button",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Support button",
+            "action": "Navigate to support page"
+          },
+          {
+            "element": "Subscribe to updates button",
+            "action": "Open subscription/notification preferences"
+          }
+        ],
+        "informationArchitecture": "Status summary at top, detailed service status list below, with upcoming maintenance indicator positioned prominently",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Upcoming maintenance scheduled indicator in top right"
+        ]
+      },
+      "copy": {
+        "headline": "We're fully operational",
+        "subheadline": "We're not aware of any issues affecting our systems.",
+        "ctas": [
+          {
+            "text": "Go to Support",
+            "style": "ghost-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Subscribe to updates",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Upcoming maintenance scheduled",
+            "context": "Right side of System status section header",
+            "purpose": "Proactive notification of future downtime"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [
+          "Service names as simple text labels",
+          "Status indicators: checkmark (operational) or maintenance notification"
+        ],
+        "trustSignals": [
+          "Full operational status indicator",
+          "Detailed service inventory",
+          "Transparency about maintenance"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-home-5-networks.png",
+      "label": "Networks",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "card-grid with tabular structure",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a1a1a",
+          "#ff9500"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14px, dark text",
+          "bodyStyle": "Regular sans-serif, 13px, medium gray",
+          "dataStyle": "Regular sans-serif, 13px, tokens use brand colors (pink for ACA, purple for OG), status text uses green (Operational) or orange (Maintenance)"
+        },
+        "components": [
+          {
+            "type": "alert-row",
+            "description": "Two rows indicating maintenance status for Withdrawals and Deposits",
+            "position": "top of content",
+            "notable": "Orange 'service in maintenance' text with info icons; upward/downward arrows for direction"
+          },
+          {
+            "type": "search-bar",
+            "description": "Search field with magnifying glass icon",
+            "position": "left sidebar",
+            "notable": "Searchable interface for filtering assets"
+          },
+          {
+            "type": "tabular-list",
+            "description": "Table with 3 columns (Asset, Deposits, Withdrawals) and expandable rows per asset",
+            "position": "main content area",
+            "notable": "Detailed network status per coin with status badges and expansion arrows"
+          },
+          {
+            "type": "token-avatar",
+            "description": "Small circular token logos with gradient colors",
+            "position": "left column of table",
+            "notable": "Visual quick identification with brand colors (ACA pink, OG purple)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Maintenance alerts at top in orange create urgency; table rows alternate subtly; token names bold with secondary text; status indicators (green checkmarks, orange maintenance, gray trade-only) guide scanning",
+        "innovativeElements": [
+          "Expandable rows for per-asset network detail",
+          "Inline status indicators combining icon + text",
+          "Color-coded token avatars for quick visual reference"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Check deposit/withdrawal status for specific cryptocurrencies and their networks",
+        "entryPoints": [
+          "Status page",
+          "Assets menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Back to overview",
+          "Search for specific asset",
+          "Expand row for details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search field",
+            "action": "Filter assets by name or ticker"
+          },
+          {
+            "element": "Row expander (chevron)",
+            "action": "Expand/collapse detailed network information"
+          },
+          {
+            "element": "Info icons",
+            "action": "Reveal additional context about maintenance or limitations"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Summary alerts → Searchable asset list → Detailed per-asset network status by operation type (Deposits/Withdrawals)",
+        "frictionPoints": [
+          "Maintenance on both Deposits and Withdrawals may concern users",
+          "Collapsed rows require expansion to see full details",
+          "'Trade only' restriction not immediately obvious without opening rows"
+        ],
+        "progressIndicators": [
+          "Maintenance alert badges showing partial service degradation"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "The time estimates provided refer solely to block confirmation times. Cryptoasset transfer instructions received between 00:00 and 23:59 (CET/CEST) will be processed on the same calendar day.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "1 service in maintenance",
+            "context": "Withdrawals row header",
+            "purpose": "Alerts users to partial service degradation"
+          },
+          {
+            "text": "1 service in maintenance",
+            "context": "Deposits row header",
+            "purpose": "Alerts users to partial service degradation"
+          },
+          {
+            "text": "Maintenance",
+            "context": "ACA token Deposits column",
+            "purpose": "Indicates specific token cannot be deposited"
+          },
+          {
+            "text": "Operational",
+            "context": "OG token Deposits/Withdrawals columns",
+            "purpose": "Confirms service availability"
+          },
+          {
+            "text": "Trade only",
+            "context": "Vaunta (A) Deposits/Withdrawals columns",
+            "purpose": "Explains restriction: trading permitted but deposits/withdrawals blocked"
+          }
+        ],
+        "tone": "professional-technical, informative",
+        "dataFormatting": [
+          "Asset names with full token name (e.g., 'Acala Token')",
+          "Status as badge: 'Operational', 'Maintenance', or 'Trade only'",
+          "Token tickers in all caps (ACA, OG, 1INCH, 2Z)"
+        ],
+        "trustSignals": [
+          "Detailed per-network status transparency",
+          "Specific maintenance communications",
+          "Time window documentation for processing"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitvavo-settings-1-support.png",
+      "label": "Support",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width with hero section and collapsible content",
+        "colorScheme": "light with blue accents",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#0052ff",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 32px, dark text; prominent and centered",
+          "bodyStyle": "Regular sans-serif, 16px, medium gray",
+          "dataStyle": "Link text in blue (#0052ff) for interactive elements"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Full-width light blue background with centered headline and search box",
+            "position": "top",
+            "notable": "Generous vertical padding, search-focused primary CTA"
+          },
+          {
+            "type": "search-input",
+            "description": "Large text input with placeholder 'Search for articles...' and blue arrow button",
+            "position": "hero section center",
+            "notable": "Primary interaction point with prominent blue action button"
+          },
+          {
+            "type": "info-callout",
+            "description": "Light blue box with icon and 'Ask Vavo AI' link",
+            "position": "below search",
+            "notable": "AI fallback option with distinctive blue icon"
+          },
+          {
+            "type": "quick-action-pills",
+            "description": "4 gray pill buttons for common queries",
+            "position": "below callout",
+            "notable": "Contextual quick filters: Deposit not arrived, Verification, 2FA issues, Withdrawal"
+          },
+          {
+            "type": "collapsible-accordion",
+            "description": "Expandable topic sections with descriptions and chevron icons",
+            "position": "lower content area",
+            "notable": "Organized by topic with preview text and expand arrows"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered headline draws eye; search box is dominant CTA; quick action pills provide secondary entry points; topic list provides tertiary navigation",
+        "innovativeElements": [
+          "AI copilot ('Vavo AI') as fallback mechanism",
+          "Quick-action pill navigation for common issues",
+          "Preview text in accordion showing topic scope without full expansion"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, help-center",
+        "userIntent": "Find answers to support questions or escalate to AI assistant",
+        "entryPoints": [
+          "Support menu link",
+          "Help icon",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Search results page",
+          "Vavo AI chat",
+          "Expanded accordion topic",
+          "Login/Sign up buttons"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input + arrow button",
+            "action": "Submit search query"
+          },
+          {
+            "element": "Ask Vavo AI link",
+            "action": "Open AI assistant chat"
+          },
+          {
+            "element": "Quick action pills",
+            "action": "Pre-filter search by topic"
+          },
+          {
+            "element": "Accordion chevrons",
+            "action": "Expand/collapse topic categories"
+          }
+        ],
+        "informationArchitecture": "Hero search → Quick action shortcuts OR Browse topics accordion. AI fallback always visible. Top nav (Assets, Solutions, Information, Support, Login, Sign up) provides global context.",
+        "frictionPoints": [
+          "Search-first approach may require users to know query terms",
+          "Accordion requires expansion to view content (not visible by default)"
+        ],
+        "progressIndicators": [
+          "'All systems operational' status badge at top",
+          "Active section indicator in top nav (Support highlighted)"
+        ]
+      },
+      "copy": {
+        "headline": "How can we help you?",
+        "subheadline": "Search our knowledge base to find answers",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Ask Vavo AI",
+            "style": "text-link",
+            "placement": "info callout"
+          },
+          {
+            "text": "Search (arrow button)",
+            "style": "primary-button",
+            "placement": "hero section right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Can't find what you need? Ask Vavo AI",
+            "context": "Blue callout box below search",
+            "purpose": "Offer AI-powered escalation for complex queries"
+          },
+          {
+            "text": "Deposit not arrived",
+            "context": "Quick action pill",
+            "purpose": "Shortcut to common issue"
+          },
+          {
+            "text": "Verification",
+            "context": "Quick action pill",
+            "purpose": "Shortcut to common issue"
+          },
+          {
+            "text": "2FA issues",
+            "context": "Quick action pill",
+            "purpose": "Shortcut to common issue"
+          },
+          {
+            "text": "Withdrawal",
+            "context": "Quick action pill",
+            "purpose": "Shortcut to common issue"
+          },
+          {
+            "text": "New users, creating an account, logging in, verification, account settings, security settings, and business accounts...",
+            "context": "Accordion preview text for 'Account & verifications'",
+            "purpose": "Preview topic scope without expanding"
+          }
+        ],
+        "tone": "friendly-casual, helpful, conversational",
+        "dataFormatting": [
+          "All topic names in sentence case",
+          "Preview text truncates with ellipsis"
+        ],
+        "trustSignals": [
+          "'All systems operational' green badge",
+          "AI-powered support assistant (Vavo AI)",
+          "Comprehensive topic categories"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

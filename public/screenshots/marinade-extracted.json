@@ -1,0 +1,3434 @@
+{
+  "slug": "marinade",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:25:08.589Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 31,
+  "screens": [
+    {
+      "image": "/screenshots/marinade-home-4-network-network-performance-insights.png",
+      "label": "Network\n\nNetwork performance insights",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1F766F",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, medium-large size",
+          "bodyStyle": "Sans-serif, regular weight, medium size",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-logo",
+            "description": "Marinde branding with teal icon in top-left",
+            "position": "top-left",
+            "notable": "Clean, minimal header with distinctive teal branding"
+          },
+          {
+            "type": "content-area",
+            "description": "Large empty/loading space below header",
+            "position": "center-main",
+            "notable": "Appears to be a loading or placeholder state for network performance data"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo anchors top, rest of page is open white space suggesting content is loading or data-driven",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View network performance metrics and insights for Solana/staking",
+        "entryPoints": [
+          "Home navigation",
+          "Dashboard link",
+          "Network insights tab"
+        ],
+        "exitPoints": [
+          "Back to home",
+          "Other dashboard sections",
+          "External links"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Header-based navigation with main content area for dynamic network data",
+        "frictionPoints": [
+          "Content appears to be loading or not fully rendered"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-5-network-network-performance-insights-scrolled-1.png",
+      "label": "Network\n\nNetwork performance insights — scrolled 1",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#1F766F"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual hierarchy in blank state",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Scroll through network performance insights data",
+        "entryPoints": [
+          "Scrolled from previous view"
+        ],
+        "exitPoints": [
+          "Continue scrolling",
+          "Navigate away"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Scrollable content area with network metrics",
+        "frictionPoints": [
+          "Content not visible in scrolled state - appears blank"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-6-network-network-performance-insights-scrolled-2.png",
+      "label": "Network\n\nNetwork performance insights — scrolled 2",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "Blank white space",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue browsing network performance data via scrolling",
+        "entryPoints": [
+          "Continued scroll from previous state"
+        ],
+        "exitPoints": [
+          "Continue scrolling",
+          "Scroll back up",
+          "Navigate away"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Long-form scrollable content layout",
+        "frictionPoints": [
+          "Content not rendered or appears to be loading in this scroll position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a4d4d",
+          "#16a085",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, right-aligned sans-serif headings in white",
+          "bodyStyle": "Medium-weight sans-serif body text in white/light gray",
+          "dataStyle": "Large numeric display with teal accent and smaller label text"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, 4 menu items (Product, Resources, Institutional, Governance), and 2 CTAs",
+            "position": "Top fixed",
+            "notable": "Dual CTA buttons with contrasting styles (outline vs filled)"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large right-aligned text block with headline, subheading, and APY metric",
+            "position": "Right side, center-right",
+            "notable": "APY highlighted in teal box with label; mixed font styles (italic subheading)"
+          },
+          {
+            "type": "Cookie Banner",
+            "description": "Modal banner with disclosure text and Deny/Accept buttons",
+            "position": "Bottom center",
+            "notable": "Prominent teal Accept button, secondary Deny text-link"
+          },
+          {
+            "type": "Product Modal",
+            "description": "Partially visible modal in bottom right with product details",
+            "position": "Bottom right corner",
+            "notable": "Teal accent branding with close icon"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large hero text dominates; APY metric creates secondary focus point; background imagery (coins/financial elements) provides subtle depth",
+        "innovativeElements": [
+          "Layered semi-transparent background with financial imagery",
+          "High contrast teal accent color for key metrics and CTAs",
+          "Multi-page modal approach showing product details"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Marinade's staking offering and take action (stake or learn more)",
+        "entryPoints": [
+          "Direct landing",
+          "Navigation from other pages"
+        ],
+        "exitPoints": [
+          "Stake now CTA",
+          "Meet with us CTA",
+          "Product menu link",
+          "Cookie acceptance/denial"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Navigate to staking interface"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Open contact/meeting request modal"
+          },
+          {
+            "element": "Product menu",
+            "action": "Reveal product submenu"
+          },
+          {
+            "element": "Accept/Deny cookie buttons",
+            "action": "Set cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Hero-first design with prominent value prop (APY) followed by navigation to deeper resources",
+        "frictionPoints": [
+          "Cookie modal blocks interaction until dismissed",
+          "Key product details hidden in bottom modal"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Automate [partial - cut off]",
+        "subheadline": "Earn More [partial - cut off]",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "filled-button",
+            "placement": "Top right nav and right side content area"
+          },
+          {
+            "text": "Meet with us",
+            "style": "outline-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Annual Percentage Yield",
+            "context": "Below APY metric",
+            "purpose": "Clarify what APY stands for"
+          },
+          {
+            "text": "Stake via Marinade's non-custodial liquidity, and automated [partial]",
+            "context": "Hero subheading",
+            "purpose": "Explain core value proposition"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "6.52% APY"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-2-roadmapour-strategic-milestones.png",
+      "label": "RoadmapOur strategic milestones",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066cc",
+          "#16a085"
+        ],
+        "typography": {
+          "headingStyle": "Standard sans-serif headings, dark text",
+          "bodyStyle": "Light gray body text with standard line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Same horizontal nav pattern as first screenshot",
+            "position": "Top fixed",
+            "notable": "CTAs now show teal primary button (Stake now filled)"
+          },
+          {
+            "type": "Content Area",
+            "description": "Large whitespace-dominant center section with right sidebar",
+            "position": "Center and right",
+            "notable": "Minimal visible content, appears to be loading or page section"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Vertical card-based listing with badges and labels",
+            "position": "Right edge",
+            "notable": "Teal badges ('Sol') with truncated text indicating feature/validator cards"
+          },
+          {
+            "type": "Cookie Banner",
+            "description": "Identical cookie modal as first screenshot",
+            "position": "Bottom center",
+            "notable": "Consistent pattern across pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Sidebar creates secondary focal point; main content area suggests scrollable page structure",
+        "innovativeElements": [
+          "Right sidebar card-based navigation pattern",
+          "Teal-badged content cards for quick visual filtering"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View roadmap/strategic milestones for Marinade",
+        "entryPoints": [
+          "Home page navigation",
+          "Direct URL to roadmap section"
+        ],
+        "exitPoints": [
+          "Stake now CTA",
+          "Meet with us CTA",
+          "Sidebar card selection",
+          "Navigation menu links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar cards",
+            "action": "Likely filter or navigate to specific roadmap item"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different product sections"
+          }
+        ],
+        "informationArchitecture": "Main content in center (appears to be scrollable), quick-access sidebar for related items",
+        "frictionPoints": [
+          "Page appears mostly empty/loading in this view",
+          "Sidebar text truncated, unclear what each card represents"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "filled-button",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "Meet with us",
+            "style": "outline-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-3-documentation-detailed-guides-and-resources.png",
+      "label": "Documentation\n\nDetailed guides and resources",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#16a085",
+          "#1a1a1a",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headings in dark gray/black, left-aligned",
+          "bodyStyle": "Regular-weight sans-serif body text in dark gray, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Search Bar",
+            "description": "Top right search input with keyboard shortcut hint (⌘ K)",
+            "position": "Top right",
+            "notable": "Integrated directly in header, minimalist styling"
+          },
+          {
+            "type": "Left Navigation Sidebar",
+            "description": "Hierarchical menu with emoji icons, section headers, and expand/collapse toggles",
+            "position": "Left side, fixed",
+            "notable": "Icon-text pairing for scannability; nested structure with arrow indicators"
+          },
+          {
+            "type": "Main Content Column",
+            "description": "Large center column with article/documentation text",
+            "position": "Center, main focus",
+            "notable": "Traditional documentation layout with headings, body text, and links"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Sticky table of contents with quick links and helpful feedback section",
+            "position": "Right edge",
+            "notable": "Teal colored links, emoji reaction buttons (😊 😐 😢) for feedback"
+          },
+          {
+            "type": "GitBook Attribution",
+            "description": "Footer credit indicating platform provider",
+            "position": "Bottom left sidebar",
+            "notable": "Light branding of underlying documentation platform"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left nav creates starting point; main content dominates; right sidebar provides context and navigation aids",
+        "innovativeElements": [
+          "Emoji icons in navigation for visual scanability",
+          "Integrated table of contents in right sidebar",
+          "Embedded emoji reaction feedback buttons",
+          "Copy-to-clipboard button on code/key sections"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Marinade through documentation, find specific information",
+        "entryPoints": [
+          "Search/documentation link from main site",
+          "Direct URL",
+          "Navigation menu link"
+        ],
+        "exitPoints": [
+          "Left sidebar menu items",
+          "Right sidebar table of contents links",
+          "Inline hyperlinks within content (e.g., 'merger of two projects')",
+          "Search functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Expand/collapse toggles (arrows)",
+            "action": "Reveal/hide subsections"
+          },
+          {
+            "element": "Right sidebar TOC links",
+            "action": "Jump to section within page"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query documentation"
+          },
+          {
+            "element": "Emoji feedback buttons",
+            "action": "Submit page feedback"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy text to clipboard"
+          },
+          {
+            "element": "Inline hyperlinks",
+            "action": "Navigate to related pages"
+          }
+        ],
+        "informationArchitecture": "Hierarchical navigation on left; deep scrollable content in center; contextual TOC on right; flat search across all content",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Marinade",
+        "subheadline": "The best place to stake your SOL.",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "Top right of main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ask or search...",
+            "context": "Search bar placeholder",
+            "purpose": "Guide users to documentation search"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Right sidebar footer",
+            "purpose": "Invite user feedback on documentation quality"
+          }
+        ],
+        "tone": "educational, friendly-casual, professional-technical",
+        "dataFormatting": [
+          "approximately every 2–3 days (time intervals)",
+          "mSOL (tokenized notation)"
+        ],
+        "trustSignals": [
+          "Detailed technical documentation",
+          "Open validator delegation strategy referenced",
+          "Merger of two projects mentioned (shows consolidation/legitimacy)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-10-marinade-in-mediaexplore-our-latest-press-coverage.png",
+      "label": "Marinade in MediaExplore our latest press coverage",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00897B"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold weight, black text, left-aligned",
+          "bodyStyle": "Medium sans-serif, regular weight, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Logo with main navigation menu (Product, Resources, Institutional, Governance) and dual CTAs",
+            "position": "top",
+            "notable": "Clean, minimal header with balanced spacing and teal accent buttons"
+          },
+          {
+            "type": "Video embed",
+            "description": "YouTube video player showing embedded media content",
+            "position": "center-right",
+            "notable": "Multiple embedded video players visible, suggesting media carousel or grid"
+          },
+          {
+            "type": "Cookie banner",
+            "description": "Privacy notice with Accept/Deny buttons",
+            "position": "bottom",
+            "notable": "Teal primary button with ghost secondary button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors top, large white space creates focus on content area, videos positioned right",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Browse latest press coverage and media mentions",
+        "entryPoints": [
+          "Home page scroll",
+          "Direct navigation from main menu"
+        ],
+        "exitPoints": [
+          "Play video",
+          "Navigate to other sections",
+          "Click CTA buttons at top"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video players",
+            "action": "Play embedded YouTube content"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access Product, Resources, Institutional, or Governance pages"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Initiate staking flow"
+          }
+        ],
+        "informationArchitecture": "Section-based layout with media content featured prominently; navigational hierarchy supports discovery of press mentions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Marinade in Media",
+        "subheadline": "Explore our latest press coverage",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie banner footer",
+            "purpose": "Privacy and consent disclosure"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-11-all-custodians.png",
+      "label": "All custodians",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00897B"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold weight, black text",
+          "bodyStyle": "Medium sans-serif, regular weight, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Consistent header with logo and menu items",
+            "position": "top",
+            "notable": "Unified navigation across all pages"
+          },
+          {
+            "type": "Custodian card",
+            "description": "Logo badge with description text for institutional partners (Bitwise visible)",
+            "position": "right side",
+            "notable": "Cards feature brand logos with accompanying service descriptions"
+          },
+          {
+            "type": "Cookie banner",
+            "description": "Privacy notice with Accept/Deny controls",
+            "position": "bottom",
+            "notable": "Consistent styling with teal primary action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header dominates top, custodian cards positioned right with ample white space on left, footer banner anchors bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Discover institutional custodians and partners supporting Marinade",
+        "entryPoints": [
+          "Home page scroll",
+          "Navigation link from main menu"
+        ],
+        "exitPoints": [
+          "Click on custodian card",
+          "Navigate via main menu",
+          "Engage with CTAs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Custodian cards",
+            "action": "Likely navigate to partner details or external custodian pages"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Access different product sections"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Initiate staking transaction"
+          }
+        ],
+        "informationArchitecture": "Partner showcase layout; custodian section displays trusted institutional integrations with brief descriptions",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "All custodians",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitwise is a leader in digital asset investment solutions. Marinade, Bitwise, and Solana staking combining secure custody and competitive staking returns",
+            "context": "Custodian card description",
+            "purpose": "Partner credibility and value proposition explanation"
+          },
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie banner footer",
+            "purpose": "Privacy consent disclosure"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitwise partnership",
+          "Institutional custody mention"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-12-mnde-tokenshape-marinade.png",
+      "label": "MNDE TokenShape Marinade",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#00897B"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold weight, black text",
+          "bodyStyle": "Medium sans-serif, regular weight, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Consistent logo and menu navigation",
+            "position": "top",
+            "notable": "Maintains design consistency across all pages"
+          },
+          {
+            "type": "Cookie banner",
+            "description": "Privacy notice with Accept/Deny controls",
+            "position": "bottom",
+            "notable": "Teal primary action button"
+          },
+          {
+            "type": "Token information section",
+            "description": "MNDE Token Shape Marinade section partially visible",
+            "position": "bottom-right",
+            "notable": "Suggests tabbed or multi-section content area"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header fixed top, large whitespace dominates center, minimal content visible suggesting section is loading or scrollable",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "View MNDE token details and information about Shape Marinade offering",
+        "entryPoints": [
+          "Home page scroll",
+          "Navigation from main menu"
+        ],
+        "exitPoints": [
+          "Scroll to adjacent sections",
+          "Click navigation menu items",
+          "Engage with staking CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Header navigation",
+            "action": "Switch between Product, Resources, Institutional, Governance"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Begin staking flow"
+          },
+          {
+            "element": "Token/Shape tabs",
+            "action": "Switch between MNDE and Shape Marinade information"
+          }
+        ],
+        "informationArchitecture": "Token-focused section; likely tabbed interface for MNDE token and Shape Marinade products with detailed specifications below fold",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "MNDE Token",
+        "subheadline": "Shape Marinade",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie banner footer",
+            "purpose": "Privacy and consent disclosure"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-7-network-network-performance-insights-scrolled-4.png",
+      "label": "Network\n\nNetwork performance insights — scrolled 4",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f5f5",
+          "#000000",
+          "#4a9b8e"
+        ],
+        "typography": {
+          "headingStyle": "Not clearly visible in this scrolled/corrupted view",
+          "bodyStyle": "Small body text, monospace-like font for repeated 'word' placeholder",
+          "dataStyle": "Cryptographic hash strings displayed in monospace"
+        },
+        "components": [
+          {
+            "type": "social-icons",
+            "description": "Twitter, Discord, LinkedIn, YouTube icons in top right",
+            "position": "top-right",
+            "notable": "Teal/gray social media links with copyright notice"
+          },
+          {
+            "type": "text-content",
+            "description": "Placeholder text and hash strings",
+            "position": "main-content-area",
+            "notable": "Page appears to be corrupted or loading with Lorem Ipsum-like filler"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Unclear due to corrupted rendering; appears to be vertical scrolled content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View network performance insights and metrics",
+        "entryPoints": [
+          "Navigation from main documentation site"
+        ],
+        "exitPoints": [
+          "Social media links",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Social media icons",
+            "action": "Navigate to social profiles"
+          }
+        ],
+        "informationArchitecture": "Vertically scrollable content layout; appears to be documentation or metrics page",
+        "frictionPoints": [
+          "Page content appears corrupted or placeholder text visible",
+          "Unclear what actual network performance data is being displayed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "© 2026 Marinade.finance. All rig",
+            "context": "Footer",
+            "purpose": "Copyright notice"
+          }
+        ],
+        "tone": "technical",
+        "dataFormatting": [
+          "mmMwWLIlOflflO&1 (hash-like strings)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-8-audits-security-and-compliance-reports.png",
+      "label": "Audits\n\nSecurity and compliance reports",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#17a697"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main heading (Audits), medium weight for section headers (2024, 2023)",
+          "bodyStyle": "Regular sans-serif body text in dark gray for descriptive content",
+          "dataStyle": "File information displayed with size (453KB) and filename in standard text"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with hierarchical navigation including MARINADE PROTOCOL, DEVELOPERS sections",
+            "position": "left",
+            "notable": "Active 'Audits' link highlighted in teal; expandable security section"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "MARINADE PROTOCOL > SECURITY breadcrumb navigation",
+            "position": "top",
+            "notable": "Clear hierarchical path indicator"
+          },
+          {
+            "type": "document-card",
+            "description": "Neodyme-PSR-Audit.pdf with download/open buttons",
+            "position": "main-content",
+            "notable": "Light background card with file icon and dual action buttons"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Year filters (2024, 2023, 2021) with report type toggles",
+            "position": "right",
+            "notable": "Vertical year selection with labeled subsections"
+          },
+          {
+            "type": "feedback-widget",
+            "description": "'Was this helpful?' with emoji reaction buttons",
+            "position": "bottom-right",
+            "notable": "Three emoji reaction options (positive, neutral, negative)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar for navigation context, main content area for primary information, right sidebar for filtering and feedback",
+        "innovativeElements": [
+          "Emoji-based feedback widget for quick user sentiment"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review security audits and code review reports for Marinade protocol",
+        "entryPoints": [
+          "Navigation from sidebar 'Audits' link",
+          "Search results for 'audits' or 'security'",
+          "Deep link from external sources"
+        ],
+        "exitPoints": [
+          "Download audit PDFs",
+          "Navigate to other security documentation",
+          "Return to protocol overview",
+          "Access other sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download button",
+            "action": "Download PDF file locally"
+          },
+          {
+            "element": "Open button",
+            "action": "View PDF in browser"
+          },
+          {
+            "element": "Year filter links",
+            "action": "Filter audits by year (2024, 2023, 2021)"
+          },
+          {
+            "element": "Emoji feedback buttons",
+            "action": "Submit page usefulness feedback"
+          },
+          {
+            "element": "Sidebar navigation",
+            "action": "Navigate to other documentation sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Protocol > Security > Audits organized by year, then by audit type (audit reports vs code review reports)",
+        "frictionPoints": [
+          "Year filtering requires clicking individual year links rather than dropdown",
+          "No clear indication of newest/most recent audits at top"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Audits",
+        "subheadline": "You'll find here the list of our audits and code review reports.",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "secondary-button",
+            "placement": "document-card"
+          },
+          {
+            "text": "Open",
+            "style": "primary-button",
+            "placement": "document-card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Neodyme: Marinade Validator Bonds",
+            "context": "Audit title under 2024 section",
+            "purpose": "Identifies the auditor and audit subject"
+          },
+          {
+            "text": "Neodyme audited Marinade's on-chain Validator Bond program during March and April of 2024. The scope of this audit was focused on technical security, with further considerations about operational security.",
+            "context": "Audit description paragraph",
+            "purpose": "Provides context about audit scope and timing"
+          },
+          {
+            "text": "The auditors found that Marinade's Validator Bond program comprised a clean design and above-standard code quality, relying on the industry-standard Anchor framework.",
+            "context": "Audit findings summary",
+            "purpose": "Highlights positive audit results"
+          },
+          {
+            "text": "In November 2023, Marinade upgraded its smart contract to include several improvements (see this article ↗). To ensure that the code remains as solid as it has always been, two audits were conducted on the upgraded version of the smart contract. They are available below:",
+            "context": "2023 section introduction",
+            "purpose": "Provides context for 2023 audit reports"
+          },
+          {
+            "text": "Audit reports",
+            "context": "Right sidebar subsection header",
+            "purpose": "Categorizes audit types"
+          },
+          {
+            "text": "Code review reports",
+            "context": "Right sidebar subsection header",
+            "purpose": "Categorizes code review types"
+          },
+          {
+            "text": "453KB PDF",
+            "context": "Document card metadata",
+            "purpose": "File type and size indicator"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "453KB (file size)",
+          "March and April of 2024 (date range)",
+          "November 2023 (specific month)"
+        ],
+        "trustSignals": [
+          "Named auditor (Neodyme) with specific audit dates",
+          "Focus on technical security and operational security",
+          "Industry-standard framework reference (Anchor)",
+          "Clean design and above-standard code quality findings",
+          "Multiple audits for code changes"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-9-media-kit-all-your-media-and-press-needs.png",
+      "label": "Media Kit\n\nAll your media and press needs",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#17a697"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif for main heading 'Marinade Press Kit', medium weight for 'Marinade Logos' subheading",
+          "bodyStyle": "Regular sans-serif gray text for descriptive content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with MARINADE PROTOCOL, DEVELOPERS, and PARTNERSHIPS sections",
+            "position": "left",
+            "notable": "Active 'Marinade Press Kit' link in teal; clear hierarchical structure"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "PARTNERSHIPS breadcrumb link",
+            "position": "top",
+            "notable": "Single-level breadcrumb showing current section"
+          },
+          {
+            "type": "logo-gallery",
+            "description": "Three Marinade logo variations displayed vertically",
+            "position": "main-content",
+            "notable": "First logo on teal background, second in black and white, third logo with color variants shown below"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Quick links to Marinade Logos, Token Logos, Fonts, Illustrations, and Brand Book",
+            "position": "right",
+            "notable": "Navigation menu with teal-colored primary link for current page"
+          },
+          {
+            "type": "feedback-widget",
+            "description": "'Was this helpful?' with emoji reaction buttons",
+            "position": "bottom-right",
+            "notable": "Same emoji feedback pattern as audits page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar for navigation context, large main area for logo showcase, right sidebar for asset type filtering",
+        "innovativeElements": [
+          "Visual brand asset gallery with multiple logo variations and color options"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access official Marinade media assets and press kit materials for partnership/press use",
+        "entryPoints": [
+          "Partnerships section navigation",
+          "'Marinade Press Kit' sidebar link",
+          "External partner or media inquiry",
+          "Search for 'media kit' or 'logos'"
+        ],
+        "exitPoints": [
+          "Download brand book",
+          "Navigate to Token Logos, Fonts, or Illustrations",
+          "Access 'Marinade Logos' section",
+          "Return to partnerships section",
+          "Contact press@marinade.finance email"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Asset type links",
+            "action": "Navigate to specific asset categories (Marinade Logos, Token Logos, Fonts, Illustrations)"
+          },
+          {
+            "element": "Brand Book link",
+            "action": "Download or view complete brand guidelines"
+          },
+          {
+            "element": "Logo images",
+            "action": "View full resolution (implied downloadable)"
+          },
+          {
+            "element": "Emoji feedback buttons",
+            "action": "Submit page usefulness feedback"
+          }
+        ],
+        "informationArchitecture": "Two-level: Marinade Press Kit (parent) > Asset categories (Marinade Logos, Token Logos, Fonts, Illustrations) shown in right sidebar and main content",
+        "frictionPoints": [
+          "No explicit download buttons visible for individual logos",
+          "Contact email (press@marinade.finance) mentioned in copy but not as clickable link",
+          "No clear call-to-action for accessing downloadable assets"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Marinade Press Kit",
+        "subheadline": "Please find official Marinade imagery below for your use. For additional info or media inquiries, contact press@marinade.finance",
+        "ctas": [
+          {
+            "text": "Download Our Brand Book",
+            "style": "text-link",
+            "placement": "right-sidebar"
+          },
+          {
+            "text": "View real-time statistics about Marinade",
+            "style": "text-link",
+            "placement": "right-sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Marinade Logos",
+            "context": "Right sidebar section header",
+            "purpose": "Categorizes logo assets"
+          },
+          {
+            "text": "Token Logos",
+            "context": "Right sidebar link",
+            "purpose": "Navigates to token-specific branding"
+          },
+          {
+            "text": "Fonts",
+            "context": "Right sidebar link",
+            "purpose": "Navigates to typography guidelines"
+          },
+          {
+            "text": "Illustrations",
+            "context": "Right sidebar link",
+            "purpose": "Navigates to illustration assets"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Feedback section",
+            "purpose": "Requests user satisfaction feedback"
+          }
+        ],
+        "tone": "professional-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Marinade branding assets",
+          "Brand book availability",
+          "Named contact for media inquiries (press@marinade.finance)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-13-teammeet-our-core-contributors.png",
+      "label": "TeamMeet our core contributors",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#16A39F",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, dark gray/black",
+          "bodyStyle": "Sans-serif, regular weight, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation bar with logo, menu items (Product, Resources, Institutional, Governance), and dual CTAs",
+            "position": "Top fixed",
+            "notable": "Clean minimalist design with teal accent buttons"
+          },
+          {
+            "type": "Team Profile Card",
+            "description": "Profile image with name and title label below",
+            "position": "Right side, bottom area",
+            "notable": "Professional headshot photography with minimal text overlay"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Bottom modal with acceptance/denial options",
+            "position": "Bottom center",
+            "notable": "Light background with teal primary CTA button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear eye direction from header to featured team member on right; large whitespace dominates",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page-section",
+        "userIntent": "View core team contributors and learn about Marinade leadership",
+        "entryPoints": [
+          "Homepage scroll",
+          "Team link in navigation"
+        ],
+        "exitPoints": [
+          "Meet with us CTA",
+          "Stake now CTA",
+          "Navigate via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Meet with us button",
+            "action": "Opens contact or scheduling form"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Navigates to staking interface"
+          },
+          {
+            "element": "Accept/Deny cookie buttons",
+            "action": "Manages cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Hero section with team showcase; navigation-driven access to product and governance info",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Meet our core contributors",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent modal",
+            "purpose": "Legal/compliance notification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-home-14-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#E8F0F0",
+          "#D0D8D8"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Decorative Illustration",
+            "description": "Abstract curved line drawings with light gray strokes",
+            "position": "Center-right, fills majority of viewport",
+            "notable": "Minimalist geometric shapes suggesting error or empty state"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dominated by negative space and abstract illustration; minimal text hierarchy",
+        "innovativeElements": [
+          "Artistic abstract illustration for 404 state rather than traditional error message"
+        ]
+      },
+      "flow": {
+        "screenType": "error-404",
+        "userIntent": "User attempted to navigate to non-existent page; now seeing error state",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link from another page"
+        ],
+        "exitPoints": [
+          "Homepage via logo click",
+          "Main navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Marinade logo",
+            "action": "Returns to homepage"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access main site sections"
+          }
+        ],
+        "informationArchitecture": "Minimal content; primarily visual error indication with navigation escape routes",
+        "frictionPoints": [
+          "No visible error message or explanation",
+          "No visible text guidance or CTAs"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-1-solana-native-stakingsecure-and-efficient-staking.png",
+      "label": "Solana Native StakingSecure and efficient staking",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D2B2A",
+          "#16A39F",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, white/light text on dark background",
+          "bodyStyle": "Sans-serif, regular, light gray on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark sticky header with logo, menu (Product, Resources, Institutional, Governance), and CTAs",
+            "position": "Top fixed",
+            "notable": "White text on dark teal background; inverted from light theme"
+          },
+          {
+            "type": "Hero Background Image",
+            "description": "Dark, atmospheric background image (appears to show staking/finance theme)",
+            "position": "Full viewport background",
+            "notable": "Heavily darkened/overlayed for text contrast"
+          },
+          {
+            "type": "Feature Card",
+            "description": "Teal-accented card with icon, heading, and descriptive text",
+            "position": "Bottom right",
+            "notable": "Non-custodial staking feature highlighted with teal icon"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "White modal with teal accent buttons",
+            "position": "Bottom center",
+            "notable": "Same pattern as light theme for consistency"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Dark hero dominates; feature card draws eye via teal accent and positioning",
+        "innovativeElements": [
+          "Dark mode variant of light theme maintains visual consistency"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page-section",
+        "userIntent": "Learn about Marinade's non-custodial staking solution on Solana",
+        "entryPoints": [
+          "Staking now CTA from homepage",
+          "Direct navigation to /staking",
+          "Resources menu"
+        ],
+        "exitPoints": [
+          "Meet with us button",
+          "Stake now button",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Meet with us button",
+            "action": "Opens contact/scheduling interface"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Navigates to staking application"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Access Product, Resources, Institutional, Governance sections"
+          }
+        ],
+        "informationArchitecture": "Hero section highlighting key staking benefit (non-custodial); feature explanation on right",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Solana Native Staking",
+        "subheadline": "Secure and efficient staking",
+        "ctas": [
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Non-custodial staking",
+            "context": "Feature card heading",
+            "purpose": "Highlight key product benefit"
+          },
+          {
+            "text": "This means you keep full custody and authority of your solana, at all...",
+            "context": "Feature card description",
+            "purpose": "Explain non-custodial benefit (text truncated)"
+          },
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent modal",
+            "purpose": "Legal/compliance notification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-5-marinade-recipesstake-and-earn-any-desired-token.png",
+      "label": "Marinade RecipesStake and earn any desired token",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "full-width hero with overlay text",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a3a3a",
+          "#4a9b8e",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif, right-aligned, truncated at edge",
+          "bodyStyle": "Medium white sans-serif, right-aligned, supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Horizontal nav with logo, menu items, and dual CTAs",
+            "position": "top",
+            "notable": "Clear separation between navigation and action buttons"
+          },
+          {
+            "type": "cookie consent banner",
+            "description": "Standard cookie disclosure with Deny/Accept buttons",
+            "position": "bottom",
+            "notable": "Teal primary button, white secondary button"
+          },
+          {
+            "type": "hero section",
+            "description": "Full-screen image with text overlay on right side",
+            "position": "center",
+            "notable": "Subtle preview of recipe heading bottom-right"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates; white text on right side guides eye; navigation anchors top; CTAs float prominently",
+        "innovativeElements": [
+          "Decorative ceramic vessels/archival imagery as metaphor for staking",
+          "Soft overlay darkening to ensure text readability without obscuring background art"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero section",
+        "userIntent": "Understand Marinade's staking recipes offering at a glance",
+        "entryPoints": [
+          "Direct navigation from main nav",
+          "Link from Product section"
+        ],
+        "exitPoints": [
+          "Stake now button (top right)",
+          "Menu navigation to other sections",
+          "Meet with us contact"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Navigate to staking interface"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Open contact/demo form"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Route to Product, Resources, Institutional, Governance sections"
+          }
+        ],
+        "informationArchitecture": "Single hero feature with forward-facing CTA; breadcrumb-style navigation at top",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Be the first to access exclusive rewards with Solana Recipes",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "secondary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "cookie consent banner",
+            "purpose": "Legal disclosure and compliance"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-6-instant-unstakeunstake-solana-from-any-validator.png",
+      "label": "Instant UnstakeUnstake Solana from any validator",
+      "flowType": "Staking",
+      "step": 6,
+      "design": {
+        "layout": "full-width hero with right-aligned content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a3a3a",
+          "#4a9b8e",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Very large white sans-serif (oversized), right-aligned, italic secondary text",
+          "bodyStyle": "Medium white sans-serif, right-aligned, descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Persistent header with branding and navigation",
+            "position": "top",
+            "notable": "Consistent across screens; same button placement"
+          },
+          {
+            "type": "hero image section",
+            "description": "Full-width background with ceramic vessels/archival theme",
+            "position": "center",
+            "notable": "Darker overlay for contrast"
+          },
+          {
+            "type": "CTA button",
+            "description": "White button with dark text on right side",
+            "position": "center-right",
+            "notable": "Solid white contrasts sharply against dark overlay"
+          },
+          {
+            "type": "cookie banner",
+            "description": "Persistent footer consent disclosure",
+            "position": "bottom",
+            "notable": "Same styling as previous screen"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large white heading immediately draws focus; italic subheading adds elegance; supporting text below; CTA button anchors bottom-right",
+        "innovativeElements": [
+          "Italic typography for subheading creates visual distinction",
+          "Color-blocked white button pops against dark hero"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero section",
+        "userIntent": "Learn about instant unstaking capability",
+        "entryPoints": [
+          "Navigation from Product menu",
+          "Link from staking recipes page"
+        ],
+        "exitPoints": [
+          "Instantly Unstake button",
+          "Top navigation menu",
+          "Stake now/Meet with us buttons"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Instantly Unstake button",
+            "action": "Initiate unstaking flow"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Switch to different section"
+          },
+          {
+            "element": "Top CTA buttons",
+            "action": "Contact or begin staking"
+          }
+        ],
+        "informationArchitecture": "Single feature hero with clear value proposition; action-oriented layout",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Instantly",
+        "subheadline": "from any",
+        "ctas": [
+          {
+            "text": "Instantly Unstake",
+            "style": "primary-button",
+            "placement": "center-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Instantly unstake and access your SOL no matter where you originally staked",
+            "context": "hero section supporting text",
+            "purpose": "Explain feature benefit and scope"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-7-staking-rewards-reportclear-overview-of-staking-pe.png",
+      "label": "Staking Rewards ReportClear overview of staking pe",
+      "flowType": "Staking",
+      "step": 7,
+      "design": {
+        "layout": "full-width hero with right-aligned content stack",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a3a3a",
+          "#4a9b8e",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Very large white sans-serif, right-aligned",
+          "bodyStyle": "Medium white sans-serif, right-aligned, supporting descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Persistent header with Marinade branding and main menu",
+            "position": "top",
+            "notable": "Consistent across all hero sections"
+          },
+          {
+            "type": "hero background",
+            "description": "Thematic ceramic/archival imagery with dark overlay",
+            "position": "full-width",
+            "notable": "Maintains visual cohesion across product offerings"
+          },
+          {
+            "type": "content block",
+            "description": "Stacked heading, subheading, description, and CTA",
+            "position": "right side",
+            "notable": "Clean vertical stack with clear visual separation"
+          },
+          {
+            "type": "CTA button",
+            "description": "White button with dark text",
+            "position": "bottom-right of content",
+            "notable": "Consistent styling with other screens"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading dominates; italic secondary text adds visual rhythm; supporting copy explains benefit; button anchors action point",
+        "innovativeElements": [
+          "Consistent design language across multiple feature sections",
+          "Thematic imagery reinforces 'crafted' positioning"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero section",
+        "userIntent": "Discover staking rewards reporting and analytics capability",
+        "entryPoints": [
+          "Navigation from Product or Resources",
+          "Link from staking overview"
+        ],
+        "exitPoints": [
+          "Request report button",
+          "Top navigation menu",
+          "Stake now CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Request report button",
+            "action": "Open form to request custom staking rewards report"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Top CTAs",
+            "action": "Contact sales or begin staking"
+          }
+        ],
+        "informationArchitecture": "Feature-focused hero with clear value (summary + dual-currency display) leading to actionable CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Staking",
+        "subheadline": "crafted di",
+        "ctas": [
+          {
+            "text": "Request report",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get a clear summary of your staking rewards in SOL and USD, tailored to your wallet.",
+            "context": "hero section description",
+            "purpose": "Explain feature value and personalization capability"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-2-solana-liquid-stakingunlock-asset-flexibility.png",
+      "label": "Solana Liquid StakingUnlock asset flexibility",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width hero with overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a5f5a",
+          "#ffffff",
+          "#4a9b93"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, right-aligned, high contrast white on teal background",
+          "bodyStyle": "Body text right-aligned, white on semi-transparent dark overlay",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, menu items (Product, Resources, Institutional, Governance), and dual CTAs",
+            "position": "Top fixed",
+            "notable": "Clean, minimal dark navbar with light text and outlined buttons"
+          },
+          {
+            "type": "Hero section",
+            "description": "Full-screen background with abstract liquid/fluid animation imagery",
+            "position": "Center-right",
+            "notable": "Organic, flowing visual metaphor for liquid staking"
+          },
+          {
+            "type": "Feature callout",
+            "description": "Text card highlighting 'First LST on Solana' with descriptive text",
+            "position": "Bottom-right",
+            "notable": "Teal accent circle icon preceding text"
+          },
+          {
+            "type": "Cookie consent banner",
+            "description": "Modal footer with privacy notice and Deny/Accept buttons",
+            "position": "Bottom",
+            "notable": "Teal primary button (Accept) with outlined secondary (Deny)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero imagery dominates with right-aligned text, feature callout lower-right, nav top-center",
+        "innovativeElements": [
+          "Fluid/organic background animation metaphor for liquid staking",
+          "Asymmetrical right-aligned layout breaking traditional center composition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page hero section",
+        "userIntent": "Understand Marinade's liquid staking offering for Solana",
+        "entryPoints": [
+          "Direct URL visit",
+          "Navigation from main product menu"
+        ],
+        "exitPoints": [
+          "Stake now button",
+          "Meet with us button",
+          "Product navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Navigate to staking interface or onboarding"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Open contact/demo request form"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections"
+          },
+          {
+            "element": "Accept button",
+            "action": "Accept cookies and dismiss banner"
+          }
+        ],
+        "informationArchitecture": "Minimal text-based, visual-first design emphasizing product benefit (LST on Solana) with dual CTAs",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "First liquid staking token on the Solana blockchain, allowing users to stake their SOL and receive rewards.",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Top-right nav"
+          },
+          {
+            "text": "Meet with us",
+            "style": "outlined-button",
+            "placement": "Top-right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "First LST on Solana",
+            "context": "Feature callout card",
+            "purpose": "Highlight market-first positioning"
+          },
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device...",
+            "context": "Cookie consent banner",
+            "purpose": "Legal disclosure and user consent"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "First LST on Solana (market leadership claim)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-3-marinade-max-yield100-bidding-validators.png",
+      "label": "Marinade Max Yield100+ bidding validators",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width hero with side text alignment",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a5f5a",
+          "#ffffff",
+          "#4a9b93"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif heading right-aligned, white on teal",
+          "bodyStyle": "Body text right-aligned, white on semi-transparent overlay",
+          "dataStyle": "Large numeric value (6.3+%) right-aligned, white"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent horizontal nav with logo, menu, and dual CTAs",
+            "position": "Top fixed",
+            "notable": null
+          },
+          {
+            "type": "Hero section",
+            "description": "Full-screen teal gradient background with abstract patterns",
+            "position": "Center",
+            "notable": "Minimalist, text-focused compared to previous screen"
+          },
+          {
+            "type": "Value proposition text",
+            "description": "Right-aligned headline (Marinade) with supporting text and APY metric",
+            "position": "Right side",
+            "notable": "Large number (6.3+) positioned prominently"
+          },
+          {
+            "type": "Primary CTA button",
+            "description": "White 'Stake now' button",
+            "position": "Right side, mid-screen",
+            "notable": "Solid white for high contrast against teal"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading dominates right side, supported by body text and emphasized APY metric, CTA button secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing page hero section",
+        "userIntent": "Learn about Marinade's max yield strategy with validator selection",
+        "entryPoints": [
+          "Navigation from product menu",
+          "Sequential scroll from previous hero"
+        ],
+        "exitPoints": [
+          "Stake now button",
+          "Top nav menu items",
+          "Resources/Governance links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Proceed to staking flow"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Text-heavy value prop with numeric anchor (APY), single dominant CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Marinade",
+        "subheadline": "Keep full custody of your assets while earning industry-leading rewards, with built-in MEV rewards and automated validator selection.",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Right side, mid-screen"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100+ bidding validators",
+            "context": "Screen label/title",
+            "purpose": "Communicate scale and validator diversity"
+          }
+        ],
+        "tone": "professional-technical, benefit-focused",
+        "dataFormatting": [
+          "6.3%+ (APY metric)"
+        ],
+        "trustSignals": [
+          "100+ validators (scale and decentralization)",
+          "Full custody messaging",
+          "MEV rewards (competitive advantage)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-4-marinade-selectcurated-set-of-validators.png",
+      "label": "Marinade SelectCurated set of validators",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "full-width hero with right-aligned content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a5f5a",
+          "#ffffff",
+          "#4a9b93"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white heading, right-aligned",
+          "bodyStyle": "Body text right-aligned, white on dark overlay",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent top nav with branding and menu",
+            "position": "Top fixed",
+            "notable": null
+          },
+          {
+            "type": "Hero background",
+            "description": "Abstract circular/validator imagery with teal overlay",
+            "position": "Center-left",
+            "notable": "Validator-themed visual (circular badge patterns)"
+          },
+          {
+            "type": "Right-aligned value prop",
+            "description": "Headline, subheadline, and CTA button stack",
+            "position": "Right side",
+            "notable": "Consistent positioning with previous hero"
+          },
+          {
+            "type": "Secondary CTA",
+            "description": "Outlined button (partially visible)",
+            "position": "Right side, bottom of value prop",
+            "notable": "Suggests secondary action option"
+          },
+          {
+            "type": "Footer section",
+            "description": "Begins to show validator logos/branding",
+            "position": "Bottom",
+            "notable": "Transition to detailed content below fold"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Right-aligned text hierarchy with visual metaphor (validator circles) on left creating balance",
+        "innovativeElements": [
+          "Validator-themed circular background imagery"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page hero section",
+        "userIntent": "Understand Marinade Select's curated validator offering",
+        "entryPoints": [
+          "Sequential scroll/navigation from previous hero",
+          "Direct product menu navigation"
+        ],
+        "exitPoints": [
+          "Stake now button",
+          "Secondary CTA button",
+          "Top nav menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Enter staking flow"
+          },
+          {
+            "element": "Secondary button",
+            "action": "Learn more or alternative action"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Product feature-focused (curated validator set) with consistent right-aligned layout pattern",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Marinade",
+        "subheadline": "Marinade Select offers a carefully curated set of high-performance validators, providing superior performance and zero technical complexity for those who value transparency.",
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Curated set of validators",
+            "context": "Screen label/feature descriptor",
+            "purpose": "Differentiate Select tier from standard offering"
+          }
+        ],
+        "tone": "professional-technical, quality-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "High-performance validators (quality screening)",
+          "Transparency (explicit value prop)",
+          "Curated selection (premium positioning)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-8-solana-staking-report-2025a-datadriven-analysis-o.png",
+      "label": "Solana Staking Report 2025A data-driven analysis o",
+      "flowType": "Staking",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#17A697",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, dark text, appears to be cut off on right edge",
+          "bodyStyle": "Regular weight sans-serif for navigation and cookie notice",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with Marinade logo, Product/Resources/Institutional/Governance links, Meet with us and Stake now CTAs",
+            "position": "top",
+            "notable": "Clean, minimal design with teal accent buttons"
+          },
+          {
+            "type": "cookie-notice",
+            "description": "Standard cookie consent banner with Deny and Accept buttons",
+            "position": "bottom",
+            "notable": null
+          },
+          {
+            "type": "background-decoration",
+            "description": "Subtle wavy/curved gradient lines in light teal/gray",
+            "position": "full-screen overlay",
+            "notable": "Minimalist aesthetic, guides eye movement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top navigation anchors attention, large heading on right (partially visible) creates focal point, cookie notice doesn't dominate",
+        "innovativeElements": [
+          "Subtle animated background wave patterns",
+          "Asymmetrical layout with content appearing right-aligned"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View Solana staking report or learn about staking options",
+        "entryPoints": [
+          "Direct navigation to Resources section",
+          "Search result for staking reports"
+        ],
+        "exitPoints": [
+          "Stake now button",
+          "Product link in nav",
+          "Meet with us link",
+          "Other nav items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Redirects to staking interface or onboarding"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Opens contact or scheduling modal"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Accept/Deny cookie buttons",
+            "action": "Manage cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Primary nav provides main pathways; hero section highlights key offering; cookie notice is tertiary",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "S (partial, cut off)",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "Deny",
+            "style": "text-link",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie notice banner",
+            "purpose": "GDPR/cookie compliance disclosure"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-9-use-casescomplete-staking-solution.png",
+      "label": "Use CasesComplete staking solution",
+      "flowType": "Staking",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#17A697",
+          "#1A4D47"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, appears right-aligned, large scale",
+          "bodyStyle": "Regular weight sans-serif for nav and descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Consistent horizontal nav across all screens",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "use-case-card",
+            "description": "Dark teal card with Use Cases label, Treasury heading, description text, and Read News link",
+            "position": "bottom-right",
+            "notable": "Partial visibility suggests scrollable or expandable content area"
+          },
+          {
+            "type": "cookie-notice",
+            "description": "Persistent consent banner",
+            "position": "bottom",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Nav leads to card in lower right; white space dominates; card stands out with teal color",
+        "innovativeElements": [
+          "Card-based content appears to slide in from right",
+          "Use Cases category label above headline suggests tabs or switchable content"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore use cases for Marinade staking platform",
+        "entryPoints": [
+          "Resources > Use Cases menu link",
+          "Direct navigation from earlier landing page"
+        ],
+        "exitPoints": [
+          "Read News link in card",
+          "Stake now button",
+          "Other navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Use Cases tab/label",
+            "action": "Likely filters or displays different use case categories"
+          },
+          {
+            "element": "Read News link",
+            "action": "Opens article or news content about Treasury management"
+          },
+          {
+            "element": "Treasury card heading",
+            "action": "May expand card or navigate to detailed use case"
+          }
+        ],
+        "informationArchitecture": "Use cases organized by category (Treasury visible); card-based layout suggests multiple cases to explore",
+        "frictionPoints": [
+          "Partial card visibility may prompt scrolling discovery"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Latest A (partial, cut off)",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read News",
+            "style": "text-link",
+            "placement": "bottom of card"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Use Cases",
+            "context": "Card label above Treasury heading",
+            "purpose": "Category/section identifier"
+          },
+          {
+            "text": "Treasury",
+            "context": "Use case card heading",
+            "purpose": "Primary use case title"
+          },
+          {
+            "text": "Discover how protocols can minimize risks and maximize yield in high-yield staking",
+            "context": "Treasury card description",
+            "purpose": "Value proposition for this use case"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-14-learn-more.png",
+      "label": "Learn more",
+      "flowType": "Staking",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a9b8e",
+          "#2d3436"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, dark gray, not visible in this crop",
+          "bodyStyle": "Sans-serif, medium weight, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, product/resources/institutional/governance links, and dual CTAs",
+            "position": "top",
+            "notable": "Prominent 'Stake now' button in teal contrasts with secondary 'Meet with us' outline button"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Bottom-positioned cookie consent notice with Deny/Accept buttons",
+            "position": "bottom",
+            "notable": "Persistent, elevated with rounded corners, teal accept button"
+          },
+          {
+            "type": "product-card",
+            "description": "Right-aligned card showing staking options with risk indicators",
+            "position": "bottom-right",
+            "notable": "Displays 'Smart Contract' and 'Risks' labels with token icons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation anchors top, white space dominates center, action items in top-right and bottom corners",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore staking options and learn more about Marinade protocol",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Learn more link from product section"
+        ],
+        "exitPoints": [
+          "Stake now CTA",
+          "Meet with us CTA",
+          "Navigation menu links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Navigate to staking interface"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Open contact/inquiry form"
+          },
+          {
+            "element": "Accept/Deny cookie buttons",
+            "action": "Cookie consent management"
+          }
+        ],
+        "informationArchitecture": "Top nav provides global navigation; main content area shows staking product cards; cookie policy inline at bottom",
+        "frictionPoints": [
+          "Cookie banner blocks lower content until dismissed",
+          "Large whitespace may indicate content loading"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie-banner-bottom"
+          },
+          {
+            "text": "Deny",
+            "style": "secondary-button",
+            "placement": "cookie-banner-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent banner",
+            "purpose": "Inform users about cookie usage and obtain consent"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-15-stake-sol-and-earn-usdg-be-first-to-earn-toptier.png",
+      "label": "Stake SOL and earn USDG\n\nBe first to earn top-tier",
+      "flowType": "Staking",
+      "step": 15,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f4a45",
+          "#1a9b8e",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, white/light text, likely bold",
+          "bodyStyle": "Sans-serif, white/light gray, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with Marinade logo and menu items",
+            "position": "top",
+            "notable": "White text on dark background for visibility"
+          },
+          {
+            "type": "hero-background",
+            "description": "Full-screen dark teal background with subtle wave/curved line patterns",
+            "position": "full-screen",
+            "notable": "Abstract organic shapes create visual interest without overwhelming content"
+          },
+          {
+            "type": "content-card",
+            "description": "Right-aligned card with icon, heading, and description text",
+            "position": "bottom-right",
+            "notable": "Lightning bolt icon with 'Native staking' label emphasizes key feature"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Bottom white card with cookie consent",
+            "position": "bottom",
+            "notable": "High contrast white banner on dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation top anchors identity; abstract background creates mood; key messaging isolated bottom-right; cookie banner demands attention at bottom",
+        "innovativeElements": [
+          "Organic wave patterns in background suggest flow/movement without distraction",
+          "Dark theme with teal accents creates modern, tech-forward aesthetic"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Marinade's native staking offering and participate early",
+        "entryPoints": [
+          "Main navigation from home",
+          "Direct link from marketing campaign"
+        ],
+        "exitPoints": [
+          "Stake now button",
+          "Navigation menu",
+          "Cookie consent"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Stake now button",
+            "action": "Navigate to staking flow"
+          },
+          {
+            "element": "Meet with us button",
+            "action": "Open inquiry/contact form"
+          },
+          {
+            "element": "Accept/Deny buttons",
+            "action": "Manage cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Navigation top; hero background with subtle messaging; key value proposition (Native staking) highlighted bottom-right; consent banner at bottom",
+        "frictionPoints": [
+          "Large empty space between nav and content card may create confusion about page purpose"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Stake SOL and earn USDG Be first to earn top-tier",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie-banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Native staking with full self custody. Nothing to worry about.",
+            "context": "Bottom-right content card",
+            "purpose": "Reassure users about security and self-custody benefits"
+          },
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent banner",
+            "purpose": "Obtain informed consent for cookie usage"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Full self custody messaging",
+          "Native staking emphasis"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-settings-1-solana-staking-guidebasics-of-staking-explained.png",
+      "label": "Solana staking guideBasics of staking explained",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0f4a45",
+          "#1a9b8e"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, dark color, not fully visible",
+          "bodyStyle": "Sans-serif, medium weight, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, product/resources/institutional/governance, and secondary nav",
+            "position": "top",
+            "notable": "Blog and Education links in top-right suggest educational content focus"
+          },
+          {
+            "type": "action-buttons",
+            "description": "Dual CTA buttons in header",
+            "position": "top-right",
+            "notable": "Consistent with other pages: outlined and filled buttons"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Bottom white card with rounded corners",
+            "position": "bottom",
+            "notable": "Teal accent on buttons maintains brand consistency"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation anchors top; large white space in center suggests hero content area; secondary navigation (Blog/Education) indicates content section; cookie consent at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access educational content about Solana staking basics",
+        "entryPoints": [
+          "Navigation from Education link",
+          "Blog section",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Stake now CTA",
+          "Blog/Education navigation",
+          "Product menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blog link",
+            "action": "Navigate to blog section"
+          },
+          {
+            "element": "Education link",
+            "action": "Navigate to educational resources"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Begin staking process"
+          }
+        ],
+        "informationArchitecture": "Primary navigation top; secondary educational navigation (Blog/Education); main content area placeholder (white space); cookie consent at bottom",
+        "frictionPoints": [
+          "Extensive whitespace suggests page may still be loading or content not visible in screenshot"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Solana staking guide Basics of staking explained",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie-banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent banner",
+            "purpose": "Cookie compliance and user consent"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-11-institutionalgrade-stakingadvanced-institutional.png",
+      "label": "Institutional-grade StakingAdvanced institutional",
+      "flowType": "Staking",
+      "step": 11,
+      "design": {
+        "layout": "full-width hero with overlay content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#2d9e8f",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, right-aligned, all-caps partial, high contrast white on dark",
+          "bodyStyle": "Regular weight sans-serif, white text, medium line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Horizontal top nav with logo, menu items (Product, Resources, Institutional, Governance), and dual CTA buttons",
+            "position": "top fixed",
+            "notable": "Asymmetric button styling - ghost button vs filled button"
+          },
+          {
+            "type": "hero headline section",
+            "description": "Large right-aligned text introducing institutional staking",
+            "position": "right side, upper-middle",
+            "notable": "Partial text cutoff creates visual intrigue"
+          },
+          {
+            "type": "value proposition text",
+            "description": "Multi-line supporting text describing SOC 2 compliance and Solana staking",
+            "position": "right side, middle",
+            "notable": "Mentions specific compliance credentials (SOC 2)"
+          },
+          {
+            "type": "CTA button",
+            "description": "Ghost-style 'Learn more' button",
+            "position": "right side, below value prop",
+            "notable": "Lower visual weight than top nav CTAs"
+          },
+          {
+            "type": "cookie consent modal",
+            "description": "Modal overlay with consent language and Deny/Accept buttons",
+            "position": "bottom center",
+            "notable": "Teal accent color on Accept button"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates; supporting text and CTAs secondary; navigation tertiary",
+        "innovativeElements": [
+          "Layered background imagery (appears to be organic/botanical shapes)",
+          "Dark overlay gradient creates text readability over image",
+          "Asymmetric button treatments in navigation"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page - institutional offering",
+        "userIntent": "Learn about institutional staking capabilities and establish credibility",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Governance menu selection",
+          "External institutional partner referral"
+        ],
+        "exitPoints": [
+          "Meet with us (lead capture)",
+          "Stake now (product entry)",
+          "Learn more (documentation)",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Meet with us button",
+            "action": "Initiates contact/scheduling flow"
+          },
+          {
+            "element": "Stake now button",
+            "action": "Routes to staking interface"
+          },
+          {
+            "element": "Learn more button",
+            "action": "Opens documentation or detailed information"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Route to different sections (Product, Resources, Institutional, Governance)"
+          },
+          {
+            "element": "Cookie consent buttons",
+            "action": "Deny or Accept cookie tracking"
+          }
+        ],
+        "informationArchitecture": "Top-down marketing funnel: attention (hero) → value (compliance credentials) → action (dual CTAs)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Institutional-grade Solana staking verified [incomplete]",
+        "subheadline": "Secure, SOC 2 compliant Solana staking with best-in-market Solana staking yields. Zodia for trusted custody.",
+        "ctas": [
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "top right navigation"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          },
+          {
+            "text": "Learn more",
+            "style": "ghost-button",
+            "placement": "hero section, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Institutional partners include:",
+            "context": "Bottom right, above partner logos",
+            "purpose": "Credibility signal, introduces social proof"
+          }
+        ],
+        "tone": "professional-technical, authoritative, compliance-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "SOC 2 compliant",
+          "Best-in-market Solana staking yields",
+          "Zodia custody partnership",
+          "Institutional partners (Bitwise visible)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-12-governance-process-structured-decisionmaking.png",
+      "label": "Governance Process\n\nStructured decision-making",
+      "flowType": "Staking",
+      "step": 12,
+      "design": {
+        "layout": "sidebar-main with right-side FAQ panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#2d9e8f",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, varying sizes for hierarchy (H1, H2, H3)",
+          "bodyStyle": "Regular weight, dark gray/black on white, generous line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "left sidebar navigation",
+            "description": "Collapsible navigation tree with sections: Welcome, DAO, Token, Governance, Protocol, Developers",
+            "position": "left fixed sidebar",
+            "notable": "Hierarchical grouping with section headers and expandable items"
+          },
+          {
+            "type": "main content area",
+            "description": "Article-style documentation about MNDE Governance and DAO Constitution",
+            "position": "center-left, main content flow",
+            "notable": "Numbered sections with bold headings and bullet points"
+          },
+          {
+            "type": "search bar",
+            "description": "Ask or search input with keyboard shortcuts (⌘ K shown)",
+            "position": "top right",
+            "notable": "Minimal design with subtle styling"
+          },
+          {
+            "type": "right sidebar - FAQ panel",
+            "description": "Related questions and links (DAO Constitution, DAO Structure, etc.)",
+            "position": "right side",
+            "notable": "Contextual help with 'Was this helpful?' feedback mechanism"
+          },
+          {
+            "type": "content links",
+            "description": "Inline teal-colored hyperlinks (Realms, Constitution) with arrow icons",
+            "position": "within body text",
+            "notable": "Clear visual distinction and affordance"
+          },
+          {
+            "type": "copy button",
+            "description": "Small copy-to-clipboard button near main heading",
+            "position": "top right of content area",
+            "notable": "Subtle icon-based interaction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar navigation (persistent context) → Main heading → Body content with H2/H3 subheadings → Right panel contextual help",
+        "innovativeElements": [
+          "Split sidebar design balances navigation and contextual help",
+          "Embedded feedback mechanism (Was this helpful?) in right panel",
+          "Numbered governance sections create scannable structure"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation page - governance content",
+        "userIntent": "Understand Marinade DAO governance structure, constitution, and decision-making processes",
+        "entryPoints": [
+          "Direct navigation from sidebar 'MNDE Governance'",
+          "Search results for governance topics",
+          "Link from other documentation pages",
+          "External documentation links"
+        ],
+        "exitPoints": [
+          "Navigate to related FAQ items (right panel)",
+          "Click internal links (Realms, Constitution)",
+          "Return to sidebar navigation",
+          "Use search to find different content",
+          "Follow developer/API links in sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-text search across documentation"
+          },
+          {
+            "element": "Inline hyperlinks (Realms, Constitution)",
+            "action": "Navigate to related governance documents"
+          },
+          {
+            "element": "Right panel FAQ links",
+            "action": "Jump to answers for related questions"
+          },
+          {
+            "element": "Helpful/unhelpful buttons",
+            "action": "Provide feedback on documentation quality"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy heading to clipboard"
+          }
+        ],
+        "informationArchitecture": "Tree structure: Left sidebar shows hierarchy; main area shows detailed content; right sidebar provides contextual discovery",
+        "frictionPoints": [
+          "Long main content may require scrolling; users might miss bottom sections",
+          "Right panel FAQ questions might not fully answer user needs",
+          "Sidebar navigation requires familiarity with DAO terminology"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "MNDE Governance",
+        "subheadline": "Marinade is governed by people that lock MNDE and obtain veMNDE.",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "icon-button",
+            "placement": "top right of main heading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Where are governance items discussed and how do I find out about them?",
+            "context": "Right sidebar FAQ section",
+            "purpose": "Guides users to governance discussion spaces"
+          },
+          {
+            "text": "Where can I trade MNDE?",
+            "context": "Right sidebar FAQ section",
+            "purpose": "Addresses common token-related question"
+          },
+          {
+            "text": "What is veMNDE?",
+            "context": "Right sidebar FAQ section",
+            "purpose": "Explains voting escrow tokenomics"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Bottom of right sidebar",
+            "purpose": "Collects feedback on documentation usefulness"
+          }
+        ],
+        "tone": "professional-technical, educational, explanatory",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official DAO Constitution ratified by MNDE holders",
+          "Structured governance with clear separation of powers",
+          "Defined roles (governance vs core team council)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-staking-13-stake-now.png",
+      "label": "Stake now",
+      "flowType": "Staking",
+      "step": 13,
+      "design": {
+        "layout": "full-width minimal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f5f5",
+          "#2d9e8f",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header bar",
+            "description": "Minimal header with Marinade logo only",
+            "position": "top left",
+            "notable": "Extremely sparse navigation"
+          },
+          {
+            "type": "footer bar",
+            "description": "Social media icons (X, Discord, LinkedIn, YouTube) and copyright text",
+            "position": "bottom right",
+            "notable": "Minimal footer with only social links and year"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Intentionally minimal - large empty space dominates",
+        "innovativeElements": [
+          "Extreme whitespace design - appears to be a loading state or blank canvas",
+          "Only branding and social links visible"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state or loading page",
+        "userIntent": "Access staking interface (page appears to be loading or blank)",
+        "entryPoints": [
+          "Click 'Stake now' CTA from previous screens"
+        ],
+        "exitPoints": [
+          "Social media links",
+          "Click logo to return home",
+          "Page may be still loading content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Social media icons",
+            "action": "Navigate to external social media platforms"
+          },
+          {
+            "element": "Marinade logo",
+            "action": "Likely returns to home page"
+          }
+        ],
+        "informationArchitecture": "Appears incomplete or loading state",
+        "frictionPoints": [
+          "No visible staking interface or content",
+          "User may be uncertain if page loaded correctly",
+          "No clear next actions beyond social links"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "© 2025 Marinade.finance. All rights reserved.",
+            "context": "Bottom right footer",
+            "purpose": "Copyright notice"
+          }
+        ],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [
+          "Year updated to 2025 (current)",
+          "Marinade branding present"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears blank - likely loading state or incomplete implementation"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/marinade-settings-5-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#17A697"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this view",
+          "bodyStyle": "Sans-serif, regular weight, 16px, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top navigation bar with Marinade logo, Product/Resources/Institutional/Governance menu items, and two CTAs",
+            "position": "Top fixed",
+            "notable": "Clean, minimal header with teal accent buttons"
+          },
+          {
+            "type": "Cookie Consent Banner",
+            "description": "Bottom-fixed notice about cookie usage with two action buttons",
+            "position": "Bottom of page",
+            "notable": "Prominent placement with clear deny/accept options in teal color scheme"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual structure with focus on header and footer CTA buttons; largely empty/blank main content area suggests page loading or minimal content display",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page with cookie-consent",
+        "userIntent": "Review privacy policy and provide cookie consent",
+        "entryPoints": [
+          "Direct navigation to privacy policy page",
+          "Footer link from main site"
+        ],
+        "exitPoints": [
+          "Accept cookies - proceed to main site",
+          "Deny cookies - proceed without tracking",
+          "Navigation menu - go to Product, Resources, Institutional, or Governance sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept Button",
+            "action": "Accept cookie usage and dismiss banner"
+          },
+          {
+            "element": "Deny Button",
+            "action": "Reject cookies and dismiss banner"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to different sections of the site"
+          },
+          {
+            "element": "Stake now CTA",
+            "action": "Navigate to staking interface"
+          }
+        ],
+        "informationArchitecture": "Header-primary navigation with footer consent controls; main content area appears to be the privacy policy content (not visible in screenshot)",
+        "frictionPoints": [
+          "Cookie banner requires active dismissal before proceeding",
+          "Large blank content area may suggest slow page load"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Bottom right of cookie banner"
+          },
+          {
+            "text": "Deny",
+            "style": "secondary-button",
+            "placement": "Bottom left of cookie banner"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent banner",
+            "purpose": "Explains data collection practices and privacy implications"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/marinade-settings-6-referral-terms.png",
+      "label": "Referral Terms",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#17A697"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this view",
+          "bodyStyle": "Sans-serif, regular weight, 16px, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top navigation bar with Marinade logo, Product/Resources/Institutional/Governance menu items, and two CTAs",
+            "position": "Top fixed",
+            "notable": "Consistent design matching privacy policy screen"
+          },
+          {
+            "type": "Cookie Consent Banner",
+            "description": "Bottom-fixed notice about cookie usage with two action buttons",
+            "position": "Bottom of page",
+            "notable": "Identical cookie banner to privacy policy page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual structure with focus on header and footer CTA buttons; largely empty/blank main content area",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page with cookie-consent",
+        "userIntent": "Review referral terms and provide cookie consent",
+        "entryPoints": [
+          "Direct navigation to referral terms page",
+          "Footer link from main site",
+          "Referral program section"
+        ],
+        "exitPoints": [
+          "Accept cookies - proceed to main site",
+          "Deny cookies - proceed without tracking",
+          "Navigation menu - go to Product, Resources, Institutional, or Governance sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept Button",
+            "action": "Accept cookie usage and dismiss banner"
+          },
+          {
+            "element": "Deny Button",
+            "action": "Reject cookies and dismiss banner"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to different sections of the site"
+          },
+          {
+            "element": "Stake now CTA",
+            "action": "Navigate to staking interface"
+          }
+        ],
+        "informationArchitecture": "Header-primary navigation with footer consent controls; main content area appears to be the referral terms content (not visible in screenshot)",
+        "frictionPoints": [
+          "Cookie banner requires active dismissal before proceeding",
+          "Large blank content area may suggest slow page load or minimal content display"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Bottom right of cookie banner"
+          },
+          {
+            "text": "Deny",
+            "style": "secondary-button",
+            "placement": "Bottom left of cookie banner"
+          },
+          {
+            "text": "Stake now",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Meet with us",
+            "style": "ghost-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By using this website, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie consent banner",
+            "purpose": "Explains data collection practices and privacy implications"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

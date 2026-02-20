@@ -1,0 +1,499 @@
+{
+  "slug": "leather",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:07:21.464Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 4,
+  "screens": [
+    {
+      "image": "/screenshots/leather-staking-1-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#E91E63"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, large (32-36px), centered",
+          "bodyStyle": "Sans-serif, regular, medium (14-16px), gray (#666)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left navigation with icon+text menu items",
+            "position": "left edge",
+            "notable": "Clean iconography with stacking symbol highlighted"
+          },
+          {
+            "type": "header-bar",
+            "description": "Top bar with logo, mobile announcement, and install CTA",
+            "position": "top",
+            "notable": "Prominent 'Install' button in black on right"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Isometric 3D animated graphic with pink and blue mechanics",
+            "position": "center-upper",
+            "notable": "Eye-catching 3D asset creates visual interest for error state"
+          },
+          {
+            "type": "card-grid",
+            "description": "Three equal-width cards with icons, headings, and descriptions",
+            "position": "center-lower",
+            "notable": "Help, Guides, Developers cards with consistent styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered error illustration draws initial attention, with secondary pathways through card grid below",
+        "innovativeElements": [
+          "3D isometric illustration for error state instead of generic 404",
+          "Card-based recovery paths with clear intent categories"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from navigation error or accessing an invalid/restricted page",
+        "entryPoints": [
+          "Direct URL navigation to non-existent page",
+          "Broken link from elsewhere",
+          "Attempted access to page outside user permissions"
+        ],
+        "exitPoints": [
+          "Help Center link",
+          "Guides walkthrough",
+          "Developers documentation",
+          "Home/main navigation via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Help card",
+            "action": "Navigate to FAQ/support section"
+          },
+          {
+            "element": "Guides card",
+            "action": "Navigate to educational walkthroughs"
+          },
+          {
+            "element": "Developers card",
+            "action": "Navigate to API documentation"
+          },
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to main features (Stacking, sBTC, Wallet, Apps, Advanced)"
+          },
+          {
+            "element": "Install button",
+            "action": "Redirect to mobile app installation"
+          }
+        ],
+        "informationArchitecture": "Primary recovery path (cards) + secondary navigation (sidebar) + tertiary options (footer)",
+        "frictionPoints": [
+          "User landed on invalid page—may be confused about what happened",
+          "Error message is witty but could lack specificity about the actual problem",
+          "No direct 'go back' or 'go home' button prominent (must use sidebar)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Oops! Seems like you took a wrong turn",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Install",
+            "style": "primary-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Help",
+            "style": "card-link",
+            "placement": "bottom card"
+          },
+          {
+            "text": "Guides",
+            "style": "card-link",
+            "placement": "bottom card"
+          },
+          {
+            "text": "Developers",
+            "style": "card-link",
+            "placement": "bottom card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Quick answers and support for common questions.",
+            "context": "Help card subtitle",
+            "purpose": "Clarify what users will find in Help section"
+          },
+          {
+            "text": "Simple walkthroughs to get you started.",
+            "context": "Guides card subtitle",
+            "purpose": "Position Guides as onboarding/educational resource"
+          },
+          {
+            "text": "Docs and tools to help you build faster.",
+            "context": "Developers card subtitle",
+            "purpose": "Appeal to technical users with builder mindset"
+          },
+          {
+            "text": "Mobile now available",
+            "context": "Header announcement",
+            "purpose": "Highlight new feature availability"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Oops! Seems like you took a wrong turn"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/leather-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main with hero banner",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF9966",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps for announcements, mixed case for product headlines",
+          "bodyStyle": "Regular sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left sidebar navigation",
+            "description": "Vertical menu with icons and labels (Portfolio, Stacking, sBTC, Apps, Advanced, Changelog, Developers, Help Center)",
+            "position": "Left edge",
+            "notable": "Sticky navigation with cursive logo at top"
+          },
+          {
+            "type": "Hero banner with illustration",
+            "description": "Orange gradient background with large headline, subtext, CTAs, and 3D coin/wallet imagery",
+            "position": "Top-right main area",
+            "notable": "Visual product mockup with animated coins spilling from leather wallet"
+          },
+          {
+            "type": "Feature section",
+            "description": "Large bold headline (BUY. SEND. SWAP. EARN. GROW.) with description and platform badges",
+            "position": "Bottom-left main area",
+            "notable": "Dramatic typography with period separators"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye draws to orange hero banner first, then large headline section below, sidebar remains secondary",
+        "innovativeElements": [
+          "3D rendered coins/wallet imagery in hero",
+          "Period-separated copy pattern (BUY. SEND. SWAP. EARN. GROW.)",
+          "Mixed typography scale between sections"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Leather wallet product and take first action (install or learn)",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Marketing campaign link",
+          "Social media referral"
+        ],
+        "exitPoints": [
+          "Bridge now (primary CTA)",
+          "Learn more (secondary CTA)",
+          "Install wallet (top-right button)",
+          "Sidebar navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Bridge now button",
+            "action": "Navigate to bridge/onboarding flow"
+          },
+          {
+            "element": "Learn more link",
+            "action": "Scroll or navigate to more information"
+          },
+          {
+            "element": "Chrome/iOS/Android badges",
+            "action": "Direct to download/install pages"
+          },
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Hero announcement at top, product capabilities headline below, platform distribution options shown",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "USDCx IS NOW LIVE ON STACKS",
+        "subheadline": "Buy and swap USDCx with Leather",
+        "ctas": [
+          {
+            "text": "Bridge now",
+            "style": "primary-button",
+            "placement": "Orange hero banner"
+          },
+          {
+            "text": "Learn more",
+            "style": "text-link",
+            "placement": "Orange hero banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Leather is a wallet for Bitcoin and Stacks, designed for security, clarity, and growth.",
+            "context": "Below feature headline",
+            "purpose": "Product positioning statement"
+          },
+          {
+            "text": "Join 100,000+ users on your favorite platform.",
+            "context": "Below product description",
+            "purpose": "Social proof / growth signaling"
+          },
+          {
+            "text": "Buy instantly through trusted partners.",
+            "context": "Above partner logos",
+            "purpose": "Trust building through partnerships"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [],
+        "trustSignals": [
+          "100,000+ users mentioned",
+          "Trusted partner logos (Coinbase, Binance, MoonPay, Gate)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/leather-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with desktop/mobile mockups",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#FF9966"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large scale",
+          "bodyStyle": "Regular sans-serif, medium weight",
+          "dataStyle": "Monospace for currency amounts (e.g., $7,517.49), smaller weight for holdings"
+        },
+        "components": [
+          {
+            "type": "Desktop wallet mockup",
+            "description": "Dark-themed wallet interface showing Savings wallet with total balance, locked amounts, and token list",
+            "position": "Left side of panel",
+            "notable": "Full portfolio view with action buttons (Send, Receive, Swap, Buy)"
+          },
+          {
+            "type": "Mobile wallet mockup",
+            "description": "iOS-style interface showing same wallet state on mobile",
+            "position": "Right side of panel, overlapping desktop",
+            "notable": "Responsive layout showing cross-device consistency"
+          },
+          {
+            "type": "Partner logos",
+            "description": "Coinbase, Binance, MoonPay, Gate logos",
+            "position": "Bottom of panel",
+            "notable": "Trust indicators for onramp/purchase options"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Mockups dominate, text contextualizes the capability",
+        "innovativeElements": [
+          "Dual device mockup overlay showing responsive design",
+          "Dark mode interface design in mockups",
+          "Token holdings displayed with colored icon circles"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "See wallet functionality in action across devices",
+        "entryPoints": [
+          "Scrolled from hero banner above"
+        ],
+        "exitPoints": [
+          "Install wallet button (top-right)",
+          "Continue scrolling for more content",
+          "Click on partner logos"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Install wallet button",
+            "action": "Navigate to installation flow"
+          },
+          {
+            "element": "Partner logos",
+            "action": "Navigate to onramp partners"
+          }
+        ],
+        "informationArchitecture": "Product mockup as primary visual, supporting text describes features",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BUY. SEND. SWAP. EARN. GROW.",
+        "subheadline": "Leather is a wallet for Bitcoin and Stacks, designed for security, clarity, and growth. Join 100,000+ users on your favorite platform.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Buy instantly through trusted partners.",
+            "context": "Below mockups",
+            "purpose": "Explains onramp capability"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$7,517.49 (total balance)",
+          "$10,751.74 (locked amount)",
+          "$7,000.50 (available)",
+          "$1,503.50 (Stacks holdings)",
+          "3,449.3 (quantity display)"
+        ],
+        "trustSignals": [
+          "100,000+ users",
+          "Trusted partner logos (Coinbase, Binance, MoonPay, Gate)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/leather-home-3-portfolio.png",
+      "label": "Portfolio",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main with modal overlay",
+        "colorScheme": "light with dark modal",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#5555FF",
+          "#FF9966"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for modal headline",
+          "bodyStyle": "Regular sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Portfolio page header",
+            "description": "Title with 'Install' button in top-right",
+            "position": "Top main area",
+            "notable": "Minimal header treatment"
+          },
+          {
+            "type": "Asset list with color indicators",
+            "description": "Left side shows token icons with colored circles (orange, red, purple/blue gradients)",
+            "position": "Left of modal",
+            "notable": "Blurred background showing asset allocation chart"
+          },
+          {
+            "type": "Onboarding modal",
+            "description": "Centered white card with icon, headline, description, and two CTA buttons",
+            "position": "Center overlay",
+            "notable": "Clean card design with rounded corners, prominent black buttons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal is focal point with blurred background de-emphasized",
+        "innovativeElements": [
+          "Blurred portfolio background visible behind modal",
+          "Leather icon in circular badge",
+          "Two-step onboarding flow clearly presented"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Connect wallet or install extension to access portfolio",
+        "entryPoints": [
+          "Portfolio navigation click",
+          "Direct URL to portfolio page"
+        ],
+        "exitPoints": [
+          "Connect button - authenticate wallet",
+          "Install button - add browser extension",
+          "Close modal (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect button",
+            "action": "Launch wallet connection flow"
+          },
+          {
+            "element": "Install button",
+            "action": "Download/install browser extension"
+          }
+        ],
+        "informationArchitecture": "Modal blocks access to portfolio until onboarded; clear two-path options",
+        "frictionPoints": [
+          "Requires either connection or installation before viewing portfolio",
+          "User must choose between two actions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Get started with Leather",
+        "subheadline": "Connect Leather to access your portfolio",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Right side of modal"
+          },
+          {
+            "text": "Install",
+            "style": "primary-button",
+            "placement": "Right side of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Connect Leather to reveal your portfolio",
+            "context": "Under 'Connect' label in modal",
+            "purpose": "Explains Connect action"
+          },
+          {
+            "text": "Add Leather extension to your browser",
+            "context": "Under 'Install' label in modal",
+            "purpose": "Explains Install action"
+          }
+        ],
+        "tone": "friendly-casual, instructional",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Get started with Leather",
+          "Connect Leather to access your portfolio"
+        ]
+      }
+    }
+  ]
+}

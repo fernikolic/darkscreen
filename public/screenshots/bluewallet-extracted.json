@@ -1,0 +1,4128 @@
+{
+  "slug": "bluewallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:56:21.904Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 36,
+  "screens": [
+    {
+      "image": "/screenshots/bluewallet-home-7-lndhub.png",
+      "label": "LNDHub",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (60px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size, gray (#6B7280) for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo Badge",
+            "description": "LNDhub logo with light gray background",
+            "position": "Left side, upper-middle",
+            "notable": "Clean, minimal badge design with rounded corners"
+          },
+          {
+            "type": "GitHub Star Button",
+            "description": "GitHub star count (976) with star icon",
+            "position": "Lower left",
+            "notable": "Trust signal showing community adoption"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large bold headline dominates, supporting text in gray underneath, call-to-action via GitHub link",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about LNDhub plugin capability and understand its purpose",
+        "entryPoints": [
+          "Features navigation link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Home",
+          "Features",
+          "Support",
+          "External link to GitHub"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Home link",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Features link",
+            "action": "Navigate to features page"
+          },
+          {
+            "element": "Support link",
+            "action": "Navigate to support page"
+          },
+          {
+            "element": "GitHub star button",
+            "action": "Link to GitHub repository"
+          }
+        ],
+        "informationArchitecture": "Hero section with headline, two supporting paragraphs, and trust signal",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A Lightning Hub",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Star",
+            "style": "secondary-button",
+            "placement": "Lower left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "A free and open source, multiple account plugin for Lightning",
+            "context": "First paragraph",
+            "purpose": "Establish key feature and business model"
+          },
+          {
+            "text": "Ideal for hosted shared services or groups, families and friends that want to share their own node.",
+            "context": "Second paragraph",
+            "purpose": "Define target use cases"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Free and open source",
+          "GitHub stars (976)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-8-apple-watch.png",
+      "label": "Apple Watch",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#1E40AF",
+          "#FFA500"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size, gray text",
+          "dataStyle": "Orange and light blue color-coded amounts on watch screens"
+        },
+        "components": [
+          {
+            "type": "Product Image",
+            "description": "Three Apple Watch devices showing watch app interface",
+            "position": "Right side, center",
+            "notable": "Realistic device mockups with color-coded wallet data displayed"
+          },
+          {
+            "type": "App Store Badge",
+            "description": "Official Apple App Store download button",
+            "position": "Left side, middle",
+            "notable": "Black background with blue border accent, Apple logo"
+          },
+          {
+            "type": "Highlights Section Header",
+            "description": "Section heading for feature highlights below",
+            "position": "Bottom left",
+            "notable": "Bold black heading starting new content section"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline, supporting text, prominent CTA button, then visual proof on right with product screenshots",
+        "innovativeElements": [
+          "Multi-watch display showing app from different angles",
+          "Color-coded data visualization on watch faces (orange for wallet names, light blue for balances)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover and download the Apple Watch Bitcoin app",
+        "entryPoints": [
+          "Features navigation",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Home",
+          "Features",
+          "Support",
+          "App Store link",
+          "Scroll to Highlights"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download on the App Store button",
+            "action": "Direct to Apple App Store"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate between Home/Features/Support"
+          }
+        ],
+        "informationArchitecture": "Hero section with headline, description, download CTA, product visualization, and below-fold highlights section",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Watch App",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button",
+            "placement": "Left side, middle"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "A beautifully designed apple watch app for Bitcoin.",
+            "context": "First line of description",
+            "purpose": "Lead with aesthetic benefit"
+          },
+          {
+            "text": "A first of its kind, by BlueWallet.",
+            "context": "Second line of description",
+            "purpose": "Establish category leadership and brand credibility"
+          },
+          {
+            "text": "Highlights",
+            "context": "Section header",
+            "purpose": "Introduce feature breakdown section"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "5 223 000 sats",
+          "20 hours ago"
+        ],
+        "trustSignals": [
+          "Apple App Store availability",
+          "First of its kind positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-9-pgp.png",
+      "label": "PGP",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#E8F3FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size, gray text",
+          "dataStyle": "Monospace font (blue text) for PGP key block"
+        },
+        "components": [
+          {
+            "type": "Heading",
+            "description": "PGP Key title",
+            "position": "Top left",
+            "notable": "Simple, direct title treatment"
+          },
+          {
+            "type": "Subheading",
+            "description": "PGP Key for BlueWallet maintainers",
+            "position": "Below main heading",
+            "notable": "Gray descriptive text"
+          },
+          {
+            "type": "Code Block",
+            "description": "PGP public key formatted in code block",
+            "position": "Center, large area",
+            "notable": "Light blue background, monospace font, full key displayed"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title at top, subtle description, large code block dominating page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access PGP public key for verification or security purposes",
+        "entryPoints": [
+          "Support navigation",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Home",
+          "Features",
+          "Support",
+          "Copy/reference key"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Navigate between Home/Features/Support"
+          },
+          {
+            "element": "Code block",
+            "action": "User can select and copy PGP key"
+          }
+        ],
+        "informationArchitecture": "Simple document display: header info followed by full key block",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PGP Key",
+        "subheadline": "PGP Key for BlueWallet maintainers",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "PGP Key for BlueWallet maintainers",
+            "context": "Below headline",
+            "purpose": "Clarify audience and purpose of key"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "-----BEGIN PGP PUBLIC KEY BLOCK-----",
+          "-----END PGP PUBLIC KEY BLOCK-----",
+          "Long alphanumeric key string in monospace"
+        ],
+        "trustSignals": [
+          "Official PGP key for maintainers",
+          "Standard PGP format"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-4-watchonly-wallet.png",
+      "label": "Watch-only Wallet",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#5a7a8a"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, large size (60px+), centered, black",
+          "bodyStyle": "Medium weight, gray-blue tone, centered, medium line-height",
+          "dataStyle": "Large bold white text on dark background in mockup (400 BTC)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Logo + navigation (Home, Features, Support)",
+            "position": "top fixed",
+            "notable": "Clean, minimal header with logo on left"
+          },
+          {
+            "type": "hero section",
+            "description": "Large centered heading with descriptive paragraph",
+            "position": "center, upper half",
+            "notable": null
+          },
+          {
+            "type": "phone mockup",
+            "description": "iPhone display showing watch-only wallet with 400 BTC balance",
+            "position": "center, lower half",
+            "notable": "Realistic device frame with glow effect, shows actual app UI"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong top-to-bottom flow: headline → description → visual proof (phone mockup). Mockup is focal point with subtle shadow.",
+        "innovativeElements": [
+          "Phone mockup with subtle outer glow creating depth",
+          "Consistent feature showcase pattern across wallet types"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / feature showcase",
+        "userIntent": "Understand what watch-only wallets are and how they work",
+        "entryPoints": [
+          "Features menu navigation",
+          "Marketing page link from main site"
+        ],
+        "exitPoints": [
+          "Download app",
+          "Features menu",
+          "Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Home/Features/Support links",
+            "action": "Navigate between sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home"
+          }
+        ],
+        "informationArchitecture": "Feature-focused page with headline, explanation, and visual example",
+        "frictionPoints": [
+          "No clear CTA button to download or learn more",
+          "Description assumes some crypto knowledge (cold storage, paper wallet, xpub/ypub)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Watch-only",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Watch-only wallets allows you to keep an eye on your cold storage or paper wallet without touching your private key. Easily import your public address, xpub or ypub and watch it from your app without moving anything.",
+            "context": "Main body text",
+            "purpose": "Educate user on watch-only functionality and benefits"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "400 BTC (large, bold white in mockup)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-5-lightning-wallet.png",
+      "label": "Lightning Wallet",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#ffc107"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, very large (60px+), centered, black",
+          "bodyStyle": "Medium weight, gray-blue tone, centered, medium line-height",
+          "dataStyle": "Large bold white text on yellow/orange gradient background (10 000 satoshi)"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Logo + navigation (Home, Features, Support)",
+            "position": "top fixed",
+            "notable": "Consistent across all feature pages"
+          },
+          {
+            "type": "hero section",
+            "description": "Headline, subheadline (Connected to your own node), and descriptive paragraph",
+            "position": "center, upper half",
+            "notable": "Two-tier heading structure"
+          },
+          {
+            "type": "phone mockup",
+            "description": "iPhone display showing Lightning wallet with 10,000 satoshi balance on yellow-orange gradient",
+            "position": "center, lower half",
+            "notable": "Distinctive yellow-to-orange gradient background in app UI"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → subheading → description → phone mockup. Gradient colors draw eye to device.",
+        "innovativeElements": [
+          "Yellow/gold color theme differentiates Lightning wallet from other wallet types",
+          "Gradient background on device mockup reflects brand accent color"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / feature showcase",
+        "userIntent": "Understand Lightning Network wallet functionality and node connection",
+        "entryPoints": [
+          "Features menu navigation",
+          "Marketing page link"
+        ],
+        "exitPoints": [
+          "Home",
+          "Features",
+          "Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "Navigate between sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to home"
+          }
+        ],
+        "informationArchitecture": "Feature page with headline, subheading, detailed description, and device mockup",
+        "frictionPoints": [
+          "No explicit download CTA",
+          "Technical jargon (LNDhub, node) may confuse beginners"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lightning Wallet",
+        "subheadline": "Connected to your own node",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "You can use your own node. Allows you to seamlessly use the Lightning Network, with accounts associated to your node. Ideal for your family wallets, small communities or groups of people running their own nodes. It uses LNDhub to power the connection.",
+            "context": "Main body text",
+            "purpose": "Explain Lightning wallet use cases and technical architecture"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "10 000 satoshi (large, bold white)"
+        ],
+        "trustSignals": [
+          "LNDhub reference (technical credibility)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-6-desktop.png",
+      "label": "Desktop",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Medium gray-blue subheading above, then extra-bold black main heading (60px+), centered",
+          "bodyStyle": "Medium weight gray, centered, medium line-height",
+          "dataStyle": "Large bold white text on colored wallet cards (BTC amounts, satoshi), and transaction list in desktop mockup"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Logo + navigation (Home, Features, Support)",
+            "position": "top fixed",
+            "notable": null
+          },
+          {
+            "type": "subheading",
+            "description": "BlueWallet for macOS",
+            "position": "above main heading",
+            "notable": "Soft blue-gray color, smaller size"
+          },
+          {
+            "type": "CTA button",
+            "description": "Download for macOS button with Apple logo",
+            "position": "center, below headline",
+            "notable": "Black button with white text, prominent placement"
+          },
+          {
+            "type": "supporting text",
+            "description": "Direct download available with .dmg or Homebrew",
+            "position": "below CTA",
+            "notable": "Secondary instruction text"
+          },
+          {
+            "type": "desktop mockup",
+            "description": "macOS window showing BlueWallet with wallet cards (Standard, Watch-only, Lightning) and transaction list",
+            "position": "center, lower half",
+            "notable": "Realistic Mac OS window frame with blue background, colored wallet cards match app design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Subheading → Large headline → CTA button → Supporting text → Desktop mockup. Mockup is focal point with realistic macOS styling.",
+        "innovativeElements": [
+          "Desktop mockup shows full app interface with multiple wallet types and transaction history",
+          "Color-coded wallet cards (blue, gray, yellow) match wallet type themes from other pages"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / download page",
+        "userIntent": "Download BlueWallet for macOS",
+        "entryPoints": [
+          "Features menu navigation",
+          "Marketing site"
+        ],
+        "exitPoints": [
+          "Download CTA (external)",
+          "Home",
+          "Features",
+          "Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for macOS button",
+            "action": "Initiate macOS app download"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Product showcase page with platform identifier, download CTA, and interface preview",
+        "frictionPoints": [
+          "No system requirement information visible",
+          "Alternative (Homebrew) only mentioned as text, not as clickable option"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Desktop Wallet",
+        "subheadline": "BlueWallet for macOS",
+        "ctas": [
+          {
+            "text": "Download for macOS",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Direct download available with .dmg or Homebrew",
+            "context": "Below CTA button",
+            "purpose": "Provide alternative installation methods"
+          }
+        ],
+        "tone": "professional-technical, straightforward",
+        "dataFormatting": [
+          "0.00009 BTC",
+          "0.00150479 BTC",
+          "112 710 sats",
+          "Timestamps (2 days ago, 4 days ago, etc.)"
+        ],
+        "trustSignals": [
+          "Official Apple download option",
+          "Homebrew package manager support"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E88E5",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display size (48px+), high contrast black on white",
+          "bodyStyle": "Regular gray sans-serif, medium weight, 16-18px for readability",
+          "dataStyle": "Large bold numbers (0.344 BTC) with accompanying labels in smaller text"
+        },
+        "components": [
+          {
+            "type": "Logo + Navigation",
+            "description": "Blue wallet icon with text logo in top-left; horizontal nav with Home/Features/Support in top-right",
+            "position": "Top header",
+            "notable": "Clean, minimal header with blue accent on 'Home' link"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with dual CTA buttons (App Store and Google Play)",
+            "position": "Left 60% of viewport",
+            "notable": "Dual app store badges with blue border accent; supporting text for direct downloads"
+          },
+          {
+            "type": "Device Mockup",
+            "description": "iPhone mockup showing wallet interface with savings wallet card and transaction list",
+            "position": "Right 40% floating mockup",
+            "notable": "Realistic dark-mode phone mockup with drop shadow; shows actual app UI"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong left-to-right flow: logo top-left, headline dominates left side, phone mockup anchors right side; CTA buttons create focal point",
+        "innovativeElements": [
+          "Device mockup overlay technique showing actual product functionality",
+          "Blue gradient on app store buttons matches brand color"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what BlueWallet is and download the app",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign link",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "App Store link",
+          "Google Play link",
+          "Features navigation",
+          "Support navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App Store button",
+            "action": "Redirect to Apple App Store"
+          },
+          {
+            "element": "Google Play button",
+            "action": "Redirect to Google Play Store"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to Features or Support pages"
+          }
+        ],
+        "informationArchitecture": "Top-level landing page with clear value proposition, prominent CTA buttons, and reference implementation on right side mockup",
+        "frictionPoints": [
+          "Multiple download options might create choice paralysis",
+          "Mention of 'direct download for android and Desktop' below buttons adds cognitive load"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Radically Simple & Powerful Bitcoin Wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button",
+            "placement": "Below headline, left side"
+          },
+          {
+            "text": "GET IT ON Google Play",
+            "style": "primary-button",
+            "placement": "Below headline, left side, secondary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Direct download available for android and Desktop",
+            "context": "Below primary CTA buttons",
+            "purpose": "Inform users of alternative download methods"
+          },
+          {
+            "text": "What you can do with BlueWallet",
+            "context": "Section heading at bottom",
+            "purpose": "Transition to features section"
+          },
+          {
+            "text": "Besides receiving, sending and storing Bitcoin, you can do a lot more...",
+            "context": "Subheading under features section",
+            "purpose": "Teaser for expanded capabilities"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [
+          "0.344 BTC",
+          "Latest transaction 5 hours ago",
+          "- 0.091",
+          "2 hours ago"
+        ],
+        "trustSignals": [
+          "App Store and Google Play availability (official app stores)",
+          "Actual transaction history shown in mockup (proof of functionality)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-2-view-all.png",
+      "label": "View All",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E88E5",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 48px+, centered, with emoji accent",
+          "bodyStyle": "Regular gray sans-serif, 16px, centered, paragraph layout",
+          "dataStyle": "Large bold numbers in accent colors on card mockups"
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Centered headline with emoji accent (unicorn/sparkle), subheading describing value prop",
+            "position": "Top center, full-width",
+            "notable": "Emoji used to convey 'magical simplicity' — breaks from pure tech aesthetic"
+          },
+          {
+            "type": "Feature Section",
+            "description": "Two-column layout with text content left, device mockup right",
+            "position": "Lower half of page",
+            "notable": "Mockup shows multiple wallet cards (orange Lightning wallet, gray watch-only wallet) in stacked view"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered hierarchy with large headline, then text-heavy feature description on left side paired with visual mockup on right",
+        "innovativeElements": [
+          "Use of emoji (sparkle) in headline for visual warmth",
+          "Multi-wallet display in single mockup showing card-based UI pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about BlueWallet's multi-wallet capability and feature set",
+        "entryPoints": [
+          "Scroll down from first landing section",
+          "Direct Features page navigation"
+        ],
+        "exitPoints": [
+          "Continue scrolling down",
+          "Navigate to Features/Support in header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation header",
+            "action": "Navigate between Home/Features/Support"
+          }
+        ],
+        "informationArchitecture": "Feature-focused content page with alternating text/visual layout pattern",
+        "frictionPoints": [
+          "Dense paragraph text may require reading commitment before understanding benefits"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Radically Simple 🦄 Extremely Powerful",
+        "subheadline": "A freedom and self-sovereign tool, disguised as a cute little Blue app on your pocket",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Multiple Wallets",
+            "context": "Feature section heading",
+            "purpose": "Highlight key feature"
+          },
+          {
+            "text": "With a multiple wallet architecture to allow maximum flexibility. BlueWallet aims to support the highest wallet standards. Besides Bitcoin Wallets, Watch-only, Multisig Vaults and Lightning. Blue can import most wallet standards including Electrum and Bread wallets.",
+            "context": "Feature description paragraph",
+            "purpose": "Explain wallet flexibility and compatibility"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual messaging ('cute little Blue app')",
+        "dataFormatting": [
+          "0 000 sats",
+          "0.344 BTC"
+        ],
+        "trustSignals": [
+          "Support for multiple wallet standards (Electrum, Bread)",
+          "Multisig vault capability mentioned",
+          "Lightning network integration"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-3-bitcoin-wallet.png",
+      "label": "Bitcoin Wallet",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E88E5",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 56px+, centered",
+          "bodyStyle": "Regular gray sans-serif, 16-18px, centered, paragraph width-constrained",
+          "dataStyle": "Large bold numbers (0.9 BTC) in white on colored backgrounds"
+        },
+        "components": [
+          {
+            "type": "Section Heading",
+            "description": "Large bold 'Bitcoin Wallet' headline",
+            "position": "Top center",
+            "notable": "Simple, direct language without emoji"
+          },
+          {
+            "type": "Description Paragraph",
+            "description": "Technical explanation of wallet standards and import capabilities",
+            "position": "Below heading, centered, width-constrained",
+            "notable": "Mentions specific standards (BIPs) and wallet formats (Electrum, Bread)"
+          },
+          {
+            "type": "Device Mockup",
+            "description": "iPhone mockup showing Bitcoin wallet card with 0.9 BTC balance",
+            "position": "Center-bottom, large",
+            "notable": "Bright blue gradient card with large balance display and back navigation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered vertical hierarchy: headline → description → device mockup focal point",
+        "innovativeElements": [
+          "Large mockup placed in lower viewport suggesting scroll continuation",
+          "Bright blue wallet card background creates strong visual anchor"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bitcoin wallet features and import capabilities",
+        "entryPoints": [
+          "Features navigation",
+          "Scroll from previous section"
+        ],
+        "exitPoints": [
+          "Continue scrolling",
+          "Navigate away via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow in mockup",
+            "action": "Navigation placeholder in mockup (non-functional in webpage)"
+          }
+        ],
+        "informationArchitecture": "Feature-focused page explaining Bitcoin wallet capabilities with visual reference",
+        "frictionPoints": [
+          "Technical jargon (BIPs, Electrum, Bread wallets) may not resonate with beginners"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Wallet",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "BlueWallet supports various Bitcoin wallet implementations, BIPs and different integrations with external services. You can easily import any wallet with our wallet recovery and import feature.",
+            "context": "Below headline",
+            "purpose": "Explain wallet functionality and import capabilities"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.9 BTC"
+        ],
+        "trustSignals": [
+          "Support for multiple Bitcoin wallet implementations",
+          "BIP standard compliance mentioned",
+          "Wallet recovery and import feature availability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-2-support-scrolled-1.png",
+      "label": "Support — scrolled 1",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066ff",
+          "#6b7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black color",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), gray color (#6b7280)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "accordion",
+            "description": "Expandable FAQ items with chevron toggles",
+            "position": "center, full-width",
+            "notable": "Clean blue text links with right-aligned expand icons"
+          },
+          {
+            "type": "section-heading",
+            "description": "Frequently asked questions title",
+            "position": "center-top",
+            "notable": null
+          },
+          {
+            "type": "description-text",
+            "description": "Subheading explaining purpose",
+            "position": "below main heading",
+            "notable": "Gray text provides context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong heading draws eye, subheading provides context, accordion items listed vertically with consistent spacing",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to common questions about wallet, transactions, and blockchain features",
+        "entryPoints": [
+          "Tap Support in main navigation",
+          "Search for help topic"
+        ],
+        "exitPoints": [
+          "Click accordion to expand and read answer",
+          "Navigate to Home/Features tabs",
+          "Scroll for more FAQs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion items (Recover a wallet, Transaction without confirmations, etc.)",
+            "action": "Expand/collapse to reveal answer content"
+          }
+        ],
+        "informationArchitecture": "FAQ organized by topic with expandable answers; categorized under common pain points",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Frequently asked questions",
+        "subheadline": "Find quick answers to frequent questions asked by fellow bitcoiners",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Recover a wallet",
+            "context": "First accordion item",
+            "purpose": "Topic identifier for FAQ"
+          },
+          {
+            "text": "Transaction without confirmations",
+            "context": "Second accordion item",
+            "purpose": "Topic identifier for FAQ"
+          },
+          {
+            "text": "Balance is not updating",
+            "context": "Third accordion item",
+            "purpose": "Topic identifier for FAQ"
+          },
+          {
+            "text": "Refill is taking too much time",
+            "context": "Fourth accordion item",
+            "purpose": "Topic identifier for FAQ"
+          },
+          {
+            "text": "Payment in transition",
+            "context": "Fifth accordion item",
+            "purpose": "Topic identifier for FAQ"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-3-create-a-bitcoin-wallet.png",
+      "label": "Create a Bitcoin wallet",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066ff",
+          "#1f2937",
+          "#f3f4f6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (40px+), black color",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray (#374151)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Help section menu with categorized links",
+            "position": "left side",
+            "notable": "Hierarchical structure with section headers (Help section, Cold storage, Multisig, LNDhub) and nested links"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Instructional content with headline and description",
+            "position": "right side, center",
+            "notable": "Includes mobile mockup showing the actual app UI"
+          },
+          {
+            "type": "call-to-action-button",
+            "description": "Blue 'Add now' button",
+            "position": "within mobile mockup, center",
+            "notable": "Bright blue (#0066ff) with rounded corners"
+          },
+          {
+            "type": "empty-state-card",
+            "description": "'Add a wallet' card with free tier messaging",
+            "position": "in mobile mockup",
+            "notable": "Light gray background with descriptive text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides context and navigation; main content area features large heading, explanatory text, and mobile mockup showing actual UI to guide user",
+        "innovativeElements": [
+          "Embedded mobile phone mockup showing actual app interface within documentation page"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Learn how to create a Bitcoin wallet and understand the first steps",
+        "entryPoints": [
+          "Click 'Create a Bitcoin wallet' in sidebar or Help section",
+          "From main documentation page"
+        ],
+        "exitPoints": [
+          "Click 'Add now' button to go to wallet creation screen",
+          "Click other sidebar links for different help topics",
+          "Navigate to Home/Features/Support tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links (Create a Bitcoin wallet, Import a wallet, etc.)",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "'Add now' button in mockup",
+            "action": "Initiate wallet creation in app"
+          }
+        ],
+        "informationArchitecture": "Step-by-step tutorial with visual mockup; sidebar provides alternative paths",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Create a Bitcoin wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Add now",
+            "style": "primary-button",
+            "placement": "within mobile mockup, center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Creating a Bitcoin wallet on BlueWallet is easy.",
+            "context": "Opening sentence",
+            "purpose": "Reassurance about ease of use"
+          },
+          {
+            "text": "You can either click on the \"Add now\" button or the \"+\" icon in the top right corner",
+            "context": "Instructions paragraph",
+            "purpose": "Explains two paths to wallet creation"
+          },
+          {
+            "text": "It's free and you can create as many as you like",
+            "context": "Within 'Add a wallet' card in mockup",
+            "purpose": "Builds confidence and reduces friction"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "It's free"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Your transactions will appear here. Start with your wallet"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-4-import-a-wallet.png",
+      "label": "Import a wallet",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#0066ff",
+          "#1f2937",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (40px+), black color",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray (#374151)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Help section menu with categorized links",
+            "position": "left side",
+            "notable": "'Import a wallet' is highlighted/active with underline"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Instructional text and embedded mobile mockup",
+            "position": "right side, center",
+            "notable": "Paragraph structure with mobile phone mockup showing actual import UI"
+          },
+          {
+            "type": "text-input",
+            "description": "Large text area for mnemonic/private key input",
+            "position": "within mobile mockup",
+            "notable": "Takes up majority of screen space in mockup"
+          },
+          {
+            "type": "button",
+            "description": "'Import' button",
+            "position": "bottom of text area in mockup",
+            "notable": "Disabled state (grayed out)"
+          },
+          {
+            "type": "secondary-action",
+            "description": "'Scan or import a file' link",
+            "position": "below Import button",
+            "notable": "Text link providing alternative input method"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading followed by explanatory text; mobile mockup demonstrates actual workflow with input field and action buttons",
+        "innovativeElements": [
+          "Mobile mockup embedded in documentation showing real app interface with dark header bar"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Learn how to import an existing wallet from another source or previous BlueWallet instance",
+        "entryPoints": [
+          "Click 'Import a wallet' in sidebar",
+          "From Help section navigation"
+        ],
+        "exitPoints": [
+          "Proceed to import screen in app via 'Import wallet' action",
+          "Click other sidebar links for different help topics",
+          "Navigate to Home/Features/Support tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "'Import' button (in mockup, shown disabled)",
+            "action": "Submit wallet data for import"
+          },
+          {
+            "element": "'Scan or import a file' link",
+            "action": "Alternative input method for wallet recovery"
+          }
+        ],
+        "informationArchitecture": "Tutorial explaining wallet import with two input methods demonstrated; sidebar provides context and alternative topics",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Import a wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Import wallet",
+            "style": "primary-button",
+            "placement": "in help section sidebar"
+          },
+          {
+            "text": "Scan or import a file",
+            "style": "text-link",
+            "placement": "below import button in mockup"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Instead of creating a new wallet, you can chose to import a wallet from another source or a wallet that you've previously created on BlueWallet.",
+            "context": "Opening explanation",
+            "purpose": "Sets context for why someone would import"
+          },
+          {
+            "text": "Click on \"Import wallet\" to open the import screen.",
+            "context": "Instruction paragraph",
+            "purpose": "Directs user to next action"
+          },
+          {
+            "text": "Write here your mnemonic, private key, WIF, or anything you've got. BlueWallet will do its best to guess the correct format and import your wallet",
+            "context": "Input field label in mockup",
+            "purpose": "Explains what formats are supported and sets expectations"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-home-10-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif (48px+), all caps emphasis on 'Chancellor' keyword",
+          "bodyStyle": "Medium-weight sans-serif (16px), gray tone for descriptive text",
+          "dataStyle": "Not applicable"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with Home, Features, Support links in top right",
+            "position": "Top right",
+            "notable": "Minimal, clean header with logo on left"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with newspaper quote styling",
+            "position": "Center upper",
+            "notable": "Uses news headline as core messaging, unusual for wallet apps"
+          },
+          {
+            "type": "Product Description",
+            "description": "Left-aligned text explaining BlueWallet origin story",
+            "position": "Lower left",
+            "notable": "Narrative-driven, mentions '2017 fork wars'"
+          },
+          {
+            "type": "App Store Badges",
+            "description": "Apple App Store and Google Play download buttons",
+            "position": "Right side, middle",
+            "notable": "Official platform badges with high contrast"
+          },
+          {
+            "type": "Social & Product Links",
+            "description": "Twitter, Telegram, GitHub icons and product category links",
+            "position": "Lower section",
+            "notable": "GitHub link signals open-source positioning"
+          },
+          {
+            "type": "Footer",
+            "description": "Legal links and copyright notice",
+            "position": "Bottom",
+            "notable": "Includes Terms of use, Privacy policy, About, PGP"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center, supporting text flows left-to-right, CTAs positioned right for balance",
+        "innovativeElements": [
+          "Uses historical newspaper headline as marketing hook",
+          "Balances product messaging with Bitcoin movement history"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what BlueWallet is and download the app",
+        "entryPoints": [
+          "Direct URL",
+          "Search engine",
+          "External links"
+        ],
+        "exitPoints": [
+          "App Store",
+          "Google Play",
+          "Navigation menu (Home, Features, Support)",
+          "Social links (Twitter, Telegram, GitHub)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Apple App Store badge",
+            "action": "Redirects to iOS app download"
+          },
+          {
+            "element": "Google Play badge",
+            "action": "Redirects to Android app download"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different pages (Home, Features, Support)"
+          },
+          {
+            "element": "Social media links",
+            "action": "External redirect to Twitter, Telegram, GitHub"
+          }
+        ],
+        "informationArchitecture": "Linear narrative flow: headline -> origin story -> app download options -> product links -> legal footer",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button",
+            "placement": "Right side, center"
+          },
+          {
+            "text": "GET IT ON Google Play",
+            "style": "primary-button",
+            "placement": "Right side, center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BlueWallet was forged in the ashes of the 2017 fork wars, in order to bring a powerful and Bitcoin only wallet for the community.",
+            "context": "Main body text below headline",
+            "purpose": "Explain origin and positioning"
+          },
+          {
+            "text": "Products",
+            "context": "Section heading above product links",
+            "purpose": "Organize navigation"
+          },
+          {
+            "text": "© BlueWallet",
+            "context": "Footer",
+            "purpose": "Copyright notice"
+          }
+        ],
+        "tone": "professional-technical with historical narrative weight",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open-source (GitHub link)",
+          "Multi-product ecosystem (Desktop App, LNDHub, Apple Watch)",
+          "Official app store presence"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-staking-1-multisig-vault.png",
+      "label": "Multisig Vault",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Extra bold, very large sans-serif (56px+), black color",
+          "bodyStyle": "Medium-weight sans-serif (18px), gray tone, multi-line",
+          "dataStyle": "Large numerical display (6150 BTC) in white on gradient phone mockup"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with Home, Features, Support",
+            "position": "Top right",
+            "notable": "Consistent with other pages"
+          },
+          {
+            "type": "Hero Headline",
+            "description": "Large 'Multisig Vault' heading",
+            "position": "Center top",
+            "notable": "Single feature focus with bold typography"
+          },
+          {
+            "type": "Feature Description",
+            "description": "Two-line explanation of multisig technology",
+            "position": "Center, below headline",
+            "notable": "Educational tone, explains vault metaphor and use case"
+          },
+          {
+            "type": "Phone Mockup",
+            "description": "iPhone mockup showing Multisig Vault interface with balance display",
+            "position": "Center, with drop shadow",
+            "notable": "Gradient background (cyan to purple), shows 6150 BTC balance, 6:15 time"
+          },
+          {
+            "type": "Highlights Section",
+            "description": "Section heading 'Highlights' in bold",
+            "position": "Lower left",
+            "notable": "Indicates more content below"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, supporting text explains benefit, mockup showcases actual UI with prominent drop shadow",
+        "innovativeElements": [
+          "Phone mockup with gradient background creates depth",
+          "Large balance display (6150 BTC) in the mockup is focal point"
+        ]
+      },
+      "flow": {
+        "screenType": "feature-showcase",
+        "userIntent": "Learn about Multisig Vault feature and understand its security benefits",
+        "entryPoints": [
+          "Features navigation menu",
+          "Direct URL",
+          "Homepage link to Staking section"
+        ],
+        "exitPoints": [
+          "Navigation menu (Home, Features, Support)",
+          "Scroll down to 'Highlights' section",
+          "App download"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation items",
+            "action": "Navigate to different pages"
+          },
+          {
+            "element": "Scroll interaction",
+            "action": "Reveal Highlights section below"
+          }
+        ],
+        "informationArchitecture": "Feature-focused: headline -> benefit explanation -> visual mockup -> supporting highlights",
+        "frictionPoints": [
+          "No immediate CTA button visible (must scroll for Highlights)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Multisig Vault",
+        "subheadline": "The most secure Bitcoin technology. Multisig is like a vault, where multiple keys are needed to spend Bitcoin. Recommended for cold storage and large amounts.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Highlights",
+            "context": "Section heading at bottom",
+            "purpose": "Introduce feature benefits below"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [
+          "6150 BTC - Large white numerals with 'BTC' label on gradient background"
+        ],
+        "trustSignals": [
+          "Describes as 'most secure Bitcoin technology'",
+          "Recommended for cold storage and large amounts"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-1-support.png",
+      "label": "Support",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Extra bold, very large sans-serif (48px+), black, includes emoji (pointing finger)",
+          "bodyStyle": "Medium-weight sans-serif (16px), gray tone",
+          "dataStyle": "Card-based layout with white background, subtle gray borders"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation with Home, Features, Support (Support underlined in blue)",
+            "position": "Top right",
+            "notable": "Support page is active state"
+          },
+          {
+            "type": "Hero Headline",
+            "description": "'Can we help?' with pointing finger emoji",
+            "position": "Center top",
+            "notable": "Friendly, approachable tone with visual emoji accent"
+          },
+          {
+            "type": "Search Bar",
+            "description": "White search input with magnifying glass icon",
+            "position": "Center, below headline",
+            "notable": "Placeholder text 'Search for answers' invites self-service support"
+          },
+          {
+            "type": "Contact Prompt",
+            "description": "Text 'or contact the team for any doubts' with email badge",
+            "position": "Center, below search",
+            "notable": "Email (bluewallet@bluewallet.io) styled as blue rounded badge"
+          },
+          {
+            "type": "Card Grid",
+            "description": "Three category cards: Bitcoin Wallets, Cold Storage, Multisig Vaults",
+            "position": "Lower section",
+            "notable": "Each card has heading and description text, subtle border and shadow"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline draws attention, search bar is clear CTA, cards organize topics logically below",
+        "innovativeElements": [
+          "Emoji in headline softens support messaging",
+          "Dual CTA: self-service search + direct team contact",
+          "Topic cards group related help content"
+        ]
+      },
+      "flow": {
+        "screenType": "support-hub",
+        "userIntent": "Find answers to questions about BlueWallet, or contact support team",
+        "entryPoints": [
+          "Support link in navigation",
+          "Direct URL",
+          "Redirect from error or help trigger"
+        ],
+        "exitPoints": [
+          "Search (executes query)",
+          "Email contact (bluewallet@bluewallet.io)",
+          "Topic cards (drill into Bitcoin Wallets, Cold Storage, or Multisig Vaults)",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Search knowledge base for answers"
+          },
+          {
+            "element": "Email badge link",
+            "action": "Open email client to contact team"
+          },
+          {
+            "element": "Topic cards",
+            "action": "Navigate to category-specific help content"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other pages"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: headline -> dual entry paths (search or email) -> organized topic cards for browsing",
+        "frictionPoints": [
+          "No indication of search results or loading state",
+          "Card labels suggest further navigation required"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Can we help? 👉",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "bluewallet@bluewallet.io",
+            "style": "text-link",
+            "placement": "Below search bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search for answers",
+            "context": "Search bar placeholder",
+            "purpose": "Invite user to search self-service knowledge base"
+          },
+          {
+            "text": "or contact the team for any doubts",
+            "context": "Text before email badge",
+            "purpose": "Offer direct support option"
+          },
+          {
+            "text": "Bitcoin Wallets",
+            "context": "Left card heading",
+            "purpose": "Category label"
+          },
+          {
+            "text": "How to create and recover wallets. Information about Transactions.",
+            "context": "Left card description",
+            "purpose": "Describe card content"
+          },
+          {
+            "text": "Cold Storage",
+            "context": "Center card heading",
+            "purpose": "Category label"
+          },
+          {
+            "text": "Connect to your favourite device and learn how to do transactions offline.",
+            "context": "Center card description",
+            "purpose": "Describe card content"
+          },
+          {
+            "text": "Multisig Vaults",
+            "context": "Right card heading",
+            "purpose": "Category label"
+          },
+          {
+            "text": "Understand Multisig, its complexities and how to better handle it for yourself.",
+            "context": "Right card description",
+            "purpose": "Describe card content"
+          }
+        ],
+        "tone": "friendly-casual, approachable",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Direct team email contact provided",
+          "Organized help structure shows responsive support",
+          "Specific topic expertise highlighted"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-5-create-a-lightning-wallet.png",
+      "label": "Create a Lightning wallet",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B7AFF",
+          "#FFB800",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), black color",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Input fields with light gray background and placeholder text"
+        },
+        "components": [
+          {
+            "type": "Modal dialog",
+            "description": "Add wallet form with name input, type selection, and advanced options",
+            "position": "Center-right, overlaying main content",
+            "notable": "Mobile phone frame mockup showing form on device screen"
+          },
+          {
+            "type": "Radio button group",
+            "description": "Bitcoin vs Lightning wallet type selection",
+            "position": "Middle of form",
+            "notable": "Lightning option has orange border highlighting, indicating selection"
+          },
+          {
+            "type": "Text input",
+            "description": "Wallet name field with placeholder 'my first wallet'",
+            "position": "Top of form",
+            "notable": null
+          },
+          {
+            "type": "Primary button",
+            "description": "Create button",
+            "position": "Bottom of form",
+            "notable": "Light blue rounded pill button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Form fields guide eye vertically; Lightning option stands out with orange accent; Create button anchors bottom",
+        "innovativeElements": [
+          "Mobile device frame mockup to show real-world context",
+          "Two-step wallet type selection with descriptive subtitles"
+        ]
+      },
+      "flow": {
+        "screenType": "modal form",
+        "userIntent": "Create a new Lightning wallet for instant transactions",
+        "entryPoints": [
+          "Clicked 'Create a Lightning wallet' from left sidebar",
+          "Navigated from wallet creation flow"
+        ],
+        "exitPoints": [
+          "Click 'Create' to complete wallet setup",
+          "Click X to cancel and return to help section",
+          "Click 'Import wallet' as alternative action",
+          "Click 'Provide entropy via dice rolls' for advanced setup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Name input field",
+            "action": "User enters custom wallet name"
+          },
+          {
+            "element": "Lightning radio button",
+            "action": "Selects Lightning wallet type"
+          },
+          {
+            "element": "Advanced Options toggle",
+            "action": "Reveals LNDHub node address field"
+          },
+          {
+            "element": "Create button",
+            "action": "Submits form and creates wallet"
+          },
+          {
+            "element": "X close button",
+            "action": "Closes modal without creating wallet"
+          }
+        ],
+        "informationArchitecture": "Sequential form: name → type selection → optional advanced config → create action",
+        "frictionPoints": [
+          "Advanced Options section might confuse beginners (LNDHub address requirement)",
+          "No clear explanation of what each wallet type is best for until description text appears"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Create a Lightning wallet",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Create",
+            "style": "primary-button",
+            "placement": "Bottom of modal"
+          },
+          {
+            "text": "Import wallet",
+            "style": "text-link",
+            "placement": "Below Create button"
+          },
+          {
+            "text": "Provide entropy via dice rolls",
+            "style": "text-link",
+            "placement": "Below Import wallet"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "add wallet",
+            "context": "Modal header",
+            "purpose": "Identifies the form action"
+          },
+          {
+            "text": "name",
+            "context": "Input field label",
+            "purpose": "Labels the wallet naming field"
+          },
+          {
+            "text": "type",
+            "context": "Radio button group label",
+            "purpose": "Identifies wallet type selection section"
+          },
+          {
+            "text": "Simple and powerful Bitcoin wallet",
+            "context": "Bitcoin option subtitle",
+            "purpose": "Describes Bitcoin wallet benefits"
+          },
+          {
+            "text": "For spending with instant transactions",
+            "context": "Lightning option subtitle",
+            "purpose": "Describes Lightning wallet use case"
+          },
+          {
+            "text": "Advanced Options",
+            "context": "Collapsible section header",
+            "purpose": "Introduces advanced configuration"
+          },
+          {
+            "text": "Connect to your LNDHub",
+            "context": "Advanced options subsection",
+            "purpose": "Describes optional node connection"
+          }
+        ],
+        "tone": "professional-technical, helpful-educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-6-backupexport-a-wallet.png",
+      "label": "Backup/export a wallet",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#808080",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), black color",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px line-height generous",
+          "dataStyle": "Body text integrated into paragraphs, no special data formatting"
+        },
+        "components": [
+          {
+            "type": "Text content section",
+            "description": "Main educational content with multiple paragraphs and subsections",
+            "position": "Center-right main content area",
+            "notable": "Scrollable content with clear section breaks"
+          },
+          {
+            "type": "Video embed",
+            "description": "YouTube video player showing backup/restore tutorial",
+            "position": "Bottom of page",
+            "notable": "Green play button with title 'How to backup and restore your bluewallet to another phone'"
+          },
+          {
+            "type": "Section heading",
+            "description": "Bold subsection headers breaking up content",
+            "position": "Throughout main content",
+            "notable": "Clear visual hierarchy with bold black text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main headline anchors top; subheadings create logical breaks; body text is generous with line-height and margins; video anchors bottom as supplemental content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "educational content / data-browse",
+        "userIntent": "Learn how to backup and export a wallet for recovery purposes",
+        "entryPoints": [
+          "Clicked 'Backup/export a wallet' from left sidebar help section"
+        ],
+        "exitPoints": [
+          "Click other help section items in left sidebar",
+          "Click 'Home', 'Features', or 'Support' in top navigation",
+          "Watch embedded video (external YouTube)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar navigation links",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "Video player",
+            "action": "Watch supplemental tutorial video"
+          },
+          {
+            "element": "Top navigation links",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Sequential: headline → subheadline/context → main explanation → key concepts subsection → practical instructions subsection → supplemental video",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Backup/export a wallet",
+        "subheadline": "Access to private keys and recover of wallets",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Things to know",
+            "context": "Subsection heading",
+            "purpose": "Introduces critical information section"
+          },
+          {
+            "text": "Where to do it",
+            "context": "Subsection heading",
+            "purpose": "Provides procedural instructions"
+          }
+        ],
+        "tone": "educational, reassuring, professional-technical",
+        "dataFormatting": [
+          "12 or 24 words (mnemonic seed format)",
+          "'text' (quoted, lowercase)"
+        ],
+        "trustSignals": [
+          "References to standard BIP protocols (BIP44, BIP49, BIP84)",
+          "Mentions external wallet software (Electrum) for recovery verification"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-7-recover-on-another-wallet.png",
+      "label": "Recover on another wallet",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#808080",
+          "#D3D3D3",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), black color",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px",
+          "dataStyle": "Monospace gray text in light gray boxes (derivation paths)"
+        },
+        "components": [
+          {
+            "type": "Text content",
+            "description": "Main educational content with subheadings and body paragraphs",
+            "position": "Center-right main area",
+            "notable": "Scrollable content with generous spacing"
+          },
+          {
+            "type": "Code block / Data box",
+            "description": "Light gray boxes containing BIP derivation paths",
+            "position": "Under each BIP section heading",
+            "notable": "Three separate boxes for BIP44, BIP49, BIP84 with monospace font"
+          },
+          {
+            "type": "Section heading (tertiary)",
+            "description": "Bold subsections for each BIP standard",
+            "position": "Above each code box",
+            "notable": "Consistent styling across three sections"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline anchors top; explanatory paragraph establishes context; BIP sections with bold headings and code boxes create scannable structure; bottom paragraph provides implementation guidance",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "educational content / data-browse",
+        "userIntent": "Learn how to recover a BlueWallet wallet on external wallet software using mnemonic seeds and BIP standards",
+        "entryPoints": [
+          "Clicked 'Recover on another wallet' from left sidebar help section"
+        ],
+        "exitPoints": [
+          "Click other help section items in left sidebar",
+          "Navigate to other main site sections via top navigation",
+          "Visit Electrum.org (mentioned in closing text)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar navigation",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Sequential: headline → subheadline → contextual intro → BIP44 section with derivation path → BIP49 section with derivation path → BIP84 section with derivation path → external software reference",
+        "frictionPoints": [
+          "Technical nature of BIP standards and derivation paths may intimidate non-expert users",
+          "No visual explanation of what derivation paths mean or why they matter"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Recover on another wallet",
+        "subheadline": "Recover your wallet on external software",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "BIP44",
+            "context": "Section heading",
+            "purpose": "Identifies Bitcoin Improvement Proposal standard"
+          },
+          {
+            "text": "BIP49",
+            "context": "Section heading",
+            "purpose": "Identifies alternative BIP standard"
+          },
+          {
+            "text": "BIP84",
+            "context": "Section heading",
+            "purpose": "Identifies modern BIP standard"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "m/44'/0'/0' (BIP44 derivation path)",
+          "m/49'/0'/0' (BIP49 derivation path)",
+          "m/84'/0'/0' (BIP84 derivation path)"
+        ],
+        "trustSignals": [
+          "References to standard BIP protocols (BIP44, BIP49, BIP84)",
+          "Mentions Electrum wallet as trusted external recovery option",
+          "Explains technical standards used for wallet derivation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-8-adding-manual-entropy.png",
+      "label": "Adding manual entropy",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#2377F3",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black color",
+          "bodyStyle": "Regular sans-serif, medium gray (#666), 16px line-height",
+          "dataStyle": "Monospace blue for code/settings paths, hyperlinked in cyan"
+        },
+        "components": [
+          {
+            "type": "sidebar-nav",
+            "description": "Left navigation with Help section categories and subsections",
+            "position": "left",
+            "notable": "Hierarchical list with collapsible sections, current item highlighted"
+          },
+          {
+            "type": "modal",
+            "description": "Mobile phone frame showing 'add wallet' dialog with wallet type selection",
+            "position": "center-right",
+            "notable": "iOS-style modal with rounded corners, Bitcoin and Lightning options with descriptions"
+          },
+          {
+            "type": "text-content",
+            "description": "Main educational content explaining manual entropy feature",
+            "position": "center",
+            "notable": "Step-by-step instructions with linked navigation breadcrumbs"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar guides navigation flow; main content area dominates with large heading; modal screenshot grounds abstract instructions",
+        "innovativeElements": [
+          "Modal overlay in phone frame format to illustrate feature in context"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to add manual entropy when creating a wallet",
+        "entryPoints": [
+          "Support section",
+          "Settings > Advanced mode discovery"
+        ],
+        "exitPoints": [
+          "Click linked settings path to perform action",
+          "Navigate to another help topic via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to related help topics"
+          },
+          {
+            "element": "Settings/General/Advanced mode links",
+            "action": "Navigate to settings in-app to enable feature"
+          },
+          {
+            "element": "Top navigation (Home, Features, Support)",
+            "action": "Navigate away from help section"
+          }
+        ],
+        "informationArchitecture": "Left sidebar organizes help topics by feature area (wallet creation, cold storage, multisig, LNDhub); main content explains specific feature with contextual UI example",
+        "frictionPoints": [
+          "User must go to Settings > General > Advanced mode toggle to access feature; not directly accessible from this page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Adding manual entropy",
+        "subheadline": "BlueWallet supports manual entropy.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "To use this feature, go to:",
+            "context": "Introduction to instructions",
+            "purpose": "Guides user on where to find feature"
+          },
+          {
+            "text": "Settings > General then toggle on Advanced mode",
+            "context": "Middle of explanation",
+            "purpose": "Provides exact navigation path with linked keywords"
+          },
+          {
+            "text": "Now when you go back to the \"add wallet\" screen, you will see the option to add manual entropy.",
+            "context": "Final instruction",
+            "purpose": "Sets expectation for what user will see after completing setup"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-9-send-to-many-or-batching.png",
+      "label": "Send to many or Batching",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#2377F3",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36px+), black color",
+          "bodyStyle": "Regular sans-serif, dark gray (#333), 18px line-height for readability",
+          "dataStyle": "Numeric data in regular weight, no special formatting in visible content"
+        },
+        "components": [
+          {
+            "type": "sidebar-nav",
+            "description": "Categorized help navigation on left",
+            "position": "left",
+            "notable": "Current topic 'Send to many or Batching' highlighted with underline"
+          },
+          {
+            "type": "text-content",
+            "description": "Educational explanation of batching feature benefits",
+            "position": "center",
+            "notable": "Paragraph format explaining technical and user benefits"
+          },
+          {
+            "type": "video-embed",
+            "description": "Embedded YouTube video demonstrating batching in action",
+            "position": "center-bottom",
+            "notable": "Live demo showing transaction batching UI with multiple wallets visible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading commands attention; explanatory text flows into video demonstration at bottom; sidebar provides context",
+        "innovativeElements": [
+          "Embedded video demo showing feature in live BlueWallet app interface"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Understand batching feature and see it demonstrated in action",
+        "entryPoints": [
+          "Support section",
+          "Cold storage help navigation"
+        ],
+        "exitPoints": [
+          "Click video to watch full demo on YouTube",
+          "Navigate to another help topic"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play embedded batching demo video"
+          },
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to related help topics"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Leave help section"
+          }
+        ],
+        "informationArchitecture": "Feature explanation followed by visual demonstration; sidebar categories help users find related topics",
+        "frictionPoints": [
+          "Video demonstrates feature but doesn't explain how to access it in the app; user must infer from demo or find separate instructions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Send to many or Batching",
+        "subheadline": "Batching demo",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Send to multiple recipients",
+            "context": "Under 'Batching demo' subheading",
+            "purpose": "Clarifies what batching enables"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [
+          "0.344 BTC visible in video thumbnail"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-10-sign-a-transaction-offline.png",
+      "label": "Sign a transaction offline",
+      "flowType": "Settings",
+      "step": 10,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#2377F3",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36px+), black color",
+          "bodyStyle": "Regular sans-serif, dark gray (#333), 18px line-height",
+          "dataStyle": "Monospace for technical terms like 'zpub', regular for amounts"
+        },
+        "components": [
+          {
+            "type": "sidebar-nav",
+            "description": "Help section categorized navigation",
+            "position": "left",
+            "notable": "Cold storage section expanded; current topic highlighted"
+          },
+          {
+            "type": "text-content",
+            "description": "Multi-paragraph technical explanation of offline signing workflow",
+            "position": "center",
+            "notable": "Step-by-step procedural text with arrow indicators (→) showing process flow"
+          },
+          {
+            "type": "video-embed",
+            "description": "Embedded YouTube video demonstrating offline signing workflow",
+            "position": "center-bottom",
+            "notable": "Split-screen showing watch-only and seed wallets side-by-side"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading sets topic; paragraphs explain process with logical flow; video at bottom demonstrates visually",
+        "innovativeElements": [
+          "Arrow notation (→) to show sequential process steps within prose text"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn offline transaction signing process for cold storage security",
+        "entryPoints": [
+          "Support section",
+          "Cold storage category in sidebar"
+        ],
+        "exitPoints": [
+          "Play video for full demo",
+          "Navigate to related cold storage topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play offline signing demonstration"
+          },
+          {
+            "element": "Sidebar Cold storage links",
+            "action": "Navigate to other cold storage methods (Coldcard, Cobo Vault, etc.)"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Leave help section"
+          }
+        ],
+        "informationArchitecture": "Sequential process explanation organized in logical stages: setup (watch-only + seed wallets), transaction building, signing, and import back",
+        "frictionPoints": [
+          "Complex multi-step process; requires two separate wallets on different devices; not for beginners"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sign a transaction offline",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "To sign an offline transaction you will need a watch-only (zpub) wallet on a device and a wallet with the seed on the other to sign it.",
+            "context": "First paragraph",
+            "purpose": "Sets prerequisites for feature"
+          },
+          {
+            "text": "On the watch-only you build your transaction. This will generate a QR code that you will be able to scan or a file that you can export.",
+            "context": "Process explanation",
+            "purpose": "Explains first step of signing workflow"
+          },
+          {
+            "text": "On the wallet with the seed, you go to send → top options → sign transaction. Then scan the QR code or import the file. That's it the transaction is now signed and ready to be broadcasted.",
+            "context": "Process explanation",
+            "purpose": "Explains signing and broadcast steps with arrow notation for navigation"
+          },
+          {
+            "text": "To import back to the online device, you just reverse the process and import the transaction from the watch-only wallet.",
+            "context": "Final instruction",
+            "purpose": "Explains completion of workflow"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [
+          "zpub wallet type notation",
+          "39 604 sats visible in video"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-14-cobo-vault.png",
+      "label": "Cobo Vault",
+      "flowType": "Settings",
+      "step": 14,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#6B7280",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1), black color",
+          "bodyStyle": "Regular sans-serif, medium gray (#6B7280), 16px",
+          "dataStyle": "Subheading in gray for contextual labels"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with expandable help categories (Help section, Cold storage, Multisig, LNDhub)",
+            "position": "Left edge, full height",
+            "notable": "Hierarchical organization with bold category headers and indented links"
+          },
+          {
+            "type": "Video Embed",
+            "description": "YouTube video player with title overlay",
+            "position": "Center-right, mid-page",
+            "notable": "Embedded iframe with standard YouTube player controls"
+          },
+          {
+            "type": "Logo Icon",
+            "description": "BlueWallet app icon with rounded corners",
+            "position": "Video overlay, top-left",
+            "notable": "Gradient blue icon reinforces branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors attention left, main content dominates center-right; video is focal point",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Cobo Vault hardware wallet integration with BlueWallet",
+        "entryPoints": [
+          "Support menu",
+          "Cobo Vault link in sidebar"
+        ],
+        "exitPoints": [
+          "Related topics (Coldcard - Watch-only, Multisig Vault General)",
+          "Navigation menu (Home, Features, Support)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to different help topics within settings"
+          },
+          {
+            "element": "Video player",
+            "action": "Play/pause embedded tutorial video"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Jump to main website sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: category > subcategory > content; main content area describes feature with embedded video walkthrough",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cobo Vault",
+        "subheadline": "Air-gapped offline transaction with BlueWallet and Cobo Vault",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "BlueWallet features Cobo Vault hardware wallet support.",
+            "context": "Body copy, first paragraph",
+            "purpose": "Establishes the core feature"
+          },
+          {
+            "text": "With one of the first of its kind Air-gapped, PSBT with animated QR codes support.",
+            "context": "Body copy, second paragraph",
+            "purpose": "Highlights technical innovation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Hardware wallet support",
+          "PSBT standard",
+          "Air-gapped technology"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-15-multisig-vault-general.png",
+      "label": "Multisig Vault General",
+      "flowType": "Settings",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#10B981",
+          "#6B7280",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1), black color",
+          "bodyStyle": "Regular sans-serif, medium gray (#6B7280), 16px line-height 1.6",
+          "dataStyle": "Seed phrase in monospace/light gray placeholder text"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with Help section and nested categories",
+            "position": "Left edge, full height",
+            "notable": "Current section (Multisig Vault General) highlighted with bold text"
+          },
+          {
+            "type": "Key Card",
+            "description": "Visual representation of Vault key 2 with checkmark status",
+            "position": "Center, mid-page",
+            "notable": "Green checkmark indicates key status; blue accent shapes flank the card"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Share button and secondary action button",
+            "position": "Within key card",
+            "notable": "Share button is primary action; secondary button for managing seed"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar < main heading < explanatory paragraphs < vault key visualization; visual element breaks up text-heavy content",
+        "innovativeElements": [
+          "Key status indicator with checkmark",
+          "Visual card layout for vault key representation",
+          "Blue accent shapes create visual rhythm"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand how Multisig Vaults work and view vault key details",
+        "entryPoints": [
+          "Multisig Vault General link in sidebar",
+          "Navigation from other vault topics"
+        ],
+        "exitPoints": [
+          "Other sidebar topics",
+          "How to create a Vault (next section)",
+          "Vaults - spending (next section)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Share button",
+            "action": "Share vault key details"
+          },
+          {
+            "element": "Forget this seed and use xpub button",
+            "action": "Switch to extended public key management"
+          },
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to related topics"
+          }
+        ],
+        "informationArchitecture": "Educational content followed by practical example; text explanation > visual representation > security recommendations",
+        "frictionPoints": [
+          "Dense text content may overwhelm new users",
+          "Technical terminology (xpub, PSBT) without glossary links"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Multisig Vault General",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Share",
+            "style": "primary-button",
+            "placement": "Within key card"
+          },
+          {
+            "text": "Forget this seed and use xpub",
+            "style": "secondary-button",
+            "placement": "Below key card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "A Multisig Vault is a wallet with multiple keys. This allows you to exponentially increase security (if used correctly) or for shared custody as well. Shared custody is when you want to share a wallet with a group of people.",
+            "context": "First paragraph",
+            "purpose": "Define multisig and explain primary use cases"
+          },
+          {
+            "text": "Multiple devices are advised. The Vault will work with other BlueWallet apps and PSBT compatible wallets, like Electrum, Specter, Coldcard, Cobo vault, etc.",
+            "context": "Second paragraph",
+            "purpose": "Provide setup recommendations and compatibility info"
+          },
+          {
+            "text": "Editing Keys",
+            "context": "Section heading",
+            "purpose": "Introduce key management capabilities"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Hardware wallet compatibility",
+          "Multiple device support",
+          "PSBT standard"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-16-how-to-create-a-vault.png",
+      "label": "How to create a Vault",
+      "flowType": "Settings",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#6B7280",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1), black color",
+          "bodyStyle": "Regular sans-serif, medium gray (#6B7280), 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with Help categories and nested topics",
+            "position": "Left edge, full height",
+            "notable": "How to create a Vault is currently selected (bold)"
+          },
+          {
+            "type": "Video Embed",
+            "description": "YouTube tutorial video with overlay title",
+            "position": "Center-right, large focal point",
+            "notable": "Shows dual-screen setup with BlueWallet UI on both sides; dark theme video overlay"
+          },
+          {
+            "type": "Navigation Arrows",
+            "description": "Previous/Next pagination controls",
+            "position": "Bottom of main content",
+            "notable": "Links to previous (Multisig Vault General) and next (Vaults - spending) pages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading anchors top; video dominates center; pagination footer guides sequential flow",
+        "innovativeElements": [
+          "Contextual video tutorial matching page topic",
+          "Sequential navigation with clear prev/next labels"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Watch tutorial on creating a multisig vault between two BlueWallet instances",
+        "entryPoints": [
+          "How to create a Vault link in sidebar",
+          "Sequential navigation from previous page"
+        ],
+        "exitPoints": [
+          "Multisig Vault General (previous)",
+          "Vaults - spending (next)",
+          "Other sidebar topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play/pause tutorial video with full YouTube controls"
+          },
+          {
+            "element": "Previous button",
+            "action": "Navigate back to Multisig Vault General"
+          },
+          {
+            "element": "Next button",
+            "action": "Navigate forward to Vaults - spending"
+          }
+        ],
+        "informationArchitecture": "Tutorial-first approach; video demonstrates concept rather than text explanation; sequential paging creates learning path",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Sidebar highlighting current section",
+          "Previous/Next buttons indicate sequential learning flow"
+        ]
+      },
+      "copy": {
+        "headline": "How to create a Vault",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "← Previous",
+            "style": "text-link",
+            "placement": "Bottom left"
+          },
+          {
+            "text": "Next →",
+            "style": "text-link",
+            "placement": "Bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "How to create a Multisig wallet Vault between 2 BlueWallet apps",
+            "context": "Video overlay title",
+            "purpose": "Clearly state tutorial topic"
+          }
+        ],
+        "tone": "educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-11-coldcard-with-bluewallet.png",
+      "label": "Coldcard with Bluewallet",
+      "flowType": "Settings",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (h1), black text",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px",
+          "dataStyle": "Monospace inline code blocks with blue highlight for menu navigation (Advanced > MicroSD Card > Export Wallet > Electrum Wallet)"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Categorized help topics with collapsible sections (Help section, Cold storage, Multisig, LNDhub)",
+            "position": "left side",
+            "notable": "Deep hierarchical navigation structure with visual distinction between section headers (bold) and links (gray)"
+          },
+          {
+            "type": "branded-icon",
+            "description": "Blue wallet icon with gradient",
+            "position": "top-left",
+            "notable": null
+          },
+          {
+            "type": "main-content-area",
+            "description": "Two-column layout with headline, subheadline, device illustration, and instructional text",
+            "position": "center-right",
+            "notable": "Device illustration (Coldcard blue device) positioned right-center with descriptive text below"
+          },
+          {
+            "type": "breadcrumb-navigation",
+            "description": "Inline step-by-step path with chevrons and blue links",
+            "position": "lower content area",
+            "notable": "Monospace typography for technical menu paths"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear distinction between navigation sidebar (secondary) and main content (primary); headline anchors the page, subheadline provides context, video/device illustration draws attention, then instructional text guides user",
+        "innovativeElements": [
+          "Monospace styling for technical navigation paths creates visual distinction from prose",
+          "Blue chevron separators (>) in instruction breadcrumbs aid scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to set up Coldcard hardware wallet with Bluewallet using Lightning SD card",
+        "entryPoints": [
+          "From sidebar navigation: Cold storage > Coldcard with Bluewallet",
+          "Direct link from support or learning materials"
+        ],
+        "exitPoints": [
+          "Back to Help section sidebar",
+          "Follow instructional steps to set up hardware",
+          "Navigate to related topics (Coldcard - Cloud, Coldcard - Watch-only)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "Top navigation (Home, Features, Support)",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Blue instruction links (Advanced, MicroSD Card, etc.)",
+            "action": "Highlight important navigation steps within the Coldcard device menu"
+          }
+        ],
+        "informationArchitecture": "Hierarchical categorization: Help section contains subsections (wallet creation, cold storage options, multisig, LNDhub); current page is nested under Cold storage; content flows from headline → subheadline → visual → detailed instructions with technical breadcrumbs",
+        "frictionPoints": [
+          "Dense text blocks with minimal visual breaks could overwhelm users",
+          "Multiple nested instruction steps require careful reading of monospace breadcrumbs",
+          "Assumes user has access to hardware device and SD card"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Coldcard with Bluewallet",
+        "subheadline": "Using a Lightning SD card",
+        "ctas": [
+          {
+            "text": "Advanced",
+            "style": "text-link",
+            "placement": "instructional breadcrumb"
+          },
+          {
+            "text": "MicroSD Card",
+            "style": "text-link",
+            "placement": "instructional breadcrumb"
+          },
+          {
+            "text": "Export Wallet",
+            "style": "text-link",
+            "placement": "instructional breadcrumb"
+          },
+          {
+            "text": "Electrum Wallet",
+            "style": "text-link",
+            "placement": "instructional breadcrumb"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "In this video you will see the usage of PSBT, watch-only wallets. And how to send transactions offline with your Coldcard and Bluewallet.",
+            "context": "Main body text below device illustration",
+            "purpose": "Sets expectations for video content and explains relevance"
+          },
+          {
+            "text": "Put the SD card into Coldcard. Choose Native Segwit. It should create the wallet skeleton file on SD card.",
+            "context": "Bulleted instruction at bottom",
+            "purpose": "Specific step-by-step guidance for hardware setup"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Menu paths with right-chevrons (Advanced > MicroSD Card > Export Wallet > Electrum Wallet)"
+        ],
+        "trustSignals": [
+          "Official Bluewallet branding and logo",
+          "Reference to PSBT (Payment Signature Block Transaction) standard",
+          "Technical terminology indicates expertise (Native Segwit, wallet skeleton file)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-12-coldcard-cloud.png",
+      "label": "Coldcard - Cloud",
+      "flowType": "Settings",
+      "step": 12,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (h1), black text",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px",
+          "dataStyle": "Monospace inline code blocks for technical paths; regular for video descriptions"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Categorized help topics with current page highlighted (Coldcard - Cloud)",
+            "position": "left side",
+            "notable": "Active state shows selected topic with dash indicator (–)"
+          },
+          {
+            "type": "youtube-embed",
+            "description": "Embedded video player with Bluewallet icon overlay and title",
+            "position": "center-right, upper portion",
+            "notable": "Video prominently featured with play controls and progress bar"
+          },
+          {
+            "type": "device-illustration",
+            "description": "Blue Coldcard device icon",
+            "position": "center-right, middle",
+            "notable": "Consistent styling with previous screen"
+          },
+          {
+            "type": "instructional-list",
+            "description": "Bulleted steps with monospace breadcrumb links",
+            "position": "lower content area",
+            "notable": "Combines narrative description with technical navigation paths"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline anchors attention, subheadline frames topic variation, embedded video provides visual engagement, descriptive paragraph contextualizes video, bulleted steps guide implementation",
+        "innovativeElements": [
+          "Video embedding reduces friction compared to external links",
+          "Contextual description mentions Dropbox specifically, differentiating this cloud variant"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to set up Coldcard with Bluewallet using cloud-based wallet file storage (Dropbox variant)",
+        "entryPoints": [
+          "From sidebar: Cold storage > Coldcard - Cloud",
+          "Navigation from previous Coldcard setup guides"
+        ],
+        "exitPoints": [
+          "Back to sidebar navigation",
+          "Related pages (Coldcard with Bluewallet, Coldcard - Watch-only, Cobo Vault)",
+          "Follow video tutorial or instructions to implement setup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play embedded tutorial video"
+          },
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "Blue instruction links (Advanced, MicroSD Card, etc.)",
+            "action": "Highlight menu steps on hardware device"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Help section → Cold storage → Coldcard - Cloud; combines video-first approach with supplementary text instructions and technical breadcrumbs",
+        "frictionPoints": [
+          "Multiple content formats (video + text) could create cognitive load",
+          "Instructions span across video and text, requiring user to consume both",
+          "Assumes familiarity with Dropbox and SD card operations"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Coldcard - Cloud",
+        "subheadline": "Coldcard with Bluewallet – Using Dropbox",
+        "ctas": [
+          {
+            "text": "Advanced",
+            "style": "text-link",
+            "placement": "instructional steps"
+          },
+          {
+            "text": "MicroSD Card",
+            "style": "text-link",
+            "placement": "instructional steps"
+          },
+          {
+            "text": "Export Wallet",
+            "style": "text-link",
+            "placement": "instructional steps"
+          },
+          {
+            "text": "Electrum Wallet",
+            "style": "text-link",
+            "placement": "instructional steps"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "In this video you will see the usage of PSBT, watch-only wallets. And how to send transactions offline with your Coldcard and Bluewallet. Using dropbox on this example.",
+            "context": "Descriptive paragraph below video",
+            "purpose": "Sets expectations and explains Dropbox differentiation"
+          },
+          {
+            "text": "Put the SD card into the PC and move the created wallet skeleton file onto the Dropbox",
+            "context": "Final bulleted instruction",
+            "purpose": "Specific step explaining cloud storage integration"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Menu paths with right-chevrons (Advanced > MicroSD Card > Export Wallet > Electrum Wallet)"
+        ],
+        "trustSignals": [
+          "Official Bluewallet branding and logo",
+          "Embedded video from verified source",
+          "Reference to PSBT standard and offline transaction capabilities"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-13-coldcard-watchonly.png",
+      "label": "Coldcard - Watch-only",
+      "flowType": "Settings",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (h1), black text",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Categorized help topics with current page highlighted (Coldcard - Watch-only)",
+            "position": "left side",
+            "notable": "Active state shows selected topic with dash indicator (–)"
+          },
+          {
+            "type": "youtube-embed",
+            "description": "Embedded tutorial video with instructor face, Bluewallet icon, and title",
+            "position": "center-right, upper-middle portion",
+            "notable": "Tutorial format with visible instructor provides personal touch and credibility"
+          },
+          {
+            "type": "device-illustration",
+            "description": "Blue Coldcard device icon",
+            "position": "center-right, above video",
+            "notable": "Consistent visual branding across all Coldcard documentation"
+          },
+          {
+            "type": "pagination-controls",
+            "description": "Previous/Next navigation with related topic labels",
+            "position": "bottom of main content area",
+            "notable": "Suggests progression through interconnected tutorial topics"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline sets topic, descriptive subheadline explains use case, device illustration provides visual anchor, video dominates visual space, pagination enables sequential learning",
+        "innovativeElements": [
+          "Pagination footer (Previous/Next) creates sense of guided learning path",
+          "Instructor-visible video format (vs. screen recording) builds trust and approachability"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to view Coldcard balance in Bluewallet without signing transactions (watch-only mode)",
+        "entryPoints": [
+          "From sidebar: Cold storage > Coldcard - Watch-only",
+          "From previous Coldcard tutorials via sequential navigation"
+        ],
+        "exitPoints": [
+          "Next: Cobo Vault (via pagination)",
+          "Previous: Coldcard - Cloud (via pagination)",
+          "Back to sidebar for other topics",
+          "Implement watch-only wallet setup based on video"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play tutorial video showing real-time demonstration"
+          },
+          {
+            "element": "Next button",
+            "action": "Navigate to Cobo Vault documentation"
+          },
+          {
+            "element": "Previous button",
+            "action": "Navigate back to Coldcard - Cloud"
+          },
+          {
+            "element": "Sidebar navigation",
+            "action": "Jump to any help topic"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Sequential learning path: Help section → Cold storage → individual Coldcard variants with Previous/Next navigation suggesting progression from technical setup (with Bluewallet, Cloud) to user-facing features (Watch-only)",
+        "frictionPoints": [
+          "Long video (7:00) may discourage users seeking quick answers",
+          "No visible timestamps or chapters within video for navigating to specific steps",
+          "Assumes user has already set up Coldcard hardware"
+        ],
+        "progressIndicators": [
+          "Pagination footer (Previous/Next) implies position in a larger learning sequence"
+        ]
+      },
+      "copy": {
+        "headline": "Coldcard - Watch-only",
+        "subheadline": "See your real time Bitcoin balance stored on your ColdCard hardware wallet anytime from your BlueWallet app",
+        "ctas": [
+          {
+            "text": "Previous",
+            "style": "text-link",
+            "placement": "bottom-left pagination"
+          },
+          {
+            "text": "Next",
+            "style": "text-link",
+            "placement": "bottom-right pagination"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Coldcard - Cloud",
+            "context": "Bottom-left pagination label",
+            "purpose": "Indicates previous page in sequence"
+          },
+          {
+            "text": "Cobo Vault",
+            "context": "Bottom-right pagination label",
+            "purpose": "Indicates next page in sequence"
+          }
+        ],
+        "tone": "professional-technical, friendly-instructional",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Bluewallet branding visible in video",
+          "Live instructor demonstration increases credibility",
+          "Tutorial format (#001) suggests systematic documentation approach"
+        ],
+        "jargonLevel": "beginner-intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-20-lndhub-with-raspibolt.png",
+      "label": "LNDhub with raspibolt",
+      "flowType": "Settings",
+      "step": 20,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e88e5",
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large cap headings (LNDhub with raspibolt, Install Redis, Make & install)",
+          "bodyStyle": "regular sans-serif, medium gray body text with good line height",
+          "dataStyle": "monospace code blocks with light gray background, blue syntax highlighting for commands"
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "left panel with categorized help topics (Help section, Cold storage, Multisig, LNDhub)",
+            "position": "left side, full height",
+            "notable": "hierarchical organization with bold section headers and light blue link text"
+          },
+          {
+            "type": "code block",
+            "description": "terminal command examples with syntax highlighting",
+            "position": "center main content area, multiple blocks",
+            "notable": "blue command text on light background, easy to copy"
+          },
+          {
+            "type": "header navigation",
+            "description": "top navigation with Home, Features, Support",
+            "position": "top right",
+            "notable": "minimal, clean horizontal menu"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "sidebar anchors left eye, main content flows down with heading, subheadings, then code blocks",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation",
+        "userIntent": "learn how to set up LNDhub with Raspibolt (Raspberry Pi Bitcoin/Lightning node)",
+        "entryPoints": [
+          "sidebar link 'LNDhub with Raspibolt'",
+          "search result"
+        ],
+        "exitPoints": [
+          "click another sidebar link",
+          "click Support in top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "sidebar links",
+            "action": "navigate to different help topics"
+          },
+          {
+            "element": "code blocks",
+            "action": "user can copy terminal commands"
+          }
+        ],
+        "informationArchitecture": "step-by-step technical guide organized by task (Install Redis, Make & install, Create working directory)",
+        "frictionPoints": [
+          "high technical bar - assumes Linux/terminal comfort",
+          "requires following multiple sequential steps"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LNDhub with raspibolt",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Install Redis",
+            "context": "subsection heading",
+            "purpose": "guide reader to first task"
+          },
+          {
+            "text": "Login as \"admin\"",
+            "context": "instruction before code block",
+            "purpose": "clarify prerequisite action"
+          },
+          {
+            "text": "Make & install",
+            "context": "subsection heading",
+            "purpose": "mark compilation step"
+          }
+        ],
+        "tone": "professional-technical, instructional",
+        "dataFormatting": [
+          "$ cd /home/admin/download",
+          "$ wget http://download.redis.io/releases/redis-5.0.3.tar.gz"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-21-recover-lndhub-account.png",
+      "label": "Recover lndhub account",
+      "flowType": "Settings",
+      "step": 21,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e88e5",
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large cap main heading, numbered subheadings (1-, 2-)",
+          "bodyStyle": "regular sans-serif, dark gray body text with good leading",
+          "dataStyle": "inline code formatting for technical terms like '.onion' and 'Indhub://'"
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "left panel with categorized help topics, same as previous screen",
+            "position": "left side, full height",
+            "notable": "consistent navigation structure across help docs"
+          },
+          {
+            "type": "content sections",
+            "description": "numbered step sections with explanatory text",
+            "position": "center main content",
+            "notable": "clear section breaks with bold numbered headers"
+          },
+          {
+            "type": "text link",
+            "description": "arrow link 'Recover form here'",
+            "position": "lower main content area",
+            "notable": "call-to-action link with arrow icon for next step"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "main heading draws eye, numbered sections create scannable structure, bold inline text emphasizes key terms",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation",
+        "userIntent": "understand how to recover an Indhub account after service sunset",
+        "entryPoints": [
+          "sidebar link 'Recover on another wallet'",
+          "search for account recovery"
+        ],
+        "exitPoints": [
+          "click 'Recover form here' link",
+          "navigate sidebar to another topic"
+        ],
+        "interactiveElements": [
+          {
+            "element": "sidebar links",
+            "action": "navigate to related help topics"
+          },
+          {
+            "element": "Recover form here link",
+            "action": "navigate to recovery form"
+          }
+        ],
+        "informationArchitecture": "problem statement, then two numbered steps explaining what info is needed, followed by CTA link",
+        "frictionPoints": [
+          "service is sunset - creates urgency but also user frustration",
+          "requires gathering account info and bitcoin address"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Recover Indhub account",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "→ Recover form here",
+            "style": "text-link",
+            "placement": "lower content, after explanatory sections"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "With the sunset of Indhub.io it is not possible to use the service anymore. However you can request to recover your balance.",
+            "context": "opening paragraph",
+            "purpose": "explain situation and provide reassurance"
+          },
+          {
+            "text": "You will need two items to be able to recover, your account information and a bitcoin onchain address.",
+            "context": "intro to steps",
+            "purpose": "set expectations for what's required"
+          },
+          {
+            "text": "Make sure it doesnt end with .onion - such wallets are usually hosted on private nodes, such as Umbrel.",
+            "context": "within step 1 explanation",
+            "purpose": "prevent user error with specific guidance"
+          }
+        ],
+        "tone": "professional-technical, empathetic (acknowledging service sunset), educational",
+        "dataFormatting": [
+          "Indhub://",
+          ".onion"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-22-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 22,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e88e5",
+          "#ffffff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large centered 'Blog' heading, bold article titles",
+          "bodyStyle": "regular sans-serif, dark gray body text",
+          "dataStyle": "light gray dates, green badges for fee tiers in image preview"
+        },
+        "components": [
+          {
+            "type": "page heading",
+            "description": "centered 'Blog' title",
+            "position": "top center",
+            "notable": "minimal, focused attention on content"
+          },
+          {
+            "type": "blog card",
+            "description": "article preview card with icon, title, date, excerpt, and read more link",
+            "position": "center, stacked vertically",
+            "notable": "bordered card with rounded corners, icon on left side"
+          },
+          {
+            "type": "article preview image",
+            "description": "embedded image showing fee options (Fast, Medium, Slow)",
+            "position": "within second blog card",
+            "notable": "visual preview of article topic"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "centered page heading draws eye, blog cards stack vertically with consistent spacing, article titles bold to scan",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "blog-feed",
+        "userIntent": "read announcements and articles about BlueWallet features and service updates",
+        "entryPoints": [
+          "click Support in top nav",
+          "search for blog"
+        ],
+        "exitPoints": [
+          "click 'Read more' on any article",
+          "return to navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read more link",
+            "action": "navigate to full article"
+          },
+          {
+            "element": "blog cards",
+            "action": "likely clickable to navigate to article"
+          }
+        ],
+        "informationArchitecture": "chronological blog post feed with most recent first (Feb 23, 2023), each post is a card with preview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blog",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read more →",
+            "style": "text-link",
+            "placement": "bottom of each blog card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sunsetting Lndhub.io",
+            "context": "first blog post title",
+            "purpose": "announce major service change"
+          },
+          {
+            "text": "Feb 23, 2023",
+            "context": "below article title",
+            "purpose": "show publication date"
+          },
+          {
+            "text": "Today, we are announcing that the Lightning node, Lndhub.io, where BlueWallet provides Lightning wallets to its users, is sunsetting. While you can still withdraw your sats, creating new or refilling existing Lightning wallets on LndHub node will no longer be possible.",
+            "context": "article excerpt",
+            "purpose": "summarize key announcement"
+          }
+        ],
+        "tone": "professional-technical, informational, apologetic (for sunsets)",
+        "dataFormatting": [
+          "Feb 23, 2023",
+          "Apr 20, 2021"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-17-vaults-spending.png",
+      "label": "Vaults - spending",
+      "flowType": "Settings",
+      "step": 17,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black color, centered",
+          "bodyStyle": "Regular sans-serif, medium gray, left-aligned",
+          "dataStyle": "Monospace in embedded video showing BTC amounts"
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Top bar with logo and nav links (Home, Features, Support)",
+            "position": "top",
+            "notable": "Clean minimal design with blue brand logo"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Categorized help menu with expandable sections",
+            "position": "left",
+            "notable": "Hierarchical organization with bold category headers and indented links"
+          },
+          {
+            "type": "Video Embed",
+            "description": "YouTube video showing multisig wallet transaction flow",
+            "position": "center-right",
+            "notable": "Full-width video with timestamp 0:01/1:40 and YouTube controls"
+          },
+          {
+            "type": "Related Content Links",
+            "description": "Bottom section with 'How to create a Vault' and 'LNDhub on VPS with Ubuntu'",
+            "position": "bottom",
+            "notable": "Contextual navigation to related help topics"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors navigation, center content is the main focus with large headline drawing eye, embedded video dominates middle section",
+        "innovativeElements": [
+          "Embedded YouTube video for procedural learning",
+          "Categorical sidebar grouping complex wallet features"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to use multisig vaults for spending transactions",
+        "entryPoints": [
+          "Clicked 'Vaults - spending' from sidebar help menu",
+          "Navigated from support/help section"
+        ],
+        "exitPoints": [
+          "Click 'How to create a Vault' link at bottom",
+          "Click 'LNDhub on VPS with Ubuntu' link at bottom",
+          "Use sidebar navigation to explore other help topics",
+          "Use top navigation (Home, Features, Support)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Video player",
+            "action": "Play/pause/scrub through transaction demo"
+          },
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to different help topics"
+          },
+          {
+            "element": "Bottom content links",
+            "action": "Jump to related help pages"
+          }
+        ],
+        "informationArchitecture": "Primary navigation via left sidebar categorized by feature (Help section, Cold storage, Multisig, LNDhub); main content area focuses on single topic with supporting video",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Vaults - spending",
+        "subheadline": "Air gapped offline transactions from a Multisig Vault",
+        "ctas": [
+          {
+            "text": "How to create a Vault",
+            "style": "text-link",
+            "placement": "bottom section"
+          },
+          {
+            "text": "LNDhub on VPS with Ubuntu",
+            "style": "text-link",
+            "placement": "bottom section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BlueWallet's Bitcoin Multisig wallet Vaults feature. Where 2 BlueWallet apps are signing transactions offline and airgapped.",
+            "context": "Main body text explaining the feature",
+            "purpose": "Set context and expectations for what user will learn"
+          },
+          {
+            "text": "Multisig wallet - How to send a transaction",
+            "context": "Video title overlay",
+            "purpose": "Label the procedural demo content"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00050666 BTC",
+          "0:01 / 1:40 (timestamp)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-18-lndhub-on-vps-with-ubuntu.png",
+      "label": "LNDhub on VPS with Ubuntu",
+      "flowType": "Settings",
+      "step": 18,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (36px+), black, main headline",
+          "bodyStyle": "Regular sans-serif, dark gray, justified alignment",
+          "dataStyle": "Monospace code blocks with syntax highlighting (blue for commands, keywords)"
+        },
+        "components": [
+          {
+            "type": "Code Block",
+            "description": "Terminal commands in monospace with light gray background",
+            "position": "center",
+            "notable": "Multiple code blocks with command syntax: '$ sudo apt update' and '$ sudo nano /etc/redis/redis.conf'"
+          },
+          {
+            "type": "Instruction Numbering",
+            "description": "Step-based progression markers",
+            "position": "center",
+            "notable": "'Step 1: Install Redis' clearly labeled"
+          },
+          {
+            "type": "Inline Code Highlighting",
+            "description": "Keywords highlighted in blue within body text",
+            "position": "inline",
+            "notable": "Words like 'supervised', 'supervised no', 'supervised systemd' are colored blue for emphasis"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline anchors top, descriptive paragraphs flow downward, code blocks are visually distinct with background color to draw focus",
+        "innovativeElements": [
+          "Syntax highlighting within prose body text",
+          "Nested step progression with explanatory text before code"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Follow technical setup instructions for LNDhub node on Ubuntu VPS",
+        "entryPoints": [
+          "Clicked 'LNDhub on VPS with Ubuntu' from sidebar or previous page link",
+          "Searched for LNDhub Ubuntu setup"
+        ],
+        "exitPoints": [
+          "Navigate to next step in tutorial",
+          "Click 'LNDhub on Mac OSX' in sidebar for alternative",
+          "Return to 'Multisig' or other help sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Code blocks",
+            "action": "User can copy/reference terminal commands (implied, not explicitly shown)"
+          },
+          {
+            "element": "Sidebar navigation",
+            "action": "Jump to other help topics or alternative platforms"
+          }
+        ],
+        "informationArchitecture": "Linear tutorial with preamble explaining prerequisites, then step-based progression with code samples interspersed with explanatory text",
+        "frictionPoints": [
+          "Requires technical knowledge of Ubuntu/Linux",
+          "No copy-to-clipboard button visible on code blocks",
+          "Long paragraphs of technical explanation may be dense for beginners"
+        ],
+        "progressIndicators": [
+          "Step 1: Install Redis (visible at bottom, implies multi-step process)"
+        ]
+      },
+      "copy": {
+        "headline": "LNDhub on VPS with Ubuntu",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "link to set up your Bitcoin&Lightning node on Ubuntu 16.04",
+            "style": "text-link",
+            "placement": "preamble paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "To avoid rewriting things already well explained in other tutorials, I leave here a link...",
+            "context": "Opening of main content",
+            "purpose": "Explain approach and set expectations"
+          },
+          {
+            "text": "You can follow this or other guides as long as LND is the implementation of choice for Lightning",
+            "context": "Preamble section",
+            "purpose": "Provide flexibility and acknowledge other resources"
+          },
+          {
+            "text": "LndHub uses Redis as database, install it with",
+            "context": "Before Step 1 code block",
+            "purpose": "Explain purpose of the command before presenting it"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ sudo apt update",
+          "$ sudo apt install redis-server",
+          "$ sudo nano /etc/redis/redis.conf",
+          "Ubuntu 16.04",
+          "VPS"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-19-lndhub-on-mac-osx.png",
+      "label": "LNDHub on Mac OSX",
+      "flowType": "Settings",
+      "step": 19,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E40AF",
+          "#60A5FA",
+          "#000000",
+          "#FFFFFF",
+          "#2D3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (36px+), black, main title",
+          "bodyStyle": "Regular sans-serif, dark gray, multiple sizes for emphasis",
+          "dataStyle": "Bullet points for requirements list, descriptive text for explanations"
+        },
+        "components": [
+          {
+            "type": "Requirements List",
+            "description": "Bulleted list of prerequisites",
+            "position": "upper center",
+            "notable": "Clean bullet list with items like 'NodeLauncher', 'Mac Terminal', 'Homebrew installed—https://brew.sh'"
+          },
+          {
+            "type": "Architecture Diagram",
+            "description": "Dark background diagram showing system flow",
+            "position": "center",
+            "notable": "Visual showing flow: 'end user' -> 'API' -> 'LNDhub' (open source) -> 'Lightning Network Daemon' -> 'node' network. Uses cyan/blue accent colors."
+          },
+          {
+            "type": "Section Heading",
+            "description": "'Step 1—LND' marks progression through tutorial",
+            "position": "lower center",
+            "notable": "Clear milestone marker for multi-step process"
+          },
+          {
+            "type": "Instructional Paragraph",
+            "description": "Descriptive text explaining next action",
+            "position": "bottom",
+            "notable": "'1A—Download and set up Pierre Rochard's NodeLauncher.'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline at top, requirements immediately below for quick scan, diagram dominates center as visual anchor, step-by-step instructions flow below",
+        "innovativeElements": [
+          "System architecture diagram showing data flow and component relationships",
+          "Combines technical requirements list with visual learning aid"
+        ]
+      },
+      "flow": {
+        "screenType": "help-documentation",
+        "userIntent": "Learn how to set up LNDhub Lightning wallet node on macOS",
+        "entryPoints": [
+          "Clicked 'LNDhub on Mac OSX' from sidebar",
+          "Navigated from Ubuntu version as platform alternative"
+        ],
+        "exitPoints": [
+          "Scroll down to continue reading Step 1 detailed instructions",
+          "Click back to 'LNDhub on VPS with Ubuntu' for alternative platform",
+          "Use sidebar to navigate to other help topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Brew.sh link",
+            "action": "Navigate to Homebrew installation page"
+          },
+          {
+            "element": "Sidebar navigation",
+            "action": "Jump to different help sections or other LNDhub variants"
+          }
+        ],
+        "informationArchitecture": "Top-down progression: headline → requirements checklist → conceptual diagram → step-by-step instructions below",
+        "frictionPoints": [
+          "Requires knowledge of Mac Terminal and command line",
+          "Multiple requirements to gather before starting"
+        ],
+        "progressIndicators": [
+          "Step 1—LND",
+          "1A—Download and set up... (sub-step indicator)"
+        ]
+      },
+      "copy": {
+        "headline": "LNDhub on Mac OSX",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "https://brew.sh",
+            "style": "text-link",
+            "placement": "Requirements list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Requirements:",
+            "context": "Section header",
+            "purpose": "Organize and label prerequisites"
+          },
+          {
+            "text": "Let's create a self-sovereign mobile lightning wallet using nothing but a Mac, a mobile phone and some software supplied by the fantastic open source community!",
+            "context": "Main introductory text",
+            "purpose": "Motivate user and explain the goal in accessible language"
+          },
+          {
+            "text": "1A—Download and set up Pierre Rochard's NodeLauncher.",
+            "context": "Step 1 sub-instruction",
+            "purpose": "Guide user to first concrete action"
+          }
+        ],
+        "tone": "friendly-casual, professional-technical",
+        "dataFormatting": [
+          "Mac OSX",
+          "Mac Terminal",
+          "Homebrew"
+        ],
+        "trustSignals": [
+          "Open source community mentioned",
+          "Named tool creator (Pierre Rochard's NodeLauncher)",
+          "Self-sovereign wallet emphasis"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-23-terms-of-use.png",
+      "label": "Terms of use",
+      "flowType": "Settings",
+      "step": 23,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e40af",
+          "#000000",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray with generous line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav with logo on left, menu items (Home, Features, Support) on right",
+            "position": "top",
+            "notable": "Clean, minimal header design with equal visual weight distribution"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Scrollable text content with structured paragraphs and legal terms",
+            "position": "center",
+            "notable": "Single column layout with comfortable margins on sides"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Heading anchors each section; body text secondary; white space separates content blocks",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Read and understand the terms of service before using the app",
+        "entryPoints": [
+          "Settings menu",
+          "Onboarding flow",
+          "Support/Help section"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Accept and continue",
+          "Home navigation link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Logo link",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective pages"
+          }
+        ],
+        "informationArchitecture": "Linear document structure with sections on app usage, liability, wallet mechanics, and key management",
+        "frictionPoints": [
+          "Long scrollable text with no table of contents",
+          "No search/find functionality within terms",
+          "Dense legal language without breakup"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of use",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "By using Bluewallet mobile application (the \"App\") provided by Bluewallet Services (the \"Company\"), you are agreeing to be bound by these terms of service...",
+            "context": "Opening paragraph",
+            "purpose": "Establishes legal binding and scope of agreement"
+          },
+          {
+            "text": "The Company intends for users to be able to use the functionality of the App on a decentralized, anonymous basis.",
+            "context": "Section on app functionality",
+            "purpose": "Sets expectations about anonymity and decentralization"
+          },
+          {
+            "text": "BlueWallet is not responsible for any errors or omissions that you make in connection with any Bitcoin transaction initiated via the Services",
+            "context": "Liability section",
+            "purpose": "Clearly disclaims responsibility for user errors"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit statement about decentralized, anonymous operation",
+          "Clear explanation of key management and BlueWallet's lack of access to private keys",
+          "Statement that BlueWallet cannot identify users"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-24-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 24,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e40af",
+          "#000000",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), dark gray/black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray with generous line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav with logo on left, menu items (Home, Features, Support) on right",
+            "position": "top",
+            "notable": "Consistent with terms of use page"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Scrollable text content with privacy policy sections",
+            "position": "center",
+            "notable": "Single column with clear section breaks"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Section headings in bold introduce topics; body text provides details",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand how BlueWallet collects, uses, and protects user data",
+        "entryPoints": [
+          "Settings menu",
+          "During onboarding",
+          "Help/Support section"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Home navigation",
+          "Support contact"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Logo link",
+            "action": "Navigate to home"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other pages"
+          }
+        ],
+        "informationArchitecture": "Organized by topics: intro, children policy, data collection philosophy, analytics, support communications, third-party app stores",
+        "frictionPoints": [
+          "Dense policy text without visual breaks",
+          "No search functionality",
+          "Long scrolling content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This Privacy policy describes the privacy practices that are applicable to your use of the Bluewallet mobile application (the \"App\") provided by Bluewallet Services (the \"Company\").",
+            "context": "Opening",
+            "purpose": "Establishes scope and applicability"
+          },
+          {
+            "text": "No Use by Children. The App is not intended for use by children under the age of thirteen (13).",
+            "context": "First policy section",
+            "purpose": "Legal compliance for age restrictions"
+          },
+          {
+            "text": "The company's policy is to collect as little user information as possible to ensure a completely private and anonymous user experience when using the Service. We also have no technical means to access your encrypted storage content in any case.",
+            "context": "Core privacy philosophy",
+            "purpose": "Establishes privacy-first commitment and technical guarantees"
+          },
+          {
+            "text": "Aggregated data and basic usage events for analytics and application crashes are collected in order to maintain the integrity of the service and help users debug in case of errors. This data collection can be opt-out by the user at any moment from the application settings privacy options.",
+            "context": "Analytics section",
+            "purpose": "Explains data collection with transparency about opt-out"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Age threshold: 13 years"
+        ],
+        "trustSignals": [
+          "Explicit commitment to collecting minimal user information",
+          "Statement about lack of technical access to encrypted content",
+          "Opt-out availability for analytics",
+          "Clear disclosure about app store relationships and BlueWallet's non-responsibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bluewallet-settings-25-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 25,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1e40af",
+          "#000000",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark blue-gray with comfortable line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav with logo on left, menu items on right",
+            "position": "top",
+            "notable": "Consistent header design across all settings pages"
+          },
+          {
+            "type": "content-sections",
+            "description": "Two main sections: About the project and Who are we",
+            "position": "center",
+            "notable": "Narrative-driven content with generous whitespace"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Section titles in bold; body text in lighter blue-gray; clear separation between sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "informational-page",
+        "userIntent": "Learn about BlueWallet's mission, history, and team philosophy",
+        "entryPoints": [
+          "Settings menu",
+          "Help/Support section",
+          "Navigation menu"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Home navigation",
+          "Contact via feedback"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Logo link",
+            "action": "Navigate to home"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections"
+          }
+        ],
+        "informationArchitecture": "Two sections: project origin story and team identity, each with narrative paragraphs",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Reach out, we will appreciate your feedback.",
+            "style": "text-link",
+            "placement": "End of Who are we section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The BlueWallet project born out of the ashes of the 2017 bull-run. With the frustration of not finding a wallet for our Bitcoin needs.",
+            "context": "Opening of About section",
+            "purpose": "Establishes origin story and motivation"
+          },
+          {
+            "text": "Our commitment is to build the best Bitcoin wallet we can. With strong focus on open source foundations, self-sovereign principles, decentralization and the Cypherpunk's Manifesto.",
+            "context": "About section, mission statement",
+            "purpose": "Articulates core values and long-term vision"
+          },
+          {
+            "text": "We are a collective of developers and designers focused on bringing tools to self-sovereignty, personal property, security and privacy.",
+            "context": "Who are we section",
+            "purpose": "Defines team identity and purpose"
+          }
+        ],
+        "tone": "friendly-casual, philosophical",
+        "dataFormatting": [
+          "Year reference: 2017"
+        ],
+        "trustSignals": [
+          "Reference to open source foundations",
+          "Commitment to Cypherpunk principles",
+          "Self-sovereign and decentralization focus",
+          "Iterative, thoughtful development approach"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

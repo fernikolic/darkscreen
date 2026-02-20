@@ -1,0 +1,144 @@
+{
+  "slug": "hyperliquid",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:57:41.607Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 1,
+  "screens": [
+    {
+      "image": "/screenshots/hyperliquid-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0d5a4a",
+          "#1a9b7a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline (appears to be Georgia or similar), white, centered, high contrast against dark background",
+          "bodyStyle": "Lighter weight sans-serif, teal/cyan tinted, centered subtext, smaller scale",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items (Stats, Docs, Ecosystem), and Launch App button",
+            "position": "Top, white rounded pill container",
+            "notable": "Sticky positioning, high contrast white container against dark gradient background"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large centered copy with gradient abstract background shapes (circles/blobs)",
+            "position": "Center of screen",
+            "notable": "Animated or gradient teal/cyan blob shapes create depth and movement"
+          },
+          {
+            "type": "Call-to-Action Buttons",
+            "description": "Two prominent buttons: 'Start Trading' (filled) and 'Start Building' (outlined)",
+            "position": "Below subheading, horizontally aligned",
+            "notable": "Primary button filled with teal, secondary button outlined in matching teal"
+          },
+          {
+            "type": "Logo Icon",
+            "description": "Bowtie/butterfly-shaped icon above main headline",
+            "position": "Center top of hero text",
+            "notable": "Mint/cyan colored, distinctive brand mark"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo → Headline → Subheading → Copy → CTAs, all vertically centered with significant breathing room",
+        "innovativeElements": [
+          "Organic gradient blob background shapes that create depth without being busy",
+          "Two-tier CTA structure differentiating transactional (trading) vs developmental (building) user paths",
+          "Minimalist navigation in high-contrast pill shape"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page - hero focused",
+        "userIntent": "Understand what Hyperliquid is and either start trading or begin building on the platform",
+        "entryPoints": [
+          "Direct navigation from marketing site",
+          "Organic search landing",
+          "Social/referral links"
+        ],
+        "exitPoints": [
+          "Launch App (nav button)",
+          "Start Trading (CTA button)",
+          "Start Building (CTA button)",
+          "Stats (nav link)",
+          "Docs (nav link)",
+          "Ecosystem (nav link)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to application interface"
+          },
+          {
+            "element": "Start Trading button",
+            "action": "Begin trading flow or navigate to trading section"
+          },
+          {
+            "element": "Start Building button",
+            "action": "Navigate to developer/builder documentation or onboarding"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective documentation, statistics, or ecosystem pages"
+          }
+        ],
+        "informationArchitecture": "Single focal point with branching paths: trading users vs. builders. Navigation provides secondary discovery options for deeper learning.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Blockchain To House All Finance",
+        "subheadline": "Crypto is fragmented today, but it doesn't need to be. For the first time, build projects, create value, and exchange assets on the same hyper-performant chain.",
+        "ctas": [
+          {
+            "text": "Start Trading",
+            "style": "primary-button",
+            "placement": "Below subheading, left"
+          },
+          {
+            "text": "Start Building",
+            "style": "secondary-outline-button",
+            "placement": "Below subheading, right"
+          },
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Stats",
+            "context": "Navigation menu",
+            "purpose": "Link to protocol statistics and metrics"
+          },
+          {
+            "text": "Docs",
+            "context": "Navigation menu",
+            "purpose": "Link to technical documentation"
+          },
+          {
+            "text": "Ecosystem",
+            "context": "Navigation menu",
+            "purpose": "Link to partner projects and ecosystem overview"
+          }
+        ],
+        "tone": "professional-technical with aspirational flair; confident and inclusive ('For the first time')",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

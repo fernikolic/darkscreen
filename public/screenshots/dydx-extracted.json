@@ -1,0 +1,700 @@
+{
+  "slug": "dydx",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:37:31.214Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/dydx-settings-1-dydx-labs.png",
+      "label": "dYdX Labs",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked with split-panel hero section",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#6366f1"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all-caps or title case, high contrast white on dark",
+          "bodyStyle": "Medium-weight sans-serif, light gray on dark background, generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with language selector, product links, and primary CTA button",
+            "position": "Top fixed",
+            "notable": "Trade button uses brand purple accent color"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large logo with adjacent headline and subheadline copy",
+            "position": "Top-center",
+            "notable": "Logo and text are left-right balanced in visual weight"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "Two bordered cards with headings and descriptive text",
+            "position": "Mid-page horizontal grid",
+            "notable": "Subtle border and dark background creates depth without high contrast"
+          },
+          {
+            "type": "Social Footer",
+            "description": "Icon-based social links in rounded container",
+            "position": "Bottom-right",
+            "notable": "Floating above content, creates visual endpoint"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large logo and headline dominate upper section; feature cards anchor middle; social icons provide grounding at bottom",
+        "innovativeElements": [
+          "Asymmetrical logo placement with text to the right creates modern, asymmetric composition",
+          "Card-based feature presentation breaks up long-form copy into scannable blocks"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Understand what dYdX is and the core value proposition",
+        "entryPoints": [
+          "Direct to homepage",
+          "From marketing materials or search"
+        ],
+        "exitPoints": [
+          "Trade button (top-right)",
+          "Products link in navigation",
+          "Social media links at bottom",
+          "Navigation menu items (About, Products, Company, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade Button",
+            "action": "Redirects to trading platform or app"
+          },
+          {
+            "element": "Navigation Links",
+            "action": "Navigate to respective pages (Products, About, Company, etc.)"
+          },
+          {
+            "element": "Language Selector",
+            "action": "Changes page language"
+          },
+          {
+            "element": "Social Icons",
+            "action": "Opens external social media profiles"
+          }
+        ],
+        "informationArchitecture": "Mission statement > feature highlights > social proof (investor backing)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trading, for everyone.",
+        "subheadline": "Our mission is to democratize access to financial opportunity.",
+        "ctas": [
+          {
+            "text": "Trade",
+            "style": "primary-button",
+            "placement": "Top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "A next generation exchange.",
+            "context": "Left feature card heading",
+            "purpose": "Positions platform as innovative and modern"
+          },
+          {
+            "text": "Empowering traders, worldwide.",
+            "context": "Right feature card heading",
+            "purpose": "Emphasizes global reach and trader-centric philosophy"
+          },
+          {
+            "text": "Backed by the best",
+            "context": "Bottom section heading",
+            "purpose": "Builds trust through institutional backing"
+          }
+        ],
+        "tone": "professional-technical with mission-driven messaging",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Backed by crypto's leading venture capital firms, market makers, and angel investors",
+          "References to Starkware zero-knowledge proofs for security credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dydx-settings-2-dydx-software-terms-of-use.png",
+      "label": "dYdX Software Terms of Use.",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width single-column document",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#cccccc"
+        ],
+        "typography": {
+          "headingStyle": "All-caps sans-serif, white, very large and bold",
+          "bodyStyle": "Sans-serif, light gray, monospace-like appearance with small font size for legal density",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Large centered title with update timestamp",
+            "position": "Top",
+            "notable": "Timestamp indicates document version control and legal currency"
+          },
+          {
+            "type": "Legal Body Text",
+            "description": "Dense paragraphs of all-caps and mixed-case legal text with section breaks",
+            "position": "Full width below header",
+            "notable": "Extensive use of ALL-CAPS for emphasis and legal requirement compliance"
+          },
+          {
+            "type": "Section Headers",
+            "description": "Bold, all-caps section titles breaking up document",
+            "position": "Inline throughout content",
+            "notable": "Creates visual scanning points in otherwise dense text"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Title dominates; section headers provide secondary breaks; body text is lower visual priority",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal document / terms page",
+        "userIntent": "Review legal terms of service and usage restrictions",
+        "entryPoints": [
+          "From Legal navigation link",
+          "Required reading before platform use"
+        ],
+        "exitPoints": [
+          "Back to main site via navigation",
+          "Scroll to footer links",
+          "Accept/agree action (not visible in screenshot)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation",
+            "action": "Escape to other site sections"
+          }
+        ],
+        "informationArchitecture": "Linear document structure with nested sections; no non-linear navigation within content",
+        "frictionPoints": [
+          "Dense all-caps text reduces readability",
+          "No table of contents or quick links for long document",
+          "No search functionality visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "DYDX SOFTWARE TERMS OF USE",
+        "subheadline": "Last updated December 8, 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "NOTICE ON PROHIBITED USE",
+            "context": "Section header",
+            "purpose": "Flags critical restriction section"
+          },
+          {
+            "text": "DYDX SOFTWARE",
+            "context": "Repeated term in parentheses",
+            "purpose": "Legal definition and consistent terminology"
+          }
+        ],
+        "tone": "professional-legal, formal and authoritative",
+        "dataFormatting": [
+          "December 8, 2025 (date format)"
+        ],
+        "trustSignals": [
+          "Specific effective date shows legal currency and maintenance"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dydx-settings-3-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width single-column accordion list",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#6366f1"
+        ],
+        "typography": {
+          "headingStyle": "Large centered sans-serif title, white",
+          "bodyStyle": "Medium-weight sans-serif, light gray for subheadline",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Centered title and subheadline",
+            "position": "Top",
+            "notable": "Clear instructional subtext sets user expectation"
+          },
+          {
+            "type": "Accordion Items",
+            "description": "Expandable question-answer pairs with plus icon indicators",
+            "position": "Full-width stacked list below header",
+            "notable": "Collapsible design maintains scanability; plus/minus icons indicate expandable state"
+          },
+          {
+            "type": "Divider Lines",
+            "description": "Subtle horizontal rules between items",
+            "position": "Between each FAQ item",
+            "notable": "Provides visual separation without heavy borders"
+          },
+          {
+            "type": "Social Footer",
+            "description": "Icon-based social links in rounded container",
+            "position": "Bottom-right",
+            "notable": "Consistent with homepage footer treatment"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large title anchors page; questions are scannable entry points; answers collapse for on-demand reading",
+        "innovativeElements": [
+          "Accordion pattern reduces cognitive load by hiding answers until requested",
+          "Consistent icon treatment (plus signs) clearly signals interactivity"
+        ]
+      },
+      "flow": {
+        "screenType": "FAQ data-browse / accordion",
+        "userIntent": "Self-serve lookup of common questions about dYdX products and features",
+        "entryPoints": [
+          "From help/FAQ navigation link",
+          "Search results for common questions"
+        ],
+        "exitPoints": [
+          "Back to main navigation",
+          "Social media links at bottom",
+          "Scroll through accordion items",
+          "Potential link to support if question not answered"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion Item",
+            "action": "Expand to reveal answer; collapse when reopened"
+          },
+          {
+            "element": "Plus Icon",
+            "action": "Visual indicator of expandable state"
+          },
+          {
+            "element": "Social Icons",
+            "action": "Navigate to external social profiles"
+          }
+        ],
+        "informationArchitecture": "Flat list of Q&A pairs organized by relevance/frequency; no categorization visible",
+        "frictionPoints": [
+          "No search or filter functionality visible for long list",
+          "No category tabs to segment FAQs by topic",
+          "Questions are listed sequentially with no ability to jump to sections"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "FAQs",
+        "subheadline": "Find answers to frequently asked questions.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "What is dYdX Chain?",
+            "context": "First accordion item",
+            "purpose": "Introduces foundational platform concept"
+          },
+          {
+            "text": "What is an app chain?",
+            "context": "Second accordion item",
+            "purpose": "Explains technical architecture"
+          },
+          {
+            "text": "What is Cosmos?",
+            "context": "Third accordion item",
+            "purpose": "Educates on blockchain foundation"
+          },
+          {
+            "text": "Which wallets are supported on dYdX?",
+            "context": "Mid-list item",
+            "purpose": "Addresses integration/compatibility concerns"
+          },
+          {
+            "text": "When will more markets be added?",
+            "context": "Lower-list item",
+            "purpose": "Addresses feature requests and roadmap questions"
+          }
+        ],
+        "tone": "educational-helpful, accessible to technical and non-technical users",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dydx-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6366F1",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, oversized (72px+), left-aligned, white text",
+          "bodyStyle": "Regular sans-serif, light gray, supporting copy below headline",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Navigation Bar",
+            "description": "Horizontal navigation with logo left, menu center (Blog, Reward Campaigns, VIP, API, Fees, App Download), Get Started button right",
+            "position": "Top",
+            "notable": "Reward Campaigns has a blue dot indicator suggesting new/promoted content"
+          },
+          {
+            "type": "Announcement Banner",
+            "description": "Purple gradient banner with promotional offer and Learn More button",
+            "position": "Top above nav",
+            "notable": "Eye-catching, uses accent color to differentiate from main content"
+          },
+          {
+            "type": "3D Coin Imagery",
+            "description": "Rendered Bitcoin and Bonk coins with glossy, dimensional styling",
+            "position": "Right side of hero",
+            "notable": "Playful, approachable crypto visuals with cartoon Bonk mascot"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Rounded purple button with white text",
+            "position": "Below headline, left side",
+            "notable": "Echoes navigation bar CTA for consistency"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates left 60%, supporting copy creates visual anchor, imagery balances right side, CTAs create clear conversion path",
+        "innovativeElements": [
+          "3D coin animation assets with personality (Bonk meme mascot)",
+          "Dual CTA placement (top nav + hero section) for high-intent users",
+          "Announcement bar above nav for time-sensitive promotions"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about fee-free trading on dYdX and initiate trading",
+        "entryPoints": [
+          "Direct URL visit to dydx.trade",
+          "Marketing campaign click (Reward Campaigns link)",
+          "Referral/social sharing"
+        ],
+        "exitPoints": [
+          "Get Started button → trading platform",
+          "Navigation links → Blog, VIP program, API docs, Fees page",
+          "App Download → mobile app"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started button",
+            "action": "Navigate to trading interface or signup"
+          },
+          {
+            "element": "Learn More (banner)",
+            "action": "Details about free fee promotion"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access additional resources and product features"
+          }
+        ],
+        "informationArchitecture": "Single-scroll hero with value prop front-and-center, supporting nav elements accessible via top bar, no deep scrolling required for primary conversion",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Fees? Never Heard of 'Em",
+        "subheadline": "Trade $BTC and $BONK for the month of February without fees cutting into your gains. dYdX combines deep liquidity, advanced order types, and instant market listing",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "Hero section, below headline"
+          },
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "Top navigation, top right"
+          },
+          {
+            "text": "Learn More",
+            "style": "ghost-button",
+            "placement": "Announcement banner, top"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Free Fee for $BTC and $BONK",
+            "context": "Announcement banner",
+            "purpose": "Immediately communicate primary value proposition"
+          }
+        ],
+        "tone": "friendly-casual, playful (Fees? Never Heard of 'Em)",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Advanced order types mention",
+          "Deep liquidity claim",
+          "Instant market listing capability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dydx-home-2-here.png",
+      "label": "here",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1E1B4B",
+          "#FFFFFF",
+          "#06B6D4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, centered, large (48px+), white",
+          "bodyStyle": "Regular sans-serif, light gray, justified alignment, small font size",
+          "dataStyle": "Monospace in table cells for URLs and provider names"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Minimal dark bar with language selector, product menu, company/governance/developer links, Trade button right",
+            "position": "Top",
+            "notable": "More corporate/informational than marketing-focused nav"
+          },
+          {
+            "type": "Candlestick Chart Background",
+            "description": "Large trading chart with red/green candles subtly behind hero content",
+            "position": "Center background",
+            "notable": "Reinforces trading/finance context, adds visual interest to text-heavy page"
+          },
+          {
+            "type": "dYdX Chain Logo",
+            "description": "Geometric, modern symbol overlay on chart",
+            "position": "Center of chart",
+            "notable": "Sophisticated, abstract design"
+          },
+          {
+            "type": "Data Table",
+            "description": "Three-column table (Provider Name, URL, Status Page) with single row of provider info",
+            "position": "Lower half, centered",
+            "notable": "Bordered table in dark theme, minimal styling"
+          },
+          {
+            "type": "Social Icons Footer",
+            "description": "Github, X, Discord, YouTube, Reddit, LinkedIn icons",
+            "position": "Bottom right",
+            "notable": "Developer/community focused"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title centered at top, chart dominates middle, legal/disclaimer text fills lower third, table provides structured reference data",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find front-end provider options for dYdX Chain access; understand decentralized infrastructure",
+        "entryPoints": [
+          "Navigation link from main site",
+          "Search for 'dYdX front end'",
+          "Developer documentation link"
+        ],
+        "exitPoints": [
+          "Trade button → trading platform",
+          "External links to provider URLs",
+          "Social/community links at bottom"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Provider URL links",
+            "action": "Navigate to third-party front-end"
+          },
+          {
+            "element": "Trade button (nav)",
+            "action": "Navigate to official trading interface"
+          },
+          {
+            "element": "Social icons",
+            "action": "External navigation to community channels"
+          }
+        ],
+        "informationArchitecture": "Educational/informational structure: headline context → disclaimer/explanation → structured provider reference table → legal disclaimers",
+        "frictionPoints": [
+          "Dense legal disclaimer text may overwhelm non-technical users",
+          "Single provider listed (dYdX Operations Services Ltd.) - limited choice visible",
+          "Open-source explanation requires reading full paragraph"
+        ],
+        "progressIndicators": [
+          "Last updated timestamp (February 26, 2024)"
+        ]
+      },
+      "copy": {
+        "headline": "dYdX Chain Front End Options",
+        "subheadline": "Last updated February 26, 2024",
+        "ctas": [
+          {
+            "text": "Trade",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "As an open-source software developer, dYdX does not deploy or run v4 software ('dYdX Chain') for public use, or operate or control any dYdX Chain infrastructure.",
+            "context": "Below headline, full-width paragraph",
+            "purpose": "Legal/transparency disclaimer explaining dYdX's role as developer, not operator"
+          },
+          {
+            "text": "open-source software",
+            "context": "Linked text within disclaimer",
+            "purpose": "Provides transparency, links to implementation details"
+          },
+          {
+            "text": "All of the third parties listed on this page are independent from and unaffiliated with dYdX...",
+            "context": "Second disclaimer paragraph",
+            "purpose": "Risk disclosure and liability limitation"
+          }
+        ],
+        "tone": "professional-technical, legal",
+        "dataFormatting": [
+          "dYdX Operations Services Ltd. (provider name)",
+          "dydx.trade (URL format)",
+          "status.dydx.trade (status page reference)"
+        ],
+        "trustSignals": [
+          "Open-source infrastructure model",
+          "Independent provider listing",
+          "Status page availability",
+          "Explicit legal disclaimers demonstrating transparency"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dydx-home-3-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#D1D5DB"
+        ],
+        "typography": {
+          "headingStyle": "Monospace, bold, very large (180px+), black",
+          "bodyStyle": "Regular sans-serif, black, small (16px)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error Code",
+            "description": "Large monospace '500' displayed prominently",
+            "position": "Center-left",
+            "notable": "Oversized HTTP status code dominates visual space"
+          },
+          {
+            "type": "Error Message",
+            "description": "Simple text 'Internal Server Error.'",
+            "position": "Center-right of code",
+            "notable": "Minimal, no additional context or recovery options"
+          },
+          {
+            "type": "Vertical Divider",
+            "description": "Light gray line separating code from message",
+            "position": "Between code and message",
+            "notable": "Creates visual hierarchy and separation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code is overwhelming visual anchor; message is secondary; vast white space dominates",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User encountered a server error; needs to understand status and next steps",
+        "entryPoints": [
+          "Navigation to non-existent route",
+          "Server-side error condition",
+          "Testing/QA verification"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Manual navigation to home or known page",
+          "Page refresh (potential auto-retry)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal error display with no additional structure; no recovery path or navigation options provided",
+        "frictionPoints": [
+          "No actionable guidance or next steps provided",
+          "No navigation options to return to safe page",
+          "No support contact or troubleshooting information",
+          "No explanation of what caused the error",
+          "Bare-bones error handling suggests incomplete page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "500",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Internal Server Error.",
+            "context": "Main error message",
+            "purpose": "Communicate technical error status"
+          }
+        ],
+        "tone": "technical, minimal",
+        "dataFormatting": [
+          "500 (HTTP status code)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "500 Internal Server Error."
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

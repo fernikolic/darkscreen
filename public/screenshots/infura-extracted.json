@@ -1,0 +1,297 @@
+{
+  "slug": "infura",
+  "category": "Infrastructure",
+  "extractedAt": "2026-02-20T11:58:04.462Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/infura-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero centered",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ff6633",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (likely 72-96px), white, bold, all-caps treatment with commas for rhythm",
+          "bodyStyle": "Medium sans-serif, white, ~18-20px, centered, moderate line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo on left, menu items center, auth CTAs right",
+            "position": "top",
+            "notable": "Sticky header with orange Sign In button as primary action"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered heading with subheading and dual CTA buttons",
+            "position": "center-viewport",
+            "notable": "Primary CTA (Get Started) is orange/red, secondary is text link with arrow"
+          },
+          {
+            "type": "trust-section",
+            "description": "Meta Mask logo with 'Now part of' text",
+            "position": "below-hero",
+            "notable": "Partnership validation prominently displayed"
+          },
+          {
+            "type": "logo-carousel",
+            "description": "Row of client logos (MetaMask, Uniswap, Coinbase, etc.)",
+            "position": "footer-area",
+            "notable": "Shows institutional adoption and major integrations"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong downward flow: logo → headline → subheadline → partnership → CTAs → social proof logos",
+        "innovativeElements": [
+          "Three-word action tagline rhythm (Build, Scale, Disrupt) creates memorability",
+          "Seamless integration of partnership badge mid-hero"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Understand what Infura offers and decide whether to sign up or explore docs",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign click",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Get Started (sign up/onboarding)",
+          "Access Docs (documentation)",
+          "Navigation menu items (Products, Solutions, Developers, etc.)",
+          "Sign In (existing user login)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started button",
+            "action": "Initiates sign-up or account creation flow"
+          },
+          {
+            "element": "Access Docs link",
+            "action": "Navigates to developer documentation"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to specific product/solution pages"
+          },
+          {
+            "element": "Sign In button",
+            "action": "Routes to login page for existing users"
+          },
+          {
+            "element": "Contact Us link",
+            "action": "Opens contact or support form"
+          }
+        ],
+        "informationArchitecture": "Top-down hero sales page: value prop → partnership validation → CTAs → social proof",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Build, Scale, Disrupt",
+        "subheadline": "The world's most powerful suite of high availability blockchain APIs and developer tools",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          },
+          {
+            "text": "Access Docs",
+            "style": "text-link",
+            "placement": "center, adjacent to Get Started"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Now part of",
+            "context": "Below hero, preceding MetaMask logo",
+            "purpose": "Establishes credibility through parent company association"
+          }
+        ],
+        "tone": "professional-technical, confident, action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Now part of MetaMask",
+          "Client logos: MetaMask, Uniswap, Coinbase, Reddit, OpenZeppelin, Brave, Compound, Polygon"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/infura-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "modal overlay on landing page",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ff6633",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "No explicit heading in cookie banner",
+          "bodyStyle": "Small sans-serif, white, ~14px, multi-line paragraph",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-panel",
+            "description": "Right-side overlay panel with semi-transparent background",
+            "position": "right side, ~25% of viewport width",
+            "notable": "Positioned to minimize blocking of primary content while maintaining visibility"
+          },
+          {
+            "type": "close-button",
+            "description": "X icon button in top-right corner of modal",
+            "position": "top-right of modal",
+            "notable": "Allows dismissal without accepting all cookies"
+          },
+          {
+            "type": "toggle-switches",
+            "description": "Three toggle switches for different cookie categories",
+            "position": "middle of modal",
+            "notable": "Gray/white styling indicates different states"
+          },
+          {
+            "type": "text-links",
+            "description": "Hyperlinks for Cookie Policy, Privacy Policy, Storage Preferences",
+            "position": "upper-middle of modal",
+            "notable": "Blue color distinguishes from body text"
+          },
+          {
+            "type": "action-buttons",
+            "description": "Three buttons: Save, Accept All, Reject Non-Essential",
+            "position": "bottom of modal",
+            "notable": "Primary (Accept All) and secondary (Save) in orange, tertiary (Reject) in orange outline"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Disclosure text → links → toggles → action buttons (bottom-heavy emphasis on consent actions)",
+        "innovativeElements": [
+          "Three-button footer with clear gradation of consent intensity"
+        ]
+      },
+      "flow": {
+        "screenType": "modal/overlay",
+        "userIntent": "Make informed consent decision regarding cookies and tracking technologies",
+        "entryPoints": [
+          "Automatic display on page load"
+        ],
+        "exitPoints": [
+          "Accept All (full consent)",
+          "Save (custom selection)",
+          "Reject Non-Essential (minimal consent)",
+          "Close button (dismiss/infer default)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie Policy link",
+            "action": "Opens full cookie disclosure document"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Opens privacy policy document"
+          },
+          {
+            "element": "Storage Preferences link",
+            "action": "Opens advanced cookie settings"
+          },
+          {
+            "element": "Toggle switches",
+            "action": "Enable/disable specific cookie categories"
+          },
+          {
+            "element": "Save button",
+            "action": "Saves custom cookie preferences"
+          },
+          {
+            "element": "Accept All button",
+            "action": "Accepts all cookies and closes modal"
+          },
+          {
+            "element": "Reject Non-Essential button",
+            "action": "Rejects optional cookies, keeps essential only"
+          },
+          {
+            "element": "Close (X) button",
+            "action": "Dismisses modal, likely infers essential-only consent"
+          }
+        ],
+        "informationArchitecture": "Disclosure → Policy links → Fine-grained controls → Action hierarchy",
+        "frictionPoints": [
+          "Modal positioned to side but still partially obscures hero content",
+          "Multiple disclosure paragraphs may require scrolling within modal",
+          "Three button options may create decision paralysis (Accept All vs Save vs Reject)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "bottom-right of modal"
+          },
+          {
+            "text": "Save",
+            "style": "secondary-button",
+            "placement": "bottom-left of modal"
+          },
+          {
+            "text": "Reject Non-Essential",
+            "style": "ghost-button",
+            "placement": "bottom-full-width of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and marketing. You may change your settings at any time or accept the default settings. You may close this banner to continue with only essential cookies.",
+            "context": "Main body text of cookie modal",
+            "purpose": "Discloses cookie usage and user rights per GDPR/privacy regulations"
+          },
+          {
+            "text": "Cookie Policy",
+            "context": "Hyperlink in modal",
+            "purpose": "Directs users to detailed cookie documentation"
+          },
+          {
+            "text": "Privacy Policy",
+            "context": "Hyperlink in modal",
+            "purpose": "Directs users to general privacy disclosures"
+          },
+          {
+            "text": "Storage Preferences",
+            "context": "Hyperlink in modal",
+            "purpose": "Allows granular control of data storage and tracking"
+          }
+        ],
+        "tone": "professional-legal, neutral, transparent",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit mention of GDPR/privacy compliance",
+          "Links to full policy documents",
+          "Clear option to reject non-essential tracking"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,4912 @@
+{
+  "slug": "okx",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T12:41:24.831Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 37,
+  "screens": [
+    {
+      "image": "/screenshots/okx-home-33-italiano-scrolled-1.png",
+      "label": "Italiano — scrolled 1",
+      "flowType": "Home",
+      "step": 33,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4a9d6f"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, uppercase for main title (Centro preferenze sulla privacy), bold for section headers",
+          "bodyStyle": "Regular sans-serif, 14-16px, left-aligned body text with high readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Full-height cookie preference modal with white background overlaying dark dashboard",
+            "position": "center of screen",
+            "notable": "Clean separation with X close button in top-right"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Four cookie category toggles, three enabled (green), one always active",
+            "position": "stacked vertically in Gestisci preferenze consenso section",
+            "notable": "Green toggles indicate enabled state; 'Sempre attivi' (always active) label in blue"
+          },
+          {
+            "type": "button-pair",
+            "description": "Two primary action buttons at bottom",
+            "position": "bottom of modal, full-width side-by-side",
+            "notable": "Black 'Rifiuta tutti' (Reject all) paired with dark 'Conferma le mie scelte' (Confirm my choices)"
+          },
+          {
+            "type": "link",
+            "description": "Ulteriori informazioni (More information) hyperlink",
+            "position": "below main descriptive paragraph",
+            "notable": "Blue link text for navigation to detailed cookie policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading → descriptive text → expandable cookie categories → action buttons. Clear separation of required vs optional cookies.",
+        "innovativeElements": [
+          "Color-coded toggle states (green for enabled), visual distinction of mandatory vs discretionary cookies"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Review and configure privacy preferences and cookie consent settings",
+        "entryPoints": [
+          "User lands on OKX homepage",
+          "Cookie banner triggered on first visit or return"
+        ],
+        "exitPoints": [
+          "Reject all cookies",
+          "Confirm chosen preferences",
+          "Close modal via X button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie toggle switches",
+            "action": "Enable/disable specific cookie categories (targeted ads, performance, functionality)"
+          },
+          {
+            "element": "Ulteriori informazioni link",
+            "action": "Navigate to detailed cookie policy information"
+          },
+          {
+            "element": "Rifiuta tutti button",
+            "action": "Reject all optional cookies and close modal"
+          },
+          {
+            "element": "Conferma le mie scelte button",
+            "action": "Save user's cookie preferences and close modal"
+          },
+          {
+            "element": "Modal X button",
+            "action": "Close modal without making changes"
+          }
+        ],
+        "informationArchitecture": "Privacy explanation → cookie categories with toggles → action buttons. Progressive disclosure with expandable sections.",
+        "frictionPoints": [
+          "Dense explanatory paragraph may require reading time",
+          "Ambiguity on whether closing modal accepts defaults",
+          "No explicit 'accept all' button (only reject or confirm choices)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centro preferenze sulla privacy",
+        "subheadline": "Gestisci preferenze consenso",
+        "ctas": [
+          {
+            "text": "Rifiuta tutti",
+            "style": "primary-button",
+            "placement": "bottom-left of modal"
+          },
+          {
+            "text": "Conferma le mie scelte",
+            "style": "primary-button",
+            "placement": "bottom-right of modal"
+          },
+          {
+            "text": "Ulteriori informazioni",
+            "style": "text-link",
+            "placement": "below explanatory paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sempre attivi",
+            "context": "Cookie strettamente necessari toggle",
+            "purpose": "Indicates mandatory cookies that cannot be disabled"
+          },
+          {
+            "text": "Quando si visita qualsiasi sito Web...",
+            "context": "Opening paragraph",
+            "purpose": "Explains what cookies are and why they're used"
+          }
+        ],
+        "tone": "professional-technical, formal and educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by OneTrust (visible at bottom)",
+          "GDPR-compliant cookie management"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-35-nederlands.png",
+      "label": "Nederlands",
+      "flowType": "Home",
+      "step": 35,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4a9d6f"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for 'Voorkeurenmenu' and section header 'Cookievoorkeuren beheren'",
+          "bodyStyle": "Regular sans-serif, moderate line-height, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Cookie preference modal with white background and OneTrust branding",
+            "position": "center-overlaid on footer/home page",
+            "notable": "Clean modal with close X button, positioned consistently"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Four cookie preference toggles with labels and enabled states",
+            "position": "Cookievoorkeuren beheren section, vertically stacked",
+            "notable": "All three optional categories enabled (green); mandatory category shows 'Altijd actief'"
+          },
+          {
+            "type": "button-pair",
+            "description": "Two black buttons at modal bottom",
+            "position": "Full-width side-by-side buttons",
+            "notable": "Left: 'Alles afwijzen' (Reject all), Right: 'Mijn keuzes bevestigen' (Confirm choices)"
+          },
+          {
+            "type": "link",
+            "description": "Meer informatie hyperlink in blue",
+            "position": "Below main explanatory text",
+            "notable": "Provides access to detailed privacy policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading → explanatory text → cookie categories → action buttons. Consistent visual weight distribution.",
+        "innovativeElements": [
+          "Dutch-language cookie preference interface matching regional requirements"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Configure cookie preferences in Dutch language environment",
+        "entryPoints": [
+          "Site entry (first visit or cookie banner trigger)",
+          "User lands on OKX home page"
+        ],
+        "exitPoints": [
+          "Reject all preferences",
+          "Confirm user choices",
+          "Close modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Doelgroepgerichte cookies toggle",
+            "action": "Enable/disable targeted advertising cookies"
+          },
+          {
+            "element": "Prestatiecookies toggle",
+            "action": "Enable/disable performance analytics cookies"
+          },
+          {
+            "element": "Functionele cookies toggle",
+            "action": "Enable/disable functional enhancement cookies"
+          },
+          {
+            "element": "Alles afwijzen button",
+            "action": "Reject all optional cookies and dismiss modal"
+          },
+          {
+            "element": "Mijn keuzes bevestigen button",
+            "action": "Save preferences and close modal"
+          }
+        ],
+        "informationArchitecture": "Privacy explanation → expandable cookie categories → action buttons. Dutch localization applied throughout.",
+        "frictionPoints": [
+          "Dense explanatory paragraph requires reading comprehension",
+          "No explicit 'accept all' option (only reject or custom confirm)",
+          "Modal dismissal behavior unclear if X is clicked"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Voorkeurenmenu",
+        "subheadline": "Cookievoorkeuren beheren",
+        "ctas": [
+          {
+            "text": "Alles afwijzen",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Mijn keuzes bevestigen",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "Meer informatie",
+            "style": "text-link",
+            "placement": "within explanatory section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Altijd actief",
+            "context": "Strikt noodzakelijke cookies row",
+            "purpose": "Labels cookies that must remain enabled"
+          },
+          {
+            "text": "Wanneer u een website bezoekt...",
+            "context": "Opening paragraph",
+            "purpose": "Educational explanation of cookie purpose and user control"
+          }
+        ],
+        "tone": "professional-technical, formal, regulatory-compliant",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by OneTrust",
+          "GDPR/regulatory compliance",
+          "OKX Europe Limited registration mentioned in footer"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-36-nederlands-scrolled-1.png",
+      "label": "Nederlands — scrolled 1",
+      "flowType": "Home",
+      "step": 36,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4a9d6f"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headers (Voorkeurenmenu, Cookievoorkeuren beheren)",
+          "bodyStyle": "Regular sans-serif, moderate size, justified text for explanatory content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Scrollable cookie preference modal with white background",
+            "position": "center overlay on dark homepage background",
+            "notable": "Modal extends beyond viewport requiring scroll (indicated by scrolled position)"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Four cookie category toggles with consistent styling",
+            "position": "Vertically stacked in Cookievoorkeuren beheren section",
+            "notable": "Three green toggles (enabled), one with 'Altijd actief' label (mandatory)"
+          },
+          {
+            "type": "button-pair",
+            "description": "Two action buttons at modal footer",
+            "position": "Sticky bottom of modal",
+            "notable": "Full-width buttons with clear reject/confirm action labels"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominance → body text explanation → categorized toggles → final action buttons",
+        "innovativeElements": [
+          "Scrollable modal for extended privacy documentation"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Review full cookie policy and configure granular preferences",
+        "entryPoints": [
+          "Homepage visit with cookie consent trigger"
+        ],
+        "exitPoints": [
+          "Reject all settings",
+          "Confirm custom preferences",
+          "Close via X button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Scrollable modal content",
+            "action": "User can scroll within modal to read full policy"
+          },
+          {
+            "element": "Four cookie toggles",
+            "action": "Enable/disable individual cookie categories"
+          },
+          {
+            "element": "Alles afwijzen button",
+            "action": "Reject all optional cookies"
+          },
+          {
+            "element": "Mijn keuzes bevestigen button",
+            "action": "Save user's custom preferences"
+          }
+        ],
+        "informationArchitecture": "Multi-section privacy center with expandable cookie categories and persistent action buttons",
+        "frictionPoints": [
+          "Requires modal scrolling to access full content",
+          "Explanatory text density may overwhelm users",
+          "Default state ambiguous (what happens if user closes without action)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Voorkeurenmenu",
+        "subheadline": "Cookievoorkeuren beheren",
+        "ctas": [
+          {
+            "text": "Alles afwijzen",
+            "style": "primary-button",
+            "placement": "sticky bottom-left of modal"
+          },
+          {
+            "text": "Mijn keuzes bevestigen",
+            "style": "primary-button",
+            "placement": "sticky bottom-right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Altijd actief",
+            "context": "Strikt noodzakelijke cookies toggle",
+            "purpose": "Indicates non-disableable mandatory cookies"
+          }
+        ],
+        "tone": "professional-technical, formal, regulatory-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OneTrust powered",
+          "GDPR compliance",
+          "MiFID II regulation reference (visible in background footer)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-29-franais.png",
+      "label": "Français",
+      "flowType": "Home",
+      "step": 29,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#4CAF50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (Centre de préférences de la confidentialité)",
+          "bodyStyle": "Regular sans-serif, medium gray text, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Full-screen privacy preferences center modal with white background and close button (X)",
+            "position": "center overlay",
+            "notable": "Modal is centered and uses clean white space with minimal visual clutter"
+          },
+          {
+            "type": "Toggle Switches",
+            "description": "Four expandable cookie preference categories with green toggle switches",
+            "position": "middle section of modal",
+            "notable": "All toggles are pre-enabled (green), with one marked 'Toujours actif' (Always active)"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Two primary CTA buttons: 'Tout refuser' (black) and 'Confirmer la sélection' (black)",
+            "position": "bottom of modal",
+            "notable": "Equal visual weight, clear contrast against white background"
+          },
+          {
+            "type": "Hyperlink",
+            "description": "'Plus d'information' text link in blue",
+            "position": "within body copy",
+            "notable": "Provides additional context for privacy policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong hierarchy: headline > body text > toggles > action buttons; modal dominates entire screen",
+        "innovativeElements": [
+          "Expandable toggle sections with + icon indicators",
+          "Distinction between optional and mandatory cookies (non-toggleable)",
+          "Onetrust branding at bottom indicating third-party provider"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-confirmation",
+        "userIntent": "User is reviewing and confirming cookie and privacy preferences before accessing the platform",
+        "entryPoints": [
+          "Page load - triggered automatically on first visit",
+          "Clicking 'Préférences des cookies' from settings menu"
+        ],
+        "exitPoints": [
+          "Click 'Tout refuser' - reject all non-essential cookies",
+          "Click 'Confirmer la sélection' - accept current selections",
+          "Click X button - close modal (typically defaults to accepting)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches (3 enabled)",
+            "action": "Click to enable/disable cookie categories"
+          },
+          {
+            "element": "Expandable sections (+ icon)",
+            "action": "Click to expand/collapse cookie category details"
+          },
+          {
+            "element": "Plus d'information link",
+            "action": "Opens additional privacy policy information"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Confirm or reject cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Top-down: headline > explanatory text > expandable cookie categories > action buttons; clear separation between optional and mandatory",
+        "frictionPoints": [
+          "Long explanatory text may require scrolling on smaller screens",
+          "All cookies pre-enabled by default (requires active rejection)",
+          "Modal blocks access to platform until action taken"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centre de préférences de la confidentialité",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Tout refuser",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Confirmer la sélection",
+            "style": "primary-button",
+            "placement": "bottom right"
+          },
+          {
+            "text": "Plus d'information",
+            "style": "text-link",
+            "placement": "within body copy"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Lorsque vous consultez un site Web...",
+            "context": "Main body paragraph",
+            "purpose": "Explains what cookies are and how they're used"
+          },
+          {
+            "text": "Cookies pour une publicité ciblée",
+            "context": "Toggle category label",
+            "purpose": "Identifies cookie type for user selection"
+          },
+          {
+            "text": "Toujours actif",
+            "context": "Next to mandatory cookies toggle",
+            "purpose": "Indicates this category cannot be disabled"
+          }
+        ],
+        "tone": "professional-technical, informative and reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by Onetrust (privacy compliance provider)",
+          "Explicit statement: 'nous respectons votre droit à la vie privée' (we respect your privacy rights)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-30-franais-scrolled-1.png",
+      "label": "Français — scrolled 1",
+      "flowType": "Home",
+      "step": 30,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#4CAF50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size",
+          "bodyStyle": "Regular sans-serif, medium gray text, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Same privacy preferences modal overlaid on homepage content",
+            "position": "center overlay",
+            "notable": "Homepage visible behind modal showing 'Votre compte' headline and trading interface"
+          },
+          {
+            "type": "Toggle Switches",
+            "description": "Four cookie preference toggles all enabled (green)",
+            "position": "middle section",
+            "notable": "Same layout as previous screenshot"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "'Tout refuser' and 'Confirmer la sélection' buttons",
+            "position": "bottom of modal",
+            "notable": "Consistent with previous design"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal remains dominant; background content is darkened and blurred for focus",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal-confirmation",
+        "userIntent": "Continue reviewing/accepting privacy preferences on homepage context",
+        "entryPoints": [
+          "Continuation from page load or settings navigation"
+        ],
+        "exitPoints": [
+          "Click 'Tout refuser'",
+          "Click 'Confirmer la sélection'",
+          "Click X button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches",
+            "action": "Enable/disable cookie categories"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Confirm or reject preferences"
+          }
+        ],
+        "informationArchitecture": "Same as previous; modal structure unchanged",
+        "frictionPoints": [
+          "Modal blocking access to main homepage content",
+          "Still showing pre-enabled cookies as default"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centre de préférences de la confidentialité",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Tout refuser",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Confirmer la sélection",
+            "style": "primary-button",
+            "placement": "bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Cookies pour une publicité ciblée",
+            "context": "First toggle",
+            "purpose": "Identifies marketing cookie type"
+          },
+          {
+            "text": "Cookies de performance",
+            "context": "Second toggle",
+            "purpose": "Identifies performance tracking cookies"
+          },
+          {
+            "text": "Cookies de fonctionnalité",
+            "context": "Third toggle",
+            "purpose": "Identifies functional cookies"
+          },
+          {
+            "text": "Cookies strictement nécessaires",
+            "context": "Fourth toggle",
+            "purpose": "Identifies mandatory cookies"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Onetrust provider branding"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-32-italiano.png",
+      "label": "Italiano",
+      "flowType": "Home",
+      "step": 32,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#4CAF50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (Centro preferenze sulla privacy)",
+          "bodyStyle": "Regular sans-serif, medium gray text, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Privacy preferences center modal with white background, Italian localization",
+            "position": "center overlay",
+            "notable": "Same structure as French version; demonstrates multi-language support"
+          },
+          {
+            "type": "Toggle Switches",
+            "description": "Four cookie categories with green toggles, all enabled",
+            "position": "middle section",
+            "notable": "Toggle states and styling identical to French version"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "'Rifiuta tutti' (Reject All) and 'Conferma le mie scelte' (Confirm My Choices)",
+            "position": "bottom of modal",
+            "notable": "Localized Italian labels; same visual treatment"
+          },
+          {
+            "type": "Hyperlink",
+            "description": "'Ulteriori informazioni' (Further Information) link in blue",
+            "position": "within body copy",
+            "notable": "Blue text indicating clickable link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to French version; strong modal focus with background darkened",
+        "innovativeElements": [
+          "Seamless localization across all UI elements",
+          "Consistent branding and layout regardless of language"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-confirmation",
+        "userIntent": "Italian-language user reviewing and confirming privacy/cookie preferences",
+        "entryPoints": [
+          "Page load with Italian language preference",
+          "Navigation to cookie preferences from Italian menu"
+        ],
+        "exitPoints": [
+          "Click 'Rifiuta tutti' - reject all non-essential cookies",
+          "Click 'Conferma le mie scelte' - accept selections",
+          "Click X button - close modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches (3 enabled, 1 always-on)",
+            "action": "Click to enable/disable cookie categories"
+          },
+          {
+            "element": "Expandable sections",
+            "action": "Click + icon to expand cookie details"
+          },
+          {
+            "element": "Ulteriori informazioni link",
+            "action": "Navigate to extended privacy information"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Submit cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Top-down flow: headline > explanatory text > expandable cookie options > action buttons; mandatory vs optional cookies clearly differentiated",
+        "frictionPoints": [
+          "Lengthy Italian explanatory text may require scrolling",
+          "All cookies enabled by default (requires active refusal)",
+          "Modal prevents access to platform content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centro preferenze sulla privacy",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Rifiuta tutti",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Conferma le mie scelte",
+            "style": "primary-button",
+            "placement": "bottom right"
+          },
+          {
+            "text": "Ulteriori informazioni",
+            "style": "text-link",
+            "placement": "within body copy"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Quando si visita qualsiasi sito Web...",
+            "context": "Opening paragraph",
+            "purpose": "Explains cookie functionality and data collection"
+          },
+          {
+            "text": "Cookie per pubblicità mirata",
+            "context": "First toggle label",
+            "purpose": "Identifies targeted advertising cookies"
+          },
+          {
+            "text": "Cookie di prestazione",
+            "context": "Second toggle label",
+            "purpose": "Identifies performance analytics cookies"
+          },
+          {
+            "text": "Cookie di funzionalità",
+            "context": "Third toggle label",
+            "purpose": "Identifies functional/preference cookies"
+          },
+          {
+            "text": "Cookie strettamente necessari",
+            "context": "Fourth toggle label",
+            "purpose": "Identifies mandatory cookies with 'Sempre attivi' indicator"
+          },
+          {
+            "text": "Sempre attivi",
+            "context": "Next to mandatory cookies",
+            "purpose": "Indicates non-disableable status"
+          }
+        ],
+        "tone": "professional-technical, informative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by Onetrust (privacy service provider)",
+          "Explicit privacy commitment: 'rispettiamo il tuo diritto alla privacy' (we respect your privacy rights)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#7FFF00"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif in white; three short lines stacked for emphasis (Secure. Transparent. Reliable.)",
+          "bodyStyle": "Medium weight gray text on dark background",
+          "dataStyle": "Large numeric value (2,564.36) with smaller unit label; lime-green line chart on dark background"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal dropdown menu with logo, main actions (Buy crypto, Deposit, Markets, Trade, Grow, Institutional, Learn, More), search bar, and auth buttons",
+            "position": "Top fixed header",
+            "notable": "Clean 8-item mega menu structure; login/signup split buttons on right"
+          },
+          {
+            "type": "Hero section",
+            "description": "Left-aligned text with three-line value proposition and subtext",
+            "position": "Left 40% of viewport",
+            "notable": "Breaking text into separate lines creates visual rhythm and scanability"
+          },
+          {
+            "type": "Chart widget",
+            "description": "Mini trading interface showing price (2,564.36), lime-green candlestick-style chart, time controls",
+            "position": "Right 40% of viewport",
+            "notable": "Live data visualization provides credibility; dark card with glowing green accent"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "Two prominent action buttons (Sign up, Download app)",
+            "position": "Below hero text on left",
+            "notable": "High contrast: white pill-shaped primary button vs. dark secondary button"
+          },
+          {
+            "type": "Cookie consent modal",
+            "description": "White overlay modal with cookie policy text and three action buttons",
+            "position": "Center-right overlay",
+            "notable": "Overlays hero content; uses high-contrast black buttons with 'Accept All Cookies' pre-selected emphasis"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right reading flow with hero text commanding initial attention; chart widget provides secondary visual anchor; cookie modal interrupts but clearly dismissible",
+        "innovativeElements": [
+          "Lime-green neon chart accent against pure black background creates sophisticated, tech-forward aesthetic",
+          "Chart widget embedded in hero section provides immediate market credibility without page navigation"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Evaluate OKX and decide whether to sign up or download the app",
+        "entryPoints": [
+          "Cold traffic to okx.com",
+          "Direct link from marketing",
+          "Organic search results"
+        ],
+        "exitPoints": [
+          "Sign up button → registration flow",
+          "Download app button → app store redirect",
+          "Navigation menu items → specific product pages",
+          "Log in link → authentication"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up button",
+            "action": "Initiates account creation workflow"
+          },
+          {
+            "element": "Download app button",
+            "action": "Redirects to iOS/Android app stores"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Expands to show category options (e.g., Buy crypto submenu)"
+          },
+          {
+            "element": "Cookie modal buttons",
+            "action": "Accept All Cookies, Reject All, or adjust Cookie Settings"
+          },
+          {
+            "element": "Search bar",
+            "action": "Allows cryptocurrency search/navigation"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation separated into product categories (Buy, Deposit, Markets, Trade, Grow, Institutional); hero section leads with value prop; utility features (Learn, More) in secondary menu; auth controls in header",
+        "frictionPoints": [
+          "Cookie consent modal blocks hero content on first load",
+          "No immediate indication of account benefits until signup",
+          "Multiple CTAs (Sign up vs. Download app) may cause choice paralysis"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Secure. Transparent. Reliable.",
+        "subheadline": "Get started today and benefit from low fees and top-notch security.",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Below hero text, left column"
+          },
+          {
+            "text": "Download app",
+            "style": "ghost-button",
+            "placement": "Beside Sign up button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Est total value",
+            "context": "Above chart value (2,564.36)",
+            "purpose": "Labels the data point shown in widget"
+          },
+          {
+            "text": "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie modal body text",
+            "purpose": "Legal disclosure of cookie usage; builds transparency trust signal"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "2,564.36 (numeric with decimal, comma-separated thousands)",
+          "Lime-green chart visualization with grid lines"
+        ],
+        "trustSignals": [
+          "Three core value props (Secure, Transparent, Reliable) placed prominently",
+          "Live market data displayed immediately (EST total value 2,564.36)",
+          "Explicit mention of 'low fees and top-notch security'",
+          "Cookie transparency and consent modal"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with overlay modal",
+        "colorScheme": "dark with white modal",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#7FFF00"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Medium-weight sans-serif in dark gray on white modal background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal overlay",
+            "description": "White card positioned center-right with rounded corners; contains cookie policy text and action buttons",
+            "position": "Overlay on top of landing page content",
+            "notable": "High contrast against dark background; close button (X) in top-right corner"
+          },
+          {
+            "type": "Action buttons",
+            "description": "Three stacked buttons: Accept All Cookies (black/primary), Reject All (black/secondary), Cookies Settings (underlined text link)",
+            "position": "Bottom of modal",
+            "notable": "Accept button given visual priority (solid fill); Reject All as secondary; Settings as tertiary text link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal draws all attention; primary button (Accept) is most visually prominent; secondary and tertiary options available but de-emphasized",
+        "innovativeElements": [
+          "Three-tier consent options (accept all, reject all, granular settings) reduces friction vs. binary choice"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Handle cookie consent and proceed to explore OKX",
+        "entryPoints": [
+          "Automatically shown on landing page load"
+        ],
+        "exitPoints": [
+          "Accept All Cookies → close modal, proceed to hero",
+          "Reject All → close modal with privacy setting, proceed to hero",
+          "Cookies Settings → detailed cookie management interface",
+          "Close (X) button → dismisses modal (implied accept)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept All Cookies button",
+            "action": "Stores user consent, closes modal"
+          },
+          {
+            "element": "Reject All button",
+            "action": "Stores rejection preference, closes modal"
+          },
+          {
+            "element": "Cookies Settings link",
+            "action": "Opens detailed cookie preferences page"
+          },
+          {
+            "element": "Close (X) button",
+            "action": "Dismisses modal without explicit preference"
+          }
+        ],
+        "informationArchitecture": "Single-purpose modal; policy text followed by prioritized action buttons",
+        "frictionPoints": [
+          "Modal blocks primary hero content until action is taken",
+          "Pressing X (close) may imply consent without user explicitly choosing—potential compliance risk"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept All Cookies",
+            "style": "primary-button",
+            "placement": "Bottom of modal, full width"
+          },
+          {
+            "text": "Reject All",
+            "style": "secondary-button",
+            "placement": "Bottom of modal, full width"
+          },
+          {
+            "text": "Cookies Settings",
+            "style": "text-link",
+            "placement": "Bottom of modal, centered"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Modal body text",
+            "purpose": "Legal disclosure of cookie usage and consent mechanism"
+          }
+        ],
+        "tone": "professional-legal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent cookie policy disclosure",
+          "User choice offered (Accept, Reject, or granular settings)",
+          "GDPR/privacy compliance language"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-4-landing-page-scrolled-2.png",
+      "label": "Landing page — scrolled 2",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel with mobile mockup and text",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#7FFF00"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif; main heading 'Sign up in a matter of minutes' and supporting 'A New Alternative' subtitle above mobile mockup",
+          "bodyStyle": "Medium-weight gray text describing account creation ease",
+          "dataStyle": "Chart and price data visible within mobile mockup (114.83 with percentage changes)"
+        },
+        "components": [
+          {
+            "type": "Mobile mockup frame",
+            "description": "Centered left-side device showing OKX app interface with home screen, price chart, asset portfolio, and bottom navigation icons",
+            "position": "Left-center of viewport",
+            "notable": "Mockup features working UI (chart, asset performance, navigation tabs); uses lime-green accent for chart"
+          },
+          {
+            "type": "Descriptive text section",
+            "description": "Right-aligned text block with headline, subtext, and carousel indicators",
+            "position": "Right 50% of viewport",
+            "notable": "Uses small dot carousel indicators (4 dots) suggesting multiple slide content"
+          },
+          {
+            "type": "Download buttons",
+            "description": "Three buttons: iOS Download, Android Download, and QR code scanner",
+            "position": "Below text on right side",
+            "notable": "Apple and Android buttons use native OS logos; QR code button enables app discovery"
+          },
+          {
+            "type": "Heading section",
+            "description": "Bottom section with 'Build your portfolio' and supporting description",
+            "position": "Full width, bottom of viewport",
+            "notable": "Acts as preview of next section; encourages scroll"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left: mobile mockup anchors visual interest; Right: text headline scales large for quick scanning; Download buttons below for clear CTA; bottom section teases next content",
+        "innovativeElements": [
+          "Mobile mockup serves dual purpose: demonstrates app UI and adds credibility through working interface preview",
+          "Carousel indicators hint at multiple value propositions without cluttering design",
+          "QR code download button bridges web-to-app journey seamlessly"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero-section",
+        "userIntent": "Understand app benefits and download OKX mobile application",
+        "entryPoints": [
+          "Scrolled down from top landing hero",
+          "Direct link to specific landing page section"
+        ],
+        "exitPoints": [
+          "Download iOS button → App Store redirect",
+          "Download Android button → Google Play redirect",
+          "QR code button → mobile app install flow",
+          "Scroll down → next section (Build your portfolio)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Login button (in mockup)",
+            "action": "Example action; shows app login flow"
+          },
+          {
+            "element": "Sign up button (in mockup)",
+            "action": "Example action; shows app signup flow"
+          },
+          {
+            "element": "Download iOS button",
+            "action": "Opens iOS App Store OKX listing"
+          },
+          {
+            "element": "Download Android button",
+            "action": "Opens Google Play OKX listing"
+          },
+          {
+            "element": "QR code button",
+            "action": "Displays QR code for mobile app install"
+          },
+          {
+            "element": "Carousel dots",
+            "action": "May indicate clickable slides (if interactive)"
+          }
+        ],
+        "informationArchitecture": "Mobile mockup on left demonstrates feature; text on right provides benefit statement; download options below; next section teased at bottom",
+        "frictionPoints": [
+          "Three separate download pathways (iOS, Android, QR) may dilute focus vs. single smart link",
+          "Carousel indicators suggest multiple messages, but unclear if slides auto-advance or require manual navigation"
+        ],
+        "progressIndicators": [
+          "Carousel dots (4 total) indicate position in multi-message sequence"
+        ]
+      },
+      "copy": {
+        "headline": "Sign up in a matter of minutes",
+        "subheadline": "A New Alternative\nTo Your Crypto Journey",
+        "ctas": [
+          {
+            "text": "Download iOS",
+            "style": "primary-button",
+            "placement": "Below text, left of center"
+          },
+          {
+            "text": "Download Android",
+            "style": "primary-button",
+            "placement": "Beside Download iOS"
+          },
+          {
+            "text": "[QR code icon]",
+            "style": "secondary-button",
+            "placement": "Right of download buttons"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Create your free account in just a few minutes. Zero hassle, zero fees.",
+            "context": "Subtext below headline",
+            "purpose": "Reinforces ease of account creation and removal of friction (fees)"
+          },
+          {
+            "text": "Build your portfolio\nTake control of your financial future with OKX. Trade 270+ coins with low fees and fast transactions.",
+            "context": "Bottom section preview",
+            "purpose": "Teases next section value prop (coin variety, fees, speed)"
+          }
+        ],
+        "tone": "friendly-casual, confidence-building",
+        "dataFormatting": [
+          "114.83 (price in mockup)",
+          "Percentage changes displayed with directional indicators (+ green, - red implied)"
+        ],
+        "trustSignals": [
+          "Working app interface shown in mockup (credibility through visual proof)",
+          "Explicit mention of 'zero fees'",
+          "High coin count (270+) signals market breadth",
+          "Fast transaction promise addresses user pain point"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-40-romn.png",
+      "label": "Română",
+      "flowType": "Home",
+      "step": 40,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#2D7D4D"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps for section headers (e.g., 'Centrul de preferințe pentru confidențialitate')",
+          "bodyStyle": "Regular sans-serif, justified text blocks for explanatory content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Cookie preference center with white background overlaying dark page background",
+            "position": "center-screen",
+            "notable": "Prominent close button (X) in top-right; OneTrust branding at bottom"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Green toggle switches for cookie categories",
+            "position": "right side of each preference row",
+            "notable": "Three enabled toggles (green), one disabled with 'Mereu active' blue text label"
+          },
+          {
+            "type": "text-link",
+            "description": "'Mai multe informații' hyperlink in blue",
+            "position": "within explanatory text block",
+            "notable": "Provides access to detailed cookie policy"
+          },
+          {
+            "type": "button",
+            "description": "Two action buttons at bottom",
+            "position": "footer of modal",
+            "notable": "Black buttons with white text: 'Respingeți toate' and 'Confirmă selecțiile mele'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title at top draws eye first, then large text block, then preference toggles in clear rows, buttons anchored at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Review and configure cookie preferences before proceeding",
+        "entryPoints": [
+          "Automatic modal trigger on home page load",
+          "Cookie banner link (likely)"
+        ],
+        "exitPoints": [
+          "Respingeți toate (reject all)",
+          "Confirmă selecțiile mele (confirm selections)",
+          "Close button (X)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches",
+            "action": "Enable/disable individual cookie categories"
+          },
+          {
+            "element": "Mai multe informații link",
+            "action": "Opens extended cookie policy documentation"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Submit preference choices or reject all"
+          }
+        ],
+        "informationArchitecture": "Cookie consent grouped into 4 categories: Direcționare, Performanță, Funcționale, and Strict Necesare. Header explains purpose, followed by toggle rows",
+        "frictionPoints": [
+          "Large text block requires reading before action",
+          "Multiple toggles to review (decision paralysis potential)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centrul de preferințe pentru confidențialitate",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Respingeți toate",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Confirmă selecțiile mele",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mereu active",
+            "context": "Next to 'Cookie-urile strict necesare' toggle",
+            "purpose": "Indicates this category cannot be disabled"
+          },
+          {
+            "text": "Mai multe informații",
+            "context": "Within explanatory paragraph",
+            "purpose": "Directs users to detailed cookie policy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OneTrust branding at bottom",
+          "GDPR-compliant cookie management framework"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-41-romn-scrolled-1.png",
+      "label": "Română — scrolled 1",
+      "flowType": "Home",
+      "step": 41,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#2D7D4D"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headers",
+          "bodyStyle": "Regular sans-serif body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Same cookie preference modal as previous screenshot, identical styling",
+            "position": "center-screen",
+            "notable": "Overlays visible home page content showing OKX dashboard behind modal"
+          },
+          {
+            "type": "background-content",
+            "description": "Blurred OKX dashboard visible behind modal showing trading data and asset lists",
+            "position": "behind modal",
+            "notable": "Demonstrates context loss while modal is active"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal takes absolute focus; background content de-emphasized through blur and opacity",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Configure cookie preferences; same flow as previous screenshot",
+        "entryPoints": [
+          "Auto-trigger on page load",
+          "Before user can access dashboard"
+        ],
+        "exitPoints": [
+          "Respingeți toate",
+          "Confirmă selecțiile mele",
+          "Close button (X)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches",
+            "action": "Enable/disable cookie categories"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Submit or reject preferences"
+          }
+        ],
+        "informationArchitecture": "Same cookie preference structure with 4 toggle rows",
+        "frictionPoints": [
+          "Blocks access to main dashboard until completed",
+          "User must resolve before proceeding to trading functions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Centrul de preferințe pentru confidențialitate",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Respingeți toate",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Confirmă selecțiile mele",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mereu active",
+            "context": "Cookie-urile strict necesare row",
+            "purpose": "Indicates mandatory cookie category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OneTrust certification badge"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-43-norsk.png",
+      "label": "Norsk",
+      "flowType": "Home",
+      "step": 43,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for main section headers (e.g., 'Mer om OKX', 'Produkter')",
+          "bodyStyle": "Regular sans-serif, smaller weight for link text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "footer-section",
+            "description": "Multi-column footer with 6 main sections: Om oss, Produkter, Tjenester, Kjøp krypto, Handle, Handle på farten",
+            "position": "bottom of page",
+            "notable": "Comprehensive navigation hub; white text on black background"
+          },
+          {
+            "type": "signup-card",
+            "description": "Right-aligned white card with 'Registrer deg' button and QR code",
+            "position": "top-right of footer",
+            "notable": "CTA to register with accompanying QR for mobile app download"
+          },
+          {
+            "type": "section-heading",
+            "description": "Bold white headings for each footer column",
+            "position": "top of each column",
+            "notable": "Clear visual separation between topic areas"
+          },
+          {
+            "type": "link-list",
+            "description": "Vertical stacks of clickable links",
+            "position": "below each section heading",
+            "notable": "Gray text for links; no visible hover states in static screenshot"
+          },
+          {
+            "type": "social-icons",
+            "description": "Social media icons row (X, Instagram, Telegram, Facebook, YouTube, more)",
+            "position": "bottom-left, under 'Samfunn' heading",
+            "notable": "Minimal icon design in white"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Section headings command attention first, then link columns guide eye downward; signup card in top-right serves as secondary CTA",
+        "innovativeElements": [
+          "QR code card with 'Skann for å laste ned OKX-appen' text for seamless mobile onboarding"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-footer",
+        "userIntent": "Explore OKX offerings, find specific products/services, or download mobile app",
+        "entryPoints": [
+          "Scrolling to bottom of home page",
+          "Direct link from top navigation"
+        ],
+        "exitPoints": [
+          "Registrer deg (primary signup CTA)",
+          "Any link within footer columns (product pages, support, trading pairs)",
+          "Social media links (external)",
+          "QR code scan (mobile app download)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Registrer deg button",
+            "action": "Opens registration modal or page"
+          },
+          {
+            "element": "QR code",
+            "action": "Mobile scan opens app store or direct download"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to specific product, service, or information pages"
+          },
+          {
+            "element": "Social icons",
+            "action": "Open external social media profiles"
+          }
+        ],
+        "informationArchitecture": "Organized by user need: 'Om oss' (company info), 'Produkter' (trading tools), 'Tjenester' (partnerships/services), 'Kjøp krypto' (on-ramp options), 'Handle' (trading pairs), 'Handle på farten' (mobile)",
+        "frictionPoints": [
+          "Dense link layout may be overwhelming for first-time users",
+          "No visible search functionality within footer"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Registrer deg",
+            "style": "primary-button",
+            "placement": "top-right card"
+          },
+          {
+            "text": "Skann for å laste ned OKX-appen",
+            "style": "text-label",
+            "placement": "below QR code"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mer om OKX",
+            "context": "First column header",
+            "purpose": "Signals company information section"
+          },
+          {
+            "text": "Støtte",
+            "context": "Subheading within Tjenester column",
+            "purpose": "Groups support-related links"
+          },
+          {
+            "text": "Kryptokalkulator",
+            "context": "Link in main column",
+            "purpose": "Tool for crypto price/value conversion"
+          },
+          {
+            "text": "Samfunn",
+            "context": "Bottom-left section",
+            "purpose": "Labels social media/community engagement section"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Regulatory disclosure: 'OKX Europe Limited, som opererer under handelsloven OKX, er nå en handelsplattform for kryptoaktiva autorisert som en leverandør av kryptoaktivatjenester av MFSA...'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-48-svenska.png",
+      "label": "Svenska",
+      "flowType": "Home",
+      "step": 48,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#52A552"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 16-18px, black text",
+          "bodyStyle": "regular sans-serif, 14px, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal",
+            "description": "Cookie consent/settings dialog with OKX branding",
+            "position": "center overlay",
+            "notable": "Prominent centered modal with close button (X)"
+          },
+          {
+            "type": "toggle-switches",
+            "description": "Four cookie category toggles with green on-state",
+            "position": "middle section",
+            "notable": "All toggles appear enabled by default"
+          },
+          {
+            "type": "button-pair",
+            "description": "Two action buttons: 'Avvisa alla' (Reject All) and 'Bekräfta mina val' (Confirm Choices)",
+            "position": "bottom of modal",
+            "notable": "Black buttons with white text, equal width layout"
+          },
+          {
+            "type": "link",
+            "description": "'Mer information' (More information) link in blue",
+            "position": "within body text",
+            "notable": "Underlined hyperlink for detailed privacy info"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal centers attention with clear heading, followed by explanatory text, toggles, and dual action buttons",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Review and configure cookie preferences before proceeding on OKX platform",
+        "entryPoints": [
+          "Page load/visit",
+          "Cookie banner interaction"
+        ],
+        "exitPoints": [
+          "Avvisa alla (Reject All)",
+          "Bekräfta mina val (Confirm Choices)",
+          "X close button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie category toggles",
+            "action": "Enable/disable specific cookie types (Nödvändiga, Prestanda, Funktionella, Absolut nödvändiga)"
+          },
+          {
+            "element": "Mer information link",
+            "action": "Navigate to detailed cookie policy"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Submit cookie preferences or reject all"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - explanation text > expandable cookie categories > action buttons",
+        "frictionPoints": [
+          "Long explanatory text may require reading",
+          "Need to understand Swedish language"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Inställningscenter för integritet",
+        "subheadline": "Hantera inställningar för samtycke",
+        "ctas": [
+          {
+            "text": "Avvisa alla",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Bekräfta mina val",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mer information",
+            "context": "within privacy explanation paragraph",
+            "purpose": "Provide link to extended cookie policy details"
+          },
+          {
+            "text": "Alltid aktiv",
+            "context": "next to 'Absolut nödvändiga cookies'",
+            "purpose": "Indicate required cookies cannot be disabled"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by OneTrust logo at bottom"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-49-svenska-scrolled-1.png",
+      "label": "Svenska — scrolled 1",
+      "flowType": "Home",
+      "step": 49,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#52A552"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 16-18px, black text",
+          "bodyStyle": "regular sans-serif, 14px, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal",
+            "description": "Cookie consent dialog overlaying trading dashboard behind",
+            "position": "center overlay",
+            "notable": "Shows trading data blurred in background, emphasizing modal importance"
+          },
+          {
+            "type": "toggle-switches",
+            "description": "Four cookie category toggles",
+            "position": "middle section",
+            "notable": "All enabled by default in green"
+          },
+          {
+            "type": "button-pair",
+            "description": "Confirm/Reject buttons",
+            "position": "bottom",
+            "notable": "Same styling as previous screenshot"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dominates; background blur emphasizes overlay importance",
+        "innovativeElements": [
+          "Background blur effect showing platform context"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Configure cookies before accessing trading dashboard",
+        "entryPoints": [
+          "Dashboard load",
+          "Page navigation"
+        ],
+        "exitPoints": [
+          "Avvisa alla",
+          "Bekräfta mina val",
+          "X close"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Toggle switches",
+            "action": "Enable/disable cookie categories"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Proceed with choice"
+          }
+        ],
+        "informationArchitecture": "Same as previous - privacy explanation > toggles > actions",
+        "frictionPoints": [
+          "Modal blocks access to main platform",
+          "Must make cookie decision before trading"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Inställningscenter för integritet",
+        "subheadline": "Hantera inställningar för samtycke",
+        "ctas": [
+          {
+            "text": "Avvisa alla",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Bekräfta mina val",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Mer information",
+            "context": "privacy text section",
+            "purpose": "Extended policy link"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OneTrust powered"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-51-.png",
+      "label": "简体中文",
+      "flowType": "Home",
+      "step": 51,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#52A552"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, 16px, black text",
+          "bodyStyle": "regular sans-serif, 14px, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal",
+            "description": "Chinese language privacy/cookie settings center",
+            "position": "center overlay",
+            "notable": "Same modal structure but localized to Simplified Chinese"
+          },
+          {
+            "type": "toggle-switches",
+            "description": "Four cookie toggles with Chinese labels",
+            "position": "middle",
+            "notable": "All enabled by default; green on-state"
+          },
+          {
+            "type": "button-pair",
+            "description": "Chinese action buttons",
+            "position": "bottom",
+            "notable": "Black buttons with white text"
+          },
+          {
+            "type": "link",
+            "description": "Chinese 'more information' link",
+            "position": "body text",
+            "notable": "Blue underlined hyperlink"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to Swedish version - modal hierarchy with text > toggles > actions",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Manage cookie preferences in Chinese interface",
+        "entryPoints": [
+          "Platform load",
+          "Language selection change"
+        ],
+        "exitPoints": [
+          "全部拒绝 (Reject All)",
+          "确认我的选择 (Confirm Choices)",
+          "X close"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie toggles",
+            "action": "Enable/disable: 定向Cookie (Targeted), 性能Cookie (Performance), 功能Cookie (Functional), 绝对必要的Cookie (Essential)"
+          },
+          {
+            "element": "查看更多信息 link",
+            "action": "Access detailed privacy information"
+          },
+          {
+            "element": "Action buttons",
+            "action": "Submit cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - Chinese explanation > cookie toggles > action buttons",
+        "frictionPoints": [
+          "Chinese language readability for non-native speakers",
+          "Modal blocks platform access until decision made"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "隐私偏好中心",
+        "subheadline": "管理许可偏好",
+        "ctas": [
+          {
+            "text": "全部拒绝",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "确认我的选择",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "查看更多信息",
+            "context": "within privacy explanation",
+            "purpose": "Link to extended policy"
+          },
+          {
+            "text": "始终处于活动状态",
+            "context": "next to essential cookies",
+            "purpose": "Indicate required/always-on status"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "OneTrust powered"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-44-norsk.png",
+      "label": "Norsk",
+      "flowType": "Home",
+      "step": 44,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#22C55E",
+          "#EF4444"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (64px+), centered, high contrast white on black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), gray text (#999999), centered below headline",
+          "dataStyle": "Monospace numbers in trading interface, mixed red/green for price movements"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with dropdown menus (Kjøp krypto, Innskudd, Markeder, Handle, Grow, Institusjoner, Lær, Mer)",
+            "position": "Top left-to-right",
+            "notable": "Minimal design with simple text links, auth buttons (Logg inn, Registrer deg) on right"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large centered headline with subtext and mockup screenshot of trading platform",
+            "position": "Center-left above fold",
+            "notable": "Trading platform screenshot embedded as visual proof of product functionality"
+          },
+          {
+            "type": "Trading platform mockup",
+            "description": "Detailed interface showing market data, charts, order forms with green/red accent buttons",
+            "position": "Right side, lower half",
+            "notable": "Fully functional-looking trading interface with candlestick charts, volume indicators, order entry"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center-left, trading interface screenshot on right creates visual balance, mockup guides eye downward through functionality",
+        "innovativeElements": [
+          "Embedded interactive-looking trading platform mockup as hero visual",
+          "Split-screen hero showing value prop on left, product proof on right",
+          "Dark mode with strategic green/red accent colors for buy/sell actions"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand OKX capabilities and begin trading crypto",
+        "entryPoints": [
+          "Direct navigation to homepage",
+          "Search engine results for 'global crypto account'",
+          "Social/referral links"
+        ],
+        "exitPoints": [
+          "Kjøp krypto (Buy crypto nav link)",
+          "Registrer deg (Register button)",
+          "Markeder (Markets nav link)",
+          "Trading interface interaction within mockup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dropdown menus",
+            "action": "Navigate to different product sections (Kjøp, Innskudd, Markeder, Handle, Grow, Institusjoner, Lær)"
+          },
+          {
+            "element": "Logg inn button",
+            "action": "Authenticate existing user"
+          },
+          {
+            "element": "Registrer deg button",
+            "action": "Create new account"
+          },
+          {
+            "element": "Search icon",
+            "action": "Search functionality"
+          }
+        ],
+        "informationArchitecture": "Hero value prop at top, platform mockup below as proof of concept, navigation provides pathways to specific features (Buy, Markets, Trading, Education, Grow)",
+        "frictionPoints": [
+          "Mockup is non-interactive (visual only, not functional demo)",
+          "Small text in subheadline may be hard to read at distance",
+          "Multiple navigation options might overwhelm new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Din globale konto i digitale dollar",
+        "subheadline": "Få de laveste gebyrene, raske transaksjoner, kraftige API-er og mer.",
+        "ctas": [
+          {
+            "text": "Registrer deg",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "Logg inn",
+            "style": "text-link",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Kjøp krypto",
+            "context": "Primary navigation dropdown",
+            "purpose": "Direct users to purchasing interface"
+          },
+          {
+            "text": "Markeder",
+            "context": "Navigation menu",
+            "purpose": "Browse available trading pairs"
+          },
+          {
+            "text": "Handle",
+            "context": "Navigation menu",
+            "purpose": "Access trading functionality"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$35.52B",
+          "2.45%",
+          "Price movements in red/green"
+        ],
+        "trustSignals": [
+          "Global account positioning",
+          "API capabilities mentioned",
+          "Low fees emphasized",
+          "Fast transactions highlighted"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-45-suomi.png",
+      "label": "Suomi",
+      "flowType": "Home",
+      "step": 45,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#CCFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (72px+), left-aligned, white on black, multi-line",
+          "bodyStyle": "Regular sans-serif, medium size (16px), gray text, minimal body copy below headline",
+          "dataStyle": "Chart data with lime-green line graph, subtle gradient fill"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with dropdown menus (Osta kryptoja, Talleta, Markkina, Treidaa, Grow, Institutionauteinen, Lue lisää, Lisää)",
+            "position": "Top left-to-right",
+            "notable": "Consistent minimal design, language-localized Finnish menus"
+          },
+          {
+            "type": "Hero headline",
+            "description": "Large multi-line headline split across left side",
+            "position": "Left side, center vertically",
+            "notable": "Aggressive typography with generous line-spacing, readable from distance"
+          },
+          {
+            "type": "Call-to-action buttons",
+            "description": "Two prominent buttons below headline: outlined button and solid white button",
+            "position": "Below headline, left-aligned",
+            "notable": "Contrast between outlined (secondary) and filled (primary) states"
+          },
+          {
+            "type": "Chart visualization",
+            "description": "Lime-green line chart showing price volatility over time periods (1D, 7D, 1M, 6M)",
+            "position": "Right side, middle section",
+            "notable": "Minimal, clean chart with only essential UI elements, bright accent color against dark background"
+          },
+          {
+            "type": "Trust badges",
+            "description": "Three sponsor/partner logos (Tribeca Festival, McLaren Formula 1, sports badge)",
+            "position": "Bottom center",
+            "notable": "Professional partnerships displayed as social proof"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, chart visualization balances right side, CTAs positioned below headline for natural reading flow, trust badges anchor bottom",
+        "innovativeElements": [
+          "Lime-green accent color (#CCFF00) creates high-contrast modern look",
+          "Minimal chart design with period toggles (1D, 7D, 1M, 6M)",
+          "Split-panel layout with asymmetric balance",
+          "Partnership logos as credibility anchors"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover OKX crypto exchange platform and begin account creation or login",
+        "entryPoints": [
+          "Direct homepage access",
+          "Organic search for Finnish crypto exchange",
+          "Language selector redirect to Finnish version"
+        ],
+        "exitPoints": [
+          "Sähköpostiosoite link (potentially newsletter)",
+          "Kokeile OKX:ää button (primary CTA)",
+          "Top navigation dropdowns to specific features",
+          "Registereidy button (top right)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Kokeile OKX:ää button",
+            "action": "Launch platform demo or begin signup"
+          },
+          {
+            "element": "Sähköpostiosoite button",
+            "action": "Newsletter signup or contact form"
+          },
+          {
+            "element": "Chart time period toggles",
+            "action": "Switch chart between 1D, 7D, 1M, 6M timeframes"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Expand submenu options for each main category"
+          }
+        ],
+        "informationArchitecture": "Headline and CTAs occupy left half for immediate conversion focus, chart provides visual evidence of platform functionality on right, navigation enables feature exploration",
+        "frictionPoints": [
+          "Chart visualization on right may distract from CTA conversion on left",
+          "Small navigation text in dropdowns requires hovering to discover options",
+          "No immediate indication of what happens after clicking 'Kokeile OKX:ää'"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Keskimääräistä kryptopörssiä nopeampi, parempi ja tehokkaampi",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sähköpostiosoite",
+            "style": "ghost-button",
+            "placement": "Below headline, left"
+          },
+          {
+            "text": "Kokeile OKX:ää",
+            "style": "primary-button",
+            "placement": "Below headline, center-right"
+          },
+          {
+            "text": "Registereidy",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Osta kryptoja",
+            "context": "Top navigation",
+            "purpose": "Direct to buy crypto section"
+          },
+          {
+            "text": "Talleta",
+            "context": "Top navigation",
+            "purpose": "Deposit funds"
+          },
+          {
+            "text": "Markkina",
+            "context": "Top navigation",
+            "purpose": "View market data"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "2.5+ (chart value)",
+          "Time periods: 1D, 7D, 1M, 6M"
+        ],
+        "trustSignals": [
+          "Tribeca Festival partnership",
+          "McLaren Formula 1 Team sponsorship",
+          "Professional sports association logos"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-46-suomi-scrolled-1.png",
+      "label": "Suomi — scrolled 1",
+      "flowType": "Home",
+      "step": 46,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#22C55E",
+          "#EF4444"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (56px+), centered, white on black",
+          "bodyStyle": "Regular sans-serif, medium size (16px), gray text (#AAAAAA), centered below headline",
+          "dataStyle": "Monospace numbers in trading interface, red/green color coding for gains/losses"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Persistent top nav with dropdowns (Osta kryptoja, Talleta, Markkina, Treidaa, Grow, Institutionauteinen, Lue lisää, Lisää)",
+            "position": "Top fixed",
+            "notable": "Remains consistent across scroll states"
+          },
+          {
+            "type": "Hero headline section",
+            "description": "Centered headline with supporting subtext about platform capabilities",
+            "position": "Above fold, center",
+            "notable": "Centered layout differs from previous split-panel approach"
+          },
+          {
+            "type": "Trading platform mockup",
+            "description": "Comprehensive screenshot of trading interface with sidebar, charts, order forms, and data tables",
+            "position": "Center, below headline",
+            "notable": "Full trading interface showing market orders, limit orders, candlestick charts, volume data, order book"
+          },
+          {
+            "type": "Order entry section",
+            "description": "Green and red action buttons for buy/sell orders at bottom of mockup",
+            "position": "Bottom of platform mockup",
+            "notable": "Clear visual distinction between long (green) and short (red) trading actions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline anchors top, mockup dominates central visual real estate, action buttons at bottom create natural conversion point",
+        "innovativeElements": [
+          "Detailed, feature-rich trading platform mockup as central hero visual",
+          "Full interface mockup demonstrates actual product UI, not simplified illustration",
+          "Green/red color coding for long/short trading actions",
+          "Multi-panel interface showing market, chart, and order entry simultaneously"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand platform features via interface preview before committing to signup",
+        "entryPoints": [
+          "Landing page scroll from hero section",
+          "Direct URL access to scrolled view",
+          "Navigation from top-level hero to platform details"
+        ],
+        "exitPoints": [
+          "Osta kryptoja (Buy crypto nav)",
+          "Registereidy (Register button, top right)",
+          "Treidaa (Trading nav link)",
+          "Scroll to more content below mockup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trading mockup (non-interactive visual)",
+            "action": "Displays feature set and interface familiarization"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Access specific product sections"
+          },
+          {
+            "element": "Green buy button on mockup",
+            "action": "Visual indicator of buy/long action"
+          },
+          {
+            "element": "Red sell button on mockup",
+            "action": "Visual indicator of sell/short action"
+          }
+        ],
+        "informationArchitecture": "Headline explains platform value (low fees, fast transactions, powerful APIs), mockup screenshot provides concrete proof of functionality, navigation pathways enable feature exploration",
+        "frictionPoints": [
+          "Mockup is large and may delay scroll engagement for conversion",
+          "Non-interactive mockup doesn't allow live feature exploration",
+          "Complex interface in mockup may overwhelm beginners",
+          "No clear secondary CTA after mockup beyond returning to top nav"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Digitaalisten dollarien maailmanlaajuinen kaupankäyntialusta",
+        "subheadline": "Hyödynnä alhaisiset maksut, nopeat transaktiot, tehokkaat API:t ja paljon muuta.",
+        "ctas": [
+          {
+            "text": "Registereidy",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Osta kryptoja",
+            "context": "Navigation menu",
+            "purpose": "Initiate crypto purchase"
+          },
+          {
+            "text": "Talleta",
+            "context": "Navigation menu",
+            "purpose": "Make deposit"
+          },
+          {
+            "text": "Markkina",
+            "context": "Navigation menu",
+            "purpose": "Browse markets"
+          },
+          {
+            "text": "Treidaa",
+            "context": "Navigation menu",
+            "purpose": "Access trading interface"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Cryptocurrency prices with decimal precision (e.g., $35.52B)",
+          "Percentage changes in red/green text",
+          "Time-based data: 1D, 7D, 1M, 6M charts"
+        ],
+        "trustSignals": [
+          "Low fees emphasized",
+          "Fast transactions highlighted",
+          "Powerful APIs mentioned",
+          "Global platform positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-52--scrolled-1.png",
+      "label": "简体中文 — scrolled 1",
+      "flowType": "Home",
+      "step": 52,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4CAF50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px, dark text on white",
+          "bodyStyle": "Regular sans-serif, 14px, justified paragraph text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Privacy preference center modal with cookie management controls",
+            "position": "center screen overlay",
+            "notable": "Clean white modal with rounded corners overlaying dark background"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Four cookie preference toggles (定向Cookie, 性能Cookie, 功能Cookie, 绝对必要Cookie)",
+            "position": "middle section",
+            "notable": "All toggles enabled by default with green fill color"
+          },
+          {
+            "type": "button-group",
+            "description": "Two action buttons at bottom: '全部拒绝' (Reject All) and '确认我的选择' (Confirm My Choice)",
+            "position": "bottom of modal",
+            "notable": "Both buttons in solid black with white text, equal width"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal title leads eye down through explanatory text, then to toggle switches organized in clear rows, finally to action buttons",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Configure cookie and privacy preferences before accessing the site",
+        "entryPoints": [
+          "Page load/initial site visit"
+        ],
+        "exitPoints": [
+          "Reject All button",
+          "Confirm My Choice button",
+          "Close (X) button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "定向Cookie toggle",
+            "action": "Enable/disable targeted advertising cookies"
+          },
+          {
+            "element": "性能Cookie toggle",
+            "action": "Enable/disable performance analytics cookies"
+          },
+          {
+            "element": "功能Cookie toggle",
+            "action": "Enable/disable functional feature cookies"
+          },
+          {
+            "element": "绝对必要Cookie toggle",
+            "action": "Display status of essential cookies (non-toggleable)"
+          },
+          {
+            "element": "全部拒绝 button",
+            "action": "Reject all optional cookies and close modal"
+          },
+          {
+            "element": "确认我的选择 button",
+            "action": "Confirm current cookie selections and proceed"
+          }
+        ],
+        "informationArchitecture": "Privacy explanation text → cookie management section with toggles → required cookies status → action buttons",
+        "frictionPoints": [
+          "Dense Chinese text may require reading effort",
+          "Small link text '更多信息' (More info) might be missed",
+          "All toggles default to ON, requiring active rejection"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "隐私偏好中心",
+        "subheadline": "管理许可偏好",
+        "ctas": [
+          {
+            "text": "全部拒绝",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "确认我的选择",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "更多信息",
+            "style": "text-link",
+            "placement": "privacy explanation section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "始终处于活动状态",
+            "context": "绝对必要Cookie row",
+            "purpose": "Clarifies that essential cookies cannot be disabled"
+          },
+          {
+            "text": "您访问任何网站时，网站都可能在您的浏览器上存储或检索信息",
+            "context": "Opening paragraph",
+            "purpose": "Explains cookie functionality and purpose"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by onetrust — displayed at bottom with logo",
+          "GDPR/privacy-compliant cookie management framework"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-home-53--scrolled-2.png",
+      "label": "简体中文 — scrolled 2",
+      "flowType": "Home",
+      "step": 53,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4CAF50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px, dark text",
+          "bodyStyle": "Regular sans-serif, 14px, body text with justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Privacy preference center with cookie management",
+            "position": "center screen overlay",
+            "notable": "Same modal as previous screenshot, showing scroll state"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Four cookie preference switches with expandable sections",
+            "position": "middle section",
+            "notable": "All toggles enabled (green), with + icons for expandable descriptions"
+          },
+          {
+            "type": "background-content",
+            "description": "Blurred onboarding content visible behind modal",
+            "position": "behind modal",
+            "notable": "Shows home page with Chinese educational copy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal centered with clear title → explanatory text → toggle switches organized in rows → action buttons at base",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Review and configure privacy/cookie preferences with expandable details",
+        "entryPoints": [
+          "Page load or modal already open from previous screen"
+        ],
+        "exitPoints": [
+          "Confirm button",
+          "Reject All button",
+          "Close button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Expandable toggle rows (+)",
+            "action": "Expand/collapse cookie type descriptions"
+          },
+          {
+            "element": "Cookie toggles",
+            "action": "Enable/disable individual cookie categories"
+          },
+          {
+            "element": "Bottom action buttons",
+            "action": "Submit privacy preferences"
+          }
+        ],
+        "informationArchitecture": "Title and description → expandable cookie preference groups → status indicators → confirmation buttons",
+        "frictionPoints": [
+          "Modal blocks all background content until dismissed",
+          "Opt-in default (all cookies enabled by default)",
+          "Small expandable icons may be easy to miss"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "隐私偏好中心",
+        "subheadline": "管理许可偏好",
+        "ctas": [
+          {
+            "text": "全部拒绝",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "确认我的选择",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "始终处于活动状态",
+            "context": "Essential cookies row",
+            "purpose": "Indicates non-optional status of essential cookies"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by onetrust",
+          "GDPR-compliant privacy framework"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 36-40px, very large display heading in black",
+          "bodyStyle": "Regular sans-serif, 16px, medium gray text with line-height of ~1.6",
+          "dataStyle": "Monospace or fixed-width for conversion rates (69,866.7), bold for emphasis"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with dropdown menus and utility buttons",
+            "position": "top of page",
+            "notable": "Clean dark bar with white text, search, login/signup buttons"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline 'Crypto converter and calculator' with explanatory paragraph",
+            "position": "top content area",
+            "notable": "Maximum contrast heading with readable body copy below"
+          },
+          {
+            "type": "converter-widget",
+            "description": "Two-field converter with BTC↔USD input fields and dropdown currency selectors",
+            "position": "center-right of hero",
+            "notable": "Light gray background card with rounded corners, shows real-time conversion rate"
+          },
+          {
+            "type": "feature-cards",
+            "description": "Four equal-width feature cards: Real-time data, Variety of assets, Easy to use, No account needed",
+            "position": "below converter widget",
+            "notable": "Light gray background cards with dark headings and gray body text"
+          },
+          {
+            "type": "data-table-section",
+            "description": "Section titled 'Top 20 crypto to US Dollar conversion rates' with currency cards",
+            "position": "bottom of visible area",
+            "notable": "Starts horizontal scrolling card carousel with crypto assets"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates → body copy explains purpose → converter widget provides immediate functionality → feature callouts below → data tables at bottom",
+        "innovativeElements": [
+          "Real-time conversion display in widget",
+          "Bi-directional currency conversion with equal signs",
+          "Seamless integration of tool functionality within educational content"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Convert between cryptocurrencies and fiat currencies using real-time rates",
+        "entryPoints": [
+          "Direct link from Markets page",
+          "Navigation menu (Markets or Tools section)",
+          "Search for 'converter' or specific crypto pairs"
+        ],
+        "exitPoints": [
+          "Click cryptocurrency or fiat dropdown to select different assets",
+          "Convert button to execute conversion",
+          "Click on currency cards in 'Top 20' section to view details",
+          "Navigate away via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BTC dropdown selector",
+            "action": "Select different cryptocurrency to convert from"
+          },
+          {
+            "element": "USD dropdown selector",
+            "action": "Select different fiat currency to convert to"
+          },
+          {
+            "element": "Numeric input fields",
+            "action": "Enter amount to convert"
+          },
+          {
+            "element": "Convert button",
+            "action": "Execute conversion (may update display or navigate)"
+          },
+          {
+            "element": "Currency cards in carousel",
+            "action": "Navigate to detailed rates for individual crypto assets"
+          }
+        ],
+        "informationArchitecture": "Heading + explanation → active converter tool → feature benefits → data references section with top conversions",
+        "frictionPoints": [
+          "Must actively use converter widget rather than passive viewing",
+          "May need to sign in for certain advanced features (not explicit here)",
+          "Carousel at bottom requires horizontal scrolling on smaller screens"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Crypto converter and calculator",
+        "subheadline": "This page displays the real-time conversion rate of crypto against its cash equivalent. With OKX, you can instantly convert 100+ popular cryptocurrencies, like Bitcoin (BTC) and Ethereum (ETH), to your desired fiat currency. You can also convert your preferred fiat currency to any available cryptocurrency. Simply select the crypto and fiat you'd like to convert below to view their live conversion rate.",
+        "ctas": [
+          {
+            "text": "Convert",
+            "style": "primary-button",
+            "placement": "below converter widget"
+          },
+          {
+            "text": "Buy crypto",
+            "style": "dropdown-menu",
+            "placement": "top navigation"
+          },
+          {
+            "text": "Deposit",
+            "style": "dropdown-menu",
+            "placement": "top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "1 Bitcoin = 69,866.7 US Dollar, 1 US Dollar = 0.014313 Bitcoin",
+            "context": "Below converter widget",
+            "purpose": "Shows current real-time exchange rate and reciprocal conversion"
+          },
+          {
+            "text": "Real-time data",
+            "context": "Feature card heading",
+            "purpose": "Highlights core benefit of converter tool"
+          },
+          {
+            "text": "Our crypto to fiat converter is updated on-demand, just refresh the page for the latest rate.",
+            "context": "Feature card body",
+            "purpose": "Explains update frequency and reliability"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "69,866.7 (currency amount with comma separator and decimal places)",
+          "0.014313 (small decimal representation for reciprocal rate)",
+          "100+ (rounded large number for asset variety claim)"
+        ],
+        "trustSignals": [
+          "Real-time data emphasis",
+          "Support for 100+ cryptocurrencies",
+          "No account required mentioned in feature card",
+          "Large established exchange (OKX) brand authority"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-3-markets.png",
+      "label": "Markets",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#2d8659"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px, dark text on white",
+          "bodyStyle": "Regular sans-serif, 13-14px, dark gray body copy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Privacy Preference Center modal with semi-transparent dark backdrop",
+            "position": "center of screen, overlaying footer navigation",
+            "notable": "Full-width modal with rounded corners and close button (X) in top-right"
+          },
+          {
+            "type": "toggle-switch",
+            "description": "Green toggle switches for cookie consent categories",
+            "position": "right side of each preference row",
+            "notable": "Three toggles in 'on' position (green), one locked as 'Always Active'"
+          },
+          {
+            "type": "call-to-action-buttons",
+            "description": "Two black buttons for rejecting all or confirming choices",
+            "position": "bottom of modal",
+            "notable": "High contrast black buttons with white text"
+          },
+          {
+            "type": "expandable-sections",
+            "description": "Cookie category rows with plus icons for expansion",
+            "position": "center section, stacked vertically",
+            "notable": "Collapsible design for each cookie type"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal header draws attention, followed by explanatory text, then preference toggles in clear rows",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Manage privacy preferences and cookie consent before accessing the platform",
+        "entryPoints": [
+          "Footer link 'Cookie preferences'",
+          "First-visit cookie banner"
+        ],
+        "exitPoints": [
+          "Reject All button",
+          "Confirm My Choices button",
+          "X close button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Targeting Cookies toggle",
+            "action": "Enable/disable targeting cookie tracking"
+          },
+          {
+            "element": "Performance Cookies toggle",
+            "action": "Enable/disable performance monitoring cookies"
+          },
+          {
+            "element": "Functional Cookies toggle",
+            "action": "Enable/disable functional feature cookies"
+          },
+          {
+            "element": "Strictly Necessary Cookies",
+            "action": "Display 'Always Active' label (non-toggleable)"
+          },
+          {
+            "element": "More information link",
+            "action": "Navigate to detailed privacy policy"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: main heading > explanatory paragraph > cookie categories with toggles > action buttons",
+        "frictionPoints": [
+          "Modal overlay blocks access to main content until dismissed",
+          "No 'accept all' quick button visible (requires clicking 'Confirm My Choices')"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Preference Center",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Reject All",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Confirm My Choices",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "More information",
+            "style": "text-link",
+            "placement": "within body paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies...",
+            "context": "Main explanatory paragraph",
+            "purpose": "Educate user on how cookies work and why preferences matter"
+          },
+          {
+            "text": "Always Active",
+            "context": "Strictly Necessary Cookies row",
+            "purpose": "Clarify that essential cookies cannot be disabled"
+          },
+          {
+            "text": "Powered by onetrust",
+            "context": "Footer of modal",
+            "purpose": "Trust signal showing third-party consent management"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Powered by OneTrust (consent management platform)",
+          "Reference to legal compliance (cookie categories per GDPR standards)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-5-spot-and-marginbuy-and-sell-crypto-with-ease.png",
+      "label": "Spot and marginBuy and sell crypto with ease",
+      "flowType": "Swap",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00d084",
+          "#ff4747"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14px, white text on dark backgrounds",
+          "bodyStyle": "Regular sans-serif, 12px, light gray text",
+          "dataStyle": "Monospace font for price data, green for gains (+), red for losses (-), white for neutral values"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "TradingView advanced chart with green/red candlesticks, volume bars, and price gridlines",
+            "position": "center-left, 60% of viewport",
+            "notable": "Interactive chart with multiple time-frame controls (1s, 1m, 5m, 15m, 1h, 4h, 1D)"
+          },
+          {
+            "type": "order-book",
+            "description": "Right-aligned panel showing real-time bid/ask prices in red and green",
+            "position": "right side, embedded in chart area",
+            "notable": "Color-coded bids (red) and asks (green) with clickable rows for quick entry"
+          },
+          {
+            "type": "trading-panel",
+            "description": "Right sidebar with Buy/Sell tabs, limit order form, and position sizing buttons",
+            "position": "far right, full height",
+            "notable": "Green 'Buy' button and 'Sell' gray button at top; collapsible order depth view"
+          },
+          {
+            "type": "info-banner",
+            "description": "Workspace introduction tooltip with educational content",
+            "position": "upper right corner",
+            "notable": "Floating info box explaining workspace customization features"
+          },
+          {
+            "type": "price-input-fields",
+            "description": "Price (EUR) and Amount (BTC) input fields in trading panel",
+            "position": "right sidebar, mid-section",
+            "notable": "Editable fields with real-time conversion display (e.g., €58,925.29)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates left side, order book embedded center, trading controls on right; price/volume data emphasized with color contrast",
+        "innovativeElements": [
+          "Embedded order book overlay on chart (not separate panel)",
+          "Quick-fill percentage buttons (0%, 25%, 50%, 75%, 100%) for position sizing",
+          "Integrated workspace introduction tooltip within active interface"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, trading-interface",
+        "userIntent": "Monitor BTC/EUR price action, view order book liquidity, place buy/sell limit orders",
+        "entryPoints": [
+          "Markets navigation from main header",
+          "Trading tab selection",
+          "Asset pair selection from crypto list"
+        ],
+        "exitPoints": [
+          "Order submission (Buy/Sell button)",
+          "Navigate to different asset pair",
+          "Switch to Portfolio or History tabs",
+          "Back arrow to previous screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time-frame buttons (1s, 1m, 5m, 15m, 1h, 4h, 1D)",
+            "action": "Change chart granularity and historical data range"
+          },
+          {
+            "element": "Chart drawing tools (on left sidebar)",
+            "action": "Add technical analysis annotations"
+          },
+          {
+            "element": "Order book rows",
+            "action": "Click to auto-fill price into trading form"
+          },
+          {
+            "element": "Buy/Sell tab toggle",
+            "action": "Switch between buy and sell order modes"
+          },
+          {
+            "element": "Price/Amount input fields",
+            "action": "Enter custom order parameters"
+          },
+          {
+            "element": "Position sizing buttons (0%, 25%, 50%, 75%, 100%)",
+            "action": "Quick-populate amount field as percentage of available balance"
+          },
+          {
+            "element": "Buy button (green, right panel)",
+            "action": "Submit buy order at specified price/amount"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: chart controls/chart (left), embedded order book (center), trading form (right); market data hierarchy emphasizes price > volume > historical range",
+        "frictionPoints": [
+          "Order form requires manual price input (not just clicking order book)",
+          "Workspace intro tooltip could distract from trading",
+          "Small text on order book rows may be hard to read during volatile markets"
+        ],
+        "progressIndicators": [
+          "Price change indicator (+1,005.6, green, +1.73%)",
+          "24h High/Low/Volume display below pair header",
+          "Real-time timestamp in chart footer (17:16:31 UTC-5)"
+        ]
+      },
+      "copy": {
+        "headline": "BTC/EUR",
+        "subheadline": "59,000.0 +1,005.6 (+1.73%)",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "right sidebar, top"
+          },
+          {
+            "text": "Sell",
+            "style": "ghost-button",
+            "placement": "right sidebar, top"
+          },
+          {
+            "text": "Log in/Sign up",
+            "style": "primary-button",
+            "placement": "right sidebar, bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Limit | Market | TP/SL",
+            "context": "Trading panel, order type selector",
+            "purpose": "Allow user to switch between order execution modes"
+          },
+          {
+            "text": "Price (EUR) | Amount (BTC) | Total (BTC)",
+            "context": "Right sidebar input labels",
+            "purpose": "Clarify input field purposes"
+          },
+          {
+            "text": "Available -- EUR | Max buy -- BTC",
+            "context": "Right sidebar, below input fields",
+            "purpose": "Show account balance constraints"
+          },
+          {
+            "text": "Workspace introduction: Your workspaces have been upgraded. Learn how to build and customize your trading interface.",
+            "context": "Floating info banner, upper right",
+            "purpose": "Educate about new customization features"
+          },
+          {
+            "text": "Max price €59,302.1 | % Fees",
+            "context": "Right sidebar, below order form",
+            "purpose": "Display safety limits and fee transparency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "59,000.0 (price with comma thousands separator)",
+          "+1,005.6 (+1.73%) (green gain indicator with percentage)",
+          "€58,925.29 (currency symbol with decimal precision)",
+          "BTC/EUR (asset pair notation)",
+          "24h low: 57,982.2 (24-hour range data)"
+        ],
+        "trustSignals": [
+          "Real-time pricing from exchange (timestamp: 17:16:31 UTC-5)",
+          "TradingView embedded charting (industry-standard platform)",
+          "Volume data displayed (trading depth transparency)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-6-spot-and-marginbuy-and-sell-crypto-with-ease-chart-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — Chart tab",
+      "flowType": "Swap",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00d084",
+          "#ff4747"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14px, white text on dark backgrounds",
+          "bodyStyle": "Regular sans-serif, 12px, light gray text",
+          "dataStyle": "Monospace font for price/amount data, green for gains, red for losses, white for neutral values"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "TradingView advanced chart with price action visualization and volume bars",
+            "position": "center-left, 60% of viewport",
+            "notable": "Same chart as previous screen with live price updates (58,920.32 vs 58,925.29)"
+          },
+          {
+            "type": "order-book",
+            "description": "Real-time bid/ask depth with red (bids) and green (asks) rows",
+            "position": "embedded in chart, overlaid on right side",
+            "notable": "Dynamically updating order book with matching engine data"
+          },
+          {
+            "type": "trading-panel",
+            "description": "Right sidebar with Buy/Sell tabs, limit order form with amount percentage quick-fill",
+            "position": "far right, full height",
+            "notable": "Added: visual quick-fill buttons (0%, 25%, 50%, 75%, 100%) with updated layout"
+          },
+          {
+            "type": "percentage-quick-fill",
+            "description": "Horizontal button group for selecting position size as percentage of balance",
+            "position": "right sidebar, under Amount (BTC) field",
+            "notable": "Interactive buttons to quickly set order size without manual calculation"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates, with embedded order book and trading controls following secondary focus; percentage buttons add tertiary visual layer",
+        "innovativeElements": [
+          "Percentage quick-fill buttons (0%, 25%, 50%, 75%, 100%) for rapid position sizing",
+          "Real-time order book updates integrated into chart view",
+          "Dual-display of available balance and maximum buy capacity"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, trading-interface",
+        "userIntent": "Place a buy order with precise position sizing using percentage quick-fill; monitor chart and order book simultaneously",
+        "entryPoints": [
+          "Markets navigation",
+          "Trading tab selection",
+          "BTC/EUR pair selection"
+        ],
+        "exitPoints": [
+          "Buy button submission",
+          "Navigate to different pair",
+          "Switch to Portfolio/History tabs",
+          "Back arrow to previous view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "0%, 25%, 50%, 75%, 100% buttons",
+            "action": "Auto-populate Amount (BTC) field as percentage of available balance"
+          },
+          {
+            "element": "Chart time-frame controls",
+            "action": "Change historical data granularity"
+          },
+          {
+            "element": "Order book rows",
+            "action": "Click to populate price from matching orders"
+          },
+          {
+            "element": "Price (EUR) input field",
+            "action": "Enter custom limit price"
+          },
+          {
+            "element": "Amount (BTC) input field",
+            "action": "Manually enter order size (auto-populated by % buttons)"
+          },
+          {
+            "element": "Buy button",
+            "action": "Submit limit buy order"
+          },
+          {
+            "element": "Limit/Market/TP-SL selector",
+            "action": "Switch order execution type"
+          }
+        ],
+        "informationArchitecture": "Left: chart with embedded order book. Right: trading form with hierarchy of price > amount > total, followed by quick-fill percentage buttons as convenience layer",
+        "frictionPoints": [
+          "Price field still requires manual entry before using % quick-fill",
+          "Two interaction patterns (clicking order book vs entering price manually) may confuse new traders"
+        ],
+        "progressIndicators": [
+          "Price change display: +1,005.6 (+1.73%)",
+          "24h High/Low/Volume metrics",
+          "Real-time chart timestamp (17:16:33 UTC-5)",
+          "Order book updates in real-time"
+        ]
+      },
+      "copy": {
+        "headline": "BTC/EUR",
+        "subheadline": "59,000.0 +1,005.6 (+1.73%)",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "right sidebar, top"
+          },
+          {
+            "text": "Sell",
+            "style": "ghost-button",
+            "placement": "right sidebar, top"
+          },
+          {
+            "text": "Log in/Sign up",
+            "style": "primary-button",
+            "placement": "right sidebar, bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Price (EUR)",
+            "context": "Input field label, right sidebar",
+            "purpose": "Identify price input field currency"
+          },
+          {
+            "text": "Amount (BTC)",
+            "context": "Input field label with placeholder 'Min 0.0001 BTC'",
+            "purpose": "Clarify amount denomination and minimum order size"
+          },
+          {
+            "text": "Total (EUR)",
+            "context": "Display-only calculation field",
+            "purpose": "Show total order cost in EUR"
+          },
+          {
+            "text": "0% | 25% | 50% | 75% | 100%",
+            "context": "Quick-fill button labels below Amount field",
+            "purpose": "Allow rapid position sizing without manual calculation"
+          },
+          {
+            "text": "Available -- EUR | Max buy -- BTC",
+            "context": "Account balance constraints display",
+            "purpose": "Show trading limits and available capital"
+          },
+          {
+            "text": "Max price €59,302.7 | % Fees",
+            "context": "Risk parameters and fee display",
+            "purpose": "Transparency on maximum fill price and trading costs"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "59,000.0 (price format with decimals)",
+          "+1,005.6 (+1.73%) (gain with percentage)",
+          "€58,920.32 (currency-formatted price)",
+          "Min 0.0001 BTC (minimum order size notation)",
+          "41.05% (order depth percentage indicator)"
+        ],
+        "trustSignals": [
+          "Real-time market data timestamp",
+          "TradingView professional charting infrastructure",
+          "Transparent fee disclosure",
+          "Explicit balance and maximum buy information"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-7-spot-and-marginbuy-and-sell-crypto-with-ease-overview-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — Overview tab",
+      "flowType": "Swap",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F1F1F",
+          "#22C55E",
+          "#EF4444"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text on dark background, 16-18px",
+          "bodyStyle": "Regular sans-serif, light gray text, 12-14px",
+          "dataStyle": "Monospace/numeric font for prices and values, color-coded (green for gains, red for losses)"
+        },
+        "components": [
+          {
+            "type": "Header bar",
+            "description": "Top navigation with crypto pair selector, price ticker, 24h metrics",
+            "position": "Top of screen",
+            "notable": "Real-time price display with percentage change and sparkline indicator"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "Chart, Overview, Trading data, Feed tabs for data organization",
+            "position": "Below header bar",
+            "notable": "Clear segmentation of different data views"
+          },
+          {
+            "type": "Order book panel",
+            "description": "Bid/ask prices displayed in red/green table with Amount, Price, Total columns",
+            "position": "Center-right",
+            "notable": "Color-coded price levels with quick buy/sell buttons"
+          },
+          {
+            "type": "Trading form",
+            "description": "Buy/Sell buttons with limit/market/TP/SL toggles and input fields",
+            "position": "Right sidebar",
+            "notable": "Green call-to-action button, percentage allocation buttons (25%, 50%, 75%, 100%)"
+          },
+          {
+            "type": "Information panel",
+            "description": "Left sidebar with asset information, market data, blockchain details",
+            "position": "Left side",
+            "notable": "Expandable 'Show more' for detailed metrics"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Price data dominates top, order book center-right with trading panel adjacent, information sidebar on left provides context",
+        "innovativeElements": [
+          "Real-time bid/ask color coding (red/green)",
+          "Percentage allocation quick-select buttons",
+          "Embedded limit/market/TP/SL order type toggle within trading form"
+        ]
+      },
+      "flow": {
+        "screenType": "trading-dashboard",
+        "userIntent": "View BTC/EUR spot trading pair, monitor price action, review order book, execute buy/sell orders",
+        "entryPoints": [
+          "From Trade menu in main navigation",
+          "Direct crypto pair selection from Markets page",
+          "Search bar for crypto lookup"
+        ],
+        "exitPoints": [
+          "Markets link to browse other pairs",
+          "Buy crypto via main Buy crypto dropdown",
+          "Portfolio/Assets view",
+          "Account menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BTC/EUR pair selector",
+            "action": "Opens dropdown to select different trading pairs"
+          },
+          {
+            "element": "Chart/Overview/Trading data/Feed tabs",
+            "action": "Switches between different data visualizations"
+          },
+          {
+            "element": "Order book rows",
+            "action": "Likely clickable to populate price field in trading form"
+          },
+          {
+            "element": "Buy/Sell toggle buttons",
+            "action": "Switches between buy and sell order modes"
+          },
+          {
+            "element": "Limit/Market/TP/SL buttons",
+            "action": "Changes order type"
+          },
+          {
+            "element": "Percentage allocation buttons (25%, 50%, 75%, 100%)",
+            "action": "Auto-fills amount field"
+          },
+          {
+            "element": "Log in/Sign up button",
+            "action": "Required to execute trades"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: information context (left), real-time data/order book (center), active trading controls (right). Tabs organize different data views.",
+        "frictionPoints": [
+          "Must be logged in to trade (not authenticated in screenshot)",
+          "Order book requires understanding of bid/ask concept",
+          "Multiple order types (Limit/Market/TP/SL) may confuse beginners",
+          "Price conversion between EUR and BTC requires mental calculation"
+        ],
+        "progressIndicators": [
+          "24h low/high/volume indicators at top",
+          "Buy order count (1) indicator in top right"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "BTC Bitcoin",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "Trading form, top right"
+          },
+          {
+            "text": "Sell",
+            "style": "secondary-button",
+            "placement": "Trading form, top right"
+          },
+          {
+            "text": "Log in/Sign up",
+            "style": "primary-button",
+            "placement": "Bottom of trading form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Price (EUR)",
+            "context": "Trading form field label",
+            "purpose": "Identifies input field for order price"
+          },
+          {
+            "text": "Amount (BTC)",
+            "context": "Trading form field label",
+            "purpose": "Identifies input field for order quantity"
+          },
+          {
+            "text": "Total (EUR)",
+            "context": "Order book and trading form",
+            "purpose": "Shows total cost/proceeds of order"
+          },
+          {
+            "text": "Available -- EUR / Max buy -- BTC",
+            "context": "Trading form help text",
+            "purpose": "Shows account balance constraints"
+          },
+          {
+            "text": "Information | Trading rules",
+            "context": "Tab navigation",
+            "purpose": "Toggles between asset info and trading rules"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "59,000.0 (price with decimal)",
+          "+1,005.6 (+1.73%) (change with percentage)",
+          "€58,920.32 (EUR currency formatting)",
+          "19,989,309 BTC (large numbers with comma separator)",
+          "€1,179,182,906,253 (market cap in currency)"
+        ],
+        "trustSignals": [
+          "Bitcoin circulating supply: 19,989,309 BTC",
+          "Market cap: €1.179 trillion",
+          "All-time high: €106,336.1 (10/06/2025)",
+          "Historical context: 'First bitcoins created in 2009'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-8-spot-and-marginbuy-and-sell-crypto-with-ease-trading-da.png",
+      "label": "Spot and marginBuy and sell crypto with ease — Trading da...",
+      "flowType": "Swap",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F1F1F",
+          "#22C55E",
+          "#8B5CF6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 16-18px",
+          "bodyStyle": "Regular sans-serif, light gray text, 12-14px",
+          "dataStyle": "Monospace numbers for metrics, color-coded for state"
+        },
+        "components": [
+          {
+            "type": "Tab navigation",
+            "description": "Chart, Overview, Trading data (active), Feed tabs",
+            "position": "Below header",
+            "notable": "Underline indicator shows active tab"
+          },
+          {
+            "type": "Empty state card",
+            "description": "Large centered card with 'Money flow breakdown' title and 'No records found' message",
+            "position": "Left panel, center",
+            "notable": "Includes time period selector (5m, 15m, 1h, 4h, 1D) and circular loading icon"
+          },
+          {
+            "type": "Time period selector",
+            "description": "Pill-shaped buttons for filtering: 5m, 15m, 1h, 4h, 1D",
+            "position": "Under 'Money flow breakdown' title",
+            "notable": "Common candlestick chart timeframe convention"
+          },
+          {
+            "type": "Secondary empty state",
+            "description": "'Net money flow' section with Day/Week/Month toggle",
+            "position": "Lower left panel",
+            "notable": "Similar empty state pattern stacked vertically"
+          },
+          {
+            "type": "Order book panel",
+            "description": "Same bid/ask table as previous screen",
+            "position": "Center-right",
+            "notable": "Persists across tabs for quick reference"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Empty state cards dominate left panel, order book and trading controls maintain right-side prominence",
+        "innovativeElements": [
+          "Multiple time-period filters on single screen",
+          "Stacked empty states for 'Money flow breakdown' and 'Net money flow'",
+          "Loading icon animation placeholder"
+        ]
+      },
+      "flow": {
+        "screenType": "trading-data-view",
+        "userIntent": "Analyze trading data, view money flow patterns, monitor net flows across time periods",
+        "entryPoints": [
+          "Click Trading data tab from overview",
+          "Direct link from trading dashboard"
+        ],
+        "exitPoints": [
+          "Back to Overview tab",
+          "Back to Chart tab",
+          "Click Feed tab for social insights",
+          "Execute trade via right panel"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time period buttons (5m, 15m, 1h, 4h, 1D)",
+            "action": "Filters money flow breakdown by selected timeframe"
+          },
+          {
+            "element": "Day/Week/Month toggle",
+            "action": "Filters net money flow by time period"
+          },
+          {
+            "element": "Info icons next to section titles",
+            "action": "Likely shows tooltip explaining metric definitions"
+          },
+          {
+            "element": "Trading form controls (right sidebar)",
+            "action": "Execute buy/sell orders while viewing trading data"
+          }
+        ],
+        "informationArchitecture": "Trading data view organized by two key metrics: (1) Money flow breakdown with intraday timeframes, (2) Net money flow with longer timeframes. Data currently unavailable (empty state).",
+        "frictionPoints": [
+          "Empty state indicates no data available for this pair/timeframe combination",
+          "Two separate empty states may feel cluttered",
+          "User must understand 'money flow' and 'net money flow' concepts",
+          "May take time to load actual data"
+        ],
+        "progressIndicators": [
+          "Tab indicator shows active 'Trading data' tab",
+          "Loading icon suggests data is processing"
+        ]
+      },
+      "copy": {
+        "headline": "Money flow breakdown",
+        "subheadline": "Net money flow",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "Right trading form"
+          },
+          {
+            "text": "Sell",
+            "style": "secondary-button",
+            "placement": "Right trading form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "No records found",
+            "context": "Empty state message, center of card",
+            "purpose": "Communicates that data is unavailable for selected timeframe"
+          },
+          {
+            "text": "5m | 15m | 1h | 4h | 1D",
+            "context": "Time period selector buttons",
+            "purpose": "Allows filtering of money flow data by timeframe"
+          },
+          {
+            "text": "Day | Week | Month",
+            "context": "Time period selector for net money flow",
+            "purpose": "Allows filtering of longer-term flow data"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Time periods in minutes/hours (5m, 15m, 1h, 4h, 1D)",
+          "Time ranges (Day, Week, Month)",
+          "Intraday timeframes follow standard trading convention"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No records found"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-9-spot-and-marginbuy-and-sell-crypto-with-ease-trade-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — Trade tab",
+      "flowType": "Swap",
+      "step": 9,
+      "design": {
+        "layout": "split-panel with modal overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F1F1F",
+          "#22C55E",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 14-16px",
+          "bodyStyle": "Regular sans-serif, light gray text, 12-13px",
+          "dataStyle": "Monospace for prices and timestamps, color-coded"
+        },
+        "components": [
+          {
+            "type": "Modal overlay",
+            "description": "Feed panel displaying user insights and trading commentary",
+            "position": "Center-right, overlaying order book",
+            "notable": "Scrollable, closeable modal with refresh icon"
+          },
+          {
+            "type": "Feed header",
+            "description": "'Feed' title with info icon and action buttons (refresh, compare, close)",
+            "position": "Top of modal",
+            "notable": "Three control icons in header: refresh, compare/scale, close (X)"
+          },
+          {
+            "type": "Insights tab",
+            "description": "Selected tab showing user-generated trading insights",
+            "position": "Below Feed header",
+            "notable": "Tab-based interface for different content types"
+          },
+          {
+            "type": "User post card",
+            "description": "Post with avatar, username, timestamp, content, image, engagement metrics",
+            "position": "Scrollable list in modal",
+            "notable": "Rich media support (images), engagement signals (likes, shares)"
+          },
+          {
+            "type": "Post content",
+            "description": "Text commentary with embedded image (meme-style trading chart image)",
+            "position": "Within card",
+            "notable": "Supports emoji, hashtags, trading terminology"
+          },
+          {
+            "type": "Engagement indicators",
+            "description": "Chart icon and heart icon with counts",
+            "position": "Bottom of post card",
+            "notable": "Shows 8 chart views and 0 likes for visible post"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal overlay gives Feed/Insights highest prominence, underneath order book and trading form are still visible but dimmed",
+        "innovativeElements": [
+          "Social feed integrated directly into trading interface",
+          "Rich media support in trading insights",
+          "Real-time user commentary overlay trading data"
+        ]
+      },
+      "flow": {
+        "screenType": "social-feed-modal",
+        "userIntent": "Browse community trading insights, read market commentary from other traders, get crowd sentiment while actively trading",
+        "entryPoints": [
+          "Click Feed tab in tab navigation",
+          "From Overview or Trading data tabs"
+        ],
+        "exitPoints": [
+          "Close modal (X button)",
+          "Switch to other tabs (Overview, Trading data, Chart)",
+          "Click on individual post for details",
+          "Execute trade via right panel (still accessible)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Close button (X)",
+            "action": "Closes Feed modal, returns to trading data view"
+          },
+          {
+            "element": "Refresh icon",
+            "action": "Reloads feed posts"
+          },
+          {
+            "element": "Compare/scale icon",
+            "action": "Likely shows additional comparison view"
+          },
+          {
+            "element": "Insights tab",
+            "action": "Shows filtered insights (may have other tabs like News, etc.)"
+          },
+          {
+            "element": "User post cards",
+            "action": "Likely clickable to expand post details"
+          },
+          {
+            "element": "Like/engagement buttons",
+            "action": "React to community posts"
+          },
+          {
+            "element": "Scroll within modal",
+            "action": "Browse more posts in feed"
+          }
+        ],
+        "informationArchitecture": "Social feed as modal overlay. Posts organized chronologically with newest first. Each post includes user context (avatar, handle, time), content (text + rich media), and engagement metrics.",
+        "frictionPoints": [
+          "Modal overlay obscures order book and some trading data",
+          "May distract traders from price action while browsing insights",
+          "Social content quality varies; users must filter signal from noise",
+          "Requires account to likely post/engage"
+        ],
+        "progressIndicators": [
+          "Post timestamps show recency ('0s ago')",
+          "Engagement counts (8, 0) show post popularity"
+        ]
+      },
+      "copy": {
+        "headline": "Feed",
+        "subheadline": "Insights",
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "primary-button",
+            "placement": "Right sidebar trading form"
+          },
+          {
+            "text": "Sell",
+            "style": "secondary-button",
+            "placement": "Right sidebar trading form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Me acting rich before taking any profits.",
+            "context": "User post caption under 'Firehorse' profile",
+            "purpose": "Post caption explaining meme context"
+          },
+          {
+            "text": "Exactly as we predicted",
+            "context": "Second post caption from 'Cozy the Caller'",
+            "purpose": "Commentary on market movement"
+          },
+          {
+            "text": "Market started pumping on the 14th. Our entries looking perfect now.",
+            "context": "Extended post text, Cozy post",
+            "purpose": "Explains trading strategy and timing"
+          },
+          {
+            "text": "0s ago | Firehorse",
+            "context": "Post header",
+            "purpose": "Shows post freshness and author identity"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "Timestamps in relative format (0s ago, 16:52:16)",
+          "Engagement counts as simple numbers (8, 0)",
+          "User handles with emoji indicators"
+        ],
+        "trustSignals": [
+          "Real user profiles with avatars",
+          "Timestamped posts (trading events are time-sensitive)",
+          "Community engagement metrics (likes, chart views)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-10-spot-and-marginbuy-and-sell-crypto-with-ease-15m-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — 15m tab",
+      "flowType": "Swap",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#00c853"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 14-16px for section headers",
+          "bodyStyle": "Regular sans-serif, light gray (#999), 12-13px for secondary info",
+          "dataStyle": "Monospace, numeric values in green (#00c853) for positive flows, red (#ff4444) for negative, small 11-12px"
+        },
+        "components": [
+          {
+            "type": "Chart",
+            "description": "Animated money flow donut chart showing inflow vs outflow with green and red segments",
+            "position": "Left panel, center",
+            "notable": "Dynamic real-time visualization with color coding for direction"
+          },
+          {
+            "type": "Data Table",
+            "description": "Scrollable list of transactions with amount (BTC), time, and status indicators",
+            "position": "Right panel, main area",
+            "notable": "Compact table with sortable columns and hierarchical sizing"
+          },
+          {
+            "type": "Feed Panel",
+            "description": "Center modal showing user insights with profile avatars and crypto memes",
+            "position": "Center overlay",
+            "notable": "Social feed overlay with engagement metrics (likes, comments)"
+          },
+          {
+            "type": "Strategy Cards",
+            "description": "Right sidebar with trading strategy options (Spot grid, Spot DCA, Liquid Marketplace)",
+            "position": "Far right",
+            "notable": "Icon-driven cards with descriptive tags and nested actions"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Price data dominates top; left panel shows macro flows; center feed provides social context; right panel enables quick strategy selection",
+        "innovativeElements": [
+          "Real-time donut chart updating live with inflow/outflow segments",
+          "Social feed overlay integrating community insights within trading dashboard",
+          "Color-coded numeric data (green for gains, red for losses)",
+          "Multi-panel layout maximizing information density without overwhelming"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Monitor BTC/EUR trading activity, analyze money flow patterns, discover trading strategies, and engage with community insights",
+        "entryPoints": [
+          "Clicked 'Trade' from main navigation",
+          "Selected BTC/EUR pair from Markets",
+          "Deep link from social sharing"
+        ],
+        "exitPoints": [
+          "Click strategy card (Spot grid, DCA, Liquid Marketplace)",
+          "Close feed modal and navigate to Chart/Overview tabs",
+          "Click 'Trade' button to execute a trade",
+          "Navigate to 'Open orders' or 'Position history' tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time interval selector (5m, 15m, 1h, 4h, 1D)",
+            "action": "Updates money flow chart and timestamps to reflect selected timeframe"
+          },
+          {
+            "element": "Feed refresh button (circular arrow icon)",
+            "action": "Reloads insights feed with latest community posts"
+          },
+          {
+            "element": "Strategy cards (Spot grid, Spot DCA, Liquid Marketplace)",
+            "action": "Navigate to respective trading strategy interfaces"
+          },
+          {
+            "element": "Close button (X) on feed modal",
+            "action": "Collapses feed panel back to sidebar"
+          },
+          {
+            "element": "Transaction rows in right table",
+            "action": "Likely expandable for order details"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: left (macro money flow analytics), center (social context), right (micro-level transactions + strategy shortcuts). Hierarchy: price metrics → flow patterns → community insights → actionable strategies",
+        "frictionPoints": [
+          "Feed panel overlays main data, requiring manual close",
+          "Multiple tabs (Chart, Overview, Trading data, Feed) may cause tab-switching fatigue",
+          "Compact transaction table requires scrolling for visibility of all trades"
+        ],
+        "progressIndicators": [
+          "Timestamp range shown below Money flow breakdown (02/14/2026, 16:45 - 17:00)",
+          "Time interval tabs show active selection (15m currently selected)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Money flow breakdown",
+        "ctas": [
+          {
+            "text": "Trade",
+            "style": "primary-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Inflow / Outflow",
+            "context": "Money flow chart legend",
+            "purpose": "Labels the chart segments to clarify direction of capital movement"
+          },
+          {
+            "text": "Mega / Large / Medium / Small",
+            "context": "Money flow breakdown legend",
+            "purpose": "Categorizes transaction sizes by volume"
+          },
+          {
+            "text": "Buy low sell high / Trade uptrends / Short, medium, and long terms",
+            "context": "Spot grid strategy card",
+            "purpose": "Quick description of available trading modes"
+          },
+          {
+            "text": "Me acting rich before taking any profits",
+            "context": "Firehouse feed post caption",
+            "purpose": "Humorous engagement to build community rapport"
+          }
+        ],
+        "tone": "professional-technical with casual-friendly community layer",
+        "dataFormatting": [
+          "0.00847457 BTC (8-digit precision for micro-amounts)",
+          "17:12:15 (24-hour timestamp)",
+          "0.00 BTC (amounts with leading zeros)",
+          "59,000.0 (price with 1 decimal)",
+          "7.61 (percentage changes with 2 decimals)"
+        ],
+        "trustSignals": [
+          "24h volume, 24h low/high, 24h turnover (EUR) displayed prominently",
+          "Real-time price feed from external source (indicated by external link icon)",
+          "User profile avatars and timestamps on feed posts (social proof)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-11-spot-and-marginbuy-and-sell-crypto-with-ease-1h-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — 1h tab",
+      "flowType": "Swap",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#ff6b6b"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 14-16px for section headers",
+          "bodyStyle": "Regular sans-serif, light gray (#999), 12-13px for secondary info",
+          "dataStyle": "Monospace, numeric values in red (#ff6b6b) for negative flows, green (#00c853) for positive, small 11-12px"
+        },
+        "components": [
+          {
+            "type": "Chart",
+            "description": "Animated money flow donut chart with updated inflow/outflow segments for 1-hour window",
+            "position": "Left panel, center",
+            "notable": "Chart visualization shifts to show red outflow segment (indicating net negative flow)"
+          },
+          {
+            "type": "Timestamp Display",
+            "description": "Time range indicator showing 1-hour window",
+            "position": "Below chart",
+            "notable": "Updates to reflect 1-hour aggregation window (02/14/2026, 16:00 - 17:00)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Identical to 15m view; visual change is data-driven rather than layout-driven",
+        "innovativeElements": [
+          "Seamless timeframe switching with real-time chart updates",
+          "Color palette adaptation (increased red for outflows)"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Analyze money flow patterns at 1-hour granularity to identify longer-term trading trends",
+        "entryPoints": [
+          "Clicked '1h' time interval button from 15m view"
+        ],
+        "exitPoints": [
+          "Switch to different time interval (5m, 4h, 1D)",
+          "Close feed or access strategy cards",
+          "Execute trade action"
+        ],
+        "interactiveElements": [
+          {
+            "element": "1h time interval button",
+            "action": "Active selected state; chart and data update to 1-hour aggregation"
+          }
+        ],
+        "informationArchitecture": "Same as 15m view; data refresh is contextual to selected interval",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active time interval tab (1h highlighted)",
+          "Updated timestamp range (16:00 - 17:00)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Money flow breakdown",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.09 BTC outflow (showing net negative flow)",
+          "Updated timestamp: 16:00 - 17:00"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-12-spot-and-marginbuy-and-sell-crypto-with-ease-4h-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — 4h tab",
+      "flowType": "Swap",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#00c853"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 14-16px for section headers",
+          "bodyStyle": "Regular sans-serif, light gray (#999), 12-13px for secondary info",
+          "dataStyle": "Monospace, numeric values in green (#00c853) for positive flows, 11-12px"
+        },
+        "components": [
+          {
+            "type": "Chart",
+            "description": "Money flow donut chart with larger inflow segment and net zero outflow for 4-hour window",
+            "position": "Left panel, center",
+            "notable": "Chart shows net inflow of 0.00 BTC with strong green inflow segment (0.08 BTC)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Same as previous timeframes; visual shift driven by data aggregation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Analyze 4-hour money flow patterns for medium-term trading signals and strategy validation",
+        "entryPoints": [
+          "Clicked '4h' time interval button from 1h view"
+        ],
+        "exitPoints": [
+          "Switch to different time interval",
+          "Engage with strategy or feed elements"
+        ],
+        "interactiveElements": [
+          {
+            "element": "4h time interval button",
+            "action": "Active selected state; chart updates to 4-hour aggregation"
+          }
+        ],
+        "informationArchitecture": "Same as other timeframes; data-responsive visualization",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active time interval tab (4h highlighted)",
+          "Timestamp range: 11:00 - 15:00"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Money flow breakdown",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.08 BTC inflow",
+          "0.00 BTC net outflow",
+          "0.02 BTC, 0.04 BTC (category breakdowns)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-settings-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00FF00",
+          "#000000",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, white sans-serif, centered, high contrast against dark background",
+          "bodyStyle": "Medium-weight white sans-serif, centered subtext below headline",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero banner",
+            "description": "Full-width neon green bordered container with dark gradient background",
+            "position": "center-full",
+            "notable": "Glowing neon green border effect with shadow, cinematic illustration inside"
+          },
+          {
+            "type": "Illustration",
+            "description": "3D office scene with neon green accents, plants, desk, chairs, monitoring equipment",
+            "position": "center-background",
+            "notable": "Tech-forward aesthetic with green color accent matching brand palette"
+          },
+          {
+            "type": "CTA link",
+            "description": "Green 'Sign up' text link with underline",
+            "position": "bottom-center",
+            "notable": "Bright neon green matches border, high visibility"
+          },
+          {
+            "type": "Close button",
+            "description": "X icon, minimal",
+            "position": "bottom-right",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominant in center, supported by subheadline, illustration provides visual weight, CTA anchors bottom",
+        "innovativeElements": [
+          "Neon glow effect on border creates premium, tech-forward feel",
+          "3D illustrated scene with thematic tech office aesthetic",
+          "Green neon as brand signature color creates strong visual identity"
+        ]
+      },
+      "flow": {
+        "screenType": "modal / overlay banner",
+        "userIntent": "Understand what the 'Decrypt crypto' learning section offers; option to sign up or dismiss",
+        "entryPoints": [
+          "Navigation from main menu (Learn/Grow section)",
+          "Direct link from primary navigation"
+        ],
+        "exitPoints": [
+          "Click 'Sign up' to proceed to registration",
+          "Click X button to dismiss overlay",
+          "Click outside banner (likely)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign up link",
+            "action": "Navigate to account creation/registration flow"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismiss banner and return to previous page"
+          }
+        ],
+        "informationArchitecture": "Simple two-level: headline (value prop) + subheadline (explanation) + CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Decrypt crypto",
+        "subheadline": "Grow your crypto and blockchain knowledge, from market analysis to the latest tokens and protocols.",
+        "ctas": [
+          {
+            "text": "Sign up to OKX",
+            "style": "text-link",
+            "placement": "bottom-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "X",
+            "context": "bottom-right corner",
+            "purpose": "Dismiss overlay"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-swap-13-spot-and-marginbuy-and-sell-crypto-with-ease-1d-tab.png",
+      "label": "Spot and marginBuy and sell crypto with ease — 1D tab",
+      "flowType": "Swap",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#00ff00",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, high contrast against dark background",
+          "bodyStyle": "Regular white/gray sans-serif for secondary text",
+          "dataStyle": "Monospace or fixed-width font for numerical values, green highlight for gains"
+        },
+        "components": [
+          {
+            "type": "chart",
+            "description": "Money flow breakdown visualization with animated green inflow circle",
+            "position": "left panel, upper section",
+            "notable": "Circular gauge design with size categorization (Mega, Large, Medium, Small)"
+          },
+          {
+            "type": "feed-panel",
+            "description": "Social trading insights with user posts and embedded media",
+            "position": "center panel, full height scrollable",
+            "notable": "Rich media integration with trader avatars and engagement metrics (likes, comments)"
+          },
+          {
+            "type": "order-list",
+            "description": "Recent trades table with time, amount, and price data",
+            "position": "right panel, scrollable",
+            "notable": "Compact data-dense layout with precise timestamps"
+          },
+          {
+            "type": "navigation-tabs",
+            "description": "Trading data, Chart, Overview, Feed tabs",
+            "position": "top of left/center panels",
+            "notable": "Underline indicator shows active tab"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Three-column layout guides eye from data visualization (left) → social insights (center) → order history (right)",
+        "innovativeElements": [
+          "Social trading feed embedded within trading interface",
+          "Money flow breakdown with whale detection categorization",
+          "Insight cards with meme-style imagery and trader commentary"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor live trading data, view market insights from other traders, track recent transactions",
+        "entryPoints": [
+          "Trade menu → Trading data tab",
+          "Market selection → 1D timeframe"
+        ],
+        "exitPoints": [
+          "Click on a trade to execute",
+          "Switch to Chart/Overview tabs",
+          "Navigate to different asset pair"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time period buttons (5m, 15m, 1h, 4h, 1D)",
+            "action": "Switch money flow chart timeframe"
+          },
+          {
+            "element": "Feed Insights tab toggle",
+            "action": "Switch between feed and insights view"
+          },
+          {
+            "element": "Spot grid / Spot DCA buttons (right sidebar)",
+            "action": "Launch different trading strategies"
+          },
+          {
+            "element": "Refresh icon in Feed header",
+            "action": "Reload insights feed"
+          }
+        ],
+        "informationArchitecture": "Three parallel information streams: aggregate flow data (left) + community sentiment (center) + individual trade history (right)",
+        "frictionPoints": [
+          "Dense data layout may overwhelm new traders",
+          "Social feed mixes entertainment with serious trading signals"
+        ],
+        "progressIndicators": [
+          "1D indicator shows selected timeframe",
+          "Feed timestamps show recency (0s ago)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Money flow breakdown, Net money flow, Feed with Insights",
+        "ctas": [
+          {
+            "text": "Trade",
+            "style": "primary-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Tools",
+            "style": "secondary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Net inflow: 5.44 BTC",
+            "context": "Money flow breakdown section",
+            "purpose": "Shows aggregate whale movement"
+          },
+          {
+            "text": "Me acting rich before taking any profits.",
+            "context": "Trader post caption",
+            "purpose": "Community sentiment signal"
+          },
+          {
+            "text": "Exactly as we predicted",
+            "context": "Follow-up trader comment",
+            "purpose": "Social proof of accurate prediction"
+          }
+        ],
+        "tone": "professional-technical with casual-community elements",
+        "dataFormatting": [
+          "59,000.0 (price with decimal)",
+          "$105.6 (-1.73%) (price with percentage change)",
+          "0.00847457 (small decimal amounts)",
+          "17:12:13 (precise timestamps)",
+          "6.44 (intensity measure for whale tiers)"
+        ],
+        "trustSignals": [
+          "Proof of specific market movements",
+          "Named trader predictions with timestamp verification",
+          "Real trading volume data (448.75K EUR turnover)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-onboarding-1-deposit-cashadd-cash-to-your-account-balance-using.png",
+      "label": "Deposit cashAdd cash to your account balance using",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#ffffff",
+          "#00b566"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, large 36-40px on dark side",
+          "bodyStyle": "Regular white/gray sans-serif for descriptive text",
+          "dataStyle": "Bold white sans-serif for monetary values ($34,489.16)"
+        },
+        "components": [
+          {
+            "type": "trust-panel",
+            "description": "Left side dark panel with value proposition and proof of reserves messaging",
+            "position": "left 40% of screen",
+            "notable": "Mockup of app interface shows real account data with portfolio breakdown"
+          },
+          {
+            "type": "login-form",
+            "description": "Vertical form with tabs for multiple auth methods",
+            "position": "right 60% of screen",
+            "notable": "Three authentication tabs (Phone, Email/Sub-account, QR code)"
+          },
+          {
+            "type": "social-login-buttons",
+            "description": "Five large button options for third-party authentication",
+            "position": "below form input, stacked vertically",
+            "notable": "Includes non-standard crypto options: Passkey, Wallet alongside Google/Apple/Telegram"
+          },
+          {
+            "type": "call-to-action-secondary",
+            "description": "Sign up link and Telegram community promotion",
+            "position": "below login form",
+            "notable": "Community building element rather than hard sell"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Trust messaging on left draws eye, login form dominates right side, social buttons create visual weight below",
+        "innovativeElements": [
+          "Split-screen approach showing app mockup + real accounts",
+          "Passkey authentication as first option",
+          "Wallet connection as native auth method"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Authenticate and access trading account",
+        "entryPoints": [
+          "Clicked Log in from header",
+          "First-time visitor accessing platform"
+        ],
+        "exitPoints": [
+          "Phone number entered → Next",
+          "Email entered → Next",
+          "Social auth selected → redirect",
+          "QR scanned → authenticated"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Phone / Email / QR tabs",
+            "action": "Switch authentication method"
+          },
+          {
+            "element": "Country code dropdown (+34)",
+            "action": "Select phone country prefix"
+          },
+          {
+            "element": "Next button",
+            "action": "Proceed to password/code entry"
+          },
+          {
+            "element": "Social login buttons (Passkey, Google, Apple, Telegram, Wallet)",
+            "action": "Authenticate via third-party provider"
+          },
+          {
+            "element": "Sign up link",
+            "action": "Navigate to account creation"
+          }
+        ],
+        "informationArchitecture": "Trust-building context (left) | Authentication options (right) with progressive disclosure (tabs reveal different input fields)",
+        "frictionPoints": [
+          "Multiple authentication methods may confuse first-time users",
+          "Passkey as primary option assumes web3/tech literacy"
+        ],
+        "progressIndicators": [
+          "Active tab indicator shows selected auth method"
+        ]
+      },
+      "copy": {
+        "headline": "Log in",
+        "subheadline": "Trade with confidence",
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "below phone input field"
+          },
+          {
+            "text": "Sign up",
+            "style": "text-link",
+            "placement": "below form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We don't lend out customer funds, which is verified through our regularly published Proof of Reserves audits.",
+            "context": "Left trust panel",
+            "purpose": "Establish security and fund safety credibility"
+          },
+          {
+            "text": "Don't have an account? Sign up",
+            "context": "Below form",
+            "purpose": "Account creation fallback CTA"
+          },
+          {
+            "text": "Or continue with",
+            "context": "Above social buttons",
+            "purpose": "Signpost alternative auth methods"
+          },
+          {
+            "text": "Join our Telegram group - Ask questions, get answers, and chat with other traders to shape the crypto future together",
+            "context": "Below login form, dark card",
+            "purpose": "Community engagement and retention"
+          }
+        ],
+        "tone": "professional-technical with community-friendly elements",
+        "dataFormatting": [
+          "$34,489.16 (total portfolio value)",
+          "+$1379.57 (+4.02%) Today (gains with percentage)",
+          "$2,305.76 (cash balance)",
+          "$32,183.40 (crypto holdings)"
+        ],
+        "trustSignals": [
+          "Proof of Reserves audits mentioned",
+          "Real account data visible in mockup",
+          "Security-focused messaging"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-onboarding-2-deposit-cashadd-cash-to-your-account-balance-using-emai.png",
+      "label": "Deposit cashAdd cash to your account balance using — Emai...",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#ffffff",
+          "#00b566"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, large 36-40px on dark side",
+          "bodyStyle": "Regular white/gray sans-serif for descriptive text",
+          "dataStyle": "Bold white sans-serif for monetary values"
+        },
+        "components": [
+          {
+            "type": "trust-panel",
+            "description": "Left side dark panel with value proposition and app mockup",
+            "position": "left 40% of screen",
+            "notable": "Identical trust messaging and account mockup as previous screen"
+          },
+          {
+            "type": "login-form",
+            "description": "Email/Sub-account input field with Next button",
+            "position": "right 60% of screen, upper section",
+            "notable": "Tab already switched to Email/Sub-account method"
+          },
+          {
+            "type": "social-login-buttons",
+            "description": "Five large button options for third-party authentication",
+            "position": "below form input, stacked vertically",
+            "notable": "Identical button set: Passkey, Google, Apple, Telegram, Wallet"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to previous screen with email field now active instead of phone",
+        "innovativeElements": [
+          "Progressive form design that maintains context while switching auth methods"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Authenticate via email instead of phone",
+        "entryPoints": [
+          "Clicked Email/Sub-account tab from previous screen"
+        ],
+        "exitPoints": [
+          "Email entered → Next",
+          "Social auth selected → redirect"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email / Sub-account input field",
+            "action": "Enter email address for authentication"
+          },
+          {
+            "element": "Next button",
+            "action": "Proceed to password/verification"
+          },
+          {
+            "element": "Social login buttons",
+            "action": "Authenticate via third-party provider"
+          }
+        ],
+        "informationArchitecture": "Same as previous screen, auth method variant (email vs phone)",
+        "frictionPoints": [
+          "Empty email field may cause validation errors if user clicks Next"
+        ],
+        "progressIndicators": [
+          "Email/Sub-account tab shows as active"
+        ]
+      },
+      "copy": {
+        "headline": "Log in",
+        "subheadline": "Trade with confidence",
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "below email input field"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We don't lend out customer funds, which is verified through our regularly published Proof of Reserves audits.",
+            "context": "Left trust panel",
+            "purpose": "Establish security credibility"
+          },
+          {
+            "text": "Or continue with",
+            "context": "Above social buttons",
+            "purpose": "Signpost alternative auth methods"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$34,489.16 (portfolio value in mockup)",
+          "+$1379.57 (+4.02%) Today"
+        ],
+        "trustSignals": [
+          "Proof of Reserves audits",
+          "Real account data visible"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-onboarding-3-deposit-cashadd-cash-to-your-account-balance-using-qr-c.png",
+      "label": "Deposit cashAdd cash to your account balance using — QR c...",
+      "flowType": "Onboarding",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1FFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large on dark side (Trade with confidence), bold sans-serif on light side (Log in)",
+          "bodyStyle": "Regular sans-serif, medium weight, light gray on dark background",
+          "dataStyle": "Bold numbers with green accent for gains ($34,489.16 with +$1379.57 in green)"
+        },
+        "components": [
+          {
+            "type": "QR Code",
+            "description": "Large scannable QR code for mobile login authentication",
+            "position": "center-right of light panel",
+            "notable": "High contrast black/white with branded logo in center"
+          },
+          {
+            "type": "Mobile Mockup",
+            "description": "iPhone frame showing portfolio dashboard with total value and asset breakdown",
+            "position": "left side, center",
+            "notable": "Shows real trading interface with performance metrics"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Three tabs for login methods (Phone, Email/Sub-account, QR code)",
+            "position": "top of light panel",
+            "notable": "QR code tab active with underline indicator"
+          },
+          {
+            "type": "Call-to-action Card",
+            "description": "Telegram group promotion",
+            "position": "bottom-left dark section",
+            "notable": "Dark gray background with community-building messaging"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side establishes trust with portfolio display; right side focuses on frictionless login via QR",
+        "innovativeElements": [
+          "Split-panel design contrasts dark trading interface with light auth interface",
+          "Mobile mockup embedded in web interface to show product in context",
+          "QR code positioned prominently for seamless device-to-device auth"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Log in to OKX account using QR code for quick mobile-to-web authentication",
+        "entryPoints": [
+          "Sign up completion",
+          "Return user clicking Log in",
+          "Institutional user onboarding"
+        ],
+        "exitPoints": [
+          "Dashboard after successful QR scan",
+          "Phone/Email tab submission",
+          "Learn resources via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Phone tab",
+            "action": "Switch to phone number login method"
+          },
+          {
+            "element": "Email/Sub-account tab",
+            "action": "Switch to email-based login"
+          },
+          {
+            "element": "QR Code",
+            "action": "Scan with phone camera or OKX app for instant login"
+          },
+          {
+            "element": "Refresh icon",
+            "action": "Regenerate new QR code"
+          }
+        ],
+        "informationArchitecture": "Authentication methods presented as tabs; QR highlighted as primary path; trust signal (portfolio mockup) anchors left section",
+        "frictionPoints": [
+          "User must have phone/camera ready or OKX app installed",
+          "QR code requires version 6.150.0+ of OKX app"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Log in",
+        "subheadline": "Scan using your phone camera or OKX app",
+        "ctas": [
+          {
+            "text": "Scan using your phone camera or OKX app",
+            "style": "instructional-text",
+            "placement": "below QR code"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For phone camera: Your OKX app version has to be 6.150.0 or later.",
+            "context": "Below QR code",
+            "purpose": "Sets expectations and reduces support issues"
+          },
+          {
+            "text": "Trade with confidence",
+            "context": "Left panel headline",
+            "purpose": "Trust-building headline for portfolio display section"
+          },
+          {
+            "text": "We don't lend out customer funds, which is verified through our regularly published Proof of Reserves audits.",
+            "context": "Left panel subheading",
+            "purpose": "Addresses key concern: custody and fund safety"
+          }
+        ],
+        "tone": "professional-technical, instructional",
+        "dataFormatting": [
+          "$34,489.16 (total portfolio value)",
+          "+$1379.57 (+4.02%) Today (gains with percentage)",
+          "$2,305.76 (Cash balance)",
+          "$32,183.40 (Crypto balance)"
+        ],
+        "trustSignals": [
+          "Proof of Reserves audits mentioned",
+          "Portfolio display with real holdings",
+          "Institutional offering in nav"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1FFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (Put your crypto to work)",
+          "bodyStyle": "Regular sans-serif, medium weight in white",
+          "dataStyle": "Bold numbers for APY (3.00%) and flexible term labels"
+        },
+        "components": [
+          {
+            "type": "Hero Illustration",
+            "description": "Geometric line-art showing stacked coins with glowing green ETH symbol and Bitcoin/Dollar icons",
+            "position": "right side of hero section",
+            "notable": "Animated-looking with neon green accent, symbolizes earning/growth"
+          },
+          {
+            "type": "Filter Dropdowns",
+            "description": "All products and All terms dropdown filters",
+            "position": "below Products heading",
+            "notable": "Clean gray background with sortable columns"
+          },
+          {
+            "type": "Product Table",
+            "description": "Sortable table with Token, Market APY, Term, and Action columns",
+            "position": "lower half of screen",
+            "notable": "Shows BTC staking option with 3.00% APY and Flexible term"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search crypto functionality",
+            "position": "top right of Products section",
+            "notable": "Placeholder text 'Search crypto' indicates crypto-specific discovery"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline and illustration dominate top 50%; Products section with table occupies lower half; illustration guides eye rightward",
+        "innovativeElements": [
+          "Neon green accent on icon creates premium feel",
+          "Geometric illustration combines crypto symbols (BTC, ETH, $) to show earning across assets",
+          "Smooth transition from hero motivation to product browsing below fold"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore staking products and compare APY rates across different tokens and term lengths",
+        "entryPoints": [
+          "Grow nav menu item",
+          "Staking product discovery",
+          "Return user looking for yield opportunities"
+        ],
+        "exitPoints": [
+          "Click on specific staking product",
+          "Search for specific token",
+          "Filter by term length or product type"
+        ],
+        "interactiveElements": [
+          {
+            "element": "All products dropdown",
+            "action": "Filter staking products by type"
+          },
+          {
+            "element": "All terms dropdown",
+            "action": "Filter by lock period (Flexible, 30-day, etc.)"
+          },
+          {
+            "element": "Market APY column header",
+            "action": "Sort products by yield percentage"
+          },
+          {
+            "element": "Token row",
+            "action": "Expand or navigate to staking details for that asset"
+          },
+          {
+            "element": "Search crypto input",
+            "action": "Find specific token to stake"
+          }
+        ],
+        "informationArchitecture": "Motivational hero section followed by filterable product table; information flows from why-stake to how-to-stake",
+        "frictionPoints": [
+          "No visible CTA button to begin staking from hero (must scroll/filter)",
+          "Table shows only one visible product (BTC) without scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Put your crypto to work",
+        "subheadline": "Earn daily rewards on more than 20 tokens.",
+        "ctas": [
+          {
+            "text": "Action dropdown per product row",
+            "style": "dropdown-menu",
+            "placement": "rightmost column of product table"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Token",
+            "context": "Table column header",
+            "purpose": "Labels asset being staked"
+          },
+          {
+            "text": "Market APY",
+            "context": "Table column header with sort indicator",
+            "purpose": "Highlights yield rate as comparable metric"
+          },
+          {
+            "text": "Term",
+            "context": "Table column header",
+            "purpose": "Shows lock-up period or flexibility"
+          }
+        ],
+        "tone": "friendly-casual, educational",
+        "dataFormatting": [
+          "3.00% (APY displayed as percentage)",
+          "Flexible (term description)"
+        ],
+        "trustSignals": [
+          "Over 20 tokens supported",
+          "Daily rewards messaging",
+          "Institutional backing (via top nav)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/okx-staking-2-earndont-just-hodl-earn.png",
+      "label": "EarnDon’t just HODL. Earn",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1FFF00"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (mirrored from staking-1)",
+          "bodyStyle": "Regular sans-serif, medium weight in white",
+          "dataStyle": "Bold numbers for APY (2.33%) and token labels"
+        },
+        "components": [
+          {
+            "type": "Hero Illustration",
+            "description": "Identical geometric stacking coins illustration with neon green ETH symbol",
+            "position": "right side of hero section",
+            "notable": "Consistent branding with staking-1; represents passive earning"
+          },
+          {
+            "type": "Filter Dropdowns",
+            "description": "All products and All terms dropdown filters",
+            "position": "below Products heading",
+            "notable": "Identical design to staking-1"
+          },
+          {
+            "type": "Product Table",
+            "description": "Sortable table showing ADA staking at 2.33% APY",
+            "position": "lower half of screen",
+            "notable": "Different product row visible (ADA instead of BTC), showing product variety"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to staking-1 screenshot; hero takes 50%, product table 50%",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse different staking products, comparing ADA as alternative to BTC",
+        "entryPoints": [
+          "Grow nav menu item",
+          "Return user browsing product alternatives",
+          "Filter or sort trigger"
+        ],
+        "exitPoints": [
+          "Click ADA row to stake",
+          "Search for different token",
+          "Adjust filters for other product types"
+        ],
+        "interactiveElements": [
+          {
+            "element": "ADA product row",
+            "action": "Expand details or navigate to staking form"
+          },
+          {
+            "element": "Dropdown filters",
+            "action": "Refine product or term selection"
+          },
+          {
+            "element": "APY column sort",
+            "action": "Order products by yield"
+          }
+        ],
+        "informationArchitecture": "Identical to staking-1; shows different underlying data to demonstrate product catalog browsing",
+        "frictionPoints": [
+          "No visible CTA from hero; user must filter/scroll to act",
+          "Single row visible without scrolling may suggest limited choices"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Put your crypto to work",
+        "subheadline": "Earn daily rewards on more than 20 tokens.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "ADA",
+            "context": "Token symbol in product row",
+            "purpose": "Identifies Cardano as stakeable asset"
+          },
+          {
+            "text": "2.33%",
+            "context": "Market APY column",
+            "purpose": "Shows competitive yield rate for ADA"
+          },
+          {
+            "text": "Flexible",
+            "context": "Term column",
+            "purpose": "Indicates no lock-up period"
+          }
+        ],
+        "tone": "friendly-casual, educational",
+        "dataFormatting": [
+          "2.33% (APY displayed as percentage)"
+        ],
+        "trustSignals": [
+          "Multiple token support",
+          "Flexible staking options",
+          "Daily reward mechanism"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

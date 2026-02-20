@@ -1,0 +1,963 @@
+{
+  "slug": "muun",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:36:26.649Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 8,
+  "screens": [
+    {
+      "image": "/screenshots/muun-settings-2-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#001A4D",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), dark navy color (#001A4D)",
+          "bodyStyle": "Regular sans-serif, medium gray (#666666), generous line height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Muun logo with navigation links (Contact, Blog, Twitter, GitHub)",
+            "position": "top of page",
+            "notable": "Minimal, clean header with social/external links"
+          },
+          {
+            "type": "text-block",
+            "description": "Multi-paragraph privacy policy content",
+            "position": "main content area",
+            "notable": "Dense legal text with consistent formatting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large bold heading draws focus, then guides eye down through paragraphs sequentially",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Read and understand Muun's privacy practices and data handling policies",
+        "entryPoints": [
+          "Settings menu link",
+          "Footer link from main site",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Contact link",
+          "Blog link",
+          "Back to app/home",
+          "Terms and Conditions link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact link in header",
+            "action": "Navigate to contact page"
+          },
+          {
+            "element": "Blog link in header",
+            "action": "Navigate to blog"
+          },
+          {
+            "element": "Social links (Twitter, GitHub)",
+            "action": "Open external social profiles"
+          }
+        ],
+        "informationArchitecture": "Sequential legal document structure: intro statement → purpose → data usage policy → terms reference",
+        "frictionPoints": [
+          "Dense paragraphs may be difficult to scan quickly",
+          "No visual breaks or section anchors for navigation",
+          "Legal jargon could be challenging for non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Muun Wallet Inc. built the Muun app as a Free app",
+            "context": "Opening paragraph",
+            "purpose": "Establish company identity and service offering"
+          },
+          {
+            "text": "We will not use or share your information with anyone except as described in this Privacy Policy",
+            "context": "Main policy statement",
+            "purpose": "Key trust-building commitment regarding data"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Free and open service model stated upfront",
+          "Explicit commitment to data privacy",
+          "References to Terms and Conditions for legal framework"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-settings-3-terms-and-conditions.png",
+      "label": "Terms and conditions",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0066FF",
+          "#001A4D",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), dark navy color (#001A4D)",
+          "bodyStyle": "Regular sans-serif, medium gray (#666666), consistent paragraph spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Muun logo with navigation (Contact, Blog, Twitter, GitHub)",
+            "position": "top of page",
+            "notable": "Identical to privacy policy header for consistency"
+          },
+          {
+            "type": "text-block",
+            "description": "Terms of use legal document with sections",
+            "position": "main content",
+            "notable": "Structured with section headings (Terms of Use, Acceptable Use)"
+          },
+          {
+            "type": "hyperlink",
+            "description": "https://muun.com link embedded in body text",
+            "position": "within opening paragraph",
+            "notable": "Blue link for external reference"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main heading dominates, subsection headings (Acceptable Use) break content into scannable chunks",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand the terms governing use of Muun wallet service and user responsibilities",
+        "entryPoints": [
+          "Settings menu link",
+          "Footer link from main site",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Contact link",
+          "Blog link",
+          "Back to app/home",
+          "Privacy Policy link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "https://muun.com hyperlink",
+            "action": "Navigate to main website"
+          },
+          {
+            "element": "Contact link in header",
+            "action": "Navigate to contact page"
+          },
+          {
+            "element": "Social links (Twitter, GitHub)",
+            "action": "Open external profiles"
+          }
+        ],
+        "informationArchitecture": "Hierarchical legal structure: company/service intro → terms agreement statement → section headings with detailed content",
+        "frictionPoints": [
+          "Dense legal language requires careful reading",
+          "No table of contents or quick navigation to sections",
+          "Long paragraphs may fatigue readers"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Use",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Muun Wallet Inc., a company incorporated in the Cayman Islands",
+            "context": "Opening definition",
+            "purpose": "Establish legal entity and jurisdiction"
+          },
+          {
+            "text": "By using the Services, you agree to these terms of use",
+            "context": "Core terms statement",
+            "purpose": "Establish user consent framework"
+          },
+          {
+            "text": "Muun's mission is to make self-custody accessible to everyone on the planet",
+            "context": "Acceptable Use section",
+            "purpose": "Articulate company mission and value proposition"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Clear corporate structure (Cayman Islands incorporated)",
+          "Self-custody commitment emphasizing user control",
+          "Explicit mention of blockchain network support (bitcoin, lightning)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#001a3d",
+          "#4a90e2",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra bold sans-serif, all caps treatment broken across lines for emphasis, very large scale",
+          "bodyStyle": "Clean sans-serif, regular weight, generous line height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Muun wordmark in blue",
+            "position": "top-left",
+            "notable": "Minimal, geometric letterforms"
+          },
+          {
+            "type": "navigation",
+            "description": "Contact, Blog, Twitter, GitHub links",
+            "position": "top-right",
+            "notable": "Icon + text navigation, social links integrated"
+          },
+          {
+            "type": "hero-heading",
+            "description": "Two-line headline with line break for rhythm",
+            "position": "center-left, mid-page",
+            "notable": "Dramatic scale and weight to command attention"
+          },
+          {
+            "type": "cta-buttons",
+            "description": "App Store and Google Play download buttons",
+            "position": "below headline",
+            "notable": "Bright blue buttons with white icon/text, rounded corners"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates visual space, supported by smaller subheading and dual CTA buttons below; background starfield effect provides depth and movement",
+        "innovativeElements": [
+          "Animated starfield background suggesting cosmic/infinite scale",
+          "Silhouetted figure at bottom-right horizon adds depth and human scale",
+          "Strategic whitespace creates breathing room around headline"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Muun is and download the app",
+        "entryPoints": [
+          "Direct traffic",
+          "Social media links",
+          "Marketing campaigns"
+        ],
+        "exitPoints": [
+          "App Store download",
+          "Google Play download",
+          "Contact navigation link",
+          "Blog navigation link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App Store button",
+            "action": "Opens Apple App Store download page"
+          },
+          {
+            "element": "Google Play button",
+            "action": "Opens Google Play download page"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to Contact, Blog, or social profiles"
+          }
+        ],
+        "informationArchitecture": "Single hero section with minimal navigation; establishes value proposition immediately then drives to app download",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Simple and powerful. Just like bitcoin.",
+        "subheadline": "Muun is a self-custodial wallet for bitcoin and lightning.",
+        "ctas": [
+          {
+            "text": "App Store",
+            "style": "primary-button",
+            "placement": "below subheading, left"
+          },
+          {
+            "text": "Google Play",
+            "style": "primary-button",
+            "placement": "below subheading, right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, confident and minimal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Self-custodial positioning (implies security/control)",
+          "Bitcoin + Lightning support (credibility through major protocols)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-home-2-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with header",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#001a3d",
+          "#ffffff",
+          "#4a90e2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for blog titles; Muun logo in light weight at top center",
+          "bodyStyle": "Serif font for blog excerpt text, medium gray color, generous line height",
+          "dataStyle": "Small caps for metadata (author, date, read time)"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Dark blue header with centered Muun logo and tagline",
+            "position": "top full-width",
+            "notable": "Centered, minimal design maintains visual consistency"
+          },
+          {
+            "type": "navigation",
+            "description": "PRODUCT, LIGHTNING NETWORK, GO TO WEBSITE links",
+            "position": "top-left",
+            "notable": "Product navigation integrated into header"
+          },
+          {
+            "type": "featured-article",
+            "description": "Large dark image placeholder with headline and excerpt",
+            "position": "left side, below header",
+            "notable": "Visual weight given to featured blog post"
+          },
+          {
+            "type": "article-card",
+            "description": "Blog article preview with title, excerpt, author, date",
+            "position": "right side",
+            "notable": "Clean card design with category label in blue"
+          },
+          {
+            "type": "article-grid",
+            "description": "Multiple product-focused articles below",
+            "position": "bottom",
+            "notable": "Grid layout showing related content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Dark header anchors page, featured article dominates left, smaller article cards provide secondary entry points, grid expands options below",
+        "innovativeElements": [
+          "Color-coded category labels (blue for BITCOIN, etc.)",
+          "Two-column layout with featured + secondary content",
+          "Serif body text provides editorial authority"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse blog content and discover educational articles about Muun and Bitcoin",
+        "entryPoints": [
+          "Blog navigation from landing page",
+          "Direct blog URL",
+          "External links"
+        ],
+        "exitPoints": [
+          "Click featured article",
+          "Click article cards",
+          "PRODUCT navigation",
+          "LIGHTNING NETWORK navigation",
+          "GO TO WEBSITE link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Featured article",
+            "action": "Opens full blog post"
+          },
+          {
+            "element": "Article cards",
+            "action": "Opens individual blog post"
+          },
+          {
+            "element": "Category labels",
+            "action": "Likely filters articles by category"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: central blog index with featured highlight and secondary cards, navigation options to related sections",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Self-custodial wallet for bitcoin and lightning.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "PRODUCT",
+            "style": "text-link",
+            "placement": "header navigation"
+          },
+          {
+            "text": "LIGHTNING NETWORK",
+            "style": "text-link",
+            "placement": "header navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BITCOIN",
+            "context": "article category label",
+            "purpose": "Categorizes article topic"
+          },
+          {
+            "text": "DARIO SNEIDERMANIS",
+            "context": "author byline",
+            "purpose": "Establishes authorship and credibility"
+          },
+          {
+            "text": "12 NOV 2021 • 3 MIN READ",
+            "context": "article metadata",
+            "purpose": "Sets expectations for content length and freshness"
+          }
+        ],
+        "tone": "educational-technical, authoritative",
+        "dataFormatting": [
+          "Date format: DD MMM YYYY",
+          "Read time: X MIN READ"
+        ],
+        "trustSignals": [
+          "Named author with profile photo",
+          "Specific publication dates",
+          "Technical topic expertise (Taproot, script upgrading)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-home-3-read-how-it-works-here.png",
+      "label": "Read how it works here",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width article",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4a90e2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large scale, black color",
+          "bodyStyle": "Serif font (Georgia-like), dark gray/charcoal, generous line height for readability, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sticky-header",
+            "description": "Navigation bar with Muun logo and menu links",
+            "position": "top",
+            "notable": "Dark background with white text, persistent across scroll"
+          },
+          {
+            "type": "article-heading",
+            "description": "Main headline in very large scale",
+            "position": "above fold, centered",
+            "notable": "Dramatic scale commands attention"
+          },
+          {
+            "type": "byline",
+            "description": "Author name with photo, date, and read time",
+            "position": "below headline",
+            "notable": "Author photo adds personal touch, metadata establishes context"
+          },
+          {
+            "type": "article-body",
+            "description": "Multi-paragraph editorial content with bold emphasis",
+            "position": "main content area",
+            "notable": "Strategic bold text highlights key concepts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, byline provides credibility, body text flows with strategic emphasis on key phrases through bold formatting",
+        "innovativeElements": [
+          "Serif typography provides editorial authority and distinction from app interface",
+          "Strategic bolding of key phrases rather than subheadings",
+          "Generous line-height and margins optimize reading experience"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read detailed educational content about Muun's fee estimation mechanism",
+        "entryPoints": [
+          "Blog listing page",
+          "Direct article URL",
+          "Search results"
+        ],
+        "exitPoints": [
+          "Navigation menu items",
+          "Inline link to website",
+          "Scroll to related articles",
+          "Back to blog listing"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "Navigate to PRODUCT, LIGHTNING NETWORK, or GO TO WEBSITE"
+          },
+          {
+            "element": "Inline link (website)",
+            "action": "Opens Muun website for real-time savings data"
+          }
+        ],
+        "informationArchitecture": "Linear article flow with navigation anchors at top; content organized in logical paragraphs building understanding progressively",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Why is Muun's fee estimator more efficient?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "website",
+            "style": "text-link",
+            "placement": "inline in body text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FLORENCIA RAVENNA",
+            "context": "author byline",
+            "purpose": "Establishes authorship"
+          },
+          {
+            "text": "8 JAN 2021 • 2 MIN READ",
+            "context": "article metadata",
+            "purpose": "Sets content expectations"
+          }
+        ],
+        "tone": "educational-technical, conversational-authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Named author with credibility",
+          "Specific technical explanations (Poisson distribution, block space)",
+          "Transparent about Muun's design philosophy"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-home-4-here.png",
+      "label": "here",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#0066FF",
+          "#E8EAEE"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold, high contrast against white background",
+          "bodyStyle": "Medium gray sans-serif for metadata (author, date, read time)",
+          "dataStyle": "Numbered list with teal text labels overlaid on illustration"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark horizontal bar with logo and menu items",
+            "position": "Top",
+            "notable": "Minimal design with social icons on right"
+          },
+          {
+            "type": "Category Badge",
+            "description": "Blue 'PRODUCT' label above headline",
+            "position": "Above headline",
+            "notable": "Signals content type at a glance"
+          },
+          {
+            "type": "Article Metadata",
+            "description": "Author avatar, name, date, and read time estimate",
+            "position": "Below headline",
+            "notable": "Establishes credibility and reading expectations"
+          },
+          {
+            "type": "Featured Illustration",
+            "description": "Stylized snowy forest scene with bitcoin symbols and a mnemonic word list overlay",
+            "position": "Center of page",
+            "notable": "Custom illustration makes abstract security concept tangible and memorable"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, supporting metadata grounds credibility, illustration provides visual interest and explains concept",
+        "innovativeElements": [
+          "Mnemonic word list overlaid directly on thematic illustration rather than presented separately",
+          "Playful forest imagery humanizes technical security topic"
+        ]
+      },
+      "flow": {
+        "screenType": "article-hero",
+        "userIntent": "Understand self-custody security in Muun wallet and why mnemonics are important",
+        "entryPoints": [
+          "Product blog navigation",
+          "Direct link from marketing material",
+          "Search for 'self-custody' or 'mnemonics'"
+        ],
+        "exitPoints": [
+          "Read full article (scroll down)",
+          "Navigate to other product pages via header",
+          "Return to blog via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "PRODUCT navigation link",
+            "action": "Filter or navigate to product-related articles"
+          },
+          {
+            "element": "Author name/avatar",
+            "action": "May link to author profile or other articles"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to different sections of site"
+          }
+        ],
+        "informationArchitecture": "Content-focused design with supporting metadata; hierarchy emphasizes headline, then supporting context, then visual explanation",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Read time estimate (4 MIN READ) sets expectations"
+        ]
+      },
+      "copy": {
+        "headline": "Self-Custody in Muun: Why Not just a Mnemonic?",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "FLORENCIA RAVENNA",
+            "context": "Author byline",
+            "purpose": "Establishes credibility and attribution"
+          },
+          {
+            "text": "26 OCT 2020 • 4 MIN READ",
+            "context": "Metadata below headline",
+            "purpose": "Sets publication context and reading time expectation"
+          },
+          {
+            "text": "TL;DR",
+            "context": "Section header visible at bottom",
+            "purpose": "Signals brief summary available"
+          }
+        ],
+        "tone": "professional-technical with educational intent",
+        "dataFormatting": [
+          "Numbered mnemonic list (1. witch through 12. again)",
+          "Simple date format (26 OCT 2020)",
+          "Linear read time (4 MIN READ)"
+        ],
+        "trustSignals": [
+          "Byline with author name",
+          "Publication date",
+          "Technical illustration suggests depth of research"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-home-5-read-how-it-works-here.png",
+      "label": "Read how it works here.",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#0066FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold black sans-serif, high contrast",
+          "bodyStyle": "Medium gray italic serif body text for explanatory content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark horizontal bar with logo and menu items",
+            "position": "Top",
+            "notable": "Consistent with previous screen"
+          },
+          {
+            "type": "Category Badge",
+            "description": "Blue 'PRODUCT' label",
+            "position": "Above headline",
+            "notable": "Content categorization"
+          },
+          {
+            "type": "Article Metadata",
+            "description": "Author avatar, name, date (12 FEB 2021), read time (4 MIN READ)",
+            "position": "Below headline",
+            "notable": "Establishes credibility"
+          },
+          {
+            "type": "Body Text Section",
+            "description": "TL;DR formatted explanation with italic serif typography",
+            "position": "Main content area",
+            "notable": "Uses serif font for body contrasting with sans-serif headers, creates visual distinction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > metadata > body text sections with clear visual breaks",
+        "innovativeElements": [
+          "Serif body font choice adds sophistication and readability for longer-form content",
+          "TL;DR section provides quick summary upfront"
+        ]
+      },
+      "flow": {
+        "screenType": "article-body",
+        "userIntent": "Learn technical details about Muun's 2-of-2 multi-signature security model",
+        "entryPoints": [
+          "From previous article hero or navigation",
+          "Direct link to article",
+          "Blog search results"
+        ],
+        "exitPoints": [
+          "Continue scrolling for more article content",
+          "Navigate via header to other sections",
+          "Return to blog via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Header navigation",
+            "action": "Navigate to other site sections"
+          },
+          {
+            "element": "Author avatar/name",
+            "action": "Potential link to author profile"
+          }
+        ],
+        "informationArchitecture": "Linear article flow with TL;DR upfront, followed by deeper explanation paragraphs",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Read time (4 MIN READ)"
+        ]
+      },
+      "copy": {
+        "headline": "Muun's Multi-Signature Model",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "TL;DR:",
+            "context": "Section opener",
+            "purpose": "Signals quick summary follows"
+          },
+          {
+            "text": "FLORENCIA RAVENNA 12 FEB 2021 • 4 MIN READ",
+            "context": "Article metadata",
+            "purpose": "Attribution and reading expectation"
+          }
+        ],
+        "tone": "professional-technical, explanatory, friendly",
+        "dataFormatting": [
+          "Technical concepts: '2-of-2 multi-signature', 'warm storage', 'Emergency Kit'",
+          "Descriptive phrases: 'self-custody', 'outgoing transactions', 'Emergency Kit'"
+        ],
+        "trustSignals": [
+          "Named author (Florencia Ravenna)",
+          "Published date",
+          "Technical depth and specificity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/muun-settings-1-contact.png",
+      "label": "Contact",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#003366",
+          "#0066FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold dark blue sans-serif, high contrast",
+          "bodyStyle": "Medium gray sans-serif for descriptive text",
+          "dataStyle": "Monospace or technical font for PGP fingerprint display"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Minimal top bar with logo and navigation links",
+            "position": "Top",
+            "notable": "Includes Contact, Blog, and social media icons"
+          },
+          {
+            "type": "Contact Section Blocks",
+            "description": "Stacked sections with headings, descriptions, and contact information",
+            "position": "Main content",
+            "notable": "Four distinct contact categories with email links"
+          },
+          {
+            "type": "Email Links",
+            "description": "Blue hyperlinked email addresses",
+            "position": "Below each section description",
+            "notable": "support@muun.com, contact@muun.com"
+          },
+          {
+            "type": "PGP Fingerprint Display",
+            "description": "Monospace text with fingerprint hash",
+            "position": "Right side of Support section",
+            "notable": "Shows security commitment with encryption option"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Category headings dominate, descriptions explain purpose, email links are actionable focal points, fingerprint adds secondary trust signal",
+        "innovativeElements": [
+          "PGP fingerprint displayed openly for users wanting encrypted communication",
+          "Multiple contact paths organized by use case rather than single email"
+        ]
+      },
+      "flow": {
+        "screenType": "contact-page",
+        "userIntent": "Find the right contact method for their specific need (support, sales, general inquiry, security)",
+        "entryPoints": [
+          "Contact link in header navigation",
+          "Direct URL visit",
+          "Footer link from other pages"
+        ],
+        "exitPoints": [
+          "Click email link to open mail client",
+          "Navigate to Blog via header",
+          "Navigate to other pages via header links",
+          "Follow social media links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "support@muun.com link",
+            "action": "Opens email client for support or bug reports"
+          },
+          {
+            "element": "contact@muun.com link",
+            "action": "Opens email client for general inquiries"
+          },
+          {
+            "element": "Header navigation links",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Social media icons",
+            "action": "Navigate to external social profiles"
+          }
+        ],
+        "informationArchitecture": "Segmented by use case (Support, Contact, Responsible Disclosure) with clear purpose statements and actionable email addresses",
+        "frictionPoints": [
+          "Email links require user's mail client to be configured",
+          "No form-based alternative for users without email configured"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Contact us",
+        "subheadline": "Send us an email and get in touch with our team. We usually respond within a few hours.",
+        "ctas": [
+          {
+            "text": "support@muun.com",
+            "style": "text-link",
+            "placement": "Support section"
+          },
+          {
+            "text": "contact@muun.com",
+            "style": "text-link",
+            "placement": "Contact section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Send us an email and get help or report bugs.",
+            "context": "Support section description",
+            "purpose": "Clarifies what support email is for"
+          },
+          {
+            "text": "You can encrypt your email message using our public PGP key.",
+            "context": "Right side of Support section",
+            "purpose": "Offers security option for sensitive communications"
+          },
+          {
+            "text": "FINGERPRINT",
+            "context": "Label above PGP key",
+            "purpose": "Identifies what the hash represents"
+          },
+          {
+            "text": "Send us an email if you have a question or want to chat.",
+            "context": "Contact section description",
+            "purpose": "Casual tone for general inquiries"
+          },
+          {
+            "text": "Send us an email to report any security related bugs or vulnerabilities.",
+            "context": "Responsible Disclosure section",
+            "purpose": "Clarifies security-specific contact path"
+          }
+        ],
+        "tone": "friendly-professional, responsive, security-conscious",
+        "dataFormatting": [
+          "PGP fingerprint: 1299 28C1 E79F E011 6DA4 C80F 8DB7 FD0F 61E6 ED76",
+          "Email addresses in standard format"
+        ],
+        "trustSignals": [
+          "Multiple dedicated contact channels show accessibility",
+          "Response time guarantee ('usually respond within a few hours')",
+          "PGP key availability demonstrates security commitment",
+          "Specific responsible disclosure path shows security maturity"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

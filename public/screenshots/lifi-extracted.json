@@ -1,0 +1,4502 @@
+{
+  "slug": "lifi",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T12:12:33.174Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 35,
+  "screens": [
+    {
+      "image": "/screenshots/lifi-home-7-home-what-is-lifi-tab.png",
+      "label": "home — What is LI.FI tab",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, centered (48-56px), black text",
+          "bodyStyle": "Medium-weight sans-serif, dark gray body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, search, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Sticky header with clear hierarchy between primary (Sign up) and secondary (Sign in) actions"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "Horizontal tabs: What is LI.FI, Community, Updates, Knowledge Hub, International, About, Onboarding",
+            "position": "Below main nav",
+            "notable": "Active tab underlined, shows context-aware filtering"
+          },
+          {
+            "type": "Filter dropdowns",
+            "description": "Three filter controls: Lifinance, All years, Latest",
+            "position": "Below headline",
+            "notable": "Dropdown selectors for narrowing content view"
+          },
+          {
+            "type": "Content skeleton",
+            "description": "Loading placeholder cards in 2-column grid layout",
+            "position": "Main content area",
+            "notable": "Skeleton screens showing anticipated card-based content structure"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered headline draws eye, tab nav creates secondary focus, filter controls tertiary, skeleton content below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand what LI.FI is and read educational/informational content",
+        "entryPoints": [
+          "Direct navigation from 'What is LI.FI' tab",
+          "Blog homepage"
+        ],
+        "exitPoints": [
+          "Click individual articles",
+          "Switch to other tabs (Community, Updates, Knowledge Hub)",
+          "Navigate away via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab selector dropdown",
+            "action": "Filter content by category"
+          },
+          {
+            "element": "Year filter dropdown",
+            "action": "Filter content by publication date"
+          },
+          {
+            "element": "Sort dropdown (Latest)",
+            "action": "Reorder content chronologically"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Navigate to registration"
+          }
+        ],
+        "informationArchitecture": "Content organized by category (Lifinance), time period (All years), and recency (Latest). Hierarchical tab system with filtering capabilities",
+        "frictionPoints": [
+          "Content is loading/skeleton state - actual content not visible",
+          "Three separate dropdowns might require multiple interactions to refine search"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lifinance",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get app",
+            "style": "ghost-button",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "Write",
+            "style": "text-link",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Lifinance",
+            "context": "Dropdown filter option",
+            "purpose": "Identifies category being filtered"
+          },
+          {
+            "text": "All years",
+            "context": "Time period dropdown",
+            "purpose": "Sets temporal scope of content"
+          },
+          {
+            "text": "Latest",
+            "context": "Sort order dropdown",
+            "purpose": "Indicates content is sorted by recency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-8-home-community-tab.png",
+      "label": "home — Community tab",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, centered (48-56px), black text",
+          "bodyStyle": "Medium-weight sans-serif, dark gray body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, search, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Consistent with previous screens, green Sign up CTA"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "Community tab is now active with underline indicator",
+            "position": "Below main nav",
+            "notable": "Visual feedback shows Community tab is selected"
+          },
+          {
+            "type": "Filter dropdowns",
+            "description": "Lifi Community selector, All years, Latest",
+            "position": "Below headline",
+            "notable": "Category filter reflects selected tab content"
+          },
+          {
+            "type": "Content skeleton",
+            "description": "Loading placeholders in 2-column grid",
+            "position": "Main content area",
+            "notable": "Same layout pattern as previous tab but with Community-specific content incoming"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered headline 'Lifi Community' dominates, active tab underline guides context, filter controls below, skeleton content fills main area",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse community-related content, discussions, or user-generated content about LI.FI",
+        "entryPoints": [
+          "Click Community tab from navigation",
+          "Direct URL to community section"
+        ],
+        "exitPoints": [
+          "Click individual community posts",
+          "Switch to other tabs",
+          "Use filter dropdowns to narrow results",
+          "Sign up to participate"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Community tab",
+            "action": "Switch content to community category"
+          },
+          {
+            "element": "Lifi Community dropdown",
+            "action": "Filter by community subcategory"
+          },
+          {
+            "element": "All years dropdown",
+            "action": "Filter by date range"
+          },
+          {
+            "element": "Latest dropdown",
+            "action": "Change sort order"
+          }
+        ],
+        "informationArchitecture": "Tab-based content organization with Community section showing filtered, sortable content. Parallel structure to other content tabs",
+        "frictionPoints": [
+          "Content loading - skeleton state prevents immediate exploration",
+          "Multiple filter options may overwhelm new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lifi Community",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get app",
+            "style": "ghost-button",
+            "placement": "Top right"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Lifi Community",
+            "context": "Category filter dropdown",
+            "purpose": "Identifies community content category"
+          },
+          {
+            "text": "All years",
+            "context": "Temporal filter",
+            "purpose": "Shows entire community archive is available"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-9-home-updates-tab.png",
+      "label": "home — Updates tab",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, centered (48-56px), black text",
+          "bodyStyle": "Regular weight sans-serif for article titles (24-28px), smaller gray text for metadata",
+          "dataStyle": "Article metadata: author names, dates, read times in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top fixed nav with Medium logo, search, Get app, Write, Sign up, Sign in",
+            "position": "Top fixed",
+            "notable": "Write button visible in this section - encourages user contribution"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "Updates tab now active with underline",
+            "position": "Below main nav",
+            "notable": "Clear visual indication of current section"
+          },
+          {
+            "type": "Filter dropdowns",
+            "description": "Lifi category selector, All years, Latest sort",
+            "position": "Below headline",
+            "notable": "Consistent filter pattern across all tabs"
+          },
+          {
+            "type": "Article cards",
+            "description": "Vertical list of article cards with title, subtitle, author avatar, author name, date, and read time",
+            "position": "Main content area",
+            "notable": "Clean card layout with visual author identification via avatar"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline 'Lifi' at top, article cards create vertical scanning pattern, author avatars add visual interest, metadata grounds each card",
+        "innovativeElements": [
+          "Author avatars on article cards provide social proof and personalization"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read latest updates, announcements, and blog posts about LI.FI ecosystem developments",
+        "entryPoints": [
+          "Click Updates tab",
+          "Direct navigation from homepage",
+          "Search results"
+        ],
+        "exitPoints": [
+          "Click article title to read full post",
+          "Switch to another tab",
+          "Adjust filters",
+          "Click Write to create new post",
+          "Sign up to bookmark"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article card",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Author name/avatar",
+            "action": "Potentially view author profile"
+          },
+          {
+            "element": "Filter dropdowns",
+            "action": "Refine visible articles"
+          },
+          {
+            "element": "Write button",
+            "action": "Create new blog post"
+          }
+        ],
+        "informationArchitecture": "Updates organized chronologically with filtering by category and date range. Sortable by recency. Articles displayed in card format with rich metadata",
+        "frictionPoints": [
+          "Must scroll to see all articles",
+          "Filter dropdowns require interaction to narrow results"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lifi",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Write",
+            "style": "text-link",
+            "placement": "Top right nav - encourages content creation"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI Expands to Solana",
+            "context": "Article headline",
+            "purpose": "Main article title communicating key news"
+          },
+          {
+            "text": "The Missing Money Lego for Apps",
+            "context": "Article subheading",
+            "purpose": "Descriptive subtitle explaining article focus"
+          },
+          {
+            "text": "Yash Chandak · Added Aug 7, 2024 · 3 min read",
+            "context": "Article metadata",
+            "purpose": "Establishes author credibility, publication date, and content length"
+          },
+          {
+            "text": "Why do we need L2s for Bitcoin?",
+            "context": "Article subtitle",
+            "purpose": "Frames article as addressing a fundamental question"
+          },
+          {
+            "text": "Tailor-made for users participating in the LI.FI ecosystem",
+            "context": "Loyalty Pass article subtitle",
+            "purpose": "Explains targeted audience and value proposition"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Aug 7, 2024 (date format)",
+          "3 min read (reading time)",
+          "9 min read (reading time)",
+          "4 min read (reading time)"
+        ],
+        "trustSignals": [
+          "Author names and avatars",
+          "Publication dates showing recent activity",
+          "Read time estimates for transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6366F1",
+          "#E9D5FF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (60+ px), black text, high contrast",
+          "bodyStyle": "Regular sans-serif, medium weight, charcoal/dark gray, comfortable leading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, dropdown menus (Developers, Products, Use cases), and primary CTA button",
+            "position": "top",
+            "notable": "Clean, minimal design with clear hierarchy; Sign in button is bright blue"
+          },
+          {
+            "type": "announcement-banner",
+            "description": "Pink/magenta banner with funding announcement and link",
+            "position": "top-above-nav",
+            "notable": "Prominent placement of Series A news with hyperlinked 'Read Here'"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline, subheading, and two CTAs (primary blue button, secondary outline button)",
+            "position": "left-center",
+            "notable": "Asymmetrical layout balances text weight with visual diagram on right"
+          },
+          {
+            "type": "diagram-illustration",
+            "description": "Technical schematic showing token flows, DEX connections, and SDK integration",
+            "position": "right-center",
+            "notable": "Pink and blue accent colors; hand-drawn style adds approachability to technical content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, drawing eye first; diagram on right provides visual interest and technical credibility; CTAs placed below headline for natural reading flow",
+        "innovativeElements": [
+          "Asymmetrical split-panel layout with technical diagram as visual anchor",
+          "Color-coded schematic (pink/blue accents) reinforces product functionality visually"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand LI.FI's core value proposition and choose between exploring integration or contacting sales",
+        "entryPoints": [
+          "Direct landing from marketing campaign",
+          "Navigation from series A announcement banner",
+          "Organic search or social sharing"
+        ],
+        "exitPoints": [
+          "Start your integration (primary CTA)",
+          "Contact sales (secondary CTA)",
+          "Navigation dropdowns (Developers, Products, Use cases)",
+          "Sign in to Partner Portal",
+          "Resources section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start your integration button",
+            "action": "Navigate to onboarding or sign-up flow"
+          },
+          {
+            "element": "Contact sales button",
+            "action": "Open contact form or sales inquiry"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Reveal submenu options"
+          },
+          {
+            "element": "Read Here link",
+            "action": "Navigate to detailed announcement article"
+          }
+        ],
+        "informationArchitecture": "Hero value prop at top, supported by clear problem statement (best price execution), solution benefits (multi-chain swaps, DEX aggregation), and dual CTAs for different user types",
+        "frictionPoints": [
+          "Technical diagram may be overwhelming for non-technical users without additional context",
+          "Two CTAs may create slight decision paralysis (but clear primary/secondary hierarchy helps)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Compare best prices across all DeFi liquidity",
+        "subheadline": "Get the best price execution for any swaps and bridging across EVM chains, Solana, Bitcoin and alt-VMs. Enable trading across all DEX aggregators, bridges, and intent-systems and save hundreds of developer hours.",
+        "ctas": [
+          {
+            "text": "Start your integration",
+            "style": "primary-button",
+            "placement": "below headline, left"
+          },
+          {
+            "text": "Contact sales",
+            "style": "ghost-button",
+            "placement": "below headline, left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI has announced a $29M Series A extension, led by Multicoin and CoinFund.",
+            "context": "pink banner at top",
+            "purpose": "Establish credibility and momentum; drive traffic to announcement"
+          }
+        ],
+        "tone": "professional-technical with friendly approachability",
+        "dataFormatting": [
+          "$29M Series A extension"
+        ],
+        "trustSignals": [
+          "$29M Series A funding announcement",
+          "Led by Multicoin and CoinFund (recognizable VCs)",
+          "Multi-chain support (EVM, Solana, Bitcoin, alt-VMs)",
+          "Developer-focused positioning (save hundreds of hours)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-2-read-here.png",
+      "label": "Read Here.",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1E3A8A",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (70+ px), black text, high contrast",
+          "bodyStyle": null,
+          "dataStyle": "Large white numerals with secondary text in white"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav consistent with previous screen",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "accordion-sidebar",
+            "description": "Expandable sections: Blockchain ecosystem overviews, Bridges in a nutshell, LI.FI updates, Explore LI.FI",
+            "position": "left-side",
+            "notable": "Organizes content hierarchy without overwhelming; dropdown indicators suggest expandable content"
+          },
+          {
+            "type": "announcement-card",
+            "description": "Large card with dark navy background, white text, LI.FI + investor logos, large $29M figure, and subtext",
+            "position": "center-right",
+            "notable": "High-contrast dark background makes white text and figures pop; professional gradient background adds depth"
+          },
+          {
+            "type": "article-headline",
+            "description": "Large black headline below card describing the funding announcement",
+            "position": "center-bottom",
+            "notable": "Leads into article content; truncated view suggests scrollable content below"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Announcement card commands attention with high contrast; $29M figure is the focal point; sidebar provides secondary navigation; headline below sets context for article flow",
+        "innovativeElements": [
+          "Dark announcement card with gradient background creates visual hierarchy and credibility",
+          "Accordion sidebar for progressive disclosure of supporting content"
+        ]
+      },
+      "flow": {
+        "screenType": "article-detail",
+        "userIntent": "Read detailed information about LI.FI's Series A funding announcement",
+        "entryPoints": [
+          "Click 'Read Here' link from banner or previous screen",
+          "Direct link from announcement banner"
+        ],
+        "exitPoints": [
+          "Scroll to article content below",
+          "Click accordion sections in sidebar",
+          "Navigate via top menu",
+          "Sign in to Partner Portal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion sections",
+            "action": "Expand/collapse to reveal nested content"
+          },
+          {
+            "element": "Article headline",
+            "action": "May link or scroll to full article content"
+          }
+        ],
+        "informationArchitecture": "Feature announcement front and center with supporting navigation sidebar; article content implied below fold",
+        "frictionPoints": [
+          "Accordion sidebar may not be immediately obvious as interactive",
+          "Content below fold (article text) not visible, requiring scroll"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LI.FI Secures $29M in Series A Extension Led by",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Multicoin Capital | CoinFund",
+            "context": "inside announcement card below logo",
+            "purpose": "Establish investor credibility and legitimacy"
+          },
+          {
+            "text": "Series A Extension",
+            "context": "subtitle inside announcement card",
+            "purpose": "Clarify funding type as extension rather than initial round"
+          }
+        ],
+        "tone": "professional-technical, celebratory",
+        "dataFormatting": [
+          "$29M"
+        ],
+        "trustSignals": [
+          "$29M Series A Extension funding",
+          "Multicoin Capital investor",
+          "CoinFund investor",
+          "LI.FI logo prominence"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-3-resources.png",
+      "label": "Resources",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E3A8A",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (60+ px), black text, centered, high contrast",
+          "bodyStyle": "Regular sans-serif, medium, charcoal gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav consistent with previous screens",
+            "position": "top",
+            "notable": null
+          },
+          {
+            "type": "page-header",
+            "description": "Centered headline and subheading introducing Knowledge hub",
+            "position": "center-top",
+            "notable": "Clean, minimal presentation; centered text creates emphasis"
+          },
+          {
+            "type": "search-bar",
+            "description": "Large input field with placeholder 'Search Bridges, DEXes, or any of your questions' and magnifying glass icon",
+            "position": "center",
+            "notable": "Prominent placement; contextual placeholder helps guide user queries"
+          },
+          {
+            "type": "popular-searches",
+            "description": "Inline links for 'LI.FI Update' and 'Bridge classification'",
+            "position": "center-below-search",
+            "notable": "Lowers barrier to entry by providing suggested searches"
+          },
+          {
+            "type": "card-grid",
+            "description": "Horizontal scrollable grid of latest blog posts with thumbnail images",
+            "position": "bottom",
+            "notable": "Visual cards with images add interest; truncated to show 3 cards with scroll affordance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline establishes page purpose; search bar is the focal point; popular searches provide guidance; blog cards appear secondary at bottom",
+        "innovativeElements": [
+          "Contextual search placeholder (Bridges, DEXes) sets expectations for query types",
+          "Popular searches reduce friction by offering pre-populated options"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Search for educational content about bridges, DEXes, and LI.FI functionality; discover latest blog posts",
+        "entryPoints": [
+          "Click Resources in top navigation",
+          "Navigation from previous screens"
+        ],
+        "exitPoints": [
+          "Enter search query",
+          "Click popular search links",
+          "Click blog post cards",
+          "Navigation to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Enter query and search knowledge base"
+          },
+          {
+            "element": "Popular searches links",
+            "action": "Execute pre-populated search queries"
+          },
+          {
+            "element": "Blog post cards",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Card carousel",
+            "action": "Scroll horizontally to view more posts"
+          }
+        ],
+        "informationArchitecture": "Educational hub organized by search + curated popular topics + latest content; progressive disclosure from general discovery to specific articles",
+        "frictionPoints": [
+          "Search bar is the primary interaction; no visible categories or taxonomy shown",
+          "Blog cards truncated; requires horizontal scroll to discover more content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Knowledge hub",
+        "subheadline": "Learn about everything related to the bridging ecosystem",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search Bridges, DEXes, or any of your questions",
+            "context": "search input placeholder",
+            "purpose": "Guide user expectations and set context for searchable content types"
+          },
+          {
+            "text": "Popular searches:",
+            "context": "above search result links",
+            "purpose": "Introduce pre-populated search suggestions"
+          }
+        ],
+        "tone": "educational, friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive knowledge base positioning",
+          "Educational framing (Learn about everything)",
+          "Latest posts/updates visible"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-4-plans.png",
+      "label": "Plans",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#6366F1"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display size (60+px), center-aligned",
+          "bodyStyle": "Regular gray sans-serif, 16-18px, center-aligned with generous line height",
+          "dataStyle": "Bold emphasis on key features like '200 requests per minute'"
+        },
+        "components": [
+          {
+            "type": "Announcement banner",
+            "description": "Pink/magenta bar at top with funding news and link",
+            "position": "Top full-width",
+            "notable": "High-contrast eye-catching banner for news dissemination"
+          },
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "Header",
+            "notable": "Sticky positioning with 'Sign in to Partner Portal' primary CTA"
+          },
+          {
+            "type": "Plan cards",
+            "description": "Two side-by-side pricing cards with colored left borders",
+            "position": "Lower half of screen",
+            "notable": "Pink accent for Standard plan, blue accent for Enterprise plan; cards partially visible below fold"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear vertical flow: banner > nav > large headline > descriptive text > plan cards. Center alignment drives focus to content.",
+        "innovativeElements": [
+          "Colorful left borders on plan cards differentiate tiers visually",
+          "Integration ecosystem listed inline with bolded DEX/bridge names"
+        ]
+      },
+      "flow": {
+        "screenType": "pricing/plans landing",
+        "userIntent": "Understand available LI.FI service tiers and choose appropriate plan",
+        "entryPoints": [
+          "Click 'Plans' in main navigation",
+          "Referred from marketing material or funding announcement"
+        ],
+        "exitPoints": [
+          "Click 'Sign in to Partner Portal' button",
+          "Click on individual plan cards for details",
+          "Navigate to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Plan cards",
+            "action": "Likely expand or navigate to detailed plan comparison"
+          },
+          {
+            "element": "Announcement banner link 'Read Here'",
+            "action": "Navigate to full funding news article"
+          },
+          {
+            "element": "Main navigation dropdowns",
+            "action": "Reveal submenu options"
+          }
+        ],
+        "informationArchitecture": "Hero-to-details structure: headline explains value proposition, descriptive paragraph lists integrated protocols, then cards present two main plan options",
+        "frictionPoints": [
+          "Plan cards partially cut off—user must scroll to see full details",
+          "No visible pricing numbers on cards shown",
+          "Large amount of text before cards may reduce scanning"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Plans",
+        "subheadline": "Sometimes the best choice is all of them.",
+        "ctas": [
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Read Here",
+            "style": "text-link",
+            "placement": "Announcement banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FREE TO INTEGRATE",
+            "context": "Badge on Standard plan card",
+            "purpose": "Highlight low barrier to entry for Standard tier"
+          },
+          {
+            "text": "Up to 200 requests per minute",
+            "context": "Feature bullet on Standard plan",
+            "purpose": "Communicate specific capacity limit"
+          }
+        ],
+        "tone": "professional-technical with friendly reassurance ('Sometimes the best choice is all of them')",
+        "dataFormatting": [
+          "$29M Series A extension",
+          "200 requests per minute"
+        ],
+        "trustSignals": [
+          "Multicoin and CoinFund as Series A lead investors (mentioned in banner)",
+          "Access to 10+ major DEX aggregators",
+          "20+ cross-chain bridges supported"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-5-sdk-documentationtake-full-control-of-your-user-jo.png",
+      "label": "SDK documentationTake full control of your user jo",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F172A",
+          "#FFFFFF",
+          "#6366F1"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, 32-40px for page heading",
+          "bodyStyle": "Light gray body text, 14-16px, left-aligned with comfortable line height",
+          "dataStyle": "Code blocks and inline code with monospace font in highlighted containers"
+        },
+        "components": [
+          {
+            "type": "Left sidebar",
+            "description": "Nested navigation menu with section headers and links",
+            "position": "Left 20% of screen",
+            "notable": "Current page highlighted; hierarchical grouping (Getting Started, Using SDK, Misc.)"
+          },
+          {
+            "type": "Top navigation tabs",
+            "description": "Horizontal tabs for SDK documentation sections",
+            "position": "Top of main content area",
+            "notable": "JS/TS SDK tab active/underlined; includes Search, Ask AI, Support, Get Started CTA"
+          },
+          {
+            "type": "Info callout banner",
+            "description": "Dark blue/teal alert box with info icon",
+            "position": "Below main heading",
+            "notable": "Highlights AI agent recommendation with link to Agent Integration Guide"
+          },
+          {
+            "type": "Table of contents sidebar",
+            "description": "Right sidebar with 'On this page' anchor links",
+            "position": "Right 15% of screen",
+            "notable": "Sticky positioning for quick page navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar establishes context, main content dominates center, TOC on right guides deep reading. Info banner disrupts flow to highlight important detail.",
+        "innovativeElements": [
+          "Ask AI feature integrated into header for quick documentation lookup",
+          "Info banner with contextual recommendation for alternative integration path"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation landing/overview",
+        "userIntent": "Understand LI.FI SDK capabilities and get started with implementation",
+        "entryPoints": [
+          "Click 'JS/TS SDK' tab from product navigation",
+          "Search for SDK documentation",
+          "Referred from onboarding flow"
+        ],
+        "exitPoints": [
+          "Click 'Get Started' button to begin installation",
+          "Navigate via left sidebar to specific topics",
+          "Click links in content to Agent Integration Guide or other docs",
+          "Use search to jump to different documentation section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar links",
+            "action": "Navigate to different SDK documentation sections"
+          },
+          {
+            "element": "Ask AI search box",
+            "action": "Query documentation with AI assistance"
+          },
+          {
+            "element": "Copy page button",
+            "action": "Copy page content to clipboard"
+          },
+          {
+            "element": "Right sidebar TOC links",
+            "action": "Jump to page sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical docs structure: left nav provides section context, main column presents detailed content with embedded links, right TOC enables quick navigation within long-form content",
+        "frictionPoints": [
+          "Three-column layout may feel cramped on smaller screens",
+          "Info callout at top may distract from primary content (though important for developers choosing integration method)",
+          "Dense text blocks without visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LI.FI SDK Overview",
+        "subheadline": "Cross-chain and on-chain swap and bridging toolkit",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Copy page",
+            "style": "ghost-button",
+            "placement": "Above main heading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Building an AI agent? For AI integrations, we recommend using the REST API directly instead of the SDK. See our Agent Integration Guide for the minimal endpoint set.",
+            "context": "Info callout banner",
+            "purpose": "Guide developers to appropriate integration method for AI use case"
+          },
+          {
+            "text": "LI.FI SDK features include:",
+            "context": "Lead-in before bulleted feature list",
+            "purpose": "Introduce key capabilities section"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "All ecosystems, chains, bridges, exchanges, and solvers supported",
+          "Complete full-cycle functionality",
+          "Event and hooks handling"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-6-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif, 28-32px for blog title 'LI.FI Blog'",
+          "bodyStyle": "Regular sans-serif, 14-16px for body text and article metadata",
+          "dataStyle": "Numbers in regular weight (1.1K followers, 5 editors)"
+        },
+        "components": [
+          {
+            "type": "Cookie consent banner",
+            "description": "Full-width black banner at top with privacy notice and X close button",
+            "position": "Top of screen",
+            "notable": "High contrast black background forces acknowledgment; contains Privacy Policy link"
+          },
+          {
+            "type": "Blog header",
+            "description": "Pink square icon, blog title, tagline, followers count, editor avatars",
+            "position": "Below cookie banner",
+            "notable": "Medium publication branding; follow and email icons on right"
+          },
+          {
+            "type": "Navigation tabs",
+            "description": "Horizontal tabs for content categories",
+            "position": "Below blog header",
+            "notable": "Onboarding tab currently selected/underlined"
+          },
+          {
+            "type": "Featured article card",
+            "description": "Large hero image with 'State of Interop 2026' research report",
+            "position": "Main content area",
+            "notable": "LI.FI Research branding; blue gradient background with geometric shapes"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Cookie banner dominates top for legal compliance, blog branding below, navigation tabs create secondary hierarchy, featured article commands visual attention with large hero image",
+        "innovativeElements": [
+          "Pink square logo creates distinctive brand identity",
+          "Research report card with gradient background and subtle geometric design"
+        ]
+      },
+      "flow": {
+        "screenType": "blog landing / content hub",
+        "userIntent": "Browse LI.FI blog content and research, understand ecosystem updates",
+        "entryPoints": [
+          "Direct navigation to blog section",
+          "Referred from main LI.FI website",
+          "Search engine result for LI.FI blog content"
+        ],
+        "exitPoints": [
+          "Click featured article to read full post",
+          "Click navigation tabs to browse category",
+          "Click Follow or email icon to subscribe",
+          "Close cookie banner and continue browsing"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie consent banner X button",
+            "action": "Dismiss privacy notice"
+          },
+          {
+            "element": "Follow button",
+            "action": "Subscribe to blog updates"
+          },
+          {
+            "element": "Email icon",
+            "action": "Subscribe via email"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Filter content by category"
+          },
+          {
+            "element": "Featured article card",
+            "action": "Navigate to full article"
+          }
+        ],
+        "informationArchitecture": "Blog hub structure: legal compliance at top, brand/discovery elements, then category navigation, leading to curated content with featured items highlighted",
+        "frictionPoints": [
+          "Cookie banner blocks content and requires dismissal",
+          "Privacy Policy link in banner requires external navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LI.FI Blog",
+        "subheadline": "The ultimate cross-chain liquidity aggregator",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Get app",
+            "style": "secondary-button",
+            "placement": "Top header"
+          },
+          {
+            "text": "Write",
+            "style": "ghost-button",
+            "placement": "Top header"
+          },
+          {
+            "text": "Follow",
+            "style": "ghost-button",
+            "placement": "Blog header right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "To make Medium work, we log user data. By using Medium, you agree to our Privacy Policy, including cookie policy.",
+            "context": "Cookie consent banner",
+            "purpose": "Legal disclosure and consent request for data usage"
+          },
+          {
+            "text": "1.1K followers · [avatars] · 5 editors",
+            "context": "Below blog title",
+            "purpose": "Establish credibility and community size"
+          },
+          {
+            "text": "The Year Interop Becomes Crypto",
+            "context": "Article subtitle",
+            "purpose": "Provide article hook and context"
+          },
+          {
+            "text": "Arjun Chand · Jan 1 · 25 min read",
+            "context": "Article metadata",
+            "purpose": "Provide author, date, and reading time estimate"
+          }
+        ],
+        "tone": "professional-technical, thought-leadership",
+        "dataFormatting": [
+          "1.1K followers",
+          "25 min read",
+          "2026 (year in title)"
+        ],
+        "trustSignals": [
+          "1.1K followers",
+          "5 editors listed",
+          "LI.FI Research branding on featured article"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-10-home-knowledge-hub-tab.png",
+      "label": "home — Knowledge Hub tab",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif headings (e.g., 'Lifi Technology'), 24-32px",
+          "bodyStyle": "Regular sans-serif body text, ~16px, dark gray",
+          "dataStyle": "Metadata in smaller gray text with author avatars and read time indicators"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal tab navigation with active underline on 'Knowledge Hub'",
+            "position": "Top below logo",
+            "notable": "Clean underline indicator for active state"
+          },
+          {
+            "type": "Filter dropdowns",
+            "description": "Three dropdown filters: topic, time period, sorting",
+            "position": "Below main heading",
+            "notable": "Consistent styling with chevron icons"
+          },
+          {
+            "type": "Article card",
+            "description": "Article preview with title, excerpt, author avatar, date, read time",
+            "position": "Stacked vertically in main content area",
+            "notable": "Right-aligned thumbnail images for featured articles"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws focus, filters below provide context, articles listed in priority order with visual emphasis through thumbnails",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and read educational content about LI.FI technology and related topics",
+        "entryPoints": [
+          "Click 'Knowledge Hub' tab from navigation",
+          "Direct link to knowledge hub"
+        ],
+        "exitPoints": [
+          "Click article to read full content",
+          "Switch to other tabs (Updates, Community, etc.)",
+          "Use search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter dropdowns (Lifi Technology, All years, Latest)",
+            "action": "Filter articles by category, time range, and sort order"
+          },
+          {
+            "element": "Article title/preview",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Author name",
+            "action": "Likely navigate to author profile"
+          }
+        ],
+        "informationArchitecture": "Category filtering at top, chronologically or relevance-ordered articles below with metadata",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lifi Technology",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "With Intents, It's Solvers All The Way Down",
+            "context": "First article title",
+            "purpose": "Hook reader with provocative concept"
+          },
+          {
+            "text": "Arjun Chand · Added Jul 11, 2024 · 22 min read",
+            "context": "Below article title",
+            "purpose": "Establish credibility and set expectations for read time"
+          },
+          {
+            "text": "Out-of-the-box frictionless swapping across all chains is here!",
+            "context": "Second article subtitle",
+            "purpose": "Highlight key product announcement"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Jul 11, 2024",
+          "22 min read",
+          "3 min read"
+        ],
+        "trustSignals": [
+          "Author attribution (Arjun Chand)",
+          "Specific publication dates"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-11-home-international-tab.png",
+      "label": "home — International tab",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, 32-40px, English and non-Latin script support",
+          "bodyStyle": "Regular sans-serif, ~16px, dark gray, multi-language support",
+          "dataStyle": "Smaller gray metadata text with dates and read times"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal tabs with 'International' tab active and underlined",
+            "position": "Top navigation",
+            "notable": "Supports internationalization with underline indicator"
+          },
+          {
+            "type": "Filter dropdowns",
+            "description": "Three dropdowns: International category, All years, Latest sort",
+            "position": "Below headline",
+            "notable": "Consistent with Knowledge Hub layout"
+          },
+          {
+            "type": "Multilingual article card",
+            "description": "Article title in Chinese, Russian, or other languages with translations",
+            "position": "Stacked vertically",
+            "notable": "Non-Latin script rendering and multilingual support"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "International heading centers focus, multilingual content arranged vertically by relevance, metadata in supporting gray text",
+        "innovativeElements": [
+          "Multilingual article support",
+          "Mixed-script typography handling"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access localized educational content in multiple languages",
+        "entryPoints": [
+          "Click 'International' tab from main navigation",
+          "Direct link to international hub"
+        ],
+        "exitPoints": [
+          "Click article to read full content",
+          "Switch to other language tabs",
+          "Return to Knowledge Hub"
+        ],
+        "interactiveElements": [
+          {
+            "element": "International filter dropdown",
+            "action": "Filter by region or language"
+          },
+          {
+            "element": "Article title (multilingual)",
+            "action": "Navigate to full article in source language"
+          },
+          {
+            "element": "Time/author metadata",
+            "action": "View author profile or filter by date"
+          }
+        ],
+        "informationArchitecture": "Region/language filtering at top, articles organized by relevance with mixed-script content",
+        "frictionPoints": [
+          "Language barrier for non-native readers",
+          "Mixed script may affect readability for some users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "International",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "通过LI.FI来探索Avalanche",
+            "context": "First article title in Chinese",
+            "purpose": "Localized content for Mandarin speakers"
+          },
+          {
+            "text": "Li.Finance—новости комьюнити #3",
+            "context": "Second article in Russian with emoji",
+            "purpose": "Community news in Russian with visual indicator"
+          },
+          {
+            "text": "mosheng · Added Mar 2, 2022 · 7 min read",
+            "context": "Metadata below Chinese article",
+            "purpose": "Attribution and read time"
+          }
+        ],
+        "tone": "professional-technical, educational, localized",
+        "dataFormatting": [
+          "Mar 2, 2022",
+          "7 min read",
+          "Feb 19, 2022",
+          "Feb 17, 2022"
+        ],
+        "trustSignals": [
+          "Author attribution",
+          "Specific dates",
+          "Read time estimates"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-12-apisdk.png",
+      "label": "API/SDK",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel with hero left, illustration right",
+        "colorScheme": "mixed (white background, pink/purple gradient accent, navy blue CTA)",
+        "primaryColors": [
+          "#FFFFFF",
+          "#FF1F8E",
+          "#5B4EFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra large bold sans-serif, 56-72px, black, single words per line for impact",
+          "bodyStyle": "Regular sans-serif, 18-20px, dark gray, generous line height",
+          "dataStyle": "Code example in monospace font on illustrated code display"
+        },
+        "components": [
+          {
+            "type": "Banner notification",
+            "description": "Pink/magenta bar with Series A announcement and 'Read Here' link",
+            "position": "Top of page",
+            "notable": "High-visibility color for important announcement"
+          },
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, dropdown menus (Developers, Products, Use cases, Resources, Plans)",
+            "position": "Below banner",
+            "notable": "Primary action button 'Sign in to Partner Portal' in blue on right"
+          },
+          {
+            "type": "Hero headline",
+            "description": "Multi-line bold heading: 'Swap, bridge, deposit'",
+            "position": "Left half of main content",
+            "notable": "Large scale with generous spacing, broken across lines for rhythm"
+          },
+          {
+            "type": "Subheadline paragraph",
+            "description": "Descriptive text about SDK/API functionality",
+            "position": "Below headline on left",
+            "notable": "Clear benefit statement with specific number (60+ chains)"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "Two buttons: 'Start your integration' (primary blue), 'Documentation' (secondary outline)",
+            "position": "Below subheadline",
+            "notable": "Clear primary/secondary hierarchy with contrasting styles"
+          },
+          {
+            "type": "Illustrative graphics",
+            "description": "Abstract code editor view, isometric shapes, code snippets, developer icons",
+            "position": "Right half of page",
+            "notable": "Modern, geometric illustration style with pink/blue accent palette matching brand"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, subheadline and CTAs below, right side illustrations balance the composition with visual interest",
+        "innovativeElements": [
+          "Pink/purple gradient accent color",
+          "Split-panel layout with asymmetric balance",
+          "Code snippet visualization in illustration",
+          "Geometric illustration style"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand LI.FI's core value proposition and begin developer integration",
+        "entryPoints": [
+          "Direct navigation to home/API-SDK page",
+          "Marketing link",
+          "Search result"
+        ],
+        "exitPoints": [
+          "Click 'Start your integration' to begin onboarding",
+          "Click 'Documentation' for technical details",
+          "Click navigation items to explore products/use cases",
+          "Click 'Sign in to Partner Portal'"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'Start your integration' button",
+            "action": "Navigate to integration/onboarding flow"
+          },
+          {
+            "element": "'Documentation' button",
+            "action": "Navigate to technical documentation"
+          },
+          {
+            "element": "Navigation dropdowns (Developers, Products, Use cases)",
+            "action": "Expand to show submenu options"
+          },
+          {
+            "element": "'Sign in to Partner Portal' button",
+            "action": "Navigate to authentication or partner dashboard"
+          },
+          {
+            "element": "Series A 'Read Here' link",
+            "action": "Navigate to announcement details"
+          }
+        ],
+        "informationArchitecture": "Top-level value proposition with immediate CTAs for two paths (integration vs. learning), secondary navigation for exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap, bridge, deposit",
+        "subheadline": "A single integration for cross-chain swaps, bridging, and deposits across 60+ chains. Use the SDK or API, your choice.",
+        "ctas": [
+          {
+            "text": "Start your integration",
+            "style": "primary-button",
+            "placement": "Below subheadline on left"
+          },
+          {
+            "text": "Documentation",
+            "style": "secondary-button-outline",
+            "placement": "Right of primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI has announced a $29M Series A extension, led by Multicoin and CoinFund.",
+            "context": "Pink banner at top",
+            "purpose": "Build credibility and announce funding milestone"
+          },
+          {
+            "text": "Read Here",
+            "context": "Link in banner",
+            "purpose": "Drive traffic to announcement details"
+          },
+          {
+            "text": "const sdk = new sdk()",
+            "context": "In right-side code illustration",
+            "purpose": "Show developer familiarity and accessibility"
+          },
+          {
+            "text": "Full flexibility - Outstanding mightness",
+            "context": "In lower illustration box",
+            "purpose": "Highlight key product benefits"
+          },
+          {
+            "text": "Easy integration",
+            "context": "In right-side illustration",
+            "purpose": "Reinforce developer-friendly positioning"
+          }
+        ],
+        "tone": "professional-technical, confident, developer-focused",
+        "dataFormatting": [
+          "$29M",
+          "60+ chains"
+        ],
+        "trustSignals": [
+          "Series A funding from Multicoin and CoinFund",
+          "Specific funding amount"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-16-stablecoin-api.png",
+      "label": "Stablecoin API",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6366F1",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (60+ px), black, high contrast",
+          "bodyStyle": "Regular sans-serif, medium gray, readable line height",
+          "dataStyle": "Regular text with currency amounts ($29M)"
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Pink/magenta banner with Series A funding news",
+            "position": "top full-width",
+            "notable": "High visibility funding announcement with CTA link"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Logo, dropdown menus (Developers, Products, Use cases), auth button",
+            "position": "top",
+            "notable": "Blue primary CTA button stands out against white background"
+          },
+          {
+            "type": "hero-image",
+            "description": "3D gradient cube with floating stablecoin icons (PayPal, Solana, etc.)",
+            "position": "right half",
+            "notable": "Vibrant blue-to-purple gradient, playful coin assets"
+          },
+          {
+            "type": "cta-button-group",
+            "description": "Two buttons: primary blue 'Start your integration' and secondary white 'Documentation'",
+            "position": "bottom left",
+            "notable": "Clear conversion path with secondary option"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline commands attention; supporting text below; right-side visual reinforces messaging; CTAs positioned at natural scan endpoint",
+        "innovativeElements": [
+          "3D gradient box with floating token icons creating depth",
+          "Hand illustration at bottom suggesting ease/onboarding"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Li.Fi's stablecoin API and begin integration",
+        "entryPoints": [
+          "Direct to stablecoin API product page",
+          "Navigation from main site"
+        ],
+        "exitPoints": [
+          "Start your integration button → onboarding flow",
+          "Documentation link → technical docs",
+          "Sign in to Partner Portal → authentication",
+          "News link in banner → funding announcement"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start your integration button",
+            "action": "Initiates developer onboarding/registration flow"
+          },
+          {
+            "element": "Documentation link",
+            "action": "Opens technical documentation in new context"
+          },
+          {
+            "element": "Read Here link in banner",
+            "action": "Opens funding announcement details"
+          }
+        ],
+        "informationArchitecture": "Problem statement (headline) → solution explanation (body text) → visual proof (token icons) → clear conversion paths (dual CTAs)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Stablecoin API: The gateway to all stablecoins",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Start your integration",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Documentation",
+            "style": "secondary-button",
+            "placement": "bottom left, adjacent to primary"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Institutional liquidity is coming onchain with stablecoins. LI.FI gives you instant access to every stablecoins, on any chain. The only API you need for global stablecoin value transfer.",
+            "context": "Main body text below headline",
+            "purpose": "Explains the value proposition and use case clearly"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M Series A",
+          "Multiple stablecoin tokens visualized with icons"
+        ],
+        "trustSignals": [
+          "$29M Series A extension led by Multicoin and CoinFund",
+          "Named institutional investors in announcement"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-17-glacis.png",
+      "label": "Glacis",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6366F1",
+          "#E9D5FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (60+ px), black, high contrast",
+          "bodyStyle": "Regular sans-serif, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-headline",
+            "description": "Large black text explaining token access capability",
+            "position": "left half",
+            "notable": "Emphasis on 'Interop token standard' shows technical specificity"
+          },
+          {
+            "type": "mockup-illustration",
+            "description": "Terminal/bridge UI mockup with token selector buttons (NTT, ITS, OFT, WARP) and interop standard logos",
+            "position": "right half",
+            "notable": "Technical mockup showing actual product interface; gradient background; labeled components"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue 'Start your integration' button",
+            "position": "bottom left",
+            "notable": "Consistent with previous screen"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates left; supporting text explains benefit; right side shows tangible product interface; CTA at natural endpoint",
+        "innovativeElements": [
+          "Product mockup integrated into hero showing actual UI components",
+          "Token standard logos (OFT, ITS, NTT, WARP, etc.) providing credibility"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Li.Fi's Interop token standard support and how it unlocks new token ecosystems",
+        "entryPoints": [
+          "Navigation from main site",
+          "Product pages menu"
+        ],
+        "exitPoints": [
+          "Start your integration → onboarding",
+          "Navigation menu to other features",
+          "Sign in button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start your integration button",
+            "action": "Initiates developer onboarding"
+          }
+        ],
+        "informationArchitecture": "Headline states capability → body explains mechanism/benefit → mockup demonstrates implementation → CTA to begin",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Access every token issued on any Interop token standard",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Start your integration",
+            "style": "primary-button",
+            "placement": "bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Unlock hundreds of new tokens powered by the latest interop technology, enabling limitless, zero-slippage value transfer across chains via a burn-and-mint transfer mechanism.",
+            "context": "Body text below headline",
+            "purpose": "Explains technical mechanism and benefits"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "References to established token standards (OFT, ITS, NTT, WARP, HASPI)",
+          "Technical credibility via bridge mechanism explanation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-18-lifi-scan.png",
+      "label": "LI.FI Scan",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6366F1",
+          "#FFFFFF",
+          "#F3F4F6"
+        ],
+        "typography": {
+          "headingStyle": "Medium-weight sans-serif, gray color for column headers",
+          "bodyStyle": "Regular sans-serif, dark gray for data rows",
+          "dataStyle": "Monospace for wallet addresses; bold for amounts; token symbols with icons"
+        },
+        "components": [
+          {
+            "type": "header-bar",
+            "description": "Li.Fi SCAN logo on left; Connect button and menu on right",
+            "position": "top",
+            "notable": "Connect button is blue/gradient with icon; hamburger menu for mobile"
+          },
+          {
+            "type": "search-bar",
+            "description": "Search field with placeholder 'Search transfers or wallets'",
+            "position": "below header, full-width",
+            "notable": "Clean, minimal design with magnifying glass icon"
+          },
+          {
+            "type": "table-data",
+            "description": "Multi-column table showing transfer data (hash, from token, to token, via platform)",
+            "position": "main content area",
+            "notable": "Columns: transaction hash, from token (with icon/amount/chain), to token (with icon/amount/chain), via (with logo)"
+          },
+          {
+            "type": "success-indicator",
+            "description": "Green checkmark icon for completed transfers",
+            "position": "left of each row",
+            "notable": "Clear visual confirmation of transaction status"
+          },
+          {
+            "type": "info-tooltip",
+            "description": "Info icon next to 'Latest transfers' column header",
+            "position": "table header",
+            "notable": "Provides context about data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header and search command attention; table organized left-to-right; success indicators provide quick scan; token icons aid quick recognition",
+        "innovativeElements": [
+          "Real-time transfer feed showing live bridge activity",
+          "Token icons with dual-badge showing source and destination chains",
+          "Bridge partner logos (Nordtern Finance, Kyberswap, Relay) providing transparency"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor recent cross-chain token transfers and stablecoin bridges in real-time",
+        "entryPoints": [
+          "Li.Fi SCAN product page",
+          "Dedicated app/service URL"
+        ],
+        "exitPoints": [
+          "Search transfers or wallets → filtered results",
+          "Connect button → wallet connection",
+          "Menu button → navigation",
+          "Click on transfer row → detailed view (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Filters transfer list by transaction hash or wallet address"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiates wallet connection for personalized view"
+          },
+          {
+            "element": "Menu button (hamburger)",
+            "action": "Opens navigation menu"
+          },
+          {
+            "element": "Table rows",
+            "action": "Likely clickable for transaction details (implied)"
+          }
+        ],
+        "informationArchitecture": "Top navigation → search functionality → real-time data feed organized in tabular format. Each row shows complete transfer context: source token → destination token → bridge provider",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Timestamp for each transfer (relative time: 'X seconds ago')",
+          "Success checkmarks indicating completed transactions"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search transfers or wallets",
+            "context": "Search bar placeholder",
+            "purpose": "Guides user on search functionality"
+          },
+          {
+            "text": "Latest transfers",
+            "context": "Table section header",
+            "purpose": "Labels the data being displayed"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0x39e9...0f57 (truncated wallet hash)",
+          "0.0000057 ETH ($0.0120)",
+          "0.0116 Bridged USDC ($0.0117)",
+          "10.6450 River on BSC ($149.5636)",
+          "148.6904 USDT on BSC ($148.6603)",
+          "Timestamps: '-32371 seconds ago' format"
+        ],
+        "trustSignals": [
+          "Real-time transaction feed with success checkmarks",
+          "Named bridge providers (Nordtern Finance, Kyberswap, Relay) showing ecosystem integration",
+          "Complete transparency of from/to tokens and chains"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-13-widget.png",
+      "label": "Widget",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B3CC7",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra large (72px+), black, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium weight, dark gray, comfortable line-height",
+          "dataStyle": "Monospace or semi-bold for crypto amounts and prices, small secondary text for conversion rates"
+        },
+        "components": [
+          {
+            "type": "Announcement Banner",
+            "description": "Pink/magenta banner at top with funding news and link",
+            "position": "Top full-width",
+            "notable": "High visibility placement for company milestone"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal menu with dropdown sections and primary CTA button",
+            "position": "Top, below banner",
+            "notable": "Blue 'Sign in to Partner Portal' CTA on right"
+          },
+          {
+            "type": "Swap Widget",
+            "description": "Interactive exchange interface showing token pairs, amounts, and routes",
+            "position": "Right panel, centered vertically",
+            "notable": "Shows multiple swap options with slippage, timing, and exchange button"
+          },
+          {
+            "type": "Value Proposition Text",
+            "description": "Large headline with supporting paragraph about bridging/swapping capabilities",
+            "position": "Left panel",
+            "notable": "Action-oriented language emphasizing no backend requirement"
+          },
+          {
+            "type": "Call-to-Action Buttons",
+            "description": "Two buttons: primary blue and secondary outlined",
+            "position": "Left panel below text",
+            "notable": "Clear action hierarchy with primary 'Start your integration'"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side establishes value prop with large bold text; right side provides immediate interactive proof with working widget",
+        "innovativeElements": [
+          "Live functional widget embedded in marketing page (not just mockup)",
+          "Real-time pricing and slippage display within hero section",
+          "Split-screen design pairing copywriting with working product demo"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand LI.FI widget capabilities and begin integration process",
+        "entryPoints": [
+          "Direct link from announcement banner",
+          "Navigation from main menu (Products)",
+          "Organic search for 'crypto swap widget'"
+        ],
+        "exitPoints": [
+          "Start your integration button",
+          "Documentation link",
+          "Navigation to other product sections",
+          "Sign in to Partner Portal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "From/To token selector",
+            "action": "Opens dropdown to select blockchain and token"
+          },
+          {
+            "element": "Amount input field",
+            "action": "Allows entering send amount with MAX button"
+          },
+          {
+            "element": "Wallet selector",
+            "action": "Displays available wallets and allows selection"
+          },
+          {
+            "element": "Exchange button",
+            "action": "Initiates transaction flow"
+          },
+          {
+            "element": "Settings icon",
+            "action": "Opens configuration options"
+          }
+        ],
+        "informationArchitecture": "Hero messaging + embedded working example + dual CTAs (educational + action)",
+        "frictionPoints": [
+          "Widget example shows high slippage (0.1%) which might concern first-time users",
+          "Multiple swap options with different rates requires comparison effort"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bridge, swap, and onboard users from any chain",
+        "subheadline": "The Widget lets you instantly embed same-chain and cross-chain swaps into your app. No backend required. It's fully customizable and live on 60+ chains.",
+        "ctas": [
+          {
+            "text": "Start your integration",
+            "style": "primary-button",
+            "placement": "Left panel below value prop"
+          },
+          {
+            "text": "Documentation",
+            "style": "secondary-button",
+            "placement": "Left panel below value prop"
+          },
+          {
+            "text": "Exchange",
+            "style": "primary-button",
+            "placement": "Right widget footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Best return",
+            "context": "Exchange option label",
+            "purpose": "Highlight recommended swap route"
+          },
+          {
+            "text": "Fastest",
+            "context": "Wallet option label",
+            "purpose": "Indicate speed advantage of MetaMask option"
+          },
+          {
+            "text": "MAX",
+            "context": "Amount input field",
+            "purpose": "Quick action to use full available balance"
+          },
+          {
+            "text": "1 USDC = 0.00026 ETH",
+            "context": "Exchange rate display",
+            "purpose": "Provide real-time conversion context"
+          }
+        ],
+        "tone": "professional-technical, confident, action-oriented",
+        "dataFormatting": [
+          "$100 (USD amount)",
+          "0.0449 (token amount to 4 decimals)",
+          "$99.85 (value display)",
+          "2645.15 (large number formatting)",
+          "0.1% (percentage slippage)"
+        ],
+        "trustSignals": [
+          "Live on 60+ chains",
+          "No backend required",
+          "Fully customizable",
+          "Working widget embedded (proof of functionality)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-14-lifi-composer.png",
+      "label": "LI.FI Composer",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light with dark accent",
+        "primaryColors": [
+          "#FFFFFF",
+          "#001A4D",
+          "#E6B3FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, variable sizes, black for page headline, white for hero text",
+          "bodyStyle": "Regular sans-serif, medium gray, readable line-height",
+          "dataStyle": "Light gray for dates, social sharing icons"
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Collapsible accordion menu with 4 main sections",
+            "position": "Left side, full height",
+            "notable": "Clean typography-based navigation without icons"
+          },
+          {
+            "type": "Hero Image Card",
+            "description": "Dark navy background with pink/magenta 3D isometric icon and product name",
+            "position": "Main content area, top",
+            "notable": "Eye-catching 3D icon design; dark background creates contrast with light page"
+          },
+          {
+            "type": "Page Headline",
+            "description": "Large bold black text below hero card",
+            "position": "Main content area",
+            "notable": "Aligns with hero card width, establishes visual balance"
+          },
+          {
+            "type": "Descriptive Subheading",
+            "description": "Medium gray text describing core functionality",
+            "position": "Below headline",
+            "notable": "Concise value prop in one line"
+          },
+          {
+            "type": "Social Sharing Footer",
+            "description": "Row of social icons (X, LinkedIn, Telegram, Link) and date",
+            "position": "Bottom right",
+            "notable": "Subtle sharing options without prominent CTA"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Sidebar provides structural navigation; hero card and large headline dominate main area; supporting text and sharing options in bottom area",
+        "innovativeElements": [
+          "3D isometric icon for product visualization",
+          "Minimalist sidebar navigation with collapsible sections",
+          "Dark card on light background creates dramatic visual focus"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-announcement",
+        "userIntent": "Learn about new LI.FI Composer product offering",
+        "entryPoints": [
+          "Navigation from main menu (Products or Updates)",
+          "Direct announcement link",
+          "From home page feature section"
+        ],
+        "exitPoints": [
+          "Sidebar navigation to other sections",
+          "Social sharing (X, LinkedIn, Telegram)",
+          "Copy link to share",
+          "Expand accordion sections for more detail"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar accordion headings",
+            "action": "Expand/collapse content sections"
+          },
+          {
+            "element": "Social sharing icons",
+            "action": "Share announcement or copy link"
+          }
+        ],
+        "informationArchitecture": "Sidebar categories provide browse context; main area focuses on single product announcement; date indicates recency",
+        "frictionPoints": [
+          "No visible CTA button for next action (documentation, demo, etc.)",
+          "Hero card doesn't link to product details or integration guide"
+        ],
+        "progressIndicators": [
+          "Publication date: 13 Jan 2026"
+        ]
+      },
+      "copy": {
+        "headline": "Introducing LI.FI Composer",
+        "subheadline": "Compose Any DeFi Workflow Into a Single Transaction",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "13 Jan 2026",
+            "context": "Bottom right of content",
+            "purpose": "Signal recency of announcement"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Dated announcement (13 Jan 2026)",
+          "Part of broader product ecosystem"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-15-lifi-deposit.png",
+      "label": "LI.FI Deposit",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light with dark accent",
+        "primaryColors": [
+          "#FFFFFF",
+          "#001A4D",
+          "#E6B3FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, variable sizes, black for page headline, white for hero text",
+          "bodyStyle": "Regular sans-serif, medium gray",
+          "dataStyle": "Large bold numbers in widget mockup, small secondary text for conversion rates"
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Collapsible accordion menu with 4 main sections",
+            "position": "Left side, full height",
+            "notable": "Consistent with previous product announcement page"
+          },
+          {
+            "type": "Hero Image Card",
+            "description": "Dark navy background with 3D isometric icon and product name, includes widget mockup overlay",
+            "position": "Main content area, top",
+            "notable": "Shows functional widget preview with deposit flow; icon is pink/magenta circular design"
+          },
+          {
+            "type": "Deposit Widget Mockup",
+            "description": "White card showing token selection, amount input (100), slippage options, and Deposit button",
+            "position": "Overlaid on right side of hero card",
+            "notable": "Interactive element mockup demonstrates actual user experience"
+          },
+          {
+            "type": "Page Headline",
+            "description": "Large bold black text below hero card",
+            "position": "Main content area",
+            "notable": "Multi-line headline establishing feature benefit"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero card with integrated widget mockup anchors attention; large headline reinforces product positioning",
+        "innovativeElements": [
+          "3D circular icon design for deposits product",
+          "Widget mockup integrated into hero card rather than standalone",
+          "Shows real-world UI of product within announcement"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-announcement",
+        "userIntent": "Learn about LI.FI Deposit new transaction type",
+        "entryPoints": [
+          "Navigation from main menu (Products or Updates)",
+          "Link from home page or Composer announcement",
+          "Product discovery"
+        ],
+        "exitPoints": [
+          "Sidebar navigation sections",
+          "Implied CTA below fold",
+          "Scroll to read full announcement"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar accordion headings",
+            "action": "Expand/collapse sections"
+          },
+          {
+            "element": "Widget mockup",
+            "action": "Visual preview (non-interactive in this context)"
+          }
+        ],
+        "informationArchitecture": "Sidebar for navigation context; centered hero card with embedded mockup; headline emphasizing new capability",
+        "frictionPoints": [
+          "No visible CTA for next action",
+          "Widget mockup is non-functional (static mockup only)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Introducing LI.FI Deposit: A New Transaction Type for",
+        "subheadline": "One Click Deposits. From Anywhere",
+        "ctas": [
+          {
+            "text": "Deposit",
+            "style": "primary-button",
+            "placement": "Bottom of widget mockup"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "100",
+            "context": "Send amount in widget",
+            "purpose": "Show example transaction size"
+          },
+          {
+            "text": "$100.00",
+            "context": "USD value display",
+            "purpose": "Provide fiat conversion context"
+          },
+          {
+            "text": "25% 50% 75% MAX",
+            "context": "Slippage/amount selection buttons",
+            "purpose": "Quick preset options for user convenience"
+          },
+          {
+            "text": "Powered by LI.FI",
+            "context": "Widget footer",
+            "purpose": "Attribution and branding"
+          }
+        ],
+        "tone": "professional-technical, user-friendly",
+        "dataFormatting": [
+          "100 (simple amount)",
+          "$100.00 (USD value)",
+          "0.00044 (small decimal amount)",
+          "$0.03 42s (value and timing)"
+        ],
+        "trustSignals": [
+          "Functional widget mockup demonstrating real UX",
+          "Multi-chain support implied (USDC to stETH)",
+          "LI.FI attribution on widget"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-19-lifi-scan-scrolled-1.png",
+      "label": "LI.FI Scan — scrolled 1",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#00D084",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "Monospace truncated addresses (6-8 chars) in bold, ~14px",
+          "bodyStyle": "Small secondary text with timestamps and chain info, ~12px gray",
+          "dataStyle": "Large numeric values in dark text, token amounts with currency symbols and $ USD equivalents in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "checkmark-badge",
+            "description": "Green checkmark on left of each row indicating verification/success status",
+            "position": "far left of each transaction row",
+            "notable": "Consistent visual confidence signal across all items"
+          },
+          {
+            "type": "token-icon-pair",
+            "description": "Dual token icons showing trading pair with colored badges",
+            "position": "center-left of each row",
+            "notable": "Small numbered badges indicate blockchain network"
+          },
+          {
+            "type": "dex-platform-badge",
+            "description": "Right-aligned service/DEX identifier (Kyberswap, Jupiter, Fly, Relay)",
+            "position": "far right of each row",
+            "notable": "Branded logos and names, color-coded by platform"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Horizontal scanning: address → timestamp → token pair with value → token pair with value → DEX platform. Green checkmarks create left-to-right flow.",
+        "innovativeElements": [
+          "Dual-value display showing paired token amounts side-by-side",
+          "Blockchain network indicators as small numbered badges on token icons",
+          "Platform branding integrated into row design rather than separated"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review recent blockchain transactions/scans and cross-chain swap data across multiple DEXs and networks",
+        "entryPoints": [
+          "Navigation from main dashboard or home",
+          "Search/filter results showing scanned transactions"
+        ],
+        "exitPoints": [
+          "Click individual row for transaction details",
+          "Click DEX platform badge to view on platform",
+          "Scroll to load more transactions",
+          "Navigate back to dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction row",
+            "action": "Click to view full transaction details or initiate swap"
+          },
+          {
+            "element": "DEX platform badge",
+            "action": "Navigate to external DEX or platform details"
+          },
+          {
+            "element": "Token icon",
+            "action": "Possibly filter or view token information"
+          }
+        ],
+        "informationArchitecture": "Flat list of transactions ordered chronologically (most recent first), each row showing source address, primary swap pair, secondary pair, and executing platform. Timestamp shows recency relative to current time.",
+        "frictionPoints": [
+          "Monospace address truncation reduces readability - unclear which addresses are user's vs counterparties",
+          "No obvious way to filter by platform or blockchain network from this view",
+          "Clicking behavior unclear - unclear if rows are interactive or require specific element click"
+        ],
+        "progressIndicators": [
+          "Green checkmarks indicate transaction completion status",
+          "Timestamps show relative recency (32357 seconds ago)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "-32357 seconds ago • 15 Feb 2026 (04:04 UTC)",
+            "context": "Below transaction address",
+            "purpose": "Indicates transaction timestamp and relative age"
+          },
+          {
+            "text": "$483.8481 • Hachiko Inu on BSC",
+            "context": "Below first token amount",
+            "purpose": "Provides USD valuation and token name/network context"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "$483.8481 (USD conversion with 4 decimal places)",
+          "0.0024 (token amount with 4 decimal places)",
+          "-32357 seconds ago (relative timestamp)"
+        ],
+        "trustSignals": [
+          "Green checkmarks on all rows suggesting verified/successful transactions",
+          "Explicit blockchain network naming (BSC, Solana, Base, Arbitrum, Ethereum, Polygon)",
+          "Multiple DEX platform names indicate aggregation across trusted sources"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-20-lifi-scan-scrolled-2.png",
+      "label": "LI.FI Scan — scrolled 2",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#00D084",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "Monospace truncated addresses in bold, ~14px",
+          "bodyStyle": "Small secondary text with timestamps, ~12px gray",
+          "dataStyle": "Large numeric values in dark text, token amounts with USD equivalents in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "checkmark-badge",
+            "description": "Green checkmark on left of each row",
+            "position": "far left",
+            "notable": "Consistent status indicator"
+          },
+          {
+            "type": "token-pair-display",
+            "description": "Two token icons with numeric values and USD equivalents",
+            "position": "center columns",
+            "notable": "Some values display very large numbers (1034786.2025, 8728848.9829) suggesting either memecoin volatility or display quirks"
+          },
+          {
+            "type": "dex-platform-badge",
+            "description": "Service identifier with logo",
+            "position": "far right",
+            "notable": "Expanded platform variety including GasZip, OKX Dex Aggregator, SushiSwap Aggregator, Mayan (Swift)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Left-to-right: checkmark → address → token value pair → token value pair → platform. Green checkmarks anchor visual attention.",
+        "innovativeElements": [
+          "Platform aggregation visualization showing diverse DEX ecosystem",
+          "Multi-chain routing indicators through blockchain tags",
+          "Very large token quantities suggest sophisticated trading or memecoin interactions"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Scan and review transactions across more diverse platforms and token types",
+        "entryPoints": [
+          "Scroll continuation from previous screen",
+          "Filter or search showing different transaction subset"
+        ],
+        "exitPoints": [
+          "Click transaction row for details",
+          "Click platform badge",
+          "Continue scrolling for more transactions"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction row",
+            "action": "Open transaction details or execute related action"
+          },
+          {
+            "element": "Platform badge (GasZip, OKX Dex, SushiSwap, Mayan)",
+            "action": "Navigate to platform or view execution details"
+          }
+        ],
+        "informationArchitecture": "Same horizontal list format, chronologically ordered, showing broader platform ecosystem including aggregators and routing services",
+        "frictionPoints": [
+          "Very large token quantities (millions+) could indicate data errors or confusing token decimal displays",
+          "Multiple aggregator services (OKX Dex Aggregator, SushiSwap Aggregator) without clear distinction in functionality",
+          "No visual indication of transaction direction (buy vs sell) or user role"
+        ],
+        "progressIndicators": [
+          "Green checkmarks on all visible rows",
+          "Continuous timestamp progression showing scrolling through transaction history"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "-32340 seconds ago • 15 Feb 2026 (04:04 UTC)",
+            "context": "Timestamp row",
+            "purpose": "Transaction recency indicator"
+          },
+          {
+            "text": "$0.3614 • The Next Bitcoin on Solana",
+            "context": "Below token value",
+            "purpose": "USD context and humorous/branded token name"
+          },
+          {
+            "text": "$0.3560 • cox the cat on Solana",
+            "context": "Second token in pair",
+            "purpose": "Alternative memecoin or community token identification"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "2020.4700 (large token amount with 4 decimals)",
+          "1034786.2025 (very large quantity suggesting memecoin or decimal confusion)",
+          "$0.3614 (USD equivalent)"
+        ],
+        "trustSignals": [
+          "Green checkmarks across all transactions",
+          "Named blockchain networks (Solana, Base, Ethereum, Arbitrum, Polygon)",
+          "Branded platform names including established DEXs and aggregators"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-21-lifi-scan-scrolled-3.png",
+      "label": "LI.FI Scan — scrolled 3",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#00D084",
+          "#7C3AED"
+        ],
+        "typography": {
+          "headingStyle": "Monospace truncated addresses in bold, ~14px",
+          "bodyStyle": "Small secondary text with timestamps, ~12px gray",
+          "dataStyle": "Large numeric values, USD equivalents in gray"
+        },
+        "components": [
+          {
+            "type": "checkmark-badge",
+            "description": "Green checkmark status indicator",
+            "position": "far left of each row",
+            "notable": null
+          },
+          {
+            "type": "token-pair-display",
+            "description": "Two columns of token icons and values",
+            "position": "center",
+            "notable": "Continues pattern of large token quantities and varied decimal precision"
+          },
+          {
+            "type": "platform-badge",
+            "description": "Service/DEX identifier with logo",
+            "position": "far right",
+            "notable": "Includes Relay, Kyberswap, Nordsten Finance - varied platform ecosystem"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Consistent left-to-right scanning with green checkmarks creating entry point",
+        "innovativeElements": [
+          "Introduction of Nordsten Finance as emerging platform",
+          "Continued tracking of multi-network transaction flow"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Continue reviewing transaction history with focus on diverse platform ecosystem",
+        "entryPoints": [
+          "Scroll continuation from previous sections"
+        ],
+        "exitPoints": [
+          "Click transaction row",
+          "Click platform badge",
+          "Continue scrolling"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction row",
+            "action": "Open details or execute related function"
+          },
+          {
+            "element": "Platform badge",
+            "action": "Navigate to platform"
+          }
+        ],
+        "informationArchitecture": "Continued chronological transaction list with consistent row format and data structure",
+        "frictionPoints": [
+          "Very large token quantities continue (1336064.6576, 872848.9829) without explanation",
+          "Some values show 4 decimals while others show up to 8 (0.00010, 0.2054) - inconsistent precision",
+          "No transaction direction indicators (buy/sell/swap)"
+        ],
+        "progressIndicators": [
+          "Green checkmarks indicating all transactions completed successfully",
+          "Timestamps continue declining (32332, 32330, 32326, 32325, 32320 seconds ago)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "-32330 seconds ago • 15 Feb 2026 (04:04 UTC)",
+            "context": "Transaction timestamp",
+            "purpose": "Indicates when transaction occurred"
+          },
+          {
+            "text": "$52.9946 • USD Coin on Base",
+            "context": "Below token amount",
+            "purpose": "USD equivalent and stablecoin/blockchain context"
+          },
+          {
+            "text": "$52.6789 • Plume on Plume",
+            "context": "Second token in pair",
+            "purpose": "Token name and native blockchain context (Plume network)"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "1336064.6576 (very large quantity)",
+          "872848.9829 (millions-scale token amount)",
+          "0.00010 (8-decimal precision for small amounts)",
+          "$304.2196 (USD with 4 decimals)"
+        ],
+        "trustSignals": [
+          "Green checkmarks on all visible transactions",
+          "Explicit blockchain network naming throughout",
+          "Varied but established platform names (Relay, Kyberswap, Nordsten Finance)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-22-lifi-scan-scrolled-4.png",
+      "label": "LI.FI Scan — scrolled 4",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1e88e5"
+        ],
+        "typography": {
+          "headingStyle": "monospace font, uppercase, truncated hex addresses",
+          "bodyStyle": "small sans-serif for timestamps and metadata",
+          "dataStyle": "large numeric values with currency symbols and decimal precision"
+        },
+        "components": [
+          {
+            "type": "transaction-row",
+            "description": "Horizontal card showing wallet address, timestamp, and paired token trades",
+            "position": "full-width rows stacked vertically",
+            "notable": "checkmark icon indicates confirmed/validated state"
+          },
+          {
+            "type": "token-pair-display",
+            "description": "Left column shows base token amount with icon, right column shows destination token with amount and blockchain",
+            "position": "center of each row",
+            "notable": "consistent icon badges for different tokens and blockchains"
+          },
+          {
+            "type": "dex-provider-badge",
+            "description": "Right-aligned circular logo with dex name (Kyberswap, Relay, Nordtsern Finance)",
+            "position": "far right of each row",
+            "notable": "branded color logos make provider instantly recognizable"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "wallet address as primary identifier, amounts emphasized in size, dex provider secondary",
+        "innovativeElements": [
+          "Real-time transaction scanning with sub-second timestamp precision",
+          "Multi-column layout efficiently displays source, destination, and provider in one line"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor real-time swap transactions across multiple chains and DEXes",
+        "entryPoints": [
+          "From LI.FI home navigation",
+          "Direct scan feature access"
+        ],
+        "exitPoints": [
+          "Click transaction for details",
+          "Navigate to different sections",
+          "Filter/search transactions"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transaction row",
+            "action": "Likely clickable to view transaction details or trace route"
+          },
+          {
+            "element": "DEX provider badge",
+            "action": "May filter transactions by provider"
+          }
+        ],
+        "informationArchitecture": "Time-ordered list of transactions with parallel columns showing source token, amount, destination token, and provider",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Timestamp relative to now (e.g. '-32327 seconds ago')",
+          "Absolute timestamp with date and UTC time"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "-32327 seconds ago • 15 Feb 2026 (04:04 UTC)",
+            "context": "Below each wallet address",
+            "purpose": "Show transaction recency and exact timestamp"
+          },
+          {
+            "text": "$0.2090 • ETH on MegaETH",
+            "context": "Below token amount",
+            "purpose": "Display token value and blockchain network"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0.2090",
+          "0.00010",
+          "1336064.6576",
+          "$304.2196"
+        ],
+        "trustSignals": [
+          "Checkmark icon indicating transaction validation",
+          "Real-time data from multiple recognized DEXes (Kyberswap, Relay, Nordtsern Finance)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-23-brand-guidelines.png",
+      "label": "Brand guidelines",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f0e5ff",
+          "#4a3f83"
+        ],
+        "typography": {
+          "headingStyle": "bold black sans-serif, extra-large (72px+), single word per line",
+          "bodyStyle": "regular gray sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Pink/magenta banner at top with funding news",
+            "position": "top full-width",
+            "notable": "Uses underline for link emphasis, underlined 'Read Here' CTA"
+          },
+          {
+            "type": "header-navigation",
+            "description": "Horizontal nav bar with logo, dropdown menus, and primary CTA button",
+            "position": "below banner",
+            "notable": "Clean B2B layout with developer-focused nav items"
+          },
+          {
+            "type": "hero-illustration",
+            "description": "Black geometric chevron icon with proportional measurements shown (1/3 divisions)",
+            "position": "right side, background",
+            "notable": "Large decorative element showing brand precision and design system"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left side text content dominates, right side illustration is secondary context",
+        "innovativeElements": [
+          "Geometric brand mark with mathematical proportions displayed visually",
+          "Clean B2B landing page design with minimal distractions"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about LI.FI's brand identity and download brand assets",
+        "entryPoints": [
+          "From Resources or Brand section in main nav"
+        ],
+        "exitPoints": [
+          "Download brand assets button",
+          "Sign in to Partner Portal",
+          "Navigate via dropdown menus"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download brand assets button",
+            "action": "Initiate download of brand kit/logos"
+          },
+          {
+            "element": "Navigation dropdown menus",
+            "action": "Reveal submenu items"
+          },
+          {
+            "element": "Read Here link",
+            "action": "Navigate to funding announcement details"
+          }
+        ],
+        "informationArchitecture": "Hero section with value proposition and CTA, supported by visual brand mark demonstration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Brand guidelines",
+        "subheadline": "Use these guidelines to represent LI.FI in your marketing clearly and consistently.",
+        "ctas": [
+          {
+            "text": "Download brand assets",
+            "style": "primary-button",
+            "placement": "below subheadline, left side"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI has announced a $29M Series A extension, led by Multicoin and CoinFund. Read Here.",
+            "context": "Top banner",
+            "purpose": "Drive awareness of recent funding milestone"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M"
+        ],
+        "trustSignals": [
+          "Series A funding from recognizable VCs (Multicoin, CoinFund)",
+          "Official brand guidelines offering"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-24-how-it-works.png",
+      "label": "How it works",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f0e5ff",
+          "#4a3f83",
+          "#1e88e5",
+          "#e88dd9"
+        ],
+        "typography": {
+          "headingStyle": "bold black sans-serif, extra-large, line breaks for emphasis",
+          "bodyStyle": "regular gray sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Pink/magenta banner with funding update",
+            "position": "top full-width",
+            "notable": "Consistent across multiple pages"
+          },
+          {
+            "type": "header-navigation",
+            "description": "Standard horizontal nav with menus and CTA",
+            "position": "below banner",
+            "notable": "Consistent navigation pattern"
+          },
+          {
+            "type": "architecture-diagram",
+            "description": "Flowchart showing dapp/widget, token swap, bridge, and dex components with labeled connections",
+            "position": "right side",
+            "notable": "Minimalist line-based diagram with color-coded components (blue dex boxes, pink bridge box)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline on left draws eye first, subheadline supports, CTA button secondary, architecture diagram on right provides visual context",
+        "innovativeElements": [
+          "Technical architecture diagram using simple geometric shapes and labeled connections",
+          "Color-coding of protocol components (blue for DEX, pink for bridge) makes system flow clear"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand how LI.FI protocol works and get started with the widget",
+        "entryPoints": [
+          "From Products or Use cases in main navigation"
+        ],
+        "exitPoints": [
+          "Get our widget in 5 mins here button",
+          "Sign in to Partner Portal",
+          "Navigate via main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get our widget in 5 mins here button",
+            "action": "Navigate to widget setup/installation guide"
+          },
+          {
+            "element": "Architecture diagram",
+            "action": "May be interactive or just illustrative"
+          }
+        ],
+        "informationArchitecture": "Problem-solution format: headline presents value proposition, subheadline provides technical detail, CTA drives conversion, diagram educates on mechanics",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Go multi-chain with LI.FI, now!",
+        "subheadline": "A bridge aggregation protocol with DEX connectivity and cross-chain data messaging capabilities.",
+        "ctas": [
+          {
+            "text": "Get our widget in 5 mins here",
+            "style": "primary-button",
+            "placement": "below subheadline, left side"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI has announced a $29M Series A extension, led by Multicoin and CoinFund. Read Here.",
+            "context": "Top banner",
+            "purpose": "Highlight recent funding milestone"
+          },
+          {
+            "text": "your_dapp",
+            "context": "Architecture diagram, left component",
+            "purpose": "Label integration point"
+          },
+          {
+            "text": "your_widget",
+            "context": "Architecture diagram, center component",
+            "purpose": "Show embedded widget"
+          },
+          {
+            "text": "desired_token_y",
+            "context": "Architecture diagram, user input area",
+            "purpose": "Show user token selection parameter"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "$29M"
+        ],
+        "trustSignals": [
+          "Series A extension funding from Multicoin and CoinFund",
+          "Technical credibility through detailed protocol architecture explanation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-26-status-scrolled-1.png",
+      "label": "Status — scrolled 1",
+      "flowType": "Home",
+      "step": 26,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#00C853"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large and prominent",
+          "bodyStyle": "Regular sans-serif, medium weight for secondary text",
+          "dataStyle": "Large percentage values in green for uptime metrics, smaller gray text for time periods"
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "Service uptime indicators with percentage and status",
+            "position": "top section",
+            "notable": "Dual-row layout showing API and Web(B2C) production uptime"
+          },
+          {
+            "type": "bar-chart",
+            "description": "Horizontal stacked bar chart showing operational status over time",
+            "position": "inline with metrics",
+            "notable": "Green bars indicate operational periods, orange indicates incidents"
+          },
+          {
+            "type": "stat-group",
+            "description": "Four metric cards showing uptime across different timeframes",
+            "position": "middle section under 'Overall Uptime'",
+            "notable": "Grid layout with 24h, 7d, 30d, and 90d comparisons"
+          },
+          {
+            "type": "empty-state",
+            "description": "Message indicating no status updates in timeframe",
+            "position": "bottom section",
+            "notable": "Light gray text with link to status update history"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Metrics arranged vertically with largest numbers at top of cards, supporting text below",
+        "innovativeElements": [
+          "Color-coded operational status bars showing historical uptime granularity",
+          "Multiple timeframe comparison for uptime context"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor service reliability and uptime metrics",
+        "entryPoints": [
+          "Status page link from navigation",
+          "Direct bookmark to status page",
+          "Alert notification about service issues"
+        ],
+        "exitPoints": [
+          "Status update history link",
+          "Navigation to other sections via header",
+          "Fullscreen mode toggle",
+          "Alert sound settings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Fullscreen mode button",
+            "action": "Expands status page to fullscreen view"
+          },
+          {
+            "element": "Alert sound toggle",
+            "action": "Enables/disables audio notifications for incidents"
+          },
+          {
+            "element": "Status update history link",
+            "action": "Navigates to historical status change log"
+          },
+          {
+            "element": "UptimeRobot branding",
+            "action": "Credits status monitoring service"
+          }
+        ],
+        "informationArchitecture": "Real-time uptime metrics at top, aggregated statistics in middle, historical updates at bottom",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Operational status badge (green dot)",
+          "Percentage uptime metrics",
+          "Visual bar indicators for incident history"
+        ]
+      },
+      "copy": {
+        "headline": "Overall Uptime",
+        "subheadline": "Status updates Last 30 days",
+        "ctas": [
+          {
+            "text": "Status update history",
+            "style": "text-link",
+            "placement": "bottom right of status updates section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last 24 hours",
+            "context": "Below first uptime metric",
+            "purpose": "Labels timeframe for metric"
+          },
+          {
+            "text": "Operational",
+            "context": "Green status indicator next to service names",
+            "purpose": "Indicates current service status"
+          },
+          {
+            "text": "There are no updates in the last 30 days.",
+            "context": "Status updates section",
+            "purpose": "Reassuring empty state message indicating stability"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "99.982%",
+          "99.988%",
+          "100.000%",
+          "99.985%"
+        ],
+        "trustSignals": [
+          "High uptime percentages (99.9%+)",
+          "Multiple services tracked (API, Web(B2C))",
+          "Historical data visualization",
+          "UptimeRobot monitoring service attribution"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "There are no updates in the last 30 days."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/lifi-home-27-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 27,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#5B5F7D"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif for 404 error code",
+          "bodyStyle": "Regular sans-serif, neutral color for error message",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Pink background banner with funding announcement",
+            "position": "top of page",
+            "notable": "High visibility for Series A extension news"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "below banner",
+            "notable": "Standard corporate site header with Partner Portal sign-in"
+          },
+          {
+            "type": "error-display",
+            "description": "Large 404 code with error message",
+            "position": "center of page",
+            "notable": "Minimal error state design with vertical separator between code and text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates left side, message text on right, minimal additional content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User encountered a non-existent or broken page link",
+        "entryPoints": [
+          "Broken link click",
+          "Manual URL entry",
+          "Redirect from deprecated page"
+        ],
+        "exitPoints": [
+          "Navigation menu items (Developers, Products, Use cases, Resources, Plans)",
+          "Logo click to return home",
+          "Partner Portal sign-in button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Return to homepage"
+          },
+          {
+            "element": "Sign in to Partner Portal",
+            "action": "Redirect to authentication"
+          },
+          {
+            "element": "Read Here link in banner",
+            "action": "Open Series A announcement article"
+          }
+        ],
+        "informationArchitecture": "Standard header navigation with error message in content area",
+        "frictionPoints": [
+          "No obvious recovery action or suggestion",
+          "No search functionality visible",
+          "No related pages or sitemap link"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "This page could not be found.",
+        "ctas": [
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top right of navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI has announced a $29M Series A extension, led by Multicoin and CoinFund.",
+            "context": "Pink banner at top",
+            "purpose": "Promotes latest funding news"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M"
+        ],
+        "trustSignals": [
+          "Named venture capital firms (Multicoin, CoinFund)",
+          "Series A extension announcement"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-1-contact-sales.png",
+      "label": "Contact sales",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#E8E8FF"
+        ],
+        "typography": {
+          "headingStyle": "Extra large bold sans-serif for main heading",
+          "bodyStyle": "Regular sans-serif for body paragraphs",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Pink background banner with Series A funding news",
+            "position": "top of page",
+            "notable": "Consistent branding across site sections"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Horizontal header with logo and navigation menu",
+            "position": "below banner",
+            "notable": "Standard B2B site navigation structure"
+          },
+          {
+            "type": "text-section",
+            "description": "Left column with headline and descriptive copy",
+            "position": "left side of main content",
+            "notable": "Contextual messaging about integration benefits and developer support"
+          },
+          {
+            "type": "form-group",
+            "description": "Multi-field contact form with text inputs and dropdowns",
+            "position": "right side of main content",
+            "notable": "Comprehensive business inquiry form with 10+ required fields"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading on left draws attention, form fields organized vertically on right with clear labels",
+        "innovativeElements": [
+          "Two-column layout combining narrative and form input",
+          "Required field indicators with red asterisks"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Submit sales inquiry to LI.FI enterprise team",
+        "entryPoints": [
+          "Partner Portal navigation",
+          "Contact sales link from plans page",
+          "Enterprise inquiry CTAs",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Form submission",
+          "Developer Support team link",
+          "Navigation menu items",
+          "Logo return to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "First Name input",
+            "action": "Capture user first name"
+          },
+          {
+            "element": "Last Name input",
+            "action": "Capture user last name"
+          },
+          {
+            "element": "Work Email input",
+            "action": "Capture business email address"
+          },
+          {
+            "element": "Purpose of Your Inquiry dropdown",
+            "action": "Select inquiry category"
+          },
+          {
+            "element": "Job Title input",
+            "action": "Capture user role"
+          },
+          {
+            "element": "Company Name input",
+            "action": "Capture organization name"
+          },
+          {
+            "element": "Company URL input",
+            "action": "Capture company website"
+          },
+          {
+            "element": "Company Category dropdown",
+            "action": "Select industry/category"
+          },
+          {
+            "element": "Country/Region input",
+            "action": "Capture location"
+          },
+          {
+            "element": "Telegram input",
+            "action": "Capture social contact method"
+          },
+          {
+            "element": "Let us know how we can help textarea",
+            "action": "Capture detailed inquiry message"
+          },
+          {
+            "element": "Developer Support team link",
+            "action": "Route non-sales inquiries to support"
+          }
+        ],
+        "informationArchitecture": "Left sidebar with contextual messaging and call-to-action, right sidebar with structured form fields organized by category (personal, company, inquiry details)",
+        "frictionPoints": [
+          "Large number of required fields (11+) may discourage completion",
+          "No visible submit button in provided screenshot",
+          "No progress indicator for multi-step form if applicable"
+        ],
+        "progressIndicators": [
+          "Required field asterisks indicate completion status"
+        ]
+      },
+      "copy": {
+        "headline": "Connect with our Sales Team",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          },
+          {
+            "text": "Developer Support team",
+            "style": "text-link",
+            "placement": "bottom of left column"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "First Name",
+            "context": "Form field label",
+            "purpose": "Identifies input field"
+          },
+          {
+            "text": "Last Name",
+            "context": "Form field label",
+            "purpose": "Identifies input field"
+          },
+          {
+            "text": "Work Email",
+            "context": "Form field label",
+            "purpose": "Identifies input field"
+          },
+          {
+            "text": "Purpose of Your Inquiry",
+            "context": "Form dropdown label",
+            "purpose": "Categorizes inquiry type"
+          },
+          {
+            "text": "Please Select",
+            "context": "Dropdown placeholder",
+            "purpose": "Invites selection from options"
+          },
+          {
+            "text": "Let us know how we can help you:",
+            "context": "Textarea label",
+            "purpose": "Prompts detailed message input"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M",
+          "$29M Series A"
+        ],
+        "trustSignals": [
+          "Series A funding round",
+          "Named investor firms (Multicoin, CoinFund)",
+          "Enterprise specialist positioning",
+          "Developer support availability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-8-faq.png",
+      "label": "FAQ",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#6366f1",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold (48px+)",
+          "bodyStyle": "Medium sans-serif, light gray, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Accordion/Collapsible",
+            "description": "Stacked FAQ items with expand/collapse arrows",
+            "position": "Main content area, full-width",
+            "notable": "Dark olive/brown background on accordion items creates subtle visual separation"
+          },
+          {
+            "type": "Search input",
+            "description": "Ask a question input field with send button",
+            "position": "Bottom of content area",
+            "notable": "Floating search bar with keyboard shortcut indicator (⌘I)"
+          },
+          {
+            "type": "Navigation tabs",
+            "description": "Horizontal tabs for different sections",
+            "position": "Top of page below logo",
+            "notable": "FAQs tab is actively highlighted"
+          },
+          {
+            "type": "Sidebar menu",
+            "description": "Vertical navigation with nested sections",
+            "position": "Left side",
+            "notable": "Current section 'Integration' is highlighted in blue"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading draws attention, accordion items are scannable with consistent sizing, search bar anchors the bottom",
+        "innovativeElements": [
+          "AI-powered 'Ask AI' button in top nav",
+          "Integrated search with question input at bottom"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, FAQ page",
+        "userIntent": "Find answers to common integration questions related to swapping and bridging",
+        "entryPoints": [
+          "FAQs tab navigation",
+          "Search functionality",
+          "Direct link to FAQ section"
+        ],
+        "exitPoints": [
+          "Click on accordion to expand answer",
+          "Search query submission",
+          "Navigate to other sections via sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accordion items",
+            "action": "Expand to reveal answer content"
+          },
+          {
+            "element": "Search input",
+            "action": "Submit question for AI assistance or search existing FAQs"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different FAQ categories or documentation sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - FAQs organized by category (General, Integration, Routing) with expandable Q&A pairs",
+        "frictionPoints": [
+          "Requires scrolling to see all FAQs",
+          "No visible indication of total questions or search results"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Integration",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Copy page",
+            "style": "ghost-button",
+            "placement": "Top right of main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ask a question...",
+            "context": "Search input placeholder",
+            "purpose": "Guides users to input their query"
+          },
+          {
+            "text": "⌘I",
+            "context": "Keyboard shortcut indicator in search",
+            "purpose": "Shows alternative way to access search"
+          }
+        ],
+        "tone": "professional-technical, clear and direct",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-swap-1-trading-widgetenable-trading-on-your-app-in-less-t.png",
+      "label": "Trading widgetEnable trading on your app in less t",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#6366f1",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold (48px+)",
+          "bodyStyle": "Medium sans-serif, light gray, 14-16px",
+          "dataStyle": "Code/API references with underlined links for standards (EIP-7702, EIP-5792, etc.)"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Large heading with subheading describing widget",
+            "position": "Top of main content",
+            "notable": "Clear value proposition: 'Cross-chain and on-chain swap and bridging UI toolkit'"
+          },
+          {
+            "type": "Bullet list",
+            "description": "Feature list with bullet points",
+            "position": "Main content area below hero",
+            "notable": "Includes technical standards (EIP-7702, EIP-5792, ERC-2612, etc.) and library names (Viem, Wallet Standard, Bigmi) as inline links"
+          },
+          {
+            "type": "Sidebar navigation",
+            "description": "Nested menu with categorized sections",
+            "position": "Left side",
+            "notable": "Multiple levels: Overview > Basic Setup > Advanced with contextual grouping"
+          },
+          {
+            "type": "Top navigation tabs",
+            "description": "Horizontal tabs for main sections",
+            "position": "Top below header",
+            "notable": "'Swap/Bridge Widget' tab is active and underlined"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero text dominates, bullet points create scannable content, technical links are emphasized, sidebar guides exploration",
+        "innovativeElements": [
+          "Embedded technical standards as interactive links",
+          "Deep sidebar structure for complex product documentation"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation, product overview",
+        "userIntent": "Understand LI.FI Widget capabilities and features for integration into their app",
+        "entryPoints": [
+          "Swap/Bridge Widget tab",
+          "Sidebar navigation from parent section",
+          "Direct documentation link"
+        ],
+        "exitPoints": [
+          "Click sidebar items for setup/configuration",
+          "Click 'Install Widget', 'Configure Widget', or 'Monetize Widget' sub-items",
+          "Navigate to other main sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different setup and configuration pages"
+          },
+          {
+            "element": "Inline links (EIP-7702, Viem, etc.)",
+            "action": "Open external reference or definition pages"
+          },
+          {
+            "element": "Top navigation tabs",
+            "action": "Switch between different product areas"
+          }
+        ],
+        "informationArchitecture": "Hierarchical documentation structure - Overview page explaining features, then nested sections for setup, customization, and advanced options",
+        "frictionPoints": [
+          "Large amount of text to scan",
+          "Multiple technical terms may require external link clicks for clarification"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LI.FI Widget Overview",
+        "subheadline": "Cross-chain and on-chain swap and bridging UI toolkit",
+        "ctas": [
+          {
+            "text": "Copy page",
+            "style": "ghost-button",
+            "placement": "Top right of content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI Widget features include:",
+            "context": "Section introducer before feature list",
+            "purpose": "Transitions from description to detailed features"
+          },
+          {
+            "text": "Ask a question...",
+            "context": "Search input at bottom",
+            "purpose": "Encourages user to search docs or ask for help"
+          }
+        ],
+        "tone": "professional-technical, educational, persuasive",
+        "dataFormatting": [
+          "Technical standards listed as codes: EIP-7702, EIP-5792, ERC-2612, EIP-712, Permit2",
+          "Library names: Viem, Wallet Standard, Bigmi"
+        ],
+        "trustSignals": [
+          "Industry-standard support (EIP-7702, EIP-5792, ERC-2612, EIP-712, Permit2)",
+          "Viem and Wallet Standard ecosystem integration"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-2-privacy.png",
+      "label": "Privacy",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#DA70D6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (H1 centered), black text",
+          "bodyStyle": "Regular sans-serif, medium line-height, dark gray/black body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Pink/magenta announcement bar with funding news and 'Read Here' link",
+            "position": "top full-width",
+            "notable": "High-contrast color draws attention to Series A announcement"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with logo, dropdown menus (Developers, Products, Use cases), static links (Resources, Plans), and CTA button",
+            "position": "top sticky",
+            "notable": "Right-aligned 'Sign in to Partner Portal' button in brand blue"
+          },
+          {
+            "type": "content-section",
+            "description": "Numbered sections (1. General information, 2. Data Controller) with hierarchical text",
+            "position": "main content area",
+            "notable": "Structured legal document layout with bold section headers"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large centered H1 draws focus first, then left-aligned body sections with bold subheadings guide reading progression",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Read and understand LI.FI's data handling and privacy practices",
+        "entryPoints": [
+          "Privacy Policy link from footer or settings menu",
+          "Direct navigation from company website"
+        ],
+        "exitPoints": [
+          "Navigate to other policy pages (Terms, Imprint)",
+          "Return to main website via logo or navigation",
+          "Sign in to Partner Portal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items (Developers, Products, Use cases)",
+            "action": "Opens dropdown menus or navigates to section pages"
+          },
+          {
+            "element": "Read Here link in announcement",
+            "action": "Opens external article about Series A funding"
+          },
+          {
+            "element": "Sign in to Partner Portal button",
+            "action": "Redirects to authentication or partner dashboard"
+          }
+        ],
+        "informationArchitecture": "Legal policy organized by numbered sections covering entity info, data protection framework, and legal compliance",
+        "frictionPoints": [
+          "Dense text blocks may be difficult to scan quickly",
+          "No table of contents or anchor links for navigation",
+          "Legal jargon (GDPR, BDSG) without simplified explanations"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": "Last updated: 9 September 2024",
+        "ctas": [
+          {
+            "text": "Read Here.",
+            "style": "text-link",
+            "placement": "announcement banner"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated: 9 September 2024",
+            "context": "Below main headline",
+            "purpose": "Establishes currency and trust for legal document"
+          },
+          {
+            "text": "LI.FI Service GmbH, Oranienburger Str. 91, 10178 Berlin, Germany (hereinafter \"LI.FI\", \"we\" or \"us\")",
+            "context": "First section of General information",
+            "purpose": "Establishes legal entity identity and jurisdiction"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M Series A extension",
+          "Regulation (EU) 2016/679",
+          "German Federal Data Protection Act (BDSG)"
+        ],
+        "trustSignals": [
+          "References to GDPR compliance",
+          "Specific legal references (EU Regulation, German laws)",
+          "Dated document (9 September 2024)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-3-terms-conditions.png",
+      "label": "Terms & conditions",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#5A5FFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (H1 centered), black text",
+          "bodyStyle": "Regular sans-serif, medium line-height, dark gray text with bold inline keywords",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Pink/magenta announcement bar identical to Privacy page",
+            "position": "top full-width",
+            "notable": "Consistent branding across legal documentation pages"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Consistent navigation with logo, dropdowns, and Partner Portal CTA",
+            "position": "top sticky",
+            "notable": "Same navigation pattern as Privacy page for consistent UX"
+          },
+          {
+            "type": "content-section",
+            "description": "Numbered hierarchical sections with subsections, bolded defined terms in quotes",
+            "position": "main content area",
+            "notable": "Structured legal prose with inline definition links (https://li.fi)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered H1 dominates, numbered sections with nested sub-points create scannable structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand LI.FI's terms of service, scope of application, and smart contract model",
+        "entryPoints": [
+          "Terms & Conditions link from footer or settings",
+          "User referral during signup flow"
+        ],
+        "exitPoints": [
+          "Navigate to Privacy Policy or Imprint",
+          "Return to main website",
+          "Sign in to Partner Portal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "https://li.fi link in section 1",
+            "action": "Opens LI.FI website homepage"
+          },
+          {
+            "element": "Navigation menu (Developers, Products, Use cases)",
+            "action": "Expands dropdowns or navigates to sections"
+          },
+          {
+            "element": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "informationArchitecture": "Hierarchical numbered sections covering basic provisions, scope, smart contracts, SDKs, and Widgets",
+        "frictionPoints": [
+          "Very dense legal text with multiple defined terms",
+          "No quick summary or plain English alternative",
+          "Long sentences with nested clauses",
+          "Limited visual breaks between sections"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms & Conditions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read Here.",
+            "style": "text-link",
+            "placement": "announcement banner"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "1. Basic Provisions; Scope of Application",
+            "context": "Section header",
+            "purpose": "Organizes content and indicates topic of following paragraphs"
+          },
+          {
+            "text": "\"LI.FI Website\", \"LI.FI Smart Contracts\", \"Third-Party Contracts\", \"SDK\", \"Widget\", \"LI.FI Software\"",
+            "context": "Throughout document",
+            "purpose": "Defines key terms used in legal agreement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Oranienburger Str. 91, 10178 Berlin, Germany",
+          "Publicly available smart contracts on any blockchain"
+        ],
+        "trustSignals": [
+          "Open-sourced software underlying smart contracts",
+          "Non-custodial model stated explicitly",
+          "Clear liability disclaimers"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-4-imprint.png",
+      "label": "Imprint",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#DA70D6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (H1 centered), black text",
+          "bodyStyle": "Regular sans-serif, smaller size for contact/legal details, dark text",
+          "dataStyle": "Business registration numbers, email addresses, URLs displayed inline"
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Pink/magenta announcement bar",
+            "position": "top full-width",
+            "notable": "Maintains brand consistency across all legal pages"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Consistent sticky navigation with logo and Partner Portal CTA",
+            "position": "top",
+            "notable": "Unified navigation across all settings/legal pages"
+          },
+          {
+            "type": "content-section",
+            "description": "Organized blocks of company information, contact details, legal references",
+            "position": "main content area",
+            "notable": "Less dense than Privacy/Terms—more like structured contact card format"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large centered H1, followed by logical groups of contact/legal info with bold labels introducing each section",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Locate company contact information and legal registration details",
+        "entryPoints": [
+          "Imprint link from footer",
+          "German regulatory requirement for website disclosures"
+        ],
+        "exitPoints": [
+          "Navigate to Privacy Policy or Terms & Conditions",
+          "Contact via email addresses provided",
+          "Visit EU dispute resolution platform link",
+          "Return to main website"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email links (marketing.requests@li.finance, legal@li.finance)",
+            "action": "Opens default email client with recipient pre-filled"
+          },
+          {
+            "element": "https://ec.europa.eu/consumers/odr/ link",
+            "action": "Opens European Commission dispute resolution platform"
+          },
+          {
+            "element": "Navigation menu and Partner Portal button",
+            "action": "Same as other legal pages"
+          }
+        ],
+        "informationArchitecture": "Structured company metadata organized by category (identification, registration, representation, contact, VAT, dispute resolution, liability)",
+        "frictionPoints": [
+          "Legal jargon in section headers (§ 5 TMG, § 27a)",
+          "Dense paragraphs about liability for content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Imprint",
+        "subheadline": "Information pursuant to § 5 TMG",
+        "ctas": [
+          {
+            "text": "Read Here.",
+            "style": "text-link",
+            "placement": "announcement banner"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "https://ec.europa.eu/consumers/odr/",
+            "style": "text-link",
+            "placement": "EU dispute resolution section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Information pursuant to § 5 TMG",
+            "context": "Below main headline",
+            "purpose": "References German Telemediengesetz (TMG) law section requiring imprint disclosure"
+          },
+          {
+            "text": "LI.FI Service GmbH",
+            "context": "First line of company info",
+            "purpose": "Legally registered company name"
+          },
+          {
+            "text": "Commercial Register: HRB 233395 B, Registration court: Amtsgericht Charlottenburg",
+            "context": "Registration details section",
+            "purpose": "Provides official German business registration proof"
+          },
+          {
+            "text": "Represented by: Philipp Zentner, Max Klenk",
+            "context": "Company leadership section",
+            "purpose": "Discloses authorized representatives"
+          },
+          {
+            "text": "VAT ID: DE347214227 (Sales tax identification number according to § 27a of the German Sales Tax Law)",
+            "context": "Tax section",
+            "purpose": "Establishes EU tax compliance and VAT registration"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Oranienburger Str. 91 10178 Berlin",
+          "HRB 233395 B",
+          "DE347214227",
+          "marketing.requests@li.finance, legal@li.finance"
+        ],
+        "trustSignals": [
+          "Specific business registration number",
+          "Official German court registration (Amtsgericht Charlottenburg)",
+          "VAT ID for EU compliance",
+          "Named representatives",
+          "Multiple contact email addresses"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-5-home-about-tab.png",
+      "label": "home — About tab",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#E91E63"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+) for section headers",
+          "bodyStyle": "Regular sans-serif (16px) for descriptive text",
+          "dataStyle": "Medium weight for follower counts and metadata"
+        },
+        "components": [
+          {
+            "type": "Header navigation",
+            "description": "Horizontal navigation with LI.FI Blog and tab menu (What is LI.FI, Community, Updates, Knowledge Hub, International, About, Onboarding)",
+            "position": "Top",
+            "notable": "Clean underline active state indicator"
+          },
+          {
+            "type": "Profile card",
+            "description": "Pink rounded square icon with checkmark, brand name, tagline, and Follow/Subscribe buttons",
+            "position": "Center-top",
+            "notable": "Vibrant pink background contrasts with minimal palette"
+          },
+          {
+            "type": "Editor list",
+            "description": "Vertical stack of profile cards with avatar, name, follower count, role, and Follow button",
+            "position": "Center",
+            "notable": "Consistent card treatment with varying avatar backgrounds"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Editor section title draws focus, profile cards are scannable with clear name > followers > role hierarchy",
+        "innovativeElements": [
+          "Pink accent square icon breaks monotone palette",
+          "Checkmark icon distinctive brand mark",
+          "Follow buttons use outline style for secondary actions"
+        ]
+      },
+      "flow": {
+        "screenType": "content-browse",
+        "userIntent": "Learn about LI.FI project and its team/editors",
+        "entryPoints": [
+          "Clicked 'About' tab from main navigation",
+          "Navigated from another LI.FI Blog section"
+        ],
+        "exitPoints": [
+          "Click 'Follow' to follow an editor",
+          "Click editor name/profile to view editor details",
+          "Navigate to other tabs (Community, Updates, etc.)",
+          "Click external link to LI.FI website"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab navigation",
+            "action": "Switch between About, Community, Updates, Knowledge Hub, International, Onboarding views"
+          },
+          {
+            "element": "Follow buttons",
+            "action": "Subscribe to individual editor's content"
+          },
+          {
+            "element": "Email icon button",
+            "action": "Subscribe to blog via email"
+          },
+          {
+            "element": "Hyperlink (https://links.li.finance/)",
+            "action": "Navigate to external LI.FI website"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation tabs organize content type; About section leads with Editor's Note contextualizing the project, followed by curated list of editors with social proof (follower counts)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "LI.FI Blog",
+        "subheadline": "Get the best cross-chain any-to-any swap out of the box.",
+        "ctas": [
+          {
+            "text": "Follow",
+            "style": "primary-button",
+            "placement": "Profile card header, right side"
+          },
+          {
+            "text": "Subscribe (envelope icon)",
+            "style": "icon-button",
+            "placement": "Profile card header, right side"
+          },
+          {
+            "text": "Follow",
+            "style": "outline-button",
+            "placement": "Right side of each editor card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "NOTE FROM THE EDITOR",
+            "context": "Section header above description",
+            "purpose": "Signals editorial voice and context"
+          },
+          {
+            "text": "1.2K followers",
+            "context": "Below editor name",
+            "purpose": "Social proof metric"
+          },
+          {
+            "text": "CEO of https://li.fi",
+            "context": "Below editor name",
+            "purpose": "Credibility and role clarification"
+          },
+          {
+            "text": "Connect:",
+            "context": "Before social icons",
+            "purpose": "Labels social media integration"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "1.2K followers",
+          "38 followers",
+          "31 followers"
+        ],
+        "trustSignals": [
+          "CEO designation",
+          "Follower counts as social proof",
+          "Editor credential display"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-6-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#E91E63",
+          "#6366F1"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (48px+) for mission statement, code-style comment prefix",
+          "bodyStyle": "Regular sans-serif (18px) for body copy",
+          "dataStyle": "$29M funding amount in bold within body text"
+        },
+        "components": [
+          {
+            "type": "Banner",
+            "description": "Full-width pink banner with announcement about $29M Series A funding",
+            "position": "Top",
+            "notable": "Bright pink with hyperlink and 'Read Here' CTA"
+          },
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Developers, Products, Use cases, Resources, Plans, and Sign in button",
+            "position": "Header",
+            "notable": "Blue CTA button 'Sign in to Partner Portal' right-aligned"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large centered headline with supportive paragraph and team photo",
+            "position": "Center",
+            "notable": "Code comment '//our_mission' prefix adds technical flavor"
+          },
+          {
+            "type": "Team photo",
+            "description": "Large photograph of 80+ team members in matching branded shirts",
+            "position": "Bottom half",
+            "notable": "Humanizes company with group visual"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Pink banner draws immediate attention; large headline dominates center; body copy and team photo support narrative from top to bottom",
+        "innovativeElements": [
+          "Code comment prefix (//our_mission) creates developer-friendly tone",
+          "Pink announcement banner breaks white space effectively",
+          "Team photo creates personal connection at scale"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-about",
+        "userIntent": "Understand LI.FI's mission, team, and credibility",
+        "entryPoints": [
+          "Clicked 'About' in navigation",
+          "Direct link from LI.FI website",
+          "From company overview pages"
+        ],
+        "exitPoints": [
+          "Click 'Read Here' on funding announcement",
+          "Navigate via top menu to Developers, Products, Use cases, Resources, Plans",
+          "Click 'Sign in to Partner Portal'",
+          "Scroll to discover more content below fold"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read Here link",
+            "action": "Navigate to detailed funding announcement"
+          },
+          {
+            "element": "Dropdown menus",
+            "action": "Expand Developers, Products, Use cases sections"
+          },
+          {
+            "element": "Sign in to Partner Portal button",
+            "action": "Navigate to partner login page"
+          }
+        ],
+        "informationArchitecture": "Linear narrative: announcement > mission statement > team introduction > team photo; builds credibility through funding news, then mission clarity, then team scale/credibility",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Use chain abstraction to keep up with a fast paced industry",
+        "subheadline": "The two founders, Philipp and Max, have already been building companies together for 10 years. With a growing team of 80+ people, we're obsessed with DeFi infrastructure and aggregating and optimizing the most important parts of it to accelerate the widespread adoption of crypto.",
+        "ctas": [
+          {
+            "text": "Read Here",
+            "style": "text-link",
+            "placement": "Pink banner announcement"
+          },
+          {
+            "text": "Sign in to Partner Portal",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "//our_mission",
+            "context": "Above headline",
+            "purpose": "Signals developer-first culture and technical focus"
+          },
+          {
+            "text": "has announced a $29M Series A extension, led by Multicoin and CoinFund",
+            "context": "Pink banner",
+            "purpose": "Establishes recent funding and investor credibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$29M Series A extension",
+          "10 years of founder collaboration",
+          "80+ person team"
+        ],
+        "trustSignals": [
+          "$29M Series A funding with named institutional investors (Multicoin, CoinFund)",
+          "10 years of founder collaboration history",
+          "80+ person team size",
+          "DeFi infrastructure expertise claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/lifi-settings-7-contact-support.png",
+      "label": "Contact support",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#0066FF",
+          "#DC3545"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif (20px) for main heading",
+          "bodyStyle": "Regular sans-serif (16px) for body text",
+          "dataStyle": "Bold red text for critical instructions"
+        },
+        "components": [
+          {
+            "type": "Header",
+            "description": "LI.FI logo on left, 'Create a ticket' and 'Sign in' links top right",
+            "position": "Top",
+            "notable": "Minimal header, no navigation menu"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "LI.FI Technical Help Center > Create a ticket with search bar",
+            "position": "Below header",
+            "notable": "Blue link styling for navigation"
+          },
+          {
+            "type": "Form section",
+            "description": "Heading, explanatory text, dropdown selector for issue type",
+            "position": "Center",
+            "notable": "Red warning text stands out from body"
+          },
+          {
+            "type": "Dropdown",
+            "description": "Single select dropdown with '-' placeholder showing no selection",
+            "position": "Center",
+            "notable": "Unfilled state with placeholder hint"
+          },
+          {
+            "type": "Footer",
+            "description": "LI.FI Technical Help Center label and chat widget",
+            "position": "Bottom right",
+            "notable": "Live chat indicator 'Hi. Need help?' in dark panel"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main heading 'Can't find an answer...' leads, red warning text creates urgency, dropdown is focal interactive element",
+        "innovativeElements": [
+          "Red text for critical email verification warning creates visual alarm",
+          "Live chat widget positioned bottom right for easy access",
+          "Breadcrumb navigation provides context within help system"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Create a support ticket for technical issue",
+        "entryPoints": [
+          "Clicked 'Create a ticket' from header",
+          "Link from help center",
+          "Search didn't find answer to question"
+        ],
+        "exitPoints": [
+          "Select issue type from dropdown to proceed",
+          "Click live chat widget to start real-time support",
+          "Click breadcrumb to return to Help Center",
+          "Search help center instead"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dropdown selector",
+            "action": "Choose issue category (e.g., Technical, Billing, etc.)"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search help center articles"
+          },
+          {
+            "element": "Create a ticket link",
+            "action": "Likely repeats current action or navigates to form"
+          },
+          {
+            "element": "Live chat widget",
+            "action": "Open chat support interface"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismiss chat widget"
+          }
+        ],
+        "informationArchitecture": "Progressive disclosure: entry point provides instructions, warning about email verification requirement, then requires issue category selection before continuing to full form",
+        "frictionPoints": [
+          "Email verification requirement adds step before ticket processing",
+          "Dropdown starts empty with '-' placeholder—user must select before proceeding",
+          "Red warning text suggests potential workflow interruption if email verification skipped"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Can't find an answer to your question or issue? Create a support ticket here.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Create a ticket",
+            "style": "text-link",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Sign in",
+            "style": "text-link",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LI.FI Technical Help Center > Create a ticket",
+            "context": "Breadcrumb navigation",
+            "purpose": "Shows current page context within help system hierarchy"
+          },
+          {
+            "text": "After you fill in the form and click on submit, please check your email to verify and submit your request.",
+            "context": "Red bold text below headline",
+            "purpose": "Critical instruction preventing user error"
+          },
+          {
+            "text": "We are not able to respond to tickets without email verification.",
+            "context": "Red bold text below instruction",
+            "purpose": "Reinforces email requirement with consequences"
+          },
+          {
+            "text": "Please choose your issue below",
+            "context": "Above dropdown",
+            "purpose": "Instructs form progression"
+          },
+          {
+            "text": "Search in our Help Center",
+            "context": "Search bar placeholder",
+            "purpose": "Offers alternative to form submission"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official LI.FI Technical Help Center branding",
+          "Live support availability"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Dropdown shows '-' as placeholder indicating no selection yet"
+        ]
+      }
+    }
+  ]
+}

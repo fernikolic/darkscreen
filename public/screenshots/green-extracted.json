@@ -1,0 +1,3258 @@
+{
+  "slug": "green",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:52:14.604Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 27,
+  "screens": [
+    {
+      "image": "/screenshots/green-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with split hero section",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00BCD4",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large and impactful, all-caps for emphasis",
+          "bodyStyle": "regular weight, light gray on dark background, readable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "top-banner",
+            "description": "bright cyan banner with product announcement and shop CTA",
+            "position": "full-width above header",
+            "notable": "high-contrast design forces attention to Jade Plus promotion"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "horizontal nav with logo and product categories",
+            "position": "sticky header",
+            "notable": "clean, minimal design with cyan accent on active tab"
+          },
+          {
+            "type": "hero-section",
+            "description": "large headline with supporting text and primary CTA button",
+            "position": "center-left of viewport",
+            "notable": "button uses bright cyan with black text for maximum contrast"
+          },
+          {
+            "type": "feature-cards",
+            "description": "three icon-based cards showcasing key features",
+            "position": "bottom of visible area",
+            "notable": "icons use cyan outlines with minimal stroke weight"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "top banner > headline > subheadline > CTA > feature cards below fold",
+        "innovativeElements": [
+          "cyan underline accent on active navigation tab",
+          "dotted circle pattern in logo design"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "learn about Blockstream App and download",
+        "entryPoints": [
+          "direct URL visit",
+          "organic search result"
+        ],
+        "exitPoints": [
+          "DOWNLOAD NOW button",
+          "navigation to Products section",
+          "scroll to feature details below"
+        ],
+        "interactiveElements": [
+          {
+            "element": "DOWNLOAD NOW button",
+            "action": "initiates app download"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "navigate to different product pages"
+          },
+          {
+            "element": "Overview/Help Center/Community tabs",
+            "action": "switch between different Blockstream App sections"
+          }
+        ],
+        "informationArchitecture": "top-level product overview with tabs for different learning paths",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Simple by Design. Secure by Default.",
+        "subheadline": "Blockstream app guides you from your first bitcoin purchase to full self-custody, all inside one elegant, security-first Bitcoin experience.",
+        "ctas": [
+          {
+            "text": "DOWNLOAD NOW",
+            "style": "primary-button",
+            "placement": "hero section below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BLOCKSTREAM APP",
+            "context": "above headline",
+            "purpose": "labels the product category"
+          }
+        ],
+        "tone": "professional-technical with consumer-friendly accessibility",
+        "dataFormatting": [],
+        "trustSignals": [
+          "security-first messaging",
+          "self-custody emphasis",
+          "Bitcoin-specific positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-2-blockstream-jadea-fullyopen-source-hardware-walle.png",
+      "label": "Blockstream JadeA fully-open source hardware walle",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width hero with split content left/right and feature labels",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00E5CC",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, extremely large, all-caps, maximum impact",
+          "bodyStyle": "regular weight, light gray, clean and minimal",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "product-hero-image",
+            "description": "3D rendered hardware wallet device with realistic shadows",
+            "position": "right side of hero, centered vertically",
+            "notable": "white and black device with cyan accent branding, professional product photography style"
+          },
+          {
+            "type": "feature-callouts",
+            "description": "four floating text labels with icons pointing to device features",
+            "position": "right of center, vertically distributed",
+            "notable": "labels have semi-transparent background and connect to specific device areas"
+          },
+          {
+            "type": "pagination-dots",
+            "description": "carousel indicators showing current slide position",
+            "position": "center bottom of hero",
+            "notable": "first dot in bright cyan, others in gray"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "headline dominates > subheadline > product image + feature labels > pagination dots",
+        "innovativeElements": [
+          "floating feature callouts with pointer design",
+          "3D product rendering with professional lighting",
+          "labeled features integrated into image rather than in separate cards"
+        ]
+      },
+      "flow": {
+        "screenType": "product-showcase landing",
+        "userIntent": "learn about Jade Plus hardware wallet features and purchase",
+        "entryPoints": [
+          "navigation from main landing",
+          "Jade Plus product category link",
+          "search result for Jade Plus"
+        ],
+        "exitPoints": [
+          "CHECK OUR SHOP button",
+          "back to Products menu",
+          "scroll down for more details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "CHECK OUR SHOP button",
+            "action": "navigate to purchase page"
+          },
+          {
+            "element": "Pagination dots",
+            "action": "cycle through product variations or feature highlights"
+          },
+          {
+            "element": "Jade Plus / Your Jade tabs",
+            "action": "switch between product variants"
+          }
+        ],
+        "informationArchitecture": "product variant tabs > hero image with labeled features > call-to-shop",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "carousel pagination dots showing current slide"
+        ]
+      },
+      "copy": {
+        "headline": "INTRODUCING NEW JADE PLUS",
+        "subheadline": "Now with better and more powerful Bitcoin security.",
+        "ctas": [
+          {
+            "text": "CHECK OUR SHOP",
+            "style": "primary-button",
+            "placement": "hero section left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BRAND NEW BITCOIN AND LIQUID HARDWARE WALLET",
+            "context": "above headline",
+            "purpose": "product category label"
+          },
+          {
+            "text": "Bigger Screen, Better Experience",
+            "context": "feature callout top right",
+            "purpose": "highlights key improvement"
+          },
+          {
+            "text": "Crafted for Strength and Style",
+            "context": "feature callout middle right",
+            "purpose": "emphasizes design quality"
+          },
+          {
+            "text": "Unbreakable Cryptographic Defense",
+            "context": "feature callout lower middle",
+            "purpose": "security messaging"
+          },
+          {
+            "text": "Effortless Control for Every User",
+            "context": "feature callout bottom right",
+            "purpose": "usability positioning"
+          }
+        ],
+        "tone": "professional-technical with consumer appeal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "security-first language",
+          "cryptographic defense mention",
+          "hardware wallet positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-3-blockstream-enterprisegrade-custody-and.png",
+      "label": "Blockstream Enterprise-grade custody and",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width hero with split content left/right and data visualization",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0066FF",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, very large, all-caps, strong emphasis",
+          "bodyStyle": "regular weight, light gray, moderate line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "data-visualization-3d",
+            "description": "isometric 3D illustration of laptop with line chart and stacked bitcoin coins",
+            "position": "right side of hero",
+            "notable": "blue glowing lines and accents, professional tech illustration style"
+          },
+          {
+            "type": "headline-block",
+            "description": "multi-line headline with clear product positioning",
+            "position": "left side upper",
+            "notable": "uppercase, bold, reads like a statement"
+          },
+          {
+            "type": "primary-cta",
+            "description": "contact button for enterprise inquiries",
+            "position": "left side below description",
+            "notable": "bright blue button indicating premium/enterprise positioning"
+          },
+          {
+            "type": "partner-logos",
+            "description": "logos of partner companies",
+            "position": "bottom center",
+            "notable": "STOKR, KOMAINU, Hadron branding visible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "product category label > headline > description > CTA > visual > partner logos",
+        "innovativeElements": [
+          "3D isometric visualization with dynamic line elements",
+          "integrated partner/company logos suggesting institutional trust",
+          "color scheme shift to blue emphasizing enterprise positioning"
+        ]
+      },
+      "flow": {
+        "screenType": "product-showcase landing",
+        "userIntent": "learn about Blockstream Enterprise custody solutions and initiate contact",
+        "entryPoints": [
+          "navigation from main landing",
+          "Enterprise products category",
+          "search for institutional crypto custody"
+        ],
+        "exitPoints": [
+          "CONTACT button",
+          "back to main products",
+          "scroll down for more enterprise details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "CONTACT button",
+            "action": "open contact form or redirect to sales page"
+          },
+          {
+            "element": "Blockstream Enterprise tab",
+            "action": "navigate to enterprise product details"
+          }
+        ],
+        "informationArchitecture": "product tabs > hero section with headline + visualization > contact CTA > partner validation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BITCOIN CUSTODY, TREASURY & TOKENIZATION SOLUTIONS",
+        "subheadline": "Blockstream Enterprise combines cutting-edge security, seamless integrations, and policy-based workflows to ensure compliance, transparency and control.",
+        "ctas": [
+          {
+            "text": "CONTACT",
+            "style": "primary-button",
+            "placement": "hero section left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BLOCKSTREAM ENTERPRISE",
+            "context": "above headline",
+            "purpose": "product tier label"
+          }
+        ],
+        "tone": "professional-technical, enterprise-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "partner logos (STOKR, KOMAINU, Hadron)",
+          "enterprise positioning language",
+          "compliance and control messaging",
+          "institutional-grade security positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-4-ampan-api-to-issue-and-manage-digital-assets-on-th.png",
+      "label": "AMPAn API to issue and manage digital assets on th",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00BCD4",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), white text",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Top navigation bar with logo and menu items",
+            "position": "top",
+            "notable": "Sticky header with cyan accent underline on active tab"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left side headline and CTA buttons",
+            "position": "left-center",
+            "notable": "Split between solid CTA (Demo) and text link (Technical Docs)"
+          },
+          {
+            "type": "feature-cards",
+            "description": "Three feature blocks with icons at bottom",
+            "position": "bottom",
+            "notable": "Issuance, Tracking, Control with teal circular icon backgrounds"
+          },
+          {
+            "type": "background-graphic",
+            "description": "Animated geometric lines forming 3D hexagon pattern",
+            "position": "right",
+            "notable": "Product logo integrated into background visual"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-anchored text draws eye first, right side graphic reinforces brand, bottom cards complete flow",
+        "innovativeElements": [
+          "3D wireframe background pattern with logo embedded",
+          "Layered hexagonal geometric design suggesting digital transformation"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blockstream AMP product capabilities and begin exploration",
+        "entryPoints": [
+          "Direct product page navigation",
+          "Marketing campaign from banner"
+        ],
+        "exitPoints": [
+          "Demo action",
+          "Technical Docs link",
+          "Products menu",
+          "Main navigation options"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Demo button",
+            "action": "Launches demo experience or sign-up flow"
+          },
+          {
+            "element": "Technical Docs link",
+            "action": "Routes to developer documentation"
+          },
+          {
+            "element": "Overview/Asset Issuer tabs",
+            "action": "Switches between product perspectives"
+          }
+        ],
+        "informationArchitecture": "Hero value prop → three core features → documentation/action paths",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Tab underline indicating current section (Overview)"
+        ]
+      },
+      "copy": {
+        "headline": "Digitize your assets",
+        "subheadline": "Issue and manage digital assets on the Liquid Network with Blockstream AMP's flexible API.",
+        "ctas": [
+          {
+            "text": "Demo",
+            "style": "primary-button",
+            "placement": "below subheadline"
+          },
+          {
+            "text": "Technical Docs",
+            "style": "text-link",
+            "placement": "below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Blockstream AMP",
+            "context": "Product name with icon",
+            "purpose": "Product identification"
+          },
+          {
+            "text": "Issuance",
+            "context": "Feature card heading",
+            "purpose": "Quickly issue standards-based digital assets"
+          },
+          {
+            "text": "Tracking",
+            "context": "Feature card heading",
+            "purpose": "Keep track of assets' activity"
+          },
+          {
+            "text": "Control",
+            "context": "Feature card heading",
+            "purpose": "Enforce granular ownership restrictions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Liquid Network (established blockchain infrastructure)",
+          "Flexible API (developer-focused credibility)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-5-cryptocurrency-data-feedrealtime-and-historical-c.png",
+      "label": "Cryptocurrency Data FeedReal-time and historical c",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00BCD4",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra large (56px+), white, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px, generous line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Top navigation bar with logo and menu",
+            "position": "top",
+            "notable": "Consistent header across all product pages"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with body copy and CTA",
+            "position": "left",
+            "notable": "Headline spans multiple lines for impact"
+          },
+          {
+            "type": "product-identifier",
+            "description": "ICE Data Services + Blockstream partnership badge",
+            "position": "right-center",
+            "notable": "Partnership logos with institutional credibility"
+          },
+          {
+            "type": "background-graphic",
+            "description": "Subtle wireframe pattern, minimal design",
+            "position": "right",
+            "notable": "Less prominent than AMP page, focuses on content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates, partnership badge adds authority, CTA anchors bottom",
+        "innovativeElements": [
+          "Partnership badge design integrating two logos with 'CRYPTOCURRENCY DATA FEED' label"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about cryptocurrency data feed product and initiate sales contact",
+        "entryPoints": [
+          "Products menu navigation",
+          "Marketing campaign"
+        ],
+        "exitPoints": [
+          "Contact Sales button",
+          "Navigation menu items",
+          "Products section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact Sales button",
+            "action": "Opens sales contact form or email"
+          }
+        ],
+        "informationArchitecture": "Problem statement (institutions need data) → Solution (partnership feed) → CTA (contact sales)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Comprehensive cryptocurrency exchange data for institutions.",
+        "subheadline": "The Cryptocurrency Data Feed is a partnership between Blockstream and Intercontinental Exchange (ICE), delivering best-in-class real-time and historical trade data from the world's leading cryptocurrency venues.",
+        "ctas": [
+          {
+            "text": "Contact Sales",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "CRYPTOCURRENCY DATA FEED",
+            "context": "Product name identifier",
+            "purpose": "Emphasize product offering with institutional tone"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Intercontinental Exchange (ICE) partnership",
+          "Real-time and historical data from leading venues",
+          "Enterprise-focused offering"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-6-core-lightningimplementation-of-the-lightning-prot.png",
+      "label": "Core LightningImplementation of the Lightning Prot",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFD700",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), white, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Top navigation with logo and menu items",
+            "position": "top",
+            "notable": "Consistent structure, yellow accent badge for Core Lightning"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Product tabs (Overview, Greenlight, Community)",
+            "position": "top-content",
+            "notable": "Yellow underline accent matching product theme"
+          },
+          {
+            "type": "hero-section",
+            "description": "Headline, body text, dual CTAs",
+            "position": "left-center",
+            "notable": "Yellow button and yellow text link split approach"
+          },
+          {
+            "type": "callout-box",
+            "description": "Dark box with yellow border outline",
+            "position": "bottom-right"
+          },
+          {
+            "type": "background-graphic",
+            "description": "Lightning bolt graphic with geometric lines",
+            "position": "right",
+            "notable": "Logo integrated as large central visual"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline anchors left, product logo dominates right side, bottom callout creates secondary path",
+        "innovativeElements": [
+          "Lightning bolt split design (yellow/white) reflecting technical brand",
+          "Geometric wireframe pattern in yellow suggesting power/energy",
+          "Bottom callout box with alternative use case (Greenlight)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Core Lightning implementation and either run own node or explore Greenlight managed option",
+        "entryPoints": [
+          "Products menu navigation",
+          "Marketing campaign",
+          "Direct product link"
+        ],
+        "exitPoints": [
+          "Run A Core Lightning Node button",
+          "Technical Docs link",
+          "Explore Greenlight button",
+          "Tab navigation (Overview/Greenlight/Community)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Run A Core Lightning Node",
+            "action": "Begins node setup process"
+          },
+          {
+            "element": "Technical Docs",
+            "style": "text-link",
+            "action": "Routes to developer documentation"
+          },
+          {
+            "element": "Explore Greenlight",
+            "style": "outline-button",
+            "action": "Routes to managed solution"
+          },
+          {
+            "element": "Product tabs",
+            "action": "Switch between product variants"
+          }
+        ],
+        "informationArchitecture": "Main value prop (high-performance Lightning) → DIY implementation path → Alternative managed solution",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Tab indicator showing current section (Overview)"
+        ]
+      },
+      "copy": {
+        "headline": "High-performance Lightning. Customizable to meet enterprise needs.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Run A Core Lightning Node",
+            "style": "primary-button",
+            "placement": "below headline"
+          },
+          {
+            "text": "Technical Docs",
+            "style": "text-link",
+            "placement": "below headline"
+          },
+          {
+            "text": "Explore Greenlight",
+            "style": "ghost-button",
+            "placement": "bottom-right callout"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Want to run a node on our infrastructure while retaining the keys on your own device?",
+            "context": "Bottom callout box",
+            "purpose": "Surface alternative solution (Greenlight) for different user needs"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Enterprise customization capability",
+          "Infrastructure hosting option",
+          "Key management flexibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-7-liquid-networkbitcoin-layer2-for-digital-asset-is.png",
+      "label": "Liquid NetworkBitcoin layer-2 for digital asset is",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9FF",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display size (60-80px), white text",
+          "bodyStyle": "Regular sans-serif, medium size, light gray text (#999-#ccc)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Large headline with descriptive body text and dual CTAs",
+            "position": "Left side, upper-middle",
+            "notable": "Bold left-aligned headline with strong visual hierarchy"
+          },
+          {
+            "type": "Animated Background",
+            "description": "Flowing wave-like topographic lines in cyan gradient",
+            "position": "Right side, full height",
+            "notable": "Subtle animated motion creates depth and technical feel"
+          },
+          {
+            "type": "Logo + Product Name",
+            "description": "Cyan circular icon with 'Liquid Network' text overlay",
+            "position": "Right side, center",
+            "notable": "Large, glowing treatment emphasizes brand identity"
+          },
+          {
+            "type": "Navigation Tabs",
+            "description": "Horizontal tab navigation with cyan underline accent",
+            "position": "Below secondary header, center",
+            "notable": "Active state clearly indicated with underline and cyan color"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates left panel; animated background with centered logo creates visual interest on right; tabs and CTAs guide eye downward",
+        "innovativeElements": [
+          "Flowing topographic animation that responds to product category",
+          "Split-panel layout with animated vs. static content sides",
+          "Glowing cyan accent colors on dark background for modern tech aesthetic"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Liquid Network is and explore use cases (issue assets or explore investments)",
+        "entryPoints": [
+          "Direct navigation from main Blockstream site",
+          "Product menu link",
+          "Jade Plus promotional banner"
+        ],
+        "exitPoints": [
+          "Issue Your Asset (primary CTA)",
+          "Explore Investments (secondary CTA)",
+          "Navigation tabs (Overview, Help Center, Community)",
+          "Main navigation menu (Products, Company, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Issue Your Asset button",
+            "action": "Navigate to asset issuance flow"
+          },
+          {
+            "element": "Explore Investments button",
+            "action": "Navigate to investment exploration interface"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Switch between Overview, asset issuance, investments, and support sections"
+          }
+        ],
+        "informationArchitecture": "Product positioning at top with tabs below; hero content on left; visual showcase on right; footer content below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "An Open Financial System, on Bitcoin",
+        "subheadline": "The Liquid Network is a Bitcoin layer-2 enabling the issuance of security tokens and other digital assets. Execute trustless swaps using non-custodial orderbooks and protect your financial privacy through confidential transactions.",
+        "ctas": [
+          {
+            "text": "Issue Your Asset",
+            "style": "primary-button",
+            "placement": "Left panel, below description"
+          },
+          {
+            "text": "Explore Investments",
+            "style": "secondary-button",
+            "placement": "Left panel, below primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "In a hyperbitcoinized future, having financial products and services on Bitcoin layer-2 is the only way to achieve the same trust minimization in...",
+            "context": "Bottom of page, continuation of value proposition",
+            "purpose": "Extended value prop for scrolling users"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin layer-2 positioning",
+          "Security tokens mention",
+          "Confidential transactions feature"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-8-elementsan-opensource-sidechaincapable-blockcha.png",
+      "label": "ElementsAn open-source, sidechain-capable blockcha",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6366F1",
+          "#ffffff",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large display (60-80px), white text",
+          "bodyStyle": "Regular sans-serif, medium size, light gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Large headline with body copy and dual CTAs",
+            "position": "Left side, upper-middle",
+            "notable": "Simplified hierarchy compared to Liquid Network page"
+          },
+          {
+            "type": "3D Animated Graphic",
+            "description": "Isometric 3D hexagonal blocks with purple-blue gradient and grid pattern",
+            "position": "Right side, full height",
+            "notable": "Geometric, technical aesthetic emphasizes blockchain infrastructure"
+          },
+          {
+            "type": "Logo + Product Name",
+            "description": "Gradient hexagon logo with 'ELEMENTS' text",
+            "position": "Right side, center-left",
+            "notable": "Purple-to-blue gradient matches 3D visualization theme"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline on left creates primary focus; 3D graphic on right provides secondary visual interest; CTAs anchored below text",
+        "innovativeElements": [
+          "3D isometric visualization of blockchain blocks",
+          "Gradient color scheme (purple to blue) more premium than Liquid Network's cyan",
+          "Geometric grid pattern background suggests technical infrastructure"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Elements sidechain platform and visit website or see releases",
+        "entryPoints": [
+          "Product carousel navigation from Liquid Network",
+          "Products menu",
+          "Main navigation"
+        ],
+        "exitPoints": [
+          "Visit Website (primary CTA)",
+          "Releases (secondary CTA)",
+          "Main navigation",
+          "Scroll to next product section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Visit Website button",
+            "action": "Navigate to Elements website"
+          },
+          {
+            "element": "Releases link",
+            "action": "View product releases and updates"
+          }
+        ],
+        "informationArchitecture": "Product showcase with hero section on left; visual hero on right; simple dual CTA pattern",
+        "frictionPoints": [
+          "No clear 'back' navigation visible to return to products list"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Launch your sidechain or blockchain with Elements.",
+        "subheadline": "Elements is an open-source platform for deploying federated sidechains and blockchains, providing developers access to powerful features such as Confidential Transactions and Issued Assets.",
+        "ctas": [
+          {
+            "text": "Visit Website",
+            "style": "primary-button",
+            "placement": "Left panel, below description"
+          },
+          {
+            "text": "Releases",
+            "style": "text-link",
+            "placement": "Left panel, beside primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Why Elements?",
+            "context": "Bottom of page",
+            "purpose": "CTA to continue learning about product benefits"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open-source platform",
+          "Confidential Transactions feature",
+          "Issued Assets capability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-9-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9FF",
+          "#FFA500",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display (48-60px), white text",
+          "bodyStyle": "Regular sans-serif, small-medium size, light gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Blog Post Card",
+            "description": "Large headline, author byline, date, and featured graphic",
+            "position": "Upper portion of page",
+            "notable": "Featured post takes prominent placement with rich metadata"
+          },
+          {
+            "type": "Product Logo + Title",
+            "description": "Blockstream Explorer logo with orange accent and tech visualization mockup",
+            "position": "Right side of post, center vertical",
+            "notable": "Dashboard/API visualization emphasizes data product nature"
+          },
+          {
+            "type": "Horizontal Divider",
+            "description": "Cyan gradient line separator",
+            "position": "Below featured post",
+            "notable": "Visual break suggesting additional content below"
+          },
+          {
+            "type": "Footer Product Card",
+            "description": "Partial view of another Blockstream product card",
+            "position": "Bottom of viewport",
+            "notable": "Suggests scrollable content with more products"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Blog headline dominates upper section; product visualization on right balances left text; divider indicates scroll; footer hints at more content",
+        "innovativeElements": [
+          "Orange accent color introduction (departure from cyan primary)",
+          "Product-specific visualizations with realistic UI mockups",
+          "Stacked card layout suggests infinite scroll pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover latest news and technical updates about Blockstream products",
+        "entryPoints": [
+          "Newsroom navigation link",
+          "Products section",
+          "Main navigation"
+        ],
+        "exitPoints": [
+          "Click featured blog post",
+          "Scroll to see more posts",
+          "Navigate to other sections via main menu",
+          "Featured product link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Featured post card",
+            "action": "Navigate to full blog post"
+          },
+          {
+            "element": "Featured image/product visualization",
+            "action": "Likely navigates to product or full post"
+          },
+          {
+            "element": "Author byline",
+            "action": "May filter by author or link to author bio"
+          }
+        ],
+        "informationArchitecture": "Featured blog post at top with rich metadata (author, date, visual); horizontal divider; additional posts stacked below; implicit infinite scroll",
+        "frictionPoints": [
+          "No visible category filters or search functionality",
+          "Author and date text is small and easily overlooked"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Real-Time Bitcoin Data at Scale: Blockstream Explorer API Launches Electrum RPC",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Jesse Jaco",
+            "context": "Below headline, left side",
+            "purpose": "Author attribution"
+          },
+          {
+            "text": "Feb 11, 2026",
+            "context": "Below author name",
+            "purpose": "Publication date"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Feb 11, 2026 (date format)"
+        ],
+        "trustSignals": [
+          "Named author attribution",
+          "Specific API feature announcement",
+          "Real-time Bitcoin data capability mentioned"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-16-local.png",
+      "label": "Local",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00B8E6",
+          "#FF9500",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (60px+), white text",
+          "bodyStyle": "Regular sans-serif, light gray, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Left-aligned text with headline, subheading, and CTA button",
+            "position": "Left 40% of viewport",
+            "notable": "Clean left-right split with illustration on right"
+          },
+          {
+            "type": "Illustration",
+            "description": "Blockstream LOCAL branded map with dotted network nodes and orange markers",
+            "position": "Right 60% of viewport",
+            "notable": "Animated geographic visualization with brand-specific visual language"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal menu with logo and 6 nav items",
+            "position": "Top of page",
+            "notable": "Persistent across all pages, clean horizontal layout"
+          },
+          {
+            "type": "Call-to-Action Button",
+            "description": "Bright cyan button with black text",
+            "position": "Below subheading on left panel",
+            "notable": "High contrast, primary action clearly differentiated"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates left side with scaled sans-serif, subheading provides context, illustration anchors right side, CTA button creates action focal point",
+        "innovativeElements": [
+          "Split-panel hero layout with illustration integration",
+          "Blockstream LOCAL branding with geographic network visualization",
+          "Color contrast using cyan against dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blockstream LOCAL Bitcoin meetup program and register",
+        "entryPoints": [
+          "Direct navigation to home",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Register Your Meetup button",
+          "Navigation to Products, Newsroom, Developers, Company, Store, Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Register Your Meetup Button",
+            "action": "Navigate to meetup registration form or external registration page"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to respective sections or pages"
+          }
+        ],
+        "informationArchitecture": "Hero landing with single focal point (meetup registration), supported by navigation and product awareness",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Turbocharge Your Bitcoin Meetup with Blockstream",
+        "subheadline": "Empower your meetup and forge powerful Bitcoiners through tools, education, and open-source hardware.",
+        "ctas": [
+          {
+            "text": "Register Your Meetup",
+            "style": "primary-button",
+            "placement": "Below subheading, left panel"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical with empowerment messaging",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blockstream branding (established Bitcoin company)",
+          "Open-source hardware mention",
+          "Educational positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-17-home.png",
+      "label": "home",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00B8E6",
+          "#FF9500",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, 80px+, white text",
+          "bodyStyle": "Regular sans-serif, light gray, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Left-aligned bold headline with supporting copy",
+            "position": "Left 50% of viewport",
+            "notable": "All-caps typography creates authoritative tone"
+          },
+          {
+            "type": "Illustration",
+            "description": "Two concentric circles (blue and orange) with Bitcoin symbol and Blockstream logo",
+            "position": "Right 50% of viewport",
+            "noteworthy": "Minimalist geometric design representing connectivity and duality"
+          },
+          {
+            "type": "Carousel Indicator",
+            "description": "Three horizontal dots, first active (cyan), others gray",
+            "position": "Bottom center",
+            "notable": "Indicates this is a carousel/slide show within hero section"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Persistent horizontal menu",
+            "position": "Top of page",
+            "notable": "Same across all landing pages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "All-caps headline commands attention immediately, supporting copy provides credibility, carousel indicator suggests scrollable content below",
+        "innovativeElements": [
+          "All-caps headline treatment for maximum impact",
+          "Concentric circle design suggesting blockchain/network layers",
+          "Carousel navigation within hero suggests content discovery"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blockstream's position as Bitcoin/blockchain leader, explore products",
+        "entryPoints": [
+          "Direct home page visit",
+          "Brand navigation from other pages"
+        ],
+        "exitPoints": [
+          "Carousel navigation (next slides)",
+          "Top navigation menu items",
+          "Implicit scroll to content below"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Carousel Dots",
+            "action": "Navigate between hero carousel slides"
+          },
+          {
+            "element": "Navigation Menu",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Hero carousel introducing brand positioning, supporting navigation for deeper exploration",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Carousel indicator dots show current position (1 of 3)"
+        ]
+      },
+      "copy": {
+        "headline": "THE FUTURE OF FINANCE RUNS ON BITCOIN",
+        "subheadline": "Blockstream is the global leader in Bitcoin and blockchain technology. Our products and services form the foundations for the financial infrastructure of the future.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, visionary, confident",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Global leader positioning",
+          "Financial infrastructure narrative",
+          "Technology focus emphasis"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-18-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00B8E6",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Massive sans-serif, 200px+, white with cyan glow effect",
+          "bodyStyle": "Bold sans-serif, white, 32px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "404 Error Number",
+            "description": "Oversized error code with glowing cyan underline effect",
+            "position": "Vertical center, slightly above middle",
+            "notable": "Dramatic typography with lighting effect creates visual impact"
+          },
+          {
+            "type": "Error Message",
+            "description": "Centered bold white text explaining page not found",
+            "position": "Below error number",
+            "notable": "Direct, simple language"
+          },
+          {
+            "type": "Background Animation",
+            "description": "Dotted pattern with floating lock and shield icons in blue",
+            "position": "Full screen background",
+            "notable": "Security-themed visual supporting blockchain brand identity"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Cyan primary button with black text",
+            "position": "Below error message",
+            "notable": "Clear recovery path back to home"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Persistent horizontal menu",
+            "position": "Top of page",
+            "notable": "Maintains navigation access even on error page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "404 error number dominates center, error text clarifies issue, CTA button provides recovery, background animation adds visual interest without distraction",
+        "innovativeElements": [
+          "Glowing/shaded 404 text effect creates dimensional appearance",
+          "Security icon background thematically relevant to blockchain brand",
+          "Maintains brand color scheme even on error state"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User landed on non-existent page, needs to recover and navigate elsewhere",
+        "entryPoints": [
+          "Broken link",
+          "Mistyped URL",
+          "Outdated page reference"
+        ],
+        "exitPoints": [
+          "Return to Home button",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Return to Home Button",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Navigation Menu",
+            "action": "Navigate to any main site section"
+          }
+        ],
+        "informationArchitecture": "Error page with single recovery CTA and persistent navigation fallback",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "The page you are looking for doesn't exist.",
+        "ctas": [
+          {
+            "text": "Return to Home",
+            "style": "primary-button",
+            "placement": "Below error message, centered"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-direct, apologetic",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "The page you are looking for doesn't exist."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-13-research.png",
+      "label": "Research",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#d4af37",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, center-aligned, high contrast",
+          "bodyStyle": "Light gray, sans-serif, small to medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo + Navigation",
+            "description": "Blockstream Research logo top-left with horizontal nav menu (Core Tech, Research Lab, Developer Tools)",
+            "position": "Top bar",
+            "notable": "Minimal, right-aligned navigation"
+          },
+          {
+            "type": "Hero Illustration",
+            "description": "Large geometric line art circle in gold/amber outline",
+            "position": "Center-top",
+            "notable": "Abstract circuit-like pattern suggests cryptography and technology"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "Three dark cards with gold outlined icons (code, lock, eye)",
+            "position": "Bottom third",
+            "notable": "Icons suggest development, security, and intelligence"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center, illustration provides visual interest, cards anchor bottom, nav is secondary",
+        "innovativeElements": [
+          "Geometric line-art circle illustration with dynamic asymmetric pattern",
+          "Gold/amber accent color against dark navy creates premium feel",
+          "Layered depth in hero illustration"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Blockstream Research is and explore research offerings",
+        "entryPoints": [
+          "Direct navigation to research domain",
+          "From main Blockstream site"
+        ],
+        "exitPoints": [
+          "Core Tech section",
+          "Research Lab section",
+          "Developer Tools section",
+          "Feature cards (likely expandable/clickable)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Route to different research sections"
+          },
+          {
+            "element": "Feature cards",
+            "action": "Likely expand or navigate to detailed views"
+          }
+        ],
+        "informationArchitecture": "Hero-driven landing with three primary content pillars",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blockstream Research",
+        "subheadline": "A Bitcoin-focused cryptography team.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin-focused expertise claim",
+          "Cryptography specialization"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-14-bitcoin-education.png",
+      "label": "Bitcoin Education",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel with sidebar",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1929",
+          "#00bfff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, left-aligned",
+          "bodyStyle": "Light gray, medium weight, generous line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Blockstream logo with horizontal nav (Products, Newsroom, Developers, Company, Store, Support)",
+            "position": "Top",
+            "notable": "Clean, minimal header"
+          },
+          {
+            "type": "Content Cards",
+            "description": "Three educational cards with 3D blue illustrations (nodes, wallets, glossary)",
+            "position": "Left/center grid",
+            "notable": "Cyan/blue accent borders, isometric 3D artwork"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Company info box, social icons, education navigation menu, blog teaser",
+            "position": "Right side",
+            "notable": "Secondary navigation and contextual info"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content cards lead the eye left-to-right, sidebar provides secondary navigation and social proof",
+        "innovativeElements": [
+          "3D isometric illustrations for educational topics",
+          "Cyan accent color creates electric, modern tech feel",
+          "Integrated sidebar with social proof and category navigation"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, content hub",
+        "userIntent": "Explore Bitcoin educational resources across nodes, wallets, and glossary",
+        "entryPoints": [
+          "From Research home",
+          "From main Products menu",
+          "Direct Bitcoin Education URL"
+        ],
+        "exitPoints": [
+          "Nodes content",
+          "Wallets content",
+          "Glossary content",
+          "All education view",
+          "Social links",
+          "Blog"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Content cards",
+            "action": "Navigate to specific educational section"
+          },
+          {
+            "element": "Sidebar category links",
+            "action": "Filter/navigate education content"
+          },
+          {
+            "element": "Social icons",
+            "action": "External social links"
+          }
+        ],
+        "informationArchitecture": "Three primary educational pillars with sidebar providing navigation, company info, and social proof",
+        "frictionPoints": [
+          "Multiple navigation options (cards vs sidebar) may create choice paralysis"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Education",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Learn all there is to about Bitcoin nodes by studying their fundamental role in verifying the network...",
+            "context": "Nodes card description",
+            "purpose": "Summarize value of Nodes content"
+          },
+          {
+            "text": "Dive into the world of Bitcoin wallets with our comprehensive guide, covering everything from the basics...",
+            "context": "Wallets card description",
+            "purpose": "Summarize value of Wallets content"
+          },
+          {
+            "text": "Expand your knowledge of Bitcoin and navigate the complexities of its underlying technology...",
+            "context": "Glossary card description",
+            "purpose": "Summarize value of Glossary content"
+          }
+        ],
+        "tone": "educational, friendly-casual, approachable",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive guide coverage",
+          "Technical depth positioning"
+        ],
+        "jargonLevel": "beginner-to-intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-15-glossary.png",
+      "label": "Glossary",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "full-width with search focus",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0a1929",
+          "#00bfff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Very large bold sans-serif, white, center-aligned",
+          "bodyStyle": "Dark gray/black, sans-serif, readable weight on light background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Blockstream logo with horizontal nav menu",
+            "position": "Top",
+            "notable": "Consistent with previous screens"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Dark background with animated wave pattern, centered headline",
+            "position": "Top 40% of viewport",
+            "notable": "Cyan wave animations, high visual impact, search-focused"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Large white search input with magnifying glass icon",
+            "position": "Center of hero",
+            "notable": "Primary CTA, high prominence"
+          },
+          {
+            "type": "Alphabet Navigation",
+            "description": "Horizontal row of letter links (# A B C D...Z)",
+            "position": "Below headline",
+            "notable": "Jump-to-letter functionality for glossary"
+          },
+          {
+            "type": "Glossary Index",
+            "description": "Light background section showing glossary entries organized by letter",
+            "position": "Bottom 60% of page",
+            "notable": "Clean white background for readability"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Search is primary focus in dramatic hero, alphabet navigation provides quick access, glossary entries are secondary content",
+        "innovativeElements": [
+          "Animated wave pattern background in hero",
+          "Alphabet letter shortcuts for quick navigation",
+          "Hero-to-light background transition creates visual separation"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, search interface",
+        "userIntent": "Search for or browse Bitcoin glossary terms",
+        "entryPoints": [
+          "From Bitcoin Education page",
+          "From Education sidebar link",
+          "Direct glossary URL"
+        ],
+        "exitPoints": [
+          "Search results (after query)",
+          "Specific glossary entry (after letter or search selection)",
+          "Back to Education hub",
+          "Other header navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Query glossary terms"
+          },
+          {
+            "element": "Alphabet letter links",
+            "action": "Jump to glossary section starting with letter"
+          },
+          {
+            "element": "Glossary entry links",
+            "action": "Navigate to full term definition"
+          }
+        ],
+        "informationArchitecture": "Search-first interface with dual navigation: text search and alphabetic browsing",
+        "frictionPoints": [
+          "User might not immediately notice letter navigation below search",
+          "No visible indication of glossary size or term count"
+        ],
+        "progressIndicators": [
+          "Alphabet navigation shows current/browsable sections"
+        ]
+      },
+      "copy": {
+        "headline": "Glossary",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search term...",
+            "context": "Search input placeholder",
+            "purpose": "Guide user to search functionality"
+          },
+          {
+            "text": "# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
+            "context": "Alphabet navigation row",
+            "purpose": "Enable quick-jump to glossary sections"
+          },
+          {
+            "text": "Address (Bitcoin)",
+            "context": "First glossary entry under A",
+            "purpose": "Example of glossary entry title"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Letter headings (A, B, etc.) as section dividers"
+        ],
+        "trustSignals": [
+          "Bitcoin-specific terminology",
+          "Comprehensive glossary coverage implied by alphabet"
+        ],
+        "jargonLevel": "intermediate-to-expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-10-in-the-news.png",
+      "label": "In The News",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00BFFF",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large sizes (32-40px), high contrast white on dark",
+          "bodyStyle": "Regular sans-serif, medium gray (#999), 16px line height",
+          "dataStyle": "Date badge with light gray text, small caps styling"
+        },
+        "components": [
+          {
+            "type": "Hero Banner",
+            "description": "Cyan banner at top with Jade Plus messaging and Shop CTA",
+            "position": "Top full-width",
+            "notable": "High contrast with black button for strong CTA visibility"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Blockstream logo with horizontal nav menu",
+            "position": "Below banner, full-width",
+            "notable": "Clean dark background with white text links"
+          },
+          {
+            "type": "Featured Article Card",
+            "description": "Left: CNBC logo in large container, Right: Article headline, description, date, and Read More button",
+            "position": "Center-right main content area",
+            "notable": "Split visual hierarchy with logo taking 40% width, content 60%"
+          },
+          {
+            "type": "Trust Grid",
+            "description": "12-logo grid of media outlets and publications",
+            "position": "Bottom half",
+            "notable": "Gray monochrome logos with consistent sizing, creates authority signal"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down: banner → nav → featured story visual + headline → supporting text → trust logos",
+        "innovativeElements": [
+          "Wavy diagonal line pattern background texture behind CNBC logo",
+          "Cyan button color provides strong visual pop against dark palette"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-section",
+        "userIntent": "Discover recent press coverage and media mentions about Blockstream",
+        "entryPoints": [
+          "Home page navigation click on 'Newsroom'",
+          "Direct link from external media",
+          "Scrolled to 'In The News' section on home"
+        ],
+        "exitPoints": [
+          "Read More button leads to full article",
+          "Navigation menu items: Products, Company, Store, Support",
+          "Top banner Shop CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read More Button",
+            "action": "Navigate to full CNBC article or internal newsroom post"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to respective section pages"
+          },
+          {
+            "element": "Shop CTA",
+            "action": "Redirect to e-commerce store"
+          }
+        ],
+        "informationArchitecture": "Featured article prominence with trust-building publication grid below",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blockstream's Adam Back: Bitcoin is in the 'early stages' of a bull market",
+        "subheadline": "CNBC | February 19, 2025",
+        "ctas": [
+          {
+            "text": "Check our Shop",
+            "style": "primary-button",
+            "placement": "Top right banner"
+          },
+          {
+            "text": "Read More",
+            "style": "primary-button",
+            "placement": "Below article description"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Jade Plus: Enhanced Design meets Maximum Security",
+            "context": "Top banner",
+            "purpose": "Headline product benefit statement"
+          },
+          {
+            "text": "Adam Back, co-founder and CEO of Blockstream, discusses the potential for Bitcoin to surge further on expectations as a significant amount of institutional capital will flow into the market.",
+            "context": "Article description",
+            "purpose": "Summarize article content and draw interest"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "CNBC | February 19, 2025"
+        ],
+        "trustSignals": [
+          "CNBC logo and branding",
+          "12 major publication logos: Bloomberg, Forbes, Inc., Coindesk, TechCrunch, Entrepreneur, Fortune, Business Insider, The Verge, Wired, Morningstar, Engadget, TNW, TheStreet, The Korea Herald, Bitcoin Magazine, El País"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-11-brand-assets.png",
+      "label": "Brand Assets",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0066FF",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large sizes (36-48px), white on dark backgrounds",
+          "bodyStyle": "Regular sans-serif, dark gray on light backgrounds, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with collapsible sections, blue highlight on active item",
+            "position": "Left side full height",
+            "notable": "Deep hierarchy with primary sections (About, Branding) and subsections (Overview, Logo, Typography, etc.), expandable/collapsible"
+          },
+          {
+            "type": "Content Header",
+            "description": "Large white heading 'Overview' on dark background band",
+            "position": "Top of main content area",
+            "notable": "Visual anchor separating nav from content"
+          },
+          {
+            "type": "Text Block",
+            "description": "Multi-paragraph descriptive content about design system usage",
+            "position": "Upper main content area",
+            "notable": "Light gray text on white background, generous line spacing"
+          },
+          {
+            "type": "Card Grid",
+            "description": "2x2 grid of component preview cards (Logo, Typography, Colours, Icons)",
+            "position": "Lower main content area",
+            "notable": "Each card has black background preview area with white label beneath"
+          },
+          {
+            "type": "Sub-grid",
+            "description": "2-column grid showing Leadership Photos and Page Template cards",
+            "position": "Bottom main content area",
+            "notable": "Consistent card styling with icon previews"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors structure → main heading sets context → body text provides details → grid cards show assets visually",
+        "innovativeElements": [
+          "Clean design system documentation interface",
+          "Consistent card-based preview system for different asset types"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-browse",
+        "userIntent": "Explore and understand Blockstream's design system and brand assets for creating consistent materials",
+        "entryPoints": [
+          "Designers/developers accessing brand guidelines",
+          "Internal team members building marketing materials",
+          "Partners needing brand consistency"
+        ],
+        "exitPoints": [
+          "Click other sections in sidebar (Logo, Typography, Colours, Icons, etc.)",
+          "Navigate to specific product brand sections (Corporate Brand, Blockstream Store, etc.)",
+          "Download/access asset files from preview cards"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar Menu Items",
+            "action": "Expand/collapse sections and navigate to different documentation pages"
+          },
+          {
+            "element": "Card Previews",
+            "action": "Click to view/download specific asset categories"
+          }
+        ],
+        "informationArchitecture": "Hierarchical taxonomy: main design sections (Branding, Company products) → asset categories (Logo, Typography) → detailed documentation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Overview",
+        "subheadline": "Blueprint Design System",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The main library outlines proper useage of assets and defines items that are found throughout Blockstreams existing designs.",
+            "context": "First paragraph",
+            "purpose": "Explain the purpose of the design system"
+          },
+          {
+            "text": "The product brand library categorises items by product. Product pages should be referenced when creating new material for a product to ensure the colours and style stay consistent.",
+            "context": "Second paragraph",
+            "purpose": "Guide users on how to apply product-specific branding"
+          },
+          {
+            "text": "Logo",
+            "context": "Card label",
+            "purpose": "Identify asset category"
+          },
+          {
+            "text": "Typography",
+            "context": "Card label",
+            "purpose": "Identify asset category"
+          },
+          {
+            "text": "Colours",
+            "context": "Card label",
+            "purpose": "Identify asset category"
+          },
+          {
+            "text": "Icons",
+            "context": "Card label",
+            "purpose": "Identify asset category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-home-12-engineering-blog.png",
+      "label": "Engineering Blog",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00BFFF",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large sizes (28-36px), white on dark, strong weight",
+          "bodyStyle": "Regular sans-serif, light gray (#ccc), 16px line height",
+          "dataStyle": "Small gray text for dates and authors, 14px"
+        },
+        "components": [
+          {
+            "type": "Top Navigation",
+            "description": "Blockstream logo left, horizontal nav menu right (Products, Newsroom, Developers, Company, Store, Support)",
+            "position": "Top full-width",
+            "notable": "Minimal dark bar, clean spacing"
+          },
+          {
+            "type": "Article Card Grid",
+            "description": "4-column grid of article cards with image, category label, headline, author/date, and overlay text",
+            "position": "Main content area left/center",
+            "notable": "Cards have rich visual backgrounds (bitcoin graphics, shield imagery, gradient effects), overlaid category labels"
+          },
+          {
+            "type": "Right Sidebar Panel",
+            "description": "Bordered box with Blockstream company info, Follow Us social links, and Blog Categories menu",
+            "position": "Right side, fixed/sticky",
+            "notable": "Cyan border accent, organized into logical sections"
+          },
+          {
+            "type": "Category Badge",
+            "description": "Small bordered label on article cards (e.g., 'Blockstream Research')",
+            "position": "Top-left corner of each card",
+            "notable": "Consistent styling, helps users filter content mentally"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation anchors top → featured articles dominate center with large imagery and text → sidebar provides navigation and context on right",
+        "innovativeElements": [
+          "Rich visual article cards with overlaid graphics and data visualization",
+          "Dynamic article imagery (bitcoin sphere, shield icon, gradient fractal patterns)",
+          "Sidebar 'Follow Us' social icon cluster with multiple platforms"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and read Blockstream's latest research and technical blog posts",
+        "entryPoints": [
+          "Click 'Newsroom' from main navigation",
+          "Navigate from home page",
+          "Direct link from social media sharing"
+        ],
+        "exitPoints": [
+          "Click article card to read full post",
+          "Click sidebar blog category to filter content",
+          "Navigate main menu to other sections",
+          "Click social icons to follow on social platforms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article Card",
+            "action": "Click to navigate to full article page"
+          },
+          {
+            "element": "Blog Category Links",
+            "action": "Filter article grid by category"
+          },
+          {
+            "element": "Social Icons",
+            "action": "Navigate to Blockstream social media profile"
+          },
+          {
+            "element": "Main Navigation Menu",
+            "action": "Navigate to different site sections"
+          }
+        ],
+        "informationArchitecture": "Featured articles grid with category labels, supporting sidebar with taxonomy of article categories and social engagement",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "All Posts",
+            "style": "text-link",
+            "placement": "Sidebar under Blog Categories"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Risks of Expressive Smart Contracts: Lessons from the Latest Ethereum Hack",
+            "context": "Article card headline",
+            "purpose": "Draw user attention to article topic"
+          },
+          {
+            "text": "Blockstream Team",
+            "context": "Article card metadata",
+            "purpose": "Indicate author/source"
+          },
+          {
+            "text": "Feb 25, 2025",
+            "context": "Article card metadata",
+            "purpose": "Indicate publication date"
+          },
+          {
+            "text": "Blockstream Research",
+            "context": "Category badge on article card",
+            "purpose": "Categorize content type"
+          },
+          {
+            "text": "Blockstream",
+            "context": "Sidebar header",
+            "purpose": "Brand identification"
+          },
+          {
+            "text": "Bitcoin and digital asset infrastructure",
+            "context": "Sidebar tagline",
+            "purpose": "Company value proposition"
+          },
+          {
+            "text": "Follow Us",
+            "context": "Sidebar section header",
+            "purpose": "Social engagement prompt"
+          },
+          {
+            "text": "Blog Categories",
+            "context": "Sidebar section header",
+            "purpose": "Content navigation label"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Feb 25, 2025",
+          "Dec 12, 2024"
+        ],
+        "trustSignals": [
+          "Blockstream Research branding on articles",
+          "Named researchers (Russell O'Connor, Andrew Poelstra)",
+          "Technical topics (SafeGCD verification, smart contract security)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-3-careers.png",
+      "label": "Careers",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00BFFF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold white text, centered, prominent hierarchy",
+          "bodyStyle": "Medium weight gray text, centered, supporting narrative",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-banner",
+            "description": "Full-width dark background with cyan wavy pattern overlay",
+            "position": "top-center",
+            "notable": "Animated wave pattern creates depth and tech aesthetic"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with logo and six navigation items",
+            "position": "top",
+            "notable": "Sticky header with product, newsroom, developers, company, store, support"
+          },
+          {
+            "type": "value-proposition-cards",
+            "description": "Three cards with icon, heading, and implicit description below fold",
+            "position": "bottom-third",
+            "notable": "Icons use cyan color with circular backgrounds, cards are dark with subtle contrast"
+          },
+          {
+            "type": "announcement-banner",
+            "description": "Cyan banner promoting Jade Plus with call-to-action button",
+            "position": "top-absolute",
+            "notable": "High contrast black button with white text and shop icon"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, supported by supporting text, wavy pattern guides eye downward, value cards anchor bottom",
+        "innovativeElements": [
+          "Flowing cyan wave pattern as background graphic element",
+          "Layered dark backgrounds creating depth effect",
+          "Icon-driven value cards with circular colored backgrounds"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page",
+        "userIntent": "Learn about Blockstream careers and company values",
+        "entryPoints": [
+          "Navigation menu 'Company' section",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Navigation to Products, Newsroom, Developers, Company, Store, Support",
+          "Scroll to view value cards (Innovation, Execution, Passion)",
+          "Click 'Check our Shop' banner"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections of website"
+          },
+          {
+            "element": "'Check our Shop' button",
+            "action": "Navigate to product store/shop page"
+          },
+          {
+            "element": "Value cards",
+            "action": "Likely clickable to expand or navigate to jobs listing"
+          }
+        ],
+        "informationArchitecture": "Hero narrative top, supported by three core value pillars below, navigation provides escape routes",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Careers",
+        "subheadline": "We're building Bitcoin solutions that will change the way the world of finance works forever. Join us on our journey. The future's not going to build itself.",
+        "ctas": [
+          {
+            "text": "Check our Shop",
+            "style": "primary-button",
+            "placement": "top-right banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Innovation",
+            "context": "Card heading bottom-left",
+            "purpose": "Value proposition emphasizing cutting-edge approach"
+          },
+          {
+            "text": "Execution",
+            "context": "Card heading bottom-center",
+            "purpose": "Value proposition emphasizing delivery capability"
+          },
+          {
+            "text": "Passion",
+            "context": "Card heading bottom-right",
+            "purpose": "Value proposition emphasizing team engagement"
+          }
+        ],
+        "tone": "professional-technical with inspirational undertones",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin solutions narrative",
+          "Blockstream brand (established crypto company)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-4-help-center.png",
+      "label": "Help Center",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00BFFF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold white text, centered",
+          "bodyStyle": "Medium gray text, centered, supporting prompt",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Full-width dark background with diagonal mesh pattern overlay",
+            "position": "top",
+            "notable": "Geometric pattern creates modern tech aesthetic"
+          },
+          {
+            "type": "search-input",
+            "description": "Large white search box with placeholder 'Search term...'",
+            "position": "center",
+            "notable": "High contrast, generous padding, icon indicator"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with logo and navigation items",
+            "position": "top",
+            "notable": "Consistent with Blockstream branding"
+          },
+          {
+            "type": "product-cards",
+            "description": "Two cards with icon, product name, and description",
+            "position": "bottom",
+            "notable": "Blockstream Jade and Blockstream App cards with cyan icon graphics"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat button with agent messaging",
+            "position": "bottom-right",
+            "notable": "Black circular button with white text, provides immediate support"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, search field focal point, product cards provide secondary options below",
+        "innovativeElements": [
+          "Geometric mesh pattern background",
+          "Prominent search-first UX for self-service support",
+          "Integrated chat widget for escalation"
+        ]
+      },
+      "flow": {
+        "screenType": "help-center-landing",
+        "userIntent": "Find answers to support questions or get help with Blockstream products",
+        "entryPoints": [
+          "Support menu navigation",
+          "Direct help center URL",
+          "Chat widget from other pages"
+        ],
+        "exitPoints": [
+          "Search results page",
+          "Product-specific help pages (Jade or App)",
+          "Chat with agent",
+          "Navigate to other main site sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input field",
+            "action": "Submit search query to find relevant help articles"
+          },
+          {
+            "element": "Product cards (Jade, App)",
+            "action": "Navigate to product-specific documentation"
+          },
+          {
+            "element": "Chat with an Agent button",
+            "action": "Open live support chat interface"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other Blockstream sections"
+          }
+        ],
+        "informationArchitecture": "Self-service search prioritized, product cards as secondary navigation, live support as tertiary option",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Blockstream Support",
+        "subheadline": "How can we help you?",
+        "ctas": [
+          {
+            "text": "Chat with an Agent",
+            "style": "primary-button",
+            "placement": "bottom-right floating widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search term...",
+            "context": "Search input placeholder",
+            "purpose": "Guides user to enter search query"
+          },
+          {
+            "text": "Blockstream Jade",
+            "context": "Product card heading",
+            "purpose": "Product identification"
+          },
+          {
+            "text": "Fully open-source Bitcoin and Liquid hardware wallet.",
+            "context": "Jade product card description",
+            "purpose": "Brief value proposition"
+          },
+          {
+            "text": "Blockstream App",
+            "context": "Product card heading",
+            "purpose": "Product identification"
+          },
+          {
+            "text": "A multi-platform Bitcoin & Liquid wallet with advanced features.",
+            "context": "App product card description",
+            "purpose": "Brief value proposition"
+          }
+        ],
+        "tone": "professional-friendly, helpful",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blockstream brand authority",
+          "Open-source transparency mention"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-5-help-center.png",
+      "label": "Help Center",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width with card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00BFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif black text, left-aligned, category headers; large white heading in hero",
+          "bodyStyle": "Regular weight black text on white, left-aligned, list items",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "breadcrumb-navigation",
+            "description": "Cyan text link breadcrumb showing Help Center > Blockstream App",
+            "position": "top-left",
+            "notable": "Guides user location in information hierarchy"
+          },
+          {
+            "type": "hero-section",
+            "description": "Dark background header with large white 'Blockstream App' heading",
+            "position": "top",
+            "notable": "Minimal design with consistent branding"
+          },
+          {
+            "type": "article-grid",
+            "description": "Six-column layout of categorized help articles",
+            "position": "main content",
+            "notable": "Three columns x two rows with bold headings and list links"
+          },
+          {
+            "type": "category-sections",
+            "description": "Six sections: Getting Started, Using Blockstream App, Liquid and Lightning Use, Advanced, Understanding Blockstream App, Troubleshooting",
+            "position": "main content",
+            "notable": "Clear categorization with 'See all articles' links in cyan"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating agent chat button",
+            "position": "bottom-right",
+            "notable": "Persistent support option visible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title prominent, section headings guide scanning, lists organize actionable items, cyan links highlight exploration paths",
+        "innovativeElements": [
+          "Category-based article organization",
+          "Cyan 'See all articles' links for category expansion",
+          "Integrated chat widget for progressive support escalation"
+        ]
+      },
+      "flow": {
+        "screenType": "help-center-index",
+        "userIntent": "Browse and find help articles for Blockstream App across different topics",
+        "entryPoints": [
+          "Search results from previous page",
+          "Product card selection (Blockstream App)",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click article link to read full article",
+          "Click 'See all articles' to expand category",
+          "Navigate via breadcrumb to Help Center main",
+          "Chat with agent for direct support",
+          "Navigate to other main site sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article links (Delete a wallet, Set up wallet, Buy bitcoin, etc.)",
+            "action": "Navigate to specific help article"
+          },
+          {
+            "element": "'See all articles' links (cyan)",
+            "action": "Expand category to show all articles"
+          },
+          {
+            "element": "Breadcrumb link 'Blockstream Help Center'",
+            "action": "Navigate back to help center main page"
+          },
+          {
+            "element": "Chat with an Agent button",
+            "action": "Open live support chat"
+          }
+        ],
+        "informationArchitecture": "Category-first navigation with articles grouped by user intent (Getting Started, Using, Advanced, Understanding, Troubleshooting)",
+        "frictionPoints": [
+          "Many categories may require scrolling to see all",
+          "Truncated article list (See all articles) requires extra click"
+        ],
+        "progressIndicators": [
+          "Breadcrumb shows current location: Help Center > Blockstream App"
+        ]
+      },
+      "copy": {
+        "headline": "Blockstream App",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "See all articles",
+            "style": "text-link",
+            "placement": "Under each category section (Getting Started, Using Blockstream App, Liquid and Lightning Use, Advanced, Understanding, Troubleshooting)"
+          },
+          {
+            "text": "Chat with an Agent",
+            "style": "primary-button",
+            "placement": "bottom-right floating widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Getting Started",
+            "context": "Category heading",
+            "purpose": "Sections users new to the app"
+          },
+          {
+            "text": "Delete a wallet",
+            "context": "Article link",
+            "purpose": "Specific task help"
+          },
+          {
+            "text": "Set up a new wallet",
+            "context": "Article link",
+            "purpose": "Onboarding task"
+          },
+          {
+            "text": "Buy bitcoin",
+            "context": "Article link",
+            "purpose": "Core functionality help"
+          },
+          {
+            "text": "Why do I have to pay transaction fees and why are they sometimes high?",
+            "context": "Article link under Understanding section",
+            "purpose": "Educational, addresses common confusion"
+          },
+          {
+            "text": "Lost device with wallet access",
+            "context": "Article link under Troubleshooting",
+            "purpose": "Emergency/crisis support"
+          },
+          {
+            "text": "We're upgrading Lightning in the Blockstream app",
+            "context": "Article link under Liquid and Lightning Use",
+            "purpose": "Product update notification"
+          }
+        ],
+        "tone": "professional-technical, educational, supportive",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive article coverage",
+          "Organized by user intent",
+          "Direct agent support available"
+        ],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-send-1-greenlightlightning-node-management-for-payments.png",
+      "label": "GreenlightLightning node management for payments",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffc107",
+          "#00bfff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48-56px), white text, high contrast",
+          "bodyStyle": "Regular sans-serif, 14-16px, light gray text with good readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Cyan banner at top with product announcement and CTA",
+            "position": "top full-width",
+            "notable": "High visibility announcement zone with contrasting shop button"
+          },
+          {
+            "type": "navigation",
+            "description": "Horizontal nav bar with logo, menu items, and section tabs",
+            "position": "below banner",
+            "notable": "Two-level nav: main menu (Products, Newsroom, etc.) and sub-tabs (Overview, Greenlight, Community)"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left-aligned text content with large headline and supporting copy",
+            "position": "left-center",
+            "notable": "Bold, benefit-driven headline emphasizing ease-of-use"
+          },
+          {
+            "type": "illustration",
+            "description": "Abstract lightning bolt graphic with yellow/white lines",
+            "position": "right-center",
+            "notable": "Dynamic diagonal composition reinforces 'Lightning' branding"
+          },
+          {
+            "type": "cta-buttons",
+            "description": "Primary yellow button and secondary text link",
+            "position": "left-lower",
+            "notable": "Clear visual hierarchy with contrasting button colors"
+          },
+          {
+            "type": "feature-icons",
+            "description": "Three icon placeholders at bottom",
+            "position": "bottom-center",
+            "notable": "Yellow outlined icons suggest key features (key, database, code)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right reading flow: headline dominates, supporting copy underneath, CTAs create action pathway, right-side illustration balances composition",
+        "innovativeElements": [
+          "Animated wave pattern background in dark theme",
+          "Dynamic diagonal lightning illustration with layered lines",
+          "Color-coded tab system with yellow accent on active state"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Greenlight product capabilities and get started or explore source code",
+        "entryPoints": [
+          "Direct product page visit from navigation menu",
+          "Campaign link from banner announcement",
+          "Search result for Lightning node solutions"
+        ],
+        "exitPoints": [
+          "Get Started button → onboarding/signup flow",
+          "View Source Code link → GitHub or code repository",
+          "Navigation menu → other products or sections",
+          "Shop button → storefront"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started button",
+            "action": "Initiates onboarding or account creation flow"
+          },
+          {
+            "element": "View Source Code link",
+            "action": "Navigates to developer documentation or repository"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Route to different product sections or company pages"
+          },
+          {
+            "element": "Tab navigation (Overview, Greenlight, Community)",
+            "action": "Switches content view within product section"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: product category (Core Lightning) → specific feature (Greenlight) → related resources (tabs for Overview, Community). Left content = conceptual, right = visual reinforcement",
+        "frictionPoints": [
+          "Multiple CTAs may create decision paralysis (Get Started vs View Source Code)",
+          "Minimal context about what happens after clicking Get Started",
+          "Feature icons at bottom are ambiguous without labels"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your personal Core Lightning node, without the technical fuss.",
+        "subheadline": "With Greenlight, developers can integrate Lightning in their apps seamlessly, while granting users full control over their funds.",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "left-lower section"
+          },
+          {
+            "text": "View Source Code",
+            "style": "text-link",
+            "placement": "left-lower section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Core Lightning",
+            "context": "Product title with yellow icon",
+            "purpose": "Identifies the product category clearly"
+          },
+          {
+            "text": "Greenlight",
+            "context": "Feature/product name in header and illustration",
+            "purpose": "Brand the specific Lightning implementation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blockstream branding and logo",
+          "References to developer integration capability",
+          "Emphasis on 'full control over funds' (security/trust)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-1-press-releases.png",
+      "label": "Press Releases",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00bfff",
+          "#ffc107"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 48px, white text, center-aligned",
+          "bodyStyle": "Regular sans-serif, 14px, light gray text",
+          "dataStyle": "Date format: 'Month DD, YYYY' in light gray, left-aligned on cards"
+        },
+        "components": [
+          {
+            "type": "page-title",
+            "description": "Centered 'Press Releases' heading",
+            "position": "top-center",
+            "notable": "Large, prominent title with significant top margin"
+          },
+          {
+            "type": "card",
+            "description": "Press release card with logo, title, and excerpt",
+            "position": "grid-left",
+            "notable": "Blockstream + Distributed Lab partnership announcement with blue-tinted background and wave pattern"
+          },
+          {
+            "type": "card",
+            "description": "Press release card for Simplicity launch",
+            "position": "grid-right",
+            "notable": "Blockstream + Simplicity co-branding with warm brown-tinted background"
+          },
+          {
+            "type": "logo-section",
+            "description": "Company logo and co-brand logos on cards",
+            "position": "card-top",
+            "notable": "Blockstream circle logo used consistently, co-brand logos positioned right-aligned"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title commands attention at top, card grid organized chronologically (newest first), date positioning creates secondary scanning path",
+        "innovativeElements": [
+          "Gradient/tinted card backgrounds (blue vs warm brown) create visual variety",
+          "Wave pattern background overlays on cards reinforce brand aesthetic",
+          "Date positioning outside card for quick scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse company announcements and press releases chronologically",
+        "entryPoints": [
+          "Newsroom section from main navigation",
+          "Company or Press page link",
+          "Search for 'Blockstream press releases'"
+        ],
+        "exitPoints": [
+          "Click on press release card → full article view",
+          "Navigation menu → other sections",
+          "Back button → previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Press release card",
+            "action": "Navigate to full press release article"
+          },
+          {
+            "element": "Main navigation",
+            "action": "Switch to different site sections"
+          }
+        ],
+        "informationArchitecture": "Chronological listing with metadata (date, logos, title, excerpt) organized in card containers. Two-column grid layout maximizes information density while maintaining readability",
+        "frictionPoints": [
+          "No pagination or 'load more' visible - unclear how many releases exist",
+          "No filtering by date, category, or keyword search",
+          "Card content truncated, requiring click to read full release"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Press Releases",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "November 18, 2025",
+            "context": "Date label on first card",
+            "purpose": "Temporal context for announcement"
+          },
+          {
+            "text": "July 31, 2025",
+            "context": "Date label on second card",
+            "purpose": "Temporal context for announcement"
+          },
+          {
+            "text": "Blockstream Boosts Engineering with Addition of Distributed Lab's Expertise",
+            "context": "Press release title (card 1)",
+            "purpose": "Headline summarizing announcement"
+          },
+          {
+            "text": "Blockstream Launches Simplicity, Heralding a New Era of Smarter, Safer Contracts on Bitcoin",
+            "context": "Press release title (card 2)",
+            "purpose": "Headline summarizing announcement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month DD, YYYY",
+          "Card layout with date, title, and excerpt"
+        ],
+        "trustSignals": [
+          "Official press releases from established blockchain company",
+          "Partnership announcements with recognized entities",
+          "Emphasis on technology expertise and Bitcoin security"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-2-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00bfff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 56-64px, white text, center-aligned",
+          "bodyStyle": "Regular sans-serif, 16px, light gray text, center-aligned, max-width container",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "page-section",
+            "description": "'About Us' section with headline and company history",
+            "position": "top-center",
+            "notable": "Centered layout with substantial whitespace, wave pattern background"
+          },
+          {
+            "type": "cta-button",
+            "description": "'Join Our Team' recruitment button",
+            "position": "center-lower",
+            "notable": "Bright cyan button contrasts dark background, clear call-to-action"
+          },
+          {
+            "type": "page-section",
+            "description": "'Our Mission' heading (implied, visible at bottom)",
+            "position": "bottom-center",
+            "notable": "Sets up next content section with similar visual treatment"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical flow: headline at top draws attention, supporting text below with ample spacing, CTA button positioned prominently, wave background creates visual interest without distraction",
+        "innovativeElements": [
+          "Animated/layered wave pattern background creates depth",
+          "Full-width centered layout emphasizes company messaging over feature focus"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about company mission, history, and culture; explore career opportunities",
+        "entryPoints": [
+          "Company section from main navigation",
+          "About page link from footer",
+          "Search for 'Blockstream company information'"
+        ],
+        "exitPoints": [
+          "Join Our Team button → careers page",
+          "Navigation menu → other sections",
+          "Scroll down → Our Mission section and beyond"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Join Our Team button",
+            "action": "Navigate to careers page or job listings"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Switch to different site sections"
+          },
+          {
+            "element": "Scroll",
+            "action": "Reveal next content section (Our Mission)"
+          }
+        ],
+        "informationArchitecture": "Vertical scrolling narrative: About Us context → recruitment CTA → Mission statement. Content flows top-to-bottom with clear section breaks",
+        "frictionPoints": [
+          "Single CTA (Join Our Team) limits navigation options",
+          "No immediate context about company size, achievements, or key numbers",
+          "Minimal visual hierarchy between sections may blur messaging"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About Us",
+        "subheadline": "Founded in 2014, Blockstream has been the leading provider of blockchain technologies and has remained on the forefront of work in cryptography and distributed systems.",
+        "ctas": [
+          {
+            "text": "Join Our Team",
+            "style": "primary-button",
+            "placement": "center-lower section"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Founded year: 2014",
+          "Industry descriptors: blockchain, cryptography, distributed systems"
+        ],
+        "trustSignals": [
+          "11-year company history (founded 2014)",
+          "Leadership positioning in blockchain and cryptography",
+          "Emphasis on sustained presence and industry forefront status"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-6-terms-of-service.png",
+      "label": "Terms of Service",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered, all-caps weight",
+          "bodyStyle": "Light gray body text, generous line-height, justified alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Cyan banner with product promo 'Jade Plus' and shop CTA",
+            "position": "top full-width",
+            "notable": "Bright cyan contrasts against dark theme"
+          },
+          {
+            "type": "navigation",
+            "description": "Horizontal navigation with Blockstream logo and 6 menu items",
+            "position": "fixed top",
+            "notable": null
+          },
+          {
+            "type": "content-container",
+            "description": "Centered column of legal text with version number and multiple paragraphs",
+            "position": "main content area",
+            "notable": "Clear paragraph breaks and bold emphasis on key terms"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline centered with extreme size, subheading (Version 1.0) below, body text flows down in readable columns with ample vertical rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review terms of service before accepting or proceeding with platform use",
+        "entryPoints": [
+          "Settings/Help section",
+          "Onboarding flow",
+          "Footer link"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Accept and proceed",
+          "Navigation to other pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to Products, Newsroom, Developers, Company, Store, or Support"
+          }
+        ],
+        "informationArchitecture": "Legal document with progressive disclosure: headline → version → introductory paragraph → detailed terms organized by topic. Supplemental Terms referenced inline.",
+        "frictionPoints": [
+          "Dense legal text requires sustained reading",
+          "No table of contents or section navigation",
+          "No visual breaks between major sections"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Use Agreement",
+        "subheadline": "Version 1.0",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "If you do not agree to be bound by the terms of use, you may not access or use this Website or the Services.",
+            "context": "End of introductory paragraph",
+            "purpose": "Critical compliance statement"
+          },
+          {
+            "text": "PLEASE NOTE THAT THE AGREEMENT IS SUBJECT TO CHANGE BY BLOCKSTREAM IN ITS SOLE DISCRETION AT ANY TIME.",
+            "context": "Final paragraph",
+            "purpose": "Disclaimer about future modifications"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blockstream Corporation official branding",
+          "Detailed terms covering Services and Website",
+          "Reference to Supplemental Terms for additional coverage"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-7-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered",
+          "bodyStyle": "Light gray body text with generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Cyan banner with 'Jade Plus' product promo and shop CTA",
+            "position": "top full-width",
+            "notable": "Consistent cyan accent color across all pages"
+          },
+          {
+            "type": "navigation",
+            "description": "Fixed horizontal navigation with logo and menu items",
+            "position": "fixed below banner",
+            "notable": null
+          },
+          {
+            "type": "content-container",
+            "description": "Centered text column with heading, intro paragraph, and numbered section",
+            "position": "main content",
+            "notable": "Numbered section headers (1. SCOPE AND DEFINITIONS) for organization"
+          },
+          {
+            "type": "bullet-list",
+            "description": "Two bullet points under scope section",
+            "position": "within main content",
+            "notable": "Provides structured list of covered sites"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates, subheading clarifies scope, intro paragraph provides context, numbered sections provide scannable structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand privacy practices and data handling policies",
+        "entryPoints": [
+          "Settings/Help",
+          "Footer link",
+          "Compliance reference"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Continue reading",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Structured legal document with headline → introductory explanation → numbered sections with subsections. Emphasis on scope definitions upfront.",
+        "frictionPoints": [
+          "Long dense paragraphs without visual breaks",
+          "No table of contents for navigation",
+          "Small font size for detailed definitions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "At Blockstream, we are committed to protecting the privacy and confidentiality of any personal data we collect when you use our sites.",
+            "context": "Opening paragraph",
+            "purpose": "Establish trust and commitment to privacy"
+          },
+          {
+            "text": "Personal information means information that identifies you personally, either alone or in combination with other information available to us.",
+            "context": "Definitions section",
+            "purpose": "Clarify scope of coverage"
+          },
+          {
+            "text": "A Note to Users Outside of the United States. If you are a non-U.S. user of the Sites, by visiting the Sites and providing us with data, you acknowledge and agree that your Personal Information may be processed for the purposes identified in the Privacy Policy.",
+            "context": "Under scope section",
+            "purpose": "International user disclosure and consent"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blockstream official branding",
+          "Comprehensive privacy commitment statement",
+          "Specific mention of personal data protection",
+          "International user acknowledgment and consent mechanism"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/green-settings-8-contact.png",
+      "label": "Contact",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#1A1A1A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered for main headline",
+          "bodyStyle": "Medium gray body text for category descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-banner",
+            "description": "Cyan banner with 'Jade Plus' promo and shop CTA",
+            "position": "top full-width",
+            "notable": "Consistent branding across section pages"
+          },
+          {
+            "type": "navigation",
+            "description": "Fixed horizontal navigation with logo and menu",
+            "position": "fixed below banner",
+            "notable": null
+          },
+          {
+            "type": "card-grid",
+            "description": "Three horizontal cards with icons, titles, descriptions, and link CTAs",
+            "position": "upper main content",
+            "notable": "Cyan rounded square icons, left-aligned with arrow links in bright cyan"
+          },
+          {
+            "type": "callout-box",
+            "description": "Bordered container with darker background for Developer Contact section",
+            "position": "bottom of visible area",
+            "notable": "Uses cyan border to match accent color scheme"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large centered headline draws eye, subheadline suggests action, three equal-weight cards below provide parallel options, Developer Contact box provides secondary emphasis",
+        "innovativeElements": [
+          "Icon-based card categorization makes contact types instantly scannable",
+          "Color-coded cyan links with arrow indicators guide users forward"
+        ]
+      },
+      "flow": {
+        "screenType": "contact-hub",
+        "userIntent": "Find the appropriate contact method for their inquiry type",
+        "entryPoints": [
+          "Settings/Help section",
+          "Navigation menu",
+          "Support link"
+        ],
+        "exitPoints": [
+          "Business Inquiries",
+          "Press Inquiries",
+          "General Inquiries",
+          "Developer Contact form"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Business Inquiries link",
+            "action": "Navigate to business contact form"
+          },
+          {
+            "element": "Press Inquiries link",
+            "action": "Navigate to press/media contact form"
+          },
+          {
+            "element": "General Inquiries link",
+            "action": "Navigate to general contact form"
+          },
+          {
+            "element": "Developer Contact section",
+            "action": "Likely navigates to developer-specific contact form"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke model: main contact page branches into three primary inquiry types (Business, Press, Help) with secondary Developer Contact highlighted separately below",
+        "frictionPoints": [
+          "Three separate inquiry pathways might create decision paralysis",
+          "Developer Contact section is cut off and incomplete in visible area"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Contact Us",
+        "subheadline": "Do you want to get in touch with Blockstream? Select the topic below!",
+        "ctas": [
+          {
+            "text": "Business Inquiries →",
+            "style": "text-link-cyan",
+            "placement": "Below Business & Sales card"
+          },
+          {
+            "text": "Press Inquiries →",
+            "style": "text-link-cyan",
+            "placement": "Below Press & Media card"
+          },
+          {
+            "text": "General Inquiries →",
+            "style": "text-link-cyan",
+            "placement": "Below Help & Support card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We'd love to talk about how we can work together.",
+            "context": "Business & Sales card description",
+            "purpose": "Warm invitation for business discussions"
+          },
+          {
+            "text": "Reach us here for press quotes and interview requests.",
+            "context": "Press & Media card description",
+            "purpose": "Clear indication of press inquiry scope"
+          },
+          {
+            "text": "Do you have a general inquiry or comment?",
+            "context": "Help & Support card description",
+            "purpose": "Welcoming call-to-action for general questions"
+          },
+          {
+            "text": "Having security concerns with one of our products?",
+            "context": "Developer Contact section",
+            "purpose": "Targets security-focused developer inquiries"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Multiple dedicated contact pathways show responsiveness",
+          "Specific security contact for developers demonstrates security focus",
+          "Press inquiry option shows media engagement and transparency"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

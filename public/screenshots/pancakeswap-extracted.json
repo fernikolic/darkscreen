@@ -1,0 +1,4064 @@
+{
+  "slug": "pancakeswap",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:50:32.173Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 27,
+  "screens": [
+    {
+      "image": "/screenshots/pancakeswap-home-4-play-scrolled-1.png",
+      "label": "Play — scrolled 1",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#ec4899",
+          "#06b6d4",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large, all-caps labels (e.g. 'Welcome!') in dark navy",
+          "bodyStyle": "Medium-weight body text in dark gray/navy, readable on light backgrounds",
+          "dataStyle": "Large bold numbers with currency symbols and percentage changes in color-coded pink/teal"
+        },
+        "components": [
+          {
+            "type": "Modal",
+            "description": "Centered white modal with 'Welcome!' heading and risk disclaimer",
+            "position": "Center of screen, overlay",
+            "notable": "Risk acknowledgment with checkbox and Continue button"
+          },
+          {
+            "type": "Price cards",
+            "description": "Rounded cards showing closed price, last price, locked price, and prize pools",
+            "position": "Behind modal, top section",
+            "notable": "Color-coded UP/DOWN indicators with payouts displayed prominently"
+          },
+          {
+            "type": "Chart toggles",
+            "description": "TradingView Chart and Chainlink Chart buttons",
+            "position": "Lower left section",
+            "notable": "Pill-shaped buttons with icon indicators"
+          },
+          {
+            "type": "Footer navigation",
+            "description": "Multi-column footer with ecosystem, business, and developer links",
+            "position": "Bottom",
+            "notable": "Social media icons and dark purple background continuation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dominates focus with risk warning, background cards visible but muted by overlay",
+        "innovativeElements": [
+          "Animated modal with risk acknowledgment checkbox",
+          "Color-coded price direction indicators (pink DOWN, teal UP)",
+          "Prize pool layering showing multiple entry points"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-confirmation",
+        "userIntent": "User is about to enter a trading/prediction product and must acknowledge risks",
+        "entryPoints": [
+          "Play section navigation from main menu",
+          "Direct link to prediction markets"
+        ],
+        "exitPoints": [
+          "Continue button to proceed to active predictions",
+          "Dismiss/back to exit without acknowledgment"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Risk disclaimer checkbox",
+            "action": "Toggle acknowledgment of personal risk responsibility"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceed past modal to prediction interface"
+          },
+          {
+            "element": "Chart toggle buttons",
+            "action": "Switch between TradingView and Chainlink chart views"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to documentation, audits, careers, etc."
+          }
+        ],
+        "informationArchitecture": "Legal/risk disclosure in prominent modal, underlying price data and charts visible but secondary, ecosystem/business links in footer for discovery",
+        "frictionPoints": [
+          "Mandatory checkbox before proceeding creates friction",
+          "Modal blocks access to underlying trading interface"
+        ],
+        "progressIndicators": [
+          "Modal overlay indicates gate/checkpoint in user journey"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome!",
+        "subheadline": "Once you enter a position, you cannot cancel or adjust it.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I understand that I am using this product at my own risk. Any losses incurred due to my actions are my own responsibility.",
+            "context": "Checkbox label in modal",
+            "purpose": "Risk acknowledgment and liability waiver"
+          },
+          {
+            "text": "CLOSED PRICE, LAST PRICE, LOCKED PRICE",
+            "context": "Card headers",
+            "purpose": "Clarify price type being displayed"
+          },
+          {
+            "text": "Prize Pool",
+            "context": "Card details",
+            "purpose": "Indicate total reward pool in BNB"
+          }
+        ],
+        "tone": "professional-technical, cautionary",
+        "dataFormatting": [
+          "$631.0900",
+          "$0.3768",
+          "$-0.2005",
+          "2.21x Payout",
+          "2.4087 BNB",
+          "3.7524 BNB"
+        ],
+        "trustSignals": [
+          "Risk acknowledgment required upfront",
+          "Locked price transparency",
+          "Multiple chart data sources (TradingView, Chainlink)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-5-lottery.png",
+      "label": "Lottery",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#fbbf24",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold white heading 'The PancakeSwap Lottery'",
+          "bodyStyle": "White body text, medium weight",
+          "dataStyle": "Large bold yellow numbers for prize pool and countdown, contrasts against purple"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Full-width purple gradient background with centered prize pool display and animated stars/coins",
+            "position": "Top 60% of screen",
+            "notable": "Playful floating 3D icons (stars, coins, tickets) create sense of luck/winning"
+          },
+          {
+            "type": "CTA button",
+            "description": "Large 'Buy Tickets' button in dark purple on yellow rounded card",
+            "position": "Center, over hero background",
+            "notable": "Prominent, contrasting color against yellow card backing"
+          },
+          {
+            "type": "Countdown timer",
+            "description": "Large yellow numbers with day/hour/minute labels",
+            "position": "Below hero, center",
+            "notable": "Creates urgency with 'until the draw' text"
+          },
+          {
+            "type": "Draw info card",
+            "description": "White card with next draw number and date/time",
+            "position": "Bottom",
+            "notable": "Provides specific draw reference (#1904)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Prize pool amount dominates center, CTA button focal point, countdown creates secondary urgency, draw info at base",
+        "innovativeElements": [
+          "Floating animated 3D icons (stars, coins, tickets)",
+          "Color-blocked yellow card containing CTA for contrast",
+          "Countdown timer with granular time units (days, hours, minutes)",
+          "Playful tone with luck-themed visual language"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-promotion",
+        "userIntent": "User wants to learn about and enter the PancakeSwap Lottery, purchase tickets",
+        "entryPoints": [
+          "Play menu navigation",
+          "Lottery tab selection from Prediction/Lottery toggle"
+        ],
+        "exitPoints": [
+          "Buy Tickets button to purchase flow",
+          "Navigation menu for other Play features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy Tickets button",
+            "action": "Navigate to ticket purchase interface"
+          },
+          {
+            "element": "Prediction/Lottery tabs",
+            "action": "Switch between Play features"
+          }
+        ],
+        "informationArchitecture": "Hero-style promotion with single clear CTA, countdown to create urgency, minimal competing elements, draw info at bottom for reference",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Countdown timer showing time until next draw creates urgency"
+        ]
+      },
+      "copy": {
+        "headline": "The PancakeSwap Lottery",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Buy Tickets",
+            "style": "primary-button",
+            "placement": "Center of hero, on yellow card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "in Prizes!",
+            "context": "Below prize pool amount",
+            "purpose": "Clarify the displayed amount is total prizes available"
+          },
+          {
+            "text": "Get your tickets now!",
+            "context": "Section heading above countdown",
+            "purpose": "Call-to-action text creating urgency"
+          },
+          {
+            "text": "until the draw",
+            "context": "Below countdown timer",
+            "purpose": "Contextualize the countdown display"
+          },
+          {
+            "text": "Next Draw",
+            "context": "Card header",
+            "purpose": "Label for draw information"
+          }
+        ],
+        "tone": "friendly-casual, playful, urgent",
+        "dataFormatting": [
+          "$19,628",
+          "1d 17h 49m",
+          "#1904 | Draw: Feb 16, 2026, 7:00 AM"
+        ],
+        "trustSignals": [
+          "Specific draw number and scheduled date/time",
+          "Large, transparent prize pool amount"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-6-cakepad.png",
+      "label": "CAKE.PAD",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6366f1",
+          "#06b6d4",
+          "#f0f9ff",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Very large bold purple sans-serif heading 'CAKE.PAD', all-caps",
+          "bodyStyle": "Dark navy/black body text, medium weight",
+          "dataStyle": "Bold numbers in dark purple/navy, values in different weights to create hierarchy"
+        },
+        "components": [
+          {
+            "type": "Header/title section",
+            "description": "Large 'CAKE.PAD' heading with descriptive subtext",
+            "position": "Top left, 40% of width",
+            "notable": "Bold typography establishes brand, mascot character on right"
+          },
+          {
+            "type": "Mascot illustration",
+            "description": "Animated bunny character with shopping bags on striped awning",
+            "position": "Top right",
+            "notable": "Playful, inviting visual, 'How does it work?' tooltip"
+          },
+          {
+            "type": "Status banner",
+            "description": "Dark banner with 'Lever Up' branding and 'CAKE.PAD Ended' status",
+            "position": "Center, full width",
+            "notable": "High contrast status indicator, Monad chain badge"
+          },
+          {
+            "type": "Info cards",
+            "description": "White rounded cards showing total sale, pool details, and contribution metrics",
+            "position": "Lower section",
+            "notable": "Structured data display with clear labels and values"
+          },
+          {
+            "type": "Connect button",
+            "description": "Large teal 'Connect Wallet' button",
+            "position": "In cards section",
+            "notable": "Primary action, requires wallet connection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading and mascot draw attention, status banner establishes context, data cards provide details, Connect button is secondary focal point",
+        "innovativeElements": [
+          "Playful mascot character with interactive tooltip",
+          "Status banner indicating ended sale state",
+          "Multi-chain indicator (Monad badge)",
+          "Clean card-based data layout with icon labels"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "User wants to understand CAKE.PAD token sale details, view sale metrics, and potentially participate if sale is active",
+        "entryPoints": [
+          "Play menu navigation",
+          "Latest/Finished tabs toggle"
+        ],
+        "exitPoints": [
+          "Connect Wallet to proceed with transaction",
+          "Navigate back to other Play features",
+          "View 'How does it work?' tooltip for information"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Latest/Finished tabs",
+            "action": "Toggle between active and completed sales"
+          },
+          {
+            "element": "How does it work? tooltip",
+            "action": "Reveal information about CAKE.PAD mechanics"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet connection to participate in sale"
+          }
+        ],
+        "informationArchitecture": "Header introduces product, status banner clarifies state (ended), structured data cards show sale metrics, CTA for wallet connection if applicable",
+        "frictionPoints": [
+          "Sale is ended, limiting immediate action for new users",
+          "Wallet connection required to proceed, creates step before participation"
+        ],
+        "progressIndicators": [
+          "Latest/Finished status indicator shows sale lifecycle position"
+        ]
+      },
+      "copy": {
+        "headline": "CAKE.PAD",
+        "subheadline": "Get exclusive early access to new tokens with CAKE",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "In CAKE POOL card section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "How does it work?",
+            "context": "Tooltip near mascot",
+            "purpose": "Provide educational information about product mechanics"
+          },
+          {
+            "text": "CAKE.PAD Ended",
+            "context": "Status banner",
+            "purpose": "Clearly communicate that this sale period has concluded"
+          },
+          {
+            "text": "TOTAL SALE",
+            "context": "Card label",
+            "purpose": "Identify metric being displayed"
+          },
+          {
+            "text": "CAKE POOL",
+            "context": "Card section header",
+            "purpose": "Label reward/participation pool"
+          },
+          {
+            "text": "Sale Price per token, Raise Goal, Total committed, Status, Total CAKE to burn",
+            "context": "Card row labels",
+            "purpose": "Provide context for displayed metrics"
+          }
+        ],
+        "tone": "professional-technical, friendly",
+        "dataFormatting": [
+          "10,000,000 LV",
+          "0.004878 Cake",
+          "48,780.4 Cake",
+          "33,118,238.21 Cake",
+          "67,892.39 %",
+          "39,683.3 Cake"
+        ],
+        "trustSignals": [
+          "Official CAKE.PAD branding from PancakeSwap",
+          "Transparent sale metrics (total committed, raise goal)",
+          "Specific chain indicator (Monad)",
+          "Lever Up partnership badge"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "CAKE.PAD Ended - indicates sale has concluded"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-swap-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "card-centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E8D5F2",
+          "#FFFFFF",
+          "#00BCD4",
+          "#6B5B95"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark purple/navy color",
+          "bodyStyle": "Regular sans-serif, medium gray text for labels",
+          "dataStyle": "Large purple/gray numbers with currency indicators below"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, menu items (Trade, Perps, Earn, Prob, Play), and wallet connection",
+            "position": "top",
+            "notable": "Vibrant turquoise 'Connect Wallet' button; network selector showing BNB Chain"
+          },
+          {
+            "type": "swap-form-card",
+            "description": "White rounded card containing swap interface with tab controls (Swap, TWAP, Limit)",
+            "position": "center",
+            "notable": "Inverted exchange icon (cyan down arrow) between from/to fields"
+          },
+          {
+            "type": "token-selector",
+            "description": "Token input fields with icon, symbol, chain label, and amount display",
+            "position": "within form",
+            "notable": "Each token shows 0.00 value with USD conversion; dropdown indicators"
+          },
+          {
+            "type": "cta-button",
+            "description": "Large turquoise 'Connect Wallet' button with wallet icon",
+            "position": "bottom of form",
+            "notable": "Full-width, disabled state (requires wallet connection)"
+          },
+          {
+            "type": "promotional-card",
+            "description": "Bottom-right floating card with orange mascot promoting probable.markets",
+            "position": "bottom-right",
+            "notable": "Cartoon mascot, linked CTA 'Start now' with external icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered white card on gradient purple background draws focus; swap form elements arranged vertically; decorative floral/geometric elements in background add visual interest without distraction",
+        "innovativeElements": [
+          "Gradient purple/pink background with layered decorative plant and geometric elements",
+          "Swap exchange icon positioned between from/to fields for intuitive direction",
+          "Floating promotional card with character mascot reduces empty space usage"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-form",
+        "userIntent": "Initiate a token swap transaction",
+        "entryPoints": [
+          "Direct navigation from Trade menu",
+          "Fresh page load",
+          "Return from wallet connection flow"
+        ],
+        "exitPoints": [
+          "Connect Wallet → wallet selection modal",
+          "Menu navigation (Trade, Perps, Earn, etc.)",
+          "Promotional card → probable.markets site",
+          "Settings icon → preferences"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap/TWAP/Limit tabs",
+            "action": "Switch between different swap execution modes"
+          },
+          {
+            "element": "Token selector dropdowns",
+            "action": "Open token selection modal to choose different assets"
+          },
+          {
+            "element": "Exchange icon (down arrow)",
+            "action": "Reverse from/to tokens"
+          },
+          {
+            "element": "Auto: 0.50% link",
+            "action": "Adjust slippage tolerance setting"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet connection flow"
+          }
+        ],
+        "informationArchitecture": "Form follows top-to-bottom flow: swap mode selection → input token → output token → settings (slippage) → action button. Navigation and network selection in header.",
+        "frictionPoints": [
+          "Wallet must be connected before proceeding (requires extra step)",
+          "Both token amounts show 0.00 (no default values or recent selections)",
+          "Slippage tolerance requires clicking to edit rather than inline adjustment"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom of swap form, full-width"
+          },
+          {
+            "text": "Start now",
+            "style": "primary-button-small",
+            "placement": "promotional card, bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From:",
+            "context": "input token section label",
+            "purpose": "Clarify direction of token flow"
+          },
+          {
+            "text": "To:",
+            "context": "output token section label",
+            "purpose": "Clarify direction of token flow"
+          },
+          {
+            "text": "BNB Chain",
+            "context": "token and header network selector",
+            "purpose": "Indicate current blockchain network"
+          },
+          {
+            "text": "Slippage Tolerance",
+            "context": "settings section",
+            "purpose": "Indicate price impact tolerance threshold"
+          },
+          {
+            "text": "Auto: 0.50%",
+            "context": "slippage settings",
+            "purpose": "Show current slippage setting with indication it's automatic"
+          },
+          {
+            "text": "~0 USD",
+            "context": "below token amounts",
+            "purpose": "Convert crypto values to fiat equivalent"
+          },
+          {
+            "text": "Place Your Zero-Fee Predictions on probable.markets!",
+            "context": "promotional card headline",
+            "purpose": "Advertise partner product"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (crypto amount, large purple text)",
+          "~0 USD (fiat conversion, gray text)",
+          "$1344 (top-right portfolio value with icon)",
+          "0.50% (percentage with % symbol)"
+        ],
+        "trustSignals": [
+          "BNB Chain selection (established network indicator)",
+          "PancakeSwap branding and logo",
+          "Network selector showing active chain"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-swap-2-trade.png",
+      "label": "Trade",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "card-centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#E8D5F2",
+          "#FFFFFF",
+          "#00BCD4",
+          "#6B5B95"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark purple/navy color",
+          "bodyStyle": "Regular sans-serif, medium gray text for labels",
+          "dataStyle": "Large purple/gray numbers with currency indicators below"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, menu items, and wallet connection",
+            "position": "top",
+            "notable": "Network selector shows BNB Chain; balance displayed as $1343"
+          },
+          {
+            "type": "swap-form-card",
+            "description": "White rounded card with tab controls (Swap, TWAP, Limit) and swap interface",
+            "position": "center",
+            "notable": "Identical to screenshot 1; shows same form state"
+          },
+          {
+            "type": "token-input-fields",
+            "description": "Two token selector rows with icon, symbol, chain, and amount",
+            "position": "within card",
+            "notable": "BNB selected as input, CAKE as output; both showing 0.00 values"
+          },
+          {
+            "type": "settings-row",
+            "description": "Slippage tolerance display with editable link",
+            "position": "below token inputs",
+            "notable": "Auto: 0.50% with pencil edit icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered white card dominates; gradient background with decorative elements; slippage setting visually separated at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-form",
+        "userIntent": "Set up and review token swap parameters",
+        "entryPoints": [
+          "Trade menu navigation",
+          "Page refresh/direct link"
+        ],
+        "exitPoints": [
+          "Connect Wallet button",
+          "Network selector",
+          "Menu navigation",
+          "Promotional card interaction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap tab",
+            "action": "Maintain current swap mode (selected state)"
+          },
+          {
+            "element": "TWAP tab",
+            "action": "Switch to time-weighted average price execution"
+          },
+          {
+            "element": "Limit tab",
+            "action": "Switch to limit order mode"
+          },
+          {
+            "element": "Token selectors (BNB, CAKE)",
+            "action": "Open token list modal to change tokens"
+          },
+          {
+            "element": "Auto: 0.50% edit icon",
+            "action": "Open slippage tolerance editor"
+          }
+        ],
+        "informationArchitecture": "Identical to screenshot 1; form-based with clear from/to structure",
+        "frictionPoints": [
+          "No tokens entered; form is in initial state waiting for input",
+          "Connect Wallet button still required (no wallet connected)",
+          "Requires two interactions to modify slippage (click label then edit)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "form footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From:",
+            "context": "input section",
+            "purpose": "Label swap origin"
+          },
+          {
+            "text": "To:",
+            "context": "output section",
+            "purpose": "Label swap destination"
+          },
+          {
+            "text": "BNB Chain",
+            "context": "token labels",
+            "purpose": "Specify network for token"
+          },
+          {
+            "text": "Slippage Tolerance",
+            "context": "settings section",
+            "purpose": "Price impact setting label"
+          },
+          {
+            "text": "Auto: 0.50%",
+            "context": "slippage display",
+            "purpose": "Current auto slippage value"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.00 (token amounts)",
+          "~0 USD (fiat conversion)",
+          "$1343 (portfolio value)",
+          "0.50% (slippage percentage)"
+        ],
+        "trustSignals": [
+          "BNB Chain network selection",
+          "PancakeSwap logo and branding"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-swap-3-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0F0A3C",
+          "#00BCD4",
+          "#6B5B95"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, navy/dark purple (#0F0A3C), 48-60px size",
+          "bodyStyle": "Regular sans-serif, dark gray, 16-18px body text with links",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Minimal header with PancakeSwap logo and utility buttons",
+            "position": "top",
+            "notable": "Light theme with theme toggle, language selector, and turquoise 'Launch App' button"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large bold heading spanning left side of page",
+            "position": "top-left",
+            "notable": "Navy text on white background; 'Solana' in bold emphasis"
+          },
+          {
+            "type": "close-button",
+            "description": "X close icon in top-right of content area",
+            "position": "top-right",
+            "notable": "Allows dismissal of announcement"
+          },
+          {
+            "type": "social-sidebar",
+            "description": "Vertical icon group on right side",
+            "position": "right",
+            "notable": "Telegram, Reddit, Discord icons for community links"
+          },
+          {
+            "type": "feature-image",
+            "description": "Large gradient box with logos and mobile mockup",
+            "position": "center",
+            "notable": "Blue-to-green gradient background; shows PancakeSwap, Solana, and Relay logos; embedded phone mockup on right"
+          },
+          {
+            "type": "feature-headline",
+            "description": "White text overlay on gradient box",
+            "position": "center-left of image",
+            "notable": "'Solana Crosschain Swaps' and 'One Click, Seven Chains' with chain icons"
+          },
+          {
+            "type": "body-text",
+            "description": "Descriptive paragraph below image",
+            "position": "bottom",
+            "notable": "Links to 'Crosschain Swap feature' and 'PancakeSwap interface' embedded in text"
+          },
+          {
+            "type": "metadata",
+            "description": "Date and category labels",
+            "position": "top-right near headline",
+            "notable": "'PRODUCT' label and date '2025-09-22' in light purple text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates upper-left; gradient feature image with embedded phone mockup draws eye to center; body text provides supporting detail below; social links and close button positioned peripherally",
+        "innovativeElements": [
+          "Embedded mobile phone mockup showing actual swap interface within announcement graphic",
+          "Multi-chain icon row (seven blockchains) visually demonstrating feature capability",
+          "Gradient background (blue-to-green) conveys multi-chain interoperability"
+        ]
+      },
+      "flow": {
+        "screenType": "announcement-landing",
+        "userIntent": "Learn about new Solana crosschain swap feature",
+        "entryPoints": [
+          "Direct link from email or social",
+          "Learn More link from main interface",
+          "Featured announcement on homepage"
+        ],
+        "exitPoints": [
+          "Launch App button → swap interface",
+          "Close (X) button → return to previous page",
+          "Social icons → community platforms",
+          "Hyperlinks in body text → feature documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to PancakeSwap swap interface"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismiss announcement and return"
+          },
+          {
+            "element": "Telegram icon",
+            "action": "Navigate to Telegram community"
+          },
+          {
+            "element": "Reddit icon",
+            "action": "Navigate to Reddit community"
+          },
+          {
+            "element": "Discord icon",
+            "action": "Navigate to Discord server"
+          },
+          {
+            "element": "Inline links (Crosschain Swap feature, PancakeSwap interface)",
+            "action": "Navigate to documentation pages"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switch between light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Top-down announcement flow: headline → visual feature demonstration → supporting body copy. Navigation and utilities in header/sidebar remain accessible.",
+        "frictionPoints": [
+          "Body text with embedded links may not be immediately visible below fold",
+          "Multiple exit paths (close, apps, socials) could reduce conversion focus",
+          "Mobile mockup visibility depends on viewport width"
+        ],
+        "progressIndicators": [
+          "Metadata label 'PRODUCT' indicating announcement category",
+          "Date indicator '2025-09-22' showing announcement recency"
+        ]
+      },
+      "copy": {
+        "headline": "Solana Crosschain Swaps Are Now Live on PancakeSwap, Powered by Relay",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PRODUCT",
+            "context": "metadata label above headline",
+            "purpose": "Categorize announcement type"
+          },
+          {
+            "text": "2025-09-22",
+            "context": "metadata date near headline",
+            "purpose": "Indicate announcement publication date"
+          },
+          {
+            "text": "Solana Crosschain Swaps",
+            "context": "feature headline overlay on gradient box",
+            "purpose": "Highlight primary feature being announced"
+          },
+          {
+            "text": "One Click, Seven Chains",
+            "context": "tagline in feature box",
+            "purpose": "Communicate multi-chain capability and ease of use"
+          },
+          {
+            "text": "Solana is now supported on PancakeSwap's Crosschain Swap feature. With this update, users can swap tokens across seven blockchains directly within the PancakeSwap interface using a single transaction.",
+            "context": "body paragraph",
+            "purpose": "Explain feature benefit and scope"
+          }
+        ],
+        "tone": "professional-technical, announcement-focused",
+        "dataFormatting": [
+          "2025-09-22 (ISO date format)",
+          "Seven (numeric reference to supported chains)"
+        ],
+        "trustSignals": [
+          "Partnership with Relay (named in headline and logo)",
+          "Solana network endorsement (major Layer-1 blockchain)",
+          "Specific feature detail ('seven blockchains')",
+          "Live status ('Are Now Live')"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-1-home.png",
+      "label": "home",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B21B6",
+          "#14B8A6",
+          "#F3F4F6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (48px+), purple (#5B21B6), left-aligned",
+          "bodyStyle": "Regular sans-serif, medium weight, dark navy for descriptions",
+          "dataStyle": "Medium sans-serif, displayed in card format with token icons and USD values"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, menu items (Trade, Perps, Earn, Prob, Play), wallet balance, chain selector, and Connect Wallet CTA",
+            "position": "top",
+            "notable": "Clean separation of product features and wallet connection"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large purple headline with subheader and chain logos",
+            "position": "left-center",
+            "notable": "Eye-catching typography dominates left side"
+          },
+          {
+            "type": "Swap form card",
+            "description": "Light purple rounded card with token input/output fields and Get Started button",
+            "position": "right-center",
+            "notable": "Pre-populated with BNB→CAKE swap showing $0 values"
+          },
+          {
+            "type": "Chain icons row",
+            "description": "Horizontal row of 10 blockchain chain logos (Ethereum, Arbitrum, Polygon, etc.)",
+            "position": "below headline",
+            "notable": "Visual representation of multi-chain support"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Purple headline dominates left side, drawing eye down to copy and chain logos; right-aligned form card creates secondary focal point",
+        "innovativeElements": [
+          "Split-screen layout with hero on left and interactive form on right",
+          "Chain logo row as visual proof of multi-chain capability"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand PancakeSwap's value proposition and initiate a token swap or wallet connection",
+        "entryPoints": [
+          "Direct navigation to app",
+          "Marketing campaign links",
+          "Bookmarked URL"
+        ],
+        "exitPoints": [
+          "Get Started button (leads to swap flow)",
+          "Connect Wallet button (initiates wallet connection)",
+          "Navigation menu items (Trade, Perps, Earn, Play)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started button",
+            "action": "Initiates token swap flow with BNB→CAKE pre-selected"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Opens wallet connection modal"
+          },
+          {
+            "element": "Token dropdown selectors (From/To)",
+            "action": "Allows users to change tokens in swap preview"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Routes to different product sections"
+          }
+        ],
+        "informationArchitecture": "Hero messaging (what it is) → supported chains (proof of capability) → immediate action (swap form) → secondary CTAs (connect wallet, explore features)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Everyone's Favorite DEX",
+        "subheadline": "Trade Crypto Instantly Across 10 Chains",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "bottom of swap card"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "top right corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Above BNB input field",
+            "purpose": "Form field label"
+          },
+          {
+            "text": "To",
+            "context": "Above CAKE input field",
+            "purpose": "Form field label"
+          },
+          {
+            "text": "0 USD",
+            "context": "Right of token amounts",
+            "purpose": "Shows USD conversion (currently zero as no amount entered)"
+          }
+        ],
+        "tone": "friendly-casual, confident",
+        "dataFormatting": [
+          "0.00 BNB (token amount with 2 decimals)",
+          "~0 USD (fiat conversion)",
+          "0.00 -0 USD (showing change)"
+        ],
+        "trustSignals": [
+          "Chain logos (10 supported blockchains)",
+          "$1344 displayed BNB price indicator"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-2-buy-crypto.png",
+      "label": "Buy Crypto",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "card-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#14B8A6",
+          "#6B7280",
+          "#F3F4F6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 24px, dark navy, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium (14px), gray for descriptions",
+          "dataStyle": "Monospace-style numbers in input fields, bold for amounts, and rate display"
+        },
+        "components": [
+          {
+            "type": "Modal card",
+            "description": "Centered white card with rounded corners, contains full swap interface",
+            "position": "center",
+            "notable": "Overlay modal design with refresh icon in top-right"
+          },
+          {
+            "type": "Input fields",
+            "description": "Two stacked input fields with token selector dropdowns, light purple background",
+            "position": "top of form",
+            "notable": "Pre-filled with amounts and token selections"
+          },
+          {
+            "type": "Swap arrow indicator",
+            "description": "Small turquoise downward arrow between From and To fields",
+            "position": "center between inputs",
+            "notable": "Simple visual separator"
+          },
+          {
+            "type": "Quote display",
+            "description": "Shows provider (Mercuryo), exchange rate (1 CAKE = $1.35), and quote badge",
+            "position": "below to input",
+            "notable": "Best quote indicator with checkmark badge"
+          },
+          {
+            "type": "Fee information",
+            "description": "Estimated total fees with info icon and collapsible details",
+            "position": "below quote",
+            "notable": "Transparent fee display with show/hide toggle"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Full-width turquoise Connect Wallet button",
+            "position": "bottom",
+            "notable": "Disabled state (cannot proceed without wallet)"
+          },
+          {
+            "type": "Promotional banner",
+            "description": "Floating banner for Probable Markets prediction platform",
+            "position": "bottom-right",
+            "notable": "External cross-promotion with mascot character"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and description at top draw focus; form inputs and quote information are primary content; fees and legal text are secondary; CTA is emphasized at bottom",
+        "innovativeElements": [
+          "Quote provider display with rate (Mercuryo integration)",
+          "Best quote badge with checkmark",
+          "Inline notification for update notifications enablement",
+          "Cross-promotion with animated character mascot"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Buy crypto using fiat currency with pre-filled parameters and review quotes before committing",
+        "entryPoints": [
+          "Get Started button from home screen",
+          "Buy Crypto navigation item"
+        ],
+        "exitPoints": [
+          "Connect Wallet button (initiates wallet connection and purchase)",
+          "Back/close (return to home)",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Amount input (From field)",
+            "action": "Enter fiat amount to buy"
+          },
+          {
+            "element": "Currency selector",
+            "action": "Change from USD to other fiat currencies"
+          },
+          {
+            "element": "Token selector (To field)",
+            "action": "Choose which crypto to receive"
+          },
+          {
+            "element": "Refresh icon",
+            "action": "Update quote/exchange rate"
+          },
+          {
+            "element": "Quote provider",
+            "action": "Display rate and provider details (clickable)"
+          },
+          {
+            "element": "Show details link",
+            "action": "Expand/collapse fee breakdown"
+          },
+          {
+            "element": "Click here link (notifications)",
+            "action": "Enable update notifications"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Proceed to wallet connection and purchase"
+          },
+          {
+            "element": "terms of service link",
+            "action": "Opens legal terms"
+          }
+        ],
+        "informationArchitecture": "Headline + description → From input (amount & currency) → To input (token selection) → Quote provider & rate → Fee summary → Legal acknowledgment → Primary CTA",
+        "frictionPoints": [
+          "Must connect wallet before proceeding (blocks transaction)",
+          "Cannot skip terms of service acknowledgment",
+          "Quote requires active provider (Mercuryo)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Buy Crypto",
+        "subheadline": "Buy crypto in just a few clicks",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "bottom of form, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From",
+            "context": "Above fiat amount input",
+            "purpose": "Form section label"
+          },
+          {
+            "text": "To",
+            "context": "Above crypto token input",
+            "purpose": "Form section label"
+          },
+          {
+            "text": "1 CAKE = $1.35",
+            "context": "In quote display box",
+            "purpose": "Shows current exchange rate for selected pair"
+          },
+          {
+            "text": "Est total fees: $4.95",
+            "context": "Below quote information",
+            "purpose": "Displays estimated transaction costs"
+          },
+          {
+            "text": "By continuing you agree to our terms of service",
+            "context": "Below Connect Wallet button",
+            "purpose": "Legal acknowledgment with linked terms"
+          },
+          {
+            "text": "Click here to enable update notifications",
+            "context": "Above Connect Wallet button",
+            "purpose": "Prompt to opt-in to push notifications"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [
+          "150 USD (fiat amount)",
+          "107.20322 CAKE (token quantity with decimals)",
+          "$1.35 (exchange rate)",
+          "$4.95 (fee amount)",
+          "BNB Chain (blockchain identifier)"
+        ],
+        "trustSignals": [
+          "Quote provider name (Mercuryo)",
+          "Best quote badge with checkmark",
+          "Transparent fee disclosure",
+          "Exchange rate display",
+          "Terms of service link"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-3-play.png",
+      "label": "Play",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7C3AED",
+          "#EC4899",
+          "#14B8A6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 20px, white/light text on dark background",
+          "bodyStyle": "Regular sans-serif, 14px, light gray for descriptions and secondary text",
+          "dataStyle": "Monospace numbers with currency symbols, displayed in large bold text for amounts"
+        },
+        "components": [
+          {
+            "type": "Tab navigation",
+            "description": "Two tabs: Prediction (active, underlined in turquoise) and Lottery",
+            "position": "top-center",
+            "notable": "Clean minimal tab design with turquoise active indicator"
+          },
+          {
+            "type": "Ticker row",
+            "description": "Horizontal scrolling price tickers showing BNB/USD, ETH/USD, BTC/USD with price, change direction, and delta",
+            "position": "upper-left area",
+            "notable": "Real-time price feeds with color-coded up/down indicators"
+          },
+          {
+            "type": "Timer display",
+            "description": "Countdown timer showing 09:01:50 with 5m interval indicator",
+            "position": "upper-right",
+            "notable": "Prominent round icon with timer for next round"
+          },
+          {
+            "type": "Prediction cards grid",
+            "description": "Card-based grid showing UP/DOWN positions with payout multipliers, locked prices, and prize pools",
+            "position": "center area",
+            "notable": "Color-coded cards (teal for UP, magenta for DOWN) with closed/next round status"
+          },
+          {
+            "type": "Modal dialog",
+            "description": "White modal overlay with welcome message, risk disclaimer, checkbox confirmation, and Continue button",
+            "position": "center-overlay",
+            "notable": "Blocks interaction with background until dismissed"
+          },
+          {
+            "type": "Chart controls",
+            "description": "Toggle buttons at bottom for TradingView Chart and Chainlink Chart",
+            "position": "bottom-center",
+            "notable": "Quick access to external data visualizations"
+          },
+          {
+            "type": "Navigation arrows",
+            "description": "Left/right navigation arrows on card carousel",
+            "position": "sides of prediction cards",
+            "notable": "Allows scrolling through more prediction positions"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Tab navigation anchors page; price tickers and timer compete for attention at top; prediction cards are primary content area below; modal overlay emphasizes risk disclosure; bottom navigation provides secondary actions",
+        "innovativeElements": [
+          "Real-time price ticker carousel at top",
+          "Color-coded UP/DOWN prediction cards with matching color scheme",
+          "Payout multiplier display with live prize pool amounts",
+          "Risk acknowledgment modal with mandatory checkbox before participation",
+          "Countdown timer for next round with visual prominence"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Place binary prediction on crypto price movements (UP/DOWN) before round closes, review odds and prize pools",
+        "entryPoints": [
+          "Play menu item from main navigation",
+          "Link from home or other sections"
+        ],
+        "exitPoints": [
+          "Continue button (after accepting terms, allows position entry)",
+          "Other navigation menu items",
+          "Lottery tab"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Prediction (tab)",
+            "action": "Switches to prediction interface (currently active)"
+          },
+          {
+            "element": "Lottery (tab)",
+            "action": "Switches to lottery interface"
+          },
+          {
+            "element": "Price ticker",
+            "action": "Shows live price data; may link to detailed charts"
+          },
+          {
+            "element": "Timer display",
+            "action": "Displays countdown; clicking may show round details"
+          },
+          {
+            "element": "Enter UP button",
+            "action": "Opens position entry form for UP prediction"
+          },
+          {
+            "element": "Enter DOWN button",
+            "action": "Opens position entry form for DOWN prediction"
+          },
+          {
+            "element": "Later button",
+            "action": "Defers position entry to later round"
+          },
+          {
+            "element": "Next button",
+            "action": "Navigates to next available position/round"
+          },
+          {
+            "element": "Left/Right arrows",
+            "action": "Scrolls through prediction cards horizontally"
+          },
+          {
+            "element": "Risk checkbox",
+            "action": "Acknowledges risk understanding (mandatory for Continue)"
+          },
+          {
+            "element": "Continue button",
+            "action": "Dismisses modal and enables position placement"
+          },
+          {
+            "element": "Chart buttons",
+            "action": "Opens TradingView or Chainlink chart integrations"
+          }
+        ],
+        "informationArchitecture": "Risk acknowledgment modal (blocking) → Price data tickers → Round timer → Prediction card selection (UP/DOWN positions) → Position entry (via buttons) → Chart data (secondary)",
+        "frictionPoints": [
+          "Modal blocks all interaction until dismissed and checkbox confirmed (intentional safety measure)",
+          "Must acknowledge risk and understand non-cancellable nature of positions",
+          "Countdown timer creates time pressure for decision-making",
+          "Limited viewing window for card carousel (requires arrow navigation)"
+        ],
+        "progressIndicators": [
+          "Countdown timer (09:01:50) shows time until next round",
+          "5m interval indicator shows prediction duration",
+          "Round number visible (#456113) for closed positions"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome!",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Enter UP",
+            "style": "primary-button",
+            "placement": "bottom of teal UP cards"
+          },
+          {
+            "text": "Enter DOWN",
+            "style": "primary-button",
+            "placement": "bottom of magenta DOWN cards"
+          },
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "bottom of modal"
+          },
+          {
+            "text": "Later",
+            "style": "secondary-button",
+            "placement": "upper-right of card"
+          },
+          {
+            "text": "Next",
+            "style": "secondary-button",
+            "placement": "upper-right of card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Once you enter a position, you cannot cancel or adjust it.",
+            "context": "Modal body text",
+            "purpose": "Critical risk warning about position immutability"
+          },
+          {
+            "text": "I understand that I am using this product at my own risk. Any losses incurred due to my actions are my responsibility.",
+            "context": "Modal checkbox label",
+            "purpose": "Risk acknowledgment that must be confirmed before proceeding"
+          },
+          {
+            "text": "Prediction",
+            "context": "Tab label",
+            "purpose": "Identifies the binary prediction feature"
+          },
+          {
+            "text": "Lottery",
+            "context": "Tab label",
+            "purpose": "Identifies the lottery feature alternative"
+          },
+          {
+            "text": "UP",
+            "context": "Card header in teal",
+            "purpose": "Identifies positions predicting price increase"
+          },
+          {
+            "text": "DOWN",
+            "context": "Card header in magenta",
+            "purpose": "Identifies positions predicting price decrease"
+          },
+          {
+            "text": "2.21x Payout",
+            "context": "Inside UP card",
+            "purpose": "Shows potential return multiplier"
+          },
+          {
+            "text": "CLOSED PRICE",
+            "context": "Inside card",
+            "purpose": "Indicates settlement price for round"
+          },
+          {
+            "text": "Locked Price:",
+            "context": "Inside card",
+            "purpose": "Shows price at time position was locked in"
+          },
+          {
+            "text": "Prize Pool: 0.3510 BNB",
+            "context": "Inside card",
+            "purpose": "Displays total pool for winners of that position"
+          },
+          {
+            "text": "09:01:50",
+            "context": "Top-right timer",
+            "purpose": "Countdown to next round start"
+          }
+        ],
+        "tone": "urgent, professional-technical, cautious",
+        "dataFormatting": [
+          "$630.8895 (price with 4 decimals)",
+          "2.21x (payout multiplier)",
+          "$631.0900 (locked price)",
+          "0.3510 BNB (pool amount)",
+          "2.4087 BNB (pool secondary display)",
+          "#456113 (round identifier)",
+          "09:01:50 (countdown in HH:MM:SS)",
+          "5m (interval duration)"
+        ],
+        "trustSignals": [
+          "Real-time price feeds from multiple sources",
+          "Chainlink chart integration available",
+          "TradingView chart integration available",
+          "Risk acknowledgment requirement before participation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-7-info.png",
+      "label": "info",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6B46C1",
+          "#14F195",
+          "#FF9F43"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, navy blue (#1A1B3F), large sizes for section titles",
+          "bodyStyle": "Regular sans-serif, dark gray for secondary text",
+          "dataStyle": "Bold, large numbers in dark navy; smaller date/time labels in gray"
+        },
+        "components": [
+          {
+            "type": "warning-banner",
+            "description": "Yellow/orange alert box with warning icon about volatile token markets",
+            "position": "top of content area",
+            "notable": "Prominent placement to catch user attention before data consumption"
+          },
+          {
+            "type": "metric-card",
+            "description": "Two-column layout displaying Liquidity and Volume 24H with area charts",
+            "position": "center-top",
+            "notable": "Large KPI values with accompanying sparkline visualizations"
+          },
+          {
+            "type": "data-table",
+            "description": "Top Tokens table with columns for name, price, price change, volume, liquidity",
+            "position": "bottom",
+            "notable": "Sortable columns indicated by header styling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Warning banner anchors attention, metric cards dominate upper space, table extends below",
+        "innovativeElements": [
+          "Area chart gradients in purple and cyan with labeled current values",
+          "Compact tooltip labels on chart peaks showing key metrics"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore PancakeSwap platform analytics, check liquidity and trading volume metrics",
+        "entryPoints": [
+          "Clicking 'Overview' tab",
+          "Navigation from main Trade/Perps menu"
+        ],
+        "exitPoints": [
+          "Switch to 'Pairs' or 'Tokens' tabs",
+          "Search for specific token",
+          "Navigate to other menu items (Trade, Perps, Earn)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab navigation (Overview, Pairs, Tokens)",
+            "action": "Switch between different analytics views"
+          },
+          {
+            "element": "BNB Smart Chain dropdown",
+            "action": "Change blockchain network for analysis"
+          },
+          {
+            "element": "Search box",
+            "action": "Filter liquidity pairs or tokens"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Platform-level metrics (Liquidity, Volume) → Token rankings table with detailed columns",
+        "frictionPoints": [
+          "Warning banner about low-cap token volatility may deter new users",
+          "No visible pagination or load-more for token table"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PancakeSwap Info & Analytics",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Before trading any token, please DYOR, and pay attention to the risk scanner.",
+            "context": "Yellow warning banner",
+            "purpose": "Risk disclosure and user education"
+          },
+          {
+            "text": "Feb 14, 2026",
+            "context": "Below metric values",
+            "purpose": "Timestamp for data freshness"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.57B (Liquidity)",
+          "$3.14B (Volume 24H)",
+          "2.25B (Y-axis scale on charts)",
+          "8:00 pm to 8:00 pm (time range labels)"
+        ],
+        "trustSignals": [
+          "Platform TVL displayed prominently",
+          "Risk scanner mention",
+          "Specific timestamp for data currency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-8-info.png",
+      "label": "Info",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6B46C1",
+          "#14F195",
+          "#FF9F43"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, navy blue (#1A1B3F), large sizes",
+          "bodyStyle": "Regular sans-serif for labels and secondary info",
+          "dataStyle": "Bold numbers in dark navy, percentage changes in teal/pink based on direction"
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "TVL metric showing $1.2B with line chart visualization",
+            "position": "top-left",
+            "notable": "Clean single-metric presentation with date timestamp"
+          },
+          {
+            "type": "metric-card",
+            "description": "Volume metric showing $37.54M with time period toggle buttons (D, W, M)",
+            "position": "top-right",
+            "notable": "Toggle buttons for time-series view switching"
+          },
+          {
+            "type": "summary-row",
+            "description": "Horizontal display of Volume 24H, Fees 24H, and TVL with percentage changes",
+            "position": "middle",
+            "notable": "Color-coded changes: pink for negative, green for positive"
+          },
+          {
+            "type": "data-table",
+            "description": "Top Tokens table with sortable columns and token icons",
+            "position": "bottom",
+            "notable": "Icon indicators on column headers for sort capability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Metrics cards dominate upper area with time-period control, summary stats flow below, detailed table extends bottom",
+        "innovativeElements": [
+          "Time period toggle buttons (D/W/M) for quick view switching",
+          "Inline percentage change display with color coding",
+          "Info icons next to metric labels"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review key platform metrics and top token performance across different time periods",
+        "entryPoints": [
+          "Clicking 'Overview' tab on Info page",
+          "Navigating from dashboard"
+        ],
+        "exitPoints": [
+          "Switch to 'Pairs' or 'Tokens' tabs",
+          "Click on token row to view details",
+          "Navigate back to main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "D/W/M toggle buttons",
+            "action": "Switch volume chart between daily, weekly, monthly views"
+          },
+          {
+            "element": "Column header sort icons",
+            "action": "Sort token table by selected column"
+          },
+          {
+            "element": "Token row",
+            "action": "Navigate to token detail page"
+          }
+        ],
+        "informationArchitecture": "Top-level platform KPIs (TVL, Volume) → Summary metrics with change indicators → Detailed token ranking table",
+        "frictionPoints": [
+          "No clear indication of which time period is currently selected on charts",
+          "Scroll required to see full token table"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PancakeSwap Info & Analytics",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Feb 14, 2026 (UTC)",
+            "context": "Below metric values",
+            "purpose": "Data timestamp with timezone clarity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.2B (TVL)",
+          "$37.54M (Volume)",
+          "0.00% (Price change - neutral)",
+          "+12.03% (Price change - positive in teal)",
+          "-28.52% (Price change - negative in pink)",
+          "$200.02M (24H volume)",
+          "USDT, WBNB (token symbols)"
+        ],
+        "trustSignals": [
+          "Timestamped data (UTC)",
+          "Large TVL figures",
+          "Volume metrics"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-9-burn-dashboard.png",
+      "label": "Burn Dashboard",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#6B46C1",
+          "#14F195",
+          "#FF9F43"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, purple (#6B46C1) for main title, blue for section headers",
+          "bodyStyle": "Regular sans-serif for supporting text and labels",
+          "dataStyle": "Bold large numbers in dark navy for key metrics, smaller regular text for supplementary data"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Large purple 'Burn Dashboard' title with CAKE icon and right-aligned metadata",
+            "position": "top",
+            "notable": "Last updated date and 'Learn More' button on same row"
+          },
+          {
+            "type": "donut-chart",
+            "description": "Large circular chart showing total supply vs burned supply in teal and purple",
+            "position": "left column",
+            "notable": "Center displays total supply, outer ring uses contrasting colors for visual clarity"
+          },
+          {
+            "type": "metric-card",
+            "description": "Three right-column cards showing Burn (7d), YTD Burn, Total Deflation, YTD Deflation",
+            "position": "right column, stacked vertically",
+            "notable": "Each card shows value and percentage with progress bar visualization"
+          },
+          {
+            "type": "legend",
+            "description": "Below donut chart showing color-coded items: Total CAKE Supply and Burned CAKE Supply",
+            "position": "bottom-left",
+            "notable": "Clear mapping of chart segments to labeled values"
+          },
+          {
+            "type": "combo-chart",
+            "description": "Supply & Net Mint chart with bars and line overlay",
+            "position": "bottom full-width",
+            "notable": "Dual-axis visualization showing both discrete and continuous data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large title anchors top, donut chart dominates left side, metric cards stack right side, detailed timeline chart spans bottom",
+        "innovativeElements": [
+          "Donut chart with center text overlay for primary metric",
+          "Progress bars within metric cards showing percentage context",
+          "Combo chart (bars + line) for supply trends",
+          "Info icons next to section headers for help/details"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Track CAKE token burn mechanics, view historical deflation metrics, understand token supply dynamics",
+        "entryPoints": [
+          "Direct navigation to Burn Dashboard",
+          "Link from main navigation"
+        ],
+        "exitPoints": [
+          "Click 'Learn More' button for detailed explanation",
+          "Navigate back to other menu sections",
+          "Return to main PancakeSwap dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Learn More button",
+            "action": "Open detailed documentation about burn mechanism"
+          },
+          {
+            "element": "Info icons",
+            "action": "Display tooltips explaining metrics (Supply, Burn, Deflation)"
+          }
+        ],
+        "informationArchitecture": "High-level supply overview (donut chart) → Time-period specific metrics (7d, YTD) → Historical trend visualization (Supply & Net Mint chart)",
+        "frictionPoints": [
+          "Chart at bottom may require scrolling",
+          "No interactive drill-down on chart data points"
+        ],
+        "progressIndicators": [
+          "Progress bars in metric cards showing percentage of peak supply burned",
+          "Donut chart ring showing visual proportion of burned to total supply"
+        ]
+      },
+      "copy": {
+        "headline": "Burn Dashboard",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Learn More",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Last updated on: Feb 9, 2026",
+            "context": "Top-right corner",
+            "purpose": "Data freshness indicator"
+          },
+          {
+            "text": "17.32% of total CAKE supply",
+            "context": "Burn (7d) card",
+            "purpose": "Contextual percentage for 7-day burn metric"
+          },
+          {
+            "text": "12.99% of peak CAKE supply",
+            "context": "Total Deflation card",
+            "purpose": "Historical context for deflation metric"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "345M CAKE (Total supply)",
+          "5158M (Burned supply) - note: appears to be formatting error",
+          "59.85M CAKE (Burn in last 7d)",
+          "304M CAKE (YTD Burn)",
+          "51.58M CAKE (Total Deflation)",
+          "1.09% (YTD Deflation)",
+          "0% - 100% (Progress bar ranges)"
+        ],
+        "trustSignals": [
+          "Specific timestamp for data accuracy",
+          "Transparent burn metrics",
+          "Historical deflation tracking",
+          "Peak supply reference point"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-10-voting.png",
+      "label": "Voting",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#7C3AED",
+          "#14B8A6",
+          "#F5F3FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (72px+), vibrant purple",
+          "bodyStyle": "Medium weight sans-serif, dark navy for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Large purple 'Voting' headline with subheading and CTA button",
+            "position": "Top left, spanning 50% width",
+            "notable": "Paired with whimsical illustrated voting boxes on right"
+          },
+          {
+            "type": "Breadcrumb Navigation",
+            "description": "Home > Voting breadcrumb trail",
+            "position": "Below hero, left-aligned",
+            "notable": "Turquoise 'Home' link, navy 'Voting' text"
+          },
+          {
+            "type": "Tab Filter",
+            "description": "Core, Community, All tabs with Vote Now, Soon, Closed status filters",
+            "position": "Middle section, horizontal layout",
+            "notable": "Purple icon badges, turquoise active state for 'Vote Now'"
+          },
+          {
+            "type": "Empty State Card",
+            "description": "Large white rounded container with centered 'No proposals found' text",
+            "position": "Center of screen, spans 90% width",
+            "notable": "Clean, minimal treatment with generous padding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero headline dominates, filters organize content below, empty state centered, illustrative assets on right balance visual weight",
+        "innovativeElements": [
+          "3D-style illustrated voting boxes with checkmark/X symbols",
+          "Staggered card layout with illustrated suggestion prompt at bottom"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with empty-state",
+        "userIntent": "View active governance proposals and vote on ecosystem decisions",
+        "entryPoints": [
+          "Clicked 'Voting' from main navigation",
+          "Direct link from governance section"
+        ],
+        "exitPoints": [
+          "Click 'Make a Proposal' button",
+          "Navigate to other sections via top menu",
+          "Apply status filters to see proposals"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Make a Proposal button",
+            "action": "Opens proposal creation form or interface"
+          },
+          {
+            "element": "Core/Community/All tabs",
+            "action": "Filters proposals by category"
+          },
+          {
+            "element": "Vote Now/Soon/Closed buttons",
+            "action": "Filters proposals by voting status"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Hero statement > Category tabs > Status filters > Proposal list > Suggestion prompt",
+        "frictionPoints": [
+          "Empty state with no active proposals reduces immediate engagement",
+          "Multiple filter layers (tabs + status buttons) before seeing content"
+        ],
+        "progressIndicators": [
+          "Status badges (Vote Now, Soon, Closed)"
+        ]
+      },
+      "copy": {
+        "headline": "Voting",
+        "subheadline": "Have your say in the future of the PancakeSwap Ecosystem",
+        "ctas": [
+          {
+            "text": "Make a Proposal",
+            "style": "primary-button",
+            "placement": "Below subheadline, left-aligned"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "No proposals found",
+            "context": "Center of empty state container",
+            "purpose": "Communicates empty list state clearly"
+          },
+          {
+            "text": "Got a suggestion? Community proposals are a great way to see how the community feels about your ideas.",
+            "context": "Bottom section with flower illustration",
+            "purpose": "Encourages user engagement and proposal submission"
+          }
+        ],
+        "tone": "friendly-casual, empowering",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No proposals found",
+          "Got a suggestion? Community proposals are a great way to see how the community feels about your ideas."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-11-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width stacked with card grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#7C3AED",
+          "#3B82F6",
+          "#F5F3FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (56px+), deep purple",
+          "bodyStyle": "Medium weight sans-serif, gray body text, smaller secondary text",
+          "dataStyle": "Large bold numbers in white text overlaid on card graphics"
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Large 'Blog' headline with subheading",
+            "position": "Top, full-width",
+            "notable": "Simple, direct typography"
+          },
+          {
+            "type": "Featured Article Card",
+            "description": "Large card with 3D illustrated mascot, kitchen report graphic with CAKE metrics, title on right",
+            "position": "Below header, spans ~70% width",
+            "notable": "Splits visual assets on left with text content on right; includes detailed token/trading data in small cards"
+          },
+          {
+            "type": "Section Heading",
+            "description": "'Chef's choice' subsection label",
+            "position": "Middle section",
+            "notable": "Purple large text with 'Recommended Readings by Chefs' subtext in gray"
+          },
+          {
+            "type": "Article Grid",
+            "description": "3-column layout of colorful article cards with rounded corners",
+            "position": "Bottom half, full-width",
+            "notable": "Each card has unique gradient background (purple, teal, gradient), illustrated mascot, data overlays"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title > Featured article (large, prominent) > Section heading > Related articles grid (smaller cards)",
+        "innovativeElements": [
+          "Data visualization overlay on illustrated cards (metrics displayed inline with graphics)",
+          "Gradient card backgrounds with 3D mascot illustrations",
+          "Mixed content layout: feature article side-by-side text, then grid below"
+        ]
+      },
+      "flow": {
+        "screenType": "content-browse with featured content",
+        "userIntent": "Read recent news, ecosystem updates, and curated article recommendations",
+        "entryPoints": [
+          "Clicked 'Blog' from main navigation",
+          "External link from social media"
+        ],
+        "exitPoints": [
+          "Click featured article to read full post",
+          "Click chef's choice cards to read recommendations",
+          "Navigate to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Featured article card",
+            "action": "Navigates to full article page"
+          },
+          {
+            "element": "Chef's choice cards (3 cards at bottom)",
+            "action": "Navigate to individual article pages"
+          }
+        ],
+        "informationArchitecture": "Linear: Header > Featured content > Curated recommendations grid",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blog",
+        "subheadline": "Latest News about PancakeSwap and more!",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "ECOSYSTEM, NEWS",
+            "context": "Above featured article title",
+            "purpose": "Categorizes and tags article content"
+          },
+          {
+            "text": "Kitchen Report: January 2026",
+            "context": "Featured article title",
+            "purpose": "Main article headline"
+          },
+          {
+            "text": "Check out our monthly recap here!",
+            "context": "Featured article subtitle",
+            "purpose": "Entices reader to click"
+          },
+          {
+            "text": "2026-02-06",
+            "context": "Featured article metadata",
+            "purpose": "Publication date"
+          },
+          {
+            "text": "Recommended Readings by Chefs",
+            "context": "Section subheading",
+            "purpose": "Describes curated content collection"
+          }
+        ],
+        "tone": "friendly-casual, informative",
+        "dataFormatting": [
+          "3.46 Million CAKE",
+          "$2.406 Billion",
+          "6.32 Million",
+          "799,040"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-12-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "sidebar-main with modal overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#14B8A6",
+          "#F5F3FF",
+          "#3B82F6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black text, large sizes (40px+)",
+          "bodyStyle": "Regular weight sans-serif, black body text, gray secondary text",
+          "dataStyle": "Blue hyperlinked text for citations and links"
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Multi-level menu with language selector, welcome section, trade categories, archive",
+            "position": "Left side, fixed width (~280px)",
+            "notable": "Collapsible menu items with icons, light gray background, organized by category"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Documentation page with 'Product Overview' heading, hero image, content sections",
+            "position": "Center/right, spans remaining width",
+            "notable": "Breadcrumb navigation, copy button, responsive text layout"
+          },
+          {
+            "type": "Right Sidebar",
+            "description": "Quick links panel with Trade, Earn, Win categories and trust signals",
+            "position": "Right side, sticky panel (~250px)",
+            "notable": "Gray text links organized by feature area, 'Is PancakeSwap safe?' section at bottom"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Bottom-right modal with cookie policy text, Accept/Reject buttons, close button",
+            "position": "Bottom right, floating",
+            "notable": "White background, turquoise action button, privacy policy link in teal"
+          },
+          {
+            "type": "Hero Image",
+            "description": "3D illustrated mascot juggling coins with 'Trade. Earn. Win.' text overlay",
+            "position": "Top of main content, full-width",
+            "notable": "Vibrant turquoise background, large purple text with white outline"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates top, large black heading 'Product Overview', body text flows below, sidebars provide secondary navigation and info",
+        "innovativeElements": [
+          "Three-column layout (sidebar + main + sidebar) for comprehensive information architecture",
+          "Sticky right sidebar with contextual quick links",
+          "Floating cookie consent that doesn't block main content",
+          "Color-coded section headers (cyan for 'WELCOME TO PANCAKESWAP')"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation/landing with modal overlay",
+        "userIntent": "Learn about PancakeSwap features and product overview; accept cookie policy",
+        "entryPoints": [
+          "Landing page visit",
+          "Documentation homepage",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click sidebar menu items to navigate sections",
+          "Click right sidebar links to feature pages",
+          "Accept/Reject cookie consent to dismiss modal",
+          "Use search bar to find specific topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Right sidebar links",
+            "action": "Navigate to Trade, Earn, Win feature pages"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copies page URL to clipboard"
+          },
+          {
+            "element": "Accept button (cookie modal)",
+            "action": "Accepts cookie policy and closes modal"
+          },
+          {
+            "element": "Reject button (cookie modal)",
+            "action": "Rejects cookies and closes modal"
+          },
+          {
+            "element": "Privacy policy link",
+            "action": "Opens privacy policy page"
+          }
+        ],
+        "informationArchitecture": "Hierarchical multi-column: Left nav (category > subcategory) + main content area (hero > heading > body) + right sidebar (feature links + trust section)",
+        "frictionPoints": [
+          "Cookie modal blocks some content interaction until addressed",
+          "Dense sidebar navigation with many nested options may overwhelm new users",
+          "Right sidebar links appear secondary despite valuable quick access"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Product Overview",
+        "subheadline": "WELCOME TO PANCAKESWAP",
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Cookie modal, right side"
+          },
+          {
+            "text": "Reject",
+            "style": "secondary-button",
+            "placement": "Cookie modal, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This site uses cookies to deliver its service and to analyze traffic. By browsing this site, you accept the",
+            "context": "Cookie consent modal body text",
+            "purpose": "Explains cookie usage policy"
+          },
+          {
+            "text": "privacy policy",
+            "context": "Cookie modal, blue hyperlink",
+            "purpose": "Links to full privacy policy"
+          },
+          {
+            "text": "Instantly swap crypto tokens: no registration or account needed.",
+            "context": "Under 'Trade' heading in main content",
+            "purpose": "Explains key feature benefit"
+          },
+          {
+            "text": "PancakeSwap helps you make the most out of your crypto in three ways: Trade, Earn, and Win.",
+            "context": "Green checkmark callout box",
+            "purpose": "Core value proposition summary"
+          },
+          {
+            "text": "The people's choice",
+            "context": "Subheading under Trade section",
+            "purpose": "Positions as user-favorite platform"
+          },
+          {
+            "text": "The leading decentralized exchange on BNB Smart Chain, with the highest trading volumes in the market",
+            "context": "Body text under 'The people's choice'",
+            "purpose": "Establishes market leadership with citation references"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Citations/references (1, 2, 3) for market leadership claims",
+          "'Is PancakeSwap safe?' section in right sidebar",
+          "Transparency and 'Security best practices' mentions"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-13-contributing.png",
+      "label": "Contributing",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FC7D4",
+          "#7928CA",
+          "#FFD800",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1: 48px+), dark navy/black",
+          "bodyStyle": "Regular sans-serif, medium gray (#666), 16px line height ~1.6",
+          "dataStyle": "Code blocks with syntax highlighting (green text for git commands on dark bg)"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with categorized menu (EARN, PLAY, TRADING TOOLS, PROTOCOL)",
+            "position": "left edge, full height",
+            "notable": "Hierarchical grouping with icons, language selector at top"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "PROTOCOL > DEVELOPERS navigation trail",
+            "position": "above headline",
+            "notable": "Uses pill-style flag icon for 'DEVELOPERS'"
+          },
+          {
+            "type": "hero-image",
+            "description": "Colorful animated illustration of PancakeSwap mascot with 'Developers' text overlay",
+            "position": "center-main, full width",
+            "notable": "Purple gradient background with cyan accents, playful mascot character"
+          },
+          {
+            "type": "code-block",
+            "description": "Terminal-style git command display",
+            "position": "lower content area",
+            "notable": "Green syntax highlighting on dark background, copyable code"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Contextual navigation panel with 'Setup your dev environment' and coding rules",
+            "position": "right edge",
+            "notable": "Secondary navigation with linked topics"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image draws eye first, then descends through explanatory text to code snippets; sidebar provides persistent navigation context",
+        "innovativeElements": [
+          "Emoji-heavy left sidebar with icon+text combos",
+          "Mascot-driven hero image with brand personality",
+          "Contextual right sidebar acting as document outline"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Learn how to contribute to PancakeSwap and set up development environment",
+        "entryPoints": [
+          "Developers link in top navigation",
+          "PROTOCOL > DEVELOPERS breadcrumb",
+          "Search results for 'contributing'"
+        ],
+        "exitPoints": [
+          "Left sidebar navigation items (CAKE PAD, Earn FAQ, Prediction, etc.)",
+          "Right sidebar links (Coding rules, Using UIKit, Pull Request Title)",
+          "External link: GitHub repository"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy button (top right)",
+            "action": "Copies code block to clipboard"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Changes interface language"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigates to related docs sections"
+          },
+          {
+            "element": "External links (yarn, repository, upstream)",
+            "action": "Opens external resources in new tab"
+          }
+        ],
+        "informationArchitecture": "Progressive disclosure: hero intro → explanatory paragraph → step-by-step setup instructions; sidebar provides rapid access to related topics",
+        "frictionPoints": [
+          "Multiple navigation options (sidebar + breadcrumb + right panel) might confuse first-time visitors",
+          "Code block requires copy+paste workflow for terminal commands",
+          "External links break out to different domains"
+        ],
+        "progressIndicators": [
+          "Numbered list (1, 2) for setup steps"
+        ]
+      },
+      "copy": {
+        "headline": "Contributing",
+        "subheadline": "Thank you for expressing your interest in contributing to PancakeSwap!",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right corner"
+          },
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "code-block top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you haven't.",
+            "context": "After 'Install yarn' link",
+            "purpose": "Conditional instruction shorthand"
+          },
+          {
+            "text": "Fork and clone the repository",
+            "context": "Step 1 of setup instructions",
+            "purpose": "Action-oriented step header"
+          },
+          {
+            "text": "Add upstream remote. E.g.",
+            "context": "Step 2 of setup instructions",
+            "purpose": "Instructions with example pattern"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Bottom right sidebar",
+            "purpose": "Feedback prompt with sentiment buttons"
+          }
+        ],
+        "tone": "professional-technical, friendly-supportive",
+        "dataFormatting": [
+          "$ git clone [fork_repo_url] — shell command syntax",
+          "Code block with colored syntax highlighting"
+        ],
+        "trustSignals": [
+          "Open-source project descriptor ('PancakeSwap is an open-source project')",
+          "GitHub integration and repository references",
+          "Structured contribution guidelines"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-14-developer-doc.png",
+      "label": "Developer Doc",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FC7D4",
+          "#001A4D",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, very large (72px+), dark navy (#001A4D)",
+          "bodyStyle": "Regular sans-serif, medium gray, 18px",
+          "dataStyle": "Not applicable on this landing page"
+        },
+        "components": [
+          {
+            "type": "top-navigation",
+            "description": "Header bar with logo, search, topic nav (EVM, Aptos, APIs, Bug Bounty), dark mode toggle",
+            "position": "top, full width",
+            "notable": "Minimalist design with topic-based quick nav"
+          },
+          {
+            "type": "hero-section",
+            "description": "Centered content with large headline, subheadline, and CTA button",
+            "position": "center viewport",
+            "notable": "Clean whitespace-heavy design, prominent teal 'Get started' button"
+          },
+          {
+            "type": "announcement-card",
+            "description": "Card-based content for latest updates and new features",
+            "position": "lower half, left-aligned",
+            "notable": "Light gray background cards with descriptive text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center, subheadline follows, CTA button breaks hierarchy in teal; lower section introduces secondary content",
+        "innovativeElements": [
+          "Minimalist landing page with extreme whitespace",
+          "Topic-based navigation in header (EVM, Aptos, APIs)",
+          "Announcement cards as teaser content below fold"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Enter developer documentation portal and explore available resources",
+        "entryPoints": [
+          "Direct navigation to /developers URL",
+          "Click 'Developers' in main site header",
+          "Search engine results for 'PancakeSwap developer docs'"
+        ],
+        "exitPoints": [
+          "Get started button (enters main docs)",
+          "Topic nav buttons (EVM, Aptos, APIs, Bug Bounty)",
+          "Announcement cards (scrolls to more content)",
+          "Logo (returns to main site)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Navigates to documentation entry point or onboarding"
+          },
+          {
+            "element": "Topic navigation (EVM, Aptos, APIs, Bug Bounty)",
+            "action": "Filters or navigates to topic-specific docs"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-text search across documentation"
+          },
+          {
+            "element": "Dark mode toggle",
+            "action": "Switches between light and dark themes"
+          }
+        ],
+        "informationArchitecture": "Welcome landing > topic branching (EVM/Aptos/APIs) > deep documentation; announcement section teases latest updates",
+        "frictionPoints": [
+          "Sparse landing page with limited visible content may not clearly convey what's available",
+          "Must click CTA to discover main content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to PancakeSwap Developer Docs",
+        "subheadline": "Your DEX Your Innovation",
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Stay informed about the latest features, improvements, and changes to our platform.",
+            "context": "Latest Updates section heading",
+            "purpose": "Section description explaining content below"
+          },
+          {
+            "text": "Introducing PancakeSwap Infinity",
+            "context": "Announcement card headline",
+            "purpose": "Feature announcement teaser"
+          },
+          {
+            "text": "We've announced the next version of our exchange with improved gas efficiency and new features.",
+            "context": "Announcement card body",
+            "purpose": "Brief description of new release"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Established product name (PancakeSwap)",
+          "Feature-rich roadmap announcements"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-15-bug-bounty.png",
+      "label": "Bug Bounty",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001A4D",
+          "#1FC7D4",
+          "#F0F0F0"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (h1: 48px), dark navy (#001A4D)",
+          "bodyStyle": "Regular sans-serif, dark blue (#001A4D), 16-18px",
+          "dataStyle": "Table format with Level/Reward columns; USD currency values right-aligned"
+        },
+        "components": [
+          {
+            "type": "page-heading",
+            "description": "Simple h1 'Bug Bounty' with horizontal rule below",
+            "position": "top, full width",
+            "notable": "Minimalist, clean serif treatment"
+          },
+          {
+            "type": "descriptive-paragraph",
+            "description": "Multi-line explanation of program focus and scope",
+            "position": "below heading",
+            "notable": "Links to external bounty platform (ImmuneFi)"
+          },
+          {
+            "type": "section-heading",
+            "description": "Category headers like 'Smart Contracts and Blockchain*' and 'Website and Apps'",
+            "position": "above each table",
+            "notable": "Navy color, markdown-style asterisk notation for footnotes"
+          },
+          {
+            "type": "data-table",
+            "description": "Two-column table (Level | Reward Amount) with rows for Critical/High/Medium",
+            "position": "below category headings",
+            "notable": "Light gray alternating rows, left-aligned levels, right-aligned USD amounts"
+          },
+          {
+            "type": "footnote-text",
+            "description": "Small text with asterisk disclaimer about proof of concept requirements",
+            "position": "below first table",
+            "notable": "Smaller font size, tighter line height, navy color"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading → intro paragraph → sections (each with heading + table) → footnotes; tables are information focal points",
+        "innovativeElements": [
+          "Multi-level bounty structure separated by vulnerability type",
+          "External ImmuneFi platform integration for bounty submission"
+        ]
+      },
+      "flow": {
+        "screenType": "information-page",
+        "userIntent": "Understand bug bounty rewards, eligibility, and submission process",
+        "entryPoints": [
+          "Bug Bounty link in top navigation",
+          "Search for 'PancakeSwap bug bounty'",
+          "Developer docs or security-focused navigation"
+        ],
+        "exitPoints": [
+          "External ImmuneFi link (https://immunefi.com/bounty/pancakeswap)",
+          "Back to developer docs or home",
+          "Topic navigation (EVM, Aptos, APIs)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "ImmuneFi bounty platform link",
+            "action": "Opens external bounty submission portal"
+          },
+          {
+            "element": "Search functionality (implied via site header)",
+            "action": "Search across documentation"
+          }
+        ],
+        "informationArchitecture": "Program overview → scope & focus → reward structure by vulnerability level & asset type → eligibility requirements; external platform for submissions",
+        "frictionPoints": [
+          "Bounty submission requires external platform navigation",
+          "Proof of concept requirement adds submission friction",
+          "Two separate tables for smart contracts vs web/apps could be confusing"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bug Bounty",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "https://immunefi.com/bounty/pancakeswap",
+            "style": "text-link",
+            "placement": "below intro paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The PancakeSwap bug bounty program is focused around our smart contracts, websites, and apps with a primary interest in the prevention of loss of user funds, either by direct draining of locked funds or social engineering attacks by redirecting users or forcing them to sign a transaction.",
+            "context": "Program overview paragraph",
+            "purpose": "Defines scope and focus areas for eligible reports"
+          },
+          {
+            "text": "*All bug reports must include a Proof of Concept demonstrating how the vulnerability can be exploited to be eligible for a reward. This may be a smart contract itself or a transaction.",
+            "context": "Footnote below first table",
+            "purpose": "Eligibility requirement clarity"
+          },
+          {
+            "text": "Smart Contracts and Blockchain*",
+            "context": "Section heading",
+            "purpose": "Category label for reward tier"
+          },
+          {
+            "text": "Website and Apps",
+            "context": "Section heading",
+            "purpose": "Category label for reward tier"
+          }
+        ],
+        "tone": "professional-technical, formal",
+        "dataFormatting": [
+          "Up to USD $1,000,000 — maximum bounty for Critical smart contract issues",
+          "Up to USD $20,000 — High severity smart contract bounty",
+          "Up to $2,000 — Medium severity smart contract bounty",
+          "USD $7,500 — Critical website/app bounty",
+          "USD $4,000 — High severity website/app bounty"
+        ],
+        "trustSignals": [
+          "Structured, transparent reward tiers",
+          "High maximum bounty amount ($1M critical) signals serious security commitment",
+          "Partnership with established ImmuneFi security platform",
+          "Clear program focus on fund protection and user security"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-16-audits.png",
+      "label": "Audits",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#17C784",
+          "#1FC7D4",
+          "#191326"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large sizes (32-48px) with icon prefixes",
+          "bodyStyle": "Regular sans-serif, medium gray (#757575) for secondary text",
+          "dataStyle": "Links in cyan (#1FC7D4) with external icon indicators, dates in parentheses"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with categorized menu items (Welcome, Trade, Protocol sections)",
+            "position": "left",
+            "notable": "Expandable subsections with icons, current page highlighted with green checkmark"
+          },
+          {
+            "type": "content-header",
+            "description": "Breadcrumb-style section indicator with icon and 'WELCOME TO PANCAKESWAP' label",
+            "position": "top-left of main content",
+            "notable": "Green checkmark icon establishes trust/completion theme"
+          },
+          {
+            "type": "link-list",
+            "description": "Organized list of audit reports grouped by product with dates",
+            "position": "main content area",
+            "notable": "Grouped by product (PancakeSwap Infinity, veCAKE, MasterChef V3, etc.)"
+          },
+          {
+            "type": "feedback-widget",
+            "description": "Three emoji reaction buttons (neutral, smile, frown)",
+            "position": "top-right",
+            "notable": "Quick sentiment capture for documentation quality"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading anchors attention, grouping headers organize sections, cyan links draw eye to actionable items",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review security audit reports and transparency documentation for protocol contracts",
+        "entryPoints": [
+          "From sidebar 'Audits' menu item",
+          "From navigation breadcrumb"
+        ],
+        "exitPoints": [
+          "Click audit links to view reports",
+          "Navigate to other sidebar sections",
+          "Use search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Cyan audit report links",
+            "action": "Open external security audit documents"
+          },
+          {
+            "element": "Feedback emoji buttons",
+            "action": "Rate helpfulness of current page"
+          },
+          {
+            "element": "Copy button (top-right)",
+            "action": "Copy page URL"
+          }
+        ],
+        "informationArchitecture": "Hierarchical grouping by product name, then audit type, with dates and auditor attribution",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Audits",
+        "subheadline": "EVM Audit Reports",
+        "ctas": [
+          {
+            "text": "Infinity Core",
+            "style": "text-link",
+            "placement": "content list"
+          },
+          {
+            "text": "PeckShield's MasterChef V3 security audit",
+            "style": "text-link",
+            "placement": "content list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "WELCOME TO PANCAKESWAP",
+            "context": "breadcrumb header",
+            "purpose": "Section context/location indicator"
+          },
+          {
+            "text": "(2024)",
+            "context": "next to audit links",
+            "purpose": "Indicates audit recency/currency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "(2024)",
+          "(Nov 2023)",
+          "(Apr 2023)"
+        ],
+        "trustSignals": [
+          "✓ Audits header with checkmark icon",
+          "Multiple named auditors (PeckShield, SlowMist, BlockSec)",
+          "Comprehensive audit coverage of multiple contracts"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-17-legacy-products.png",
+      "label": "Legacy products",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FC7D4",
+          "#FFB237",
+          "#191326"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (36-48px), with archive folder icon",
+          "bodyStyle": "Regular sans-serif, medium gray for descriptive text",
+          "dataStyle": "Cyan links for active items, strikethrough for deprecated items, dates in parentheses"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Expanded Archive section showing nested legacy product categories",
+            "position": "left",
+            "notable": "Color-coded folder icons for each legacy product type"
+          },
+          {
+            "type": "header-section",
+            "description": "Archive badge with folder icon and 'Legacy Products' heading",
+            "position": "top of main content",
+            "notable": "Yellow/orange archive icon (🏛️) establishes historical context"
+          },
+          {
+            "type": "description-text",
+            "description": "Subheading explaining purpose of section",
+            "position": "below headline",
+            "notable": "Light gray descriptive copy"
+          },
+          {
+            "type": "bulleted-list",
+            "description": "Links to archived products with removal/sunset dates",
+            "position": "main content",
+            "notable": "Strikethrough text (Gaming Marketplace) indicates discontinued items"
+          },
+          {
+            "type": "navigation-footer",
+            "description": "Previous/Next pagination controls",
+            "position": "bottom",
+            "notable": "Shows current section and next section link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Archive icon draws attention to status, strikethrough creates visual distinction between active and removed products, dates show timeline",
+        "innovativeElements": [
+          "Strikethrough formatting for removed products",
+          "Nested sidebar hierarchy showing archive structure"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find information about deprecated/archived PancakeSwap products and their sunset timelines",
+        "entryPoints": [
+          "From sidebar Archive menu",
+          "From navigation search"
+        ],
+        "exitPoints": [
+          "Click product links to view details",
+          "Navigate via Previous/Next pagination",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar nested items",
+            "action": "Navigate to specific archived product details"
+          },
+          {
+            "element": "Product links (cyan text)",
+            "action": "Open product page or external reference"
+          },
+          {
+            "element": "Previous/Next buttons",
+            "action": "Navigate between archive sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical list organized by product category, with removal dates and status clearly marked",
+        "frictionPoints": [
+          "Strikethrough text on removed products may be slightly harder to read",
+          "Long list could benefit from categorization or filtering"
+        ],
+        "progressIndicators": [
+          "Previous/Next section indicators at bottom"
+        ]
+      },
+      "copy": {
+        "headline": "Legacy Products",
+        "subheadline": "Entry points and references for legacy products",
+        "ctas": [
+          {
+            "text": "NFT Marketplace",
+            "style": "text-link",
+            "placement": "product list"
+          },
+          {
+            "text": "Simple Staking",
+            "style": "text-link",
+            "placement": "product list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ARCHIVE",
+            "context": "page header badge",
+            "purpose": "Category/section indicator"
+          },
+          {
+            "text": "Removed 18th September 2025",
+            "context": "next to Gaming Marketplace",
+            "purpose": "Specifies exact removal date for deprecated product"
+          },
+          {
+            "text": "Last updated 1 month ago",
+            "context": "footer",
+            "purpose": "Indicates documentation freshness"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "(17th October 2023)",
+          "(3rd November 2023)",
+          "(23rd August 2024)",
+          "(21st June 2025)"
+        ],
+        "trustSignals": [
+          "Clear archival status",
+          "Specific sunset dates for transparency",
+          "Comprehensive product history"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-home-18-tokenomics.png",
+      "label": "Tokenomics",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1FC7D4",
+          "#FF69B4",
+          "#17C784",
+          "#191326"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (40-48px), with cake emoji icon",
+          "bodyStyle": "Regular sans-serif, body text in charcoal",
+          "dataStyle": "Large bold numerals for tokenomics values (e.g., ~19,000 CPD), smaller secondary metrics in boxes"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with categorized sections (EARN, PLAY, TRADING TOOLS, PROTOCOL)",
+            "position": "left",
+            "notable": "Color-coded icons for each category, CAKE Tokenomics highlighted in gold"
+          },
+          {
+            "type": "header-section",
+            "description": "Protocol badge with cake icon and 'CAKE Tokenomics' heading",
+            "position": "top of main content",
+            "notable": "Yellow/gold cake icon emphasizes token focus"
+          },
+          {
+            "type": "infographic",
+            "description": "Large visual diagram with pastel background showing tokenomics 3.0",
+            "position": "main content area",
+            "notable": "Colorful card-based layout with cyan (Emission) and pink (Burn) sections, animated-style decorative elements"
+          },
+          {
+            "type": "metric-card",
+            "description": "Colored boxes displaying key metrics and percentages",
+            "position": "within infographic",
+            "notable": "Nested cards with hierarchical information (e.g., AMM v2, AMM v3, IFO breakdown)"
+          },
+          {
+            "type": "info-footer",
+            "description": "Daily Hint, Daily Burn, and Average Burn colored boxes",
+            "position": "bottom of infographic",
+            "notable": "Teal, pink, and magenta color coding for easy scanning"
+          },
+          {
+            "type": "formula-box",
+            "description": "Purple box showing 'Deflation = Mint - Burn' equation",
+            "position": "very bottom",
+            "notable": "Educational formula with dark purple background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large cake icon and headline anchor focus, main infographic dominates viewport, color coding guides scanning of related metrics",
+        "innovativeElements": [
+          "Colorful pastel-background infographic with playful visual design",
+          "Card-within-card nesting pattern for multi-level metrics",
+          "Color-coded sections (cyan/pink split) for emission vs. burn mechanisms"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand CAKE token supply mechanics, emission/burn rates, and fee distribution across protocol features",
+        "entryPoints": [
+          "From sidebar CAKE Tokenomics menu",
+          "From Protocol section",
+          "From search"
+        ],
+        "exitPoints": [
+          "Click related links (e.g., 'CAKE Tokenomics 3.0 Overview')",
+          "Navigate sidebar to other sections",
+          "Use search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to related tokenomics docs or FAQs"
+          },
+          {
+            "element": "Right-side links (e.g., 'How to Confirm CAKE Supply')",
+            "action": "Navigate to related documentation"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy page URL"
+          }
+        ],
+        "informationArchitecture": "Visual-first approach with infographic as primary information delivery, supplemented by sidebar navigation to related topics",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CAKE Tokenomics",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "CAKE Tokenomics 3.0 Overview",
+            "style": "text-link",
+            "placement": "right sidebar"
+          },
+          {
+            "text": "How to Confirm CAKE Supply for yourself",
+            "style": "text-link",
+            "placement": "right sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PROTOCOL",
+            "context": "page header badge",
+            "purpose": "Section classification"
+          },
+          {
+            "text": "Product Emissions*",
+            "context": "emission card header",
+            "purpose": "Metric category label"
+          },
+          {
+            "text": "*Multichain Farms and Lottery",
+            "context": "below emission value",
+            "purpose": "Footnote explaining metric scope"
+          },
+          {
+            "text": "Deflation = Mint - Burn",
+            "context": "bottom formula box",
+            "purpose": "Educational equation summarizing core mechanic"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [
+          "~19,000 CPD",
+          "~3,250 CPD",
+          "~22,250 CPD",
+          "23% of LP Fees",
+          "100% of fees",
+          "20% of all profit"
+        ],
+        "trustSignals": [
+          "Transparent tokenomics display",
+          "Multiple auditors on related pages",
+          "Clear breakdown of fee distribution"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-staking-4-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1D1B4D",
+          "#17C784"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, navy blue (#1D1B4D), large size (~48px), multi-line for emphasis",
+          "bodyStyle": "Regular sans-serif, dark gray, medium weight, readable line-height",
+          "dataStyle": "Zero prominently displayed with asterisk for conditional note"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Large headline with tokenized assets messaging",
+            "position": "center-left",
+            "notable": "Occupies 60% of viewport height with strong visual weight"
+          },
+          {
+            "type": "product-mockup",
+            "description": "Mobile phone UI screenshot with trading interface and badges",
+            "position": "center-right",
+            "notable": "3D perspective with floating badges (zero fees, trading interface icons)"
+          },
+          {
+            "type": "metadata-tags",
+            "description": "Category tags and date",
+            "position": "top-right",
+            "notable": "Small, professional gray text with colored link accents"
+          },
+          {
+            "type": "social-icons",
+            "description": "X, Telegram, Reddit, Discord icons",
+            "position": "right-side vertical stack",
+            "notable": "Dark circular icons, minimalist design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, mockup creates secondary focal point, supporting details relegated to top-right, social icons on right perimeter",
+        "innovativeElements": [
+          "3D floating badge elements around product mockup",
+          "Multi-line headline with semantic line breaks",
+          "Asymmetric layout balancing text and visual"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-marketing",
+        "userIntent": "Learn about new tokenized real-world assets integration and understand the offering",
+        "entryPoints": [
+          "Marketing campaign click",
+          "News feed link",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Launch App button (top-right)",
+          "Social media icon clicks",
+          "Learn more scroll or link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Redirect to web app"
+          },
+          {
+            "element": "Social icons",
+            "action": "Open social media profiles"
+          },
+          {
+            "element": "Language/Theme toggle",
+            "action": "Change locale and appearance"
+          }
+        ],
+        "informationArchitecture": "Hero messaging at top, partnership logo (PancakeSwap × Ondo), key benefit (100+ assets), visual proof (mockup), supporting details (tags, date, social links)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PancakeSwap Brings Ondo Finance's 100+ Tokenized Real-World assets (RWAs) Onchain to BNB Chain",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "*Zero trading fees apply only for the first 30 days and are limited to select tokenized assets",
+            "context": "Below zero fees badge",
+            "purpose": "Clarify promotion limitations and conditions"
+          },
+          {
+            "text": "PRODUCT , ECOSYSTEM , NEWS",
+            "context": "Top-right metadata",
+            "purpose": "Content categorization"
+          },
+          {
+            "text": "2025-10-29",
+            "context": "Top-right metadata",
+            "purpose": "Publication date"
+          }
+        ],
+        "tone": "professional-technical, promotional",
+        "dataFormatting": [
+          "100+ assets count",
+          "0 trading fees (with asterisk for conditions)",
+          "2025-10-29 (date format)"
+        ],
+        "trustSignals": [
+          "Ondo Finance partnership logo",
+          "BNB Chain integration",
+          "Real-world assets (RWA) specification"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-settings-1-cake-incentives.png",
+      "label": "CAKE Incentives",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1D1B4D",
+          "#17C784"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, large (~32px), with icon prefix",
+          "bodyStyle": "Regular sans-serif, dark gray, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Hierarchical menu with collapsible sections, color-coded icons, active state highlighting",
+            "position": "left 280px width",
+            "notable": "Deep nesting with sections like 'Business Partnerships' expanded to show 'Initial Farm Offerings - IFOs' and 'Syrup Pools'"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Multi-level navigation trail with colored icons and text links",
+            "position": "top of main content, below header",
+            "notable": "Cyan-colored links (e.g., 'SYRUP POOLS', 'CONTACT US') indicate active navigation path"
+          },
+          {
+            "type": "content-body",
+            "description": "Main panel with title, introduction, PDF embed, numbered process list",
+            "position": "main content area, right of sidebar",
+            "notable": "Generous whitespace, clear section breaks"
+          },
+          {
+            "type": "pdf-card",
+            "description": "Embedded PDF preview with download/open buttons",
+            "position": "below headline, in content area",
+            "notable": "Shows file size (4MB), PDF icon, dual action buttons"
+          },
+          {
+            "type": "feedback-widget",
+            "description": "Emoji-based satisfaction rating",
+            "position": "top-right of content",
+            "notable": "Three emoji options, 'Was this helpful?' question"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides secondary navigation, breadcrumb orients user, main headline commands attention, process steps organized numerically with clear visual separation",
+        "innovativeElements": [
+          "Color-coded sidebar icons for different content types",
+          "Active state indication in sidebar (cyan highlight for 'Syrup Pools')"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Understand Syrup Pools program structure and application process",
+        "entryPoints": [
+          "Sidebar navigation click",
+          "Search bar result",
+          "Direct link from external source"
+        ],
+        "exitPoints": [
+          "Sidebar menu selection (navigate to related page)",
+          "PDF download",
+          "Search bar query",
+          "External link (Twitter, Telegram)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation pages"
+          },
+          {
+            "element": "PDF Download/Open buttons",
+            "action": "Download or view PancakeSwap Syrup Pool One-Pager.pdf"
+          },
+          {
+            "element": "Hyperlinks (e.g., 'here')",
+            "action": "Navigate to application form or external resources"
+          },
+          {
+            "element": "Emoji feedback buttons",
+            "action": "Rate page helpfulness"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change page language"
+          }
+        ],
+        "informationArchitecture": "Left sidebar organizes documentation by topic hierarchy; breadcrumb shows current location; main content presents Syrup Pools overview followed by numbered process steps; external links provided for forms and social channels",
+        "frictionPoints": [
+          "PDF required for full information (added friction to access complete details)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Syrup Pools",
+        "subheadline": "For more information about our token distribution programs (\"Syrup Pools\"), please view this PDF:",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "secondary-button",
+            "placement": "PDF card action buttons"
+          },
+          {
+            "text": "Open",
+            "style": "secondary-button",
+            "placement": "PDF card action buttons"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "Within step 1, 'Apply via our form'"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PancakeSwap Syrup Pool One-Pager.pdf",
+            "context": "PDF filename in card",
+            "purpose": "Identify downloadable resource"
+          },
+          {
+            "text": "4MB PDF",
+            "context": "Above PDF filename",
+            "purpose": "Indicate file size and type"
+          },
+          {
+            "text": "(Average time to fill up form: ≤8 minutes)",
+            "context": "Step 1, Initial Outreach",
+            "purpose": "Set expectation for application effort"
+          },
+          {
+            "text": "Using the information in the form, we would clarify some points",
+            "context": "Step 2, Due Diligence",
+            "purpose": "Explain what happens next in process"
+          },
+          {
+            "text": "The team passes due diligence – congrats!",
+            "context": "Step 2 conclusion",
+            "purpose": "Positive reinforcement, milestone celebration"
+          }
+        ],
+        "tone": "professional-technical, instructional, encouraging",
+        "dataFormatting": [
+          "4MB file size",
+          "≤8 minutes form completion",
+          "5-step numbered process"
+        ],
+        "trustSignals": [
+          "Documented process with PDF resource",
+          "Clear timeline expectations",
+          "Social proof through team discussion"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-settings-2-token-launches.png",
+      "label": "Token Launches",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1D1B4D",
+          "#17C784"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, black, large (~32px), with farmer icon prefix",
+          "bodyStyle": "Regular sans-serif, dark gray, medium weight, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Hierarchical menu with collapsible sections, different icon colors for content types",
+            "position": "left 280px width",
+            "notable": "Active item 'Initial Farm Offerings - IFOs' highlighted in cyan; 'veCHKE Sunset' section visible at top"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Multi-level navigation showing current path",
+            "position": "top of main content",
+            "notable": "Cyan-colored active link 'BUSINESS PARTNERSHIPS'"
+          },
+          {
+            "type": "content-body",
+            "description": "Main documentation with title, subtitle, embedded PDF card, numbered process list",
+            "position": "right of sidebar, main viewing area",
+            "notable": "Similar structure to previous Syrup Pools page but with IFO-specific content"
+          },
+          {
+            "type": "pdf-card",
+            "description": "Embedded PDF preview showing 1MB file size, actions for download/open",
+            "position": "below subtitle, in content area",
+            "notable": "Smaller file than Syrup Pools (1MB vs 4MB)"
+          },
+          {
+            "type": "process-list",
+            "description": "Numbered steps with bullet points detailing IFO launch process",
+            "position": "below PDF card, main content",
+            "notable": "5 main steps with detailed sub-bullets; includes inline hyperlinks for form, Twitter, Telegram, marketing campaign"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar organizes navigation, breadcrumb orients user, title with icon draws attention, PDF card provides downloadable resource, numbered process steps provide clear structure with visual scanning support",
+        "innovativeElements": [
+          "Consistent design system reused across documentation pages",
+          "Inline hyperlinks embedded in process descriptions for seamless flow"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Understand Initial Farm Offerings (IFO) process and requirements for launching tokens on PancakeSwap",
+        "entryPoints": [
+          "Sidebar menu navigation",
+          "Search query result",
+          "External link to documentation",
+          "Referred from Business Partnerships section"
+        ],
+        "exitPoints": [
+          "Sidebar navigation to other sections",
+          "PDF download",
+          "External link clicks (application form, Twitter, Telegram, marketing campaign)",
+          "Search bar",
+          "Back navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation pages or sections"
+          },
+          {
+            "element": "PDF Download/Open buttons",
+            "action": "Download or view PancakeSwap IFO One-Pager.pdf"
+          },
+          {
+            "element": "Form link ('here')",
+            "action": "Open IFO application form"
+          },
+          {
+            "element": "Social media links (Twitter, Telegram)",
+            "action": "Open external social profiles"
+          },
+          {
+            "element": "Marketing campaign link",
+            "action": "Navigate to campaign details"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change documentation language"
+          }
+        ],
+        "informationArchitecture": "Sidebar provides navigation hierarchy; breadcrumb shows location in content tree; main content presents IFO overview with downloadable reference, followed by 5-step process with detailed explanations; external resources linked inline",
+        "frictionPoints": [
+          "Multi-step process requires commitment and understanding",
+          "PDF download needed for complete reference material",
+          "Form application adds friction before outreach can proceed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Initial Farm Offerings - IFOs",
+        "subheadline": "For more information about our token launchpad offerings (\"Initial Farm Offering, or IFO\"), please view this PDF",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "secondary-button",
+            "placement": "PDF card action"
+          },
+          {
+            "text": "Open",
+            "style": "secondary-button",
+            "placement": "PDF card action"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "Step 1, 'Apply via our form'"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PancakeSwap IFO One-Pager.pdf",
+            "context": "PDF filename in card",
+            "purpose": "Identify downloadable resource"
+          },
+          {
+            "text": "1MB PDF",
+            "context": "Above PDF filename",
+            "purpose": "Indicate file size and type"
+          },
+          {
+            "text": "(Average time to fill up form: ≤14 minutes)",
+            "context": "Step 1, Initial Outreach",
+            "purpose": "Set expectation for application time (longer than Syrup Pools)"
+          },
+          {
+            "text": "We have a lovely chat about your target launch date, your goals for TGE, and your team decides to commit to an IFO - let's go!",
+            "context": "Step 1 description",
+            "purpose": "Humanize the process, create positive tone"
+          },
+          {
+            "text": "For our IFOs, compared to our Syrup Pools/Farms, there is a bit more discussion: we are happy to share our knowledge of best practices with regard to tokenomics, product, Go-To-Market (GTM) Strategy, etc.",
+            "context": "Step 2, Due Diligence",
+            "purpose": "Explain added value and scope of IFO vs Syrup Pools"
+          },
+          {
+            "text": "Team passes due diligence – congrats!",
+            "context": "Step 2 conclusion",
+            "purpose": "Positive milestone reinforcement"
+          }
+        ],
+        "tone": "professional-technical, friendly-encouraging, advisory",
+        "dataFormatting": [
+          "1MB file size",
+          "≤14 minutes form completion",
+          "5-step numbered process"
+        ],
+        "trustSignals": [
+          "Documented process with downloadable reference",
+          "Clear timeline expectations",
+          "Advisory support mentioned (tokenomics, GTM strategy)",
+          "Comparison to similar program (Syrup Pools)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-staking-1-earn.png",
+      "label": "Earn",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "card-grid with data table",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#7C3AED",
+          "#14B8A6",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif in purple (#7C3AED), 48-56px",
+          "bodyStyle": "Medium weight sans-serif, 14-16px for labels and secondary text",
+          "dataStyle": "Monospace/tabular numbers in green for APR percentages, dollar amounts in black"
+        },
+        "components": [
+          {
+            "type": "Tab navigation",
+            "description": "Farm / Liquidity and Syrup Pools tabs with cyan underline indicator",
+            "position": "Top center, above headline",
+            "notable": "Tab styling uses filled background for active state"
+          },
+          {
+            "type": "Featured pool card",
+            "description": "PANCAKE PICKS #1 highlight showing cbETH/WETH pool with token icons and stats (Fee Tier, APR 9.17%, TVL 630.74K)",
+            "position": "Top right",
+            "notable": "Prominent flame icon indicates featured/hot pool"
+          },
+          {
+            "type": "Data table",
+            "description": "Multi-column table showing all available liquidity pools with sortable headers (All Pools, Fee Tier, APR, TVL, Volume 24H, Pool Type, Pool Feature)",
+            "position": "Lower half, full width",
+            "notable": "Sortable columns indicated by arrow icons; network chain icons shown in pool name column"
+          },
+          {
+            "type": "Action buttons",
+            "description": "Create Pool (outline) and Add Liquidity (filled) buttons in teal",
+            "position": "Right side, above table",
+            "notable": "Add Liquidity uses plus icon to indicate additive action"
+          },
+          {
+            "type": "Filter controls",
+            "description": "Network selector dropdown (All networks), search bar, and version filter pills (All, Infinity, V3, V2, StableSwap)",
+            "position": "Above table, left to right",
+            "notable": "Dropdown shows multiple chain icons for network selection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws eye first with large purple text, featured pool card in top right adds secondary focus, table provides comprehensive browsable data below",
+        "innovativeElements": [
+          "Multi-token icon display in pool selector showing multiple chains",
+          "Dynamic APR visualization with percentage badges and trend indicators (green upward arrows)",
+          "Volume-based sorting providing transparency on pool liquidity depth"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with featured promotion",
+        "userIntent": "Browse available liquidity pools, identify highest yield opportunities, prepare to add liquidity or create new positions",
+        "entryPoints": [
+          "Click Earn in main navigation",
+          "Farm / Liquidity tab selection",
+          "Direct link from marketing campaign"
+        ],
+        "exitPoints": [
+          "Click on pool row to view details",
+          "Click Add Liquidity button",
+          "Click Create Pool button",
+          "Navigate to Syrup Pools tab",
+          "Use search to find specific pool"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pool table rows",
+            "action": "Click to view pool details, manager position, or add liquidity"
+          },
+          {
+            "element": "APR column header",
+            "action": "Sort pools by annual percentage return"
+          },
+          {
+            "element": "Network selector dropdown",
+            "action": "Filter pools by blockchain network"
+          },
+          {
+            "element": "Add Liquidity button",
+            "action": "Open liquidity provision modal or form"
+          },
+          {
+            "element": "Version filter pills",
+            "action": "Show only pools matching selected contract version"
+          },
+          {
+            "element": "Featured pool card action",
+            "action": "Navigate to specific pool details or add liquidity modal"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: featured recommendation at top, then filtering controls, then sortable data table organized by pool pair name, then financial metrics (fee, APR, TVL, volume)",
+        "frictionPoints": [
+          "Table is dense with many columns; mobile responsiveness may be limited",
+          "No obvious call-to-action to start for new users unfamiliar with liquidity provision",
+          "Multiple version filters (Infinity, V3, V2, StableSwap) may confuse beginners about which to choose"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Earn from LP",
+        "subheadline": "Liquidity Pools & Farms",
+        "ctas": [
+          {
+            "text": "Add Liquidity",
+            "style": "primary-button",
+            "placement": "Top right, above table"
+          },
+          {
+            "text": "Create Pool",
+            "style": "secondary-button",
+            "placement": "Top right, above table"
+          },
+          {
+            "text": "Learn How",
+            "style": "text-link",
+            "placement": "Below subheadline, left"
+          },
+          {
+            "text": "Legacy Farm Page",
+            "style": "text-link",
+            "placement": "Below subheadline, left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PANCAKE PICKS #1 🔥",
+            "context": "Featured pool card header",
+            "purpose": "Highlight recommended pool and create sense of curation/approval"
+          },
+          {
+            "text": "FEE TIER | APR | TVL",
+            "context": "Featured pool card stats labels",
+            "purpose": "Scannable metrics showing key pool characteristics at a glance"
+          },
+          {
+            "text": "All Pools | My Positions",
+            "context": "Tab toggle below filters",
+            "purpose": "Toggle between global pool view and user's personal positions"
+          }
+        ],
+        "tone": "professional-technical with friendly accent (mascot, emoji)",
+        "dataFormatting": [
+          "APR: 9.17% (with green upward trend arrow)",
+          "TVL: 630.74K (abbreviated thousands)",
+          "Fee Tier: 0.01%, 0.05%, 0.30%, 1.00%",
+          "Volume 24H: $7,897,454.2 (full precision with comma separators)",
+          "Pool names: SOL / USDC (token pair notation)"
+        ],
+        "trustSignals": [
+          "PANCAKE PICKS #1 curation badge indicates editorial selection",
+          "TVL (Total Value Locked) displayed for each pool showing capital commitment",
+          "Multiple network support (Solana shown in example) suggests reliability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-staking-2-syrup-pools.png",
+      "label": "Syrup Pools",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "stacked with card-based list",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#7C3AED",
+          "#14B8A6",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif in purple (#7C3AED), 48-56px",
+          "bodyStyle": "Medium weight sans-serif, 14-16px for pool info and labels",
+          "dataStyle": "Tabular numbers for APR and amounts, with icons (leaf emoji) for yield indicators"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Large purple heading 'Syrup Pools' with subheading explaining value proposition",
+            "position": "Top, full width",
+            "notable": "Large, engaging copy optimized for immediate value communication"
+          },
+          {
+            "type": "Control bar",
+            "description": "View toggle buttons (grid/list), Live/Old/Staked only tabs, sort dropdown (Hot), search input",
+            "position": "Below hero, horizontal bar",
+            "notable": "Live status indicator with toggle emphasizes active/inactive pool distinction"
+          },
+          {
+            "type": "Pool cards",
+            "description": "Expandable cards showing: token logo, pool name, earned amount (0/0 USD), total staked, APR with copy icon, days remaining, Details dropdown",
+            "position": "Below controls, stacked vertically",
+            "notable": "Mint green Details button suggests expandable content; countdown timer creates urgency"
+          },
+          {
+            "type": "Illustration",
+            "description": "Cute mascot character at bottom with cloud and honey pot",
+            "position": "Bottom center",
+            "notable": "Decorative but reinforces brand personality and pool theme (honey/syrup)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section dominates top half, controls provide secondary focus, cards are uniform and scannable, illustration anchors bottom",
+        "innovativeElements": [
+          "Live/Old pool toggle creates clear active vs. inactive distinction",
+          "Staked only filter helps users focus on their own positions",
+          "Countdown timer (e.g., 'Ends in 23 days') creates urgency for time-limited pools",
+          "Copy button on APR suggests easy sharing/comparison flow"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with filtering",
+        "userIntent": "Discover single-token staking opportunities, compare APR across pools, identify time-limited offers, and manage existing stakes",
+        "entryPoints": [
+          "Click Syrup Pools tab from Earn page",
+          "Click 'Earn' in navigation then 'Syrup Pools'",
+          "Direct link from email or social campaign"
+        ],
+        "exitPoints": [
+          "Click Details dropdown on pool card",
+          "Search for specific pool",
+          "Filter by Live/Old status",
+          "Navigate back to Earn page tabs",
+          "Sort by Hot/different metrics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Live / Old / Staked only tabs",
+            "action": "Filter pools by status or ownership"
+          },
+          {
+            "element": "Hot dropdown (Sort by)",
+            "action": "Reorder pools by popularity or other metrics"
+          },
+          {
+            "element": "Search input",
+            "action": "Find specific pools by name or token"
+          },
+          {
+            "element": "Pool card",
+            "action": "Expand details or navigate to stake modal"
+          },
+          {
+            "element": "Details button (cyan)",
+            "action": "Open pool details view or stake/unstake interface"
+          },
+          {
+            "element": "APR copy icon",
+            "action": "Copy APR value to clipboard for sharing"
+          },
+          {
+            "element": "Grid/List toggle",
+            "action": "Switch between card and list view layouts"
+          }
+        ],
+        "informationArchitecture": "Categorical filters (Live/Old/Staked) at top, then sortable list with uniform card layout containing pool name, earning metrics (DN earned, total staked, APR), and time-to-end information",
+        "frictionPoints": [
+          "APR copy button may be unclear to users unfamiliar with interface conventions",
+          "No indication of how to actually stake or add funds directly from card view",
+          "Time-limited pools (23 days, 79 days) may create pressure without clear deadline explanations"
+        ],
+        "progressIndicators": [
+          "Live/Old status indicator",
+          "Countdown timer (Ends in 23 days, 79 days, etc.)",
+          "Earned amount display showing claimed rewards"
+        ]
+      },
+      "copy": {
+        "headline": "Syrup Pools",
+        "subheadline": "Just stake some tokens to earn. High APR, low risk.",
+        "ctas": [
+          {
+            "text": "Details",
+            "style": "text-link-button",
+            "placement": "Right side of each pool card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "DN Earned",
+            "context": "Pool card label above earned amount",
+            "purpose": "Identify the reward token being earned"
+          },
+          {
+            "text": "Total staked",
+            "context": "Pool card label above amount",
+            "purpose": "Show total capital locked in pool"
+          },
+          {
+            "text": "APR",
+            "context": "Pool card metric label",
+            "purpose": "Display annual percentage return; includes copy icon for sharing"
+          },
+          {
+            "text": "Ends in",
+            "context": "Pool card label before countdown",
+            "purpose": "Indicate time-limited nature and create urgency"
+          }
+        ],
+        "tone": "friendly-casual with urgency elements",
+        "dataFormatting": [
+          "Earned: 0 (0 USD) — double display showing token and fiat value",
+          "Total staked: 750,666 Cake — large round numbers with token abbreviation",
+          "APR: 3.48%, 5.20%, 3.78%, 65.29% — percentages with optional copy icon",
+          "Ends in: 23 days, 79 days, 8 days — human-readable time durations",
+          "TVL-style metrics: 2,180,382 Cake — abbreviated to thousands where appropriate"
+        ],
+        "trustSignals": [
+          "High APR / low risk claim in subheadline (aspiration signal, not guaranteed)",
+          "Total staked amounts show pool capital commitment",
+          "Named pools (Earn DN, Earn U, Earn TYCOON, Earn Cake) indicate real, active products"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No pools shown if filters result in zero matches"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/pancakeswap-staking-3-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width hero with modal overlay style",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#5B4A95",
+          "#14B8A6",
+          "#FFFFFF",
+          "#A78BFA"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif in dark navy/purple (#1F1F4D), 40-56px",
+          "bodyStyle": "Medium weight sans-serif, 16px for body copy",
+          "dataStyle": "Not heavily used; emphasis on narrative copy"
+        },
+        "components": [
+          {
+            "type": "Announcement header",
+            "description": "Dark navy heading with announcement format: 'PancakeSwap Now Live on Monad Mainnet: Trade Faster. Earn Smarter.'",
+            "position": "Top left, 70% of width",
+            "notable": "Colon-separated structure emphasizes product launch news"
+          },
+          {
+            "type": "Close button",
+            "description": "X icon to dismiss announcement",
+            "position": "Top right",
+            "notable": "Subtle positioning suggests dismissible modal/banner"
+          },
+          {
+            "type": "Social link icons",
+            "description": "Vertically stacked icons for Telegram, Reddit, Discord in purple",
+            "position": "Right side, vertically centered",
+            "notable": "Right-aligned social links not typical for landing pages; suggests modal/sidebar layout"
+          },
+          {
+            "type": "Hero image",
+            "description": "Large purple gradient background with PancakeSwap × MONAD partnership badge, iPhone mockup showing app interface, 'Trade Faster Earn Smarter' text overlay, decorative stars",
+            "position": "Center, below headline",
+            "notable": "3D perspective on phone mockup; vibrant purple with contrasting yellow stars for visual pop"
+          },
+          {
+            "type": "Body text",
+            "description": "Descriptive paragraph about Monad Mainnet launch benefits",
+            "position": "Below image, left-aligned",
+            "notable": "Uses phrases like 'faster, cheaper, more capital-efficient' to articulate value props"
+          },
+          {
+            "type": "Metadata bar",
+            "description": "Tags (ECOSYSTEM, NEWS, PRODUCT) with date (2025-11-24) in smaller font",
+            "position": "Top right, above headline",
+            "notable": "Categorization and datestamp adds editorial credibility"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Bold headline captures attention, supporting metadata provides context, large hero image dominates visual real estate, body copy explains value, social links provide secondary CTAs",
+        "innovativeElements": [
+          "iPhone mockup integrated into hero image shows product in realistic context",
+          "Partnership badge (PancakeSwap × MONAD) creates clear co-branding",
+          "Decorative stars and gradient background create premium announcement feel",
+          "Vertical social link stack on right edge suggests sidebar/modal presentation"
+        ]
+      },
+      "flow": {
+        "screenType": "announcement / modal",
+        "userIntent": "Learn about PancakeSwap's expansion to Monad Mainnet and its benefits (faster trading, lower costs, smarter earning)",
+        "entryPoints": [
+          "Auto-display on app load (if modal/announcement banner)",
+          "Click on news/announcement in app navigation",
+          "Direct link from social media or email campaign"
+        ],
+        "exitPoints": [
+          "Click X to close announcement",
+          "Click social links (Telegram, Reddit, Discord) to join community",
+          "Navigate back to main app/home",
+          "Implicit: scroll down to read more (if page continues)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Close (X) button",
+            "action": "Dismiss announcement modal/banner"
+          },
+          {
+            "element": "Social icons (Telegram, Reddit, Discord)",
+            "action": "Navigate to external community platforms"
+          },
+          {
+            "element": "Hero image / phone mockup",
+            "action": "May link to app download or deeper product page"
+          }
+        ],
+        "informationArchitecture": "Linear narrative: attention-grabbing headline → supporting details (tags + date) → visual proof (product mockup) → persuasive body copy explaining benefits",
+        "frictionPoints": [
+          "Close button makes it easy to dismiss without reading full announcement",
+          "Social links lead away from app, creating exit friction for engagement",
+          "No clear primary CTA to download Monad version or switch networks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PancakeSwap Now Live on Monad Mainnet: Trade Faster. Earn Smarter.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Telegram icon",
+            "style": "icon-link",
+            "placement": "Right side, top social stack"
+          },
+          {
+            "text": "Reddit icon",
+            "style": "icon-link",
+            "placement": "Right side, middle social stack"
+          },
+          {
+            "text": "Discord icon",
+            "style": "icon-link",
+            "placement": "Right side, bottom social stack"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ECOSYSTEM . NEWS . PRODUCT",
+            "context": "Metadata tags above headline",
+            "purpose": "Categorize announcement type and signal editorial source"
+          },
+          {
+            "text": "2025-11-24",
+            "context": "Date stamp in metadata bar",
+            "purpose": "Establish recency and credibility of announcement"
+          },
+          {
+            "text": "Trade Faster Earn Smarter",
+            "context": "Overlay text on hero image",
+            "purpose": "Reinforce headline benefits in visual form"
+          }
+        ],
+        "tone": "professional-technical with celebratory excitement",
+        "dataFormatting": [
+          "Headline structure: 'X Now Live on Y: Benefit 1. Benefit 2.'",
+          "Date format: YYYY-MM-DD (2025-11-24)",
+          "Tag format: ALL_CAPS . separated . by . dots"
+        ],
+        "trustSignals": [
+          "Partnership badge (PancakeSwap × MONAD) shows official collaboration",
+          "Editorial categorization (ECOSYSTEM, NEWS, PRODUCT) suggests official announcement",
+          "Date stamp (2025-11-24) establishes when information was published",
+          "Concrete benefits: 'faster, cheaper, more capital-efficient' instead of empty claims"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

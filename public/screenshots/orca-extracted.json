@@ -1,0 +1,1395 @@
+{
+  "slug": "orca",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:47:59.787Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 10,
+  "screens": [
+    {
+      "image": "/screenshots/orca-home-1-portfolio.png",
+      "label": "Portfolio",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with header navigation and table structure",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFC107",
+          "#1a1f36",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (Portfolio), with descriptive subheading in lighter gray",
+          "bodyStyle": "Regular weight sans-serif for navigation and labels, medium size",
+          "dataStyle": "Monospace or numeric-optimized font for table headers and data columns"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Sticky header with logo, main nav items (Pools, Portfolio, Trade, Stake, Wavebreak, More), Connect Wallet button",
+            "position": "top",
+            "notable": "Yellow accent button (Connect Wallet) stands out against dark background"
+          },
+          {
+            "type": "Search Input",
+            "description": "Token search field with placeholder 'Search tokens...'",
+            "position": "below main heading, left-aligned",
+            "notable": "Dark input with subtle border, provides quick access to filter data"
+          },
+          {
+            "type": "Table Headers",
+            "description": "Column headers: Pool, Balance, Pending Yield, Est. Yield, Position Range, Current Price",
+            "position": "below search, full width",
+            "notable": "Includes time range selector (24H) and info tooltip on Est. Yield"
+          },
+          {
+            "type": "View Toggle",
+            "description": "List view, grid view, and settings icons",
+            "position": "top right of table area",
+            "notable": "Icon-based toggle for different data visualization modes"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear top-to-bottom flow: navigation → heading + description → search → table headers → empty state CTA",
+        "innovativeElements": [
+          "Yellow accent color (uncommon in crypto UI) creates distinctive branding",
+          "Information tooltip on 'Est. Yield' suggests complex feature explanation"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-empty-state",
+        "userIntent": "View and manage active liquidity positions across pools",
+        "entryPoints": [
+          "Click Portfolio from main navigation",
+          "Return from other dashboard sections"
+        ],
+        "exitPoints": [
+          "Connect Wallet button (bottom-center CTA)",
+          "Search tokens to filter pools",
+          "Switch view format (list/grid icons)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet Button",
+            "action": "Initiates wallet connection flow to authenticate user and load portfolio data"
+          },
+          {
+            "element": "Search Input",
+            "action": "Real-time token filtering of portfolio items"
+          },
+          {
+            "element": "24H Dropdown",
+            "action": "Changes time period for yield calculations"
+          },
+          {
+            "element": "View Toggle Icons",
+            "action": "Switches between list and grid layouts"
+          }
+        ],
+        "informationArchitecture": "Three-level structure: (1) Hero section with heading, (2) Search/filter controls, (3) Empty table with column definitions awaiting data",
+        "frictionPoints": [
+          "Empty state requires wallet connection before any data is visible",
+          "No preview or example data shown to educate users on what they'll see post-connection"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Portfolio",
+        "subheadline": "Track and manage your active liquidity positions.",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center of empty state"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search tokens ...",
+            "context": "Input placeholder",
+            "purpose": "Instructs user on filtering functionality"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Column headers suggest: token addresses, dollar amounts, percentages, price ranges, current prices"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Empty table state waiting for wallet connection"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/orca-home-2-wavebreak.png",
+      "label": "Wavebreak",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with hero section, feature card, and card grid layout for past launches",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFC107",
+          "#1a1f36",
+          "#5FD3D3"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (Wavebreak, Premier Launches), prominent and hierarchical",
+          "bodyStyle": "Regular sans-serif body text, medium line-height for readability",
+          "dataStyle": "Dollar amounts and timeframes in smaller, lighter gray text within cards"
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Left-aligned content with 'PREMIER' badge, heading, explanatory text, and 'Apply Now' link",
+            "position": "top-left, spanning ~40% width",
+            "notable": "Yellow badge and left-aligned asymmetric layout creates visual interest"
+          },
+          {
+            "type": "Right-Aligned Promotional Box",
+            "description": "Centered callout box with rocket icon, question headline, and CTA button",
+            "position": "top-right",
+            "notable": "Off-center placement and contrasting button style draws attention"
+          },
+          {
+            "type": "Filter and Sort Controls",
+            "description": "Dropdown menu (Premier Launches selected), Filter icon, and 'Newest' sort option",
+            "position": "below hero, left-aligned",
+            "notable": "Dark button styling matches design system"
+          },
+          {
+            "type": "Section Header with Empty State",
+            "description": "'Live & Upcoming' section title with 'No active launches' message",
+            "position": "center area",
+            "notable": "Clear empty state messaging prevents confusion"
+          },
+          {
+            "type": "Past Launches Card Grid",
+            "description": "Two-column grid of project cards (GBOY, TUNA) with logos, names, symbols, descriptions, progress bars, and total raised",
+            "position": "bottom section",
+            "notable": "Progress bar visualization (mint green color) and 'PREMIER' badge on each card"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero content on left pulls focus, promotional box on right balances layout; empty state clearly marked; past launches grid anchors bottom with concrete examples",
+        "innovativeElements": [
+          "Asymmetric two-column hero layout (content left, promo right) is distinctive",
+          "Progress bar visualization with mint green accent color",
+          "PREMIER badge branding across multiple card types"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-browse-products",
+        "userIntent": "Discover and apply to token launches (Wavebreak feature), particularly Premier Launches",
+        "entryPoints": [
+          "Click Wavebreak from main navigation",
+          "Promotional marketing channels"
+        ],
+        "exitPoints": [
+          "'Apply to Premier Launches' button (top-right and bottom CTA)",
+          "Filter/sort dropdown to explore other launch types",
+          "Past launches cards (if user clicks into previous projects)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Apply to Premier Launches Button",
+            "action": "Opens application form or flow for Premier Launch eligibility"
+          },
+          {
+            "element": "Apply Now Link",
+            "action": "Same action as primary CTA, alternative entry point"
+          },
+          {
+            "element": "Premier Launches Dropdown",
+            "action": "Filters launch list by type/category"
+          },
+          {
+            "element": "Filter Icon",
+            "action": "Opens advanced filtering options"
+          },
+          {
+            "element": "Newest Sort Button",
+            "action": "Reorders results by date"
+          },
+          {
+            "element": "Past Launch Cards",
+            "action": "Likely navigates to project detail or external link"
+          }
+        ],
+        "informationArchitecture": "Top-level feature promotion → filter/sort controls → empty state for active launches → concrete examples of past launches",
+        "frictionPoints": [
+          "Empty 'Live & Upcoming' section could discourage users (no active opportunities shown)",
+          "Two Apply buttons create slight redundancy"
+        ],
+        "progressIndicators": [
+          "Progress bars on past launch cards showing fundraising progress",
+          "Timestamp ('2mo ago', '6mo ago') on past launches indicates recency"
+        ]
+      },
+      "copy": {
+        "headline": "Wavebreak",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Apply to Premier Launches",
+            "style": "primary-button-with-icon",
+            "placement": "top-right corner"
+          },
+          {
+            "text": "Apply Now",
+            "style": "text-link-with-arrow",
+            "placement": "hero section, left side"
+          },
+          {
+            "text": "Apply to Premier Launches",
+            "style": "ghost-button-outlined",
+            "placement": "right-aligned promotional box"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "In addition to our permissionless launchpad, projects can do a Premier Launch: receive white-glove launch support, build a custom bonding curve, and hit your target.",
+            "context": "Hero section description",
+            "purpose": "Educates users on Premier Launches value proposition"
+          },
+          {
+            "text": "Want to make a big splash with your token?",
+            "context": "Right-aligned promotional box",
+            "purpose": "Conversational CTA framing, encourages project teams to apply"
+          },
+          {
+            "text": "No active launches",
+            "context": "Live & Upcoming section",
+            "purpose": "Clear empty state messaging"
+          },
+          {
+            "text": "G'BOY is the flagship IP of NEUKO",
+            "context": "Past launch card description",
+            "purpose": "Project summary for discovery"
+          }
+        ],
+        "tone": "professional-friendly",
+        "dataFormatting": [
+          "$120.00k (Total Raised)",
+          "$1.37M (Total Raised)",
+          "2mo ago, 6mo ago (timestamps)"
+        ],
+        "trustSignals": [
+          "Past launches with substantial funding amounts shown ($120k+, $1.37M)",
+          "PREMIER badge indicates curated/quality projects",
+          "Project descriptions and logos build credibility"
+        ],
+        "jargonLevel": "beginner-intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No active launches"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/orca-home-3-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width centered empty state",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f36",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large monospace or bold sans-serif error code and message",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Standard top header with logo, nav items, Connect Wallet button",
+            "position": "top",
+            "notable": "Persists even on error page for wayfinding"
+          },
+          {
+            "type": "Error Message",
+            "description": "Centered text '404 | Not Found'",
+            "position": "center of viewport",
+            "notable": "Minimal, clean error presentation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors top; centered error message dominates viewport with significant whitespace",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error-404",
+        "userIntent": "User attempted to access a non-existent page or route",
+        "entryPoints": [
+          "Direct URL navigation to invalid route",
+          "Broken link from another page"
+        ],
+        "exitPoints": [
+          "Navigate via top navigation (Pools, Portfolio, Trade, Stake, Wavebreak, More)",
+          "Connect Wallet (unlikely to help)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Top Navigation Links",
+            "action": "Navigate back to valid pages"
+          }
+        ],
+        "informationArchitecture": "Minimal—error state with navigation fallback only",
+        "frictionPoints": [
+          "No helpful messaging or suggested next steps",
+          "No search or 'go home' button",
+          "No error explanation or assistance"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 | Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 | Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-7-pools-9txiurrw7kbejlhzxtxdxys2ree43uh2e7k1kocgdm9b.png",
+      "label": "pools - 9tXiuRRw7kbejLhZXtxDxYs2REe43uH2e7k1kocgdM9B",
+      "flowType": "Staking",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1b23",
+          "#ffd700",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, medium weight, white text for main titles",
+          "bodyStyle": "Regular sans-serif, small to medium size, light gray for secondary text",
+          "dataStyle": "Monospace font for price data, highlighted in green (gains) or red (losses), with percentage indicators"
+        },
+        "components": [
+          {
+            "type": "Candlestick Chart",
+            "description": "Interactive trading chart showing PYUSD/USDC price action with volume bars below",
+            "position": "Left panel, center-dominant",
+            "notable": "Real-time data visualization with time-based zoom controls (5m, 1h, D)"
+          },
+          {
+            "type": "Position Creation Panel",
+            "description": "Right-side modal for creating trading positions with price range inputs",
+            "position": "Right panel, overlaid",
+            "notable": "Price range preset buttons (Full, Custom) and liquidity range visualization"
+          },
+          {
+            "type": "Key Metrics Bar",
+            "description": "Horizontal bar displaying Current Price, TVL, Volume 24H, Fees 24H",
+            "position": "Top of chart area, under token pair header",
+            "notable": "Uses badge-style display with arrow icon for price refresh"
+          },
+          {
+            "type": "Tabbed Navigation",
+            "description": "My Positions vs Position Simulator tabs with Beta label",
+            "position": "Below chart, left-aligned",
+            "notable": "Beta badge indicates experimental feature"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Chart dominates left side; creation panel anchors right side; metrics hierarchy guides eye top-to-bottom through price → range → yield",
+        "innovativeElements": [
+          "Position range visualization with histogram overlay showing liquidity distribution",
+          "Dual price input fields with +/- increment buttons for precise range setting",
+          "Estimated yield display with 24H selector and green percentage highlight"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse + form overlay",
+        "userIntent": "Analyze PYUSD/USDC liquidity pool and create a staking position",
+        "entryPoints": [
+          "Tap on pool from pools list",
+          "Direct navigation from Pools tab"
+        ],
+        "exitPoints": [
+          "Connect Wallet to confirm position",
+          "Close modal (X button)",
+          "Return to pools list"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time range selector",
+            "action": "Changes chart timeframe (5m, 1h, D)"
+          },
+          {
+            "element": "Min/Max Price inputs",
+            "action": "Sets liquidity range boundaries"
+          },
+          {
+            "element": "Range Preset buttons",
+            "action": "Auto-fills price range with Fixed Price, Single Sided, or Price History presets"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiates wallet connection to finalize position creation"
+          }
+        ],
+        "informationArchitecture": "Price data (chart) → Position parameters (range, deposit ratio) → Action (wallet connection)",
+        "frictionPoints": [
+          "User must connect wallet before creating position (shown as blocking message)",
+          "Custom price range requires manual input; preset buttons help but add cognitive load"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PYUSD / USDC",
+        "subheadline": "Create Position",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Bottom right of position panel"
+          },
+          {
+            "text": "Create Position",
+            "style": "secondary-button",
+            "placement": "Bottom of chart panel, muted/disabled state"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Connect Wallet to create a position.",
+            "context": "Center of My Positions tab",
+            "purpose": "Prompts user action when wallet not connected"
+          },
+          {
+            "text": "Current Price",
+            "context": "Metrics bar",
+            "purpose": "Labels price display field"
+          },
+          {
+            "text": "USDC per PYUSD",
+            "context": "Right side of metrics",
+            "purpose": "Clarifies price denomination"
+          },
+          {
+            "text": "Permissions",
+            "context": "Below token pair, orange badge",
+            "purpose": "Indicates smart contract permissions requirement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.9999 USDC per PYUSD",
+          "$30,070,960 TVL",
+          "$21,728,394 Volume 24H",
+          "+0.01% change indicator",
+          "41.7% PYUSD / 58.3% USDC deposit ratio"
+        ],
+        "trustSignals": [
+          "$30M+ TVL displayed prominently",
+          "Real-time price feeds",
+          "Volume and fee metrics for pool liquidity assessment"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect Wallet to create a position."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-8-pools-hxa6skw5qa4o12fjvgtpxdq2ynz5zv1s7sb4ffomsylm.png",
+      "label": "pools - HxA6SKW5qA4o12fjVgTpXdq2YnZ5Zv1s7SB4FFomsyLM",
+      "flowType": "Staking",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1b23",
+          "#ffd700",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, medium weight",
+          "bodyStyle": "Regular sans-serif, light gray, small to medium size",
+          "dataStyle": "Monospace for large numbers (69.44k, 70,801.967431), color-coded green/red for gains/losses"
+        },
+        "components": [
+          {
+            "type": "Candlestick Chart",
+            "description": "cbBTC/USDC trading chart with volume histogram, showing volatile price movement",
+            "position": "Left panel, center-dominant",
+            "notable": "Shows significant volatility with large red candles and volume spikes"
+          },
+          {
+            "type": "Position Range Visualizer",
+            "description": "Right panel showing distribution histogram with min/max price indicators",
+            "position": "Right panel, top",
+            "notable": "Narrow range window (67.84k to 72.03k) overlaid on full price distribution"
+          },
+          {
+            "type": "Price Input Controls",
+            "description": "Dual input fields with +/- buttons for min and max prices",
+            "position": "Right panel, center",
+            "notable": "Large readable numbers; increment/decrement buttons for precision adjustment"
+          },
+          {
+            "type": "Range Preset Buttons",
+            "description": "Fixed Price, Single Sided, Price History presets",
+            "position": "Right panel, middle",
+            "notable": "Percentage-based presets (±1%, ±5%, ±10%, Custom)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Chart emphasizes price volatility; position range panel guides eye from histogram → price inputs → presets → yield metrics",
+        "innovativeElements": [
+          "Distribution histogram shows liquidity concentration relative to selected range",
+          "Percentage change badges (-2%, +2%) flanking the histogram for quick volatility assessment",
+          "Deposit ratio clearly shows capital allocation (48.5% cbBTC / 51.5% USDC)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse + form overlay",
+        "userIntent": "Analyze cbBTC/USDC liquidity pool and set up a staking position with custom price range",
+        "entryPoints": [
+          "Navigate from Pools tab",
+          "Click cbBTC/USDC pool card"
+        ],
+        "exitPoints": [
+          "Connect Wallet button",
+          "Close modal",
+          "Return to pools"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time selector",
+            "action": "Change chart timeframe"
+          },
+          {
+            "element": "Min Price input",
+            "action": "Set lower bound of liquidity range"
+          },
+          {
+            "element": "Max Price input",
+            "action": "Set upper bound of liquidity range"
+          },
+          {
+            "element": "Range Preset buttons",
+            "action": "Auto-populate price range based on percentage deviation"
+          },
+          {
+            "element": "Zoom controls in histogram",
+            "action": "Adjust range visualization"
+          }
+        ],
+        "informationArchitecture": "Price discovery (chart) → Range visualization (histogram) → Range configuration (inputs + presets) → Yield estimation → Wallet connection",
+        "frictionPoints": [
+          "Large price values (69k+) require precision; manual input could be error-prone",
+          "Multiple preset options require understanding of DeFi liquidity concepts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "cbBTC / USDC",
+        "subheadline": "Create Position",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Bottom right panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Current Price",
+            "context": "Metrics bar header",
+            "purpose": "Identifies price field"
+          },
+          {
+            "text": "Position Range",
+            "context": "Right panel header",
+            "purpose": "Section title for range configuration"
+          },
+          {
+            "text": "Range Preset",
+            "context": "Above preset buttons",
+            "purpose": "Introduces quick-set options"
+          },
+          {
+            "text": "Estimated Yield",
+            "context": "Below presets",
+            "purpose": "Shows projected return with timeframe selector"
+          },
+          {
+            "text": "Deposit Ratio",
+            "context": "Below yield",
+            "purpose": "Shows required capital allocation between assets"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "69.44k USDC per cbBTC",
+          "$3,373,509 TVL",
+          "68025.918621 Min Price",
+          "70801.967431 Max Price",
+          "48.5% cbBTC / 51.5% USDC",
+          "0.436% Estimated Yield 24H"
+        ],
+        "trustSignals": [
+          "$3.3M TVL",
+          "Real-time price feeds",
+          "Liquidity distribution visualization"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-9-pools-9rqdtfwcx2sgxsvkpspqhc38huo3b6hrd3or9jr966ps.png",
+      "label": "pools - 9RqDTfwCx2SgxsvKpspQHc38HUo3B6hRd3oR9JR966Ps",
+      "flowType": "Staking",
+      "step": 9,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1b23",
+          "#ffd700",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, medium weight",
+          "bodyStyle": "Regular sans-serif, light gray, small to medium",
+          "dataStyle": "Monospace for prices and data, color-coded red/green for changes"
+        },
+        "components": [
+          {
+            "type": "Candlestick Chart",
+            "description": "USDG/USDC price chart showing stable price with tight range",
+            "position": "Left panel, dominant",
+            "notable": "Minimal volatility; price hovering near 1.000, characteristic of stablecoin pair"
+          },
+          {
+            "type": "Price Range Histogram",
+            "description": "Distribution showing liquidity concentration in narrow band",
+            "position": "Right panel, top",
+            "notable": "Very tight range (0.998 to 1.001) reflects stablecoin stability"
+          },
+          {
+            "type": "Price Range Inputs",
+            "description": "Min and max price fields with increment controls",
+            "position": "Right panel, center",
+            "notable": "High precision required (6 decimal places) for stablecoin pricing"
+          },
+          {
+            "type": "Preset Range Buttons",
+            "description": "Fixed Price, Single Sided, Price History options",
+            "position": "Right panel, below inputs",
+            "notable": "Tight presets (±0.1%, ±0.3%, ±0.5%) appropriate for low-volatility assets"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Stable price chart (left) contrasts with tight range visualization (right); inputs and presets guide configuration flow downward",
+        "innovativeElements": [
+          "Stablecoin-specific preset ranges (±0.1%, ±0.3%, ±0.5%) vs traditional ±1-10% ranges",
+          "Highly precise price display reflects stablecoin requirements",
+          "Flat chart line emphasizes stability of USDG/USDC pair"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse + form overlay",
+        "userIntent": "Create a liquidity position for USDG/USDC stablecoin pair",
+        "entryPoints": [
+          "Select USDG/USDC from pools list",
+          "Navigate via Pools tab"
+        ],
+        "exitPoints": [
+          "Connect Wallet",
+          "Close modal",
+          "Return to pools list"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time range selector",
+            "action": "Adjust chart timeframe (5m, 1h, D)"
+          },
+          {
+            "element": "Min Price field",
+            "action": "Set lower price boundary"
+          },
+          {
+            "element": "Max Price field",
+            "action": "Set upper price boundary"
+          },
+          {
+            "element": "Range preset buttons",
+            "action": "Auto-apply stablecoin-optimized ranges"
+          }
+        ],
+        "informationArchitecture": "Stable price display (chart) → Tight range visualization → Precision inputs → Narrow presets → Yield metrics → Wallet connection",
+        "frictionPoints": [
+          "Six decimal place precision required; users may struggle with manual input",
+          "Stablecoin pairs have lower yield potential (shown as <0.01%)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "USDG / USDC",
+        "subheadline": "Create Position",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Bottom right panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Current Price",
+            "context": "Metrics bar",
+            "purpose": "Labels stable price display"
+          },
+          {
+            "text": "USDC per USDG",
+            "context": "Right side metric label",
+            "purpose": "Clarifies price denomination"
+          },
+          {
+            "text": "Position Range",
+            "context": "Right panel header",
+            "purpose": "Section identifier"
+          },
+          {
+            "text": "Range Preset",
+            "context": "Above preset buttons",
+            "purpose": "Introduces quick-select options optimized for stablecoins"
+          },
+          {
+            "text": "Permissions",
+            "context": "Below token pair header",
+            "purpose": "Indicates smart contract permissions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "1 USDC per USDG (stable)",
+          "$16,324,897 TVL",
+          "$1,186,193 Volume 24H",
+          "+0.01% change",
+          "44.6% USDG / 55.4% USDC deposit ratio",
+          "<0.01% Estimated Yield 24H"
+        ],
+        "trustSignals": [
+          "$16.3M TVL indicates strong liquidity",
+          "Real-time price stability",
+          "Volume metrics for pool activity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width with horizontal data table",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1b2e",
+          "#ffd700",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (28-32px) with supporting subheading in gray",
+          "bodyStyle": "Medium-weight sans-serif (14-16px) for table headers and labels",
+          "dataStyle": "Monospace or tabular numbers in white, right-aligned in columns"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Horizontal nav with Pools, Portfolio, Trade, Stake, Wavebreak, More dropdown; yellow Connect Wallet CTA on right",
+            "position": "Top fixed header",
+            "notable": "Clean navigation with prominent wallet connection button"
+          },
+          {
+            "type": "Header Section",
+            "description": "Large headline 'Liquidity Pools' with subtext, three key metrics (TVL, 24H Volume, 24H Fees) right-aligned, yellow Create Pool button",
+            "position": "Top of main content",
+            "notable": "Summary metrics front-and-center for at-a-glance dashboard impression"
+          },
+          {
+            "type": "Search & Filter Bar",
+            "description": "Search input for tokens with filter, settings, and refresh icons",
+            "position": "Above table",
+            "notable": "Compact control bar with icon-based actions"
+          },
+          {
+            "type": "Data Table",
+            "description": "10 rows of liquidity pools with columns: Pool name/icon, Yield/TVL with info icon, 24H toggle, Volume 24H, TVL, Fees 24H, Rewards 24H",
+            "position": "Main content area",
+            "notable": "Dense data table with 7 columns; sortable header row; paired token icons"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Dark overlay with privacy notice, Decline and Accept buttons in yellow/gray",
+            "position": "Bottom center overlay",
+            "notable": "Non-intrusive but present consent flow"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Eye drawn from headline → metrics summary → search → table; yellow accents guide to Create Pool and Accept actions",
+        "innovativeElements": [
+          "24H time-period toggle inline with column header",
+          "Yield/TVL with contextual info icon for quick explanations",
+          "Paired token icons showing dual-asset pools"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse dashboard",
+        "userIntent": "Explore liquidity pools, compare yields and volumes, search for specific tokens",
+        "entryPoints": [
+          "Click Pools nav from main dashboard",
+          "Landing after wallet connection"
+        ],
+        "exitPoints": [
+          "Click individual pool row to view details",
+          "Click Create Pool button to start pool creation",
+          "Navigate to Portfolio, Trade, or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Filter pools by token name/symbol"
+          },
+          {
+            "element": "Filter icon",
+            "action": "Open advanced filtering options"
+          },
+          {
+            "element": "Settings icon",
+            "action": "Configure table display preferences"
+          },
+          {
+            "element": "24H toggle",
+            "action": "Switch time period for metrics"
+          },
+          {
+            "element": "Pool row",
+            "action": "Expand or navigate to pool detail view"
+          },
+          {
+            "element": "Create Pool button",
+            "action": "Initiate new pool creation workflow"
+          },
+          {
+            "element": "Accept/Decline buttons",
+            "action": "Consent to tracking and data collection"
+          }
+        ],
+        "informationArchitecture": "Pools organized in sortable table by pair name; aggregate metrics (TVL, Volume, Fees) displayed in header; search/filter for quick navigation",
+        "frictionPoints": [
+          "Cookie consent modal blocks interaction (though standard compliance requirement)",
+          "Dense table with 7 columns may require horizontal scroll on smaller screens",
+          "Yield/TVL column requires learning what percentages mean (contextual help icon mitigates)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Liquidity Pools",
+        "subheadline": "Explore pools and deploy capital to earn trading fees.",
+        "ctas": [
+          {
+            "text": "Create Pool",
+            "style": "primary-button with yellow background and arrow icon",
+            "placement": "Top right of content area"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button with yellow background",
+            "placement": "Top right navigation bar"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button with yellow background",
+            "placement": "Cookie consent modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pool",
+            "context": "Table column header",
+            "purpose": "Identifies the trading pair column"
+          },
+          {
+            "text": "Yield / TVL",
+            "context": "Table column header with info icon",
+            "purpose": "Shows APY or returns relative to total value locked"
+          },
+          {
+            "text": "24H",
+            "context": "Toggle button in Volume/Fees columns",
+            "purpose": "Allows switching time window for metrics"
+          },
+          {
+            "text": "Search tokens ...",
+            "context": "Input placeholder",
+            "purpose": "Guides user to search by token name"
+          }
+        ],
+        "tone": "professional-technical, data-driven and efficient",
+        "dataFormatting": [
+          "$257,264,668 (TVL in currency format)",
+          "$194,382,974 (24H Volume)",
+          "0.133% (Yield percentage with sign)",
+          "$85,598,423 (Large numbers with thousand separators)",
+          "−  (Dash for missing data in Rewards column)"
+        ],
+        "trustSignals": [
+          "Large aggregate TVL ($257M) displayed prominently",
+          "24-hour volume and fee metrics indicate active trading",
+          "Multiple trading pairs indicate broad protocol support"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "modal overlay on full-width table",
+        "colorScheme": "dark with semi-transparent backdrop",
+        "primaryColors": [
+          "#1a1b2e",
+          "#ffd700",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Small sans-serif (13-14px) for consent text, with link underlines",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Overlay",
+            "description": "Semi-transparent dark backdrop darkening background table content",
+            "position": "Full screen behind modal",
+            "notable": "Standard darkening overlay to focus attention on modal"
+          },
+          {
+            "type": "Consent Card",
+            "description": "Dark card with privacy icon, consent text (3 lines), links to Privacy Policy and Cookie Policy, two action buttons",
+            "position": "Center-bottom of screen",
+            "notable": "Non-blocking placement allows some table visibility; conversational tone"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Two buttons: 'Decline' (gray ghost style) and 'Accept' (yellow primary style)",
+            "position": "Bottom right of consent card",
+            "notable": "Equal visual weight with slight emphasis on yellow Accept"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Privacy icon draws attention → body text read → links and buttons provide clear choices",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal / compliance overlay",
+        "userIntent": "Acknowledge data collection and tracking preferences before continuing",
+        "entryPoints": [
+          "Auto-triggered on page load",
+          "Not explicitly navigated to—blocking interaction"
+        ],
+        "exitPoints": [
+          "Click Decline to reject tracking",
+          "Click Accept to consent and dismiss modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Decline button",
+            "action": "Reject on-the-spot tracking; close modal"
+          },
+          {
+            "element": "Accept button",
+            "action": "Consent to tracking; close modal and allow continued use"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Open external privacy policy document"
+          },
+          {
+            "element": "Cookie Policy link",
+            "action": "Open external cookie policy document"
+          }
+        ],
+        "informationArchitecture": "Simple two-choice modal; links provided for detailed reading without requiring action",
+        "frictionPoints": [
+          "Modal blocks primary content until action taken",
+          "User must make a choice before continuing; no 'maybe later' option"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Decline",
+            "style": "ghost-button with gray text",
+            "placement": "Bottom left of modal"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button with yellow background",
+            "placement": "Bottom right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We and selected third parties may use on-the-spot tracking to collect interaction data and personalize your experience. See our Privacy Policy and Cookie Policy for details.",
+            "context": "Main body of consent modal",
+            "purpose": "Explains data collection practice and directs to policies"
+          }
+        ],
+        "tone": "professional-technical, compliant and transparent",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Reference to Privacy Policy and Cookie Policy documents",
+          "Transparency about third-party use",
+          "Clear opt-in/opt-out choice"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-staking-5-create-pool.png",
+      "label": "Create Pool",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "centered full-width modal/page",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1b2e",
+          "#ffd700",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (32-36px) centered headline with question subtext (16-18px) in gray",
+          "bodyStyle": "Medium sans-serif (16px) for card titles, small sans-serif (14px) for descriptions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Centered 'Create Pool' headline with subtext 'What type of liquidity pool would you like to create?' and right-aligned 'Learn more' link with external icon",
+            "position": "Top center of page",
+            "notable": "Question-based framing guides user choice; Learn more link provides educational path"
+          },
+          {
+            "type": "Card Option 1 – Splash Pool",
+            "description": "Dark card with pool name 'Splash Pool 💦', description text, 'Best for Memecoins and newer tokens' label, and right-arrow CTA",
+            "position": "Center left",
+            "notable": "Emoji icon makes pool type memorable; descriptive text explains use case"
+          },
+          {
+            "type": "Card Option 2 – Concentrated Pool",
+            "description": "Dark card with pool name 'Concentrated Pool', 'Advanced' badge, description text, 'Best for Experienced LPs' label, and right-arrow CTA",
+            "position": "Center right",
+            "notable": "'Advanced' badge signals complexity; targets experienced users"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered headline → two equally weighted card options → right-arrow CTAs draw eye to selection action",
+        "innovativeElements": [
+          "Question-based headline frames choice as guided decision",
+          "Emoji in pool name (Splash Pool 💦) adds personality",
+          "Asymmetric cards: one basic/beginner, one advanced—clear skill-level signaling"
+        ]
+      },
+      "flow": {
+        "screenType": "form / decision modal",
+        "userIntent": "Choose pool type (Splash vs. Concentrated) and proceed to detailed pool creation",
+        "entryPoints": [
+          "Click Create Pool button from Liquidity Pools dashboard"
+        ],
+        "exitPoints": [
+          "Click Splash Pool card → proceed to Splash pool creation form",
+          "Click Concentrated Pool card → proceed to Concentrated pool creation form",
+          "Click Learn more link → open documentation/tutorial in new tab",
+          "Close or back → return to Liquidity Pools dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Splash Pool card with arrow",
+            "action": "Navigate to Splash pool creation wizard"
+          },
+          {
+            "element": "Concentrated Pool card with arrow",
+            "action": "Navigate to Concentrated pool creation wizard"
+          },
+          {
+            "element": "Learn more link",
+            "action": "Open external documentation or help resource"
+          }
+        ],
+        "informationArchitecture": "Two primary paths presented as equal cards with descriptive context for each; secondary link for learning before choosing",
+        "frictionPoints": [
+          "User must understand difference between Splash and Concentrated pools to make informed choice",
+          "No 'skip' or 'not now' option if user is undecided"
+        ],
+        "progressIndicators": [
+          "Implied step 1 of pool creation workflow (not explicitly numbered)"
+        ]
+      },
+      "copy": {
+        "headline": "Create Pool",
+        "subheadline": "What type of liquidity pool would you like to create?",
+        "ctas": [
+          {
+            "text": "→",
+            "style": "arrow-icon-link embedded in card",
+            "placement": "Right side of Splash Pool card"
+          },
+          {
+            "text": "→",
+            "style": "arrow-icon-link embedded in card",
+            "placement": "Right side of Concentrated Pool card"
+          },
+          {
+            "text": "Learn more",
+            "style": "text-link with external icon",
+            "placement": "Top right of headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Splash Pool 💦",
+            "context": "Card title",
+            "purpose": "Names the pool type with memorable emoji"
+          },
+          {
+            "text": "The fastest and cheapest way to get your tokens tradable on Orca. Supports full-range positions only.",
+            "context": "Splash Pool card description",
+            "purpose": "Explains key benefits and limitations of Splash pools"
+          },
+          {
+            "text": "Best for Memecoins and newer tokens",
+            "context": "Splash Pool card label",
+            "purpose": "Targets primary user persona for this pool type"
+          },
+          {
+            "text": "Concentrated Pool",
+            "context": "Card title",
+            "purpose": "Names the advanced pool type"
+          },
+          {
+            "text": "Advanced",
+            "context": "Badge on Concentrated Pool card",
+            "purpose": "Signals higher complexity and skill requirement"
+          },
+          {
+            "text": "Enjoy access to the full suite of pool creation settings. Supports both concentrated & full-range positions.",
+            "context": "Concentrated Pool card description",
+            "purpose": "Explains full feature set and flexibility"
+          },
+          {
+            "text": "Best for Experienced LPs",
+            "context": "Concentrated Pool card label",
+            "purpose": "Targets advanced user persona"
+          }
+        ],
+        "tone": "friendly-casual with educational undertones, encouraging exploration",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Clear feature comparison between pool types",
+          "Explicit messaging of what each pool supports (positions, range, settings)"
+        ],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/orca-swap-1-trade.png",
+      "label": "Trade",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F1F2E",
+          "#FFD166",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, medium size for section labels (Pay, Receive)",
+          "bodyStyle": "Sans-serif, regular weight, smaller size for amounts and labels",
+          "dataStyle": "Monospace or fixed-width for token amounts and prices; large bold numbers for primary values"
+        },
+        "components": [
+          {
+            "type": "token-input-field",
+            "description": "Pay section with token amount (0), dollar value ($0.00), and SOL token selector badge",
+            "position": "upper panel",
+            "notable": "Clear visual separation with currency badge on right side"
+          },
+          {
+            "type": "swap-toggle",
+            "description": "Bidirectional arrow icon between Pay and Receive sections",
+            "position": "center divider",
+            "notable": "Allows quick token reversal"
+          },
+          {
+            "type": "token-output-field",
+            "description": "Receive section with token amount (0), dollar value ($0.00), and ORCA token selector badge",
+            "position": "lower panel",
+            "notable": "Yellow accent icon for ORCA token"
+          },
+          {
+            "type": "primary-cta",
+            "description": "Connect Wallet button, full-width yellow background",
+            "position": "bottom of input panel",
+            "notable": "Prominent call-to-action blocking further interaction"
+          },
+          {
+            "type": "token-list",
+            "description": "List of available tokens (SOL, ORCA) with contract addresses, chain labels, and current prices",
+            "position": "below main swap panel",
+            "notable": "Displays contract address snippets and external link icons for verification"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Input panel anchors attention, slippage indicator top-right is secondary, token list below serves as reference data",
+        "innovativeElements": [
+          "Slippage tolerance displayed inline with swap icon at top",
+          "Contract address display with copy/link functionality for transparency",
+          "Token badges with distinct icon styling (SOL simple, ORCA branded)"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Initiate a token swap between SOL and ORCA, or enter custom amounts",
+        "entryPoints": [
+          "Clicked Trade tab from main navigation",
+          "Deep link to swap interface"
+        ],
+        "exitPoints": [
+          "Connect Wallet button → wallet connection flow",
+          "Navigate to Pools, Portfolio, Stake, Wavebreak tabs",
+          "Close or back button (implied top-left)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "SOL token selector badge",
+            "action": "Opens token picker to select pay token"
+          },
+          {
+            "element": "ORCA token selector badge",
+            "action": "Opens token picker to select receive token"
+          },
+          {
+            "element": "Swap toggle arrow",
+            "action": "Reverses Pay and Receive tokens"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiates wallet connection (required to proceed)"
+          },
+          {
+            "element": "Slippage icon",
+            "action": "Opens slippage tolerance configuration modal"
+          },
+          {
+            "element": "Contract address links",
+            "action": "Copy to clipboard or open in explorer"
+          }
+        ],
+        "informationArchitecture": "Two-tier structure: swap input form above the fold, reference token data below. Slippage setting exposed at top-right for power users.",
+        "frictionPoints": [
+          "Wallet must be connected before swap execution (expected friction)",
+          "No estimated output shown until wallet connects",
+          "Token list below main form may not be immediately obvious as clickable"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center, full-width, bottom of input panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pay",
+            "context": "Label for top input section",
+            "purpose": "Identifies which token user is spending"
+          },
+          {
+            "text": "Receive",
+            "context": "Label for bottom output section",
+            "purpose": "Identifies which token user is receiving"
+          },
+          {
+            "text": "Slippage",
+            "context": "Top-right indicator with value 0.5%",
+            "purpose": "Shows current slippage tolerance setting"
+          },
+          {
+            "text": "Solana",
+            "context": "Chain label below SOL contract address",
+            "purpose": "Clarifies which blockchain the token belongs to"
+          },
+          {
+            "text": "Orca",
+            "context": "Chain label below ORCA contract address",
+            "purpose": "Clarifies token origin/ecosystem"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0.00 (dollar values for amounts)",
+          "$87.868 (token price display with multiple decimals)",
+          "$0.8137 (alternative price format)",
+          "0 (token amount display, large bold)",
+          "0.5% (slippage percentage)"
+        ],
+        "trustSignals": [
+          "Contract addresses displayed with verification links",
+          "Chain identification (Solana, Orca) for each token",
+          "External link icons indicate blockchain verification available"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

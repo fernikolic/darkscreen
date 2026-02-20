@@ -1,0 +1,2557 @@
+{
+  "slug": "alby",
+  "category": "Payment",
+  "extractedAt": "2026-02-20T10:05:11.465Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 21,
+  "screens": [
+    {
+      "image": "/screenshots/alby-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FCD34D",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, black text with gray accent words mixed in",
+          "bodyStyle": "Regular weight sans-serif, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top horizontal nav with logo, menu items (PRODUCTS, SOLUTIONS, RESOURCES, PRICING), and Log In button",
+            "position": "Top fixed",
+            "notable": "Minimal, clean design with black Log In button"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline split across two lines with color treatment on subset of words",
+            "position": "Center-left",
+            "notable": "Strategic gray coloring on 'online, in apps and in person' to create visual rhythm"
+          },
+          {
+            "type": "CTA button",
+            "description": "Black rounded button with arrow",
+            "position": "Right side below subheading",
+            "notable": "High contrast, clear action"
+          },
+          {
+            "type": "Hero imagery",
+            "description": "Two product screenshots showing dashboard and interface",
+            "position": "Bottom of viewport",
+            "notable": "Partially visible, encourages scroll"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline commands attention, secondary text supports value prop, imagery reinforces offering",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Alby's core value proposition and sign up",
+        "entryPoints": [
+          "Direct website visit",
+          "Marketing link"
+        ],
+        "exitPoints": [
+          "Sign Up Now",
+          "Navigation menu items",
+          "Log In"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign Up Now button",
+            "action": "Navigate to registration/signup flow"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Browse products, solutions, resources, or pricing"
+          },
+          {
+            "element": "Log In button",
+            "action": "Redirect to login page"
+          }
+        ],
+        "informationArchitecture": "Hero-first approach: headline → subheading → CTA → supporting imagery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "All you need to use bitcoin as everyday money online, in apps and in person.",
+        "subheadline": "Subscribe to Alby Cloud or self-host Alby Hub and use bitcoin like never before.",
+        "ctas": [
+          {
+            "text": "Sign Up Now",
+            "style": "primary-button",
+            "placement": "Below subheading, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PRODUCTS, SOLUTIONS, RESOURCES, PRICING",
+            "context": "Navigation menu",
+            "purpose": "Guide users to different sections"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-2-pricing.png",
+      "label": "PRICING",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#E5E7EB",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif bold with gray accent text",
+          "bodyStyle": "Regular sans-serif for descriptions, slightly lighter weight",
+          "dataStyle": "Large bold numbers for pricing ($0, $12.9), small gray text for billing period"
+        },
+        "components": [
+          {
+            "type": "Pricing toggle",
+            "description": "Monthly/Yearly toggle with -20% discount badge",
+            "position": "Below headline",
+            "notable": "Black button for active state, secondary text for inactive"
+          },
+          {
+            "type": "Pricing card",
+            "description": "Three-column card layout with tier names, descriptions, and pricing",
+            "position": "Center, stacked horizontally",
+            "notable": "Middle card (Alby Cloud) has light gray background to highlight recommended tier"
+          },
+          {
+            "type": "Tier badges",
+            "description": "Sub-category toggles (Free/Pro) within Self-hosting section",
+            "position": "Inside first card",
+            "notable": "Nested selection within pricing tier"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, toggle controls pricing view, three cards present equal visual weight with middle card emphasized via background",
+        "innovativeElements": [
+          "Gray background highlighting for recommended tier",
+          "Nested tier selection within card",
+          "Discount badge on yearly option"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, pricing-comparison",
+        "userIntent": "Compare pricing tiers and select appropriate plan",
+        "entryPoints": [
+          "PRICING menu item",
+          "Direct link from navigation"
+        ],
+        "exitPoints": [
+          "Select a plan",
+          "Back to navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Monthly/Yearly toggle",
+            "action": "Switch pricing view and display discount percentage"
+          },
+          {
+            "element": "Free/Pro sub-toggles",
+            "action": "Switch between tiers within Self-hosting option"
+          },
+          {
+            "element": "Pricing cards",
+            "action": "Display detailed information about each tier (implied clickable)"
+          }
+        ],
+        "informationArchitecture": "Headline → billing frequency toggle → three-column comparison with nested options",
+        "frictionPoints": [
+          "Multiple toggles could be confusing (billing frequency + tier sub-selection)",
+          "Limited visibility of full feature lists (text says 'Available features:' but list is cut off)"
+        ],
+        "progressIndicators": [
+          "-20% discount badge on Yearly option"
+        ]
+      },
+      "copy": {
+        "headline": "Pricing that fits your bitcoin journey. 0% added transaction fees.",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Perfect for developers and tech-savvy users who want full control",
+            "context": "Self-hosting card description",
+            "purpose": "Explain target audience for tier"
+          },
+          {
+            "text": "Best for most users seeking convenience and reliable hosting",
+            "context": "Alby Cloud card description",
+            "purpose": "Position as recommended option"
+          },
+          {
+            "text": "Tailored for solutions organisations with custom requirements",
+            "context": "Enterprise card description",
+            "purpose": "Define enterprise use case"
+          },
+          {
+            "text": "Everything in Self-hosting, plus:",
+            "context": "Alby Cloud section",
+            "purpose": "Signal feature bundling/progression"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "$0 / month",
+          "$12.9 / month",
+          "Custom"
+        ],
+        "trustSignals": [
+          "0% added transaction fees (unique value prop)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-3-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FCD34D",
+          "#000000",
+          "#FFFFFF",
+          "#F3F4F6"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif with emoji icon prefix",
+          "bodyStyle": "Regular sans-serif for card descriptions and links",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left sidebar navigation",
+            "description": "Vertical menu with emoji icons, product categories (Hub, Browser Extension, Account, Go, etc.), and guide sections",
+            "position": "Left side, fixed",
+            "notable": "Emoji icons for visual scanning, organized by product and guide type"
+          },
+          {
+            "type": "Search bar",
+            "description": "Prominent search field with keyboard shortcut indicator (⌘ K) and Ask button",
+            "position": "Top center",
+            "notable": "Keyboard shortcut accessibility, paired Ask button for AI assistance"
+          },
+          {
+            "type": "Card grid",
+            "description": "Three-column layout of audience-specific guide cards with emoji icons and descriptions",
+            "position": "Main content area",
+            "notable": "Clear persona segmentation with visual icons"
+          },
+          {
+            "type": "Link sections",
+            "description": "Three columns of categorized links (For users, For developers, Social & contact)",
+            "position": "Below card grid",
+            "notable": "External link indicators (arrows), grouped by audience"
+          },
+          {
+            "type": "Footer attribution",
+            "description": "GitBook credit and sponsorship info",
+            "position": "Bottom right",
+            "notable": "Transparency about platform and sponsor"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top search bar → main welcome header → card grid with clear visual distinction → link sections → footer",
+        "innovativeElements": [
+          "Dual search + Ask AI pattern",
+          "Emoji-based icon system for navigation and content",
+          "Persona-driven card segmentation",
+          "Nested section organization with expandable categories"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, documentation-hub",
+        "userIntent": "Explore Alby guides, find resources by audience, and search documentation",
+        "entryPoints": [
+          "Direct documentation link",
+          "Main website navigation to Resources"
+        ],
+        "exitPoints": [
+          "Sidebar links to product guides",
+          "Search to specific documentation",
+          "Card clicks to audience-specific guides",
+          "External links to developer portal, blog, social channels"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Find specific documentation topics"
+          },
+          {
+            "element": "Ask button",
+            "action": "Launch AI assistant for questions"
+          },
+          {
+            "element": "Sidebar nav items",
+            "action": "Navigate to product-specific or guide-specific pages"
+          },
+          {
+            "element": "Persona cards",
+            "action": "Navigate to Users, Content Creators, or Developers guide sections"
+          },
+          {
+            "element": "External links",
+            "action": "Open external resources (Developer Guide, Blog, Twitter, etc.)"
+          }
+        ],
+        "informationArchitecture": "Hub structure with dual navigation (sidebar + search) → content organized by audience → supporting links by category",
+        "frictionPoints": [
+          "Dense sidebar with many items could overwhelm new users",
+          "Mixed internal and external links require context switching"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "👋 Welcome to Alby Guides!",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Ask",
+            "style": "secondary-button",
+            "placement": "Top right, next to search bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For AI assistants and LLMs",
+            "context": "Section header above card grid",
+            "purpose": "Set context for content below"
+          },
+          {
+            "text": "Learn more about Alby Hub, the Alby Browser Extension, and Alby Go!",
+            "context": "Alby for Users card",
+            "purpose": "Summarize user-focused products"
+          },
+          {
+            "text": "Receive bitcoin payments on your website and integrate value-4-value in your podcast 🎙️",
+            "context": "Alby for Content Creators card",
+            "purpose": "Highlight key creator-focused features"
+          },
+          {
+            "text": "Learn how to power your app with bitcoin. Build on top of Alby and innovate with us!",
+            "context": "Alby for Developers card",
+            "purpose": "Engage developer audience with partnership language"
+          },
+          {
+            "text": "We can't wait to see you using Alby! 😊 🚀 💪",
+            "context": "Bottom of page",
+            "purpose": "Warm, community-focused closing message"
+          }
+        ],
+        "tone": "friendly-casual, encouraging, community-driven",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Published for free with GitBook's Community Plan",
+          "Active community channels (Discord, Twitter, YouTube)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-5-request-a-feature.png",
+      "label": "Request a feature",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif with emoji accents, large cap height",
+          "bodyStyle": "Regular sans-serif, medium line height, dark gray text",
+          "dataStyle": "Numeric badges in light gray pills with numeric counts"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Navigation bar with logo, roadmap link, feedback dropdown, and login",
+            "position": "top",
+            "notable": "Clean horizontal navigation with secondary actions"
+          },
+          {
+            "type": "welcome-section",
+            "description": "Greeting with emoji and multi-line intro paragraph",
+            "position": "top",
+            "notable": "Conversational tone with clear value proposition"
+          },
+          {
+            "type": "product-list",
+            "description": "Bulleted list of Alby products with links in orange",
+            "position": "upper-middle",
+            "notable": "Products differentiated by descriptive subtitles"
+          },
+          {
+            "type": "feedback-cards",
+            "description": "Six card-based product categories with request buttons and count badges",
+            "position": "middle",
+            "notable": "Grid layout showing request volume per product"
+          },
+          {
+            "type": "roadmap-section",
+            "description": "Three-column layout with status indicators (Under Review, Planned, In Progress)",
+            "position": "bottom",
+            "notable": "Visual pipeline showing feature development stages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Welcome section > Product list > Feedback cards > Roadmap; emphasis via emoji and color",
+        "innovativeElements": [
+          "Emoji-based status indicators in roadmap",
+          "Dual action pattern: product name + request feature button",
+          "Vote counts displayed as numeric badges"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore Alby products and submit feature requests or feedback",
+        "entryPoints": [
+          "Direct navigation from Alby ecosystem",
+          "Feedback button from products",
+          "Roadmap link from header"
+        ],
+        "exitPoints": [
+          "Click product name to navigate to product",
+          "Request button to submit feedback form",
+          "Login/Signup in header",
+          "Back to main Alby site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Request button on each card",
+            "action": "Opens feedback submission form for that product category"
+          },
+          {
+            "element": "Product links (orange text)",
+            "action": "Routes to specific product page or external resource"
+          },
+          {
+            "element": "GIVE FEEDBACK dropdown",
+            "action": "Likely toggles feedback options or menu"
+          },
+          {
+            "element": "Roadmap link in header",
+            "action": "Anchors or scrolls to roadmap section"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Welcome context → Product categories → Request channels → Development pipeline",
+        "frictionPoints": [
+          "User must find which product to submit feedback for before acting",
+          "Vote counts shown but no direct voting mechanism visible"
+        ],
+        "progressIndicators": [
+          "Roadmap status labels (Under Review, Planned, In Progress)",
+          "Vote counts per feature request"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome to Alby's Feedback Forum!",
+        "subheadline": "We create these products for you. This is your space to make Alby even better.",
+        "ctas": [
+          {
+            "text": "Request a Feature",
+            "style": "secondary-button",
+            "placement": "On each product feedback card"
+          },
+          {
+            "text": "Request a Feature",
+            "style": "text-link",
+            "placement": "On roadmap items"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Feel encouraged to share ideas and feature requests:",
+            "context": "Below subheadline, introduces product list",
+            "purpose": "Encourages user participation and sets expectations"
+          },
+          {
+            "text": "Your voice is the wind beneath our wings.",
+            "context": "Below product list, before closing",
+            "purpose": "Emotional connection and validation of user input"
+          },
+          {
+            "text": "Happy exploring, Alby Team",
+            "context": "Sign-off before feedback cards",
+            "purpose": "Friendly closing with mascot reference (emoji)"
+          }
+        ],
+        "tone": "friendly-casual, encouraging, community-focused",
+        "dataFormatting": [
+          "56 (request count on Alby Extension)",
+          "110 (request count on Alby Hub)",
+          "26 (request count on Alby Accounts)"
+        ],
+        "trustSignals": [
+          "Multiple product categories showing active development",
+          "Public roadmap transparency",
+          "Request vote counts indicating community validation"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-6-brandkit.png",
+      "label": "Brandkit",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FFC107"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, high contrast black on white",
+          "bodyStyle": "Regular sans-serif, medium weight, generous spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Minimal navigation with logo, section links (PRODUCTS, SOLUTIONS, RESOURCES, PRICING), and Log In button",
+            "position": "top",
+            "notable": "Clean corporate header with high contrast log in button"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large heading 'Alby Brand Assets' with supporting text",
+            "position": "upper-left",
+            "notable": "Ample white space, minimal copy approach"
+          },
+          {
+            "type": "cta-button",
+            "description": "Dark rounded button 'Alby Media Github' with link action",
+            "position": "right-middle",
+            "notable": "Inverse placement relative to heading (right vs left)"
+          },
+          {
+            "type": "footer-branding",
+            "description": "Alby logo and signature bee mascot imagery visible at bottom",
+            "position": "bottom",
+            "notable": "Reinforces brand identity through visual elements"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dominant heading anchors attention; CTA button positioned for clear secondary focus; white space provides breathing room",
+        "innovativeElements": [
+          "Minimal information design with maximum white space",
+          "Asymmetrical layout with heading-left, CTA-right"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access or download Alby brand assets and design files",
+        "entryPoints": [
+          "Navigation from main Alby site",
+          "Direct link to brand kit page",
+          "Search for brand assets"
+        ],
+        "exitPoints": [
+          "Click 'Alby Media Github' button to repository",
+          "Navigate via main menu (PRODUCTS, SOLUTIONS, RESOURCES, PRICING)",
+          "Log In action",
+          "Back to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Alby Media Github button",
+            "action": "Routes to GitHub repository with SVG and brand files"
+          },
+          {
+            "element": "Main navigation links",
+            "action": "Navigate to different product/company sections"
+          },
+          {
+            "element": "Log In button",
+            "action": "Initiates authentication flow"
+          }
+        ],
+        "informationArchitecture": "Simple linear: identify page purpose → offer primary action (GitHub) → provide secondary navigation",
+        "frictionPoints": [
+          "Limited information about what assets are available before clicking",
+          "Only one clear call-to-action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Alby Brand Assets",
+        "subheadline": "For svg files, check our Github",
+        "ctas": [
+          {
+            "text": "Alby Media Github",
+            "style": "primary-button",
+            "placement": "Right side of page"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For svg files, check our Github",
+            "context": "Below main heading",
+            "purpose": "Directs users to specific asset format location"
+          }
+        ],
+        "tone": "professional-minimal, direct",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-7-documentation.png",
+      "label": "Documentation",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFC107",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif with emoji prefix, large size, high contrast white on dark",
+          "bodyStyle": "Regular sans-serif, light gray text on dark background, medium line height",
+          "dataStyle": "Monospace for code references or technical labels"
+        },
+        "components": [
+          {
+            "type": "dark-header",
+            "description": "Dark navigation bar with search, logo, and top-right links (User Guide, Developer Portal)",
+            "position": "top",
+            "notable": "Dark mode with prominent search bar and keyboard shortcut hints"
+          },
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with dropdown 'Developer Docs' and expandable menu with nested links",
+            "position": "left",
+            "notable": "Accordion-style navigation with depth indicators; 'Developer Sandbox' highlighted"
+          },
+          {
+            "type": "main-hero",
+            "description": "Large emoji-prefixed greeting with supportive text and contextual messaging",
+            "position": "top-center",
+            "notable": "Friendly tone with #BuildingOnBitcoin hashtag reference"
+          },
+          {
+            "type": "mascot-illustration",
+            "description": "Large illustrated bee character in retro computer lab setting",
+            "position": "center",
+            "notable": "Colorful, energetic visual contrasting dark background"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Secondary navigation with Developer Portal links and helpful resources",
+            "position": "right",
+            "notable": "Sticky panel with feedback mechanisms and theme toggles"
+          },
+          {
+            "type": "info-box",
+            "description": "Light-colored info panel with icon and link to Developer Portal",
+            "position": "below-hero",
+            "notable": "Call-out box with clear onboarding guidance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Welcome heading with emoji > Mascot illustration > Info box > Sidebars provide secondary navigation paths",
+        "innovativeElements": [
+          "Retro mascot illustration as emotional anchor",
+          "Dark mode documentation with light accent colors",
+          "Dual-sidebar layout for comprehensive navigation",
+          "Search bar with keyboard shortcuts visible"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step, documentation-home",
+        "userIntent": "Developer exploring documentation, APIs, and tools; understand available resources and get started",
+        "entryPoints": [
+          "Direct link to Developer Docs",
+          "Click from main Alby site Developer Portal",
+          "Search result navigation"
+        ],
+        "exitPoints": [
+          "Click sidebar navigation items to specific docs",
+          "Click 'Developer Portal' to access portal interface",
+          "Click 'Developer Sandbox' for test environment",
+          "Use search to find specific topics",
+          "Follow 'contact us' link if blocked"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar (Ask or search...)",
+            "action": "Search across documentation; shows keyboard shortcut ⌘ K"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to specific API docs and guides"
+          },
+          {
+            "element": "Developer Portal link",
+            "action": "Routes to developer dashboard/portal"
+          },
+          {
+            "element": "Helpful feedback buttons (Was this helpful?)",
+            "action": "Collects user satisfaction on documentation quality"
+          },
+          {
+            "element": "Theme toggle (light/dark/auto)",
+            "action": "Changes documentation display theme"
+          }
+        ],
+        "informationArchitecture": "Hierarchical with dual access: main content area welcomes users, sidebars provide comprehensive navigation, search offers quick access",
+        "frictionPoints": [
+          "Dense sidebar navigation may overwhelm new users",
+          "Multiple ways to access same content (sidebar, right panel, search)",
+          "Message 'Something is missing?' suggests docs gaps"
+        ],
+        "progressIndicators": [
+          "Current selection highlighted in sidebar",
+          "Helpful feedback ratings below content"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome, Builder!",
+        "subheadline": "Good to see you here! It means you are #BuildingOnBitcoin.",
+        "ctas": [
+          {
+            "text": "Developer Portal",
+            "style": "text-link",
+            "placement": "Right sidebar and main info box"
+          },
+          {
+            "text": "contact us",
+            "style": "text-link",
+            "placement": "Right sidebar 'Something is missing?' section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you can't find what you need in this guide or in your Developer Portal - then contact us",
+            "context": "Below main hero section",
+            "purpose": "Sets expectations and provides support pathway"
+          },
+          {
+            "text": "For an overview of all our tools, APIs, endpoints, and an onboarding guide, try the Alby developer portal. You'll need an Alby account to access it!",
+            "context": "Info box below mascot",
+            "purpose": "Guides developers to portal for comprehensive resource overview"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Right sidebar",
+            "purpose": "Collects feedback on documentation usefulness"
+          },
+          {
+            "text": "Powered by GitBook",
+            "context": "Bottom left",
+            "purpose": "Attribution; indicates documentation platform"
+          }
+        ],
+        "tone": "friendly-casual, encouraging, technical-supportive",
+        "dataFormatting": [
+          "Menu section labels (Nostr Wallet Connect API, Wallet API, Browser Extension API)"
+        ],
+        "trustSignals": [
+          "GitBook platform (professional documentation provider)",
+          "Multiple API categories indicating comprehensive tooling",
+          "Developer Sandbox availability shows commitment to testing",
+          "Support contact pathway visible"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-8-open-bounties.png",
+      "label": "Open Bounties",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffd700",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (h1), dark text on light background",
+          "bodyStyle": "Regular sans-serif, medium size, dark gray text with comfortable line-height",
+          "dataStyle": "Linked text for bounty categories, arrow indicators for navigation"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left panel with dropdown and nested bounty categories",
+            "position": "Left side",
+            "notable": "Hierarchical structure with parent category expandable to children"
+          },
+          {
+            "type": "Card List",
+            "description": "Four clickable card rows for different bounty programs",
+            "position": "Main content area",
+            "notable": "Minimal styling with right-arrow indicators for navigation"
+          },
+          {
+            "type": "Copy Button",
+            "description": "Top-right action button with dropdown",
+            "position": "Top-right of main content",
+            "notable": "Icon + text with chevron dropdown"
+          },
+          {
+            "type": "Feedback Widget",
+            "description": "Three emoji reaction buttons (helpful/neutral/unhelpful)",
+            "position": "Top-right corner",
+            "notable": "Non-intrusive sentiment collection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline with emoji icon draws attention; descriptive text follows; bullet points organize conditionals; card list provides clear navigation options",
+        "innovativeElements": [
+          "Emoji icon (👑) paired with headline for visual recognition",
+          "Clear sectioning with italic emphasis on key guidance ('time wasted')",
+          "Helpful/Neutral/Unhelpful emoji feedback integration"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with nested navigation",
+        "userIntent": "Explore available bounty programs and understand how to participate in Alby's bug bounty initiative",
+        "entryPoints": [
+          "Click 'Bounty Program' from sidebar",
+          "Direct link from documentation"
+        ],
+        "exitPoints": [
+          "Click specific bounty card (Alby Hub, Browser Extension, Developer, Bitcoin Connect, Bitcoin & AI)",
+          "Navigate via sidebar to different sections",
+          "Contact via email or Discord link",
+          "Visit Discord channel via external link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar category dropdown",
+            "action": "Expand/collapse bounty subcategories"
+          },
+          {
+            "element": "Bounty card rows",
+            "action": "Navigate to specific bounty program details"
+          },
+          {
+            "element": "Discord channel link",
+            "action": "Open Discord in new tab"
+          },
+          {
+            "element": "Email link (hello@getalby.com)",
+            "action": "Open email client to contact support"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy page URL to clipboard"
+          },
+          {
+            "element": "Emoji feedback buttons",
+            "action": "Submit page helpfulness feedback"
+          }
+        ],
+        "informationArchitecture": "Top-level overview of bounty program with purpose statement; conditional instructions ('If you want to'); contact methods; warnings about technical complexity; then organized list of specific bounty categories",
+        "frictionPoints": [
+          "Multiple action buttons (email, Discord) could be more visually prominent",
+          "Requires external navigation to Discord or email client",
+          "No direct 'Get Started' CTA on this page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bounty Program",
+        "subheadline": "Check out bounties for various projects",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "icon-button with dropdown",
+            "placement": "Top-right of main content"
+          },
+          {
+            "text": "Discord channel",
+            "style": "text-link",
+            "placement": "Body copy, contact section"
+          },
+          {
+            "text": "hello@getalby.com",
+            "style": "email-link",
+            "placement": "Body copy, contact section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you want to:",
+            "context": "Before conditional list",
+            "purpose": "Introduce three common user intents"
+          },
+          {
+            "text": "work on a bounty / ask about the status of a bounty / propose a new bounty",
+            "context": "Bulleted list after 'If you want to'",
+            "purpose": "Clarify action options"
+          },
+          {
+            "text": "please reach out to hello@getalby.com or join our Discord channel",
+            "context": "Below action list",
+            "purpose": "Direct users to communication channels"
+          },
+          {
+            "text": "Think about creating a concept first. A concept can help to align before any development is done and time wasted.",
+            "context": "Warning paragraph before bounty cards",
+            "purpose": "Guide users away from unnecessary work"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "Top-right feedback section",
+            "purpose": "Solicit page satisfaction feedback"
+          }
+        ],
+        "tone": "professional-technical with helpful guidance",
+        "dataFormatting": [
+          "Bounty category names in sidebar (e.g., 'Alby Hub Bounties')",
+          "Card-based list formatting with right-arrow indicators"
+        ],
+        "trustSignals": [
+          "Multiple bounty categories indicate active program",
+          "Clear mention of 'active contributors' review process",
+          "Official communication channels (email, Discord)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-9-discord.png",
+      "label": "Discord",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width centered modal",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#5865f2",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, large centered heading",
+          "bodyStyle": "White sans-serif, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Overlay",
+            "description": "Centered dark gray box with loading state",
+            "position": "Center of screen",
+            "notable": "Semi-transparent background with blur effect"
+          },
+          {
+            "type": "Loading Indicator",
+            "description": "Discord logo/icon",
+            "position": "Center of modal",
+            "notable": "Animated or static Discord mascot icon"
+          },
+          {
+            "type": "Status Text",
+            "description": "'Opening Discord App.' heading",
+            "position": "Above icon",
+            "notable": "Period at end suggests ongoing process"
+          },
+          {
+            "type": "Background Animation",
+            "description": "Animated purple-blue gradient with floating orbs and particles",
+            "position": "Full screen background",
+            "notable": "Kinetic design with bokeh effects and subtle star elements"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Animated background creates ambient context; centered modal focuses attention on loading state; white text provides contrast against dark backgrounds",
+        "innovativeElements": [
+          "Animated gradient background with parallax bokeh effect",
+          "Floating particle/orb animations suggesting movement and energy",
+          "Smooth, polished loading experience rather than standard spinner"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-transition",
+        "userIntent": "User clicked Discord link and system is launching Discord app or redirecting to Discord",
+        "entryPoints": [
+          "Clicked 'Discord channel' link from bounty program page"
+        ],
+        "exitPoints": [
+          "Discord app opens (desktop)",
+          "Discord web redirects (browser)",
+          "Modal closes and returns to previous page (if redirect fails)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal—pure loading/transition state with no interactive elements",
+        "frictionPoints": [
+          "No timeout error handling visible",
+          "No 'Cancel' or 'Go Back' option shown",
+          "User left in limbo if Discord fails to open"
+        ],
+        "progressIndicators": [
+          "Status text 'Opening Discord App.' indicates in-progress action"
+        ]
+      },
+      "copy": {
+        "headline": "Opening Discord App.",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral-informative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Discord branding present, suggesting official integration"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-10-albyhub.png",
+      "label": "alby-hub",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "split-panel with header navigation",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffd700",
+          "#000000",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, hero-size main heading with 'superpowers' in black and gray secondary text",
+          "bodyStyle": "Large gray sans-serif for secondary headline text",
+          "dataStyle": "Large monospace-style Bitcoin amount and action buttons"
+        },
+        "components": [
+          {
+            "type": "Navigation Header",
+            "description": "Horizontal menu with PRODUCTS, SOLUTIONS, RESOURCES, PRICING and Log In button",
+            "position": "Top bar",
+            "notable": "Clean, minimal nav without dropdowns visible; Log In is high-contrast black button"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered logo, headline, and subheadline",
+            "position": "Upper center of page",
+            "notable": "albyhub logo with yellow and black branding; large hero text with color variation (black 'superpowers', gray secondary text)"
+          },
+          {
+            "type": "CTA Button Pair",
+            "description": "Two primary actions: 'Start Instantly with Alby Cloud' (black) and 'Explore Self-Hosting' (gray)",
+            "position": "Below hero text, center",
+            "notable": "Rounded pill-shaped buttons; primary action is high-contrast black; secondary is light gray"
+          },
+          {
+            "type": "Product Card/Sidebar",
+            "description": "Left sidebar showing albyhub product with Wallet section and transaction buttons",
+            "position": "Bottom-left third of screen",
+            "notable": "Green status dot indicates active state; displays Bitcoin balance; action buttons (Receive, Send, Swap, Recurring, Buy)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo draws eye first; hero headline dominates center; two-tone headline text (black/gray) guides to CTA buttons; product preview anchors bottom-left",
+        "innovativeElements": [
+          "Two-color headline treatment (black 'superpowers' contrasts with gray secondary text)",
+          "Animated or dynamic background suggested by composition",
+          "Integrated product preview in hero section showing real wallet interface"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page with embedded product preview",
+        "userIntent": "Learn about Alby Hub and decide between cloud or self-hosted deployment; preview wallet functionality",
+        "entryPoints": [
+          "Direct navigation to alby.com main page",
+          "Clicked 'alby Hub' from documentation"
+        ],
+        "exitPoints": [
+          "Click 'Start Instantly with Alby Cloud' button",
+          "Click 'Explore Self-Hosting' button",
+          "Click header navigation (PRODUCTS, SOLUTIONS, RESOURCES, PRICING)",
+          "Click Log In button",
+          "Click wallet action buttons (Receive, Send, Swap, Buy, Recurring)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start Instantly with Alby Cloud button",
+            "action": "Navigate to cloud onboarding flow"
+          },
+          {
+            "element": "Explore Self-Hosting button",
+            "action": "Navigate to self-hosting documentation or installation guide"
+          },
+          {
+            "element": "Header navigation links",
+            "action": "Navigate to product/pricing/resource pages"
+          },
+          {
+            "element": "Log In button",
+            "action": "Navigate to login page"
+          },
+          {
+            "element": "Wallet action buttons",
+            "action": "Trigger wallet actions (Receive, Send, Swap, Buy, Recurring)"
+          }
+        ],
+        "informationArchitecture": "Hero value proposition at top; dual CTA for two deployment methods; product preview below to show real functionality; standard nav for secondary navigation",
+        "frictionPoints": [
+          "Two different onboarding paths (Cloud vs Self-Hosting) may create decision friction",
+          "Limited explanation of differences between deployment methods on this screen",
+          "Product preview in lower section may not be visible on smaller viewports"
+        ],
+        "progressIndicators": [
+          "Green dot next to albyhub logo in product preview suggests 'online' or 'active' state"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin wallet with superpowers.",
+        "subheadline": "Connect to dozens of apps and use on any device, anytime, anywhere.",
+        "ctas": [
+          {
+            "text": "Start Instantly with Alby Cloud",
+            "style": "primary-button",
+            "placement": "Center, below headline"
+          },
+          {
+            "text": "Explore Self-Hosting",
+            "style": "secondary-button",
+            "placement": "Center, beside primary CTA"
+          },
+          {
+            "text": "Receive",
+            "style": "action-button",
+            "placement": "Wallet card, right side"
+          },
+          {
+            "text": "Send",
+            "style": "action-button",
+            "placement": "Wallet card, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Wallet",
+            "context": "Product preview section header",
+            "purpose": "Label the wallet feature"
+          },
+          {
+            "text": "Swap / Recurring / Buy",
+            "context": "Additional action buttons in wallet preview",
+            "purpose": "Show expanded wallet capabilities beyond send/receive"
+          }
+        ],
+        "tone": "friendly-casual with emphasis on ease and capability",
+        "dataFormatting": [
+          "Bitcoin amount: Large monospace display (e.g., ₿ 256.032)",
+          "Action labels: Direct, single-word verbs (Receive, Send, Swap, Buy, Recurring)"
+        ],
+        "trustSignals": [
+          "'Bitcoin wallet' terminology emphasizes crypto credibility",
+          "Multiple action capabilities (Swap, Recurring, Buy) suggest full-featured product",
+          "Green online status indicator in product preview"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-11-albyextension.png",
+      "label": "alby-extension",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, center-aligned, split color emphasis (black main text with gray secondary)",
+          "bodyStyle": "Not applicable on primary view",
+          "dataStyle": "Bitcoin balance displayed in large monospace-style font (₿ 256 032) in bottom mockup"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items (PRODUCTS, SOLUTIONS, RESOURCES, PRICING), and Log In button",
+            "position": "Top of page",
+            "notable": "Clean, minimal design with high contrast black Log In button"
+          },
+          {
+            "type": "Product Logo",
+            "description": "Alby Extension wordmark with dual-tone icon (yellow and black)",
+            "position": "Center, upper third",
+            "notable": "Clear product branding with yellow accent differentiating 'extension' text"
+          },
+          {
+            "type": "Browser Mockup",
+            "description": "Safari browser window showing Stacker News website with Alby extension UI visible",
+            "position": "Lower half",
+            "notable": "Contextual product demonstration showing real-world integration"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Black rounded button with white text",
+            "position": "Center, middle section",
+            "notable": "Primary action button positioned between copy and mockup"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong vertical flow: branding → headline → CTA → product mockup. Mockup grounds the user experience with concrete visual proof",
+        "innovativeElements": [
+          "Embedded browser screenshot showing real product integration",
+          "Two-tone text coloring in headline for semantic emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Alby Extension is and download/install it",
+        "entryPoints": [
+          "Marketing site navigation",
+          "Direct link from PRODUCTS menu"
+        ],
+        "exitPoints": [
+          "Get Alby Extension button",
+          "Navigation menu links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Alby Extension button",
+            "action": "Navigates to download or installation page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other product sections or pages"
+          },
+          {
+            "element": "Log In button",
+            "action": "Opens login modal or navigates to auth page"
+          }
+        ],
+        "informationArchitecture": "Hero-style landing focused on single product. Headline emphasizes core value (seamless payments), followed by use case demonstration via mockup",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Seamless bitcoin payments on the web.",
+        "subheadline": "One-click logins and transactions.",
+        "ctas": [
+          {
+            "text": "Get Alby Extension",
+            "style": "primary-button",
+            "placement": "Center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Alice",
+            "context": "User profile dropdown in browser mockup",
+            "purpose": "Demonstrates logged-in user state"
+          },
+          {
+            "text": "₿ 256 032",
+            "context": "Bitcoin balance display in mockup",
+            "purpose": "Shows wallet balance visualization"
+          }
+        ],
+        "tone": "professional-technical, benefit-focused",
+        "dataFormatting": [
+          "₿ 256 032"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-12-albygo.png",
+      "label": "alby-go",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, center-aligned, split color (black main with gray secondary)",
+          "bodyStyle": "Not applicable on primary hero",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation matching main site design",
+            "position": "Top of page",
+            "notable": "Consistent with extension page navigation"
+          },
+          {
+            "type": "Product Logo",
+            "description": "Alby Go wordmark with circular icon (yellow/black)",
+            "position": "Center, upper third",
+            "notable": "Yellow 'go' text differentiates mobile product"
+          },
+          {
+            "type": "App Store Buttons",
+            "description": "Two prominent app download buttons (Apple App Store, Google Play)",
+            "position": "Center, below headline",
+            "notable": "Dual-platform distribution strategy clearly presented"
+          },
+          {
+            "type": "iPhone Mockup",
+            "description": "iPhone frame showing clean mobile wallet interface",
+            "position": "Lower center",
+            "notable": "Minimalist mobile UI design with time and signal icons visible"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical progression: branding → headline → app buttons → device mockup. Focus guides to download buttons as primary conversion point",
+        "innovativeElements": [
+          "Responsive device mockup showing actual app interface",
+          "Dual app store buttons side-by-side for frictionless downloads"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Download Alby Go mobile wallet to iOS or Android",
+        "entryPoints": [
+          "Marketing site navigation",
+          "Direct link from PRODUCTS menu"
+        ],
+        "exitPoints": [
+          "App Store button",
+          "Google Play button",
+          "Navigation menu links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App Store button",
+            "action": "Redirects to Apple App Store listing"
+          },
+          {
+            "element": "Google Play button",
+            "action": "Redirects to Google Play Store listing"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Mobile-first product landing. Simple, direct path to download with device preview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The easiest mobile bitcoin wallet.",
+        "subheadline": "Connect your Hub and go!",
+        "ctas": [
+          {
+            "text": "DOWNLOAD ON THE App Store",
+            "style": "primary-button",
+            "placement": "Left side below headline"
+          },
+          {
+            "text": "GET IT ON Google Play",
+            "style": "primary-button",
+            "placement": "Right side below headline"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual, action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "App Store distribution",
+          "Google Play distribution"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-13-alby-for-developers.png",
+      "label": "Alby for Developers",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width with left-aligned text",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#000000",
+          "#FFFFFF",
+          "#A8D8E8"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold, left-aligned, split color emphasis (black main, gray secondary)",
+          "bodyStyle": "Regular weight body text, left-aligned, readable sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation bar consistent across product pages",
+            "position": "Top",
+            "notable": "Maintained design consistency"
+          },
+          {
+            "type": "Main Headline Section",
+            "description": "Prominent headline with supporting body copy",
+            "position": "Left side, upper half",
+            "notable": "Text-heavy approach targeting developer audience"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Black rounded button with white text",
+            "position": "Right side, middle",
+            "notable": "Positioned beside copy for quick access"
+          },
+          {
+            "type": "Background Image",
+            "description": "Soft, blurred gradient visual element",
+            "position": "Right side and lower half",
+            "notable": "Subtle teal/blue gradient adds visual interest without distraction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-to-right flow with text on left, CTA prominently positioned right, background imagery softly supporting",
+        "innovativeElements": [
+          "Asymmetrical layout with text left and visual right",
+          "Soft gradient background creating depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Alby developer offerings and begin integration",
+        "entryPoints": [
+          "PRODUCTS menu",
+          "Solutions menu",
+          "Developer-specific marketing campaigns"
+        ],
+        "exitPoints": [
+          "Start Building button",
+          "Navigation menu",
+          "Other product pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start Building button",
+            "action": "Navigates to developer documentation or API setup"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Navigate to other pages"
+          }
+        ],
+        "informationArchitecture": "Developer-focused product landing with emphasis on technical capability. Text explains integration methods, CTA drives to resources",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Power-up your app with bitcoin payments",
+        "subheadline": "Embed wallets and instant payments into your apps with Alby Wallet API or NWC.",
+        "ctas": [
+          {
+            "text": "Start Building",
+            "style": "primary-button",
+            "placement": "Right side, middle of page"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, empowering",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-3-developerintroducing-alby-sandbox.png",
+      "label": "DeveloperIntroducing Alby Sandbox",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFD700",
+          "#2C3E50",
+          "#3498DB"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (60-80px), black color, strong visual weight",
+          "bodyStyle": "Regular sans-serif, 18-20px, dark gray (#555), generous line-height",
+          "dataStyle": "Gray labels with bold dark text for metadata (dates, categories)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with Alby logo, main nav items (PRODUCTS, SOLUTIONS, RESOURCES, PRICING), and Log In button",
+            "position": "top",
+            "notable": "Clean, minimal navigation with dark Log In CTA on right"
+          },
+          {
+            "type": "Metadata section",
+            "description": "Published date and Category label with values",
+            "position": "upper left, before headline",
+            "notable": "Subtle gray text establishes content context"
+          },
+          {
+            "type": "Hero image",
+            "description": "Large blue gradient banner with partial UI mockup visible",
+            "position": "below copy, full-width",
+            "notable": "Color blocked blue section transitions to complementary visual"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Metadata (small) → Headline (dominant) → Subheadline (medium) → Hero image (fills lower half)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page / blog-article",
+        "userIntent": "Learn about Alby Sandbox developer tool and its capabilities",
+        "entryPoints": [
+          "Direct from PRODUCTS menu",
+          "RESOURCES section",
+          "Google search"
+        ],
+        "exitPoints": [
+          "Click CTA below (likely)",
+          "Navigation menu items",
+          "Log In button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log In button",
+            "action": "Navigate to authentication"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Browse other sections"
+          }
+        ],
+        "informationArchitecture": "Content-first design with metadata context, headline introduces product, subheadline explains benefit, visual demonstrates feature",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Introducing Alby Sandbox",
+        "subheadline": "Build and test bitcoin payments in minutes. Alby Sandbox offers zero-setup test wallets, different payment scenarios, and ready-to-use code examples.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Published",
+            "context": "Metadata label above headline",
+            "purpose": "Establish credibility and recency"
+          },
+          {
+            "text": "Category",
+            "context": "Metadata label above headline",
+            "purpose": "Classify content type"
+          },
+          {
+            "text": "Developer",
+            "context": "Category value",
+            "purpose": "Target audience signal"
+          }
+        ],
+        "tone": "professional-technical, educational, solution-focused",
+        "dataFormatting": [
+          "Feb 3, 2026 (date format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-4-nwchow-to-accept-bitcoin-payments-on-woocommerce.png",
+      "label": "NWCHow to Accept Bitcoin Payments on WooCommerce",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFD700",
+          "#2C3E50",
+          "#3498DB"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (60-80px), black color, strong visual weight",
+          "bodyStyle": "Regular sans-serif, 18-20px, dark gray (#555), generous line-height",
+          "dataStyle": "Gray labels with bold dark text for metadata"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with Alby logo and main navigation",
+            "position": "top",
+            "notable": "Consistent header across all content pages"
+          },
+          {
+            "type": "Metadata section",
+            "description": "Published date (Dec 16, 2025) and Category (NWC)",
+            "position": "upper left",
+            "notable": "NWC category indicates technical integration article"
+          },
+          {
+            "type": "Hero image",
+            "description": "WooCommerce interface mockup with colorful overlays and design elements",
+            "position": "below copy, full-width",
+            "notable": "Practical screenshot demonstrates integration context"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Metadata (small) → Headline (dominant, multi-line) → Subheadline (medium) → Featured image (fills lower half)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page / tutorial-article",
+        "userIntent": "Learn how to set up Bitcoin payment acceptance on WooCommerce",
+        "entryPoints": [
+          "SOLUTIONS menu",
+          "RESOURCES section",
+          "Search for WooCommerce Bitcoin"
+        ],
+        "exitPoints": [
+          "Scroll to article body (below fold)",
+          "Navigation menu",
+          "Log In"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log In button",
+            "action": "Authenticate user"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Browse other resources"
+          }
+        ],
+        "informationArchitecture": "Context-setting metadata → Compelling headline → Benefit-focused subheadline → Visual proof of concept",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How to Accept Bitcoin Payments on WooCommerce",
+        "subheadline": "Learn how to add Bitcoin payments to WooCommerce quickly and easily with a single, user-friendly plugin.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Published",
+            "context": "Metadata label",
+            "purpose": "Show content freshness"
+          },
+          {
+            "text": "Category: NWC",
+            "context": "Metadata",
+            "purpose": "Technical categorization for e-commerce integrations"
+          }
+        ],
+        "tone": "professional-technical, action-oriented, user-friendly",
+        "dataFormatting": [
+          "Dec 16, 2025 (date format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-5-experiencehow-to-earn-bitcoin-mining-rewards-from.png",
+      "label": "ExperienceHow to earn Bitcoin Mining rewards from",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFD700",
+          "#2C3E50",
+          "#3498DB"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (70-90px), black color, multi-line, strong impact",
+          "bodyStyle": "Regular sans-serif, 18-20px, dark gray (#555), generous line-height",
+          "dataStyle": "Gray labels with bold values for metadata"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Alby logo, main nav items, Log In button",
+            "position": "top",
+            "notable": "Consistent header design"
+          },
+          {
+            "type": "Metadata block",
+            "description": "Published Dec 22, 2025 and Category: Experience",
+            "position": "upper left",
+            "notable": "Experience category indicates user-focused guide"
+          },
+          {
+            "type": "Hero image",
+            "description": "Atmospheric blue/purple gradient background with mining/cloud imagery",
+            "position": "below copy, full-width",
+            "notable": "Evocative visual metaphor for mining rewards concept"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Metadata (accent) → Large multi-line headline (dominant) → Descriptive subheadline (medium-large) → Atmospheric hero image (fills screen)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-page / guide-article",
+        "userIntent": "Understand how to earn Bitcoin mining rewards through NiceHash and Alby Hub integration",
+        "entryPoints": [
+          "SOLUTIONS or RESOURCES menu",
+          "Search for mining rewards",
+          "Experience category browse"
+        ],
+        "exitPoints": [
+          "Scroll to full article",
+          "Navigation menu",
+          "Log In",
+          "External resource links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log In button",
+            "action": "Authenticate"
+          },
+          {
+            "element": "PRODUCTS/SOLUTIONS/RESOURCES menu",
+            "action": "Navigate site sections"
+          }
+        ],
+        "informationArchitecture": "Context metadata → Benefit-focused headline (3 lines) → Detailed explanation subheadline → Inspirational visual",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How to earn Bitcoin Mining rewards from NiceHash with Alby Hub",
+        "subheadline": "Earn Bitcoin mining rewards directly in Alby Hub, your own self-custodial wallet. Learn how to set up bitcoin lightning payouts from NiceHash and receive mining rewards seamlessly into your on-chain or lightning wallet.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Published",
+            "context": "Metadata label",
+            "purpose": "Content date verification"
+          },
+          {
+            "text": "Category: Experience",
+            "context": "Metadata section",
+            "purpose": "Content type classification for user guides"
+          }
+        ],
+        "tone": "professional-technical, educational, empowering",
+        "dataFormatting": [
+          "Dec 22, 2025 (date format)"
+        ],
+        "trustSignals": [
+          "Self-custodial wallet emphasis",
+          "NiceHash partnership mention",
+          "Alby Hub branding"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-home-14-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#E8E8E8",
+          "#CC0000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, red color for error emphasis",
+          "bodyStyle": "Medium weight sans-serif, dark gray for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "Large '404' in light gray background text",
+            "position": "center-top",
+            "notable": "Oversized and faded to create hierarchy with red heading overlay"
+          },
+          {
+            "type": "error-heading",
+            "description": "'Not Found' in bold red text",
+            "position": "center, overlaid on 404",
+            "notable": "Red color immediately signals error state"
+          },
+          {
+            "type": "error-description",
+            "description": "Multi-line explanatory text in dark gray",
+            "position": "center-bottom",
+            "notable": "Bold opening statement followed by lighter explanatory text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn to red 'Not Found' heading, then to explanatory text below; 404 code provides context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User landed on non-existent page; needs to understand what happened and where to go",
+        "entryPoints": [
+          "Broken link",
+          "Mistyped URL",
+          "Outdated bookmark"
+        ],
+        "exitPoints": [
+          "Navigate back",
+          "Go to home",
+          "Contact support"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Error message presented in descending clarity: error code, error status, explanation, suggestions",
+        "frictionPoints": [
+          "No CTAs provided to navigate away",
+          "No search function mentioned",
+          "No home button visible in error screen"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The page you were looking for doesn't exist.",
+            "context": "Opening line of error message",
+            "purpose": "State the problem clearly"
+          },
+          {
+            "text": "You may have mistyped the address or the page may have moved. If you're the application owner check the logs for more information.",
+            "context": "Supporting explanation",
+            "purpose": "Provide actionable suggestions for different user types"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Not Found",
+          "The page you were looking for doesn't exist"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-1-terms-of-service.png",
+      "label": "Terms of Service",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#9B9B9B"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold for main title, smaller bold for section headers",
+          "bodyStyle": "Regular weight sans-serif in dark gray for body text and legal content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Alby logo and main navigation menu with Log In button",
+            "position": "top",
+            "notable": "Sticky header with black background Log In button for contrast"
+          },
+          {
+            "type": "page-title",
+            "description": "'Terms of Service' in large heading",
+            "position": "top-left",
+            "notable": "Substantial whitespace around title for emphasis"
+          },
+          {
+            "type": "metadata",
+            "description": "'Last updated September 02, 2025' timestamp",
+            "position": "below title",
+            "notable": "Gray text indicating document freshness and legal credibility"
+          },
+          {
+            "type": "introductory-text",
+            "description": "Friendly welcome message from Alby team",
+            "position": "content start",
+            "notable": "Humanizes legal document with conversational tone"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Legal content organized into numbered sections (General, Definitions, etc.)",
+            "position": "main content",
+            "notable": "Clear section numbering with bold headers and hierarchical bullet points"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title dominates, followed by intro paragraph, then progressive disclosure of legal sections with clear numbering",
+        "innovativeElements": [
+          "Conversational opening paragraph softens rigid legal document",
+          "Friendly tone in formal legal context"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review company's terms of service before using platform",
+        "entryPoints": [
+          "Link from footer",
+          "Account signup flow",
+          "Settings/legal section"
+        ],
+        "exitPoints": [
+          "Back to home",
+          "Log In",
+          "Navigate to Privacy Policy"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items (PRODUCTS, SOLUTIONS, RESOURCES, PRICING)",
+            "action": "Navigate to different sections of marketing site"
+          },
+          {
+            "element": "Log In button",
+            "action": "Navigate to authentication"
+          }
+        ],
+        "informationArchitecture": "Linear document flow: welcome → general terms → definitions → specific obligations, organized hierarchically with numbered sections and bullet points",
+        "frictionPoints": [
+          "Long dense legal text may discourage reading",
+          "No table of contents for navigation",
+          "No search functionality visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": "Last updated September 02, 2025",
+        "ctas": [
+          {
+            "text": "Log In",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From everyone at Alby, thank you for using our products and / or services!",
+            "context": "Opening paragraph",
+            "purpose": "Establish friendly, human tone for legal document"
+          },
+          {
+            "text": "We build them to provide you a better experience for payments online.",
+            "context": "Introductory paragraph",
+            "purpose": "Explain company purpose and value proposition"
+          },
+          {
+            "text": "Because we don't know every one of our users personally, we have to put in place some terms of service to help keep the ship afloat.",
+            "context": "Introductory paragraph",
+            "purpose": "Justify need for legal terms in conversational way"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual opening",
+        "dataFormatting": [
+          "Alby Inc., 8 The Green STE A, Dover, DE 19901, United States",
+          "Delaware Division of Corporations"
+        ],
+        "trustSignals": [
+          "Company incorporation details provided",
+          "Registered office address listed",
+          "Last updated date visible"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-2-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#7A7A7A"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif bold for main title, medium bold for section headers",
+          "bodyStyle": "Regular weight sans-serif in medium gray for body and legal text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Alby logo and main navigation with Log In button",
+            "position": "top",
+            "notable": "Consistent with Terms of Service page"
+          },
+          {
+            "type": "page-title",
+            "description": "'Privacy Policy' in large bold heading",
+            "position": "top-left",
+            "notable": "Substantial whitespace emphasizes importance of document"
+          },
+          {
+            "type": "introduction",
+            "description": "Opening statement welcoming users and stating company identity",
+            "position": "content start",
+            "notable": "Personalizes legal document with 'We thank you' language"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Legal content in numbered sections with nested subsections (1.1, 1.2, etc.)",
+            "position": "main content",
+            "notable": "Deep hierarchical structure (sections, subsections, bullet lists)"
+          },
+          {
+            "type": "emphasis-text",
+            "description": "Bold text highlights key topics like 'Alby respects your privacy'",
+            "position": "section headers",
+            "notable": "Strategic bolding creates visual anchors within dense text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title → introduction → numbered sections with progressive disclosure; bold headers create scanning path through dense content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand how platform collects, processes, and protects personal data",
+        "entryPoints": [
+          "Footer link",
+          "Account creation",
+          "Settings/legal section"
+        ],
+        "exitPoints": [
+          "Back to home",
+          "Log In",
+          "Terms of Service link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Log In button",
+            "action": "Access user account"
+          }
+        ],
+        "informationArchitecture": "Logical flow from principles → accountability → data handling → processing purposes; nested subsections organize increasingly specific information",
+        "frictionPoints": [
+          "Dense legal text with limited whitespace within sections",
+          "No interactive table of contents",
+          "Multiple nested levels (1, 1.1, 1.2) may confuse navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Log In",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "getalby.com (hereinafter \"Alby\" or \"We\" or \"Us\") welcomes you to our internet page and services (together also referred to as 'Online Offers').",
+            "context": "Opening statement",
+            "purpose": "Establish entity identity and scope of policy"
+          },
+          {
+            "text": "We thank you for your interest in our company and our products.",
+            "context": "Opening statement",
+            "purpose": "Humanize formal legal document"
+          },
+          {
+            "text": "Alby respects your privacy",
+            "context": "Section 1 header",
+            "purpose": "Lead with key value proposition"
+          },
+          {
+            "text": "The protection of your privacy throughout the course of processing personal data as well as the security of all business data are important concerns to us.",
+            "context": "Section 1 body",
+            "purpose": "Establish commitment to data protection"
+          }
+        ],
+        "tone": "professional-technical with emphasis on privacy protection",
+        "dataFormatting": [
+          "Alby Inc. 8 The Green STE A, Dover, DE 19901, United States",
+          "hello@getalby.com",
+          "Communication data, transaction data, lightning node authentication data"
+        ],
+        "trustSignals": [
+          "Explicit privacy commitment statement",
+          "Data categories listed transparently",
+          "Contact email provided",
+          "Company address and registration details"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-6-alby-hubmodularizing-alby-hub-userhosted-serverl.png",
+      "label": "Alby HubModularizing Alby Hub: User-Hosted Serverl",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, black text (60-70px), minimal spacing above",
+          "bodyStyle": "Medium gray sans-serif, regular weight, 18-20px, generous line height",
+          "dataStyle": "Metadata labels in smaller gray text with bold dark values, organized in vertical pairs"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Fixed horizontal navigation with logo, menu items, and login button",
+            "position": "top",
+            "notable": "Clean minimal design with balanced spacing"
+          },
+          {
+            "type": "Metadata Section",
+            "description": "Published date and category labels with values",
+            "position": "above headline",
+            "notable": "Uses distinct typography hierarchy to separate metadata from main content"
+          },
+          {
+            "type": "Hero Image",
+            "description": "Large colorful illustration with blue sky, yellow sun, and abstract elements",
+            "position": "bottom third",
+            "notable": "Vibrant brand colors aligned with logo, partial crop suggests continuation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye flows from top navigation → metadata → large headline → body text → hero image, creating natural reading progression",
+        "innovativeElements": [
+          "Split-tone heading with yellow accent",
+          "Illustrative hero image with brand color palette"
+        ]
+      },
+      "flow": {
+        "screenType": "blog-article",
+        "userIntent": "Read technical documentation about Alby Hub architecture and serverless signers",
+        "entryPoints": [
+          "RESOURCES navigation menu",
+          "Blog link from main site",
+          "Search or direct link"
+        ],
+        "exitPoints": [
+          "Navigation menu (PRODUCTS, SOLUTIONS, PRICING)",
+          "Log In button",
+          "Scroll down to full article or related content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log In button",
+            "action": "Navigates to authentication"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to different product sections"
+          }
+        ],
+        "informationArchitecture": "Linear article format with metadata context headers, technical abstract, followed by hero imagery",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Published date (Dec 9, 2025)",
+          "Category label (Alby Hub)"
+        ]
+      },
+      "copy": {
+        "headline": "Modularizing Alby Hub: User-Hosted Serverless Signers",
+        "subheadline": "A user-hosted, serverless signer architecture using Spark, Ark, and NWC to power self-custodial bitcoin wallets optimized for payments in 3rd-party apps.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Published",
+            "context": "Metadata label above headline",
+            "purpose": "Indicates content type and recency"
+          },
+          {
+            "text": "Category",
+            "context": "Metadata label above headline",
+            "purpose": "Organizes content by product area"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Dec 9, 2025 (date format)",
+          "Alby Hub (category label)"
+        ],
+        "trustSignals": [
+          "Published date",
+          "Technical terminology (Spark, Ark, NWC, self-custodial)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-7-see-all-posts.png",
+      "label": "See All Posts",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, 48-56px",
+          "bodyStyle": "Medium gray sans-serif, 18-20px, with emphasized text portions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Large title with subheading combining black and gray text",
+            "position": "top",
+            "notable": "Partial highlight in gray on secondary line for visual interest"
+          },
+          {
+            "type": "Card Grid",
+            "description": "Two blog post cards side-by-side with vibrant illustrated headers",
+            "position": "below headline",
+            "notable": "Each card contains branded imagery, headline, and category label"
+          },
+          {
+            "type": "Article Card",
+            "description": "Left card with blue/yellow illustration and 'Developer' category",
+            "position": "bottom left",
+            "notable": "Colorful abstract design matching brand palette"
+          },
+          {
+            "type": "Article Card",
+            "description": "Right card with WooCommerce + Bitcoin integration imagery",
+            "position": "bottom right",
+            "notable": "Real UI screenshot overlay with WooCommerce branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large title dominates, followed by two equally-weighted content cards below",
+        "innovativeElements": [
+          "Colored text highlighting in headline",
+          "Mixed illustration and screenshot-based card imagery",
+          "Horizontal card layout with even distribution"
+        ]
+      },
+      "flow": {
+        "screenType": "content-hub",
+        "userIntent": "Browse blog articles and recent posts",
+        "entryPoints": [
+          "RESOURCES menu",
+          "Blog navigation",
+          "Internal links from other pages"
+        ],
+        "exitPoints": [
+          "Click into article cards",
+          "Navigation menu",
+          "Scroll down for more posts"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blog post card (left)",
+            "action": "Navigate to 'Introducing Alby Sandbox' article"
+          },
+          {
+            "element": "Blog post card (right)",
+            "action": "Navigate to 'How to Accept Bitcoin Payments on WooCommerce' article"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Route to different sections"
+          }
+        ],
+        "informationArchitecture": "Hero section with headline, followed by curated content cards organized in grid, category-tagged",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Category labels (Developer, NWC)"
+        ]
+      },
+      "copy": {
+        "headline": "Alby Blog",
+        "subheadline": "Follow our stories of crafting the future of open payments.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Developer",
+            "context": "Left card category label",
+            "purpose": "Categorizes content type"
+          },
+          {
+            "text": "NWC",
+            "context": "Right card category label",
+            "purpose": "Indicates technical focus area"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "Category labels as simple text badges"
+        ],
+        "trustSignals": [
+          "Official blog designation",
+          "Multiple product categories represented"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/alby-settings-8-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFC107",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, 48-56px, black text",
+          "bodyStyle": "Medium gray sans-serif, 16-18px, generous line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Large headline 'We're here to help!' with welcoming tone",
+            "position": "top",
+            "notable": "Friendly, approachable typography"
+          },
+          {
+            "type": "Support Path Container",
+            "description": "Vertical stack of four conditional support sections with headings and CTAs",
+            "position": "main content area",
+            "notable": "Clear Q&A format with distinct pathways"
+          },
+          {
+            "type": "Button",
+            "description": "Outlined text button with external link arrow",
+            "position": "within each section",
+            "notable": "Minimal style with icon indicator for external navigation"
+          },
+          {
+            "type": "Floating Action Button",
+            "description": "Yellow circular chat/call button",
+            "position": "bottom right corner",
+            "notable": "Prominent, accessible for quick contact"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main headline creates context, followed by four equally-weighted help pathways with clear hierarchy within each",
+        "innovativeElements": [
+          "Flowchart-style Q&A structure",
+          "Floating action button for persistent access",
+          "Conditional support paths vs. single-path design"
+        ]
+      },
+      "flow": {
+        "screenType": "help-center",
+        "userIntent": "Find support, report issues, request features, or get community/direct assistance",
+        "entryPoints": [
+          "Navigation menu (RESOURCES assumed)",
+          "Help link",
+          "In-app support button"
+        ],
+        "exitPoints": [
+          "Alby Guides (external documentation)",
+          "Request a Feature (external form)",
+          "Alby Community (external community forum)",
+          "Schedule a Call (external calendar)",
+          "Floating chat button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Alby Guides button",
+            "action": "Navigate to external knowledge base"
+          },
+          {
+            "element": "Request a Feature button",
+            "action": "Open external feature request form"
+          },
+          {
+            "element": "Alby Community button",
+            "action": "Navigate to external community forum"
+          },
+          {
+            "element": "Schedule a Call button",
+            "action": "Open external calendar scheduling tool"
+          },
+          {
+            "element": "Floating action button",
+            "action": "Initiate chat or call with support"
+          }
+        ],
+        "informationArchitecture": "Problem-solution matching structure; users identify their need (issues, features, community, live chat) and take corresponding action",
+        "frictionPoints": [
+          "All CTAs route externally, requiring context switching"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We're here to help!",
+        "subheadline": "If you encounter an issue or have a question, we recommend checking out the Alby Guides first. They cover most common topics.",
+        "ctas": [
+          {
+            "text": "Alby Guides",
+            "style": "text-link",
+            "placement": "within subheadline"
+          },
+          {
+            "text": "Alby Guides",
+            "style": "ghost-button",
+            "placement": "first support section"
+          },
+          {
+            "text": "Request a Feature",
+            "style": "ghost-button",
+            "placement": "second support section"
+          },
+          {
+            "text": "Alby Community",
+            "style": "ghost-button",
+            "placement": "third support section"
+          },
+          {
+            "text": "Schedule a Call",
+            "style": "ghost-button",
+            "placement": "fourth support section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For personal assistance, our subscribers also enjoy priority support.",
+            "context": "Below introductory paragraph",
+            "purpose": "Highlights premium support value"
+          },
+          {
+            "text": "Are you running into issues or need guidance?",
+            "context": "Section heading",
+            "purpose": "Frames first support pathway"
+          },
+          {
+            "text": "Do you have feature requests or suggestions?",
+            "context": "Section heading",
+            "purpose": "Frames second support pathway"
+          },
+          {
+            "text": "Are you looking for advise from community members?",
+            "context": "Section heading",
+            "purpose": "Frames third support pathway"
+          },
+          {
+            "text": "Do you prefer a live conversation?",
+            "context": "Section heading",
+            "purpose": "Frames fourth support pathway"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Priority support for subscribers",
+          "Multiple support channels available",
+          "Direct scheduling option"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

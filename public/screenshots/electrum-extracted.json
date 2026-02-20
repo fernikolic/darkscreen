@@ -1,0 +1,452 @@
+{
+  "slug": "electrum",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:39:37.235Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 4,
+  "screens": [
+    {
+      "image": "/screenshots/electrum-home-4-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif (appears to be Georgia or similar), high contrast black on white",
+          "bodyStyle": "Not visible on this screen",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "heading",
+            "description": "404 Not Found error message",
+            "position": "top-left",
+            "notable": "Minimal, stark presentation typical of server error pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single dominant element with vast whitespace, drawing focus to the error message",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User has navigated to a non-existent page and needs to understand what happened and how to recover",
+        "entryPoints": [
+          "Direct URL navigation to invalid path",
+          "Broken internal link",
+          "Test/debug scenario"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Manual navigation to home",
+          "Search or menu navigation (if available in full app)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal error state with no recovery guidance visible",
+        "frictionPoints": [
+          "No visible CTA or navigation options",
+          "No explanation of why page doesn't exist",
+          "No suggestions for next steps",
+          "No way forward without manual action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "technical, terse",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "404 Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/electrum-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0066cc",
+          "#1a3a52",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all-caps for logo, sentence case for headlines",
+          "bodyStyle": "Medium weight sans-serif, light gray on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top bar with logo, nav menu, and social icons",
+            "position": "top",
+            "notable": "Electrum branding with atomic nucleus icon, horizontal nav menu right-aligned"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left-aligned text with heading and descriptive copy",
+            "position": "center-left",
+            "notable": "Dark semi-transparent overlay container"
+          },
+          {
+            "type": "illustration",
+            "description": "Network diagram with connected nodes",
+            "position": "center-right",
+            "notable": "Animated-looking network topology representing decentralization"
+          },
+          {
+            "type": "feature-cards",
+            "description": "Six feature tiles with icons and descriptions",
+            "position": "bottom",
+            "notable": "3x2 grid layout with Safe, Forgiving, Instant On, No Lock-In, No Downtimes, Proof Checking"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn to hero section left, secondary focus on network visualization right, tertiary to feature tiles below",
+        "innovativeElements": [
+          "Network diagram visualization for decentralization concept",
+          "Blue neon glow aesthetic on branding",
+          "Warning banner integrated into design hierarchy"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Electrum is and its key benefits before downloading",
+        "entryPoints": [
+          "Direct visit to electrum.org",
+          "Search results for Bitcoin wallet",
+          "External links from documentation or community"
+        ],
+        "exitPoints": [
+          "Download button (off-screen)",
+          "Navigation to Documentation",
+          "Navigation to Community",
+          "Social links to GitHub/Twitter"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu (Home, Download, Documentation, Community, About)",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Social media icons (GitHub, Twitter)",
+            "action": "Open external social profiles"
+          },
+          {
+            "element": "Feature cards",
+            "action": "Likely scroll-triggered animations or hover states"
+          }
+        ],
+        "informationArchitecture": "Top-down: brand identity → value proposition → key features → call to action (download implied below)",
+        "frictionPoints": [
+          "Security warning placed prominently but could deter new users",
+          "No visible download button in this viewport",
+          "Feature benefits presented without interactive exploration"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Improve your Bitcoin Experience",
+        "subheadline": "Securing Bitcoin payments since 2011, Electrum is one of the most popular Bitcoin wallets.",
+        "ctas": [
+          {
+            "text": "Home",
+            "style": "text-link",
+            "placement": "top navigation"
+          },
+          {
+            "text": "Download",
+            "style": "text-link",
+            "placement": "top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Warning: Do not download Electrum from a source other than electrum.org. Verify GPG signatures.",
+            "context": "below header",
+            "purpose": "Security trust signal and fraud prevention"
+          },
+          {
+            "text": "Electrum is fast, secure and easy to use. It suits the needs of a wide spectrum of users.",
+            "context": "hero section subtext",
+            "purpose": "Value proposition reinforcement"
+          },
+          {
+            "text": "Your private keys are encrypted and never leave your computer.",
+            "context": "Safe feature tile",
+            "purpose": "Security assurance"
+          }
+        ],
+        "tone": "professional-technical with security emphasis",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Securing Bitcoin payments since 2011",
+          "One of the most popular Bitcoin wallets",
+          "GPG signature verification recommended",
+          "Private key encryption claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/electrum-home-2-previous-releases.png",
+      "label": "Previous releases",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "table",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif headings (Name, Last modified, Size, Description columns)",
+          "bodyStyle": "Monospace for version numbers, regular serif for dates",
+          "dataStyle": "Monospace timestamp format (YYYY-MM-DD HH:MM)"
+        },
+        "components": [
+          {
+            "type": "page-title",
+            "description": "Index of / heading",
+            "position": "top",
+            "notable": "Minimal, functional heading"
+          },
+          {
+            "type": "data-table",
+            "description": "Sortable columns with folder icons and version links",
+            "position": "main",
+            "notable": "Standard directory listing with hyperlinked versions (1.8.1, 1.8, 1.9.1, etc.)"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Uniform grid structure with column headers guiding scan",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find and download specific historical versions of Electrum",
+        "entryPoints": [
+          "Download page link",
+          "Direct URL to releases directory",
+          "Fallback from current version download"
+        ],
+        "exitPoints": [
+          "Click on version folder to see release files",
+          "Browser back button",
+          "Search for latest version"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Version number links (1.8.1/, 1.9.1/, etc.)",
+            "action": "Navigate to version-specific directory"
+          },
+          {
+            "element": "Column headers (Name, Last modified, Size, Description)",
+            "action": "Likely sortable in full directory listing UI"
+          }
+        ],
+        "informationArchitecture": "Hierarchical directory structure with version folders listed chronologically",
+        "frictionPoints": [
+          "Minimal visual design may feel outdated",
+          "No filtering or search mechanism visible",
+          "No descriptions of what changed in each version",
+          "All versions listed equally with no indication of stability or recommendation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Index of /",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "1.8.1/",
+            "style": "text-link",
+            "placement": "table rows"
+          }
+        ],
+        "microcopy": [],
+        "tone": "minimal-functional",
+        "dataFormatting": [
+          "2015-10-28 16:41 (date-time format)",
+          "Version numbering: 1.8.1, 1.9.2, 2.0.3 (semantic versioning)"
+        ],
+        "trustSignals": [
+          "Historical version availability dating back to 2011 implied by version numbers"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/electrum-home-3-more-information.png",
+      "label": "More information",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#2a2a2a",
+          "#ffffff",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for main content heading, medium weight for sidebar sections",
+          "bodyStyle": "Regular serif for body paragraphs, sans-serif for UI labels",
+          "dataStyle": "Hyperlinked references in blue"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with hierarchical documentation menu",
+            "position": "left",
+            "notable": "Dark background with color-coded section headers (blue for ADVANCED USERS, DAEMON AND COMMAND LINE, FOR DEVELOPERS)"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Home icon and 'Simple Payment Verification' link",
+            "position": "top-right",
+            "notable": "Shows current page location in hierarchy"
+          },
+          {
+            "type": "content-area",
+            "description": "Main documentation content with heading and paragraphs",
+            "position": "center-right",
+            "notable": "Serif font body text with embedded blue hyperlinks"
+          },
+          {
+            "type": "navigation-buttons",
+            "description": "Previous and Next buttons with icon indicators",
+            "position": "bottom-center",
+            "notable": "Ghost button style with clear directional indicators"
+          },
+          {
+            "type": "footer-meta",
+            "description": "Copyright, build tool credits, and banner ad",
+            "position": "bottom",
+            "notable": "Links to Sphinx, theme providers, and ethical ads"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides persistent context, main content dominates visual space, navigation controls at bottom guide next steps",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation",
+        "userIntent": "Learn technical details about Simple Payment Verification",
+        "entryPoints": [
+          "Navigation from Documentation menu",
+          "Direct link from community discussions",
+          "Search results for SPV"
+        ],
+        "exitPoints": [
+          "Previous button (to prior topic)",
+          "Next button (to subsequent topic)",
+          "Sidebar menu selection",
+          "External reference link (Bitcoin whitepaper)",
+          "View page source link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items (categorized by ADVANCED USERS, DAEMON AND COMMAND LINE, FOR DEVELOPERS)",
+            "action": "Navigate to related documentation pages"
+          },
+          {
+            "element": "Previous button",
+            "action": "Go to previous documentation page"
+          },
+          {
+            "element": "Next button",
+            "action": "Go to next documentation page"
+          },
+          {
+            "element": "Inline hyperlinks (Bitcoin: A peer-to-peer Electronic Cash System)",
+            "action": "Navigate to external reference"
+          },
+          {
+            "element": "View page source link",
+            "action": "Show raw page source code"
+          }
+        ],
+        "informationArchitecture": "Hierarchical documentation with main navigation sidebar and sequential pagination through topics",
+        "frictionPoints": [
+          "Left sidebar navigation requires scrolling to see all options",
+          "No search functionality visible",
+          "Dense technical paragraphs without visual breaks",
+          "Current page highlighted in sidebar but not immediately obvious to all users"
+        ],
+        "progressIndicators": [
+          "Breadcrumb navigation showing current location",
+          "Sidebar highlight showing current section",
+          "Previous/Next buttons indicating position in sequential flow"
+        ]
+      },
+      "copy": {
+        "headline": "Simple Payment Verification",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Previous",
+            "style": "ghost-button",
+            "placement": "bottom-left"
+          },
+          {
+            "text": "Next",
+            "style": "ghost-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Simple Payment Verification (SPV)",
+            "context": "breadcrumb and page title",
+            "purpose": "Establish page topic and context"
+          },
+          {
+            "text": "© Copyright 2011-2023+, Thomas Voegtlin.",
+            "context": "footer",
+            "purpose": "Attribution and ownership"
+          },
+          {
+            "text": "Built with Sphinx using a theme provided by Read the Docs. Dark theme provided by MrDogeBro.",
+            "context": "footer",
+            "purpose": "Technical attribution and credits"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [
+          "Satoshi Nakamoto's paper reference"
+        ],
+        "trustSignals": [
+          "Copyright attribution to Thomas Voegtlin (Electrum creator)",
+          "Reference to peer-reviewed Bitcoin whitepaper",
+          "Built with Sphinx (professional documentation platform)",
+          "Read the Docs hosting (established documentation service)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

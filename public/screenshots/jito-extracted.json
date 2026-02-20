@@ -1,0 +1,1791 @@
+{
+  "slug": "jito",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:59:00.174Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/jito-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#a855f7",
+          "#000000",
+          "#9ca3af"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale with color contrast (purple 'MEV Powered' + black 'Staking Rewards')",
+          "bodyStyle": "Medium-weight sans-serif, mid-gray for supporting text",
+          "dataStyle": "Monospace font for wallet addresses and SOL amounts in header ticker"
+        },
+        "components": [
+          {
+            "type": "header-ticker",
+            "description": "Scrolling display of wallet addresses and SOL amounts",
+            "position": "top center below nav",
+            "notable": "Shows real-time MEV opportunities with wallet addresses"
+          },
+          {
+            "type": "modal-dialog",
+            "description": "Welcome modal with ToS, analytics, and cookie toggles",
+            "position": "center overlay",
+            "notable": "Pre-checked toggles for analytics acceptance with purple accent color"
+          },
+          {
+            "type": "trust-badge",
+            "description": "'Built On Solana' logo with network indicator",
+            "position": "center above headline",
+            "notable": "Establishes blockchain infrastructure credibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal overlay dominates; background headline hierarchy shows purple accent on 'MEV Powered' to draw attention to key differentiator",
+        "innovativeElements": [
+          "Real-time MEV tip ticker at top with wallet addresses and amounts",
+          "Color-split headline treatment (purple + black) for emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "landing + modal",
+        "userIntent": "First-time user onboarding with consent and introduction to staking platform",
+        "entryPoints": [
+          "Direct landing page visit",
+          "Referred from marketing link"
+        ],
+        "exitPoints": [
+          "Continue button (after accepting ToS)",
+          "Decline button (skip analytics)",
+          "Connect Wallet button (top right nav)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "I agree to the Terms of Service",
+            "action": "Checkbox toggle for ToS acceptance"
+          },
+          {
+            "element": "Accept Analytics toggle",
+            "action": "Enable/disable analytics tracking"
+          },
+          {
+            "element": "Accept Cookie Policy toggle",
+            "action": "Enable/disable cookie usage"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceed to main platform after consent"
+          }
+        ],
+        "informationArchitecture": "Modal-first consent flow blocking main content; clearly separates legal requirements (ToS) from optional tracking (analytics/cookies)",
+        "frictionPoints": [
+          "Modal completely blocks access to main platform",
+          "Must accept ToS to continue (no alternative flow)",
+          "Three separate consent items may feel overwhelming on first visit"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "bottom right modal"
+          },
+          {
+            "text": "Decline",
+            "style": "ghost-button",
+            "placement": "bottom left modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Checkbox label",
+            "purpose": "Legal consent requirement"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Above analytics toggles",
+            "purpose": "Explains data usage rationale"
+          },
+          {
+            "text": "Accept Analytics per our Privacy Policy",
+            "context": "Toggle label with link",
+            "purpose": "Consent + documentation link"
+          }
+        ],
+        "tone": "professional-technical, friendly",
+        "dataFormatting": [
+          "Wallet addresses in monospace (e.g., 48c0e..e4d14)",
+          "SOL amounts as large bold numbers (75 SOL, 45 SOL, 37 SOL)"
+        ],
+        "trustSignals": [
+          "Terms of Service and Privacy Policy links",
+          "Cookie Policy reference",
+          "Built On Solana badge"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#a855f7",
+          "#000000",
+          "#9ca3af"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale with color contrast (purple 'MEV Powered' + black 'Staking Rewards')",
+          "bodyStyle": "Medium-weight sans-serif, mid-gray for supporting text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Welcome modal with ToS and cookie consent",
+            "position": "center overlay",
+            "notable": "Same modal state as previous screenshot; language selector in top right"
+          },
+          {
+            "type": "language-selector",
+            "description": "English dropdown selector",
+            "position": "top right of modal",
+            "notable": "Internationalization support indicated"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dominates visual space with clear button hierarchy (purple primary CTA, gray secondary)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Accept consent and language preferences before accessing platform",
+        "entryPoints": [
+          "Page load"
+        ],
+        "exitPoints": [
+          "Continue button (proceed after consent)",
+          "Decline button (skip analytics)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "English selector dropdown",
+            "action": "Change modal and UI language"
+          },
+          {
+            "element": "Terms of Service link",
+            "action": "Navigate to full ToS document"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Navigate to privacy policy"
+          },
+          {
+            "element": "Cookie Policy link",
+            "action": "Navigate to cookie policy"
+          },
+          {
+            "element": "Accept Analytics toggle",
+            "action": "Enable/disable analytics"
+          },
+          {
+            "element": "Accept Cookies toggle",
+            "action": "Enable/disable cookies"
+          }
+        ],
+        "informationArchitecture": "Consent-first modal blocking main content; groups legal documents with consent toggles",
+        "frictionPoints": [
+          "Modal blocks all main content access",
+          "Multiple toggles require attention before continuing",
+          "Language selection is secondary but visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "bottom right modal"
+          },
+          {
+            "text": "Decline",
+            "style": "ghost-button",
+            "placement": "bottom left modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Checkbox with link",
+            "purpose": "Legal requirement with navigation to full document"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Section header",
+            "purpose": "Explains tracking purpose"
+          },
+          {
+            "text": "Accept Analytics per our Privacy Policy",
+            "context": "Toggle label",
+            "purpose": "Ties consent to privacy documentation"
+          },
+          {
+            "text": "Accept our Cookie Policy",
+            "context": "Toggle label",
+            "purpose": "References cookie policy"
+          }
+        ],
+        "tone": "professional-technical, friendly",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Terms of Service hyperlink",
+          "Privacy Policy hyperlink",
+          "Cookie Policy hyperlink",
+          "Multiple consent mechanisms showing privacy consideration"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-home-3-landing-page-scrolled-2.png",
+      "label": "Landing page — scrolled 2",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#a855f7",
+          "#000000",
+          "#9ca3af"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large scale (black 'Maximize Your Rewards, Unlock Solana DeFi')",
+          "bodyStyle": "Medium-weight sans-serif, gray body text describing product benefits",
+          "dataStyle": "Large purple percentage (5.96%) for APY metric"
+        },
+        "components": [
+          {
+            "type": "partner-logo-row",
+            "description": "Five crypto protocol logos (Phantom, Kamino, Raydium, Drift, Orca)",
+            "position": "top center horizontal scroll",
+            "notable": "Shows ecosystem integration and partnerships"
+          },
+          {
+            "type": "product-badge",
+            "description": "Teal badge with 'LIQUID STAKING' text and icon",
+            "position": "left side, above product name",
+            "notable": "Categorizes product offering clearly"
+          },
+          {
+            "type": "metric-display",
+            "description": "APY percentage displayed in large purple text",
+            "position": "left sidebar",
+            "notable": "Emphasizes yield potential as key motivator"
+          },
+          {
+            "type": "modal-dialog",
+            "description": "Same consent modal as previous screens",
+            "position": "center overlay",
+            "notable": "Persists across page scroll"
+          },
+          {
+            "type": "cta-button",
+            "description": "Partially visible call-to-action button in green",
+            "position": "bottom right below headline",
+            "notable": "Likely leads to staking action"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-aligned product info (name, APY, CTA) contrasts with right-aligned headline; metric (APY) color-coded in purple to draw eye",
+        "innovativeElements": [
+          "Partner logo row demonstrates ecosystem credibility",
+          "Split-column layout with product name on left and headline on right"
+        ]
+      },
+      "flow": {
+        "screenType": "landing + modal",
+        "userIntent": "Learn about JitoSOL liquid staking product and APY offering; proceed with wallet connection",
+        "entryPoints": [
+          "Scrolled from top of page",
+          "Direct navigation to StakeNet section"
+        ],
+        "exitPoints": [
+          "Continue button in modal (accept consent)",
+          "Primary CTA button (green button at bottom right)",
+          "Partner logos (navigate to integrated protocols)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Partner logo row",
+            "action": "Likely navigates to partner protocol pages"
+          },
+          {
+            "element": "Terms of Service link",
+            "action": "Open full ToS document"
+          },
+          {
+            "element": "Analytics consent toggle",
+            "action": "Enable/disable analytics"
+          },
+          {
+            "element": "Cookie consent toggle",
+            "action": "Enable/disable cookies"
+          },
+          {
+            "element": "Green call-to-action button",
+            "action": "Initiate staking or wallet connection"
+          }
+        ],
+        "informationArchitecture": "Hero section with product positioning; key metrics highlighted; modal consent blocks interaction until accepted",
+        "frictionPoints": [
+          "Modal blocks access to main features even after scrolling",
+          "Must complete consent before exploring product details",
+          "Green CTA partially obscured by modal"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Maximize Your Rewards, Unlock Solana DeFi",
+        "subheadline": "JitoSOL combines staking rewards with MEV rewards, offering a unique opportunity to boost yields. Stake now with the most liquid LST on Solana.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "modal bottom right"
+          },
+          {
+            "text": "Decline",
+            "style": "ghost-button",
+            "placement": "modal bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LIQUID STAKING",
+            "context": "Teal badge above product name",
+            "purpose": "Categorizes product type"
+          },
+          {
+            "text": "JitoSOL",
+            "context": "Large heading on left",
+            "purpose": "Product name/branding"
+          },
+          {
+            "text": "APY",
+            "context": "Label above metric",
+            "purpose": "Identifies yield metric"
+          },
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Modal checkbox",
+            "purpose": "Legal consent requirement"
+          }
+        ],
+        "tone": "professional-technical, benefit-focused",
+        "dataFormatting": [
+          "APY as large purple percentage (5.96%)",
+          "Partner logos in monochrome for subtle branding"
+        ],
+        "trustSignals": [
+          "Five major DeFi protocol partnerships (Phantom, Kamino, Raydium, Drift, Orca)",
+          "Terms of Service and Privacy Policy links in modal",
+          "Emphasis on 'most liquid LST on Solana' in subheadline"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-home-4-landing-page-scrolled-3.png",
+      "label": "Landing page — scrolled 3",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width with modal overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#A8D5BA",
+          "#B8A3D9",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (e.g., 'How it all works')",
+          "bodyStyle": "Regular weight, medium size for explanatory text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Centered consent modal with language selector, terms/privacy agreements, and toggle controls",
+            "position": "Center overlay, covers lower half of page",
+            "notable": "Clean white card with rounded corners, dual toggle switches with vibrant purple color"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Gradient green background with animated token icons (purple and teal gradient circles)",
+            "position": "Top half, behind modal",
+            "notable": "Decorative circular token icons arranged in diamond pattern, suggests movement/connectivity"
+          },
+          {
+            "type": "Educational Content",
+            "description": "Numbered steps (01-04) explaining staking mechanics",
+            "position": "Below hero, partially visible behind modal",
+            "notable": "Large numbered headings with body text in light gray on gray background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Modal dominates visual hierarchy; background content de-emphasized with opacity; bright purple CTA stands out",
+        "innovativeElements": [
+          "Animated token icon arrangement",
+          "Dual-toggle consent pattern with linked policy text"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step / modal confirmation",
+        "userIntent": "Accept terms and privacy policies to access staking features",
+        "entryPoints": [
+          "Initial page load",
+          "First-time visitor redirect"
+        ],
+        "exitPoints": [
+          "Continue button (accept)",
+          "Decline button (reject)",
+          "Close modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Service link",
+            "action": "Opens terms document (linked in purple)"
+          },
+          {
+            "element": "Accept Analytics toggle",
+            "action": "Enable/disable analytics tracking"
+          },
+          {
+            "element": "Accept Cookies toggle",
+            "action": "Enable/disable cookie usage"
+          },
+          {
+            "element": "Continue button",
+            "action": "Accepts all checked agreements, closes modal"
+          },
+          {
+            "element": "Decline button",
+            "action": "Rejects consent, likely prevents access"
+          }
+        ],
+        "informationArchitecture": "Modal-based consent flow; policies organized into two categories (ToS + Analytics/Cookies); language selector top-right",
+        "frictionPoints": [
+          "Modal blocks access to underlying content",
+          "Multiple toggles require individual clicks",
+          "Policy links open externally"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom right, full-width purple button"
+          },
+          {
+            "text": "Decline",
+            "style": "text-link",
+            "placement": "Bottom left, subtle gray link"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "First checkbox in modal",
+            "purpose": "Legally required consent statement"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Above analytics/cookie toggles",
+            "purpose": "Explains purpose of data collection"
+          },
+          {
+            "text": "Accept Analytics per our Privacy Policy",
+            "context": "Second toggle option",
+            "purpose": "Links analytics acceptance to privacy policy"
+          },
+          {
+            "text": "Accept our Cookie Policy",
+            "context": "Third toggle option",
+            "purpose": "Separate cookie consent"
+          }
+        ],
+        "tone": "professional-technical, compliance-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy reference",
+          "Cookie Policy reference",
+          "Terms of Service reference",
+          "Language selector (English)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-settings-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width with modal overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#C4A8D9",
+          "#000000",
+          "#FFFFFF",
+          "#7B2CBF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra large (e.g., 'January 2026')",
+          "bodyStyle": "Regular weight, medium size for blog preview text",
+          "dataStyle": "Date and reading time in smaller gray text (e.g., 'April 16, 2024  2 minute reading time')"
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Identical consent modal as previous screenshot; centered white card with toggles",
+            "position": "Center overlay",
+            "notable": "Same design language maintains consistency across flows"
+          },
+          {
+            "type": "Hero Blog Card",
+            "description": "Large purple gradient card with typography and geometric line art",
+            "position": "Left side, behind modal",
+            "notable": "Minimalist line drawing of Jito logo, bold date treatment"
+          },
+          {
+            "type": "Blog Feed",
+            "description": "Three article cards stacked vertically on right side",
+            "position": "Right side, partially visible behind modal",
+            "notable": "Article cards display title, date, and reading time; 'POPULAR' section label"
+          },
+          {
+            "type": "Newsletter Signup",
+            "description": "Email input with submit button in section labeled 'STAY IN THE LOOP'",
+            "position": "Bottom right, behind modal",
+            "notable": "Purple submit button matches primary CTA color"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal overlays blog content; blog layout uses card-based design with clear hierarchy between featured article and article feed",
+        "innovativeElements": [
+          "Minimalist line art in hero card",
+          "Monthly roundup concept with editorial focus"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / blog-browse with modal overlay",
+        "userIntent": "Consent to policies before accessing blog/educational content",
+        "entryPoints": [
+          "Blog section click",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Continue button (accept)",
+          "Decline button",
+          "Article card click (after consent)",
+          "Newsletter signup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blog Article Card",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Newsletter Email Input",
+            "action": "Enter email for subscription"
+          },
+          {
+            "element": "Newsletter Submit Button",
+            "action": "Subscribe to email list"
+          },
+          {
+            "element": "Language Selector",
+            "action": "Change interface language"
+          }
+        ],
+        "informationArchitecture": "Modal blocks blog content; background shows featured article + article feed + newsletter signup in stacked layout",
+        "frictionPoints": [
+          "Modal prevents browsing blog without consent",
+          "Must dismiss modal before reading content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom right, full-width purple button"
+          },
+          {
+            "text": "Decline",
+            "style": "text-link",
+            "placement": "Bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "January 2026",
+            "context": "Hero blog card heading",
+            "purpose": "Feature date for monthly roundup"
+          },
+          {
+            "text": "POPULAR",
+            "context": "Section label above article feed",
+            "purpose": "Indicates high-engagement content"
+          },
+          {
+            "text": "2 minute reading time",
+            "context": "Below article titles",
+            "purpose": "Sets user expectations for article length"
+          },
+          {
+            "text": "STAY IN THE LOOP",
+            "context": "Newsletter signup section label",
+            "purpose": "Encourages subscription with colloquial language"
+          }
+        ],
+        "tone": "professional-technical, friendly-casual (for blog content behind modal)",
+        "dataFormatting": [
+          "April 16, 2024",
+          "2 minute reading time",
+          "6 minute reading time"
+        ],
+        "trustSignals": [
+          "Blog content authored by Jito team",
+          "Multiple published articles",
+          "Newsletter subscription option"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-settings-2-faq.png",
+      "label": "FAQ",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with sidebar navigation and main content",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#7B2CBF",
+          "#000000",
+          "#CCCCCC"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (e.g., 'Frequently Asked Questions')",
+          "bodyStyle": "Regular weight for expandable FAQ questions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Title",
+            "description": "Large bold heading 'Frequently Asked Questions'",
+            "position": "Top left, full width",
+            "notable": "Oversized typography establishes primary hierarchy"
+          },
+          {
+            "type": "FAQ Accordion Section",
+            "description": "Categorized collapsible Q&A items (JTO Token, Jito Points, JitoSOL Primer)",
+            "position": "Left side, 60% width",
+            "notable": "Purple section headers with expandable questions; chevron icons indicate collapse/expand state"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical list of FAQ category links",
+            "position": "Right side, 40% width",
+            "notable": "Purple 'JTO Token' link highlighted, indicating current section; clean link list for quick navigation"
+          },
+          {
+            "type": "Modal Dialog",
+            "description": "Identical consent modal overlaying page content",
+            "position": "Center overlay",
+            "notable": "Same 'Welcome to Jito' modal persists across all pages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large page title at top; two-column layout with main content on left, navigation on right; purple accents guide attention to current section",
+        "innovativeElements": [
+          "Sidebar category navigation alongside accordion",
+          "Color-coded current section indicator"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / FAQ / help-center",
+        "userIntent": "Find answers to common questions about JTO token, Jito Points, and staking mechanics",
+        "entryPoints": [
+          "Help/FAQ link from navigation",
+          "Direct URL",
+          "Search redirect"
+        ],
+        "exitPoints": [
+          "Sidebar category click",
+          "Expand FAQ accordion item",
+          "Back to main site",
+          "Connect Wallet"
+        ],
+        "interactiveElements": [
+          {
+            "element": "FAQ Accordion Item",
+            "action": "Expand/collapse to reveal answer"
+          },
+          {
+            "element": "Sidebar Category Link",
+            "action": "Jump to FAQ section, update highlighted state"
+          },
+          {
+            "element": "Policy Links in Modal",
+            "action": "Open external policy documents"
+          }
+        ],
+        "informationArchitecture": "Content organized hierarchically: page title → category sections (collapsible) → individual Q&A pairs; parallel sidebar navigation for quick jumping between categories",
+        "frictionPoints": [
+          "Modal overlay blocks content access without consent",
+          "Must scroll to see all accordion items",
+          "Category links on right may be missed by users focused on left content"
+        ],
+        "progressIndicators": [
+          "Current section highlighted in purple in sidebar"
+        ]
+      },
+      "copy": {
+        "headline": "Frequently Asked Questions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Modal bottom right"
+          },
+          {
+            "text": "Decline",
+            "style": "text-link",
+            "placement": "Modal bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "JTO Token",
+            "context": "Purple section header and sidebar link",
+            "purpose": "Marks FAQ category; purple color indicates current selection in sidebar"
+          },
+          {
+            "text": "What is JTO?",
+            "context": "First expandable question",
+            "purpose": "Foundational question for users unfamiliar with token"
+          },
+          {
+            "text": "Will there be another airdrop of JTO tokens?",
+            "context": "Second expandable question",
+            "purpose": "Addresses common user concern about token distribution"
+          },
+          {
+            "text": "Jito Points",
+            "context": "Section header and sidebar navigation",
+            "purpose": "Categorizes questions about rewards program"
+          },
+          {
+            "text": "Is the Points program still active?",
+            "context": "FAQ question under Jito Points",
+            "purpose": "Addresses user concern about program status"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive FAQ coverage",
+          "Multiple topic categories (JTO, Jito Points, JitoSOL, Security, Validators, Staking)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#9945FF",
+          "#FFFFFF",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale for main headline",
+          "bodyStyle": "Regular sans-serif, medium weight for body copy",
+          "dataStyle": "Large bold numbers (APY display), percentage format"
+        },
+        "components": [
+          {
+            "type": "Modal overlay",
+            "description": "Centered consent dialog with rounded corners",
+            "position": "Center of screen, layered above staking interface",
+            "notable": "Semi-transparent backdrop with full-screen coverage"
+          },
+          {
+            "type": "Toggle switches",
+            "description": "Analytics and Cookie acceptance toggles",
+            "position": "Middle of modal",
+            "notable": "Both pre-enabled (purple filled state)"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "Decline and Continue buttons",
+            "position": "Bottom of modal",
+            "notable": "Asymmetric styling - Continue is prominent (purple), Decline is subtle"
+          },
+          {
+            "type": "Info stack",
+            "description": "APY display, staking input, and swap information",
+            "position": "Background behind modal",
+            "notable": "Large APY percentage (5.96%) displayed prominently"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal is centered and elevated, drawing attention away from background content",
+        "innovativeElements": [
+          "Pre-enabled consent toggles create smooth onboarding flow"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "User blocked from staking interface until consenting to terms and policies",
+        "entryPoints": [
+          "Landing on staking page",
+          "Refresh or return to site"
+        ],
+        "exitPoints": [
+          "Click Continue to proceed to staking",
+          "Click Decline to leave"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Service link",
+            "action": "Opens external link (purple hyperlink)"
+          },
+          {
+            "element": "Analytics toggle",
+            "action": "Enables/disables analytics tracking"
+          },
+          {
+            "element": "Cookie Policy toggle",
+            "action": "Enables/disables cookie acceptance"
+          },
+          {
+            "element": "Continue button",
+            "action": "Closes modal and allows access to staking"
+          },
+          {
+            "element": "Decline button",
+            "action": "Presumably closes modal without full consent"
+          }
+        ],
+        "informationArchitecture": "Compliance requirements layered over primary staking interface; clear separation of concerns",
+        "frictionPoints": [
+          "Modal blocks interaction with main interface",
+          "Two-step consent (terms + analytics) requires multiple interactions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Decline",
+            "style": "text-link",
+            "placement": "Bottom left of modal"
+          },
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "Bottom right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Terms acceptance checkbox",
+            "purpose": "Explicit consent to legal terms"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Above analytics toggles",
+            "purpose": "Explains rationale for data collection"
+          },
+          {
+            "text": "Accept Analytics per our Privacy Policy",
+            "context": "Toggle description",
+            "purpose": "Links policy while requesting consent"
+          },
+          {
+            "text": "Accept our Cookie Policy",
+            "context": "Toggle description",
+            "purpose": "Links policy while requesting consent"
+          }
+        ],
+        "tone": "professional-technical, compliant, friendly",
+        "dataFormatting": [
+          "5.96% (APY display)",
+          "$0.0 (staking amount)"
+        ],
+        "trustSignals": [
+          "Terms of Service reference",
+          "Privacy Policy reference",
+          "Cookie Policy reference"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-staking-2-learn-more.png",
+      "label": "Learn More",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#9945FF",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale for section titles",
+          "bodyStyle": "Regular monospace font for technical labels and values",
+          "dataStyle": "Large bold numbers with minimal formatting; percentages and dollar values"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top horizontal menu with logo, sections, and wallet connect",
+            "position": "Top of screen",
+            "notable": "TipRouter highlighted in yellow, indicating current section"
+          },
+          {
+            "type": "Hero section",
+            "description": "TipRouter branding with ACTIVE status badge",
+            "position": "Top-left of main content",
+            "notable": "Green 'ACTIVE' badge signals operational status"
+          },
+          {
+            "type": "Stats row",
+            "description": "Four key metrics with labels and info icons",
+            "position": "Below hero",
+            "notable": "Info icons enable tooltips for each metric"
+          },
+          {
+            "type": "3D cube visualization",
+            "description": "Four isometric cubes showing process stages",
+            "position": "Center of screen",
+            "notable": "Green and gold gradient; visual metaphor for staking workflow"
+          },
+          {
+            "type": "Modal overlay",
+            "description": "Identical consent modal to screenshot 1",
+            "position": "Center, layered above visualization",
+            "notable": "Blocking interaction with main content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero metrics anchor attention; 3D visualization creates visual interest; modal overlays to force engagement",
+        "innovativeElements": [
+          "3D isometric cube visualization for abstract process flow",
+          "Color gradient from green (active) to gold (passive)",
+          "Epoch timeline visualization"
+        ]
+      },
+      "flow": {
+        "screenType": "modal with data-browse underneath",
+        "userIntent": "Learn about TipRouter mechanics and current epoch distribution status",
+        "entryPoints": [
+          "Click 'Learn More' from main TipRouter page",
+          "Navigate to TipRouter section"
+        ],
+        "exitPoints": [
+          "Click Continue on consent modal to proceed",
+          "Click Decline to exit",
+          "Navigate to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Learn More link",
+            "action": "Navigates to TipRouter details page"
+          },
+          {
+            "element": "Tip Claims link",
+            "action": "Navigates to claims explorer"
+          },
+          {
+            "element": "Priority Fees link",
+            "action": "Navigates to fee information"
+          },
+          {
+            "element": "Info icons",
+            "action": "Display tooltips explaining each metric"
+          },
+          {
+            "element": "Epoch timeline",
+            "action": "Allows scrolling through historical epochs"
+          }
+        ],
+        "informationArchitecture": "Top-level staking product (TipRouter) with drill-down into specific claims and fees; metrics provide contextual overview",
+        "frictionPoints": [
+          "Modal blocks immediate interaction with 3D visualization",
+          "Consent required before exploring TipRouter metrics"
+        ],
+        "progressIndicators": [
+          "Epoch Progress bar showing 72% completion"
+        ]
+      },
+      "copy": {
+        "headline": "TipRouter",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Learn More",
+            "style": "text-link",
+            "placement": "Top right of hero section"
+          },
+          {
+            "text": "Tip Claims",
+            "style": "text-link",
+            "placement": "Top right of hero section"
+          },
+          {
+            "text": "Priority Fees",
+            "style": "text-link",
+            "placement": "Top right of hero section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "All-time Restaking Distribution",
+            "context": "Stats row label",
+            "purpose": "Describes cumulative rewards"
+          },
+          {
+            "text": "Last Epoch Distribution",
+            "context": "Stats row label",
+            "purpose": "Shows most recent period rewards"
+          },
+          {
+            "text": "Current Epoch Distribution",
+            "context": "Stats row label",
+            "purpose": "Shows ongoing period rewards"
+          },
+          {
+            "text": "NCN Reward Rate",
+            "context": "Stats row label",
+            "purpose": "Shows current network reward percentage"
+          },
+          {
+            "text": "Current Epoch",
+            "context": "Bottom left stat",
+            "purpose": "Shows current epoch number"
+          },
+          {
+            "text": "Epoch Progress",
+            "context": "Progress bar label",
+            "purpose": "Indicates time remaining in epoch"
+          },
+          {
+            "text": "Time to Next Epoch",
+            "context": "Bottom right stat",
+            "purpose": "Shows countdown in human-readable format"
+          },
+          {
+            "text": "Initialization",
+            "context": "First cube label",
+            "purpose": "First stage of staking process"
+          },
+          {
+            "text": "Claiming",
+            "context": "Fourth cube label",
+            "purpose": "Final stage of staking process"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "$1,128,421 (dollar amounts)",
+          "$381,994 (dollar amounts)",
+          "$316,422 (dollar amounts)",
+          "≈ 0.61% / 5.40% (percentage ranges)",
+          "926 (epoch count)",
+          "72% (progress percentage)",
+          "0d 13h 15m (time format)"
+        ],
+        "trustSignals": [
+          "All-time distribution of $1.1M+",
+          "ACTIVE status badge",
+          "Real-time epoch tracking"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-staking-5-tip-claims.png",
+      "label": "Tip Claims",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#9945FF",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale for main heading",
+          "bodyStyle": "Regular monospace font for technical labels and addresses",
+          "dataStyle": "Large bold numbers with minimal formatting; very long numbers truncated with ellipsis"
+        },
+        "components": [
+          {
+            "type": "Navigation breadcrumb",
+            "description": "Back button to TipRouter with left arrow",
+            "position": "Top left below main nav",
+            "notable": "Ghost button style with minimal styling"
+          },
+          {
+            "type": "Page heading",
+            "description": "Main heading 'Tip Distribution Claims'",
+            "position": "Left side, large scale",
+            "notable": "Emphasizes content section"
+          },
+          {
+            "type": "Epoch selector",
+            "description": "Current epoch (926) with Previous Epoch timeline",
+            "position": "Top left, above main content",
+            "notable": "Horizontal scroll through 10 previous epochs; current highlighted in gold"
+          },
+          {
+            "type": "Stats row",
+            "description": "Five key metrics with info icons",
+            "position": "Below heading, full width",
+            "notable": "Monospace font, very large numbers, info icons for context"
+          },
+          {
+            "type": "Tab filter",
+            "description": "Recent, Largest, All Claims, Restaking Claims",
+            "position": "Right side above grid",
+            "notable": "Recent is active (darker), others are muted"
+          },
+          {
+            "type": "Claims grid",
+            "description": "12 cards showing individual wallet claims",
+            "position": "Main content area below filters",
+            "notable": "Green border indicating 'Claimed' status; monospace addresses and values"
+          },
+          {
+            "type": "Modal overlay",
+            "description": "Identical consent modal",
+            "position": "Center, blocking claims grid",
+            "notable": "Prevents exploration of claims data"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Epoch selector at top anchors context; stats row provides overview; grid shows detailed claims",
+        "innovativeElements": [
+          "Horizontal epoch timeline selector",
+          "Color-coded claim status (green 'Claimed')",
+          "Monospace typography for cryptographic addresses"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with modal overlay",
+        "userIntent": "Explore individual tip distribution claims across epochs and wallets",
+        "entryPoints": [
+          "Click 'Tip Claims' from TipRouter page",
+          "Direct navigation via URL"
+        ],
+        "exitPoints": [
+          "Click back to return to TipRouter",
+          "Navigate to other sections",
+          "Continue through consent modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "TipRouter back button",
+            "action": "Returns to previous TipRouter overview page"
+          },
+          {
+            "element": "Epoch timeline",
+            "action": "Scroll horizontally to view different epochs; click to select epoch"
+          },
+          {
+            "element": "Info icons",
+            "action": "Display tooltips for metric definitions"
+          },
+          {
+            "element": "Tab filters",
+            "action": "Filter claims by Recent, Largest, All, or Restaking Claims"
+          },
+          {
+            "element": "Claim cards",
+            "action": "Presumably clickable to view claim details or initiate claim"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: epoch selection → metrics overview → filtered claims list; monospace addresses suggest wallet/transaction focus",
+        "frictionPoints": [
+          "Modal blocks interaction with claims grid",
+          "Very long monospace addresses may require horizontal scrolling",
+          "Multiple filter tabs could overwhelm new users"
+        ],
+        "progressIndicators": [
+          "Epoch Progress bar (72% shown on background)",
+          "Current Epoch number displayed"
+        ]
+      },
+      "copy": {
+        "headline": "Tip Distribution Claims",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "TipRouter",
+            "style": "ghost-button",
+            "placement": "Top left breadcrumb"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Current Epoch",
+            "context": "Top left stat",
+            "purpose": "Shows active epoch number"
+          },
+          {
+            "text": "Previous Epoch",
+            "context": "Top left timeline header",
+            "purpose": "Indicates historical epoch reference"
+          },
+          {
+            "text": "Total Claims",
+            "context": "Metrics row label",
+            "purpose": "Cumulative claim count"
+          },
+          {
+            "text": "Total SOL",
+            "context": "Metrics row label",
+            "purpose": "Total SOL value of all claims"
+          },
+          {
+            "text": "Claim Epoch",
+            "context": "Metrics row label",
+            "purpose": "Epoch when claims are issued"
+          },
+          {
+            "text": "Expiry Epoch",
+            "context": "Metrics row label",
+            "purpose": "When claims expire"
+          },
+          {
+            "text": "Expiry Offset",
+            "context": "Metrics row label",
+            "purpose": "Number of epochs before expiry"
+          },
+          {
+            "text": "Tip Claim Status Explorer",
+            "context": "Grid section heading",
+            "purpose": "Title for claims grid"
+          },
+          {
+            "text": "Recent",
+            "context": "Tab filter",
+            "purpose": "Show newest claims first"
+          },
+          {
+            "text": "Largest",
+            "context": "Tab filter",
+            "purpose": "Sort by highest value"
+          },
+          {
+            "text": "All Claims",
+            "context": "Tab filter",
+            "purpose": "Show all claims without filtering"
+          },
+          {
+            "text": "Restaking Claims",
+            "context": "Tab filter",
+            "purpose": "Show only restaking-related claims"
+          },
+          {
+            "text": "Claimed",
+            "context": "Status badge on claim cards",
+            "purpose": "Indicates claim has been redeemed"
+          }
+        ],
+        "tone": "professional-technical, data-focused",
+        "dataFormatting": [
+          "726,585 (claim count)",
+          "3,478.55 SOL (token amount with decimal precision)",
+          "926 (epoch number)",
+          "935 (epoch number)",
+          "After 10 (offset format)",
+          "DKJh_c6aw 0.0000076... (truncated monospace addresses)",
+          "0.0000007... (very small decimal numbers truncated)"
+        ],
+        "trustSignals": [
+          "Real-time claim tracking",
+          "Transparent claim status per wallet",
+          "Historical epoch data available"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-send-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered modal overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#B680F0",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+) for main headline",
+          "bodyStyle": "Regular sans-serif, medium gray text for descriptive copy",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "White rounded modal overlay with consent controls",
+            "position": "Center of screen, overlaying Transfer Tokens form",
+            "notable": "Blocks interaction with underlying form until resolved"
+          },
+          {
+            "type": "Toggle Switch",
+            "description": "Two purple toggle controls for analytics and cookie acceptance",
+            "position": "Within modal, left-aligned with text labels",
+            "notable": "Both toggles start in enabled (ON) position by default"
+          },
+          {
+            "type": "Button Pair",
+            "description": "Decline (outline) and Continue (filled purple) action buttons",
+            "position": "Bottom of modal",
+            "notable": "Asymmetric weighting with primary action (Continue) emphasized in bright purple"
+          },
+          {
+            "type": "Language Selector",
+            "description": "Dropdown showing 'English' with chevron",
+            "position": "Top-right corner of modal",
+            "notable": "Allows localization of consent text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dominates visual hierarchy; gray background behind reduces focus on underlying content",
+        "innovativeElements": [
+          "Default-on toggles signal aggressive opt-in approach",
+          "Hyperlinked policy text (Terms of Service, Privacy Policy, Cookie Policy) in purple accent color"
+        ]
+      },
+      "flow": {
+        "screenType": "modal - consent/compliance gate",
+        "userIntent": "User is attempting to transfer tokens but must first consent to terms and cookie policies",
+        "entryPoints": [
+          "Direct navigation to Transfer Tokens page",
+          "Redirect after wallet connection"
+        ],
+        "exitPoints": [
+          "Click 'Continue' to proceed with transfer flow",
+          "Click 'Decline' to reject analytics (unclear if user can proceed)",
+          "Click policy links to read full terms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Service checkbox",
+            "action": "Required agreement to proceed; unchecked prevents Continue button"
+          },
+          {
+            "element": "Analytics toggle",
+            "action": "Enables/disables analytics collection; defaults to ON"
+          },
+          {
+            "element": "Cookie Policy toggle",
+            "action": "Enables/disables cookie acceptance; defaults to ON"
+          },
+          {
+            "element": "Continue button",
+            "action": "Submits consent selections and closes modal"
+          },
+          {
+            "element": "Decline button",
+            "action": "Rejects optional consents but unclear if allows page access"
+          }
+        ],
+        "informationArchitecture": "Required consent (Terms) presented first, followed by optional tracking consents, ending with action buttons",
+        "frictionPoints": [
+          "Modal blocks all page interaction until resolved",
+          "Small checkbox for Terms of Service requires explicit interaction",
+          "Unclear whether 'Decline' button allows user to proceed or blocks access"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Decline",
+            "style": "text-link outline button",
+            "placement": "Bottom-left of modal"
+          },
+          {
+            "text": "Continue",
+            "style": "primary-button filled purple",
+            "placement": "Bottom-right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Checkbox label with linked policy text",
+            "purpose": "Required consent acknowledgment"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Introductory sentence before toggle controls",
+            "purpose": "Sets context for tracking consent requests"
+          },
+          {
+            "text": "Accept Analytics per our Privacy Policy",
+            "context": "First toggle label with linked policy",
+            "purpose": "Optional consent for analytics tracking"
+          },
+          {
+            "text": "Accept our Cookie Policy",
+            "context": "Second toggle label with linked policy",
+            "purpose": "Optional consent for cookie usage"
+          }
+        ],
+        "tone": "professional-technical with compliance undertone",
+        "dataFormatting": [],
+        "trustSignals": [
+          "References to Terms of Service",
+          "References to Privacy Policy",
+          "References to Cookie Policy",
+          "Transparency about analytics and cookie usage"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jito-onboarding-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered modal overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#B680F0",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for '404' error display",
+          "bodyStyle": "Regular sans-serif, medium gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "White rounded modal consent overlay",
+            "position": "Center of screen, overlaying 404 error page",
+            "notable": "Same design as send flow - indicates reusable component"
+          },
+          {
+            "type": "Error Page Background",
+            "description": "404 error code displayed prominently behind modal",
+            "position": "Background, center",
+            "notable": "Large faded '404' and 'Jito' wordmark create visual context"
+          },
+          {
+            "type": "Toggle Switch",
+            "description": "Two purple toggles for analytics and cookie consent",
+            "position": "Within modal",
+            "notable": "Both default to enabled state"
+          },
+          {
+            "type": "Navigation Bar",
+            "description": "Top navigation with StakeNet dropdown, JTO Hub, Stats, Blog, DeFi, Restaking, Institutions",
+            "position": "Top of page",
+            "notable": "Connect Wallet button appears in purple in top-right"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal takes precedence; 404 background provides context but is de-emphasized",
+        "innovativeElements": [
+          "Reusable consent modal appears across all page types (including error pages)",
+          "404 error page forced to display consent before showing error content"
+        ]
+      },
+      "flow": {
+        "screenType": "error + modal - consent gate on 404",
+        "userIntent": "User navigated to invalid URL or onboarding endpoint but encounters consent modal before seeing error",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken onboarding link",
+          "Direct navigation to non-existent page"
+        ],
+        "exitPoints": [
+          "Click Continue to dismiss modal and view 404 error",
+          "Click Decline to reject tracking",
+          "Use top navigation to return to valid pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Service checkbox",
+            "action": "Required to proceed"
+          },
+          {
+            "element": "Analytics toggle",
+            "action": "Optional; defaults enabled"
+          },
+          {
+            "element": "Cookie toggle",
+            "action": "Optional; defaults enabled"
+          },
+          {
+            "element": "Continue button",
+            "action": "Closes modal, displays 404 content"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Allows user to leave error page"
+          }
+        ],
+        "informationArchitecture": "Consent modal is forced gate; error page content remains hidden until modal is resolved",
+        "frictionPoints": [
+          "User cannot access 404 error information until consenting",
+          "Forces consent collection even for users who accidentally landed on wrong page",
+          "Creates additional friction on already-problematic error state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Decline",
+            "style": "text-link outline button",
+            "placement": "Bottom-left"
+          },
+          {
+            "text": "Continue",
+            "style": "primary-button filled purple",
+            "placement": "Bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Checkbox label",
+            "purpose": "Mandatory consent"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Intro text before toggles",
+            "purpose": "Context setting"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Terms of Service reference",
+          "Privacy Policy reference",
+          "Cookie Policy reference"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "404 error code displayed as background element (not shown in text, but visible in design)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jito-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered modal overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#B680F0",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif for modal headline",
+          "bodyStyle": "Regular sans-serif, medium gray body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Identical white consent modal to other flows",
+            "position": "Center, overlaying 404 error background",
+            "notable": "Same component reused across all user flows - indicates mature component library"
+          },
+          {
+            "type": "Toggle Switch",
+            "description": "Analytics and Cookie toggles",
+            "position": "Within modal",
+            "notable": "Both enabled by default"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Decline and Continue buttons",
+            "position": "Modal footer",
+            "notable": "Continue button uses brand purple color"
+          },
+          {
+            "type": "Navigation",
+            "description": "Top bar with wallet connection",
+            "position": "Header",
+            "notable": "Connect Wallet button highlighted in purple"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal entirely dominates; background 404 de-emphasized",
+        "innovativeElements": [
+          "Consistent modal component across swap, send, and error pages demonstrates strong design system"
+        ]
+      },
+      "flow": {
+        "screenType": "error + modal - consent gate on 404 (swap flow)",
+        "userIntent": "User attempting to access swap functionality but encounters 404 and consent modal",
+        "entryPoints": [
+          "Invalid swap URL",
+          "Broken swap page link",
+          "Direct navigation to non-existent swap endpoint"
+        ],
+        "exitPoints": [
+          "Continue button to dismiss modal",
+          "Navigation menu to access valid swap page",
+          "Decline button to reject analytics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms checkbox",
+            "action": "Required consent"
+          },
+          {
+            "element": "Analytics toggle",
+            "action": "Optional tracking consent"
+          },
+          {
+            "element": "Cookie toggle",
+            "action": "Optional cookie consent"
+          },
+          {
+            "element": "Continue button",
+            "action": "Proceeds past modal"
+          }
+        ],
+        "informationArchitecture": "Consent modal gates all page access; error content remains hidden",
+        "frictionPoints": [
+          "Consent requirement on error page creates poor UX for users who landed incorrectly",
+          "User cannot quickly recover from 404 without interacting with consent modal"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Jito",
+        "subheadline": "Please review and agree to our Terms of Service in order to continue.",
+        "ctas": [
+          {
+            "text": "Decline",
+            "style": "text-link outline",
+            "placement": "Bottom-left"
+          },
+          {
+            "text": "Continue",
+            "style": "primary-button purple",
+            "placement": "Bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I agree to the Terms of Service",
+            "context": "Checkbox label with linked text",
+            "purpose": "Required legal acknowledgment"
+          },
+          {
+            "text": "We use analytics and cookies to improve your experience.",
+            "context": "Introductory statement",
+            "purpose": "Transparency about data collection"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Terms of Service",
+          "Privacy Policy",
+          "Cookie Policy"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

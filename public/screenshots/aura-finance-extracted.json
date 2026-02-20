@@ -1,0 +1,835 @@
+{
+  "slug": "aura-finance",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:13:23.519Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/aura-finance-home-7-snapshot.png",
+      "label": "Snapshot",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#1f2937",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, 48px+ for main heading",
+          "bodyStyle": "Regular sans-serif, gray text for secondary info",
+          "dataStyle": "Bold numeric values with unit labels (e.g., '896 proposals', '1.1k followers')"
+        },
+        "components": [
+          {
+            "type": "Logo/Brand Header",
+            "description": "Aura Finance branding with purple gradient icon and text",
+            "position": "Top left in header",
+            "notable": "Consistent brand identity with animated/gradient sphere icon"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Search for a proposal input field",
+            "position": "Top center header",
+            "notable": "Prominent search affordance for proposal discovery"
+          },
+          {
+            "type": "Proposal Cards",
+            "description": "List of governance proposals with metadata (votes, timestamps)",
+            "position": "Main content area",
+            "notable": "Color-coded proposal status indicators (green/white dots), BIP reference numbers"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large purple gradient banner with org icon and stats",
+            "position": "Above proposals list",
+            "notable": "High-impact visual with social metrics prominently displayed"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eyes drawn to hero section first, then proposal list items prioritized by status indicators and voting info",
+        "innovativeElements": [
+          "Color-coded proposal status rings (active/completed states)",
+          "Seamless integration of DAO metrics in hero section",
+          "Social media icons inline with organization stats"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Browse active governance proposals and understand DAO activity at a glance",
+        "entryPoints": [
+          "Direct navigation from home/landing",
+          "Search proposal link from nav"
+        ],
+        "exitPoints": [
+          "Click proposal title to view details",
+          "Navigate to Leaderboard/Delegates/Treasury via sidebar",
+          "Log in to participate in voting"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Proposal list items",
+            "action": "Navigate to proposal detail view"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter proposals by keyword"
+          },
+          {
+            "element": "Social media icons",
+            "action": "Open external social profiles"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Organization overview → Proposal list with nested metadata (BIP ID, vote count, time remaining)",
+        "frictionPoints": [
+          "No clear indication of proposal sorting/filtering options beyond search",
+          "Vote count and follower metrics use abbreviated format (1.1k) that requires parsing"
+        ],
+        "progressIndicators": [
+          "Proposal status indicator: 'Xd left' shows voting timeline",
+          "Active proposal count in hero: '896 proposals'"
+        ]
+      },
+      "copy": {
+        "headline": "Aura Finance",
+        "subheadline": "896 proposals · 1.1k votes · 1.1k followers",
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "Top right header"
+          },
+          {
+            "text": "See more",
+            "style": "text-link",
+            "placement": "Bottom of proposals list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "[BIP-911] Emergency subDAO Signer Swap - Q1 2026",
+            "context": "Proposal title",
+            "purpose": "Identify proposal topic"
+          },
+          {
+            "text": "#8433c by Aura Finance BIPs · author · -3 votes · 2d left",
+            "context": "Proposal metadata row",
+            "purpose": "Show BIP reference, voting activity, and urgency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "896 proposals",
+          "1.1k votes",
+          "1.1k followers",
+          "#8433c (proposal identifier)",
+          "2d left (time delta)",
+          "3 votes (vote count)"
+        ],
+        "trustSignals": [
+          "896 active proposals (demonstrating governance activity)",
+          "1.1k followers (community size indicator)",
+          "Author attribution for each proposal"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aura-finance-home-8-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0099ff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px, centered",
+          "bodyStyle": "Regular sans-serif, medium gray, centered subtext",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Icon",
+            "description": "Arrow/return icon centered at top",
+            "position": "Center, above headline",
+            "notable": "Minimalist single-color icon sets tone for error context"
+          },
+          {
+            "type": "Error Message",
+            "description": "Page Not Found headline with descriptive subtext",
+            "position": "Center of screen",
+            "notable": "Clear, friendly error messaging without technical jargon"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Back to Home button in bright blue",
+            "position": "Center, below text",
+            "notable": "High-contrast button color against light background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical centering focuses all attention on single call-to-action recovery path",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from navigation error and return to valid content",
+        "entryPoints": [
+          "Direct URL entry for non-existent page",
+          "Broken link navigation"
+        ],
+        "exitPoints": [
+          "Click 'Back to Home' to return to homepage"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back to Home button",
+            "action": "Navigate to home page"
+          }
+        ],
+        "informationArchitecture": "Simple error page with single recovery action",
+        "frictionPoints": [
+          "No alternative navigation options provided (e.g., sitemap, search)",
+          "No suggestion for what page user might have meant to visit"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": "The page you are looking for does not exist or may have been moved.",
+        "ctas": [
+          {
+            "text": "Back to Home",
+            "style": "primary-button",
+            "placement": "Center below text"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "The page you are looking for does not exist or may have been moved."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aura-finance-staking-1-pools.png",
+      "label": "Pools",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#1e293b",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif heading 'Transform your BAL'",
+          "bodyStyle": "Regular sans-serif gray text for descriptive copy",
+          "dataStyle": "Large bold percentage values (20.88%, 27.12%) with smaller gray labels above"
+        },
+        "components": [
+          {
+            "type": "Alert Banner",
+            "description": "Warning alerts about Gnosis subgraph issues and protocol risks",
+            "position": "Top of main content, stackable",
+            "notable": "Orange warning icon with dismissible X, prominent risk disclosure"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Purple gradient banner promoting auraBAL staking with APY metrics",
+            "position": "Below alerts, full width",
+            "notable": "Four APY columns displayed side-by-side with token icons, CTA button integrated"
+          },
+          {
+            "type": "Filter/Control Bar",
+            "description": "Tabs (All, v3, New, Deep, Points), token filters, dropdown and search inputs",
+            "position": "Below hero section",
+            "notable": "Multiple filter dimensions with token logo pills, sortable columns"
+          },
+          {
+            "type": "Data Table",
+            "description": "Pools list with composition, points, vAPR, TVL, deposited columns",
+            "position": "Below filters",
+            "notable": "Token pair composition shown as dual-token badges with percentage splits, TVL in bold"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section dominates, followed by control/filter area, then detailed pool table with secondary metrics",
+        "innovativeElements": [
+          "Token composition visualization as paired badges with percentage weights",
+          "Dynamic APY display across multiple blockchain protocols",
+          "Multi-dimensional filtering system with visual token indicators",
+          "Animated gradient background in hero section with floating spheres"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore liquidity pools and staking opportunities, compare APY across different pool types",
+        "entryPoints": [
+          "Navigation from header (auraBAL tab)",
+          "Direct URL to staking section"
+        ],
+        "exitPoints": [
+          "Click 'Stake auraBAL' button in hero",
+          "Click individual pool row for details",
+          "Navigate to Claim/Lock/Bridge via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter tabs (All, v3, New, Deep, Points)",
+            "action": "Filter pools by type/version"
+          },
+          {
+            "element": "Pool Type dropdown",
+            "action": "Sort pools by classification"
+          },
+          {
+            "element": "Token symbol search",
+            "action": "Search pools by token name"
+          },
+          {
+            "element": "Min TVL input",
+            "action": "Filter pools by minimum TVL"
+          },
+          {
+            "element": "Min APR sort toggle",
+            "action": "Sort by APR ascending/descending"
+          },
+          {
+            "element": "Show Inactive toggle",
+            "action": "Toggle display of inactive pools"
+          },
+          {
+            "element": "Pool rows",
+            "action": "Navigate to pool detail"
+          }
+        ],
+        "informationArchitecture": "Tiered filtering system → APY hero section → filterable pool data table with composition and metrics",
+        "frictionPoints": [
+          "Multiple risk warnings at top may create trust concerns",
+          "Dense filter bar with many simultaneous options could overwhelm",
+          "APY percentages in hero don't link directly to corresponding pools below"
+        ],
+        "progressIndicators": [
+          "Connected Wallet indicator (green dot with address)",
+          "Pool status indicators (v3, New, Deep, Points badges)"
+        ]
+      },
+      "copy": {
+        "headline": "Transform your BAL",
+        "subheadline": "Convert idle BAL and 80BAL20WETH into auraBAL",
+        "ctas": [
+          {
+            "text": "Stake auraBAL",
+            "style": "primary-button",
+            "placement": "Right side of hero section, purple button"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Top right corner header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "There are some issues with the Gnosis subgraph - rewards and data may be show incorrectly while the issue is being fixed.",
+            "context": "Top warning banner",
+            "purpose": "Alert users to data accuracy issues"
+          },
+          {
+            "text": "Aura uses novel technology and using it involves a variety of risks. You understand and agree to assume full responsibility for all of the risks of accessing and using the Interface to interact with the Protocol.",
+            "context": "Risk disclosure banner",
+            "purpose": "Legal risk acknowledgment with Learn more link"
+          },
+          {
+            "text": "Ethereum APY",
+            "context": "Above 20.88% in hero",
+            "purpose": "Label APY source"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "20.88% (Ethereum APY)",
+          "27.12% (Arbitrum One APY)",
+          "30.00% (Polygon APY)",
+          "26.35% (Base APY)",
+          "8.42% (vAPR with projected 8.38%)",
+          "32.07% (vAPR with projected 31.94%)",
+          "$411.18k (TVL)",
+          "$141.63k (TVL)",
+          "50% (token weight composition)"
+        ],
+        "trustSignals": [
+          "$411.18k+ TVL across pools (liquidity depth)",
+          "Multiple blockchain support (Ethereum, Arbitrum, Polygon, Base)",
+          "Prominent risk disclosure language",
+          "Multiple pool types available (v3, Deep, etc.)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "There are some issues with the Gnosis subgraph - rewards and data may be show incorrectly while the issue is being fixed."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aura-finance-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#a855f7",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, centered (main headline ~60px+)",
+          "bodyStyle": "Medium sans-serif, light gray/white, centered",
+          "dataStyle": "Large bold sans-serif numbers in white with small gray labels above"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Dark translucent header with logo, nav items, and CTA button",
+            "position": "top",
+            "notable": "Horizontal layout with 'Pools', 'Lock', 'Docs' navigation items"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large centered text with gradient purple background and blurred glass effect",
+            "position": "center",
+            "notable": "Animated or blurred background creates depth"
+          },
+          {
+            "type": "Stats Row",
+            "description": "Three key metrics displayed in large typography",
+            "position": "below hero",
+            "notable": "Dollar amounts and percentages prominently featured"
+          },
+          {
+            "type": "Partner Logos",
+            "description": "Footer row of integrated protocol logos",
+            "position": "bottom",
+            "notable": "Shows ecosystem connections (Balancer, Lido, Polygon, etc.)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → Subheadline → CTA button → Key metrics → Partner logos",
+        "innovativeElements": [
+          "Blurred glassmorphism background effect",
+          "Floating orb/sphere visual elements in background",
+          "Tagline 'Align your Chakras' suggests spiritual/alignment metaphor"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Aura Finance's value proposition and access the application",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Open App (primary CTA)",
+          "Navigation to Pools/Lock/Docs",
+          "Partner protocol links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Open App button",
+            "action": "Navigate to main application interface"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Link to specific features or documentation"
+          },
+          {
+            "element": "Partner logos",
+            "action": "External links to integrated protocols"
+          }
+        ],
+        "informationArchitecture": "Single-page hero with key metrics displayed, minimal navigation options",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "DeFi's Yield & Liquidity Hub",
+        "subheadline": "The ultimate source of Liquidity and Yield in DeFi, powered by Balancer and voting incentives",
+        "ctas": [
+          {
+            "text": "Open App",
+            "style": "primary-button",
+            "placement": "center, below main headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Align your Chakras",
+            "context": "Above main headline",
+            "purpose": "Brand messaging, metaphorical alignment of incentives"
+          }
+        ],
+        "tone": "professional-technical with spiritual/wellness metaphor",
+        "dataFormatting": [
+          "$42.13m",
+          "67.18%",
+          "$87.48m"
+        ],
+        "trustSignals": [
+          "Partnership with Balancer (mentioned in copy)",
+          "Multiple integrated protocols shown (Lido, Polygon, LayerZero, Pendle)",
+          "Specific metrics displayed (TVL, share percentage, incentives distributed)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aura-finance-home-2-lock.png",
+      "label": "Lock",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#1e1b4b",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Medium-large bold sans-serif (Transform your BAL section)",
+          "bodyStyle": "Small to medium sans-serif, light gray for labels and descriptions",
+          "dataStyle": "Large bold numbers for APY percentages and TVL figures"
+        },
+        "components": [
+          {
+            "type": "Warning Banners",
+            "description": "Two stacked alert boxes with orange icons",
+            "position": "top below nav",
+            "notable": "Gnossis subgraph issue and general risk disclaimer with 'Learn more' link"
+          },
+          {
+            "type": "Featured Card",
+            "description": "Large purple gradient card promoting BAL transformation",
+            "position": "center-top",
+            "notable": "Contains 4 APY metrics and prominent 'Stake auraBAL' CTA button"
+          },
+          {
+            "type": "Filter Bar",
+            "description": "Horizontal filter controls with tags and dropdowns",
+            "position": "below featured card",
+            "notable": "Multiple filter options: All/v3/New/Deep/Points, Pool Type, Token symbol, Min TVL"
+          },
+          {
+            "type": "Data Table",
+            "description": "Multi-row table showing pools with token pairs, APY, TVL, and deposited amounts",
+            "position": "bottom",
+            "notable": "Token pair icons shown left, expandable rows, '-' symbol for empty values"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Alerts → Featured promo card → Filter controls → Data table",
+        "innovativeElements": [
+          "Multi-token pool visualization with overlapping circular icons",
+          "Blend of protocol logos (WETH, AURA, weETH, iETH, etc.) for pool composition",
+          "Projected APY indicators ('proj. 8.45%') showing forecast vs actual"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse available liquidity pools, compare APYs, and select a pool to stake",
+        "entryPoints": [
+          "From landing page via 'Open App'",
+          "Direct navigation to Lock tab"
+        ],
+        "exitPoints": [
+          "Stake auraBAL button",
+          "Click on individual pool rows to detail view",
+          "Connect Wallet button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter tags (All/v3/New/Deep/Points)",
+            "action": "Filter pools by category or version"
+          },
+          {
+            "element": "Pool Type dropdown",
+            "action": "Sort or filter by pool type"
+          },
+          {
+            "element": "Token symbol search",
+            "action": "Search pools by token name"
+          },
+          {
+            "element": "Min TVL filter",
+            "action": "Filter by minimum total value locked threshold"
+          },
+          {
+            "element": "Pool rows",
+            "action": "Expand or navigate to pool detail page"
+          },
+          {
+            "element": "Stake auraBAL button",
+            "action": "Initiate staking transaction"
+          }
+        ],
+        "informationArchitecture": "Alert zone → Promotional section → Filterable data table with contextual actions",
+        "frictionPoints": [
+          "Multiple warning banners take up significant screen real estate",
+          "Gnossis subgraph issue warning may cause trust hesitation",
+          "'-' symbols in Deposited column unclear if user has no deposits yet"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Transform your BAL",
+        "subheadline": "Convert idle BAL and 80BAL20WETH into auraBAL",
+        "ctas": [
+          {
+            "text": "Stake auraBAL",
+            "style": "primary-button",
+            "placement": "right side of featured card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "There are some issues with the Gnosis subgraph - rewards and data may be show incorrectly while the issue is being fixed.",
+            "context": "Top warning banner",
+            "purpose": "Transparency about data reliability issues"
+          },
+          {
+            "text": "Aura uses novel technology and using it involves a variety of risks. You understand and agree to assume full responsibility for all of the risks of accessing and using the Interface to interact with the Protocol.",
+            "context": "Second warning banner",
+            "purpose": "Risk disclosure and liability waiver"
+          },
+          {
+            "text": "Min APR",
+            "context": "Filter bar label",
+            "purpose": "Indicates minimum annual percentage rate filter"
+          },
+          {
+            "text": "Show Inactive",
+            "context": "Toggle in filter bar",
+            "purpose": "Option to display inactive pools"
+          },
+          {
+            "text": "proj. 8.45%",
+            "context": "Next to vAPR column",
+            "purpose": "Indicates projected APY vs actual"
+          }
+        ],
+        "tone": "professional-technical with transparency-focused risk communication",
+        "dataFormatting": [
+          "8.49% (vAPR with projection)",
+          "$411.18k (TVL in thousands)",
+          "50% token split display",
+          "27.12%, 30.00%, 26.35%, 20.88% (APY percentages)"
+        ],
+        "trustSignals": [
+          "Explicit risk disclosure and user responsibility statement",
+          "Transparent about known issues (Gnossis subgraph)",
+          "Real TVL figures displayed ($411.18k, $141.63k, $2.59)",
+          "Multiple integrated protocols shown in pool compositions",
+          "Projected APY transparency"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "There are some issues with the Gnosis subgraph - rewards and data may be show incorrectly while the issue is being fixed."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aura-finance-home-3-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#7c3aed",
+          "#1e1b4b",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif with emoji icon (Welcome heading)",
+          "bodyStyle": "Medium sans-serif for body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Left Sidebar Navigation",
+            "description": "Vertical menu with language selector, collapsible sections, and social links",
+            "position": "left",
+            "notable": "Hierarchical organization with sections for About, Governance, Developers, Links"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Primary content viewing pane with illustrated banner",
+            "position": "center-right",
+            "notable": "Large illustrated scene with character in purple environment"
+          },
+          {
+            "type": "Cookie Consent Banner",
+            "description": "Bottom-right overlay with cookie policy and accept/reject buttons",
+            "position": "bottom-right",
+            "notable": "Dark background with purple CTA button"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Top-right search input with keyboard shortcuts",
+            "position": "top-right",
+            "notable": "Shows ⌘K keyboard shortcut hint"
+          },
+          {
+            "type": "Copy Button",
+            "description": "Icon button with dropdown in top-right",
+            "position": "top-right near search",
+            "notable": "Suggests content copying functionality"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar navigation → Main content headline → Illustration → CTAs → Cookie banner overlay",
+        "innovativeElements": [
+          "Illustrated welcome scene with character and neon chakra symbols",
+          "Collapsible sidebar with nested menu structure",
+          "Illustrated onboarding narrative approach"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Understand what Aura is and begin learning journey; accept terms",
+        "entryPoints": [
+          "First-time visitor to docs/help section",
+          "Landing page navigation to docs"
+        ],
+        "exitPoints": [
+          "Next button to 'What is Aura?' content",
+          "Sidebar navigation to other sections",
+          "Cookie consent acceptance",
+          "Search functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Language selector dropdown",
+            "action": "Change interface language"
+          },
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Next button (What is Aura?)",
+            "action": "Progress to next onboarding step"
+          },
+          {
+            "element": "Social links (Twitter, Discord, Forum)",
+            "action": "External navigation to social/community"
+          },
+          {
+            "element": "Accept/Reject cookie buttons",
+            "action": "Consent or reject cookie tracking"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-text search of documentation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sidebar navigation with main content area; cookie overlay modal; search accessibility",
+        "frictionPoints": [
+          "Cookie banner appears at bottom, may be slightly intrusive but dismissible",
+          "User must accept/reject cookies before proceeding",
+          "Illustrated section doesn't provide immediate functional value, more narrative-focused"
+        ],
+        "progressIndicators": [
+          "'Next' button indicates progression through onboarding sequence",
+          "'Last updated 1 year ago' timestamp suggests documentation freshness"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome",
+        "subheadline": "It is time to align your chakras",
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "bottom of illustrated section, leading to 'What is Aura?' page"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie consent banner, bottom-right"
+          },
+          {
+            "text": "Reject",
+            "style": "secondary-button",
+            "placement": "cookie consent banner, bottom-right"
+          },
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "top-right corner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Click below to begin your journey to enlightenment:",
+            "context": "Below illustration",
+            "purpose": "Guides user toward next action with metaphorical language"
+          },
+          {
+            "text": "This site uses cookies to deliver its service and to analyze traffic. By browsing this site, you accept the",
+            "context": "Cookie banner",
+            "purpose": "Explains purpose of cookies and obtains consent"
+          },
+          {
+            "text": "privacy policy",
+            "context": "Cookie banner link",
+            "purpose": "Links to detailed privacy information"
+          },
+          {
+            "text": "What is Aura?",
+            "context": "Next button label within navigation flow",
+            "purpose": "Sets expectation for next page content"
+          },
+          {
+            "text": "Last updated 1 year ago",
+            "context": "Bottom of page",
+            "purpose": "Transparency about documentation freshness"
+          }
+        ],
+        "tone": "friendly-casual with spiritual/wellness metaphor throughout",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy policy link provided in cookie banner",
+          "Clear disclosure about cookie usage",
+          "Documentation timestamp shows maintenance"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

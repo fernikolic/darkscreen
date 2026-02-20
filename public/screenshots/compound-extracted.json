@@ -1,0 +1,2627 @@
+{
+  "slug": "compound",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:23:58.302Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 20,
+  "screens": [
+    {
+      "image": "/screenshots/compound-home-4-app.png",
+      "label": "App",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D395",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text on dark background",
+          "bodyStyle": "Regular sans-serif, gray text for secondary information",
+          "dataStyle": "Large bold numbers in white, prefixed with $ symbol"
+        },
+        "components": [
+          {
+            "type": "Modal Dialog",
+            "description": "Centered white modal with wallet connection options",
+            "position": "Center overlay",
+            "notable": "Clean list of 5 wallet providers with right-arrow CTAs"
+          },
+          {
+            "type": "Card Grid",
+            "description": "Supply and Borrow balance cards visible behind modal",
+            "position": "Background",
+            "notable": "Shows $0 balances in green accent color"
+          },
+          {
+            "type": "Table",
+            "description": "Supply Markets table with Asset, APY, Wallet, Liquidity columns",
+            "position": "Lower background",
+            "notable": "Dark theme with truncated rows visible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal dominates with Compound logo centered and wallet options in clear rows",
+        "innovativeElements": [
+          "Wallet provider icons with brand recognition",
+          "Green accent color for crypto-native feel"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Connect wallet to access Compound protocol features",
+        "entryPoints": [
+          "User lands on dashboard without connected wallet"
+        ],
+        "exitPoints": [
+          "Select wallet option to connect",
+          "Close modal with X button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Metamask option",
+            "action": "Initiates MetaMask wallet connection flow"
+          },
+          {
+            "element": "Ledger option",
+            "action": "Initiates Ledger wallet connection flow"
+          },
+          {
+            "element": "Wallet Connect option",
+            "action": "Opens QR code for mobile wallet connection"
+          },
+          {
+            "element": "Coinbase Wallet option",
+            "action": "Initiates Coinbase wallet connection"
+          },
+          {
+            "element": "Tally option",
+            "action": "Initiates Tally wallet connection"
+          },
+          {
+            "element": "Close X button",
+            "action": "Dismisses modal"
+          }
+        ],
+        "informationArchitecture": "Hierarchical list of wallet options with brand logos and directional arrows",
+        "frictionPoints": [
+          "Modal blocks access to platform features",
+          "Requires choosing wallet provider before proceeding"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect Wallet",
+        "subheadline": "To start using Compound",
+        "ctas": [
+          {
+            "text": "→ (arrow on each wallet option)",
+            "style": "text-link",
+            "placement": "Right side of each wallet row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By connecting, I accept Compound's Terms of Service",
+            "context": "Bottom of modal",
+            "purpose": "Legal consent confirmation with linked terms"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Recognized wallet providers (MetaMask, Ledger, Coinbase)",
+          "Terms of Service link"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-5-protocol-security.png",
+      "label": "Protocol Security",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#00D395",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif black text, large scale for h1/h2",
+          "bodyStyle": "Regular sans-serif gray text with moderate line-height",
+          "dataStyle": "Numeric list items (01, 02, 03) in light gray with bold black labels"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with Security section and nested menu items",
+            "position": "Left side",
+            "notable": "Green accent bar highlighting active 'Security' section"
+          },
+          {
+            "type": "Top Tab Navigation",
+            "description": "Horizontal tabs for cTokens, Controller, Governance, Price Feed, Security",
+            "position": "Top of main content",
+            "notable": "Security tab has green underline indicating active state"
+          },
+          {
+            "type": "Content Sections",
+            "description": "Introduction, Audits, and numbered audit report cards",
+            "position": "Main content area",
+            "notable": "Audit reports displayed as numbered items with right arrow navigation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large introduction headline leads to explanatory text, then audits section with numbered links",
+        "innovativeElements": [
+          "Audit firm names displayed as inline links in teal/cyan color"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review Compound protocol security audits and trust information",
+        "entryPoints": [
+          "Docs main navigation",
+          "Security tab in protocol documentation"
+        ],
+        "exitPoints": [
+          "Click audit report links to view details",
+          "Navigate to other tabs",
+          "Return to Markets/Governance"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Security sidebar item",
+            "action": "Highlights active section"
+          },
+          {
+            "element": "Audit report cards (01, 02, 03)",
+            "action": "Navigate to full audit report details"
+          },
+          {
+            "element": "Trail of Bits link",
+            "action": "Navigate to audit firm details"
+          },
+          {
+            "element": "OpenZeppelin link",
+            "action": "Navigate to audit firm details"
+          }
+        ],
+        "informationArchitecture": "Sidebar categorization with main content flowing: introduction > explanation > audits section > numbered audit items",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Security",
+        "subheadline": "Introduction",
+        "ctas": [
+          {
+            "text": "→ (arrow on audit items)",
+            "style": "text-link",
+            "placement": "Right side of each audit report"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The security of the Compound protocol is our highest priority; our development team, alongside third-party auditors and consultants, has invested considerable effort to create a protocol that we believe is safe and dependable.",
+            "context": "Introduction section",
+            "purpose": "Establish trust and explain security commitment"
+          },
+          {
+            "text": "We believe that size, visibility, and time are the true test for the security of a smart contract; please exercise caution, and make your own determination of security and suitability.",
+            "context": "Introduction section",
+            "purpose": "Provide realistic expectations about smart contract security"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "01 Trail of Bits - April 2019",
+          "02 OpenZeppelin - August 2019",
+          "03 Trail of Bits - August 2019"
+        ],
+        "trustSignals": [
+          "Third-party auditors (Trail of Bits, OpenZeppelin)",
+          "Multiple audits over time",
+          "Open-source codebase",
+          "Public verifiability",
+          "Bug bounty program"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-6-documentation.png",
+      "label": "Documentation",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#00D395",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif black text, large scale h1",
+          "bodyStyle": "Regular sans-serif gray text with good readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with Getting Started section and nested items",
+            "position": "Left side",
+            "notable": "Green accent bar on active 'Getting Started' section"
+          },
+          {
+            "type": "Top Tab Navigation",
+            "description": "Horizontal tabs for cTokens, Controller, Governance, Price Feed, Security",
+            "position": "Top of main content",
+            "notable": "Consistent with security docs page"
+          },
+          {
+            "type": "Alert Banner",
+            "description": "Notification about Compound III availability with CTA button",
+            "position": "Main content area",
+            "notable": "Green button with rounded corners, prominent placement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline followed by introductory copy, alert banner with CTA, then explanatory text with inline links",
+        "innovativeElements": [
+          "Version migration alert with direct link to v3 documentation"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Compound v2 protocol with awareness of v3 availability",
+        "entryPoints": [
+          "Docs main navigation",
+          "Getting Started tab"
+        ],
+        "exitPoints": [
+          "Click 'Compound III Documentation' button",
+          "Navigate to other tabs",
+          "Click inline links to Whitepaper or open-source repos"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Compound III Documentation button",
+            "action": "Navigate to v3 documentation"
+          },
+          {
+            "element": "Compound Whitepaper link",
+            "action": "Navigate to whitepaper resource"
+          },
+          {
+            "element": "open-source link (codebase)",
+            "action": "Navigate to GitHub repository"
+          },
+          {
+            "element": "open-source link (app interface)",
+            "action": "Navigate to frontend repository"
+          },
+          {
+            "element": "Discord server link",
+            "action": "Navigate to Discord community"
+          }
+        ],
+        "informationArchitecture": "Sidebar categorization with main content: introduction headline > migration alert > explanatory paragraphs > guides section",
+        "frictionPoints": [
+          "V2 documentation may confuse users seeking current version"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Introduction to Compound v2",
+        "subheadline": "Getting Started",
+        "ctas": [
+          {
+            "text": "Compound III Documentation",
+            "style": "primary-button",
+            "placement": "Center of alert banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Compound III is now live, you're currently viewing Compound v2 documentation.",
+            "context": "Alert banner before main content",
+            "purpose": "Inform users about version status and provide migration path"
+          },
+          {
+            "text": "The Compound protocol is based on the Compound Whitepaper (2019); the codebase is open-source, and maintained by the community.",
+            "context": "Introduction section",
+            "purpose": "Establish protocol origins and community ownership"
+          },
+          {
+            "text": "The app.compound.finance interface is open-source, and maintained by the community.",
+            "context": "Introduction section",
+            "purpose": "Establish transparency of the interface"
+          },
+          {
+            "text": "Please join the #development room in the Compound community Discord server; Compound Labs and members of the community look forward to helping you build an application on top of Compound. Your questions help us improve, so please don't hesitate to ask if you can't find what you are looking for here.",
+            "context": "Introduction section",
+            "purpose": "Encourage community engagement and provide support resources"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open-source codebase",
+          "Community-maintained",
+          "Whitepaper published 2019",
+          "Active Discord community"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-7-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main with overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#2D3748",
+          "#10B981"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px, dark gray",
+          "bodyStyle": "Regular sans-serif, 14px, medium gray",
+          "dataStyle": "Monospace or tabular for vote counts and addresses"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, section links, and wallet connection",
+            "position": "Top fixed",
+            "notable": "Icon+text pairing for clarity, 'Connect wallet' prominent CTA"
+          },
+          {
+            "type": "Proposal list",
+            "description": "Stacked proposal cards with status badges, vote progress bars, vote counts",
+            "position": "Main content area",
+            "notable": "Color-coded status badges (ACTIVE=purple, EXECUTED=teal), horizontal bar charts for votes"
+          },
+          {
+            "type": "Cookie consent banner",
+            "description": "Dark overlay banner at bottom with privacy notice and action buttons",
+            "position": "Bottom fixed overlay",
+            "notable": "Low-friction design with 'Accept' button and link to Privacy Policy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Proposal titles dominate, status and dates secondary, vote data tertiary with visual bars",
+        "innovativeElements": [
+          "Horizontal progress bars for vote visualization (green for support)",
+          "Color-coded status badges with subtle typography distinction"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with cookie overlay",
+        "userIntent": "Browse active and executed governance proposals and voting activity",
+        "entryPoints": [
+          "Direct navigation to Proposals tab",
+          "Home page navigation"
+        ],
+        "exitPoints": [
+          "Click on proposal title",
+          "+ New proposal button",
+          "Connect wallet for interaction",
+          "Accept/dismiss cookie banner"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Proposal title link",
+            "action": "Navigate to proposal detail view"
+          },
+          {
+            "element": "+ New proposal button",
+            "action": "Open proposal creation form"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Launch wallet connection modal"
+          },
+          {
+            "element": "Accept button",
+            "action": "Accept cookies and dismiss banner"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Navigate to privacy policy document"
+          }
+        ],
+        "informationArchitecture": "List view with horizontal scrolling market cards, proposals organized by status, metadata displayed inline",
+        "frictionPoints": [
+          "Cookie banner obscures bottom content",
+          "Truncated proposal titles may require reading full text"
+        ],
+        "progressIndicators": [
+          "ACTIVE/EXECUTED status badges",
+          "Percentage votes shown (476.79K • 0 • 0)"
+        ]
+      },
+      "copy": {
+        "headline": "Proposals",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "+ New proposal",
+            "style": "primary-button",
+            "placement": "Top right of proposals section"
+          },
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Cookie banner bottom right"
+          },
+          {
+            "text": "Privacy Policy",
+            "style": "text-link",
+            "placement": "Cookie banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We value your privacy.",
+            "context": "Cookie banner headline",
+            "purpose": "Establish trust"
+          },
+          {
+            "text": "We use cookies to improve user experience. We want to understand how our website is used.",
+            "context": "Cookie banner body",
+            "purpose": "Explain cookie usage"
+          },
+          {
+            "text": "Compound Governor",
+            "context": "Proposal creator field",
+            "purpose": "Identify proposal authority"
+          },
+          {
+            "text": "9 addresses",
+            "context": "Participant count",
+            "purpose": "Show voting participation level"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$476.79K vote amounts",
+          "0 • 0 abstain/against votes",
+          "Feb 12th, 2026 dates",
+          "9 addresses, 8 addresses participant counts"
+        ],
+        "trustSignals": [
+          "Clear proposal status (ACTIVE/EXECUTED)",
+          "Transparent vote counts and participating addresses",
+          "Named governance role (Compound Governor)",
+          "Privacy Policy linked in cookie notice"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-8-discord.png",
+      "label": "discord",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "centered-modal",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D3748",
+          "#FFFFFF",
+          "#10B981",
+          "#6B7EFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 20px, white",
+          "bodyStyle": "Regular sans-serif, 14px, light gray",
+          "dataStyle": "Badge-style with dot indicators for online/members status"
+        },
+        "components": [
+          {
+            "type": "Modal dialog",
+            "description": "Centered card with invitation header, form fields, and action buttons",
+            "position": "Center screen overlay",
+            "notable": "Compound logo at top, animated background with protocol icons on right side"
+          },
+          {
+            "type": "Form input field",
+            "description": "Text input for display name with placeholder and helper text",
+            "position": "Mid-modal",
+            "notable": "Blue border on focus, helper text in small secondary color"
+          },
+          {
+            "type": "Dropdown selectors",
+            "description": "Three dropdown fields for Date of Birth (Month, Day, Year)",
+            "position": "Below display name",
+            "notable": "Simple outline style with light gray labels"
+          },
+          {
+            "type": "Checkbox",
+            "description": "Terms agreement checkbox with linked text",
+            "position": "Above primary button",
+            "notable": "Blue hyperlinks for Terms of Service and Privacy Policy"
+          },
+          {
+            "type": "Protocol icons",
+            "description": "Circular gradient icons on right showing Ethereum, Bitcoin, and Aave symbols",
+            "position": "Right side background",
+            "notable": "Teal-to-purple gradient rings, decorative animation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Invitation text largest, form fields secondary, legal text smallest",
+        "innovativeElements": [
+          "Animated protocol icon rings in background",
+          "Conditional form with dropdowns for age verification",
+          "Discord-style onboarding modal adapted for crypto context"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create Discord account for Compound community after receiving invite",
+        "entryPoints": [
+          "Discord invite link from Adam B.",
+          "Community signup flow"
+        ],
+        "exitPoints": [
+          "Create Account button",
+          "Log in link for existing users"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Display Name input",
+            "action": "Enter custom username for community"
+          },
+          {
+            "element": "Month/Day/Year dropdowns",
+            "action": "Set date of birth for age verification"
+          },
+          {
+            "element": "Terms checkbox",
+            "action": "Agree to Discord Terms of Service and Privacy Policy"
+          },
+          {
+            "element": "Create Account button",
+            "action": "Submit form and create Discord account"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login for existing account holders"
+          }
+        ],
+        "informationArchitecture": "Linear form with required fields clearly labeled, legal agreement checkbox before submission",
+        "frictionPoints": [
+          "Three separate dropdowns for date entry (could be single date picker)",
+          "Checkbox requires reading and accepting two external documents",
+          "Small text for 'Already have an account?' login link"
+        ],
+        "progressIndicators": [
+          "Online status (706 Online, 7,429 Members shown in header)"
+        ]
+      },
+      "copy": {
+        "headline": "Adam B. (ajb413) invited you to join Compound",
+        "subheadline": "706 Online • 7,429 Members",
+        "ctas": [
+          {
+            "text": "Create Account",
+            "style": "primary-button",
+            "placement": "Modal center bottom"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "Modal bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Display Name",
+            "context": "Form field label",
+            "purpose": "Explain field purpose"
+          },
+          {
+            "text": "What should everyone call you?",
+            "context": "Input placeholder",
+            "purpose": "Provide example"
+          },
+          {
+            "text": "This is how others see you. You can use special characters and emoji.",
+            "context": "Helper text below input",
+            "purpose": "Set expectations for username format"
+          },
+          {
+            "text": "Date of Birth",
+            "context": "Form section header",
+            "purpose": "Introduce date fields"
+          },
+          {
+            "text": "I have read and agree to Discord's Terms of Service and Privacy Policy.",
+            "context": "Checkbox label",
+            "purpose": "Legal agreement requirement"
+          },
+          {
+            "text": "Already have an account?",
+            "context": "Bottom text",
+            "purpose": "Offer alternative path"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "706 Online status indicator",
+          "7,429 Members count"
+        ],
+        "trustSignals": [
+          "Named inviter (Adam B.)",
+          "Transparent member count and online status",
+          "Discord's Terms of Service and Privacy Policy linked",
+          "Community branding with Compound logo"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-9-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#D946EF",
+          "#06B6D4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 72px, mixed purple and white colors",
+          "bodyStyle": "Regular sans-serif, 28px, white",
+          "dataStyle": "Large typography for currency amounts with color coding"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, section links (Markets, Governance, Docs), and App button",
+            "position": "Top fixed",
+            "notable": "'App' button with green outline, minimal navigation links"
+          },
+          {
+            "type": "Hero headline",
+            "description": "Large typography mixing color (purple dollar amount + white text)",
+            "position": "Upper center",
+            "notable": "Split-color headline with metrics formatting ($603.5M in purple, 'of borrowing backed by' in white)"
+          },
+          {
+            "type": "Market cards grid",
+            "description": "Horizontal scrolling cards showing token pairs, their collateral/supply data with progress bars",
+            "position": "Lower center",
+            "notable": "Each card has icon pair, green/purple bars for different metrics, Market/App tabs per card"
+          },
+          {
+            "type": "Decorative background",
+            "description": "Animated background with geometric lines and dots",
+            "position": "Full screen behind content",
+            "notable": "Subtle gradient lines in teal and purple, scattered dot pattern"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large hero metrics dominate, market cards secondary, navigation minimal",
+        "innovativeElements": [
+          "Dual-color headline with green/purple color separation",
+          "Horizontal scrolling market card layout instead of vertical grid",
+          "Market/App toggle buttons on individual cards for quick access"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View key Compound metrics and market overview at a glance",
+        "entryPoints": [
+          "Direct visit to Compound homepage",
+          "App navigation"
+        ],
+        "exitPoints": [
+          "Click 'App' button in nav or on market cards",
+          "Click 'Markets', 'Governance', or 'Docs' nav links",
+          "Scroll market cards left/right"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App button (top right)",
+            "action": "Navigate to main application"
+          },
+          {
+            "element": "Markets link",
+            "action": "Navigate to markets section"
+          },
+          {
+            "element": "Governance link",
+            "action": "Navigate to governance section"
+          },
+          {
+            "element": "Docs link",
+            "action": "Navigate to documentation"
+          },
+          {
+            "element": "Market cards",
+            "action": "Scroll horizontally through available markets"
+          },
+          {
+            "element": "Market/App tabs on cards",
+            "action": "Toggle between market and app views for that asset"
+          }
+        ],
+        "informationArchitecture": "Headline metrics at top, market cards below in horizontally scrollable row, minimal navigation",
+        "frictionPoints": [
+          "Horizontal scrolling may not be obvious to all users",
+          "Market card tabs (Market/App) could be confused with navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,538,780 of borrowing backed by $1,193,599,824 of collateral across 28 markets",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Markets",
+            "style": "text-link",
+            "placement": "Top navigation"
+          },
+          {
+            "text": "Governance",
+            "style": "text-link",
+            "placement": "Top navigation"
+          },
+          {
+            "text": "Docs",
+            "style": "text-link",
+            "placement": "Top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Market",
+            "context": "Card tab",
+            "purpose": "Toggle to market data view"
+          },
+          {
+            "text": "App",
+            "context": "Card tab",
+            "purpose": "Toggle to application view"
+          },
+          {
+            "text": "USDC | Ethereum",
+            "context": "Market card header",
+            "purpose": "Identify token and blockchain"
+          },
+          {
+            "text": "Ethereum",
+            "context": "Blockchain indicator",
+            "purpose": "Show deployment chain"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$603,538,780 total borrow (purple)",
+          "$1,193,599,824 total collateral (cyan/green)",
+          "28 markets",
+          "$137.84M / $14.79M (collateral/borrow split per market)",
+          "$510.86M / $268.05M (market-specific metrics)"
+        ],
+        "trustSignals": [
+          "Large transparent TVL metrics ($1.1B+ collateral)",
+          "Specific numbers across 28 markets",
+          "Clear breakdown of collateral vs. borrow amounts",
+          "Named tokens (USDC, USDT, ETH) with blockchain attribution"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D0F12",
+          "#00D4AA",
+          "#8B5CF6",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, mixed color (purple and white), large scale (80px+), high contrast against dark background",
+          "bodyStyle": "Regular sans-serif, white/light gray, medium weight",
+          "dataStyle": "Bold sans-serif with color coding: purple for borrowing amounts, cyan/teal for collateral amounts"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal header with logo, nav items (Markets, Governance, Docs), and App button",
+            "position": "Top",
+            "notable": "Minimal design with neon green accent on App button"
+          },
+          {
+            "type": "Hero Statistics",
+            "description": "Large financial metrics displayed prominently",
+            "position": "Center-top",
+            "notable": "Uses color differentiation (purple vs cyan) to distinguish metric types"
+          },
+          {
+            "type": "Market Cards",
+            "description": "Horizontal scrollable cards showing individual markets with dual progress bars",
+            "position": "Center-bottom",
+            "notable": "Each card shows App vs Market breakdown with asset icons and token symbols"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero metrics dominate upper half, cards are secondary focal points in lower half, background starfield adds depth",
+        "innovativeElements": [
+          "Animated starfield background",
+          "Dual-colored typography emphasizing metric relationships",
+          "Color-coded progress bars (cyan for app, purple for protocol)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Compound's protocol scale and market coverage at a glance",
+        "entryPoints": [
+          "Direct to compound.finance home",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Click Markets tab",
+          "Click App button",
+          "Click Governance tab",
+          "Click Docs link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App button",
+            "action": "Navigate to application dashboard"
+          },
+          {
+            "element": "Markets cards",
+            "action": "Likely navigate to Markets page with filtered view"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Switch between Markets, Governance, Docs sections"
+          }
+        ],
+        "informationArchitecture": "Hero metrics first (protocol scale), then market-level breakdown (distribution across chains and assets)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,538,840 of borrowing backed by $1,193,589,024 of collateral across 28 markets",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "primary-button",
+            "placement": "Top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Markets",
+            "context": "Navigation menu",
+            "purpose": "Direct user to markets view"
+          },
+          {
+            "text": "Governance",
+            "context": "Navigation menu",
+            "purpose": "Direct user to governance dashboard"
+          },
+          {
+            "text": "Docs",
+            "context": "Navigation menu",
+            "purpose": "Direct user to documentation"
+          }
+        ],
+        "tone": "professional-technical, data-driven",
+        "dataFormatting": [
+          "$603,538,840",
+          "$1,193,589,024",
+          "28 markets",
+          "$510.86M / $268.05M",
+          "$271.04M / $133.75M"
+        ],
+        "trustSignals": [
+          "Large TVL amounts ($1.1B+ collateral)",
+          "Multi-market presence (28 markets)",
+          "Named asset backing"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-2-docs.png",
+      "label": "Docs",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#00D4AA",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/charcoal, section headers in medium size (~24px)",
+          "bodyStyle": "Regular sans-serif, gray-blue (#5A7C8C), readable line-height, medium font size",
+          "dataStyle": "Monospace for code snippets, inline cyan highlighting for technical terms"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical nav menu with collapsible sections (Introduction, Networks, Protocol Contracts, Developer Resources, Security)",
+            "position": "Left",
+            "notable": "Active state highlighted with cyan accent bar, expandable sections"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Documentation search input",
+            "position": "Top-right",
+            "notable": "Light background with placeholder text"
+          },
+          {
+            "type": "Top Tab Navigation",
+            "description": "Horizontal tabs for major documentation sections (Compound III, Interest Rates, Collateral & Borrowing, etc.)",
+            "position": "Top",
+            "notable": "Sticky navigation, visual separation with light border"
+          },
+          {
+            "type": "Main Content",
+            "description": "Long-form documentation with headings, body text, inline code, and links",
+            "position": "Center-right",
+            "notable": "Rich text formatting with color-coded links (cyan for action links)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides section structure, top tabs for major topics, main content flows top-to-bottom with clear heading hierarchy",
+        "innovativeElements": [
+          "Sticky tab navigation",
+          "Inline code highlighting",
+          "Contextual sidebar active states"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Compound III protocol specifications, deployment details, and technical integration points",
+        "entryPoints": [
+          "Click Docs from navigation",
+          "Direct documentation link",
+          "Search result from docs search"
+        ],
+        "exitPoints": [
+          "Click different section in sidebar",
+          "Click top tab",
+          "Click embedded links (Discord, Comet, docs.compound.finance/v2)",
+          "Use search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Top tabs",
+            "action": "Switch between documentation topics"
+          },
+          {
+            "element": "Search bar",
+            "action": "Full-text search documentation"
+          },
+          {
+            "element": "Embedded links",
+            "action": "Navigate to external resources (Discord, repositories, v2 docs)"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Protocol-level (Compound III) → Topic (Networks, Contracts) → Detailed explanation with code examples",
+        "frictionPoints": [
+          "No visible back/forward breadcrumb navigation",
+          "Search bar may not be immediately visible depending on scroll position"
+        ],
+        "progressIndicators": [
+          "Active tab highlight",
+          "Sidebar active state"
+        ]
+      },
+      "copy": {
+        "headline": "Compound III",
+        "subheadline": "Introduction",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "#development",
+            "context": "Inline documentation text",
+            "purpose": "Reference to Discord channel for questions"
+          },
+          {
+            "text": "Comet",
+            "context": "Inline documentation text",
+            "purpose": "Reference to contract repository"
+          },
+          {
+            "text": "Comet Interface ABI",
+            "context": "Inline documentation text",
+            "purpose": "Reference to technical resource"
+          }
+        ],
+        "tone": "educational-technical, developer-focused, helpful",
+        "dataFormatting": [
+          "EVM compatible protocol",
+          "Ethereum deployment",
+          "USDC base asset",
+          "yarn compile"
+        ],
+        "trustSignals": [
+          "Formal protocol documentation",
+          "Reference to Comet repository",
+          "Security section in sidebar",
+          "Developer Resources section"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-3-app.png",
+      "label": "App",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D0F12",
+          "#1A1F2E",
+          "#00D4AA",
+          "#8B5CF6",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, medium size (~16-18px), section labels in gray",
+          "bodyStyle": "Regular sans-serif, light gray, medium weight, monospace for numerical values",
+          "dataStyle": "Large bold numerals, color-coded (white for main value, gray for labels), token symbols in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "Top Navigation",
+            "description": "Horizontal tabs with icons: Dashboard, Markets, Extensions, Vote",
+            "position": "Top",
+            "notable": "Icon + text combination, clean separation with light border"
+          },
+          {
+            "type": "User Status Bar",
+            "description": "Shows connected wallet (USDC on Ethereum) and Connect Wallet button",
+            "position": "Top-right",
+            "notable": "Network selector with dropdown, neon green primary button"
+          },
+          {
+            "type": "Balance Display",
+            "description": "Large main balance with icon and denomination ($0.00)",
+            "position": "Top-left",
+            "notable": "Cyan accent for label, large typography emphasis"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Supply USDC / Borrow USDC buttons with icons",
+            "position": "Top-right of balance card",
+            "notable": "Ghost buttons with icons, secondary styling"
+          },
+          {
+            "type": "Collateral Asset List",
+            "description": "Left panel showing portfolio assets with balances and token icons",
+            "position": "Left-center",
+            "notable": "Token icons, symbol labels, protocol balance in gray"
+          },
+          {
+            "type": "Protocol Balance Card",
+            "description": "Shows protocol-level balance metrics",
+            "position": "Center-top",
+            "notable": "Monospace numbers, gray background panel"
+          },
+          {
+            "type": "USDC Wallet Balance Card",
+            "description": "Displays user's wallet USDC balance and APR metrics",
+            "position": "Right-center",
+            "notable": "Separated card with clear metric labels and values"
+          },
+          {
+            "type": "Position Summary Card",
+            "description": "Shows collateral value, liquidation point, borrow capacity, available to borrow",
+            "position": "Right-bottom",
+            "notable": "Key risk metrics clearly displayed with label/value pairs"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Balance at top-left is primary focal point, action buttons draw eye to supply/borrow, left panel supports asset context, right panels show detailed risk metrics",
+        "innovativeElements": [
+          "Split panel layout balancing portfolio and risk metrics",
+          "Token icon visual recognition system",
+          "APR display inline with balance"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View personal account position, manage collateral and borrowing, understand risk exposure",
+        "entryPoints": [
+          "Click App button from landing/docs",
+          "Direct navigation from logged-in state"
+        ],
+        "exitPoints": [
+          "Click Markets tab",
+          "Click Extensions tab",
+          "Click Vote tab",
+          "Click Supply/Borrow buttons",
+          "Click Connect Wallet (if disconnected)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Supply USDC button",
+            "action": "Open supply modal/form"
+          },
+          {
+            "element": "Borrow USDC button",
+            "action": "Open borrow modal/form"
+          },
+          {
+            "element": "Collateral assets list",
+            "action": "Likely expand details or open management modal for each asset"
+          },
+          {
+            "element": "Navigation tabs (Dashboard, Markets, Extensions, Vote)",
+            "action": "Navigate to different app sections"
+          },
+          {
+            "element": "Network selector",
+            "action": "Switch connected network"
+          }
+        ],
+        "informationArchitecture": "Portfolio health (balance) → Asset positions (left) → Protocol context (center) → Risk metrics (right). Left-to-right flow from assets to risk assessment",
+        "frictionPoints": [
+          "Zero balances across all assets may discourage new users",
+          "Risk metrics appear only after some collateral/borrowing",
+          "Position Summary assumes user has active position"
+        ],
+        "progressIndicators": [
+          "Active tab highlight (Dashboard)",
+          "Connected wallet indicator"
+        ]
+      },
+      "copy": {
+        "headline": "Balance",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Supply USDC",
+            "style": "ghost-button",
+            "placement": "Top-right of balance card"
+          },
+          {
+            "text": "Borrow USDC",
+            "style": "ghost-button",
+            "placement": "Top-right of balance card"
+          },
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Collateral Asset",
+            "context": "Left panel header",
+            "purpose": "Label for asset portfolio section"
+          },
+          {
+            "text": "Protocol Balance",
+            "context": "Center card header",
+            "purpose": "Label for protocol-level metrics"
+          },
+          {
+            "text": "USDC Wallet Balance",
+            "context": "Right card header",
+            "purpose": "Label for external wallet balance"
+          },
+          {
+            "text": "Net Borrow APR / Net Supply APR",
+            "context": "Right card, below balance",
+            "purpose": "Show yield/cost metrics"
+          },
+          {
+            "text": "Position Summary",
+            "context": "Right card header",
+            "purpose": "Introduce risk metrics section"
+          }
+        ],
+        "tone": "professional-technical, neutral-informative",
+        "dataFormatting": [
+          "0.0000 (large balance display)",
+          "$0.00 (USD equivalent)",
+          "3.31% (APR percentages)",
+          "0.0000 USDC (metric values)",
+          "Chainlink, Coinbase Wrapped BTC, Compound, Ether, KelpDAO Restaked ETH, etc. (asset names with symbols)"
+        ],
+        "trustSignals": [
+          "Clear risk metrics (Liquidation Point, Borrow Capacity)",
+          "Real-time APR display",
+          "Multi-asset support (6+ assets shown)",
+          "Wallet connection indication"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "0.0000 (empty state for all balances shown)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-10-explore-page.png",
+      "label": "explore page",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#00d4aa",
+          "#8b5cf6",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, mixed color (purple/cyan accents on key numbers)",
+          "bodyStyle": "Medium weight gray text for supporting information",
+          "dataStyle": "Large bold numbers with color coding (cyan for collateral, purple for borrowing, white for totals)"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top bar with logo, nav links (Markets, Governance, Docs), and App CTA button",
+            "position": "top",
+            "notable": "Minimal design with neon green App button as primary CTA"
+          },
+          {
+            "type": "hero-stat-section",
+            "description": "Large typography displaying total borrowing and collateral with token amounts",
+            "position": "center-upper",
+            "notable": "Color-coded numbers (purple for borrowed, cyan for collateral) create visual hierarchy"
+          },
+          {
+            "type": "market-cards",
+            "description": "Horizontal scrolling cards showing individual market data (USDC, USDT, ETH, etc.) with colored bars",
+            "position": "center-lower",
+            "notable": "Dual-bar charts per card (app vs market values) with cyan/purple color distinction"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye flows from hero stats (large purple/cyan numbers) down to individual market cards; card icons and color-coding guide secondary exploration",
+        "innovativeElements": [
+          "Animated background with subtle dot/line particles",
+          "Dual-metric bar visualization within compact card format"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, data-browse",
+        "userIntent": "Understand Compound's total market size, explore collateral vs borrowing dynamics, and navigate to specific markets",
+        "entryPoints": [
+          "Direct URL to explore page",
+          "Markets navigation link from header"
+        ],
+        "exitPoints": [
+          "Click individual market card to drill down",
+          "Navigate to Markets/Governance/Docs",
+          "Click App button to enter application"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market cards",
+            "action": "Horizontally scrollable, tap to view detailed market data"
+          },
+          {
+            "element": "App button",
+            "action": "Navigate to connected application interface"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: macro overview (total supply) → ecosystem summary (borrowing/collateral) → individual market breakdown",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button with neon border",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$603,538,979 (borrowing total)",
+          "$1,193,590,166 (collateral total)",
+          "28 markets",
+          "$137.84M | $510.86M (market-specific values)"
+        ],
+        "trustSignals": [
+          "Total borrowing backed by collateral display",
+          "Multi-market distribution (28 markets)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-home-11-governance-page.png",
+      "label": "governance page",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#2d3748",
+          "#5c68d9",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Medium-weight sans-serif in dark gray/black, hierarchical sizing",
+          "bodyStyle": "Regular weight gray text for secondary information",
+          "dataStyle": "Bold large numbers with light gray subtext (e.g., '18.77K' with '219.5k token holders')"
+        },
+        "components": [
+          {
+            "type": "sidebar",
+            "description": "Left-side navigation with Compound branding, about section, voting power CTA, and secondary links",
+            "position": "left",
+            "notable": "Dark card background with Connect wallet CTA as primary action"
+          },
+          {
+            "type": "stat-cards",
+            "description": "Three horizontal cards showing Delegates, Proposals, and Treasury metrics",
+            "position": "top-right",
+            "notable": "Light backgrounds with right-aligned chevrons indicating drill-down capability"
+          },
+          {
+            "type": "proposal-list",
+            "description": "Scrollable list of active proposals with status badges, voting stats, and vote counts",
+            "position": "center-right",
+            "notable": "Color-coded status badges (purple ACTIVE), green vote indicators, vote count display"
+          },
+          {
+            "type": "delegates-grid",
+            "description": "2x3 grid of delegate addresses/names with vote balances",
+            "position": "bottom",
+            "notable": "Circular avatar icons with COMP token amounts displayed right-aligned"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors navigation on left; main content flows top (summary stats) → middle (proposals) → bottom (delegates)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Review governance state, view active proposals, understand delegation landscape, and manage voting power",
+        "entryPoints": [
+          "Governance nav link from header",
+          "Direct governance URL"
+        ],
+        "exitPoints": [
+          "View all proposals link",
+          "Click delegate address to view details",
+          "Connect wallet to delegate/vote"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Initiate wallet connection to enable voting/delegation"
+          },
+          {
+            "element": "Proposal rows",
+            "action": "Click to view proposal details and vote"
+          },
+          {
+            "element": "Delegate cards",
+            "action": "Click to view delegate profile and voting history"
+          },
+          {
+            "element": "Stat card chevrons",
+            "action": "Navigate to detailed sections (Delegates, Proposals, Treasury)"
+          }
+        ],
+        "informationArchitecture": "Dashboard with persistent sidebar navigation; main content area segmented by governance function (proposals, delegates)",
+        "frictionPoints": [
+          "Wallet connection required before voting",
+          "Must understand delegation mechanics before participating"
+        ],
+        "progressIndicators": [
+          "ACTIVE status badge on proposals",
+          "Vote count displays on proposals"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Let's check your voting power",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "sidebar center"
+          },
+          {
+            "text": "View all proposals",
+            "style": "text-link",
+            "placement": "proposals section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Connect your wallet to see your voting power and start delegating",
+            "context": "Sidebar above Connect wallet button",
+            "purpose": "Explain wallet connection benefit"
+          },
+          {
+            "text": "219.5k token holders",
+            "context": "Below Delegates count (18.77K)",
+            "purpose": "Indicate participation scale"
+          },
+          {
+            "text": "Active proposals now",
+            "context": "Below Proposals count (494)",
+            "purpose": "Clarify temporal scope"
+          }
+        ],
+        "tone": "professional-technical, inviting",
+        "dataFormatting": [
+          "18.77K delegates",
+          "494 active proposals",
+          "$ 6.42M treasury",
+          "476.79K votes",
+          "ACTIVE (status badge)"
+        ],
+        "trustSignals": [
+          "Governance Working Group renewal shown",
+          "Multiple active proposals",
+          "Large delegate network (18.77K)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-swap-1-markets.png",
+      "label": "Markets",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#00d4aa",
+          "#8b5cf6",
+          "#ffffff",
+          "#64748b"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif in white for key metrics",
+          "bodyStyle": "Regular gray text for labels",
+          "dataStyle": "Large bold numbers in white/cyan/purple; smaller gray percentages; colored bars for visualization"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top navigation with logo, tabs (Dashboard, Markets, Extensions, Vote), and Connect Wallet button",
+            "position": "top",
+            "notable": "Mint green Connect Wallet button with border style; clear segmentation of app sections"
+          },
+          {
+            "type": "summary-stats",
+            "description": "Four large metric cards displaying Total Supply, Earning, Borrowing, and Collateral",
+            "position": "upper-left",
+            "notable": "Color-coded labels with icon indicators (cyan for earning, purple for borrowing)"
+          },
+          {
+            "type": "stacked-bar-chart",
+            "description": "Time-series chart (Jan 17 - Feb 15) with stacked bars showing earning (green) and borrowing (purple) with collateral backdrop (gray)",
+            "position": "center-upper",
+            "notable": "Dual-metric stacked visualization allows temporal trend analysis; date labels spaced for readability"
+          },
+          {
+            "type": "data-table",
+            "description": "Scrollable table with rows per market (Wrapped BTC, Lido Wrapped Staked ETH, Tether) and columns for metrics",
+            "position": "center-lower",
+            "notable": "Dual token icons per row; color-coded percentage changes; collateral asset icons displayed as row chips"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-level summary stats → temporal visualization → detailed market table; color coding (cyan/purple/gray) guides metric identification",
+        "innovativeElements": [
+          "Stacked bar chart combining three metrics across time",
+          "Collateral asset pills displayed inline in table rows"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard, data-browse",
+        "userIntent": "Monitor market performance, analyze earning/borrowing trends, and review individual market metrics",
+        "entryPoints": [
+          "Markets tab from header",
+          "Dashboard navigation"
+        ],
+        "exitPoints": [
+          "Extensions tab",
+          "Vote tab",
+          "Click market row for detailed breakdown",
+          "Connect Wallet for trading"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sort by dropdown",
+            "action": "Change primary sort metric (Utilization)"
+          },
+          {
+            "element": "Order dropdown",
+            "action": "Reverse sort direction (Ascending)"
+          },
+          {
+            "element": "Market rows",
+            "action": "Click to view detailed market data or initiate transaction"
+          }
+        ],
+        "informationArchitecture": "Summary metrics → temporal trends → filterable/sortable market table; logical progression from macro to micro analysis",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Sort/Order controls indicate data is sortable"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "ghost-button with green border",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Supply",
+            "context": "Label above $1.90B metric",
+            "purpose": "Identify metric type"
+          },
+          {
+            "text": "Earning | Borrowing | Collateral",
+            "context": "Labels above three summary metrics",
+            "purpose": "Categorize metrics with color coding"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.90B (total supply)",
+          "$837.22M (earning)",
+          "$589.55M (borrowing)",
+          "$1.06B (collateral)",
+          "11.63% | 0.13% | -0.98% (utilization, net earn APR, net borrow APR)",
+          "$8.82M | $1.03M | $1.22M (earning/borrowing/collateral per asset)"
+        ],
+        "trustSignals": [
+          "Large total supply ($1.90B)",
+          "Distributed across multiple assets",
+          "Detailed market metrics per asset"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-swap-5-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size for section titles (Market Overview)",
+          "bodyStyle": "Regular sans-serif, medium gray for secondary text",
+          "dataStyle": "Numeric values in light gray, labels in muted gray"
+        },
+        "components": [
+          {
+            "type": "card",
+            "description": "Total Supply card with top 3 markets list and volume metrics",
+            "position": "left side, upper-middle",
+            "notable": "Split layout showing two parallel metric cards"
+          },
+          {
+            "type": "card",
+            "description": "Total Borrow card mirroring Total Supply layout",
+            "position": "right side, upper-middle",
+            "notable": "Symmetric design reinforces comparison between supply/borrow"
+          },
+          {
+            "type": "data-table",
+            "description": "All Markets table with columns for Market, Total Supply, Supply APY, Total Borrow, Borrow APY",
+            "position": "full-width, bottom section",
+            "notable": "Skeleton loading state visible, indicates dynamic data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-level headline draws eye, two metric cards create secondary focus, detailed table below for deep dives",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View market-wide metrics and compare supply/borrow across different markets",
+        "entryPoints": [
+          "Markets nav link from header",
+          "Direct market overview access"
+        ],
+        "exitPoints": [
+          "Click into individual market details",
+          "Navigate to Governance or Docs tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Top 3 Markets sections",
+            "action": "Likely clickable to drill into market details"
+          },
+          {
+            "element": "All Markets table rows",
+            "action": "Expand or navigate to individual market page"
+          }
+        ],
+        "informationArchitecture": "Summary metrics at top (Total Supply/Borrow), followed by detailed market-by-market breakdown in table format",
+        "frictionPoints": [
+          "Skeleton loaders indicate data may not load instantly",
+          "No visible filters or search on markets table"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Market Overview",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Top 3 Markets",
+            "context": "Section header within Total Supply and Total Borrow cards",
+            "purpose": "Labels the subsection highlighting top performers"
+          },
+          {
+            "text": "24H Supply Volume",
+            "context": "Metric label in Total Supply card",
+            "purpose": "Contextualizes the 24-hour trading activity"
+          },
+          {
+            "text": "# of Suppliers",
+            "context": "Metric label in Total Supply card",
+            "purpose": "Shows market participation breadth"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Dollar amounts (e.g., supply/borrow volumes)",
+          "Numeric counts (suppliers, borrowers)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-staking-1-comp-distribution.png",
+      "label": "COMP Distribution",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084",
+          "#4F46E5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (COMP Distribution title)",
+          "bodyStyle": "Regular sans-serif, medium gray for secondary labels",
+          "dataStyle": "Large numeric values in white or green accent, APY values in light gray"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "COMP Distribution title with contract address and copy/link icons",
+            "position": "top, left-aligned",
+            "notable": "Displays blockchain contract address with easy copy functionality"
+          },
+          {
+            "type": "metric-grid",
+            "description": "Three key metrics: Daily Distribution (1,639), Total Distributed (4,500,491), Remaining (4,457)",
+            "position": "top right, horizontal layout",
+            "notable": "Large, prominent numbers with green accent line under Daily Distribution"
+          },
+          {
+            "type": "data-table",
+            "description": "Market Distribution table with columns: Enabled Markets, Daily Supply, Daily Borrow, Supply, APY, Borrow, APY",
+            "position": "full-width below header",
+            "notable": "Toggle switches (green circles) indicate active metrics, token icons in rows"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Contract info and title at top, key distribution metrics to right, detailed market table dominates lower section",
+        "innovativeElements": [
+          "Toggle switches for metric visibility",
+          "Token icons paired with market names",
+          "Green accent line under primary metric"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View COMP token distribution across markets and track daily/total allocation",
+        "entryPoints": [
+          "Staking section",
+          "COMP governance dashboard"
+        ],
+        "exitPoints": [
+          "Click individual markets for distribution details",
+          "Navigate to other governance sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Copy icon next to contract address",
+            "action": "Copy address to clipboard"
+          },
+          {
+            "element": "Toggle switches in table headers",
+            "action": "Show/hide metric columns"
+          },
+          {
+            "element": "Market rows with token icons",
+            "action": "Likely clickable to drill into market-specific distribution"
+          }
+        ],
+        "informationArchitecture": "Summary statistics header, followed by table of individual markets with filterable/toggleable columns",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Remaining count (4,457) shows distribution progress"
+        ]
+      },
+      "copy": {
+        "headline": "COMP Distribution",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Daily Distribution",
+            "context": "Metric label above 1,639 value",
+            "purpose": "Explains the daily emission rate"
+          },
+          {
+            "text": "Total Distributed",
+            "context": "Metric label above 4,500,491 value",
+            "purpose": "Shows cumulative COMP distributed"
+          },
+          {
+            "text": "Remaining",
+            "context": "Metric label above 4,457 value",
+            "purpose": "Shows remaining COMP in distribution pool"
+          },
+          {
+            "text": "Enabled Markets",
+            "context": "First column header in table",
+            "purpose": "Clarifies that listed markets are active in distribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Large numeric values (e.g., 1,639 COMP)",
+          "Market identifiers with chain names (e.g., Compound III ETH (Ronin))"
+        ],
+        "trustSignals": [
+          "Contract address displayed for transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-staking-2-vote-page.png",
+      "label": "vote page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#9945FF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large display text with mixed color highlighting",
+          "bodyStyle": "Medium sans-serif for labels within cards",
+          "dataStyle": "Large numeric values in green and purple, stacked with smaller values below"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Large headline stating borrowing backed by collateral with numerical highlights",
+            "position": "center, top 40% of screen",
+            "notable": "Purple and green color coding for different numbers, animated particle background"
+          },
+          {
+            "type": "card-grid",
+            "description": "Horizontal scrollable cards showing market breakdowns (USDC/Ethereum, USDT/Ethereum, ETH/Ethereum, USDC/Arbitrum)",
+            "position": "center, lower section",
+            "notable": "Each card shows supply/borrow data with colored progress bars, token pair icons"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large hero numbers command attention, market cards below provide context with visual bar comparisons",
+        "innovativeElements": [
+          "Animated particle background effect",
+          "Color-coded numeric display (purple/green)",
+          "Horizontal card scroll layout",
+          "Dual-color progress bars per card"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View aggregate protocol stats and market-by-market collateral/borrowing breakdown",
+        "entryPoints": [
+          "Home/governance overview",
+          "Staking section entry"
+        ],
+        "exitPoints": [
+          "Click into individual market cards for details",
+          "Navigate to Markets or App"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market cards",
+            "action": "Horizontal scroll to view more markets or click to drill in"
+          },
+          {
+            "element": "App/Market buttons below each card",
+            "action": "Navigate to app or market-specific page"
+          }
+        ],
+        "informationArchitecture": "Top-level protocol metrics (total borrowing, collateral across all markets), followed by individual market breakdowns",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,538,979 of borrowing backed by $1,193,590,150 of collateral across 28 markets",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "text-link",
+            "placement": "Below each market card"
+          },
+          {
+            "text": "Market",
+            "style": "text-link",
+            "placement": "Below each market card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "USDC | Ethereum",
+            "context": "Market label above card metrics",
+            "purpose": "Identifies the asset and blockchain"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$603,538,979 (large borrowing total, purple)",
+          "$1,193,590,150 (large collateral total, green)",
+          "$137.84M, $14.79M (per-market breakdown)",
+          "28 markets (count of active markets)"
+        ],
+        "trustSignals": [
+          "Large aggregate numbers ($1.19B collateral)",
+          "Specific market-by-market breakdown",
+          "Multi-chain presence emphasized"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-swap-2-market.png",
+      "label": "Market",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F172A",
+          "#10B981",
+          "#A78BFA",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 24-32px for asset names",
+          "bodyStyle": "Regular sans-serif, 14px, gray for labels",
+          "dataStyle": "Monospace numerals, large bold figures in green and white for values; percentages in small text with colored labels"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top nav with logo, Dashboard/Markets/Extensions/Vote tabs, Connect Wallet button",
+            "position": "top",
+            "notable": "Green accent on Connect Wallet CTA"
+          },
+          {
+            "type": "Market card",
+            "description": "Grid of asset cards showing Earn/Borrow metrics in columns with mini sparkline charts on right",
+            "position": "main content",
+            "notable": "Dual chart display (green/purple bars) for earn vs borrow APR on the right side"
+          },
+          {
+            "type": "Back button",
+            "description": "Left-arrow 'Markets' link",
+            "position": "upper left",
+            "notable": null
+          },
+          {
+            "type": "Asset header",
+            "description": "Token icon, name, network badge, contract address",
+            "position": "above cards",
+            "notable": "Numbered chain badge (17) for easy network identification"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eyes drawn to large TVL values ($47.95M, $388.31K) first, then to APR percentages in secondary section",
+        "innovativeElements": [
+          "Side-mounted real-time sparkline charts showing APR trends",
+          "Dual metric layout (Earn vs Borrow) within single card design"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review market-level lending/borrowing metrics for specific assets across different metrics (APR, distribution, reserves)",
+        "entryPoints": [
+          "Clicked on asset from Markets overview",
+          "Searched for specific market"
+        ],
+        "exitPoints": [
+          "Back to Markets list",
+          "Connect Wallet to enter app",
+          "Navigate to Dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Return to Markets overview"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet connection flow"
+          },
+          {
+            "element": "Market card",
+            "action": "Likely expandable or navigable to detailed market view"
+          },
+          {
+            "element": "Sparkline charts",
+            "action": "Show historical APR trends"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Asset > Metrics organized into Earning (Total, APR, Distribution, Reserves) and Borrowing (Total, APR, Distribution, Cap) sections, with Risk metrics (Utilization, Collateral Factor, Reserve Factor) separated on right",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Compound V2 • Ethereum",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "ghost-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Earning",
+            "context": "column header",
+            "purpose": "Label metric"
+          },
+          {
+            "text": "Earn APR",
+            "context": "column header",
+            "purpose": "Identify interest rate column"
+          },
+          {
+            "text": "Borrow APR",
+            "context": "secondary section",
+            "purpose": "Distinguish borrowing rate from earning"
+          },
+          {
+            "text": "Collateral Factor",
+            "context": "risk metrics",
+            "purpose": "Explain liquidation threshold"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$47.95M",
+          "0.00%",
+          "82.50%",
+          "100.00%",
+          "$2,058.97",
+          "2.15%",
+          "0.00%"
+        ],
+        "trustSignals": [
+          "Contract address visible and copyable",
+          "Network clearly identified (Ethereum)",
+          "TVL amounts prominently displayed"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-swap-3-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F172A",
+          "#10B981",
+          "#A78BFA",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif display text, 48-64px, mixed white and color (purple for borrowing, green for collateral)",
+          "bodyStyle": "Regular sans-serif, 14px, gray for secondary labels",
+          "dataStyle": "Large monospace numerals with commas, color-coded (green for positive values, purple for negative/secondary)"
+        },
+        "components": [
+          {
+            "type": "Hero headline",
+            "description": "Two-line statement about borrowing and collateral with color-coded values",
+            "position": "center top",
+            "notable": "Mix of colors within single sentence for visual emphasis"
+          },
+          {
+            "type": "Market card grid",
+            "description": "Horizontal scrollable cards showing 5+ markets with dual-bar metrics (green/purple)",
+            "position": "center",
+            "notable": "Compact card design with App/Market toggle buttons at bottom of each card"
+          },
+          {
+            "type": "Navigation",
+            "description": "Horizontal top nav with Markets/Governance/Docs links",
+            "position": "top",
+            "notable": "Minimal design, monospace style"
+          },
+          {
+            "type": "App button CTA",
+            "description": "Green bordered button top right",
+            "position": "top right",
+            "notable": "Consistent with design system"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Massive headline values ($603.5B, $1.193T) dominate visual center, market cards secondary and scrollable below",
+        "innovativeElements": [
+          "Hero metric display with dual-color values embedded in sentence",
+          "Horizontal scrollable market carousel",
+          "App/Market toggle within card footer"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand total protocol value and explore available markets across chains/assets",
+        "entryPoints": [
+          "Landing page entry",
+          "Navigated from Governance/Docs"
+        ],
+        "exitPoints": [
+          "Click 'App' to enter trading interface",
+          "Click individual market card",
+          "Navigate to Governance or Docs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App button",
+            "action": "Navigate to main app interface"
+          },
+          {
+            "element": "Market cards",
+            "action": "Likely navigate to market detail or initiate trade"
+          },
+          {
+            "element": "App/Market toggle",
+            "action": "Switch between app-level and market-level metrics"
+          },
+          {
+            "element": "Scrollable card carousel",
+            "action": "Browse through additional markets"
+          }
+        ],
+        "informationArchitecture": "Hero metrics first (high-level TVL), followed by market-by-market breakdown with dual metrics (App vs Market view)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,538,896 of borrowing backed by",
+        "subheadline": "$1,193,598,234 of collateral across 28 markets",
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button",
+            "placement": "top right"
+          },
+          {
+            "text": "App",
+            "style": "text-link",
+            "placement": "market card footer"
+          },
+          {
+            "text": "Market",
+            "style": "text-link",
+            "placement": "market card footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "USDC | Ethereum",
+            "context": "market card header",
+            "purpose": "Identify asset and network"
+          },
+          {
+            "text": "$510.86M / $268.05M",
+            "context": "market card metrics",
+            "purpose": "Show split between App (green) and Market (purple) values"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$603,538,896",
+          "$1,193,598,234",
+          "28 markets",
+          "$510.86M",
+          "$268.05M"
+        ],
+        "trustSignals": [
+          "Massive TVL figures ($1.19T collateral)",
+          "28 markets listed for transparency",
+          "Cross-chain presence (Ethereum, Arbitrum shown)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-swap-4-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F172A",
+          "#10B981",
+          "#A78BFA",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif display text, 48-64px, mixed white and color (purple for borrowing, green for collateral)",
+          "bodyStyle": "Regular sans-serif, 14px, gray for secondary labels",
+          "dataStyle": "Large monospace numerals with commas, color-coded (green for positive values, purple for negative/secondary)"
+        },
+        "components": [
+          {
+            "type": "Hero headline",
+            "description": "Two-line statement about borrowing and collateral with color-coded values",
+            "position": "center top",
+            "notable": "Identical layout to previous screen, values slightly incremented"
+          },
+          {
+            "type": "Market card grid",
+            "description": "Horizontal scrollable cards showing 5+ markets with dual-bar metrics (green/purple)",
+            "position": "center",
+            "notable": "Cards now show more detailed breakdown with left-side collapsed metrics visible"
+          },
+          {
+            "type": "Navigation",
+            "description": "Horizontal top nav with Markets/Governance/Docs links",
+            "position": "top",
+            "notable": "Consistent with previous screen"
+          },
+          {
+            "type": "App button CTA",
+            "description": "Green bordered button top right",
+            "position": "top right",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to previous screen - massive headline values dominate, market cards secondary and scrollable",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Same as previous - understand protocol TVL and explore markets, possibly with cart/selection state active",
+        "entryPoints": [
+          "Landing page continuation",
+          "Scroll or interaction on markets page"
+        ],
+        "exitPoints": [
+          "Click 'App' to enter trading",
+          "Click individual market card",
+          "Navigate away"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App button",
+            "action": "Navigate to main app interface"
+          },
+          {
+            "element": "Market cards",
+            "action": "Select or view market details"
+          },
+          {
+            "element": "App/Market toggle",
+            "action": "Switch metric views"
+          }
+        ],
+        "informationArchitecture": "Identical to previous screen - hero metrics followed by market breakdown",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,538,897 of borrowing backed by",
+        "subheadline": "$1,193,590,330 of collateral across 28 markets",
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button",
+            "placement": "top right"
+          },
+          {
+            "text": "App",
+            "style": "text-link",
+            "placement": "market card footer"
+          },
+          {
+            "text": "Market",
+            "style": "text-link",
+            "placement": "market card footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "USDC | Ethereum",
+            "context": "market card header",
+            "purpose": "Identify asset and network"
+          },
+          {
+            "text": "$510.86M / $268.05M",
+            "context": "market card metrics",
+            "purpose": "Show split between App (green) and Market (purple) values"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$603,538,897",
+          "$1,193,590,330",
+          "28 markets",
+          "$510.86M",
+          "$268.05M"
+        ],
+        "trustSignals": [
+          "Massive TVL figures ($1.19T collateral)",
+          "28 markets listed for transparency",
+          "Cross-chain presence visible"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-staking-3-liquidity-page.png",
+      "label": "liquidity page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width with horizontal card grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D0221",
+          "#00D084",
+          "#9D5EFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif with mixed color accents (purple and cyan for key numbers)",
+          "bodyStyle": "Small sans-serif, white for descriptive text",
+          "dataStyle": "Large bold numerals with color coding—purple for borrowing amounts, cyan for collateral amounts, white for combined text"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links (Markets, Governance, Docs), and App CTA button",
+            "position": "top",
+            "notable": "Minimal, clean, with bright cyan App button standing out against dark background"
+          },
+          {
+            "type": "Hero Metrics Display",
+            "description": "Two-line large-scale data visualization showing total borrowing and collateral",
+            "position": "center-top",
+            "notable": "Color-coded numbers ($603M in purple, $1.19B in cyan) create visual hierarchy and guide attention"
+          },
+          {
+            "type": "Market Cards",
+            "description": "Horizontal scrollable grid of 4 visible cards showing asset pairs (USDC/ETH, USDT, ETH, USDC), token icons, and dual bar charts",
+            "position": "center-middle",
+            "notable": "Each card displays App vs Market comparison with color-coded bars (cyan for one metric, purple for another)"
+          },
+          {
+            "type": "Animated Background",
+            "description": "Subtle particle/line animations scattered across dark background",
+            "position": "full-screen",
+            "notable": "Creates depth without distraction; reinforces tech/blockchain aesthetic"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Extreme emphasis on headline metrics in large bold typography at top, with supporting data cards below in smaller scale. Color coding (purple/cyan) creates secondary hierarchy within metrics.",
+        "innovativeElements": [
+          "Dual-metric card design showing App vs Market values side-by-side with comparative bar charts",
+          "Color-coded number highlighting where purple and cyan distinguish different financial metrics",
+          "Horizontal scrollable market cards showcasing multi-blockchain presence (Ethereum, Arbitrum)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / data-browse",
+        "userIntent": "Understand Compound's total liquidity position, explore available markets, and browse borrowing/collateral across different blockchains",
+        "entryPoints": [
+          "Direct navigation from Markets link",
+          "Landing page default view",
+          "Link from homepage"
+        ],
+        "exitPoints": [
+          "Click into individual market cards for details",
+          "Navigate to Markets, Governance, or Docs via header",
+          "Launch App button to enter trading interface"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market Cards (horizontal scroll)",
+            "action": "Scroll horizontally to see additional markets"
+          },
+          {
+            "element": "App CTA Button (top-right)",
+            "action": "Navigate to trading/staking application"
+          },
+          {
+            "element": "Navigation Links (Markets, Governance, Docs)",
+            "action": "Navigate to different sections of platform"
+          }
+        ],
+        "informationArchitecture": "Top-down flow: total protocol metrics → individual market breakdowns. Markets organized horizontally by asset pair and blockchain.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$603,539,030 of borrowing backed by $1,193,583,367 of collateral across 28 markets",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button with cyan outline",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "USDC | Ethereum",
+            "context": "Market card label",
+            "purpose": "Identify asset and blockchain"
+          },
+          {
+            "text": "App",
+            "context": "Market card footer tabs",
+            "purpose": "Toggle to view app-specific metrics"
+          },
+          {
+            "text": "Market",
+            "context": "Market card footer tabs",
+            "purpose": "Toggle to view protocol-wide metrics"
+          }
+        ],
+        "tone": "professional-technical, data-driven, authoritative",
+        "dataFormatting": [
+          "$603,539,030 (purple-colored large number)",
+          "$1,193,583,367 (cyan-colored large number)",
+          "28 markets (white numeric)",
+          "$510.86M (card-level metrics with cyan color)"
+        ],
+        "trustSignals": [
+          "Large TVL displays ($1.19B collateral)",
+          "Multi-blockchain presence (28 markets across Ethereum, Arbitrum)",
+          "Transparent App vs Market comparison metrics"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/compound-settings-1-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered text",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0D0221",
+          "#00D084",
+          "#9D5EFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif with color-coded numbers (purple for zero values)",
+          "bodyStyle": "Large white sans-serif for descriptive text",
+          "dataStyle": "Large bold numerals in purple for zero values, cyan for zero collateral counts"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top bar with logo, nav links (Markets, Governance, Docs), and App CTA button",
+            "position": "top",
+            "notable": "Identical to previous screen; maintains visual consistency"
+          },
+          {
+            "type": "Empty State Metrics Display",
+            "description": "Two-line display showing zero borrowing and zero collateral across single market",
+            "position": "center-vertical",
+            "notable": "Mirrors the data layout of liquidity page but with all zero values, indicating no user activity"
+          },
+          {
+            "type": "Animated Background",
+            "description": "Subtle particle/line animations scattered across dark background",
+            "position": "full-screen",
+            "notable": "Consistent with first screen; creates cohesive visual identity"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Extreme vertical centering with large headline metrics taking up most visual real estate. Minimal supporting elements.",
+        "innovativeElements": [
+          "Reuses metric display pattern from liquidity page for empty state messaging",
+          "Shows zero states in same visual language as active data"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View account-specific borrowing and collateral status (currently empty/zero)",
+        "entryPoints": [
+          "Settings or account section navigation",
+          "User with no active positions"
+        ],
+        "exitPoints": [
+          "Navigate back via header links",
+          "Launch App to create positions",
+          "Navigate to Markets or Governance"
+        ],
+        "interactiveElements": [
+          {
+            "element": "App CTA Button (top-right)",
+            "action": "Navigate to trading/staking application"
+          },
+          {
+            "element": "Navigation Links (Markets, Governance, Docs)",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Centered empty state with metric template. No market cards or additional data present.",
+        "frictionPoints": [
+          "Lack of guidance on next steps for user with zero positions",
+          "No obvious CTA encouraging user to create their first position"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "$0 of borrowing backed by $0 of collateral across 1 markets",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "App",
+            "style": "ghost-button with cyan outline",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, neutral",
+        "dataFormatting": [
+          "$0 (purple-colored large number)",
+          "$0 (cyan-colored large number)",
+          "1 markets (white numeric)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$0 of borrowing backed by",
+          "$0 of collateral across 1 markets"
+        ]
+      }
+    }
+  ]
+}

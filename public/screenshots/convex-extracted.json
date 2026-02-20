@@ -1,0 +1,1372 @@
+{
+  "slug": "convex",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:24:51.175Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 8,
+  "screens": [
+    {
+      "image": "/screenshots/convex-staking-2-add-gauge-for-weight-votes.png",
+      "label": "Add gauge for weight votes",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large size for main heading",
+          "bodyStyle": "regular sans-serif for body text and labels",
+          "dataStyle": "monospace for addresses/contract hashes, large bold for TVL values"
+        },
+        "components": [
+          {
+            "type": "search-input",
+            "description": "Search pools text field with placeholder 'Search pools'",
+            "position": "top-left of main panel",
+            "notable": "Simple, unfocused state shown"
+          },
+          {
+            "type": "data-table",
+            "description": "Sortable pool list with Pool name, TVL, and Add button columns",
+            "position": "center-left, stacked rows",
+            "notable": "Pool icons with dual logos, grey 'Add' buttons, sortable TVL column"
+          },
+          {
+            "type": "info-card",
+            "description": "White card explaining the page purpose and functionality",
+            "position": "right side",
+            "notable": "Contains inline link to 'Gauge Weights Votes' page in blue"
+          },
+          {
+            "type": "back-button",
+            "description": "Back navigation to 'Gauge weight votes'",
+            "position": "top-left above heading",
+            "notable": "Arrow icon with text label, outlined style"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left panel dominant for action (pools list), right panel secondary for context (explanation)",
+        "innovativeElements": [
+          "Dual-logo pool icons representing paired assets",
+          "Dynamic TVL display with sorting capability"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find and add Curve gauges to the Vote Gauge Registry for governance participation",
+        "entryPoints": [
+          "From 'Gauge weight votes' page",
+          "Navigation from governance menu"
+        ],
+        "exitPoints": [
+          "Click 'Add' to add a gauge",
+          "Back button to return to gauge weight votes",
+          "Navigate to other main menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Filter pool list by name or symbol"
+          },
+          {
+            "element": "TVL column header",
+            "action": "Sort pools by total value locked"
+          },
+          {
+            "element": "Add button",
+            "action": "Add the selected gauge to the registry"
+          }
+        ],
+        "informationArchitecture": "Two-column layout: left contains filterable/sortable pool registry, right contains contextual help explaining page purpose and linking to related functionality",
+        "frictionPoints": [
+          "Search functionality requires exact pool name/symbol match",
+          "No pagination or load-more visible for large pool lists",
+          "Grey 'Add' buttons may have low contrast"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Add Gauges to Vote Gauge Registry",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Add",
+            "style": "ghost-button",
+            "placement": "right of each pool row"
+          },
+          {
+            "text": "Gauge Weights Votes",
+            "style": "text-link",
+            "placement": "within info card explanation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search pools",
+            "context": "input placeholder",
+            "purpose": "Guide user to filter pool list"
+          },
+          {
+            "text": "Pool",
+            "context": "table column header",
+            "purpose": "Label pool identifier column"
+          },
+          {
+            "text": "TVL",
+            "context": "table column header with dropdown",
+            "purpose": "Sortable column header for total value locked"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$87.6m",
+          "$85.6m",
+          "$74.8m",
+          "$54.4m",
+          "$51.5m",
+          "$50m"
+        ],
+        "trustSignals": [
+          "Contract addresses displayed (e.g., 0x74_92ef)",
+          "Gauge registry reference adds official status"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/convex-staking-3-vote-page.png",
+      "label": "vote page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#0066ff",
+          "#ff9900"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large uppercase for 'Vote with your vlCVX'",
+          "bodyStyle": "regular sans-serif for descriptions and labels",
+          "dataStyle": "large bold monospace for governance stats values (47.8m, 416m, etc.)"
+        },
+        "components": [
+          {
+            "type": "card-grid",
+            "description": "6-card grid showing voting options: Convex DAO, Curve Gauge Weights, Curve DAO, Prisma DAO, Frax DAO, f(x) Protocol DAO",
+            "position": "center-left, 2x3 grid layout",
+            "notable": "Dark cards with protocol logos, status badges (e.g., '26' for Curve Gauge Weights), descriptions, and disabled vote buttons"
+          },
+          {
+            "type": "warning-banner",
+            "description": "Orange/amber alert banner stating voting system is in beta test phase",
+            "position": "top-right above governance stats",
+            "notable": "High-contrast orange (#ff9900), contains link to 'More info' and 'Real vote page'"
+          },
+          {
+            "type": "stats-panel",
+            "description": "Right sidebar showing governance statistics with labels and values",
+            "position": "right side, stacked layout",
+            "notable": "Includes total vlCVX, controlled tokens, and user-specific stats; mostly dashes indicating user has no positions"
+          },
+          {
+            "type": "button",
+            "description": "Primary blue button 'Manage vote weight'",
+            "position": "bottom-right, full width within stats panel",
+            "notable": "Bright blue (#0066ff), active CTA"
+          },
+          {
+            "type": "form-section",
+            "description": "Delegate vote weight section with text input and Delegate button",
+            "position": "bottom-right below Manage vote weight button",
+            "notable": "Expandable section with info icons, grey Delegate button"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main grid of voting options dominates center-left, right sidebar provides contextual governance stats and controls, warning banner anchors top-right for important alert",
+        "innovativeElements": [
+          "Protocol-specific voting cards with distinct logos and color schemes",
+          "Beta test warning with direct link to production voting",
+          "Vote weight delegation UI integrated into stats panel"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Vote across multiple DAO/protocol governance systems using vlCVX holdings; manage vote weight and delegation",
+        "entryPoints": [
+          "From main navigation menu",
+          "From staking/lock page",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click 'Vote for [Protocol]' buttons (coming soon)",
+          "Click 'Manage vote weight' to open weight dialog",
+          "Delegate vote weight via input form",
+          "Navigate to 'Real vote page' via warning banner link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Vote buttons on cards",
+            "action": "Navigate to individual protocol voting page (currently disabled)"
+          },
+          {
+            "element": "Manage vote weight button",
+            "action": "Open dialog to adjust voting weight distribution"
+          },
+          {
+            "element": "Delegate address input",
+            "action": "Enter address to delegate voting power"
+          },
+          {
+            "element": "Delegate button",
+            "action": "Submit delegation transaction"
+          },
+          {
+            "element": "Info icons",
+            "action": "Show tooltips explaining delegate vote weight feature"
+          }
+        ],
+        "informationArchitecture": "Voting options arranged in card grid by protocol/DAO, with supporting governance statistics and vote management controls in right sidebar. Warning banner separates test system from production.",
+        "frictionPoints": [
+          "All vote buttons are disabled with 'coming soon' status",
+          "User shows no voting power (all dashes in stats), unclear onboarding path",
+          "Warning banner adds cognitive load - users may be uncertain if they should proceed",
+          "Delegation UI placement in footer of right panel may be overlooked"
+        ],
+        "progressIndicators": [
+          "'26' badge on Curve Gauge Weights card indicates active voting rounds",
+          "User stats showing 0 voting power suggests incomplete setup"
+        ]
+      },
+      "copy": {
+        "headline": "Vote with your vlCVX",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Vote on Convex DAO proposals",
+            "style": "ghost-button",
+            "placement": "Convex DAO Proposals card"
+          },
+          {
+            "text": "Vote for Curve gauge weights",
+            "style": "ghost-button",
+            "placement": "Curve Gauge Weights card"
+          },
+          {
+            "text": "Vote on Curve DAO proposals",
+            "style": "ghost-button",
+            "placement": "Curve DAO Proposals card"
+          },
+          {
+            "text": "Vote on Prisma DAO proposals",
+            "style": "ghost-button",
+            "placement": "Prisma DAO Proposals card"
+          },
+          {
+            "text": "Vote on Frax DAO proposals",
+            "style": "ghost-button",
+            "placement": "Frax DAO Proposals card"
+          },
+          {
+            "text": "Vote on f(x) Protocol proposals",
+            "style": "ghost-button",
+            "placement": "f(x) Protocol DAO Proposals card"
+          },
+          {
+            "text": "Manage vote weight",
+            "style": "primary-button",
+            "placement": "Bottom of governance stats panel"
+          },
+          {
+            "text": "Delegate",
+            "style": "ghost-button",
+            "placement": "Delegate vote weight section"
+          },
+          {
+            "text": "More info",
+            "style": "text-link",
+            "placement": "Within orange warning banner"
+          },
+          {
+            "text": "Real vote page",
+            "style": "text-link",
+            "placement": "Within orange warning banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Vote every two weeks to direct CRV emissions to Curve pools",
+            "context": "Curve Gauge Weights card description",
+            "purpose": "Explain voting frequency and purpose"
+          },
+          {
+            "text": "Vote on all Convex DAO decisions (coming soon)",
+            "context": "Card descriptions across multiple DAO cards",
+            "purpose": "Set expectations that voting is not yet live"
+          },
+          {
+            "text": "Last round incentives: APR: 37.43%",
+            "context": "Curve Gauge Weights card stat",
+            "purpose": "Show recent voting reward metrics"
+          },
+          {
+            "text": "What you see on this page is a new vote system currently being tested. You can vote and interact with those pages, but these votes don't count for anything yet.",
+            "context": "Orange warning banner",
+            "purpose": "Critical warning that system is in beta, votes don't count"
+          },
+          {
+            "text": "Governance stats",
+            "context": "Right sidebar section heading",
+            "purpose": "Label statistics panel"
+          },
+          {
+            "text": "Total vlCVX",
+            "context": "Stats row label",
+            "purpose": "Identify total voting power in network"
+          },
+          {
+            "text": "Your vote weight",
+            "context": "Stats row label",
+            "purpose": "Indicate user's personal voting power"
+          },
+          {
+            "text": "Delegate vote weight",
+            "context": "Form section heading with info icon",
+            "purpose": "Label delegation feature"
+          },
+          {
+            "text": "Delegate to a specific address",
+            "context": "Delegation subsection heading",
+            "purpose": "Clarify delegation target"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "47.8m vICVX",
+          "416m veCRV (53%)",
+          "2,685m vePRISMA (89%)",
+          "21m veFXS (40%)",
+          "137k veFXN (50%)",
+          "APR: 37.43%"
+        ],
+        "trustSignals": [
+          "Protocol logos and branding for 6 major protocols",
+          "Controlled token percentages show platform integration depth",
+          "Beta testing disclosure shows transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Latest proposal: —",
+          "Your vote weight: —",
+          "Your veCRV controlled: —",
+          "Your vePRISMA controlled: —",
+          "Your veFXS controlled: —",
+          "Your veFXN controlled: —"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/convex-home-4-treasury-holdings.png",
+      "label": "Treasury Holdings",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, white text on dark backgrounds",
+          "bodyStyle": "Sans-serif, regular weight, medium gray for secondary text",
+          "dataStyle": "Monospace or tabular numbers with USD conversion in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "Three KPI cards showing Vault Holdings, Manager Holdings, and Total Holdings with large dollar amounts",
+            "position": "top-center",
+            "notable": "Plus/minus icons to adjust viewing, strong visual hierarchy"
+          },
+          {
+            "type": "two-column-list",
+            "description": "Left column shows Treasury Vault with token holdings, right column shows Treasury Manager contracts with LP positions",
+            "position": "main-content",
+            "notable": "Nested expandable sections with collapsible rows"
+          },
+          {
+            "type": "token-row",
+            "description": "Token icon, name, quantity, and USD equivalent for each holding",
+            "position": "within-panels",
+            "notable": "Color-coded token icons aid quick scanning"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top KPI cards draw eye first, then horizontal scan left-to-right between vault and manager holdings",
+        "innovativeElements": [
+          "Plus/minus toggle controls on summary cards to expand/collapse details",
+          "Dual-panel layout comparing vault vs manager holdings side-by-side"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View the composition and total value of Convex treasury holdings across vaults and managers",
+        "entryPoints": [
+          "Home navigation",
+          "Direct link to treasury page"
+        ],
+        "exitPoints": [
+          "Choose App dropdown",
+          "Lock CVX nav item",
+          "Claim nav item",
+          "Governance nav item"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Plus icon on Vault Holdings card",
+            "action": "Expand or collapse detailed vault holdings"
+          },
+          {
+            "element": "Minus icon on Manager Holdings card",
+            "action": "Collapse manager holdings detail"
+          },
+          {
+            "element": "Treasury Vault row header",
+            "action": "Navigate to or expand specific vault contract"
+          },
+          {
+            "element": "Treasury Manager # rows",
+            "action": "View specific manager contract details or navigate"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Summary KPIs → Treasury type (Vault/Manager) → Individual contracts → Token holdings within each contract",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Convex Treasury Holdings",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Vault Holdings",
+            "context": "Top-left summary card",
+            "purpose": "Label for vault-specific assets"
+          },
+          {
+            "text": "Manager Holdings",
+            "context": "Top-center summary card",
+            "purpose": "Label for manager-specific assets"
+          },
+          {
+            "text": "Total Holdings",
+            "context": "Top-right summary card",
+            "purpose": "Label for aggregate treasury value"
+          },
+          {
+            "text": "Treasury Vault",
+            "context": "Left panel header",
+            "purpose": "Section identifier with contract address"
+          },
+          {
+            "text": "Treasury Manager #1, #2, #3, #6, #7",
+            "context": "Right panel contract headers",
+            "purpose": "Identify distinct manager contracts with addresses"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$15.4m",
+          "$2.2m",
+          "$17.6m",
+          "7.1m CVX = $13.9m",
+          "4.9m stkCvxCRV = $614.5k",
+          "0x13...1bb7",
+          "$839.5k",
+          "5.9m LP = $839.5k"
+        ],
+        "trustSignals": [
+          "Explicit contract addresses (0x-format) for each holding",
+          "TVL amounts for each position",
+          "Detailed breakdown of token compositions"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/convex-home-5-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large monospace numbers for error code, sans-serif for message",
+          "bodyStyle": "Sans-serif, regular weight, gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "Two KPI cards at top showing Total Claimable ($0) and Total Locked CVX ($–)",
+            "position": "top-center",
+            "notable": "Grayed out or placeholder state indicating no wallet connected"
+          },
+          {
+            "type": "error-display",
+            "description": "Large 404 error code with explanatory text",
+            "position": "center-page",
+            "notable": "Minimal, clean error layout with ample whitespace"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top KPI cards provide context, large 404 dominates center view, explanation text below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User navigated to non-existent page and needs to understand the error and return",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Broken link"
+        ],
+        "exitPoints": [
+          "Back button",
+          "Navigation menu items (Lock CVX, Claim, Governance, More)",
+          "Home logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Route to main app sections"
+          },
+          {
+            "element": "Home logo (Convex)",
+            "action": "Return to home page"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Open wallet connection flow"
+          }
+        ],
+        "informationArchitecture": "Simple error page with persistent navigation allowing user to recover",
+        "frictionPoints": [
+          "No direct recovery CTA like 'Go Back to Home'",
+          "Error page still shows disconnected state metrics"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "This page could not be found.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Total Claimable",
+            "context": "Top-left metric card",
+            "purpose": "Label for unclaimed rewards (placeholder state)"
+          },
+          {
+            "text": "Total Locked CVX",
+            "context": "Top-right metric card",
+            "purpose": "Label for locked token amount (placeholder state)"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0",
+          "$–"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/convex-staking-1-lock-cvx-view-pool-info-tab.png",
+      "label": "Lock CVX — View pool info tab",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, white or dark depending on background",
+          "bodyStyle": "Sans-serif, regular weight, gray on light backgrounds",
+          "dataStyle": "Tabular numbers with USD equivalents, blue progress bars for allocation percentages"
+        },
+        "components": [
+          {
+            "type": "modal-tabs",
+            "description": "Two tab buttons: 'View pool info' and main content area",
+            "position": "above-panels",
+            "notable": "White button style for active state"
+          },
+          {
+            "type": "data-table",
+            "description": "Pool information table with pool name, TVL, vecrv allocation, and boosted share columns",
+            "position": "left-panel",
+            "notable": "Color-coded pool icons, sortable/interactive columns"
+          },
+          {
+            "type": "blue-bar-chart",
+            "description": "Stacked blue bars representing boosted share of curve pool for each pool",
+            "position": "center-right of table",
+            "notable": "Visual representation of allocation proportions"
+          },
+          {
+            "type": "form-section",
+            "description": "Your current CVX locks display with delegation controls",
+            "position": "right-panel",
+            "notable": "Call-to-action button and form inputs for delegation"
+          },
+          {
+            "type": "info-icon",
+            "description": "Question mark icons next to field labels",
+            "position": "field-labels",
+            "notable": "Tooltip indicators for additional context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left table draws eye first, center bars show visual allocation, right panel secondary actions",
+        "innovativeElements": [
+          "Blue progress bars showing proportional allocation across pools",
+          "Info icons providing contextual help throughout form"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View available staking pools, their TVL and curve allocations, and manage personal CVX locks/delegation",
+        "entryPoints": [
+          "Lock CVX navigation item",
+          "Staking section"
+        ],
+        "exitPoints": [
+          "Other nav items",
+          "Go to vote page button",
+          "Delegate address input/submit",
+          "Delegate to Convex team button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "View pool info button",
+            "action": "Toggle between pool information and other lock views"
+          },
+          {
+            "element": "Pool information table rows",
+            "action": "Likely expandable or navigable to pool details"
+          },
+          {
+            "element": "Go to vote page button (blue)",
+            "action": "Navigate to governance voting page"
+          },
+          {
+            "element": "Delegate address input",
+            "action": "Accept wallet address for vote delegation"
+          },
+          {
+            "element": "Delegate button (gray, disabled state)",
+            "action": "Submit delegation transaction"
+          },
+          {
+            "element": "Delegate to Convex team button (gray, disabled state)",
+            "action": "Pre-filled delegation to protocol team"
+          },
+          {
+            "element": "Info icons",
+            "action": "Display tooltip explaining field purpose"
+          }
+        ],
+        "informationArchitecture": "Left side shows pools (external context), right side shows user's holdings and actions (personal context); clear division of information and actions",
+        "frictionPoints": [
+          "Both delegation buttons appear disabled (grayed out) - unclear why user cannot delegate",
+          "'Delegate address' input label could be more explicit about format requirements",
+          "Current vote weight shows '–' (no connected wallet context needed earlier)"
+        ],
+        "progressIndicators": [
+          "Current vote weight indicator",
+          "Delegate vote weight label with info icon"
+        ]
+      },
+      "copy": {
+        "headline": "Lock CVX",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View pool info",
+            "style": "ghost-button",
+            "placement": "above-panels"
+          },
+          {
+            "text": "Go to vote page",
+            "style": "primary-button",
+            "placement": "right-panel-center"
+          },
+          {
+            "text": "Delegate",
+            "style": "secondary-button-disabled",
+            "placement": "right-panel-inline"
+          },
+          {
+            "text": "Delegate to Convex team",
+            "style": "secondary-button-disabled",
+            "placement": "right-panel-full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pool Information",
+            "context": "Left panel heading",
+            "purpose": "Section identifier"
+          },
+          {
+            "text": "Pool Name",
+            "context": "Table column header",
+            "purpose": "Column identifier"
+          },
+          {
+            "text": "TVL",
+            "context": "Table column header",
+            "purpose": "Total value locked identifier"
+          },
+          {
+            "text": "Current veCRV Allocation",
+            "context": "Table column header",
+            "purpose": "Describes voting escrow allocation metric"
+          },
+          {
+            "text": "Boosted Share of Curve Pool",
+            "context": "Table column header",
+            "purpose": "Explains proportional pool share with boost"
+          },
+          {
+            "text": "Your current CVX locks",
+            "context": "Right panel heading",
+            "purpose": "Section identifier for user state"
+          },
+          {
+            "text": "Connect wallet to see its locked CVX",
+            "context": "Right panel secondary text",
+            "purpose": "Explains placeholder state when wallet not connected"
+          },
+          {
+            "text": "Current vote weight: –",
+            "context": "Right panel metric",
+            "purpose": "Shows user's governance power"
+          },
+          {
+            "text": "Delegate vote weight",
+            "context": "Right panel form label",
+            "purpose": "Introduces delegation controls"
+          },
+          {
+            "text": "Delegate to a specific address",
+            "context": "Right panel form section",
+            "purpose": "Describes custom delegation option"
+          },
+          {
+            "text": "Delegate address",
+            "context": "Form input label",
+            "purpose": "Placeholder/label for address field"
+          },
+          {
+            "text": "Or delegate to the Convex team",
+            "context": "Right panel form section",
+            "purpose": "Introduces preset delegation option"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$180.3k",
+          "$4,746.29",
+          "$0",
+          "$37.53",
+          "$130.89",
+          "$178.6k",
+          "0x–..."
+        ],
+        "trustSignals": [
+          "Explicit pool names and compositions (cDAI+cUSDC, yDAI+yUSDC+yUSDT, etc.)",
+          "TVL values for each pool",
+          "Allocation percentages with visual bar representation",
+          "Delegation option to Convex team (implies protocol governance legitimacy)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect wallet to see its locked CVX"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/convex-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with hero section and split card grid below",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066ff",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif, 48-64px, high contrast against dark background",
+          "bodyStyle": "Medium weight white/light gray sans-serif, 14-16px for descriptions",
+          "dataStyle": "Large green (#00ff88) bold numbers with dollar signs, 24-32px, against dark card backgrounds"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, app selector dropdown, main nav items (Lock CVX, Claim, Governance, More), social icons, and Connect Wallet button",
+            "position": "Top fixed header",
+            "notable": "Blue primary CTA button stands out; dropdown pattern for multi-app navigation"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with subheadline, protocol badges (Curve, Frax, f(x)), and pixel art yellow vault/safe illustration",
+            "position": "Left 60% of viewport",
+            "notable": "Retro pixel art aesthetic contrasts with modern dark UI; creates visual identity"
+          },
+          {
+            "type": "Metric cards",
+            "description": "Four dark cards showing TVL ($838.1m), Platform Revenue ($248.7m), Treasury ($17.6m), and 14D Emissions (662.2k)",
+            "position": "Lower left grid, 2x2 layout",
+            "notable": "Green accent color for numbers creates visual hierarchy; includes info icons for tooltips"
+          },
+          {
+            "type": "Governance power panel",
+            "description": "Right panel showing governance token distribution (veCRV, veFXS, veFXN, RSUP) with percentages and amounts controlled",
+            "position": "Lower right section",
+            "notable": "Shows protocol integration and control metrics; multi-token governance display"
+          },
+          {
+            "type": "Protocol selector tabs",
+            "description": "Three tab buttons at bottom showing Curve, Frax, f(x) with logos and protocol names",
+            "position": "Bottom center, 3-column grid",
+            "notable": "Allows quick switching between protocol contexts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero headline dominates; pixel art vault draws eye to right; metric cards and governance panel create balanced lower section; protocol tabs anchor bottom",
+        "innovativeElements": [
+          "Retro pixel art vault illustration contrasts modern dark UI",
+          "Animated colored pixel squares scattered across background create depth",
+          "Rainbow gradient stripe elements (bottom of hero, between sections) add visual interest without being garish"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / dashboard overview",
+        "userIntent": "Understand Convex's core metrics, navigate to specific features, and connect wallet to participate",
+        "entryPoints": [
+          "Direct visit to convex.finance domain",
+          "Navigation from community/social channels",
+          "Protocol documentation or integration guides"
+        ],
+        "exitPoints": [
+          "Connect Wallet button (wallet connection modal)",
+          "Lock CVX nav item (staking interface)",
+          "Claim nav item (earnings dashboard)",
+          "Governance nav item (voting interface)",
+          "Protocol tabs at bottom (switch context)",
+          "Social icons (external links)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Choose App dropdown",
+            "action": "Switch between different Convex protocol apps"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiate wallet connection flow"
+          },
+          {
+            "element": "Info icons on metric cards",
+            "action": "Display tooltip explanations for TVL, Revenue, etc."
+          },
+          {
+            "element": "Protocol tabs (Curve, Frax, f(x))",
+            "action": "Filter or focus view on specific protocol context"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Route to Lock CVX, Claim, or Governance sections"
+          }
+        ],
+        "informationArchitecture": "Top-down hierarchy: headline value proposition → protocol logos → key metrics → governance details → protocol options. Left-aligned narrative (hero) with right-aligned governance power context.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active nav item underline on 'Lock CVX' (currently active page)"
+        ]
+      },
+      "copy": {
+        "headline": "Boosted Staking",
+        "subheadline": "Deposit Liquidity, Earn Boosted Rewards\nOn Curve, Frax, f(x) Protocol",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "TOTAL VALUE LOCKED",
+            "context": "Card header",
+            "purpose": "Label for TVL metric"
+          },
+          {
+            "text": "GOVERNANCE POWER",
+            "context": "Right panel header",
+            "purpose": "Introduce governance token control metrics"
+          },
+          {
+            "text": "Convex For:",
+            "context": "Below headline, before protocol logos",
+            "purpose": "Clarify what protocols Convex supports"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "$838.1m (TVL)",
+          "$248.7m (Platform Revenue)",
+          "$17.6m (Treasury)",
+          "662.2k (14D Emissions)",
+          "416m veCRV (53.01% of total)",
+          "28.93% (APR)"
+        ],
+        "trustSignals": [
+          "$838.1m TVL (total value locked on platform)",
+          "Multi-protocol integration (Curve, Frax, f(x))",
+          "Governance token distribution metrics showing control",
+          "Treasury value displayed"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/convex-home-2-lock-cvx.png",
+      "label": "Lock CVX",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main with two-column split (form left, info right)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Medium weight white sans-serif, 18-20px for section headers",
+          "bodyStyle": "Regular weight light gray sans-serif, 14px for descriptions and labels",
+          "dataStyle": "Large white numbers in metric displays, smaller gray for secondary values"
+        },
+        "components": [
+          {
+            "type": "Top stat cards",
+            "description": "Two metric cards showing 'Total Claimable' ($0) and 'Total Locked CVX' ($–)",
+            "position": "Top center, spanning full width",
+            "notable": "Placeholder values indicate wallet not connected; centered layout"
+          },
+          {
+            "type": "Tab navigation",
+            "description": "LOCK and INFO tabs with underline indicator",
+            "position": "Left side below stat cards",
+            "notable": "LOCK tab is active; simple two-option navigation"
+          },
+          {
+            "type": "Lock form",
+            "description": "Input field for 'Amount of CVX to lock' with Max button, approval/lock action buttons",
+            "position": "Left column, center",
+            "notable": "Multi-step form (Approve → Lock CVX); Max button convenience feature"
+          },
+          {
+            "type": "Info boxes",
+            "description": "Educational text boxes explaining lock mechanics, staking alternative, voting incentives",
+            "position": "Left column below form",
+            "notable": "Light blue bordered box highlights alternative (stake vs lock) with link to 'stake CVX'"
+          },
+          {
+            "type": "Right sidebar",
+            "description": "Your Current CVX Locks panel with vote delegation options, white card on dark background",
+            "position": "Right 30% of viewport",
+            "notable": "Prominent call-to-action 'Go to vote page'; delegate UI with address input and presets"
+          },
+          {
+            "type": "Governance power section",
+            "description": "Read-only display of voting weight and delegation options",
+            "position": "Right sidebar lower section",
+            "notable": "Multiple delegation pathways (custom address or preset Convex team)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top stats → action tabs → primary form (left) paired with secondary info (right) → delegation UI; form inputs larger than explanatory text",
+        "innovativeElements": [
+          "Split layout balances user action (left) with education and delegation (right)",
+          "Blue bordered info box creates clear distinction for alternative strategies",
+          "Connected wallet state is implicit through form availability"
+        ]
+      },
+      "flow": {
+        "screenType": "form / action page",
+        "userIntent": "Lock CVX tokens for governance voting weight and platform fee share; optionally delegate voting power",
+        "entryPoints": [
+          "Click 'Lock CVX' from main navigation",
+          "From landing page via nav menu"
+        ],
+        "exitPoints": [
+          "Go to vote page button (navigate to voting interface)",
+          "Approve button (triggers wallet approval transaction)",
+          "Lock CVX button (completes lock transaction)",
+          "View pool info link (likely opens modal or new view)",
+          "Stake CVX link (alternative path within product)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Amount input field",
+            "action": "Enter CVX amount to lock"
+          },
+          {
+            "element": "Max button",
+            "action": "Auto-populate input with maximum available balance"
+          },
+          {
+            "element": "Approve button",
+            "action": "Initiate ERC-20 approval transaction via wallet"
+          },
+          {
+            "element": "Lock CVX button",
+            "action": "Submit lock transaction to blockchain"
+          },
+          {
+            "element": "LOCK/INFO tabs",
+            "action": "Toggle between form and explanatory information"
+          },
+          {
+            "element": "Delegate address input",
+            "action": "Enter custom address for vote delegation"
+          },
+          {
+            "element": "Delegate button",
+            "action": "Submit delegation transaction"
+          },
+          {
+            "element": "Delegate to Convex team button",
+            "action": "Quick-select delegation preset"
+          }
+        ],
+        "informationArchitecture": "Task-focused left column (lock mechanics) with supporting right column (governance context). Sequential flow: input amount → approve → lock → optionally delegate. Education integrated inline via blue box.",
+        "frictionPoints": [
+          "Requires two transactions (approve + lock) before governance participation",
+          "Lock duration fixed (16 weeks + 5 days) with no alternative options visible",
+          "Wallet connection required but not shown as explicit prerequisite"
+        ],
+        "progressIndicators": [
+          "Active tab underline on 'LOCK'",
+          "Two-step transaction indicator (1 2 dots showing Approve vs Lock stages)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to vote page",
+            "style": "primary-button",
+            "placement": "Right sidebar top"
+          },
+          {
+            "text": "Approve",
+            "style": "ghost-button",
+            "placement": "Form area"
+          },
+          {
+            "text": "Lock CVX",
+            "style": "primary-button",
+            "placement": "Form area"
+          },
+          {
+            "text": "Delegate",
+            "style": "ghost-button",
+            "placement": "Right sidebar delegation section"
+          },
+          {
+            "text": "Delegate to Convex team",
+            "style": "ghost-button",
+            "placement": "Right sidebar delegation section"
+          },
+          {
+            "text": "View pool info",
+            "style": "text-link",
+            "placement": "Near tab navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Lock CVX for 16 weeks + 5 days.",
+            "context": "Explanatory text below headline",
+            "purpose": "Communicate lock duration requirement"
+          },
+          {
+            "text": "Locked CVX gives voting weight for Curve & f(x) Protocol Emissions Weight Votes, and for Admin Proposals on Curve, Frax, f(x) Protocol, and of course Convex. Locked CVX also earns a share of platform fees.",
+            "context": "Main explanatory paragraph",
+            "purpose": "Explain benefits and use cases of locking"
+          },
+          {
+            "text": "Note: you can also stake CVX. Staked CVX earns a different share of platform revenue (current vAPR: 3.54%), and can be withdrawn at any time.",
+            "context": "Blue bordered info box",
+            "purpose": "Present alternative staking option with comparison"
+          },
+          {
+            "text": "Connect wallet to see its locked CVX",
+            "context": "Right sidebar empty state",
+            "purpose": "Prompt wallet connection for personalized data"
+          },
+          {
+            "text": "Current vote weight: –",
+            "context": "Right sidebar",
+            "purpose": "Display wallet's voting power (empty if not connected)"
+          },
+          {
+            "text": "Delegate vote weight",
+            "context": "Right sidebar section header",
+            "purpose": "Introduce vote delegation feature"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "$0 (USD value for claimable)",
+          "– (locked CVX placeholder)",
+          "0.013% vAPR",
+          "$94.8m (total locked)",
+          "3.54% (staking vAPR comparison)"
+        ],
+        "trustSignals": [
+          "Platform fee share mentioned",
+          "Governance voting weight for multiple protocols",
+          "Transparent lock duration specification",
+          "Alternative option (staking) clearly presented"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect wallet to see its locked CVX"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/convex-home-3-claim.png",
+      "label": "Claim",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width stacked sections with horizontal scrollable card areas",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Medium-large white sans-serif, 20-24px for section headers",
+          "bodyStyle": "Regular weight light gray sans-serif, 14-16px for descriptions",
+          "dataStyle": "Large white numbers in metric displays and card headers"
+        },
+        "components": [
+          {
+            "type": "Top stat cards",
+            "description": "Two metric cards showing 'Total Claimable' ($0) and 'Total Locked CVX' ($–)",
+            "position": "Top center",
+            "notable": "Same header stats as Lock page; consistent design"
+          },
+          {
+            "type": "Earnings header",
+            "description": "'Claim earnings' section title with no visible subsections yet visible",
+            "position": "Left side below stats",
+            "notable": "Clear primary section heading"
+          },
+          {
+            "type": "Claimable card",
+            "description": "Locked CVX card showing $0 claimable (USD value), 0.013% vAPR, and 'Claim All' button",
+            "position": "First horizontal card in earnings section",
+            "notable": "Primary action card; CTA button with dropdown arrow suggests additional options"
+          },
+          {
+            "type": "Voting incentives card",
+            "description": "Card showing 'Locked CVX Voting Incentives' with 28.93% APR from Last Round on Votium",
+            "position": "Second card in row",
+            "notable": "High APR displayed prominently; indicates external incentive integration"
+          },
+          {
+            "type": "Educational section",
+            "description": "Text explanation of voting incentives with blue hyperlinks",
+            "position": "Full width below cards",
+            "notable": "Links to 'Lock CVX page' and external resources (Votium, Llama Airforce)"
+          },
+          {
+            "type": "Action buttons",
+            "description": "Two prominent buttons: 'Open Votium.app' (blue primary) and 'Open Llama Airforce dashboard' (gray secondary)",
+            "position": "Below educational text",
+            "notable": "External protocol integration; clear differentiation between primary and secondary actions"
+          },
+          {
+            "type": "Footer",
+            "description": "Multi-column footer with Convex logo, Community links (Twitter, Discord, GitHub), Resources (Documentation, Blog, contact email)",
+            "position": "Bottom of page",
+            "notable": "Standard footer UX with community/support links"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header stats → section title → claimable earnings cards (primary focus) → voting incentives explanation → action buttons → footer",
+        "innovativeElements": [
+          "Card layout with horizontal scroll implies additional claimable assets below the fold",
+          "External protocol integration (Votium, Llama Airforce) shown as native actions",
+          "APR displayed prominently on incentive cards to attract participation"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard / claims interface",
+        "userIntent": "View claimable earnings from locked CVX, understand voting incentive opportunities, and access external platforms for additional rewards",
+        "entryPoints": [
+          "Click 'Claim' from main navigation",
+          "Redirect after successful lock transaction",
+          "Direct navigation from connected wallet state"
+        ],
+        "exitPoints": [
+          "Claim All button (initiate claim transaction for all eligible rewards)",
+          "Open Votium.app button (external navigation to voting incentive platform)",
+          "Open Llama Airforce dashboard button (external navigation to incentive aggregator)",
+          "Lock CVX page link (return to lock interface)",
+          "Footer links (navigation to docs, blog, community, external contact)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Claim All button",
+            "action": "Claim all available earnings (Locked CVX + Voting Incentives)"
+          },
+          {
+            "element": "Card dropdown arrow",
+            "action": "Likely expand or show additional claim options"
+          },
+          {
+            "element": "Open Votium.app button",
+            "action": "External link to Votium for voting incentive details"
+          },
+          {
+            "element": "Open Llama Airforce dashboard button",
+            "action": "External link to Llama Airforce incentive tracker"
+          },
+          {
+            "element": "Hyperlinks in educational text",
+            "action": "Navigate to Lock CVX page or external resources"
+          }
+        ],
+        "informationArchitecture": "Wallet-level earnings summary → claimable categories (Locked CVX, Voting Incentives) → educational context → external platform actions. Horizontal card layout allows expansion for additional earning sources.",
+        "frictionPoints": [
+          "No specific earning amounts shown; all display $0 (likely requires wallet connection)",
+          "Voting incentives explanation assumes user knows about Votium/Llama Airforce",
+          "Two-step process to earn incentives (lock CVX, then vote on Votium)"
+        ],
+        "progressIndicators": [
+          "Active nav item underline on 'Claim'",
+          "No progress bar or step indicator visible on this screen"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Claim All",
+            "style": "primary-button",
+            "placement": "Locked CVX card"
+          },
+          {
+            "text": "Open Votium.app",
+            "style": "primary-button",
+            "placement": "Below explanatory text"
+          },
+          {
+            "text": "Open Llama Airforce dashboard",
+            "style": "secondary-button",
+            "placement": "Below explanatory text, right of Votium button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Claim earnings",
+            "context": "Section heading",
+            "purpose": "Label primary content area"
+          },
+          {
+            "text": "Claimable (USD value)",
+            "context": "Card header label",
+            "purpose": "Clarify metric being displayed"
+          },
+          {
+            "text": "vAPR",
+            "context": "Card header label with info icon",
+            "purpose": "Display variable APR for locked CVX earnings"
+          },
+          {
+            "text": "Locked CVX gives voting weight for Curve & f(x) Protocol Emissions Weight Votes, among a lot of other things listed on the 'Lock CVX' page.",
+            "context": "Educational paragraph",
+            "purpose": "Reinforce value prop and cross-link to lock page"
+          },
+          {
+            "text": "Those Curve & f(x) Protocol Emissions Weight Votes take place every two weeks, and receive external incentives through the third-party Votium platform: when you vote for some pools, you can earn incentives. Head to Votium to learn more!",
+            "context": "Educational paragraph",
+            "purpose": "Explain voting incentive mechanics and point to Votium"
+          }
+        ],
+        "tone": "professional-technical, educational, incentive-focused",
+        "dataFormatting": [
+          "$0 (claimable USD)",
+          "0.013% vAPR",
+          "28.93% (Voting incentives APR)",
+          "Last Round Incentives APR on Votium"
+        ],
+        "trustSignals": [
+          "Real-time APR displayed (0.013%)",
+          "External audit/partnership with Votium mentioned",
+          "Multi-protocol earnings (Curve, f(x) voting incentives)",
+          "Links to documentation and external platforms for transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

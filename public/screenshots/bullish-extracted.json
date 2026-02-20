@@ -1,0 +1,4014 @@
+{
+  "slug": "bullish",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T11:08:30.271Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 32,
+  "screens": [
+    {
+      "image": "/screenshots/bullish-home-5-amm.png",
+      "label": "AMM",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, left-aligned, 72+ px, white on dark",
+          "bodyStyle": "Regular sans-serif, medium weight, left-aligned, 16-18px, light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Bright cyan/green banner with competition announcement and underlined link",
+            "position": "top full-width",
+            "notable": "High contrast, dismissible with X button, drives engagement"
+          },
+          {
+            "type": "navigation",
+            "description": "Horizontal menu with MARKETS and PRODUCTS, plus Log in button",
+            "position": "top-center",
+            "notable": "Minimalist, white text on dark background"
+          },
+          {
+            "type": "visual-graphic",
+            "description": "Abstract curved lines with cyan highlight, geometric and tech-forward",
+            "position": "right side, lower half",
+            "notable": "Subtle animation suggests advanced technology"
+          },
+          {
+            "type": "accent-line",
+            "description": "Cyan horizontal line below headline",
+            "position": "below main heading",
+            "notable": "Reinforces brand color and creates visual separation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates left 60%, supporting text below, graphic visual accent on right fills remaining space",
+        "innovativeElements": [
+          "Animated abstract geometric graphic",
+          "Integrated brand color accent line",
+          "Asymmetric layout with breathing room"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bullish's core value proposition around automated market making",
+        "entryPoints": [
+          "Direct navigation from home",
+          "PRODUCTS menu click"
+        ],
+        "exitPoints": [
+          "MARKETS navigation",
+          "PRODUCTS menu",
+          "Log in button",
+          "Competition banner link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "MARKETS link",
+            "action": "Navigate to markets overview"
+          },
+          {
+            "element": "PRODUCTS link",
+            "action": "Navigate to products section"
+          },
+          {
+            "element": "Log in button",
+            "action": "Open authentication flow"
+          },
+          {
+            "element": "Competition banner link",
+            "action": "Navigate to trading competition tracker"
+          },
+          {
+            "element": "X dismiss button",
+            "action": "Close banner notification"
+          }
+        ],
+        "informationArchitecture": "Hero headline with supporting description, followed by navigation to deeper product exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The new standard in automated market making.",
+        "subheadline": "Bullish revolutionizes crypto automated market making by offering traders deep liquidity while empowering liquidity providers with an alternative way to make markets.",
+        "ctas": [
+          {
+            "text": "Track the top traders.",
+            "style": "text-link",
+            "placement": "top banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "top banner",
+            "purpose": "Announce active promotion and drive competition engagement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Professional Trading Competition",
+          "Deep liquidity mention"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-6-02052026bullish-reports-fourth-quarter-2025-resu.png",
+      "label": "02.05.2026Bullish Reports Fourth Quarter 2025 Resu",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1a1a1a",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, white text on dark background, 56+ px",
+          "bodyStyle": "Regular sans-serif, light gray on dark for metadata, italic for financial data",
+          "dataStyle": "Bold currency figures ($64.3B, $92.5M) and percentages, italicized metrics"
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "MARKETS and PRODUCTS menu with Log in",
+            "position": "top-center",
+            "notable": "Consistent with other pages"
+          },
+          {
+            "type": "news-metadata",
+            "description": "NEWS badge, date, read time in caps",
+            "position": "below headline",
+            "notable": "Clear categorization and scannability"
+          },
+          {
+            "type": "content-section",
+            "description": "White background area with bulleted financial data",
+            "position": "lower half",
+            "notable": "High contrast shift from dark to light background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates dark section, metadata provides context, bullet points in light section ensure readability of financial data",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "news-article",
+        "userIntent": "Read quarterly financial results and company performance metrics",
+        "entryPoints": [
+          "Home page link",
+          "News section navigation"
+        ],
+        "exitPoints": [
+          "MARKETS navigation",
+          "PRODUCTS menu",
+          "Scroll to read more",
+          "Back to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "MARKETS",
+            "action": "Navigate to markets"
+          },
+          {
+            "element": "PRODUCTS",
+            "action": "Navigate to products"
+          },
+          {
+            "element": "Log in",
+            "action": "Authentication"
+          }
+        ],
+        "informationArchitecture": "News headline with publication metadata, followed by key financial metrics presented as bullet points",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bullish Reports Fourth Quarter 2025 Results",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "NEWS",
+            "context": "below headline",
+            "purpose": "Categorize content type"
+          },
+          {
+            "text": "FEBRUARY 5, 2026 • 10 MIN READ",
+            "context": "metadata line",
+            "purpose": "Provide publication date and reading time estimate"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$64.3 billion",
+          "$(563.6) million",
+          "$92.5 million",
+          "$44.5 million"
+        ],
+        "trustSignals": [
+          "Specific financial figures",
+          "Quarterly reporting",
+          "Record performance metrics"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-7-digital-assets.png",
+      "label": "Digital Assets",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, left-aligned, 60+ px, white",
+          "bodyStyle": "Regular sans-serif, medium weight, 16px, light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Cyan/green banner with trading competition announcement",
+            "position": "top full-width",
+            "notable": "Consistent with other pages, high visibility"
+          },
+          {
+            "type": "navigation",
+            "description": "MARKETS and PRODUCTS with Log in",
+            "position": "top-center",
+            "notable": "Consistent header pattern"
+          },
+          {
+            "type": "icon-illustration",
+            "description": "Animated circular crypto asset icons (Bitcoin, Ethereum, Litecoin, Ripple, Chainlink) with glowing cyan/blue borders",
+            "position": "right side, center to lower",
+            "notable": "Distinctive animated glowing circles, floating particles, 3D perspective, branded color treatment"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and description occupy left 50%, right side dominated by large illuminated crypto asset icons with particle effects",
+        "innovativeElements": [
+          "Glowing circular crypto icons",
+          "Floating particle effects",
+          "Animated asset visualization",
+          "Cyan/blue glow effects on icons"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore supported digital assets and learn about exchange capabilities",
+        "entryPoints": [
+          "PRODUCTS navigation",
+          "Home page link"
+        ],
+        "exitPoints": [
+          "MARKETS",
+          "PRODUCTS",
+          "Log in",
+          "Competition banner",
+          "Scroll for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "MARKETS",
+            "action": "Navigate to markets"
+          },
+          {
+            "element": "PRODUCTS",
+            "action": "Navigate to products"
+          },
+          {
+            "element": "Log in",
+            "action": "Authentication"
+          },
+          {
+            "element": "Competition banner",
+            "action": "Navigate to trading competition"
+          }
+        ],
+        "informationArchitecture": "Value proposition headline with supporting description and visual demonstration of supported assets",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bullish exchange digital assets.",
+        "subheadline": "Learn more about the assets currently supported on our exchange.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Named supported assets (Bitcoin, Ethereum, Litecoin, Ripple, Chainlink)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-8-indices.png",
+      "label": "Indices",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00FF9F",
+          "#1A1A1A",
+          "#00BFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif (48px+), white text, clean and modern",
+          "bodyStyle": "Regular weight sans-serif, white/light gray, 16-18px, high contrast",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "notification-banner",
+            "description": "Cyan/green gradient banner at top with trading competition announcement",
+            "position": "top-full-width",
+            "notable": "Bright, attention-grabbing color breaks dark aesthetic, includes underlined link"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Horizontal menu with MARKETS, PRODUCTS, settings icon, Log in button",
+            "position": "top-left to top-right",
+            "notable": "Minimal, spacious layout with strong visual separation"
+          },
+          {
+            "type": "animated-crypto-icons",
+            "description": "Circular coin icons (Bitcoin, Litecoin, Polygon, Ethereum, etc.) with neon green/blue glowing borders",
+            "position": "right-center to bottom-right",
+            "notable": "Floating, glowing orbital elements create motion and premium feel; large sizes (100-200px)"
+          },
+          {
+            "type": "text-panel",
+            "description": "Left-aligned heading 'Indices' with explanatory subtext",
+            "position": "left-center",
+            "notable": "Simple, left-justified, contrasts with decorative right side"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading draws eye to left; glowing crypto icons on right create visual balance and draw eye to assets offered",
+        "innovativeElements": [
+          "Neon glow effect on crypto icons with orbital animation suggestion",
+          "Radial gradient blur/glow on icons creating depth",
+          "Minimal text paired with rich visual ornamentation"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-section",
+        "userIntent": "Understand what indices/assets are available on the platform",
+        "entryPoints": [
+          "Scrolled from homepage hero",
+          "Clicked 'MARKETS' navigation"
+        ],
+        "exitPoints": [
+          "Scroll further down for more sections",
+          "Click 'MARKETS' to view full market listing",
+          "Click crypto icons to view individual asset details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Crypto icon circles",
+            "action": "Likely clickable to view asset details or trading pairs"
+          },
+          {
+            "element": "Navigation links (MARKETS, PRODUCTS)",
+            "action": "Navigate to different platform sections"
+          },
+          {
+            "element": "Trading competition banner link",
+            "action": "Navigate to competition tracking page"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Section title > supporting text on left; visual taxonomy of assets on right",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Indices",
+        "subheadline": "Learn more about the assets currently supported on our exchange.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway. Track the top traders.",
+            "context": "Top banner notification",
+            "purpose": "Drive engagement with promotional event; 'Track the top traders' is underlined CTA"
+          }
+        ],
+        "tone": "professional-technical, confident, welcoming",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Mention of 'exchange' implies regulatory compliance",
+          "Professional branding and design signal institutional quality"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-9-custody.png",
+      "label": "Custody",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00FF9F",
+          "#1A1A1A",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold sans-serif (56px+), white text, line breaks for emphasis",
+          "bodyStyle": "Regular weight sans-serif, light gray, 16px, readable on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "category-badge",
+            "description": "Cyan 'CUSTODY' label above headline",
+            "position": "top-left",
+            "notable": "All caps, bright neon green color, sets section context"
+          },
+          {
+            "type": "heading-with-accent",
+            "description": "Multi-line heading with underline accent",
+            "position": "left-center",
+            "notable": "Thick horizontal line beneath heading in cyan, adds visual weight"
+          },
+          {
+            "type": "3d-illustration",
+            "description": "Padlock/security mechanism icon with metallic finish and cyan/green accent elements",
+            "position": "right-center",
+            "notable": "Isometric 3D styling, sophisticated gradient, communicates security metaphor"
+          },
+          {
+            "type": "body-text-block",
+            "description": "Paragraph explaining custody architecture benefits",
+            "position": "left-bottom",
+            "notable": "Truncated text suggests scroll-to-read or partial content display"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading dominates left; supporting 3D icon reinforces message on right; underline creates visual anchor",
+        "innovativeElements": [
+          "3D isometric padlock illustration with realistic metallic shading",
+          "Horizontal accent line under headline in brand color",
+          "Cyan accent blocks floating near main illustration"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-section",
+        "userIntent": "Understand Bullish's custody/security capabilities",
+        "entryPoints": [
+          "Scrolled from homepage hero or indices section",
+          "Clicked 'PRODUCTS' menu"
+        ],
+        "exitPoints": [
+          "Scroll to next feature section",
+          "Click on heading/illustration for custody details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Headline/text area",
+            "action": "Likely expandable or links to detailed custody page"
+          }
+        ],
+        "informationArchitecture": "Feature spotlight: category label > headline > supporting copy > visual metaphor",
+        "frictionPoints": [
+          "Text appears truncated; user may need to scroll or expand to read full description"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Industry leading security & velocity.",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "CUSTODY",
+            "context": "Category badge above headline",
+            "purpose": "Categorize and label the feature section"
+          }
+        ],
+        "tone": "professional-technical, trustworthy, authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Mention of 'best-in-class crypto custody architecture'",
+          "Reference to 'security of your assets' and 'risk mitigation'",
+          "Mention of 'regulatory oversight'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-10-trust-transparency.png",
+      "label": "Trust & Transparency",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00FF9F",
+          "#1A1A1A",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large, bold sans-serif (64px+), white text, multi-line for impact",
+          "bodyStyle": "Regular weight sans-serif, light gray, 16px, high readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "category-badge",
+            "description": "Cyan 'TRUST & TRANSPARENCY' label",
+            "position": "top-left",
+            "notable": "All caps, bright neon green, establishes section theme"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large multi-line heading emphasizing trust commitment",
+            "position": "left-center",
+            "notable": "Bold, conversational tone; headline spans 3-4 lines"
+          },
+          {
+            "type": "supporting-text",
+            "description": "Paragraph about compliance, security measures, regulatory oversight",
+            "position": "left-bottom",
+            "notable": "Substantive copy building credibility"
+          },
+          {
+            "type": "geometric-illustration",
+            "description": "Abstract pie chart or circular graph with gradient elements",
+            "position": "right-center to right-bottom",
+            "notable": "Minimalist 3D design, dark colors with cyan accent line, semi-transparent"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Giant headline commands primary attention; geometric visual provides secondary interest; supporting copy builds narrative",
+        "innovativeElements": [
+          "Abstract pie/donut chart visualization (non-traditional representation of metrics)",
+          "Cyan horizontal line accent integrated into geometric shape",
+          "Semi-transparent 3D visualization technique"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-section",
+        "userIntent": "Understand Bullish's commitment to trust, transparency, compliance, and regulatory standards",
+        "entryPoints": [
+          "Scrolled from previous sections",
+          "User researching platform credibility"
+        ],
+        "exitPoints": [
+          "Scroll down for additional sections or footer",
+          "Click headline/text for compliance documentation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Headline and supporting text",
+            "action": "Potentially expandable or links to trust/compliance resources"
+          }
+        ],
+        "informationArchitecture": "Trust-building narrative: category > bold commitment statement > supporting details > visual reinforcement",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We are committed to being the most trusted digital asset exchange.",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "TRUST & TRANSPARENCY",
+            "context": "Category badge",
+            "purpose": "Label and emphasize section theme"
+          }
+        ],
+        "tone": "professional-technical, reassuring, serious commitment",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Direct commitment statement to being 'most trusted'",
+          "Explicit mention of 'crypto compliance'",
+          "Reference to 'robust security measures'",
+          "Mention of 'regulatory oversight'",
+          "Emphasis on 'mature approach' and 'safeguarding customer assets'"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1abc9c",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, light gray (#888888), multi-line sans serifs breaking naturally",
+          "bodyStyle": "Medium sans-serif, light gray (#999999), 16-18px, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Teal/green banner at top with trading competition message",
+            "position": "top-full-width",
+            "notable": "High contrast, clickable link underlined, dismissible"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Logo, MARKETS/PRODUCTS nav links, Log in button",
+            "position": "top-left-to-right",
+            "notable": "Minimal spacing, professional layout"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with gradient underline separator",
+            "position": "left-center",
+            "notable": "Gradient line (teal to blue) adds visual interest"
+          },
+          {
+            "type": "product-screenshot",
+            "description": "Desktop trading platform with charts, tables, live data",
+            "position": "right-center",
+            "notable": "3D perspective angle, showing real UI with green/red candlesticks"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Bottom dark overlay with three action buttons",
+            "position": "bottom-full-width",
+            "notable": "White buttons on dark, clear three-option hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates left; right side showcases product visually; hero text guides eye downward; announcement banner captures attention at top",
+        "innovativeElements": [
+          "Gradient underline separator beneath headline",
+          "3D-angled product screenshot creating depth",
+          "Contrasting announcement banner as engagement hook"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Bullish Europe is and its core value proposition",
+        "entryPoints": [
+          "Direct URL visit",
+          "External campaign link",
+          "Marketing email"
+        ],
+        "exitPoints": [
+          "MARKETS navigation",
+          "PRODUCTS navigation",
+          "Log in button",
+          "Track the top traders link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Track the top traders link",
+            "action": "Navigate to trading competition leaderboard"
+          },
+          {
+            "element": "MARKETS nav",
+            "action": "Open markets dropdown/page"
+          },
+          {
+            "element": "PRODUCTS nav",
+            "action": "Open products dropdown/page"
+          },
+          {
+            "element": "Log in button",
+            "action": "Navigate to authentication"
+          }
+        ],
+        "informationArchitecture": "Hero-focused with product showcase; navigation provides clear sectioning into Markets and Products; banner promotes active campaign",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The standard for institutional crypto trading.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders",
+            "style": "text-link",
+            "placement": "announcement-banner"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Leveraging a deeply liquid global order book, Bullish Europe (BEU) offers tight spreads and low fees to institutions and advanced traders. Backed by a tier-1 license, BEU ensures asset security with regulated institutional-grade infrastructure.",
+            "context": "Below headline",
+            "purpose": "Establishes credibility and key differentiators"
+          },
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Green banner",
+            "purpose": "Creates urgency and draws attention to active promotion"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "tier-1 license",
+          "regulated institutional-grade infrastructure",
+          "asset security emphasis",
+          "tight spreads and low fees"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1abc9c",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Small sans-serif, white (#ffffff), 13-14px, regular weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "cookie-consent-modal",
+            "description": "Dark overlay banner spanning bottom of screen with white text and three action buttons",
+            "position": "bottom-full-width",
+            "notable": "Subtle transparency, non-blocking but prominent position"
+          },
+          {
+            "type": "button-group",
+            "description": "Three white buttons: Settings, Reject all, Accept all",
+            "position": "bottom-right",
+            "notable": "Equal visual weight with slight spacing between"
+          },
+          {
+            "type": "linked-text",
+            "description": "Cookie Notice underlined text link",
+            "position": "inline with body text",
+            "notable": "Provides legal documentation reference"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main body text left-aligned, buttons right-aligned; linked text breaks the paragraph for compliance",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Make a choice about cookie consent",
+        "entryPoints": [
+          "Page load (first visit or cookie expired)"
+        ],
+        "exitPoints": [
+          "Accept all",
+          "Reject all",
+          "Settings (granular control)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Settings button",
+            "action": "Open cookie preferences dialog"
+          },
+          {
+            "element": "Reject all button",
+            "action": "Decline all non-essential cookies and close banner"
+          },
+          {
+            "element": "Accept all button",
+            "action": "Accept all cookies and dismiss banner"
+          },
+          {
+            "element": "Cookie Notice link",
+            "action": "Open cookie policy document"
+          }
+        ],
+        "informationArchitecture": "Linear choice: accept all > settings > reject all; linked reference to policy",
+        "frictionPoints": [
+          "Three buttons require deliberate choice (not auto-accepting)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Settings",
+            "style": "secondary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "Reject all",
+            "style": "secondary-button",
+            "placement": "bottom-right"
+          },
+          {
+            "text": "Accept all",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By clicking \"Accept all\", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+            "context": "Cookie banner body",
+            "purpose": "Inform user of cookie purposes and consent implications"
+          },
+          {
+            "text": "Cookie Notice",
+            "context": "Inline link",
+            "purpose": "Provide legal reference and full policy details"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Legal compliance messaging",
+          "Clear consent options"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-4-products.png",
+      "label": "Products",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1abc9c",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, white (#ffffff), multi-line with natural breaks",
+          "bodyStyle": "Medium sans-serif, light gray (#999999), 16-18px, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Teal/green banner with trading competition message",
+            "position": "top-full-width",
+            "notable": "Consistent with first screen, maintains campaign visibility"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Logo, MARKETS/PRODUCTS nav, Log in, theme toggle",
+            "position": "top-left-to-right",
+            "notable": "Settings/theme icon visible, professional spacing"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large white text with teal-to-blue gradient underline",
+            "position": "left-center",
+            "notable": "Same gradient treatment as first screen for consistency"
+          },
+          {
+            "type": "abstract-graphic",
+            "description": "Concentric circles with teal/blue gradient outline",
+            "position": "right-center",
+            "notable": "Minimalist geometric design, suggests interconnected/nested concepts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "White headline dominates; abstract graphic provides visual anchor on right; body text below guides further engagement",
+        "innovativeElements": [
+          "Minimalist concentric circle graphic (DeFi/ecosystem concept)",
+          "Consistent gradient underline creating brand signature"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about core product offering (deep liquidity and tight spreads)",
+        "entryPoints": [
+          "PRODUCTS navigation from home",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "MARKETS navigation",
+          "PRODUCTS navigation (active)",
+          "Log in",
+          "Scroll for more content below (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "MARKETS nav",
+            "action": "Switch to Markets section"
+          },
+          {
+            "element": "PRODUCTS nav",
+            "action": "Stay/refresh Products view"
+          },
+          {
+            "element": "Log in button",
+            "action": "Navigate to authentication"
+          },
+          {
+            "element": "Theme toggle icon",
+            "action": "Switch light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Feature-focused landing; headline leads with benefit (deep liquidity); supporting body text explains the technical advantage (DeFi + regulated); visual metaphor suggests ecosystem harmony",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trade with deep liquidity & tight spreads.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bullish Europe (BEU) leverages innovations of decentralized finance (DeFi) within a regulated framework so you can execute fast, reliable crypto trades with near-zero spreads, even in volatile markets.",
+            "context": "Below headline",
+            "purpose": "Explains the unique value proposition combining DeFi innovation with regulatory safety"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "regulated framework",
+          "decentralized finance (DeFi)",
+          "fast, reliable crypto trades",
+          "near-zero spreads"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-11-investor-relations.png",
+      "label": "Investor Relations",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00CED1",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, all-caps 'Investor Relations' positioned left",
+          "bodyStyle": "Light sans-serif body text, medium weight, left-aligned paragraph",
+          "dataStyle": "Large bold numerals for price ($31.73), smaller for change (+0.02), percentage (0.06%)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal menu with Overview, News, Events, Stock info, Financials, Governance, Resources",
+            "position": "top",
+            "notable": "Dropdown indicators on multi-level items"
+          },
+          {
+            "type": "stock-ticker-card",
+            "description": "Black card with NYSE: BLSH ticker, price, change, and timestamp",
+            "position": "right side, centered vertically",
+            "notable": "Minimal design with green gradient background bleeding behind main content"
+          },
+          {
+            "type": "logo",
+            "description": "Bullish wing icon and wordmark",
+            "position": "top-left",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading draws eye to left, stock ticker card anchors right side, gradient background creates depth",
+        "innovativeElements": [
+          "Gradient teal-to-blue background that evokes market volatility",
+          "Real-time stock data floating over hero section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero",
+        "userIntent": "Understand Bullish as an investment opportunity and access investor relations information",
+        "entryPoints": [
+          "Direct navigation to Investor Relations section",
+          "Homepage redirect"
+        ],
+        "exitPoints": [
+          "Navigate to News",
+          "Navigate to Stock info",
+          "Navigate to Financials",
+          "Navigate to Governance"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Expand dropdowns or navigate to subsections"
+          },
+          {
+            "element": "Stock ticker card",
+            "action": "May link to detailed stock info or trading interface"
+          },
+          {
+            "element": "Search icon",
+            "action": "Open search functionality"
+          }
+        ],
+        "informationArchitecture": "Hero section introduces page purpose, with live stock data as proof point; detailed Corporate Overview below explains mission",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Investor Relations",
+        "subheadline": "Corporate Overview",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "20 minutes minimum delay",
+            "context": "Below stock price on ticker card",
+            "purpose": "Discloses data freshness/latency"
+          },
+          {
+            "text": "NYSE: BLSH",
+            "context": "Ticker symbol above price",
+            "purpose": "Identifies the security being quoted"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$31.73",
+          "+0.02 (0.06%)",
+          "2/13/2026 | 4:00 PM"
+        ],
+        "trustSignals": [
+          "NYSE listing (BLSH)",
+          "Real-time stock data"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-12-news-insights.png",
+      "label": "News & Insights",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00FF00",
+          "#00CED1"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, multi-line 'News & Insights'",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner-announcement",
+            "description": "Bright neon-green banner with black text announcing trading competition",
+            "position": "top full-width",
+            "notable": "High-contrast urgent styling with underlined link 'Track the top traders'"
+          },
+          {
+            "type": "navigation-tabs",
+            "description": "MARKETS and PRODUCTS tabs in white caps",
+            "position": "upper left below banner",
+            "notable": null
+          },
+          {
+            "type": "hamburger-menu",
+            "description": "Mobile-style menu icon",
+            "position": "left sidebar",
+            "notable": "Persistent sidebar menu trigger"
+          },
+          {
+            "type": "abstract-graphic",
+            "description": "Curved wave-like design element in grayscale",
+            "position": "right side of screen",
+            "notable": "Animated or sculptural 3D feel"
+          },
+          {
+            "type": "teaser-card",
+            "description": "Partial card visible at bottom with 'Bullish Reports Fourth'",
+            "position": "bottom right",
+            "notable": "Incomplete card suggests scroll/swipe interaction"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Heading dominates left side; geometric abstract graphic anchors right; bright banner pulls attention top",
+        "innovativeElements": [
+          "Neon green alert banner contrasting dark theme",
+          "3D sculptural wave graphic creating depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero",
+        "userIntent": "Discover news and market insights; stay informed about trading opportunities",
+        "entryPoints": [
+          "Navigation from main menu",
+          "Homepage section scroll"
+        ],
+        "exitPoints": [
+          "Track the top traders (competition link)",
+          "Scroll to see full 'Bullish Reports' card",
+          "Navigate to Markets or Products tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Green announcement banner",
+            "action": "Navigate to trading competition tracking page"
+          },
+          {
+            "element": "MARKETS / PRODUCTS tabs",
+            "action": "Switch content sections"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Open sidebar navigation"
+          },
+          {
+            "element": "Log in button",
+            "action": "Open authentication flow"
+          }
+        ],
+        "informationArchitecture": "Eye-catching announcement at top; content sections via tabs; hero messaging with teaser for expandable content",
+        "frictionPoints": [
+          "Partial card at bottom may indicate more content below (requires scrolling to see)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "News & Insights",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders",
+            "style": "text-link-underlined",
+            "placement": "Green announcement banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Green banner announcement",
+            "purpose": "Headline for time-sensitive event marketing"
+          }
+        ],
+        "tone": "professional-technical with urgent-marketing overlay",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-13-bullish-capital.png",
+      "label": "Bullish Capital",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00FF00",
+          "#00CED1"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, multi-line 'Venture capital investment'",
+          "bodyStyle": "Body text in light gray, readable sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner-announcement",
+            "description": "Bright neon-green banner with black text about trading competition",
+            "position": "top full-width",
+            "notable": "Identical to previous screen; persistent across pages"
+          },
+          {
+            "type": "label-tag",
+            "description": "Green caps text 'BULLISH CAPITAL'",
+            "position": "upper left above main heading",
+            "notable": "Category or section label"
+          },
+          {
+            "type": "navigation-tabs",
+            "description": "MARKETS and PRODUCTS tabs",
+            "position": "upper left below banner",
+            "notable": null
+          },
+          {
+            "type": "hamburger-menu",
+            "description": "Sidebar menu trigger",
+            "position": "left edge",
+            "notable": null
+          },
+          {
+            "type": "abstract-graphic",
+            "description": "3D curved bracket/arc shape with gradient outline in teal-blue",
+            "position": "right side",
+            "notable": "Similar sculptural style to previous screen, branded color accent"
+          },
+          {
+            "type": "descriptive-box",
+            "description": "Dark rounded rectangle containing explanatory text",
+            "position": "bottom right, partially visible",
+            "notable": "Framed section with teal accent border"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Label and heading left, large serif typography; explanatory body text; 3D graphic right anchors design",
+        "innovativeElements": [
+          "Branded 3D graphic elements consistent across hero sections",
+          "Teal-blue gradient accent on geometric shapes"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero",
+        "userIntent": "Learn about Bullish Capital's venture investment offerings and services",
+        "entryPoints": [
+          "Navigation from main menu",
+          "Bullish Capital product link",
+          "Homepage section scroll"
+        ],
+        "exitPoints": [
+          "Learn more (presumably on expanded card below)",
+          "Navigate to Markets or Products",
+          "Navigate elsewhere via menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Green announcement banner",
+            "action": "Navigate to trading competition"
+          },
+          {
+            "element": "MARKETS / PRODUCTS tabs",
+            "action": "Switch sections"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Open navigation"
+          },
+          {
+            "element": "Log in button",
+            "action": "Authenticate"
+          }
+        ],
+        "informationArchitecture": "Category label → Product heading → Benefit-focused body text; visual anchor on right; expandable card below",
+        "frictionPoints": [
+          "Content cut off at bottom may require scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Venture capital investment",
+        "subheadline": "BULLISH CAPITAL",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Offering strategic capital, industry expertise and an extensive network of resources, Bullish Capital operates within the Bullish group ecosystem.",
+            "context": "Body paragraph below heading",
+            "purpose": "Explains service value proposition and positioning within group"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Group ecosystem positioning",
+          "Network of resources mention"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-14-hong-kong.png",
+      "label": "Hong Kong",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast white on black, prominent line breaks",
+          "bodyStyle": "Medium-weight sans-serif, light gray text, comfortable line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Bright turquoise banner with trading competition notice and link",
+            "position": "top full-width",
+            "notable": "High contrast, dismissible, drives engagement"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with MARKETS, PRODUCTS, region selector, auth controls",
+            "position": "top below banner",
+            "notable": "Clean two-column layout with right-aligned CTAs"
+          },
+          {
+            "type": "hero-image",
+            "description": "Angled 3D renders of desktop and mobile trading interfaces",
+            "position": "right side",
+            "notable": "Modern perspective rendering with cyan/red accent colors"
+          },
+          {
+            "type": "cta-button",
+            "description": "GET STARTED button with arrow",
+            "position": "left column bottom",
+            "notable": "Secondary style text link with icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large bold headline dominates left 60%, supporting text below, CTA anchors bottom, high-res imagery on right drives attention",
+        "innovativeElements": [
+          "3D perspective device rendering with gradient lighting",
+          "Floating announcement banner with underline action link",
+          "Region-aware locale selector in nav"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bullish's value proposition as an institutional crypto trading platform",
+        "entryPoints": [
+          "Direct landing from marketing",
+          "Regional entry point (Hong Kong variant)"
+        ],
+        "exitPoints": [
+          "GET STARTED → likely signup/onboarding",
+          "MARKETS → market data browsing",
+          "PRODUCTS → product details",
+          "Log in → authenticated dashboard",
+          "SIGN UP → registration flow",
+          "Track the top traders link → leaderboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "GET STARTED button",
+            "action": "Navigate to signup or product tour"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Trigger registration modal or onboarding"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "Region selector icon",
+            "action": "Switch locale/region"
+          },
+          {
+            "element": "Track the top traders link",
+            "action": "Navigate to trading competition leaderboard"
+          }
+        ],
+        "informationArchitecture": "Hero value prop centered on left, supporting details below, navigation top, authentication/signup top-right",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The standard for institutional crypto trading.",
+        "subheadline": "With near-zero spreads and low fees, Bullish puts performance and security first. Best-in-class for institutions, now available for serious traders.",
+        "ctas": [
+          {
+            "text": "GET STARTED",
+            "style": "text-link-with-icon",
+            "placement": "left column above fold"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Preview exchange",
+            "context": "header nav",
+            "purpose": "Invite exploration without commitment"
+          },
+          {
+            "text": "The Bullish Professional Trading Competition is underway. Track the top traders.",
+            "context": "top banner",
+            "purpose": "Drive engagement with competitive feature"
+          }
+        ],
+        "tone": "professional-technical, confident, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "near-zero spreads",
+          "low fees",
+          "best-in-class",
+          "performance and security first"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-15-united-states.png",
+      "label": "United States",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast white on black, prominent line breaks",
+          "bodyStyle": "Medium-weight sans-serif, light gray text, comfortable line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Bright turquoise banner with trading competition notice",
+            "position": "top full-width",
+            "notable": "Identical to Hong Kong version"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "MARKETS, PRODUCTS with US flag selector, login and no signup visible",
+            "position": "top below banner",
+            "notable": "Region-aware: US flag instead of HK, different CTA strategy"
+          },
+          {
+            "type": "hero-image",
+            "description": "Same 3D trading interface renders",
+            "position": "right side",
+            "notable": "Consistent visual language across regions"
+          },
+          {
+            "type": "cta-button",
+            "description": "GET IN TOUCH button instead of GET STARTED",
+            "position": "left column bottom",
+            "notable": "Regional variation in primary CTA messaging"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to Hong Kong variant - hero headline dominates, supporting copy below, device imagery right",
+        "innovativeElements": [
+          "Region-specific CTA adaptation (GET IN TOUCH vs GET STARTED)",
+          "Conditional visibility of signup button based on region"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bullish platform with US-specific regulatory/market context",
+        "entryPoints": [
+          "Direct landing from US marketing campaign",
+          "Regional entry point detection (US)"
+        ],
+        "exitPoints": [
+          "GET IN TOUCH → likely contact form or consultation booking",
+          "MARKETS → market browsing",
+          "PRODUCTS → feature exploration",
+          "Log in → authenticated access",
+          "Track the top traders → competition leaderboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "GET IN TOUCH button",
+            "action": "Open contact form or sales inquiry channel"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "US flag selector",
+            "action": "Switch region/locale"
+          },
+          {
+            "element": "Top traders link",
+            "action": "Navigate to leaderboard"
+          }
+        ],
+        "informationArchitecture": "Same as Hong Kong but with region-aware CTA hierarchy",
+        "frictionPoints": [
+          "No visible signup button for US users (may require contact first)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The standard for institutional crypto trading.",
+        "subheadline": "With near-zero spreads and low fees, Bullish puts performance and security first. Best-in-class for institutions, now available for serious traders.",
+        "ctas": [
+          {
+            "text": "GET IN TOUCH",
+            "style": "text-link-with-icon",
+            "placement": "left column above fold"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Preview exchange",
+            "context": "header nav",
+            "purpose": "Explore without full commitment"
+          },
+          {
+            "text": "The Bullish Professional Trading Competition is underway. Track the top traders.",
+            "context": "top banner",
+            "purpose": "Drive engagement"
+          }
+        ],
+        "tone": "professional-technical, confident, compliance-aware",
+        "dataFormatting": [],
+        "trustSignals": [
+          "near-zero spreads",
+          "low fees",
+          "best-in-class",
+          "performance and security first"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-16-track-the-top-traders.png",
+      "label": "Track the top traders.",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#ffffff",
+          "#4a90e2"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif white headline, thin green subheading",
+          "bodyStyle": "Medium sans-serif light gray body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Bright turquoise banner, full-width competition notice",
+            "position": "top",
+            "notable": "Consistent across all pages"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "MARKETS, PRODUCTS, region selector (blue), Log in only",
+            "position": "top below banner",
+            "notable": "No signup button on this page"
+          },
+          {
+            "type": "section-label",
+            "description": "Green 'PRO TRADER COMPETITION' heading",
+            "position": "left column above headline",
+            "notable": "Accent color signals special section"
+          },
+          {
+            "type": "hero-image",
+            "description": "Abstract curved lines in blue-green gradient",
+            "position": "right side",
+            "notable": "Geometric abstraction instead of product mockup"
+          },
+          {
+            "type": "section-heading",
+            "description": "'Competitor statistics' white heading",
+            "position": "bottom left",
+            "notable": "Signals section continuation below fold"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Green label guides attention to competition context, massive white headline establishes stakes ($10M), supporting text below, abstract gradient art right, section preview at bottom",
+        "innovativeElements": [
+          "Abstract geometric gradient visualization instead of product showcase",
+          "Hierarchical color coding (green for section label, white for content, blue for accent)",
+          "Stacked section preview pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about and engage with the Pro Trader Competition and view competitor performance data",
+        "entryPoints": [
+          "From announcement banner CTA on previous pages",
+          "Direct link to competition page"
+        ],
+        "exitPoints": [
+          "Log in → view live competition dashboard",
+          "Scroll down → see competitor statistics section",
+          "MARKETS/PRODUCTS → navigate away from competition focus"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log in",
+            "action": "Authenticate to access competition dashboard"
+          },
+          {
+            "element": "Region selector",
+            "action": "Switch locale"
+          },
+          {
+            "element": "Page scroll",
+            "action": "Reveal Competitor statistics section"
+          }
+        ],
+        "informationArchitecture": "Hero section dedicated to competition excitement, supporting context copy, section preview below to encourage downward scroll",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The battle for the $10M mandate has begun.",
+        "subheadline": "Watch the strategies unfold. Follow the Pro Trader leaderboard and results below.",
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "PRO TRADER COMPETITION",
+            "context": "left column accent label",
+            "purpose": "Signal section context and type"
+          },
+          {
+            "text": "Track real-time performance and latest trading activity. Final winners are determined",
+            "context": "bottom section preview",
+            "purpose": "Tease Competitor statistics content below"
+          }
+        ],
+        "tone": "professional-technical, engaging, competitive, excitement-driven",
+        "dataFormatting": [
+          "$10M (prize pool/mandate size)"
+        ],
+        "trustSignals": [
+          "$10M competition prize",
+          "Professional trading format",
+          "Real-time performance tracking"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-17-get-in-touch.png",
+      "label": "GET IN TOUCH",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, all-caps sans-serif, white on dark background",
+          "bodyStyle": "Regular weight, light gray, high contrast for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Bright cyan/green banner at top announcing trading competition",
+            "position": "top-full-width",
+            "notable": "High contrast, closable, directs to leaderboard"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Sticky header with MARKETS, PRODUCTS, Log in",
+            "position": "top-fixed",
+            "notable": "Clean minimal approach, hamburger menu on left"
+          },
+          {
+            "type": "text-input-field",
+            "description": "First Name text input with label and border",
+            "position": "bottom-left",
+            "notable": "Standard form field, minimal styling"
+          },
+          {
+            "type": "supporting-text",
+            "description": "Right-aligned descriptive copy about institutional offerings",
+            "position": "center-right",
+            "notable": "Provides context for the form below"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, supporting text on right guides to form section below",
+        "innovativeElements": [
+          "Split dark/light layout with form section transitioning to white at bottom",
+          "Cyan underline accent beneath form section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-form",
+        "userIntent": "Sign up for institutional account or connect with relationship manager",
+        "entryPoints": [
+          "Direct navigation from home",
+          "Institutional segment targeting"
+        ],
+        "exitPoints": [
+          "Form submission",
+          "Back to MARKETS or PRODUCTS",
+          "Log in link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Announcement banner X button",
+            "action": "Dismisses competition banner"
+          },
+          {
+            "element": "Track the top traders link",
+            "action": "Navigates to leaderboard"
+          },
+          {
+            "element": "First Name input field",
+            "action": "Text entry for form"
+          }
+        ],
+        "informationArchitecture": "Value proposition (headline) → Context (supporting text) → Form entry",
+        "frictionPoints": [
+          "Form appears below fold requiring scroll",
+          "Only first name field visible, unclear how many steps total"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trading for an institution? Get in touch.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders.",
+            "style": "text-link",
+            "placement": "announcement-banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Interested in our institutional offerings or opening an account? Add your details below to connect with a Relationship Manager.",
+            "context": "Right side of hero section",
+            "purpose": "Explains form purpose and value proposition"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Relationship Manager mentioned (implies dedicated support)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-19-fee-schedule.png",
+      "label": "Fee schedule",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#00D9A3"
+        ],
+        "typography": {
+          "headingStyle": "Medium-large sans-serif, dark gray/black",
+          "bodyStyle": "Regular weight sans-serif, charcoal on white, readable",
+          "dataStyle": "Inline text, hyperlinks in blue"
+        },
+        "components": [
+          {
+            "type": "breadcrumb-navigation",
+            "description": "Help Center / Bullish Help Center / Understanding fees",
+            "position": "top-left",
+            "notable": "Clear content hierarchy and site location"
+          },
+          {
+            "type": "hero-banner",
+            "description": "Dark gradient banner with cyan/blue mesh graphic",
+            "position": "top-full-width",
+            "notable": "Visual branding consistent with dark mode theme"
+          },
+          {
+            "type": "alert-box-yellow",
+            "description": "Yellow background note about fee schedules and supported assets",
+            "position": "upper-middle",
+            "notable": "High visibility warning/info box with linked reference"
+          },
+          {
+            "type": "alert-box-blue",
+            "description": "Light blue background note about fee schedule changes and ToS",
+            "position": "middle",
+            "notable": "Secondary info box with region selector dropdown"
+          },
+          {
+            "type": "success-toast",
+            "description": "Green checkmark with 'Cookie preferences saved' message",
+            "position": "bottom-left",
+            "notable": "Confirmation feedback with dismissal option"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero at top, yellow alert dominates visual attention, blue note provides secondary context, section link at bottom",
+        "innovativeElements": [
+          "Color-coded alert system (yellow for warnings, blue for info)",
+          "Contextual cookie preference confirmation"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Understand Bullish's fee structure and applicable charges",
+        "entryPoints": [
+          "Help Center navigation",
+          "Direct search for 'fees'",
+          "Link from account/pricing pages"
+        ],
+        "exitPoints": [
+          "Click Terms of Service region",
+          "Click Supported Assets link",
+          "Navigate back to Help Center",
+          "Click Setup fees link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Supported Assets link",
+            "action": "Navigates to asset support documentation"
+          },
+          {
+            "element": "Terms of Service region dropdown",
+            "action": "Reveals region-specific ToS options (US Legal, UK, FCA, etc.)"
+          },
+          {
+            "element": "Setup fees link",
+            "action": "Jumps to fees section"
+          },
+          {
+            "element": "Cookie preferences dismissal",
+            "action": "Closes success toast"
+          }
+        ],
+        "informationArchitecture": "Breadcrumb → Hero → Key disclaimers → Legal references → Related sections",
+        "frictionPoints": [
+          "Actual fee table/data not visible in screenshot",
+          "Multiple disclaimers may confuse users seeking quick answers",
+          "Region selection requires interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Understanding fees",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Supported Assets",
+            "style": "text-link",
+            "placement": "yellow-alert-box"
+          },
+          {
+            "text": "Legal US",
+            "style": "text-link",
+            "placement": "blue-note-box"
+          },
+          {
+            "text": "Setup fees",
+            "style": "text-link",
+            "placement": "bottom-section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Note: This fee schedule applies to all Bullish customers. However please be aware that the schedule may refer to services, products or assets which you are not approved to access. We recommend visiting our Supported Assets article to understand what services, products or assets are available to you. You will not be charged fees for services, products or assets that you do not use.",
+            "context": "Yellow alert box",
+            "purpose": "Sets expectations and clarifies scope of fee schedule"
+          },
+          {
+            "text": "Note: All information on Fees is subject to change at any time.",
+            "context": "Blue info box",
+            "purpose": "Legal disclaimer about fee volatility"
+          },
+          {
+            "text": "Please refer to the Terms of Service in your onboarded entity for further detail:",
+            "context": "Blue info box",
+            "purpose": "Directs to authoritative legal source"
+          },
+          {
+            "text": "You can change this at any time in your Atlassian account.",
+            "context": "Success toast",
+            "purpose": "Explains cookie preference management"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Multiple legal disclaimers and ToS references",
+          "Region-specific compliance options",
+          "Links to supporting documentation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-20-individuals.png",
+      "label": "Individuals",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9A3",
+          "#0a0a0a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Very large, bold sans-serif, white, sentence case",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "announcement-banner",
+            "description": "Bright cyan/green banner at top announcing trading competition",
+            "position": "top-full-width",
+            "notable": "Same high-contrast design as institutional page"
+          },
+          {
+            "type": "navigation-header",
+            "description": "Sticky header with MARKETS, PRODUCTS, Log in",
+            "position": "top-fixed",
+            "notable": "Consistent navigation across pages"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large white text headline on dark background",
+            "position": "center-left",
+            "notable": "Left-aligned, bold weight, spans multiple lines"
+          },
+          {
+            "type": "accent-underline",
+            "description": "Cyan horizontal line accent",
+            "position": "below-headline-left",
+            "notable": "Brand color highlight"
+          },
+          {
+            "type": "data-visualization",
+            "description": "Abstract candlestick/bar chart visualization with green and cyan gradient",
+            "position": "right-side",
+            "notable": "Stylized, artistic rather than precise data display"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates left, supporting visual on right creates visual balance",
+        "innovativeElements": [
+          "Artistic gradient chart visualization suggesting trading activity",
+          "Matching design language across institutional and individual landing pages",
+          "Cyan accent underline creates visual continuity"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-segment",
+        "userIntent": "Explore Bullish crypto trading for individual traders",
+        "entryPoints": [
+          "Navigation from PRODUCTS or MARKETS",
+          "Individual trader segment selector",
+          "Website main navigation"
+        ],
+        "exitPoints": [
+          "MARKETS section",
+          "PRODUCTS section",
+          "Log in",
+          "Scroll down for more content",
+          "Track trading competition"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Announcement banner X button",
+            "action": "Dismisses competition banner"
+          },
+          {
+            "element": "Track the top traders link",
+            "action": "Navigates to leaderboard"
+          },
+          {
+            "element": "MARKETS navigation",
+            "action": "Expands or navigates to markets section"
+          },
+          {
+            "element": "PRODUCTS navigation",
+            "action": "Expands or navigates to products section"
+          }
+        ],
+        "informationArchitecture": "Value proposition headline → Visual reinforcement → Navigation to detailed sections",
+        "frictionPoints": [
+          "No visible CTA button below headline",
+          "Content appears cut off, requires scroll to see full offering",
+          "No form or signup visible on this segment"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Leave conventional trading behind.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders.",
+            "style": "text-link",
+            "placement": "announcement-banner"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-21-status.png",
+      "label": "Status",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#1db883",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large hierarchy levels",
+          "bodyStyle": "Regular sans-serif, medium gray text for secondary content",
+          "dataStyle": "Monospace-like for component counts and status indicators"
+        },
+        "components": [
+          {
+            "type": "status-badge",
+            "description": "Green checkmark with 'We're fully operational' status",
+            "position": "top-center prominent banner",
+            "notable": "Teal/green border box with check icon, high confidence visual"
+          },
+          {
+            "type": "expandable-list",
+            "description": "System status items with drill-down counts (e.g., '4 components', '61 components')",
+            "position": "main content area",
+            "notable": "Nested component disclosure pattern showing service architecture depth"
+          },
+          {
+            "type": "button",
+            "description": "View history button with calendar icon",
+            "position": "bottom-center",
+            "notable": "Secondary action to access historical incident data"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Status banner dominates top, system items listed in descending order, progress details revealed via expansion",
+        "innovativeElements": [
+          "Component count disclosure on list items",
+          "Color-coded status section with teal accent border"
+        ]
+      },
+      "flow": {
+        "screenType": "status-dashboard",
+        "userIntent": "Check real-time platform health and service component status",
+        "entryPoints": [
+          "Status page link from navigation",
+          "Direct URL access",
+          "Help/support referral"
+        ],
+        "exitPoints": [
+          "Report a problem form",
+          "Subscribe to updates modal",
+          "View history page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Component expansion",
+            "action": "Toggle to reveal nested component status counts"
+          },
+          {
+            "element": "Report a problem button",
+            "action": "Open issue reporting form"
+          },
+          {
+            "element": "Subscribe to updates button",
+            "action": "Launch subscription modal for status alerts"
+          }
+        ],
+        "informationArchitecture": "Top-level status summary → system category groups → expandable component details",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We're fully operational",
+        "subheadline": "We're not aware of any issues affecting our systems.",
+        "ctas": [
+          {
+            "text": "Report a problem",
+            "style": "secondary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "Subscribe to updates",
+            "style": "primary-button",
+            "placement": "top-right"
+          },
+          {
+            "text": "View history",
+            "style": "secondary-button-with-icon",
+            "placement": "bottom-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Welcome to the Bullish status page for up-to-date information on Bullish service status.",
+            "context": "Introductory explanation above main content",
+            "purpose": "Set context for page purpose and scope"
+          },
+          {
+            "text": "System status",
+            "context": "Section heading",
+            "purpose": "Label the component list section"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [
+          "Service names: 'Bullish website', 'Trading', 'REST API'",
+          "Component counts: '4 components', '61 components', '2 components', '1 component'",
+          "Status: checkmark icon + 'We're fully operational'"
+        ],
+        "trustSignals": [
+          "Transparent component-level status visibility",
+          "Real-time operational status affirmation",
+          "Historical incident tracking access"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-22-bug-bounty-program.png",
+      "label": "Bug Bounty Program",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00ff99",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, white text on dark background",
+          "bodyStyle": "Regular sans-serif, medium gray on light background (bottom section)",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "promotional-banner",
+            "description": "Bright cyan/mint banner with gradient (cyan to blue) at top announcing trading competition",
+            "position": "top full-width",
+            "notable": "High-contrast animated banner with 'Track the top traders' link, closable with X button"
+          },
+          {
+            "type": "navigation",
+            "description": "Horizontal nav with MARKETS and PRODUCTS, plus Log in and settings icon",
+            "position": "top-right",
+            "notable": "Minimal, left-aligned logo, settings/profile icons on right"
+          },
+          {
+            "type": "hamburger-menu",
+            "description": "Mobile/responsive navigation toggle",
+            "position": "left side",
+            "notable": "Indicates responsive design support"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large multi-line heading 'Bullish Bug Bounty Program'",
+            "position": "left side, center vertical",
+            "notable": "Large 96pt+ bold text, white on dark background, clear focal point"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Banner alerts > nav structure > hero headline dominates left half > body content bottom",
+        "innovativeElements": [
+          "Split dark/light section design with visual contrast",
+          "Full-width promotional banner with gradient color transition",
+          "Large typographic-focused hero section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page",
+        "userIntent": "Learn about Bullish's bug bounty program and security researcher participation",
+        "entryPoints": [
+          "Navigation menu",
+          "Direct URL access from marketing",
+          "External security researcher referral"
+        ],
+        "exitPoints": [
+          "MARKETS section",
+          "PRODUCTS section",
+          "Log in",
+          "Close promotional banner"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Track the top traders link",
+            "action": "Navigate to trading competition leaderboard"
+          },
+          {
+            "element": "Banner close (X)",
+            "action": "Dismiss promotional banner"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Reveal mobile navigation"
+          },
+          {
+            "element": "MARKETS / PRODUCTS nav",
+            "action": "Navigate to main sections"
+          }
+        ],
+        "informationArchitecture": "Global nav > promotional alert > hero title > body content scroll",
+        "frictionPoints": [
+          "Promotional banner takes significant vertical space and attention",
+          "Content below fold requires scrolling to access bug bounty details"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bullish Bug Bounty Program",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders",
+            "style": "text-link-underlined",
+            "placement": "promotional banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Promotional banner text",
+            "purpose": "Highlight ongoing event"
+          }
+        ],
+        "tone": "professional-technical, security-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal bug bounty program announcement",
+          "Emphasis on security and researcher outreach",
+          "Reference to continuous security measures"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-24-complaints-handling.png",
+      "label": "Complaints Handling",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#00ff99",
+          "#0066ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif white heading on dark background",
+          "bodyStyle": "Regular serif/sans-serif on light background, numbered list formatting",
+          "dataStyle": "Monospace/regular for email addresses and regulatory references"
+        },
+        "components": [
+          {
+            "type": "promotional-banner",
+            "description": "Bright cyan/mint to blue gradient banner with trading competition announcement",
+            "position": "top full-width",
+            "notable": "Consistent with previous screens, high-contrast attention draw"
+          },
+          {
+            "type": "navigation",
+            "description": "Global nav with MARKETS, PRODUCTS, Log in, settings",
+            "position": "top",
+            "notable": "Consistent navigation structure across pages"
+          },
+          {
+            "type": "hero-title",
+            "description": "Large 'Legal' heading",
+            "position": "left side, upper-middle",
+            "notable": "Simple, authoritative typography"
+          },
+          {
+            "type": "content-section",
+            "description": "White background section with structured complaints handling text",
+            "position": "bottom half, full-width",
+            "notable": "Legal compliance document styling with last-updated timestamp"
+          },
+          {
+            "type": "metadata-badge",
+            "description": "'LAST UPDATED: MARCH 17, 2025' small text",
+            "position": "above main heading in content section",
+            "notable": "Shows document recency and regulatory compliance diligence"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Banner > nav > hero title > numbered legal content with metadata",
+        "innovativeElements": [
+          "Consistent split design pattern with promotional top and content bottom",
+          "Last updated timestamp on regulatory documents",
+          "Clear document structure with numbered sections"
+        ]
+      },
+      "flow": {
+        "screenType": "information-page",
+        "userIntent": "Understand complaint procedures and regulatory compliance information",
+        "entryPoints": [
+          "Legal/Compliance nav section",
+          "Customer support referral",
+          "Direct regulatory inquiry"
+        ],
+        "exitPoints": [
+          "MARKETS",
+          "PRODUCTS",
+          "Log in",
+          "Contact email (complaints.de@bullish.com)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email link (complaints.de@bullish.com)",
+            "action": "Open email client to submit complaints"
+          },
+          {
+            "element": "Banner close (X)",
+            "action": "Dismiss promotional banner"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Reveal navigation options"
+          }
+        ],
+        "informationArchitecture": "Regulatory document structure with numbered sections, contact information integrated in body text",
+        "frictionPoints": [
+          "Physical mailing address requires copying from text",
+          "Multiple submission methods (email vs. post) increases potential confusion"
+        ],
+        "progressIndicators": [
+          "Last updated date (MARCH 17, 2025) indicates current version"
+        ]
+      },
+      "copy": {
+        "headline": "Legal",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "complaints.de@bullish.com",
+            "style": "email-link-underlined",
+            "placement": "body text in complaints section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LAST UPDATED: MARCH 17, 2025",
+            "context": "Above main section heading",
+            "purpose": "Establish document currency and regulatory compliance"
+          },
+          {
+            "text": "We take any of our clients' complaints very seriously and are committed to addressing them promptly and with the highest level of quality and care in line with the newest regulation.",
+            "context": "Opening of Complaints Handling Information section",
+            "purpose": "Establish commitment to customer service and regulatory compliance"
+          }
+        ],
+        "tone": "professional-technical, formal-regulatory",
+        "dataFormatting": [
+          "Email: complaints.de@bullish.com",
+          "Postal: Bullish Europe GmbH, Fora Office, Oper 46, Bockenheimer Anlage 46, 60322 Frankfurt",
+          "Date format: MARCH 17, 2025"
+        ],
+        "trustSignals": [
+          "Formal complaints handling procedures documented",
+          "Multiple contact methods (email and postal)",
+          "Reference to regulatory compliance 'newest regulation'",
+          "Last updated date demonstrates active maintenance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-1-about-us.png",
+      "label": "About Us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width with split content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9B6",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold, white text on dark background",
+          "bodyStyle": "Medium-weight sans-serif, light gray, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Green promotional banner with competition info and close button",
+            "position": "top-full-width",
+            "notable": "High-contrast green to break from dark theme; includes text link"
+          },
+          {
+            "type": "navigation",
+            "description": "Top navigation with MARKETS, PRODUCTS, and Log in",
+            "position": "top-right",
+            "notable": "Simple white text, no dropdown indicators visible"
+          },
+          {
+            "type": "decorative-element",
+            "description": "Abstract glossy 3D shapes with cyan-to-blue gradient line",
+            "position": "right side",
+            "notable": "Modern gradient treatment adds visual interest to dark layout"
+          },
+          {
+            "type": "logo",
+            "description": "Bullish wing icon",
+            "position": "top-left",
+            "notable": "White minimalist design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side; supporting text below; decorative element balances right side; color label draws eye to section",
+        "innovativeElements": [
+          "Cyan-to-blue gradient line on 3D shapes creates depth",
+          "Bright green banner contrasts sharply with dark theme for urgency",
+          "Minimalist navigation with no visual clutter"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Bullish's mission and values before exploring platform",
+        "entryPoints": [
+          "Direct navigation from MARKETS or PRODUCTS menu",
+          "Logo click from any page",
+          "New visitor landing"
+        ],
+        "exitPoints": [
+          "Click MARKETS to view trading data",
+          "Click PRODUCTS to explore offerings",
+          "Click Log in to enter platform",
+          "Close banner to dismiss promotion"
+        ],
+        "interactiveElements": [
+          {
+            "element": "MARKETS link",
+            "action": "Navigate to markets section"
+          },
+          {
+            "element": "PRODUCTS link",
+            "action": "Navigate to products section"
+          },
+          {
+            "element": "Log in button",
+            "action": "Open login flow"
+          },
+          {
+            "element": "Banner close (X)",
+            "action": "Dismiss promotional banner"
+          },
+          {
+            "element": "Track the top traders link",
+            "action": "Navigate to competition leaderboard"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation > About section > Mission statement hierarchy",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We make trading with digital assets more rewarding and secure.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders",
+            "style": "text-link",
+            "placement": "in green banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "ABOUT BULLISH",
+            "context": "Label above headline",
+            "purpose": "Signal section context"
+          },
+          {
+            "text": "Operating with a mature approach, we prioritize crypto compliance and safeguarding customer assets through robust security measures and regulatory oversight.",
+            "context": "Supporting paragraph",
+            "purpose": "Build trust by explaining company values and approach"
+          }
+        ],
+        "tone": "professional-technical, trustworthy",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Crypto compliance emphasis",
+          "Robust security measures mentioned",
+          "Regulatory oversight highlighted"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-2-careers.png",
+      "label": "Careers",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width with left text and right image grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9B6",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold, white text",
+          "bodyStyle": "Medium-weight sans-serif, light gray, 16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Green promotional banner",
+            "position": "top-full-width",
+            "notable": "Consistent with previous screens"
+          },
+          {
+            "type": "navigation",
+            "description": "Top navigation bar with MARKETS, PRODUCTS, Log in",
+            "position": "top-right",
+            "notable": "Same layout as About page"
+          },
+          {
+            "type": "image-grid",
+            "description": "5-image grid of team member portraits",
+            "position": "right side",
+            "notable": "Staggered layout, diverse team representation, varied backgrounds"
+          },
+          {
+            "type": "cta-button",
+            "description": "Bright green button with arrow",
+            "position": "bottom-left",
+            "notable": "High contrast, clear directional arrow"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Question headline leads; supporting text below; button draws attention with color; team photos on right reinforce culture message",
+        "innovativeElements": [
+          "Staggered image grid creates dynamic composition",
+          "Diverse team photography humanizes company",
+          "Arrow icon in button guides next action"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore career opportunities at Bullish",
+        "entryPoints": [
+          "Navigation menu from main site",
+          "Link from About Us or settings",
+          "Job seeker discovery"
+        ],
+        "exitPoints": [
+          "EXPLORE OPENINGS button (likely external careers page)",
+          "Return to MARKETS or PRODUCTS",
+          "Log in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "EXPLORE OPENINGS button",
+            "action": "Navigate to careers/jobs page"
+          },
+          {
+            "element": "Team member images",
+            "action": "Likely non-interactive but reinforce messaging"
+          }
+        ],
+        "informationArchitecture": "Landing > Careers pitch > Call-to-action",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Are you Bullish?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "EXPLORE OPENINGS",
+            "style": "primary-button",
+            "placement": "bottom-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We're laser-focused on providing performance, security, transparency, and innovation to our customers. Take charge with us and be Bullish on your career.",
+            "context": "Main value proposition",
+            "purpose": "Connect company mission to employee benefit"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Team diversity and transparency through photography",
+          "Performance, security, transparency values listed"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-3-press.png",
+      "label": "Press",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width with left-aligned text sections and right decorative element",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D9B6",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, white text",
+          "bodyStyle": "Medium sans-serif, white/light gray, various weights",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Green promotional banner",
+            "position": "top-full-width",
+            "notable": "Consistent branding"
+          },
+          {
+            "type": "navigation",
+            "description": "Top navigation with MARKETS, PRODUCTS, Log in",
+            "position": "top-right",
+            "notable": null
+          },
+          {
+            "type": "section-header",
+            "description": "Large 'Press' heading with cyan underline",
+            "position": "left-top",
+            "notable": "Cyan accent line adds visual break"
+          },
+          {
+            "type": "tab-group",
+            "description": "Contact and News tabs with underline style",
+            "position": "left-middle",
+            "notable": "Clean tab indicator using cyan underline"
+          },
+          {
+            "type": "contact-section",
+            "description": "Email link and News & Insights link",
+            "position": "left-middle",
+            "notable": "Underlined text links with external icon"
+          },
+          {
+            "type": "social-links",
+            "description": "X and LinkedIn icons",
+            "position": "left-bottom",
+            "notable": "Minimal icon style"
+          },
+          {
+            "type": "decorative-element",
+            "description": "Abstract curved shapes with gradient lines",
+            "position": "right side",
+            "notable": "Dark 3D effect with cyan accent"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main heading dominates; tabs organize content; links with consistent styling; social proof at bottom; decorative element balances composition",
+        "innovativeElements": [
+          "Cyan underline as interactive indicator for tabs",
+          "Consistent decorative design language across screens"
+        ]
+      },
+      "flow": {
+        "screenType": "information-hub",
+        "userIntent": "Find press contact info, news, and social media",
+        "entryPoints": [
+          "Navigation from main site",
+          "Footer link on other pages",
+          "Press inquiry search"
+        ],
+        "exitPoints": [
+          "Click media@bullish.com to open email",
+          "Click News & Insights to view press releases",
+          "Click social icons to external platforms",
+          "Return via navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact tab",
+            "action": "Display contact information (likely already visible)"
+          },
+          {
+            "element": "News tab",
+            "action": "Switch to news content view"
+          },
+          {
+            "element": "media@bullish.com link",
+            "action": "Open email client with pre-filled recipient"
+          },
+          {
+            "element": "News & Insights link",
+            "action": "Navigate to press releases/news page"
+          },
+          {
+            "element": "X icon",
+            "action": "Open Twitter/X profile"
+          },
+          {
+            "element": "LinkedIn icon",
+            "action": "Open LinkedIn profile"
+          }
+        ],
+        "informationArchitecture": "Main heading > Content tabs > Contact/News links > Social media",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Press",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "media@bullish.com",
+            "style": "text-link",
+            "placement": "Contact section"
+          },
+          {
+            "text": "News & Insights",
+            "style": "text-link",
+            "placement": "News tab"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Contact",
+            "context": "Tab label",
+            "purpose": "Organize press materials"
+          },
+          {
+            "text": "News",
+            "context": "Tab label",
+            "purpose": "Access press releases and news"
+          },
+          {
+            "text": "Follow us",
+            "context": "Social media section heading",
+            "purpose": "Direct to social channels"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official press contact email",
+          "News & Insights section for transparency",
+          "Social media presence (X, LinkedIn)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-home-25-deposit-page.png",
+      "label": "deposit page",
+      "flowType": "Home",
+      "step": 25,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all caps for main navigation, bold weight for section headers",
+          "bodyStyle": "Medium-weight sans-serif for link text, clean and minimal",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal nav with MARKETS, PRODUCTS, AMM in white text",
+            "position": "Top left, below logo",
+            "notable": "Clean minimal styling with consistent spacing"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Bright green SIGN UP button",
+            "position": "Top right",
+            "notable": "High contrast against dark background, draws attention immediately"
+          },
+          {
+            "type": "Error State Heading",
+            "description": "Large white text 'Page not found'",
+            "position": "Center of dark section",
+            "notable": "Minimal error messaging without additional context or recovery path"
+          },
+          {
+            "type": "Footer Navigation",
+            "description": "Multi-column footer with Markets, Products, AMM, Features, Bullish Group, Support categories",
+            "position": "Lower portion, white background",
+            "notable": "Comprehensive navigation hierarchy with nested links"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dark header section dominates upper portion; white footer provides secondary navigation and information; strong contrast between sections guides eye downward",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a non-existent page or URL",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Broken internal link",
+          "Bookmarked invalid URL"
+        ],
+        "exitPoints": [
+          "Click Markets/Products/AMM in header",
+          "Click footer navigation links",
+          "Click SIGN UP or Log in",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "SIGN UP button",
+            "action": "Navigates to sign up flow"
+          },
+          {
+            "element": "Log in link",
+            "action": "Navigates to authentication"
+          },
+          {
+            "element": "Footer links",
+            "action": "Navigate to respective sections (Markets, Products, About Us, Help Center, etc.)"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Opens mobile navigation"
+          }
+        ],
+        "informationArchitecture": "Two-tier structure: header navigation for primary sections, footer for comprehensive site map with feature details and support resources",
+        "frictionPoints": [
+          "No clear recovery action or suggestion for what to do next",
+          "No search functionality visible to help user find content",
+          "Error state doesn't explain why page wasn't found"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Preview exchange",
+            "context": "Top navigation",
+            "purpose": "Allows non-authenticated users to view exchange interface"
+          },
+          {
+            "text": "Trust & Transparency",
+            "context": "Footer Bullish Group column",
+            "purpose": "Signals compliance and legitimacy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "About Us link",
+          "Careers link",
+          "Trust & Transparency section",
+          "Help Center",
+          "Status page"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-swap-1-markets.png",
+      "label": "Markets",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084",
+          "#1E90FF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif 'Our markets.' in white, with cyan underline accent",
+          "bodyStyle": "Medium-weight sans-serif for column headers (Markets, Last Price, 24h change, 24h volume)",
+          "dataStyle": "Monospace-like formatting for prices ($69,831.23) and percentages (1.24%), small font for volume numbers"
+        },
+        "components": [
+          {
+            "type": "Announcement Banner",
+            "description": "Green-to-cyan gradient banner with trading competition message and 'Track the top traders' link",
+            "position": "Top of page",
+            "notable": "High visibility promotional banner with call-to-action; dismissible with X button"
+          },
+          {
+            "type": "Section Heading",
+            "description": "'Our markets.' with cyan underline",
+            "position": "Upper left, below banner",
+            "notable": "Minimalist heading with accent line adds visual interest"
+          },
+          {
+            "type": "Market Data Table",
+            "description": "Tabular display of crypto pairs with dual currency icons, price, 24h change percentage, and volume",
+            "position": "Lower half of screen",
+            "notable": "Color-coded icons (orange Bitcoin, blue USDC, purple Ethereum), small sparkline charts on right side"
+          },
+          {
+            "type": "Sparkline Charts",
+            "description": "Mini price trend charts in green",
+            "position": "Right column of table rows",
+            "notable": "Visual indication of price movement without detailed chart"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Announcement banner draws attention first; large heading establishes context; table data organized with currency icons providing visual anchors; sparklines provide secondary visual interest",
+        "innovativeElements": [
+          "Dual currency icon pairing for trading pairs",
+          "Animated sparkline charts for quick trend visualization",
+          "Gradient promotional banner at top"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse available cryptocurrency markets, check prices, volume, and recent price movement",
+        "entryPoints": [
+          "Click MARKETS in main navigation",
+          "Initiated swap flow and reviewing available markets"
+        ],
+        "exitPoints": [
+          "Click on a market row to view details or initiate trade",
+          "Navigate to PRODUCTS or other main sections",
+          "Click promotional banner link to view trader competition",
+          "Log in to access trading functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market row (BTC/USDC, ETH/USDC)",
+            "action": "Likely navigates to detailed market view or initiates trade"
+          },
+          {
+            "element": "Trading competition banner link",
+            "action": "Navigates to competition tracking page"
+          },
+          {
+            "element": "Log in button",
+            "action": "Opens authentication flow"
+          },
+          {
+            "element": "Banner X button",
+            "action": "Dismisses promotional announcement"
+          }
+        ],
+        "informationArchitecture": "Simple flat structure: promotional content at top, followed by market listing with standardized columns for comparison shopping",
+        "frictionPoints": [
+          "No search or filter functionality visible for finding specific markets",
+          "Market rows don't show visual indication of clickability",
+          "No sorting controls visible for columns (Price, 24h change, Volume)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Our markets.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders.",
+            "style": "text-link",
+            "placement": "Promotional banner at top"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Gradient banner",
+            "purpose": "Drives engagement in platform competition"
+          },
+          {
+            "text": "Markets | Last Price | 24h change | 24h volume",
+            "context": "Table column headers",
+            "purpose": "Labels data columns for clarity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$69,831.23 (Bitcoin price)",
+          "1.24% (24h change percentage)",
+          "$334.59M (24h trading volume)"
+        ],
+        "trustSignals": [
+          "Real-time market data display",
+          "Professional trading competition",
+          "Multiple tradable pairs (BTC, ETH)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-swap-2-legal.png",
+      "label": "legal",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif 'Legal' in white against dark background",
+          "bodyStyle": "Medium-weight sans-serif for navigation menu items and section titles; smaller weight for metadata",
+          "dataStyle": "Small monospace-style font for 'LAST UPDATED: JULY 29, 2025'"
+        },
+        "components": [
+          {
+            "type": "Left Navigation Panel",
+            "description": "Vertical menu with legal document categories",
+            "position": "Left side, white background",
+            "notable": "Active state indicated by cyan left border on 'Terms of Service EU'"
+          },
+          {
+            "type": "Document Header",
+            "description": "'Terms of Service EU' with update date metadata",
+            "position": "Upper right of content area",
+            "notable": "Establishes document version control and recency"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Bright green 'DOWNLOAD PDF' button with icon",
+            "position": "Center-right below title",
+            "notable": "Contrasts sharply with white background; facilitates document export"
+          },
+          {
+            "type": "Document Content",
+            "description": "Italicized disclaimer text about geographic service restrictions",
+            "position": "Below CTA button",
+            "notable": "Legal prose with emphasis on specific jurisdictions excluded"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Dark header establishes page context; left panel provides navigation; right panel centers on selected document with prominent download option; body text provides detailed legal information",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access and review legal documents, compliance information, and service terms",
+        "entryPoints": [
+          "Footer link to Legal section",
+          "Direct navigation from navigation menu"
+        ],
+        "exitPoints": [
+          "Click different legal document in left menu",
+          "Download PDF version of document",
+          "Navigate back to main site via header or back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left menu items (Complaints Handling, Risk Warnings EU, Exchange Rules, Privacy Notice EU, Terms of Service EU)",
+            "action": "Switch displayed document in main panel"
+          },
+          {
+            "element": "DOWNLOAD PDF button",
+            "action": "Exports current document as PDF file"
+          },
+          {
+            "element": "Navigation header (MARKETS, PRODUCTS)",
+            "action": "Navigate to main sections"
+          }
+        ],
+        "informationArchitecture": "Sidebar navigation with nested legal topics; main content area displays selected document with metadata and download option",
+        "frictionPoints": [
+          "Multiple regional variants (EU-specific) may require users to find correct jurisdiction",
+          "No search functionality within legal documents",
+          "Page layout doesn't indicate which document is currently selected until viewing"
+        ],
+        "progressIndicators": [
+          "Cyan left border on active menu item indicates current selection"
+        ]
+      },
+      "copy": {
+        "headline": "Legal",
+        "subheadline": "Terms of Service EU",
+        "ctas": [
+          {
+            "text": "DOWNLOAD PDF ↓",
+            "style": "primary-button",
+            "placement": "Center-right below document title"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LAST UPDATED: JULY 29, 2025",
+            "context": "Above document title",
+            "purpose": "Indicates document recency and version control"
+          },
+          {
+            "text": "does not provide services in certain jurisdictions, including the United States, Canada, People's Republic of China (excluding, for the avoidance of doubt, Hong Kong S.A.R, Macau S.A.R and Taiwan), Japan, Israel, and Russia.",
+            "context": "Body text under document heading",
+            "purpose": "Legal disclaimer establishing geographic restrictions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "JULY 29, 2025 (date format)"
+        ],
+        "trustSignals": [
+          "Terms of Service document",
+          "Risk Warnings documentation",
+          "Privacy Notice compliance",
+          "Exchange Rules",
+          "Regular document updates with dated versions"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-7-legal.png",
+      "label": "Legal",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D9FF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, black text (72px+ estimated)",
+          "bodyStyle": "Regular sans-serif, underlined links in black",
+          "dataStyle": "Monospace, small caps for metadata (LAST UPDATED)"
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Bright cyan/turquoise promotional banner with trading competition announcement",
+            "position": "top full-width",
+            "notable": "High contrast, dismissible with X button, drives engagement"
+          },
+          {
+            "type": "navigation",
+            "description": "Dark header with MARKETS and PRODUCTS tabs, Log in button right-aligned",
+            "position": "top",
+            "notable": "Minimal, professional, globe icon for localization"
+          },
+          {
+            "type": "link list",
+            "description": "Vertically stacked underlined text links for legal documents",
+            "position": "main content area",
+            "notable": "No visual hierarchy beyond underline; relies on reading order"
+          },
+          {
+            "type": "hamburger menu",
+            "description": "Three-line icon in left sidebar",
+            "position": "left edge",
+            "notable": "Always visible, suggests collapsible navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large 'Legal EU' heading dominates; metadata timestamp provides context; link list treated equally without visual differentiation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-page, legal-hub",
+        "userIntent": "Access EU-specific legal documents and compliance information",
+        "entryPoints": [
+          "Settings menu",
+          "Footer links",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Click individual legal document links",
+          "Navigate to MARKETS/PRODUCTS",
+          "Close banner and continue"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Terms of Service link",
+            "action": "Navigate to ToS document"
+          },
+          {
+            "element": "OTC Terms link",
+            "action": "Navigate to OTC-specific terms"
+          },
+          {
+            "element": "Risk Warnings link",
+            "action": "Navigate to risk disclosure"
+          },
+          {
+            "element": "Banner X button",
+            "action": "Dismiss trading competition announcement"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Expand/collapse sidebar navigation"
+          }
+        ],
+        "informationArchitecture": "Flat list of legal document categories; no nested hierarchy or conditional branching",
+        "frictionPoints": [
+          "All links appear equally; no indication of which documents are most critical",
+          "No search or filtering mechanism for legal documents",
+          "Timestamp suggests data currency but no last-read tracking"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Legal EU",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Terms of Service",
+            "style": "text-link",
+            "placement": "main content list"
+          },
+          {
+            "text": "OTC Terms",
+            "style": "text-link",
+            "placement": "main content list"
+          },
+          {
+            "text": "Order Execution Summary",
+            "style": "text-link",
+            "placement": "main content list"
+          },
+          {
+            "text": "Trading Rules",
+            "style": "text-link",
+            "placement": "main content list"
+          },
+          {
+            "text": "Track the top traders",
+            "style": "text-link",
+            "placement": "banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LAST UPDATED: SEPTEMBER 23, 2025",
+            "context": "Above main heading",
+            "purpose": "Signal document freshness and trust"
+          },
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Banner headline",
+            "purpose": "Drive engagement with time-limited promotional event"
+          }
+        ],
+        "tone": "professional-technical, formal legal register",
+        "dataFormatting": [
+          "SEPTEMBER 23, 2025 (date format, all caps)"
+        ],
+        "trustSignals": [
+          "Explicit 'Legal EU' section (regulatory compliance)",
+          "Document version date tracking",
+          "Comprehensive legal categories (Terms, OTC, Risk Warnings, Privacy)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-8-cookie-notice.png",
+      "label": "Cookie Notice",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00D9FF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold white text on dark background (120px+ estimated)",
+          "bodyStyle": "Regular sans-serif, white and dark text in footer columns",
+          "dataStyle": "Regular sans-serif for links and dropdown text"
+        },
+        "components": [
+          {
+            "type": "error state / hero",
+            "description": "Large 'Page not found' heading centered on dark background",
+            "position": "top-center, above fold",
+            "notable": "Minimal error page, uses brand color scheme; no friendly mascot or illustration"
+          },
+          {
+            "type": "navigation header",
+            "description": "Dark header with MARKETS/PRODUCTS and Log in button",
+            "position": "top",
+            "notable": "Consistent with legal page; unaffected by error state"
+          },
+          {
+            "type": "footer navigation",
+            "description": "Multi-column footer with categorical links (Markets, Products, Features, Support, etc.)",
+            "position": "bottom",
+            "notable": "Comprehensive sitemap; helps users recover from 404"
+          },
+          {
+            "type": "location selector",
+            "description": "Dropdown button showing 'Europe' with globe icon",
+            "position": "bottom-right",
+            "notable": "Allows region-specific navigation; suggests localized experience"
+          },
+          {
+            "type": "social links",
+            "description": "Twitter, LinkedIn, Telegram icons in footer",
+            "position": "right side of footer",
+            "notable": "Drives offsite engagement"
+          },
+          {
+            "type": "login prompt",
+            "description": "'Log in' text link in footer right column",
+            "position": "right column, above social",
+            "notable": "Provides alternate entry point to auth"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered error message dominates; footer navigation provides secondary options; location selector tertiary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error, 404-page-not-found",
+        "userIntent": "Recover from navigation error; find intended content or return to main platform",
+        "entryPoints": [
+          "Broken link clicked",
+          "Mistyped URL",
+          "Outdated navigation path"
+        ],
+        "exitPoints": [
+          "Click footer navigation link",
+          "Click Markets/Products in header",
+          "Use location selector to change region",
+          "Click social links (exit to external)",
+          "Click Log in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Markets link (header/footer)",
+            "action": "Navigate to markets section"
+          },
+          {
+            "element": "Products link (header/footer)",
+            "action": "Navigate to products section"
+          },
+          {
+            "element": "Help Center link",
+            "action": "Navigate to support portal"
+          },
+          {
+            "element": "About Us / Careers / etc. links",
+            "action": "Navigate to respective company pages"
+          },
+          {
+            "element": "Europe dropdown",
+            "action": "Change location/region, likely reload page with new context"
+          },
+          {
+            "element": "Social icons (X, LinkedIn, Telegram)",
+            "action": "Open external social media profile"
+          }
+        ],
+        "informationArchitecture": "Top-level error message + comprehensive footer sitemap; avoids trapped user state by offering multiple exit paths",
+        "frictionPoints": [
+          "No explanation of what went wrong or suggestions for specific pages",
+          "Error message text lacks personality or helpful tone",
+          "No search box or direct link to homepage",
+          "User must visually scan footer to find useful links"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Markets",
+            "style": "text-link",
+            "placement": "footer left column"
+          },
+          {
+            "text": "Products",
+            "style": "text-link",
+            "placement": "footer left column"
+          },
+          {
+            "text": "Digital Assets",
+            "style": "text-link",
+            "placement": "footer center column (Features)"
+          },
+          {
+            "text": "Help Center",
+            "style": "text-link",
+            "placement": "footer right column (Support)"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "footer right column"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Follow us",
+            "context": "Above social media icons in footer",
+            "purpose": "Label social engagement cluster"
+          },
+          {
+            "text": "Location",
+            "context": "Above Europe dropdown at bottom-right",
+            "purpose": "Explain the dropdown selector"
+          }
+        ],
+        "tone": "professional-technical, minimal, non-apologetic",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive footer navigation (demonstrates full site structure and transparency)",
+          "Region selector (acknowledges global operations)",
+          "Social proof links (established presence on major platforms)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-4-api-docs.png",
+      "label": "API Docs",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0088CC"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, large (48px+) for main heading, smaller for section headers",
+          "bodyStyle": "Sans-serif, regular weight, 14-16px, dark gray on white",
+          "dataStyle": "Monospace font for code snippets and API URLs (e.g., api.exchange.bullish.com)"
+        },
+        "components": [
+          {
+            "type": "sidebar navigation",
+            "description": "Left-side dark navigation with nested menu items for API documentation sections",
+            "position": "left edge, full height",
+            "notable": "Hierarchical structure with parent/child navigation items; 'Additional Links' highlighted in teal"
+          },
+          {
+            "type": "breadcrumb/version indicator",
+            "description": "Shows 'Bullish Trading API 10.0' at top",
+            "position": "top of main content",
+            "notable": "Version number prominently displayed"
+          },
+          {
+            "type": "inline code blocks",
+            "description": "Red monospace text for API endpoints and URLs embedded in paragraph text",
+            "position": "scattered throughout body text",
+            "notable": "Color-coded (red) for easy scanning of technical references"
+          },
+          {
+            "type": "hyperlinks",
+            "description": "Blue hyperlinks to support resources and related endpoints",
+            "position": "inline and in lists",
+            "notable": "Contextual links (e.g., 'Get Orders', 'Get Markets') provide quick navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left navigation anchors attention; main heading dominates; body text uses bullet lists and nesting to organize complex API information",
+        "innovativeElements": [
+          "Color-coded inline code (red) distinguishes technical elements from regular text",
+          "Nested sidebar with collapse/expand capability for deep documentation structure"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn API specifications, find endpoints, understand authentication and configuration options",
+        "entryPoints": [
+          "Direct link from settings",
+          "Search from help center",
+          "External reference from developer docs"
+        ],
+        "exitPoints": [
+          "Click sidebar links to navigate other API sections",
+          "Follow inline links to GitHub repository or related endpoints",
+          "Return to main dashboard via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different API documentation sections"
+          },
+          {
+            "element": "Hyperlinks (blue text)",
+            "action": "Jump to support resources, code examples, or related endpoints"
+          },
+          {
+            "element": "Email and URL links",
+            "action": "Contact support or access external documentation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical tree structure in sidebar; main content flows top-to-bottom with sections, subsections, and bullet points; sidebar serves as persistent navigation backbone",
+        "frictionPoints": [
+          "Dense technical content may overwhelm non-developers",
+          "Multiple URL variations (api.exchange.bullish.com vs api.trade.coindesk.com) requires careful reading",
+          "No visible search within documentation page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bullish Trading API",
+        "subheadline": "Overview",
+        "ctas": [
+          {
+            "text": "support@bullish.com",
+            "style": "email-link",
+            "placement": "top of page"
+          },
+          {
+            "text": "https://support.bullish.com",
+            "style": "text-link",
+            "placement": "top of page"
+          },
+          {
+            "text": "GET Orders",
+            "style": "text-link",
+            "placement": "inline in documentation"
+          },
+          {
+            "text": "Get Markets",
+            "style": "text-link",
+            "placement": "inline in documentation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This documentation provides resource descriptions and endpoints usage instructions for the API.",
+            "context": "First paragraph under Overview",
+            "purpose": "Set expectations for what the documentation covers"
+          },
+          {
+            "text": "CoinDesk Trading services are provided by Bullish via regulated subsidiaries in select locations.",
+            "context": "Second paragraph",
+            "purpose": "Clarify relationship between Bullish and CoinDesk branding"
+          },
+          {
+            "text": "may add new fields to existing response payloads. Please do not use strict deserialization as it may cause compatibility issues.",
+            "context": "In API bullet points",
+            "purpose": "Warn developers about backwards compatibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "api.exchange.bullish.com (monospace, red)",
+          "api.trade.coindesk.com (monospace, red)",
+          "REST (blue hyperlink)",
+          "Bearer token (mentioned in auth section)"
+        ],
+        "trustSignals": [
+          "Regulated subsidiaries mentioned",
+          "Formal API documentation structure",
+          "Multiple authentication methods (bearer-based)",
+          "Rate limiting enforced"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-5-help-center.png",
+      "label": "Help Center",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#00D9FF",
+          "#00B894"
+        ],
+        "typography": {
+          "headingStyle": "Bold, white text on dark background for hero heading; black bold headers for section titles",
+          "bodyStyle": "Regular weight, dark gray/black on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero banner",
+            "description": "Large full-width dark section with gradient background and illustrated bull graphic",
+            "position": "top of page",
+            "notable": "Cyan/teal neon bull illustration creates visual interest and brand identity"
+          },
+          {
+            "type": "search bar",
+            "description": "Prominent white search input with magnifying glass icon",
+            "position": "centered in hero banner",
+            "notable": "Large, easily discoverable entry point for information lookup"
+          },
+          {
+            "type": "card grid",
+            "description": "Six topic cards arranged in 3x2 grid below hero",
+            "position": "main content area",
+            "notable": "Each card contains 3 related articles; icon + text for visual identification"
+          },
+          {
+            "type": "topic cards",
+            "description": "Individual cards for Top Articles, Individual onboarding, Managing your account, Deposit and Withdrawal, Spot Trading, Perpetual Futures",
+            "position": "grid layout",
+            "notable": "Consistent styling with document icons and truncated text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero dominates visual focus; search bar is secondary focal point; card grid below uses consistent visual weight for discoverability",
+        "innovativeElements": [
+          "Animated/illustrated bull character in hero section creates memorable brand experience",
+          "Color gradient (cyan to teal) in background suggests market movement"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to common questions; navigate to specific help topics; search for information",
+        "entryPoints": [
+          "Click Help or Support link from main navigation",
+          "Follow link from settings menu",
+          "Redirect from support email"
+        ],
+        "exitPoints": [
+          "Click topic card to view articles",
+          "Use search bar to find specific information",
+          "Return to main dashboard via logo",
+          "Click 'Log in' to access account"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search bar",
+            "action": "Type query to filter help articles"
+          },
+          {
+            "element": "Topic cards",
+            "action": "Click to navigate to category of help articles"
+          },
+          {
+            "element": "Individual article links",
+            "action": "Open full article content"
+          }
+        ],
+        "informationArchitecture": "Two-level hierarchy: Topic categories (6 main areas) → Individual articles (3 per topic). Hero section with search provides quick-access alternative to browsing.",
+        "frictionPoints": [
+          "Text is truncated in cards (e.g., 'Managing your wallet addresses and bank acc...'), requiring click to see full title",
+          "No indication of article length or estimated read time",
+          "Topics are broad; users may need to click into multiple cards to find specific answer"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How can we assist?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Search for information",
+            "style": "search-input",
+            "placement": "hero banner center"
+          },
+          {
+            "text": "Log in",
+            "style": "button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Topics",
+            "context": "Above card grid",
+            "purpose": "Label for section"
+          },
+          {
+            "text": "Top Articles",
+            "context": "Card header",
+            "purpose": "Category label"
+          },
+          {
+            "text": "Individual onboarding",
+            "context": "Card header",
+            "purpose": "Category label"
+          },
+          {
+            "text": "Managing trading accounts",
+            "context": "Card, Managing your account section",
+            "purpose": "Article title"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Bullish branding and logo",
+          "Comprehensive help center organization",
+          "Multiple topic categories covering onboarding, account management, trading, and compliance"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bullish-settings-6-site-terms-of-use.png",
+      "label": "Site Terms of Use",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#00FF99",
+          "#0088FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, white sans-serif, extra-large (72px+) on dark background",
+          "bodyStyle": "Bold sans-serif, 14-16px, dark gray/black on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "notification banner",
+            "description": "Horizontal banner with event announcement and dismissible X button",
+            "position": "top of page, full-width",
+            "notable": "Bright cyan/green background with black text; creates high visual urgency"
+          },
+          {
+            "type": "top navigation",
+            "description": "Dark navigation bar with logo, MARKETS/PRODUCTS menu, settings icon, and Log in button",
+            "position": "below banner",
+            "notable": "Minimal design; maintains dark theme consistency"
+          },
+          {
+            "type": "hamburger menu",
+            "description": "Left-side toggle for mobile/responsive menu",
+            "position": "left side of navigation",
+            "notable": "Indicates responsive design"
+          },
+          {
+            "type": "hero heading",
+            "description": "Large white heading text on dark background",
+            "position": "left side, center-left of viewport",
+            "notable": "Occupies significant vertical space; positioned over dark background for contrast"
+          },
+          {
+            "type": "body content",
+            "description": "White background section with legal text in bold font",
+            "position": "below hero, full-width",
+            "notable": "Abrupt tonal shift from dark to light; legal text displayed prominently"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Notification banner grabs initial attention; hero heading dominates middle section; legal text section anchors bottom",
+        "innovativeElements": [
+          "Notification banner uses bright neon colors to create urgency without being garish",
+          "Color contrast between dark hero section and white legal section creates clear visual break"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-policy",
+        "userIntent": "Review site terms of use before using platform; understand legal obligations and disclaimers",
+        "entryPoints": [
+          "Link from footer of main site",
+          "Link from account settings",
+          "Required review during onboarding flow",
+          "Redirect from sign-up process"
+        ],
+        "exitPoints": [
+          "Close notification banner via X button",
+          "Click MARKETS or PRODUCTS in navigation",
+          "Click Log in to return to dashboard",
+          "Scroll to footer for additional policy links (not visible in screenshot)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Notification banner X button",
+            "action": "Dismiss event announcement"
+          },
+          {
+            "element": "MARKETS / PRODUCTS menu",
+            "action": "Navigate to market or product information"
+          },
+          {
+            "element": "Log in button",
+            "action": "Return to account/dashboard"
+          },
+          {
+            "element": "Hamburger menu",
+            "action": "Open responsive mobile navigation"
+          }
+        ],
+        "informationArchitecture": "Linear, top-to-bottom: notification → hero heading → legal body text. No branching or navigation within policy document (visible section).",
+        "frictionPoints": [
+          "Large block of dense legal text with no visual breaks or formatting to aid scanning",
+          "No table of contents or jump links for long policy document",
+          "Notification banner may distract from reading legal content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Site Terms of Use",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Track the top traders",
+            "style": "text-link",
+            "placement": "notification banner"
+          },
+          {
+            "text": "Log in",
+            "style": "button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bullish Professional Trading Competition is underway.",
+            "context": "Notification banner",
+            "purpose": "Event announcement / urgency creation"
+          },
+          {
+            "text": "MARKETS",
+            "context": "Top navigation",
+            "purpose": "Navigation menu label"
+          },
+          {
+            "text": "PRODUCTS",
+            "context": "Top navigation",
+            "purpose": "Navigation menu label"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal legal document format",
+          "Clear disclaimer about informational purposes",
+          "Regulated entity references ('relevant Bullish group company')",
+          "Specific legal language about financial instruments and jurisdictions"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,626 @@
+{
+  "slug": "breez",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:03:18.777Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/breez-home-4-vision.png",
+      "label": "Vision",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width hero with centered content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1929",
+          "#ffffff",
+          "#1e88e5",
+          "#ffa500"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif headline, center-aligned, high contrast white text",
+          "bodyStyle": "Light weight sans-serif subheading, center-aligned, muted gray tone",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items, and social icons",
+            "position": "Top of page",
+            "notable": "Active tab (VISION) highlighted in blue, minimal design with good spacing"
+          },
+          {
+            "type": "Hero Illustration",
+            "description": "Line-drawn figures exchanging bitcoin icons with connecting lines and a dog mascot",
+            "position": "Center of screen",
+            "notable": "Dual-color stroke (blue for people, orange/gold for bitcoin and dog) creates visual interest and brand consistency"
+          },
+          {
+            "type": "reCAPTCHA Widget",
+            "description": "Google reCAPTCHA badge",
+            "position": "Bottom right corner",
+            "notable": "Standard trust signal placement"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, subheadline provides context, illustration anchors viewer attention, social proof at top via navigation",
+        "innovativeElements": [
+          "Minimalist line-art illustration with dual-color stroke technique",
+          "Metaphorical visualization of peer-to-peer value transfer through anthropomorphic figures"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page - vision statement",
+        "userIntent": "Understand Breez's core mission and value proposition around Bitcoin utility",
+        "entryPoints": [
+          "Direct navigation from main menu (VISION tab)",
+          "Homepage navigation",
+          "External links to vision page"
+        ],
+        "exitPoints": [
+          "Navigate to other main sections (HOME, SDK, MISTY BREEZ, BLOG, CONTACT US)",
+          "Click social media icons (Twitter, Telegram, Discord, GitHub, Email)",
+          "Scroll to reveal additional content below hero"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to different sections of site"
+          },
+          {
+            "element": "Social Media Icons",
+            "action": "Open external social profiles"
+          }
+        ],
+        "informationArchitecture": "Single value statement presented through text and visual metaphor, positioned as core brand narrative",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Utility of Bitcoin",
+        "subheadline": "Moving Value Like Information",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "reCAPTCHA badge indicating security consciousness"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/breez-home-5-breez-sdk-nodeless.png",
+      "label": "Breez SDK - Nodeless",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main documentation layout",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066cc",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headings in black, hierarchical sizing, left-aligned",
+          "bodyStyle": "Regular weight sans-serif body text, dark gray on white background, high readability",
+          "dataStyle": "Code snippets in monospace, protocol names in bold"
+        },
+        "components": [
+          {
+            "type": "Left Navigation Sidebar",
+            "description": "Collapsible menu with API documentation sections, expandable categories",
+            "position": "Left side of screen",
+            "notable": "Three-level hierarchy visible (API Overview, subsections, expandable items with arrow indicators)"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Scrollable documentation with headings, prose, bullet points, and feature lists",
+            "position": "Right of sidebar",
+            "notable": "Generous padding, clear visual distinction between sections"
+          },
+          {
+            "type": "Header Bar",
+            "description": "Top navigation with hamburger menu, edit, and search icons",
+            "position": "Above main content",
+            "notable": "GitHub and external link icons indicate version control and external resources"
+          },
+          {
+            "type": "Feature Checklist",
+            "description": "Unchecked checkbox list of capabilities",
+            "position": "Bottom of visible content",
+            "notable": "Empty checkboxes visually indicate comprehensive feature set"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar provides stable navigation anchor, headline size clearly differentiates section vs. subsection content, bullet points break up text blocks",
+        "innovativeElements": [
+          "Dual-implementation options clearly presented (Liquid vs. Spark Implementation)",
+          "Inline italicized qualifiers (e.g., 'Liquid Implementation') providing context within headings"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation landing page",
+        "userIntent": "Learn about Breez SDK capabilities, understand integration options, explore implementation approaches",
+        "entryPoints": [
+          "Direct link from main navigation (SDK menu)",
+          "Search or documentation portal",
+          "Developer onboarding flow"
+        ],
+        "exitPoints": [
+          "Expand sidebar sections to drill into specific topics (Payment fundamentals, Sending payments, etc.)",
+          "Click inline links to Liquid Implementation or Spark Implementation",
+          "Scroll down to additional documentation sections",
+          "Use search functionality to find specific topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar Navigation Items",
+            "action": "Expand/collapse categories to reveal nested documentation pages"
+          },
+          {
+            "element": "Inline Hyperlinks (Liquid Implementation, Spark Implementation)",
+            "action": "Navigate to alternative implementation documentation"
+          },
+          {
+            "element": "Search Icon",
+            "action": "Open documentation search"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sidebar navigation paired with detailed prose documentation; clear separation between SDK overview and implementation variants",
+        "frictionPoints": [
+          "Sidebar requires active expanding to explore deeper topics—passive users may miss content",
+          "Long left sidebar may obscure main content on smaller screens"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About Breez SDK - Nodeless (Liquid Implementation)",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "What Is the Breez SDK?",
+            "context": "First section heading",
+            "purpose": "Orient reader to product definition"
+          },
+          {
+            "text": "What Is the Breez SDK - Nodeless (Liquid Implementation)?",
+            "context": "Secondary section heading",
+            "purpose": "Clarify specific variant being documented"
+          },
+          {
+            "text": "Key Features",
+            "context": "Feature list section header",
+            "purpose": "Introduce checklist of capabilities"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "Protocol names: Bolt11, Bolt12, BIP353, LNURL-Pay, Lightning",
+          "Multi-asset: USDT and multi-asset support on Liquid"
+        ],
+        "trustSignals": [
+          "Detailed technical documentation suggesting comprehensive product maturity",
+          "Multiple protocol support (Bolt11, Bolt12, BIP353, LNURL, Lightning, on-chain)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/breez-home-6-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width blank",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": null,
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error - 404 page not found",
+        "userIntent": "User navigated to non-existent page; needs to recover",
+        "entryPoints": [
+          "Broken link navigation",
+          "Invalid URL entry",
+          "Navigation error"
+        ],
+        "exitPoints": [
+          "Return to home via navigation",
+          "Go back browser button",
+          "Navigate to valid documentation section"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Page loaded but contains no visible content—suggests either incomplete implementation or intentionally blank test page",
+        "frictionPoints": [
+          "No visible error message or guidance for user",
+          "No clear path to recovery or next steps",
+          "No navigation visible to help user reorient"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears to be blank or non-existent (404 test page)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/breez-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1628",
+          "#1e3a5f",
+          "#00a8ff",
+          "#d4af37"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, large scale (60+ px), centered",
+          "bodyStyle": "Regular sans-serif, light gray, 18-20px, centered alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal menu with logo and nav items (HOME, SDK, MISTY BREEZ, VISION, BLOG, CONTACT US), social icons on right",
+            "position": "Top fixed",
+            "notable": "Clean horizontal layout with blue accent on active HOME link"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered headline with supporting subtext and illustrative icons",
+            "position": "Center of viewport",
+            "notable": "Multiple vignette illustrations showing diverse use cases with coin icons overlaid"
+          },
+          {
+            "type": "Call-to-Action Indicator",
+            "description": "Chevron down icon",
+            "position": "Bottom center",
+            "notable": "Subtle scroll indicator to encourage downward exploration"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong vertical centering with illustrative elements framing the text; illustrations use blue and gold accent colors to draw attention",
+        "innovativeElements": [
+          "Multi-scenario illustration layout with integrated coin iconography",
+          "Subtle color gradients in background suggesting depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Breez is and explore its core value proposition",
+        "entryPoints": [
+          "Direct URL visit",
+          "External link click"
+        ],
+        "exitPoints": [
+          "Navigation to SDK, MISTY BREEZ, VISION, BLOG, CONTACT US",
+          "Social media links",
+          "Scroll down for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Social icons",
+            "action": "Open external social/community links"
+          },
+          {
+            "element": "Chevron down",
+            "action": "Scroll to next section"
+          }
+        ],
+        "informationArchitecture": "Top-level value statement with illustrated use cases; navigation provides access to deeper product and company info",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin in Every App",
+        "subheadline": "SDKs that make value move as easily as information. Built for apps, services, and billions of users worldwide.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Mention of 'billions of users worldwide'"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/breez-home-2-sdk.png",
+      "label": "SDK",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with left text, right illustration",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1628",
+          "#1e3a5f",
+          "#00a8ff",
+          "#d4af37"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, large (48-56px), left-aligned",
+          "bodyStyle": "Regular sans-serif, light gray, 16-18px, left-aligned in two paragraphs",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Section Header",
+            "description": "Breez SDK title with tagline",
+            "position": "Top left",
+            "notable": "Large heading with concise supporting subheadline"
+          },
+          {
+            "type": "Body Text Block",
+            "description": "Two paragraphs describing SDK capabilities and use cases",
+            "position": "Left side, below header",
+            "notable": "Readable paragraph structure with specific use case examples (social platforms, content apps, crypto wallets)"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Two action buttons: BECOME A PARTNER (solid blue) and BUILD (ghost with arrow)",
+            "position": "Bottom left",
+            "notable": "Clear distinction between primary and secondary actions"
+          },
+          {
+            "type": "Illustration",
+            "description": "Connected figures using Bitcoin puzzle piece with blue outlines and gold accents",
+            "position": "Right side, full height",
+            "notable": "Isometric-style illustration showing collaborative/integration theme"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-aligned text hierarchy leading eye down the left side; illustration anchors the right",
+        "innovativeElements": [
+          "Bitcoin puzzle piece as integration metaphor in illustration"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / product overview",
+        "userIntent": "Understand SDK capabilities and decide whether to partner or build",
+        "entryPoints": [
+          "SDK nav link from home",
+          "Direct page visit"
+        ],
+        "exitPoints": [
+          "BECOME A PARTNER button",
+          "BUILD button",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "BECOME A PARTNER button",
+            "action": "Navigate to partnership inquiry or form"
+          },
+          {
+            "element": "BUILD button",
+            "action": "Navigate to developer documentation or build guide"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Return to home or visit other sections"
+          }
+        ],
+        "informationArchitecture": "Top: product name and value prop. Middle: detailed description in two sections. Bottom: clear action pathways",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Breez SDK",
+        "subheadline": "Make Value Move Like Information",
+        "ctas": [
+          {
+            "text": "BECOME A PARTNER",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "BUILD",
+            "style": "ghost-button",
+            "placement": "bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "from social platforms adding tipping, to content apps embedding payments, to crypto wallets offering true self-custody",
+            "context": "Within main body text",
+            "purpose": "Provides concrete use case examples to clarify SDK versatility"
+          }
+        ],
+        "tone": "professional-technical, developer-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "'best-in-class solution'",
+          "mention of 'billions of users'",
+          "emphasis on removing dependencies"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/breez-home-3-misty-breez.png",
+      "label": "Misty Breez",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel with left text, right isometric illustration",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1628",
+          "#1e3a5f",
+          "#00a8ff",
+          "#d4af37"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, large (48-56px), left-aligned",
+          "bodyStyle": "Regular sans-serif, light gray, 16-18px, left-aligned",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Section Header",
+            "description": "Misty Breez title with tagline",
+            "position": "Top left",
+            "notable": "Clear product name with descriptive subheadline"
+          },
+          {
+            "type": "Body Text Block",
+            "description": "Two paragraphs: one-liner product description and detailed capability description",
+            "position": "Left side below header",
+            "notable": "Links to 'Breez SDK - Nodeless' for contextual reference"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Three action buttons: Google Play, App Store, BUILD (ghost)",
+            "position": "Bottom left",
+            "notable": "Platform-specific download options with BUILD option for customization"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "4 cards at bottom with icons and descriptions",
+            "position": "Full width below main content",
+            "notable": "Grid layout showing key differentiators (Lightning Made Easy, Receive Offline Payments, Lightning Address Support, Powered by Breez SDK)"
+          },
+          {
+            "type": "Illustration",
+            "description": "Isometric mobile phone showing app interface with stacked payment layers and user figures",
+            "position": "Right side, full height",
+            "notable": "3D perspective showing app in use with payment visualization and users interacting"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Text hierarchy on left guides downward; illustration anchors right; feature grid provides scannable summary at bottom",
+        "innovativeElements": [
+          "Stacked isometric illustration of payment layers within phone display",
+          "Icon + text feature cards provide clear visual summary"
+        ]
+      },
+      "flow": {
+        "screenType": "product-overview with download options",
+        "userIntent": "Understand Misty Breez app and download for iOS/Android or build custom version",
+        "entryPoints": [
+          "MISTY BREEZ nav link",
+          "Direct page visit"
+        ],
+        "exitPoints": [
+          "Google Play download",
+          "App Store download",
+          "BUILD button",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Google Play button",
+            "action": "Open Google Play store"
+          },
+          {
+            "element": "App Store button",
+            "action": "Open Apple App Store"
+          },
+          {
+            "element": "BUILD button",
+            "action": "Navigate to developer resources"
+          },
+          {
+            "element": "Feature card icons",
+            "action": "Potentially expandable info (if interactive)"
+          }
+        ],
+        "informationArchitecture": "Product overview > detailed description > download/build options > feature summary cards",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Misty Breez",
+        "subheadline": "Lightning Made Easy",
+        "ctas": [
+          {
+            "text": "GET IT ON Google Play",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "Download on the App Store",
+            "style": "primary-button",
+            "placement": "bottom left"
+          },
+          {
+            "text": "BUILD",
+            "style": "ghost-button",
+            "placement": "bottom left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Misty Breez is the simplest self-custodial app for sending and receiving bitcoin payments.",
+            "context": "Opening product description",
+            "purpose": "Immediately communicates core value proposition"
+          },
+          {
+            "text": "Powered by the Breez SDK - Nodeless",
+            "context": "Second paragraph",
+            "purpose": "Establishes technical credibility and links to SDK"
+          },
+          {
+            "text": "No channels. No setup fees. Just permissionless P2P payments.",
+            "context": "Feature card",
+            "purpose": "Highlights key differentiator with minimal jargon"
+          }
+        ],
+        "tone": "professional-technical, user-friendly, clarity-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "'simplest self-custodial app'",
+          "'full capabilities' of SDK",
+          "'best practices' mentioned",
+          "references to 'open, decentralized, neutral monetary network'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

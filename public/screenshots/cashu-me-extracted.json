@@ -1,0 +1,171 @@
+{
+  "slug": "cashu-me",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:10:10.147Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/cashu-me-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#c9a961"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, all-caps treatment with high contrast white on dark background",
+          "bodyStyle": "Regular weight, medium size, light gray text for secondary information",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Avatar Icon",
+            "description": "Pixelated character illustration in circular badge",
+            "position": "Top center, above headline",
+            "notable": "Retro 8-bit aesthetic adds personality and approachability"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Full-width rounded button with 'Next' label",
+            "position": "Bottom-center of card",
+            "notable": "High contrast white button with dark text ensures accessibility"
+          },
+          {
+            "type": "Legal Footer Link",
+            "description": "Small underlined text linking to Terms of Service",
+            "position": "Below primary button",
+            "notable": "Subtle but accessible legal compliance signal"
+          },
+          {
+            "type": "Language Selector",
+            "description": "Dropdown showing 'English' with caret",
+            "position": "Bottom left corner",
+            "notable": "Minimal, unobtrusive internationalization option"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical center alignment draws eye to avatar first, then headline, then description, with CTA as clear termination point",
+        "innovativeElements": [
+          "Pixelated mascot character creates memorable brand identity",
+          "Dark mode-first design establishes crypto-native aesthetic"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Understand what Cashu wallet is and proceed with setup",
+        "entryPoints": [
+          "App launch",
+          "First-time user visit"
+        ],
+        "exitPoints": [
+          "Click 'Next' to proceed to next onboarding step"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Next Button",
+            "action": "Advances to next onboarding screen"
+          },
+          {
+            "element": "Terms of Service Link",
+            "action": "Opens legal document (modal or external)"
+          },
+          {
+            "element": "Language Dropdown",
+            "action": "Changes interface language"
+          }
+        ],
+        "informationArchitecture": "Linear onboarding flow with welcome introduction before wallet setup",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Cashu",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Next",
+            "style": "primary-button",
+            "placement": "Center, full-width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By continuing, you agree to the Terms of Service",
+            "context": "Below primary button",
+            "purpose": "Legal acknowledgment and consent priming"
+          }
+        ],
+        "tone": "professional-technical with approachable friendliness",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Free and open-source Bitcoin wallet",
+          "Uses ecash for security and privacy"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cashu-me-home-2-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": "spacious",
+        "visualHierarchy": "N/A - blank/empty page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Navigate to requested page",
+        "entryPoints": [
+          "Invalid URL or broken link"
+        ],
+        "exitPoints": [
+          "Navigate back",
+          "Return to home"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "N/A - blank page",
+        "frictionPoints": [
+          "Page appears to be blank or loading error",
+          "No visible navigation or error message to guide user"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears blank - likely 404 error state without proper error messaging"
+        ]
+      }
+    }
+  ]
+}

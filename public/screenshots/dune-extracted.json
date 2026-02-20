@@ -1,0 +1,5114 @@
+{
+  "slug": "dune",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T11:37:02.102Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 51,
+  "screens": [
+    {
+      "image": "/screenshots/dune-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top-right header with Dune logo/text and Sim text link",
+            "position": "top-right",
+            "notable": "Minimal branding with toggle between Dune and Sim environments"
+          },
+          {
+            "type": "cookie-banner",
+            "description": "Bottom footer banner with cookie policy notice",
+            "position": "bottom",
+            "notable": "Standard compliance banner with Accept and Manage settings CTAs"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal - mostly blank white space with navigation at top and cookie banner at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Initial page load, potential entry to the Dune platform",
+        "entryPoints": [
+          "Direct URL visit",
+          "External link"
+        ],
+        "exitPoints": [
+          "Click Dune logo to enter platform",
+          "Click Sim for simulation mode",
+          "Accept or Manage cookies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune logo/button",
+            "action": "Navigate to main platform or dashboard"
+          },
+          {
+            "element": "Sim text link",
+            "action": "Switch to simulation or test environment"
+          },
+          {
+            "element": "Accept button",
+            "action": "Accept cookie policy and proceed"
+          },
+          {
+            "element": "Manage settings link",
+            "action": "Open cookie preferences modal"
+          }
+        ],
+        "informationArchitecture": "Minimal - navigation at top, compliance notice at bottom, blank center space suggests hero content may load dynamically",
+        "frictionPoints": [
+          "Cookie banner requires interaction before full access",
+          "Lack of visible content or CTAs in main area may confuse new users",
+          "No clear value proposition or hero messaging visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie-banner-bottom-right"
+          },
+          {
+            "text": "Manage settings",
+            "style": "text-link",
+            "placement": "cookie-banner-bottom-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We use cookies to improve your experience on our site. By using this website you agree to our Cookie Policy.",
+            "context": "cookie-banner",
+            "purpose": "Inform user of cookie usage and link to policy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Cookie Policy link for transparency"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": "Small sans-serif, dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top-right header with Dune logo and Sim toggle",
+            "position": "top-right",
+            "notable": "Consistent with previous screen, allows environment switching"
+          },
+          {
+            "type": "cookie-banner-overlay",
+            "description": "Full-width bottom banner with cookie notice and action buttons",
+            "position": "bottom",
+            "notable": "Persistent overlay with three clear action options"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Cookie banner dominates lower viewport with clear button hierarchy",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "User views landing page and encounters cookie compliance overlay",
+        "entryPoints": [
+          "Page load after initial visit"
+        ],
+        "exitPoints": [
+          "Accept cookies and dismiss banner",
+          "Click Manage settings for preferences",
+          "Click Cookie Policy link for details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept button",
+            "action": "Accept all cookies and dismiss banner"
+          },
+          {
+            "element": "Manage settings",
+            "action": "Open cookie preferences dialog"
+          },
+          {
+            "element": "Cookie Policy link",
+            "action": "Navigate to policy page"
+          }
+        ],
+        "informationArchitecture": "Standard compliance pattern - banner at bottom with three progressive options",
+        "frictionPoints": [
+          "Banner blocks interaction with main content until dismissed",
+          "No default dismissal without explicit acceptance or settings management"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie-banner-right"
+          },
+          {
+            "text": "Manage settings",
+            "style": "text-link",
+            "placement": "cookie-banner-center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We use cookies to improve your experience on our site. By using this website you agree to our Cookie Policy.",
+            "context": "cookie-banner",
+            "purpose": "GDPR/compliance notice explaining cookie usage"
+          }
+        ],
+        "tone": "professional-compliant",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Cookie Policy reference demonstrates transparency"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-5-pricing.png",
+      "label": "Pricing",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top-right header with Dune branding and Sim option",
+            "position": "top-right",
+            "notable": "Consistent navigation across all screens"
+          },
+          {
+            "type": "bottom-sheet-indicator",
+            "description": "Single 'C' character visible in bottom-right corner",
+            "position": "bottom-right",
+            "notable": "Likely indicates scrollable or expandable content section"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual content; character 'C' in corner suggests collapsed state",
+        "innovativeElements": [
+          "Unusual single-character indicator (C) suggesting section toggle or accordion control"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse pricing information or tier options",
+        "entryPoints": [
+          "Click pricing link from navigation",
+          "Direct URL to pricing page"
+        ],
+        "exitPoints": [
+          "Select a pricing tier",
+          "Return to navigation",
+          "Expand 'C' section for more details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "C indicator",
+            "action": "Likely expands or reveals pricing comparison table or details"
+          }
+        ],
+        "informationArchitecture": "Page appears to be in collapsed or loading state with expandable section",
+        "frictionPoints": [
+          "Pricing content not visible - unclear what plans are available",
+          "No clear pricing table, tier names, or feature comparisons visible",
+          "Single character 'C' is cryptic and not self-explanatory"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears mostly empty or in loading/collapsed state"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-6-explore-data.png",
+      "label": "Explore Data",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#6C5CE7"
+        ],
+        "typography": {
+          "headingStyle": "Clean sans-serif, minimal weight variation",
+          "bodyStyle": "Light sans-serif for navigation labels",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, dropdown menus (Products, Discover, Use Cases, Resources), Pricing, search, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Minimalist design with prominent Dune logo in black pill-shaped container"
+          },
+          {
+            "type": "Sidebar Grid",
+            "description": "Right-aligned vertical grid of product/feature cards with colorful icons and logos",
+            "position": "Right side",
+            "notable": "Sparse layout with breathing room, icon-focused discovery"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors top; white space dominates center; discovery cards float on right edge",
+        "innovativeElements": [
+          "Right-side vertical discovery grid creates asymmetrical balance",
+          "Minimal navigation with substantial whitespace suggests premium positioning"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore available data products and integrations",
+        "entryPoints": [
+          "Direct from navigation 'Discover' dropdown",
+          "Home page scroll"
+        ],
+        "exitPoints": [
+          "Click individual product cards",
+          "Return to main navigation",
+          "Scroll to additional content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Product cards (right sidebar)",
+            "action": "Navigate to specific product/integration details"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Reveal submenu options"
+          },
+          {
+            "element": "Search icon",
+            "action": "Open search interface"
+          }
+        ],
+        "informationArchitecture": "Hierarchical navigation with discovery cards as secondary exploration path",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-7-contact-sales.png",
+      "label": "Contact Sales",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large serif or display font, appears right-aligned at bottom",
+          "bodyStyle": "Light sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Minimal top navigation with Dune logo and Sim toggle",
+            "position": "Top right",
+            "notable": "Extremely sparse, focuses attention on hero area"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large white space with minimal text overlay",
+            "position": "Full screen center",
+            "notable": "Dramatic negative space with partial text visible ('Tailored pri...')"
+          },
+          {
+            "type": "Decorative Element",
+            "description": "Geometric line drawing (connected dots forming angle shape)",
+            "position": "Right side, lower portion",
+            "notable": "Minimalist accent suggesting premium/enterprise positioning"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Extreme negative space with text anchor at bottom-right corner",
+        "innovativeElements": [
+          "Partial text truncation creates intrigue",
+          "Geometric line accent adds sophistication without clutter"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Contact sales for enterprise/tailored solutions",
+        "entryPoints": [
+          "From pricing page",
+          "Navigation 'Pricing' or 'Resources'"
+        ],
+        "exitPoints": [
+          "Contact form submission",
+          "Return to navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact form (implied, not fully visible)",
+            "action": "Submit sales inquiry"
+          }
+        ],
+        "informationArchitecture": "Single-purpose landing focused on sales conversion",
+        "frictionPoints": [
+          "Limited visible content makes it unclear what the full page offers"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Tailored pri[cing]",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-8-see-more.png",
+      "label": "See more",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold weight, right-aligned",
+          "bodyStyle": "Regular sans-serif for descriptive text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Top navigation with Dune logo and Sim toggle",
+            "position": "Top right",
+            "notable": "Consistent minimal styling across pages"
+          },
+          {
+            "type": "Product Card",
+            "description": "Right-aligned card featuring 'Blockworks' with description and category tag",
+            "position": "Bottom right quadrant",
+            "notable": "Partial reveal strategy - main content below fold"
+          },
+          {
+            "type": "Category Tag",
+            "description": "Dashed border tag reading 'INSTITUTIONAL CRYPTO'",
+            "position": "Within product card",
+            "notable": "Distinctive dashed styling differentiates from standard badges"
+          },
+          {
+            "type": "Logo Block",
+            "description": "Large black rectangular area with white text/logo (partially visible)",
+            "position": "Bottom of card",
+            "notable": "High contrast brand presentation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large white space above; information reveals bottom-right with strong visual anchoring",
+        "innovativeElements": [
+          "Dashed category tag creates visual distinction",
+          "Below-fold content strategy encourages scrolling"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover additional partner/product integrations",
+        "entryPoints": [
+          "Scroll from previous discovery section",
+          "Browse more partners link"
+        ],
+        "exitPoints": [
+          "Click Blockworks card for details",
+          "Continue scrolling",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blockworks product card",
+            "action": "Navigate to Blockworks integration/product page"
+          }
+        ],
+        "informationArchitecture": "Grid or carousel of partner/product cards with progressive disclosure",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blockworks",
+        "subheadline": "Blockworks: Powering Institutional Crypto on Dune",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "INSTITUTIONAL CRYPTO",
+            "context": "Category tag on product card",
+            "purpose": "Categorizes the partner/integration type"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Institutional partner mention suggests enterprise credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-9-blockworks-powering-institutional-crypto-research.png",
+      "label": "Blockworks: Powering Institutional Crypto Research",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, centered",
+          "bodyStyle": "Medium sans-serif, light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, dropdown menus, search, and auth buttons",
+            "position": "top",
+            "notable": "Clean minimalist design with toggle between Dune and Sim"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large empty white space with minimal content visible",
+            "position": "center",
+            "notable": "Predominantly blank, suggesting below-fold content or loading state"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors the top; content area is largely empty",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore institutional crypto research platform capabilities",
+        "entryPoints": [
+          "Direct navigation to Dune home",
+          "Search engine results"
+        ],
+        "exitPoints": [
+          "Products dropdown",
+          "Discover section",
+          "Use Cases",
+          "Pricing",
+          "LOG IN",
+          "SIGN UP"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Expand product menu"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "Browse discovery features"
+          },
+          {
+            "element": "Use Cases dropdown",
+            "action": "View industry use cases"
+          },
+          {
+            "element": "LOG IN button",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Navigate to registration"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with dropdown categories for product discovery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-11-chains.png",
+      "label": "Chains",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f0f0f0"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with Products, Discover, Use Cases, Resources, Pricing, search, LOG IN, SIGN UP",
+            "position": "top",
+            "notable": "Dune/Sim toggle in pill-shaped button"
+          },
+          {
+            "type": "sidebar-icons",
+            "description": "Vertical list of colorful blockchain/protocol icons on right side",
+            "position": "right",
+            "notable": "Represents 60+ chains; icons include Ethereum, Polygon, Optimism, Arbitrum, Base, Solana, and others"
+          },
+          {
+            "type": "heading",
+            "description": "'Disc' text visible in top-right, likely 'Discover' section header",
+            "position": "top-right",
+            "notable": "Partial text suggests sidebar navigation or expanded menu"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation top, chain icons right side create vertical scanning pattern",
+        "innovativeElements": [
+          "Sidebar icon grid for chain visualization",
+          "Color-coded protocol logos"
+        ]
+      },
+      "flow": {
+        "screenType": "discovery-browse",
+        "userIntent": "Browse supported blockchain networks and chains",
+        "entryPoints": [
+          "Products > Chains",
+          "Discover navigation",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Click on chain icon to filter/view",
+          "Navigate to other sections via top menu",
+          "Search functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Chain icons (sidebar)",
+            "action": "Filter or navigate to specific blockchain data"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Access products, use cases, resources"
+          },
+          {
+            "element": "Search icon",
+            "action": "Search for chains or protocols"
+          }
+        ],
+        "informationArchitecture": "Top navigation for categories, right sidebar for chain selection",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Disc",
+            "context": "Right sidebar header",
+            "purpose": "Section label (likely 'Discover')"
+          },
+          {
+            "text": "Dash",
+            "context": "Right sidebar label",
+            "purpose": "Subsection navigation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "60+ chains supported"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-12-api.png",
+      "label": "API",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#ffffff",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large serif font (Georgia-like), bold, centered, white text",
+          "bodyStyle": "Medium sans-serif, white/light gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Dark navigation with rounded borders, Dune/Sim toggle, API, Subscriptions, Chains, Case Studies, Docs, Pricing, auth buttons",
+            "position": "top",
+            "notable": "Inverted dark theme; 'Sim API' tab highlighted in white"
+          },
+          {
+            "type": "badge",
+            "description": "Dotted border pill with 'SIM API' text",
+            "position": "above-headline",
+            "notable": "Subtle label indicating feature/product tier"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large serif typography with headline text",
+            "position": "center",
+            "notable": "Prominent vertical-centered layout"
+          },
+          {
+            "type": "subheadline",
+            "description": "Body copy describing value proposition",
+            "position": "center",
+            "notable": "Below headline, explains core benefit"
+          },
+          {
+            "type": "cta-button",
+            "description": "White rounded button with arrow icon",
+            "position": "center",
+            "notable": "High contrast primary action"
+          },
+          {
+            "type": "background-shape",
+            "description": "Rounded rectangle outline at bottom",
+            "position": "bottom",
+            "notable": "Suggests additional content below fold"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Badge at top, large headline dominates, subheadline supports, CTA button anchors attention",
+        "innovativeElements": [
+          "Dark mode hero with serif typography",
+          "Dotted border badge design",
+          "Minimalist compositional approach"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about SIM API product and start using it",
+        "entryPoints": [
+          "Dune main navigation > API or Sim tab",
+          "Direct marketing link",
+          "Product discovery"
+        ],
+        "exitPoints": [
+          "START USING SIM API button",
+          "Navigation menu items (Subscriptions, Case Studies, Docs)",
+          "LOG IN / SIGN UP"
+        ],
+        "interactiveElements": [
+          {
+            "element": "START USING SIM API button",
+            "action": "Navigate to API onboarding or dashboard"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Browse related documentation and pricing"
+          },
+          {
+            "element": "LOG IN / SIGN UP",
+            "action": "Access authentication"
+          }
+        ],
+        "informationArchitecture": "Vertical hero layout with single focal point; navigation provides secondary navigation paths",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "60+ chains, one unified API",
+        "subheadline": "Launch wallet apps across chains with clean, production-ready APIs.",
+        "ctas": [
+          {
+            "text": "START USING SIM API",
+            "style": "primary-button",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "SIM API",
+            "context": "Top badge",
+            "purpose": "Product tier identifier"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "60+ chains"
+        ],
+        "trustSignals": [
+          "Production-ready APIs"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-19-documentation.png",
+      "label": "Documentation",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), dark color for main headings",
+          "bodyStyle": "Regular sans-serif, medium gray (#666), 16px line height",
+          "dataStyle": "Numbers in body text with context (e.g., '100+ blockchains', '3+ petabytes', '1,500+ paying customers')"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with categorized menu items including Introduction, Products Overview, Use Cases, and Data Hub sections",
+            "position": "left",
+            "notable": "Hierarchical organization with expandable sections and icons for each menu item"
+          },
+          {
+            "type": "top-navigation-bar",
+            "description": "Header with logo, search, Ask AI, Support, Start building CTA, and Assistant panel",
+            "position": "top",
+            "notable": "AI assistant integration with persistent right-side panel showing AI disclaimer"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Secondary nav with Docs, Data Catalog, API Reference, SQL Query Engine, Resources",
+            "position": "top-left below logo",
+            "notable": "Active tab underlined to show current section"
+          },
+          {
+            "type": "product-cards",
+            "description": "Two feature cards (Data Hub, Datashare) with icons, titles, and descriptions",
+            "position": "bottom-center",
+            "notable": "Clean white cards with icon indicators and descriptive text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors navigation, main content area features large heading, descriptive paragraphs, then product cards at bottom. Right panel assistant creates three-column layout.",
+        "innovativeElements": [
+          "Floating AI Assistant panel with persistent disclaimer about AI-generated content",
+          "OpenInChatGPT button integrated into documentation header",
+          "Multi-level navigation combining tabs + sidebar + secondary menu"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Understand Dune's purpose, capabilities, and explore product offerings and documentation structure",
+        "entryPoints": [
+          "Direct link from main Dune app",
+          "Navigation from Docs tab",
+          "Search results for 'Dune documentation'"
+        ],
+        "exitPoints": [
+          "Click individual sidebar menu items (Introduction, Products Overview, Use Cases)",
+          "Click Data Hub or Datashare product cards",
+          "Open documentation in ChatGPT",
+          "Use search to find specific topics",
+          "Click Support or Start building"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to specific documentation sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search documentation across all categories"
+          },
+          {
+            "element": "Ask AI button",
+            "action": "Query AI assistant for documentation help"
+          },
+          {
+            "element": "Open in ChatGPT button",
+            "action": "Open current docs section in ChatGPT"
+          },
+          {
+            "element": "Product cards",
+            "action": "Navigate to product-specific documentation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Introduction → Products Overview → Use Cases (Analytics, Engineering, Accounting) and Data Hub sections (Overview, Write and Run Queries, Visualize, Automate, Share, Import/Export, Search, Decode Smart Contracts, Manage Team)",
+        "frictionPoints": [
+          "Large sidebar reduces main content area visibility",
+          "Multiple navigation systems (tabs, sidebar, breadcrumbs) may confuse some users",
+          "AI assistant panel takes up significant real estate"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Dune Docs",
+        "subheadline": "Dune is the onchain data platform for analytics, data engineering, and application development.",
+        "ctas": [
+          {
+            "text": "Start building",
+            "style": "primary-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Open in ChatGPT",
+            "style": "secondary-button",
+            "placement": "next to headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Responses are generated using AI and may contain mistakes.",
+            "context": "Right sidebar AI assistant panel",
+            "purpose": "Manage expectations around AI-generated content accuracy"
+          },
+          {
+            "text": "Ask a question...",
+            "context": "AI assistant input field at bottom of right panel",
+            "purpose": "Prompt user to interact with AI assistant"
+          }
+        ],
+        "tone": "professional-technical, educational, mission-driven",
+        "dataFormatting": [
+          "100+ blockchains indexed",
+          "3+ petabytes of data",
+          "1,500+ paying customers",
+          "Web-based SQL editor"
+        ],
+        "trustSignals": [
+          "1,500+ paying customers mentioned",
+          "100+ blockchains indexed",
+          "3+ petabytes of data",
+          "Battle-tested platform"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-20-hire-an-expert.png",
+      "label": "Hire an expert",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Top navigation with Dune logo and Sim tab selector",
+            "position": "top",
+            "notable": "Minimal header with product switcher"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Mostly blank page with header and footer elements visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "loading-state",
+        "userIntent": "Navigate to expert hiring/freelance service offering",
+        "entryPoints": [
+          "Click from documentation",
+          "Navigation menu selection"
+        ],
+        "exitPoints": [
+          "Page loads with content",
+          "Return to Dune tab"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim tab selector",
+            "action": "Switch between Dune and Sim product"
+          }
+        ],
+        "informationArchitecture": "Page content loading or not fully visible",
+        "frictionPoints": [
+          "Page appears to be loading or blank"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-21-become-an-expert.png",
+      "label": "Become an expert",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Top navigation with Dune logo and Sim tab selector",
+            "position": "top",
+            "notable": "Minimal header with product switcher"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Mostly blank page with header visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "loading-state",
+        "userIntent": "Explore expert/community contributor program",
+        "entryPoints": [
+          "Click from documentation or main menu",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Page loads with content",
+          "Return to Dune tab",
+          "Navigate to Sim product"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim tab selector",
+            "action": "Switch between Dune and Sim product"
+          }
+        ],
+        "informationArchitecture": "Page content loading or not fully visible",
+        "frictionPoints": [
+          "Page appears to be loading or blank"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-13-subscriptions.png",
+      "label": "Subscriptions",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline, centered, high contrast white on black",
+          "bodyStyle": "Clean sans-serif subtext, centered, moderate weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, product switcher, main menu items, and auth buttons",
+            "position": "Top of page",
+            "notable": "Product switcher (Dune/Sim) styled as pill with active state"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered text content with tag, large headline, subheadline, and CTA button",
+            "position": "Center of viewport",
+            "notable": "Dashed border tag 'SIM SUBSCRIPTIONS' above headline creates visual hierarchy"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Rounded white button with arrow icon and monospace text",
+            "position": "Below subheadline",
+            "notable": "High contrast white on dark background with arrow glyph"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "Partially visible grid at bottom with icon and text",
+            "position": "Bottom of screen",
+            "notable": "Faded appearance suggests scroll-to-reveal pattern"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong vertical centering with tag > headline > subheadline > CTA hierarchy. Progressive disclosure with hidden content below fold.",
+        "innovativeElements": [
+          "Dashed border tag styling for feature callouts",
+          "Minimal dark hero with maximum whitespace",
+          "Progressive content reveal pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Sim subscriptions feature for real-time webhook data",
+        "entryPoints": [
+          "Click 'Subscriptions' in main nav",
+          "Direct link from marketing"
+        ],
+        "exitPoints": [
+          "Click 'START USING SUBSCRIPTIONS' button",
+          "Navigate to other nav items (API, Chains, Case Studies, Docs, Pricing)",
+          "Scroll down to explore features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "START USING SUBSCRIPTIONS button",
+            "action": "Navigate to subscriptions onboarding or dashboard"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Switch between different product sections"
+          },
+          {
+            "element": "LOG IN / SIGN UP buttons",
+            "action": "Authenticate or create account"
+          }
+        ],
+        "informationArchitecture": "Hero-first design pattern with single strong value proposition followed by feature discovery. Vertical scroll reveals more details.",
+        "frictionPoints": [
+          "No immediate feature details visible - requires scroll or CTA click to understand capabilities"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Realtime webhooks. Instant updates.",
+        "subheadline": "Stop polling. Start streaming. Get onchain data pushed directly to your app as events happen.",
+        "ctas": [
+          {
+            "text": "START USING SUBSCRIPTIONS →",
+            "style": "primary-button",
+            "placement": "Center below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "SIM SUBSCRIPTIONS",
+            "context": "Dashed tag above headline",
+            "purpose": "Section identifier and visual separator"
+          }
+        ],
+        "tone": "professional-technical, action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-14-chains.png",
+      "label": "Chains",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "full-width, card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline, left-aligned, high contrast white",
+          "bodyStyle": "Sans-serif body text, left-aligned, medium weight, gray tone",
+          "dataStyle": "Large numeric prefix '60+' in headline for impact"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Sticky horizontal nav with logo, product switcher, menu items, auth buttons",
+            "position": "Top of page",
+            "notable": "Consistent with previous screen"
+          },
+          {
+            "type": "Section Header",
+            "description": "Headline, subheadline, and search input",
+            "position": "Top-left of content area",
+            "notable": "Left alignment breaks from center-focused landing pattern"
+          },
+          {
+            "type": "Search Input",
+            "description": "Dark input with placeholder 'Search chains'",
+            "position": "Below subheadline, left side",
+            "notable": "Icon-prefixed search field for discoverability"
+          },
+          {
+            "type": "Chain Grid",
+            "description": "Multi-column grid of chain cards with logos and labels",
+            "position": "Main content area",
+            "notable": "8-column responsive grid, each card shows colored logo and text name"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong headline leading to detailed product showcase. Grid layout emphasizes breadth of support. Search encourages active exploration.",
+        "innovativeElements": [
+          "Large numeric prefix in headline for credibility",
+          "Organized grid showcase with colorful brand assets",
+          "Integrated search for navigating large chain list"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, product-showcase",
+        "userIntent": "Explore and discover which blockchain chains are supported by Sim",
+        "entryPoints": [
+          "Click 'Chains' in main navigation",
+          "Direct navigation from landing pages"
+        ],
+        "exitPoints": [
+          "Click individual chain card (implied interaction)",
+          "Use search to filter chains",
+          "Navigate to other sections via main nav",
+          "Return to home or other pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search Input",
+            "action": "Filter chains by name or keyword"
+          },
+          {
+            "element": "Chain Cards",
+            "action": "Likely navigate to chain-specific details or integration docs"
+          },
+          {
+            "element": "Main Navigation",
+            "action": "Switch between product sections"
+          }
+        ],
+        "informationArchitecture": "Two-level hierarchy: headline establishes trust via scale (60+), then product grid enables browsing. Search provides both discovery and filtering.",
+        "frictionPoints": [
+          "Grid extends beyond visible viewport - requires horizontal scroll on some devices",
+          "No indication of which chains are premium vs free tier"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "60+ chains supported across Sim",
+        "subheadline": "Sim delivers the most comprehensive and reliable crypto data — right where you need it.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Search chains",
+            "context": "Placeholder in search input",
+            "purpose": "Guide user to filter chains"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "60+ (numeric prefix for scale credibility)"
+        ],
+        "trustSignals": [
+          "60+ chains (breadth of support)",
+          "comprehensive and reliable (data quality claims)"
+        ],
+        "jargonLevel": "beginner-intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-15-case-studies.png",
+      "label": "Case Studies",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "full-width, card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline, centered, high contrast white",
+          "bodyStyle": "Sans-serif body, centered, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, product switcher, menu items, auth buttons",
+            "position": "Top of page",
+            "notable": "Consistent branding across all screens"
+          },
+          {
+            "type": "Section Tag",
+            "description": "Dashed border tag with section identifier",
+            "position": "Above headline, centered",
+            "notable": "Matching style from subscriptions screen for consistency"
+          },
+          {
+            "type": "Hero Headline",
+            "description": "Large centered serif text with multi-line layout",
+            "position": "Center of viewport",
+            "notable": "Emphasizes customer success through 'real-life success stories'"
+          },
+          {
+            "type": "Case Study Cards",
+            "description": "Three-column grid with title, description, category tag, and branded visuals",
+            "position": "Bottom half of screen",
+            "notable": "Dark cards with borders, company logos, and call-to-action areas"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Tag > Headline > Cards. Centered hero content with progressive reveal of case study details below.",
+        "innovativeElements": [
+          "Consistent design system with reusable tag component",
+          "Brand logo integration in case study cards",
+          "Multi-card grid showing diverse use cases"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, content-showcase",
+        "userIntent": "Discover how other teams use Sim to solve real problems and achieve results",
+        "entryPoints": [
+          "Click 'Case Studies' in main navigation",
+          "Linked from landing or product pages"
+        ],
+        "exitPoints": [
+          "Click individual case study card to read full story",
+          "Navigate to other sections via main nav",
+          "Scroll to explore all case studies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Case Study Cards",
+            "action": "Navigate to detailed case study page"
+          },
+          {
+            "element": "Main Navigation",
+            "action": "Switch between product sections"
+          },
+          {
+            "element": "Auth Buttons",
+            "action": "Log in or sign up"
+          }
+        ],
+        "informationArchitecture": "Hero-first with customer proof point. Three featured case studies showcasing different industries/use cases (wallet infrastructure, cross-chain DeFi, embedded wallets).",
+        "frictionPoints": [
+          "Limited to 3 visible case studies - may need pagination or scroll to see more"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Read real-life success stories of how Sim empowers teams to transform data into action",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue with Google (implied from third card)",
+            "style": "primary-button",
+            "placement": "In Dynamic case study card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "CASE STUDIES",
+            "context": "Dashed tag above headline",
+            "purpose": "Section identifier"
+          },
+          {
+            "text": "WALLET INFRASTRUCTURE",
+            "context": "Tag on Abstract case study",
+            "purpose": "Category label for use case"
+          },
+          {
+            "text": "CROSS-CHAIN DEFI",
+            "context": "Tag on Orbitals case study",
+            "purpose": "Category label for use case"
+          },
+          {
+            "text": "EMBEDDED WALLETS",
+            "context": "Tag on Dynamic case study",
+            "purpose": "Category label for use case"
+          }
+        ],
+        "tone": "professional-technical, aspirational, customer-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Real-life success stories",
+          "Named customer companies (Abstract, Orbitals, Dynamic)",
+          "Specific use case categories demonstrating product versatility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-16-docs.png",
+      "label": "Docs",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main with right panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#00D084"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, 48px+ for main headline",
+          "bodyStyle": "Regular sans-serif, 16px for body copy",
+          "dataStyle": "Monospace for code/API examples, numeric values in dashboard mockup use sans-serif"
+        },
+        "components": [
+          {
+            "type": "Sidebar navigation",
+            "description": "Left navigation with API documentation sections organized by product (Sim APIs, EVM, SVM)",
+            "position": "Left side, fixed width",
+            "notable": "Green 'GET' badges next to API endpoints indicate available endpoints"
+          },
+          {
+            "type": "Main content area",
+            "description": "Documentation page with headline, subheadline, and instructional text",
+            "position": "Center, main body",
+            "notable": "Mockup images of wallet and dashboard integrated inline to show real-world use"
+          },
+          {
+            "type": "AI Assistant panel",
+            "description": "Right sidebar with chat interface for asking questions about documentation",
+            "position": "Right side, collapsible",
+            "notable": "Floating chat interface with disclaimer about AI-generated responses"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, subheadline clarifies intent, body text supports, sidebars frame context",
+        "innovativeElements": [
+          "Inline product mockups demonstrating actual use cases",
+          "Right-side AI assistant for contextual help",
+          "GET badges on API methods for quick visual scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation landing page",
+        "userIntent": "Understand Sim APIs and get started with developer quickstart",
+        "entryPoints": [
+          "Click 'Sim APIs' from main navigation",
+          "Direct link from homepage to developer quickstart"
+        ],
+        "exitPoints": [
+          "Click on specific API sections (Balances, Stablecoins, Activity, etc.)",
+          "Navigate to Support or other sidebar sections",
+          "Click 'Start Building' button in top nav",
+          "Use search or Ask AI features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different API documentation sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search documentation with keyboard shortcut ⌘K"
+          },
+          {
+            "element": "Ask AI button",
+            "action": "Open assistant panel for contextual questions"
+          },
+          {
+            "element": "Copy page button",
+            "action": "Copy current page content to clipboard"
+          },
+          {
+            "element": "Start Building button",
+            "action": "Navigate to development environment or onboarding"
+          }
+        ],
+        "informationArchitecture": "Hierarchical with product categories (Sim APIs, EVM, SVM) containing specific endpoints and features. Content flows from overview to implementation details.",
+        "frictionPoints": [
+          "Multiple navigation options (sidebar, top nav, AI assistant) could be overwhelming for new users",
+          "Mockup images are static; interactive elements not visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Developer Quickstart",
+        "subheadline": "Take your first steps with the Sim APIs",
+        "ctas": [
+          {
+            "text": "Start Building",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Copy page",
+            "style": "secondary-button",
+            "placement": "Top right of content area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Responses are generated using AI and may contain mistakes.",
+            "context": "AI Assistant panel header",
+            "purpose": "Set expectations and reduce trust concerns about AI responses"
+          },
+          {
+            "text": "⌘K",
+            "context": "Search bar keyboard shortcut",
+            "purpose": "Indicate quick access method for power users"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "$252.07 USD",
+          "+$12.41 (+5.18%)",
+          "$32,020",
+          "$10,123"
+        ],
+        "trustSignals": [
+          "Access data from 60+ chains",
+          "Real-time blockchain activity and ownership data mentioned",
+          "Sim Dashboard reference for API key management"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-17-enterprise.png",
+      "label": "Enterprise",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#4D4D4D"
+        ],
+        "typography": {
+          "headingStyle": "Serif font (Times-like), very large, 60px+, centered, elegant",
+          "bodyStyle": "Sans-serif, white text, 18-20px for subheadline",
+          "dataStyle": "Sans-serif for feature labels and form inputs"
+        },
+        "components": [
+          {
+            "type": "Top navigation bar",
+            "description": "Horizontal navigation with Dune/Sim switcher and main menu items",
+            "position": "Top, fixed",
+            "notable": "Dune logo with Sim toggle in pill-shaped container"
+          },
+          {
+            "type": "Hero section with features",
+            "description": "Full-width section with large headline and three feature callouts",
+            "position": "Center, above form",
+            "notable": "Feature metrics (60+ chains, Unlimited API keys, <1 day response) in distinct bordered boxes"
+          },
+          {
+            "type": "Contact form",
+            "description": "Multi-field form for enterprise inquiry (First Name, Last Name, Work Email, Company/Project, Telegram Handle)",
+            "position": "Bottom, centered, dark theme",
+            "notable": "Rounded input fields with placeholder text, optional Telegram field suggests communication preference"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline commands attention, subheadline clarifies value, feature metrics prove capability, form requests engagement",
+        "innovativeElements": [
+          "Serif headline font choice creates premium, established feel unusual for tech",
+          "Feature metrics presented in grid with minimal borders creating elegant separation",
+          "Telegram field indicates crypto-native audience awareness"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page with lead capture form",
+        "userIntent": "Understand enterprise offering and request custom pricing/support",
+        "entryPoints": [
+          "Click 'Pricing' from main navigation",
+          "Direct link from enterprise information page"
+        ],
+        "exitPoints": [
+          "Submit contact form to request enterprise plan",
+          "Navigate back via top navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim switcher",
+            "action": "Switch between Dune and Sim product lines"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to API, Subscriptions, Chains, Case Studies, Docs, Pricing sections"
+          },
+          {
+            "element": "Login/Sign Up buttons",
+            "action": "Access authentication or create account"
+          },
+          {
+            "element": "Contact form inputs",
+            "action": "Submit enterprise inquiry"
+          }
+        ],
+        "informationArchitecture": "Top-down: hero value proposition → feature metrics → lead capture form. Minimal text, maximum visual prominence to headline.",
+        "frictionPoints": [
+          "Telegram field might confuse users unfamiliar with crypto communication conventions",
+          "No indication of form submission handling or next steps"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Scale your blockchain data infra",
+        "subheadline": "Get custom pricing, dedicated support, and enterprise-grade SLAs for your production applications.",
+        "ctas": [
+          {
+            "text": "First Name*",
+            "style": "form-input",
+            "placement": "Form field 1"
+          },
+          {
+            "text": "Last Name*",
+            "style": "form-input",
+            "placement": "Form field 2"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Chains Supported / API Keys / Support Response Time",
+            "context": "Feature metric labels",
+            "purpose": "Communicate key differentiators for enterprise tier"
+          }
+        ],
+        "tone": "professional-technical, premium, confident",
+        "dataFormatting": [
+          "60+",
+          "Unlimited",
+          "<1 day"
+        ],
+        "trustSignals": [
+          "Enterprise-grade SLAs mentioned",
+          "Custom pricing (implies negotiated terms)",
+          "Dedicated support offered"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-18-pricing.png",
+      "label": "Pricing",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#2A2A2A"
+        ],
+        "typography": {
+          "headingStyle": "Serif font (Times-like), 60px+, centered, white, elegant",
+          "bodyStyle": "Sans-serif, white text, 18-20px for subheadline",
+          "dataStyle": "Sans-serif for plan features and pricing text"
+        },
+        "components": [
+          {
+            "type": "Top navigation bar",
+            "description": "Horizontal navigation with Dune/Sim switcher and menu items",
+            "position": "Top, fixed",
+            "notable": "Consistent with previous enterprise page"
+          },
+          {
+            "type": "Hero section",
+            "description": "Full-width headline and subheadline explaining pricing philosophy",
+            "position": "Center, above pricing cards",
+            "notable": "Headline emphasizes simplicity and scalability; subheadline emphasizes transparency"
+          },
+          {
+            "type": "Pricing cards",
+            "description": "Two side-by-side plan comparison cards (Free and Enterprise)",
+            "position": "Center, below hero",
+            "notable": "Dark bordered cards with checkmark list items; Enterprise shows starting price"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, subheadline clarifies, pricing cards present options clearly with visual weight on differentiators",
+        "innovativeElements": [
+          "Consistent serif headline design language across pages",
+          "Pricing transparency messaging ('No hidden fees') builds trust",
+          "Checkmark-based feature comparison creates scannable format"
+        ]
+      },
+      "flow": {
+        "screenType": "pricing page",
+        "userIntent": "Understand pricing tiers and choose between Free and Enterprise plans",
+        "entryPoints": [
+          "Click 'Pricing' in top navigation",
+          "Linked from homepage or other marketing pages"
+        ],
+        "exitPoints": [
+          "Click on Free plan to proceed with sign-up",
+          "Click on Enterprise plan to request custom pricing (likely links to previous enterprise form)",
+          "Navigate to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Navigate between product sections"
+          },
+          {
+            "element": "Pricing plan cards",
+            "action": "Select between Free or Enterprise tiers"
+          },
+          {
+            "element": "Login/Sign Up buttons",
+            "action": "Access authentication"
+          }
+        ],
+        "informationArchitecture": "Linear: headline → subheadline → two pricing tiers presented as equal options with clear differentiation via feature lists",
+        "frictionPoints": [
+          "Only two tiers shown (Free and Enterprise); no mid-tier visible for growing teams",
+          "No clear CTA buttons on pricing cards to trigger action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Simple pricing that scales with you",
+        "subheadline": "Usage-based pricing with monthly compute unit volume. No hidden fees.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "For testing and small projects",
+            "context": "Free plan description",
+            "purpose": "Clarify ideal customer for Free tier"
+          },
+          {
+            "text": "For growing apps",
+            "context": "Enterprise plan description",
+            "purpose": "Clarify ideal customer for Enterprise tier"
+          },
+          {
+            "text": "Starting at $500/month",
+            "context": "Enterprise pricing",
+            "purpose": "Set pricing expectations for enterprise customers"
+          }
+        ],
+        "tone": "professional-technical, transparent, trustworthy",
+        "dataFormatting": [
+          "1 million",
+          "5",
+          "10 million+",
+          "100 to 1000",
+          "$500/month"
+        ],
+        "trustSignals": [
+          "Usage-based pricing (transparent and fair)",
+          "No hidden fees statement",
+          "Clear feature comparison with checkmarks"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-22-dunecon.png",
+      "label": "DuneCon",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1a1a1a",
+          "#8B7355"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast against dark background",
+          "bodyStyle": "Medium-weight sans-serif for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-image",
+            "description": "Full-width video/image background showing DuneCon event with people",
+            "position": "top full-bleed",
+            "notable": "Atmospheric event imagery dominates screen, creating immersive landing experience"
+          },
+          {
+            "type": "navigation",
+            "description": "Top-right logo and tab navigation",
+            "position": "top-right corner",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Image-dominant with text overlaid; guides eye from atmospheric visuals to text content below",
+        "innovativeElements": [
+          "Full-bleed hero video with event atmosphere",
+          "Dark overlay on video for text legibility"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, event-showcase",
+        "userIntent": "Learn about DuneCon event and get engaged with community gathering",
+        "entryPoints": [
+          "Direct navigation from home",
+          "Event link from nav menu",
+          "Marketing campaign"
+        ],
+        "exitPoints": [
+          "Event details page",
+          "Registration/ticketing",
+          "Back to home via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hero image/video area",
+            "action": "May be clickable to expand or navigate to event details"
+          },
+          {
+            "element": "Navigation tabs (Dune, Sim)",
+            "action": "Switch between different sections"
+          }
+        ],
+        "informationArchitecture": "Hero-first design emphasizing visual storytelling over text; event details likely below fold",
+        "frictionPoints": [
+          "Large hero may take time to load",
+          "No visible CTAs in viewport (likely below fold)",
+          "Limited information visible without scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "event-focused, community-driven, experiential",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official DuneCon branding"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-23-events.png",
+      "label": "Events",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#3D2B8F"
+        ],
+        "typography": {
+          "headingStyle": "Large, clean sans-serif (\"Upcoming Eve[nts]\" visible)",
+          "bodyStyle": "Regular weight sans-serif for event details",
+          "dataStyle": "Date format: \"Nov 15, 2026\"; Location format: \"London\""
+        },
+        "components": [
+          {
+            "type": "header-section",
+            "description": "Tab navigation with 'ALL', 'CONFERENCE', 'DU[...]' filters",
+            "position": "top-center",
+            "notable": "Multiple filter tabs for event categorization"
+          },
+          {
+            "type": "event-card",
+            "description": "Right-aligned event card showing Solana Breakpoint details",
+            "position": "right panel, center-right",
+            "notable": "Includes event title, date, location, category badge, and gradient image preview"
+          },
+          {
+            "type": "category-badge",
+            "description": "Dashed border badge showing 'CONFERENCE'",
+            "position": "event card",
+            "notable": "Subtle styling with dashed border"
+          },
+          {
+            "type": "gradient-image",
+            "description": "Purple-to-blue gradient visual below event details",
+            "position": "bottom of event card",
+            "notable": "Visual branding for event category"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left whitespace creates breathing room; right panel with event card draws eye rightward",
+        "innovativeElements": [
+          "Minimal left-side design with heavy right-side content density",
+          "Dashed category badges for subtle categorization"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, event-listing",
+        "userIntent": "Discover and browse upcoming crypto/blockchain events",
+        "entryPoints": [
+          "Events section from main nav",
+          "Home page events section"
+        ],
+        "exitPoints": [
+          "Click event card to view details",
+          "Switch filter tabs (ALL/CONFERENCE/etc)",
+          "Navigate to another section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter tabs (ALL, CONFERENCE, DU...)",
+            "action": "Filter events by category"
+          },
+          {
+            "element": "Event card",
+            "action": "Navigate to event details page"
+          },
+          {
+            "element": "Dune logo top-left",
+            "action": "Navigate home"
+          }
+        ],
+        "informationArchitecture": "Horizontal filter navigation at top; right-aligned event listing suggests horizontal scrolling or pagination for multiple events",
+        "frictionPoints": [
+          "Unclear if more events visible by scrolling/swiping",
+          "Filter labels partially cut off (\"DU[...]\")",
+          "No visible pagination or 'next' indicator"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Upcoming Eve[nts]",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Solana Breakpo[int]",
+            "context": "Event card title",
+            "purpose": "Identify event name"
+          },
+          {
+            "text": "Nov 15, 2026 • London",
+            "context": "Event card metadata",
+            "purpose": "Show event date and location"
+          },
+          {
+            "text": "CONFERENCE",
+            "context": "Event category badge",
+            "purpose": "Categorize event type"
+          },
+          {
+            "text": "NOV 15",
+            "context": "Date badge on card",
+            "purpose": "Quick-reference date"
+          }
+        ],
+        "tone": "professional-technical, informational",
+        "dataFormatting": [
+          "Nov 15, 2026 (Month DD, YYYY)",
+          "Location: London"
+        ],
+        "trustSignals": [
+          "Official event branding (Solana Breakpoint)",
+          "Specific dates and locations"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-24-newsletter.png",
+      "label": "Newsletter",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "full-width, centered-content",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Dune logo with icon, right-aligned sidebar",
+            "position": "right sidebar, center-ish",
+            "notable": "Prominent logo placement suggests this is a branded content area"
+          },
+          {
+            "type": "navigation",
+            "description": "Top-right navigation with Dune and Sim tabs",
+            "position": "top-right",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal content visible; mostly whitespace with single logo element",
+        "innovativeElements": [
+          "Extreme minimalism - almost entirely blank canvas",
+          "Right-aligned content in otherwise empty space"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state, loading, or placeholder",
+        "userIntent": "View newsletter or waiting for content to load",
+        "entryPoints": [
+          "Newsletter section from main menu",
+          "Home page newsletter widget"
+        ],
+        "exitPoints": [
+          "Navigate to other sections via top nav",
+          "Go home via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune logo",
+            "action": "Navigate to home or parent section"
+          },
+          {
+            "element": "Navigation tabs (Dune, Sim)",
+            "action": "Switch between content sections"
+          }
+        ],
+        "informationArchitecture": "Content-light layout; appears to be a placeholder or loading state",
+        "frictionPoints": [
+          "No visible content or messaging",
+          "Unclear what user should do on this screen",
+          "Possible incomplete page load or placeholder state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [
+          "Dune branding visible"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-25-brand-hub.png",
+      "label": "Brand Hub",
+      "flowType": "Home",
+      "step": 25,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, 48px+, positioned lower-right, high contrast",
+          "bodyStyle": "Medium gray sans-serif, 14-16px, supporting text below heading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Top-right segmented toggle between 'Dune' (active) and 'Sim'",
+            "position": "top-right",
+            "notable": "Rounded pill-shaped toggle with black active state"
+          },
+          {
+            "type": "button",
+            "description": "Download logos call-to-action",
+            "position": "bottom-right",
+            "notable": "Black rounded button with white text"
+          },
+          {
+            "type": "text-block",
+            "description": "Logo usage guidelines",
+            "position": "bottom-right",
+            "notable": "Descriptive microcopy explaining logo usage constraints"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large white canvas with content anchored to bottom-right corner, creating intentional negative space",
+        "innovativeElements": [
+          "Minimal, content-sparse layout emphasizing brand asset presentation",
+          "Strategic use of whitespace for brand breathing room"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access and download brand assets (logos, guidelines)",
+        "entryPoints": [
+          "Direct navigation from Dune main site",
+          "Brand guideline search"
+        ],
+        "exitPoints": [
+          "Download logos",
+          "Navigate to Sim variant",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim toggle",
+            "action": "Switch between brand variants"
+          },
+          {
+            "element": "Download logos button",
+            "action": "Initiate asset download"
+          }
+        ],
+        "informationArchitecture": "Single-focus page presenting primary logo with supporting guidance text",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Logo",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download logos",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This primary logo is used for applications. It should be placed on light backgrounds only.",
+            "context": "Below heading",
+            "purpose": "Provide usage constraints and guidelines"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-26-dune-merch.png",
+      "label": "Dune Merch",
+      "flowType": "Home",
+      "step": 26,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#8B9E3A"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, right-aligned, truncated at edge",
+          "bodyStyle": "Small gray sans-serif, right-aligned, partial visibility",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "text-block",
+            "description": "Merchandise category headers (Dune, Clothing, etc.)",
+            "position": "right side",
+            "notable": "Text alignment to right edge with intentional overflow/truncation"
+          },
+          {
+            "type": "color-swatch",
+            "description": "Vertical olive/yellow-green gradient bar",
+            "position": "right edge",
+            "notable": "Muted color palette suggesting product imagery or branding"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimalist layout with most content pushed to periphery, creating stark negative space",
+        "innovativeElements": [
+          "Edge-aligned text treatment creating intentional information scarcity",
+          "Subdued color palette hinting at product without explicit display"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Browse or access Dune merchandise offerings",
+        "entryPoints": [
+          "Navigation from main Dune site",
+          "Direct merch link"
+        ],
+        "exitPoints": [
+          "Product category selection",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category text",
+            "action": "Navigate to merchandise category"
+          }
+        ],
+        "informationArchitecture": "Category-based merchandise browsing with minimal visible content",
+        "frictionPoints": [
+          "Limited information hierarchy makes it unclear what products are available",
+          "Text truncation reduces discoverability"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Dune, Clothing, Hats (partially visible)",
+            "context": "Right-aligned text",
+            "purpose": "Category labels for merchandise navigation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-27-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 27,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Monospace font, 14px, center-aligned, technical appearance",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Main header navigation with dropdown menus",
+            "position": "top",
+            "notable": "Standard horizontal menu with Products, Discover, Use Cases, Resources dropdowns plus Pricing, Search, LOG IN, SIGN UP"
+          },
+          {
+            "type": "logo",
+            "description": "Dune logo with pill background",
+            "position": "top-left",
+            "notable": "Black rounded pill containing Dune branding"
+          },
+          {
+            "type": "error-message",
+            "description": "404 error text",
+            "position": "center",
+            "notable": "Minimal, monospace error message"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation dominates upper portion; error message centered with heavy whitespace below",
+        "innovativeElements": [
+          "Monospace typeface for error message creates developer-friendly aesthetic"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access non-existent page",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link follow"
+        ],
+        "exitPoints": [
+          "Products dropdown",
+          "Discover dropdown",
+          "Use Cases dropdown",
+          "Resources dropdown",
+          "Pricing link",
+          "LOG IN",
+          "SIGN UP",
+          "Search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to main application sections"
+          },
+          {
+            "element": "LOG IN / SIGN UP",
+            "action": "Authentication entry points"
+          },
+          {
+            "element": "Search",
+            "action": "Site search functionality"
+          }
+        ],
+        "informationArchitecture": "Standard marketing site structure with persistent navigation, allowing recovery from error state",
+        "frictionPoints": [
+          "No explicit recovery action provided from 404 state",
+          "Minimal error context or explanation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "404 Page Not Found or Private",
+            "context": "Center of page",
+            "purpose": "Indicate error state with privacy caveat"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "404 Page Not Found or Private"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-28-signin-page.png",
+      "label": "signin page",
+      "flowType": "Home",
+      "step": 28,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF1744"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast against white",
+          "bodyStyle": "Medium-weight sans-serif for navigation and UI text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal header with logo, menu items, search, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Minimalist design with clear separation between logo/menu and auth actions"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Navigation path showing 'Discover > Cre'",
+            "position": "Top right, below nav",
+            "notable": "Indicates current page location"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation dominates top, vast whitespace in main content area suggests content-loading state or modal overlay",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Browse or sign in to Dune Analytics platform",
+        "entryPoints": [
+          "Direct navigation from home",
+          "Breadcrumb click from Discover section"
+        ],
+        "exitPoints": [
+          "LOG IN button",
+          "SIGN UP button",
+          "Product dropdown menus",
+          "Search functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "LOG IN button",
+            "action": "Opens login form or modal"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Opens signup form or modal"
+          },
+          {
+            "element": "Navigation dropdowns (Products, Discover, Use Cases, Resources)",
+            "action": "Expand submenu options"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search interface"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation provides access to main product areas; auth actions separated to right side for discoverability",
+        "frictionPoints": [
+          "Largely empty page suggests content may not have loaded or user is in transition state",
+          "Unclear what specific signin/authentication interface is available"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Discover › Cre",
+            "context": "Top right breadcrumb",
+            "purpose": "Navigation context and page location indication"
+          },
+          {
+            "text": "Products, Discover, Use Cases, Resources, Pricing",
+            "context": "Main navigation menu",
+            "purpose": "Primary content taxonomy and platform features"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-home-29-explore-page.png",
+      "label": "explore page",
+      "flowType": "Home",
+      "step": 29,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF1744"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, high contrast",
+          "bodyStyle": "Medium-weight sans-serif for navigation",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Identical to signin page - horizontal header with logo, menu items, auth buttons",
+            "position": "Top fixed",
+            "notable": "Consistent across pages"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Navigation showing 'Discover › Cre'",
+            "position": "Top right below nav",
+            "notable": "Same breadcrumb path as signin page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation bar only visible element; massive empty white space suggests content loading or lazy-loaded interface",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore crypto data, dashboards, or analytics on the Dune platform",
+        "entryPoints": [
+          "Navigation menu Discover option",
+          "Breadcrumb click from previous screen"
+        ],
+        "exitPoints": [
+          "Navigation menu items",
+          "LOG IN / SIGN UP for authenticated access"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Discover menu dropdown",
+            "action": "Expand discovery options"
+          },
+          {
+            "element": "LOG IN / SIGN UP buttons",
+            "action": "Authentication flow"
+          }
+        ],
+        "informationArchitecture": "Top navigation provides consistent platform structure; main content area appears to be lazy-loaded or requires authentication",
+        "frictionPoints": [
+          "Empty page state may confuse users about what content should appear",
+          "No visible search, filters, or content previews without scrolling or authentication",
+          "Unclear if explore functionality requires login"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "Top right nav"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Discover › Cre",
+            "context": "Breadcrumb trail",
+            "purpose": "Navigation context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-1-learn-more.png",
+      "label": "Learn more",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Clean sans-serif for navigation",
+          "bodyStyle": "Medium-weight sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Minimalist top header with logo and product selector",
+            "position": "Top right",
+            "notable": "Logo and 'Sim' toggle only visible; different from previous screenshots - suggests alternative navigation paradigm"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation minimized to top right only; content area completely empty white space",
+        "innovativeElements": [
+          "Logo repositioned to top right instead of left",
+          "Simplified navigation showing only 'Dune' and 'Sim' selector - possible product variant toggle"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn more about Dune staking features",
+        "entryPoints": [
+          "CTA button 'Learn more' from parent staking page"
+        ],
+        "exitPoints": [
+          "Dune logo click to return",
+          "Sim toggle to switch product variant"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune logo",
+            "action": "Navigate to home or product selection"
+          },
+          {
+            "element": "Sim toggle/selector",
+            "action": "Switch between Dune and Sim products"
+          }
+        ],
+        "informationArchitecture": "Alternative layout suggests this may be a dedicated microsite or modal view for staking education",
+        "frictionPoints": [
+          "Completely empty content area - unclear if page has loaded",
+          "No visible call-to-action or educational content about staking",
+          "Navigation is minimal and may lack clear exit path"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Dune",
+            "context": "Top right branding",
+            "purpose": "Product identification"
+          },
+          {
+            "text": "Sim",
+            "context": "Navigation toggle",
+            "purpose": "Product variant selector"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Page appears empty - content may be loading or not yet implemented"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-2-how-dune-helps-1inch-to-make-data-transparent-and.png",
+      "label": "How Dune helps 1inch to Make Data Transparent and",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, black text",
+          "bodyStyle": "Medium-weight sans-serif, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top-right toggle between 'Dune' and 'Sim' modes",
+            "position": "top-right",
+            "notable": "Pill-shaped button design with filled/unfilled states"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal with significant whitespace; header anchors attention top-right",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-page",
+        "userIntent": "View information about how Dune analytics benefits 1inch protocol",
+        "entryPoints": [
+          "Navigation from settings or main menu",
+          "Direct link from case study page"
+        ],
+        "exitPoints": [
+          "Navigate to 'Sim' tab",
+          "Return to previous page",
+          "Navigate to other case studies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim toggle",
+            "action": "Switch between two viewing modes or protocol versions"
+          }
+        ],
+        "informationArchitecture": "Single-column content layout with header navigation",
+        "frictionPoints": [
+          "Mostly blank page suggests content not fully loaded or placeholder state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-3-how-dune-helps-polygon-highlight-user-engagement-a.png",
+      "label": "How Dune helps Polygon highlight user engagement a",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, black text",
+          "bodyStyle": "Medium-weight sans-serif, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top-right toggle between 'Dune' and 'Sim' modes",
+            "position": "top-right",
+            "notable": "Consistent pill-shaped button design across pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal with significant whitespace; header anchors attention top-right",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-page",
+        "userIntent": "View information about how Dune analytics benefits Polygon network",
+        "entryPoints": [
+          "Navigation from settings or main menu",
+          "Direct link from case study page"
+        ],
+        "exitPoints": [
+          "Navigate to 'Sim' tab",
+          "Return to previous page",
+          "Navigate to other case studies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim toggle",
+            "action": "Switch between two viewing modes or protocol versions"
+          }
+        ],
+        "informationArchitecture": "Single-column content layout with header navigation",
+        "frictionPoints": [
+          "Mostly blank page suggests content not fully loaded or placeholder state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-4-dune-digest-046kalshi-hits-800m-super-bowl-volume.png",
+      "label": "Dune Digest 046Kalshi Hits $800M Super Bowl Volume",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, black text",
+          "bodyStyle": "Medium-weight sans-serif, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top-right toggle between 'Dune' and 'Sim' modes",
+            "position": "top-right",
+            "notable": "Consistent pill-shaped button design maintains brand identity"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal with significant whitespace; header anchors attention top-right",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "content-page",
+        "userIntent": "View crypto market digest entry about Kalshi Super Bowl trading volumes",
+        "entryPoints": [
+          "Navigation from digest or news section",
+          "Direct link from digest listing"
+        ],
+        "exitPoints": [
+          "Navigate to 'Sim' tab",
+          "Return to digest list",
+          "Navigate to other digest entries"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune/Sim toggle",
+            "action": "Switch between two viewing modes or protocol versions"
+          }
+        ],
+        "informationArchitecture": "Single-column content layout with header navigation",
+        "frictionPoints": [
+          "Mostly blank page suggests content not fully loaded or placeholder state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$800M volume figure implied in title"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-2-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, likely 16-18px for navigation items",
+          "bodyStyle": "Clean sans-serif body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, menu items, search, and auth buttons",
+            "position": "top fixed",
+            "notable": "Minimalist design with dropdown indicators on menu items"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation breadcrumb showing Discover > Cre...",
+            "position": "top right",
+            "notable": "Text is truncated, suggesting responsive design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors the top; main content area appears empty or loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Explore or access staking earn opportunities",
+        "entryPoints": [
+          "Clicked Discover menu",
+          "Navigated from homepage",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click on staking product",
+          "Return to Products menu",
+          "Navigate to Pricing or Resources"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Expands to show product options"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "Expands to show discover/browse options"
+          },
+          {
+            "element": "LOG IN / SIGN UP buttons",
+            "action": "Authentication flow"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with multi-level dropdowns; breadcrumb shows context",
+        "frictionPoints": [
+          "Main content area appears blank or is loading",
+          "Breadcrumb text is truncated"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top right navigation"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Dune",
+            "context": "Logo/brand name",
+            "purpose": "Brand identification"
+          },
+          {
+            "text": "Discover › Cre",
+            "context": "Breadcrumb",
+            "purpose": "Navigation context"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-3-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, 16-18px for navigation",
+          "bodyStyle": "Clean sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Consistent top navigation bar with branding and menus",
+            "position": "top fixed",
+            "notable": "Identical to previous screen - persistent navigation"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation trail showing Discover > Cre...",
+            "position": "top right",
+            "notable": "Same truncated text as previous screen"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation focal point; main content area empty or loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review staking options and choose a stake to participate in",
+        "entryPoints": [
+          "From earn page",
+          "Clicked on specific staking product",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Select a staking option",
+          "Return to earn page",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dropdown menus",
+            "action": "Reveal submenu items"
+          },
+          {
+            "element": "Search icon",
+            "action": "Open search functionality"
+          }
+        ],
+        "informationArchitecture": "Navigation-driven; breadcrumb indicates current location in hierarchy",
+        "frictionPoints": [
+          "Content area loading or not visible",
+          "No clear call-to-action visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Dune",
+            "context": "Logo",
+            "purpose": "Brand identification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-4-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, 16-18px",
+          "bodyStyle": "Clean sans-serif",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Persistent top navigation with Dune branding and menus",
+            "position": "top fixed",
+            "notable": "Consistent across all three screenshots"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation breadcrumb",
+            "position": "top right",
+            "notable": "Truncated breadcrumb text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation-focused; main content not visible",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Execute a staking transaction or review staking details",
+        "entryPoints": [
+          "Selected staking option from previous screen",
+          "Direct link from product page"
+        ],
+        "exitPoints": [
+          "Confirm staking",
+          "Go back to previous screen",
+          "Cancel operation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation dropdowns",
+            "action": "Expand menu options"
+          },
+          {
+            "element": "Search",
+            "action": "Search functionality"
+          }
+        ],
+        "informationArchitecture": "Form-based flow with navigation context via breadcrumb",
+        "frictionPoints": [
+          "Main content area appears to be loading or not rendering",
+          "No visible form elements or staking details"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Dune",
+            "context": "Logo",
+            "purpose": "Brand identification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-5-rewards-page.png",
+      "label": "rewards page",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Clean sans-serif, medium weight, dark color",
+          "bodyStyle": "Light sans-serif, regular weight, neutral gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation bar with logo, menu items, search, and auth actions",
+            "position": "Top fixed",
+            "notable": "Prominent 'SIGN UP' CTA alongside login, suggesting conversion focus"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Navigation path showing 'Discover > Cre...'",
+            "position": "Top right below header",
+            "notable": null
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header dominates; large blank white space below suggests content loading or placeholder state",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View staking rewards information and performance metrics",
+        "entryPoints": [
+          "Navigation from staking dashboard",
+          "Direct link from rewards section"
+        ],
+        "exitPoints": [
+          "Navigate to pool page",
+          "Return to dashboard",
+          "Access other menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Expand product menu"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "Expand discovery options"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Initiate account creation flow"
+          },
+          {
+            "element": "Search icon",
+            "action": "Open search interface"
+          }
+        ],
+        "informationArchitecture": "Hierarchical menu structure with breadcrumb trail; main content area appears empty or loading",
+        "frictionPoints": [
+          "Blank page with no visible content may indicate loading state or missing data",
+          "No clear call-to-action visible for rewards interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "Main navigation",
+            "purpose": "Navigate to products section"
+          },
+          {
+            "text": "Discover",
+            "context": "Main navigation",
+            "purpose": "Navigate to discovery section"
+          },
+          {
+            "text": "Use Cases",
+            "context": "Main navigation",
+            "purpose": "Navigate to use cases"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-staking-6-pool-page.png",
+      "label": "pool page",
+      "flowType": "Staking",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF006E"
+        ],
+        "typography": {
+          "headingStyle": "Clean sans-serif, medium weight, dark color",
+          "bodyStyle": "Light sans-serif, regular weight, neutral gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal navigation bar with logo, menu items, search, and auth actions",
+            "position": "Top fixed",
+            "notable": "Consistent with previous screen, maintains branding"
+          },
+          {
+            "type": "Accent Element",
+            "description": "Pink/magenta gradient accent in top right corner",
+            "position": "Top right",
+            "notable": "Brand color accent suggests active pool or feature highlight"
+          },
+          {
+            "type": "Icon Button",
+            "description": "Grid/layout toggle icon in bottom right",
+            "position": "Bottom right",
+            "notable": "Utility control for view customization"
+          },
+          {
+            "type": "Text Label",
+            "description": "Large 'p' text visible on right side",
+            "position": "Right side middle",
+            "notable": "Partial text suggests truncated content or loading state"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header anchors top; sparse content placement suggests minimalist design or loading state; accent color draws attention to upper right",
+        "innovativeElements": [
+          "Gradient accent color treatment in corner suggesting modern design language"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View pool information, details, and performance metrics",
+        "entryPoints": [
+          "Navigation from rewards page",
+          "Direct pool selection from list",
+          "Search results"
+        ],
+        "exitPoints": [
+          "Return to rewards page",
+          "Navigate to another pool",
+          "Return to dashboard",
+          "Exit to main menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Grid toggle icon",
+            "action": "Switch between view layouts"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections"
+          },
+          {
+            "element": "Search",
+            "action": "Open search interface"
+          }
+        ],
+        "informationArchitecture": "Content-sparse layout; pool details likely populate main area below header; utility controls positioned peripherally",
+        "frictionPoints": [
+          "Limited visible content makes it unclear what pool data is being displayed",
+          "No clear primary action visible for pool interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "Top right header"
+          },
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Discover",
+            "context": "Breadcrumb and navigation",
+            "purpose": "Navigation context"
+          },
+          {
+            "text": "Cre",
+            "context": "Breadcrumb (truncated)",
+            "purpose": "Current location indicator"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-1-how-dune-helps-op-labs-to-power-ecosystem-growth-a.png",
+      "label": "How Dune helps OP Labs to power ecosystem growth a",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Clean sans-serif, medium weight",
+          "bodyStyle": "Light sans-serif, regular weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Minimal header with Dune logo and 'Sim' toggle positioned in top right",
+            "position": "Top right fixed",
+            "notable": "Right-aligned layout; 'Sim' toggle suggests simulation or alternate view mode"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal visual hierarchy; mostly blank canvas with only header navigation visible",
+        "innovativeElements": [
+          "'Sim' toggle suggests dual-mode interface (possibly simulation vs. live data)"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Access information about how Dune helps OP Labs with ecosystem growth",
+        "entryPoints": [
+          "Navigation from settings menu",
+          "Direct URL access",
+          "Menu selection"
+        ],
+        "exitPoints": [
+          "Navigate away via header menu",
+          "Return to previous section",
+          "Switch to 'Sim' mode"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune logo",
+            "action": "Return to home or dashboard"
+          },
+          {
+            "element": "Sim toggle",
+            "action": "Switch between simulation and live modes"
+          }
+        ],
+        "informationArchitecture": "Minimal; page appears to be loading or placeholder content not yet rendered",
+        "frictionPoints": [
+          "No visible content on the page",
+          "No clear call-to-action or information hierarchy",
+          "User may be confused about what this page is supposed to display"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Dune",
+            "context": "Logo/header",
+            "purpose": "Brand identifier and home link"
+          },
+          {
+            "text": "Sim",
+            "context": "Top right toggle",
+            "purpose": "Mode switcher"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-8-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, likely 32-40px, black",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top-right tab switcher with 'Dune' active and 'Sim' inactive",
+            "position": "top-right",
+            "notable": "Minimal, pill-shaped toggle design"
+          },
+          {
+            "type": "Content Area",
+            "description": "Mostly blank/loading state",
+            "position": "full viewport",
+            "notable": "Minimal visible content suggests page is loading or placeholder"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal - mostly empty canvas with header bar only",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-subsection",
+        "userIntent": "View company information, About page details",
+        "entryPoints": [
+          "Settings menu navigation",
+          "Help/Info section"
+        ],
+        "exitPoints": [
+          "Back to Settings",
+          "Tab switch to Sim",
+          "External links (if present)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune tab",
+            "action": "Toggle to view Dune About information"
+          },
+          {
+            "element": "Sim tab",
+            "action": "Toggle to view Sim About information"
+          }
+        ],
+        "informationArchitecture": "Settings > About, with multi-product tab structure",
+        "frictionPoints": [
+          "Page appears mostly empty - content may not have loaded",
+          "No visible back button or breadcrumb navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-9-careers.png",
+      "label": "Careers",
+      "flowType": "Settings",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, likely 32-40px, black",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top-right tab switcher with 'Dune' active and 'Sim' inactive",
+            "position": "top-right",
+            "notable": "Consistent pill-shaped toggle across settings pages"
+          },
+          {
+            "type": "Content Area",
+            "description": "Blank/loading state",
+            "position": "full viewport",
+            "notable": "No visible careers information"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal - empty page with header only",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-subsection",
+        "userIntent": "Access careers/jobs information",
+        "entryPoints": [
+          "Settings menu navigation",
+          "Careers link from main menu"
+        ],
+        "exitPoints": [
+          "Back to Settings",
+          "Tab switch to Sim",
+          "External careers page (if linked)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune tab",
+            "action": "View Dune careers"
+          },
+          {
+            "element": "Sim tab",
+            "action": "View Sim careers"
+          }
+        ],
+        "informationArchitecture": "Settings > Careers, with product-specific tabs",
+        "frictionPoints": [
+          "No content visible - page appears empty/loading",
+          "No clear call-to-action or external link visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-10-press-room.png",
+      "label": "Press Room",
+      "flowType": "Settings",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, black, appears to start with 'M'",
+          "bodyStyle": "Regular sans-serif, gray text, partially visible",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Top-right tab switcher with 'Dune' active and 'Sim' inactive",
+            "position": "top-right",
+            "notable": "Consistent header design"
+          },
+          {
+            "type": "Content Cards/Sections",
+            "description": "Right-aligned content sections visible including 'M' heading and 'C' section with 'Fre' visible text",
+            "position": "right side of viewport",
+            "notable": "Partial content visibility suggests right-aligned or carousel layout"
+          },
+          {
+            "type": "Dark Button",
+            "description": "Dark circular/rounded button element",
+            "position": "bottom-right",
+            "notable": "Appears to be CTA button, possibly 'Visit' or similar"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Content positioned to the right, drawing eye to right side",
+        "innovativeElements": [
+          "Right-aligned content layout (unusual for typical left-to-right reading patterns)"
+        ]
+      },
+      "flow": {
+        "screenType": "settings-subsection",
+        "userIntent": "Access press room, media resources, or news",
+        "entryPoints": [
+          "Settings menu navigation",
+          "Press/Media section"
+        ],
+        "exitPoints": [
+          "Back to Settings",
+          "Tab switch to Sim",
+          "Dark button action (likely external link to press resources)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune tab",
+            "action": "View Dune press room"
+          },
+          {
+            "element": "Sim tab",
+            "action": "View Sim press room"
+          },
+          {
+            "element": "Dark button",
+            "action": "Navigate to press portal or external resource"
+          }
+        ],
+        "informationArchitecture": "Settings > Press Room, with product tabs and card-based content",
+        "frictionPoints": [
+          "Content is partially cut off/outside viewport",
+          "Unclear navigation pattern with right-aligned layout"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "M (partial, likely 'Media' or similar)",
+        "subheadline": "Disco... (partial, likely 'Discover' or 'Disclosure')",
+        "ctas": [
+          {
+            "text": "Fre (partial, likely 'Free' or 'Frequently')",
+            "style": "dark-button",
+            "placement": "bottom-right area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Disco... crypt... analyti...",
+            "context": "Right-aligned content area",
+            "purpose": "Describes press room functionality or features"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-5-dune-digest-044usa-bitwise-x-morpho-flying-tuli.png",
+      "label": "Dune Digest 044USA₮; Bitwise x Morpho; Flying Tuli",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Dune/Sim toggle in top-right corner",
+            "position": "top-right",
+            "notable": "Minimalist pill-shaped toggle with active state highlighting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal content visible; mostly blank canvas with header controls",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "View or manage settings/preferences",
+        "entryPoints": [
+          "Settings menu from main navigation"
+        ],
+        "exitPoints": [
+          "Return to main dashboard",
+          "Switch to Sim view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune button (active)",
+            "action": "Remains on Dune settings view"
+          },
+          {
+            "element": "Sim button",
+            "action": "Switch to Sim settings view"
+          }
+        ],
+        "informationArchitecture": "Tab-based segmentation between Dune and Sim settings",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-6-dune-digest-043ostium-robinhood-and-susquehanna.png",
+      "label": "Dune Digest 043Ostium, Robinhood and Susquehanna,",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Dune/Sim toggle header",
+            "position": "top-right",
+            "notable": "Consistent pill-shaped toggle design across settings screens"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Empty canvas with minimal interface chrome",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Access or configure settings related to digest subscriptions",
+        "entryPoints": [
+          "Settings navigation from main menu"
+        ],
+        "exitPoints": [
+          "Return to main dashboard",
+          "Switch to Sim view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Dune button",
+            "action": "Maintain current settings view"
+          },
+          {
+            "element": "Sim button",
+            "action": "Switch to Sim configuration"
+          }
+        ],
+        "informationArchitecture": "Dual-view settings with Dune/Sim segmentation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "minimal",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-7-content-hub.png",
+      "label": "Content Hub",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "All-caps sans-serif, bold, minimal tracking",
+          "bodyStyle": "Regular weight sans-serif, medium gray",
+          "dataStyle": "Regular weight sans-serif for secondary text"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Dune/Sim toggle navigation",
+            "position": "top-right",
+            "notable": "Consistent persistent header across views"
+          },
+          {
+            "type": "content-card",
+            "description": "Dune 101 series card with icon and description",
+            "position": "right side, middle",
+            "notable": "Black card with white icon and truncated text description"
+          },
+          {
+            "type": "filter-tabs",
+            "description": "ALL, GUIDE, RESEARCH tabs",
+            "position": "bottom-right",
+            "notable": "ALL tab appears active/selected with dark background"
+          },
+          {
+            "type": "content-preview",
+            "description": "Dune Digest preview card",
+            "position": "bottom-right corner",
+            "notable": "Shows headline and partial description of featured content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Content hub positioned lower-right; navigation and filters at bottom; main canvas mostly empty above",
+        "innovativeElements": [
+          "Carousel navigation with arrow buttons for browsing series",
+          "Multi-category filtering system for content discovery"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and explore educational content, guides, and research materials",
+        "entryPoints": [
+          "From main navigation menu",
+          "Settings or content discovery section"
+        ],
+        "exitPoints": [
+          "Click into Dune 101 series",
+          "Click into Dune Digest article",
+          "Filter by GUIDE or RESEARCH tabs",
+          "Browse carousel for more series"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left arrow button",
+            "action": "Scroll carousel to previous series"
+          },
+          {
+            "element": "Series card (Dune 101)",
+            "action": "Navigate to series content"
+          },
+          {
+            "element": "Filter tabs (ALL/GUIDE/RESEARCH)",
+            "action": "Filter content by category"
+          },
+          {
+            "element": "Dune Digest preview card",
+            "action": "Open featured digest article"
+          }
+        ],
+        "informationArchitecture": "Content hub organized by series carousel and category filters; featured content preview at bottom",
+        "frictionPoints": [
+          "Content positioned in corner may be hard to discover",
+          "Truncated descriptions limit preview information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "EXPLORE SERIES",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "ALL",
+            "style": "primary-button",
+            "placement": "bottom filter tabs"
+          },
+          {
+            "text": "GUIDE",
+            "style": "text-link",
+            "placement": "bottom filter tabs"
+          },
+          {
+            "text": "RESEARCH",
+            "style": "text-link",
+            "placement": "bottom filter tabs"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Dune 101",
+            "context": "Series card heading",
+            "purpose": "Identifies educational series title"
+          },
+          {
+            "text": "Your complete Web3 analysis",
+            "context": "Series card subheading",
+            "purpose": "Describes series value proposition"
+          },
+          {
+            "text": "Dune Digest 044",
+            "context": "Featured content preview",
+            "purpose": "Names the featured article"
+          },
+          {
+            "text": "Kalshi Hits $800M Super E",
+            "context": "Featured content description",
+            "purpose": "Preview of article topic"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [
+          "$800M",
+          "Dune Digest 044 (issue numbering)"
+        ],
+        "trustSignals": [
+          "Dune 101 branded educational series",
+          "Official Dune Digest publication"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-11-terms-of-service.png",
+      "label": "Terms of Service",
+      "flowType": "Settings",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Serif font (appears to be Georgia or similar), large size, centered, high contrast",
+          "bodyStyle": "Sans-serif, body text in dark gray/black, generous line-height for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal navigation with logo, menu items, search, and auth buttons",
+            "position": "top",
+            "notable": "Persistent across all pages, clean minimal design"
+          },
+          {
+            "type": "content-container",
+            "description": "Centered text column with legal terms content",
+            "position": "center",
+            "notable": "Right-aligned text block, generous whitespace margins"
+          },
+          {
+            "type": "metadata-text",
+            "description": "Last updated date in gray subtext",
+            "position": "top-right of content",
+            "notable": "Subtle timestamp to show currency of policy"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main title dominates, meta information smaller, body text consistent—vertical scrolling guides through sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review service terms and conditions before using platform",
+        "entryPoints": [
+          "Resources menu",
+          "Footer link",
+          "Account settings"
+        ],
+        "exitPoints": [
+          "Back to previous page",
+          "Navigate to Privacy Policy",
+          "Return to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Expand product menu"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "Expand discovery menu"
+          },
+          {
+            "element": "LOG IN button",
+            "action": "Navigate to login"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Navigate to registration"
+          }
+        ],
+        "informationArchitecture": "Linear reading structure with defined terms and sections; content flows vertically with clear section breaks",
+        "frictionPoints": [
+          "Dense legal text with minimal formatting may be difficult to scan",
+          "All-caps warning text at bottom is jarring but intentional for compliance",
+          "No table of contents or jump links for lengthy document"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Service",
+        "subheadline": "Last updated on: May 20th, 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated on: May 20th, 2025",
+            "context": "Subheading below main title",
+            "purpose": "Establish currency and legitimacy of document"
+          },
+          {
+            "text": "Terms of Service",
+            "context": "In quotation marks within body",
+            "purpose": "Define key term for the document"
+          },
+          {
+            "text": "Service",
+            "context": "In quotation marks, italicized",
+            "purpose": "Define what constitutes a service offering"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Norwegian company registration: 921 400 349",
+          "Website domain: dune.com"
+        ],
+        "trustSignals": [
+          "Dune Analytics AS company registration number provided",
+          "Norwegian legal entity establishment",
+          "Recent update date (May 2025)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-12-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": "Serif font (Georgia or similar), large size, centered, hierarchical numbered sections",
+          "bodyStyle": "Sans-serif, dark gray/black, consistent line-height with generous spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top persistent navigation with logo, menus, search, auth buttons",
+            "position": "top",
+            "notable": "Consistent styling across legal document pages"
+          },
+          {
+            "type": "page-title",
+            "description": "Main heading with serif font treatment",
+            "position": "top-center",
+            "notable": "Clear visual separation from nav bar"
+          },
+          {
+            "type": "metadata-subtitle",
+            "description": "Document validity dates",
+            "position": "directly under title",
+            "notable": "Shows initial creation date and update date for transparency"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Content organized into numbered sections (1. Introduction, 2. Purpose and basis...)",
+            "position": "main content area",
+            "notable": "Structured format aids navigation and comprehension"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Title > Metadata > Numbered section headings > Body paragraphs; vertical flow with clear visual breaks between sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand how personal data is processed and privacy rights",
+        "entryPoints": [
+          "Resources/Legal menu",
+          "Footer link",
+          "Account settings"
+        ],
+        "exitPoints": [
+          "Navigate to Terms of Service",
+          "Return to home",
+          "Scroll to related policies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Browse different sections"
+          },
+          {
+            "element": "LOG IN / SIGN UP buttons",
+            "action": "Navigate to authentication"
+          },
+          {
+            "element": "Search icon",
+            "action": "Search site content"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sectioning with numbered structure; intro section leads into topic sections; policy designed to be read sequentially",
+        "frictionPoints": [
+          "Long document requires scrolling and may feel overwhelming",
+          "No visible table of contents for quick navigation",
+          "Dense regulatory language typical of privacy policies"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy and Cookie Policy",
+        "subheadline": "Valid from 7th of May 2020, updated 15th of Aug 2023.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Valid from 7th of May 2020, updated 15th of Aug 2023.",
+            "context": "Subtitle below main heading",
+            "purpose": "Establish document timeline and current validity"
+          },
+          {
+            "text": "In this Privacy Policy you will find information about...",
+            "context": "Opening paragraph of Introduction section",
+            "purpose": "Set expectations for what user will learn"
+          },
+          {
+            "text": "Dune is the controller of the processing activities described in this policy.",
+            "context": "Body paragraph in Introduction",
+            "purpose": "Clarify data controller responsibility under GDPR"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Dates: 7th of May 2020, 15th of Aug 2023"
+        ],
+        "trustSignals": [
+          "GDPR compliance language (data controller terminology)",
+          "Multiple update dates showing active policy management",
+          "Detailed personal data handling disclosure"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-settings-13-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 13,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#666666"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top persistent navigation bar with logo, menu items, search, auth buttons",
+            "position": "top",
+            "notable": "Consistent styling across all pages"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation breadcrumb showing 'Discover > Cre...'",
+            "position": "top-right",
+            "notable": "Indicates page location in hierarchy (text cut off)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal—mostly empty white space with navigation elements",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "Access help or support resources",
+        "entryPoints": [
+          "Resources menu",
+          "Help navigation link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Navigate back via breadcrumb",
+          "Use main navigation",
+          "Search functionality"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Discover breadcrumb link",
+            "action": "Navigate to Discover section"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Browse site sections"
+          },
+          {
+            "element": "Search icon",
+            "action": "Search for help content"
+          }
+        ],
+        "informationArchitecture": "Page appears to be loading or incomplete; breadcrumb indicates nested page structure but content not visible",
+        "frictionPoints": [
+          "Page appears to be blank or loading—no help content visible",
+          "Breadcrumb text is truncated ('Cre...') making full path unclear",
+          "User would be confused by empty state with no explanation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Discover › Cre",
+            "context": "Breadcrumb navigation top-right",
+            "purpose": "Show current page location (text truncated)"
+          }
+        ],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Help page content not visible or loaded"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/dune-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this view",
+          "bodyStyle": "Clean sans-serif, medium weight for navigation",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, menu items, search, and auth buttons",
+            "position": "top-fixed",
+            "notable": "Clean minimalist design with prominent LOG IN and SIGN UP buttons in top right"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation breadcrumb showing 'Discover > Cre...'",
+            "position": "top-right",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation dominates top of page; main content area appears blank or loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Access account or view login options",
+        "entryPoints": [
+          "Direct navigation to login",
+          "Click LOG IN button from landing page"
+        ],
+        "exitPoints": [
+          "Enter credentials and log in",
+          "Click SIGN UP for new account creation",
+          "Navigate to Products, Discover, Use Cases, or Resources"
+        ],
+        "interactiveElements": [
+          {
+            "element": "LOG IN button",
+            "action": "Opens login form or modal"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "Routes to signup flow"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to product sections"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation architecture with dropdown menus for Products, Discover, Use Cases, Resources",
+        "frictionPoints": [
+          "Main content area is blank, unclear what form or instructions are below navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "navigation menu",
+            "purpose": "Access product offerings"
+          },
+          {
+            "text": "Discover",
+            "context": "navigation menu",
+            "purpose": "Explore features and content"
+          },
+          {
+            "text": "Use Cases",
+            "context": "navigation menu",
+            "purpose": "See real-world applications"
+          },
+          {
+            "text": "Resources",
+            "context": "navigation menu",
+            "purpose": "Access documentation and support"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-onboarding-2-signup-page.png",
+      "label": "signup page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this view",
+          "bodyStyle": "Clean sans-serif, medium weight for navigation",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Identical horizontal navigation with logo, menu items, search, and auth buttons",
+            "position": "top-fixed",
+            "notable": "Consistent navigation design across onboarding flow"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation breadcrumb showing 'Discover > Cre...'",
+            "position": "top-right",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation dominates; main content area blank or loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Create new account for Dune platform",
+        "entryPoints": [
+          "Click SIGN UP button from login page or landing",
+          "New user discovery flow"
+        ],
+        "exitPoints": [
+          "Complete signup and verify email",
+          "Return to LOG IN if already have account",
+          "Navigate away via navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "SIGN UP button",
+            "action": "Initiates signup form"
+          },
+          {
+            "element": "LOG IN button",
+            "action": "Routes back to login page"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Navigate to product sections"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with dropdown menus; signup form likely below navigation",
+        "frictionPoints": [
+          "Main content blank or not loaded, unclear signup form layout",
+          "No visible progress indication for multi-step signup"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "navigation menu",
+            "purpose": "Access product offerings"
+          },
+          {
+            "text": "Discover",
+            "context": "navigation menu",
+            "purpose": "Explore features"
+          },
+          {
+            "text": "Pricing",
+            "context": "navigation menu",
+            "purpose": "View pricing tiers"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Not visible in this view",
+          "bodyStyle": "Clean sans-serif, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation bar with Dune logo, Sim button, dropdown menus",
+            "position": "top-fixed",
+            "notable": "Persistent navigation consistent with onboarding pages"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Shows 'Discover > Cre...' location",
+            "position": "top-right",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation prominent; main swap interface not visible in screenshot",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "swap",
+        "userIntent": "Execute a token swap transaction",
+        "entryPoints": [
+          "Logged-in user navigates to swap interface",
+          "Access from Products or main navigation menu"
+        ],
+        "exitPoints": [
+          "Complete swap transaction",
+          "Cancel swap",
+          "Navigate to other sections via menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap interface (not fully visible)",
+            "action": "Initiate token swap"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other features"
+          }
+        ],
+        "informationArchitecture": "Swap functionality accessible from main navigation; likely centered interface for token pair selection and transaction",
+        "frictionPoints": [
+          "Main swap interface not visible; cannot assess form complexity or confirmation flow"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "navigation dropdown",
+            "purpose": "Access product offerings"
+          },
+          {
+            "text": "Discover",
+            "context": "navigation dropdown",
+            "purpose": "Explore platform"
+          },
+          {
+            "text": "Pricing",
+            "context": "navigation menu",
+            "purpose": "View pricing information"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, medium weight",
+          "bodyStyle": "sans-serif, regular weight, neutral gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation with logo, menu items, and auth buttons",
+            "position": "top",
+            "notable": "Clean minimal design with dropdown indicators on Products, Discover, Use Cases, Resources"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation path showing Discover > Cre[dit]",
+            "position": "top-right",
+            "notable": "Subtle gray text indicating current location"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Horizontal navigation dominates; content area appears mostly blank/loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Access swap trading functionality or browse available products",
+        "entryPoints": [
+          "Navigation Products menu",
+          "Direct URL",
+          "Discover section"
+        ],
+        "exitPoints": [
+          "Click on specific product",
+          "Browse to other sections via nav",
+          "Login/Sign Up"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "reveal product submenu"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "reveal discovery options"
+          },
+          {
+            "element": "LOG IN button",
+            "action": "authenticate user"
+          },
+          {
+            "element": "SIGN UP button",
+            "action": "create new account"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with expandable categories; main content area reserved for product details",
+        "frictionPoints": [
+          "Content area appears blank/loading",
+          "Unclear what products are available without expanding menus"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "navigation menu",
+            "purpose": "category label"
+          },
+          {
+            "text": "Discover",
+            "context": "navigation menu",
+            "purpose": "category label"
+          },
+          {
+            "text": "Use Cases",
+            "context": "navigation menu",
+            "purpose": "category label"
+          },
+          {
+            "text": "Resources",
+            "context": "navigation menu",
+            "purpose": "category label"
+          },
+          {
+            "text": "Pricing",
+            "context": "navigation menu",
+            "purpose": "category label"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-send-1-send-page.png",
+      "label": "send page",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#00DD00"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, medium weight",
+          "bodyStyle": "sans-serif, regular weight, neutral gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation consistent across pages",
+            "position": "top",
+            "notable": "Dune logo and Sim tab visible; breadcrumb shows Discover > Cre"
+          },
+          {
+            "type": "floating-element",
+            "description": "Bright green/lime icon element",
+            "position": "top-right",
+            "notable": "Draws attention, possibly settings or status indicator"
+          },
+          {
+            "type": "icon-grid",
+            "description": "Grid icon visible in middle-right area",
+            "position": "right-center",
+            "notable": "Suggests alternate view or menu option"
+          },
+          {
+            "type": "send-indicator",
+            "description": "Partial text visible: 'Pe' and forward slash '/'",
+            "position": "right side",
+            "notable": "Suggests send/recipient interface elements"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation bar dominant; content area mostly empty with minimal UI elements visible on edges",
+        "innovativeElements": [
+          "Bright green accent color used sparingly for emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Send tokens or assets to another address/user",
+        "entryPoints": [
+          "Navigation from main menu",
+          "Send button from dashboard"
+        ],
+        "exitPoints": [
+          "Enter recipient address",
+          "Navigate to bridge page",
+          "Cancel/back"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Green accent button",
+            "action": "likely initiates send or next step"
+          },
+          {
+            "element": "Grid icon",
+            "action": "toggle view or show options"
+          },
+          {
+            "element": "Input field (Pe)",
+            "action": "enter recipient details"
+          }
+        ],
+        "informationArchitecture": "Linear form flow; primary action (green) encourages progression; supporting actions on edges",
+        "frictionPoints": [
+          "Most of the interface is blank/off-screen",
+          "Unclear what fields are required without full visibility"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "[Green action button]",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pe",
+            "context": "right side, possibly input label",
+            "purpose": "field identifier or partial text"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/dune-send-2-bridge-page.png",
+      "label": "bridge page",
+      "flowType": "Send",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, medium weight",
+          "bodyStyle": "sans-serif, regular weight, neutral gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation with logo, menu items, and auth buttons",
+            "position": "top",
+            "notable": "Identical to other pages; consistent branding"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Navigation path showing current location",
+            "position": "top-right",
+            "notable": "Gray subtle text for page context"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation bar dominates; main content area blank/loading",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Bridge tokens across different chains",
+        "entryPoints": [
+          "From Send page",
+          "Direct navigation",
+          "Bridge menu option"
+        ],
+        "exitPoints": [
+          "Select source/destination chain",
+          "Enter amount",
+          "Confirm transaction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "reveal submenu"
+          },
+          {
+            "element": "Discover dropdown",
+            "action": "reveal options"
+          },
+          {
+            "element": "LOG IN",
+            "action": "authenticate"
+          },
+          {
+            "element": "SIGN UP",
+            "action": "create account"
+          }
+        ],
+        "informationArchitecture": "Multi-step bridge process; primary navigation via top bar; form elements likely below fold",
+        "frictionPoints": [
+          "Content area appears blank or off-screen",
+          "Unclear what bridge options are available",
+          "No visible form fields or input areas"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "LOG IN",
+            "style": "text-link",
+            "placement": "top-right"
+          },
+          {
+            "text": "SIGN UP",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Products",
+            "context": "navigation",
+            "purpose": "menu category"
+          },
+          {
+            "text": "Discover",
+            "context": "navigation",
+            "purpose": "menu category"
+          },
+          {
+            "text": "Use Cases",
+            "context": "navigation",
+            "purpose": "menu category"
+          },
+          {
+            "text": "Resources",
+            "context": "navigation",
+            "purpose": "menu category"
+          },
+          {
+            "text": "Pricing",
+            "context": "navigation",
+            "purpose": "menu category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

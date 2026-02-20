@@ -1,0 +1,1150 @@
+{
+  "slug": "opennode",
+  "category": "Payment",
+  "extractedAt": "2026-02-20T12:42:39.548Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 9,
+  "screens": [
+    {
+      "image": "/screenshots/opennode-settings-6-how-many-people-use-bitcoin-scrolled-1.png",
+      "label": "How many people use Bitcoin? — scrolled 1",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#342E48",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, 28px+ for section headers",
+          "bodyStyle": "Regular sans-serif, dark gray (#342E48), 16px line-height 1.6",
+          "dataStyle": "Bold inline text for statistics (e.g., 'tens of millions')"
+        },
+        "components": [
+          {
+            "type": "text-block",
+            "description": "Long-form article content with multiple paragraphs",
+            "position": "full-width centered column",
+            "notable": "Heavy use of hyperlinked company names in blue"
+          },
+          {
+            "type": "section-heading",
+            "description": "'More Users on Bitcoin Platforms' heading",
+            "position": "mid-page",
+            "notable": "Bold treatment anchors content sections"
+          },
+          {
+            "type": "hyperlink",
+            "description": "Blue text links to 'Coinbase', 'wallet', 'interview with their CEO', 'Binance', 'Etoro'",
+            "position": "inline within paragraphs",
+            "notable": "Strategic linking to related platforms and sources"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-to-bottom reading flow with bold section headers breaking content into digestible chunks",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "blog-article",
+        "userIntent": "Learn about Bitcoin adoption statistics and user base across platforms",
+        "entryPoints": [
+          "Blog navigation",
+          "Search results",
+          "Direct link from blog index"
+        ],
+        "exitPoints": [
+          "Return to blog",
+          "Follow hyperlinks to referenced platforms",
+          "Scroll to footer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinked company names (Coinbase, Binance, Etoro, wallet)",
+            "action": "Navigate to external platform pages or sources"
+          },
+          {
+            "element": "Scroll",
+            "action": "Reveal more article content"
+          }
+        ],
+        "informationArchitecture": "Linear narrative with nested facts; introduces question, provides blockchain-based answer, then cites exchange platforms with user numbers",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Who are the early adopters of Bitcoin, and how many are there? The answer isn't easy to find.",
+            "context": "Opening paragraph",
+            "purpose": "Hook reader with question and establish difficulty of answer"
+          },
+          {
+            "text": "tens of millions of Bitcoin users worldwide",
+            "context": "Mid-article claim",
+            "purpose": "Bold statement of scale"
+          },
+          {
+            "text": "Registered users don't necessarily translate into number of users, traders, or owners.",
+            "context": "Closing insight",
+            "purpose": "Nuance the statistics with important caveat"
+          }
+        ],
+        "tone": "educational-analytical",
+        "dataFormatting": [
+          "over 30 million users (Coinbase)",
+          "about 15 million total users (Binance)",
+          "about 12 million registered users (Etoro)",
+          "up half of the platform's 'active traders' trade crypto"
+        ],
+        "trustSignals": [
+          "Public blockchain data cited",
+          "Company statements and interviews referenced",
+          "Multiple platforms compared for triangulation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-7-newsletter.png",
+      "label": "Newsletter",
+      "flowType": "Settings",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#4A90E2",
+          "#9B9B9B"
+        ],
+        "typography": {
+          "headingStyle": "Regular sans-serif, dark gray, 16px",
+          "bodyStyle": "Regular sans-serif, dark gray, 14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navbar",
+            "description": "Horizontal navigation with logo, menu items, and Subscribe CTA button",
+            "position": "top of page",
+            "notable": "Blue Subscribe button stands out against nav bar"
+          },
+          {
+            "type": "empty-state-message",
+            "description": "Large centered text stating 'What are you looking for is not here anymore'",
+            "position": "center of viewport",
+            "notable": "Honest, direct error messaging"
+          },
+          {
+            "type": "recovery-link",
+            "description": "'Return to OpenNode blog' text link",
+            "position": "below empty state message",
+            "notable": "Clear recovery path"
+          },
+          {
+            "type": "tagline",
+            "description": "'Instant Transactions. Low Fees. Global.'",
+            "position": "lower-middle of page",
+            "notable": "Brand value proposition"
+          },
+          {
+            "type": "footer",
+            "description": "Copyright notice",
+            "position": "bottom",
+            "notable": "Minimal footer for simple page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered vertical arrangement with generous whitespace creating calm, apologetic tone",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error-empty-state",
+        "userIntent": "Recover from dead link; explore blog or resubscribe",
+        "entryPoints": [
+          "Direct link from old blog post or article"
+        ],
+        "exitPoints": [
+          "Return to OpenNode blog via recovery link",
+          "Navigate via top nav",
+          "Click Subscribe button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Return to OpenNode blog link",
+            "action": "Navigate back to blog homepage"
+          },
+          {
+            "element": "Subscribe button (top-right and center)",
+            "action": "Open newsletter subscription"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Browse to different blog sections"
+          }
+        ],
+        "informationArchitecture": "Acknowledgment → Recovery path + Secondary engagement (tagline + subscribe)",
+        "frictionPoints": [
+          "Content not found creates initial confusion",
+          "User must click to recover (though link is clear)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "What are you looking for is not here anymore.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Return to OpenNode blog.",
+            "style": "text-link",
+            "placement": "center of screen"
+          },
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top-right and center-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Instant Transactions. Low Fees. Global.",
+            "context": "Lower page section",
+            "purpose": "Brand positioning and value reminder"
+          },
+          {
+            "text": "Copyright ©2026 OpenNode Blog",
+            "context": "Footer",
+            "purpose": "Legal attribution"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "What are you looking for is not here anymore."
+        ],
+        "emptyStateText": [
+          "What are you looking for is not here anymore."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-8-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1F2A48",
+          "#4A90E2",
+          "#7B68EE",
+          "#FFC857"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark navy (#1F2A48), 56px+, line-height 1.2",
+          "bodyStyle": "Regular sans-serif, dark gray, 16px",
+          "dataStyle": "Bold white text on colored backgrounds for stats (e.g., '14,000+')"
+        },
+        "components": [
+          {
+            "type": "navbar",
+            "description": "Horizontal navigation with logo, menu items (Payments, Developers, Company, Pricing), Log in button",
+            "position": "top",
+            "notable": "Clean, minimal header with blue Log in CTA"
+          },
+          {
+            "type": "section-label",
+            "description": "'About us' with OpenNode icon",
+            "position": "left sidebar, upper",
+            "notable": "Visual anchor for page section"
+          },
+          {
+            "type": "headline",
+            "description": "'Our mission is to empower and connect the world with bitcoin'",
+            "position": "left column, prominent",
+            "notable": "Mission-driven positioning, bold typography"
+          },
+          {
+            "type": "body-text",
+            "description": "Paragraph about building payments infrastructure and bitcoin's future",
+            "position": "left column, below headline",
+            "notable": "Concise, conviction-driven narrative"
+          },
+          {
+            "type": "abstract-illustration",
+            "description": "Colorful geometric shapes (circles, triangles, rectangles) in blue, yellow, purple, orange",
+            "position": "right column",
+            "notable": "Modern, playful visual identity; includes bitcoin logo in orange circle"
+          },
+          {
+            "type": "stat-card",
+            "description": "'14,000+ users' with 'Registered user growth has been exponential'",
+            "position": "bottom-right, blue background",
+            "notable": "Trust signal with growth metric"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left text dominates (headline → body), right illustrative; stat card anchors bottom-right",
+        "innovativeElements": [
+          "Abstract geometric illustration style (modern, non-literal)",
+          "Color palette integration (blue/purple/yellow) reflects brand identity"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page",
+        "userIntent": "Learn about OpenNode's mission, values, and proof of scale",
+        "entryPoints": [
+          "Company nav menu",
+          "Direct URL link"
+        ],
+        "exitPoints": [
+          "Click Payments/Developers/Pricing nav",
+          "Log in",
+          "Scroll down for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navbar menu items (Payments, Developers, Company, Pricing)",
+            "action": "Navigate to corresponding pages"
+          },
+          {
+            "element": "Log in button",
+            "action": "Navigate to login page"
+          },
+          {
+            "element": "Scroll",
+            "action": "Reveal more about content (stat card visible at bottom)"
+          }
+        ],
+        "informationArchitecture": "Mission statement + supporting narrative + social proof (user growth stat)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Our mission is to empower and connect the world with bitcoin",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "primary-button",
+            "placement": "top-right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We are building the best payments infrastructure today, without compromising tomorrow. We believe that bitcoin is the future of global, digital payments and that no other payment method can ultimately compete.",
+            "context": "Below mission headline",
+            "purpose": "Establish conviction and differentiation"
+          },
+          {
+            "text": "14,000+",
+            "context": "Stat card bottom-right",
+            "purpose": "Proof of scale"
+          },
+          {
+            "text": "users",
+            "context": "Stat card bottom-right",
+            "purpose": "Contextualizes stat"
+          },
+          {
+            "text": "Registered user growth has been exponential",
+            "context": "Stat card subtext",
+            "purpose": "Growth momentum signal"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "14,000+ users"
+        ],
+        "trustSignals": [
+          "14,000+ registered users",
+          "Exponential growth claim"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-3-bitcoin-regulation-which-countries-are-bitcoinfr.png",
+      "label": "Bitcoin Regulation: Which Countries are Bitcoin-Fr",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width with hero overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#4A90E2",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (40-50px), white text on dark overlay",
+          "bodyStyle": "Medium gray sans-serif on white background, high contrast",
+          "dataStyle": "Blue hyperlinked text for key terms like 'Bitcoin' and 'cryptocurrency'"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, social icons, category links, and blue Subscribe button",
+            "position": "top",
+            "notable": "Clean, minimal design with balanced spacing"
+          },
+          {
+            "type": "Hero section",
+            "description": "Full-width image with wooden gavel overlay, white headline overlay",
+            "position": "center",
+            "notable": "Thematic imagery (justice/law) directly relevant to regulation topic"
+          },
+          {
+            "type": "Author byline",
+            "description": "Profile avatar, author name 'OpenNode Team', Array category",
+            "position": "bottom-left of hero",
+            "notable": "Subtle placement, social share icons on right"
+          },
+          {
+            "type": "Body article text",
+            "description": "Long-form article content with blue hyperlinked terms and structured bullet points",
+            "position": "main content area",
+            "notable": "Strategic linking of key terms to provide context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates attention, headline clearly visible, body text organized in readable paragraphs with scannable section headers",
+        "innovativeElements": [
+          "Thematic hero image (gavel) that directly relates to legal/regulation topic",
+          "Color-coded link terms (blue) to highlight key concepts within body text",
+          "Structured list formatting for complex regulatory reasons"
+        ]
+      },
+      "flow": {
+        "screenType": "article-landing",
+        "userIntent": "Understand Bitcoin regulation status across different countries",
+        "entryPoints": [
+          "Direct link from articles listing",
+          "Search results for Bitcoin regulation",
+          "Social media share",
+          "Blog navigation from Articles section"
+        ],
+        "exitPoints": [
+          "Click through to related guides",
+          "Subscribe button at top",
+          "Social sharing icons",
+          "Navigation to other article categories"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinked terms (Bitcoin, cryptocurrency, Rakuten)",
+            "action": "Navigate to glossary definitions or related articles"
+          },
+          {
+            "element": "Subscribe button",
+            "action": "Open subscription form"
+          },
+          {
+            "element": "Social share icons",
+            "action": "Share article to social platforms"
+          }
+        ],
+        "informationArchitecture": "Introduction of topic → explanation of legal complexity → section headers for 'Bitcoin Welcome Here' countries (Japan, South Korea) with detailed country-specific details",
+        "frictionPoints": [
+          "No table of contents or quick navigation for long article",
+          "No 'back to top' button visible in scrolled view",
+          "Required scrolling to see country-specific content"
+        ],
+        "progressIndicators": [
+          "Article read time estimate (5 min read)",
+          "Publication date (February 6, 2020)"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Regulation: Which Countries are Bitcoin-Friendly",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "5 min read",
+            "context": "Under article headline",
+            "purpose": "Set reader expectation for time investment"
+          },
+          {
+            "text": "February 6, 2020",
+            "context": "Under article headline",
+            "purpose": "Establish article currency and recency"
+          },
+          {
+            "text": "author: Array",
+            "context": "Bottom of hero section",
+            "purpose": "Identify article collection/series"
+          },
+          {
+            "text": "OpenNode Team",
+            "context": "Author byline",
+            "purpose": "Attribution and credibility"
+          }
+        ],
+        "tone": "professional-technical, educational, balanced",
+        "dataFormatting": [
+          "10,000 businesses (Japan acceptance statistic)",
+          "Country names as section headers"
+        ],
+        "trustSignals": [
+          "Named author/team attribution",
+          "Specific dates and statistics",
+          "References to official bodies (Financial Service Agency)",
+          "Named merchants (Rakuten)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-4-bitcoin-regulation-which-countries-are-bitcoinfr-scro.png",
+      "label": "Bitcoin Regulation: Which Countries are Bitcoin-Fr — scro...",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width single-column article",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4A90E2",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif section headers (24-32px) in dark gray/black",
+          "bodyStyle": "Regular sans-serif body text, dark gray on white, ~16-18px line height",
+          "dataStyle": "Blue hyperlinked text (10,000 businesses, Rakuten) and bold emphasis for key claims"
+        },
+        "components": [
+          {
+            "type": "Section header",
+            "description": "'Bitcoin Welcome Here' as main section divider",
+            "position": "mid-content",
+            "notable": "Semantic heading that provides clear content organization"
+          },
+          {
+            "type": "Country subsection",
+            "description": "Country name (Japan, South Korea) as h2, followed by paragraph blocks",
+            "position": "stacked vertically",
+            "notable": "Consistent formatting creates scannable structure"
+          },
+          {
+            "type": "Inline hyperlinks",
+            "description": "Blue underlined text linking to related content",
+            "position": "within body paragraphs",
+            "notable": "Strategic placement to connect related concepts"
+          },
+          {
+            "type": "Bullet list",
+            "description": "Unordered list describing regulatory complexity reasons",
+            "position": "early in article",
+            "notable": "Breaks up text density and improves readability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Section headers dominate, body text secondary, blue links provide visual accent points",
+        "innovativeElements": [
+          "Semantic use of section headers to organize international regulatory data",
+          "Inline hyperlinks that contextualize terms without disrupting reading flow"
+        ]
+      },
+      "flow": {
+        "screenType": "article-content-body",
+        "userIntent": "Read detailed information about Bitcoin-friendly countries and their specific regulations",
+        "entryPoints": [
+          "Scroll down from hero section",
+          "Direct link to specific country section via hash navigation"
+        ],
+        "exitPoints": [
+          "Continue scrolling to next country section",
+          "Click hyperlinked terms to related articles",
+          "Scroll back to top or navigate via header links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Hyperlinked terms (Bitcoin, Rakuten, regulatory terms)",
+            "action": "Navigate to glossary or related article"
+          },
+          {
+            "element": "Scroll position",
+            "action": "Progress through article content"
+          }
+        ],
+        "informationArchitecture": "Regulatory explanation with bullet points → Country-by-country breakdown (Japan details → South Korea transition) with specific regulatory requirements and adoption metrics",
+        "frictionPoints": [
+          "Long scrolling required to find specific country information",
+          "No table of contents or jump navigation",
+          "Information density may require multiple reads for complex topics"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Technically, Bitcoin is legal everywhere it isn't illegal.",
+            "context": "Opening sentence of main content",
+            "purpose": "Hook reader with paradoxical framing of regulatory complexity"
+          },
+          {
+            "text": "In practice, it's more helpful to talk about friendliness towards Bitcoin instead of its legal status.",
+            "context": "Second sentence explaining regulatory approach",
+            "purpose": "Reframe regulatory discussion around adoption-friendly status"
+          }
+        ],
+        "tone": "professional-technical, educational, explanatory",
+        "dataFormatting": [
+          "10,000 businesses (adoption statistic)",
+          "Country names and specific regulatory requirements",
+          "Compliance obligations (verify customer identities, keep records)"
+        ],
+        "trustSignals": [
+          "References to official regulatory bodies (Financial Service Agency)",
+          "Specific business examples (Rakuten)",
+          "Detailed regulatory requirements showing research depth",
+          "Multi-country analysis providing comprehensive coverage"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-5-how-many-people-use-bitcoin.png",
+      "label": "How many people use Bitcoin?",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width with hero overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#4A90E2",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (40-50px), white text on dark overlay",
+          "bodyStyle": "Medium sans-serif on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, social icons, category links, Subscribe button",
+            "position": "top",
+            "notable": "Consistent with previous article screens, clean minimal design"
+          },
+          {
+            "type": "Hero section",
+            "description": "Full-width aerial photo of crowded pedestrian crossing (Shibuya-style), white headline overlay",
+            "position": "center",
+            "notable": "Thematic imagery of 'many people' directly visualizes headline question"
+          },
+          {
+            "type": "Author byline",
+            "description": "Profile avatar, author name 'Ryan Flowers', Array category",
+            "position": "bottom-left of hero",
+            "notable": "Individual author attribution instead of team"
+          },
+          {
+            "type": "Social share buttons",
+            "description": "Facebook, Twitter, LinkedIn, Pinterest icons",
+            "position": "bottom-right",
+            "notable": "Consistent placement across articles"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates attention, headline clearly visible and readable against dark overlay, metadata below",
+        "innovativeElements": [
+          "Thematic hero photography (crowd imagery) that directly visualizes the article topic",
+          "Strong color contrast between white text and dark overlay ensures readability"
+        ]
+      },
+      "flow": {
+        "screenType": "article-landing",
+        "userIntent": "Understand adoption statistics and how many people globally use Bitcoin",
+        "entryPoints": [
+          "Direct link from articles listing",
+          "Search for Bitcoin adoption statistics",
+          "Social media share",
+          "Blog navigation from Articles section"
+        ],
+        "exitPoints": [
+          "Scroll down to read article body",
+          "Click Subscribe button",
+          "Share article via social icons",
+          "Click navigation links to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button",
+            "action": "Open subscription form"
+          },
+          {
+            "element": "Social share icons",
+            "action": "Share article to respective platforms"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to other article categories"
+          }
+        ],
+        "informationArchitecture": "Hero article card → Article metadata (author, read time) → Body content (accessed via scroll)",
+        "frictionPoints": [
+          "Must scroll to see article body content",
+          "No preview of article content visible above fold"
+        ],
+        "progressIndicators": [
+          "Read time estimate (3 min read)",
+          "Publication date (January 15, 2020)"
+        ]
+      },
+      "copy": {
+        "headline": "How many people use Bitcoin?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "3 min read",
+            "context": "Under article headline",
+            "purpose": "Set reader expectation for time investment"
+          },
+          {
+            "text": "January 15, 2020",
+            "context": "Under article headline",
+            "purpose": "Establish publication date and recency"
+          },
+          {
+            "text": "author: Array",
+            "context": "Bottom of hero section",
+            "purpose": "Identify article collection/series"
+          },
+          {
+            "text": "Ryan Flowers",
+            "context": "Author byline",
+            "purpose": "Individual writer attribution and credibility"
+          }
+        ],
+        "tone": "professional-educational, approachable",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Named individual author",
+          "Publication date",
+          "Specific read time estimate",
+          "Series categorization (Array)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#5B7EFF",
+          "#FFFFFF",
+          "#1A1A1A"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif (60px+), dark navy color, high contrast",
+          "bodyStyle": "Regular weight sans-serif, medium gray (#666), comfortable line-height",
+          "dataStyle": "Monospace or semi-bold for crypto amounts, light gray secondary text"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal nav with logo, menu items (Payments, Developers, Company, Pricing), and blue Log in button",
+            "position": "Top fixed",
+            "notable": "Clean, minimal design with blue CTA button contrasting light background"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with supporting body text on left, mockup phone interface on right",
+            "position": "Center-left",
+            "notable": "Asymmetric layout balances text-heavy left with visual mockup on right"
+          },
+          {
+            "type": "Mobile Mockup",
+            "description": "iPhone frame showing payment request with QR code and wallet interaction",
+            "position": "Center-right",
+            "notable": "Includes realistic wallet UI, QR code, and 'Open in wallet' button showing actual product use"
+          },
+          {
+            "type": "Wallet Dashboard Preview",
+            "description": "Right sidebar showing wallet balance ($681,993.78 USD), multiple cryptocurrency balances (BTC, USD), and activity feed",
+            "position": "Right edge",
+            "notable": "Semi-transparent overlay with real data visualization; shows transactions and balance in real-time format"
+          },
+          {
+            "type": "Partner Logos",
+            "description": "Row of integration partner logos (Shopify, Stripe Apps, Substack, Twitter)",
+            "position": "Bottom",
+            "notable": "Trust-building element showing major integrations"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws attention first, supporting text clarifies value prop, phone mockup demonstrates product, right sidebar shows dashboard for credibility",
+        "innovativeElements": [
+          "Dual-focus layout combining sales narrative with live product interface",
+          "Overlapping card design (mockup phone and dashboard) creating depth",
+          "Integration logo row at bottom providing social proof"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what OpenNode does and sign up or explore further",
+        "entryPoints": [
+          "Direct traffic to opennode.com",
+          "Marketing campaign links",
+          "Partner/referral links"
+        ],
+        "exitPoints": [
+          "Log in (existing users)",
+          "Click navigation items (Payments, Developers, Company, Pricing)",
+          "Scroll down to partner logos and CTAs",
+          "Click on product mockup to learn more"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Log in Button",
+            "action": "Navigate to authentication screen"
+          },
+          {
+            "element": "Navigation Menu Items",
+            "action": "Navigate to section pages (Payments, Developers, Company, Pricing)"
+          },
+          {
+            "element": "Phone Mockup",
+            "action": "Likely a demo or more detailed product view"
+          },
+          {
+            "element": "Partner Logos",
+            "action": "Possible navigation to integration or partner details"
+          }
+        ],
+        "informationArchitecture": "Single-page hero with navigation breadcrumbs; information flows from headline → value proposition → product mockup → social proof",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin payments at the speed of now",
+        "subheadline": "Get lightning-fast, low-cost bitcoin payments and payouts for your business with our powerful API, ecommerce plugins, or hosted payment pages.",
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "primary-button",
+            "placement": "Top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "On-chain / Lightning",
+            "context": "Payment method toggles on phone mockup",
+            "purpose": "Clarify transaction type options"
+          },
+          {
+            "text": "Open in wallet",
+            "context": "Button on payment request screen",
+            "purpose": "Call-to-action for wallet interaction"
+          },
+          {
+            "text": "Total balance: $681,993.78 USD",
+            "context": "Wallet sidebar heading",
+            "purpose": "Demonstrate real transaction data"
+          }
+        ],
+        "tone": "professional-technical with friendly accessibility",
+        "dataFormatting": [
+          "13.02315160 BTC",
+          "356,014.99 USD",
+          "$681,993.78 USD",
+          "$100.00 USD"
+        ],
+        "trustSignals": [
+          "Integration with Shopify, Stripe Apps, Substack, Twitter (partner logos)",
+          "Real wallet balance display ($681K+)",
+          "Live transaction activity shown"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-1-read-the-full-article.png",
+      "label": "Read the full article",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#4A90E2",
+          "#FFFFFF",
+          "#2C3E50"
+        ],
+        "typography": {
+          "headingStyle": "Bold, white sans-serif on dark overlay, 48px+ size",
+          "bodyStyle": "Regular sans-serif, dark gray on white background, readable line-height",
+          "dataStyle": "Lighter gray for metadata (dates, read time)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal header with OpenNode logo, 'Blog' label, social icons, and search",
+            "position": "Top fixed",
+            "notable": "Minimal design with social sharing icons (Twitter, Facebook, LinkedIn, RSS) and search"
+          },
+          {
+            "type": "Category Navigation",
+            "description": "Secondary horizontal menu with content categories (OpenNode.com, Company News, Guides, Articles, Partner Stories, Glossary, Money Moves) and Subscribe button",
+            "position": "Below main nav",
+            "notable": "Blue Subscribe CTA button right-aligned"
+          },
+          {
+            "type": "Hero Image with Overlay",
+            "description": "Full-width image of gift cards with semi-transparent dark overlay containing article title and metadata",
+            "position": "Full width below nav",
+            "notable": "Uses dark overlay for text legibility over photo background"
+          },
+          {
+            "type": "Article Header",
+            "description": "Text overlay on hero image showing 'Partner Stories', headline 'Bitcoin E-commerce: Gift Off', date 'January 8, 2020', and '3 min read'",
+            "position": "Overlay on image",
+            "notable": "Contextual category label and read time estimate"
+          },
+          {
+            "type": "Author Card",
+            "description": "Avatar, author label, name 'OpenNode Team', and social share icons",
+            "position": "Below article header",
+            "notable": "Social sharing buttons for distribution"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero image dominates top, overlay text provides context, article body flows below with clear hierarchy",
+        "innovativeElements": [
+          "Full-width hero image with text overlay for visual interest",
+          "Contextual metadata (category, read time) placed directly on hero"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read educational/marketing content about bitcoin payments and partners",
+        "entryPoints": [
+          "Blog landing page",
+          "Search results",
+          "Partner Stories category",
+          "Direct blog post link"
+        ],
+        "exitPoints": [
+          "Navigate to another category (Company News, Guides, Articles, etc.)",
+          "Subscribe button",
+          "Social share buttons",
+          "Logo back to main site",
+          "Scroll down to read full article"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category Links",
+            "action": "Filter content by category"
+          },
+          {
+            "element": "Subscribe Button",
+            "action": "Sign up for blog newsletter"
+          },
+          {
+            "element": "Social Icons (Twitter, Facebook, LinkedIn)",
+            "action": "Share article on social media"
+          },
+          {
+            "element": "Search Icon",
+            "action": "Search blog content"
+          }
+        ],
+        "informationArchitecture": "Blog hub structure with category filtering; article metadata clearly displayed; social distribution integrated",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Category label (Partner Stories) indicates article type",
+          "Read time estimate (3 min read) sets expectations"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin E-commerce: Gift Off",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "Top-right navigation bar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Partner Stories",
+            "context": "Above article headline",
+            "purpose": "Categorize article content type"
+          },
+          {
+            "text": "January 8, 2020   3 min read",
+            "context": "Below headline on hero overlay",
+            "purpose": "Provide publication date and expected read duration"
+          },
+          {
+            "text": "author: OpenNode Team",
+            "context": "Below article body",
+            "purpose": "Attribution and credibility"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [
+          "January 8, 2020 (date format)",
+          "3 min read (time estimate)"
+        ],
+        "trustSignals": [
+          "Author attribution (OpenNode Team)",
+          "Publication date visible"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/opennode-settings-2-read-the-full-article-scrolled-1.png",
+      "label": "Read the full article — scrolled 1",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#2C3E50",
+          "#16A085"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif headings in dark gray/navy, 32px+ for section headers",
+          "bodyStyle": "Regular sans-serif body text in dark gray (#333), 16-18px with comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Article Body",
+            "description": "Long-form text content with linked text ('Gift Off' appears as link in light blue), paragraph breaks, and section headings",
+            "position": "Main content area",
+            "notable": "Clean reading experience with generous whitespace and clear typography hierarchy"
+          },
+          {
+            "type": "Embedded Screenshot",
+            "description": "Full-width embedded image showing Gift Off website interface with gift card categories and product listings",
+            "position": "Bottom of visible scroll area",
+            "notable": "Real product UI screenshot demonstrating the service being discussed"
+          },
+          {
+            "type": "Section Heading",
+            "description": "'A simple service for purchasing digital gift cards with Bitcoin' - subheading that organizes article content",
+            "position": "Mid-article",
+            "notable": "Uses bold sans-serif to break up long-form content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Body text dominant, section headings create scannable structure, embedded screenshot breaks up text with visual reference",
+        "innovativeElements": [
+          "Embedded product screenshots within article content for contextual demonstration"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read full article about Gift Off partnership and bitcoin e-commerce use case",
+        "entryPoints": [
+          "Scrolled from article header"
+        ],
+        "exitPoints": [
+          "Continue scrolling for more content",
+          "Navigate to related articles",
+          "Share via social",
+          "Return to blog homepage"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Linked text ('Gift Off')",
+            "action": "Navigate to external website or internal reference"
+          },
+          {
+            "element": "Embedded screenshot",
+            "action": "May expand or link to full-resolution image"
+          }
+        ],
+        "informationArchitecture": "Linear article flow with section breaks; long-form content interspersed with visual references",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "A simple service for purchasing digital gift cards with Bitcoin",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Gift Off",
+            "context": "Linked text in opening paragraph",
+            "purpose": "Reference partner company with clickable link"
+          },
+          {
+            "text": "founded in 2013 in London, was one of the first companies to sell gift cards to retail businesses in exchange for Bitcoin",
+            "context": "Opening context paragraph",
+            "purpose": "Establish company credibility and history"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [
+          "$10,000 in profit (financial milestone)",
+          "180 gift cards (product catalog size)",
+          "Amazon, Tesco, Nike, Adidas (partner examples)"
+        ],
+        "trustSignals": [
+          "Company founding date (2013) indicates longevity",
+          "Multiple retail partners listed (Amazon, Tesco, Nike, Adidas)",
+          "Specific profit metrics ($10,000 first month)",
+          "Product breadth (180+ gift cards)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

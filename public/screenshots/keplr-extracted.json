@@ -1,0 +1,1297 @@
+{
+  "slug": "keplr",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:01:53.412Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/keplr-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with centered content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, all-caps, massive scale (appears 120px+), white text",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "Horizontal top nav with logo, product dropdown, ecosystem links, external links",
+            "position": "top fixed",
+            "notable": "Minimalist design with external link indicators"
+          },
+          {
+            "type": "hero CTA button",
+            "description": "Bright cyan rounded button with text 'Get Kepl Wallet'",
+            "position": "center below headline",
+            "notable": "Stands out against dark background with glowing cyan color"
+          },
+          {
+            "type": "device mockups",
+            "description": "iPhone and tablet/browser interface previews showing wallet UI",
+            "position": "bottom right, angled perspective",
+            "notable": "Real product screenshots shown in context, progressive disclosure of capabilities"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates viewport with supporting CTA and device imagery below, grid background adds subtle depth",
+        "innovativeElements": [
+          "Grid background pattern that creates visual depth without clutter",
+          "Device mockup perspective creates 3D sense of layered products",
+          "Bright cyan accent color creates strong focal point against dark canvas"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Kepl multichain gateway and access wallet",
+        "entryPoints": [
+          "Direct URL navigation",
+          "External links from ecosystem partners"
+        ],
+        "exitPoints": [
+          "Get Kepl button → product download/install",
+          "Navigation menu → subpages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "Reveals product submenu"
+          },
+          {
+            "element": "Get Kepl button",
+            "action": "Primary conversion action, likely links to download/install page"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to Interoperability, Chains, Ecosystem, Support, Blog"
+          }
+        ],
+        "informationArchitecture": "Top-level value prop (multichain gateway) with immediate access to product, navigation hints at ecosystem breadth",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "YOUR MULTICHAIN GATEWAY",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get Kepl Wallet",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          },
+          {
+            "text": "Get Kepl",
+            "style": "primary-button",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [],
+        "tone": "bold, confident, technical-forward",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-2-extensionfast-and-lean.png",
+      "label": "ExtensionFast and Lean",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width hero with centered content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, all-caps, massive scale (appears 120px+), white text with line breaks for emphasis",
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "product badge",
+            "description": "Small badge reading 'Extension' above headline",
+            "position": "center-top",
+            "notable": "Contextual product identifier, smaller than main heading"
+          },
+          {
+            "type": "hero CTA button",
+            "description": "Bright cyan button with Chrome icon and text 'Get for Chrome'",
+            "position": "center below headline",
+            "notable": "Platform-specific CTA with browser branding"
+          },
+          {
+            "type": "device mockup",
+            "description": "Chrome browser window mockup showing Kepl wallet interface",
+            "position": "bottom right, angled perspective",
+            "notable": "Shows actual extension UI in context"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Product badge orients user, headline emphasizes convenience, CTA converts, mockup provides social proof",
+        "innovativeElements": [
+          "Product badge creates product-specific landing experience",
+          "Platform-specific CTA (Chrome) shows targeting awareness",
+          "Browser mockup reinforces extension positioning"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Download Kepl browser extension",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Products menu click"
+        ],
+        "exitPoints": [
+          "Get for Chrome button → Chrome Web Store",
+          "Navigation menu → other products/pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get for Chrome button",
+            "action": "Routes to Chrome Web Store for extension install"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Links to other product sections or pages"
+          }
+        ],
+        "informationArchitecture": "Product-specific landing emphasizing accessibility and convenience, supported by visual proof",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "FAST & LEAN. RIGHT IN YOUR BROWSER",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get for Chrome",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [],
+        "tone": "confident, performance-focused, accessible",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-3-validator-dashboardultimate-tool-for-validators.png",
+      "label": "Validator DashboardUltimate Tool for Validators",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width hero with centered content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, all-caps, massive scale (appears 120px+), white text",
+          "bodyStyle": null,
+          "dataStyle": "Numeric data visible in mockup: '113,151.20 ATOM', '230,000', '$825,151.38', '$75,322.35 OSMO'"
+        },
+        "components": [
+          {
+            "type": "product badge",
+            "description": "Badge reading 'Validator Dashboard' above headline",
+            "position": "center-top",
+            "notable": "Identifies specific product tier/feature"
+          },
+          {
+            "type": "hero CTA button",
+            "description": "Cyan button with arrow icon and text 'Go to Validator Dashboard'",
+            "position": "center below headline",
+            "notable": "Product-specific, action-oriented CTA"
+          },
+          {
+            "type": "device mockup",
+            "description": "Laptop browser showing full Validator Dashboard interface with sidebar nav, validator info, connected validators table, and data",
+            "position": "bottom right, angled perspective",
+            "notable": "Rich UI showing actual validator management capabilities and real data display"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Product badge → headline emphasizing customization → CTA → detailed mockup showing capabilities",
+        "innovativeElements": [
+          "Validator-specific UI mockup shows sophisticated financial data management",
+          "Real validator data visible in preview builds credibility",
+          "Dashboard complexity justified by 'custom-built' positioning"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access validator dashboard for stake management",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Products menu or ecosystem navigation"
+        ],
+        "exitPoints": [
+          "Go to Validator Dashboard button → dashboard login/entry",
+          "Navigation menu → other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Validator Dashboard button",
+            "action": "Routes to validator dashboard application"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Links to other products or informational pages"
+          }
+        ],
+        "informationArchitecture": "Product-specific landing for professional users (validators), highlighted by dashboard preview showing data management",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CUSTOM-BUILT FOR VALIDATORS",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to Validator Dashboard",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Welcome to Kepl Validator Dashboard",
+            "context": "Dashboard UI mockup header",
+            "purpose": "Orients user to dashboard purpose"
+          },
+          {
+            "text": "Connected Validator",
+            "context": "Dashboard table row label",
+            "purpose": "Identifies validator data section"
+          }
+        ],
+        "tone": "professional-technical, confident, validators-focused",
+        "dataFormatting": [
+          "ATOM coin amounts: 113,151.20 ATOM",
+          "USD values: $230,000",
+          "Token quantities: 825,151.38",
+          "Alternative token values: $75,322.35 OSMO"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-7-ecosystem.png",
+      "label": "Ecosystem",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, all-caps, white, centered",
+          "bodyStyle": "Medium weight sans-serif, light gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, product dropdown, and CTA button",
+            "position": "Top",
+            "notable": "Minimal, dark with cyan accent on CTA"
+          },
+          {
+            "type": "Card Grid",
+            "description": "6-column grid of blockchain partner cards with icons",
+            "position": "Bottom half",
+            "notable": "Dark semi-transparent cards with colored brand icons (Agoric red, Akash orange, Arbitrum blue)"
+          },
+          {
+            "type": "Section Label",
+            "description": "Stat badge showing '71' with text",
+            "position": "Left of grid",
+            "notable": "Cyan accent color on number to draw attention"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates center, partner cards below organized in grid, subtle background network pattern guides attention downward",
+        "innovativeElements": [
+          "Subtle geometric network lines in background",
+          "Color-coded partner ecosystem cards with consistent visual language"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, data-browse",
+        "userIntent": "Explore blockchain ecosystems and partners building with Kepler Wallet",
+        "entryPoints": [
+          "Navigation menu click on 'Ecosystem'",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click partner card to view details",
+          "Navigate to other menu sections",
+          "Return to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Partner cards (Agoric, Akash, Arbitrum, etc.)",
+            "action": "Click to view partner details or integration info"
+          },
+          {
+            "element": "Products dropdown",
+            "action": "Reveal submenu of product offerings"
+          },
+          {
+            "element": "Get Kepler button",
+            "action": "Navigate to download/signup flow"
+          }
+        ],
+        "informationArchitecture": "Hero section with value prop, followed by grid of integrated blockchain partners organized by logo/brand",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ECOSYSTEM",
+        "subheadline": "Explore partner projects building with Kepler Wallet",
+        "ctas": [
+          {
+            "text": "Get Kepler",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "71 Natively Integrated Chains",
+            "context": "Above card grid",
+            "purpose": "Establish credibility and scope of integration"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "71 (numeric statistic)"
+        ],
+        "trustSignals": [
+          "71 Natively Integrated Chains (large number emphasizing ecosystem breadth)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-8-get-keplr.png",
+      "label": "Get Keplr",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width stacked split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, all-caps, white, left-aligned",
+          "bodyStyle": "Medium sans-serif, light gray, multi-line descriptive",
+          "dataStyle": "Large currency values displayed on wallet interface mockup ($5,110.45)"
+        },
+        "components": [
+          {
+            "type": "Hero Headline",
+            "description": "Multi-line all-caps headline split across two lines",
+            "position": "Top center",
+            "notable": "Extreme scale typography creates visual impact"
+          },
+          {
+            "type": "Product Mockup",
+            "description": "Browser extension wallet interface showing balance and chain info",
+            "position": "Bottom left",
+            "notable": "Realistic device mockup with functioning UI preview showing dogemos chain and $5,110.45 balance"
+          },
+          {
+            "type": "Feature Card",
+            "description": "Right-aligned text block describing Extension features",
+            "position": "Bottom right",
+            "notable": "Contrasts with left-side visual mockup"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates top, product mockup and feature description compete for attention below",
+        "innovativeElements": [
+          "Product mockup with realistic wallet state",
+          "Perspective/angled phone display adds depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, conversion-focused",
+        "userIntent": "Download Kepler Wallet extension and understand core benefits",
+        "entryPoints": [
+          "Navigation CTA 'Get Kepler'",
+          "Direct landing from marketing campaigns"
+        ],
+        "exitPoints": [
+          "Click download link (implied below fold)",
+          "Navigate to other sections",
+          "Return to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Kepler button (top right)",
+            "action": "Trigger download or platform selection"
+          },
+          {
+            "element": "Product mockup area",
+            "action": "Likely clickable to demo or view details"
+          }
+        ],
+        "informationArchitecture": "Hero value proposition, followed by product preview and feature highlights",
+        "frictionPoints": [
+          "Call-to-action cut off at bottom of visible screen",
+          "No immediate download button visible in viewport"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "DOWNLOAD KEPLER WALLET",
+        "subheadline": "Enjoy the seamless multichain experience wherever you go.",
+        "ctas": [
+          {
+            "text": "Get Kepler",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Fast & Lean. Right in Your Browser.",
+            "context": "Extension feature section (bottom right)",
+            "purpose": "Communicate key differentiator and accessibility"
+          },
+          {
+            "text": "Total Available: $5,110.45",
+            "context": "Wallet mockup interface",
+            "purpose": "Show realistic wallet state and balance display"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [
+          "$5,110.45 (USD currency with cents)"
+        ],
+        "trustSignals": [
+          "Live wallet mockup showing real balance display"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-9-brand-assets.png",
+      "label": "Brand Assets",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width stacked card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, all-caps, white, centered",
+          "bodyStyle": "Medium sans-serif, light gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Centered headline with icon and descriptive text",
+            "position": "Top center",
+            "notable": "Icon (folder download) integrated into headline area"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Primary cyan button with download icon",
+            "position": "Center",
+            "notable": "Download All action with supporting microcopy below"
+          },
+          {
+            "type": "Asset Cards",
+            "description": "3-column grid showing different logo variations",
+            "position": "Bottom",
+            "notable": "Dark, light, and monochrome versions with file type labels (png, svg)"
+          },
+          {
+            "type": "Section Label",
+            "description": "Left-aligned 'Kepler Logo' heading with file type indicator",
+            "position": "Above asset cards",
+            "notable": "Minimal, guides user to downloadable content"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline draws focus to top, CTA button is clear focal point, asset cards below provide granular options",
+        "innovativeElements": [
+          "File type badges on cards",
+          "Multiple brand asset variations displayed together"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse, resource-hub",
+        "userIntent": "Download branding and logo assets for use in materials",
+        "entryPoints": [
+          "Navigation link from main menu",
+          "Direct URL from marketing/partner communications"
+        ],
+        "exitPoints": [
+          "Download All button",
+          "Click individual cards to download",
+          "Navigate away from page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download All button",
+            "action": "Initiate bulk download of all assets including SVG files"
+          },
+          {
+            "element": "Asset cards",
+            "action": "Click to preview or download individual variants"
+          }
+        ],
+        "informationArchitecture": "Hero explanation, prominent CTA, followed by filterable/categorized asset grid with metadata",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BRAND ASSETS",
+        "subheadline": "Explore and download our logos and product images.",
+        "ctas": [
+          {
+            "text": "Download All",
+            "style": "primary-button",
+            "placement": "Center below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "All assets including SVG files",
+            "context": "Below Download All button",
+            "purpose": "Set expectations for download content and formats"
+          },
+          {
+            "text": "png",
+            "context": "File type indicator on asset cards",
+            "purpose": "Communicate available file format"
+          },
+          {
+            "text": "Kepler Logo",
+            "context": "Section header above first asset row",
+            "purpose": "Categorize and organize downloadable content"
+          }
+        ],
+        "tone": "professional-technical, helpful",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-4-mobile-appmultichain-on-the-go.png",
+      "label": "Mobile AppMultichain on the Go",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (80+ px), white text with strong impact",
+          "bodyStyle": "Regular sans-serif, smaller scale, white or light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top nav with Keplr logo, menu items (Products, Interoperability, Chains, Ecosystem, Support, Blog), and Get Keplr CTA",
+            "position": "top",
+            "notable": "Clean, minimal nav with dropdown menu on Products"
+          },
+          {
+            "type": "feature-label",
+            "description": "Mobile badge with icon indicating product category",
+            "position": "above headline",
+            "notable": "Centered, icon + text in pill shape"
+          },
+          {
+            "type": "hero-cta",
+            "description": "Bright cyan Get App button",
+            "position": "center",
+            "notable": "Rounded pill shape, high contrast against dark background"
+          },
+          {
+            "type": "platform-indicators",
+            "description": "Android and iOS availability badges",
+            "position": "below CTA",
+            "notable": "Small logos with platform names, clearly show multi-platform support"
+          },
+          {
+            "type": "device-mockups",
+            "description": "Two mobile phone images showing app interface",
+            "position": "bottom half",
+            "notable": "Angled perspective view, shows real product UI with 'dogemos' account and tabs"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong top-down flow: logo/label → massive headline → CTA → platform badges → device imagery. Grid background adds depth without distraction.",
+        "innovativeElements": [
+          "Subtle grid background creates layered depth effect",
+          "Device mockups displayed in natural 3D perspective angles",
+          "Combination of bold typography with product visualization"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero-section",
+        "userIntent": "Discover and download the Keplr mobile app for multichain wallet management",
+        "entryPoints": [
+          "Home page navigation",
+          "Products menu click",
+          "Direct marketing link"
+        ],
+        "exitPoints": [
+          "Get App button → app store download",
+          "Navigation menu → other product pages",
+          "Support/Blog links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get App button",
+            "action": "Navigate to app download or app store"
+          },
+          {
+            "element": "Products dropdown",
+            "action": "Reveal submenu of product offerings"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to respective pages (Chains, Ecosystem, etc.)"
+          }
+        ],
+        "informationArchitecture": "Linear vertical structure: header → hero section with headline + CTA → supporting platform indicators → device visualization. Single-column focus on mobile app promotion.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "MULTICHAIN ON THE GO!",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get App",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Available for",
+            "context": "above platform badges",
+            "purpose": "Indicate platform support"
+          }
+        ],
+        "tone": "friendly-casual, energetic with exclamation mark",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Platform availability (Android, iOS)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-5-dashboardpowerful-and-versatile.png",
+      "label": "DashboardPowerful and Versatile",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (80+ px), white with strong visual weight",
+          "bodyStyle": "Regular sans-serif, small to medium, white/light gray",
+          "dataStyle": "Large bold numbers in white ($9,230.90, $5,110.45, $4,120.45) with dollar signs"
+        },
+        "components": [
+          {
+            "type": "feature-label",
+            "description": "Dashboard badge with icon",
+            "position": "above headline",
+            "notable": "Centered, consistent with other hero sections"
+          },
+          {
+            "type": "hero-cta",
+            "description": "Bright cyan 'Go to Dashboard' button",
+            "position": "center below headline",
+            "notable": "Rounded pill shape, consistent styling"
+          },
+          {
+            "type": "dashboard-mockup",
+            "description": "Full desktop browser window showing dashboard UI",
+            "position": "bottom two-thirds",
+            "notable": "Comprehensive view with sidebar navigation, multiple tabs, charts, asset distribution, and key metrics displayed"
+          },
+          {
+            "type": "data-visualization",
+            "description": "Charts, graphs, and data tables within dashboard",
+            "position": "within mockup",
+            "notable": "Includes bar charts for asset distribution, pie charts for portfolio breakdown, and tabular data"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical emphasis: headline dominates, CTA below, then large product screenshot fills lower viewport showing comprehensive dashboard capabilities",
+        "innovativeElements": [
+          "Full-featured dashboard mockup demonstrates complexity and power",
+          "Multiple data visualization types shown in single view",
+          "Grid background maintains consistency across all hero sections"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero-section",
+        "userIntent": "Explore Keplr Dashboard capabilities for comprehensive portfolio management and staking",
+        "entryPoints": [
+          "Home page scrolling",
+          "Products menu",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Go to Dashboard button → dashboard app",
+          "Navigation menu",
+          "Back to mobile app section or other features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Dashboard button",
+            "action": "Navigate to Keplr Dashboard application"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to other pages"
+          }
+        ],
+        "informationArchitecture": "Linear vertical: headline → CTA → full dashboard UI mockup. Single focus on showcasing dashboard comprehensiveness and features through realistic UI preview.",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "POWERFUL & VERSATILE",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to Dashboard",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "$9,230.90",
+          "$5,110.45",
+          "$4,120.45",
+          "Percentage values (e.g., 26.63%, 12.18%)"
+        ],
+        "trustSignals": [
+          "Multiple asset types displayed (ATOM, OSMO, STAKS, etc.)",
+          "Real portfolio metrics shown",
+          "Staking rewards displayed ($31.72)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-6-multisigcollaborative-control.png",
+      "label": "MultisigCollaborative Control",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D4FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (80+ px), white text",
+          "bodyStyle": "Regular sans-serif, small to medium, white/light gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "feature-label",
+            "description": "Multisig BETA badge with icon",
+            "position": "above headline",
+            "notable": "Indicates beta status of feature"
+          },
+          {
+            "type": "hero-cta",
+            "description": "Cyan 'Open Keplr Multisig' button with external link icon",
+            "position": "center below headline",
+            "notable": "Rounded pill, includes arrow indicating external navigation"
+          },
+          {
+            "type": "app-mockup",
+            "description": "Tablet/desktop interface showing Keplr Multisig welcome screen",
+            "position": "bottom half",
+            "notable": "Left sidebar with chain navigation (Prysm, Osmosis, Stargaze, Celestia, Avitar, Stride, Tellurium, Evmos, CosmosHub), main content area showing 'Your Multisig Accounts' with table"
+          },
+          {
+            "type": "sidebar-navigation",
+            "description": "Vertical chain list with icons",
+            "position": "left side of mockup",
+            "notable": "Color-coded chain icons for easy visual identification"
+          },
+          {
+            "type": "data-table",
+            "description": "Account management table with columns for Chain, Account Name, Multisig Address, and Signers",
+            "position": "main content area",
+            "notable": "Shows 3 sample accounts (Prysm, Osmosis, Stargaze) with addresses and signer counts"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong vertical focus: headline → CTA → large mockup. Left sidebar in mockup creates secondary hierarchy for navigation.",
+        "innovativeElements": [
+          "Beta label signals new/advanced feature",
+          "Detailed UI mockup shows real product complexity",
+          "Sidebar navigation pattern demonstrates organizational depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero-section",
+        "userIntent": "Discover Keplr Multisig feature for collaborative multi-signature account management",
+        "entryPoints": [
+          "Home page scrolling",
+          "Products menu",
+          "Feature discovery"
+        ],
+        "exitPoints": [
+          "Open Keplr Multisig button → Multisig application",
+          "Navigation menu",
+          "Sidebar chains in mockup (visual only)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Open Keplr Multisig button",
+            "action": "Navigate to Multisig application (external link)"
+          }
+        ],
+        "informationArchitecture": "Linear vertical hero followed by comprehensive app UI preview. Sidebar demonstrates multi-chain support; main area shows account management workflow.",
+        "frictionPoints": [
+          "BETA status may create hesitation in some users"
+        ],
+        "progressIndicators": [
+          "BETA label indicates feature maturity level"
+        ]
+      },
+      "copy": {
+        "headline": "SIMPLIFIED TEAM OPS",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Open Keplr Multisig ↗",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Welcome",
+            "context": "mockup content area",
+            "purpose": "Greeting in app"
+          },
+          {
+            "text": "Your Multisig Accounts 21",
+            "context": "mockup main section",
+            "purpose": "Account count display"
+          },
+          {
+            "text": "Manage Chains",
+            "context": "mockup header area",
+            "purpose": "Action link for chain management"
+          }
+        ],
+        "tone": "professional-technical, collaborative",
+        "dataFormatting": [
+          "Account count (21)",
+          "Chain/account names (Prysm, Osmosis, Stargaze, etc.)",
+          "Multisig addresses (full hex strings)"
+        ],
+        "trustSignals": [
+          "Multiple chain support demonstrated",
+          "Team account management capability",
+          "Real account examples shown"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-10-brand-assets-infra-logo-tab.png",
+      "label": "Brand Assets — Infra Logo tab",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, left-aligned section headers in light gray",
+          "bodyStyle": "Sans-serif, medium weight, white text for labels",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "card",
+            "description": "Dark card displaying Kepl INFRA logo with yellow-green icon variant",
+            "position": "left-center",
+            "notable": "Features colored icon on dark background"
+          },
+          {
+            "type": "card",
+            "description": "Dark card displaying Kepl INFRA logo with white icon variant",
+            "position": "center",
+            "notable": "Monochrome icon version"
+          },
+          {
+            "type": "card",
+            "description": "Light gray card displaying Kepl INFRA logo with black icon on light background",
+            "position": "right-center",
+            "notable": "Light variant for contrast testing"
+          },
+          {
+            "type": "button",
+            "description": "Download icon button (chevron down) on each card",
+            "position": "bottom-right of each card",
+            "notable": "Consistent placement for asset download"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Equal weight cards arranged horizontally, labels below guide focus to asset variants",
+        "innovativeElements": [
+          "Light/dark variant showcase in single viewport",
+          "Color-coded icon variants for different use cases"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and download Kepl Infra logo assets in multiple variants",
+        "entryPoints": [
+          "Brand Assets section navigation",
+          "Tab selection from Kepl Logo/Icon tabs"
+        ],
+        "exitPoints": [
+          "Download asset via button",
+          "Switch to different asset tab",
+          "Navigate to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Infra Logo tab",
+            "action": "Displays logo asset variants (currently selected)"
+          },
+          {
+            "element": "Download button",
+            "action": "Initiates asset download (PNG format)"
+          },
+          {
+            "element": "Tab navigation pills",
+            "action": "Switch between Kepl Logo, Kepl Icon, Infra Logo, Infra Icon"
+          }
+        ],
+        "informationArchitecture": "Horizontal tab structure organizes assets by type (Logo vs Icon) and brand (Kepl vs Infra); variants displayed as comparable cards",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active tab highlight (Infra Logo)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Infra Logo",
+        "ctas": [
+          {
+            "text": "Download (chevron icon)",
+            "style": "ghost-button",
+            "placement": "Bottom-right of each card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Infra Logo",
+            "context": "Left-aligned section header",
+            "purpose": "Identifies asset category"
+          },
+          {
+            "text": "Kepl Logo / Kepl Icon / Infra Logo / Infra Icon",
+            "context": "Tab pills below cards",
+            "purpose": "Asset type navigation"
+          },
+          {
+            "text": "Brand & Product Images",
+            "context": "Section header below",
+            "purpose": "Indicates next content section"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-11-brand-assets-infra-icon-tab.png",
+      "label": "Brand Assets — Infra Icon tab",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#00D4FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, left-aligned section headers in light gray",
+          "bodyStyle": "Sans-serif, medium weight, white text for labels",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "card",
+            "description": "Dark card with centered yellow-green plus-in-circle icon",
+            "position": "left-center",
+            "notable": "Minimalist icon display with generous whitespace"
+          },
+          {
+            "type": "button",
+            "description": "Download icon button (chevron down)",
+            "position": "bottom-right of card",
+            "notable": "Consistent with logo variant"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Single centered icon in large card, tab selection below clarifies context",
+        "innovativeElements": [
+          "Icon-only focused presentation",
+          "Isolated asset view reduces cognitive load"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View and download the Kepl Infra icon asset",
+        "entryPoints": [
+          "Infra Icon tab selection",
+          "Previous asset browsing"
+        ],
+        "exitPoints": [
+          "Download icon asset",
+          "Switch to different asset tab",
+          "Return to brand assets"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Infra Icon tab",
+            "action": "Displays single icon asset (currently active)"
+          },
+          {
+            "element": "Download button",
+            "action": "Download icon in PNG format"
+          },
+          {
+            "element": "Tab navigation pills",
+            "action": "Switch between asset types"
+          }
+        ],
+        "informationArchitecture": "Tab-based asset filtering; single-asset view reduces complexity",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Active tab highlight shows Infra Icon selected"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Infra Icon",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "ghost-button",
+            "placement": "Bottom-right of card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Infra Icon",
+            "context": "Left-aligned section header",
+            "purpose": "Asset category identifier"
+          },
+          {
+            "text": "Kepl Logo / Kepl Icon / Infra Logo / Infra Icon",
+            "context": "Tab navigation",
+            "purpose": "Asset selection"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/keplr-home-12-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold, all-caps, sans-serif, white, full-width centered",
+          "bodyStyle": null,
+          "dataStyle": "Large monospace numbers (404)"
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "404 error code displayed at top",
+            "position": "top-center",
+            "notable": "Subtle gray color, sets error context immediately"
+          },
+          {
+            "type": "heading",
+            "description": "Large theatrical headline",
+            "position": "center-screen",
+            "notable": "Uses metaphor ('galaxy') matching Kepl brand theme"
+          },
+          {
+            "type": "button",
+            "description": "Call-to-action to return home",
+            "position": "below headline",
+            "notable": "Primary button style, white text on rounded background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code → Dramatic headline → Action button creates strong visual flow downward",
+        "innovativeElements": [
+          "Branded error message using galaxy/space metaphor",
+          "Theatrical tone shifts from professional to engaging"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand page not found; return to safe location",
+        "entryPoints": [
+          "Invalid URL attempt",
+          "Broken link",
+          "Page deletion/deprecation"
+        ],
+        "exitPoints": [
+          "Go to Homepage button",
+          "Header navigation (Products, Chains, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Homepage button",
+            "action": "Navigate back to home page"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Access main site sections"
+          }
+        ],
+        "informationArchitecture": "Error page isolated for clarity; single CTA provides clear recovery path",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "YOU'RE LOST IN THE GALAXY",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Go to Homepage",
+            "style": "primary-button",
+            "placement": "Center-screen, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "404",
+            "context": "Top of page",
+            "purpose": "Error code identifier"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "404"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "YOU'RE LOST IN THE GALAXY (metaphorical 404 message)"
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

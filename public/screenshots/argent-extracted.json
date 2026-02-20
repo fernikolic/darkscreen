@@ -1,0 +1,98 @@
+{
+  "slug": "argent",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:12:23.667Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 1,
+  "screens": [
+    {
+      "image": "/screenshots/argent-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, extra-large size (48px+), high contrast black on white",
+          "bodyStyle": "regular sans-serif, medium size (16px), dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "error-code",
+            "description": "404 displayed in top-left corner",
+            "position": "top-left",
+            "notable": "minimal, understated presentation of error code"
+          },
+          {
+            "type": "heading",
+            "description": "Large 'Page not found' heading",
+            "position": "upper-left quadrant",
+            "notable": null
+          },
+          {
+            "type": "body-text",
+            "description": "Explanatory message about missing/moved page",
+            "position": "below heading",
+            "notable": "concise, helpful tone"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "minimal content centered on left side with large empty space on right; error code at top establishes context, heading dominates, supporting text below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "user attempted to navigate to a non-existent or moved page; needs guidance on next steps",
+        "entryPoints": [
+          "broken link from external source",
+          "manual URL entry error",
+          "outdated bookmark"
+        ],
+        "exitPoints": [
+          "back navigation button (implied)",
+          "home/landing page link (not visible, likely below fold)",
+          "search functionality (not visible)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "error messaging follows standard web convention: error code → headline → explanation → recovery options (implied)",
+        "frictionPoints": [
+          "no visible call-to-action or navigation options on screen",
+          "user must scroll or use browser back button to recover",
+          "no search or site map reference provided"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The page you are looking for doesn't exist or has been moved.",
+            "context": "primary error message below headline",
+            "purpose": "explains the error condition to user in plain language"
+          }
+        ],
+        "tone": "professional-technical, straightforward and clear",
+        "dataFormatting": [
+          "404 error code (numeric identifier)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "Page not found",
+          "The page you are looking for doesn't exist or has been moved."
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

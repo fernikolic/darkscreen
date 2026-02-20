@@ -1,0 +1,1792 @@
+{
+  "slug": "maple-finance",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:23:27.093Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 14,
+  "screens": [
+    {
+      "image": "/screenshots/maple-finance-home-4-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FF8A65",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline, high contrast white on black",
+          "bodyStyle": "Sans-serif body text in white, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, menu items, and dual CTAs",
+            "position": "top fixed",
+            "notable": "Clear separation between product nav (Earn, Borrow, SYRUP Token) and action buttons"
+          },
+          {
+            "type": "hero-section",
+            "description": "Split layout with text on left, 3D illustrated token on right",
+            "position": "center-full",
+            "notable": "Tilted 3D rendered maple leaf token with shadow depth creates visual interest"
+          },
+          {
+            "type": "primary-button",
+            "description": "Buy SYRUP call-to-action button",
+            "position": "left side below headline",
+            "notable": "Orange/coral color provides strong contrast against dark background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates, supporting text follows, 3D asset anchors right side, CTA positioned below headline",
+        "innovativeElements": [
+          "3D rendered token asset with realistic lighting and shadow",
+          "Asymmetrical split layout with visual weight on right"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Maple Finance's SYRUP token and initiate purchase or app access",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Buy SYRUP button",
+          "Enter App button",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Earn dropdown menu",
+            "action": "Reveals earning opportunities"
+          },
+          {
+            "element": "Buy SYRUP button",
+            "action": "Likely navigates to purchase flow"
+          },
+          {
+            "element": "Enter App button",
+            "action": "Launches main application"
+          }
+        ],
+        "informationArchitecture": "Hero value proposition with token visual, navigation menu positioned for secondary exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Native Token Of Maple",
+        "subheadline": "Hold SYRUP and shape Maple's future",
+        "ctas": [
+          {
+            "text": "Buy SYRUP",
+            "style": "primary-button",
+            "placement": "below headline, left side"
+          },
+          {
+            "text": "Enter App",
+            "style": "primary-button-inverted",
+            "placement": "top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Earn",
+            "context": "Navigation menu",
+            "purpose": "Signals investment earning features"
+          },
+          {
+            "text": "SYRUP Token",
+            "context": "Navigation menu",
+            "purpose": "Direct access to token information"
+          }
+        ],
+        "tone": "professional-technical with aspirational undertones",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-5-syrup-token-scrolled-1.png",
+      "label": "SYRUP Token — scrolled 1",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FF8A65",
+          "#4A90E2",
+          "#9B4D9B"
+        ],
+        "typography": {
+          "headingStyle": "Large serif centered headline",
+          "bodyStyle": "Sans-serif white body text on dark cards",
+          "dataStyle": "Large bold white pricing text with currency symbol"
+        },
+        "components": [
+          {
+            "type": "section-headline",
+            "description": "Centered headline spanning full width",
+            "position": "top",
+            "notable": "Serif typography creates premium feel"
+          },
+          {
+            "type": "card-grid",
+            "description": "Three equal-width benefit cards with numbered labels (01, 02, 03)",
+            "position": "center",
+            "notable": "Each card has distinct color accent (orange, blue, purple) matching token use cases"
+          },
+          {
+            "type": "pricing-display",
+            "description": "Large token price with icon",
+            "position": "bottom left",
+            "notable": "Prominent display of current SYRUP token price with visual icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered headline draws focus, three-card grid provides balanced information architecture, pricing anchors bottom",
+        "innovativeElements": [
+          "Color-coded benefit cards corresponding to token functions",
+          "Progressive numbered labeling (01, 02, 03) creates intuitive sequence"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand SYRUP token value proposition and current market price",
+        "entryPoints": [
+          "Scrolled down from hero section",
+          "SYRUP Token navigation link"
+        ],
+        "exitPoints": [
+          "Continue scrolling",
+          "Navigate to different section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Card 01, 02, 03",
+            "action": "Likely expandable or clickable for more detail"
+          }
+        ],
+        "informationArchitecture": "Three-pillar benefit structure (Share Success, Align with Growth, Shape Future) followed by pricing transparency",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Numbered labels (01, 02, 03) indicate sequence"
+        ]
+      },
+      "copy": {
+        "headline": "Own the Future of Asset Management Onchain",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Share in Maple's Success",
+            "context": "Card 01",
+            "purpose": "Token benefit proposition"
+          },
+          {
+            "text": "Align with Protocol Growth",
+            "context": "Card 02",
+            "purpose": "Incentive alignment narrative"
+          },
+          {
+            "text": "Shape Maple's future. Use your SYRUP to vote on key decisions and protocol enhancements.",
+            "context": "Card 03",
+            "purpose": "Governance value proposition"
+          }
+        ],
+        "tone": "professional-technical, visionary",
+        "dataFormatting": [
+          "$0.28 Token Price"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-6-insights.png",
+      "label": "Insights",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#FF8A65",
+          "#2C2C2C"
+        ],
+        "typography": {
+          "headingStyle": "Large serif centered headline",
+          "bodyStyle": "Sans-serif dark text on light backgrounds",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "section-headline",
+            "description": "Centered serif headline with underline",
+            "position": "top",
+            "notable": "Underline accent provides subtle visual emphasis"
+          },
+          {
+            "type": "filter-label",
+            "description": "'Featured' filter indicator",
+            "position": "above card grid",
+            "notable": "Suggests content can be filtered/browsed"
+          },
+          {
+            "type": "article-card-grid",
+            "description": "Three article cards in horizontal layout",
+            "position": "center",
+            "notable": "First two cards light gray background, third card dark brown with orange accent bar"
+          },
+          {
+            "type": "article-card",
+            "description": "Light colored article preview with title and 'Articles' label",
+            "position": "left and center",
+            "notable": "Clean minimal design with ample whitespace"
+          },
+          {
+            "type": "featured-article-card",
+            "description": "Dark featured article with orange bar and arrow CTA",
+            "position": "right",
+            "notable": "Darker treatment and right arrow indicate featured/promoted content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline anchors top, three cards displayed equally with featured card emphasized through darker styling and orange accent",
+        "innovativeElements": [
+          "Featured card styling with dark background and orange accent bar",
+          "Subtle underline on headline"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover educational content and featured articles about Maple protocol",
+        "entryPoints": [
+          "Insights navigation link",
+          "Scrolled down from previous section"
+        ],
+        "exitPoints": [
+          "Click article card",
+          "Continue scrolling",
+          "Return to navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article cards",
+            "action": "Navigate to full article"
+          },
+          {
+            "element": "Featured card arrow",
+            "action": "Navigate to featured article"
+          },
+          {
+            "element": "Filter/Featured label",
+            "action": "Likely reveals additional filter options"
+          }
+        ],
+        "informationArchitecture": "Content hub with featured section and article discovery; labeled categories indicate browsable content taxonomy",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Explore our Insights",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "→ (right arrow)",
+            "style": "text-link",
+            "placement": "bottom right of featured card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Featured",
+            "context": "Above card grid",
+            "purpose": "Content filtering/discovery signal"
+          },
+          {
+            "text": "Articles",
+            "context": "Top of each card",
+            "purpose": "Content type label"
+          },
+          {
+            "text": "Aave x Maple: Unlocking Yields for Exchanges, Fintechs and Neobanks",
+            "context": "Left card",
+            "purpose": "Article title showcasing partnership content"
+          },
+          {
+            "text": "Maple x Base: Bringing Institutional Asset Management to the Masses",
+            "context": "Center card",
+            "purpose": "Article title showcasing protocol expansion"
+          },
+          {
+            "text": "syrupUSDC and syrupUSDT: Built for Scale",
+            "context": "Right featured card",
+            "purpose": "Article title showcasing product launch"
+          }
+        ],
+        "tone": "professional-educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Partnership mentions (Aave, Base)",
+          "Product-focused titles (syrupUSDC, syrupUSDT)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-7-enter-app.png",
+      "label": "Enter App",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1a1a1a",
+          "#FF6B35",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, centered, ~48px, bold black",
+          "bodyStyle": "Medium gray sans-serif, ~16px, regular weight",
+          "dataStyle": "Large bold numbers with % symbol, right-aligned on cards"
+        },
+        "components": [
+          {
+            "type": "card",
+            "description": "syrupUSDC/USDT product card with gradient border (blue-to-orange)",
+            "position": "left side",
+            "notable": "Gradient accent border with colored dots along edge"
+          },
+          {
+            "type": "card",
+            "description": "Maple Institutional product card with shadow effect",
+            "position": "right side",
+            "notable": "Flat white background with drop shadow for depth"
+          },
+          {
+            "type": "button",
+            "description": "Black CTA buttons with arrow icon",
+            "position": "bottom of each card",
+            "notable": "High contrast black on light background"
+          },
+          {
+            "type": "badge",
+            "description": "APY percentage display",
+            "position": "top-right of each card",
+            "notable": "Large numbers emphasizing yield rates"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered headline draws attention, two equal-weight cards below create choice, APY rates are secondary focal points",
+        "innovativeElements": [
+          "Gradient border treatment on left card (teal→orange→red)",
+          "Asymmetric card styling (gradient border vs shadow) to differentiate products"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Choose between two yield earning products to begin",
+        "entryPoints": [
+          "App launch after authentication",
+          "Direct link to app welcome screen"
+        ],
+        "exitPoints": [
+          "Earn Now → product details/deposit flow",
+          "Login & Register → institutional signup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Earn Now button",
+            "action": "Navigate to syrupUSDC/USDT earning product"
+          },
+          {
+            "element": "Login & Register button",
+            "action": "Navigate to Maple Institutional signup/login"
+          }
+        ],
+        "informationArchitecture": "Binary choice presented as parallel comparison cards with key differentiators listed as bullet points",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Maple",
+        "subheadline": "Choose between these options below to start earning",
+        "ctas": [
+          {
+            "text": "Earn Now",
+            "style": "primary-button",
+            "placement": "bottom left card"
+          },
+          {
+            "text": "Login & Register",
+            "style": "primary-button",
+            "placement": "bottom right card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Liquid Yielding Dollar",
+            "context": "left card feature list",
+            "purpose": "Product name/category"
+          },
+          {
+            "text": "Institutional quality yield in a single, liquid asset",
+            "context": "left card benefits",
+            "purpose": "Value proposition"
+          },
+          {
+            "text": "Overcollateralized Loans",
+            "context": "left card features",
+            "purpose": "Key mechanism description"
+          },
+          {
+            "text": "Open for everyone (non-US)",
+            "context": "left card accessibility",
+            "purpose": "Geographic availability signal"
+          },
+          {
+            "text": "KYC required, minimum $100k",
+            "context": "right card requirements",
+            "purpose": "Barriers to entry for institutional product"
+          },
+          {
+            "text": "24/7 White glove service",
+            "context": "right card service",
+            "purpose": "Differentiation through premium support"
+          }
+        ],
+        "tone": "professional-technical, clear comparison-focused",
+        "dataFormatting": [
+          "4.5% APY",
+          "6.7% APY"
+        ],
+        "trustSignals": [
+          "Institutional quality yield",
+          "Overcollateralized loans structure",
+          "24/7 White glove service"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-8-articlesmaple-in-2025-data-review.png",
+      "label": "ArticlesMaple in 2025: Data Review",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1a1a1a",
+          "#FF6B35",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large serif/display font, centered, ~56px, black",
+          "bodyStyle": "Regular sans-serif, ~16px, dark gray",
+          "dataStyle": "Timestamp format, gray text"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Full-width dark hero with embedded content player",
+            "position": "center-top",
+            "notable": "Dark background with loading animation bars in orange/tan"
+          },
+          {
+            "type": "navigation",
+            "description": "Top header with logo and primary nav",
+            "position": "top",
+            "notable": "Minimal dark header, CTA buttons on right"
+          },
+          {
+            "type": "social-icons",
+            "description": "Share buttons for X, YouTube, Telegram",
+            "position": "below hero",
+            "notable": "Icon-only design, right-aligned"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered headline dominates, dark content area creates focal point, supporting text flows naturally",
+        "innovativeElements": [
+          "Loading state visualization with colored progress bars in hero",
+          "Minimalist navigation with sparse information density"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View/read content about Maple's 2025 performance review",
+        "entryPoints": [
+          "Homepage article link",
+          "Content navigation from main site"
+        ],
+        "exitPoints": [
+          "Share via social (X, YouTube, Telegram)",
+          "Navigate via header menu (Earn, Borrow, etc)",
+          "Click Enter App button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact Us button",
+            "action": "Navigate to contact form"
+          },
+          {
+            "element": "Enter App button",
+            "action": "Navigate to app login"
+          },
+          {
+            "element": "Social share icons",
+            "action": "Share to respective platform"
+          }
+        ],
+        "informationArchitecture": "Hero content with supporting narrative text below, sparse layout encourages reading",
+        "frictionPoints": [
+          "Loading state visible - content not immediately available"
+        ],
+        "progressIndicators": [
+          "Publication timestamp: 5m · Jan 23, 2026"
+        ]
+      },
+      "copy": {
+        "headline": "Maple in 2025: Data Review",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Contact Us",
+            "style": "ghost-button",
+            "placement": "top right"
+          },
+          {
+            "text": "Enter App",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "5m · Jan 23, 2026",
+            "context": "below hero",
+            "purpose": "Content recency indicator"
+          },
+          {
+            "text": "2025 marked a turning point for Maple and for onchain asset management as a category.",
+            "context": "body paragraph",
+            "purpose": "Content preview/hook"
+          }
+        ],
+        "tone": "professional-technical, editorial",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Recent publication date",
+          "Data-driven content focus"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-10-documentation.png",
+      "label": "Documentation",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FF6B35",
+          "#1a1a1a",
+          "#F8F8F8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, ~32px, black",
+          "bodyStyle": "Regular sans-serif, ~16px, dark gray or lighter gray for secondary",
+          "dataStyle": "Inline links in orange, monospace-style URLs"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with multi-level menu structure",
+            "position": "left",
+            "notable": "Section headers in caps, nested menu items with right arrows"
+          },
+          {
+            "type": "header",
+            "description": "Top bar with logo, search, and feedback widget",
+            "position": "top",
+            "notable": "Search bar with keyboard shortcuts (⌘ K), feedback emoji buttons"
+          },
+          {
+            "type": "main-content",
+            "description": "Large text area with introductory content",
+            "position": "center-right",
+            "notable": "Multi-paragraph narrative with inline links"
+          },
+          {
+            "type": "widget",
+            "description": "Helpful feedback widget (Was this helpful?)",
+            "position": "top-right",
+            "notable": "Three emoji reaction options (thumbs up, neutral, thumbs down)"
+          },
+          {
+            "type": "links-section",
+            "description": "Structured list of external resource links",
+            "position": "mid-right",
+            "notable": "Icon indicator showing external links, organized by category"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear left-to-right flow: navigation guides content selection, main area emphasizes readability, feedback widget creates engagement layer",
+        "innovativeElements": [
+          "Nested navigation with chevron indicators",
+          "Inline feedback collection with emoji",
+          "Search-focused header design"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Maple products and technical implementation across multiple chains",
+        "entryPoints": [
+          "From main website navigation",
+          "Direct documentation URL",
+          "Search engine"
+        ],
+        "exitPoints": [
+          "Navigate sidebar sections",
+          "Click external links (website, social, dashboards)",
+          "Search for specific topics",
+          "Contact via email/social"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Expand/navigate to sub-sections"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search documentation content"
+          },
+          {
+            "element": "External links",
+            "action": "Open resource in new tab"
+          },
+          {
+            "element": "Feedback emoji buttons",
+            "action": "Submit page helpfulness rating"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sidebar navigation with categorical grouping (Integrate, For Lenders, For Borrowers, Institutional), main content area displays detailed information for selected section",
+        "frictionPoints": [
+          "Long link list requires scrolling",
+          "Multiple navigation levels may require expansion"
+        ],
+        "progressIndicators": [
+          "Current page indicator in sidebar (implied by bolding)"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome to Maple",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "top-right of main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ask or search...",
+            "context": "search bar placeholder",
+            "purpose": "Directs user to search functionality"
+          },
+          {
+            "text": "Was this helpful?",
+            "context": "feedback widget",
+            "purpose": "Solicits page quality feedback"
+          },
+          {
+            "text": "Links:",
+            "context": "section header",
+            "purpose": "Introduces external resource list"
+          },
+          {
+            "text": "Website: www.maple.finance",
+            "context": "link list",
+            "purpose": "Provides primary web presence"
+          },
+          {
+            "text": "Powered by GitBook",
+            "context": "sidebar footer",
+            "purpose": "Platform attribution"
+          }
+        ],
+        "tone": "professional-technical, educational, informative",
+        "dataFormatting": [
+          "www.maple.finance",
+          "https://t.me/maplefinance",
+          "https://twitter.com/maplefinance",
+          "https://dune.com/maple-finance/maple-finance"
+        ],
+        "trustSignals": [
+          "Founded in 2019 by former bankers and credit professionals",
+          "Comprehensive documentation structure",
+          "Multiple verified social channels",
+          "Links to analytics dashboards (Dune, CoinGecko)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-5-articlesaave-x-maple-unlocking-yields-for-exchang.png",
+      "label": "ArticlesAave x Maple: Unlocking Yields for Exchang",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#ff6b35"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline (72px+), centered, black text",
+          "bodyStyle": "Clean sans-serif body text, white on dark backgrounds",
+          "dataStyle": "Monospace-style for timestamp (2m · Feb 06, 2026)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, dropdown menus (Earn, Borrow), token info, and CTA buttons",
+            "position": "Top fixed header",
+            "notable": "Clean separation between primary nav (Earn, Borrow, SYRUP Token, About, Insights) and secondary CTAs (Contact Us, Enter App)"
+          },
+          {
+            "type": "Article card",
+            "description": "Dark rounded container with orange/cream striped header accent, centered white text, dual logo badges",
+            "position": "Center of page",
+            "notable": "Aave and Maple logo merge creates visual partnership emphasis"
+          },
+          {
+            "type": "Social share buttons",
+            "description": "X, YouTube, Telegram icons",
+            "position": "Below article card",
+            "notable": "Subtle integration, grayscale design"
+          },
+          {
+            "type": "Chat support bubble",
+            "description": "Floating orange action button",
+            "position": "Bottom right corner",
+            "notable": "Persistent, non-intrusive engagement mechanism"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong focus on headline, then article card as focal point. White space guides eye down the page logically.",
+        "innovativeElements": [
+          "Striped accent bar at top of article card (orange and cream horizontals)",
+          "Overlapping circular logo badges create partnership visual metaphor",
+          "Minimal article preview—focuses on announcement rather than full content"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-article-announcement",
+        "userIntent": "Learn about Aave x Maple partnership and yield opportunities",
+        "entryPoints": [
+          "From Insights section",
+          "Direct link from marketing material",
+          "From Earn dropdown menu"
+        ],
+        "exitPoints": [
+          "Enter App (top right CTA)",
+          "Contact Us (top right)",
+          "Navigate via main menu",
+          "Share on social platforms",
+          "Click to read full article (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Earn dropdown",
+            "action": "Reveals yield options and strategies"
+          },
+          {
+            "element": "Enter App button",
+            "action": "Routes to main application"
+          },
+          {
+            "element": "Logo badges in article card",
+            "action": "Likely clickable to partner pages"
+          },
+          {
+            "element": "Social share icons",
+            "action": "Share article to X, YouTube, Telegram"
+          }
+        ],
+        "informationArchitecture": "Announcement-focused. Headline → Article preview card → Metadata → Sharing options. Heavy emphasis on partnership narrative.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Timestamp indicating recency (Feb 06, 2026)",
+          "Read time estimate (2m)"
+        ]
+      },
+      "copy": {
+        "headline": "Aave x Maple: Unlocking Yields for Exchanges, Fintechs and Neobanks",
+        "subheadline": "Unlocking Yields for Exchanges, Fintechs and Neobanks (repeated in card)",
+        "ctas": [
+          {
+            "text": "Enter App",
+            "style": "primary-button",
+            "placement": "Top right navbar"
+          },
+          {
+            "text": "Contact Us",
+            "style": "secondary-button",
+            "placement": "Top right navbar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "2m · Feb 06, 2026",
+            "context": "Below article card",
+            "purpose": "Establishes currency and recency of announcement"
+          },
+          {
+            "text": "Maple",
+            "context": "Below logo badges in card",
+            "purpose": "Confirms brand identity"
+          }
+        ],
+        "tone": "professional-technical, aspirational",
+        "dataFormatting": [
+          "2m (read time estimate)",
+          "Feb 06, 2026 (ISO-style date)"
+        ],
+        "trustSignals": [
+          "Partnership with Aave (major DeFi protocol)",
+          "Specific institutional targets (Exchanges, Fintechs, Neobanks)",
+          "Official branding and logos"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-6-articlesplasma-x-maple-the-yield-layer-for-stable.png",
+      "label": "ArticlesPlasma x Maple: The Yield Layer For Stable",
+      "flowType": "Staking",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#ff6b35"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headline (68px+), centered, black text with semantic bold emphasis",
+          "bodyStyle": "Clean sans-serif body text, white on dark backgrounds",
+          "dataStyle": "Monospace-style timestamp (2m · Jan 30, 2026)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Identical to previous screenshot—persistent top nav",
+            "position": "Top fixed header",
+            "notable": "Consistent design pattern across article pages"
+          },
+          {
+            "type": "Article card",
+            "description": "Dark rounded container with orange/cream striped header, white centered text, dual logo badges (Maple + Plasma)",
+            "position": "Center of page",
+            "notable": "Plasma logo features a distinctive radial/fan pattern design"
+          },
+          {
+            "type": "Key Metrics section",
+            "description": "Heading text visible at bottom of fold",
+            "position": "Below article card",
+            "notable": "Suggests expandable or scrollable metrics section"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, followed by featured article card. Key Metrics teaser at bottom invites scrolling.",
+        "innovativeElements": [
+          "Striped accent pattern creates visual continuity with previous article",
+          "Plasma logo's radial/pinwheel design differentiates protocol identity",
+          "'Key Metrics' section suggests rich data visualization below fold"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-article-announcement",
+        "userIntent": "Learn about Plasma x Maple partnership and stablecoin yield infrastructure",
+        "entryPoints": [
+          "From Insights section",
+          "Direct link from marketing material",
+          "From Earn dropdown menu",
+          "Related articles carousel"
+        ],
+        "exitPoints": [
+          "Enter App (top right CTA)",
+          "Contact Us (top right)",
+          "Scroll to Key Metrics section",
+          "Navigate via main menu",
+          "Share on social platforms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Earn dropdown",
+            "action": "Reveals yield and strategy options"
+          },
+          {
+            "element": "Enter App button",
+            "action": "Routes to main application"
+          },
+          {
+            "element": "Logo badges",
+            "action": "Likely link to partner protocol pages"
+          },
+          {
+            "element": "Key Metrics heading",
+            "action": "Implies scrollable/expandable data section"
+          }
+        ],
+        "informationArchitecture": "Partnership announcement with data narrative. Headline → Article preview → Metadata → Metrics teaser. Encourages scrolling to view supporting data.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Timestamp (Jan 30, 2026)",
+          "Read time estimate (2m)"
+        ]
+      },
+      "copy": {
+        "headline": "Plasma x Maple: The Yield Layer For Stablecoin Infrastructure",
+        "subheadline": "The Yield Layer For Plasma's Stablecoin Infrastructure (repeated in card)",
+        "ctas": [
+          {
+            "text": "Enter App",
+            "style": "primary-button",
+            "placement": "Top right navbar"
+          },
+          {
+            "text": "Contact Us",
+            "style": "secondary-button",
+            "placement": "Top right navbar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "2m · Jan 30, 2026",
+            "context": "Below article card",
+            "purpose": "Establishes publishing date and read time"
+          },
+          {
+            "text": "Key Metrics",
+            "context": "Section heading below card",
+            "purpose": "Signals data-rich content follows"
+          },
+          {
+            "text": "Maple",
+            "context": "Below logo badges",
+            "purpose": "Brand confirmation"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "2m (read time)",
+          "Jan 30, 2026 (ISO date)"
+        ],
+        "trustSignals": [
+          "Partnership with Plasma protocol",
+          "Focus on infrastructure (implies robust, foundational integration)",
+          "Institutional credibility via protocol pairing",
+          "Official logos and branding"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-11-security.png",
+      "label": "Security",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FF6B35"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (h1: ~48px), black text",
+          "bodyStyle": "Regular sans-serif, medium gray (#666), ~16px line-height 1.6",
+          "dataStyle": "Monospace-style links in orange (#FF6B35) with external link icon"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with hierarchical menu structure (sections and subsections)",
+            "position": "left edge",
+            "notable": "Collapsible security subsection with current page highlighted in orange"
+          },
+          {
+            "type": "breadcrumb-navigation",
+            "description": "Orange text breadcrumb showing TECHNICAL RESOURCES > SECURITY",
+            "position": "top of main content",
+            "notable": "Uses orange accent color to match brand"
+          },
+          {
+            "type": "data-table",
+            "description": "Two-column table with Auditor names and linked Report filenames",
+            "position": "main content area",
+            "notable": "Report links styled in orange with hover state, icon indicates external links"
+          },
+          {
+            "type": "right-sidebar-index",
+            "description": "Vertical list of audit release dates and security features",
+            "position": "right edge",
+            "notable": "Acts as quick-jump navigation to different audit sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title dominates, section headings create rhythm, tables provide structured data zones, sidebar index on right serves as secondary reference",
+        "innovativeElements": [
+          "Three-column layout optimizing for documentation browsing (navigation + content + index)",
+          "Orange accent color used consistently for actionable elements and current state"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review security audit reports and understand protocol security measures",
+        "entryPoints": [
+          "Sidebar navigation from Security submenu",
+          "Direct URL to security documentation page"
+        ],
+        "exitPoints": [
+          "Click audit report links to external documents",
+          "Navigate to other security subsections (List of Assumptions, External Entry Points, etc.)",
+          "Return to parent TECHNICAL RESOURCES section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to different documentation pages"
+          },
+          {
+            "element": "Orange report links",
+            "action": "Open external audit PDFs in new window"
+          },
+          {
+            "element": "Right-sidebar release links",
+            "action": "Jump to specific audit release section"
+          },
+          {
+            "element": "Copy button (top right)",
+            "action": "Copy page URL to clipboard"
+          }
+        ],
+        "informationArchitecture": "Hierarchical documentation structure - main sections branch into subsections, reports organized chronologically by release date, each release contains auditor details and report links",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Security",
+        "subheadline": "Audits",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "ghost-button",
+            "placement": "top-right of main content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Maple protocol contracts went through 3 audits during its development for the December 2022 release, details of which you can find below. All relevant issues identified by auditors were addressed prior to the launch of V2.",
+            "context": "Below December 2022 Release heading",
+            "purpose": "Explain audit scope and context for this release"
+          },
+          {
+            "text": "The Maple protocol contracts went through 2 audits during its development for the June 2023 release, details of which you can find below. All relevant issues identified by auditors were addressed prior to release.",
+            "context": "Below June 2023 Release heading",
+            "purpose": "Provide confidence that issues were resolved before launch"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: MMMM YYYY (e.g., December 2022)",
+          "Report links: YYYY-MM - Auditor Name Report (e.g., 2022-08 - Trail of Bits Report)"
+        ],
+        "trustSignals": [
+          "Multiple third-party auditors (Trail of Bits, Spearbit, Three Sigma)",
+          "Sequential release dates showing ongoing security improvements",
+          "Statement that all identified issues were addressed before launch",
+          "Comprehensive audit listings including Bug Bounty and monitoring functions"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-home-12-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FF6B35"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif font, very large (h1: ~72px), black, centered",
+          "bodyStyle": "Regular sans-serif, medium gray, ~20px, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top navigation bar with Maple logo, menu items (Earn, Borrow, SYRUP Token, About, Insights), and CTA buttons",
+            "position": "top",
+            "notable": "Black 'Enter App' button and gray 'Contact Us' button create visual hierarchy"
+          },
+          {
+            "type": "error-state-content",
+            "description": "Centered error messaging with large heading and descriptive text",
+            "position": "center viewport",
+            "notable": "Minimalist design emphasizes message clarity"
+          },
+          {
+            "type": "primary-cta-button",
+            "description": "Black button with white text 'Go to Homepage'",
+            "position": "below error message",
+            "notable": "Provides recovery path from error state"
+          },
+          {
+            "type": "decorative-footer",
+            "description": "Gradient band with orange and light orange stripes",
+            "position": "bottom of page",
+            "notable": "Branded color treatment adds personality to error page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation anchors top, large centered heading dominates viewport, supporting text underneath, recovery button below, decorative footer at bottom",
+        "innovativeElements": [
+          "Decorative gradient footer stripe uses brand colors to soften error experience",
+          "Maintained navigation bar encourages exploration of other site sections"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and find path back to valid content",
+        "entryPoints": [
+          "Direct navigation to invalid URL path",
+          "Broken link from another page",
+          "Typo in URL bar"
+        ],
+        "exitPoints": [
+          "Click 'Go to Homepage' to return to main site",
+          "Click main navigation items (Earn, Borrow, etc.) to browse other sections",
+          "Click 'Contact Us' for support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go to Homepage button",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to main sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Navigate to home page"
+          }
+        ],
+        "informationArchitecture": "Error page maintains global navigation context to enable user recovery without requiring back button",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Sorry, this page is not available",
+        "subheadline": "We could not find the page you are looking for.",
+        "ctas": [
+          {
+            "text": "Go to Homepage",
+            "style": "primary-button",
+            "placement": "below error message"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Sorry, this page is not available",
+          "We could not find the page you are looking for."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-1-syrupusdc-astroislandastroslotastrostaticslo.png",
+      "label": "syrupUSDC astro-island,astro-slot,astro-static-slo",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FF6B35"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (h2: ~32px), black, centered",
+          "bodyStyle": "Regular sans-serif, medium gray, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-dialog",
+            "description": "Centered white card with rounded corners on blurred background",
+            "position": "center viewport",
+            "notable": "Overlays blurred content, maintaining context awareness"
+          },
+          {
+            "type": "logo-icon",
+            "description": "Maple logo (curved lines) centered at top of modal",
+            "position": "top center of modal",
+            "notable": "Brand consistency and immediate recognition"
+          },
+          {
+            "type": "text-content",
+            "description": "Heading, descriptive text, and linked policy documents",
+            "position": "center of modal",
+            "notable": "Links styled in orange (#FF6B35) for visual emphasis"
+          },
+          {
+            "type": "button-group",
+            "description": "Two buttons: Cancel (white/outline) and Continue (black/filled)",
+            "position": "bottom of modal",
+            "notable": "Clear primary/secondary button hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo attracts initial attention, heading establishes purpose, body text provides context, linked policies highlight key information, buttons direct next action",
+        "innovativeElements": [
+          "Blurred background maintains environmental awareness while focusing attention",
+          "Modal design pattern common in modern web apps but effectively applied for terms acceptance"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Accept terms and conditions before accessing staking functionality",
+        "entryPoints": [
+          "User clicks 'Enter App' or attempts to access staking features"
+        ],
+        "exitPoints": [
+          "Click 'Continue' to accept and proceed to app",
+          "Click 'Cancel' to exit and return to previous screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue button",
+            "action": "Accept terms and proceed to staking app"
+          },
+          {
+            "element": "Cancel button",
+            "action": "Reject terms and return to previous screen"
+          },
+          {
+            "element": "Interface Terms of Use link",
+            "action": "Open terms document in new window"
+          },
+          {
+            "element": "Privacy Policy link",
+            "action": "Open privacy policy document in new window"
+          }
+        ],
+        "informationArchitecture": "Modal-first approach ensures user acknowledges legal requirements before proceeding, with easy access to supporting documents",
+        "frictionPoints": [
+          "Modal blocks access - user must read and respond",
+          "Requires scrolling or explicit acceptance rather than implicit continuation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Maple",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Continue",
+            "style": "primary-button",
+            "placement": "bottom-right of modal"
+          },
+          {
+            "text": "Cancel",
+            "style": "secondary-button",
+            "placement": "bottom-left of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "By clicking continue, you have read and agree to our",
+            "context": "Modal body text",
+            "purpose": "Communicate legal acknowledgment requirement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Interface Terms of Use",
+          "Privacy Policy",
+          "Explicit legal acknowledgment required"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-2-maple-institutional-secured-lending-67-apy.png",
+      "label": "Maple Institutional - Secured Lending 6.7 %APY",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FFA500"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headings (40-48px) with high contrast against white",
+          "bodyStyle": "Regular weight sans-serif body text in charcoal gray",
+          "dataStyle": "Bold large numerals for metrics ($154M, 6.7%) with supporting labels in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "metric-card",
+            "description": "Key performance indicators in 2x2 grid (Pool AUM, Collateral Ratio, Net APY, Collateral Assets)",
+            "position": "left panel, below headline",
+            "notable": "Collateral icons displayed with crypto symbol badges (Bitcoin, Ethereum, etc.)"
+          },
+          {
+            "type": "area-chart",
+            "description": "Growth visualization showing $1M-1.09M range over Jan-Nov timeline",
+            "position": "center-right, mid-page",
+            "notable": "Orange gradient fill with light background, clean axis labels"
+          },
+          {
+            "type": "performance-table",
+            "description": "Monthly returns comparison for 2024 and 2025 years",
+            "position": "right panel, below chart",
+            "notable": "Two-column year tabs with percentage returns per month"
+          },
+          {
+            "type": "cta-button",
+            "description": "Primary action button with rounded corners",
+            "position": "left panel, bottom",
+            "notable": "High-contrast black background with white text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left panel establishes product credibility (headline + metrics + CTA), center provides performance proof (chart), right shows detailed returns (table)",
+        "innovativeElements": [
+          "Crypto collateral badge display with multiple asset icons",
+          "Dual-year performance table with interactive tabs",
+          "Integrated product benefits section at bottom"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product-detail",
+        "userIntent": "Understand institutional lending product features, returns, and take action to lend",
+        "entryPoints": [
+          "Navigation 'Earn' dropdown",
+          "Direct product link from marketing",
+          "Homepage product showcase"
+        ],
+        "exitPoints": [
+          "Lend Now button (primary conversion)",
+          "Contact Us button (sales inquiry)",
+          "Navigation menu to other products",
+          "Enter App top-right button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Year tabs (2024/2025)",
+            "action": "Toggle between annual performance views"
+          },
+          {
+            "element": "Collateral badge with '+2'",
+            "action": "Likely expands to show additional collateral assets"
+          },
+          {
+            "element": "Lend Now button",
+            "action": "Initiates account creation or onboarding flow"
+          }
+        ],
+        "informationArchitecture": "Product overview → Key metrics → Proof of performance → Detailed monthly breakdown → Call to action",
+        "frictionPoints": [
+          "Multiple sections require scrolling to see complete picture",
+          "Institutional focus may not appeal to retail investors",
+          "Technical jargon (overcollateralization, collateral ratio) without tooltips"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Maple Institutional – Secured Lending",
+        "subheadline": "Overcollateralized loans to institutional borrowers, transparency backed by liquid digital assets, held in qualified custody.",
+        "ctas": [
+          {
+            "text": "Lend Now",
+            "style": "primary-button",
+            "placement": "Left panel, below metrics"
+          },
+          {
+            "text": "Contact Us",
+            "style": "secondary-button",
+            "placement": "Left panel, below Lend Now"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Growth of $1m deposited",
+            "context": "Above main chart",
+            "purpose": "Explains what the visualization represents"
+          },
+          {
+            "text": "Monthly Performance",
+            "context": "Right panel header",
+            "purpose": "Labels the performance table section"
+          },
+          {
+            "text": "Full Year",
+            "context": "Bottom of performance table",
+            "purpose": "Displays annualized return summary"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1,080,390 (growth metric with commas)",
+          "6.7% (APY in large bold)",
+          "$154M (Pool AUM)",
+          "135.0% (Collateral ratio with decimal precision)",
+          "1.23% (Monthly returns)"
+        ],
+        "trustSignals": [
+          "$154M Pool AUM (demonstrates scale)",
+          "135.0% Collateral Ratio (overprotection against risk)",
+          "6.7% Net APY (competitive return)",
+          "Qualified custody (regulatory compliance implied)",
+          "Institutional borrowers (premium counterparties)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-3-maple-institutional-secured-lending-67-apy-2024-tab.png",
+      "label": "Maple Institutional - Secured Lending 6.7 %APY — 2024 tab",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FFA500"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headings (40-48px) matching primary screenshot",
+          "bodyStyle": "Regular sans-serif body text in gray tones",
+          "dataStyle": "Bold numerals for percentages with light gray text labels and dashes for unavailable data"
+        },
+        "components": [
+          {
+            "type": "year-toggle",
+            "description": "Tab interface switching between 2024 and 2025 data",
+            "position": "Right panel, above performance table",
+            "notable": "2024 tab appears active (white background), 2025 appears inactive (light gray)"
+          },
+          {
+            "type": "performance-table",
+            "description": "Two-column monthly performance data with paired months (Jan/Feb, Mar/Apr, etc.)",
+            "position": "Right panel",
+            "notable": "Data shows 2024 view with some months showing dash (-) indicating missing data, others showing percentage returns"
+          },
+          {
+            "type": "metric-cards",
+            "description": "Same KPI display as previous screenshot",
+            "position": "Left panel",
+            "notable": "Pool AUM, Collateral Ratio, Net APY, Collateral assets unchanged"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to previous screenshot with emphasis on year-specific data in table",
+        "innovativeElements": [
+          "Dynamic data display updating based on selected year",
+          "Graceful handling of incomplete data with dashes"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product-detail-with-filter",
+        "userIntent": "Compare annual returns across different years to validate performance consistency",
+        "entryPoints": [
+          "Same as previous screenshot",
+          "Direct click on 2024 tab from default view"
+        ],
+        "exitPoints": [
+          "Same as previous screenshot",
+          "Switch back to 2025 tab view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "2024 tab",
+            "action": "Switches performance table to show 2024 monthly data"
+          },
+          {
+            "element": "2025 tab",
+            "action": "Switches performance table to show 2025 monthly data"
+          },
+          {
+            "element": "Lend Now button",
+            "action": "Conversion action (unchanged)"
+          }
+        ],
+        "informationArchitecture": "Same as previous screenshot, but with year-filtered data view",
+        "frictionPoints": [
+          "Partial 2024 data (Jan/Feb showing dashes) may confuse users",
+          "Need to toggle tabs to compare year-over-year returns",
+          "Full Year summary shows different values between tabs (10.28% vs 16.58%)"
+        ],
+        "progressIndicators": [
+          "Year tab selection indicator"
+        ]
+      },
+      "copy": {
+        "headline": "Maple Institutional – Secured Lending",
+        "subheadline": "Overcollateralized loans to institutional borrowers, transparency backed by liquid digital assets, held in qualified custody.",
+        "ctas": [
+          {
+            "text": "Lend Now",
+            "style": "primary-button",
+            "placement": "Left panel, below metrics"
+          },
+          {
+            "text": "Contact Us",
+            "style": "secondary-button",
+            "placement": "Left panel, below Lend Now"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "2024",
+            "context": "Tab label for year selection",
+            "purpose": "Indicates active data view"
+          },
+          {
+            "text": "2025",
+            "context": "Tab label for year selection",
+            "purpose": "Indicates alternative data view"
+          },
+          {
+            "text": "Full Year",
+            "context": "Performance table footer",
+            "purpose": "Annualized return summary (16.58% for 2024 data shown)"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "1.23% (monthly returns with percentage sign)",
+          "0% (zero return displayed as 0%)",
+          "- (dash for unavailable data points)",
+          "16.58% (full year return)"
+        ],
+        "trustSignals": [
+          "Historical performance data across multiple years",
+          "Consistent metrics ($154M Pool AUM, 6.7% Net APY)",
+          "135.0% Collateral Ratio maintained",
+          "Detailed monthly breakdown transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/maple-finance-staking-4-lend-now.png",
+      "label": "Lend Now",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#FF6B4A",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large serif headings (48px+) in white on dark background for right panel, sans-serif on light left panel",
+          "bodyStyle": "Regular sans-serif body text in gray on light background, white on dark background",
+          "dataStyle": "Not applicable to this screen"
+        },
+        "components": [
+          {
+            "type": "sign-up-form",
+            "description": "Account creation card with Google SSO and email input",
+            "position": "Left panel, centered card layout",
+            "notable": "Minimal design with Maple logo, Google authentication option prominently featured, email field with arrow submission icon"
+          },
+          {
+            "type": "benefits-cards",
+            "description": "Three feature cards highlighting product benefits",
+            "position": "Right panel, dark background with orange accent bar at top",
+            "notable": "Dark-themed benefit cards (High Yield, Risk Management, Customer Service) with descriptive text below headers"
+          },
+          {
+            "type": "authentication-button",
+            "description": "Google OAuth integration button",
+            "position": "Center of sign-up form",
+            "notable": "Google colors (G logo with multicolor design)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left panel draws users to signup action (white background, centered). Right panel provides reassurance (dark, benefits-focused). Orange accent bar at top creates visual separation.",
+        "innovativeElements": [
+          "Split-screen onboarding with benefits reinforcement",
+          "Orange accent bar spanning top of page",
+          "Asymmetric color treatment (light/dark) for psychological effect"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-sign-up",
+        "userIntent": "Create a Maple account to gain access to institutional lending opportunities",
+        "entryPoints": [
+          "Lend Now CTA from previous product page",
+          "Enter App top navigation",
+          "Direct URL to sign-up flow"
+        ],
+        "exitPoints": [
+          "Google OAuth redirect (create account via Google)",
+          "Email submission with arrow button (email-based signup)",
+          "Log In link (existing account recovery)",
+          "Terms of Service and Privacy Policy links (legal documents)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Continue with Google button",
+            "action": "Initiates OAuth flow to create account using Google credentials"
+          },
+          {
+            "element": "Email input field",
+            "action": "Text entry for account creation"
+          },
+          {
+            "element": "Arrow submit button",
+            "action": "Submits email to advance signup process"
+          },
+          {
+            "element": "Log In link",
+            "action": "Redirects existing users to login screen"
+          }
+        ],
+        "informationArchitecture": "Authentication options (Google SSO) → Email fallback → Legal agreement acknowledgment → Benefit reinforcement on complementary panel",
+        "frictionPoints": [
+          "Dual authentication paths may create decision paralysis",
+          "No visible password field (unclear if email-based signup requires later password setup)",
+          "Small, light-gray 'Log In' link may be missed by returning users",
+          "Terms/Privacy links are small and de-emphasized"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Create your Maple account",
+        "subheadline": "Create your account to have access to curated Opportunities in DeFi",
+        "ctas": [
+          {
+            "text": "Continue with Google",
+            "style": "social-auth-button",
+            "placement": "Center of sign-up form, primary action"
+          },
+          {
+            "text": "→ (Arrow submit)",
+            "style": "icon-button",
+            "placement": "Right side of email input field"
+          },
+          {
+            "text": "Log In",
+            "style": "text-link",
+            "placement": "Below email input, secondary action"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "OR",
+            "context": "Between Google button and email input",
+            "purpose": "Separates authentication methods"
+          },
+          {
+            "text": "Enter your email",
+            "context": "Email input placeholder text",
+            "purpose": "Guides user input expectation"
+          },
+          {
+            "text": "Already have an account?",
+            "context": "Before Log In link",
+            "purpose": "Contextualizes link for returning users"
+          },
+          {
+            "text": "By continuing, you agree to Maple Terms of Service and Privacy Policy",
+            "context": "Footer of sign-up form",
+            "purpose": "Legal compliance and consent acknowledgment"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Google OAuth integration (third-party validation)",
+          "Terms of Service and Privacy Policy links (regulatory transparency)",
+          "Benefit claims on right panel (High Yield, Risk Management, Customer Service)",
+          "Professional onboarding design (builds confidence)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

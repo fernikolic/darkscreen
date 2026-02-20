@@ -1,0 +1,1909 @@
+{
+  "slug": "nunchuk",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:38:28.287Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 14,
+  "screens": [
+    {
+      "image": "/screenshots/nunchuk-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFC107",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (48-56px), dark navy color",
+          "bodyStyle": "Regular weight sans-serif, 16px, dark gray, generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, menu items (Inheritance, Platform, Pricing, Resources, FAQ), and Sign in button",
+            "position": "Top fixed header",
+            "notable": "Dark navy Sign in button with rounded corners contrasts against light background"
+          },
+          {
+            "type": "Hero section",
+            "description": "Left side: large headline, subtext, two CTA buttons, app download badges",
+            "position": "Left 40% of viewport",
+            "notable": "Yellow primary button ('Plan my legacy') paired with outlined secondary button"
+          },
+          {
+            "type": "Product mockup",
+            "description": "iPhone displaying app interface with three golden cards (Security, Inheritance, Privacy) and key management options",
+            "position": "Right 60% of viewport",
+            "notable": "3D perspective rendering with glossy golden UI elements and floating key icons"
+          },
+          {
+            "type": "Cookie consent banner",
+            "description": "Dark footer banner with cookie policy link and Accept/Decline buttons",
+            "position": "Bottom",
+            "notable": "White buttons on dark background for high contrast"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-to-right flow: headline anchors attention, subtext provides detail, CTAs drive action, right side showcases product",
+        "innovativeElements": [
+          "3D isometric iPhone mockup with floating card elements and subtle shadow depth",
+          "Golden accent color used exclusively for security/inheritance features on product display",
+          "Geometric line pattern background suggesting circuit/blockchain topology"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Nunchuk does and either sign up or explore the platform",
+        "entryPoints": [
+          "Direct website visit",
+          "Marketing campaign link",
+          "Search engine results"
+        ],
+        "exitPoints": [
+          "Plan my legacy (conversion)",
+          "Explore the platform (product demo/walkthrough)",
+          "Sign in (existing user)",
+          "App Store/Google Play links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Plan my legacy button",
+            "action": "Navigate to onboarding or sign-up flow"
+          },
+          {
+            "element": "Explore the platform button",
+            "action": "Navigate to platform tour or feature overview"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Link to specific feature pages (Inheritance, Platform, Pricing, Resources, FAQ)"
+          },
+          {
+            "element": "App Store / Google Play badges",
+            "action": "Open respective app stores"
+          }
+        ],
+        "informationArchitecture": "Value proposition → product showcase → call-to-action, with secondary navigation for deeper exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "SECURE YOUR BITCOIN FOR GENERATIONS",
+        "subheadline": "The first Bitcoin inheritance solution designed to outlive the company that created it. Built on the most advanced multisig platform. Trust-minimized. Zero KYC.",
+        "ctas": [
+          {
+            "text": "Plan my legacy",
+            "style": "primary-button",
+            "placement": "Hero section, left side"
+          },
+          {
+            "text": "Explore the platform",
+            "style": "ghost-button",
+            "placement": "Hero section, left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Download on the App Store",
+            "context": "App Store badge",
+            "purpose": "Drive mobile app installation"
+          },
+          {
+            "text": "GET IT ON Google Play",
+            "context": "Google Play badge",
+            "purpose": "Drive mobile app installation"
+          }
+        ],
+        "tone": "professional-technical, authoritative, trust-building",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Zero KYC",
+          "Trust-minimized architecture",
+          "Most advanced multisig platform"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFC107",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (48-56px), dark navy color",
+          "bodyStyle": "Regular weight sans-serif, 16px, dark gray, generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Cookie consent banner",
+            "description": "Modal overlay at bottom with policy text, cookie policy link, and two action buttons",
+            "position": "Bottom of screen, full width",
+            "notable": "High contrast white buttons (Accept/Decline) on dark navy background for accessibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Banner positioned to interrupt hero content appropriately without obscuring primary CTA",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Acknowledge cookie policy and proceed with site browsing",
+        "entryPoints": [
+          "Automatic display on first landing page visit"
+        ],
+        "exitPoints": [
+          "Accept (dismiss banner, enable cookies)",
+          "Decline (dismiss banner, disable cookies)",
+          "Read Cookies Policy (external link)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept button",
+            "action": "Accept all cookies and dismiss banner"
+          },
+          {
+            "element": "Decline button",
+            "action": "Reject cookies and dismiss banner"
+          },
+          {
+            "element": "Cookies Policy link",
+            "action": "Open detailed cookie policy page"
+          }
+        ],
+        "informationArchitecture": "Compliance-first messaging with clear action options",
+        "frictionPoints": [
+          "Banner obscures lower portion of hero content",
+          "Equal visual weight on Accept/Decline might create decision friction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "Banner right side"
+          },
+          {
+            "text": "Decline",
+            "style": "primary-button",
+            "placement": "Banner right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We use cookies to enhance your user experience. Read our Cookies Policy.",
+            "context": "Banner message",
+            "purpose": "Comply with GDPR/ePrivacy regulations while explaining cookie usage"
+          }
+        ],
+        "tone": "professional-technical, compliant",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy-forward messaging"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-4-inheritance.png",
+      "label": "Inheritance",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFC107",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps sans-serif, very large (48-56px), dark navy color",
+          "bodyStyle": "Regular weight sans-serif, 16px, dark gray for body; bold for labels",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, menu items, and Sign in button",
+            "position": "Top fixed header",
+            "notable": "Consistent with landing page navigation"
+          },
+          {
+            "type": "Headline section",
+            "description": "Large all-caps headline with supporting paragraphs",
+            "position": "Top of content area, full width",
+            "notable": "Multi-line headline broken into three lines for emphasis"
+          },
+          {
+            "type": "Educational link",
+            "description": "Inline text link to 'Definitive Guide to Bitcoin Inheritance'",
+            "position": "Body text area",
+            "notable": "Text link with arrow icon, targets new users"
+          },
+          {
+            "type": "Toggle selector",
+            "description": "Two-option toggle between 'On-chain timelock' and 'Off-chain timelock'",
+            "position": "Below introductory text",
+            "notable": "Rounded pill-style buttons with one active (white) and one inactive (gray)"
+          },
+          {
+            "type": "Chat widget",
+            "description": "Floating chat button in bottom right corner",
+            "position": "Bottom right",
+            "notable": "Navy background with white text 'Have a question? Chat with us'"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates upper third, body text leads to toggle selection, chat widget encourages engagement",
+        "innovativeElements": [
+          "Toggle-based feature comparison for two distinct inheritance methods",
+          "Integration of educational content link within copy flow"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about inheritance solutions and choose between timelock options",
+        "entryPoints": [
+          "Navigation click from landing page",
+          "Direct URL visit",
+          "Click from Inheritance nav item"
+        ],
+        "exitPoints": [
+          "Select On-chain timelock (likely leads to feature details/comparison)",
+          "Select Off-chain timelock (likely leads to feature details/comparison)",
+          "Read Definitive Guide (external link)",
+          "Chat with support via widget",
+          "Navigate to other sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "On-chain timelock toggle",
+            "action": "Display on-chain method details and comparison"
+          },
+          {
+            "element": "Off-chain timelock toggle",
+            "action": "Display off-chain method details and comparison"
+          },
+          {
+            "element": "Definitive Guide link",
+            "action": "Navigate to guide article"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open support chat"
+          }
+        ],
+        "informationArchitecture": "Hero copy → educational callout → feature comparison selectors → support options",
+        "frictionPoints": [
+          "No visible content below toggle selection—user may not know what happens next",
+          "Copy is dense and technical; may be overwhelming for beginners"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "THE NEW STANDARD FOR BITCOIN INHERITANCE.",
+        "subheadline": "Introducing the first autonomous inheritance solution, designed to outlive us. Choose our breakthrough on-chain timelock or our proven off-chain recovery. Both include ongoing support and guided claims for your heirs. Always non-custodial. Always zero KYC.",
+        "ctas": [
+          {
+            "text": "Read our Definitive Guide to Bitcoin Inheritance first",
+            "style": "text-link",
+            "placement": "Body text, after 'New to estate planning?' label"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "New to estate planning?",
+            "context": "Label before guide link",
+            "purpose": "Segment users and provide contextual education"
+          },
+          {
+            "text": "Select timelock type to explore:",
+            "context": "Label above toggle selector",
+            "purpose": "Explain the purpose of the toggle component"
+          },
+          {
+            "text": "On-chain timelock",
+            "context": "Active toggle option",
+            "purpose": "Label for first inheritance method"
+          },
+          {
+            "text": "Off-chain timelock",
+            "context": "Inactive toggle option",
+            "purpose": "Label for second inheritance method"
+          }
+        ],
+        "tone": "professional-technical, educational, authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Autonomous solution",
+          "Always non-custodial",
+          "Always zero KYC",
+          "Ongoing support and guided claims"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-5-platform.png",
+      "label": "Platform",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFFFFF",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps, large serif-like sans-serif, high contrast dark navy",
+          "bodyStyle": "Regular weight, medium-length paragraphs, dark navy text on light background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav bar with logo, menu items, and sign-in button",
+            "position": "top",
+            "notable": "Clean, minimal, professional with dark navy primary button"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline spanning full width above fold",
+            "position": "above-fold",
+            "notable": "Single compelling headline with no supporting visuals, emphasizes security and UX duality"
+          },
+          {
+            "type": "three-column-text",
+            "description": "Three columns of body text explaining problems and solution",
+            "position": "below-fold",
+            "notable": "Educational narrative structure, problem-problem-solution flow"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating chat button in bottom right corner",
+            "position": "bottom-right",
+            "notable": "Dark navy rounded square with chat icon and text label"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates immediately, body text descends into supporting columns, white space separates sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand the core value proposition of Nunchuk Wallet platform",
+        "entryPoints": [
+          "Direct navigation from Platform menu item",
+          "External link from marketing materials"
+        ],
+        "exitPoints": [
+          "Sign in button",
+          "Menu navigation to Inheritance/Pricing/Resources",
+          "Chat widget"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign in button",
+            "action": "Directs to authentication/login"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections (Inheritance, Platform, Pricing, Resources, FAQ)"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Opens support chat interface"
+          }
+        ],
+        "informationArchitecture": "Linear narrative: problem identification → problem complexity → solution overview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "NUNCHUK WALLET: CUTTING-EDGE SECURITY MEETS USER-CENTRIC DESIGN",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Have a question? Chat with us",
+            "style": "ghost-button",
+            "placement": "bottom-right floating widget"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "THE PROBLEMS",
+            "context": "Section heading",
+            "purpose": "Frames upcoming content as problem statement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-6-pricing.png",
+      "label": "Pricing",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FCD34D",
+          "#A8D5D0",
+          "#2D5A5A"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps, navy color, large size",
+          "bodyStyle": "Regular weight, medium size, navy text, 3-4 line descriptions",
+          "dataStyle": "Large bold price numbers with $ sign and /year suffix, navy color"
+        },
+        "components": [
+          {
+            "type": "headline",
+            "description": "Centered all-caps section title",
+            "position": "top-center",
+            "notable": "Clear value proposition statement"
+          },
+          {
+            "type": "pricing-card",
+            "description": "Three distinct cards with pricing tiers",
+            "position": "grid layout",
+            "notable": "Progressive visual escalation: light gray → light mint → dark teal; badge on premium tier"
+          },
+          {
+            "type": "feature-checklist",
+            "description": "Checkmark-prefixed feature lists within each card",
+            "position": "card-body",
+            "notable": "Consistent checkmark icon, scannable format"
+          },
+          {
+            "type": "primary-cta",
+            "description": "Bright yellow rounded button",
+            "position": "card center",
+            "notable": "Consistent across all tiers, high contrast"
+          },
+          {
+            "type": "secondary-cta",
+            "description": "Outlined button with border",
+            "position": "below primary CTA",
+            "notable": "Testnet option reduces commitment friction"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Free plan left (baseline), Iron Hand center (recommended visual treatment with badge), Honey Badger right (darkest/premium visual treatment); price is visual anchor within each card",
+        "innovativeElements": [
+          "Ribbon badge indicating 'Most popular' tier",
+          "Color-coded tier visual progression"
+        ]
+      },
+      "flow": {
+        "screenType": "pricing",
+        "userIntent": "Compare pricing tiers and select appropriate plan",
+        "entryPoints": [
+          "Pricing menu item",
+          "Sign in flow upsell"
+        ],
+        "exitPoints": [
+          "Subscribe now button per tier",
+          "Try on testnet button",
+          "Sign in button (top)",
+          "Other navigation items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe now button",
+            "action": "Initiates subscription purchase flow for selected tier"
+          },
+          {
+            "element": "Try on testnet for free button",
+            "action": "Routes to testnet trial without payment"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Opens support interface"
+          }
+        ],
+        "informationArchitecture": "Tiered comparison with clear feature differentiation; free option on left, increases in capability/price moving right",
+        "frictionPoints": [
+          "Feature descriptions in Honey Badger card truncated (text cut off at bottom)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "A PLAN FOR EVERY NEED",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Join for free",
+            "style": "primary-button",
+            "placement": "Free tier card"
+          },
+          {
+            "text": "Subscribe now",
+            "style": "primary-button",
+            "placement": "Iron Hand and Honey Badger cards"
+          },
+          {
+            "text": "Try on testnet for free",
+            "style": "secondary-button",
+            "placement": "Iron Hand and Honey Badger cards"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FREE",
+            "context": "Tier name",
+            "purpose": "Tier identifier"
+          },
+          {
+            "text": "IRON HAND",
+            "context": "Tier name",
+            "purpose": "Tier identifier with personality"
+          },
+          {
+            "text": "HONEY BADGER",
+            "context": "Tier name",
+            "purpose": "Premium tier identifier with personality"
+          },
+          {
+            "text": "The cypherpunk's dream. Take custody into your own hands.",
+            "context": "Free tier description",
+            "purpose": "Appeals to self-custody ideology"
+          },
+          {
+            "text": "The starter pack. Secure your bitcoin with multisig, one-tap signing and cloud backups.",
+            "context": "Iron Hand tier description",
+            "purpose": "Value proposition for entry-level paid users"
+          },
+          {
+            "text": "Our flagship inheritance package. Choose between maximum autonomy (on-chain timelock) or assisted flexibility (off-chain timelock). No KYC required.",
+            "context": "Honey Badger tier description",
+            "purpose": "Premium feature highlight with privacy emphasis"
+          },
+          {
+            "text": "Most popular",
+            "context": "Honey Badger badge",
+            "purpose": "Social proof nudge toward premium tier"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "$ 0",
+          "$ 120 / year",
+          "$ 480 / year"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-7-for-families-groups.png",
+      "label": "For families & groups",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#001F3F",
+          "#FCD34D",
+          "#C5D9DD",
+          "#1F3E5C"
+        ],
+        "typography": {
+          "headingStyle": "Bold, all-caps, navy, large",
+          "bodyStyle": "Regular weight, medium size, dark navy, 2-3 line descriptions",
+          "dataStyle": "Large bold prices with $ and /year suffix, white text on Finney Pro, dark on Finney Standard"
+        },
+        "components": [
+          {
+            "type": "section-headline",
+            "description": "Centered all-caps heading",
+            "position": "top",
+            "notable": "Targets specific user segment"
+          },
+          {
+            "type": "comparison-card",
+            "description": "Two side-by-side tier cards for Finney product line",
+            "position": "grid",
+            "notable": "Left card light (Standard/recommended), right card dark navy (Pro)"
+          },
+          {
+            "type": "product-badge",
+            "description": "Inline badge with product name and variant",
+            "position": "card header",
+            "notable": "Standard vs Pro designation with icon"
+          },
+          {
+            "type": "ribbon-badge",
+            "description": "Yellow diagonal ribbon on Standard card",
+            "position": "top-right corner",
+            "notable": "Recommended status indicator"
+          },
+          {
+            "type": "feature-list",
+            "description": "Checkmark-prefixed features",
+            "position": "card body",
+            "notable": "Consistent icon styling, clear feature hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws focus, two equal-weight cards side-by-side with color contrast directing to Standard first (light), Pro emphasized through dark premium color; features listed in order of importance",
+        "innovativeElements": [
+          "Dual-product positioning for specific use case (families & groups)",
+          "Color-coded tier comparison (light recommended vs dark premium)"
+        ]
+      },
+      "flow": {
+        "screenType": "pricing-comparison",
+        "userIntent": "Understand Finney product options for team/family setups and select appropriate tier",
+        "entryPoints": [
+          "Pricing section navigation",
+          "Marketing campaign"
+        ],
+        "exitPoints": [
+          "Subscribe now button",
+          "Try on testnet button",
+          "Chat widget",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe now button",
+            "action": "Initiates subscription for selected Finney tier"
+          },
+          {
+            "element": "Try on testnet for free button",
+            "action": "Routes to testnet trial"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Opens support"
+          }
+        ],
+        "informationArchitecture": "Product-focused comparison: both tiers aligned side-by-side with feature differentiation; Standard recommended for baseline, Pro for advanced use",
+        "frictionPoints": [
+          "Feature list in Standard card truncated at bottom"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "MULTISIG FOR FAMILIES & GROUPS",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Subscribe now",
+            "style": "primary-button",
+            "placement": "Both Finney cards"
+          },
+          {
+            "text": "Try on testnet for free",
+            "style": "secondary-button",
+            "placement": "Both Finney cards"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FINNEY",
+            "context": "Product name header",
+            "purpose": "Product identifier"
+          },
+          {
+            "text": "STANDARD",
+            "context": "Tier variant badge",
+            "purpose": "Tier designation"
+          },
+          {
+            "text": "PRO",
+            "context": "Tier variant badge with icon",
+            "purpose": "Premium tier designation"
+          },
+          {
+            "text": "Recommended",
+            "context": "Ribbon badge on Standard",
+            "purpose": "Social proof directing users to starter option"
+          },
+          {
+            "text": "State-of-the-art, multi-user multisig wallet with essential collaboration tools. Bring your own keys. 2-of-3 security.",
+            "context": "Finney Standard description",
+            "purpose": "Value prop for entry collaborative wallet"
+          },
+          {
+            "text": "State-of-the-art, multi-user multisig wallet with essential collaboration tools. Bring your own keys. 3-of-5 security.",
+            "context": "Finney Pro description",
+            "purpose": "Value prop highlighting increased security level"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$ 250 per wallet per year",
+          "$ 750 per wallet per year"
+        ],
+        "trustSignals": [
+          "No KYC required",
+          "Distributed setup",
+          "Multi-device sync",
+          "Key health check system"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-8-for-advisors.png",
+      "label": "For advisors",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width hero with centered content and illustration",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0F1E2E",
+          "#FFFFFF",
+          "#F4C430"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, all caps, dark navy, centered",
+          "bodyStyle": "Regular sans-serif, dark gray, centered, moderate line-height",
+          "dataStyle": "Monospace or slightly technical in wallet cards showing BTC amounts and balances"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, menu items (Inheritance, Platform, Pricing, Resources, FAQ), and Sign in button",
+            "position": "Top fixed",
+            "notable": "Clean minimalist design with dark CTA button"
+          },
+          {
+            "type": "Hero heading",
+            "description": "Large centered title about Byzantine collaborative custody",
+            "position": "Center top",
+            "notable": "Uses specific product name and wealth-focused messaging"
+          },
+          {
+            "type": "Illustration with personas",
+            "description": "Three circular avatars (Client, Advisor, Beneficiary) connected by golden lines representing relationship/custody flow",
+            "position": "Lower center and right",
+            "notable": "Visual representation of multi-party custody model with role labels"
+          },
+          {
+            "type": "Mobile mockup",
+            "description": "Embedded screenshot showing wallet dashboard with multiple client accounts and Bitcoin holdings",
+            "position": "Center-right",
+            "notable": "Shows real app interface with green accent for active state"
+          },
+          {
+            "type": "QR code card",
+            "description": "Quick Receive section with QR code and chat widget overlay",
+            "position": "Right side of mockup",
+            "notable": "Chat widget in bottom right corner"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down flow from headline to subheadline to CTA to detailed illustration showing custody relationships",
+        "innovativeElements": [
+          "Golden connecting lines between personas suggesting wealth transfer",
+          "Integrated mobile mockup within illustration to show real product",
+          "Role-based badges (Advisor, Client, Beneficiary) positioned contextually"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand how Nunchuk Byzantine enables multi-party custody for wealth inheritance",
+        "entryPoints": [
+          "Direct navigation from Inheritance menu",
+          "Marketing campaign link",
+          "Web search for crypto inheritance solutions"
+        ],
+        "exitPoints": [
+          "Join Byzantine CTA button",
+          "Navigate to Platform/Pricing via top menu",
+          "Sign in if existing user"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Join Byzantine button",
+            "action": "Primary CTA, likely leads to signup or detailed product page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Switch between product sections (Inheritance, Platform, Pricing)"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Takes existing users to authentication"
+          }
+        ],
+        "informationArchitecture": "Value proposition at top, visual proof of concept in center, clear relationship model with personas",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BYZANTINE: COLLABORATIVE CUSTODY FOR GENERATIONAL WEALTH",
+        "subheadline": "Help clients secure bitcoin and pass on wealth to future generations.",
+        "ctas": [
+          {
+            "text": "Join Byzantine",
+            "style": "primary-button",
+            "placement": "Center, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Advisor (you)",
+            "context": "Yellow badge on center persona",
+            "purpose": "Role identification in custody relationship"
+          },
+          {
+            "text": "Client",
+            "context": "Yellow badge on left persona",
+            "purpose": "Role identification in custody relationship"
+          },
+          {
+            "text": "Beneficiary",
+            "context": "Yellow badge on right persona",
+            "purpose": "Role identification in custody relationship"
+          },
+          {
+            "text": "10 BTC / $294,528.00",
+            "context": "Wallet display in mobile mockup",
+            "purpose": "Demonstrates real asset holdings"
+          },
+          {
+            "text": "Have a question? Chat with us",
+            "context": "Bottom right chat widget",
+            "purpose": "Support accessibility"
+          }
+        ],
+        "tone": "professional-technical, wealth-focused, advisory",
+        "dataFormatting": [
+          "10 BTC (cryptocurrency format)",
+          "$294,528.00 (USD equivalent in standard currency format)",
+          "2/4 Multisig, 3 Assistants (technical specification)"
+        ],
+        "trustSignals": [
+          "Specific product name (Byzantine) suggests established solution",
+          "Multi-party custody model (2/4 Multisig) demonstrates security architecture"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-9-claiming-inheritance.png",
+      "label": "Claiming inheritance",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width stacked with sidebar navigation",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0F1E2E",
+          "#FFFFFF",
+          "#F4C430"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, all caps, dark navy, left-aligned",
+          "bodyStyle": "Regular sans-serif, dark gray, left-aligned, moderate line-height",
+          "dataStyle": "Monospace or slightly technical for app store badges"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, menu items, and Sign in button",
+            "position": "Top fixed",
+            "notable": "Consistent across page"
+          },
+          {
+            "type": "Tab selection",
+            "description": "Two-option toggle: 'Claiming with Nunchuk service' (selected/white) and 'Self claim' (inactive/gray)",
+            "position": "Below headline",
+            "notable": "Pill-shaped toggle design with clear active state"
+          },
+          {
+            "type": "Numbered section headings",
+            "description": "Three steps: 01. Prepare Materials, 02. Download App and Create Account, 03. Initiate the Claim",
+            "position": "Main content area",
+            "notable": "Clear progressive numbering with bold step titles"
+          },
+          {
+            "type": "App store badges",
+            "description": "Apple App Store and Google Play Store download buttons",
+            "position": "Under step 02",
+            "notable": "Standard dark badges with white text and icons"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > subheadline explaining choice > tab selection > progressive numbered steps with increasing detail",
+        "innovativeElements": [
+          "Conditional content switching via tabs without page reload",
+          "Clear step-by-step guidance for sensitive financial operation"
+        ]
+      },
+      "flow": {
+        "screenType": "educational-guide",
+        "userIntent": "Learn the process for claiming a crypto inheritance using Nunchuk's service",
+        "entryPoints": [
+          "Inheritance menu link",
+          "From Byzantine product page",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Switch to 'Self claim' tab to see alternative method",
+          "Download app from provided links",
+          "Continue to account creation flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab toggle ('Claiming with Nunchuk service' / 'Self claim')",
+            "action": "Switch between two different claim procedures"
+          },
+          {
+            "element": "App Store badge (Apple)",
+            "action": "Navigate to Apple App Store"
+          },
+          {
+            "element": "Play Store badge (Google)",
+            "action": "Navigate to Google Play Store"
+          }
+        ],
+        "informationArchitecture": "Decision tree (service vs self-claim) followed by sequential instruction steps",
+        "frictionPoints": [
+          "Multiple prerequisites (Magic Phrase, Backup Password, Inheritance Key) must be gathered before proceeding",
+          "Emphasis on app verification (IMPORTANT callout) adds cognitive load"
+        ],
+        "progressIndicators": [
+          "Numbered steps (01, 02, 03) indicate progress through the claim process"
+        ]
+      },
+      "copy": {
+        "headline": "HOW TO CLAIM AN INHERITANCE",
+        "subheadline": "Depending on your inheritance plan package, you can choose to claim with Nunchuk service or recover it yourself.",
+        "ctas": [
+          {
+            "text": "Claiming with Nunchuk service",
+            "style": "primary-toggle",
+            "placement": "Top of content area"
+          },
+          {
+            "text": "Self claim",
+            "style": "secondary-toggle",
+            "placement": "Top of content area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Have the Magic Phrase ready, along with either the Backup Password or the Inheritance Key seed phrase shared by the inheritance plan owner.",
+            "context": "Under step 01 - Prepare Materials",
+            "purpose": "Lists required materials for claim process"
+          },
+          {
+            "text": "Download the Nunchuk app from the App Store (IMPORTANT: please verify that the app was developed by Nunchuk). The claimant should sign up for their own account, separate from the owner's.",
+            "context": "Under step 02 - Download App and Create Account",
+            "purpose": "Security instruction and account setup guidance"
+          },
+          {
+            "text": "Sign in to the claimant's account on the mobile app. Go to the Services tab and tap Claim an inheritance. Enter the Magic Phrase if prompted, and provide any additional details requested, such as the Backup Password or the Inheritance Key seed phrase.",
+            "context": "Under step 03 - Initiate the Claim",
+            "purpose": "Detailed procedural steps"
+          }
+        ],
+        "tone": "professional-technical, instructional, security-conscious",
+        "dataFormatting": [
+          "Magic Phrase (specific term)",
+          "Backup Password (specific term)",
+          "Inheritance Key seed phrase (specific term)"
+        ],
+        "trustSignals": [
+          "Emphasis on app verification to prevent spoofing",
+          "Requirement for separate accounts to prevent unauthorized access"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-10-claiming-inheritance-self-claim-tab.png",
+      "label": "Claiming inheritance — Self claim tab",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width stacked with sidebar navigation",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0F1E2E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, all caps, dark navy, left-aligned",
+          "bodyStyle": "Regular sans-serif, dark gray, left-aligned, moderate line-height",
+          "dataStyle": "Monospace or slightly technical for technical instructions"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation consistent with previous screens",
+            "position": "Top fixed",
+            "notable": "Same as prior screens"
+          },
+          {
+            "type": "Tab selection",
+            "description": "Two-option toggle: 'Claiming with Nunchuk service' (inactive/gray) and 'Self claim' (selected/white)",
+            "position": "Below headline",
+            "notable": "Reversed from previous screenshot - Self claim is now active"
+          },
+          {
+            "type": "Numbered section headings",
+            "description": "Three steps: 01. Prepare Materials, 02. Download and Verify the Application, with expanded step 02",
+            "position": "Main content area",
+            "notable": "Different step titles than service-based flow"
+          },
+          {
+            "type": "App store badges",
+            "description": "Apple App Store and Google Play Store download buttons",
+            "position": "Under step 02",
+            "notable": "Standard dark badges"
+          },
+          {
+            "type": "Nested bullet points",
+            "description": "Option A (Official App Stores) and Option B (Open Source / Sovereign Backup)",
+            "position": "Under step 02",
+            "notable": "Provides two paths with clear differentiation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline > subheadline > active tab > progressive numbered steps with nested options",
+        "innovativeElements": [
+          "Dual-path architecture (Official vs Open Source) for security and sovereignty",
+          "Emphasis on verification and sovereign backup option suggests security-first design philosophy"
+        ]
+      },
+      "flow": {
+        "screenType": "educational-guide",
+        "userIntent": "Learn the process for self-claiming a crypto inheritance without Nunchuk service intermediation",
+        "entryPoints": [
+          "From 'Claiming with Nunchuk service' tab by clicking 'Self claim'",
+          "Direct URL navigation to self-claim instructions"
+        ],
+        "exitPoints": [
+          "Switch back to 'Claiming with Nunchuk service' tab",
+          "Download app from provided links",
+          "Continue to reconstruction and signing process"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Tab toggle ('Claiming with Nunchuk service' / 'Self claim')",
+            "action": "Switch between two different claim procedures"
+          },
+          {
+            "element": "App Store badge (Apple)",
+            "action": "Navigate to Apple App Store"
+          },
+          {
+            "element": "Play Store badge (Google)",
+            "action": "Navigate to Google Play Store"
+          }
+        ],
+        "informationArchitecture": "Sequential instruction steps with branching paths for app acquisition (official stores vs open source)",
+        "frictionPoints": [
+          "Self-claim requires wallet configuration file (BSMS) and seed phrase instead of Magic Phrase",
+          "Two app acquisition options may create decision paralysis",
+          "More technical requirements than service-based claim path"
+        ],
+        "progressIndicators": [
+          "Numbered steps (01, 02) indicate progress through preparation and verification"
+        ]
+      },
+      "copy": {
+        "headline": "HOW TO CLAIM AN INHERITANCE",
+        "subheadline": "Depending on your inheritance plan package, you can choose to claim with Nunchuk service or recover it yourself.",
+        "ctas": [
+          {
+            "text": "Claiming with Nunchuk service",
+            "style": "secondary-toggle",
+            "placement": "Top of content area"
+          },
+          {
+            "text": "Self claim",
+            "style": "primary-toggle",
+            "placement": "Top of content area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Prepare the wallet configuration file (BSMS) if available, along with the Inheritance Key (the 12 or 24-word seed phrase) shared by the inheritance plan owner.",
+            "context": "Under step 01 - Prepare Materials",
+            "purpose": "Lists required materials for self-claim process"
+          },
+          {
+            "text": "You will need the Nunchuk application (mobile or desktop) to reconstruct the wallet and sign the transaction. You have two options for obtaining the software:",
+            "context": "Under step 02 intro",
+            "purpose": "Introduces two paths for app acquisition"
+          },
+          {
+            "text": "Option A: Official App Stores (Convenient) Download from the Apple App Store or Google Play Store. (IMPORTANT: Verify that the app developer is listed as \"Nunchuk\".)",
+            "context": "Nested under step 02",
+            "purpose": "First app acquisition option with security warning"
+          },
+          {
+            "text": "Option B: Open Source (Sovereign Backup) If the official stores are unavailable, or if you prefer to use the open-source version, use the desktop or Android (APK) versions directly from our official GitHub repositories below.",
+            "context": "Nested under step 02",
+            "purpose": "Alternative path emphasizing sovereignty and offline security"
+          }
+        ],
+        "tone": "professional-technical, instructional, sovereignty-conscious",
+        "dataFormatting": [
+          "BSMS (specific technical format)",
+          "Inheritance Key (12 or 24-word seed phrase)",
+          "APK (Android Package file format)"
+        ],
+        "trustSignals": [
+          "Emphasis on app developer verification",
+          "Explicit mention of open-source availability and GitHub repositories",
+          "Labeling Option B as 'Sovereign Backup' appeals to security-conscious users"
+        ],
+        "jargonLevel": "intermediate-expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-settings-3-wallet-recovery.png",
+      "label": "Wallet recovery",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, uppercase, large sans-serif (60+ px), dark navy",
+          "bodyStyle": "Regular weight, medium gray, sans-serif",
+          "dataStyle": "Small gray text for metadata (article length, date)"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items, and sign-in button",
+            "position": "Top of page",
+            "notable": "Clean, minimalist design with dark sign-in button"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with article metadata below",
+            "position": "Upper content area",
+            "notable": "Prominent typography guides attention immediately"
+          },
+          {
+            "type": "Illustration",
+            "description": "Two rounded squares with Nunchuk logo (yellow) and Sparrow logo (white), connected by green line",
+            "position": "Center of page",
+            "notable": "Simple, clean visual representation of integration/connection"
+          },
+          {
+            "type": "Social Share Buttons",
+            "description": "Twitter, Facebook, LinkedIn, and copy link icons",
+            "position": "Right side of metadata",
+            "notable": "Minimalist icon style with dark color"
+          },
+          {
+            "type": "Category Badge",
+            "description": "'Guide' label in light gray box",
+            "position": "Left side, below headline",
+            "notable": "Subtle content categorization"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates upper area, metadata provides context, illustration centers attention, social sharing on right periphery",
+        "innovativeElements": [
+          "Minimalist integration illustration with connected logos",
+          "Clean separation of article metadata from content area"
+        ]
+      },
+      "flow": {
+        "screenType": "article-header / content-page",
+        "userIntent": "Understand how to recover a Nunchuk wallet using Sparrow as an alternative tool",
+        "entryPoints": [
+          "Direct link from Resources menu",
+          "Search result for wallet recovery",
+          "Link from help documentation"
+        ],
+        "exitPoints": [
+          "Scroll down to read full article",
+          "Click social share buttons",
+          "Use navigation bar to visit other sections",
+          "Chat with support via bottom-right widget"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to Inheritance, Platform, Pricing, Resources, FAQ sections"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Redirect to authentication"
+          },
+          {
+            "element": "Social share buttons",
+            "action": "Share article to social networks or copy link"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open live chat support"
+          },
+          {
+            "element": "Dropdown menus",
+            "action": "Expand Pricing and Resources sub-menus"
+          }
+        ],
+        "informationArchitecture": "Linear article with metadata header, followed by content. Support chat and navigation always accessible.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Article length indicator (7 min read)",
+          "Publication date (Dec 24, 2022)",
+          "Content category tag (Guide)"
+        ]
+      },
+      "copy": {
+        "headline": "RECOVER A NUNCHUK WALLET WITH SPARROW",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Have a question? Chat with us",
+            "style": "ghost-button",
+            "placement": "Bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Article length",
+            "context": "Left side metadata",
+            "purpose": "Set expectation for reading time"
+          },
+          {
+            "text": "7 min read",
+            "context": "Left side metadata",
+            "purpose": "Quantify article length"
+          },
+          {
+            "text": "Published",
+            "context": "Left side metadata",
+            "purpose": "Label publication date"
+          },
+          {
+            "text": "Dec 24, 2022",
+            "context": "Left side metadata",
+            "purpose": "Provide publication timestamp"
+          }
+        ],
+        "tone": "professional-technical, instructional",
+        "dataFormatting": [
+          "7 min read (article length)",
+          "Dec 24, 2022 (date format)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-settings-4-miniscript-recovery.png",
+      "label": "Miniscript recovery",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width with left sidebar",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#001F3F",
+          "#FFD700",
+          "#FF9500",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, uppercase, very large sans-serif (70+ px), dark navy",
+          "bodyStyle": "Regular weight, dark gray, sans-serif for body text",
+          "dataStyle": "Small gray text for metadata; blue underlined text for section links"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with logo, menu items, and sign-in button",
+            "position": "Top of page",
+            "notable": "Consistent with previous screen"
+          },
+          {
+            "type": "Hero Headline",
+            "description": "Large bold uppercase text spanning 2 lines",
+            "position": "Upper left content area",
+            "notable": "Larger than previous example, commanding visual presence"
+          },
+          {
+            "type": "Table of Contents",
+            "description": "Vertical list of linked sections with hierarchical indentation",
+            "position": "Left sidebar",
+            "notable": "Nested structure shows multi-step process; blue underlined links indicate interactivity"
+          },
+          {
+            "type": "Illustration",
+            "description": "Two rounded squares with Nunchuk logo (yellow) and Bitcoin Core logo (orange), connected by green line",
+            "position": "Center-right of page",
+            "notable": "Similar visual pattern to previous screen but with Bitcoin Core branding"
+          },
+          {
+            "type": "Social Share Buttons",
+            "description": "Twitter, Facebook, LinkedIn, and copy link icons",
+            "position": "Right side of metadata",
+            "notable": "Consistent with previous screen"
+          },
+          {
+            "type": "Chat Widget",
+            "description": "Dark rounded button with chat icon and text",
+            "position": "Bottom right corner",
+            "notable": "Always-visible support access"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates upper area; left sidebar table of contents provides navigation hierarchy; central illustration; metadata and social sharing on right",
+        "innovativeElements": [
+          "Left-side table of contents for multi-step guide navigation",
+          "Hierarchical indentation showing step dependencies",
+          "Integration illustration consistent with design system"
+        ]
+      },
+      "flow": {
+        "screenType": "article-header / guide-landing",
+        "userIntent": "Understand wallet recovery options for Miniscript wallets using Bitcoin Core",
+        "entryPoints": [
+          "Direct link from Resources or documentation",
+          "Search for miniscript wallet recovery",
+          "Link from Nunchuk settings or help section"
+        ],
+        "exitPoints": [
+          "Click section links in left sidebar to jump to content",
+          "Scroll down to read full article",
+          "Click social share buttons",
+          "Use top navigation to visit other sections",
+          "Initiate chat with support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Table of Contents links",
+            "action": "Scroll to specific sections (Overview, What You'll Need, Step 1, Step 2, sub-sections)"
+          },
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to Inheritance, Platform, Pricing, Resources, FAQ"
+          },
+          {
+            "element": "Dropdown menus",
+            "action": "Expand Pricing and Resources sub-menus"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Redirect to authentication"
+          },
+          {
+            "element": "Social share buttons",
+            "action": "Share article to social networks or copy link"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open live chat support"
+          }
+        ],
+        "informationArchitecture": "Multi-step guide with navigable table of contents on left; main content area with header and illustration; metadata and sharing at top right",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Article length (10 min read)",
+          "Publication date (Oct 31, 2025)",
+          "Numbered steps in table of contents (Step 1, Step 2)",
+          "Sub-sections with letter designations (A., B.)"
+        ]
+      },
+      "copy": {
+        "headline": "RECOVER A MINISCRIPT WALLET WITH BITCOIN CORE",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign in",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          },
+          {
+            "text": "Have a question? Chat with us",
+            "style": "ghost-button",
+            "placement": "Bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Article length",
+            "context": "Left side metadata",
+            "purpose": "Label for reading time estimate"
+          },
+          {
+            "text": "10 min read",
+            "context": "Left side metadata",
+            "purpose": "Quantify article duration"
+          },
+          {
+            "text": "Published",
+            "context": "Left side metadata",
+            "purpose": "Label publication date"
+          },
+          {
+            "text": "Oct 31, 2025",
+            "context": "Left side metadata",
+            "purpose": "Provide publication timestamp"
+          },
+          {
+            "text": "Overview: Two Recovery Approaches",
+            "context": "Table of Contents",
+            "purpose": "Signal that guide covers multiple methods"
+          }
+        ],
+        "tone": "professional-technical, instructional, detailed",
+        "dataFormatting": [
+          "10 min read (article length)",
+          "Oct 31, 2025 (date format)",
+          "Step 1, Step 2 (process numbering)",
+          "A., B. (sub-step lettering)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-home-11-tapsigner-guide.png",
+      "label": "Tapsigner guide",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#001a2e",
+          "#ffc107"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, bold, large (72px+), dark navy color",
+          "bodyStyle": "Sans-serif, regular weight, 16-18px, dark gray (#333), 1.6 line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top navigation with logo, menu items (Inheritance, Platform, Pricing, Resources, FAQ), and Sign in button",
+            "position": "top full-width",
+            "notable": "Clean horizontal layout with right-aligned authentication"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large heading 'TAPSIGNER x NUNCHUK' with body text on left, product image on right",
+            "position": "main content area",
+            "notable": "3D product visualization of black hardware wallet with gold accent"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating 'Have a question? Chat with us' button in bottom right",
+            "position": "bottom-right fixed",
+            "notable": "Always-visible support entry point"
+          },
+          {
+            "type": "external-link",
+            "description": "Reference link to tapsigner.com",
+            "position": "footer text",
+            "notable": "Underlined hyperlink in body copy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates top 40%, body text occupies left 60% of lower section, product image anchors right side, creates balanced left-right balance",
+        "innovativeElements": [
+          "3D perspective rendering of hardware device",
+          "Angled product display creates dynamic visual interest"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about TAPSIGNER hardware wallet capabilities and integration with Nunchuk",
+        "entryPoints": [
+          "Direct navigation from main nav",
+          "Link from homepage",
+          "External referral from tapsigner.com"
+        ],
+        "exitPoints": [
+          "Visit tapsigner.com (external link)",
+          "Chat with support widget",
+          "Navigate to Platform, Pricing, or Resources via header",
+          "Sign in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "tapsigner.com link",
+            "action": "Open external website with product details"
+          },
+          {
+            "element": "Chat with us button",
+            "action": "Open live support chat"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Redirect to authentication"
+          }
+        ],
+        "informationArchitecture": "Hero-first: major heading, followed by progressive disclosure of use cases (starter, intermediate, advanced), subscription benefits listed last, reference link for deeper learning",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "TAPSIGNER x NUNCHUK",
+        "subheadline": "Congratulations on your TAPSIGNER!",
+        "ctas": [
+          {
+            "text": "tapsigner.com",
+            "style": "text-link",
+            "placement": "footer text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "For more information on TAPSIGNER, please visit tapsigner.com",
+            "context": "Footer note",
+            "purpose": "Direct users to official TAPSIGNER documentation"
+          }
+        ],
+        "tone": "professional-technical, congratulatory, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Partnership with established hardware wallet brand (TAPSIGNER)",
+          "Subscription plans positioning as premium/advanced offering",
+          "Specific feature mentions (inheritance planning, emergency lockdown, encrypted cloud backups)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-settings-1-about-us.png",
+      "label": "About us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1f2e",
+          "#ffffff",
+          "#ffc107"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, all-caps, bold, extra-large (60px+), white text, right-aligned",
+          "bodyStyle": "Sans-serif, regular, 18px, white text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top navigation with logo, menu items, and Sign in button on dark background",
+            "position": "top full-width",
+            "notable": "Consistent with previous screen, white text on dark background"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered heading with subheadline underneath on dark blue gradient background",
+            "position": "main content area (upper 50%)",
+            "notable": "Full-width dark background with right-aligned text creates premium feel"
+          },
+          {
+            "type": "hero-image",
+            "description": "Mobile phone displaying app interface with illustrated icons",
+            "position": "bottom half full-width",
+            "notable": "Product photography with natural lighting and perspective"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Floating support button",
+            "position": "bottom-right fixed",
+            "notable": "Consistent placement across pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline occupies top 30%, subheadline provides context, full-width image takes remaining space creating hero-image composition",
+        "innovativeElements": [
+          "Split color scheme: dark hero section with light product photography",
+          "Large-scale typography treatment emphasizes core value proposition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Nunchuk's core mission and value proposition around multisig and Bitcoin custody",
+        "entryPoints": [
+          "Navigation from main menu",
+          "Settings or About link from app",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Chat with support",
+          "Navigate to other sections via header menu",
+          "Sign in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Switch to other pages"
+          },
+          {
+            "element": "Chat widget",
+            "action": "Open support chat"
+          },
+          {
+            "element": "Sign in button",
+            "action": "Authentication"
+          }
+        ],
+        "informationArchitecture": "Single unified message: headline presents core claim, subheadline reinforces security/privacy value, visual reinforces trust through product imagery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "TO MAKE MULTISIG THE GOLD STANDARD OF BITCOIN CUSTODY",
+        "subheadline": "Security and privacy. Get both with Nunchuk Bitcoin wallet.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, aspirational, authoritative",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin custody focus",
+          "Multisig security standard positioning",
+          "Privacy emphasis"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nunchuk-settings-2-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#001a2e",
+          "#ffc107"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, 28-32px, yellow text (#ffc107) on dark background for featured card, black text for article titles",
+          "bodyStyle": "Sans-serif, regular, 14-16px, gray/dark text",
+          "dataStyle": "Metadata tags and dates in smaller sans-serif, 12px, gray"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Consistent top navigation bar",
+            "position": "top full-width",
+            "notable": "White background, matches other pages"
+          },
+          {
+            "type": "feature-card",
+            "description": "Large dark navy card with yellow headline, bullet points, and info graphic showing Bitcoin → claim paths",
+            "position": "left side, upper",
+            "notable": "Rounded corners, visual hierarchy with icon diagram showing inheritance flow"
+          },
+          {
+            "type": "article-preview",
+            "description": "Right-aligned article card with title, category tag, date, and read time",
+            "position": "right side, upper",
+            "notable": "Clean white background, metadata clearly displayed"
+          },
+          {
+            "type": "category-tabs",
+            "description": "Horizontal scrollable tabs: All categories, SPoF, Bitcoin, Multisig, Partnerships, Advanced features, Inheritance Planning, Minis",
+            "position": "below featured section",
+            "notable": "Content filtering/organization system"
+          },
+          {
+            "type": "search-bar",
+            "description": "Full-width search input with magnifying glass icon",
+            "position": "below category tabs",
+            "notable": "Placeholder text 'Enter you search keyword here' (minor typo: 'you' vs 'your')"
+          },
+          {
+            "type": "blog-grid",
+            "description": "Grid of article cards below search",
+            "position": "bottom half",
+            "notable": "Visible cards cut off suggesting scrollable content"
+          },
+          {
+            "type": "chat-widget",
+            "description": "Fixed support button",
+            "position": "bottom-right",
+            "notable": "Consistent placement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Featured announcement card dominates left-upper area with high contrast, article preview on right, category navigation and search create scanning path, blog grid below follows standard card layout",
+        "innovativeElements": [
+          "Split layout: feature card paired with article preview for news/announcement presentation",
+          "Icon-based diagram simplifying inheritance flow concept",
+          "Category tab system for content discovery"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover educational content and blog articles about Nunchuk features, inheritance, multisig, etc.",
+        "entryPoints": [
+          "Navigation from main menu (Resources or Blog link)",
+          "Settings page",
+          "Featured card link from homepage"
+        ],
+        "exitPoints": [
+          "Click on article cards to read full articles",
+          "Filter by category tabs",
+          "Search for specific topics",
+          "Chat with support",
+          "Navigate away via header menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category tabs",
+            "action": "Filter blog articles by topic"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search blog content by keyword"
+          },
+          {
+            "element": "Featured card",
+            "action": "Navigate to featured announcement/article"
+          },
+          {
+            "element": "Article cards",
+            "action": "Open full article"
+          },
+          {
+            "element": "Category tag on articles",
+            "action": "Filter to similar articles"
+          }
+        ],
+        "informationArchitecture": "Homepage-style featured section followed by searchable, filterable article library. Featured article gets prominent left-side placement, category tabs enable content discovery, search provides direct access, article grid shows paginated results",
+        "frictionPoints": [
+          "Search placeholder text contains typo ('Enter you search keyword here' should be 'your')",
+          "No visible pagination controls visible on current view"
+        ],
+        "progressIndicators": [
+          "Date metadata on articles (e.g., 'Nov 12, 2025')",
+          "Read time estimate ('3 min read')",
+          "Category labels"
+        ]
+      },
+      "copy": {
+        "headline": "NUNCHUK 2.0: AUTONOMOUS INHERITANCE",
+        "subheadline": "Nunchuk 2.0: Autonomous Inheritance",
+        "ctas": [
+          {
+            "text": "Featured article card",
+            "style": "card-link",
+            "placement": "left featured section"
+          },
+          {
+            "text": "Article cards in grid",
+            "style": "card-link",
+            "placement": "bottom section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Inheritance Planning",
+            "context": "Category tag on featured article",
+            "purpose": "Content categorization and filtering"
+          },
+          {
+            "text": "Nov 12, 2025 • 3 min read",
+            "context": "Metadata on article preview",
+            "purpose": "Help users decide whether to read based on publication date and time commitment"
+          },
+          {
+            "text": "Enter you search keyword here",
+            "context": "Search bar placeholder",
+            "purpose": "Guide user input for content discovery"
+          }
+        ],
+        "tone": "professional-technical, educational, announcements-focused",
+        "dataFormatting": [
+          "Date format: 'Nov 12, 2025'",
+          "Read time format: '3 min read'",
+          "Category tags: single-word labels"
+        ],
+        "trustSignals": [
+          "Feature announcements (Nunchuk 2.0)",
+          "Specific technical topics (SPoF, Multisig, Bitcoin, Inheritance Planning)",
+          "Dated content showing active publishing"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

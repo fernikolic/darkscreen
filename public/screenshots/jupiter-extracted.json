@@ -1,0 +1,4306 @@
+{
+  "slug": "jupiter",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T12:01:10.454Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 28,
+  "screens": [
+    {
+      "image": "/screenshots/jupiter-home-4-terminal-tracker-tab-manage-wallets-empty-state-wi.png",
+      "label": "Terminal — Tracker tab, manage wallets",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#a6f338",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, medium weight, white text, centered",
+          "bodyStyle": "Sans-serif, regular weight, gray (#888888), centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal tab navigation with main menu items (Swap, Terminal, Perps, Lend, Predict, Portfolio, Rewards, More)",
+            "position": "top of screen",
+            "notable": "Terminal highlighted as active, with secondary sub-tabs below (Discover, AlphaScan, Tracker, Positions, Watchlist)"
+          },
+          {
+            "type": "empty-state-container",
+            "description": "Centered messaging area with heading, subheading, and action buttons",
+            "position": "center of main content area",
+            "notable": "Clear visual hierarchy with prominent CTA buttons"
+          },
+          {
+            "type": "wallet-management-tabs",
+            "description": "Two-tab interface (Manage Wallets, Live Trades) with column headers (Created, Name, Balance, Last Active, Remove All)",
+            "position": "below navigation",
+            "notable": "Search and import/export functionality integrated in header"
+          },
+          {
+            "type": "floating-footer",
+            "description": "Bottom bar with watchlist, wallet tracker, and AlphaScan shortcuts plus price tickers",
+            "position": "bottom of screen",
+            "notable": "Always-visible quick access to key features"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Empty state messaging is centered and prominent, with supporting elements (column headers) in background. Secondary actions clearly separated.",
+        "innovativeElements": [
+          "Green accent color (#a6f338) for primary actions stands out against dark background",
+          "Floating footer navigation provides persistent quick access"
+        ]
+      },
+      "flow": {
+        "screenType": "empty-state",
+        "userIntent": "User is in the Tracker tab attempting to manage wallets but has no wallets added yet",
+        "entryPoints": [
+          "Clicked Tracker sub-tab from Terminal main navigation"
+        ],
+        "exitPoints": [
+          "Add Wallet button",
+          "Import Wallets button",
+          "Switch to Live Trades tab",
+          "Navigate to other Terminal sub-tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Add Wallet button",
+            "action": "Opens wallet addition flow"
+          },
+          {
+            "element": "Import Wallets button",
+            "action": "Opens wallet import dialog"
+          },
+          {
+            "element": "Manage Wallets tab",
+            "action": "Already active, shows wallet management interface"
+          },
+          {
+            "element": "Live Trades tab",
+            "action": "Switches to live trading view"
+          }
+        ],
+        "informationArchitecture": "Primary action (Add Wallet) presented first and with more prominent styling, secondary action (Import Wallets) with lower contrast",
+        "frictionPoints": [
+          "Users with no wallets see empty state; requires initial action to populate data"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "No tracked wallets",
+        "subheadline": "Add wallets to track their trading activity",
+        "ctas": [
+          {
+            "text": "Add Wallet",
+            "style": "primary-button",
+            "placement": "center, below subheading"
+          },
+          {
+            "text": "Import Wallets",
+            "style": "secondary-button",
+            "placement": "center, right of Add Wallet"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Created",
+            "context": "table column header",
+            "purpose": "Indicates sort-by date column"
+          },
+          {
+            "text": "Search by name or addr...",
+            "context": "search input placeholder",
+            "purpose": "Guides user on how to search wallets"
+          },
+          {
+            "text": "Import / Export",
+            "context": "button near search",
+            "purpose": "Suggests data management capabilities"
+          }
+        ],
+        "tone": "professional-technical, direct and action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "No tracked wallets",
+          "Add wallets to track their trading activity"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-5-terminal-positions-tab-connect-wallet-prompt-to-vi.png",
+      "label": "Terminal — Positions tab",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#a6f338",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, medium weight, white text, centered, larger font",
+          "bodyStyle": "Sans-serif, regular weight, gray text, centered, secondary importance",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-overlay",
+            "description": "Semi-transparent overlay with centered modal prompting wallet connection",
+            "position": "center of screen",
+            "notable": "Obscures background content to focus attention on CTA"
+          },
+          {
+            "type": "hero-message-area",
+            "description": "Centered text block with headline, subheadline, and CTA button",
+            "position": "center modal",
+            "notable": "Clean, minimal design with generous whitespace"
+          },
+          {
+            "type": "background-content",
+            "description": "Blurred/darkened table or data grid visible beneath modal",
+            "position": "behind modal",
+            "notable": "Shows context of what user will see after connecting"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Modal is primary focus; background content is deliberately de-emphasized to reduce cognitive load",
+        "innovativeElements": [
+          "Blur effect on background creates clear modal hierarchy",
+          "Green CTA button strongly contrasts dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "System prompting user to connect wallet to view position and P&L data",
+        "entryPoints": [
+          "Clicked Positions tab without wallet connected"
+        ],
+        "exitPoints": [
+          "Connect Wallet button (wallet connection flow)",
+          "Close modal/dismiss"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiates wallet connection flow (likely Web3 modal)"
+          },
+          {
+            "element": "Modal overlay",
+            "action": "May dismiss on background click (typical UX pattern)"
+          }
+        ],
+        "informationArchitecture": "Single-purpose modal with clear value proposition and strong CTA",
+        "frictionPoints": [
+          "Requires wallet connection to proceed; adds friction for new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect to view your live positions and PnL",
+        "subheadline": "Access detailed PnL and more...",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center, below subheadline"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, benefit-focused",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect to view your live positions and PnL",
+          "Access detailed PnL and more..."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-6-terminal-watchlist-tab-shows-sol-and-jup-tokens-wi.png",
+      "label": "Terminal — Watchlist tab, SOL and JUP",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#a6f338",
+          "#ff0080",
+          "#00d4aa"
+        ],
+        "typography": {
+          "headingStyle": "Sans-serif, bold, white text, left-aligned",
+          "bodyStyle": "Sans-serif, regular weight, gray text for labels, varied sizes for data",
+          "dataStyle": "Monospace or fixed-width for prices and numbers; colored indicators (green for up, red for down)"
+        },
+        "components": [
+          {
+            "type": "header-section",
+            "description": "Title 'Watchlist' with description 'Showing tokens from watchlist'",
+            "position": "top-left of main panel",
+            "notable": "Minimal header with clear purpose statement"
+          },
+          {
+            "type": "time-range-selector",
+            "description": "Quick toggle buttons (5m, 1h, 6h, 24h) for chart time ranges",
+            "position": "top-right of left panel",
+            "notable": "24h is highlighted, suggesting it's default selected"
+          },
+          {
+            "type": "action-buttons",
+            "description": "Edit, lightning bolt (quick action), and currency display buttons",
+            "position": "top-right of left panel",
+            "placement": "right of time selectors"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-column table showing tokens (SOL, JUP) with columns: Token, Price/% change, MC/FDV, 24h Vol/Net, Liquidity, Holders/% change, Buy action",
+            "position": "left panel, below header",
+            "notable": "Color-coded rows (green/red) for price movement; star icons for favorites; right-aligned numbers"
+          },
+          {
+            "type": "verified-tweets-panel",
+            "description": "Right sidebar showing 'Verified Tweets' with news summaries and embedded social media content",
+            "position": "right side of screen",
+            "notable": "Video embedded (ACCELERR APAC content); social proof element with engagement metrics (likes, retweets)"
+          },
+          {
+            "type": "news-summary-widget",
+            "description": "Text box showing recent news about Goldman Sachs SOL holdings and Solana-related updates",
+            "position": "top of right panel",
+            "notable": "Timestamped ('Last updated: Feb 12, 2026'); highlights key ecosystem news"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Left panel emphasizes token data with clear column structure; right panel provides secondary context via social/news feeds. Price data is largest and most prominent.",
+        "innovativeElements": [
+          "Integrated social sentiment panel shows real-time tweets and verified news",
+          "Color coding (green/red/cyan/pink) provides immediate visual understanding of market direction",
+          "Embedded video content in news feed creates engaging secondary panel"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "User wants to monitor watchlisted tokens and stay informed on ecosystem news and sentiment",
+        "entryPoints": [
+          "Clicked Watchlist tab from Terminal sub-navigation"
+        ],
+        "exitPoints": [
+          "Click token to view details",
+          "Click news item to view source",
+          "Edit watchlist button",
+          "Switch to other Terminal tabs",
+          "Navigate to other app sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time-range buttons (5m, 1h, 6h, 24h)",
+            "action": "Updates chart data for selected time period"
+          },
+          {
+            "element": "Edit button",
+            "action": "Opens watchlist editing interface"
+          },
+          {
+            "element": "Token row (SOL, JUP)",
+            "action": "Likely navigates to token detail view"
+          },
+          {
+            "element": "Lightning bolt button",
+            "action": "Likely a quick-trade or alert button"
+          },
+          {
+            "element": "News/tweet items",
+            "action": "Opens linked content or expands detail"
+          },
+          {
+            "element": "Watch on X button",
+            "action": "Navigates to external X (Twitter) content"
+          }
+        ],
+        "informationArchitecture": "Primary content (watchlist tokens and prices) on left; secondary context (news and sentiment) on right. Time-range controls at top allow temporal filtering.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Last updated: Feb 12, 2026 (news timestamp)",
+          "Time-range selector indicates current period"
+        ]
+      },
+      "copy": {
+        "headline": "Watchlist",
+        "subheadline": "Showing tokens from watchlist",
+        "ctas": [
+          {
+            "text": "Edit",
+            "style": "text-link",
+            "placement": "top-right"
+          },
+          {
+            "text": "Watch on X",
+            "style": "primary-button",
+            "placement": "right panel, embedded in news item"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Price/% Δ",
+            "context": "table column header",
+            "purpose": "Indicates price and percent change data"
+          },
+          {
+            "text": "MC/FDV",
+            "context": "table column header",
+            "purpose": "Market cap / Fully diluted valuation"
+          },
+          {
+            "text": "24h Vol/Net",
+            "context": "table column header",
+            "purpose": "24-hour trading volume and net volume change"
+          },
+          {
+            "text": "News Summary",
+            "context": "right panel section header",
+            "purpose": "Categorizes content as aggregated news"
+          },
+          {
+            "text": "Goldman Sachs disclosed $108M SOL holdings and 21Shares launched Solana ETP. Sushi and Firedancer validator client launched on Solana.",
+            "context": "news summary item",
+            "purpose": "Communicates key ecosystem developments"
+          }
+        ],
+        "tone": "professional-technical, data-focused with contextual narrative elements",
+        "dataFormatting": [
+          "$81.74 (price)",
+          "+0.87% (percent change, green)",
+          "$46.4B (market cap/FDV)",
+          "+$47.0M (volume change)",
+          "$595M (liquidity)",
+          "3.82M (holders)",
+          "$12.9B (24h volume)"
+        ],
+        "trustSignals": [
+          "Verified Tweets indicator",
+          "Solana official handle (@solana) with blue checkmark",
+          "Named sources (Goldman Sachs, Firedancer, 21Shares)",
+          "Timestamp on news (Feb 12, 2026)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-1-homepage-with-swap-interface-market-tab-selected-u.png",
+      "label": "Homepage — Swap interface, market tab",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with right sidebar",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C7FF53",
+          "#1a1f2e",
+          "#0f1419"
+        ],
+        "typography": {
+          "headingStyle": "Large white serif-like sans-serif, centered, 60px+ for main headline",
+          "bodyStyle": "Clean white sans-serif, 14-16px for labels and secondary text",
+          "dataStyle": "Large monospace figures in light gray, $0.00 format with smaller secondary values"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with main sections: Swap, Terminal, Perps, Lend, Predict, Portfolio, Rewards, More",
+            "position": "Top left, following icon",
+            "notable": "Yellow 'New' badge on Rewards"
+          },
+          {
+            "type": "Swap card",
+            "description": "Central trading interface with Sell/Buy fields, token selectors, amount inputs",
+            "position": "Center of screen",
+            "notable": "Bright lime-green Connect button, swap icon between fields"
+          },
+          {
+            "type": "Token price cards",
+            "description": "Horizontal cards showing USDC and SOL with prices and percentage changes",
+            "position": "Bottom center",
+            "notable": "Compact card layout with icon, price, and percentage color-coded"
+          },
+          {
+            "type": "Net Worth widget",
+            "description": "Shows current balance with tokens held",
+            "position": "Top right sidebar",
+            "notable": "Connect button for wallet integration"
+          },
+          {
+            "type": "Header controls",
+            "description": "Search bar, Refer button, settings, Connect button",
+            "position": "Top right",
+            "notable": "Refer has lime-green background, Connect is secondary"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates center, swap interface secondary focal point, token cards and wallet info tertiary",
+        "innovativeElements": [
+          "Lime-green accent color creates high contrast call-to-action",
+          "Tab system within swap card (Market, Limit, Recurring)",
+          "Integrated wallet balance display in top right"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / home dashboard",
+        "userIntent": "Access swap functionality and see account overview",
+        "entryPoints": [
+          "Direct app load",
+          "Return from other sections via navigation"
+        ],
+        "exitPoints": [
+          "Execute swap via Connect button",
+          "Navigate to Terminal, Perps, Lend, Predict, Portfolio, or Rewards",
+          "Search for tokens"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect button (main)",
+            "action": "Initiates wallet connection to enable trading"
+          },
+          {
+            "element": "USDC dropdown",
+            "action": "Opens token selector to choose sell currency"
+          },
+          {
+            "element": "SOL dropdown",
+            "action": "Opens token selector to choose buy currency"
+          },
+          {
+            "element": "Swap icon (arrows)",
+            "action": "Reverses sell/buy currencies"
+          },
+          {
+            "element": "Tab navigation (Market, Limit, Recurring)",
+            "action": "Switches order type mode"
+          },
+          {
+            "element": "Refer button",
+            "action": "Opens referral program interface"
+          }
+        ],
+        "informationArchitecture": "Hero headline with primary action below, supporting features in secondary navigation, wallet status in peripheral location",
+        "frictionPoints": [
+          "Must connect wallet before swapping",
+          "No pre-filled amounts shown (0.00 for both sides)",
+          "Need to navigate away from home to see detailed market data"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Home of Onchain Finance",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Center of swap card, bottom"
+          },
+          {
+            "text": "Connect",
+            "style": "secondary-button",
+            "placement": "Top right sidebar"
+          },
+          {
+            "text": "Refer",
+            "style": "secondary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Market",
+            "context": "Tab within swap card",
+            "purpose": "Indicates market order mode"
+          },
+          {
+            "text": "Sell / Buy",
+            "context": "Field labels in swap interface",
+            "purpose": "Clarifies transaction direction"
+          },
+          {
+            "text": "Net Worth",
+            "context": "Top right widget label",
+            "purpose": "Labels account balance display"
+          },
+          {
+            "text": "Find Cooking Tokens with Jupiter Terminal",
+            "context": "Bottom promotional text",
+            "purpose": "Encourages exploration of token discovery features"
+          }
+        ],
+        "tone": "professional-technical with friendly accessibility",
+        "dataFormatting": [
+          "$0.00 (swap amounts)",
+          "$0.99988 (token price)",
+          "$81.7 (token value)",
+          "0.85% (percentage change)"
+        ],
+        "trustSignals": [
+          "Multiple product categories (Swap, Terminal, Perps, Lend, Predict)",
+          "Referral program indicating user base",
+          "Portfolio tracking feature"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-2-terminal-page-discover-tab-with-cooking-filter-sho.png",
+      "label": "Terminal — Discover tab, Cooking filter",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "data table with vertical scrolling, horizontal column headers",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C7FF53",
+          "#1a1f2e",
+          "#0f1419"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 12-14px for column headers in light gray",
+          "bodyStyle": "Regular sans-serif, 13px for token names and data rows",
+          "dataStyle": "Monospace figures with color coding: green for positive changes, red for negative, white for prices"
+        },
+        "components": [
+          {
+            "type": "Tab navigation",
+            "description": "Discover, AlphaScan, Tracker, Positions, Watchlist tabs",
+            "position": "Top left below main nav",
+            "notable": "Discover is active/highlighted"
+          },
+          {
+            "type": "Filter bar",
+            "description": "Cooking, Launchpads, Stocks, Top Traded, Stablecoins, Organic category tabs",
+            "position": "Below tab navigation, left side",
+            "notable": "Cooking is highlighted, Stablecoins has 'New' yellow badge"
+          },
+          {
+            "type": "Time range selector",
+            "description": "5m, 1h, 6h, 24h buttons",
+            "position": "Top right of table",
+            "notable": "24h is selected by default"
+          },
+          {
+            "type": "Data table",
+            "description": "Multi-column table with token icon, name, price, changes, volume, liquidity, holders, fees, chart, and buy button",
+            "position": "Main content area",
+            "notable": "Each row has sparkline chart, color-coded metrics, lightning bolt buy button"
+          },
+          {
+            "type": "Token symbol indicator",
+            "description": "Crypto icon, token name with verified checkmark",
+            "position": "First data column",
+            "notable": "Checkmarks indicate verified/official tokens"
+          },
+          {
+            "type": "Chart sparkline",
+            "description": "Small inline candlestick or area chart",
+            "position": "Right side of each row before buy button",
+            "notable": "Green uptrend charts for all visible tokens"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Column headers guide scanning, token names stand out with icons, prices and percentages in secondary hierarchy, charts provide visual accent",
+        "innovativeElements": [
+          "Inline sparkline charts in table rows for quick trend visualization",
+          "Color-coded positive/negative metrics throughout",
+          "Category-based filtering with real-time badge updates",
+          "Quick-action buy button with lightning icon per row"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / discovery",
+        "userIntent": "Discover new or trending tokens filtered by category, analyze price and volume metrics",
+        "entryPoints": [
+          "Click Terminal in main navigation",
+          "Return from previous view"
+        ],
+        "exitPoints": [
+          "Click token row to view details",
+          "Click buy button to open swap for that token",
+          "Switch tabs (AlphaScan, Tracker, Positions, Watchlist)",
+          "Change filter category",
+          "Adjust time range"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter tabs (Cooking, Launchpads, etc.)",
+            "action": "Filters token list by category"
+          },
+          {
+            "element": "Time range buttons (5m, 1h, 6h, 24h)",
+            "action": "Changes timeframe for price/volume metrics"
+          },
+          {
+            "element": "Filters button",
+            "action": "Opens advanced filter options"
+          },
+          {
+            "element": "Token row",
+            "action": "Likely navigates to token detail view"
+          },
+          {
+            "element": "Buy button (lightning icon)",
+            "action": "Opens swap interface for that token"
+          },
+          {
+            "element": "Star icon on token",
+            "action": "Adds token to watchlist"
+          }
+        ],
+        "informationArchitecture": "Category-based filtering at top, time range selector in secondary position, dense tabular data with micro-interactions (charts, color coding, quick actions)",
+        "frictionPoints": [
+          "High data density may be overwhelming for beginners",
+          "Many columns require horizontal scrolling on smaller screens",
+          "No obvious way to sort columns or save filtered views"
+        ],
+        "progressIndicators": [
+          "Active tab highlighting (Discover)",
+          "Active filter category highlighting (Cooking)",
+          "Active time range highlighting (24h)"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Buy",
+            "style": "ghost-button with icon",
+            "placement": "Right edge of each token row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Cooking",
+            "context": "Filter category",
+            "purpose": "Labels token discovery category"
+          },
+          {
+            "text": "New",
+            "context": "Badge on Stablecoins filter",
+            "purpose": "Highlights new feature availability"
+          },
+          {
+            "text": "24h Vol",
+            "context": "Column header",
+            "purpose": "Indicates 24-hour trading volume metric"
+          },
+          {
+            "text": "MC/FDV",
+            "context": "Column header",
+            "purpose": "Market Cap to Fully Diluted Valuation ratio"
+          },
+          {
+            "text": "Holders/%Δ",
+            "context": "Column header",
+            "purpose": "Shows holder count and percentage change"
+          }
+        ],
+        "tone": "professional-technical, data-focused",
+        "dataFormatting": [
+          "$3.3177 (token price)",
+          "+6.14% (positive change in green)",
+          "$777M (market cap)",
+          "652K (holder count)",
+          "-0.01% (negative change in red)"
+        ],
+        "trustSignals": [
+          "Verified checkmarks on official tokens (TRUMP, PUMP, HYPE)",
+          "Multiple data points per token showing liquidity and adoption",
+          "Category filtering (Cooking tokens have specific criteria)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-3-terminal-alphascan-tab-new-token-launches-with-fil.png",
+      "label": "Terminal — Alphascan tab, new token launches",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "card-grid (3 columns) with horizontal scrolling tabs",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C7FF53",
+          "#1a1f2e",
+          "#0f1419"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14-16px for token names and category headers",
+          "bodyStyle": "Regular sans-serif, 12-13px for metadata and stats",
+          "dataStyle": "Monospace for prices and metrics with color coding (green/red for direction)"
+        },
+        "components": [
+          {
+            "type": "Horizontal tab carousel",
+            "description": "New, Soon, Bonded category tabs with left/right navigation",
+            "position": "Top of card grid",
+            "notable": "Three distinct sections visible simultaneously, tab headers with emoji/icons"
+          },
+          {
+            "type": "Search bar",
+            "description": "Per-column search input to filter by keyword",
+            "position": "Top of each column section",
+            "notable": "Placeholder 'Search keyword' for filtering within category"
+          },
+          {
+            "type": "Token card",
+            "description": "Square card with token icon, name, ticker, metrics, and interactive elements",
+            "position": "Grid cells within each column",
+            "notable": "Icon, name, verification status, price, market cap, volume, holder count, trade count, sentiment indicators"
+          },
+          {
+            "type": "Sentiment badges",
+            "description": "Circular percentage indicators (98%, 0%, 2%) with color coding",
+            "position": "Bottom of token cards",
+            "notable": "Red, green, and gray circles indicating buy/sell/neutral sentiment"
+          },
+          {
+            "type": "Customise button",
+            "description": "Column customization control",
+            "position": "Top right",
+            "notable": "Allows user to configure which metrics are visible"
+          },
+          {
+            "type": "Filter Launchpad button",
+            "description": "Narrows results to specific launchpad projects",
+            "position": "Top right",
+            "notable": "Funnel icon indicates filter functionality"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large token icons and names dominate cards, metrics in secondary size, sentiment indicators provide visual accent at card bottom",
+        "innovativeElements": [
+          "Multi-column tab system showing New/Soon/Bonded simultaneously",
+          "Per-column search capability",
+          "Sentiment badges with traffic-light color scheme",
+          "Customizable column display",
+          "Card-based grid design for quick token discovery"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse / discovery",
+        "userIntent": "Discover new token launches organized by stage (New, Soon, Bonded), analyze metrics and sentiment",
+        "entryPoints": [
+          "Click AlphaScan tab in Terminal",
+          "Return from other discovery views"
+        ],
+        "exitPoints": [
+          "Click token card for details",
+          "Search for specific token",
+          "Switch category tabs (New, Soon, Bonded)",
+          "Apply filters (Customise, Filter Launchpad)",
+          "Return to other Terminal tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category tabs (New, Soon, Bonded)",
+            "action": "Switches active token launch stage column"
+          },
+          {
+            "element": "Search keyword input",
+            "action": "Filters tokens within current category by name/symbol"
+          },
+          {
+            "element": "Token card",
+            "action": "Likely opens token detail or swap interface"
+          },
+          {
+            "element": "Star icon on card",
+            "action": "Adds token to watchlist"
+          },
+          {
+            "element": "Customise button",
+            "action": "Opens modal to configure visible metrics"
+          },
+          {
+            "element": "Filter Launchpad button",
+            "action": "Opens filter options for launchpad selection"
+          }
+        ],
+        "informationArchitecture": "Three-column layout organized by token maturity stage (New/Soon/Bonded), within-column search for quick access, customizable metric display",
+        "frictionPoints": [
+          "Requires understanding of token launch stages (New vs Soon vs Bonded)",
+          "Information density on cards may overwhelm new users",
+          "No obvious visual indicator of which tokens are trending or recommended"
+        ],
+        "progressIndicators": [
+          "Active tab highlighting within each column section"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Customise",
+            "style": "ghost-button",
+            "placement": "Top right controls"
+          },
+          {
+            "text": "Filter Launchpad",
+            "style": "ghost-button",
+            "placement": "Top right controls"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "New",
+            "context": "Column header",
+            "purpose": "Indicates newly launched tokens"
+          },
+          {
+            "text": "Soon",
+            "context": "Column header",
+            "purpose": "Indicates tokens launching soon"
+          },
+          {
+            "text": "Bonded",
+            "context": "Column header",
+            "purpose": "Indicates bonded curve tokens"
+          },
+          {
+            "text": "Search keyword",
+            "context": "Placeholder in search fields",
+            "purpose": "Instructs user on search functionality"
+          },
+          {
+            "text": "V / MC / F =",
+            "context": "Card metric abbreviations",
+            "purpose": "Price, Market Cap, F-value indicators"
+          }
+        ],
+        "tone": "professional-technical, discovery-focused",
+        "dataFormatting": [
+          "$420 (token price)",
+          "MC $2.42K (market cap)",
+          "$77M (volume data)",
+          "98% / 98% / 98% (sentiment percentages in red)"
+        ],
+        "trustSignals": [
+          "Official verified badges on tokens (TRUMP, Tesla AI, NVIDIA, X)",
+          "Holder count transparency",
+          "Sentiment indicators showing community activity",
+          "Multiple metrics per token (price, volume, liquidity)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-7-predict-page-browse-tab-with-category-filters-spor.png",
+      "label": "Predict page — Browse tab with filters",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C6FF00",
+          "#0a0e27",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text for prediction titles",
+          "bodyStyle": "Regular sans-serif, gray text for secondary information",
+          "dataStyle": "Large bold numbers with percentage indicators, Yes/No buttons with lime green accent"
+        },
+        "components": [
+          {
+            "type": "Navigation tabs",
+            "description": "For You, Browse, Leaderboard, Profile with category filters (All, Live, Sports, Crypto, Politics, etc.)",
+            "position": "Top horizontal",
+            "notable": "Browse tab is active with 'New' badge on Predict; category filter pill-style buttons"
+          },
+          {
+            "type": "Prediction cards",
+            "description": "4-column grid showing prediction markets with icon, title, participants with odds, Yes/No voting buttons",
+            "position": "Main content area",
+            "notable": "Each card shows 3 top participants and 'Show More' expandable option; volume data at bottom"
+          },
+          {
+            "type": "Volume toggle",
+            "description": "Volume/sorting control with dropdown",
+            "position": "Top right of grid",
+            "notable": "Allows switching between different data views"
+          },
+          {
+            "type": "Search bar",
+            "description": "Search for any Event with keyboard shortcut indicator",
+            "position": "Top right",
+            "notable": "Integrated with category browsing flow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Category filters and search guide initial attention, then card grid with participant odds creating scannable rows; volume aggregates at bottom of each card",
+        "innovativeElements": [
+          "Inline Yes/No voting buttons with opacity states",
+          "Color-coded participant odds showing probability distribution",
+          "Real-time volume aggregation display at card base"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and explore prediction markets across multiple categories; assess odds and market sentiment",
+        "entryPoints": [
+          "Predict tab in main navigation",
+          "Browse subtab default view",
+          "Category filter selection"
+        ],
+        "exitPoints": [
+          "Click prediction card to detail view",
+          "Category filter to narrow scope",
+          "Search to find specific prediction",
+          "Leaderboard, Portfolio, or other main tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category filter pills",
+            "action": "Filter prediction markets by category (Sports, Crypto, Politics, etc.)"
+          },
+          {
+            "element": "Yes/No buttons on each prediction",
+            "action": "Cast vote or navigate to market detail"
+          },
+          {
+            "element": "Show More link per card",
+            "action": "Expand to see additional participants beyond top 3"
+          },
+          {
+            "element": "Volume dropdown",
+            "action": "Change sorting or data display metric"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter predictions by keyword or event name"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: category → prediction market → participants → odds. Volume metrics aggregate at card level for quick market assessment.",
+        "frictionPoints": [
+          "Multiple filter/sort options may create decision paralysis",
+          "Card-based layout requires scrolling to see all options; 'Show More' adds an extra click"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Show More",
+            "style": "text-link",
+            "placement": "Bottom of each prediction card"
+          },
+          {
+            "text": "Yes / No",
+            "style": "ghost-button",
+            "placement": "Inline with each participant prediction"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Fvkd...GTK just bought $4.64 of Yes",
+            "context": "Status line below main filters",
+            "purpose": "Shows live market activity; creates FOMO"
+          },
+          {
+            "text": "vol",
+            "context": "Volume data at card base",
+            "purpose": "Indicates total market volume traded"
+          }
+        ],
+        "tone": "professional-technical, data-driven",
+        "dataFormatting": [
+          "$4.64 of Yes",
+          "27%",
+          "95%",
+          "$646,105,905 vol",
+          "Key names: Kevin Warsh, Judy Shelton, Jon Ossoff"
+        ],
+        "trustSignals": [
+          "Live participant names (Kevin Warsh, JD Vance, etc.)",
+          "Large volume aggregates ($646M+) suggesting liquidity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-8-portfolio-page-landing-page-with-solana-defi-track.png",
+      "label": "Portfolio page — Solana DeFi tracker",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C6FF00",
+          "#0a0e27",
+          "#1f4d3d"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif with lime green accent on key words (e.g., 'Solana DeFi')",
+          "bodyStyle": "Regular gray text for descriptive copy",
+          "dataStyle": "Large bold dollar amounts with smaller denomination labels; green/red for positive/negative changes"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Left-side call-to-action with headline, subheading, CTA button, and search field",
+            "position": "Left panel, ~40% width",
+            "notable": "Lime green 'Connect wallet' button; secondary 'Or try the demo' text link; search for address/domain/group"
+          },
+          {
+            "type": "Dashboard preview",
+            "description": "Right panel showing active portfolio dashboard with net worth, asset breakdown, positions, and activity",
+            "position": "Right panel, ~60% width",
+            "notable": "Shows real data including multiple token holdings (SOL, JUP, PENGU, TRUMP); animated mascot character in corner"
+          },
+          {
+            "type": "Wallet breakdown",
+            "description": "Card showing net worth ($60.4k), change (+$959), and visual asset allocation",
+            "position": "Top-right dashboard area",
+            "notable": "Shows main bundle, personal wallet, and detailed token list with prices and positions"
+          },
+          {
+            "type": "Token list table",
+            "description": "Detailed holdings table with token symbols, amounts, prices, and P&L",
+            "position": "Bottom-right of dashboard preview",
+            "notable": "Shows mix of major (SOL, JUP) and meme (PENGU, TRUMP) tokens with live prices"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side emphasizes CTA with large headline and lime green button; right side dashboard shows depth of functionality through layered cards and detailed token table",
+        "innovativeElements": [
+          "Split-panel onboarding with live product preview on right",
+          "Animated character mascot in dashboard preview",
+          "Real-time token price and P&L display in preview",
+          "Seamless integration of multiple token types (DeFi, meme tokens)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand portfolio tracking capabilities and connect wallet to begin monitoring assets",
+        "entryPoints": [
+          "Portfolio tab in main navigation",
+          "First-time user visiting Jupiter"
+        ],
+        "exitPoints": [
+          "Click 'Connect wallet' to authenticate and load real portfolio",
+          "Click 'Or try the demo' to see sample dashboard",
+          "Search for address to load external wallet data",
+          "Navigate to other main tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Initiate wallet connection flow"
+          },
+          {
+            "element": "Search address/domain/group field",
+            "action": "Look up portfolio by wallet address or ENS domain"
+          },
+          {
+            "element": "Or try the demo link",
+            "action": "Load sample portfolio without authentication"
+          },
+          {
+            "element": "Dashboard tabs (Dashboard, Wallet Manager)",
+            "action": "Switch between portfolio views"
+          },
+          {
+            "element": "Positions and Activity tabs",
+            "action": "Filter dashboard data display"
+          }
+        ],
+        "informationArchitecture": "Value proposition → Call-to-action → Feature preview. Right panel shows capability in action: net worth summary → asset breakdown → detailed holdings.",
+        "frictionPoints": [
+          "User must connect wallet or search address to see real data",
+          "Demo option is secondary text link (low visibility)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your entire Solana DeFi world, tracked in one unified dashboard.",
+        "subheadline": "We scan 140+ protocols in real time to track your assets and catch every claimable item you might have missed.",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Center of left panel below headline"
+          },
+          {
+            "text": "Or try the demo",
+            "style": "text-link",
+            "placement": "Below primary CTA"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search address, domain or group",
+            "context": "Search field placeholder",
+            "purpose": "Instructs users on alternative entry method"
+          },
+          {
+            "text": "Net Worth",
+            "context": "Dashboard card label",
+            "purpose": "Identifies primary metric"
+          },
+          {
+            "text": "Main Bundle",
+            "context": "Wallet section header",
+            "purpose": "Organizes holdings by wallet group"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [
+          "$60,416.38 $23.56 SOL",
+          "+$959.28",
+          "+23 new holdings",
+          "$43,816.19",
+          "120.87 SOL"
+        ],
+        "trustSignals": [
+          "140+ protocols scanned",
+          "Real-time tracking",
+          "Claimable item detection",
+          "Live portfolio preview with substantial holdings ($60k+)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Login to view total referrals (on dashboard preview)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-9-referral-dashboard-shows-referral-link-section-tot.png",
+      "label": "Referral dashboard",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#C6FF00",
+          "#0a0e27",
+          "#1a2d2d"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white for section titles; gray for secondary headings",
+          "bodyStyle": "Regular gray text for descriptions and explanatory copy",
+          "dataStyle": "Large bold dollar amounts ($2M, $1M) with colored badges (JupUSD, USDC)"
+        },
+        "components": [
+          {
+            "type": "Page header",
+            "description": "Rewards/Referral tab navigation with headline and subheadline",
+            "position": "Top of page",
+            "notable": "Referral tab is active; simple horizontal tab navigation"
+          },
+          {
+            "type": "Your Referral Link card",
+            "description": "Feature card with link icon, explanation text, and 'Connect Wallet' CTA",
+            "position": "Left column, top section",
+            "notable": "Lime green button; explains 10% bonus trading points benefit"
+          },
+          {
+            "type": "Total Referrals card",
+            "description": "Empty state card indicating login required",
+            "position": "Center column, aligned with referral link",
+            "notable": "Gray placeholder with 'Login to view total referrals' message"
+          },
+          {
+            "type": "Referral Status card",
+            "description": "Empty state card for referral status tracking",
+            "position": "Right column, aligned with others",
+            "notable": "Gray placeholder with 'Login to view referral status' message"
+          },
+          {
+            "type": "Referral Campaigns section",
+            "description": "Card grid showing active and ended referral campaigns with reward pools",
+            "position": "Bottom section, full width",
+            "notable": "'New' badge on section; campaign cards show status badge (Live/Ended), icon, title, description, reward pool"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page header emphasizes main section; three-column card layout guides eye horizontally; campaign section emphasizes current opportunities with 'New' label and Live/Ended status badges",
+        "innovativeElements": [
+          "Status badges (Live/Ended) on campaign cards",
+          "'New' section label to highlight recent additions",
+          "Multi-column information architecture for empty state cards"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Access referral program, generate referral link, track referral performance, and discover active reward campaigns",
+        "entryPoints": [
+          "Rewards tab in main navigation",
+          "Referral subtab selection"
+        ],
+        "exitPoints": [
+          "Connect Wallet button to authenticate",
+          "Click on campaign card to view details",
+          "View Others link to see additional campaigns",
+          "Return to other main tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect Wallet button",
+            "action": "Authenticate to view referral link and statistics"
+          },
+          {
+            "element": "Campaign card",
+            "action": "Navigate to campaign detail or join campaign"
+          },
+          {
+            "element": "View Others link",
+            "action": "See additional referral campaigns beyond initial display"
+          },
+          {
+            "element": "Rewards/Referral tabs",
+            "action": "Switch between rewards views"
+          }
+        ],
+        "informationArchitecture": "Header introduces referral system → Three-column status/data cards for authenticated users → Active campaigns section with filtering and expandability. Empty states indicate authentication requirement.",
+        "frictionPoints": [
+          "Must connect wallet to see referral link and statistics",
+          "Empty state cards take up space without providing value to non-authenticated users",
+          "No preview of referral benefits until authentication"
+        ],
+        "progressIndicators": [
+          "Live/Ended status badges on campaign cards"
+        ]
+      },
+      "copy": {
+        "headline": "Referral Dashboard",
+        "subheadline": "Refer friends and earn rewards!",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Center of 'Your Referral Link' card"
+          },
+          {
+            "text": "View Others",
+            "style": "text-link",
+            "placement": "Right side of 'Referral Campaigns' section header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Share your referral code to earn rewards. Users you refer will get 10% bonus trading points",
+            "context": "In 'Your Referral Link' card",
+            "purpose": "Explains program mechanics and user incentive"
+          },
+          {
+            "text": "How referrals work",
+            "context": "Info icon next to 'Referrals' heading",
+            "purpose": "Toggles explanation of referral mechanics"
+          },
+          {
+            "text": "Login to view total referrals",
+            "context": "Placeholder in 'Total Referrals' card",
+            "purpose": "Calls out authentication requirement"
+          },
+          {
+            "text": "Trade & Refer to Earn from $2,000,000 in Rewards",
+            "context": "Campaign card description",
+            "purpose": "Highlights reward pool size and earning opportunity"
+          },
+          {
+            "text": "$2M in JupUSD",
+            "context": "Campaign card footer",
+            "purpose": "Specifies reward token and amount"
+          }
+        ],
+        "tone": "professional-technical, incentive-focused",
+        "dataFormatting": [
+          "$2,000,000 in Rewards",
+          "$2M in JupUSD",
+          "$1M in USDC",
+          "10% bonus trading points"
+        ],
+        "trustSignals": [
+          "Large reward pools ($2M, $1M)",
+          "Named campaigns (TCG Rewards Season 1 & 2)",
+          "Clear terms: 10% bonus for referred users"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Login to view total referrals",
+          "Login to view referral status"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-10-referral-modal-how-referrals-work-with-tiered-earn.png",
+      "label": "Referral modal — How referrals work",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a2e",
+          "#a8ff35",
+          "#00d9ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif, clean and direct",
+          "bodyStyle": "Medium-weight gray text with subtle contrast for readability",
+          "dataStyle": "Bold percentages and amounts in white, hierarchical sizing for earning rates"
+        },
+        "components": [
+          {
+            "type": "modal-header",
+            "description": "Title 'How Referrals Work' with close button",
+            "position": "top-center",
+            "notable": "Clean, minimal header with X close button"
+          },
+          {
+            "type": "tiered-tree-diagram",
+            "description": "Visual representation of referral hierarchy with user icons and earning percentages",
+            "position": "center-bottom",
+            "notable": "Innovative hierarchical tree showing 3 tiers with direct/indirect referral structure and color-coded earning percentages"
+          },
+          {
+            "type": "text-section",
+            "description": "Three sections explaining referral mechanics",
+            "position": "top-center",
+            "notable": "Clear progressive disclosure of earning structure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Text explanation flows top-to-bottom, visual diagram anchors understanding at bottom with clear tier progression",
+        "innovativeElements": [
+          "Hierarchical tree visualization showing tiered referral structure with connected user icons",
+          "Color-coded earning percentages displayed on each tier level",
+          "Integration of text explanation with visual diagram for dual-mode understanding"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-informational",
+        "userIntent": "Understand how the referral program works and earning structure",
+        "entryPoints": [
+          "Clicked 'How it works' link from referral dashboard"
+        ],
+        "exitPoints": [
+          "Close button (X)",
+          "Outside modal click",
+          "Back to referral dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Close button (X)",
+            "action": "Dismiss modal and return to previous screen"
+          }
+        ],
+        "informationArchitecture": "Progressive disclosure: earning rules → bonus structure → tiered rates → visual diagram confirmation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How Referrals Work",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "When you refer others",
+            "context": "First section header",
+            "purpose": "Introduce referrer earning rules"
+          },
+          {
+            "text": "You earn a percentage of points from your direct and indirect referrals",
+            "context": "Under 'When you refer others'",
+            "purpose": "Explain base earning mechanism"
+          },
+          {
+            "text": "When you are referred",
+            "context": "Second section header",
+            "purpose": "Introduce referee earning rules"
+          },
+          {
+            "text": "You earn 10% bonus trading points",
+            "context": "Under 'When you are referred'",
+            "purpose": "State bonus for being referred"
+          },
+          {
+            "text": "The more you refer, the more points and rewards you accumulate.",
+            "context": "Bottom of explanation",
+            "purpose": "Incentivize referral action"
+          },
+          {
+            "text": "Visual guide to how tiered referrals function",
+            "context": "Below diagram",
+            "purpose": "Label the visual aid"
+          }
+        ],
+        "tone": "educational-encouraging",
+        "dataFormatting": [
+          "30% of points from Direct (Tier 1) referrals",
+          "3% of points from Indirect (Tier 2) referrals",
+          "2% of points from Indirect (Tier 3) referrals",
+          "10% bonus trading points"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-11-404-error-page-page-not-found-with-back-to-home-bu.png",
+      "label": "404 error page",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width-centered",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#a8ff35",
+          "#00d9ff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif, prominent and clear",
+          "bodyStyle": "Medium gray text, readable against dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo-icon",
+            "description": "Jupiter brand logo in teal/cyan gradient",
+            "position": "center-top",
+            "notable": "Consistent brand identity maintained even in error state"
+          },
+          {
+            "type": "error-heading",
+            "description": "'404 — Page Not Found' text",
+            "position": "center-middle",
+            "notable": "Clear error code with em-dash separator"
+          },
+          {
+            "type": "error-message",
+            "description": "Explanatory text about missing page",
+            "position": "center-middle-bottom",
+            "notable": "Simple, non-technical language"
+          },
+          {
+            "type": "primary-button",
+            "description": "'Back to Home' call-to-action",
+            "position": "center-bottom",
+            "notable": "Bright lime green (#a8ff35) for high visibility and recovery path"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered composition with clear progression: logo → error message → recovery action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error-404",
+        "userIntent": "Recover from navigation error and return to functional area",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link"
+        ],
+        "exitPoints": [
+          "Back to Home button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back to Home button",
+            "action": "Navigate user to home page"
+          }
+        ],
+        "informationArchitecture": "Simple error page with single recovery option—minimal friction",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 — Page Not Found",
+        "subheadline": "The page you're looking for doesn't exist.",
+        "ctas": [
+          {
+            "text": "Back to Home",
+            "style": "primary-button",
+            "placement": "center-bottom"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-apologetic",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 — Page Not Found",
+          "The page you're looking for doesn't exist."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-12-homepage-scrolled-trending-tokens-trump-hype-pump-.png",
+      "label": "Homepage scrolled — Trending tokens",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "card-grid-stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#a8ff35",
+          "#00d9ff"
+        ],
+        "typography": {
+          "headingStyle": "Medium-bold white sans-serif for section headers",
+          "bodyStyle": "Small gray text for secondary information and descriptions",
+          "dataStyle": "Bold white for prices and volumes, green for positive changes, color-coded for market metrics"
+        },
+        "components": [
+          {
+            "type": "section-header",
+            "description": "Section titles like 'Find Cooking Tokens', 'Trade Your Opinions', etc.",
+            "position": "top of each card section",
+            "notable": "Includes action label with external link icon"
+          },
+          {
+            "type": "token-row",
+            "description": "Horizontal list showing token icon, name, price, volume, and market cap",
+            "position": "top section (Find Cooking Tokens)",
+            "notable": "Four-column data layout with percentage gains in green"
+          },
+          {
+            "type": "prediction-card-grid",
+            "description": "3-column grid of prediction markets with icons and betting volumes",
+            "position": "middle section (Trade Your Opinions)",
+            "notable": "Cards show market title, volume indicator, and progress bar"
+          },
+          {
+            "type": "chart-card",
+            "description": "Leverage trading cards with sparkline charts and trading controls",
+            "position": "lower section (Trade up to 250x Leverage)",
+            "notable": "Interactive +/- buttons, 24H change, integrated micro-chart visualization"
+          },
+          {
+            "type": "nav-hint",
+            "description": "'Back to Swap ↑' navigation link",
+            "position": "bottom-right",
+            "notable": "Soft gray text indicating scroll context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Horizontal card sections guide eye left-to-right, with data hierarchy within cards (primary value, supporting metrics, micro-visuals)",
+        "innovativeElements": [
+          "Integrated sparkline charts within trading cards showing price movement",
+          "Card-based product discovery layout showing multiple product verticals (tokens, predictions, leverage)",
+          "Volume indicators and progress visualization for prediction markets",
+          "Icon-badge system for token identification"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse-discovery",
+        "userIntent": "Explore trending tokens, prediction markets, and leverage trading opportunities",
+        "entryPoints": [
+          "Scrolled down from top of home",
+          "Navigated to home"
+        ],
+        "exitPoints": [
+          "Click into token/market details",
+          "Back to Swap navigation",
+          "Click external links",
+          "Navigate to specific products (Terminal, Predict, Perps)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token rows",
+            "action": "Navigate to token detail or swap page"
+          },
+          {
+            "element": "Prediction cards",
+            "action": "Navigate to prediction market detail"
+          },
+          {
+            "element": "+/- buttons on leverage cards",
+            "action": "Adjust leverage or position sizing"
+          },
+          {
+            "element": "External link icons",
+            "action": "Open associated product pages"
+          },
+          {
+            "element": "Back to Swap ↑",
+            "action": "Scroll back to top or navigate to Swap product"
+          }
+        ],
+        "informationArchitecture": "Product-centric discovery: four distinct verticals (cooking tokens, prediction markets, leverage, yield vaults) presented as scrollable card sections",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Find Cooking Tokens with Jupiter Terminal",
+            "style": "section-header-with-icon",
+            "placement": "top of token section"
+          },
+          {
+            "text": "Trade Your Opinions with Jupiter Prediction Markets",
+            "style": "section-header-with-icon",
+            "placement": "top of prediction section"
+          },
+          {
+            "text": "Trade up to 250x Leverage with Jupiter Perps",
+            "style": "section-header-with-icon",
+            "placement": "top of leverage section"
+          },
+          {
+            "text": "Earn Yield Simply with Jupiter Lend Vaults",
+            "style": "section-header-with-icon",
+            "placement": "top of yield section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "1y, 4mo, 7mo",
+            "context": "Token listing age labels",
+            "purpose": "Show how recently token became active"
+          },
+          {
+            "text": "+5.94%, +6.8%, +5.07%",
+            "context": "Green percentage values in token rows",
+            "purpose": "Display positive price changes"
+          },
+          {
+            "text": "$24.3M VOL, $9.70M MCAP",
+            "context": "Token volume and market cap metrics",
+            "purpose": "Provide market size indicators"
+          },
+          {
+            "text": "$646M Vol, $459M Vol, $282M Vol",
+            "context": "Prediction market volume indicators",
+            "purpose": "Show market liquidity and activity"
+          },
+          {
+            "text": "0.7% • 24H, 1.1% • 24H, 1.3% • 24H",
+            "context": "Change percentage with timeframe",
+            "purpose": "Display short-term price volatility"
+          }
+        ],
+        "tone": "professional-discovery",
+        "dataFormatting": [
+          "$3.316 (token price)",
+          "+5.94% (positive change)",
+          "$24.3M (volume)",
+          "$771M (market cap)",
+          "$646M Vol (prediction market volume)",
+          "0.7% • 24H (change with timeframe)"
+        ],
+        "trustSignals": [
+          "Specific market volumes displayed for each asset",
+          "Market cap indicators for token evaluation",
+          "Real-time percentage changes"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-swap-2-swap-page-limit-order-tab-with-usdc-to-sol-showing.png",
+      "label": "Limit order tab — USDC to SOL",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c7f34d",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, centered, white text (72px+)",
+          "bodyStyle": "Medium-weight sans-serif, gray secondary text",
+          "dataStyle": "Monospace-like, large white numbers with gray sub-values"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Market | Limit | Recurring tabs with active state highlighting",
+            "position": "Below headline",
+            "notable": "Limit tab active with white underline"
+          },
+          {
+            "type": "Input Field Pair",
+            "description": "Allocate (USDC) and To Buy (SOL) with token selectors",
+            "position": "Upper form section",
+            "notable": "Swap arrow icon between fields"
+          },
+          {
+            "type": "Price Display",
+            "description": "Large price ($73.40) with percentage variance indicators",
+            "position": "Center-right of form",
+            "notable": "Multiple percentage discount buttons (-10%, -20%, -10%)"
+          },
+          {
+            "type": "Info Box",
+            "description": "Red/orange alert about price and slippage settings",
+            "position": "Below price section",
+            "notable": "Inline red text highlighting condition 'below $73.4'"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Lime green Connect button spanning full width",
+            "position": "Bottom of form",
+            "notable": "High contrast, impossible to miss"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline → Tabs → Form inputs → Price details → Alert → CTA",
+        "innovativeElements": [
+          "Multi-percentage discount selector buttons for quick price adjustment",
+          "Swap icon between allocation/purchase fields for visual clarity",
+          "Color-coded alert box with inline condition highlighting"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Set up a limit order to buy SOL when price drops to specific threshold",
+        "entryPoints": [
+          "Market tab",
+          "Swap navigation menu",
+          "Direct link to limit orders"
+        ],
+        "exitPoints": [
+          "Connect wallet to execute order",
+          "Switch to Market or Recurring tabs",
+          "Terminal view for order confirmation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "USDC dropdown",
+            "action": "Opens token selector for 'Allocate' currency"
+          },
+          {
+            "element": "SOL dropdown",
+            "action": "Opens token selector for 'To Buy' currency"
+          },
+          {
+            "element": "HALF / MAX buttons",
+            "action": "Quickly set allocation to 50% or 100% of balance"
+          },
+          {
+            "element": "Price discount buttons (-10%, -20%, -10%)",
+            "action": "Automatically adjusts target price to percentage below market"
+          },
+          {
+            "element": "Limit V2+ dropdown",
+            "action": "Opens advanced limit order version selector"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiates wallet connection and order submission"
+          }
+        ],
+        "informationArchitecture": "Sequential form flow: allocate token → select purchase token → set price conditions → review → connect",
+        "frictionPoints": [
+          "Must connect wallet before executing (reasonable security measure)",
+          "Price and slippage alert requires understanding of market conditions",
+          "Multiple settings (TP, SL, expiry) condensed in limited space"
+        ],
+        "progressIndicators": [
+          "Tab state (Limit is active/highlighted)",
+          "Price condition text shows order intent status"
+        ]
+      },
+      "copy": {
+        "headline": "The Home of Onchain Finance",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Bottom of form, full width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Allocate",
+            "context": "Form section label",
+            "purpose": "Labels the token being sold"
+          },
+          {
+            "text": "To Buy",
+            "context": "Form section label",
+            "purpose": "Labels the token being purchased"
+          },
+          {
+            "text": "Buy SOL with 15 USDC when price goes below $73.4 (-10% from market)",
+            "context": "Alert/condition summary in red box",
+            "purpose": "Confirms order logic to user"
+          },
+          {
+            "text": "Your set slippage applies. SOL returned may differ from estimates.",
+            "context": "Subtext in alert box",
+            "purpose": "Manages expectations about execution"
+          },
+          {
+            "text": "Est. Received",
+            "context": "Label below SOL purchase amount",
+            "purpose": "Indicates the amount is an estimate"
+          },
+          {
+            "text": "Limit V2+",
+            "context": "Top right of form",
+            "purpose": "Product version identifier with upgrade option"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$73.4004217274 (large price display)",
+          "0.204558 (token amount with 6 decimals)",
+          "15 USDC ($15 in parentheses)",
+          "-10%, -20%, -10% (percentage variance)",
+          "$81.56 (market price reference)",
+          "7 Days (time duration)"
+        ],
+        "trustSignals": [
+          "Explicit slippage warning",
+          "Market price shown for reference",
+          "Est. Received label indicates transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-swap-3-swap-page-recurring-order-tab-with-dca-settings-12.png",
+      "label": "Recurring order tab — DCA settings",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c7f34d",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, centered, white text (72px+)",
+          "bodyStyle": "Medium-weight sans-serif, gray secondary text",
+          "dataStyle": "Large white numbers with gray sub-labels"
+        },
+        "components": [
+          {
+            "type": "Tab Navigation",
+            "description": "Market | Limit | Recurring tabs with active state",
+            "position": "Below headline",
+            "notable": "Recurring tab active with lime green underline"
+          },
+          {
+            "type": "Form Section",
+            "description": "'I Want To Allocate' with USDC amount input",
+            "position": "Upper form area",
+            "notable": "Natural language labeling instead of technical terms"
+          },
+          {
+            "type": "DCA Parameters",
+            "description": "Dual input row: 'Every 1 minute' | 'Over 2 orders'",
+            "position": "Mid form",
+            "notable": "Two-part cadence configuration with dropdown selectors"
+          },
+          {
+            "type": "Price Range Input",
+            "description": "Optional Min Price / Max Price fields",
+            "position": "Lower form section",
+            "notable": "Contextual rate display (81.68 SOL / USDC)"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Lime green Connect button",
+            "position": "Bottom of form",
+            "notable": "Full width, high contrast"
+          },
+          {
+            "type": "Pair Summary",
+            "description": "Token pair cards at bottom showing prices and 24h change",
+            "position": "Below form",
+            "notable": "Shows USDC and SOL with current prices and % change in green"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline → Tabs → Allocation input → DCA schedule → Price range → CTA → Token summary",
+        "innovativeElements": [
+          "Natural language form labels ('I Want To Allocate' vs 'Amount')",
+          "Dual-parameter DCA cadence selector (frequency × occurrences)",
+          "Optional price range bounds for DCA execution safety",
+          "Token pair summary cards showing real-time pricing below form"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Configure a recurring/DCA (dollar-cost averaging) order with frequency and count parameters",
+        "entryPoints": [
+          "Limit tab",
+          "Recurring tab selection",
+          "Direct DCA setup link"
+        ],
+        "exitPoints": [
+          "Connect wallet to execute DCA",
+          "Switch to Market or Limit tabs",
+          "Terminal confirmation screen"
+        ],
+        "interactiveElements": [
+          {
+            "element": "USDC dropdown",
+            "action": "Opens token selector for allocation currency"
+          },
+          {
+            "element": "SOL display",
+            "action": "Shows destination token (non-interactive in this view)"
+          },
+          {
+            "element": "'Every' dropdown",
+            "action": "Changes time interval (minute, hour, day, week, etc.)"
+          },
+          {
+            "element": "'Over' dropdown",
+            "action": "Changes total order count"
+          },
+          {
+            "element": "Min Price / Max Price inputs",
+            "action": "Sets price boundary conditions for execution"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiates wallet connection and DCA submission"
+          },
+          {
+            "element": "Token pair cards",
+            "action": "Opens token details or price information"
+          }
+        ],
+        "informationArchitecture": "Sequential DCA setup: allocation amount → execution frequency → order count → optional price bounds → connect",
+        "frictionPoints": [
+          "Must understand DCA concept (may require education for new users)",
+          "Two separate dropdowns for cadence can feel non-intuitive",
+          "Optional price range may be overlooked by casual users"
+        ],
+        "progressIndicators": [
+          "Recurring tab active/highlighted",
+          "Price range hint showing current rate (81.68 SOL / USDC)"
+        ]
+      },
+      "copy": {
+        "headline": "The Home of Onchain Finance",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Bottom of form, full width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I Want To Allocate",
+            "context": "Form section label",
+            "purpose": "Natural language instruction to set allocation amount"
+          },
+          {
+            "text": "To Buy",
+            "context": "Form section label",
+            "purpose": "Indicates target token"
+          },
+          {
+            "text": "Every",
+            "context": "Left side of cadence row",
+            "purpose": "Time interval selector for recurring orders"
+          },
+          {
+            "text": "minute",
+            "context": "Dropdown value for Every field",
+            "purpose": "Selected time unit"
+          },
+          {
+            "text": "Over",
+            "context": "Right side of cadence row",
+            "purpose": "Total execution count selector"
+          },
+          {
+            "text": "orders",
+            "context": "Label after count value",
+            "purpose": "Clarifies unit of measurement"
+          },
+          {
+            "text": "Price Range (optional)",
+            "context": "Section header",
+            "purpose": "Indicates optional advanced feature"
+          },
+          {
+            "text": "Rate: 81.68 SOL / USDC",
+            "context": "Below price inputs",
+            "purpose": "Current market rate reference for price boundary setting"
+          }
+        ],
+        "tone": "friendly-casual with professional-technical undertones",
+        "dataFormatting": [
+          "120 USDC ($119.99 in parentheses)",
+          "1 minute (time interval)",
+          "2 orders (count)",
+          "Rate: 81.68 SOL / USDC (exchange rate)",
+          "$0.99991 (USDC price)",
+          "0.34% (24h change in green)"
+        ],
+        "trustSignals": [
+          "Real-time rate display for context",
+          "Token pair summary showing current market data",
+          "24h price change indicators"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-swap-4-token-selector-modal-shows-sol-usdc-usdt-usd1-jlus.png",
+      "label": "Token selector modal",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "modal / card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c7f34d",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Medium sans-serif, white text for token names",
+          "bodyStyle": "Small sans-serif, gray text for token details",
+          "dataStyle": "Small green/gray percentages and chain names"
+        },
+        "components": [
+          {
+            "type": "Search Bar",
+            "description": "Search any token, Include quotes for exact match, with Esc hint",
+            "position": "Top of modal",
+            "notable": "Provides helpful UX hint about exact matching"
+          },
+          {
+            "type": "Token Category Tabs",
+            "description": "Top | Cooking | Stocks tabs with icons",
+            "position": "Below search bar",
+            "notable": "Pre-filtered token categories for quick browsing"
+          },
+          {
+            "type": "Icon Grid",
+            "description": "Visual token icons (SOL, USDC, JLP, JupUSD)",
+            "position": "Second row of tabs area",
+            "notable": "Quick-access favorite/popular tokens"
+          },
+          {
+            "type": "Token List Item",
+            "description": "Row with token icon, name, symbol, chain info, and % score",
+            "position": "Repeating in modal body",
+            "notable": "Consistent card design with right-aligned green percentage"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Lime green button at bottom (partially visible)",
+            "position": "Bottom of modal",
+            "notable": "Likely confirms token selection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Search → Category tabs → Icon shortcuts → Scrollable token list → Selection CTA",
+        "innovativeElements": [
+          "Contextual category tabs (Top, Cooking, Stocks) for curated browsing",
+          "Quick-access icon row for frequently used tokens",
+          "Green scoring percentage on right side of each token",
+          "Helpful search hint about exact matching with quotes"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Select a token from available options for swap/allocation",
+        "entryPoints": [
+          "Click USDC or SOL dropdown from swap form",
+          "Token selector trigger from any token input field"
+        ],
+        "exitPoints": [
+          "Select a token from list (closes modal)",
+          "Search and select specific token",
+          "Esc key to cancel"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Filters token list by name/symbol in real-time"
+          },
+          {
+            "element": "Category tabs (Top, Cooking, Stocks)",
+            "action": "Filters displayed tokens by category"
+          },
+          {
+            "element": "Icon quick-access buttons",
+            "action": "Immediately selects that token"
+          },
+          {
+            "element": "Token list items",
+            "action": "Selects token and closes modal"
+          },
+          {
+            "element": "Esc key / modal close",
+            "action": "Cancels selection and returns to form"
+          }
+        ],
+        "informationArchitecture": "Search or browse → Optionally filter by category → Select from list or quick icons",
+        "frictionPoints": [
+          "Long scroll list may require search for obscure tokens",
+          "Multiple category tabs add cognitive load",
+          "No 'Recently used' section visible"
+        ],
+        "progressIndicators": [
+          "Active category tab highlighting",
+          "Search text shows filtering in progress"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Select",
+            "style": "primary-button",
+            "placement": "Bottom of modal (partially visible)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search any token. Include \"\" for exact match.",
+            "context": "Search bar placeholder/hint",
+            "purpose": "Instructs user on search syntax and exact matching"
+          },
+          {
+            "text": "Top",
+            "context": "First category tab",
+            "purpose": "Shows top/popular tokens"
+          },
+          {
+            "text": "Cooking",
+            "context": "Second category tab",
+            "purpose": "Shows cooking-related tokens (likely meme/community tokens)"
+          },
+          {
+            "text": "Stocks",
+            "context": "Third category tab",
+            "purpose": "Shows stock-related synthetic tokens"
+          },
+          {
+            "text": "Solana · Sol1...1l12",
+            "context": "Subtitle under SOL token name",
+            "purpose": "Shows blockchain and truncated contract address"
+          },
+          {
+            "text": "USD Coin · EPiF...DfV",
+            "context": "Subtitle under USDC token name",
+            "purpose": "Shows token description and truncated address"
+          },
+          {
+            "text": "99",
+            "context": "Green percentage badge on token row",
+            "purpose": "Likely indicates liquidity score or popularity metric"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Sol1...1l12 (truncated contract address)",
+          "EPiF...DfV (truncated contract address)",
+          "99, 100, 95, 100, 89, 98 (percentage scores)",
+          "0%, 0.34% (24h change percentages)"
+        ],
+        "trustSignals": [
+          "Green verification checkmarks on trusted tokens",
+          "Percentage scoring system for token quality/liquidity",
+          "Chain identification (Solana, EPIF, etc.)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-13-homepage-scrolled-jupiter-perps-250x-leverage-and-.png",
+      "label": "Homepage scrolled — Jupiter Perps 250x leverage",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#00d4aa",
+          "#fbbf24"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px, white text for feature names",
+          "bodyStyle": "Regular sans-serif, 12-14px, gray text for descriptions and secondary data",
+          "dataStyle": "Monospace or bold for prices and percentages; cyan/green for gains, red/orange for losses"
+        },
+        "components": [
+          {
+            "type": "feature-card",
+            "description": "Promotional cards for leverage trading, yield farming, and stock trading",
+            "position": "Full-width stacked sections",
+            "notable": "Each card has inline mini-charts and external link icons"
+          },
+          {
+            "type": "token-pair-display",
+            "description": "Shows token symbol, mini sparkline chart, price, and 24H change",
+            "position": "Within feature cards",
+            "notable": "Up/down arrows adjacent to price for quick action"
+          },
+          {
+            "type": "yield-card",
+            "description": "Currency pair with APY percentage and supplied TVL",
+            "position": "Earn Yield section",
+            "notable": "Large cyan APY values with smaller gray TVL labels"
+          },
+          {
+            "type": "progress-bar",
+            "description": "Horizontal bar showing pool utilization percentage",
+            "position": "Bottom of Multiply Loops section",
+            "notable": "Lime-green fill on dark background, labeled with percentage"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Feature cards dominate; prices and APY values emphasized in larger font; external link icons guide attention to CTAs",
+        "innovativeElements": [
+          "Mini sparkline charts embedded in card headers",
+          "Leverage multiplier badges (250x, 26.81%, 316.63%)",
+          "Connected yield metrics showing supply amounts alongside APY"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / dashboard",
+        "userIntent": "Discover Jupiter's feature offerings (leverage trading, yield farming, stock trading) and assess performance metrics",
+        "entryPoints": [
+          "Home navigation",
+          "Direct landing from marketing"
+        ],
+        "exitPoints": [
+          "Click feature cards to enter respective products",
+          "Connect wallet button for authentication",
+          "Back to Swap navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature card",
+            "action": "Navigate to product (Perps, Lend Vaults, Multiply Loops, Terminal)"
+          },
+          {
+            "element": "Up/down arrows on price",
+            "action": "Likely expand or highlight token details"
+          },
+          {
+            "element": "External link icon",
+            "action": "Open feature details or product page"
+          },
+          {
+            "element": "Connect button (top right)",
+            "action": "Authenticate wallet to view personal net worth"
+          }
+        ],
+        "informationArchitecture": "Hero section showcasing flagship features; grid of product cards organized by capability (trade, earn, invest); connected wallet status in top-right corner",
+        "frictionPoints": [
+          "Disconnected state shows $0.00 net worth—may discourage exploration",
+          "Multiple CTAs per card (card click + external link) could be ambiguous"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trade up to 250x Leverage with Jupiter Perps",
+        "subheadline": "Earn Yield Simply with Jupiter Lend Vaults",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top-right, persistent"
+          },
+          {
+            "text": "External link icon",
+            "style": "ghost-button",
+            "placement": "Top-right of each feature card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "0.7% - 24H",
+            "context": "Solana price change",
+            "purpose": "Display short-term volatility"
+          },
+          {
+            "text": "5.23% APY, $54.7M Supplied",
+            "context": "JupUSD yield offering",
+            "purpose": "Communicate earning potential and liquidity depth"
+          },
+          {
+            "text": "53% filled",
+            "context": "Multiply Loops utilization",
+            "purpose": "Show pool usage and availability"
+          },
+          {
+            "text": "Back to Swap ↑",
+            "context": "Bottom-right",
+            "purpose": "Navigation breadcrumb"
+          }
+        ],
+        "tone": "professional-technical, promotional",
+        "dataFormatting": [
+          "$81.68 / $67.9K / $1.98K (prices with 4 sig figs)",
+          "0.7% - 24H / 11% - 24H (percentage changes)",
+          "5.23% APY (yield with 2 decimals)",
+          "$54.7M Supplied (TVL with 1 decimal + K/M suffix)"
+        ],
+        "trustSignals": [
+          "Large TVL figures ($54.7M, $519M, $23.2M) demonstrating liquidity",
+          "APY percentages showcasing earning potential",
+          "Specific leverage limits (250x, 26.81%, 316.63%) suggesting risk management"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-home-14-homepage-scrolled-jupiter-multiply-loops-jupsol-so.png",
+      "label": "Homepage scrolled — Jupiter Multiply",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#00d4aa",
+          "#fbbf24"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16px, white text for section titles",
+          "bodyStyle": "Regular sans-serif, 12-14px, gray text for descriptions",
+          "dataStyle": "Monospace for numbers; cyan/green for positive metrics, gray for secondary info"
+        },
+        "components": [
+          {
+            "type": "yield-pool-card",
+            "description": "Shows LP pair, max yield %, pool utilization bar, and filled percentage",
+            "position": "Multiply Loops section",
+            "notable": "Dual-token icons with max yield in large cyan text"
+          },
+          {
+            "type": "stock-asset-row",
+            "description": "Colored icon, asset name, price, volume, and percentage change",
+            "position": "Trade Stocks section",
+            "notable": "Bright colored circles (green, red, blue) for brand identity"
+          },
+          {
+            "type": "currency-selector",
+            "description": "Dropdown showing SOL with currency icon",
+            "position": "Send Crypto section bottom",
+            "notable": "Dark button with left-aligned icon"
+          },
+          {
+            "type": "primary-cta",
+            "description": "Full-width Connect button in muted green",
+            "position": "Bottom of Send Crypto section",
+            "notable": "High contrast against dark background; disabled state appearance"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Feature sections stack vertically; max yield % values in large cyan emphasize returns; stock tickers draw attention with brand colors; connect CTA anchors bottom",
+        "innovativeElements": [
+          "Progress bars for pool utilization embedded in cards",
+          "Stock ticker integration with live pricing and volume",
+          "Currency selector within send flow for single-step selection"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / dashboard with embedded forms",
+        "userIntent": "Browse yield opportunities, stock prices, and initiate a crypto send transaction",
+        "entryPoints": [
+          "Scrolled from above sections",
+          "Home navigation"
+        ],
+        "exitPoints": [
+          "Click Multiply Loops cards to enter strategy",
+          "Click stock rows to trade",
+          "Complete Send transaction or dismiss",
+          "Back to Swap navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Yield pool card",
+            "action": "Navigate to strategy details"
+          },
+          {
+            "element": "Stock asset row",
+            "action": "Open stock trading interface"
+          },
+          {
+            "element": "Currency selector dropdown",
+            "action": "Change send currency"
+          },
+          {
+            "element": "Connect button",
+            "action": "Authenticate wallet before sending"
+          }
+        ],
+        "informationArchitecture": "Stacked feature sections: Multiply Loops (yield strategies), Trade Stocks (equity tickers), Send Crypto (transaction form at bottom)",
+        "frictionPoints": [
+          "Connect required before sending—interrupts flow",
+          "No pre-filled amount in Send section; starts at 0.00",
+          "Multiple feature sections may overwhelm first-time users"
+        ],
+        "progressIndicators": [
+          "Pool utilization bars (53%, 69%)"
+        ]
+      },
+      "copy": {
+        "headline": "Maximize Your Yield with Jupiter Multiply Loops",
+        "subheadline": "Trade Stocks Onchain with Jupiter Terminal",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Bottom of Send Crypto form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Max 26.81%",
+            "context": "JupSOL-SOL yield",
+            "purpose": "Highlight maximum return potential"
+          },
+          {
+            "text": "69% filled",
+            "context": "JLP-USDC pool utilization",
+            "purpose": "Show pool capacity and health"
+          },
+          {
+            "text": "+0.47%",
+            "context": "NVDAx price change",
+            "purpose": "Display intraday performance"
+          },
+          {
+            "text": "+37.26% - VOL",
+            "context": "Stock volume metric",
+            "purpose": "Show volume-based change"
+          },
+          {
+            "text": "Send Crypto to Anyone as a Link",
+            "context": "Section headline",
+            "purpose": "Describe feature benefit"
+          },
+          {
+            "text": "0.00",
+            "context": "Amount field",
+            "purpose": "Placeholder showing send amount"
+          }
+        ],
+        "tone": "professional-technical, feature-focused",
+        "dataFormatting": [
+          "Max 26.81%, Max 316.63% (percentages with 2 decimals)",
+          "53% filled, 69% filled (utilization %)",
+          "$191.43 (stock price)",
+          "+0.47%, +37.26% (changes with + prefix)",
+          "0.00 (amount with 2 decimals)"
+        ],
+        "trustSignals": [
+          "High max yields (26.81%, 316.63%) demonstrating strategy potential",
+          "Pool utilization percentages (53%, 69%) showing active liquidity",
+          "Real stock tickers (NVDAx, TSLAx, CRCLx) with live pricing"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-swap-1-perps-page-loading-sol-perpetual-trading-with-pric.png",
+      "label": "Perps — SOL perpetual trading",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#00d4aa",
+          "#ef4444",
+          "#22c55e"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 14-16px, white for section titles",
+          "bodyStyle": "Regular sans-serif, 12px, gray for labels and descriptions",
+          "dataStyle": "Monospace for OHLC values, large bold for current price, small gray for secondary metrics"
+        },
+        "components": [
+          {
+            "type": "candlestick-chart",
+            "description": "Full OHLCV chart with red/green candles, volume bars, price annotations",
+            "position": "Left-center, ~60% width",
+            "notable": "Interactive with time controls (5m, 15m, 1h), volume indicators, high/low labels"
+          },
+          {
+            "type": "price-header",
+            "description": "Token name, current price, 24H change, volume, high/low prices",
+            "position": "Above chart",
+            "notable": "Large cyan price ($81.70), compact secondary metrics in gray"
+          },
+          {
+            "type": "trading-panel",
+            "description": "Right sidebar with order form, leverage slider, and entry/exit controls",
+            "position": "Right, ~35% width",
+            "notable": "Long/Buy and Short/Sell tabs; leverage multiplier slider (1.1x-250x)"
+          },
+          {
+            "type": "leverage-slider",
+            "description": "Horizontal slider with preset buttons and visual indicator",
+            "position": "Trading panel center",
+            "notable": "Quick-select buttons (1.1x, 50x, 100x, 150x, 200x, 250x); lock icon for safety"
+          },
+          {
+            "type": "order-form-fields",
+            "description": "Entry Price, Liquidation Price, Slippage, Total Fees dropdowns",
+            "position": "Trading panel bottom",
+            "notable": "Expandable sections; Max 2% slippage warning"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Positions, Open Orders, History, Clear All tabs",
+            "position": "Chart footer-left",
+            "notable": "Tabs for order management and history"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Chart dominates left; trading controls anchor right; price and leverage metrics emphasized; order details de-emphasized in collapsible sections",
+        "innovativeElements": [
+          "High-precision leverage slider with 250x extreme leverage option",
+          "Inline take-profit/stop-loss checkbox",
+          "Real-time price levels overlaid on chart (81.702, 84.53, 78.01)",
+          "Collapsible order details showing max 2% slippage warning"
+        ]
+      },
+      "flow": {
+        "screenType": "trading-dashboard / form",
+        "userIntent": "Execute perpetual futures trades on SOL with precise leverage, entry/exit controls, and real-time price tracking",
+        "entryPoints": [
+          "Perps navigation from main menu",
+          "Token search or selection from homepage"
+        ],
+        "exitPoints": [
+          "Submit Long/Buy or Short/Sell order",
+          "View Positions, Open Orders, or History tabs",
+          "Switch tokens via token selector (SOL, ETH, WBTC tabs)",
+          "Navigate to different app sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Long/Buy button",
+            "action": "Submit long position order with configured leverage"
+          },
+          {
+            "element": "Short/Sell button",
+            "action": "Submit short position order with configured leverage"
+          },
+          {
+            "element": "Leverage slider",
+            "action": "Adjust position leverage multiplier (1.1x-250x)"
+          },
+          {
+            "element": "Preset leverage buttons",
+            "action": "Quick-select leverage preset"
+          },
+          {
+            "element": "Take Profit / Stop Loss checkbox",
+            "action": "Toggle automated exit controls"
+          },
+          {
+            "element": "Chart indicators & time controls",
+            "action": "Add technical indicators, change timeframe"
+          },
+          {
+            "element": "Token tabs (SOL, ETH, WBTC)",
+            "action": "Switch trading pair"
+          }
+        ],
+        "informationArchitecture": "Header with token price & metrics → Chart area with controls → Right sidebar with order form. Bottom panels for position management. Top nav for app navigation.",
+        "frictionPoints": [
+          "Wallet disconnection shows 'Connect your wallet to see your trades' message—blocks trading",
+          "Extreme leverage (250x) available without explicit risk warning dialog",
+          "Collapsible order details require expansion—some users may miss fee info",
+          "No obvious visual distinction between Market and Limit modes beyond header tabs"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Long/Buy",
+            "style": "primary-button",
+            "placement": "Right panel, full-width, bottom"
+          },
+          {
+            "text": "Short/Sell",
+            "style": "secondary-button",
+            "placement": "Right panel tab, top"
+          },
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Chart center, overlay message"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You're paying",
+            "context": "Order form label",
+            "purpose": "Indicate what user will spend"
+          },
+          {
+            "text": "0 SOL",
+            "context": "Quantity field",
+            "purpose": "Show order size placeholder"
+          },
+          {
+            "text": "10x",
+            "context": "Leverage display",
+            "purpose": "Show current leverage setting"
+          },
+          {
+            "text": "Max: 2%",
+            "context": "Slippage control",
+            "purpose": "Display maximum acceptable slippage"
+          },
+          {
+            "text": "Entry Price",
+            "context": "Dropdown label",
+            "purpose": "Show order entry configuration"
+          },
+          {
+            "text": "Take Profit / Stop Loss",
+            "context": "Checkbox",
+            "purpose": "Enable automated position exit"
+          },
+          {
+            "text": "Connect your wallet to see your trades",
+            "context": "Center-chart message",
+            "purpose": "Prompt authentication for position tracking"
+          }
+        ],
+        "tone": "professional-technical, neutral",
+        "dataFormatting": [
+          "$81.70 (current price with 2 decimals)",
+          "0.89% / $167.48M / $83.08 / $78.01 (24H change %, volume, high, low)",
+          "10x, 1.1x-250x (leverage multipliers)",
+          "81.702 / 84.53 / 78.01 (OHLC values on chart)",
+          "Max: 2% (slippage percentage)"
+        ],
+        "trustSignals": [
+          "Real-time OHLCV data and chart visualization",
+          "Configurable slippage control (Max 2%)",
+          "Take-profit and stop-loss options for risk management",
+          "Clear order entry controls (Entry Price, Liquidation Price, Total Fees)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Connect your wallet to see your trades"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-onboarding-1-connect-wallet-modal-shows-jupiter-extension-recom.png",
+      "label": "Connect Wallet modal",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white text, 24px+ weight 600-700",
+          "bodyStyle": "Medium-weight grey text for descriptions, 14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-header",
+            "description": "Connect title with close button (X) in top right",
+            "position": "top-center",
+            "notable": "Clean minimal header with close affordance"
+          },
+          {
+            "type": "featured-card",
+            "description": "Jupiter Extension highlighted with 'NEW!' and 'Recommended' badges",
+            "position": "top of list",
+            "notable": "Lime-green accent border, prominent icons, clear value prop"
+          },
+          {
+            "type": "wallet-option",
+            "description": "Jupiter Mobile with QR code affordance",
+            "position": "second option",
+            "notable": "Secondary option still prominent with distinctive icon"
+          },
+          {
+            "type": "expandable-section",
+            "description": "View More Wallets dropdown",
+            "position": "center-bottom",
+            "notable": "Collapsed view shows top 2 options, expandable for discovery"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong top-down: extension (recommended) > mobile > more options, with strategic use of lime accents to guide attention",
+        "innovativeElements": [
+          "Badge system (NEW!, Recommended) on wallet options",
+          "Tiered wallet display with expandable list",
+          "Color-coded distinction between recommended and standard options"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-onboarding",
+        "userIntent": "Connect wallet to Jupiter protocol to begin trading",
+        "entryPoints": [
+          "App landing page",
+          "Connect button on main interface"
+        ],
+        "exitPoints": [
+          "Select Jupiter Extension → proceed to approval",
+          "Select Jupiter Mobile → QR scan flow",
+          "Select other wallet → wallet-specific auth"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Jupiter Extension card",
+            "action": "Triggers wallet connection flow for browser extension"
+          },
+          {
+            "element": "Jupiter Mobile card",
+            "action": "Opens QR code scanner or modal"
+          },
+          {
+            "element": "View More Wallets",
+            "action": "Expands to show additional 10+ wallet options"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses modal, returns to previous screen"
+          }
+        ],
+        "informationArchitecture": "Layered discovery: most relevant option (proprietary extension) is featured first and immediately visible; secondary option (mobile) visible; additional options gated behind expansion to reduce cognitive load",
+        "frictionPoints": [
+          "Must expand to see all wallet options",
+          "Two-step process if choosing less-recommended option"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "NEW!",
+            "context": "Badge on Jupiter Extension",
+            "purpose": "Signal recent feature; create urgency/novelty appeal"
+          },
+          {
+            "text": "Recommended",
+            "context": "Badge on Jupiter Extension",
+            "purpose": "Social proof and nudge toward preferred option"
+          },
+          {
+            "text": "Instant trades with auto-approvals!",
+            "context": "Subtext under Jupiter Extension",
+            "purpose": "Communicate key benefit and differentiation"
+          },
+          {
+            "text": "Scan QR code to connect",
+            "context": "Subtext under Jupiter Mobile",
+            "purpose": "Explain how to use mobile option"
+          },
+          {
+            "text": "View More Wallets",
+            "context": "Expandable section label",
+            "purpose": "Indicate additional options are available"
+          }
+        ],
+        "tone": "professional-technical, friendly",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Jupiter proprietary options prominently featured",
+          "Recommendation badge implies vetting"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-onboarding-2-connect-wallet-modal-expanded-shows-additional-wal.png",
+      "label": "Connect Wallet — Additional options",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "modal-overlay-expanded",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white text, 24px+ weight 600-700",
+          "bodyStyle": "Medium-weight grey text for descriptions, 14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "featured-card",
+            "description": "Jupiter Extension with NEW! and Recommended badges",
+            "position": "top",
+            "notable": "Lime-green border maintains visual priority"
+          },
+          {
+            "type": "secondary-card",
+            "description": "Jupiter Mobile",
+            "position": "below featured",
+            "notable": "Still visually distinct from standard options"
+          },
+          {
+            "type": "wallet-grid",
+            "description": "12-item grid of wallet providers with icons and names",
+            "position": "main content area",
+            "notable": "2-column grid layout, organized alphabetically/by prominence; includes Social Login, Phantom, Solflare, Backpack, Coinbase, Magic Eden, Trust, Ledger, Trezor, Ethereum Wallet, Coin98, Google via TipLink, Bitget, QR"
+          },
+          {
+            "type": "expandable-section",
+            "description": "View Less Wallets toggle",
+            "position": "center-bottom",
+            "notable": "Collapse control appears only when expanded"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Tiered: proprietary options at top (featured first), then grid of integrations organized in scannable 2-column layout",
+        "innovativeElements": [
+          "Expansible wallet list preserves recommended option prominence",
+          "2-column grid allows scanning 12+ options without overwhelming",
+          "Diverse wallet ecosystem displayed (extension, hardware, custodial, social)"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-onboarding-expanded",
+        "userIntent": "Browse and select from comprehensive list of wallet options",
+        "entryPoints": [
+          "Clicked 'View More Wallets' from initial Connect modal"
+        ],
+        "exitPoints": [
+          "Select any wallet option → proceed to auth flow",
+          "Click 'View Less Wallets' → return to simplified view",
+          "Close modal → exit connect flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Any wallet option card",
+            "action": "Initiates connection flow for that wallet provider"
+          },
+          {
+            "element": "View Less Wallets",
+            "action": "Collapses grid back to featured options only"
+          },
+          {
+            "element": "Close button (X)",
+            "action": "Dismisses modal entirely"
+          }
+        ],
+        "informationArchitecture": "Hierarchical expansion: recommended options remain visible at top; additional options organized in scannable 2-column grid below; easy toggle to collapse for users who found what they need",
+        "frictionPoints": [
+          "Must navigate potentially long list to find specific wallet",
+          "No search/filter functionality visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Connect",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "NEW!",
+            "context": "Jupiter Extension badge",
+            "purpose": "Signal feature recency"
+          },
+          {
+            "text": "Recommended",
+            "context": "Jupiter Extension badge",
+            "purpose": "Direct user toward preferred option"
+          },
+          {
+            "text": "Instant trades with auto-approvals!",
+            "context": "Jupiter Extension subtext",
+            "purpose": "Highlight key differentiator"
+          },
+          {
+            "text": "Scan QR code to connect",
+            "context": "Jupiter Mobile subtext",
+            "purpose": "Explain mobile flow"
+          },
+          {
+            "text": "View Less Wallets",
+            "context": "Toggle control",
+            "purpose": "Allow collapsing to simplified view"
+          }
+        ],
+        "tone": "professional-technical, friendly",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Extensive wallet integrations shown (15+)",
+          "Mix of custodial, non-custodial, hardware, social options indicates broad support"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-1-lend-page-terms-and-conditions-modal-for-jupiter-l.png",
+      "label": "Lend — Terms and conditions modal",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "modal-overlay-center",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif white, 18-20px for modal title",
+          "bodyStyle": "Regular grey text for legal content, 13-14px, line-height generous for readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-header",
+            "description": "Acknowledge Terms and Conditions title",
+            "position": "top-center",
+            "notable": "Clear, plain-language heading"
+          },
+          {
+            "type": "product-branding",
+            "description": "Jupiter Lend logo and tagline in top section of modal",
+            "position": "modal-top-background",
+            "notable": "Lime-green accent on 'Lend' logo text"
+          },
+          {
+            "type": "legal-content",
+            "description": "Terms of use text with structured sections (Jupiter Lend, Service Terms of Use, Last Updated, Definitions)",
+            "position": "scrollable content area",
+            "notable": "Uses bold text for key terms like 'Smart Contract' and 'relevant Blockchain Network'; inline emphasis for important concepts"
+          },
+          {
+            "type": "button-pair",
+            "description": "Do not agree (dark/ghost) and Accept and Continue (lime-green primary)",
+            "position": "modal-footer",
+            "notable": "Clear accept/reject pattern; primary action is lime-green"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header/branding → legal content (scrollable) → action buttons, with green primary CTA drawing attention to positive path",
+        "innovativeElements": [
+          "Clean modal overlay with product branding embedded",
+          "Strategic use of bold text within legal content for scannability"
+        ]
+      },
+      "flow": {
+        "screenType": "modal-confirmation",
+        "userIntent": "Review and accept terms before using Jupiter Lend protocol",
+        "entryPoints": [
+          "Clicked to use Lend feature",
+          "Onboarding flow for new staking/lending users"
+        ],
+        "exitPoints": [
+          "Accept and Continue → proceed to Lend interface",
+          "Do not agree → return to previous screen/exit flow"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Scrollable content area",
+            "action": "Allows user to read full terms of service"
+          },
+          {
+            "element": "Accept and Continue button",
+            "action": "Confirms terms acceptance, proceeds to Lend feature"
+          },
+          {
+            "element": "Do not agree button",
+            "action": "Rejects terms, likely returns to previous screen"
+          }
+        ],
+        "informationArchitecture": "Standard legal agreement flow: product identification → full terms text → accept/reject choice. Scrollable content allows reading without overwhelming page",
+        "frictionPoints": [
+          "User must scroll to read full terms",
+          "No summary or key-points overview provided",
+          "Binary choice (accept/reject) with no partial acceptance"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Acknowledge Terms and Conditions",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept and Continue",
+            "style": "primary-button-lime",
+            "placement": "modal-footer-right"
+          },
+          {
+            "text": "Do not agree",
+            "style": "ghost-button-dark",
+            "placement": "modal-footer-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Jupiter Lend",
+            "context": "Product name in terms header",
+            "purpose": "Identify which service's terms are being presented"
+          },
+          {
+            "text": "Service Terms of Use",
+            "context": "Section subheading",
+            "purpose": "Categorize legal content"
+          },
+          {
+            "text": "Last updated: 16 July 2025",
+            "context": "Below subheading",
+            "purpose": "Indicate terms currency and recency"
+          },
+          {
+            "text": "Smart Contract",
+            "context": "Bolded within legal text",
+            "purpose": "Emphasize key technical term"
+          },
+          {
+            "text": "relevant Blockchain Network",
+            "context": "Bolded within legal text",
+            "purpose": "Highlight scope definition"
+          }
+        ],
+        "tone": "professional-legal, neutral",
+        "dataFormatting": [
+          "Date format: 16 July 2025"
+        ],
+        "trustSignals": [
+          "Recent terms update (July 2025)",
+          "Comprehensive legal text visible for review",
+          "Clear identification of service terms"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-settings-1-more-menu-dropdown-shows-positions-pnl-onboard-mob.png",
+      "label": "More menu dropdown",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main with right-panel dropdown",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a2e",
+          "#c7ff2b",
+          "#6b7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+) for main headline; smaller (16px) for subheadings",
+          "bodyStyle": "Regular sans-serif, gray (#9ca3af) for secondary text, 14px",
+          "dataStyle": "Bold green (#c7ff2b) for reward amounts, smaller gray text for descriptors"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top nav with menu items: Swap, Terminal, Perps, Lend, Predict, Portfolio, Rewards, More (with New badge)",
+            "position": "Top of screen",
+            "notable": "More button shows New badge in green, indicates recently added feature"
+          },
+          {
+            "type": "Dropdown Menu",
+            "description": "Vertical dropdown from More menu showing 7 product features with icons and descriptions",
+            "position": "Center-right, anchored to More button",
+            "notable": "Features displayed as card-like items with colored left icons; descriptive microcopy below each item"
+          },
+          {
+            "type": "Campaign Card",
+            "description": "TCG Rewards Season 2 campaign with avatar, title, and reward amount",
+            "position": "Bottom left of main area",
+            "notable": "Contains Live badge and visual icon; $2M reward amount highlighted in green"
+          },
+          {
+            "type": "Social Links Footer",
+            "description": "Row of social media icons (Twitter, Discord, Telegram, YouTube, Reddit)",
+            "position": "Bottom of dropdown",
+            "notable": "Monochrome icons with labels below"
+          },
+          {
+            "type": "Tab Navigation",
+            "description": "Rewards and Referral tabs with underline indicator",
+            "position": "Top of main left panel",
+            "notable": "Referral tab currently active (underline visible)"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Connect Wallet button in bright green",
+            "position": "Left panel, under Your Referral Link section",
+            "notable": "High-contrast lime green (#c7ff2b) against dark background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Eye drawn to dropdown menu items via icons + bold titles; green CTAs and reward amounts stand out; secondary text supports hierarchy",
+        "innovativeElements": [
+          "Green accent color (#c7ff2b) creates distinctive brand identity against dark UI",
+          "Product icons with colored left borders in dropdown create visual rhythm",
+          "Live badge with green dot indicator on campaign card"
+        ]
+      },
+      "flow": {
+        "screenType": "settings-menu-dropdown with referral-dashboard context",
+        "userIntent": "Explore additional features available in the More menu; manage referral program",
+        "entryPoints": [
+          "Click More button in top navigation",
+          "Land directly on Referral tab from portfolio navigation"
+        ],
+        "exitPoints": [
+          "Click any dropdown menu item to navigate to feature (Positions/PnL, Onboard, Mobile, Extension Wallet, VRFD, etc.)",
+          "Click Connect Wallet to initiate wallet connection",
+          "Click Rewards or Referral tabs to switch sections",
+          "Click campaign card to view full campaign details",
+          "Click social links to visit external communities"
+        ],
+        "interactiveElements": [
+          {
+            "element": "More button with dropdown",
+            "action": "Opens/closes feature menu overlay"
+          },
+          {
+            "element": "Connect Wallet button",
+            "action": "Initiates wallet connection flow"
+          },
+          {
+            "element": "Referral Link section",
+            "action": "Displays referral code and copy-to-clipboard functionality"
+          },
+          {
+            "element": "Campaign card",
+            "action": "Navigates to campaign details"
+          },
+          {
+            "element": "View Others link",
+            "action": "Shows additional referral campaigns"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Top-level nav > More menu dropdown > individual features; Left sidebar shows referral context; Right panel shows referral status and total earnings",
+        "frictionPoints": [
+          "Login required message in Referral Status section (right panel) requires authentication step",
+          "Multiple menu levels (nav > dropdown > subpages) creates navigation depth",
+          "Dropdown menu position may obscure underlying content depending on viewport"
+        ],
+        "progressIndicators": [
+          "New badge on Rewards button",
+          "Live badge on TCG Rewards Season 2 campaign",
+          "Referral tab underline shows active section"
+        ]
+      },
+      "copy": {
+        "headline": "Referral Dashboard",
+        "subheadline": "Refer friends and earn rewards!",
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "Left sidebar under Your Referral Link"
+          },
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Right panel under Total Referral Earnings"
+          },
+          {
+            "text": "View Others",
+            "style": "text-link",
+            "placement": "Left sidebar under Referral Campaigns heading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Share your referral code to earn rewards. Users you refer will get 10% bonus trading points",
+            "context": "Your Referral Link card",
+            "purpose": "Explains referral mechanics and incentive structure"
+          },
+          {
+            "text": "View live token positions and PnL.",
+            "context": "Positions / PnL dropdown item",
+            "purpose": "Describes feature functionality"
+          },
+          {
+            "text": "Buy SOL with your credit card or bridge assets from other chains.",
+            "context": "Onboard dropdown item",
+            "purpose": "Explains onramp feature"
+          },
+          {
+            "text": "Trade 8-10x cheaper & 3x faster than any other wallets on a fully-native app.",
+            "context": "Mobile dropdown item",
+            "purpose": "Highlights competitive advantage"
+          },
+          {
+            "text": "Trade & Refer to Earn from $2,000,000 in Rewards",
+            "context": "TCG Rewards Season 2 campaign card",
+            "purpose": "Campaign headline highlighting reward pool"
+          },
+          {
+            "text": "How referrals work",
+            "context": "Referrals section header",
+            "purpose": "Information icon link to educational content"
+          },
+          {
+            "text": "across all campaigns",
+            "context": "Total Referral Earnings section",
+            "purpose": "Clarifies scope of earnings aggregation"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual elements; educational for feature descriptions",
+        "dataFormatting": [
+          "$2,000,000 in Rewards",
+          "$2M in JupUSD",
+          "10% bonus trading points"
+        ],
+        "trustSignals": [
+          "Live badge on campaigns indicates active/verified status",
+          "Specific reward amounts ($2M) demonstrate concrete program value",
+          "Feature descriptions emphasize competitive advantages (8-10x cheaper, 3x faster)",
+          "Multiple product integrations (Onboard, VRFD, JLP Loans) signal ecosystem maturity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Login to view referral status"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-2-lend-earn-tab-jupiter-lend-money-market-with-1-73b.png",
+      "label": "Lend — Earn tab, money market",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1428",
+          "#00d4aa",
+          "#7b8fb5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (24-32px), lime-green and blue gradient for branding",
+          "bodyStyle": "Regular sans-serif, 14-16px, light gray (#b8bcc4) for descriptions",
+          "dataStyle": "Bold monospace, green for APY percentages, white for large numbers ($1.73B), smaller gray subtotals"
+        },
+        "components": [
+          {
+            "type": "hero-banner",
+            "description": "Bordered container with Jupiter Lend branding, tagline, and three key metrics (Total Supply, Available, Borrowed)",
+            "position": "top-center",
+            "notable": "Gradient text mix of lime and cyan, icon integration with tagline"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-column table listing vaults (JupUSD, USDC, SOL, USDT, EURC) with APY, Deposited, Earnings, TVL",
+            "position": "lower-center",
+            "notable": "Row-based cards with right-arrow expansion buttons; color-coded tokens with icons"
+          },
+          {
+            "type": "section-header",
+            "description": "Two-tab navigation (Earn / History) with icon and descriptive text",
+            "position": "mid-left",
+            "notable": "Active tab highlighted in lime, inactive in muted gray"
+          },
+          {
+            "type": "stat-block",
+            "description": "Right-aligned metric showing Earn Deposits $758M",
+            "position": "top-right",
+            "notable": "Large white number with smaller label above"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero banner draws eye first, then large headline, supporting description, key metrics, then detailed table. Right-aligned stats provide secondary focus.",
+        "innovativeElements": [
+          "Gradient text combining lime and cyan for primary branding",
+          "Expandable row cards with chevron navigation",
+          "Multi-metric hero showing ecosystem liquidity at a glance"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-data-browse",
+        "userIntent": "View available earning opportunities and vault performance metrics to decide where to deposit crypto",
+        "entryPoints": [
+          "Click Lend nav item from main menu",
+          "Click Earn tab within Lend section"
+        ],
+        "exitPoints": [
+          "Click vault row to expand or interact",
+          "Click chevron buttons to drill into vault details",
+          "Navigate to History tab to view transaction activity",
+          "Return to main nav (Swap, Terminal, Perps, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Earn / History tabs",
+            "action": "Switch between earning vaults view and transaction history"
+          },
+          {
+            "element": "Vault table rows",
+            "action": "Expand to reveal details or navigate to deposit flow"
+          },
+          {
+            "element": "Right-chevron buttons on each row",
+            "action": "Likely navigate to deposit/manage vault position"
+          },
+          {
+            "element": "Grid/List view icons (top-right of table)",
+            "action": "Toggle between card and table layout"
+          },
+          {
+            "element": "How it works link",
+            "action": "Display educational modal explaining earning mechanics"
+          }
+        ],
+        "informationArchitecture": "Hero metrics → Purpose statement + CTA link → Tab navigation → Asset selector dropdowns → Detailed table organized by vault",
+        "frictionPoints": [
+          "Empty states for Deposited/Earnings columns (all shown as '-') may confuse new users",
+          "No clear deposit button visible; action may require table row interaction",
+          "TVL numbers abbreviated (54.7M, 519M) without consistent formatting context"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Earn Interest on Your Crypto",
+        "subheadline": "Passively get yield using Jupiter Lend's Earning Vaults.",
+        "ctas": [
+          {
+            "text": "How it works",
+            "style": "text-link",
+            "placement": "next to subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Supply",
+            "context": "above $1.73B metric",
+            "purpose": "Label describing aggregate vault liquidity"
+          },
+          {
+            "text": "Vault",
+            "context": "table column header",
+            "purpose": "Identifies asset/vault name column"
+          },
+          {
+            "text": "APY",
+            "context": "table column header with up/down sort icon",
+            "purpose": "Annual Percentage Yield; sortable metric"
+          },
+          {
+            "text": "The most advanced money market on Solana",
+            "context": "hero banner tagline",
+            "purpose": "Positions Jupiter Lend as premium, sophisticated offering"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$1.73B (Total Supply)",
+          "$1.09B (Total Available)",
+          "$641M (Total Borrowed)",
+          "5.23% (APY, JupUSD)",
+          "54.7M JupUSD ($54.7M equivalent)",
+          "4.39% (USDC APY)"
+        ],
+        "trustSignals": [
+          "Total Supply $1.73B indicates significant ecosystem liquidity",
+          "Total Borrowed $641M shows active usage",
+          "Multiple vault options (JupUSD, USDC, SOL, USDT, EURC) suggests diversification",
+          "Powered by FLUID attribution (bottom, small)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-3-lend-borrow-tab-get-a-loan-with-crypto-collateral-.png",
+      "label": "Lend — Borrow tab, crypto collateral",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1428",
+          "#00d4aa",
+          "#7b8fb5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (24-32px), white for main headline",
+          "bodyStyle": "Regular sans-serif, 14-16px, light gray for descriptions",
+          "dataStyle": "Bold monospace for percentages (green for APY), white/light for large numbers, muted for TVL subtotals"
+        },
+        "components": [
+          {
+            "type": "alert-banner",
+            "description": "Compact banner with crypto asset icons and text: 'Native stake as collateral is live. View Vaults'",
+            "position": "top-center",
+            "notable": "Multiple token icons stacked, lime-green link text, informational tone"
+          },
+          {
+            "type": "heading-with-metrics",
+            "description": "Main headline with two right-aligned metrics (Total Supply $971M, Active Loans $641M)",
+            "position": "upper-center",
+            "notable": "Metrics flush-right, headline on left, clear visual separation"
+          },
+          {
+            "type": "card-grid",
+            "description": "Four top vaults displayed as horizontal cards showing vault pair, Create button, and Total Supplied",
+            "position": "mid-upper",
+            "notable": "Card-based layout with lime 'Create' CTA buttons, icon badges for tokens"
+          },
+          {
+            "type": "dual-filter-dropdowns",
+            "description": "Two dropdown menus labeled 'All Assets' with Collateral/Debt selectors",
+            "position": "mid-center",
+            "notable": "Left side (Collateral), right side (Debt); allows users to filter vaults by asset type"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-row table with tabs (All, SOL Based, BTC based, Incentivised Vaults, Pegged Vaults, Native Staked Vaults) and columns (Vault, Debt, Max Liq. Thresh., Max Supply APY, TVL)",
+            "position": "lower-center",
+            "notable": "'Native Staked Vaults' tab marked as 'New', expandable rows with chevron icons"
+          },
+          {
+            "type": "toolbar",
+            "description": "Top-right controls: 'By Supply' and 'Sort' buttons plus grid/list view toggles",
+            "position": "mid-right",
+            "notable": "Lime-green outlined buttons, sorting/view preference controls"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Alert banner draws attention first, main headline with metrics, top vaults carousel, filter controls, detailed table. Toolbar for power users in secondary position.",
+        "innovativeElements": [
+          "Native Staked Vaults marked 'New' to highlight latest feature",
+          "Alert banner with token icons emphasizing new collateral support",
+          "Dual asset-type filters (Collateral vs. Debt) enabling flexible vault discovery",
+          "Tab-based vault categorization (SOL-based, BTC-based, incentivised, pegged, native-staked)"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-data-browse",
+        "userIntent": "Browse available lending vaults, find suitable collateral pairs, and initiate a borrowing position",
+        "entryPoints": [
+          "Click Lend nav item, then Borrow tab",
+          "Click from Earn tab to explore borrowing opportunities"
+        ],
+        "exitPoints": [
+          "Click 'Create' button on vault card to open position creation flow",
+          "Click table row to expand or navigate to vault details",
+          "Click 'View Vaults' link in alert banner to see staking collateral info",
+          "Switch to other Lend tabs (Earn, Multiply, Transparency, Statistics)",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Alert banner 'View Vaults' link",
+            "action": "Navigate to staking/native vaults information"
+          },
+          {
+            "element": "Collateral/Debt dropdowns",
+            "action": "Filter vault list by selected asset type"
+          },
+          {
+            "element": "'Create' buttons on top vault cards",
+            "action": "Initiate borrowing position creation for that vault pair"
+          },
+          {
+            "element": "Vault tabs (All, SOL Based, BTC based, etc.)",
+            "action": "Filter table to show specific vault category"
+          },
+          {
+            "element": "'By Supply' and 'Sort' buttons",
+            "action": "Reorder table by liquidity or custom sort criteria"
+          },
+          {
+            "element": "Grid/List view toggles",
+            "action": "Switch between card and table layouts"
+          },
+          {
+            "element": "Table rows with chevron",
+            "action": "Expand row to show more details or navigate to vault"
+          }
+        ],
+        "informationArchitecture": "Alert banner (contextual info) → Headline + key metrics → Quick-access top vaults → Filter controls → Categorized vault table with sorting/viewing options",
+        "frictionPoints": [
+          "Multiple filter options (dropdowns + tabs + sort buttons) may overwhelm new users",
+          "Difference between 'Total Supplied' on cards vs. table 'Debt' column unclear",
+          "Max Liq. Thresh. percentages (90%, 95%) shown without explanation of what triggers liquidation",
+          "No visible deposit/borrow amount input; user must click row to access details"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Get a Loan with Crypto Collateral",
+        "subheadline": "Borrow against your assets by selecting a Vault below",
+        "ctas": [
+          {
+            "text": "How it works",
+            "style": "text-link",
+            "placement": "next to subheadline"
+          },
+          {
+            "text": "View Vaults",
+            "style": "text-link",
+            "placement": "in alert banner"
+          },
+          {
+            "text": "Create",
+            "style": "primary-button",
+            "placement": "on each top vault card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Native stake as collateral is live.",
+            "context": "alert banner at top",
+            "purpose": "Announces new feature availability"
+          },
+          {
+            "text": "Top Vaults",
+            "context": "section header above card carousel",
+            "purpose": "Labels most popular lending vaults for quick discovery"
+          },
+          {
+            "text": "Vault Select",
+            "context": "section header above filter dropdowns",
+            "purpose": "Introduces asset filtering mechanism"
+          },
+          {
+            "text": "Total Supplied",
+            "context": "card subheader",
+            "purpose": "Shows total liquidity available in that vault"
+          },
+          {
+            "text": "Max Liq. Thresh.",
+            "context": "table column header",
+            "purpose": "Maximum liquidation threshold percentage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Total Supply $971M",
+          "Active Loans $641M",
+          "90% (Max Liq. Threshold)",
+          "52.5% (Max Supply APY)",
+          "$137M (TVL)",
+          "SOL / USDC (vault pair labeling)"
+        ],
+        "trustSignals": [
+          "Total Supply $971M + Active Loans $641M demonstrates active, real-money usage",
+          "Multiple vault options across token pairs (SOL/USDC, SOL/USDT, SOL/EURC, JupSOL/SOL)",
+          "'Native Staked Vaults' marked 'New' shows ongoing feature development",
+          "Powered by FLUID attribution (bottom)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-4-lend-multiply-tab-amplify-exposure-with-leveraged-.png",
+      "label": "Lend — Multiply tab, leveraged exposure",
+      "flowType": "Staking",
+      "step": 4,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a1428",
+          "#00d4aa",
+          "#7b8fb5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (24-32px), white for main headline",
+          "bodyStyle": "Regular sans-serif, 14-16px, light gray for descriptions",
+          "dataStyle": "Bold monospace for APY percentages (lime-green), white for large numbers, muted gray for subtotals"
+        },
+        "components": [
+          {
+            "type": "heading-with-description",
+            "description": "Main headline 'Amplify Exposure to your Assets' with subtext 'Create a leveraged or looped position'",
+            "position": "top-left",
+            "notable": "Clean, straightforward messaging without metrics pull-out (unlike Borrow tab)"
+          },
+          {
+            "type": "card-grid",
+            "description": "Four top loops displayed as horizontal cards showing loop pair, Multiply CTA, and Max Leverage APY",
+            "position": "mid-upper",
+            "notable": "Similar design to Borrow tab but emphasizes leverage multipliers (+316.57%, +47.91%, etc.)"
+          },
+          {
+            "type": "dual-filter-dropdowns",
+            "description": "Two dropdown menus labeled 'All Assets' with Collateral/Debt selectors",
+            "position": "mid-center",
+            "notable": "Identical layout to Borrow tab, positioned below section header"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-row table with tabs (All, SOL Based, BTC based, Incentivised Vaults, Pegged Vaults, Native Staked Vaults) and columns (Vault, Debt icons, Max Liq. Thresh., Max Supply APY, TVL)",
+            "position": "lower-center",
+            "notable": "Rows show loop pairs (JLP, INF, JupSOL) with expandable details; 'Native Staked Vaults' marked 'New'"
+          },
+          {
+            "type": "toolbar",
+            "description": "Top-right controls: 'By Supply' and 'Sort' buttons plus grid/list view toggles",
+            "position": "mid-right",
+            "notable": "Consistent with Borrow tab design"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline and description draw eye first, then top loops carousel emphasizing high leverage APY, then filter controls and detailed table for power users.",
+        "innovativeElements": [
+          "Emphasis on Max Leverage APY rather than standard APY to attract yield-focused users",
+          "Loop terminology (vs. 'vaults') signals different product mechanics",
+          "High leverage percentages (+316.57%, +47.91%) prominently displayed on cards"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard-data-browse",
+        "userIntent": "Explore leveraged/looped positions, compare leverage multiples and APY, and create a leveraged exposure strategy",
+        "entryPoints": [
+          "Click Lend nav item, then Multiply tab",
+          "Navigate from Borrow or Earn tabs to explore leverage options"
+        ],
+        "exitPoints": [
+          "Click 'Multiply' button on loop card to initiate leveraged position creation",
+          "Click table row to expand or navigate to loop details",
+          "Switch to other Lend tabs (Earn, Borrow, Transparency, Statistics)",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Collateral/Debt dropdowns",
+            "action": "Filter loop list by selected asset type"
+          },
+          {
+            "element": "'Multiply' buttons on top loop cards",
+            "action": "Initiate leveraged position creation for that loop pair"
+          },
+          {
+            "element": "Loop tabs (All, SOL Based, BTC based, etc.)",
+            "action": "Filter table to show specific loop category"
+          },
+          {
+            "element": "'By Supply' and 'Sort' buttons",
+            "action": "Reorder table by liquidity or custom sort criteria"
+          },
+          {
+            "element": "Grid/List view toggles",
+            "action": "Switch between card and table layouts"
+          },
+          {
+            "element": "Table rows with chevron or expandable regions",
+            "action": "Expand to show more details or navigate to loop details"
+          }
+        ],
+        "informationArchitecture": "Headline + description → Quick-access top loops (emphasizing leverage multiples) → Filter controls → Categorized loop table with sorting/viewing options",
+        "frictionPoints": [
+          "Leverage multipliers are complex and risky; no risk warnings visible on cards or headline",
+          "Difference between 'Max Leverage APY' on cards and 'Max Supply APY' in table may confuse users",
+          "High leverage APYs (+316.57%) could be misleading without clearly stating liquidation/loss risks",
+          "No visible educational content on leverage mechanics beyond 'How it works' link",
+          "Debt column in table shows multi-token combinations (e.g., '+3' indicators) that are not explained"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Amplify Exposure to your Assets",
+        "subheadline": "Create a leveraged or looped position",
+        "ctas": [
+          {
+            "text": "How it works",
+            "style": "text-link",
+            "placement": "next to subheadline"
+          },
+          {
+            "text": "Multiply",
+            "style": "primary-button",
+            "placement": "on each top loop card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Top Loops",
+            "context": "section header above card carousel",
+            "purpose": "Labels most popular leveraged positions for quick discovery"
+          },
+          {
+            "text": "Max Leverage APY",
+            "context": "card metric label",
+            "purpose": "Highlights maximum achievable APY at full leverage for that loop"
+          },
+          {
+            "text": "Loop Select",
+            "context": "section header above filter dropdowns",
+            "purpose": "Introduces asset filtering mechanism for loop discovery"
+          },
+          {
+            "text": "Max Liq. Thresh.",
+            "context": "table column header",
+            "purpose": "Maximum liquidation threshold percentage"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "+316.57% (Max Leverage APY, JLP/USDC)",
+          "+47.91% (INF/SOL)",
+          "+26.97% (JupSOL/SOL)",
+          "+25.81% (fwdSOL/SOL)",
+          "90% (Max Liq. Threshold)",
+          "52.5% (Max Supply APY)",
+          "$117M (TVL, JLP loop)"
+        ],
+        "trustSignals": [
+          "Multiple loop options available across token pairs",
+          "TVL figures ($117M, $7.90M, $7.59M) show real usage and liquidity",
+          "'Native Staked Vaults' marked 'New' indicates ongoing development",
+          "Powered by FLUID attribution"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-5-lend-transparency-tab-security-audits-section-with.png",
+      "label": "Lend — Transparency tab, security audits",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif white headings (Transparency, Security Audits)",
+          "bodyStyle": "Medium gray body text with good contrast, regular weight",
+          "dataStyle": "Large white numbers (7, 4) in minimal cards with gray labels"
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Five horizontal tabs (Earn, Borrow, Multiply, Transparency, Statistics)",
+            "position": "top secondary navigation",
+            "notable": "Transparency is highlighted in yellow-green accent"
+          },
+          {
+            "type": "info-card",
+            "description": "GitHub codebase reference with link to external repo",
+            "position": "upper-middle",
+            "notable": "Minimal dark card with icon, emphasizes open-source credibility"
+          },
+          {
+            "type": "pill-tabs",
+            "description": "Secondary navigation for audit sections (Security Audits, Oracle Integrations, Formal Verification, Multisigs, Dashboards)",
+            "position": "mid-section",
+            "notable": "Security Audits tab is lime-green active state"
+          },
+          {
+            "type": "metric-cards",
+            "description": "Two stat cards displaying Total Audits (7) and Auditors (4)",
+            "position": "lower-middle",
+            "notable": "Bordered dark cards with minimal styling"
+          },
+          {
+            "type": "audit-list-item",
+            "description": "Rows listing audit reports (Zenith Report, Offside Labs reports) with dates and CTA links",
+            "position": "bottom section",
+            "notable": "Each item has 'Check Report' link in green, external link icon"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline → descriptive subheading → GitHub trust signal → secondary tabs → key metrics → detailed audit list",
+        "innovativeElements": [
+          "Trust-through-transparency design pattern with audit listings as primary content",
+          "GitHub integration as credibility anchor",
+          "Lime-green accent color for active security-related tabs signals safety/trust"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Verify protocol safety through security audits and independent verification",
+        "entryPoints": [
+          "Lend section → Transparency tab",
+          "Direct navigation from main menu"
+        ],
+        "exitPoints": [
+          "View on GitHub (external)",
+          "Check Report links (external)",
+          "Other secondary tabs (Oracle, Formal Verification, etc.)",
+          "Back to Lend dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Transparency tab",
+            "action": "Displays trust/safety information for the protocol"
+          },
+          {
+            "element": "Security Audits pill tab",
+            "action": "Filters/shows security audit section content"
+          },
+          {
+            "element": "View on GitHub link",
+            "action": "Opens external GitHub repository for codebase review"
+          },
+          {
+            "element": "Check Report links",
+            "action": "Opens individual audit report PDFs/documents externally"
+          },
+          {
+            "element": "Show more link",
+            "action": "Expands truncated audit description text"
+          }
+        ],
+        "informationArchitecture": "Trust layer (headline + GitHub) → Audit categories (tabs) → Metrics (volume of audits) → Detailed results (audit list with dates and links)",
+        "frictionPoints": [
+          "External links require leaving the app",
+          "Audit reports may be PDF-heavy for non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Transparency",
+        "subheadline": "Provably safe, independently audited, and stress-tested to protect users under every market condition.",
+        "ctas": [
+          {
+            "text": "View on GitHub",
+            "style": "text-link",
+            "placement": "GitHub card top-right"
+          },
+          {
+            "text": "Check Report",
+            "style": "text-link",
+            "placement": "Each audit list item, right-aligned"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Jupiter Lend Protocol codebase",
+            "context": "Below GitHub icon",
+            "purpose": "Clarifies the repo content"
+          },
+          {
+            "text": "Completed on [dates]",
+            "context": "Below each audit name",
+            "purpose": "Shows recency and timeliness of audit"
+          },
+          {
+            "text": "Probably safe",
+            "context": "Opening of subheadline",
+            "purpose": "Balances confidence claim with honest language"
+          }
+        ],
+        "tone": "professional-technical, confident yet measured",
+        "dataFormatting": [
+          "7 (total audits count)",
+          "4 (auditor count)",
+          "Date ranges (June 24 - July 31, 2025)"
+        ],
+        "trustSignals": [
+          "Independent audits from top-tier firms",
+          "GitHub codebase transparency",
+          "Specific audit firm names (Zenith, Offside Labs)",
+          "Multiple audit types (Security, Liquidity, Vault)",
+          "Stress-testing mention in subheadline"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-6-lend-statistics-tab-liquidity-view-showing-usdc-jl.png",
+      "label": "Lend — Statistics tab, USDC liquidity",
+      "flowType": "Staking",
+      "step": 6,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#ff6b35"
+        ],
+        "typography": {
+          "headingStyle": "Large white heading 'Statistics' with subheading in gray",
+          "bodyStyle": "Gray secondary labels with medium weight",
+          "dataStyle": "Large white currency values ($1.73B, $518M), percentages in green or orange, small gray APY/factor labels"
+        },
+        "components": [
+          {
+            "type": "header-metrics",
+            "description": "Three key stats at top: Total Supply ($1.73B), Total Available ($1.09B), Total Borrowed ($641M)",
+            "position": "top-right corner",
+            "notable": "Large white text right-aligned, summary view of protocol health"
+          },
+          {
+            "type": "tab-navigation",
+            "description": "Three tabs for filtering: Liquidity (active), Borrow, Earn",
+            "position": "upper-left below headline",
+            "notable": "Green active state on Liquidity tab"
+          },
+          {
+            "type": "asset-card-grid",
+            "description": "3x2 grid of asset/token stat cards (USDC, JLP, SOL, syrupUSDC, JupSOL, INF)",
+            "position": "main content area",
+            "notable": "Each card shows token icon, TVL, Supplied vs Borrow amounts, APY rates, and 'All Stats' action button"
+          },
+          {
+            "type": "expandable-section",
+            "description": "Chevron icon for collapsing/expanding each card details",
+            "position": "right side of each asset card",
+            "notable": "Allows detailed APY/Reserve/Factor metrics to be hidden"
+          },
+          {
+            "type": "metric-row",
+            "description": "Each card displays: Supply APY, Borrow APY, Reserves, Reserve Factor",
+            "position": "bottom of each asset card",
+            "notable": "Color-coded values ($768,958.07 in green), percentage rates (2.8%), factory settings (10%)"
+          },
+          {
+            "type": "footer-branding",
+            "description": "Powered by FLUID logo",
+            "position": "bottom center",
+            "notable": "Partnership/infrastructure credit"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page headline + summary KPIs → Filter tabs → Grid of asset cards → Detailed metrics per card",
+        "innovativeElements": [
+          "Data-rich card layout with 6+ metrics per token without overwhelming",
+          "Color coding for supplied (white) vs borrowed (orange) creates visual distinction",
+          "Expandable cards preserve space while allowing deep dives"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Analyze lending pool statistics, compare token performance, review APY rates and liquidity metrics",
+        "entryPoints": [
+          "Statistics tab from Lend section",
+          "Navigation from other Lend tabs"
+        ],
+        "exitPoints": [
+          "Switch to Borrow or Earn tabs",
+          "Click 'All Stats' for token detail page",
+          "Back to main lending dashboard"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Liquidity / Borrow / Earn tabs",
+            "action": "Filters the statistics view by pool type"
+          },
+          {
+            "element": "Chevron expand/collapse icon",
+            "action": "Toggles visibility of detailed metrics (APY, Reserves, factors)"
+          },
+          {
+            "element": "All Stats button",
+            "action": "Navigates to detailed statistics page for that token"
+          }
+        ],
+        "informationArchitecture": "Protocol-level summary (top KPIs) → Asset class filter (tabs) → Asset-level metrics (card grid) → Granular APY/reserve details (expandable rows)",
+        "frictionPoints": [
+          "Large amount of data per card may require explanation for new users",
+          "No chart/visualization of trends over time, only current snapshots"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Statistics",
+        "subheadline": "All Jupiter Lend statistics in one place",
+        "ctas": [
+          {
+            "text": "All Stats",
+            "style": "ghost-button",
+            "placement": "Bottom of each asset card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "TVL $123M",
+            "context": "Top-right of each asset card",
+            "purpose": "Shows total value locked in that pool"
+          },
+          {
+            "text": "Supplied",
+            "context": "Left column of each card's metrics",
+            "purpose": "Labels the supplied liquidity amount"
+          },
+          {
+            "text": "Borrow",
+            "context": "Right column of each card's metrics",
+            "purpose": "Labels the borrowed amount"
+          },
+          {
+            "text": "Supply APY",
+            "context": "Bottom metric row",
+            "purpose": "Identifies annual yield for suppliers"
+          },
+          {
+            "text": "Reserve Fact.",
+            "context": "Bottom metric row",
+            "purpose": "Abbreviation for reserve factor, shows protocol reserve allocation"
+          }
+        ],
+        "tone": "professional-technical, data-focused",
+        "dataFormatting": [
+          "$1.73B (large currency with B suffix)",
+          "$518M (asset-level supply amounts)",
+          "2.8% (APY percentages)",
+          "$768,958.07 (reserve absolute values)",
+          "10% (reserve factor percentages)"
+        ],
+        "trustSignals": [
+          "Total Supply $1.73B indicates significant TVL and protocol maturity",
+          "Multiple audited token pools (USDC, SOL, established tokens)",
+          "Transparent APY and reserve metrics"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/jupiter-staking-7-rewards-page-two-live-campaigns-active-staking-rew.png",
+      "label": "Rewards — Active staking campaigns",
+      "flowType": "Staking",
+      "step": 7,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#c3f53b",
+          "#16a34a"
+        ],
+        "typography": {
+          "headingStyle": "Large white 'Explore Rewards Hub' with smaller gray subheading below",
+          "bodyStyle": "Medium white campaign titles, smaller gray descriptive text",
+          "dataStyle": "Large white numbers ($2M, 50M), currency formatted with M/K suffixes"
+        },
+        "components": [
+          {
+            "type": "tab-navigation",
+            "description": "Two tabs: Rewards (active), Referral",
+            "position": "top-left",
+            "notable": "Underline active state on Rewards"
+          },
+          {
+            "type": "header-section",
+            "description": "Page title with value proposition (Trade Spot. Earn Rewards) and total rewards summary card",
+            "position": "top-right",
+            "notable": "Minimalist 'Connect' CTA to show personal rewards total"
+          },
+          {
+            "type": "search-and-filter",
+            "description": "Search box for campaign names and dropdown filter (All selected)",
+            "position": "above campaign grid",
+            "notable": "Allows users to narrow down reward opportunities"
+          },
+          {
+            "type": "campaign-card",
+            "description": "3-column grid of campaign cards with icon, title, description, reward amount, status badge",
+            "position": "main content area",
+            "notable": "Each card has 'New' badge (lime-green) and 'Live' or 'Ended' status indicator (green/olive)"
+          },
+          {
+            "type": "status-badge",
+            "description": "Colored indicators: 'New' (lime-green), 'Live' (green dot), 'Ended' (olive/brown dot)",
+            "position": "top-right of each campaign card",
+            "notable": "Quick visual scan of campaign maturity and availability"
+          },
+          {
+            "type": "icon-image",
+            "description": "Large illustrative icon per campaign (gradient circles, character icons)",
+            "position": "center of each card upper half",
+            "notable": "Brand/campaign visual identity, colorful against dark background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title + value prop → Total rewards summary (right) → Search/filter bar → Campaign grid with status → Campaign descriptions and amounts",
+        "innovativeElements": [
+          "Status badges (New, Live, Ended) enable quick campaign lifecycle assessment",
+          "Colorful campaign icons add visual variety in dark theme",
+          "Search+filter pattern reduces cognitive load for finding relevant campaigns",
+          "Right-aligned rewards summary creates call-to-action focal point"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover active and past reward campaigns, understand reward opportunities, connect wallet to track personal earnings",
+        "entryPoints": [
+          "Rewards navigation from main menu",
+          "Direct app link to rewards section"
+        ],
+        "exitPoints": [
+          "Click campaign card for details/participation",
+          "Referral tab",
+          "Connect wallet (to see personal rewards)",
+          "Search/filter to narrow campaigns"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Rewards / Referral tabs",
+            "action": "Switches between rewards campaigns and referral program view"
+          },
+          {
+            "element": "Search campaign name field",
+            "action": "Filters visible campaigns by text match"
+          },
+          {
+            "element": "All dropdown filter",
+            "action": "Likely filters by campaign status (Live, Ended, All)"
+          },
+          {
+            "element": "Connect button (top-right)",
+            "action": "Wallet connection to display user's personal rewards total"
+          },
+          {
+            "element": "Campaign card",
+            "action": "Likely clickable to open campaign details / participation page"
+          }
+        ],
+        "informationArchitecture": "Campaign discovery (headline + search) → Campaign list (grid) → Campaign summary (card with key details) → Detailed view (click-through)",
+        "frictionPoints": [
+          "Search/filter only visible with keywords; no obvious category tabs",
+          "Disconnected wallet shows 'Connect' CTA instead of personal reward total, requires extra step",
+          "Campaign cards don't show clear 'Join' or 'Participate' CTA on the card itself"
+        ],
+        "progressIndicators": [
+          "Status badges (New, Live, Ended)"
+        ]
+      },
+      "copy": {
+        "headline": "Explore Rewards Hub",
+        "subheadline": "Trade Spot. Earn Rewards",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top-right, above campaign grid"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Total Rewards Earned",
+            "context": "Right-side summary card label",
+            "purpose": "Header for user's cumulative reward total"
+          },
+          {
+            "text": "across all campaigns",
+            "context": "Below total rewards earned value",
+            "purpose": "Clarifies scope of rewards shown"
+          },
+          {
+            "text": "Active Staking Rewards (ASR) Oct -...",
+            "context": "Campaign card title",
+            "purpose": "Campaign name with date range"
+          },
+          {
+            "text": "ASR incentivizes active JUP participation with increased voting power. Claim exclusively vi...",
+            "context": "Campaign card description",
+            "purpose": "Summarizes campaign mechanics and benefits"
+          },
+          {
+            "text": "50M Staked JUP",
+            "context": "Bottom of campaign card",
+            "purpose": "Shows total rewards pool amount"
+          }
+        ],
+        "tone": "friendly-casual, achievement-oriented",
+        "dataFormatting": [
+          "$2,000,000 in Rewards (formatted as $2M on card)",
+          "50M Staked JUP (large number with M suffix)",
+          "$1M in USDC (currency with M suffix for readability)"
+        ],
+        "trustSignals": [
+          "Specific staking amounts (50M JUP, $2M JupUSD pool)",
+          "Named reward campaigns with dates (TCG Rewards Season 2, Active Staking Rewards Oct)",
+          "Multiple ongoing campaigns indicate sustained reward program"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

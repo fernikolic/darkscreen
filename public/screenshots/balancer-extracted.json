@@ -1,0 +1,2860 @@
+{
+  "slug": "balancer",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:15:12.728Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 23,
+  "screens": [
+    {
+      "image": "/screenshots/balancer-home-7-home.png",
+      "label": "home",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a3f5f",
+          "#ffffff",
+          "#c9b1ff"
+        ],
+        "typography": {
+          "headingStyle": "Large, clean sans-serif in white, centered",
+          "bodyStyle": "Medium weight sans-serif, white text on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal dialog",
+            "description": "Discord invite verification modal with reCAPTCHA",
+            "position": "Center-top of screen",
+            "notable": "Overlays main content with semi-transparent backdrop"
+          },
+          {
+            "type": "Branded header",
+            "description": "Balancer logo with Discord branding",
+            "position": "Top of modal",
+            "notable": null
+          },
+          {
+            "type": "reCAPTCHA widget",
+            "description": "Google reCAPTCHA verification checkbox",
+            "position": "Bottom of modal",
+            "notable": "Google-branded security element"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal centered and elevated above full-width background image with zen aesthetic",
+        "innovativeElements": [
+          "Animated zen stone/hat illustration at page center",
+          "Textured dark background with subtle depth"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Verify humanity and join Balancer Discord community",
+        "entryPoints": [
+          "Discord invite link",
+          "Community CTA from landing page"
+        ],
+        "exitPoints": [
+          "Discord verification completion",
+          "Close modal"
+        ],
+        "interactiveElements": [
+          {
+            "element": "reCAPTCHA checkbox",
+            "action": "Verify user is human before sending Discord invite"
+          }
+        ],
+        "informationArchitecture": "Single-step verification flow with minimal cognitive load",
+        "frictionPoints": [
+          "reCAPTCHA adds extra step before Discord access"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join Our Community",
+        "subheadline": "Verify that you're human to receive an invite.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "I'm not a robot",
+            "context": "reCAPTCHA widget",
+            "purpose": "Standard bot prevention label"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Google reCAPTCHA verification",
+          "Discord partnership"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-8-cookies-policy.png",
+      "label": "Cookies policy",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a3f5f",
+          "#ffffff",
+          "#e0e0e0"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif headings with numbered sections (I., II.)",
+          "bodyStyle": "Medium-weight gray text body copy, left-aligned",
+          "dataStyle": "Italicized dates (e.g., 'October 2023')"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with Balancer logo, main menu items, and action buttons",
+            "position": "Top of page",
+            "notable": "Settings, thumbs-up, dark mode toggle, wallet buttons"
+          },
+          {
+            "type": "Content container",
+            "description": "Centered text column with policy content",
+            "position": "Main content area",
+            "notable": "Generous margins and readable line length"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hierarchical section numbering guides reader through policy structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read and understand Balancer's cookie policy",
+        "entryPoints": [
+          "Footer link",
+          "Legal/compliance link",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Navigation menu items (Pools, Swap, Portfolio)",
+          "Connect wallet button",
+          "Home via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to different sections of Balancer app"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiate wallet connection"
+          }
+        ],
+        "informationArchitecture": "Sequential policy sections with numbered structure for scanability",
+        "frictionPoints": [
+          "Long legal text may deter casual reading",
+          "No table of contents for quick jumping"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Balancer Cookies Policy",
+        "subheadline": "Last Updated: October 2023",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This Cookies Policy (\"Policy\") applies to your interaction with the Balancer Foundation...",
+            "context": "Section I introduction",
+            "purpose": "Scope definition"
+          },
+          {
+            "text": "We do not generally use cookies; however our third party vendors do.",
+            "context": "Section II about cookies",
+            "purpose": "Privacy transparency"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "October 2023"
+        ],
+        "trustSignals": [
+          "Explicit cookie policy disclosure",
+          "Third-party vendor transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-9-3rd-party-services.png",
+      "label": "3rd party services",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a3f5f",
+          "#ffffff",
+          "#e0e0e0"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif main heading, service names in medium weight",
+          "bodyStyle": "Medium-weight gray descriptive text for service purposes",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with Balancer branding and menu",
+            "position": "Top of page",
+            "notable": "Consistent with cookies policy page"
+          },
+          {
+            "type": "Service card list",
+            "description": "Vertically stacked service cards with logos and descriptions",
+            "position": "Main content area",
+            "notable": "Each service has distinctive colored logo icon"
+          },
+          {
+            "type": "Logo icons",
+            "description": "Branded service logos (dRPC green, The Graph purple, Fathom gray, Appzi blue, Hypernative green)",
+            "position": "Left side of each service row",
+            "notable": "Color-coded for visual differentiation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Service names in larger text followed by descriptive purpose text",
+        "innovativeElements": [
+          "Color-coded service logos for quick visual scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand which third-party services Balancer uses and their purposes",
+        "entryPoints": [
+          "Footer legal link",
+          "Compliance documentation",
+          "Cookie policy reference"
+        ],
+        "exitPoints": [
+          "Navigation menu items",
+          "Connect wallet",
+          "Back to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Top navigation",
+            "action": "Navigate to different app sections"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiate wallet connection"
+          }
+        ],
+        "informationArchitecture": "List view of services with consistent name-description pattern",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Use of third-party services",
+        "subheadline": "Last Updated: April 2025",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right nav"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Balancer is an open source, permissionless, decentralized protocol. The smart contracts that power the ecosystem may be used by anyone. This website is the Balancer Foundation's front-end to the ecosystem and it is also open-source.",
+            "context": "Page introduction",
+            "purpose": "Trust and transparency signal"
+          },
+          {
+            "text": "This website uses the following 3rd party services:",
+            "context": "Before service list",
+            "purpose": "Transition to list"
+          },
+          {
+            "text": "Used to fetch on-chain data and to construct contract calls.",
+            "context": "dRPC description",
+            "purpose": "Service purpose explanation"
+          },
+          {
+            "text": "Used to fetch blockchain data from The Graph's hosted service.",
+            "context": "The Graph description",
+            "purpose": "Service purpose explanation"
+          },
+          {
+            "text": "Used to understand user behavior on the site and marketing performance.",
+            "context": "Fathom Analytics description",
+            "purpose": "Service purpose explanation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "April 2025"
+        ],
+        "trustSignals": [
+          "Open source transparency",
+          "Decentralized protocol emphasis",
+          "Explicit third-party service disclosure",
+          "GitHub fork availability mentioned"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-4-view-v3-docs.png",
+      "label": "View v3 docs",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f5f5",
+          "#1a2332",
+          "#b8860b"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif-like sans-serif, dark navy, centered",
+          "bodyStyle": "Regular weight, medium gray, centered alignment",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation with logo and section tabs",
+            "position": "top",
+            "notable": "Clean minimal design with icon buttons on far right"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large banner with centered text content",
+            "position": "above-fold",
+            "notable": "Subtle gradient background, eyebrow text in gold"
+          },
+          {
+            "type": "search-bar",
+            "description": "Centered search input with keyboard icon hint",
+            "position": "middle",
+            "notable": "Generous width, minimal styling"
+          },
+          {
+            "type": "card-grid",
+            "description": "6-card grid (2 rows x 3 cols) with icon, heading, and description",
+            "position": "below search",
+            "notable": "Rounded corners, subtle shadow, consistent spacing"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down flow: brand > hero > search > content cards with clear distinction between sections",
+        "innovativeElements": [
+          "Gold eyebrow text treatment",
+          "Subtle shadow depth on cards"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover and navigate to documentation categories",
+        "entryPoints": [
+          "Direct URL access",
+          "From marketing site"
+        ],
+        "exitPoints": [
+          "Click card to enter category",
+          "Use search to find specific content",
+          "Click nav tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Card buttons",
+            "action": "Navigate to category landing"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter/search documentation"
+          },
+          {
+            "element": "Navigation tabs",
+            "action": "Jump to section"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke: central landing with 6 equal-weight categories branching out",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "AMMs made easy",
+        "subheadline": "Learn, integrate, and build on a programmable AMM",
+        "ctas": [
+          {
+            "text": "Core Concepts",
+            "style": "card-link",
+            "placement": "card 1"
+          },
+          {
+            "text": "Integration Guides",
+            "style": "card-link",
+            "placement": "card 2"
+          },
+          {
+            "text": "Build on Balancer",
+            "style": "card-link",
+            "placement": "card 3"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Learn how Balancer works under the hood",
+            "context": "Core Concepts card",
+            "purpose": "Set expectations for category"
+          },
+          {
+            "text": "How to swap, add, and remove liquidity using the SDK, javascript, and solidity",
+            "context": "Integration Guides card",
+            "purpose": "Describe content scope"
+          }
+        ],
+        "tone": "professional-technical, approachable",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-5-v2-docs.png",
+      "label": "v2 Docs",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#0a1f3d",
+          "#ff1e64",
+          "#ffd700",
+          "#2563eb"
+        ],
+        "typography": {
+          "headingStyle": "Large bold white sans-serif on dark background",
+          "bodyStyle": "Regular medium gray on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Collapsible left sidebar with nested menu structure",
+            "position": "left",
+            "notable": "Expandable sections (Overview, Vault, Pools, Governance, Advanced)"
+          },
+          {
+            "type": "hero-banner",
+            "description": "Full-width angled gradient banner with colorful geometric shapes",
+            "position": "top of main area",
+            "notable": "Dynamic diagonal composition with pink, blue, yellow accents"
+          },
+          {
+            "type": "search-bar",
+            "description": "Centered search input with keyboard hint",
+            "position": "below hero",
+            "notable": "Light background, larger than v3 version"
+          },
+          {
+            "type": "card-grid",
+            "description": "6-card grid with colored circular icon backgrounds",
+            "position": "below search",
+            "notable": "Color-coded icons (blue, purple, yellow, teal, orange, pink)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar organizes by category, main area flows top-down with prominent hero banner drawing attention",
+        "innovativeElements": [
+          "Angled gradient hero with geometric shapes",
+          "Color-coded card icons",
+          "Expanded sidebar taxonomy"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Navigate v2 documentation by category or search",
+        "entryPoints": [
+          "From v3 docs link",
+          "Direct URL",
+          "From navigation switcher"
+        ],
+        "exitPoints": [
+          "Click sidebar section",
+          "Click card to enter topic",
+          "Search for content",
+          "Click top nav tabs"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar sections",
+            "action": "Expand/collapse menu hierarchy"
+          },
+          {
+            "element": "Sidebar links",
+            "action": "Navigate to specific page"
+          },
+          {
+            "element": "Card buttons",
+            "action": "Navigate to category"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search documentation"
+          }
+        ],
+        "informationArchitecture": "Sidebar tree structure (Vault, Pools, Governance) + main grid for quick-access categories",
+        "frictionPoints": [
+          "Two navigation systems (sidebar + cards) may feel redundant"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Balancer Docs",
+        "subheadline": "Learn, integrate, and build on a programmable AMM",
+        "ctas": [
+          {
+            "text": "Basics",
+            "style": "card-link",
+            "placement": "card 1"
+          },
+          {
+            "text": "Integrate",
+            "style": "card-link",
+            "placement": "card 2"
+          },
+          {
+            "text": "Smart Contracts",
+            "style": "card-link",
+            "placement": "card 3"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Learn how Balancer works under the hood",
+            "context": "Basics card",
+            "purpose": "Category description"
+          },
+          {
+            "text": "Jump into the SDK, APIs, and ways to integrate Balancer",
+            "context": "Integrate card",
+            "purpose": "Set expectations"
+          },
+          {
+            "text": "For fair token launches and NFT drops",
+            "context": "Liquidity Bootstrapping Pools card",
+            "purpose": "Use case explanation"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-6-governance.png",
+      "label": "Governance",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#00ff00",
+          "#2563eb"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif, large for proposal titles",
+          "bodyStyle": "Regular gray monospace-like for metadata, technical details",
+          "dataStyle": "Numeric values in white, secondary data in dim gray with separator dots"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Dark left sidebar with icon-text menu items",
+            "position": "left",
+            "notable": "6 navigation items (Overview, Proposals, Leaderboard, Delegates, Discussions, Treasury)"
+          },
+          {
+            "type": "top-bar",
+            "description": "Dark horizontal bar with search, logo, and login",
+            "position": "top",
+            "notable": "Search field for proposals, external link icon on right"
+          },
+          {
+            "type": "dao-header",
+            "description": "DAO branding section with icon, name, stats, and social links",
+            "position": "main content top",
+            "notable": "Large icon square, stat display (1,055 proposals, 124k votes, 37k followers)"
+          },
+          {
+            "type": "proposal-list",
+            "description": "Stacked list items with proposal metadata",
+            "position": "below header",
+            "notable": "Alternating indicator icons (green circles/signal icons), proposal ID/title, author, vote counts, timestamps"
+          }
+        ],
+        "spacing": "compact",
+        "visualHierarchy": "Left nav anchors, header section establishes DAO identity, proposal list is main focus with consistent visual rhythm",
+        "innovativeElements": [
+          "Live vote/quorum percentages inline",
+          "Proposal status indicators (colored circles)",
+          "Compact dense layout for governance focus"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View and explore active governance proposals",
+        "entryPoints": [
+          "From governance nav",
+          "Direct URL",
+          "From marketing site"
+        ],
+        "exitPoints": [
+          "Click proposal to view details",
+          "Navigate sidebar sections",
+          "Use search to filter proposals",
+          "Log in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu",
+            "action": "Navigate to governance sections"
+          },
+          {
+            "element": "Search field",
+            "action": "Filter proposals"
+          },
+          {
+            "element": "Proposal item",
+            "action": "Open proposal detail"
+          },
+          {
+            "element": "Log in button",
+            "action": "Authenticate user"
+          }
+        ],
+        "informationArchitecture": "Governance hub with proposal feed as primary content; sidebar provides context navigation",
+        "frictionPoints": [
+          "Dense text layout may be hard to scan",
+          "Proposal IDs use technical naming (BIP-911, etc.)"
+        ],
+        "progressIndicators": [
+          "Quorum percentages shown inline (e.g., '158% quorum')",
+          "Vote counts and timestamps",
+          "3d left time indicator"
+        ]
+      },
+      "copy": {
+        "headline": "Balancer",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Log in",
+            "style": "primary-button",
+            "placement": "top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "1,055 proposals",
+            "context": "DAO header stats",
+            "purpose": "Show governance activity level"
+          },
+          {
+            "text": "124k votes",
+            "context": "DAO header stats",
+            "purpose": "Show voting participation"
+          },
+          {
+            "text": "37k followers",
+            "context": "DAO header stats",
+            "purpose": "Show community size"
+          },
+          {
+            "text": "1 vote · 0.000216% quorum · 3d left",
+            "context": "Proposal item metadata",
+            "purpose": "Show current proposal status"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "124k votes",
+          "37k followers",
+          "0.000216% quorum",
+          "158% quorum",
+          "3d left"
+        ],
+        "trustSignals": [
+          "Governance proposal tracking",
+          "Vote counts visible",
+          "Author attribution (gov.maxyz.xyz)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#6B7280",
+          "#C9B8E4",
+          "#E8D5B7"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, all-caps for badge (BALANCER V3 IS LIVE), large title case for main heading (AMMss made easy)",
+          "bodyStyle": "Light weight sans-serif, medium gray, comfortable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top navigation with logo, section links (Pools, Swap, Portfolio, veBAL, Build), theme toggle, and CTA button",
+            "position": "Top fixed",
+            "notable": "Clean, minimal navbar with balanced spacing"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with subheading, two action buttons, and video play button",
+            "position": "Left-center of viewport",
+            "notable": "Left-aligned asymmetrical layout with right-side visual"
+          },
+          {
+            "type": "Background illustration",
+            "description": "Abstract 3D mountains/hills with gradient overlay",
+            "position": "Right side, full height",
+            "notable": "Sophisticated organic shapes with depth and layering"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Typography-driven hierarchy: badge → headline → subheading → CTAs. Right-side illustration provides secondary focal point without competing",
+        "innovativeElements": [
+          "Layered abstract 3D illustration as background asset",
+          "Two-tone button styling (purple and warm tan) with arrow icons"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Balancer v3 offers and explore key features or documentation",
+        "entryPoints": [
+          "Direct URL navigation to homepage",
+          "Organic search result for Balancer",
+          "External marketing or social media link"
+        ],
+        "exitPoints": [
+          "View v3 docs (external documentation link)",
+          "Prototype v3 (interactive demo)",
+          "Learn about Balancer v3 (video play)",
+          "Navigation menu items (Pools, Swap, Portfolio, veBAL, Build)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "View v3 docs button",
+            "action": "Navigate to documentation page with arrow icon indicating external link"
+          },
+          {
+            "element": "Prototype v3 button",
+            "action": "Open interactive prototype or demo environment"
+          },
+          {
+            "element": "Play button",
+            "action": "Trigger video content about Balancer v3"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to respective protocol sections"
+          },
+          {
+            "element": "Launch app button (top right)",
+            "action": "Route to application interface"
+          }
+        ],
+        "informationArchitecture": "Linear storytelling: hook (badge) → value proposition (headline) → context (subheading) → exploration paths (three CTAs) → supplemental content (video)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "AMMss made easy",
+        "subheadline": "The ultimate platform for custom liquidity solutions. Balancer v3 perfectly balances simplicity and flexibility to reshape the future of AMMss.",
+        "ctas": [
+          {
+            "text": "View v3 docs",
+            "style": "primary-button",
+            "placement": "Below subheading, left"
+          },
+          {
+            "text": "Prototype v3",
+            "style": "secondary-button",
+            "placement": "Below subheading, left (adjacent)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BALANCER V3 IS LIVE",
+            "context": "Badge above headline",
+            "purpose": "Create urgency and signal major release"
+          },
+          {
+            "text": "Learn about Balancer v3",
+            "context": "Video play button label",
+            "purpose": "Guide user to educational video content"
+          }
+        ],
+        "tone": "professional-technical, confident, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit version release announcement (V3 IS LIVE)",
+          "Product positioning as 'ultimate platform'"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-2-portfolio.png",
+      "label": "Portfolio",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#374151",
+          "#C9B8E4",
+          "#10B981"
+        ],
+        "typography": {
+          "headingStyle": "Medium weight sans-serif, light gray, section headers",
+          "bodyStyle": "Regular weight sans-serif, light gray for labels",
+          "dataStyle": "Large bold numbers in white/light color (e.g., $0.00), right-aligned in cards"
+        },
+        "components": [
+          {
+            "type": "Header cards",
+            "description": "Two side-by-side stat cards with concentric circle background pattern, metric label, and large currency value",
+            "position": "Top, spanning full width",
+            "notable": "Identical card layout with subtle icons (chart, star) and decorative circular lines pattern"
+          },
+          {
+            "type": "Section heading",
+            "description": "Subheading for 'Claimable incentives' section",
+            "position": "Below header cards",
+            "notable": "Typographic hierarchy with light gray text"
+          },
+          {
+            "type": "Chain/Network cards",
+            "description": "Horizontal cards showing Ethereum, Arbitrum, Base with icons and Connect buttons",
+            "position": "Middle section, three columns",
+            "notable": "Consistent card design with chain logos and ghost-button CTAs"
+          },
+          {
+            "type": "Data table",
+            "description": "Table with columns: Pool name, Details, Staking, veBAL boost, My liquidity, APR",
+            "position": "Bottom section",
+            "notable": "Sortable columns indicated by arrow icons (↓↑), green accent on 'Staking' header"
+          },
+          {
+            "type": "Empty state CTA",
+            "description": "Centered Connect wallet button",
+            "position": "Within table area",
+            "notable": "Gradient button (purple to tan) with rounded corners"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down flow: summary stats → incentive options → portfolio table. Green accent on active/sortable columns draws attention to key metrics",
+        "innovativeElements": [
+          "Concentric circle background pattern on stat cards suggesting growth/ripples",
+          "Multi-chain incentive view with per-network Connect options"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "View portfolio summary, manage incentives across chains, explore claimable rewards, connect wallet to see full data",
+        "entryPoints": [
+          "Portfolio navigation menu item",
+          "Post-login dashboard redirect",
+          "Direct URL to portfolio section"
+        ],
+        "exitPoints": [
+          "Connect wallet button (authenticates user)",
+          "Chain-specific Connect buttons (Ethereum, Arbitrum, Base)",
+          "Navigation to other sections (Pools, Swap, veBAL, Build)",
+          "Settings or theme toggle icons (top right)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet (top right)",
+            "action": "Trigger wallet connection modal"
+          },
+          {
+            "element": "Connect buttons (per chain)",
+            "action": "Connect to specific blockchain network"
+          },
+          {
+            "element": "Table column headers",
+            "action": "Sort portfolio data by selected metric (Staking, veBAL boost, My liquidity, APR)"
+          },
+          {
+            "element": "Filters button (top right of table)",
+            "action": "Open filter/display options for portfolio view"
+          },
+          {
+            "element": "Connect wallet (bottom center)",
+            "action": "Trigger wallet connection modal"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: summary → incentives by network → portfolio details. Wallet connection is gating factor for full feature access",
+        "frictionPoints": [
+          "Empty portfolio table requires wallet connection before meaningful data display",
+          "Multiple Connect CTAs could cause confusion about which one to use",
+          "No indication of what data will appear after connection"
+        ],
+        "progressIndicators": [
+          "Stat cards show $0.00 values indicating empty/unconnected state"
+        ]
+      },
+      "copy": {
+        "headline": "My Balancer liquidity / Claimable incentives",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Top right, header area"
+          },
+          {
+            "text": "Create wallet",
+            "style": "secondary-button",
+            "placement": "Top right, header area"
+          },
+          {
+            "text": "Connect",
+            "style": "ghost-button",
+            "placement": "Ethereum, Arbitrum, Base cards"
+          },
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Center of empty portfolio table"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "My Balancer liquidity",
+            "context": "Left stat card label",
+            "purpose": "Explain first metric"
+          },
+          {
+            "text": "Claimable incentives",
+            "context": "Right stat card label with star icon",
+            "purpose": "Explain second metric and incentive availability"
+          },
+          {
+            "text": "Pool name / Details / Staking / veBAL boost / My liquidity / APR",
+            "context": "Table column headers",
+            "purpose": "Define portfolio data structure"
+          }
+        ],
+        "tone": "professional-technical, neutral, action-oriented",
+        "dataFormatting": [
+          "$0.00 (currency values, right-aligned, large font)",
+          "Arrow indicators (↓↑) for sortable columns"
+        ],
+        "trustSignals": [
+          "Multi-chain support (Ethereum, Arbitrum, Base)",
+          "Detailed portfolio metrics (Staking, veBAL boost, APR)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "$0.00 (placeholder values indicating disconnected state)"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-3-vebal.png",
+      "label": "veBAL",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2D3748",
+          "#D4A574",
+          "#3F3F3F"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, warm tan/gold color, bold weight",
+          "bodyStyle": "Regular weight sans-serif, light gray, comfortable line-height",
+          "dataStyle": "Large bold numbers (80, 20) in gold within coin illustration"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top fixed navigation with logo, section links, theme/settings icons, and auth buttons",
+            "position": "Top fixed",
+            "notable": "Consistent with other screens, veBAL link highlighted in green"
+          },
+          {
+            "type": "Text content panel",
+            "description": "Left-side content with heading, body copy, two action buttons, and footnote text",
+            "position": "Left-center",
+            "notable": "Asymmetrical layout prioritizing visual on right"
+          },
+          {
+            "type": "Coin illustration",
+            "description": "Large 3D coin with cream/gold rim, white and gold center sections showing numbers (80, 20) and Ethereum icon, geometric mesh pattern, starbursts",
+            "position": "Right side, bottom anchored",
+            "notable": "Premium, ornate coin design with fine details and dimensional shading"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left-aligned text hierarchy (heading → body → actions) with dominant right-side visual. Gold color accents create visual relationship between text and coin asset",
+        "innovativeElements": [
+          "High-fidelity 3D rendered coin illustration",
+          "Subtle geometric mesh pattern and concentric circle backgrounds on coin",
+          "Numerical breakdown (80/20 split) integrated into coin design",
+          "Dual-icon system showing Ethereum and abstract symbols"
+        ]
+      },
+      "flow": {
+        "screenType": "education-marketing",
+        "userIntent": "Learn about veBAL governance system, understand lock-in mechanics, manage or claim veBAL incentives",
+        "entryPoints": [
+          "veBAL navigation link",
+          "Portfolio incentives section (Claim veBAL incentives link)",
+          "Direct URL to veBAL section"
+        ],
+        "exitPoints": [
+          "Manage veBAL button (to veBAL management interface)",
+          "Vote on gauges button (to governance voting)",
+          "Other navigation sections",
+          "Top-right auth buttons (Connect, Create wallet)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Manage veBAL button",
+            "action": "Navigate to veBAL management or locking interface"
+          },
+          {
+            "element": "Vote on gauges button",
+            "action": "Navigate to governance voting interface"
+          },
+          {
+            "element": "Claim veBAL incentives link",
+            "action": "Navigate to incentive claims view"
+          }
+        ],
+        "informationArchitecture": "Educational layout: context heading → explanation paragraph → action options → supplemental link. Right-side visual reinforces product concept without competing",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Lock-in for veBAL boosts",
+        "subheadline": "veBAL is the Balancer protocol governance system that rewards long-term commitment. Get veBAL by locking the LP tokens of the BAL/WETH 80/20 pool.",
+        "ctas": [
+          {
+            "text": "Manage veBAL",
+            "style": "secondary-button",
+            "placement": "Below subheading, left"
+          },
+          {
+            "text": "Vote on gauges",
+            "style": "text-link",
+            "placement": "Below subheading, left (adjacent)"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Claim veBAL incentives",
+            "context": "Small text link below action buttons",
+            "purpose": "Direct users to incentive claims"
+          }
+        ],
+        "tone": "professional-technical, educational, incentive-focused",
+        "dataFormatting": [
+          "80/20 (pool composition percentages, displayed in coin illustration)",
+          "Implicit ratio visualization in coin design"
+        ],
+        "trustSignals": [
+          "Governance system positioning (rewards long-term commitment)",
+          "Specific pool identification (BAL/WETH 80/20)",
+          "Incentive-based model description"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-13-v3-core-concepts.png",
+      "label": "v3 core concepts",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a202c"
+        ],
+        "typography": {
+          "headingStyle": "Large serif-like sans-serif, dark navy (#1a202c), 2.5rem+ size",
+          "bodyStyle": "Regular sans-serif, charcoal gray, 1rem line-height",
+          "dataStyle": "Inline code with purple link highlights for technical references"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with nested menu structure showing Core Concepts hierarchy",
+            "position": "left",
+            "notable": "Expandable sections with chevrons, current page highlighted in light gray"
+          },
+          {
+            "type": "info-callout",
+            "description": "Blue-bordered info box with icon noting V3 documentation scope",
+            "position": "main-content-above-fold",
+            "notable": "Left border accent, subtle background color differentiation"
+          },
+          {
+            "type": "right-sidebar-toc",
+            "description": "Page Contents table of contents with linked sections",
+            "position": "right",
+            "notable": "Secondary navigation for quick jumping within current page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors navigation context, main heading dominates center, body text flows with inline hyperlinks in purple, right sidebar provides quick navigation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-article",
+        "userIntent": "Learn foundational concepts about Balancer v3 protocol architecture",
+        "entryPoints": [
+          "Concepts navigation tab",
+          "Search results",
+          "Direct link from external sources"
+        ],
+        "exitPoints": [
+          "Click sidebar links to other Core Concepts pages",
+          "Follow inline hyperlinks (Integration Guides, Building An AMM, Developer Reference)",
+          "Navigate via top navigation tabs (Guides, Build, Reference)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to different Core Concepts sections"
+          },
+          {
+            "element": "Inline hyperlinks (purple text)",
+            "action": "Jump to related documentation or external references"
+          },
+          {
+            "element": "Expandable menu items (chevrons)",
+            "action": "Reveal/hide nested navigation options"
+          }
+        ],
+        "informationArchitecture": "Hierarchical structure: Concepts > Core Concepts > Introduction with related pages accessible via sidebar and inline links",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Current page highlighted in sidebar (Introduction)"
+        ]
+      },
+      "copy": {
+        "headline": "Introduction",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Integration Guides",
+            "style": "text-link",
+            "placement": "inline-body"
+          },
+          {
+            "text": "Building An AMM",
+            "style": "text-link",
+            "placement": "inline-body"
+          },
+          {
+            "text": "Developer Reference",
+            "style": "text-link",
+            "placement": "inline-body"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "info-callout"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Please note these docs cover V3. For anything V2 related please visit here.",
+            "context": "Info callout box",
+            "purpose": "Clarify documentation version scope"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official Balancer v3 documentation",
+          "References to audited protocol architecture"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-14-build-an-amm.png",
+      "label": "Build an AMM",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a202c"
+        ],
+        "typography": {
+          "headingStyle": "Large dark navy sans-serif, 2rem+ size",
+          "bodyStyle": "Regular sans-serif, charcoal, readable line-height",
+          "dataStyle": "Inline code snippets in monospace with orange/coral syntax highlighting"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Hierarchical menu with expanded Build An Amm section",
+            "position": "left",
+            "notable": "Current page 'Create a custom AMM with a novel invariant' highlighted in cyan/teal background"
+          },
+          {
+            "type": "code-block",
+            "description": "Syntax-highlighted code showing contract implementations",
+            "position": "main-content",
+            "notable": "Function names highlighted in coral orange, code references inline in body text"
+          },
+          {
+            "type": "right-sidebar-toc",
+            "description": "Detailed table of contents for this guide",
+            "position": "right",
+            "notable": "Multiple subsections with visual hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar establishes context, main heading orients task, subheading in italics clarifies audience, body text weaves code references and links naturally",
+        "innovativeElements": [
+          "Inline code highlighting within running prose (onSwap, computeInvariant, computeBalance, etc.)"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-guide",
+        "userIntent": "Understand how to build a custom automated market maker with novel invariant on Balancer",
+        "entryPoints": [
+          "Build section navigation",
+          "Sidebar hierarchy from Build An Amm category",
+          "Search for AMM creation keywords"
+        ],
+        "exitPoints": [
+          "Navigate to other Build sections via sidebar (Build A Hook, Build A Router)",
+          "Follow inline links to contract references (IBasePool, BalancerPoolToken, ERC20MultiToken)",
+          "Jump to specific sections via right TOC",
+          "External links to example pools (Gyroscope, Xave)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation",
+            "action": "Switch between building guides"
+          },
+          {
+            "element": "Right-sidebar TOC links",
+            "action": "Jump to specific sections within guide"
+          },
+          {
+            "element": "Inline hyperlinks",
+            "action": "Navigate to contract interfaces and related concepts"
+          },
+          {
+            "element": "Code block",
+            "action": "Displays implementation details (read-only)"
+          }
+        ],
+        "informationArchitecture": "Guide structure: Overview → Implementation details → Code references → Related examples → Further resources",
+        "frictionPoints": [
+          "Dense technical content with multiple inline code references may require careful reading",
+          "Multiple layers of links could distract from main content flow"
+        ],
+        "progressIndicators": [
+          "Current page highlighted in sidebar"
+        ]
+      },
+      "copy": {
+        "headline": "Create a custom AMM with a novel invariant",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Deploy a Custom AMM Using a Factory",
+            "style": "text-link",
+            "placement": "sidebar"
+          },
+          {
+            "text": "Integrate a Custom AMM with Subgraph",
+            "style": "text-link",
+            "placement": "sidebar"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "inline-body"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This section is for developers looking to build a new custom pool type with a novel invariant. If you are looking to extend an existing pool type with hooks, start here.",
+            "context": "Below headline",
+            "purpose": "Set audience expectations and provide navigation hint"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Function names in code: onSwap, computeInvariant, computeBalance, IswapFeePercentageBounds",
+          "Contract interfaces: IBasePool.sol, BalancerPoolToken.sol"
+        ],
+        "trustSignals": [
+          "References to audited contract standards (ERC20MultiToken, ERC20)",
+          "Examples of real implementations (Gyroscope, Xave)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-15-build-a-router.png",
+      "label": "Build a router",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a202c"
+        ],
+        "typography": {
+          "headingStyle": "Large dark navy sans-serif, 2rem size",
+          "bodyStyle": "Regular sans-serif, charcoal gray, comfortable line-height",
+          "dataStyle": "Monospace code block with syntax highlighting for Solidity"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Expanded Build A Router section with current page highlighted",
+            "position": "left",
+            "notable": "Cyan/teal background on 'Create a custom router' indicates current selection"
+          },
+          {
+            "type": "code-block",
+            "description": "Solidity code snippet showing license and pragma declaration",
+            "position": "bottom-main-content",
+            "notable": "Dark background with 'solidity' language label in corner, syntax highlighting in coral and purple"
+          },
+          {
+            "type": "right-sidebar-toc",
+            "description": "Minimal table of contents showing only 'Usage' and GitHub link",
+            "position": "right",
+            "notable": "Sparse compared to other pages, indicating straightforward structure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar provides navigation context, large heading dominates, bulleted explanations build understanding, code sample grounds technical concepts",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-guide",
+        "userIntent": "Learn how to create a custom Router smart contract for Balancer",
+        "entryPoints": [
+          "Build navigation tab",
+          "Build A Router sidebar section",
+          "Existing Routers reference page"
+        ],
+        "exitPoints": [
+          "Navigate to related Build guides via sidebar (Build A Hook, Build An Amm)",
+          "Jump to Usage section via TOC",
+          "Edit on GitHub link",
+          "Click to Existing Routers to see examples"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar links (Build A Hook, Build An Amm)",
+            "action": "Switch to different building guides"
+          },
+          {
+            "element": "Existing Routers link",
+            "action": "Navigate to examples page"
+          },
+          {
+            "element": "Usage link in right TOC",
+            "action": "Jump to Usage section"
+          },
+          {
+            "element": "Edit page on GitHub",
+            "action": "Open GitHub editor for documentation"
+          }
+        ],
+        "informationArchitecture": "Introduction → Use-case examples → Key characteristics → Usage section with code examples",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Current page 'Create a custom router' highlighted in sidebar"
+        ]
+      },
+      "copy": {
+        "headline": "Create a custom Router",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Existing Routers",
+            "style": "text-link",
+            "placement": "sidebar"
+          },
+          {
+            "text": "Edit page on GitHub",
+            "style": "text-link",
+            "placement": "right-sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "A custom Router is a smart contract which interacts with the Balancer Vault and utilizes the Vaults function in unique combinations.",
+            "context": "Opening paragraph",
+            "purpose": "Define Router concept concisely"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Code: pragma solidity ^0.8.4;",
+          "Code: // SPDX-License-Identifier: GPL-3.0-or-later"
+        ],
+        "trustSignals": [
+          "Multiple real-world use case examples (DEX aggregators, DeFi projects, liquidity migration)",
+          "Reference to Balancer Vault security model"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-16-integration-guides.png",
+      "label": "Integration guides",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#2c3e50"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, dark navy, 2.5rem weight",
+          "bodyStyle": "Regular sans-serif, medium gray, readable line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top horizontal nav with logo and menu items (Concepts, Guides, Build, Reference, Partner, Data, Tools)",
+            "position": "top-fixed",
+            "notable": "Clean minimal header with centered product name"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Vertical list of expandable topics (Add Liquidity, Remove Liquidity, Swapping, Price Impact, Aggregators)",
+            "position": "left-side",
+            "notable": "Chevron-based expandable items with current section highlighted"
+          },
+          {
+            "type": "card-grid",
+            "description": "3-column grid of guide cards with code icon, title, and description",
+            "position": "main-content-area",
+            "notable": "Each card has icon in circle, colored heading, gray description text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominates, descriptive text creates path to cards, cards form grid with clear visual separation",
+        "innovativeElements": [
+          "Code icon circular badges on cards",
+          "Hyperlinked contextual references (Discord, Developer References)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find integration guides for common Balancer operations",
+        "entryPoints": [
+          "From Guides section in main nav",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click guide card to view full guide",
+          "Navigate to Developer References",
+          "Contact Discord support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Guide cards",
+            "action": "Navigate to specific guide page"
+          },
+          {
+            "element": "Discord link",
+            "action": "Open external support channel"
+          },
+          {
+            "element": "Developer References link",
+            "action": "Navigate to API/contract reference"
+          }
+        ],
+        "informationArchitecture": "Categories in sidebar mirror content cards in main area; user scans sidebar to understand available guides, then clicks card for details",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Integration Guides",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Discord",
+            "style": "text-link",
+            "placement": "body paragraph"
+          },
+          {
+            "text": "Developer References",
+            "style": "text-link",
+            "placement": "body paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This sections contains useful guides for common actions such as adding/removing liquidity and making swaps using the SDK.",
+            "context": "introductory paragraph",
+            "purpose": "Set context and expectations"
+          },
+          {
+            "text": "Individuals are encouraged to contact our developers via Discord to request further assistance.",
+            "context": "introductory paragraph",
+            "purpose": "Direct support path"
+          },
+          {
+            "text": "For more detailed technical documentation including interface APIs, contract ABIs and deployments please see Developer References.",
+            "context": "introductory paragraph",
+            "purpose": "Guide to deeper resources"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-17-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#3a4556",
+          "#ffffff",
+          "#6c7a8c"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, 2.5rem+, clear contrast",
+          "bodyStyle": "Regular sans-serif, light gray, moderate size",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Top navigation with Balancer logo, main menu (Pools, Swap, Portfolio, veBAL, Build), settings/theme/wallet controls on right",
+            "position": "top-fixed",
+            "notable": "Clean minimal header with purple Connect button accent"
+          },
+          {
+            "type": "error-state",
+            "description": "Large heading 'Page Not Found' with explanatory text and action button",
+            "position": "center-left-upper",
+            "notable": "Minimal error design with ample whitespace and clear recovery path"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large error heading draws immediate attention, supporting text explains situation, action button provides clear next step",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand they've reached a broken/missing page and find a way back",
+        "entryPoints": [
+          "Broken link",
+          "Mistyped URL",
+          "Expired page"
+        ],
+        "exitPoints": [
+          "Click 'Return Home' button",
+          "Use navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Return Home button",
+            "action": "Navigate back to home page"
+          }
+        ],
+        "informationArchitecture": "Single focus: explain error and provide recovery option",
+        "frictionPoints": [
+          "Large empty space may feel disorienting"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page Not Found",
+        "subheadline": "The page you are looking for does not exist",
+        "ctas": [
+          {
+            "text": "Return Home",
+            "style": "primary-button",
+            "placement": "below subheading"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "The page you are looking for does not exist"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-staking-1-pools.png",
+      "label": "Pools",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2d3748",
+          "#a09aff",
+          "#38f9d7",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large serif/display font, light colored (gradient purple-to-gold), 3rem+",
+          "bodyStyle": "Regular sans-serif, light gray, smaller size for secondary text",
+          "dataStyle": "Bold monospace-style numbers in white/light color with currency symbols, supporting arrows and icons"
+        },
+        "components": [
+          {
+            "type": "navigation-header",
+            "description": "Horizontal nav with logo, main sections (Pools, Swap, Portfolio, veBAL, Build), utility controls (settings, theme, wallet)",
+            "position": "top-fixed",
+            "notable": "Pools tab highlighted in teal/green, purple Connect button"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large heading 'Earn passively on Balancer' with subheading about liquidity providers, background imagery",
+            "position": "top-section",
+            "notable": "Gradient text effect, compelling value prop copy"
+          },
+          {
+            "type": "stats-cards",
+            "description": "Three cards showing TVL ($219.84m), Volume 24h ($114.40m), Yield 24h ($19.90k)",
+            "position": "top-right",
+            "notable": "Large white numbers with labels, aligned vertically"
+          },
+          {
+            "type": "featured-banner",
+            "description": "Wide card highlighting Plasma Chain deployment with View pools button and chain logos",
+            "position": "below-hero",
+            "notable": "Dark textured background, left-aligned content, right-aligned chain imagery"
+          },
+          {
+            "type": "data-table",
+            "description": "Multi-row table showing liquidity pools with token compositions, TVL, Volume, APR metrics",
+            "position": "bottom-main",
+            "notable": "Token icons with percentages, sortable columns (TVL, Volume 24h, APR), search and filter controls"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero headline + stats command attention; featured chain banner creates secondary focus; data table is scannable with clear columns",
+        "innovativeElements": [
+          "Gradient text in headline",
+          "Circular token composition badges",
+          "Right-aligned stat cards overlapping hero",
+          "Chain logo carousel in featured section"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Browse available liquidity pools, understand earnings opportunities, and select a pool to interact with",
+        "entryPoints": [
+          "Click Pools from main nav",
+          "Landing page redirect"
+        ],
+        "exitPoints": [
+          "Click pool row to view details",
+          "Click View pools in banner",
+          "Search/filter to narrow results"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pool rows",
+            "action": "Navigate to pool detail page"
+          },
+          {
+            "element": "View pools button",
+            "action": "Filter or navigate to Plasma Chain pools"
+          },
+          {
+            "element": "Search box",
+            "action": "Filter pools by name or token"
+          },
+          {
+            "element": "Filters button",
+            "action": "Open advanced filtering options"
+          },
+          {
+            "element": "Column headers",
+            "action": "Sort pools by TVL, Volume, or APR"
+          }
+        ],
+        "informationArchitecture": "Hero section establishes value prop; stats provide credibility; featured banner highlights new deployment; table provides comprehensive pool data with search/sort/filter for discovery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Earn passively on Balancer",
+        "subheadline": "Join 326k+ Liquidity Providers in yield-bearing pools",
+        "ctas": [
+          {
+            "text": "View pools",
+            "style": "ghost-button",
+            "placement": "featured banner"
+          },
+          {
+            "text": "Learn more",
+            "style": "text-link",
+            "placement": "featured banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Balancer is live on Plasma Chain",
+            "context": "featured banner heading",
+            "purpose": "Highlight new deployment"
+          },
+          {
+            "text": "Global Reach. Real Impact. Balancer brings stable-optimized pools to the stablecoins-focused blockchain.",
+            "context": "featured banner description",
+            "purpose": "Explain Plasma Chain value proposition"
+          },
+          {
+            "text": "Liquidity pools (5,661)",
+            "context": "table section heading",
+            "purpose": "Label table section with pool count"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$219.84m (TVL)",
+          "$114.40m (Volume 24h)",
+          "$19.90k (Yield 24h)",
+          "1.70% (APR with trending indicator)",
+          "2.09% - 2.16% (APR range)"
+        ],
+        "trustSignals": [
+          "326k+ Liquidity Providers",
+          "$219.84m TVL",
+          "5,661 active pools",
+          "Plasma Chain deployment (security/scaling)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-10-risks.png",
+      "label": "Risks",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#3a424d",
+          "#ffffff",
+          "#7c8a99"
+        ],
+        "typography": {
+          "headingStyle": "Large, centered, all-caps weight, white text on dark background",
+          "bodyStyle": "Italic, gray-blue, 16px, multi-line paragraph with high line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, main sections (Pools, Swap, Portfolio, veBAL, Build), and action buttons (settings, theme toggle, Create wallet, Connect)",
+            "position": "Top, full-width",
+            "notable": "Purple accent on Connect button, settings and theme toggle icons on right"
+          },
+          {
+            "type": "Content container",
+            "description": "Centered text block with headline, date, and explanatory paragraph",
+            "position": "Top section, centered",
+            "notable": "Italicized introductory text emphasizes transparency and non-exhaustive nature"
+          },
+          {
+            "type": "Table of Contents",
+            "description": "Nested bullet list with hierarchical risk categories",
+            "position": "Lower half, contained in rounded card",
+            "notable": "Two-level hierarchy (main risks and sub-categories), light text on dark card background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates top, date provides temporal context, body text creates secondary emphasis, nested list guides scanning with indentation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "informational-page",
+        "userIntent": "Understand the risks associated with using Balancer protocol before engaging",
+        "entryPoints": [
+          "Navigation link from main site",
+          "Direct URL access",
+          "Help or documentation link"
+        ],
+        "exitPoints": [
+          "Navigate to Pools, Swap, Portfolio, or other main sections",
+          "Create wallet or Connect wallet buttons",
+          "Click on specific risk categories to expand details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Risk category links (General risks, Pool type risks, etc.)",
+            "action": "Navigate to detailed section for each risk category"
+          },
+          {
+            "element": "Connect button",
+            "action": "Initiate wallet connection flow"
+          },
+          {
+            "element": "Create wallet button",
+            "action": "Initiate wallet creation flow"
+          }
+        ],
+        "informationArchitecture": "Linear, educational structure: headline → context → comprehensive risk taxonomy organized by risk type and protocol level",
+        "frictionPoints": [
+          "Long introductory text may deter quick scanning",
+          "No visual risk severity indicators (color coding or icons)",
+          "Contents list is text-only without expandable sections visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Risks of using Balancer",
+        "subheadline": "Last Updated: May 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This page aims to summarize the top risks to help you with your risk decisions",
+            "context": "Opening paragraph",
+            "purpose": "Set expectations for scope and purpose of document"
+          },
+          {
+            "text": "It is important to note that this list is not exhaustive, and there may be additional risks not explicitly mentioned here",
+            "context": "Opening paragraph",
+            "purpose": "Manage risk expectations and provide transparency"
+          },
+          {
+            "text": "As the risk environment is fluid, we expect to periodically update this summary",
+            "context": "Opening paragraph",
+            "purpose": "Communicate commitment to ongoing review"
+          }
+        ],
+        "tone": "professional-technical, cautionary, transparent",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit list of risk categories shows comprehensive analysis",
+          "Timestamp (May 2025) indicates currency",
+          "Acknowledgment of limitations and ongoing updates"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-11-balancer.png",
+      "label": "Balancer",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2a3239",
+          "#1a1f26",
+          "#42d5b7",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold white text, section headers in medium weight",
+          "bodyStyle": "Regular weight, gray text for labels and descriptions",
+          "dataStyle": "Monospace-style for protocol/network names, em-dash separators for dividers"
+        },
+        "components": [
+          {
+            "type": "Promo card",
+            "description": "Full-width banner introducing Balancer v3 with feature icons (Capital efficiency, Access to hooks, Immediate liquidity) and CTA link",
+            "position": "Top, full-width",
+            "notable": "Gold accent icons on dark circular backgrounds, gradient layout with text on left"
+          },
+          {
+            "type": "Step indicator",
+            "description": "Numbered progress tabs (1 Type, 2 Tokens, 3 Details, 4 Fund)",
+            "position": "Left panel, horizontal",
+            "notable": "Circled numbers, step 1 highlighted/active"
+          },
+          {
+            "type": "Protocol selector",
+            "description": "Two card options with icons (Balancer v3 selected in teal border, CoW as alternative)",
+            "position": "Left panel, below Type header",
+            "notable": "Teal border indicates selection, white icon on dark circular background"
+          },
+          {
+            "type": "Network selector",
+            "description": "Two card options with network icons (Ethereum selected, Arbitrum as alternative)",
+            "position": "Left panel, below Choose network header",
+            "notable": "Consistent card styling, color-coded network logos"
+          },
+          {
+            "type": "Pool preview panel",
+            "description": "Right-side panel showing pool configuration summary with icon, token list table below",
+            "position": "Right side, full height",
+            "notable": "Secondary heading with action buttons (Delete & restart, Get help), nested table structure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Promo card dominates top, step indicator guides left panel flow, preview panel on right provides real-time feedback",
+        "innovativeElements": [
+          "Numbered step tabs with visual progression",
+          "Real-time pool preview synchronizing with form inputs",
+          "Split-panel layout separating input controls from output preview"
+        ]
+      },
+      "flow": {
+        "screenType": "form-with-preview",
+        "userIntent": "Create a new liquidity pool on Balancer protocol",
+        "entryPoints": [
+          "Build or Create Pool navigation",
+          "Pools section with create button"
+        ],
+        "exitPoints": [
+          "Proceed to step 2 (Tokens) after protocol/network selection",
+          "Delete & restart to reset form",
+          "Get help to access documentation",
+          "Back to previous step"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Protocol cards (Balancer v3, CoW)",
+            "action": "Select protocol and update preview"
+          },
+          {
+            "element": "Network cards (Ethereum, Arbitrum)",
+            "action": "Select blockchain network and update preview"
+          },
+          {
+            "element": "Step tabs (1-4)",
+            "action": "Navigate between form sections"
+          },
+          {
+            "element": "Delete & restart button",
+            "action": "Clear form and reset to initial state"
+          },
+          {
+            "element": "Get help link",
+            "action": "Open documentation or support"
+          }
+        ],
+        "informationArchitecture": "Linear multi-step form with parallel preview: selections on left influence pool preview on right; numbered tabs indicate progression; each step represents distinct configuration phase",
+        "frictionPoints": [
+          "Two panel layout requires horizontal scrolling on smaller screens",
+          "Empty token table in preview may confuse users about what comes next",
+          "CoW alternative may distract from Balancer v3 primary flow"
+        ],
+        "progressIndicators": [
+          "Numbered step tabs (1-4) showing completion percentage",
+          "Active step highlighted with different styling",
+          "Pool preview updates in real-time as selections change"
+        ]
+      },
+      "copy": {
+        "headline": "Create a pool on Balancer v3",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "View Partner Onboarding docs ↗",
+            "style": "text-link",
+            "placement": "Below headline in promo card"
+          },
+          {
+            "text": "Delete & restart",
+            "style": "secondary-button",
+            "placement": "Top right of preview panel"
+          },
+          {
+            "text": "Get help",
+            "style": "text-link",
+            "placement": "Top right of preview panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Balancer v3 handles the low level tasks, like token accounting and security, allowing you to focus on innovating with custom logic.",
+            "context": "Below headline in promo card",
+            "purpose": "Value proposition explaining why v3 simplifies pool creation"
+          },
+          {
+            "text": "Pool type",
+            "context": "Form section header",
+            "purpose": "Label for protocol/network selection phase"
+          },
+          {
+            "text": "Choose protocol",
+            "context": "Form section subheader",
+            "purpose": "Instruction for protocol selection"
+          },
+          {
+            "text": "Choose network",
+            "context": "Form section subheader",
+            "purpose": "Instruction for network selection"
+          },
+          {
+            "text": "Pool preview",
+            "context": "Right panel header",
+            "purpose": "Label indicating preview purpose"
+          },
+          {
+            "text": "Balancer v3 | Ethereum Mainnet | Stable",
+            "context": "Pool preview configuration details",
+            "purpose": "Display selected pool type, protocol, and network"
+          }
+        ],
+        "tone": "professional-technical, instructional, encouraging",
+        "dataFormatting": [
+          "Pipe-separated values (|) for pool attributes",
+          "Table column headers (Price, Market Cap)",
+          "Em-dash separators in preview display"
+        ],
+        "trustSignals": [
+          "Partner Onboarding documentation link suggests established partner program",
+          "v3 protocol designation indicates mature version",
+          "Multi-network support (Ethereum, Arbitrum) shown"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Empty Tokens section in preview (shown as dashes) indicates next step to fill"
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/balancer-home-12-data-analytics.png",
+      "label": "Data & Analytics",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a3a52",
+          "#20c997",
+          "#6f7781"
+        ],
+        "typography": {
+          "headingStyle": "Large, serif-style primary headings in dark blue (#1a3a52), secondary headings in matching color",
+          "bodyStyle": "Regular sans-serif body text in charcoal gray, moderate line spacing",
+          "dataStyle": "Monospace code text for schema references, colored links for URLs"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal bar with logo, navigation sections (Concepts, Guides, Build, Reference, Partner, Data, Tools), and icons (search, theme, Discord, GitHub)",
+            "position": "Top, full-width",
+            "notable": "Left-aligned logo, centered nav, right-aligned utility icons, clean minimalist style"
+          },
+          {
+            "type": "Sidebar navigation",
+            "description": "Left panel with collapsible categories and links (Data And Analytics > Subgraph selected, with Balancer Api and Dune visible)",
+            "position": "Left side, full height",
+            "notable": "Green highlight on active section (Subgraph), expandable/collapsible categories"
+          },
+          {
+            "type": "Main content area",
+            "description": "Right-aligned text content with hierarchical headings, paragraphs, and embedded hyperlinks",
+            "position": "Center/right, scrollable",
+            "notable": "Wide content column with generous margins, multiple heading levels"
+          },
+          {
+            "type": "Data table",
+            "description": "Multi-column table showing network names, production URLs, and development URLs with external link icons",
+            "position": "Lower main content area",
+            "notable": "Three-column layout, clickable URLs in purple, consistent iconography"
+          },
+          {
+            "type": "Page contents sidebar",
+            "description": "Right-side sticky panel listing page sections with indented links (V3 Subgraphs, Vault Subgraphs, Pools, etc.)",
+            "position": "Far right, sticky",
+            "notable": "Indented hierarchy, green accent link (V3 Subgraphs), 'Edit page on GitHub' link at bottom"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo and navigation anchor top, content flows vertically in center, sidebars provide context (left) and navigation (right)",
+        "innovativeElements": [
+          "Three-panel layout (left nav, center content, right page contents) maximizes scannability",
+          "Sticky right sidebar for quick page navigation",
+          "Embedded code references with external link icons"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Learn about Balancer Subgraph and GraphQL data indexing",
+        "entryPoints": [
+          "Navigation from main site",
+          "Direct link from search results",
+          "Sidebar navigation from Data & Analytics category",
+          "External links from other documentation"
+        ],
+        "exitPoints": [
+          "Click any navigation link in left sidebar (Balancer Api, Dune, etc.)",
+          "Navigate via page contents links on right (V3 Subgraphs, Vault Subgraphs, etc.)",
+          "External links to GraphQL schema files or The Graph website",
+          "GitHub link to edit page",
+          "Search or other top navigation sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Left sidebar navigation links",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Right page contents links",
+            "action": "Jump to specific section on current page"
+          },
+          {
+            "element": "External link icons",
+            "action": "Open GraphQL schema files or related resources in new window"
+          },
+          {
+            "element": "Top navigation menu",
+            "action": "Navigate to Concepts, Guides, Build, etc."
+          },
+          {
+            "element": "Edit page on GitHub link",
+            "action": "Open page source in GitHub for contribution"
+          }
+        ],
+        "informationArchitecture": "Hierarchical documentation structure: left sidebar shows category tree, main content presents detailed information with nested sections, right sidebar enables quick navigation within page",
+        "frictionPoints": [
+          "Three-panel layout may overwhelm on smaller screens",
+          "Long external URLs in table may cause layout issues",
+          "No visible breadcrumb showing current position in hierarchy"
+        ],
+        "progressIndicators": [
+          "Active section highlighted in left sidebar (green)",
+          "Right sidebar shows page structure with hierarchical indentation",
+          "URL and page title indicate current location"
+        ]
+      },
+      "copy": {
+        "headline": "Balancer Subgraph",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "here↗",
+            "style": "text-link",
+            "placement": "Inline in main paragraph"
+          },
+          {
+            "text": "Edit page on GitHub ↗",
+            "style": "text-link",
+            "placement": "Bottom right, sticky panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Balancer Subgraph indexes data on the Balancer smart contracts with a GraphQL interface. It updates data in response to function calls and contract events to maintain data.",
+            "context": "First paragraph after headline",
+            "purpose": "Define what Subgraph is and its function"
+          },
+          {
+            "text": "Balancer uses Subgraph Studio for development and deployment of its subgraphs. For querying non-rate-limited endpoints, users need to obtain an API key from The Graph.",
+            "context": "Second paragraph",
+            "purpose": "Explain deployment process and API access requirements"
+          },
+          {
+            "text": "The schemas of GraphQL elements are defined in two separate schema files:",
+            "context": "Section introducing schema files",
+            "purpose": "Introduce two-file schema architecture"
+          },
+          {
+            "text": "Vault:",
+            "context": "Table row header",
+            "purpose": "Label for vault schema"
+          },
+          {
+            "text": "Pools:",
+            "context": "Table row header",
+            "purpose": "Label for pools schema"
+          }
+        ],
+        "tone": "professional-technical, educational, instructional",
+        "dataFormatting": [
+          "Code references: v3-vault/schema.graphql (orange text)",
+          "Code references: v3-pools/schema.graphql (orange text)",
+          "Full URLs with http/https protocol",
+          "Network names in plain text (Arbitrum, Avalanche, Base, Ethereum)"
+        ],
+        "trustSignals": [
+          "Links to official The Graph documentation",
+          "GitHub integration for community contributions",
+          "Multi-network support documented",
+          "Structured schema references indicate robust data model"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-settings-2-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#3a424f",
+          "#ffffff",
+          "#8b95a5"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif headlines in white, 48-56px, bold weight",
+          "bodyStyle": "Italic body text in light gray, ~16px, high line-height for readability",
+          "dataStyle": "Standard italic text for dates (Last Updated: April 2025)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, main sections (Pools, Swap, Portfolio, veBAL, Build), and action buttons",
+            "position": "Top",
+            "notable": "Purple 'Connect' button stands out with contrasting color"
+          },
+          {
+            "type": "Header section",
+            "description": "Centered title and subtitle with update date",
+            "position": "Top of content",
+            "notable": "Date clearly visible in italics for transparency"
+          },
+          {
+            "type": "Body text blocks",
+            "description": "Multiple paragraphs of policy text in italic serif/sans-serif mix",
+            "position": "Main content area",
+            "notable": "All text italicized for emphasis on formal legal document"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Clear vertical flow with headline prominence, followed by smaller subtitle, then body copy in descending importance",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-legal",
+        "userIntent": "Review privacy policy and understand data handling practices",
+        "entryPoints": [
+          "Settings menu",
+          "Footer link",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Back to dashboard",
+          "Navigate to other sections via top nav",
+          "External links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect button",
+            "action": "Wallet connection flow"
+          },
+          {
+            "element": "Create wallet button",
+            "action": "New wallet setup"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Dark/light mode switch"
+          }
+        ],
+        "informationArchitecture": "Linear document with header, intro paragraphs, then sectioned content (Summary visible at bottom)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Balancer Foundation Privacy Policy",
+        "subheadline": "Last Updated: April 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This Privacy Policy applies when you use our website, Balancer Protocol user-interface or application and other online products",
+            "context": "Main policy intro paragraph",
+            "purpose": "Define scope of policy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "April 2025"
+        ],
+        "trustSignals": [
+          "Privacy Policy",
+          "Balancer Foundation",
+          "formal legal document"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-onboarding-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#f5f5f5",
+          "#2c3e50",
+          "#6366f1"
+        ],
+        "typography": {
+          "headingStyle": "Medium weight sans-serif headers in dark navy, 24-32px",
+          "bodyStyle": "Regular weight sans-serif body text in gray, 14-16px",
+          "dataStyle": "Inline links in blue with underline styling"
+        },
+        "components": [
+          {
+            "type": "Sidebar navigation",
+            "description": "Left sidebar with collapsible sections (Onboarding Overview, Products, Balancer V2/V3)",
+            "position": "Left",
+            "notable": "Hierarchical navigation with highlighted current section in light gray"
+          },
+          {
+            "type": "Info box",
+            "description": "Blue-bordered box with info icon containing overview text",
+            "position": "Top of main content",
+            "notable": "Left border accent in blue, white background with blue left border"
+          },
+          {
+            "type": "Tips box",
+            "description": "Green-bordered box with lightbulb icon and link",
+            "position": "Middle of content",
+            "notable": "Green left border accent, light green background"
+          },
+          {
+            "type": "Right sidebar",
+            "description": "Page contents navigation with linked subheadings",
+            "position": "Right",
+            "notable": "Quick navigation to sections on page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Three-column layout with clear section hierarchy; callout boxes break up text and draw attention",
+        "innovativeElements": [
+          "Colored border accents on information boxes (blue for info, green for tips)",
+          "Dual sidebar navigation pattern for document exploration"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Learn about partner onboarding process and Balancer technology features",
+        "entryPoints": [
+          "Documentation site",
+          "Partner integration flow",
+          "Help section"
+        ],
+        "exitPoints": [
+          "Navigate to other docs sections",
+          "Click linked resources",
+          "Follow integration guides"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to different documentation sections"
+          },
+          {
+            "element": "Page contents links",
+            "action": "Jump to section on page"
+          },
+          {
+            "element": "'here' link in Tips",
+            "action": "Navigate to external resource"
+          },
+          {
+            "element": "Colored links (Boosted Pools, Yield-Bearing liquidity pools, veBAL/Governance Tokenomics)",
+            "action": "Navigate to detailed documentation"
+          }
+        ],
+        "informationArchitecture": "Hierarchical documentation structure with left navigation, main content area, and right-side contents index",
+        "frictionPoints": [
+          "Multiple navigation options might confuse users about which to use",
+          "Dense text blocks could benefit from more visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Partner Onboarding",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "Tips box"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From product details to step-by-step integration guides, this documentation provides partners with everything they need to onboard into the Balancer Ecosystem.",
+            "context": "Info box",
+            "purpose": "Explain page purpose and scope"
+          },
+          {
+            "text": "Want to learn more about Balancer? Click here",
+            "context": "Tips box",
+            "purpose": "Encourage deeper learning with optional external link"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Balancer v3 Docs",
+          "Step-by-step integration guides",
+          "Official documentation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-staking-2-build-a-hook.png",
+      "label": "Build a hook",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a1a2e"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (appears to be 32-36px), dark navy/charcoal, bold weight",
+          "bodyStyle": "Medium-weight sans-serif, dark gray (#595959), 16px line height",
+          "dataStyle": "Monospace or code-style for contract names and technical identifiers (BaseHooks.sol, IHooks.sol)"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with collapsible sections (Build A Hook, Build A Router, Build An Amm) with nested links",
+            "position": "Left edge, full height",
+            "notable": "Current page highlighted in teal/green"
+          },
+          {
+            "type": "Info Card",
+            "description": "Light blue background info box with icon and linked references",
+            "position": "Main content area, mid-page",
+            "notable": "Blue left border accent, inline hyperlinks in purple"
+          },
+          {
+            "type": "Table of Contents",
+            "description": "Right sidebar with page sections and subsections as links",
+            "position": "Right edge",
+            "notable": "Indented hierarchy with colored link text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar navigation establishes context, main heading anchors focus, body text flows naturally with callout boxes breaking rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-guide",
+        "userIntent": "Learn how to extend existing pool types using hooks framework",
+        "entryPoints": [
+          "From Build navigation menu",
+          "From documentation homepage"
+        ],
+        "exitPoints": [
+          "Navigate to other guides via sidebar",
+          "Click technical references (BaseHooks.sol, Hooks API)",
+          "Return to navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate between different build guide sections"
+          },
+          {
+            "element": "Inline hyperlinks (here, technical section on hooks, Hooks API)",
+            "action": "Jump to related documentation or code references"
+          },
+          {
+            "element": "Right sidebar table of contents",
+            "action": "Jump to specific page sections"
+          },
+          {
+            "element": "Edit page on GitHub link",
+            "action": "Redirect to GitHub for contributing changes"
+          }
+        ],
+        "informationArchitecture": "Top-level guide topic (Extend Pool Type) with nested subsections covering hooks concepts, contract implementation details, and configuration steps",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Extend an Existing Pool Type Using Hooks",
+        "subheadline": "This section is for developers looking to extend an existing pool type with custom hooks. If you are looking to create a custom AMM with a novel invariant, start here.",
+        "ctas": [
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "Subheadline"
+          },
+          {
+            "text": "technical section on hooks",
+            "style": "text-link",
+            "placement": "Info callout"
+          },
+          {
+            "text": "Hooks API",
+            "style": "text-link",
+            "placement": "Info callout"
+          },
+          {
+            "text": "Edit page on GitHub",
+            "style": "text-link",
+            "placement": "Right sidebar footer"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Before you start with this walkthrough, consider reading through the technical section on hooks and take a look at the Hooks API.",
+            "context": "Info box",
+            "purpose": "Guide user to prerequisite resources"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2c3e50",
+          "#a8a8e6",
+          "#e8c9a0"
+        ],
+        "typography": {
+          "headingStyle": "Medium sans-serif, 24px, light gray/white",
+          "bodyStyle": "Light sans-serif, 14px, medium gray",
+          "dataStyle": "Monospace numerals (0.00), appears in large display format with secondary smaller text ($0.00)"
+        },
+        "components": [
+          {
+            "type": "Swap Card",
+            "description": "Centered card container with rounded corners and dark background",
+            "position": "Center of screen",
+            "notable": "Subtle drop shadow, bordered input fields"
+          },
+          {
+            "type": "Input Field",
+            "description": "Two stacked input fields for token amounts with dropdown selectors",
+            "position": "Inside swap card",
+            "notable": "Large display of amounts (0.00), secondary USD value below"
+          },
+          {
+            "type": "Swap Direction Toggle",
+            "description": "Circular button with bidirectional arrow icon between input fields",
+            "position": "Between input fields, center aligned",
+            "notable": "Accessible swap reversal control"
+          },
+          {
+            "type": "Token Selector Dropdown",
+            "description": "Dropdown button showing selected token with icon and name",
+            "position": "Right side of input fields",
+            "notable": "Tan/beige background button for secondary action"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Full-width button at bottom of card",
+            "position": "Bottom of swap card",
+            "notable": "Gradient background (purple to orange), disabled state (not yet connected)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top nav anchors context, centered card draws focus, large amount displays dominate input areas, gradient CTA button commands attention",
+        "innovativeElements": [
+          "Gradient button styling (purple-to-orange)",
+          "Circular swap toggle between inputs"
+        ]
+      },
+      "flow": {
+        "screenType": "form-transaction",
+        "userIntent": "Initiate a token swap transaction",
+        "entryPoints": [
+          "From Swap navigation menu",
+          "Direct link to swap interface"
+        ],
+        "exitPoints": [
+          "After connecting wallet and executing swap",
+          "Navigate away via top menu",
+          "Close interface"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Token input field (From)",
+            "action": "Enter amount of token to swap"
+          },
+          {
+            "element": "Token input field (To)",
+            "action": "View receive amount or enter desired output"
+          },
+          {
+            "element": "Swap direction toggle",
+            "action": "Reverse from/to tokens"
+          },
+          {
+            "element": "Select token dropdown",
+            "action": "Choose token to receive"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Initiate wallet connection"
+          },
+          {
+            "element": "Slippage settings button",
+            "action": "Configure trade slippage tolerance"
+          }
+        ],
+        "informationArchitecture": "Single focused task: input source token amount → select destination token → execute swap. Secondary options (slippage, exchange rate) accessible via settings",
+        "frictionPoints": [
+          "Must connect wallet before swapping",
+          "Exchange rate and details hidden behind 'Details' link"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Bottom of card"
+          },
+          {
+            "text": "Select token",
+            "style": "secondary-button",
+            "placement": "Right side of to-token input"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "0.50%",
+            "context": "Settings icon near top right of card",
+            "purpose": "Display current slippage tolerance setting"
+          },
+          {
+            "text": "$0.00",
+            "context": "Below input amounts",
+            "purpose": "Show USD equivalent values"
+          },
+          {
+            "text": "Exchange rate: —",
+            "context": "Below swap inputs",
+            "purpose": "Display current exchange rate (hidden until trade is configured)"
+          },
+          {
+            "text": "Details",
+            "context": "Right side of exchange rate",
+            "purpose": "Expandable section for additional trade parameters"
+          }
+        ],
+        "tone": "professional-casual",
+        "dataFormatting": [
+          "0.00 (large display)",
+          "$0.00 (smaller USD value)",
+          "0.50% (slippage setting)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/balancer-settings-1-terms-of-use.png",
+      "label": "Terms of use",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a2e",
+          "#ffffff",
+          "#e8e8e8"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif (48-56px), white, bold, center-aligned",
+          "bodyStyle": "Regular sans-serif (16-18px), light gray, line height 1.6-1.8, justified",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Page Header",
+            "description": "Large centered heading with last updated timestamp below",
+            "position": "Top of content area",
+            "notable": "Italic timestamp in smaller, lighter text"
+          },
+          {
+            "type": "Body Text",
+            "description": "Long-form legal text in multiple paragraphs",
+            "position": "Main content area",
+            "notable": "Multiple paragraphs with nested sections (Overview) using numbered heading hierarchy"
+          },
+          {
+            "type": "Section Heading",
+            "description": "Numbered section headings (1. Overview)",
+            "position": "Within body content",
+            "notable": "Larger bold text, marks distinct document sections"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered title dominates, timestamp establishes currency, body text flows with section breaks creating natural rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review terms of service and legal agreements",
+        "entryPoints": [
+          "From settings or footer links",
+          "Direct link to terms page"
+        ],
+        "exitPoints": [
+          "Scroll to navigate document",
+          "Return via back button or navigation",
+          "Follow embedded links"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear document flow: title + timestamp → overview disclaimer → numbered sections (Overview shown) → presumably further sections below",
+        "frictionPoints": [
+          "Long dense legal text may be difficult to scan",
+          "No table of contents or quick-jump navigation visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Balancer Terms of Use",
+        "subheadline": "Last updated: November 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Do not access this site, as defined below, where such access is prohibited by applicable law.",
+            "context": "First paragraph after title",
+            "purpose": "Critical legal disclaimer about prohibited access"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Last updated: November 2025 (current)",
+          "References to Balancer Foundation and subsidiaries",
+          "Mentions mandatory arbitration clause and legal compliance"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

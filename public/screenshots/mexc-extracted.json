@@ -1,0 +1,175 @@
+{
+  "slug": "mexc",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T12:33:08.675Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 1,
+  "screens": [
+    {
+      "image": "/screenshots/mexc-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width hero with sticky header and feature cards footer",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#1e40af",
+          "#fbbf24",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (80px+), white text with strong contrast, multi-line layout",
+          "bodyStyle": "Medium-weight sans-serif, white/light gray text on dark backgrounds, readable at all sizes",
+          "dataStyle": "Large numeric values (2,347, 1,000%+, 0%, #1) in white with context labels below in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal sticky header with logo, dropdown menus (Exchange, DEX+, Buy Crypto, Markets, Spot, Futures GOLD badge, Earn, Event Center, More), search, auth buttons",
+            "position": "top",
+            "notable": "GOLD badge on Futures menu item; blue Sign Up button stands out; promotional 'Commodity Zero-Fee Gala' text"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered text with animated 3D assets (gold bars, silver bars, large zero percent symbol) on dark background with subtle vertical line pattern",
+            "position": "center",
+            "notable": "Cinematic 3D rendering with dramatic lighting; metallic gold/silver visual metaphor for commodities"
+          },
+          {
+            "type": "Sign-up Form",
+            "description": "Email/Mobile Number input field with blue Sign Up button and social login icons (Google, Apple, Telegram)",
+            "position": "center-below-hero",
+            "notable": "Inline form with multi-sign-up options; prominent CTA button"
+          },
+          {
+            "type": "Feature Cards",
+            "description": "Four dark cards with white headings, large KPI numbers, and right-arrow navigation",
+            "position": "bottom",
+            "notable": "Metric-driven storytelling: trending tokens, APR, fees, liquidity rankings"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large hero headline dominates upper half; animated 3D asset draws eye; sign-up form positioned as secondary CTA; footer cards present supporting metrics",
+        "innovativeElements": [
+          "3D animated metallic objects (gold/silver bars and percent symbol) with depth and lighting effects",
+          "Dark background with subtle vertical line pattern suggesting market volatility",
+          "GOLD badge on Futures navigation indicating premium tier"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Discover MEXC platform capabilities, particularly Gold & Silver Futures trading, and sign up for account",
+        "entryPoints": [
+          "Direct navigation to home",
+          "Marketing campaign or external link featuring 0 Fees promotion"
+        ],
+        "exitPoints": [
+          "Sign Up button (primary CTA)",
+          "Log In link (top right)",
+          "Navigation menu items (Exchange, DEX+, Markets, Futures, Earn)",
+          "Feature card navigation (Most Trending Tokens, Everyday Airdrops, Xtremely Low Fees, Comprehensive Liquidity)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign Up Button",
+            "action": "Opens registration flow with email/mobile entry"
+          },
+          {
+            "element": "Email/Mobile Input",
+            "action": "Accepts user contact information for signup"
+          },
+          {
+            "element": "Social Login Icons",
+            "action": "Authenticates via Google, Apple, or Telegram"
+          },
+          {
+            "element": "Navigation Dropdown Menus",
+            "action": "Reveals product categories and sub-features"
+          },
+          {
+            "element": "Feature Cards",
+            "action": "Navigate to detailed product pages (right arrow indicates clickability)"
+          },
+          {
+            "element": "Search Icon",
+            "action": "Opens search functionality"
+          }
+        ],
+        "informationArchitecture": "Top-level: Navigation by product type (trading venues, education, events); Primary focus: Futures trading promotion with conversion incentive; Secondary focus: Supporting metrics and benefits; Tertiary: Account management and search",
+        "frictionPoints": [
+          "Multiple navigation options may overwhelm new users",
+          "Large number of dropdown menus could increase decision paralysis",
+          "3D hero asset may not load reliably on slower connections"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Gold & Silver Futures\n0 Fees. #1 Liquidity.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign Up",
+            "style": "primary-button",
+            "placement": "inline form below hero, right side"
+          },
+          {
+            "text": "Sign Up",
+            "style": "primary-button",
+            "placement": "top navigation bar, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sign Up & Get 10,000 USDT",
+            "context": "Below hero image, above sign-up form",
+            "purpose": "Incentivizes signup with concrete reward"
+          },
+          {
+            "text": "Email/Mobile Number",
+            "context": "Input field placeholder",
+            "purpose": "Instructs user what information to enter"
+          },
+          {
+            "text": "Most Trending Tokens",
+            "context": "Feature card heading",
+            "purpose": "Indicates content category"
+          },
+          {
+            "text": "Everyday Airdrops",
+            "context": "Feature card heading",
+            "purpose": "Highlights promotional benefit"
+          },
+          {
+            "text": "Xtremely Low Fees",
+            "context": "Feature card heading",
+            "purpose": "Reinforces key value proposition"
+          },
+          {
+            "text": "Comprehensive Liquidity",
+            "context": "Feature card heading",
+            "purpose": "Emphasizes market depth advantage"
+          }
+        ],
+        "tone": "professional-technical with casual confidence; emphatic value propositions (0 Fees, #1 Liquidity); excitement through superlatives (Xtremely, Everyday Airdrops)",
+        "dataFormatting": [
+          "2,347 (token count)",
+          "1,000%+ APR (annual percentage return with plus accent)",
+          "0% (zero fees emphasized)",
+          "#1 in the industry (ranking notation)"
+        ],
+        "trustSignals": [
+          "#1 Liquidity in industry",
+          "Zero fees positioning",
+          "1,000%+ APR on airdrops",
+          "10,000 USDT signup bonus",
+          "2,347 trending tokens available"
+        ],
+        "jargonLevel": "beginner to intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1558 @@
+{
+  "slug": "coinomi",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:22:39.948Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/coinomi-home-7-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#DC143C",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, large (72px+), white text",
+          "bodyStyle": "Light sans-serif, body-sized, white text on red background",
+          "dataStyle": "Large numeric display (404) in white within outlined window icon"
+        },
+        "components": [
+          {
+            "type": "Error Icon",
+            "description": "Browser window outline with 404 displayed inside",
+            "position": "Upper left, center-aligned",
+            "notable": "Clean line-based illustration, reminiscent of system error dialogs"
+          },
+          {
+            "type": "Text Block",
+            "description": "Error message and instructional copy",
+            "position": "Below icon, left-aligned",
+            "notable": "Multi-line explanatory text with underline accent beneath headline"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon → Headline → Underline accent → Subheading → Body text, guiding eye downward",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User has navigated to non-existent URL; needs recovery path back to valid content",
+        "entryPoints": [
+          "Invalid URL entry",
+          "Broken link click",
+          "Typo in address bar"
+        ],
+        "exitPoints": [
+          "Navigation menu (About, Exchange, Shop, Support)",
+          "Logo click to home",
+          "Language selector",
+          "Download button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation Menu",
+            "action": "Return to main site sections"
+          },
+          {
+            "element": "Coinomi Logo",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Support Link",
+            "action": "Access customer support"
+          }
+        ],
+        "informationArchitecture": "Error message hierarchy: code → headline → explanation, with global nav maintained at top",
+        "frictionPoints": [
+          "No direct 'Go Home' button visible",
+          "User must parse error message to understand next action",
+          "Limited contextual suggestions for next steps"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PAGE NOT FOUND",
+        "subheadline": "Error 404",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "The specified file was not found on this website. Please check the URL and try again.",
+            "context": "Below subheadline",
+            "purpose": "Explain error cause and suggest user action"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "404 (error code display)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Error 404"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-settings-1-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F70DC",
+          "#FFFFFF",
+          "#00BCD4"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, large (48px+), white text",
+          "bodyStyle": "Light sans-serif, 18px, light gray/white on blue background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Headline Section",
+            "description": "Large 'ABOUT US' heading with cyan underline",
+            "position": "Top, left-aligned",
+            "notable": "Underline accent bar adds visual break and branding continuity"
+          },
+          {
+            "type": "Introductory Paragraph",
+            "description": "Company mission statement spanning full width",
+            "position": "Below headline",
+            "notable": "Long-form narrative establishing core values and technical positioning"
+          },
+          {
+            "type": "Three-Column Card Grid",
+            "description": "Our History, Our Advantage, Our Mission sections",
+            "position": "Lower section",
+            "notable": "Column-based layout with underlined subheadings, maintaining visual rhythm"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Main headline → mission statement → three equal-weight columns, reading left-to-right",
+        "innovativeElements": [
+          "Cyan/turquoise underline accent as branding element repeating across sections",
+          "Three-column equal-weight layout avoids hierarchy bias"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, informational",
+        "userIntent": "Learn company background, values, history, and competitive advantages",
+        "entryPoints": [
+          "About navigation link",
+          "Landing page deep link"
+        ],
+        "exitPoints": [
+          "Exchange",
+          "Shop",
+          "Support",
+          "Download",
+          "Home via logo"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation Menu",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Download Button",
+            "action": "Access app download"
+          }
+        ],
+        "informationArchitecture": "Introduction → Historical narrative → Value propositions → Mission statement, flowing top-to-bottom",
+        "frictionPoints": [
+          "Dense text blocks may overwhelm scanners",
+          "No clear CTA after reading",
+          "Three columns could challenge mobile readability"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ABOUT US",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Our history",
+            "context": "Three-column subheading",
+            "purpose": "Section divider"
+          },
+          {
+            "text": "Our advantage",
+            "context": "Three-column subheading",
+            "purpose": "Section divider"
+          },
+          {
+            "text": "Our mission",
+            "context": "Three-column subheading",
+            "purpose": "Section divider"
+          }
+        ],
+        "tone": "professional-technical, educational, aspirational",
+        "dataFormatting": [
+          "2014 (founding year)"
+        ],
+        "trustSignals": [
+          "Blockchain technology experts mention",
+          "Global users and employees reference",
+          "Security science emphasis",
+          "Strategic exchange partnerships mention"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-settings-2-careers.png",
+      "label": "Careers",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel (left narrative, right job cards)",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#9C6ABE",
+          "#FFFFFF",
+          "#1F70DC"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, large (48px+), white text",
+          "bodyStyle": "Light sans-serif, 18px, white/light gray on purple background",
+          "dataStyle": "Job title: bold sans-serif; Job type/location: smaller gray text"
+        },
+        "components": [
+          {
+            "type": "Headline Section",
+            "description": "'CAREERS @COINOMI' with cyan underline",
+            "position": "Top left",
+            "notable": "@ symbol adds modern, conversational brand tone"
+          },
+          {
+            "type": "Job Listing Card",
+            "description": "White rounded rectangle containing title, employment type, and location",
+            "position": "Right side, stacked vertically",
+            "notable": "Clean card design with high contrast for readability; ANYWHERE/REMOTE label standard"
+          },
+          {
+            "type": "Bulleted Benefits List",
+            "description": "Four-point list of employment benefits",
+            "position": "Bottom left",
+            "notable": "Crypto payment highlight ('Only 200 to choose from') adds differentiation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline → narrative paragraph → benefits list on left; job cards stack on right at equal visual weight",
+        "innovativeElements": [
+          "Crypto payment benefit callout showing 200+ currency options",
+          "ANYWHERE/REMOTE location tags pre-address remote work expectation",
+          "Purple gradient background creates recruitment-focused atmosphere"
+        ]
+      },
+      "flow": {
+        "screenType": "landing, recruitment",
+        "userIntent": "Browse open positions and learn about company culture and benefits",
+        "entryPoints": [
+          "Careers section link",
+          "About page navigation"
+        ],
+        "exitPoints": [
+          "Job card click (likely external application)",
+          "Navigation to other sections",
+          "Home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Job Listing Card",
+            "action": "Navigate to detailed job posting or application form"
+          },
+          {
+            "element": "Navigation Menu",
+            "action": "Leave careers section"
+          },
+          {
+            "element": "Download Button",
+            "action": "Access app"
+          }
+        ],
+        "informationArchitecture": "Headline → company culture narrative → benefits overview → available positions grid, top-to-bottom",
+        "frictionPoints": [
+          "Only 3 jobs visible; user may need to scroll for more",
+          "No 'View All' or pagination indicator visible",
+          "Job cards lack click affordance indicators",
+          "No application process preview"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CAREERS @COINOMI",
+        "subheadline": "Together, we are shaping the future of currencies & payments.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "FULL-TIME",
+            "context": "Job listing badge",
+            "purpose": "Clarify employment type"
+          },
+          {
+            "text": "ANYWHERE/REMOTE",
+            "context": "Job listing badge",
+            "purpose": "Signal location flexibility"
+          },
+          {
+            "text": "Benefits",
+            "context": "Section header in left narrative",
+            "purpose": "Introduce benefits list"
+          }
+        ],
+        "tone": "friendly-casual, inclusive, aspirational",
+        "dataFormatting": [
+          "200 (currency payment options)",
+          "FULL-TIME (employment type)",
+          "ANYWHERE/REMOTE (location)"
+        ],
+        "trustSignals": [
+          "Diversity and inclusion emphasis",
+          "Crypto payment flexibility (200+ options)",
+          "Autonomy and deadline-setting language",
+          "Professional development implicit in technical role descriptions"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-4-responsible-disclosure.png",
+      "label": "Responsible Disclosure",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#2d2d2d",
+          "#ffffff",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif all-caps white text (60-70px), bold weight",
+          "bodyStyle": "Light gray body text (14-16px), multi-paragraph with good line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal top nav with logo, menu items, language selector, and download button",
+            "position": "Top fixed",
+            "notable": null
+          },
+          {
+            "type": "Accent line",
+            "description": "Bright blue horizontal line beneath heading",
+            "position": "Below headline",
+            "notable": "Visual break that emphasizes section importance"
+          },
+          {
+            "type": "Text content block",
+            "description": "Main content area with paragraphs and lettered list items",
+            "position": "Center, full-width",
+            "notable": "Hierarchical list formatting with a, b, c, d, e labels"
+          },
+          {
+            "type": "Hyperlink",
+            "description": "Underlined email (security@coinomi.com) and PGP key download link",
+            "position": "Within body text",
+            "notable": "Interactive elements embedded in flowing text"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large centered heading draws eye first, blue underline acts as emphasis, body text flows logically with section subheadings",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "informational-policy",
+        "userIntent": "Understand Coinomi's security disclosure process and report vulnerabilities",
+        "entryPoints": [
+          "Support menu navigation",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Download PGP key",
+          "Send security email",
+          "Return to main nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "security@coinomi.com link",
+            "action": "Opens email client to report vulnerability"
+          },
+          {
+            "element": "Download the Coinomi PGP key link",
+            "action": "Downloads PGP public key for encrypted communication"
+          }
+        ],
+        "informationArchitecture": "Linear progression: intro > contact info > guidelines (5-point list) > response timeline",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "RESPONSIBLE DISCLOSURE",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Download the Coinomi PGP key",
+            "style": "text-link",
+            "placement": "Within body text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Priority will be granted to encrypted reports — please include your PGP public key along with the report.",
+            "context": "Security reporting instructions",
+            "purpose": "Emphasize encryption preference for sensitive disclosures"
+          },
+          {
+            "text": "We will make every effort to respond to your disclosure within 1-2 business days.",
+            "context": "End of page",
+            "purpose": "Set expectation for response time"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "1-2 business days"
+        ],
+        "trustSignals": [
+          "Commitment to responsible disclosure",
+          "Security researcher valued",
+          "PGP encryption support",
+          "Response timeline commitment"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-5-buy-crypto.png",
+      "label": "Buy Crypto",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif all-caps black text (60-70px), bold weight, left-aligned",
+          "bodyStyle": "Medium dark gray body text (14px), left-aligned narrative paragraph",
+          "dataStyle": "Large monospace numbers in form fields (0.00465925, 300, EUR), light gray input backgrounds"
+        },
+        "components": [
+          {
+            "type": "Form card",
+            "description": "White card with 3-step progress indicator (Quote/Payment/Receive tabs), form fields for amount and currency",
+            "position": "Right side, centered vertically",
+            "notable": "Step indicators with blue underline on active tab"
+          },
+          {
+            "type": "Form fields",
+            "description": "Input fields for crypto amount, dropdown selectors for BTC currency, fiat amount, currency dropdown",
+            "position": "Within form card",
+            "notable": "Paired display of crypto and fiat amounts"
+          },
+          {
+            "type": "Warning box",
+            "description": "Yellow/beige background box with 'Please Note:' header and bullet-point list",
+            "position": "Below form card",
+            "notable": "Risk disclosure formatting with multiple trust/security statements"
+          },
+          {
+            "type": "CTA button",
+            "description": "Black button with white text",
+            "position": "Center of form card",
+            "notable": "High-contrast, easy to locate"
+          },
+          {
+            "type": "Partner badge",
+            "description": "Dark footer showing 'Powered by Simplex' with Visa/Mastercard logos",
+            "position": "Bottom of form card",
+            "notable": "Third-party trust signals"
+          },
+          {
+            "type": "Decorative elements",
+            "description": "Soft-focus colored circles (green, yellow, blue, pink) scattered in background",
+            "position": "Background",
+            "notable": "Playful, modern aesthetic without interfering with content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline on left draws attention, form card on right with clear step flow, warning box below provides secondary information",
+        "innovativeElements": [
+          "Three-step horizontal progress indicator integrated into form card",
+          "Soft-focus background circles for visual interest without distraction"
+        ]
+      },
+      "flow": {
+        "screenType": "form-transaction",
+        "userIntent": "Purchase cryptocurrency using fiat currency (credit/debit card or bank transfer)",
+        "entryPoints": [
+          "Shop menu",
+          "Exchange section navigation",
+          "Direct buy crypto link"
+        ],
+        "exitPoints": [
+          "CONTINUE button to payment processor",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Quote/Payment/Receive tabs",
+            "action": "Progress through multi-step purchase flow"
+          },
+          {
+            "element": "Amount input fields",
+            "action": "Enter desired crypto and fiat amounts"
+          },
+          {
+            "element": "Currency dropdowns (BTC, EUR)",
+            "action": "Select cryptocurrencies and payment currencies"
+          },
+          {
+            "element": "CONTINUE button",
+            "action": "Proceed to Simplex payment processor"
+          },
+          {
+            "element": "terms of use link",
+            "action": "Opens third-party terms in new window"
+          }
+        ],
+        "informationArchitecture": "Left: narrative value prop | Right: actionable form with progressive disclosure via tabs | Below: risk disclosures",
+        "frictionPoints": [
+          "Multiple warnings about third-party service and legal/scam risks",
+          "Irreversible transactions caveat",
+          "Rate volatility notification requiring re-confirmation"
+        ],
+        "progressIndicators": [
+          "Step indicators (1. Quote / 2. Payment / 3. Receive) with active step highlighted"
+        ]
+      },
+      "copy": {
+        "headline": "PURCHASE WITH EASE.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "CONTINUE",
+            "style": "primary-button",
+            "placement": "Center of form card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BTC address must be yours and under your full control.",
+            "context": "Form field label",
+            "purpose": "Critical safety instruction for receiving crypto"
+          },
+          {
+            "text": "Powered by Simplex",
+            "context": "Form card footer",
+            "purpose": "Attribution to payment processor"
+          },
+          {
+            "text": "This page is for buying cryptocurrency. Use only your own personal Coinomi address for receiving.",
+            "context": "Please Note warning box",
+            "purpose": "Primary risk disclosure"
+          },
+          {
+            "text": "This service is provided by a third party, and you are subject to their terms of use.",
+            "context": "Please Note warning box",
+            "purpose": "Third-party liability disclaimer"
+          }
+        ],
+        "tone": "friendly-casual (headline) mixed with professional-technical (warnings)",
+        "dataFormatting": [
+          "0.00465925 (crypto amount)",
+          "300 (fiat amount)",
+          "BTC, EUR (currency codes)"
+        ],
+        "trustSignals": [
+          "Simplex payment processor",
+          "Visa/Mastercard acceptance",
+          "Security-focused receiving address validation",
+          "Third-party terms available"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-6-sell-crypto.png",
+      "label": "Sell Crypto",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#0066ff"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif all-caps black text (60-70px), bold weight, left-aligned",
+          "bodyStyle": "Medium dark gray body text (14px), left-aligned narrative paragraph",
+          "dataStyle": "Large monospace numbers (0.001, €0), light gray input backgrounds, lighter gray for loading state"
+        },
+        "components": [
+          {
+            "type": "Form card",
+            "description": "White card with 'Sell crypto' header, form fields for sell and receive amounts, loading indicator",
+            "position": "Right side, centered vertically",
+            "notable": "Clean white card with subtle drop shadow"
+          },
+          {
+            "type": "Amount display",
+            "description": "Two-field layout: 'You sell' (0.001 BTC) and 'You get' (€0), with currency badges",
+            "position": "Center of form card",
+            "notable": "Paired display with icon badges for BTC (orange) and EUR (blue)"
+          },
+          {
+            "type": "Loading indicator",
+            "description": "Spinner with 'Fetching best price...' text",
+            "position": "Below receive amount",
+            "notable": "Transparent communication of async data fetch"
+          },
+          {
+            "type": "Dropdown selector",
+            "description": "Payment method selector with Credit Card highlighted as 'Recommended'",
+            "position": "Lower form card section",
+            "notable": "Recommendation badge in green text"
+          },
+          {
+            "type": "CTA button",
+            "description": "Light gray button text 'Sell BTC', appears disabled",
+            "position": "Bottom of form card",
+            "notable": "Inactive state until form is ready"
+          },
+          {
+            "type": "Partner badge",
+            "description": "Dark footer showing 'Powered by Onramper'",
+            "position": "Bottom of form card",
+            "notable": "Third-party attribution"
+          },
+          {
+            "type": "Decorative elements",
+            "description": "Soft-focus colored circles scattered in background",
+            "position": "Background",
+            "notable": "Consistent design language with buy screen"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline on left, form card on right with clear data entry flow, recommendation badges guide selection",
+        "innovativeElements": [
+          "Loading state with 'Fetching best price' messaging shows active data retrieval",
+          "Recommended badge on preferred payment method"
+        ]
+      },
+      "flow": {
+        "screenType": "form-transaction",
+        "userIntent": "Sell cryptocurrency and receive fiat currency to bank account or card",
+        "entryPoints": [
+          "Shop menu",
+          "Exchange section navigation",
+          "Direct sell crypto link"
+        ],
+        "exitPoints": [
+          "Sell BTC button (when enabled) to Onramper processor",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sell amount input",
+            "action": "Enter quantity of BTC to sell"
+          },
+          {
+            "element": "Receive method dropdown",
+            "action": "Select between payment methods (Credit Card, etc.)"
+          },
+          {
+            "element": "Sell BTC button",
+            "action": "Submit sale transaction to Onramper"
+          },
+          {
+            "element": "Menu icon (hamburger)",
+            "action": "Open additional options"
+          }
+        ],
+        "informationArchitecture": "Left: value prop narrative | Right: transaction form with real-time price fetching | Bottom: risk disclosure note",
+        "frictionPoints": [
+          "Price fetching creates brief loading state",
+          "Button appears disabled until form validation complete",
+          "Required to use own Coinomi wallet"
+        ],
+        "progressIndicators": [
+          "Loading spinner with 'Fetching best price...' text"
+        ]
+      },
+      "copy": {
+        "headline": "SELL WITH CONFIDENCE.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sell BTC",
+            "style": "primary-button",
+            "placement": "Bottom of form card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You sell",
+            "context": "Form label",
+            "purpose": "Clarify input field purpose"
+          },
+          {
+            "text": "You get",
+            "context": "Form label",
+            "purpose": "Display fiat equivalent"
+          },
+          {
+            "text": "Fetching best price...",
+            "context": "Loading state",
+            "purpose": "Communicate real-time price retrieval"
+          },
+          {
+            "text": "Recommended",
+            "context": "Payment method badge",
+            "purpose": "Guide user toward optimal payment method"
+          },
+          {
+            "text": "Use only your own Coinomi wallet when selling crypto.",
+            "context": "Please Note section",
+            "purpose": "Critical security instruction"
+          }
+        ],
+        "tone": "friendly-casual (headline) mixed with professional-technical (instructions)",
+        "dataFormatting": [
+          "0.001 (crypto amount)",
+          "€0 (fiat equivalent)",
+          "BTC, EUR (currency codes)"
+        ],
+        "trustSignals": [
+          "Onramper payment processor",
+          "Real-time price fetching",
+          "Recommended payment method badge"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, very large (70+ px), high contrast black on white",
+          "bodyStyle": "Regular sans-serif, 16-18px, dark gray/black, readable line-height",
+          "dataStyle": "Currency amounts in secondary text, clean formatting (e.g., 23.60 USD)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, menu items (About, Exchange, Shop, Support), Language selector, Download button",
+            "position": "Top fixed",
+            "notable": "Prominent Download CTA in black button, language picker with globe icon"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with value proposition, blue accent underline, subtext, two CTAs",
+            "position": "Left side, upper-mid",
+            "notable": "Clear visual hierarchy with underline accent breaking up text"
+          },
+          {
+            "type": "Mobile mockup",
+            "description": "iPhone mockup showing app interface with wallet overview, menu items (Trade, Exchange, DEX, Jupiter), and asset list with USD values",
+            "position": "Right side, center",
+            "notable": "Real app UI visible with blue header, wallet dropdown, and hierarchical menu system"
+          },
+          {
+            "type": "Decorative elements",
+            "description": "Blurred circular gradient overlays (pink, green, yellow, blue)",
+            "position": "Throughout background",
+            "notable": "Subtle, modern aesthetic without cluttering content"
+          },
+          {
+            "type": "Platform badges",
+            "description": "Icons for Windows, macOS, Google Play, Android, Windows Store, and other platforms",
+            "position": "Bottom left",
+            "notable": "Shows multi-platform availability at a glance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates via size and weight; blue underline draws eye downward to subtext; mobile mockup anchors right side; CTAs positioned prominently below headline",
+        "innovativeElements": [
+          "Blurred gradient circles used as background ornament without visual noise",
+          "Split layout with live app mockup showing real feature list"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Coinomi wallet does and decide whether to download or learn more",
+        "entryPoints": [
+          "Direct URL entry",
+          "Organic search",
+          "Marketing materials"
+        ],
+        "exitPoints": [
+          "Download button (app stores)",
+          "Learn more link (deeper content)",
+          "Navigation menu (Exchange, Shop, Support, About)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download button (top right)",
+            "action": "Likely opens app store or download page"
+          },
+          {
+            "element": "Download button (hero section)",
+            "action": "Primary CTA to download app"
+          },
+          {
+            "element": "Learn more button",
+            "action": "Secondary CTA to educational content"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to different sections (Exchange, Shop, Support, About)"
+          },
+          {
+            "element": "Language selector",
+            "action": "Switch UI language"
+          }
+        ],
+        "informationArchitecture": "Hero value prop at top; supporting subtext explains key features (10,000+ assets, 50+ blockchains, non-custodial); app mockup provides visual proof; platform compatibility at bottom",
+        "frictionPoints": [
+          "Two download CTAs might create decision paralysis",
+          "Mobile mockup menu items not clickable from landing page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "THE BLOCKCHAIN WALLET TRUSTED BY MILLIONS",
+        "subheadline": "Seamlessly explore 10,000+ Assets & NFTs Across 50+ Blockchains. Including Bitcoin, Ethereum, Solana & more. Your secure, non-custodial gateway to the world of DeFi.",
+        "ctas": [
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "Hero section lower-left"
+          },
+          {
+            "text": "Learn more",
+            "style": "ghost-button",
+            "placement": "Hero section lower-left, adjacent to Download"
+          },
+          {
+            "text": "Download",
+            "style": "primary-button",
+            "placement": "Top navigation, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Default Wallet",
+            "context": "Mobile app mockup header dropdown",
+            "purpose": "Labels selected wallet context"
+          },
+          {
+            "text": "Overview, Trade, Exchange, DEX, Jupiter, Buy/Sell, Domains & Addresses, Support",
+            "context": "Mobile app mockup menu",
+            "purpose": "Shows feature breadth without overwhelming copy"
+          }
+        ],
+        "tone": "professional-technical, confident, trust-focused",
+        "dataFormatting": [
+          "10,000+ Assets",
+          "50+ Blockchains",
+          "23.60 USD",
+          "0.03 ETH",
+          "16.84 USD"
+        ],
+        "trustSignals": [
+          "Trusted by millions (headline)",
+          "Non-custodial gateway (security emphasis)",
+          "50+ blockchains supported (scale/credibility)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-2-download.png",
+      "label": "Download",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#7BC93F",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, centered, 48-56px, black",
+          "bodyStyle": "Regular sans-serif, 18px, dark gray, centered alignment",
+          "dataStyle": "Small monospace/technical font for version numbers and checksums"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent top navigation with logo and menu",
+            "position": "Top fixed",
+            "notable": "Same treatment as landing page for consistency"
+          },
+          {
+            "type": "Headline section",
+            "description": "Centered 'DOWNLOAD COINOMI' with blue underline and descriptive subheading",
+            "position": "Top, centered",
+            "notable": "Consistent visual language with landing page"
+          },
+          {
+            "type": "Android card",
+            "description": "Bright lime green (#7BC93F) card with Android icon, product description, Google Play button, and APK download option",
+            "position": "Center, top section",
+            "notable": "High-contrast color helps it pop; dual CTA options (store vs direct)"
+          },
+          {
+            "type": "iOS card",
+            "description": "Black card with Apple icon, product description, App Store button",
+            "position": "Center, below Android card",
+            "notable": "Apple brand colors used (black with white button); concise messaging"
+          },
+          {
+            "type": "Desktop section heading",
+            "description": "Uppercase 'DESKTOP' text",
+            "position": "Below mobile cards",
+            "notable": "Indicates platform section transition"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates; green Android card grabs attention; black iOS card provides contrast; section headings organize content vertically",
+        "innovativeElements": [
+          "Color-coded platform cards (green for Android, black for iOS) matching brand identities",
+          "Direct APK download option alongside app store links",
+          "Checksums shown for transparency/security"
+        ]
+      },
+      "flow": {
+        "screenType": "form-data-browse",
+        "userIntent": "Find and download the Coinomi app for their preferred platform/device",
+        "entryPoints": [
+          "Download button from landing page",
+          "Direct URL navigation",
+          "Navigation menu Download link"
+        ],
+        "exitPoints": [
+          "Google Play Store link",
+          "APK direct download",
+          "App Store link",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Google Play button",
+            "action": "Navigate to Google Play Store listing"
+          },
+          {
+            "element": "Download APK button",
+            "action": "Direct .apk file download"
+          },
+          {
+            "element": "App Store button",
+            "action": "Navigate to Apple App Store listing"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Platform-based sections (Mobile, then Desktop); within each platform, options are presented (app store primary, direct download secondary); system requirements listed under each option",
+        "frictionPoints": [
+          "Lengthy system requirement text may deter some users",
+          "Scroll required to see Desktop section",
+          "No visual indication of which platform the user is on"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "DOWNLOAD COINOMI",
+        "subheadline": "One free, simple, and secure blockchain wallet for all your devices.",
+        "ctas": [
+          {
+            "text": "Google Play",
+            "style": "primary-button",
+            "placement": "Android card, right side"
+          },
+          {
+            "text": "Download apk (v1.61.0)",
+            "style": "primary-button",
+            "placement": "Android card, right side, below Google Play"
+          },
+          {
+            "text": "AppStore",
+            "style": "primary-button",
+            "placement": "iOS card, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Coinomi Wallet for Android",
+            "context": "Android card heading",
+            "purpose": "Platform identifier"
+          },
+          {
+            "text": "Get the latest Android version for free on Google Play or download the .apk file directly from us.",
+            "context": "Android card description",
+            "purpose": "Explains download options"
+          },
+          {
+            "text": "Requires Android Marshmallow 6.0 and up.",
+            "context": "Android card subtext",
+            "purpose": "System requirement"
+          },
+          {
+            "text": ".apk_checksum (SHA256)",
+            "context": "Android card footer",
+            "purpose": "Security verification for direct download"
+          },
+          {
+            "text": "Coinomi Wallet for iOS",
+            "context": "iOS card heading",
+            "purpose": "Platform identifier"
+          },
+          {
+            "text": "Get the latest iOS version for free on Apple's AppStore.",
+            "context": "iOS card description",
+            "purpose": "Single download option for iOS"
+          },
+          {
+            "text": "Requires iOS 12.0 or later. Compatible with iPhone, iPad, and iPod touch.",
+            "context": "iOS card subtext",
+            "purpose": "System requirement and device compatibility"
+          }
+        ],
+        "tone": "professional-technical, straightforward, action-oriented",
+        "dataFormatting": [
+          "v1.61.0 (version number)",
+          "Android Marshmallow 6.0",
+          "iOS 12.0"
+        ],
+        "trustSignals": [
+          "Free download",
+          "Secure wallet",
+          "Direct APK download with checksum",
+          "Official app store listings"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-home-3-assets.png",
+      "label": "Assets",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#4A90E2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, centered, 48-56px, black, no all-caps",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray, centered",
+          "dataStyle": "Small sans-serif for ticker symbols (BTC, ETH, etc.) below asset names"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Consistent top navigation",
+            "position": "Top fixed",
+            "notable": "Maintains design consistency across all pages"
+          },
+          {
+            "type": "Headline section",
+            "description": "Centered 'Supported assets' heading with blue underline and descriptive text",
+            "position": "Top center",
+            "notable": "Blue underline mirrors landing and download pages"
+          },
+          {
+            "type": "Info text",
+            "description": "Explanation text with hyperlinked 'add it to your Coinomi Wallet manually'",
+            "position": "Below headline",
+            "notable": "Provides helpful context; acknowledges asset not found scenario"
+          },
+          {
+            "type": "Search input",
+            "description": "Search assets field with magnifying glass icon",
+            "position": "Center, below info text",
+            "notable": "Enables user to filter 10,000+ assets"
+          },
+          {
+            "type": "Asset cards",
+            "description": "Grid of asset cards with colored icon, asset name, and ticker symbol",
+            "position": "Below search, full width",
+            "notable": "Large colorful icons (Bitcoin orange, Ethereum gray, etc.) make assets instantly recognizable; 2x4 grid visible, implying more below"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline draws focus; search field enables action; asset grid dominates with large, colorful icons and clear labeling",
+        "innovativeElements": [
+          "Highly visual asset grid with brand-colored icons",
+          "Search functionality reducing cognitive load from 10,000+ options",
+          "Hyperlinked suggestion for adding unlisted assets"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore available assets/tokens that Coinomi supports, or search for a specific asset",
+        "entryPoints": [
+          "Navigation menu from other pages",
+          "Assets link from mobile app",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Select/click an asset (likely opens detail page or initiates wallet addition)",
+          "Back to navigation (About, Exchange, Shop, Support, Download)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search field",
+            "action": "Filter asset list by keyword"
+          },
+          {
+            "element": "Asset card",
+            "action": "Likely selects asset or opens detail/add-to-wallet flow"
+          },
+          {
+            "element": "Hyperlink 'add it to your Coinomi Wallet manually'",
+            "action": "Navigate to manual asset addition instructions"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Headline explains purpose; info text provides guidance; search enables filtering; assets organized in grid with visual/text identification; scroll reveals more assets",
+        "frictionPoints": [
+          "No pagination or load-more indicator visible; user may not realize there are thousands more assets below",
+          "Grid doesn't show asset details (blockchain, TVL, etc.) at a glance",
+          "Search field not pre-focused; requires explicit user action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Supported assets",
+        "subheadline": "We provide native support and true ownership for more than 10,000 tokens across 50+ blockchains.",
+        "ctas": [
+          {
+            "text": "add it to your Coinomi Wallet manually",
+            "style": "text-link",
+            "placement": "Info text below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you can't find the token you want in the list below you can always",
+            "context": "Intro to hyperlink",
+            "purpose": "Acknowledges that not all assets may be listed; provides solution"
+          },
+          {
+            "text": "Search assets",
+            "context": "Placeholder text in search input",
+            "purpose": "Instructs user on search field purpose"
+          }
+        ],
+        "tone": "professional-technical, helpful, reassuring",
+        "dataFormatting": [
+          "10,000+ tokens",
+          "50+ blockchains",
+          "Bitcoin (BTC)",
+          "Ethereum (ETH)",
+          "Wrapped SOL (SOL)"
+        ],
+        "trustSignals": [
+          "10,000+ tokens supported",
+          "50+ blockchains",
+          "Native support and true ownership",
+          "Ability to add custom assets"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-settings-3-contact.png",
+      "label": "Contact",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#6B46C1",
+          "#2563EB"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, black sans-serif, centered, all-caps",
+          "bodyStyle": "Medium gray sans-serif, centered, readable",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "form-container",
+            "description": "Purple-topped contact form with white background",
+            "position": "center, main content area",
+            "notable": "Gradient purple header bar creates visual emphasis"
+          },
+          {
+            "type": "text-input",
+            "description": "Name and Email fields with placeholder text",
+            "position": "mid-form",
+            "notable": "Spanish language microcopy ('Tu respuesta')"
+          },
+          {
+            "type": "google-signin-link",
+            "description": "Blue text link to initiate Google session",
+            "position": "top of form",
+            "notable": "Bilingual (Spanish/English) with info link"
+          },
+          {
+            "type": "chat-button",
+            "description": "Floating blue circular chat icon",
+            "position": "bottom-right corner",
+            "notable": "Persistent support access"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down: headline → subheadline → form sections (Google signin → Name → Email → Message)",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "contact-form",
+        "userIntent": "Submit a message to Coinomi support team",
+        "entryPoints": [
+          "Support navigation link",
+          "FAQ or support page"
+        ],
+        "exitPoints": [
+          "Form submission",
+          "Navigation to other pages",
+          "Chat support initiation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Iniciar sesión en Google",
+            "action": "Authenticate via Google to prefill form data"
+          },
+          {
+            "element": "Name input field",
+            "action": "Text entry for user name"
+          },
+          {
+            "element": "Email input field",
+            "action": "Text entry for user email"
+          },
+          {
+            "element": "Message input field",
+            "action": "Text entry for contact message"
+          },
+          {
+            "element": "Chat bubble icon",
+            "action": "Open live chat support"
+          }
+        ],
+        "informationArchitecture": "Single-column form with optional Google authentication, followed by required fields (Name, Email, Message)",
+        "frictionPoints": [
+          "Required fields marked with red asterisks may not be immediately obvious",
+          "Spanish and English mixed language could confuse some users",
+          "No visible submit button in screenshot"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CONTACT US",
+        "subheadline": "Send us a message and we'll respond as soon as possible",
+        "ctas": [
+          {
+            "text": "Iniciar sesión en Google",
+            "style": "text-link",
+            "placement": "top of form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "* Indica que la pregunta es obligatoria",
+            "context": "Below form intro",
+            "purpose": "Explains required field notation"
+          },
+          {
+            "text": "Tu respuesta",
+            "context": "Placeholder text in Name and Email fields",
+            "purpose": "Input hint in Spanish"
+          },
+          {
+            "text": "para guardar lo que llevas hecho. Más información",
+            "context": "Google signin line",
+            "purpose": "Explains benefit of Google auth"
+          }
+        ],
+        "tone": "professional-technical, supportive",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Google authentication integration",
+          "Professional form structure",
+          "Clear contact intent messaging"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-settings-4-terms-of-use.png",
+      "label": "Terms of use",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#4A4A4A",
+          "#FFFFFF",
+          "#2563EB"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, white sans-serif, left-aligned, all-caps",
+          "bodyStyle": "Light gray sans-serif, left-aligned, moderate line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "page-header",
+            "description": "Dark gray background with white headline and blue underline",
+            "position": "top",
+            "notable": "Blue accent line adds visual interest to dense legal content"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Hierarchical legal sections with numbers and sub-bullets",
+            "position": "main content area",
+            "notable": "Multi-level list structure (1, 2.a, 2.a.i) for complex legal text"
+          },
+          {
+            "type": "text-block",
+            "description": "Body text in light gray for readability on dark background",
+            "position": "full width",
+            "notable": "High contrast for accessibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, blue underline breaks monotony, numbered sections create scannable structure",
+        "innovativeElements": [
+          "Dark background for legal pages reduces eye strain during long reading",
+          "Blue accent underline provides visual relief on dense text page"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review terms and conditions before using service",
+        "entryPoints": [
+          "Footer link",
+          "Settings/Legal section",
+          "Pre-signup flow"
+        ],
+        "exitPoints": [
+          "Navigation to other pages",
+          "Accept and proceed",
+          "Back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Scrollable content",
+            "action": "View full terms document"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sections with numbered points and nested sub-points for legal clarity",
+        "frictionPoints": [
+          "Long-form legal text may overwhelm users",
+          "No table of contents or jump links for navigation",
+          "No Accept/Decline buttons visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "TERMS AND CONDITIONS OF USE",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "1. Terms",
+            "context": "Section header",
+            "purpose": "Organize legal content"
+          },
+          {
+            "text": "2. Use license",
+            "context": "Section header",
+            "purpose": "Organize legal content"
+          }
+        ],
+        "tone": "professional-technical, legal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Comprehensive terms document",
+          "Clear legal company identification (Loksias Sarl, Loksias SA)",
+          "Detailed use restrictions and copyright notices"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinomi-settings-5-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#4A4A4A",
+          "#FFFFFF",
+          "#2563EB"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold, white sans-serif, left-aligned, all-caps",
+          "bodyStyle": "Light gray sans-serif, left-aligned, moderate line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "page-header",
+            "description": "Dark gray background with white headline and blue underline",
+            "position": "top",
+            "notable": "Consistent design with Terms of Use page"
+          },
+          {
+            "type": "numbered-sections",
+            "description": "Hierarchical sections with numbers, sub-sections, and nested bullets",
+            "position": "main content area",
+            "notable": "Complex nesting (1.1, 1.2, 2.1, 2.2) for detailed privacy breakdown"
+          },
+          {
+            "type": "bold-text-emphasis",
+            "description": "Key terms like 'usage data' bolded for emphasis",
+            "position": "within body text",
+            "notable": "Highlights important concepts within paragraphs"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, blue underline provides relief, numbered sections create scannable structure, bold text highlights key terms",
+        "innovativeElements": [
+          "Dark mode design consistent with Terms page reduces cognitive load",
+          "Selective bolding of key privacy terms aids scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Understand how personal data is collected and used",
+        "entryPoints": [
+          "Footer link",
+          "Settings/Legal section",
+          "Pre-signup flow"
+        ],
+        "exitPoints": [
+          "Navigation to other pages",
+          "Scroll through document",
+          "Back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Scrollable content",
+            "action": "View full privacy policy document"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sections covering: Introduction → Data Usage → Data Processing, with nested subsections for specificity",
+        "frictionPoints": [
+          "Dense legal document with multiple nesting levels",
+          "No expandable sections or collapsible content",
+          "No FAQ or simplified summary version"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "PRIVACY POLICY",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "1. Introduction",
+            "context": "Section header",
+            "purpose": "Introduce privacy commitment"
+          },
+          {
+            "text": "2. How we use your personal data",
+            "context": "Section header",
+            "purpose": "Explain data usage"
+          },
+          {
+            "text": "usage data",
+            "context": "Within body text, bolded",
+            "purpose": "Highlight key privacy term"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Commitment to safeguarding privacy stated upfront",
+          "Clear data controller identification",
+          "Detailed explanation of cookie usage and consent",
+          "Explicit mention of privacy controls available to users"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "slug": "camelot",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T11:09:58.138Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 3,
+  "screens": [
+    {
+      "image": "/screenshots/camelot-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#f7931a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, ~60px, high contrast against dark background",
+          "bodyStyle": "Medium-weight sans-serif, light gray, ~16px, readable but secondary",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "logo",
+            "description": "Camelot shield icon with text wordmark",
+            "position": "top-left",
+            "notable": "Orange shield with stylized camel silhouette"
+          },
+          {
+            "type": "hero-illustration",
+            "description": "Armored knight holding golden coin with fortress tower background",
+            "position": "right-side",
+            "notable": "Medieval fantasy aesthetic, 3D rendered style, warm color palette"
+          },
+          {
+            "type": "cta-button",
+            "description": "Primary action button for app launch",
+            "position": "left-side below headline",
+            "notable": "Bold orange background, full width ~200px, high contrast"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right flow: logo at top, massive headline dominates left third, supporting text below, CTA anchors bottom-left; illustration balances right side with vibrant colors",
+        "innovativeElements": [
+          "Medieval fantasy branding for DeFi product",
+          "3D illustration style unusual for crypto UI",
+          "Warm orange accent against cool dark theme"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Camelot is and launch the application",
+        "entryPoints": [
+          "Direct URL visit",
+          "External marketing link"
+        ],
+        "exitPoints": [
+          "Launch App button",
+          "External navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App button",
+            "action": "Navigate to main application interface"
+          }
+        ],
+        "informationArchitecture": "Hero-first: value proposition (headline) → explanation (subtext) → action (button)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Orbital Liquidity Network",
+        "subheadline": "Camelot acts as the liquidity hub for the Arbitrum ecosystem, creating a network of aligned Orbit chains built on battle-tested infrastructure.",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "left-side, below subheadline"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical with aspirational undertone",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Arbitrum ecosystem mention",
+          "battle-tested infrastructure reference"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/camelot-home-2-launch-app.png",
+      "label": "Launch App",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#f7931a",
+          "#2a3a52"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, ~24px for section titles",
+          "bodyStyle": "Regular sans-serif, light gray, ~14px",
+          "dataStyle": "Monospace or numeric-focused for balances and token amounts, light text on dark backgrounds"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal menu with Trade, Earn, GRAIL, Roundtable, Info, Resources, and wallet connection",
+            "position": "top",
+            "notable": "Dropdown menus for multi-level navigation, Arbitrum network badge on right"
+          },
+          {
+            "type": "swap-panel",
+            "description": "Central card with From/To token selection and Connect Wallet CTA",
+            "position": "center-left",
+            "notable": "Token icons with dropdown selectors, balance display, Max button"
+          },
+          {
+            "type": "delegation-promo",
+            "description": "Right-side card promoting ARB delegation with illustration",
+            "position": "right",
+            "notable": "Matches landing page illustration style, secondary CTA button"
+          },
+          {
+            "type": "footer",
+            "description": "Multi-column footer with Resources, Help, Tools, Ecosystem links",
+            "position": "bottom",
+            "notable": "Social icons, TVL display ($87,772 in top-right), RPC endpoint info"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation → Swap card (primary) + Delegation promo (secondary) → Footer; orange accents draw attention to CTAs",
+        "innovativeElements": [
+          "Inline TVL display in footer",
+          "Split primary/secondary CTAs on single screen",
+          "ALDEBRA powered attribution visible in swap module"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Access trading interface or connect wallet to execute swaps",
+        "entryPoints": [
+          "Launch App button from landing",
+          "Direct navigation from nav menu"
+        ],
+        "exitPoints": [
+          "Connect Wallet CTA",
+          "Delegation CTA",
+          "Navigation menu items",
+          "Footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade dropdown",
+            "action": "Expand trading options menu"
+          },
+          {
+            "element": "From/To token selectors",
+            "action": "Open token picker modal"
+          },
+          {
+            "element": "Max button",
+            "action": "Auto-fill maximum available balance"
+          },
+          {
+            "element": "Connect Wallet",
+            "action": "Trigger wallet connection flow"
+          },
+          {
+            "element": "Delegate ARB Now",
+            "action": "Navigate to delegation interface"
+          }
+        ],
+        "informationArchitecture": "Primary task (swap) on left, supporting action (delegate) on right, persistent navigation top and bottom",
+        "frictionPoints": [
+          "Wallet must be connected to proceed with swap",
+          "Token selection requires modal interaction"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect Wallet",
+            "style": "primary-button",
+            "placement": "center of swap panel"
+          },
+          {
+            "text": "Delegate ARB Now",
+            "style": "primary-button",
+            "placement": "right promo panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "balance: 0",
+            "context": "Under From token field",
+            "purpose": "Confirm user has no balance in selected token"
+          },
+          {
+            "text": "Max",
+            "context": "Right of From balance",
+            "purpose": "Quick action to set maximum amount"
+          },
+          {
+            "text": "Support the ecosystem",
+            "context": "Above delegation promo headline",
+            "purpose": "Contextual messaging for secondary action"
+          },
+          {
+            "text": "Powered by ALDEBRA",
+            "context": "Below swap panel",
+            "purpose": "Attribution to swap infrastructure provider"
+          }
+        ],
+        "tone": "professional-technical, action-oriented",
+        "dataFormatting": [
+          "balance: 0",
+          "$87,772 TVL",
+          "$46.24 M"
+        ],
+        "trustSignals": [
+          "ALDEBRA attribution",
+          "TVL display ($87,772)",
+          "RPC endpoint transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/camelot-home-3-home.png",
+      "label": "home",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1f2e",
+          "#f7931a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white/orange, ~32px for main title, ~20px for section headers",
+          "bodyStyle": "Regular sans-serif, light gray, ~14-16px for body text",
+          "dataStyle": "Serif or numeric emphasis for key statistics and descriptions"
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left vertical navigation with collapsible sections: Overview, GET STARTED, PROTOCOL, TOKENOMICS",
+            "position": "left",
+            "notable": "Icon + text labels, active state highlighted in orange, hierarchical grouping"
+          },
+          {
+            "type": "main-content-panel",
+            "description": "Center content area with logo, headline, description, and protocol objectives",
+            "position": "center",
+            "notable": "Large Camelot logo as visual anchor, long-form descriptive text"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Secondary info panel with section links and heading",
+            "position": "right",
+            "notable": "Orange highlight color for key info titles"
+          },
+          {
+            "type": "search-bar",
+            "description": "Keyboard shortcut search (⌘ K) in top-right",
+            "position": "top-right",
+            "notable": "Command palette style, allows quick navigation"
+          },
+          {
+            "type": "copy-button",
+            "description": "Copy content action button",
+            "position": "top-right of content area",
+            "notable": "Secondary action with dropdown"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo + headline dominate center, body text supports below, sidebar navigation provides context on left, right panel shows related topics",
+        "innovativeElements": [
+          "Documentation-style interface for app overview",
+          "Integrated search command palette",
+          "Hierarchical sidebar with icons and chevrons for expanding sections"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Camelot protocol details and navigate to specific documentation sections",
+        "entryPoints": [
+          "Navigation from launch app screen",
+          "Direct URL or sidebar navigation"
+        ],
+        "exitPoints": [
+          "Any sidebar menu item",
+          "Search function",
+          "Right-panel topic links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to section or expand submenu"
+          },
+          {
+            "element": "Search bar (⌘ K)",
+            "action": "Open search modal for quick navigation"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy overview content to clipboard"
+          },
+          {
+            "element": "Right-panel links",
+            "action": "Navigate to related sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sidebar (nav) → Main content area (current page) → Contextual links (right panel); searchable throughout",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The first Orbital Liquidity Network and largest Arbitrum DEX",
+        "subheadline": "Overview",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Protocol Objectives",
+            "context": "Right sidebar section header",
+            "purpose": "Highlight key section below main content"
+          },
+          {
+            "text": "Initial Foundations",
+            "context": "Right sidebar link",
+            "purpose": "Enable quick navigation to related topic"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "$30bn volume traded",
+          "75 partners",
+          "Over 75 partners"
+        ],
+        "trustSignals": [
+          "$30bn volume metric",
+          "75 partners count",
+          "Arbitrum ecosystem emphasis",
+          "Decentralized and permissionless claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

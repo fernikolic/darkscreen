@@ -1,0 +1,1475 @@
+{
+  "slug": "aerodrome",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:03:50.298Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 12,
+  "screens": [
+    {
+      "image": "/screenshots/aerodrome-home-4-flight-school.png",
+      "label": "Flight School",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0066FF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold black sans-serif, very large (h1), high contrast",
+          "bodyStyle": "Medium gray sans-serif, readable line-height",
+          "dataStyle": "Numeric values in context (1.3x weighting, 2,500 veAERO, 4 weeks)"
+        },
+        "components": [
+          {
+            "type": "Hero heading",
+            "description": "\"Flight School\" main title in large bold black",
+            "position": "top-left, above content",
+            "notable": "Paired with aviation-themed airplane icon on right side"
+          },
+          {
+            "type": "Feature card",
+            "description": "White rounded card with Coinbase One logo and explanation",
+            "position": "center, prominent placement",
+            "notable": "Blue circular badge with Coinbase logo, left-aligned icon pattern"
+          },
+          {
+            "type": "CTA link",
+            "description": "Blue underlined text link \"Start your free trial\"",
+            "position": "within card, below description",
+            "notable": "External link icon, minimal styling"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section dominates top third, feature card centers attention, body copy follows in readable blocks",
+        "innovativeElements": [
+          "Airplane icon watermark in top-right creating subtle visual interest",
+          "Weighted lock bonus explanation using relatable financial multiplier language"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-informational",
+        "userIntent": "Learn about Flight School bonus program and how to participate",
+        "entryPoints": [
+          "Navigation menu - Incentivize tab",
+          "Direct link from marketing"
+        ],
+        "exitPoints": [
+          "Start your free trial CTA",
+          "Back to navigation (Dashboard, Swap, Lock, etc.)",
+          "Scroll down for more details"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Start your free trial link",
+            "action": "Directs to Coinbase One trial signup"
+          },
+          {
+            "element": "Lock AERO link",
+            "action": "Navigation to Lock feature"
+          }
+        ],
+        "informationArchitecture": "Program overview → Featured integration (Coinbase One) → Detailed eligibility/mechanics rules",
+        "frictionPoints": [
+          "Requires external navigation to Coinbase One to understand trial details",
+          "Dense body copy explaining weighting mechanics may need visual aids"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Flight School",
+        "subheadline": "Lock AERO, get a bonus",
+        "ctas": [
+          {
+            "text": "Start your free trial",
+            "style": "text-link",
+            "placement": "within Coinbase One card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Coinbase One members' locks are weighted 1.3x when the Flight School bonus is calculated",
+            "context": "Feature card description",
+            "purpose": "Explains unique value proposition of Coinbase integration"
+          },
+          {
+            "text": "Every four weeks, the Aerodrome Flight School program distributes bonus veAERO to qualifying users.",
+            "context": "Body copy, first paragraph",
+            "purpose": "Sets frequency and distribution expectations"
+          },
+          {
+            "text": "To qualify for a Flight School bonus, users must create a new lock of at least 2,500 veAERO within that class period (each class lasts four weeks).",
+            "context": "Body copy, qualification rules",
+            "purpose": "Defines minimum threshold and time window"
+          }
+        ],
+        "tone": "professional-technical, educational, incentive-focused",
+        "dataFormatting": [
+          "1.3x (multiplier)",
+          "2,500 veAERO (token amount)",
+          "four weeks (time period)",
+          "5% (proportional share example)"
+        ],
+        "trustSignals": [
+          "Coinbase One partnership (branded integration)",
+          "Clear mechanics explanation building confidence"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-home-5-aero-launch.png",
+      "label": "Aero Launch",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold black sans-serif, large (h1), high contrast against light background",
+          "bodyStyle": "Medium gray sans-serif, conversational tone",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero heading",
+            "description": "\"Built to launch\" in massive bold black text",
+            "position": "top-left",
+            "notable": "Large visual impact, left-aligned, sets campaign tone"
+          },
+          {
+            "type": "Feature list",
+            "description": "Five checkmarked bullet points in left column",
+            "position": "left side, below headline",
+            "notable": "Clean tick marks, progressive disclosure of benefits"
+          },
+          {
+            "type": "CTA buttons",
+            "description": "Two prominent buttons: \"Launch now\" (blue) and \"How it works\" (outlined)",
+            "position": "bottom-left",
+            "notable": "Dual-action pattern with primary/secondary distinction"
+          },
+          {
+            "type": "Hero image",
+            "description": "Gradient blue background with text overlay \"THE FUTURE IS BUILT ONCHAIN\"",
+            "position": "right side, full-height",
+            "notable": "Bold typography overlay, subtle abstract gradient, pagination dot"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left column drives messaging with headline → benefits → CTAs; right side provides immersive visual reinforcement",
+        "innovativeElements": [
+          "Split-screen with asymmetric content distribution",
+          "Blurred gradient background creating depth and modernity",
+          "Text overlay on hero image breaking traditional composition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-promotional",
+        "userIntent": "Understand Aerodrome launch capabilities and initiate token launch process",
+        "entryPoints": [
+          "Navigation menu - Liquidity tab",
+          "Marketing campaign",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Launch now button (primary conversion)",
+          "How it works link (educational path)",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch now button",
+            "action": "Initiates token launch flow"
+          },
+          {
+            "element": "How it works link",
+            "action": "Opens educational/documentation page"
+          },
+          {
+            "element": "Right-side image carousel dot",
+            "action": "Navigate carousel (if multi-slide)"
+          }
+        ],
+        "informationArchitecture": "Value proposition → Key benefits (5 points) → Dual CTAs (conversion vs. education)",
+        "frictionPoints": [
+          "Two competing CTAs might create choice paralysis",
+          "Hero image carousel requires user interaction for full content"
+        ],
+        "progressIndicators": [
+          "Carousel pagination dot (bottom-right of hero image)"
+        ]
+      },
+      "copy": {
+        "headline": "Built to launch",
+        "subheadline": "Get day-one visibility on the largest liquidity marketplace on the world's leading L2. Build on Base. Launch on Aerodrome. We make launching liquidity quick and simple.",
+        "ctas": [
+          {
+            "text": "Launch now",
+            "style": "primary-button",
+            "placement": "bottom-left, above fold"
+          },
+          {
+            "text": "How it works",
+            "style": "secondary-button",
+            "placement": "bottom-left, beside Launch now"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Create a liquidity pool in minutes",
+            "context": "First benefit bullet",
+            "purpose": "Emphasizes speed/ease"
+          },
+          {
+            "text": "Earn 100% of swap fees",
+            "context": "Second benefit bullet",
+            "purpose": "Financial incentive"
+          },
+          {
+            "text": "Lock liquidity natively",
+            "context": "Third benefit bullet",
+            "purpose": "Security/control feature"
+          },
+          {
+            "text": "Eligible tokens trade on Coinbase",
+            "context": "Fourth benefit bullet",
+            "purpose": "Credibility through exchange partnership"
+          },
+          {
+            "text": "Get attention: become an emerging token",
+            "context": "Fifth benefit bullet",
+            "purpose": "Marketing/visibility incentive"
+          },
+          {
+            "text": "THE FUTURE IS BUILT ONCHAIN",
+            "context": "Hero image overlay",
+            "purpose": "Brand positioning statement"
+          }
+        ],
+        "tone": "professional-technical, confident, action-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase integration/partnership mentioned",
+          "Base L2 credibility",
+          "100% fee retention (vs. typical platform models)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-home-6-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FF6B6B"
+        ],
+        "typography": {
+          "headingStyle": "Bold black sans-serif for error state label",
+          "bodyStyle": "Medium gray sans-serif, centered, readable",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error icon",
+            "description": "Large circular error badge with red outline and centered exclamation mark",
+            "position": "top-center",
+            "notable": "Soft red (#FF6B6B) with minimal design, clear visual signal"
+          },
+          {
+            "type": "Error message",
+            "description": "Centered text block with error heading and description",
+            "position": "center of page",
+            "notable": "Two-line layout: bold first phrase + explanatory sentence"
+          },
+          {
+            "type": "CTA button",
+            "description": "\"Back to home\" navigation button with left arrow",
+            "position": "below error message",
+            "notable": "Ghost-button style with subtle background"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon draws eye, error message provides context, recovery CTA offers clear exit path",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from 404 page-not-found error and navigate back to valid content",
+        "entryPoints": [
+          "Broken/invalid URL navigation",
+          "Dead link click",
+          "Manual mistyped URL"
+        ],
+        "exitPoints": [
+          "Back to home button (primary recovery)",
+          "Manual URL navigation",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back to home button",
+            "action": "Navigate to home page"
+          }
+        ],
+        "informationArchitecture": "Error state → Recovery CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Something went wrong.",
+        "subheadline": "The page you are looking for does not exist.",
+        "ctas": [
+          {
+            "text": "Back to home",
+            "style": "ghost-button",
+            "placement": "center, below error text"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual, helpful",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Something went wrong. The page you are looking for does not exist."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#5B7FFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48-64px), black text with strong presence",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray with blue hyperlinks",
+          "dataStyle": "Monospaced, right-aligned in white input fields showing balance values like '0.0 ETH', '~$0.0'"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, 6 main sections (Dashboard, Swap, Liquidity, Vote, Lock, Incentivize), Connect button",
+            "position": "Top sticky header",
+            "notable": "Clean, minimal, supports quick access to core features"
+          },
+          {
+            "type": "Swap card modal",
+            "description": "White card with dual input fields for selling/buying tokens with dropdown selectors",
+            "position": "Center-right, overlays gradient background",
+            "notable": "Currency toggle (ETH to AERO) with visual swap icon between fields"
+          },
+          {
+            "type": "Gradient background",
+            "description": "Animated blue-to-purple gradient with wavy line pattern",
+            "position": "Full background",
+            "notable": "Creates sense of movement and depth, supports aerial/flight branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline drives eye movement downward to swap card; card remains focal point via contrast against background",
+        "innovativeElements": [
+          "Animated wave pattern suggesting motion/flight",
+          "Integrated swap widget on landing page for immediate action"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Aerodrome's value proposition and initiate a token swap",
+        "entryPoints": [
+          "Cold visit to homepage",
+          "External link from marketing material"
+        ],
+        "exitPoints": [
+          "Connect wallet (top right)",
+          "Navigate to Dashboard, Swap, Liquidity, Vote, Lock, or Incentivize via nav",
+          "Swap action within card"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect button",
+            "action": "Opens wallet connection modal"
+          },
+          {
+            "element": "Currency dropdowns (ETH, AERO)",
+            "action": "Allow user to select token pairs for swap"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Route to respective features"
+          },
+          {
+            "element": "Swap arrow icon",
+            "action": "Reverses Sell/Buy token positions"
+          }
+        ],
+        "informationArchitecture": "Hero section with clear value prop, supporting swap widget that scaffolds common first action",
+        "frictionPoints": [
+          "Wallet not connected; swap card shows 0 balance",
+          "No explicit CTA button below headline—user must scroll or use nav"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap, deposit, take to the skies",
+        "subheadline": "Aerodrome is a decentralized exchange where you can execute low-fee swaps, deposit tokens to earn rewards, and actively participate in the onchain economy.",
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "Top right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Balance 0.0 ETH",
+            "context": "Above Sell input field",
+            "purpose": "Indicates current holdings and wallet connection state"
+          },
+          {
+            "text": "~$0.0",
+            "context": "Below token amount input",
+            "purpose": "Shows USD equivalent value"
+          }
+        ],
+        "tone": "friendly-casual with technical undertones",
+        "dataFormatting": [
+          "0.0 ETH (token symbol + amount)",
+          "~$0.0 (USD prefix with approximation)"
+        ],
+        "trustSignals": [
+          "Decentralized exchange positioning",
+          "Reference to low-fee operations",
+          "Mention of reward earning and onchain economy participation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-home-2-security.png",
+      "label": "Security",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1E40AF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28-32px, black text",
+          "bodyStyle": "Regular sans-serif, 14-16px, dark gray/charcoal",
+          "dataStyle": "Monospaced for contract addresses (0x format), inline code styling"
+        },
+        "components": [
+          {
+            "type": "Left sidebar navigation",
+            "description": "Vertical menu with expandable sections: Documentation (collapsed), Security (active/expanded), Aero Launch (collapsed)",
+            "position": "Left side, 20-25% width",
+            "notable": "Nested subsections (Overview, Emergency Council, Contracts) with active state highlighting in blue"
+          },
+          {
+            "type": "Main content area",
+            "description": "Right side column with prose content, headings, and structured lists",
+            "position": "Right, 75-80% width",
+            "notable": "Scannable layout with h2 headings, body text, hyperlinks, bullet points, code snippets"
+          },
+          {
+            "type": "Hyperlinks",
+            "description": "Blue text links to external resources (Velodrome security page, Discord, Github)",
+            "position": "Inline within body text",
+            "notable": "Supports navigation to trust-building resources"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors navigation on left; main heading 'Security Overview' establishes context; subsections guide scanning",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review security information, audit status, governance structure, and smart contract details",
+        "entryPoints": [
+          "Security link from main nav",
+          "Sidebar navigation from Documentation page"
+        ],
+        "exitPoints": [
+          "Click external links to Velodrome security page, Discord, Github",
+          "Navigate to Overview, Emergency Council, or Contracts subsections",
+          "Return to Documentation or Aero Launch sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar section headers (Documentation, Security, Aero Launch)",
+            "action": "Expand/collapse to show nested options"
+          },
+          {
+            "element": "Subsection links (Overview, Emergency Council, Contracts)",
+            "action": "Jump to relevant content section"
+          },
+          {
+            "element": "External hyperlinks (Velodrome, Discord, Github)",
+            "action": "Open external pages in new tab"
+          }
+        ],
+        "informationArchitecture": "Sidebar nav + main content; hierarchical structure (Security > Overview/Council/Contracts); prose + structured lists",
+        "frictionPoints": [
+          "Long-form text requires scrolling; no table of contents visible",
+          "Contract addresses in monospace may require copy-paste for verification"
+        ],
+        "progressIndicators": [
+          "Active section highlight in sidebar (Security shown in blue)"
+        ]
+      },
+      "copy": {
+        "headline": "Security Overview",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Velodrome security page",
+            "style": "text-link",
+            "placement": "First paragraph"
+          },
+          {
+            "text": "Discord",
+            "style": "text-link",
+            "placement": "Second paragraph"
+          },
+          {
+            "text": "Github page",
+            "style": "text-link",
+            "placement": "Second paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Security index:",
+            "context": "Above sidebar subsection",
+            "purpose": "Labels navigation grouping"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0x99249b16593fCa1Ae9DAE6D4819F1A6dae5C013D (contract address)",
+          "0x8DE0c70B8DC242577c52dFA53389F82Fd149EA5a (multisig address)"
+        ],
+        "trustSignals": [
+          "Velodrome V2 audit mention",
+          "Bug-bounty program reference",
+          "Emergency Council governance structure described",
+          "Multiple multisig addresses for security"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-home-3-brand-kit.png",
+      "label": "Brand Kit",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#5B7FFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 36-48px, black text, centered",
+          "bodyStyle": "Regular sans-serif, 14-16px, medium gray, centered and justified",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Brand logo showcase",
+            "description": "Circular white badge with Aerodrome icon (blue/red wings)",
+            "position": "Top center, prominent spacing",
+            "notable": "Icon-only version on white background demonstrates standalone versatility"
+          },
+          {
+            "type": "Descriptive prose section",
+            "description": "Centered column of paragraph text explaining Aerodrome's purpose and features",
+            "position": "Center, ~60% width max-width",
+            "notable": "Comprehensive, readable paragraph explaining AMM, liquidity hub, vote-lock governance"
+          },
+          {
+            "type": "Card grid",
+            "description": "Three equal-width cards displaying Token (icon variant), Logo (full mark), and Wordmark (logotype)",
+            "position": "Bottom section",
+            "notable": "Clean presentation of brand asset variations with minimal labeling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top-down flow from icon to prose to asset grid; generous whitespace supports scannability",
+        "innovativeElements": [
+          "Branded asset showcase as interactive cards with hover-friendly layout"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review brand guidelines and download brand assets (logo, icon, wordmark variations)",
+        "entryPoints": [
+          "Documentation nav section",
+          "Brand kit link from docs sidebar"
+        ],
+        "exitPoints": [
+          "Download brand assets (implied click on cards)",
+          "Return to Documentation or other nav sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Card containers (Token, Logo, Wordmark)",
+            "action": "Likely opens download or detail view for each asset variant"
+          }
+        ],
+        "informationArchitecture": "Linear, top-to-bottom: intro content → brand assets; cards provide visual organization of variants",
+        "frictionPoints": [
+          "No explicit download buttons visible; interaction model unclear",
+          "No detailed brand guidelines (colors, typography rules) shown on this screen"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Guide & Logos for the Aerodrome Brand",
+        "subheadline": "AERODROME BRAND KIT",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Token",
+            "context": "Card label bottom left",
+            "purpose": "Names icon asset variant"
+          },
+          {
+            "text": "Logo",
+            "context": "Card label bottom center",
+            "purpose": "Names full brand mark variant"
+          },
+          {
+            "text": "Wordmark",
+            "context": "Card label bottom right",
+            "purpose": "Names typography-based brand variant"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Formal brand kit positioning suggests professional operations",
+          "Detailed description of Aerodrome's technology and governance model"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-onboarding-1-dashboard.png",
+      "label": "Dashboard",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1E40AF",
+          "#F5F5F5",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (40-48px), white text on blue background",
+          "bodyStyle": "Regular sans-serif (16px), white text with moderate line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Left panel with headline, description, and animated curve graphic",
+            "position": "left 50% of screen",
+            "notable": "Asymmetrical split design with animated geometric flight path illustration"
+          },
+          {
+            "type": "Wallet Selection Panel",
+            "description": "Right side with logo, instruction text, and 4 wallet option buttons",
+            "position": "right 50% of screen",
+            "notable": "Clean card-based layout with labeled wallet icons and clear CTA hierarchy"
+          },
+          {
+            "type": "Back Link",
+            "description": "Navigation link with back arrow",
+            "position": "lower left of blue panel",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Split attention: bold typography on left draws eye first, right panel provides clear action path",
+        "innovativeElements": [
+          "Animated flight-path curve graphic suggesting ascent/growth",
+          "Split-panel design balancing brand storytelling with functional wallet selection"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Connect wallet to access Aerodrome platform",
+        "entryPoints": [
+          "Direct navigation from landing page",
+          "First-time user attempting to use platform features"
+        ],
+        "exitPoints": [
+          "Select wallet option (Browser Wallet, WalletConnect, Coinbase, Binance)",
+          "Back to app link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Browser Wallet button",
+            "action": "Initiates browser wallet connection flow"
+          },
+          {
+            "element": "WalletConnect button",
+            "action": "Opens WalletConnect mobile wallet selection"
+          },
+          {
+            "element": "Coinbase Wallet button",
+            "action": "Connects Coinbase wallet"
+          },
+          {
+            "element": "Binance Wallet button",
+            "action": "Connects Binance wallet"
+          },
+          {
+            "element": "Back to app link",
+            "action": "Returns to previous screen"
+          }
+        ],
+        "informationArchitecture": "Two-column layout: narrative on left, action on right. Options stacked vertically with consistent spacing.",
+        "frictionPoints": [
+          "Four wallet options may create decision paralysis for new users",
+          "No indication of which wallet option is recommended"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap, deposit, take to the skies",
+        "subheadline": "Aerodrome is a decentralized exchange where you can execute low-fee swaps, deposit tokens to earn rewards, and actively participate in the onchain economy.",
+        "ctas": [
+          {
+            "text": "Browser Wallet",
+            "style": "ghost-button",
+            "placement": "Wallet selection panel"
+          },
+          {
+            "text": "WalletConnect",
+            "style": "ghost-button",
+            "placement": "Wallet selection panel"
+          },
+          {
+            "text": "Coinbase Wallet",
+            "style": "ghost-button",
+            "placement": "Wallet selection panel"
+          },
+          {
+            "text": "Binance Wallet",
+            "style": "ghost-button",
+            "placement": "Wallet selection panel"
+          },
+          {
+            "text": "Back to app",
+            "style": "text-link",
+            "placement": "Lower left of blue panel"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You'll need an Ethereum Wallet to continue.",
+            "context": "Above wallet selection buttons",
+            "purpose": "Clarifies requirement and explains next step"
+          },
+          {
+            "text": "2026 © Aerodrome Finance. v5.0.0+00da65",
+            "context": "Footer",
+            "purpose": "Copyright and version information"
+          }
+        ],
+        "tone": "friendly-casual, aspirational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Aerodrome branding with logo",
+          "Multiple established wallet options (Coinbase, Binance, WalletConnect)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-swap-1-swap.png",
+      "label": "Swap",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F9F9F9",
+          "#1E40AF",
+          "#E5E7EB"
+        ],
+        "typography": {
+          "headingStyle": "Medium sans-serif (18-20px), dark gray",
+          "bodyStyle": "Regular sans-serif (14-16px), gray text",
+          "dataStyle": "Large monospace or tabular (24-32px) for token amounts, small for balance labels"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top bar with logo, nav links, and connect button",
+            "position": "top of screen",
+            "notable": "Sticky header with primary navigation and wallet connection icon"
+          },
+          {
+            "type": "Swap Card",
+            "description": "Central white card with two token input sections (Sell/Buy) and swap button",
+            "position": "center of screen, vertically centered",
+            "notable": "Dual-input swap interface with vertical separation and exchange indicator arrow"
+          },
+          {
+            "type": "Token Input Field",
+            "description": "Blue-bordered input field with token selector and amount display",
+            "position": "Within swap card",
+            "notable": "Large number input with currency icon and dropdown selector"
+          },
+          {
+            "type": "Exchange Arrow",
+            "description": "Circular button with downward arrow between Sell and Buy inputs",
+            "position": "Center of swap card",
+            "notable": "Light blue background, facilitates token pair reversal"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Full-width blue button at bottom of card",
+            "position": "Bottom of swap card",
+            "notable": "High contrast, clear call-to-action for wallet connection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Swap card dominates center screen; balance labels subtle; large number inputs guide focus; blue CTA anchors bottom",
+        "innovativeElements": [
+          "Subtle balance display at field level ($0.0 values)",
+          "Minimal swap interface focusing on core transaction mechanics"
+        ]
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Execute a token swap transaction",
+        "entryPoints": [
+          "Click Swap in main navigation",
+          "From dashboard after wallet connection"
+        ],
+        "exitPoints": [
+          "Click Connect wallet button (initiates wallet connection)",
+          "Navigate to other sections via top navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "ETH token selector (Sell section)",
+            "action": "Opens token selection dropdown to change asset being sold"
+          },
+          {
+            "element": "AERO token selector (Buy section)",
+            "action": "Opens token selection dropdown to change asset being purchased"
+          },
+          {
+            "element": "Exchange arrow button",
+            "action": "Reverses Sell/Buy token pair"
+          },
+          {
+            "element": "Sell amount input field",
+            "action": "Allows manual entry of amount to swap out"
+          },
+          {
+            "element": "Buy amount input field",
+            "action": "Displays calculated output amount (may be editable)"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Initiates wallet connection flow before swap can execute"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: navigation at top, primary action (swap) centralized, secondary elements (balances) positioned inline with inputs",
+        "frictionPoints": [
+          "Wallet must be connected before any swap can occur",
+          "No swap preview or fee estimation visible on form",
+          "0.0 balance values may confuse users about whether they can proceed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "Bottom of swap card, full width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Sell",
+            "context": "Label above first token input",
+            "purpose": "Identifies the token being sold"
+          },
+          {
+            "text": "Buy",
+            "context": "Label above second token input",
+            "purpose": "Identifies the token being purchased"
+          },
+          {
+            "text": "Balance: 0.0 ETH",
+            "context": "Right-aligned text above Sell input",
+            "purpose": "Displays user's balance of selected token"
+          },
+          {
+            "text": "Balance: 0.0 AERO",
+            "context": "Right-aligned text above Buy input",
+            "purpose": "Displays user's balance of receiving token"
+          },
+          {
+            "text": "~$0.0",
+            "context": "Below token amount input",
+            "purpose": "Shows approximate USD value of amount entered"
+          }
+        ],
+        "tone": "professional-technical, minimal",
+        "dataFormatting": [
+          "0 (amount in tokens)",
+          "~$0.0 (USD equivalent)"
+        ],
+        "trustSignals": [
+          "Aerodrome branding and logo in header",
+          "Multiple navigation options suggesting established platform"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#0F172A",
+          "#1E40AF",
+          "#22C55E"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif (24-28px) for pool counts, regular for descriptions",
+          "bodyStyle": "Regular sans-serif (14-16px) for explanatory text and table headers",
+          "dataStyle": "Large tabular numbers (16-18px) for financial data, small labels below (12px)"
+        },
+        "components": [
+          {
+            "type": "Info Section",
+            "description": "Left panel with icon, text explaining liquidity provision benefit",
+            "position": "top left",
+            "notable": "Layered icon with horizontal lines suggesting depth/layers"
+          },
+          {
+            "type": "Featured Pool Card",
+            "description": "Dark blue card with SUP8 Superform branding and gradient background",
+            "position": "top right, taking ~40% of width",
+            "notable": "Vibrant gradient (blue to purple), prominent token logo treatment, 'Launched First' badge"
+          },
+          {
+            "type": "Stats Row",
+            "description": "Three columns showing Volume, Fees, TVL with large numbers",
+            "position": "below info section, spanning full width",
+            "notable": "Tilde (~) prefix on currency values indicating approximation"
+          },
+          {
+            "type": "Pool List Header",
+            "description": "Pools tab counter (2323), Tokens tab counter (437), Launch Pool button, search",
+            "position": "center, below stats",
+            "notable": "Blue tab showing active state, search functionality, action button"
+          },
+          {
+            "type": "Filter Bar",
+            "description": "Horizontal filter options: Token, Type, Volatility, AutoPilot, Advanced, Sort, Filters",
+            "position": "below Pool/Tokens tabs",
+            "notable": "Multiple dropdown filters with inline sort control"
+          },
+          {
+            "type": "Pool Data Table",
+            "description": "Multi-row table showing individual pools with all metrics",
+            "position": "below filter bar, main content area",
+            "notable": "Complex data presentation with dual-token rows and deposit actions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Featured pool banner dominates upper right; stats row provides overview; pool list is scannable grid; filter bar separates discovery from results",
+        "innovativeElements": [
+          "Featured pool card with gradient background and badge system",
+          "Tilde notation (~) for approximate values throughout",
+          "Dual-line token display in table (showing both token symbols and quantities)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover and evaluate liquidity pools to deposit into",
+        "entryPoints": [
+          "Click Liquidity in main navigation",
+          "From dashboard or swap interface"
+        ],
+        "exitPoints": [
+          "Click Launch pool button (create new pool)",
+          "Click on specific pool row (view pool details)",
+          "Click New deposit link (deposit into selected pool)",
+          "Navigate away via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pools/Tokens tabs",
+            "action": "Switch between pool and token browse views"
+          },
+          {
+            "element": "Launch pool button",
+            "action": "Opens pool creation form"
+          },
+          {
+            "element": "Search box",
+            "action": "Filters pools/tokens by symbol or address"
+          },
+          {
+            "element": "Token filter dropdown",
+            "action": "Filters by token status (Listed & Emerging, etc.)"
+          },
+          {
+            "element": "Type dropdown",
+            "action": "Filters by pool type"
+          },
+          {
+            "element": "Volatility dropdown",
+            "action": "Filters by volatility classification"
+          },
+          {
+            "element": "TVL sort button",
+            "action": "Sorts pools by total value locked"
+          },
+          {
+            "element": "Pool row",
+            "action": "Likely navigates to pool detail view"
+          },
+          {
+            "element": "New deposit link",
+            "action": "Opens deposit form for specific pool"
+          }
+        ],
+        "informationArchitecture": "Hierarchy: featured pool (marketing) > statistics overview > discovery tools (search, filters) > results list (table)",
+        "frictionPoints": [
+          "Many filter options may overwhelm new users",
+          "Large numbers with tilde notation might confuse precision expectations",
+          "No visible APY/yield info in quick view (requires row expansion or navigation)"
+        ],
+        "progressIndicators": [
+          "Pools count badge (2323)",
+          "Tokens count badge (437)"
+        ]
+      },
+      "copy": {
+        "headline": "Provide liquidity to enable low-slippage swaps and earn AERO emissions.",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Launch pool",
+            "style": "primary-button",
+            "placement": "Header row, next to search"
+          },
+          {
+            "text": "New deposit",
+            "style": "text-link",
+            "placement": "Within pool rows, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "~$662.15M",
+            "context": "Stats row under 'Volume'",
+            "purpose": "Shows total trading volume across all pools"
+          },
+          {
+            "text": "~$773,731.12",
+            "context": "Stats row under 'Fees'",
+            "purpose": "Shows total fees collected"
+          },
+          {
+            "text": "~$300.82M",
+            "context": "Stats row under 'TVL'",
+            "purpose": "Shows total value locked in protocol"
+          },
+          {
+            "text": "Listed & Emerging",
+            "context": "Token filter dropdown default",
+            "purpose": "Indicates token status filter option"
+          },
+          {
+            "text": "Concentrated Stable 1",
+            "context": "Pool type badge on pool row",
+            "purpose": "Indicates pool classification/risk profile"
+          },
+          {
+            "text": "0.009%",
+            "context": "Next to pool pair name",
+            "purpose": "Displays swap fee percentage"
+          },
+          {
+            "text": "LAUNCHED FIRST ON AERODROME",
+            "context": "Badge on featured pool card",
+            "purpose": "Trust signal indicating early deployment"
+          },
+          {
+            "text": "AERO EMISSIONS ACTIVATED",
+            "context": "Text on featured pool card",
+            "purpose": "Indicates pool is earning emissions rewards"
+          }
+        ],
+        "tone": "professional-technical, data-focused",
+        "dataFormatting": [
+          "~$662.15M (approximate currency with tilde)",
+          "~$23.31M (volume data)",
+          "3,282.74 cbETH (dual-token breakdown)",
+          "0.009% (percentage values)",
+          "120443% (large APY percentages)"
+        ],
+        "trustSignals": [
+          "TVL displayed prominently (~$300.82M)",
+          "Fee collection data transparency",
+          "Multiple established pools visible",
+          "'Launched First on Aerodrome' badge on featured pool",
+          "Emissions activation indicator"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-staking-2-pools-page.png",
+      "label": "pools page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#F5F5F5",
+          "#000000",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, large",
+          "bodyStyle": "sans-serif, regular, medium",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "horizontal top navigation with logo and main menu items",
+            "position": "top",
+            "notable": "fixed header with clean spacing"
+          },
+          {
+            "type": "loading-indicator",
+            "description": "centered loading message with skeleton placeholders",
+            "position": "center",
+            "notable": "clear communication of async data fetch"
+          },
+          {
+            "type": "button",
+            "description": "Connect wallet button in top right",
+            "position": "top-right",
+            "notable": "prominent orange dot indicator"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "navigation dominates top, content area centered with breathing room",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "browse available staking pools while data loads",
+        "entryPoints": [
+          "clicked Liquidity/Staking tab from main navigation"
+        ],
+        "exitPoints": [
+          "wait for data to load and view pool details",
+          "navigate to other sections via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "navigation items (Dashboard, Swap, Liquidity, Vote, Lock, Incentivize)",
+            "action": "route to different sections"
+          },
+          {
+            "element": "Connect button",
+            "action": "trigger wallet connection modal"
+          }
+        ],
+        "informationArchitecture": "hierarchical - main nav at top, content loads in viewport",
+        "frictionPoints": [
+          "loading state blocks interaction",
+          "no progress indicator visible for how long load will take"
+        ],
+        "progressIndicators": [
+          "Loading onchain data... message"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Loading onchain data...",
+            "context": "center of viewport during data fetch",
+            "purpose": "inform user of async operation in progress"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Loading onchain data..."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-settings-1-tokenomics.png",
+      "label": "Tokenomics",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, extra-large (h1)",
+          "bodyStyle": "sans-serif, regular, medium, generous line-height",
+          "dataStyle": "bold labels for key terms (TRADERS, LP'S, vaERO VOTERS, etc.)"
+        },
+        "components": [
+          {
+            "type": "sidebar",
+            "description": "left navigation with collapsible sections (Documentation, Security, Aero Launch)",
+            "position": "left",
+            "notable": "blue highlighted active state, expandable sections with plus icons"
+          },
+          {
+            "type": "content-area",
+            "description": "main reading area with headings and body text",
+            "position": "main",
+            "notable": "ample white space, single-column layout"
+          },
+          {
+            "type": "diagram",
+            "description": "circular flow diagram showing Aerodrome mechanics with connected nodes",
+            "position": "center-right",
+            "notable": "visual representation of protocol relationships and incentive flow"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "sidebar guides navigation, main content emphasizes headings then body, diagram breaks text flow",
+        "innovativeElements": [
+          "circular mechanic diagram with blue connection lines and black node labels"
+        ]
+      },
+      "flow": {
+        "screenType": "educational-content",
+        "userIntent": "understand Aerodrome protocol mechanics and governance structure",
+        "entryPoints": [
+          "clicked Documentation from sidebar",
+          "external link to learning resources"
+        ],
+        "exitPoints": [
+          "click sidebar links to other docs (Tokenomics, Emissions, Intro)",
+          "navigate to main app features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "sidebar menu items (Intro, Tokenomics, Emissions)",
+            "action": "navigate to different documentation pages"
+          },
+          {
+            "element": "Documentation section toggle",
+            "action": "expand/collapse with plus icon"
+          }
+        ],
+        "informationArchitecture": "hierarchical sidebar navigation with nested documentation; main content scrolls vertically",
+        "frictionPoints": [
+          "diagram nodes are small and may be hard to read on mobile",
+          "no direct links between related concepts"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About Aerodrome",
+        "subheadline": "Aerodrome Mechanics",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation index:",
+            "context": "above sidebar menu items",
+            "purpose": "label the navigation structure"
+          },
+          {
+            "text": "Aerodrome launched on 28th of August, 2023 on BASE network",
+            "context": "within About section",
+            "purpose": "provide key launch milestone and network information"
+          }
+        ],
+        "tone": "educational-technical",
+        "dataFormatting": [
+          "28th of August, 2023 — formatted date with ordinal"
+        ],
+        "trustSignals": [
+          "BASE network launch date specified"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/aerodrome-settings-2-legal-disclaimer.png",
+      "label": "Legal Disclaimer",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0052FF"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, extra-large (h1)",
+          "bodyStyle": "sans-serif, regular, medium, line-height 1.6",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "horizontal top navigation unchanged",
+            "position": "top",
+            "notable": "consistent across all pages"
+          },
+          {
+            "type": "content-block",
+            "description": "single-column scrollable legal text with structural hierarchy",
+            "position": "main",
+            "notable": "generous left/right margins, emphasis on readability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "headline dominates, last-updated date underneath, body paragraphs in reading order, legal points bulleted",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "read and accept legal terms before using platform",
+        "entryPoints": [
+          "clicked disclaimer/legal link from settings or navigation"
+        ],
+        "exitPoints": [
+          "acknowledge and return to app",
+          "exit by closing or navigating away"
+        ],
+        "interactiveElements": [
+          {
+            "element": "navigation items in header",
+            "action": "navigate to other app sections"
+          }
+        ],
+        "informationArchitecture": "linear reading experience, single scrollable column; no explicit acceptance button visible in screenshot",
+        "frictionPoints": [
+          "lengthy legal text may deter reading",
+          "no clear visual acceptance mechanism shown"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Legal Disclaimer",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Last updated on October 14, 2025",
+            "context": "directly below headline",
+            "purpose": "establish document currency and credibility"
+          }
+        ],
+        "tone": "professional-legal",
+        "dataFormatting": [
+          "October 14, 2025 — formal date format"
+        ],
+        "trustSignals": [
+          "specific last-updated date",
+          "reference to Aerodrome Foundation as legal entity"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

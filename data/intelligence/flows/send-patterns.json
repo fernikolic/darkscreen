@@ -1,0 +1,2894 @@
+{
+  "title": "Send Flow Patterns",
+  "totalApps": 19,
+  "totalScreens": 40,
+  "apps": [
+    "aave",
+    "across",
+    "alchemy",
+    "bingx",
+    "bitfinex",
+    "bitpay",
+    "bitso",
+    "bitvavo",
+    "coinbase",
+    "defillama",
+    "dune",
+    "edge",
+    "etherscan",
+    "green",
+    "jito",
+    "l2beat",
+    "lnbits",
+    "metamask",
+    "okx"
+  ],
+  "screenTypes": [
+    {
+      "name": "landing",
+      "value": "landing",
+      "count": 7,
+      "totalOccurrences": 12,
+      "adoptionRate": 0.368,
+      "classification": "common",
+      "apps": [
+        "alchemy",
+        "bitfinex",
+        "bitpay",
+        "bitso",
+        "coinbase",
+        "edge",
+        "green"
+      ]
+    },
+    {
+      "name": "error",
+      "value": "error",
+      "count": 4,
+      "totalOccurrences": 6,
+      "adoptionRate": 0.211,
+      "classification": "emerging",
+      "apps": [
+        "bitvavo",
+        "coinbase",
+        "metamask",
+        "okx"
+      ]
+    },
+    {
+      "name": "form",
+      "value": "form",
+      "count": 3,
+      "totalOccurrences": 11,
+      "adoptionRate": 0.158,
+      "classification": "emerging",
+      "apps": [
+        "across",
+        "bingx",
+        "dune"
+      ]
+    },
+    {
+      "name": "data-browse",
+      "value": "data-browse",
+      "count": 3,
+      "totalOccurrences": 6,
+      "adoptionRate": 0.158,
+      "classification": "emerging",
+      "apps": [
+        "defillama",
+        "etherscan",
+        "l2beat"
+      ]
+    },
+    {
+      "name": "empty-state",
+      "value": "empty-state",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "landing with embedded payment flow preview",
+      "value": "landing with embedded payment flow preview",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "data-browse | analytics-dashboard",
+      "value": "data-browse | analytics-dashboard",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "modal - consent/compliance gate",
+      "value": "modal - consent/compliance gate",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "extension-detail-page",
+      "value": "extension-detail-page",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    }
+  ],
+  "userIntents": [
+    {
+      "name": "View past bridge transactions (but wallet not yet connected)",
+      "value": "View past bridge transactions (but wallet not yet connected)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Initiate a cross-chain token bridge transaction from Base network",
+      "value": "Initiate a cross-chain token bridge transaction from Base network",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Initiate a cross-chain token bridge transaction from Base to Solana",
+      "value": "Initiate a cross-chain token bridge transaction from Base to Solana",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Initiate a cross-chain token bridge transaction from Base to Unichain",
+      "value": "Initiate a cross-chain token bridge transaction from Base to Unichain",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Bridge USDC from Ethereum Base to Optimism using Across protocol",
+      "value": "Bridge USDC from Ethereum Base to Optimism using Across protocol",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Bridge USDC from Ethereum Base to Linea (different destination than Optimism version)",
+      "value": "Bridge USDC from Ethereum Base to Linea (different destination than Optimism version)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Bridge USDC from Ethereum Base to Polygon (third destination variant)",
+      "value": "Bridge USDC from Ethereum Base to Polygon (third destination variant)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Bridge tokens from Base to World Chain",
+      "value": "Bridge tokens from Base to World Chain",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Bridge USDC from Base and receive WETH on zkSync",
+      "value": "Bridge USDC from Base and receive WETH on zkSync",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Understand Alchemy Send capabilities and initiate payment/stablecoin transfer",
+      "value": "Understand Alchemy Send capabilities and initiate payment/stablecoin transfer",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Understand Alchemy's portfolio management capabilities and view transaction tracking features",
+      "value": "Understand Alchemy's portfolio management capabilities and view transaction tracking features",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Deposit fiat currency (CHF) to BingX account via bank transfer or payment provider",
+      "value": "Deposit fiat currency (CHF) to BingX account via bank transfer or payment provider",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Learn about Bitfinex deposit and withdrawal features and benefits",
+      "value": "Learn about Bitfinex deposit and withdrawal features and benefits",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Understand BitPay's payment solution and either get started or contact sales",
+      "value": "Understand BitPay's payment solution and either get started or contact sales",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Understand stablecoin payment solution and either start using it or contact sales",
+      "value": "Understand stablecoin payment solution and either start using it or contact sales",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Learn about crypto payout capabilities for global payments and initiate business conversation",
+      "value": "Learn about crypto payout capabilities for global payments and initiate business conversation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Understand in-store crypto payment acceptance and explore setup options",
+      "value": "Understand in-store crypto payment acceptance and explore setup options",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Understand Bitso's core value proposition for international money transfers",
+      "value": "Understand Bitso's core value proposition for international money transfers",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Understand why page is not found and return to main site",
+      "value": "Understand why page is not found and return to main site",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Understand Coinbase payment solution while managing cookie preferences",
+      "value": "Understand Coinbase payment solution while managing cookie preferences",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Handle 404 navigation error gracefully",
+      "value": "Handle 404 navigation error gracefully",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "User attempted to access a page that does not exist or is no longer available",
+      "value": "User attempted to access a page that does not exist or is no longer available",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Understand Coinbase's stablecoin payment solution and get started",
+      "value": "Understand Coinbase's stablecoin payment solution and get started",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Understand Coinbase Commerce and how merchants can accept crypto payments",
+      "value": "Understand Coinbase Commerce and how merchants can accept crypto payments",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Understand why page wasn't found and recover from error",
+      "value": "Understand why page wasn't found and recover from error",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Compare and analyze Total Value Locked across different blockchain bridges, sorted by ranking",
+      "value": "Compare and analyze Total Value Locked across different blockchain bridges, sorted by ranking",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Analyze bridge TVL across blockchain networks, compare chains by bridge metrics",
+      "value": "Analyze bridge TVL across blockchain networks, compare chains by bridge metrics",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Compare bridge TVL metrics across different protocols and token distribution types",
+      "value": "Compare bridge TVL metrics across different protocols and token distribution types",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Continue browsing bridge TVL data across more protocols",
+      "value": "Continue browsing bridge TVL data across more protocols",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Browse higher-ranked bridge protocols with larger TVL values",
+      "value": "Browse higher-ranked bridge protocols with larger TVL values",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Send tokens or assets to another address/user",
+      "value": "Send tokens or assets to another address/user",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Bridge tokens across different chains",
+      "value": "Bridge tokens across different chains",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Learn about Edge's privacy features and Bridge integration",
+      "value": "Learn about Edge's privacy features and Bridge integration",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "edge"
+      ]
+    },
+    {
+      "name": "Browse, search, and analyze ERC-20 token transfers on Ethereum",
+      "value": "Browse, search, and analyze ERC-20 token transfers on Ethereum",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Understand Greenlight product capabilities and get started or explore source code",
+      "value": "Understand Greenlight product capabilities and get started or explore source code",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "User is attempting to transfer tokens but must first consent to terms and cookie policies",
+      "value": "User is attempting to transfer tokens but must first consent to terms and cookie policies",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "explore and compare cryptocurrency bridges by security metrics and TVL",
+      "value": "explore and compare cryptocurrency bridges by security metrics and TVL",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Understand the Split Payments extension, view details, download or access source code",
+      "value": "Understand the Split Payments extension, view details, download or access source code",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "User has navigated to a non-existent page and needs to return to valid navigation",
+      "value": "User has navigated to a non-existent page and needs to return to valid navigation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Recover from attempting to access a non-existent page",
+      "value": "Recover from attempting to access a non-existent page",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    }
+  ],
+  "interactiveElements": [
+    {
+      "name": "Get Started button",
+      "value": "Get Started button",
+      "count": 3,
+      "totalOccurrences": 5,
+      "adoptionRate": 0.158,
+      "classification": "emerging",
+      "apps": [
+        "bitpay",
+        "bitso",
+        "green"
+      ]
+    },
+    {
+      "name": "Navigation menu items",
+      "value": "Navigation menu items",
+      "count": 3,
+      "totalOccurrences": 4,
+      "adoptionRate": 0.158,
+      "classification": "emerging",
+      "apps": [
+        "bitso",
+        "coinbase",
+        "metamask"
+      ]
+    },
+    {
+      "name": "Amount Input",
+      "value": "Amount Input",
+      "count": 2,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.105,
+      "classification": "outlier",
+      "apps": [
+        "across",
+        "bingx"
+      ]
+    },
+    {
+      "name": "Sign up button",
+      "value": "Sign up button",
+      "count": 2,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.105,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex",
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Continue button",
+      "value": "Continue button",
+      "count": 2,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.105,
+      "classification": "outlier",
+      "apps": [
+        "bingx",
+        "jito"
+      ]
+    },
+    {
+      "name": "Connect Wallet button",
+      "value": "Connect Wallet button",
+      "count": 1,
+      "totalOccurrences": 7,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token Selector (From)",
+      "value": "Token Selector (From)",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token Selector (To)",
+      "value": "Token Selector (To)",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Set Recipient Link",
+      "value": "Set Recipient Link",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Contact Sales button",
+      "value": "Contact Sales button",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Go back button",
+      "value": "Go back button",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Protocol names",
+      "value": "Protocol names",
+      "count": 1,
+      "totalOccurrences": 3,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "To token selector",
+      "value": "To token selector",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Logo",
+      "value": "Logo",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Navigation menu links",
+      "value": "Navigation menu links",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Sidebar menu items",
+      "value": "Sidebar menu items",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Column headers",
+      "value": "Column headers",
+      "count": 1,
+      "totalOccurrences": 2,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "'Connect wallet' button",
+      "value": "'Connect wallet' button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Top nav items",
+      "value": "Top nav items",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "From amount input",
+      "value": "From amount input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token selector dropdown (From)",
+      "value": "Token selector dropdown (From)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token selector dropdown (To)",
+      "value": "Token selector dropdown (To)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Swap arrow icon",
+      "value": "Swap arrow icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Amount Input Field",
+      "value": "Amount Input Field",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token dropdown selector (From)",
+      "value": "Token dropdown selector (From)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Token dropdown selector (To)",
+      "value": "Token dropdown selector (To)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Amount input fields",
+      "value": "Amount input fields",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Source token selector",
+      "value": "Source token selector",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Destination token selector",
+      "value": "Destination token selector",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Amount inputs",
+      "value": "Amount inputs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Connect Wallet",
+      "value": "Connect Wallet",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Start building button",
+      "value": "Start building button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Contact sales link",
+      "value": "Contact sales link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Deposit/Send/Receive action buttons",
+      "value": "Deposit/Send/Receive action buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Sign in button",
+      "value": "Sign in button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Get your API key button",
+      "value": "Get your API key button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "View docs link",
+      "value": "View docs link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Currency dropdown",
+      "value": "Currency dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Payment method dropdown",
+      "value": "Payment method dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Checkbox",
+      "value": "Checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Terms of Service link",
+      "value": "Terms of Service link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Privacy Policy link",
+      "value": "Privacy Policy link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Top navigation dropdowns",
+      "value": "Top navigation dropdowns",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Log in button",
+      "value": "Log in button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "Chat button",
+      "value": "Chat button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitfinex"
+      ]
+    },
+    {
+      "name": "For Individuals dropdown",
+      "value": "For Individuals dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "For Businesses dropdown",
+      "value": "For Businesses dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Developers link",
+      "value": "Developers link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Pay in Wallet button",
+      "value": "Pay in Wallet button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Pay with BitPay button",
+      "value": "Pay with BitPay button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Close (X) on top banner",
+      "value": "Close (X) on top banner",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Contact BitPay to Get Started Button",
+      "value": "Contact BitPay to Get Started Button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Product name/label area",
+      "value": "Product name/label area",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Checkout mockup (Pay in Wallet / Pay with BitPay buttons)",
+      "value": "Checkout mockup (Pay in Wallet / Pay with BitPay buttons)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Language selector",
+      "value": "Language selector",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitso"
+      ]
+    },
+    {
+      "name": "Back to bitvavo.com button",
+      "value": "Back to bitvavo.com button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Contacta con nosotros button",
+      "value": "Contacta con nosotros button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Cookie consent modal - Aceptar button",
+      "value": "Cookie consent modal - Aceptar button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Cookie consent modal - Rechazar button",
+      "value": "Cookie consent modal - Rechazar button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Personalizar cookies link",
+      "value": "Personalizar cookies link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Get in touch button",
+      "value": "Get in touch button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Payment method radio buttons",
+      "value": "Payment method radio buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Quantity +/- controls",
+      "value": "Quantity +/- controls",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Navigation tabs",
+      "value": "Navigation tabs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Change to Spain link",
+      "value": "Change to Spain link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "X close button on banner",
+      "value": "X close button on banner",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Column headers (Total Bridged, Native, Canonical, Own Tokens, Third Party)",
+      "value": "Column headers (Total Bridged, Native, Canonical, Own Tokens, Third Party)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Bridge name link (e.g., Sui, Avalanche, Hyperliquid L1)",
+      "value": "Bridge name link (e.g., Sui, Avalanche, Hyperliquid L1)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "RWA menu item",
+      "value": "RWA menu item",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Chain tabs (All/Ethereum/Tron/etc)",
+      "value": "Chain tabs (All/Ethereum/Tron/etc)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "ranked by Bridged TVL dropdown",
+      "value": "ranked by Bridged TVL dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Search chains input",
+      "value": "Search chains input",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "CSV button",
+      "value": "CSV button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Chain rows",
+      "value": "Chain rows",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Table rows",
+      "value": "Table rows",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Sortable headers",
+      "value": "Sortable headers",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Green accent button",
+      "value": "Green accent button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Grid icon",
+      "value": "Grid icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Input field (Pe)",
+      "value": "Input field (Pe)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Products dropdown",
+      "value": "Products dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Discover dropdown",
+      "value": "Discover dropdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "LOG IN",
+      "value": "LOG IN",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "SIGN UP",
+      "value": "SIGN UP",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Chat widget",
+      "value": "Chat widget",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "edge"
+      ]
+    },
+    {
+      "name": "Edge logo",
+      "value": "Edge logo",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "edge"
+      ]
+    },
+    {
+      "name": "Transaction Hash links",
+      "value": "Transaction Hash links",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Address links (From/To)",
+      "value": "Address links (From/To)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Token name links",
+      "value": "Token name links",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Copy icons",
+      "value": "Copy icons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Pagination buttons",
+      "value": "Pagination buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Download Page Data",
+      "value": "Download Page Data",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "View Source Code link",
+      "value": "View Source Code link",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Navigation items",
+      "value": "Navigation items",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Tab navigation (Overview, Greenlight, Community)",
+      "value": "Tab navigation (Overview, Greenlight, Community)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Terms of Service checkbox",
+      "value": "Terms of Service checkbox",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Analytics toggle",
+      "value": "Analytics toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Cookie Policy toggle",
+      "value": "Cookie Policy toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Decline button",
+      "value": "Decline button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "category toggle buttons",
+      "value": "category toggle buttons",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "sortable table headers",
+      "value": "sortable table headers",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "time range selector (7D, 30D, 90D, etc.)",
+      "value": "time range selector (7D, 30D, 90D, etc.)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "USD/ETH toggle",
+      "value": "USD/ETH toggle",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Columns button",
+      "value": "Columns button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Filters button",
+      "value": "Filters button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Download button",
+      "value": "Download button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "GitHub button",
+      "value": "GitHub button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Description/Gallery/Terms/Versions tabs",
+      "value": "Description/Gallery/Terms/Versions tabs",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Contributor names",
+      "value": "Contributor names",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "DOWNLOAD METAMASK button",
+      "value": "DOWNLOAD METAMASK button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "GO HOME button",
+      "value": "GO HOME button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Language toggle icon",
+      "value": "Language toggle icon",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "Go to homepage button",
+      "value": "Go to homepage button",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Top navigation dropdown menus",
+      "value": "Top navigation dropdown menus",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Search bar",
+      "value": "Search bar",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Language selector (English/USD)",
+      "value": "Language selector (English/USD)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    }
+  ],
+  "frictionPoints": [
+    {
+      "name": "User cannot view any bridge history without connecting wallet first",
+      "value": "User cannot view any bridge history without connecting wallet first",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Single call-to-action requires wallet connection step",
+      "value": "Single call-to-action requires wallet connection step",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "aave"
+      ]
+    },
+    {
+      "name": "Must connect wallet before proceeding—blocks transaction initiation",
+      "value": "Must connect wallet before proceeding—blocks transaction initiation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Zero balance display may confuse new users about whether funds are required first",
+      "value": "Zero balance display may confuse new users about whether funds are required first",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "'Set Recipient' link on To field adds optional complexity that may go unnoticed",
+      "value": "'Set Recipient' link on To field adds optional complexity that may go unnoticed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Must connect wallet before proceeding",
+      "value": "Must connect wallet before proceeding",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "No indication of different fees or timelines for Solana vs other chains",
+      "value": "No indication of different fees or timelines for Solana vs other chains",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Wallet connection requirement blocks transaction initiation",
+      "value": "Wallet connection requirement blocks transaction initiation",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "No chain-specific information displayed",
+      "value": "No chain-specific information displayed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Wallet connection required before any transaction",
+      "value": "Wallet connection required before any transaction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Balance showing 0 USDC creates initial barrier",
+      "value": "Balance showing 0 USDC creates initial barrier",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "No visible amount validation or fee preview before wallet connection",
+      "value": "No visible amount validation or fee preview before wallet connection",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Same as Optimism variant: wallet requirement, zero balance shown, no fee preview",
+      "value": "Same as Optimism variant: wallet requirement, zero balance shown, no fee preview",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Same barriers as prior variants: wallet connection required, zero balance, no fees shown",
+      "value": "Same barriers as prior variants: wallet connection required, zero balance, no fees shown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "User must have a connected wallet to proceed",
+      "value": "User must have a connected wallet to proceed",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Balance displays as 0 (empty state friction)",
+      "value": "Balance displays as 0 (empty state friction)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "Cross-chain token conversion may confuse users",
+      "value": "Cross-chain token conversion may confuse users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "No visible exchange rate for USDC→WETH conversion",
+      "value": "No visible exchange rate for USDC→WETH conversion",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "across"
+      ]
+    },
+    {
+      "name": "No visible signup form on landing—requires navigation to separate page",
+      "value": "No visible signup form on landing—requires navigation to separate page",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Partner logos don't link to integrations or case studies",
+      "value": "Partner logos don't link to integrations or case studies",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Right panel example may not clearly show where user can interact",
+      "value": "Right panel example may not clearly show where user can interact",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "No form submission on landing—requires navigation away",
+      "value": "No form submission on landing—requires navigation away",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Transaction list is static, doesn't show interactivity",
+      "value": "Transaction list is static, doesn't show interactivity",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "alchemy"
+      ]
+    },
+    {
+      "name": "Payment method must be selected (currently empty)",
+      "value": "Payment method must be selected (currently empty)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Terms checkbox must be checked",
+      "value": "Terms checkbox must be checked",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Minimum 50 CHF requirement may deter small deposits",
+      "value": "Minimum 50 CHF requirement may deter small deposits",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Third-party service dependency noted in legal text",
+      "value": "Third-party service dependency noted in legal text",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bingx"
+      ]
+    },
+    {
+      "name": "Single CTA path (no self-serve option) may deter individual users",
+      "value": "Single CTA path (no self-serve option) may deter individual users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Generic phrasing doesn't differentiate from competitors",
+      "value": "Generic phrasing doesn't differentiate from competitors",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Mockup may imply more simplicity than actual merchant integration",
+      "value": "Mockup may imply more simplicity than actual merchant integration",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Limited technical detail about POS system compatibility",
+      "value": "Limited technical detail about POS system compatibility",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "User cannot find intended content",
+      "value": "User cannot find intended content",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Requires clicking button to navigate away",
+      "value": "Requires clicking button to navigate away",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitvavo"
+      ]
+    },
+    {
+      "name": "Cookie modal blocks main content interaction",
+      "value": "Cookie modal blocks main content interaction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Required action needed to proceed past overlay",
+      "value": "Required action needed to proceed past overlay",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "User is on wrong page and needs to navigate away",
+      "value": "User is on wrong page and needs to navigate away",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Limited context about how to find desired content",
+      "value": "Limited context about how to find desired content",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "User has lost their intended destination",
+      "value": "User has lost their intended destination",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Error message is generic without specific troubleshooting steps",
+      "value": "Error message is generic without specific troubleshooting steps",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "No search bar prominently displayed to help find what user was looking for",
+      "value": "No search bar prominently displayed to help find what user was looking for",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Geolocation banner may distract from error resolution",
+      "value": "Geolocation banner may distract from error resolution",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "coinbase"
+      ]
+    },
+    {
+      "name": "Requires horizontal scrolling to view all 6 columns on smaller screens",
+      "value": "Requires horizontal scrolling to view all 6 columns on smaller screens",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Row numbers (58-74) suggest pagination exists but not visible—unclear if table is sortable or locked to this view",
+      "value": "Row numbers (58-74) suggest pagination exists but not visible—unclear if table is sortable or locked to this view",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No visible search or filter controls to quickly find specific bridge",
+      "value": "No visible search or filter controls to quickly find specific bridge",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Multiple filter mechanisms (tabs, dropdown, search) may be overwhelming",
+      "value": "Multiple filter mechanisms (tabs, dropdown, search) may be overwhelming",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Horizontal scroll needed for rightmost columns on smaller screens",
+      "value": "Horizontal scroll needed for rightmost columns on smaller screens",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No visible pagination or row count indicator",
+      "value": "No visible pagination or row count indicator",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "New badge on RWA item in sidebar may distract from core content",
+      "value": "New badge on RWA item in sidebar may distract from core content",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Dense table requires horizontal scrolling on smaller screens",
+      "value": "Dense table requires horizontal scrolling on smaller screens",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No visible search/filter functionality to narrow down protocols",
+      "value": "No visible search/filter functionality to narrow down protocols",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Row numbers may not be immediately intuitive for discovering total count",
+      "value": "Row numbers may not be immediately intuitive for discovering total count",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Very long list (60+ protocols) requires significant scrolling to reach end",
+      "value": "Very long list (60+ protocols) requires significant scrolling to reach end",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No visible pagination controls",
+      "value": "No visible pagination controls",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No jump-to-section or search visible",
+      "value": "No jump-to-section or search visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No indication of where user is in the full list",
+      "value": "No indication of where user is in the full list",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Table scrolling doesn't show total row count",
+      "value": "Table scrolling doesn't show total row count",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Large value ranges (from millions to billions) require mental conversion",
+      "value": "Large value ranges (from millions to billions) require mental conversion",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Most of the interface is blank/off-screen",
+      "value": "Most of the interface is blank/off-screen",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Unclear what fields are required without full visibility",
+      "value": "Unclear what fields are required without full visibility",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Content area appears blank or off-screen",
+      "value": "Content area appears blank or off-screen",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Unclear what bridge options are available",
+      "value": "Unclear what bridge options are available",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "No visible form fields or input areas",
+      "value": "No visible form fields or input areas",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "dune"
+      ]
+    },
+    {
+      "name": "Majority of screen is empty white space, unclear what main content is",
+      "value": "Majority of screen is empty white space, unclear what main content is",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "edge"
+      ]
+    },
+    {
+      "name": "No visible call-to-action buttons or next steps beyond chat",
+      "value": "No visible call-to-action buttons or next steps beyond chat",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "edge"
+      ]
+    },
+    {
+      "name": "Table is very dense; may be hard to parse on smaller screens",
+      "value": "Table is very dense; may be hard to parse on smaller screens",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Truncated addresses require clicking to see full value",
+      "value": "Truncated addresses require clicking to see full value",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "100 pages suggests potential performance issues for pagination",
+      "value": "100 pages suggests potential performance issues for pagination",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "Multiple CTAs may create decision paralysis (Get Started vs View Source Code)",
+      "value": "Multiple CTAs may create decision paralysis (Get Started vs View Source Code)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Minimal context about what happens after clicking Get Started",
+      "value": "Minimal context about what happens after clicking Get Started",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Feature icons at bottom are ambiguous without labels",
+      "value": "Feature icons at bottom are ambiguous without labels",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "green"
+      ]
+    },
+    {
+      "name": "Modal blocks all page interaction until resolved",
+      "value": "Modal blocks all page interaction until resolved",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Small checkbox for Terms of Service requires explicit interaction",
+      "value": "Small checkbox for Terms of Service requires explicit interaction",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "Unclear whether 'Decline' button allows user to proceed or blocks access",
+      "value": "Unclear whether 'Decline' button allows user to proceed or blocks access",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "jito"
+      ]
+    },
+    {
+      "name": "many columns in table may cause horizontal scroll on smaller screens",
+      "value": "many columns in table may cause horizontal scroll on smaller screens",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "color-coded status indicators require legend familiarity",
+      "value": "color-coded status indicators require legend familiarity",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "disclaimer banner about incomplete research may create doubt",
+      "value": "disclaimer banner about incomplete research may create doubt",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "multiple filter/sort options could overwhelm casual users",
+      "value": "multiple filter/sort options could overwhelm casual users",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "Long hash string requires scrolling horizontally or is truncated",
+      "value": "Long hash string requires scrolling horizontally or is truncated",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "Detailed usage instructions take significant screen real estate",
+      "value": "Detailed usage instructions take significant screen real estate",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "No clear visual indication of tab content before clicking",
+      "value": "No clear visual indication of tab content before clicking",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "lnbits"
+      ]
+    },
+    {
+      "name": "User has already encountered broken navigation, may lack confidence in alternative paths",
+      "value": "User has already encountered broken navigation, may lack confidence in alternative paths",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "No explanation of why page was not found or how it occurred",
+      "value": "No explanation of why page was not found or how it occurred",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "metamask"
+      ]
+    },
+    {
+      "name": "User must navigate back manually—no automatic redirect",
+      "value": "User must navigate back manually—no automatic redirect",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    },
+    {
+      "name": "Doesn't explain *why* page doesn't exist (wrong URL, deprecated feature, etc.)",
+      "value": "Doesn't explain *why* page doesn't exist (wrong URL, deprecated feature, etc.)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "okx"
+      ]
+    }
+  ],
+  "progressIndicators": [
+    {
+      "name": "Time Left display (14:59) simulates real payment session countdown",
+      "value": "Time Left display (14:59) simulates real payment session countdown",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "bitpay"
+      ]
+    },
+    {
+      "name": "Row numbering (58-74) shows position in full ranking list",
+      "value": "Row numbering (58-74) shows position in full ranking list",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "No explicit page indicator or total count visible",
+      "value": "No explicit page indicator or total count visible",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Row numbering (1-13 visible) gives position in dataset",
+      "value": "Row numbering (1-13 visible) gives position in dataset",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Active tab highlighted in blue shows current filter",
+      "value": "Active tab highlighted in blue shows current filter",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Row numbers (29-45) indicate position within dataset",
+      "value": "Row numbers (29-45) indicate position within dataset",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Row numbers 44-60 suggest approaching end of list",
+      "value": "Row numbers 44-60 suggest approaching end of list",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "defillama"
+      ]
+    },
+    {
+      "name": "Page 1 of 100",
+      "value": "Page 1 of 100",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "etherscan"
+      ]
+    },
+    {
+      "name": "category badge counts (Single-chain 8, Others 29)",
+      "value": "category badge counts (Single-chain 8, Others 29)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    },
+    {
+      "name": "filter count indicator (0 active)",
+      "value": "filter count indicator (0 active)",
+      "count": 1,
+      "totalOccurrences": 1,
+      "adoptionRate": 0.053,
+      "classification": "outlier",
+      "apps": [
+        "l2beat"
+      ]
+    }
+  ]
+}

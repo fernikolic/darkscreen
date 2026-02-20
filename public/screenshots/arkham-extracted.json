@@ -1,0 +1,297 @@
+{
+  "slug": "arkham",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T10:12:47.473Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 3,
+  "screens": [
+    {
+      "image": "/screenshots/arkham-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main with split-panel data section",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0F1419",
+          "#00D4FF",
+          "#FF4444"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, all-caps, high contrast white on dark (e.g., 'ARKHAM INTEL')",
+          "bodyStyle": "Monospace font for technical data and labels, regular sans-serif for microcopy",
+          "dataStyle": "Monospace with subtle icons and directional indicators for flows"
+        },
+        "components": [
+          {
+            "type": "Top banner",
+            "description": "Blue promotional bar with earning opportunity and Trade Now CTA",
+            "position": "Top of page, full-width",
+            "notable": "Converts immediately with action-oriented copy"
+          },
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Intel, Exchange, Swap, API, Markets, Custom, Tools sections plus search",
+            "position": "Below banner, sticky",
+            "notable": "Clean minimalist design with right-aligned profile/account options"
+          },
+          {
+            "type": "Search bar",
+            "description": "Large input field with placeholder 'Search for tokens, addresses, entities...'",
+            "position": "Below main heading, center-aligned",
+            "notable": "Duplicated in header and main area, suggests importance"
+          },
+          {
+            "type": "Data table section",
+            "description": "Two-column layout with 'ARKHAM EXCHANGE TOKENS' and 'FILTER FOR TRANSFERS' panels",
+            "position": "Lower half of screen",
+            "notable": "Empty state with error messages, demonstrating failed data load"
+          },
+          {
+            "type": "Cookie consent modal",
+            "description": "Bottom overlay with Allow All, Reject All, Custom Preferences buttons",
+            "position": "Bottom of screen",
+            "notable": "Non-intrusive but persistent, blue primary CTA stands out"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page guides eye from promotional banner → main heading → search input → dual data panels. Error states and empty content reduce emphasis on data visualization.",
+        "innovativeElements": [
+          "Monospace typography for exchange data creates technical/trading platform aesthetic",
+          "Duplicated search bar suggests critical user task",
+          "Multi-filter pill interface (CEX/DEX, Market Cap, Volume, Sort) for advanced data manipulation"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / data-browse",
+        "userIntent": "Explore crypto exchange flows, trending insights, and token data for research or trading decisions",
+        "entryPoints": [
+          "Direct landing from marketing (Trade Now banner)",
+          "Navigation from external links (Intel section entry point)"
+        ],
+        "exitPoints": [
+          "Exchange tab for trading",
+          "Markets dropdown for broader market data",
+          "Search for specific tokens/addresses",
+          "Profile/account management"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Trade Now button",
+            "action": "Navigate to exchange or sign up flow"
+          },
+          {
+            "element": "Search bar",
+            "action": "Query tokens, addresses, entities with autocomplete/results"
+          },
+          {
+            "element": "Exchange Flows filter pills",
+            "action": "Toggle CEX/DEX, set market cap/volume ranges, sort results"
+          },
+          {
+            "element": "Time dropdown (24H)",
+            "action": "Change data timeframe"
+          },
+          {
+            "element": "Allow All / Reject All buttons",
+            "action": "Manage cookie preferences"
+          }
+        ],
+        "informationArchitecture": "Hierarchical with multiple data sections. Trending Insights (empty) → Exchange Tokens & Transfers in parallel columns → detailed table with sortable columns (Asset, Price, Volume, Netflow)",
+        "frictionPoints": [
+          "Multiple error states ('Something went wrong') reduce confidence",
+          "Empty Trending Insights section suggests incomplete loading",
+          "No data visible in tables creates confusion about platform functionality",
+          "Two-column layout requires horizontal scrolling on smaller screens"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ARKHAM INTEL",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Trade Now",
+            "style": "primary-button with arrow icon",
+            "placement": "Top right of banner"
+          },
+          {
+            "text": "Allow All",
+            "style": "primary-button",
+            "placement": "Cookie consent modal, left side"
+          },
+          {
+            "text": "Reject All",
+            "style": "secondary-button",
+            "placement": "Cookie consent modal, center"
+          },
+          {
+            "text": "Custom Preferences",
+            "style": "text-link",
+            "placement": "Cookie consent modal, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Something went wrong.",
+            "context": "Below main heading and in Exchange Tokens section",
+            "purpose": "Error notification with circle warning icon"
+          },
+          {
+            "text": "Sign Up to Earn Up To $100 on The Arkham Exchange",
+            "context": "Blue promotional banner at top",
+            "purpose": "Value proposition and incentive messaging"
+          },
+          {
+            "text": "No trending insights right now.",
+            "context": "Under 'TRENDING INSIGHTS' section heading",
+            "purpose": "Empty state message explaining missing data"
+          },
+          {
+            "text": "WE USE COOKIES TO IMPROVE OUR PRODUCT AND YOUR EXPERIENCE ON OUR WEBSITES. YOU CAN OPT OUT OF COOKIES HERE, OR IN THE SETTINGS TAB.",
+            "context": "Cookie consent modal body text",
+            "purpose": "Legal disclosure and user control messaging"
+          },
+          {
+            "text": "Search for tokens, addresses, entities...",
+            "context": "Placeholder text in search input (appears twice)",
+            "purpose": "Input instruction and scope clarification"
+          }
+        ],
+        "tone": "professional-technical with hint of urgency in promotional banner",
+        "dataFormatting": [
+          "ARKHAM EXCHANGE TOKENS label with all-caps styling",
+          "TIME: 24H format dropdown",
+          "CEX/DEX, MARKET CAP > $100M, VOLUME > $100M formatted as filter pills",
+          "ASSET | PRICE | VOLUME | NETFLOW as monospace table headers"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "Something went wrong.",
+          "This page could not be found. (in 404 page)"
+        ],
+        "emptyStateText": [
+          "No trending insights right now."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/arkham-settings-1-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width blank",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0A0E17"
+        ],
+        "typography": {
+          "headingStyle": null,
+          "bodyStyle": null,
+          "dataStyle": null
+        },
+        "components": [],
+        "spacing": null,
+        "visualHierarchy": "No visible content; entirely blank dark screen",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "loading or blank settings page",
+        "userIntent": "Access application settings or configuration",
+        "entryPoints": [
+          "Settings menu navigation from main app"
+        ],
+        "exitPoints": [
+          "Back to main navigation",
+          "Navigate to other settings sections"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Unknown - content not loaded",
+        "frictionPoints": [
+          "Complete blank page suggests failed load or rendering issue",
+          "No loading indicator or error message to guide user"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": null,
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/arkham-settings-2-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large numeric heading (404)",
+          "bodyStyle": "Regular sans-serif, dark text on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error page layout",
+            "description": "Centered error code with description text",
+            "position": "Center of screen",
+            "notable": "Minimalist design with high contrast for clarity"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large 404 number dominates, with divider line separating description text",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why requested page cannot be accessed",
+        "entryPoints": [
+          "Navigation to non-existent settings URL",
+          "Broken link from help section"
+        ],
+        "exitPoints": [
+          "Back button",
+          "Navigation to valid pages"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Simple error message display",
+        "frictionPoints": [
+          "No visible recovery CTA or navigation options",
+          "Minimal context about what the help page should contain",
+          "No back button or home link visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404",
+        "subheadline": "This page could not be found.",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "neutral-informational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 This page could not be found."
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

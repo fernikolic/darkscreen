@@ -1,0 +1,721 @@
+{
+  "slug": "layerswap",
+  "category": "Bridge",
+  "extractedAt": "2026-02-20T12:06:55.579Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 6,
+  "screens": [
+    {
+      "image": "/screenshots/layerswap-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, uppercase error code",
+          "bodyStyle": "Regular monospace for technical details",
+          "dataStyle": "Monospace for error codes and ID strings"
+        },
+        "components": [
+          {
+            "type": "error-card",
+            "description": "Centered card displaying error code and technical details",
+            "position": "center of screen",
+            "notable": "Clean, minimal presentation of error state with technical transparency"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button for documentation link",
+            "position": "below error card",
+            "notable": "Soft button style with rounded corners for secondary action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, technical details secondary, CTA tertiary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand why swap page failed to load",
+        "entryPoints": [
+          "Direct navigation to swap route",
+          "Failed page load"
+        ],
+        "exitPoints": [
+          "Click documentation link",
+          "Navigate back",
+          "Refresh page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Opens documentation explaining NOT_FOUND error"
+          }
+        ],
+        "informationArchitecture": "Error information presented in order of importance: code → details → resolution",
+        "frictionPoints": [
+          "User cannot proceed with swap",
+          "Minimal guidance on resolution"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "Error details section",
+            "purpose": "Identifies error type for technical reference"
+          },
+          {
+            "text": "ID: `cdg1::7gwl5-1771121705562-91ef3fd6233d`",
+            "context": "Error details section",
+            "purpose": "Provides unique error tracking ID for support"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "Backtick-wrapped error codes",
+          "UUID format ID string"
+        ],
+        "trustSignals": [
+          "Error tracking ID provided"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/layerswap-onboarding-1-dashboard-page.png",
+      "label": "dashboard page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#1a1a2e"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large centered heading",
+          "bodyStyle": "Regular sans-serif for placeholder text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "text-input",
+            "description": "Email input field with placeholder",
+            "position": "center, below headline",
+            "notable": "Clean bordered input with subtle styling"
+          },
+          {
+            "type": "primary-button",
+            "description": "Dark navy/black button with white text",
+            "position": "below input",
+            "notable": "Full-width button with rounded corners, high contrast"
+          },
+          {
+            "type": "theme-toggle",
+            "description": "Light/dark mode icon",
+            "position": "top-right corner",
+            "notable": "Accessible theme switching in onboarding context"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline commands attention, input/button follow natural reading flow, theme toggle subtle in corner",
+        "innovativeElements": [
+          "Theme toggle during onboarding phase"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Authenticate and access dashboard",
+        "entryPoints": [
+          "Landing page CTA",
+          "Direct dashboard URL"
+        ],
+        "exitPoints": [
+          "Submit email → receive verification",
+          "Back to landing"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input",
+            "action": "Accepts user email for authentication"
+          },
+          {
+            "element": "Sign In with Email button",
+            "action": "Submits email and initiates authentication flow"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switches between light and dark mode"
+          }
+        ],
+        "informationArchitecture": "Simple linear form: headline → input → action button",
+        "frictionPoints": [
+          "No password option shown",
+          "No social auth alternatives visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Log in to Layerswap Dashboard",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Sign In with Email",
+            "style": "primary-button",
+            "placement": "below email input"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "name@example.com",
+            "context": "Email input field",
+            "purpose": "Placeholder showing expected format"
+          }
+        ],
+        "tone": "professional-friendly",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/layerswap-staking-1-rewards-page.png",
+      "label": "rewards page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#FF00FF",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold white sans-serif for section titles",
+          "bodyStyle": "Regular white sans-serif for body content",
+          "dataStyle": "Gray text for secondary information like countdown"
+        },
+        "components": [
+          {
+            "type": "logo-header",
+            "description": "Layerswap logo with magenta accent square",
+            "position": "top-left",
+            "notable": "Distinctive magenta brand color contrasts against dark bg"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Top bar with back arrow, grid view toggle, menu icon",
+            "position": "top of main content area",
+            "notable": "Minimalist icon-based navigation"
+          },
+          {
+            "type": "campaign-card",
+            "description": "Dark card listing active campaign with countdown",
+            "position": "main content area",
+            "notable": "Icon badge system for campaign identity"
+          },
+          {
+            "type": "footer-links",
+            "description": "Privacy, Terms, copyright text",
+            "position": "bottom",
+            "notable": "Subtle gray text with underlines"
+          },
+          {
+            "type": "social-icons",
+            "description": "X, Discord, GitHub, YouTube icons",
+            "position": "bottom-right",
+            "notable": "White icons on dark background"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo anchors top-left, main campaign card centered, footer content secondary",
+        "innovativeElements": [
+          "Magenta neon-style brand accent",
+          "Minimalist icon-only navigation"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "View active rewards campaigns and track remaining duration",
+        "entryPoints": [
+          "Dashboard navigation",
+          "Staking/rewards section"
+        ],
+        "exitPoints": [
+          "Back to main dashboard",
+          "Open campaign detail",
+          "Visit external links in footer"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Back arrow",
+            "action": "Returns to previous screen"
+          },
+          {
+            "element": "Grid view toggle",
+            "action": "Changes campaign display layout"
+          },
+          {
+            "element": "Menu icon",
+            "action": "Opens additional options"
+          },
+          {
+            "element": "Campaign card",
+            "action": "Likely expands to show campaign details"
+          },
+          {
+            "element": "Social icons",
+            "action": "Navigate to external social profiles"
+          }
+        ],
+        "informationArchitecture": "Header navigation → Campaign list → Footer information",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "76 days left countdown on campaign"
+        ]
+      },
+      "copy": {
+        "headline": "Campaigns",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Ready Metal Card Rewards",
+            "context": "Campaign card title",
+            "purpose": "Campaign name identifier"
+          },
+          {
+            "text": "76 days left",
+            "context": "Campaign card right side",
+            "purpose": "Time remaining indicator"
+          },
+          {
+            "text": "© 2026 Layerswap Labs, Inc. All rights reserved.",
+            "context": "Footer",
+            "purpose": "Copyright and legal attribution"
+          }
+        ],
+        "tone": "professional-friendly",
+        "dataFormatting": [
+          "Countdown: '76 days left'",
+          "Campaign names use descriptive labels"
+        ],
+        "trustSignals": [
+          "Company name and copyright attribution"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/layerswap-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FF1B6D",
+          "#0F1419",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, 60-72px, white, underline accent on 'Swap & Bridge'",
+          "bodyStyle": "Medium gray sans-serif, 16-18px, neutral tone",
+          "dataStyle": "Large numeric display (747.898, 0.362) with smaller USD equivalents below in gray"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navigation with Layerswap logo and menu items",
+            "position": "Top fixed",
+            "notable": "Magenta icon logo, dropdown on 'User Guides'"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Centered headline with subheading and dual CTAs",
+            "position": "Upper center",
+            "notable": "Pink underline on heading, high contrast white on dark"
+          },
+          {
+            "type": "Swap Form",
+            "description": "Two-column swap interface with send/receive sections",
+            "position": "Lower center",
+            "notable": "Split pane with swap arrow icon between sections, token dropdowns with icons"
+          },
+          {
+            "type": "Footer",
+            "description": "Copyright and social links",
+            "position": "Bottom fixed",
+            "notable": "Social icons for X, Discord, GitHub, YouTube"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero headline dominates, CTAs positioned prominently below, form secondary but visible",
+        "innovativeElements": [
+          "Animated underline accent on heading",
+          "Dual CTA approach (primary action + learning path)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Layerswap and initiate a cross-chain swap transaction",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign",
+          "Navigation from docs"
+        ],
+        "exitPoints": [
+          "Launch App button",
+          "Learn more link",
+          "Navigation menu items (Explorer, Help Center, Testnet, Docs)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Launch App",
+            "action": "Navigate to main application interface"
+          },
+          {
+            "element": "Learn more",
+            "action": "Navigate to informational content"
+          },
+          {
+            "element": "Token dropdown (USD₣0 / ETH)",
+            "action": "Select token for swap"
+          },
+          {
+            "element": "Address field dropdowns",
+            "action": "Select source/destination chains"
+          },
+          {
+            "element": "Swap arrow icon",
+            "action": "Reverse send/receive amounts"
+          }
+        ],
+        "informationArchitecture": "Value proposition first (headline + subheadline), immediate action path (form), supplementary navigation (top menu)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap & Bridge Across Chains",
+        "subheadline": "Swap any token across 73 chains",
+        "ctas": [
+          {
+            "text": "Launch App",
+            "style": "primary-button",
+            "placement": "Hero section center"
+          },
+          {
+            "text": "Learn more",
+            "style": "text-link",
+            "placement": "Hero section right of primary button"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Send from",
+            "context": "Form label above amount field",
+            "purpose": "Clarify form section purpose"
+          },
+          {
+            "text": "Receive at",
+            "context": "Form label above amount field",
+            "purpose": "Clarify form section purpose"
+          }
+        ],
+        "tone": "professional-technical, confident, direct",
+        "dataFormatting": [
+          "747.898 (large numeric display)",
+          "$746.92 (USD equivalent)",
+          "0.362 (token amount)",
+          "$746.64 (USD equivalent)"
+        ],
+        "trustSignals": [
+          "73 chains supported",
+          "Explorer reference",
+          "Help Center link"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/layerswap-home-2-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width centered stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FF1B6D",
+          "#0F1419",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, white, 60-72px",
+          "bodyStyle": "Medium gray sans-serif, 16px, neutral",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error Code",
+            "description": "404 error code display",
+            "position": "Upper center",
+            "notable": "Magenta/pink color to match brand accent"
+          },
+          {
+            "type": "Error Heading",
+            "description": "Large error message",
+            "position": "Center",
+            "notable": "Simple, clear language"
+          },
+          {
+            "type": "Error Description",
+            "description": "Explanatory text",
+            "position": "Below heading",
+            "notable": "Sympathetic tone, concise"
+          },
+          {
+            "type": "Error Recovery CTAs",
+            "description": "Dual action buttons",
+            "position": "Below description",
+            "notable": "Primary action (go home) + secondary action (support)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code establishes context, heading communicates problem, CTAs provide clear exit paths",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from navigation to non-existent page",
+        "entryPoints": [
+          "Broken link",
+          "Invalid URL",
+          "Expired link"
+        ],
+        "exitPoints": [
+          "Go back home button",
+          "Contact support link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back home",
+            "action": "Navigate to landing page"
+          },
+          {
+            "element": "Contact support",
+            "action": "Navigate to support/help center"
+          }
+        ],
+        "informationArchitecture": "Error state centered, two clear recovery paths provided",
+        "frictionPoints": [
+          "User arrived at wrong page",
+          "No context on what was intended"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "Sorry, we couldn't find the page you're looking for.",
+        "ctas": [
+          {
+            "text": "Go back home",
+            "style": "primary-button",
+            "placement": "Center below description"
+          },
+          {
+            "text": "Contact support",
+            "style": "text-link",
+            "placement": "Right of primary button"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual, apologetic, helpful",
+        "dataFormatting": [
+          "404"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404",
+          "Page not found",
+          "Sorry, we couldn't find the page you're looking for."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/layerswap-settings-1-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FF1B6D",
+          "#0F1419",
+          "#1A202C"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white, 32-36px",
+          "bodyStyle": "Medium gray sans-serif, 14-16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Layerswap brand logo centered at top",
+            "position": "Top center",
+            "notable": "Magenta icon with white text wordmark"
+          },
+          {
+            "type": "Help Content Card",
+            "description": "Main container with heading and description",
+            "position": "Center",
+            "notable": "Rounded corners, dark background with subtle elevation"
+          },
+          {
+            "type": "CTA Card Grid",
+            "description": "Two-column grid of action cards",
+            "position": "Upper middle within card",
+            "notable": "Contact Us (primary) vs FAQ (secondary) styling"
+          },
+          {
+            "type": "Search Section",
+            "description": "Explorer search field",
+            "position": "Lower middle within card",
+            "notable": "Placeholder text shows searchable fields"
+          },
+          {
+            "type": "Floating Action Button",
+            "description": "Pink chat/support icon",
+            "position": "Bottom right corner",
+            "notable": "Fixed position, always accessible"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo establishes context, welcome headline dominates, two clear primary actions (contact/FAQ), secondary action (search), persistent help button",
+        "innovativeElements": [
+          "Floating action button for persistent support access"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find help resources or contact support team",
+        "entryPoints": [
+          "Help Center menu link",
+          "Direct URL",
+          "Support navigation"
+        ],
+        "exitPoints": [
+          "Contact Us",
+          "FAQ",
+          "Search results",
+          "Floating help button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact Us",
+            "action": "Open contact form or support channel"
+          },
+          {
+            "element": "FAQ",
+            "action": "Navigate to frequently asked questions"
+          },
+          {
+            "element": "Search field",
+            "action": "Search transaction history or help content"
+          },
+          {
+            "element": "Floating help button",
+            "action": "Initiate chat or support interaction"
+          }
+        ],
+        "informationArchitecture": "Welcome/orientation first, then primary support paths (contact vs self-service), then transaction lookup, with persistent help access",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Layerswap Help",
+        "subheadline": "Layerswap help resources all in one place — FAQ, transaction history search, and contact details.",
+        "ctas": [
+          {
+            "text": "Contact Us",
+            "style": "primary-button",
+            "placement": "Left card in grid"
+          },
+          {
+            "text": "FAQ",
+            "style": "secondary-button",
+            "placement": "Right card in grid"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Got a question? Our support team is just a click away",
+            "context": "Contact Us card description",
+            "purpose": "Reassure user support is accessible"
+          },
+          {
+            "text": "Find answers to the questions we get asked the most",
+            "context": "FAQ card description",
+            "purpose": "Set expectations for FAQ content"
+          },
+          {
+            "text": "Check the status of your transactions by searching on the Layerswap explorer.",
+            "context": "Search section description",
+            "purpose": "Explain search functionality"
+          },
+          {
+            "text": "Search by Address / Source Tx / Destination Tx",
+            "context": "Search field placeholder",
+            "purpose": "Show search options"
+          }
+        ],
+        "tone": "friendly-casual, supportive, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Dedicated help resources",
+          "Explorer integration",
+          "Multiple support channels"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

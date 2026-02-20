@@ -1,0 +1,204 @@
+{
+  "slug": "enuts",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:41:08.373Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/enuts-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#00D084",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, stacked multi-line with color accent (teal on first word)",
+          "bodyStyle": "Regular weight sans-serif, light gray on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-headline",
+            "description": "Three-line stacked heading with 'ENUTS.' in teal, 'PRIVATE. SIMPLE.' in white",
+            "position": "center-top",
+            "notable": "Color differentiation emphasizes the brand name"
+          },
+          {
+            "type": "modal-card",
+            "description": "Dark semi-transparent container with alpha test signup form",
+            "position": "center-middle",
+            "notable": "Contained signup flow with risk acknowledgment checkbox"
+          },
+          {
+            "type": "cta-button",
+            "description": "Teal/green full-width button with icon",
+            "position": "bottom of modal",
+            "notable": "High contrast primary action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dramatic centered composition with animated starfield background guiding focus to hero text, then down to modal",
+        "innovativeElements": [
+          "Animated particle/starfield background creating depth",
+          "Color-split headline for brand emphasis",
+          "Glassmorphic modal card on dark background"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand product value proposition and join alpha test",
+        "entryPoints": [
+          "Direct visit to homepage",
+          "Marketing campaign link"
+        ],
+        "exitPoints": [
+          "Join TestFlight button leads to external signup",
+          "Navigation to other sections (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Risk acknowledgment checkbox",
+            "action": "Toggle agreement to alpha terms"
+          },
+          {
+            "element": "Join the TestFlight button",
+            "action": "Initiates signup process for alpha access"
+          }
+        ],
+        "informationArchitecture": "Single focal point: value prop headline → explanation copy → gated signup form",
+        "frictionPoints": [
+          "Checkbox must be checked before signup",
+          "External flow (TestFlight) may require app switching"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "ENUTS. PRIVATE. SIMPLE.",
+        "subheadline": "eNuts is back. Completely rebuilt from the ground up to bring you private, simple Bitcoin payments with an intuitive UX.",
+        "ctas": [
+          {
+            "text": "Join the TestFlight",
+            "style": "primary-button",
+            "placement": "bottom of modal card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "I acknowledge that eNuts is alpha software and I will be using it at my own risk",
+            "context": "Checkbox label in modal",
+            "purpose": "Risk disclosure and legal protection"
+          },
+          {
+            "text": "Join the eNuts alpha test",
+            "context": "Modal title",
+            "purpose": "Contextual frame for form"
+          }
+        ],
+        "tone": "professional-technical, confident product positioning",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Rebuilt from ground up",
+          "Private payments emphasis",
+          "Alpha/testing transparency"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/enuts-home-2-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#FFFFFF",
+          "#FF6B6B",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text on dark",
+          "bodyStyle": "Regular sans-serif, light gray on dark background",
+          "dataStyle": "Monospace/code-style for technical identifiers (ErrorBoundary, errorElement)"
+        },
+        "components": [
+          {
+            "type": "error-banner",
+            "description": "Top bar with error title and status code",
+            "position": "top-left",
+            "notable": "Minimal, functional design for error state"
+          },
+          {
+            "type": "error-message",
+            "description": "Developer-focused error explanation with code snippets",
+            "position": "left column",
+            "notable": "Includes emoji (waving hand), treats error as teaching moment"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error title prominent at top, developer message below with technical guidance",
+        "innovativeElements": [
+          "Developer-friendly error messaging with implementation suggestions"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and how to proceed",
+        "entryPoints": [
+          "Invalid route/404 path"
+        ],
+        "exitPoints": [
+          "Navigation back (implied)",
+          "Developer action (implement error handling)"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Linear top-to-bottom: error code → title → explanation → guidance",
+        "frictionPoints": [
+          "No visible call-to-action or navigation options",
+          "Page remains in error state"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Unexpected Application Error!",
+        "subheadline": "404 Not Found",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Hey developer 👋",
+            "context": "Opening line of error message",
+            "purpose": "Friendly tone to mitigate frustration"
+          },
+          {
+            "text": "You can provide a way better UX than this when your app throws errors by providing your own ErrorBoundary or errorElement prop on your route.",
+            "context": "Main error explanation",
+            "purpose": "Educate developer on proper error handling implementation"
+          }
+        ],
+        "tone": "friendly-casual, educational",
+        "dataFormatting": [
+          "404 Not Found",
+          "ErrorBoundary",
+          "errorElement"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "Unexpected Application Error!",
+          "404 Not Found"
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

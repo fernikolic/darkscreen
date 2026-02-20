@@ -1,0 +1,554 @@
+{
+  "slug": "frame",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:46:51.123Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 4,
+  "screens": [
+    {
+      "image": "/screenshots/frame-home-4-feedback.png",
+      "label": "Feedback",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "card-grid with kanban columns",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 16-18px, dark gray/black",
+          "bodyStyle": "Regular sans-serif, 14px, medium gray for secondary text",
+          "dataStyle": "Numbers displayed in light gray boxes on the right of each card, 12-16px"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Frame logo with Roadmap/Feedback navigation and Log in/Sign up buttons",
+            "position": "top",
+            "notable": "Clean, minimal branding with clear authentication CTA"
+          },
+          {
+            "type": "board-cards",
+            "description": "Five clickable board category cards (Feature Requests, Bug Reports, Dapp Issues, Account Module Requests, General Feedback)",
+            "position": "upper-middle",
+            "notable": "Each card shows count of items; bordered cards with right-aligned numbers"
+          },
+          {
+            "type": "kanban-columns",
+            "description": "Three-column layout: Planned (blue), In Progress (purple), Complete (green)",
+            "position": "lower section",
+            "notable": "Color-coded status indicators with collapsible feature request cards"
+          },
+          {
+            "type": "filter-button",
+            "description": "Filters button in top right of Roadmap section",
+            "position": "top-right of roadmap",
+            "notable": "Funnel icon with 'Filters' text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down: navigation → board selection → roadmap columns; kanban columns guide lateral scanning",
+        "innovativeElements": [
+          "Color-coded kanban status columns with visual differentiation",
+          "Nested expandable items showing vote counts and categorization tags",
+          "Dual navigation system (Boards overview + Roadmap detail view)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse with kanban workflow",
+        "userIntent": "Explore product feedback, feature requests, and development roadmap; understand what's planned vs. in progress vs. complete",
+        "entryPoints": [
+          "Click 'Roadmap' from nav",
+          "Click 'Feedback' from nav",
+          "Land on home after sign up/login"
+        ],
+        "exitPoints": [
+          "Click specific board card to filter",
+          "Click individual feature request to view details",
+          "Search for specific items",
+          "Apply filters"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Board cards",
+            "action": "Filter roadmap by category (Feature Requests, Bug Reports, etc.)"
+          },
+          {
+            "element": "Kanban column headers",
+            "action": "Visual status grouping; likely clickable for more detail"
+          },
+          {
+            "element": "Feature request cards",
+            "action": "Expand to show details or navigate to full view"
+          },
+          {
+            "element": "Filters button",
+            "action": "Open filter panel to refine roadmap view"
+          },
+          {
+            "element": "Search box",
+            "action": "Find specific features or requests"
+          }
+        ],
+        "informationArchitecture": "Two-level hierarchy: Boards overview (aggregate by category) → Roadmap detail (filtered by status); each feature shows vote count, category tag, and brief description",
+        "frictionPoints": [
+          "Requires account to likely submit feedback or vote",
+          "Multiple navigation layers (boards vs. roadmap) may confuse some users"
+        ],
+        "progressIndicators": [
+          "Kanban status columns (Planned, In Progress, Complete)",
+          "Vote counts on each feature request card"
+        ]
+      },
+      "copy": {
+        "headline": "Boards",
+        "subheadline": "Roadmap",
+        "ctas": [
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Log in",
+            "style": "ghost-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Filters",
+            "style": "ghost-button",
+            "placement": "top-right of roadmap section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FEATURE REQUESTS",
+            "context": "Category tag below feature title",
+            "purpose": "Categorize feedback type"
+          },
+          {
+            "text": "BUG REPORTS",
+            "context": "Category tag below feature title",
+            "purpose": "Categorize feedback type"
+          },
+          {
+            "text": "Planned / In Progress / Complete",
+            "context": "Kanban column headers",
+            "purpose": "Status indicator"
+          }
+        ],
+        "tone": "professional-technical, transparent",
+        "dataFormatting": [
+          "Vote counts: plain numbers (e.g., '14', '9', '94')",
+          "Board counts: right-aligned gray numbers (e.g., '167', '34', '4')"
+        ],
+        "trustSignals": [
+          "Public roadmap transparency",
+          "Categorized feedback (Bug Reports, Feature Requests, Dapp Issues)",
+          "Real vote counts and item counts"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/frame-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with centered hero and split-panel sections below",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#00d4ff",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "monospace, all-caps, large letter-spacing, technical aesthetic",
+          "bodyStyle": "sans-serif, white, moderate weight, clean readability",
+          "dataStyle": "cyan accent color (#00d4ff) for version numbers and highlights"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with logo, docs/blog/feedback/careers links, social icons",
+            "position": "top",
+            "notable": "Clean minimal design with right-aligned social icons (Discord, Twitter, GitHub)"
+          },
+          {
+            "type": "Hero section",
+            "description": "Centered text 'MODERN WEB3 FOR DESKTOP' with 3D rendered cube icon",
+            "position": "center-upper",
+            "notable": "Large 3D gradient cube with 'Frame' branding creates premium feel"
+          },
+          {
+            "type": "Subheadline",
+            "description": "White text describing 'Transcend browser extensions and unlock system-wide web3'",
+            "position": "center-middle",
+            "notable": null
+          },
+          {
+            "type": "Dual CTA buttons",
+            "description": "Two split buttons for Apple Silicon and Intel downloads",
+            "position": "center-lower",
+            "notable": "Architecture-specific targeting shows technical sophistication"
+          },
+          {
+            "type": "Multi-panel demo",
+            "description": "5 side-by-side interface mockups showing Frame wallet in action",
+            "position": "bottom",
+            "notable": "Live product showcase with dark UI, transaction signing, request handling, chain selection, settings"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero text dominates, 3D cube draws eye, demo panels at bottom show capability breadth",
+        "innovativeElements": [
+          "3D rendered cube icon with gradient coloring",
+          "Monospace all-caps headline treatment for technical legitimacy",
+          "Multi-panel product mockup carousel showing diverse use cases"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Understand what Frame is and download the desktop application",
+        "entryPoints": [
+          "Direct URL visit",
+          "External referral",
+          "Social media link"
+        ],
+        "exitPoints": [
+          "Download for Apple Silicon",
+          "Download for Intel",
+          "View all builds",
+          "Navigation to Docs/Blog/Feedback/Careers"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download for Apple Silicon",
+            "action": "Initiates download for ARM architecture"
+          },
+          {
+            "element": "Download for Intel",
+            "action": "Initiates download for x86 architecture"
+          },
+          {
+            "element": "View All Builds",
+            "action": "Navigate to full build list"
+          },
+          {
+            "element": "Social icons",
+            "action": "Open community platforms"
+          }
+        ],
+        "informationArchitecture": "Top-level nav, hero value prop, architecture-specific CTAs, live product mockups",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "MODERN WEB3 FOR DESKTOP",
+        "subheadline": "Transcend browser extensions and unlock system-wide web3",
+        "ctas": [
+          {
+            "text": "Download for Apple Silicon",
+            "style": "primary-button",
+            "placement": "center-lower section"
+          },
+          {
+            "text": "Download for Intel",
+            "style": "primary-button",
+            "placement": "center-lower section"
+          },
+          {
+            "text": "VIEW ALL BUILDS",
+            "style": "text-link",
+            "placement": "below CTAs"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "v0.611",
+            "context": "version number below CTAs",
+            "purpose": "Indicates current build version"
+          }
+        ],
+        "tone": "professional-technical, forward-thinking",
+        "dataFormatting": [
+          "v0.611"
+        ],
+        "trustSignals": [
+          "Version number display (v0.611) suggests active development",
+          "Multiple build options show maturity"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/frame-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "stacked with sidebar navigation and centered content column",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "bold, white, large sans-serif, center-aligned",
+          "bodyStyle": "light gray, sans-serif, 16-18px, readable prose",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Top bar with logo, Docs/Support links, Community dropdown, dark mode toggle",
+            "position": "top",
+            "notable": "Minimal nav with Community dropdown and theme toggle"
+          },
+          {
+            "type": "Banner notification",
+            "description": "Announcement bar: 'Download the latest Frame here!' with link",
+            "position": "top-sticky",
+            "notable": "Subtle gray background, encourages upgrade awareness"
+          },
+          {
+            "type": "Hero heading",
+            "description": "Large white 'Frame' text centered on page",
+            "position": "center-upper",
+            "notable": "Minimal presentation, lets tagline speak"
+          },
+          {
+            "type": "Tagline",
+            "description": "'A privacy-focused Ethereum wallet for Web3'",
+            "position": "center-upper",
+            "notable": "Clear value prop about privacy"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "'Getting Started with Frame' button in white/dark contrast",
+            "position": "center",
+            "notable": "High-contrast ghost button style"
+          },
+          {
+            "type": "Feature cards",
+            "description": "Three column layout with Privacy, Omnichain, and Application Support",
+            "position": "center-middle",
+            "notable": "Card-based layout with bold headings and explanatory text"
+          },
+          {
+            "type": "Footer",
+            "description": "Three column footer with Docs, Resources, Community links",
+            "position": "bottom",
+            "notable": "Organized link structure with external link indicators"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Logo and heading establish identity, tagline clarifies purpose, CTA stands out, feature cards equal weight, footer provides navigation",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing page",
+        "userIntent": "Understand Frame's core value propositions and navigate to getting started or community",
+        "entryPoints": [
+          "Direct URL visit",
+          "Download banner click-through",
+          "Navigation links from elsewhere"
+        ],
+        "exitPoints": [
+          "Getting Started with Frame button",
+          "Docs link",
+          "Support link",
+          "Community dropdown",
+          "Footer resource links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Getting Started with Frame",
+            "action": "Navigate to onboarding/tutorial content"
+          },
+          {
+            "element": "Docs link",
+            "action": "Open documentation"
+          },
+          {
+            "element": "Community dropdown",
+            "action": "Reveal community options"
+          },
+          {
+            "element": "Footer links (Website, Github, Blog, etc.)",
+            "action": "Navigate to external resources"
+          }
+        ],
+        "informationArchitecture": "Top nav, banner, hero value prop, feature benefits in cards, footer with resource links",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Frame",
+        "subheadline": "A privacy-focused Ethereum wallet for Web3",
+        "ctas": [
+          {
+            "text": "Getting Started with Frame",
+            "style": "primary-button",
+            "placement": "center section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Download the latest Frame here!",
+            "context": "top banner",
+            "purpose": "Drive upgrade awareness"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy-focused positioning appeals to security concerns",
+          "Ethereum-specific branding establishes credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/frame-home-3-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel: left sidebar with newsletter signup, right content column with blog article",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#00d4ff",
+          "#1a1f3a"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, white, large for article title, smaller for section headers",
+          "bodyStyle": "serif (Georgia/similar) for body text, light gray, 16-18px, readable prose",
+          "dataStyle": "cyan for metadata (author, date), gray for supporting text"
+        },
+        "components": [
+          {
+            "type": "Left sidebar",
+            "description": "Dark panel with logo, tagline, newsletter signup form, footer",
+            "position": "left third",
+            "notable": "Email input with right-arrow submit button, minimal design"
+          },
+          {
+            "type": "Right content column",
+            "description": "Blog article with title, metadata, body text, and embedded screenshot",
+            "position": "right two-thirds",
+            "notable": "'LATEST ISSUE' label, featured image of Frame v0.6 interface"
+          },
+          {
+            "type": "Article header",
+            "description": "'Frame v0.6' title with author/date metadata",
+            "position": "top-right",
+            "notable": "BY FRAME LABS — MAR 8, 2023 attribution"
+          },
+          {
+            "type": "CTA button",
+            "description": "'Read latest issue' dark button overlay on screenshot",
+            "position": "center-right over image",
+            "notable": "Hover-state or floating button to encourage engagement"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar with newsletter is secondary focus, right article content is primary with large heading and featured image drawing eye",
+        "innovativeElements": [
+          "Split-panel design with newsletter signup contextually placed",
+          "Featured image overlay with CTA button for engagement"
+        ]
+      },
+      "flow": {
+        "screenType": "blog landing / content hub",
+        "userIntent": "Stay informed about Frame updates, read latest release notes, subscribe to newsletter",
+        "entryPoints": [
+          "Blog link from main nav",
+          "External blog URL",
+          "Newsletter signup interest"
+        ],
+        "exitPoints": [
+          "Read latest issue button",
+          "Email subscription submission",
+          "Article body links",
+          "Back to main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Email input field",
+            "action": "Enter email address for newsletter"
+          },
+          {
+            "element": "Submit arrow button",
+            "action": "Subscribe to newsletter"
+          },
+          {
+            "element": "Read latest issue button",
+            "action": "Open full article"
+          }
+        ],
+        "informationArchitecture": "Newsletter signup drives engagement on left, blog article preview on right with clear CTA to read full content",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Frame v0.6",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read latest issue",
+            "style": "primary-button",
+            "placement": "overlay on screenshot"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BY FRAME LABS — MAR 8, 2023",
+            "context": "article header",
+            "purpose": "Attribution and date context"
+          },
+          {
+            "text": "LATEST ISSUE",
+            "context": "top-right label",
+            "purpose": "Indicates current/featured content"
+          },
+          {
+            "text": "Stay tuned",
+            "context": "left sidebar heading",
+            "purpose": "Newsletter CTA header"
+          },
+          {
+            "text": "Don't miss out on the latest updates, sign up now",
+            "context": "left sidebar subtext",
+            "purpose": "Newsletter signup motivation"
+          }
+        ],
+        "tone": "professional-technical, conversational",
+        "dataFormatting": [
+          "v0.6 (version notation)",
+          "MAR 8, 2023 (date format)"
+        ],
+        "trustSignals": [
+          "Regular release updates (v0.6 release date)",
+          "Transparent development communication"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

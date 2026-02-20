@@ -1,0 +1,3107 @@
+{
+  "slug": "glassnode",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T11:50:19.213Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 23,
+  "screens": [
+    {
+      "image": "/screenshots/glassnode-home-8-bespoke-research-and-advisoryindepth-market-analy.png",
+      "label": "Bespoke research and advisoryIn-depth market analy",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#e8eef7"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large scale (48px+), dark charcoal",
+          "bodyStyle": "regular weight, medium gray, 16px line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "horizontal top nav with dropdown menus (Products, Use Cases, Resources, About), secondary CTA buttons (Contact us, Launch Studio)",
+            "position": "top-bar",
+            "notable": "high contrast black Contact Us button vs outline Launch Studio"
+          },
+          {
+            "type": "hero-section",
+            "description": "left-aligned text block with subbranding 'glassnode research', main headline, descriptive paragraph, dual CTA buttons",
+            "position": "left-half",
+            "notable": "clean two-button strategy: primary dark button vs secondary outline button"
+          },
+          {
+            "type": "data-visualization",
+            "description": "3D isometric chart showing market data trends with gradient blue coloring",
+            "position": "right-half",
+            "notable": "sophisticated 3D rendering conveys data complexity and analytical depth"
+          },
+          {
+            "type": "trust-section",
+            "description": "media logos section (Financial Times, Bloomberg, WSJ, Goldman Sachs, Bridgewater) centered below fold",
+            "position": "bottom-center",
+            "notable": "prestigious institutional press validates research credibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "strong left-to-right flow with hero text anchoring attention, 3D chart adds depth without overwhelming, media logos provide grounding element",
+        "innovativeElements": [
+          "3D isometric data visualization in hero",
+          "gradient blue geometric shapes suggesting analytical sophistication"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "understand what Glassnode Research offers and explore research products",
+        "entryPoints": [
+          "direct homepage visit",
+          "navigation from main glassnode.com",
+          "external referral from press mentions"
+        ],
+        "exitPoints": [
+          "Get in touch (contact form or email)",
+          "Visit Insights (product page)",
+          "navigate via top menu to other products/resources"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Products dropdown",
+            "action": "reveals product categories"
+          },
+          {
+            "element": "Get in touch button",
+            "action": "opens contact form or sales inquiry"
+          },
+          {
+            "element": "Visit Insights button",
+            "action": "navigates to Insights product page"
+          },
+          {
+            "element": "Launch Studio button",
+            "action": "opens Studio application or sign-up"
+          }
+        ],
+        "informationArchitecture": "top-level positioning of research product, supported by institutional credibility (press logos), minimal friction path to contact or product exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Our expertise, on demand",
+        "subheadline": "glassnode research",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "left hero section"
+          },
+          {
+            "text": "Visit Insights",
+            "style": "secondary-button",
+            "placement": "left hero section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trusted market intelligence built on Glassnode's data. From weekly market analysis to bespoke reports, designed for investors and institutions seeking a quantifiable edge in digital asset markets.",
+            "context": "hero section body text",
+            "purpose": "explains value proposition and target audience (institutions/professional investors)"
+          }
+        ],
+        "tone": "professional-technical, confident, institutional",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Featured in Financial Times, Bloomberg, WSJ, Goldman Sachs, Bridgewater",
+          "Mentions 'trusted market intelligence' and 'quantifiable edge'",
+          "institutional targeting signals credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-9-partner-reportscoinbase-glassnode-charting-cryp.png",
+      "label": "Partner ReportsCoinbase + Glassnode: Charting Cryp",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "full-width-stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#003d82"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, extra-large (56px+), white, high contrast",
+          "bodyStyle": "regular weight, light gray, 18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "dark top bar with Glassnode Insights logo, primary nav (Market Pulse, Week On-chain, Market Vectors, Partner Reports, Research), secondary actions (Subscribe, Log In, search)",
+            "position": "top-bar",
+            "notable": "Subscribe button with white background creates clear CTA hierarchy"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Partner Reports • Featured tag",
+            "position": "above-headline",
+            "notable": "contextual labeling establishes report type"
+          },
+          {
+            "type": "hero-content",
+            "description": "large white headline, gray descriptive paragraph, Glassnode byline with date and read time",
+            "position": "left-center",
+            "notable": "clean text hierarchy with metadata (Jan 27, 2026 • 3 min read)"
+          },
+          {
+            "type": "report-preview",
+            "description": "visual mockup of Coinbase + Glassnode report cover with blue/dark theme and geometric design",
+            "position": "right-center",
+            "notable": "professional report cover imagery builds credibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "headline dominates, supported by clean subtext and metadata, report imagery provides visual anchor on right, footer CTA grounds the flow",
+        "innovativeElements": [
+          "geometric dot pattern accent in report cover",
+          "dark mode with selective white/blue highlights"
+        ]
+      },
+      "flow": {
+        "screenType": "content-detail",
+        "userIntent": "preview and access featured partner report on crypto market trends",
+        "entryPoints": [
+          "Partner Reports section navigation",
+          "Featured content carousel or homepage",
+          "direct URL from email newsletter"
+        ],
+        "exitPoints": [
+          "Subscribe for free (email capture)",
+          "View full report (likely PDF download or gated form)",
+          "navigate to other reports or sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button (top nav)",
+            "action": "opens subscription modal"
+          },
+          {
+            "element": "Subscribe button (footer)",
+            "action": "opens email capture form"
+          },
+          {
+            "element": "Report cover image",
+            "action": "likely opens full report or gated form"
+          },
+          {
+            "element": "Partner Reports nav",
+            "action": "navigates to reports listing"
+          }
+        ],
+        "informationArchitecture": "content detail page with clear report metadata, minimal navigation to keep focus on content, prominent email capture to convert free readers",
+        "frictionPoints": [
+          "unclear if headline links to report or if separate action needed",
+          "report cover image might benefit from explicit CTA overlay"
+        ],
+        "progressIndicators": [
+          "Featured indicator suggests curated/promoted content",
+          "read time (3 min) sets expectation"
+        ]
+      },
+      "copy": {
+        "headline": "Coinbase + Glassnode: Charting Crypto Q1 2026",
+        "subheadline": "Partner Reports • Featured",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top-nav"
+          },
+          {
+            "text": "Subscribe",
+            "style": "secondary-button",
+            "placement": "footer email form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Discover key trends shaping the crypto market outlook in our latest collaborative report with Coinbase Institutional.",
+            "context": "hero section body text",
+            "purpose": "teases report content and reinforces partner credibility"
+          },
+          {
+            "text": "Glassnode",
+            "context": "byline author",
+            "purpose": "establishes source/publisher"
+          },
+          {
+            "text": "Jan 27, 2026 • 3 min read",
+            "context": "metadata below byline",
+            "purpose": "sets temporal context and engagement expectation"
+          },
+          {
+            "text": "Subscribe for free to receive best-in-class market analysis on Bitcoin, Ethereum, and DeFi, and novel on-chain research.",
+            "context": "footer subscription pitch",
+            "purpose": "value prop for newsletter signup"
+          },
+          {
+            "text": "By subscribing, you agree to our Terms & Conditions and Privacy Notice.",
+            "context": "footer legal text",
+            "purpose": "compliance/trust signal"
+          }
+        ],
+        "tone": "professional-technical, collaborative, market-focused",
+        "dataFormatting": [
+          "Q1 2026 (temporal quarter reference)",
+          "3 min read (engagement metric)"
+        ],
+        "trustSignals": [
+          "Coinbase partnership (major institutional exchange)",
+          "Glassnode byline (established research brand)",
+          "mention of Bitcoin, Ethereum, DeFi (established asset coverage)",
+          "Terms & Conditions and Privacy Notice links"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-10-partner-reportsfasanara-digital-glassnode-q4-20.png",
+      "label": "Partner ReportsFasanara Digital + Glassnode: Q4 20",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "full-width-stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#ffffff",
+          "#1a7a7a",
+          "#003d82"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, extra-large (56px+), white, high contrast",
+          "bodyStyle": "regular weight, light gray, 18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "dark top bar with Glassnode Insights logo, primary nav (Market Pulse, Week On-chain, Market Vectors, Partner Reports, Research), secondary actions (Subscribe, Log In, search)",
+            "position": "top-bar",
+            "notable": "consistent with previous report page, establishes product family cohesion"
+          },
+          {
+            "type": "breadcrumb",
+            "description": "Partner Reports tag",
+            "position": "above-headline",
+            "notable": "contextual labeling, no Featured tag on this one"
+          },
+          {
+            "type": "hero-content",
+            "description": "large white headline spanning three lines, gray descriptive paragraph with market context, Glassnode byline with date (Dec 2, 2025) and read time (4 min)",
+            "position": "left-center",
+            "notable": "longer paragraph than previous report suggests deeper/more complex subject matter"
+          },
+          {
+            "type": "report-preview",
+            "description": "visual split of Fasanara Digital logo + Glassnode branding on teal/blue gradient background, geometric pyramid pattern, and Digital Asset Report cover mockup",
+            "position": "right-center",
+            "notable": "teal-to-blue gradient distinguishes from Coinbase report's darker aesthetic"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "headline dominates, supported by context-rich paragraph and metadata, report visual preview with geometric elements creates visual interest",
+        "innovativeElements": [
+          "teal-blue gradient backgrounds in report cover",
+          "geometric pyramid/line pattern suggests analytical rigor",
+          "dual-brand co-op display (Fasanara + Glassnode)"
+        ]
+      },
+      "flow": {
+        "screenType": "content-detail",
+        "userIntent": "preview and access partner report on Q4 2025 institutional crypto market perspectives",
+        "entryPoints": [
+          "Partner Reports section",
+          "Featured content or recent reports carousel",
+          "external email or press mention"
+        ],
+        "exitPoints": [
+          "Subscribe for free (email capture)",
+          "Access full report (PDF or gated form)",
+          "navigate via top nav to other insights/reports"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button (top nav)",
+            "action": "opens subscription modal or form"
+          },
+          {
+            "element": "Subscribe button (footer)",
+            "action": "captures email and subscribes to newsletter"
+          },
+          {
+            "element": "Report cover/image area",
+            "action": "likely downloads report or opens gated form"
+          },
+          {
+            "element": "Partner Reports nav link",
+            "action": "returns to partner reports listing"
+          }
+        ],
+        "informationArchitecture": "similar structure to Coinbase report page—content-focused detail view with minimal friction to subscription, metadata-rich to establish authority and scope",
+        "frictionPoints": [
+          "no explicit CTA button on report cover or image",
+          "user must infer how to access full report"
+        ],
+        "progressIndicators": [
+          "read time (4 min) sets engagement expectation",
+          "recent date (Dec 2, 2025) signals freshness"
+        ]
+      },
+      "copy": {
+        "headline": "Fasanara Digital + Glassnode: Q4 2025 Institutional Market Perspectives",
+        "subheadline": "Partner Reports",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top-nav"
+          },
+          {
+            "text": "Subscribe",
+            "style": "secondary-button",
+            "placement": "footer email form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "With Bitcoin retracing from recent highs and global liquidity tightening, our collaborative report with Fasanara Digital outlines how market structure is shifting in Q4, and the implications for institutional investors.",
+            "context": "hero section body text",
+            "purpose": "contextualizes report relevance to current market conditions and audience (institutional investors)"
+          },
+          {
+            "text": "Glassnode",
+            "context": "byline author",
+            "purpose": "establishes source credibility"
+          },
+          {
+            "text": "Dec 2, 2025 • 4 min read",
+            "context": "metadata below byline",
+            "purpose": "temporal context and engagement metric"
+          },
+          {
+            "text": "Subscribe for free to receive best-in-class market analysis on Bitcoin, Ethereum, and DeFi, and novel on-chain research.",
+            "context": "footer subscription pitch",
+            "purpose": "newsletter value prop"
+          },
+          {
+            "text": "By subscribing, you agree to our Terms & Conditions and Privacy Notice.",
+            "context": "footer legal",
+            "purpose": "compliance and trust signal"
+          }
+        ],
+        "tone": "professional-technical, institutional-focused, market-analytical",
+        "dataFormatting": [
+          "Q4 2025 (quarter reference)",
+          "4 min read (engagement metric)",
+          "Bitcoin, Ethereum, DeFi (asset class references)"
+        ],
+        "trustSignals": [
+          "Fasanara Digital partnership (institutional fund/advisor)",
+          "Glassnode byline (established on-chain research brand)",
+          "reference to market structure and institutional implications",
+          "Terms & Conditions and Privacy Notice links"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-5-launch-studio.png",
+      "label": "Launch Studio",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "card-grid with sidebar navigation",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#FF4444",
+          "#4A90E2",
+          "#50C878"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 16-18px for card titles",
+          "bodyStyle": "Regular sans-serif, medium gray, 12-14px for secondary text",
+          "dataStyle": "Monospace or bold sans-serif for numerical values, color-coded for sentiment (red/green for negative/positive)"
+        },
+        "components": [
+          {
+            "type": "Time-series chart",
+            "description": "Market Cap showing downward trend line in red",
+            "position": "Top-left card",
+            "notable": "Miniature sparkline with percentage delta"
+          },
+          {
+            "type": "Bar chart",
+            "description": "Futures vs Spot Vol with blue bars",
+            "position": "Top-center card",
+            "notable": "Clean distribution across time periods"
+          },
+          {
+            "type": "Gauge/range slider",
+            "description": "Altcoin Cycle Index and BTC Sharpe Signal with color gradient",
+            "position": "Top-right cards",
+            "notable": "Three-zone gradient (risk off/neutral/risk on) with triangular indicators"
+          },
+          {
+            "type": "Treemap",
+            "description": "Spot Volume breakdown by asset with price labels",
+            "position": "Middle-left",
+            "notable": "Nested rectangles color-coded by asset, sized by market cap"
+          },
+          {
+            "type": "Ranking table",
+            "description": "Top Gainers with percentage gains in green",
+            "position": "Middle-center",
+            "notable": "Numbered list with icon badges for each cryptocurrency"
+          },
+          {
+            "type": "Stacked area chart",
+            "description": "Sector Performance with multiple asset lines",
+            "position": "Middle-right",
+            "notable": "Legend with colored dots, percentage scale on y-axis"
+          },
+          {
+            "type": "Stacked bar chart",
+            "description": "Supply In Profit showing asset allocation",
+            "position": "Right side",
+            "notable": "Multi-color segments with right-aligned legend"
+          },
+          {
+            "type": "Data table",
+            "description": "Bottom section with sortable columns for Asset, Price, 24h%, 7d%, Market Cap, etc.",
+            "position": "Full-width bottom",
+            "notable": "Scrollable with multi-tab navigation (Overview, Fundamentals, Profit & Loss, etc.)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Multiple focal points: color-coded cards draw eye, red decline data emphasizes urgency, larger numbers in cards anchor attention before detailed table below",
+        "innovativeElements": [
+          "Gauge-style indicators with gradient zones instead of simple sliders",
+          "Treemap for hierarchical asset composition visualization",
+          "Multi-layer tabbed interface combining overview and detailed analytics"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Monitor real-time crypto market metrics, identify price movements, and analyze sector performance across multiple timeframes",
+        "entryPoints": [
+          "Home navigation link in header",
+          "Login from landing page",
+          "Direct link from email or notifications"
+        ],
+        "exitPoints": [
+          "Click individual asset to drill down",
+          "Navigate to Dashboards tab for custom views",
+          "Access Charts or Insights for deeper analysis",
+          "Launch Studio button in top-right"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Time range selector (1h, 24h, 7d)",
+            "action": "Updates all charts and metrics for selected timeframe"
+          },
+          {
+            "element": "Dropdown filters (Spot Volume, Top Gainers - Large, Sector Performance, Supply In Profit)",
+            "action": "Toggles between different metric views within card"
+          },
+          {
+            "element": "Table column headers (sortable arrows)",
+            "action": "Sorts data by Price, 24h%, Market Cap, etc."
+          },
+          {
+            "element": "Tab navigation (Overview, Fundamentals, Profit & Loss, Supply Dynamics, Futures)",
+            "action": "Switches between analytical categories"
+          },
+          {
+            "element": "Asset category buttons (Stablecoins, Layer 1, Web3, DeFi, AI, etc.)",
+            "action": "Filters the detailed table below"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: macro overview cards (market cap, volume, indices) followed by mid-level detail (gainers, sector, supply), then granular asset-level table with categorical filters",
+        "frictionPoints": [
+          "Multiple time selectors (1h, 24h, 7d) repeated across cards may feel redundant",
+          "Dense data table at bottom requires significant scrolling",
+          "Asset categories button bar (Stablecoins, Layer 1, etc.) placement after tab navigation could be confused as separate controls"
+        ],
+        "progressIndicators": [
+          "Active tab indicator (black background on 'Overview')",
+          "Filter dropdowns show currently selected view",
+          "Timeframe buttons highlight current selection"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Upgrade",
+            "style": "primary-button",
+            "placement": "Top-right header"
+          },
+          {
+            "text": "Log in",
+            "style": "text-link",
+            "placement": "Top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Market Cap",
+            "context": "Card title, top-left",
+            "purpose": "Labels the metric being displayed"
+          },
+          {
+            "text": "$2.51T",
+            "context": "Large value in card",
+            "purpose": "Displays current total market capitalization"
+          },
+          {
+            "text": "-26%",
+            "context": "Red badge next to value",
+            "purpose": "Shows period-over-period change with negative sentiment"
+          },
+          {
+            "text": "Top Gainers - Large",
+            "context": "Card title with dropdown",
+            "purpose": "Names the filtered ranking view"
+          },
+          {
+            "text": "+15.4%",
+            "context": "Green percentage in table",
+            "purpose": "Indicates positive price change with bullish sentiment"
+          },
+          {
+            "text": "Vol 24h%",
+            "context": "Table header with sorting arrow",
+            "purpose": "Column header for 24-hour volume change, clickable to sort"
+          },
+          {
+            "text": "Neutral",
+            "context": "Middle label on gauge",
+            "purpose": "Indicates mid-point sentiment zone"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$2.51T (large market value with T suffix)",
+          "-26% (percentage with red color for negative)",
+          "$0.011465 (small asset price with full decimal precision)",
+          "$69,705.22 (standard currency format for major assets)",
+          "+15.4% (percentage with green color for positive)",
+          "1h, 24h, 7d (time period abbreviations)"
+        ],
+        "trustSignals": [
+          "Logos of trusted clients: Coinbase Institutional, Binance, CME Group, Grayscale, ARK Invest",
+          "Real-time market data from major exchanges implied by BTC, ETH, XRP pricing",
+          "TVL and market cap figures suggest comprehensive blockchain coverage"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-6-comprehensive-market-onchain-dataexhaustive-dig.png",
+      "label": "Comprehensive market & on-chain dataExhaustive dig",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width split-panel with hero left, illustration right",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#6B7280"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (48-56px), dark gray/black, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray (#6B7280), 16-18px line-height 1.6",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Products, Use Cases, Resources, About, Pricing; Contact us and Launch Studio buttons",
+            "position": "Top fixed",
+            "notable": "Clean minimal design with black 'Contact us' button and outlined 'Launch Studio' button"
+          },
+          {
+            "type": "Hero section with text",
+            "description": "Left-aligned headline, subheading, and CTA button",
+            "position": "Left half of viewport",
+            "notable": "Generous whitespace, strong visual hierarchy"
+          },
+          {
+            "type": "Background illustration",
+            "description": "3D wireframe chart/graph visualization in blue tones",
+            "position": "Right half, subtle and blurred",
+            "notable": "Lightweight abstract design, doesn't compete with text"
+          },
+          {
+            "type": "Trust section",
+            "description": "Centered heading 'Trusted by industry leaders' with 5 logo marks below",
+            "position": "Lower viewport",
+            "notable": "Grayscale logos, evenly spaced, no clickable links"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong top-to-bottom flow: headline dominates, body copy supports, CTA leads to action, trust logos ground credibility at bottom",
+        "innovativeElements": [
+          "Subtle 3D wireframe background that conveys data/analytics without clutter",
+          "Two-tone heading (smaller 'glassnode' in gray, bold 'data' prefix)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / hero section",
+        "userIntent": "Understand Glassnode's core value proposition (data backbone for crypto trading strategies) and learn about their data offerings",
+        "entryPoints": [
+          "Direct landing page visit",
+          "Marketing campaign link",
+          "Navigation from main site"
+        ],
+        "exitPoints": [
+          "Click 'Get in touch' CTA for contact form",
+          "Click logo to return to home",
+          "Explore navigation menu (Products, Use Cases, Resources, Pricing)",
+          "Scroll down to see additional sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'Get in touch' button",
+            "action": "Initiates contact/inquiry flow"
+          },
+          {
+            "element": "Navigation menu items (Products, Use Cases, etc.)",
+            "action": "Routes to respective category pages"
+          },
+          {
+            "element": "Contact us button",
+            "action": "Opens contact form or sales inquiry"
+          },
+          {
+            "element": "Launch Studio button",
+            "action": "Directs to analytics platform"
+          }
+        ],
+        "informationArchitecture": "Simple linear flow: value proposition (headline) → explanation (body copy) → action (CTA) → credibility (trusted brands) → navigation to deeper content",
+        "frictionPoints": [
+          "Single CTA 'Get in touch' may not be clear enough for different user intents (sales vs. support vs. general interest)",
+          "No direct link to pricing or product demo from hero section"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The data backbone of your strategies",
+        "subheadline": "Traders and analysts use Glassnode's standardized, high-resolution blockchain and market data for faster signal discovery, model development, and execution in digital asset markets.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "glassnode data",
+            "context": "Above headline",
+            "purpose": "Product category label, builds expectation"
+          },
+          {
+            "text": "Trusted by industry leaders",
+            "context": "Centered heading above logo grid",
+            "purpose": "Confidence builder, introduces social proof"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase Institutional, Binance, CME Group, Grayscale, ARK Invest logos displayed prominently"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-7-powerful-analytics-suiteintuitive-charting-suite-c.png",
+      "label": "Powerful analytics suiteIntuitive charting suite c",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width split-panel with hero left, 3D illustration right",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#6B7280",
+          "#6366F1"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (48-56px), dark gray/black, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray (#6B7280), 16-18px line-height 1.6",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu matching previous screen with Products, Use Cases, Resources, About, Pricing; Contact us and Launch Studio buttons",
+            "position": "Top fixed",
+            "notable": "Consistent styling across pages"
+          },
+          {
+            "type": "Hero section with text",
+            "description": "Left-aligned headline, subheading, and dual CTA buttons",
+            "position": "Left half of viewport",
+            "notable": "Two action buttons: primary ('Get in touch') and secondary ('Launch Studio')"
+          },
+          {
+            "type": "3D isometric illustration",
+            "description": "Complex geometric 3D grid with scattered blue dots, wireframe surfaces, vertical bars suggesting data visualization",
+            "position": "Right half, subtle and ethereal",
+            "notable": "Sophisticated animation-ready design, represents multi-dimensional data analysis"
+          },
+          {
+            "type": "Trust section",
+            "description": "Centered heading 'Trusted by industry leaders' with same 5 client logos",
+            "position": "Lower viewport",
+            "notable": "Consistent trust signal across product pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong headline dominance, supporting body copy, dual CTAs (primary action + product entry), trust logos at bottom",
+        "innovativeElements": [
+          "3D isometric background with floating particles and vertical data bars suggesting analytical depth",
+          "Dual CTA approach: 'Get in touch' (sales/inquiry) vs. 'Launch Studio' (product entry)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing page / feature hero section",
+        "userIntent": "Understand Glassnode Studio's capabilities for market analysis with precision, and choose between contacting sales or launching the product immediately",
+        "entryPoints": [
+          "Navigation from home/products page",
+          "Marketing campaign link",
+          "Scroll from previous section"
+        ],
+        "exitPoints": [
+          "Click 'Get in touch' for sales inquiry",
+          "Click 'Launch Studio' to enter the analytics platform",
+          "Explore navigation menu (Products, Use Cases, Resources, Pricing)",
+          "Scroll down for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'Get in touch' button (primary, dark)",
+            "action": "Initiates contact/sales inquiry flow"
+          },
+          {
+            "element": "'Launch Studio' button (secondary, outlined)",
+            "action": "Directs authenticated users to analytics platform or signup flow"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Routes to respective category pages"
+          }
+        ],
+        "informationArchitecture": "Feature-focused landing: product name/category → value proposition → capabilities explanation → clear action paths (contact sales vs. try product) → social proof",
+        "frictionPoints": [
+          "Two CTAs may create decision paralysis; unclear which button serves which user intent",
+          "No mention of pricing or free trial eligibility from this section",
+          "3D illustration complexity might distract from core message on smaller screens"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Analyze market activity with precision",
+        "subheadline": "Glassnode Studio brings on-chain, spot, and derivatives data into one analytical view. Monitor signals and detect structural shifts in a feature-rich workspace.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side, dark background"
+          },
+          {
+            "text": "Launch Studio",
+            "style": "ghost-button",
+            "placement": "Below subheadline, left side, outlined"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "glassnode studio",
+            "context": "Above headline",
+            "purpose": "Product name label, positions section within broader product line"
+          },
+          {
+            "text": "Trusted by industry leaders",
+            "context": "Centered heading above logo grid",
+            "purpose": "Confidence builder with enterprise customer proof"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase Institutional, Binance, CME Group, Grayscale, ARK Invest logos"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#4a4a4a",
+          "#2a9d8f",
+          "#e76f51",
+          "#264653"
+        ],
+        "typography": {
+          "headingStyle": "Large bold serif-like sans-serif, dark gray on dark background, high contrast",
+          "bodyStyle": "Regular weight sans-serif, medium gray, readable but secondary to heading",
+          "dataStyle": "Monospace-style labels with colored badges for asset tags (BTC, ETH, etc.)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, product dropdowns, and CTA buttons",
+            "position": "Top fixed header",
+            "notable": "Dropdown-enabled menu structure with clear visual hierarchy"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with supporting body text and CTA button on left",
+            "position": "Left half of screen, vertical center",
+            "notable": "Balanced asymmetric layout with text on left, visualization on right"
+          },
+          {
+            "type": "Interactive chart",
+            "description": "Stacked area chart showing Bitcoin balance on exchanges over time with multiple colored layers",
+            "position": "Right half of screen, center",
+            "notable": "Live/real data visualization with asset selector and interactive controls (Compare, Favorite, Create alert)"
+          },
+          {
+            "type": "Asset search/filter",
+            "description": "Search box with selected asset (Ethereum) and icon",
+            "position": "Below chart, right side",
+            "notable": "Allows immediate exploration of different assets"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large heading dominates left side, chart visualization draws eye to right. Navigation anchors top. Asymmetric balance creates movement and interest.",
+        "innovativeElements": [
+          "Live crypto data chart as hero visual instead of generic imagery",
+          "Interactive controls overlaid on visualization (Compare, Favorite, Alert buttons)",
+          "Product-in-action demo on landing page"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Glassnode offers and get started or learn more",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Ad or marketing campaign",
+          "Organic search"
+        ],
+        "exitPoints": [
+          "Get in touch button (to contact form)",
+          "Products dropdown (to product pages)",
+          "Use Cases link",
+          "Launch Studio button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get in touch button",
+            "action": "Navigate to contact/demo request form"
+          },
+          {
+            "element": "Products dropdown",
+            "action": "Expand menu showing product options"
+          },
+          {
+            "element": "Compare button on chart",
+            "action": "Allow multi-asset comparison on chart"
+          },
+          {
+            "element": "Create alert button",
+            "action": "Set up custom alerts for asset metrics"
+          },
+          {
+            "element": "Cryptocurrency search",
+            "action": "Switch displayed asset and chart data"
+          }
+        ],
+        "informationArchitecture": "Hero value proposition + live product demo + navigation to explore. Clear progression from awareness (headline) to consideration (chart demo) to action (CTA).",
+        "frictionPoints": [
+          "Privacy settings modal at bottom obscures content and requires interaction",
+          "Multiple dropdown menus may be confusing for first-time visitors",
+          "Chart visualization might be overwhelming without context for crypto novices"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Pioneering digital asset market intelligence",
+        "subheadline": "Glassnode empowers investors and researchers with digital asset data, analytics, and research, enabling users to uncover the key drivers of Bitcoin, Ethereum, and beyond.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "Left hero section, below body text"
+          },
+          {
+            "text": "Launch Studio",
+            "style": "ghost-button",
+            "placement": "Top navigation bar, right side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin: Balance on exchanges (stacked) [BTC]",
+            "context": "Chart title and asset label",
+            "purpose": "Identifies the specific metric being visualized"
+          },
+          {
+            "text": "Ethereum (ETH)",
+            "context": "Asset selector below chart",
+            "purpose": "Shows currently selected asset for quick reference"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Asset labels with ticker symbols in brackets: [BTC], [ETH]",
+          "Year labels on x-axis: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023",
+          "Color-coded asset tags for visual differentiation"
+        ],
+        "trustSignals": [
+          "Live market data visualization demonstrating real platform capabilities",
+          "Reference to institutional focus (Bitcoin, Ethereum analysis)",
+          "Product credentials (Data, Studio, Research mentioned)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#333333",
+          "#000000",
+          "#4a90e2"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark text, prominent at top of modal",
+          "bodyStyle": "Regular sans-serif, dark gray, justified alignment, readable",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal container",
+            "description": "Bottom-anchored privacy settings panel with white background",
+            "position": "Bottom of screen, full width",
+            "notable": "Non-dismissible overlay that partially obscures content, forcing interaction"
+          },
+          {
+            "type": "Toggle switches",
+            "description": "Three toggle controls for Marketing, Functional, and Essential cookies",
+            "position": "Middle section of modal",
+            "notable": "Essential is disabled/greyed out, others are toggleable. Visual affordance with toggle styling."
+          },
+          {
+            "type": "Action buttons",
+            "description": "Three horizontal buttons: Save Settings (secondary), Deny (secondary), Accept All (primary)",
+            "position": "Bottom of modal",
+            "notable": "Accept All given highest visual weight with black background; clear hierarchy of choices"
+          },
+          {
+            "type": "Link group",
+            "description": "Privacy Notice, Terms and Conditions, and 'more' link",
+            "position": "Lower left of modal",
+            "notable": "Tertiary information with low visual weight"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading at top draws attention, toggle section is focal point, action buttons at bottom with clear CTA hierarchy. Links are minimized.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Manage cookie and tracking consent preferences",
+        "entryPoints": [
+          "Auto-triggered on page load (GDPR/privacy regulation requirement)"
+        ],
+        "exitPoints": [
+          "Accept All button (approve all cookies, close modal)",
+          "Deny button (reject non-essential cookies, close modal)",
+          "Save Settings button (apply custom toggle selections, close modal)",
+          "Privacy Notice link (navigate to full privacy policy)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Marketing toggle",
+            "action": "Enable/disable marketing cookie consent"
+          },
+          {
+            "element": "Functional toggle",
+            "action": "Enable/disable functional cookie consent"
+          },
+          {
+            "element": "Essential toggle",
+            "action": "Locked/always enabled, no action available"
+          },
+          {
+            "element": "Accept All button",
+            "action": "Approve all cookie categories and dismiss modal"
+          },
+          {
+            "element": "Deny button",
+            "action": "Reject non-essential cookies and dismiss modal"
+          },
+          {
+            "element": "Save Settings button",
+            "action": "Apply custom cookie preferences and dismiss modal"
+          }
+        ],
+        "informationArchitecture": "Privacy disclosure → Cookie type toggles → Action buttons. Linear decision flow with three clear paths (all-yes, all-no, custom).",
+        "frictionPoints": [
+          "Modal is non-dismissible without selection, forcing interaction",
+          "Blocks access to content below until resolved",
+          "Three action buttons may create decision paralysis",
+          "Small link text for legal documents is hard to read and act upon"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Settings",
+        "subheadline": "This site uses third-party website tracking technologies to provide and continually improve our services, and to display advertisements according to users' interests. I agree and may revoke or change my consent at any time with effect for the future.",
+        "ctas": [
+          {
+            "text": "Save Settings",
+            "style": "secondary-button",
+            "placement": "Bottom center of modal"
+          },
+          {
+            "text": "Deny",
+            "style": "secondary-button",
+            "placement": "Bottom center of modal"
+          },
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "Bottom right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Marketing",
+            "context": "Toggle label left",
+            "purpose": "Identifies cookie category"
+          },
+          {
+            "text": "Functional",
+            "context": "Toggle label left",
+            "purpose": "Identifies cookie category"
+          },
+          {
+            "text": "Essential",
+            "context": "Toggle label left",
+            "purpose": "Identifies mandatory cookie category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparency about tracking technologies",
+          "User control and revocation option stated",
+          "Links to Privacy Notice and Terms and Conditions",
+          "Powered by Usercentrics Consent Management (industry-standard tool)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-4-pricing.png",
+      "label": "Pricing",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#4a90e2",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size, dark text, centered. Overline 'Pricing & Plans' above.",
+          "bodyStyle": "Regular sans-serif, dark gray, 400 weight, ample line height for readability",
+          "dataStyle": "Large bold figures for prices ($0, $49, $999) with regular-weight per-month text"
+        },
+        "components": [
+          {
+            "type": "Page header",
+            "description": "Overline label, main headline, and product toggle tabs",
+            "position": "Top center of page",
+            "notable": "Three tab options (Glassnode Data, Glassnode Studio, Glassnode Research) with active state highlighting"
+          },
+          {
+            "type": "Subheading",
+            "description": "Descriptive text about the platform capabilities",
+            "position": "Below header, center, full-width",
+            "notable": "Bridges context between headline and pricing cards"
+          },
+          {
+            "type": "Pricing card",
+            "description": "Three equal-width cards displaying tier name, description, price, and CTA",
+            "position": "Bottom two-thirds of page in 3-column grid",
+            "notable": "Middle card (Advanced) has blue highlight bar and appears elevated. Graduated visual emphasis left-to-right (basic → featured → premium)"
+          },
+          {
+            "type": "Price display",
+            "description": "Large dollar amount with subscript per-month text and billing cycle",
+            "position": "Lower middle of each card",
+            "notable": "Clear typography hierarchy with size differentiation"
+          },
+          {
+            "type": "Card features",
+            "description": "List of included features under 'Get access to:' heading",
+            "position": "Lower card section",
+            "notable": "Not fully visible in screenshot but present in structure"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, sub-text clarifies, cards arranged in grid with middle card emphasized through color and visual lift. Price is secondary focal point within cards.",
+        "innovativeElements": [
+          "Product selector tabs at page level, not within cards",
+          "Blue highlight bar on featured tier creates visual hierarchy without color-washing entire card",
+          "Tiered card design with clear free, mid-tier, and enterprise options"
+        ]
+      },
+      "flow": {
+        "screenType": "pricing",
+        "userIntent": "Compare pricing tiers and decide which plan to purchase or request more information",
+        "entryPoints": [
+          "Click Pricing link in main navigation",
+          "Deep link to pricing page"
+        ],
+        "exitPoints": [
+          "Start for free button (sign up for free tier)",
+          "Find out more button (request demo or more info on paid tiers)",
+          "Product tabs (filter by product: Data, Studio, Research)",
+          "Navigation menu (browse other sections)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Glassnode Data tab",
+            "action": "Switch pricing view to Data product pricing"
+          },
+          {
+            "element": "Glassnode Studio tab",
+            "action": "Switch pricing view to Studio product pricing (currently active)"
+          },
+          {
+            "element": "Glassnode Research tab",
+            "action": "Switch pricing view to Research product pricing"
+          },
+          {
+            "element": "Start for free button",
+            "action": "Navigate to sign-up flow for Standard plan"
+          },
+          {
+            "element": "Find out more button",
+            "action": "Open contact form or demo request modal for paid plans"
+          }
+        ],
+        "informationArchitecture": "Product selection → Tier comparison → Feature discovery → Action selection. Linear top-to-bottom flow with horizontal product selection at top.",
+        "frictionPoints": [
+          "Feature lists cut off in screenshot, requiring scroll to see full details",
+          "Two different CTA types (Start for free vs Find out more) may create confusion about next steps",
+          "No annual vs monthly toggle visible on this view (appears to be per-product)",
+          "Enterprise/high-touch tier not visible at standard viewport, may require scrolling"
+        ],
+        "progressIndicators": [
+          "Product tabs indicate which product pricing is being displayed"
+        ]
+      },
+      "copy": {
+        "headline": "Stay ahead in digital assets",
+        "subheadline": "Our analytics platform combines a catalogued library of metrics and curated dashboards with a powerful charting tool to help teams visualize data, test hypotheses, and analyze the markets holistically.",
+        "ctas": [
+          {
+            "text": "Start for free",
+            "style": "ghost-button",
+            "placement": "Standard tier card, bottom"
+          },
+          {
+            "text": "Find out more",
+            "style": "ghost-button",
+            "placement": "Advanced and Professional tier cards, bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pricing & Plans",
+            "context": "Overline above headline",
+            "purpose": "Page context label"
+          },
+          {
+            "text": "Studio Standard",
+            "context": "Card tier name",
+            "purpose": "Identifies plan tier level"
+          },
+          {
+            "text": "$0/month — free",
+            "context": "Standard tier price",
+            "purpose": "Clearly indicates free tier with explicit language"
+          },
+          {
+            "text": "$49/month",
+            "context": "Advanced tier price",
+            "purpose": "Displays subscription cost"
+          },
+          {
+            "text": "Yearly",
+            "context": "Dropdown near Advanced tier price",
+            "purpose": "Indicates billing cycle selector"
+          },
+          {
+            "text": "VAT not included",
+            "context": "Below price on paid tiers",
+            "purpose": "Sets transparency expectation on tax charges"
+          },
+          {
+            "text": "Embark on your journey into digital asset analysis, gaining access to basic on-chain and spot/ETF market metrics.*",
+            "context": "Standard tier description",
+            "purpose": "Value proposition for free tier"
+          },
+          {
+            "text": "Perfect for deeper analysis with more advanced on-chain and spot/ETF market metrics, alongside basic derivatives data.",
+            "context": "Advanced tier description",
+            "purpose": "Value proposition for mid-tier"
+          },
+          {
+            "text": "Full access to sophisticated on-chain, spot/ETF, and derivatives market metrics. High-resolution data, entity-adjusted metrics, and cutting-edge tools.",
+            "context": "Professional tier description",
+            "purpose": "Value proposition for enterprise tier"
+          },
+          {
+            "text": "Get access to:",
+            "context": "Feature list header",
+            "purpose": "Introduces included features"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$0/month — free",
+          "$49/month (with 'Yearly' dropdown option)",
+          "$999/month — billed yearly"
+        ],
+        "trustSignals": [
+          "Free tier available for entry-level users",
+          "Clear tiered progression showing upgrade path",
+          "Specific feature descriptions for each tier",
+          "Transparent pricing with VAT disclosure",
+          "Professional product names and positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-14-partner-reports.png",
+      "label": "Partner Reports",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#5b5b5b",
+          "#0088cc",
+          "#00b4a6"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, white, bold (60-70px)",
+          "bodyStyle": "Medium gray sans-serif, 16px, slightly muted tone",
+          "dataStyle": "Small gray text for metadata (date, read time)"
+        },
+        "components": [
+          {
+            "type": "banner",
+            "description": "Blue promo banner at top with arrow link",
+            "position": "top full-width",
+            "notable": "Promotes premium research plans with directional link"
+          },
+          {
+            "type": "navigation",
+            "description": "Horizontal nav with 6 items plus Subscribe/Log In",
+            "position": "header",
+            "notable": "Sparse, clean, emphasizes Partner Reports as active"
+          },
+          {
+            "type": "card-grid",
+            "description": "3-column grid of report cards with images and text",
+            "position": "main content",
+            "notable": "Cards have diagonal 3D perspective effect, create visual depth"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline > subheadline > featured cards in grid, guides eye downward",
+        "innovativeElements": [
+          "3D perspective effect on report cards",
+          "Featured badge on cards",
+          "Blue accent on partner badge"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover collaborative research reports between Glassnode and partners",
+        "entryPoints": [
+          "Partner Reports nav item",
+          "Direct link from marketing email"
+        ],
+        "exitPoints": [
+          "Click into individual report card",
+          "Subscribe CTA at bottom",
+          "Navigate to other sections via nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Report card",
+            "action": "Click to open full report details"
+          },
+          {
+            "element": "Subscribe button",
+            "action": "Open newsletter signup modal"
+          },
+          {
+            "element": "Featured badge",
+            "action": "Filter or highlight reports"
+          }
+        ],
+        "informationArchitecture": "Reports organized by partner institution, each card contains partner name, title, date, read time",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Partner Reports",
+        "subheadline": "Explore our research reports, where we present timely insights and analyses developed in collaboration with industry-leading institutions.",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Q1 2026 - Research Report",
+            "context": "card metadata",
+            "purpose": "Communicate publication date and content type"
+          },
+          {
+            "text": "3 min read",
+            "context": "card metadata",
+            "purpose": "Set time expectations for reader"
+          },
+          {
+            "text": "Featured",
+            "context": "card badge",
+            "purpose": "Highlight curated/important reports"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Q1 2026",
+          "Jan 27, 2026",
+          "3 min read",
+          "4 min read"
+        ],
+        "trustSignals": [
+          "Partnership logos (Coinbase, Fasanara, Keyrock)",
+          "Institutional affiliation messaging"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-16-case-studies.png",
+      "label": "Case Studies",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#e8eef5",
+          "#5b5b5b",
+          "#6366f1"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark/black, bold (48-56px), centered",
+          "bodyStyle": "Medium gray sans-serif, 16px, centered subheading",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Minimal top nav with dropdown menus",
+            "position": "header",
+            "notable": "Clean, left-aligned logo, right-aligned CTAs"
+          },
+          {
+            "type": "filter-pills",
+            "description": "Horizontal button group with 'All', 'Trading and Investing', 'Research and Content Creation'",
+            "position": "below subheading, centered",
+            "notable": "Indigo highlight on active filter, soft borders on inactive"
+          },
+          {
+            "type": "card-grid",
+            "description": "3-column responsive grid of company case study cards",
+            "position": "main content",
+            "notable": "Clean white cards with minimal decoration, category badge above logo"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Centered headline > subheadline > filter pills > card grid, symmetrical and calm",
+        "innovativeElements": [
+          "Responsive filter UI",
+          "Category badges with indigo background"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse customer case studies filtered by use case category",
+        "entryPoints": [
+          "Case Studies link from nav",
+          "Direct URL from marketing"
+        ],
+        "exitPoints": [
+          "Click individual company card to view full case study",
+          "Filter by category to narrow results"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Filter pill",
+            "action": "Click to filter case studies by category"
+          },
+          {
+            "element": "Company card",
+            "action": "Click to view full case study details"
+          }
+        ],
+        "informationArchitecture": "Case studies grouped by category (Trading/Investing, Research), each shows company logo and use case badge",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Explore customer stories",
+        "subheadline": "See how leading investors, funds, and institutions use Glassnode to tackle the unique challenges of crypto markets.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Discretionary Trading",
+            "context": "card badge",
+            "purpose": "Indicate customer use case"
+          },
+          {
+            "text": "Systematic Investing",
+            "context": "card badge",
+            "purpose": "Indicate customer use case"
+          },
+          {
+            "text": "Research",
+            "context": "card badge",
+            "purpose": "Indicate customer use case"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Customer logos (Blockchain.com, Sound Money Capital, Swissblock, Capriole, Fountainhead, Binance)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-1-contact-us.png",
+      "label": "Contact us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#1a1a1a",
+          "#4a4a4a"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, dark/black, bold (56px+), centered",
+          "bodyStyle": "Medium gray sans-serif, 16-18px, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation",
+            "description": "Minimal top nav matching site standard",
+            "position": "header",
+            "notable": "Black Contact Us button, outlined Launch Studio button"
+          },
+          {
+            "type": "hero-section",
+            "description": "Centered headline and subheadline with lots of vertical space",
+            "position": "top of content area",
+            "notable": "Very generous white space creates breathing room"
+          },
+          {
+            "type": "card-grid",
+            "description": "2-column grid of contact option cards",
+            "position": "main content",
+            "notable": "Simple white cards with dark text, minimal visual embellishment"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered headline attracts attention, subheadline provides context, cards below are secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form",
+        "userIntent": "Choose a contact method based on inquiry type",
+        "entryPoints": [
+          "Contact Us nav item",
+          "Footer link"
+        ],
+        "exitPoints": [
+          "Click Contact Sales card to open form",
+          "Click General Inquiries card to open form"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact Sales card",
+            "action": "Navigate to sales inquiry form"
+          },
+          {
+            "element": "General Inquiries card",
+            "action": "Navigate to general inquiry form"
+          }
+        ],
+        "informationArchitecture": "Two clear pathways: sales-focused vs. general support, each with explanatory text",
+        "frictionPoints": [
+          "Clicking card required (not obvious they're clickable)",
+          "No visual hover states visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How can we connect",
+        "subheadline": "Select a category below to connect with the right team and get a faster response.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Contact Sales",
+            "context": "card heading",
+            "purpose": "Label primary card category"
+          },
+          {
+            "text": "General Inquiries",
+            "context": "card heading",
+            "purpose": "Label secondary card category"
+          },
+          {
+            "text": "Interested in a Professional plan subscription or getting a demo?",
+            "context": "Contact Sales card body",
+            "purpose": "Clarify what sales team handles"
+          },
+          {
+            "text": "Looking for support, partnerships, or have other inquiries for our product experts?",
+            "context": "General Inquiries card body",
+            "purpose": "Clarify what general team handles"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-11-bitcoin-analysis-researchcme-glassnode-bitcoi.png",
+      "label": "Bitcoin Analysis & ResearchCME + Glassnode: Bitcoi",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#00d4ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "large bold sans-serif, all caps treatment for category labels",
+          "bodyStyle": "medium weight gray text on dark background for body copy",
+          "dataStyle": "minimal, date and read time in smaller gray text"
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "horizontal top nav with logo, section links, auth buttons",
+            "position": "top",
+            "notable": "clean minimal design with Subscribe CTA"
+          },
+          {
+            "type": "featured content card",
+            "description": "large hero section with headline, description, author info",
+            "position": "center",
+            "notable": "prominent use of white space and bold typography"
+          },
+          {
+            "type": "image asset",
+            "description": "featured report cover image with Bitcoin and CME branding",
+            "position": "below content",
+            "notable": "blue gradient background with Bitcoin icon"
+          },
+          {
+            "type": "subscription form",
+            "description": "email input with Subscribe button",
+            "position": "bottom",
+            "notable": "placed in footer as secondary CTA"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "eye drawn to large headline, then supporting text, then featured image",
+        "innovativeElements": [
+          "Featured badge indicator",
+          "Asymmetrical layout with centered content block"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature",
+        "userIntent": "learn about featured Bitcoin analysis report and subscribe for insights",
+        "entryPoints": [
+          "direct to research section",
+          "from marketing campaign",
+          "homepage feature"
+        ],
+        "exitPoints": [
+          "Subscribe button (top right nav)",
+          "Subscribe button (bottom footer form)",
+          "Log In link (top right)",
+          "Navigation to other sections (Market Pulse, Week On-chain, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button",
+            "action": "opens subscription form or initiates signup flow"
+          },
+          {
+            "element": "Log In link",
+            "action": "navigates to authentication page"
+          },
+          {
+            "element": "Navigation links",
+            "action": "browse to different market insight sections"
+          },
+          {
+            "element": "Search icon",
+            "action": "opens search functionality"
+          }
+        ],
+        "informationArchitecture": "featured content prominent, subscription incentive repeated, supporting links in footer",
+        "frictionPoints": [
+          "Multiple subscription CTAs may feel repetitive",
+          "No direct link to download or view full report visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CME + Glassnode: Bitcoin Insight and Market Trends H1 2025",
+        "subheadline": "Bitcoin Analysis & Research | Featured",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top right nav"
+          },
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "bottom footer form"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "May 29, 2025 • 3 min read",
+            "context": "below author name",
+            "purpose": "establishes recency and estimated read time"
+          },
+          {
+            "text": "By subscribing, you agree to our Terms & Conditions and Privacy Notice.",
+            "context": "footer subscription area",
+            "purpose": "legal disclaimer and trust building"
+          }
+        ],
+        "tone": "professional-technical, institutional",
+        "dataFormatting": [
+          "Date format: May 29, 2025",
+          "Time format: 3 min read"
+        ],
+        "trustSignals": [
+          "CME Group partnership (institutional credibility)",
+          "Joint publication framing",
+          "Specific market data references (on-chain flows, ETF activity, derivatives)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-12-impressum.png",
+      "label": "Impressum",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#f0f0f0"
+        ],
+        "typography": {
+          "headingStyle": "large sans-serif headers in dark gray",
+          "bodyStyle": "standard body text in dark gray on white",
+          "dataStyle": "monospace-like formatting for registration IDs and contact details"
+        },
+        "components": [
+          {
+            "type": "navigation bar",
+            "description": "horizontal top nav with logo and section links",
+            "position": "top",
+            "notable": "matches Glassnode Studio branding consistently"
+          },
+          {
+            "type": "content container",
+            "description": "main body content with structured sections",
+            "position": "center",
+            "notable": "clean legal/compliance document layout"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "hierarchical sections with bold headings and indented content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-info-page",
+        "userIntent": "view company legal information and compliance details",
+        "entryPoints": [
+          "footer link from main site",
+          "direct URL navigation",
+          "legal/compliance section"
+        ],
+        "exitPoints": [
+          "navigation back to main site via top menu",
+          "click on any top nav link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "navigate to different platform sections"
+          }
+        ],
+        "informationArchitecture": "structured legal document with clear sections (contact, registration, board representation)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Impressum",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Mail address:",
+            "context": "section header",
+            "purpose": "introduces contact location"
+          },
+          {
+            "text": "Registered:",
+            "context": "section header",
+            "purpose": "introduces legal registration details"
+          },
+          {
+            "text": "Represented by the board of directors:",
+            "context": "section header",
+            "purpose": "introduces leadership information"
+          },
+          {
+            "text": "Contact:",
+            "context": "section header",
+            "purpose": "introduces communication details"
+          }
+        ],
+        "tone": "formal-legal",
+        "dataFormatting": [
+          "Company name: Glassnode Services AG",
+          "Address format: Street, Postal Code, City, Country",
+          "UID format: CHE-297.410.093",
+          "Phone format: +41 41 481 04 04",
+          "Email format: contact@glassnode.com"
+        ],
+        "trustSignals": [
+          "Registered company with UID and VAT number",
+          "Swiss business registration (Canton Zug)",
+          "Named board directors"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-home-13-the-week-onchain.png",
+      "label": "The Week On-Chain",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "full-width with sidebar subscription card and grid content",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0e27",
+          "#1a1f4d",
+          "#00d4ff",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "large bold sans-serif for main title, medium weight for article titles",
+          "bodyStyle": "medium gray text for descriptions",
+          "dataStyle": "bold white for article headlines, gray for dates and read times"
+        },
+        "components": [
+          {
+            "type": "announcement banner",
+            "description": "blue banner with new premium research plans promotion",
+            "position": "top",
+            "notable": "eye-catching with underlined link text"
+          },
+          {
+            "type": "navigation bar",
+            "description": "horizontal nav with logo, section links, auth and upgrade buttons",
+            "position": "below banner",
+            "notable": "global language selector in top right"
+          },
+          {
+            "type": "page header",
+            "description": "large title with descriptive subtitle",
+            "position": "top of content",
+            "notable": "establishes section purpose clearly"
+          },
+          {
+            "type": "subscription card",
+            "description": "dark blue card with subscription CTA",
+            "position": "left sidebar",
+            "notable": "sticky positioning with primary and secondary buttons"
+          },
+          {
+            "type": "article grid",
+            "description": "3-column layout of featured articles with images",
+            "position": "main content area",
+            "notable": "thumbnail preview images with gradient overlays"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "left sidebar draws eye first, then large title, then featured articles in grid below",
+        "innovativeElements": [
+          "Color-coded article preview images (heatmaps and charts)",
+          "Article metadata integrated within preview cards",
+          "Subscription card maintains prominence alongside content"
+        ]
+      },
+      "flow": {
+        "screenType": "content-browse-hub",
+        "userIntent": "discover and read weekly on-chain analysis articles, potentially subscribe",
+        "entryPoints": [
+          "navigation link from top menu",
+          "direct to section URL",
+          "from homepage feature"
+        ],
+        "exitPoints": [
+          "click article to read full content",
+          "subscribe via subscription card",
+          "upgrade link in top nav",
+          "navigate to other sections via top menu",
+          "footer subscription form"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button (card)",
+            "action": "initiates email subscription or signup flow"
+          },
+          {
+            "element": "Send me free research button",
+            "action": "submits email subscription form"
+          },
+          {
+            "element": "Article cards",
+            "action": "navigates to full article page"
+          },
+          {
+            "element": "Upgrade button (top nav)",
+            "action": "navigates to premium plans page"
+          },
+          {
+            "element": "Navigation links",
+            "action": "browse other insight sections"
+          }
+        ],
+        "informationArchitecture": "featured section with subscription incentive on left, latest articles in grid on right, consistent footer subscription CTA",
+        "frictionPoints": [
+          "Dual subscription CTAs (sidebar and footer) may feel repetitive",
+          "Limited article preview text - users must click to see full content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The Week On-chain",
+        "subheadline": "Glassnode's flagship newsletter. The Week On-chain provides contextualised insight into Bitcoin, Ethereum, and digital asset market structure using on-chain and financial data.",
+        "ctas": [
+          {
+            "text": "Send me free research",
+            "style": "primary-button",
+            "placement": "subscription card"
+          },
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "bottom footer form"
+          },
+          {
+            "text": "exclusive, directional market insights →",
+            "style": "text-link",
+            "placement": "top blue banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Receive best-in-class market analysis on Bitcoin, Ethereum, and DeFi, and novel on-chain research.",
+            "context": "subscription card",
+            "purpose": "value proposition for subscription"
+          },
+          {
+            "text": "By subscribing, you agree to our Terms & Conditions and Privacy Notice.",
+            "context": "subscription card footer",
+            "purpose": "legal compliance and trust signal"
+          },
+          {
+            "text": "Feb 11, 2026 • 9 min read",
+            "context": "article metadata",
+            "purpose": "recency and estimated read time"
+          },
+          {
+            "text": "Bitcoin remains defensive between $60k-$72k zone while the $82k-$97k overhead supply cap...",
+            "context": "article preview text",
+            "purpose": "article preview/teaser"
+          }
+        ],
+        "tone": "professional-technical, analytical",
+        "dataFormatting": [
+          "Price ranges: $60k-$72k",
+          "Date format: Feb 11, 2026",
+          "Read time: 9 min read"
+        ],
+        "trustSignals": [
+          "Flagship newsletter designation",
+          "Multi-asset coverage (Bitcoin, Ethereum, DeFi)",
+          "On-chain data methodology",
+          "Consistent publication schedule"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-2-for-research-and-content-creationglassnode-helps-r.png",
+      "label": "For research and content creationGlassnode helps r",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#e8eef7"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48px+), dark charcoal, left-aligned",
+          "bodyStyle": "Regular sans-serif, medium gray, 16px, generous line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, dropdown menus (Products, Use Cases, Resources, About), Pricing link, Contact us button, Launch Studio button",
+            "position": "top",
+            "notable": "Clear separation between navigation items and CTAs with dark button styling"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with supporting paragraph and primary CTA button",
+            "position": "left-center",
+            "notable": "Clean typography hierarchy with strong contrast"
+          },
+          {
+            "type": "illustration",
+            "description": "3D isometric graphic of a chart/analytics visualization in blue and white",
+            "position": "right-center",
+            "notable": "Minimalist line-art style, subtle shadows suggesting depth"
+          },
+          {
+            "type": "trust-section",
+            "description": "Branded logo carousel displaying industry partner logos (Coinbase, Binance, CME Group, Grayscale, ARK Invest)",
+            "position": "bottom-center",
+            "notable": "5 institutional logos establishing credibility"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn from large headline to supporting text, then to prominent CTA, with illustration balancing the right side",
+        "innovativeElements": [
+          "3D isometric illustration",
+          "Staggered trust logo alignment"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Glassnode's value proposition for researchers and content creators",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Marketing campaign link",
+          "Use Cases section"
+        ],
+        "exitPoints": [
+          "Get in touch CTA",
+          "Launch Studio button (top nav)",
+          "Navigation menu items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get in touch button",
+            "action": "Initiates contact form or sales inquiry"
+          },
+          {
+            "element": "Launch Studio button",
+            "action": "Navigates to Studio application"
+          },
+          {
+            "element": "Navigation dropdowns",
+            "action": "Reveals submenu options"
+          }
+        ],
+        "informationArchitecture": "Hero statement → Value proposition explanation → Social proof (trusted partners)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Craft compelling digital asset research",
+        "subheadline": "Glassnode enables researchers and content creators to form and share impactful market views using leading analytics and research.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "below subheadline"
+          },
+          {
+            "text": "Launch Studio",
+            "style": "secondary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Trusted by industry leaders",
+            "context": "Above partner logo section",
+            "purpose": "Builds credibility through social proof"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase Institutional",
+          "Binance",
+          "CME Group",
+          "Grayscale",
+          "ARK Invest"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-3-terms-and-conditions.png",
+      "label": "Terms and Conditions",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px), dark charcoal, left-aligned",
+          "bodyStyle": "Regular sans-serif, dark gray, 16px, justified alignment, generous line-height for legal readability",
+          "dataStyle": "Italicized legal terms enclosed in quotation marks"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top navigation with Glassnode Studio logo, search bar, main navigation (Home, Dashboards, Charts, Insights, Resources), notification icon, upgrade button, log in",
+            "position": "top",
+            "notable": "Functional navigation distinct from marketing site nav"
+          },
+          {
+            "type": "page-heading",
+            "description": "Large 'Terms & Conditions' title",
+            "position": "top-left",
+            "notable": "Immediately establishes page purpose"
+          },
+          {
+            "type": "legal-content",
+            "description": "Long-form legal text with update date, multiple paragraphs, section headers (Services), inline links",
+            "position": "main-content-area",
+            "notable": "Emphasized legal terms in italics, nested paragraph structure"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title → Update date → Body text with section breaks creating rhythm",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings",
+        "userIntent": "Review and understand service terms and conditions",
+        "entryPoints": [
+          "Footer link from main site",
+          "Settings/Account menu",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Navigation to other main sections (Home, Dashboards, Charts)",
+          "Search bar",
+          "Upgrade/Log in"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Privacy Notice link",
+            "action": "Navigates to privacy-notice page"
+          },
+          {
+            "element": "Resources dropdown",
+            "action": "Reveals submenu"
+          },
+          {
+            "element": "Email links (legal@glassnode.com, support@glassnode.com)",
+            "action": "Opens email client or contact form"
+          }
+        ],
+        "informationArchitecture": "Linear legal document with section headers, definitions in quotes, support contact info embedded",
+        "frictionPoints": [
+          "Dense legal text may require scrolling and focused reading",
+          "Long paragraphs without visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms & Conditions",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Updated: February 11, 2026",
+            "context": "Below main heading",
+            "purpose": "Establishes recency and legal validity"
+          },
+          {
+            "text": "legal@glassnode.com or support@glassnode.com",
+            "context": "In consumer rights section",
+            "purpose": "Provides contact method for user rights"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: Month Day, Year"
+        ],
+        "trustSignals": [
+          "Legal compliance references (EU GDPR, Swiss Data Protection Act)",
+          "Specified company address (Neuhofstrasse 22, 6340 Baar, Switzerland)",
+          "Phone and email contact info"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-4-privacy-notice.png",
+      "label": "Privacy Notice",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#1a1a1a",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px), dark charcoal, left-aligned for main title; bold (20px) for numbered section headers",
+          "bodyStyle": "Regular sans-serif, dark gray, 16px, justified, generous line-height for legal readability",
+          "dataStyle": "Bold text for key terms and italicized within angle brackets (e.g., «we», «data», «GDPR»)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top navigation with Glassnode Studio logo, search, main nav items, notification, upgrade, log in",
+            "position": "top",
+            "notable": "Consistent with Terms & Conditions page styling"
+          },
+          {
+            "type": "page-heading",
+            "description": "'Privacy Notice of Glassnode Services AG' title",
+            "position": "top-left",
+            "notable": "Clear identification of document scope"
+          },
+          {
+            "type": "legal-sections",
+            "description": "Numbered sections (1, 2) with bold headers and explanatory body text",
+            "position": "main-content",
+            "notable": "Emphasis on key definitions in angle brackets and bold"
+          },
+          {
+            "type": "contact-block",
+            "description": "Glassnode Services AG address and contact details (phone with link, email with link)",
+            "position": "mid-page",
+            "notable": "Formatted contact info in bold with linked phone number and email"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Page title → Numbered section headers → Body paragraphs → Contact block, with strategic bold/italic emphasis on legal terms",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings",
+        "userIntent": "Understand privacy practices and data handling procedures",
+        "entryPoints": [
+          "Footer link from main site",
+          "Settings/Legal section",
+          "Reference from Terms & Conditions"
+        ],
+        "exitPoints": [
+          "Navigation menu items",
+          "Search",
+          "Upgrade/Log in",
+          "Contact via phone or email"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Phone number link (+41 41 481 04 04)",
+            "action": "Initiates phone call or reveals contact method"
+          },
+          {
+            "element": "Email link (contact@glassnode.com)",
+            "action": "Opens email client"
+          },
+          {
+            "element": "Top navigation items",
+            "action": "Navigate to other sections"
+          }
+        ],
+        "informationArchitecture": "Structured legal document with numbered sections addressing: notice purpose, data controller identity, with embedded contact information",
+        "frictionPoints": [
+          "Dense legal paragraphs require focused reading",
+          "Terminology uses angle brackets which may be unfamiliar",
+          "Long scrolling required to reach contact info"
+        ],
+        "progressIndicators": [
+          "Numbered section structure (1, 2) suggests continuation"
+        ]
+      },
+      "copy": {
+        "headline": "Privacy Notice of Glassnode Services AG",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "«we», «us»",
+            "context": "Opening paragraph of section 1",
+            "purpose": "Clarifies company identity"
+          },
+          {
+            "text": "«third parties», «data», «personal data», «websites»",
+            "context": "Definition section in opening paragraphs",
+            "purpose": "Establishes legal terminology framework"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Address: Neuhofstrasse 22, 6340 Baar, Switzerland",
+          "Phone: +41 41 481 04 04",
+          "Email: contact@glassnode.com"
+        ],
+        "trustSignals": [
+          "Compliance with EU GDPR",
+          "Swiss Data Protection Act (DPA) and revised DPA (revDPA) alignment",
+          "Specific company registration (Glassnode Services AG)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-5-careers.png",
+      "label": "Careers",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48px+), dark color, high contrast",
+          "bodyStyle": "Regular sans-serif, medium size, dark gray (#666), comfortable line height",
+          "dataStyle": "Bold sans-serif with supporting labels, icon-text pairing for metrics"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal nav with dropdown menus and dual CTAs",
+            "position": "top",
+            "notable": "Clean, minimal design with clear primary/secondary button distinction"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with subtext and CTA button",
+            "position": "left-half",
+            "notable": "Left-aligned text hierarchy with strong visual balance"
+          },
+          {
+            "type": "image-card",
+            "description": "Photo of team members in branded apparel",
+            "position": "right-half",
+            "notable": "Real team photography adds authentic human element"
+          },
+          {
+            "type": "stat-cards",
+            "description": "Three horizontal cards with icons, numbers, and descriptions",
+            "position": "bottom-full-width",
+            "notable": "Icon + stat + description layout on dark background creates visual rhythm"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right flow: headline draws eye, subtext explains, image reinforces, bottom stats build credibility",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-careers",
+        "userIntent": "Explore job opportunities and learn about company culture",
+        "entryPoints": [
+          "About menu dropdown",
+          "Direct careers URL"
+        ],
+        "exitPoints": [
+          "Explore opportunities button",
+          "Navigation to other sections",
+          "Contact us"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Explore opportunities button",
+            "action": "Navigate to job listings or application portal"
+          },
+          {
+            "element": "Navigation menu dropdowns",
+            "action": "Reveal submenu options"
+          }
+        ],
+        "informationArchitecture": "Hero statement → company values (people, diversity, products) → call to action",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Do your best work with us",
+        "subheadline": "Join a team of pioneers building products with real impact in a fast-moving, future-ready industry.",
+        "ctas": [
+          {
+            "text": "Explore opportunities",
+            "style": "primary-button",
+            "placement": "below hero text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "45+ People",
+            "context": "stat card with person icon",
+            "purpose": "Communicate team size and scale"
+          },
+          {
+            "text": "Despite the rough seas, we have continued our steady, strategic growth, building a talented team",
+            "context": "stat card description",
+            "purpose": "Build credibility through market challenges narrative"
+          },
+          {
+            "text": "26+ Nationalities",
+            "context": "stat card with globe icon",
+            "purpose": "Signal diversity and international scope"
+          },
+          {
+            "text": "We're intentional about building a diverse, global team, where varied backgrounds drive better",
+            "context": "stat card description",
+            "purpose": "Emphasize inclusive culture"
+          }
+        ],
+        "tone": "professional-friendly, aspirational",
+        "dataFormatting": [
+          "45+ People",
+          "26+ Nationalities"
+        ],
+        "trustSignals": [
+          "Team scale metrics",
+          "International diversity",
+          "Industry positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-settings-6-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#f5f5f5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large scale (48px+), dark color",
+          "bodyStyle": "Regular sans-serif, medium size, medium gray, generous line height",
+          "dataStyle": "Bold sans-serif, large scale, with descriptive labels below"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal nav with products, use cases, resources, about dropdowns",
+            "position": "top",
+            "notable": "Consistent minimal design across all pages"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with supporting paragraph and CTA",
+            "position": "left",
+            "notable": "Clean typography-focused design"
+          },
+          {
+            "type": "illustration",
+            "description": "3D isometric graphic of processor/chip with Glassnode logo",
+            "position": "right",
+            "notable": "Modern isometric style conveys technology and innovation"
+          },
+          {
+            "type": "stat-cards",
+            "description": "Three vertical stat cards with large numbers and descriptive text",
+            "position": "bottom",
+            "notable": "Minimalist card design with generous whitespace"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, supporting text creates context, visual element adds sophistication, metrics anchor credibility",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-about",
+        "userIntent": "Understand Glassnode's mission, credibility, and scope",
+        "entryPoints": [
+          "About menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Get in touch button",
+          "Navigation menu",
+          "Contact us"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get in touch button",
+            "action": "Open contact form or navigate to contact page"
+          }
+        ],
+        "informationArchitecture": "Mission statement → visual representation → trust metrics (founding year, client count, product breadth)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Setting the standard in digital asset market intelligence",
+        "subheadline": "We equip institutional investors and analysts with the data, analytics, and research they need to act with confidence in digital asset markets.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "2017",
+            "context": "metric card",
+            "purpose": "Establish longevity and founding timeline"
+          },
+          {
+            "text": "Serving data since",
+            "context": "stat label",
+            "purpose": "Clarify the 2017 metric"
+          },
+          {
+            "text": "499+",
+            "context": "metric card",
+            "purpose": "Show institutional adoption"
+          },
+          {
+            "text": "Institutional clients",
+            "context": "stat label",
+            "purpose": "Explain client count metric"
+          },
+          {
+            "text": "3,494+",
+            "context": "metric card",
+            "purpose": "Demonstrate product breadth"
+          },
+          {
+            "text": "Metrics to choose from",
+            "context": "stat label",
+            "purpose": "Clarify data offering scope"
+          }
+        ],
+        "tone": "professional-technical, confident",
+        "dataFormatting": [
+          "2017",
+          "499+",
+          "3,494+"
+        ],
+        "trustSignals": [
+          "Founded 2017",
+          "499+ institutional clients",
+          "3,494+ metrics available",
+          "Serves institutional market"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-swap-1-for-trading-and-investingglassnode-equips-traders.png",
+      "label": "For trading and investingGlassnode equips traders",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1a1a1a",
+          "#f0f0f0"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48px+), dark color",
+          "bodyStyle": "Regular sans-serif, medium size, dark gray, standard line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Consistent top navigation with dropdown menus",
+            "position": "top",
+            "notable": "Maintains design continuity across property"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with explanatory paragraph and dual CTAs",
+            "position": "left",
+            "notable": "Clear value proposition with action options"
+          },
+          {
+            "type": "video-preview",
+            "description": "Interactive video card showing product interface with play overlay",
+            "position": "right",
+            "notable": "Shows actual product UI with heatmap visualization and trading dashboard"
+          },
+          {
+            "type": "logo-grid",
+            "description": "Horizontal row of enterprise client logos",
+            "position": "bottom-center",
+            "notable": "High-authority brands build immediate credibility"
+          },
+          {
+            "type": "headline",
+            "description": "Large callout text spanning full width",
+            "position": "bottom",
+            "notable": "Reinforces core value proposition with strong typography"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left headline draws attention, right video provides proof, logos anchor trust, bottom headline reinforces message",
+        "innovativeElements": [
+          "Video preview with play button overlay on product interface",
+          "Heatmap visualization in product preview (orange-to-yellow gradient)",
+          "Dual CTA buttons with secondary 'Watch video' option"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-product",
+        "userIntent": "Understand Glassnode's trading/investing capabilities and see the product in action",
+        "entryPoints": [
+          "Products menu",
+          "Use Cases menu",
+          "Direct landing page"
+        ],
+        "exitPoints": [
+          "Get in touch button",
+          "Watch video button",
+          "Navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get in touch button",
+            "action": "Navigate to contact or demo request"
+          },
+          {
+            "element": "Watch video button",
+            "action": "Play embedded video demonstration"
+          },
+          {
+            "element": "Video play overlay",
+            "action": "Expand or start video playback"
+          }
+        ],
+        "informationArchitecture": "Use case statement → problem/solution → product proof (video) → social proof (logos) → value reinforcement",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Insights for data-driven trading",
+        "subheadline": "Glassnode equips traders and investors with advanced blockchain data and market intelligence, empowering them to form clear views on market trends and act on key inflection points in digital assets.",
+        "ctas": [
+          {
+            "text": "Get in touch",
+            "style": "primary-button",
+            "placement": "below headline"
+          },
+          {
+            "text": "Watch video",
+            "style": "ghost-button",
+            "placement": "beside Get in touch"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Realized Cap HODL Waves",
+            "context": "video preview label",
+            "purpose": "Identify specific metric being demonstrated"
+          },
+          {
+            "text": "Transfer",
+            "context": "video preview label",
+            "purpose": "Show additional analytics capability"
+          },
+          {
+            "text": "Trusted by industry leaders",
+            "context": "section heading above logos",
+            "purpose": "Introduce social proof"
+          }
+        ],
+        "tone": "professional-technical, confident, data-driven",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase Institutional logo",
+          "Binance logo",
+          "CME Group logo",
+          "Grayscale logo",
+          "ARK Invest logo",
+          "Advanced blockchain data claim",
+          "Market intelligence positioning"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-swap-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#5b7aff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (48px+), high contrast white on dark",
+          "bodyStyle": "Regular sans-serif, medium size (16px), gray text (#999999) for secondary content",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "sidebar-navigation",
+            "description": "Left sidebar with collapsible guide sections and API documentation",
+            "position": "left side, full height",
+            "notable": "Two-tier hierarchy (GUIDES & TUTORIALS, API, FURTHER INFORMATION) with expandable menu items"
+          },
+          {
+            "type": "info-banner",
+            "description": "Top banner with engagement CTA linking to Glassnode Expert Services",
+            "position": "top of page, full width",
+            "notable": "Light gray background with blue hyperlink text, includes info icon"
+          },
+          {
+            "type": "page-header",
+            "description": "Main content heading with category label and copy button",
+            "position": "main content area, top",
+            "notable": "Blue category label 'FURTHER INFORMATION' above large black headline"
+          },
+          {
+            "type": "content-block",
+            "description": "Multi-paragraph body text with italicized note section",
+            "position": "main content, centered",
+            "notable": "Light background callout box for important note with italicized text"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Secondary navigation with related topics (Data Acquisition, Data Precision, etc.)",
+            "position": "right side",
+            "notable": "Blue text links in vertical stack, guides user to related documentation sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar anchors navigation, main content dominates center with clear heading > subheading > body structure, right sidebar provides contextual navigation",
+        "innovativeElements": [
+          "Two-level sidebar navigation (left guides + right topic links)",
+          "Italicized note blocks with distinct styling for definitions/important context",
+          "Copy button integration in page header for documentation snippets"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Glassnode's exchange data methodology and transparency practices",
+        "entryPoints": [
+          "From main website navigation (Insights section)",
+          "From API documentation links",
+          "From search results for 'exchange data transparency'"
+        ],
+        "exitPoints": [
+          "Left sidebar: navigate to other guides (Getting Started, Metric Guides, On-Chain Concepts)",
+          "Right sidebar: navigate to related data topics (Data Precision, Data Interpretation)",
+          "Top banner: Request quote from Expert Services",
+          "Main navigation: Website, Studio, Insights, Twitter"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Expand/collapse guide sections or navigate to related documentation"
+          },
+          {
+            "element": "Copy button",
+            "action": "Copy page URL or content snippet"
+          },
+          {
+            "element": "Right sidebar links",
+            "action": "Navigate to related documentation pages"
+          },
+          {
+            "element": "Info banner link",
+            "action": "Navigate to Expert Services quote request"
+          },
+          {
+            "element": "Search bar (top right)",
+            "action": "Search documentation by keyword"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: navigation sidebar (left) > primary content (center) > contextual topic links (right). Content structured as introduction > detailed explanation > methodology breakdown with supporting details",
+        "frictionPoints": [
+          "Multiple navigation paths might confuse users about primary vs secondary navigation",
+          "Dense text blocks without visual breaks could slow reading comprehension",
+          "Italicized definition text may be hard to read on dark background"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Exchange Data: Transparency Notice",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Request a quote from Glassnode Expert Services",
+            "style": "text-link",
+            "placement": "top banner"
+          },
+          {
+            "text": "Copy",
+            "style": "icon-button",
+            "placement": "next to headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FURTHER INFORMATION",
+            "context": "above main headline",
+            "purpose": "Categorizes page content as reference documentation"
+          },
+          {
+            "text": "Note: Within this context, \"exchange metrics\" strictly refers to on-chain metrics...",
+            "context": "callout box below introduction",
+            "purpose": "Provides critical definition to prevent user misunderstanding"
+          },
+          {
+            "text": "Jun 24, 2025 • 3 min read",
+            "context": "below author byline on partner report",
+            "purpose": "Sets user expectations for content length and freshness"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Glassnode branding and official documentation framework",
+          "Detailed transparency notice establishing methodology credibility",
+          "Partnership with Avenir Group cited for research",
+          "Public commitment to data accuracy and holistic labeling"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/glassnode-staking-1-bitcoin-analysis-researchavenir-glassnode-bit.png",
+      "label": "Bitcoin Analysis & ResearchAvenir + Glassnode: Bit",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#ffffff",
+          "#5b7aff"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif (64px+), white text, minimal character spacing",
+          "bodyStyle": "Medium sans-serif (18px), light gray (#cccccc), generous line height",
+          "dataStyle": "Blue accent text for key metrics or highlights"
+        },
+        "components": [
+          {
+            "type": "navbar",
+            "description": "Top navigation bar with logo, main sections, and authentication",
+            "position": "top of page, fixed",
+            "notable": "Glassnode Insights branding, horizontal nav layout with Subscribe/Log In CTAs, search functionality"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with category label, subheading, and author byline",
+            "position": "top of main content area",
+            "notable": "Category label in light gray, massive headline dominates viewport, author info with avatar and metadata"
+          },
+          {
+            "type": "feature-image",
+            "description": "Large image showing research paper mockup with co-branding",
+            "position": "center of page, below headline",
+            "notable": "Shows physical paper with Glassnode and Avenir Group logos, demonstrates partnership credibility"
+          },
+          {
+            "type": "newsletter-signup",
+            "description": "Email subscription callout at bottom",
+            "position": "bottom of page",
+            "notable": "Dark background with white text, email input field and Subscribe button, legal disclaimer links"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation provides context, hero section with oversized headline captures attention, descriptive subheading clarifies value proposition, research image provides social proof, newsletter signup creates conversion opportunity",
+        "innovativeElements": [
+          "Oversized typography for headline impact",
+          "Partnership co-branding in physical paper mockup",
+          "Clean full-width layout with generous vertical spacing",
+          "Integrated subscription conversion at page bottom"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about research report on Bitcoin's liquidity profile and subscribe for similar insights",
+        "entryPoints": [
+          "From Glassnode Insights main navigation",
+          "From Research section menu",
+          "From direct link via email or social media"
+        ],
+        "exitPoints": [
+          "Subscribe for newsletter",
+          "Log In to access full content",
+          "Navigate via navbar (Market Pulse, Week On-chain, Market Vectors, Partner Reports, Research)",
+          "Search for related content",
+          "Click on author/publication"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe button",
+            "action": "Opens email signup form and enters newsletter subscription flow"
+          },
+          {
+            "element": "Log In button",
+            "action": "Redirects to authentication page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different content sections (Market Pulse, Research, etc.)"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          },
+          {
+            "element": "Email input field",
+            "action": "Captures email for newsletter subscription"
+          }
+        ],
+        "informationArchitecture": "Hero-focused landing page emphasizing research content and partnership credibility. Clear hierarchy: navigation > category label > headline > description > visual proof > conversion opportunity (newsletter signup)",
+        "frictionPoints": [
+          "Large hero section might require scrolling to see full content details",
+          "Newsletter signup requires email entry before accessing preview content",
+          "Multiple navigation options in top bar could dilute focus on research report"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Avenir + Glassnode: Bitcoin's Liquidity Profile",
+        "subheadline": "An innovative study by Glassnode and Avenir Group exploring how Bitcoin's liquidity profile is being reshaped by structural capital flows, institutional demand, and macro-financial integration.",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "top right navbar"
+          },
+          {
+            "text": "Log In",
+            "style": "text-link",
+            "placement": "top right navbar"
+          },
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "newsletter form at bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Analysis & Research",
+            "context": "above main headline",
+            "purpose": "Categorizes content as research-focused Bitcoin analysis"
+          },
+          {
+            "text": "Jun 24, 2025 • 3 min read",
+            "context": "below author byline",
+            "purpose": "Sets expectations for content length and publication date"
+          },
+          {
+            "text": "Subscribe for free to receive best-in-class market analysis on Bitcoin, Ethereum, and DeFi, and novel on-chain research.",
+            "context": "in newsletter signup section",
+            "purpose": "Communicates value proposition of newsletter subscription"
+          },
+          {
+            "text": "By subscribing, you agree to our Terms & Conditions and Privacy Notice.",
+            "context": "below newsletter form",
+            "purpose": "Legal disclaimer establishing user consent and trust"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Jun 24, 2025 (date format)",
+          "3 min read (reading time indicator)"
+        ],
+        "trustSignals": [
+          "Partnership with Avenir Group (prominent co-branding)",
+          "Institutional research framing ('innovative study')",
+          "Glassnode Insights branding and publication authority",
+          "Publication date and estimated read time demonstrate credibility"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

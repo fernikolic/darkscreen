@@ -1,0 +1,4827 @@
+{
+  "slug": "bitcoin-core",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:26:48.410Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 41,
+  "screens": [
+    {
+      "image": "/screenshots/bitcoin-core-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray (#333), large size for section headers",
+          "bodyStyle": "Regular sans-serif, dark gray (#555), medium line-height for readability",
+          "dataStyle": "Regular weight, publication dates in lighter gray"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal black header with Bitcoin Core logo and nav links",
+            "position": "Top of page, full width",
+            "notable": "Language selector dropdown in top right corner"
+          },
+          {
+            "type": "Content Container",
+            "description": "White background with centered article list",
+            "position": "Main content area",
+            "notable": "Dividing lines between articles create visual separation"
+          },
+          {
+            "type": "Article Cards",
+            "description": "Text-based cards with title, excerpt, and publication date",
+            "position": "Stacked vertically in main content",
+            "notable": "No images or thumbnails, pure text-based layout"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Article titles draw attention first via bold weight, followed by descriptive text and dates",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse recent Bitcoin Core news and updates",
+        "entryPoints": [
+          "Direct navigation to home",
+          "External links to Bitcoin Core website"
+        ],
+        "exitPoints": [
+          "Click article title to read full post",
+          "Navigate to BLOG, RELEASES, or SECURITY ADVISORIES via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Article Title",
+            "action": "Navigate to full article page"
+          },
+          {
+            "element": "Navigation Links",
+            "action": "Jump to specific sections (ABOUT, DOWNLOAD, BLOG, RELEASES, etc.)"
+          }
+        ],
+        "informationArchitecture": "Chronological list of posts organized by recency, with titles and summaries for quick scanning",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Recent Posts",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core 29.3 is now available.",
+            "context": "First article excerpt",
+            "purpose": "Inform user of latest release availability"
+          },
+          {
+            "text": "Published on February 10, 2026",
+            "context": "Below article title",
+            "purpose": "Indicate publication date for context"
+          },
+          {
+            "text": "A wallet migration bug present in Bitcoin Core 30.0 and 30.1 may delete all files in the wallet directory, potentially resulting in a loss of funds.",
+            "context": "Security article excerpt",
+            "purpose": "Alert users to critical issue"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version numbers (29.3, 30.2)",
+          "Dates (February 10, 2026)"
+        ],
+        "trustSignals": [
+          "Security Advisories section in navigation",
+          "Detailed technical issue descriptions"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-2-download.png",
+      "label": "Download",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1E5BA8",
+          "#E8A500"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color, prominent size",
+          "bodyStyle": "Regular sans-serif, medium gray, clear readability",
+          "dataStyle": "Version numbers displayed prominently in heading format"
+        },
+        "components": [
+          {
+            "type": "Primary CTA Button",
+            "description": "Large blue button with Apple logo and text 'Download Bitcoin Core'",
+            "position": "Center, above OS selection",
+            "notable": "Most prominent interactive element with contrasting blue color"
+          },
+          {
+            "type": "OS Selection Grid",
+            "description": "Bordered container with platform options arranged in 2-column layout",
+            "position": "Center, main content area",
+            "notable": "Orange/tan border around entire section, OS icons with labels"
+          },
+          {
+            "type": "Platform Options",
+            "description": "Windows, macOS (x86_64), macOS (arm64), Linux (tgz), ARM Linux, RISC-V Linux, PPC64 Linux, Snap Store",
+            "position": "Inside bordered grid container",
+            "notable": "File formats displayed below OS names (exe-zip, zip-tar.gz, etc.)"
+          },
+          {
+            "type": "Security Links",
+            "description": "SHA256 hashes, signatures, torrent download, source code",
+            "position": "Below OS grid, centered",
+            "notable": "Underlined text links for advanced users"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline draws attention, primary button is most prominent, OS grid provides secondary options, security links are tertiary",
+        "innovativeElements": [
+          "Bordered container distinguishes download options section",
+          "Icon-based platform identification for quick scanning"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Download Bitcoin Core software for their operating system",
+        "entryPoints": [
+          "DOWNLOAD navigation link",
+          "External referrals"
+        ],
+        "exitPoints": [
+          "Click OS-specific download option",
+          "Click primary macOS button",
+          "Access version history",
+          "Download torrent",
+          "View source code"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download Bitcoin Core Button",
+            "action": "Initiate macOS download"
+          },
+          {
+            "element": "OS Selection Options",
+            "action": "Download Bitcoin Core for selected operating system"
+          },
+          {
+            "element": "SHA256 binary hashes",
+            "action": "View/copy hash verification data"
+          },
+          {
+            "element": "Show version history",
+            "action": "Navigate to historical releases list"
+          }
+        ],
+        "informationArchitecture": "Primary action prominently placed, followed by platform-specific options, security verification tools below",
+        "frictionPoints": [
+          "Multiple download options might confuse non-technical users",
+          "Security verification steps require additional knowledge"
+        ],
+        "progressIndicators": [
+          "Latest version: 30.2"
+        ]
+      },
+      "copy": {
+        "headline": "Download - Bitcoin",
+        "subheadline": "Latest version: 30.2",
+        "ctas": [
+          {
+            "text": "Download Bitcoin Core",
+            "style": "primary-button",
+            "placement": "Center, top of download section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Or choose your operating system",
+            "context": "Above platform selection grid",
+            "purpose": "Guide user to alternative download options"
+          },
+          {
+            "text": "exe - zip",
+            "context": "Below Windows option",
+            "purpose": "Specify file format"
+          },
+          {
+            "text": "64 bit - 32 bit",
+            "context": "Beside ARM Linux",
+            "purpose": "Indicate architecture options"
+          },
+          {
+            "text": "Refresh expired keys using:",
+            "context": "Bottom of visible section",
+            "purpose": "Direct users to security key refresh instructions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version number: 30.2",
+          "Architecture specifications: 64 bit, 32 bit",
+          "File formats: exe, zip, tar.gz"
+        ],
+        "trustSignals": [
+          "SHA256 binary hashes",
+          "SHA256 hash signatures",
+          "Torrent download option",
+          "Source code availability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-3-releases.png",
+      "label": "releases",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color, large",
+          "bodyStyle": "Regular sans-serif, dark color, bullet list format",
+          "dataStyle": "Version numbers as hyperlinks in blue underlined text"
+        },
+        "components": [
+          {
+            "type": "Page Heading",
+            "description": "Large bold 'Releases' heading",
+            "position": "Top of main content",
+            "notable": "Simple, clear typographic hierarchy"
+          },
+          {
+            "type": "Bulleted List",
+            "description": "Vertical list of version numbers as hyperlinks",
+            "position": "Main content area",
+            "notable": "Version numbers are clickable links rendered in blue with underlines"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading anchors the page, bulleted links draw eyes down the list in reading order",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse and access historical Bitcoin Core release versions",
+        "entryPoints": [
+          "RELEASES navigation link",
+          "From download page version history link"
+        ],
+        "exitPoints": [
+          "Click individual version link to view release details",
+          "Return to download page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Version Number Link",
+            "action": "Navigate to specific release details page"
+          }
+        ],
+        "informationArchitecture": "Reverse chronological list of all major and minor releases from newest (30.2) to older versions (0.21.2)",
+        "frictionPoints": [
+          "Long scrolling list with no pagination or filtering",
+          "No visual distinction between major and minor versions",
+          "No timestamps or release dates visible on this list view"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Releases",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: Bitcoin Core X.X (major.minor)",
+          "Examples: Bitcoin Core 30.2, Bitcoin Core 30.1, Bitcoin Core 0.21.2"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-7-lifecycle.png",
+      "label": "Lifecycle",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#f0ad4e"
+        ],
+        "typography": {
+          "headingStyle": "Bold, dark sans-serif, large x-height for hierarchy",
+          "bodyStyle": "Regular serif font, comfortable line-height, dark gray",
+          "dataStyle": "Inline monospace for version numbers (29.0, 30.0, rc1, rc2)"
+        },
+        "components": [
+          {
+            "type": "navigation-sidebar",
+            "description": "Right-side gray panel with section links",
+            "position": "right side, full height",
+            "notable": "Sticky navigation for long-form content"
+          },
+          {
+            "type": "content-panel",
+            "description": "Main content area with documentation text",
+            "position": "left-center, takes up 60% width",
+            "notable": "Multi-column heading structure with inline links"
+          },
+          {
+            "type": "header-nav",
+            "description": "Top navigation with logo and menu items",
+            "position": "top, full width",
+            "notable": "Language selector in top-right"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar anchors navigation while main content flows vertically; headings use weight and size to distinguish sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-page",
+        "userIntent": "Understand Bitcoin Core software lifecycle, versioning strategy, and maintenance policies",
+        "entryPoints": [
+          "DEVELOPMENT menu item",
+          "direct link from releases page"
+        ],
+        "exitPoints": [
+          "click sidebar section links (Versioning, Consensus rules, etc.)",
+          "navigate to other main menu items",
+          "follow external links in content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "sidebar section links",
+            "action": "smooth scroll or jump to corresponding content section"
+          },
+          {
+            "element": "inline hyperlinks",
+            "action": "navigate to related documentation or external resources"
+          },
+          {
+            "element": "language selector",
+            "action": "switch interface language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical sections (Software Life Cycle > Versioning > details about major/minor releases, Consensus rules, Maintenance period)",
+        "frictionPoints": [
+          "Long-form text may require significant scrolling",
+          "No search function visible on this page",
+          "Dense technical content without visual breaks"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Software Life Cycle",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This document describes the life-cycle of the Bitcoin Core software package released by the Bitcoin Core project.",
+            "context": "opening paragraph",
+            "purpose": "set expectation for document scope"
+          },
+          {
+            "text": "We aim to make a major release every 6 months.",
+            "context": "Versioning section",
+            "purpose": "establish predictable release cadence"
+          },
+          {
+            "text": "We will not introduce major new features in maintenance releases",
+            "context": "Versioning section",
+            "purpose": "set boundary for maintenance version scope"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "29.0, 30.0 (MAJOR.MINOR format)",
+          "29.3, 30.1 (maintenance versions)",
+          "rc1, rc2 (release candidate suffix)"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core project",
+          "Standard maintenance policy alignment",
+          "Clear versioning governance"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-8-rpc-docs.png",
+      "label": "RPC Docs",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#0066cc"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size, dark color",
+          "bodyStyle": "Regular font, light gray",
+          "dataStyle": "Underlined links for version numbers (30.0.0, 29.0.0, etc.)"
+        },
+        "components": [
+          {
+            "type": "bulleted-link-list",
+            "description": "Vertically stacked version links",
+            "position": "center-left, primary content area",
+            "notable": "Links styled as version identifiers with underlines"
+          },
+          {
+            "type": "header-nav",
+            "description": "Global navigation bar",
+            "position": "top, full width",
+            "notable": "Consistent with other pages"
+          },
+          {
+            "type": "footer",
+            "description": "Legal, social, copyright info",
+            "position": "bottom, full width",
+            "notable": "Bitcoin Core logo in footer"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title anchors the page; version links organized chronologically (newest to oldest); footer grounds the layout",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "directory-index",
+        "userIntent": "Find and access RPC documentation for a specific Bitcoin Core version",
+        "entryPoints": [
+          "DEVELOPMENT menu",
+          "direct URL to RPC docs section"
+        ],
+        "exitPoints": [
+          "click version link to view RPC docs for that version",
+          "navigate back to main menu",
+          "click footer links (Legal, Privacy, RSS)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "version links (30.0.0, 29.0.0, etc.)",
+            "action": "navigate to RPC documentation for that specific version"
+          },
+          {
+            "element": "footer links",
+            "action": "navigate to legal, privacy, or RSS feed"
+          }
+        ],
+        "informationArchitecture": "Simple index of available versions listed chronologically with most recent at top",
+        "frictionPoints": [
+          "No description or indication of which version to choose",
+          "No search function to filter versions",
+          "18+ items may require scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core RPC",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Following docs are available:",
+            "context": "before the version list",
+            "purpose": "introduce the list of available documentation versions"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "30.0.0, 29.0.0, 28.0.0 (semantic versioning)",
+          "0.21.0, 0.20.0, 0.19.0 (older version format)"
+        ],
+        "trustSignals": [
+          "Multiple maintained versions",
+          "Official Bitcoin Core documentation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-9-3000.png",
+      "label": "30.0.0",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1a1a1a",
+          "#ffffff",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size, dark color",
+          "bodyStyle": "Regular serif font, instructional text",
+          "dataStyle": "Search input and categorized command labels"
+        },
+        "components": [
+          {
+            "type": "search-input",
+            "description": "Search box for RPC commands",
+            "position": "top-right sidebar",
+            "notable": "Allows filtering of commands"
+          },
+          {
+            "type": "command-category-buttons",
+            "description": "Dark buttons with category names",
+            "position": "right sidebar below search",
+            "notable": "Stacked vertically, bold all-caps text, icon prefix"
+          },
+          {
+            "type": "main-content-panel",
+            "description": "Center area with instructions",
+            "position": "left-center",
+            "notable": "Sparse content inviting user to select from menu"
+          },
+          {
+            "type": "metadata-text",
+            "description": "Italic documentation export note",
+            "position": "left side, upper area",
+            "notable": "Indicates source version"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar commands are visually dominant with dark contrast; main content area is secondary and instructional",
+        "innovativeElements": [
+          "Dynamic command categorization with visual separation"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-hub-with-navigation",
+        "userIntent": "Browse and select Bitcoin Core 30.0.0 RPC commands by category",
+        "entryPoints": [
+          "version link from RPC docs index page"
+        ],
+        "exitPoints": [
+          "click category button (BLOCKCHAIN, CONTROL, MINING, etc.)",
+          "use search to filter commands",
+          "navigate back to version list"
+        ],
+        "interactiveElements": [
+          {
+            "element": "search input",
+            "action": "filter RPC commands by keyword"
+          },
+          {
+            "element": "category buttons",
+            "action": "view all commands in that category"
+          }
+        ],
+        "informationArchitecture": "Version-specific RPC command browser organized by functional categories (blockchain operations, mining, network, transactions, signing, utilities, wallet, message queuing)",
+        "frictionPoints": [
+          "No initial guidance on what commands are available",
+          "Must select a category to see content",
+          "Search and browse are competing interaction models"
+        ],
+        "progressIndicators": [
+          "Bitcoin Core 30.0.0 header indicates version context"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 30.0.0 RPC",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Select a command group in the menu.",
+            "context": "center of main panel",
+            "purpose": "instruct user to choose category from sidebar"
+          },
+          {
+            "text": "Documentation exported from Bitcoin Core 30.0",
+            "context": "left side, italic metadata",
+            "purpose": "indicate documentation source and version"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "BLOCKCHAIN, CONTROL, MINING, NETWORK, RAWTRANSACTIONS, SIGNER, UTIL, WALLET, ZMQ (category labels)"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core RPC documentation",
+          "Version-specific documentation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-4-security-advisories.png",
+      "label": "Security Advisories",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#F7931A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, large hierarchy (h1 ~32px for main, h2 ~24px for sections)",
+          "bodyStyle": "Regular sans-serif, dark gray (#333), ~16px line-height, justified alignment",
+          "dataStyle": "Bold text for severity categories (Critical, High, Medium, Low), inline emphasis with bold"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Fixed header with Bitcoin Core logo, main nav links (ABOUT, DOWNLOAD, BLOG, etc.), language selector",
+            "position": "top",
+            "notable": "Orange Bitcoin icon logo establishes brand, black background provides contrast"
+          },
+          {
+            "type": "Right Sidebar Navigation",
+            "description": "Sticky vertical nav with OVERVIEW, Policy, Past Security Advisories links in gray boxes",
+            "position": "right",
+            "notable": "Provides contextual navigation within the security section"
+          },
+          {
+            "type": "Bulleted Lists",
+            "description": "Hierarchical list of vulnerability severity classes with expandable 'Examples' links",
+            "position": "main-content",
+            "notable": "Triangle play icons (▶) indicate collapsible sections"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title dominates, intro text establishes context, bold severity headings create scanning pattern, body text provides detailed explanations",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand Bitcoin Core's vulnerability disclosure policies and severity classifications",
+        "entryPoints": [
+          "SECURITY ADVISORIES nav link",
+          "search for security info"
+        ],
+        "exitPoints": [
+          "Past Security Advisories link",
+          "SECURITY.md external link",
+          "Examples expandable sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Examples links (▶ symbol)",
+            "action": "Expand/collapse detailed examples for each vulnerability severity"
+          },
+          {
+            "element": "SECURITY.md hyperlink",
+            "action": "Navigate to detailed security policy document"
+          },
+          {
+            "element": "Sidebar navigation links",
+            "action": "Navigate to Policy, Overview, or Past Security Advisories"
+          }
+        ],
+        "informationArchitecture": "Linear flow: intro → policy overview → severity classification (4 tiers) → detailed definitions with collapsible examples",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Security Advisories",
+        "subheadline": "This page summarizes policies in relation to disclosing vulnerabilities in Bitcoin Core, as well as provides a summary of historical Security Advisories.",
+        "ctas": [
+          {
+            "text": "SECURITY.md",
+            "style": "text-link",
+            "placement": "inline in policy text"
+          },
+          {
+            "text": "Examples",
+            "style": "text-link",
+            "placement": "inline after each severity description"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "security@bitcoincore.org",
+            "context": "vulnerability reporting email",
+            "purpose": "Direct users to proper reporting channel"
+          },
+          {
+            "text": "see SECURITY.md for details",
+            "context": "parenthetical in first paragraph",
+            "purpose": "Directs to fuller documentation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "4 Severity Classes: Critical, High, Medium, Low"
+        ],
+        "trustSignals": [
+          "Formal vulnerability disclosure policy",
+          "Structured severity classification system",
+          "Dedicated security email (security@bitcoincore.org)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-5-contribute.png",
+      "label": "contribute",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#F7931A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, h1 ~36px, h2 ~24px",
+          "bodyStyle": "Regular sans-serif, dark gray, ~16px, generous line-height",
+          "dataStyle": "Inline links underlined, hashtags for IRC channels, code references italicized"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Fixed header with Bitcoin Core logo, nav links, language selector",
+            "position": "top",
+            "notable": "Consistent branding across pages"
+          },
+          {
+            "type": "Bulleted Lists",
+            "description": "Multiple bulleted lists organizing contribution types and IRC channels",
+            "position": "main-content",
+            "notable": "Links embedded within list items (README.md, doc folder, pull requests, etc.)"
+          },
+          {
+            "type": "Footer",
+            "description": "Minimal footer with social links (X), Legal, Privacy Policy, RSS, Bitcoin Core logo",
+            "position": "bottom",
+            "notable": "Social media integration"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large title draws attention, three major sections (contribution types, discussion, website contribution), bold subsection headings create scannable structure",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand how to contribute to Bitcoin Core project",
+        "entryPoints": [
+          "DEVELOPMENT nav link",
+          "contribution interest"
+        ],
+        "exitPoints": [
+          "hosted on GitHub link",
+          "Translations link",
+          "pull requests link",
+          "contribution guidelines link",
+          "IRC channels",
+          "bitcoin-dev mailing list",
+          "website link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "hosted on GitHub",
+            "action": "Navigate to GitHub repository"
+          },
+          {
+            "element": "README.md, doc folder",
+            "action": "Navigate to documentation"
+          },
+          {
+            "element": "pull requests",
+            "action": "Navigate to GitHub pull requests"
+          },
+          {
+            "element": "contribution guidelines",
+            "action": "Navigate to contribution workflow"
+          },
+          {
+            "element": "IRC channel links (#bitcoin-core-dev, etc.)",
+            "action": "Navigate to chat channels"
+          },
+          {
+            "element": "website link (at bottom)",
+            "action": "Navigate to website repository"
+          }
+        ],
+        "informationArchitecture": "Three clear sections: (1) How to Contribute with 6 contribution areas, (2) Discussion with IRC channels, (3) Website contribution path",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How Can I Contribute?",
+        "subheadline": "You are welcome to contribute to the project! Our main source code repository is hosted on GitHub and there are several aspects you can help on:",
+        "ctas": [
+          {
+            "text": "hosted on GitHub",
+            "style": "text-link",
+            "placement": "in introduction paragraph"
+          },
+          {
+            "text": "README.md",
+            "style": "text-link",
+            "placement": "first bullet point"
+          },
+          {
+            "text": "doc folder",
+            "style": "text-link",
+            "placement": "first bullet point"
+          },
+          {
+            "text": "Translations",
+            "style": "text-link",
+            "placement": "second bullet point"
+          },
+          {
+            "text": "contribution guidelines",
+            "style": "text-link",
+            "placement": "closing paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Feel free to report issues and open pull requests, but please check the contribution guidelines to understand our workflow.",
+            "context": "paragraph between contribution types and discussion section",
+            "purpose": "Sets expectations for code contribution process"
+          },
+          {
+            "text": "Most Bitcoin Core related discussion happens in the following IRC channels on irc.libera.chat:",
+            "context": "introduction to discussion section",
+            "purpose": "Orients user to communication channels"
+          },
+          {
+            "text": "There is also a mailing list for Bitcoin protocol discussion",
+            "context": "after IRC channels list",
+            "purpose": "Presents alternative discussion venue"
+          }
+        ],
+        "tone": "friendly-casual, welcoming",
+        "dataFormatting": [
+          "Hashtag format for IRC channels: #bitcoin-core-dev",
+          "Repository links as plain URLs"
+        ],
+        "trustSignals": [
+          "GitHub repository hosting",
+          "Formal contribution guidelines",
+          "Active IRC discussion channels",
+          "Mailing list for protocol discussion"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-6-meetings.png",
+      "label": "meetings",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#F7931A",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray, h1 ~36px, h2 ~24px",
+          "bodyStyle": "Regular sans-serif, dark gray, ~16px, comfortable line-height",
+          "dataStyle": "Inline URLs, hashtags for IRC channels, italicized references to external links"
+        },
+        "components": [
+          {
+            "type": "Top Navigation Bar",
+            "description": "Fixed header with logo, nav menu, language selector",
+            "position": "top",
+            "notable": "Consistent with other pages"
+          },
+          {
+            "type": "Body Copy with Embedded Links",
+            "description": "Narrative text with strategically placed hyperlinks and references",
+            "position": "main-content",
+            "notable": "Multiple link types: webchat, wiki URLs, external websites, ical format"
+          },
+          {
+            "type": "Footer",
+            "description": "Minimal footer with social (X), legal links, RSS, logo",
+            "position": "bottom",
+            "notable": "Consistent footer across pages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large title, introductory paragraph with hashtag highlight, three subsections (meeting schedules, PR Review Club, old meetings), varying content density",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find information about Bitcoin Core IRC meetings and how to attend",
+        "entryPoints": [
+          "DEVELOPMENT nav link",
+          "meeting attendance interest"
+        ],
+        "exitPoints": [
+          "webchat link",
+          "here links (for meeting logs/minutes)",
+          "GitHub wiki link",
+          "ical format link",
+          "PR Review Club website",
+          "separate page link for old meetings"
+        ],
+        "interactiveElements": [
+          {
+            "element": "webchat link",
+            "action": "Navigate to Libera Chat web interface"
+          },
+          {
+            "element": "here links (x2)",
+            "action": "Navigate to meeting logs/minutes"
+          },
+          {
+            "element": "GitHub wiki link",
+            "action": "Navigate to general IRC meeting schedule"
+          },
+          {
+            "element": "ical format link",
+            "action": "Download calendar file for subscription"
+          },
+          {
+            "element": "the review club website",
+            "action": "Navigate to PR Review Club details"
+          },
+          {
+            "element": "listed on a separate page",
+            "action": "Navigate to archived meetings 2015-2018"
+          }
+        ],
+        "informationArchitecture": "Linear narrative: intro → current meeting access methods → discussion channels → PR Review Club reference → archive mention",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "IRC Meetings",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "webchat",
+            "style": "text-link",
+            "placement": "first paragraph"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "first paragraph (logs reference)"
+          },
+          {
+            "text": "here",
+            "style": "text-link",
+            "placement": "first paragraph (minutes reference)"
+          },
+          {
+            "text": "Here as ical format",
+            "style": "text-link",
+            "placement": "second paragraph"
+          },
+          {
+            "text": "the review club website",
+            "style": "text-link",
+            "placement": "PR Review Club paragraph"
+          },
+          {
+            "text": "listed on a separate page",
+            "style": "text-link",
+            "placement": "final paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "#bitcoin-core-dev",
+            "context": "IRC channel reference",
+            "purpose": "Identifies specific chat channel"
+          },
+          {
+            "text": "Everyone is welcome to attend.",
+            "context": "First paragraph after channel reference",
+            "purpose": "Lowers barrier to entry"
+          },
+          {
+            "text": "to subscribe via a calendar app.",
+            "context": "After ical format link",
+            "purpose": "Explains utility of calendar subscription"
+          },
+          {
+            "text": "If you have any questions about the date or time of an upcoming meeting, please ask in the IRC channel.",
+            "context": "Standalone paragraph",
+            "purpose": "Provides support pathway for uncertain users"
+          }
+        ],
+        "tone": "professional-welcoming",
+        "dataFormatting": [
+          "GitHub URLs for wiki links",
+          "Hashtag IRC channel notation: #bitcoin-core-dev",
+          "Time/schedule references (weekly, 2015 to 2018)"
+        ],
+        "trustSignals": [
+          "Libera Chat hosting (established IRC network)",
+          "GitHub wiki for meeting records",
+          "Documented meeting schedules",
+          "Meeting logs and minutes publicly available"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-10-2900.png",
+      "label": "29.0.0",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), all caps for main headline",
+          "bodyStyle": "Regular sans-serif, 14-16px, gray text for secondary content",
+          "dataStyle": "Version numbers displayed in bold headline format"
+        },
+        "components": [
+          {
+            "type": "horizontal navigation bar",
+            "description": "Dark header with logo and main nav links",
+            "position": "top of page",
+            "notable": "Sticky header with language selector dropdown"
+          },
+          {
+            "type": "vertical sidebar menu",
+            "description": "Right sidebar with categorized RPC command groups",
+            "position": "right side",
+            "notable": "Dark background with icon-prefixed menu items (BLOCKCHAIN, CONTROL, MINING, etc.)"
+          },
+          {
+            "type": "search bar",
+            "description": "Text input field for searching documentation",
+            "position": "top of right sidebar",
+            "notable": null
+          },
+          {
+            "type": "footer",
+            "description": "Minimal footer with social links and copyright",
+            "position": "bottom center",
+            "notable": "Bitcoin Core branding and 2026 copyright"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content area centers attention on headline and instruction text, sidebar provides secondary navigation for command exploration",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core 29.0.0 RPC documentation and navigate to specific command groups",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Version-specific link from releases page",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Click on sidebar menu items (BLOCKCHAIN, CONTROL, MINING, NETWORK, etc.)",
+          "Navigate to main site via header links (ABOUT, DOWNLOAD, BLOG, etc.)",
+          "Search for specific commands via search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to RPC command group documentation"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter/search RPC commands"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to different site sections"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - main site navigation at top, version-specific RPC documentation in center, command categories in right sidebar",
+        "frictionPoints": [
+          "User must select a command group before seeing any documentation",
+          "Empty state provides minimal guidance on what to explore first"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 29.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 29.0",
+            "context": "Left sidebar, above main content",
+            "purpose": "Provides context about documentation source and version"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer",
+            "purpose": "Standard footer legal links"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: X.Y.Z (29.0.0)",
+          "Menu category labels in all caps"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "Version specificity",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-11-2800.png",
+      "label": "28.0.0",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), all caps for main headline",
+          "bodyStyle": "Regular sans-serif, 14-16px, gray text for secondary content",
+          "dataStyle": "Version numbers displayed in bold headline format"
+        },
+        "components": [
+          {
+            "type": "horizontal navigation bar",
+            "description": "Dark header with logo and main nav links",
+            "position": "top of page",
+            "notable": "Sticky header with language selector dropdown"
+          },
+          {
+            "type": "vertical sidebar menu",
+            "description": "Right sidebar with categorized RPC command groups",
+            "position": "right side",
+            "notable": "Dark background with icon-prefixed menu items (BLOCKCHAIN, CONTROL, MINING, etc.)"
+          },
+          {
+            "type": "search bar",
+            "description": "Text input field for searching documentation",
+            "position": "top of right sidebar",
+            "notable": null
+          },
+          {
+            "type": "footer",
+            "description": "Minimal footer with social links and copyright",
+            "position": "bottom center",
+            "notable": "Bitcoin Core branding and 2026 copyright"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content area centers attention on headline and instruction text, sidebar provides secondary navigation for command exploration",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core 28.0.0 RPC documentation and navigate to specific command groups",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Version-specific link from releases page",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Click on sidebar menu items (BLOCKCHAIN, CONTROL, MINING, NETWORK, etc.)",
+          "Navigate to main site via header links (ABOUT, DOWNLOAD, BLOG, etc.)",
+          "Search for specific commands via search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to RPC command group documentation"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter/search RPC commands"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to different site sections"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - main site navigation at top, version-specific RPC documentation in center, command categories in right sidebar",
+        "frictionPoints": [
+          "User must select a command group before seeing any documentation",
+          "Empty state provides minimal guidance on what to explore first"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 28.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 28.0",
+            "context": "Left sidebar, above main content",
+            "purpose": "Provides context about documentation source and version"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer",
+            "purpose": "Standard footer legal links"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: X.Y.Z (28.0.0)",
+          "Menu category labels in all caps"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "Version specificity",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-12-2700.png",
+      "label": "27.0.0",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (28-32px), all caps for main headline",
+          "bodyStyle": "Regular sans-serif, 14-16px, gray text for secondary content",
+          "dataStyle": "Version numbers displayed in bold headline format"
+        },
+        "components": [
+          {
+            "type": "horizontal navigation bar",
+            "description": "Dark header with logo and main nav links",
+            "position": "top of page",
+            "notable": "Sticky header with language selector dropdown"
+          },
+          {
+            "type": "vertical sidebar menu",
+            "description": "Right sidebar with categorized RPC command groups",
+            "position": "right side",
+            "notable": "Dark background with icon-prefixed menu items (BLOCKCHAIN, CONTROL, MINING, etc.)"
+          },
+          {
+            "type": "search bar",
+            "description": "Text input field for searching documentation",
+            "position": "top of right sidebar",
+            "notable": null
+          },
+          {
+            "type": "footer",
+            "description": "Minimal footer with social links and copyright",
+            "position": "bottom center",
+            "notable": "Bitcoin Core branding and 2026 copyright"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main content area centers attention on headline and instruction text, sidebar provides secondary navigation for command exploration",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core 27.0.0 RPC documentation and navigate to specific command groups",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Version-specific link from releases page",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Click on sidebar menu items (BLOCKCHAIN, CONTROL, MINING, NETWORK, etc.)",
+          "Navigate to main site via header links (ABOUT, DOWNLOAD, BLOG, etc.)",
+          "Search for specific commands via search bar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to RPC command group documentation"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter/search RPC commands"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to different site sections"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - main site navigation at top, version-specific RPC documentation in center, command categories in right sidebar",
+        "frictionPoints": [
+          "User must select a command group before seeing any documentation",
+          "Empty state provides minimal guidance on what to explore first"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 27.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 27.0",
+            "context": "Left sidebar, above main content",
+            "purpose": "Provides context about documentation source and version"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer",
+            "purpose": "Standard footer legal links"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: X.Y.Z (27.0.0)",
+          "Menu category labels in all caps"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "Version specificity",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-13-2600.png",
+      "label": "26.0.0",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36-40px), dark color, all caps for main title",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), gray/dark text for instructions",
+          "dataStyle": "Version numbers and metadata in italic serif font"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Dark horizontal bar with Bitcoin Core logo and main nav menu (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT)",
+            "position": "top",
+            "notable": "Sticky/fixed positioning, minimal design with clear separation"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Vertical menu with dark buttons containing categorized RPC command groups (BLOCKCHAIN, CONTROL, MINING, NETWORK, RAWTRANSACTIONS, SIGNER, UTIL, WALLET, ZMQ)",
+            "position": "right",
+            "notable": "Each category as distinct button-like element with icon, enabling quick navigation"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Large white/light background area with version title and instruction text",
+            "position": "center",
+            "notable": "Substantial whitespace, minimal content on initial page load"
+          },
+          {
+            "type": "search-bar",
+            "description": "Input field at top of right sidebar for searching documentation",
+            "position": "right-top",
+            "notable": "Consistent placement for quick access"
+          },
+          {
+            "type": "footer",
+            "description": "Social links, legal info, copyright notice, and Bitcoin Core branding",
+            "position": "bottom",
+            "notable": "Subtle gray text, X/Twitter link, RSS feed icon"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top navigation anchors attention; main content area draws focus through size and whitespace; right sidebar provides secondary navigation without visual competition",
+        "innovativeElements": [
+          "Sidebar categorization of RPC commands by functional groups rather than alphabetical",
+          "Persistent version-specific documentation (26.0.0) indicating multi-version support",
+          "Clean separation between primary nav (top) and secondary nav (sidebar)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Bitcoin Core RPC documentation for version 26.0.0; browse or search command reference",
+        "entryPoints": [
+          "Direct link to documentation page",
+          "From DOWNLOAD or DEVELOPMENT sections",
+          "Search engine result for specific version docs"
+        ],
+        "exitPoints": [
+          "Click command group (BLOCKCHAIN, CONTROL, etc.) to view category",
+          "Use search bar to find specific command",
+          "Navigate to other site sections via top menu",
+          "Download or visit ABOUT page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Right sidebar command categories",
+            "action": "Click to view RPC commands within that functional group"
+          },
+          {
+            "element": "Search bar",
+            "action": "Type to filter/search documentation"
+          },
+          {
+            "element": "Top navigation menu items",
+            "action": "Navigate to different site sections"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Change interface language"
+          },
+          {
+            "element": "Legal/RSS links in footer",
+            "action": "Navigate to legal docs or subscribe to updates"
+          }
+        ],
+        "informationArchitecture": "Hierarchical structure: top-level site navigation → version-specific landing → functional category selection → detailed command reference. Sidebar provides parallel access to categories at any point.",
+        "frictionPoints": [
+          "Instruction 'Select a command group in the menu' requires user knowledge of desired command",
+          "No visible breadcrumb or version switcher for multi-version navigation",
+          "Large empty area after headline may confuse new users about next action"
+        ],
+        "progressIndicators": [
+          "Version number in headline (26.0.0) indicates which documentation version is displayed"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 26.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [
+          {
+            "text": "DOWNLOAD",
+            "style": "text-link",
+            "placement": "top navigation"
+          },
+          {
+            "text": "DEVELOPMENT",
+            "style": "text-link",
+            "placement": "top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 26.0",
+            "context": "left sidebar above main content",
+            "purpose": "Contextualizes the source and completeness of documentation"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "footer",
+            "purpose": "Provides access to compliance and subscription options"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "footer right",
+            "purpose": "Copyright attribution and branding"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: X.0.0 (26.0.0)",
+          "Category names in all caps (BLOCKCHAIN, CONTROL, MINING)"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core branding",
+          "Explicit version documentation export indicator",
+          "Copyright notice showing active maintenance (2026)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-14-2500.png",
+      "label": "25.0.0",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36-40px), dark color, all caps for main title",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), gray/dark text for instructions",
+          "dataStyle": "Version numbers and metadata in italic serif font"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Dark horizontal bar with Bitcoin Core logo and main nav menu",
+            "position": "top",
+            "notable": "Identical layout to 26.0.0 version"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Vertical menu with dark buttons containing RPC command categories",
+            "position": "right",
+            "notable": "Same structure and categories as 26.0.0"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Large white/light background with version title and instruction text",
+            "position": "center",
+            "notable": "Identical layout to 26.0.0, only version number differs"
+          },
+          {
+            "type": "search-bar",
+            "description": "Input field at top of right sidebar",
+            "position": "right-top",
+            "notable": "Same positioning as 26.0.0"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to 26.0.0 version",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Bitcoin Core RPC documentation for version 25.0.0; browse or search command reference",
+        "entryPoints": [
+          "Direct link to version 25.0.0 documentation",
+          "From version archive or release history"
+        ],
+        "exitPoints": [
+          "Click command group to view category",
+          "Use search to find specific command",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Right sidebar command categories",
+            "action": "Click to view RPC commands within functional group"
+          },
+          {
+            "element": "Search bar",
+            "action": "Filter/search documentation"
+          },
+          {
+            "element": "Top navigation",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Identical to 26.0.0: hierarchical version-specific landing with functional category navigation",
+        "frictionPoints": [
+          "No visible version switcher to compare or navigate between versions",
+          "Instruction text same as 26.0.0 despite version change may not be immediately obvious"
+        ],
+        "progressIndicators": [
+          "Version number in headline (25.0.0)"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 25.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [
+          {
+            "text": "DOWNLOAD",
+            "style": "text-link",
+            "placement": "top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 25.0",
+            "context": "left sidebar",
+            "purpose": "Indicates source version"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: 25.0.0"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core branding",
+          "Version documentation export indicator"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-15-2400.png",
+      "label": "24.0.0",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (36-40px), dark color, all caps",
+          "bodyStyle": "Regular sans-serif, medium size (14-16px), gray/dark text",
+          "dataStyle": "Version numbers in italic serif"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Dark horizontal header with Bitcoin Core branding and navigation menu",
+            "position": "top",
+            "notable": "Consistent design across all versions"
+          },
+          {
+            "type": "right-sidebar",
+            "description": "Command category buttons in dark styling",
+            "position": "right",
+            "notable": "Standard 9 categories (BLOCKCHAIN through ZMQ)"
+          },
+          {
+            "type": "main-content-area",
+            "description": "White background with centered headline and instruction",
+            "position": "center",
+            "notable": "Ample whitespace reflecting template design"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header → main content → sidebar, with emphasis on clarity over density",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Bitcoin Core 24.0.0 RPC command reference documentation",
+        "entryPoints": [
+          "Direct link to version 24 documentation",
+          "From releases or archive section"
+        ],
+        "exitPoints": [
+          "Select command category",
+          "Use search functionality",
+          "Navigate to other pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar category buttons",
+            "action": "Navigate to command category"
+          },
+          {
+            "element": "Search input",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Top menu items",
+            "action": "Site navigation"
+          }
+        ],
+        "informationArchitecture": "Version-specific documentation hub with category-based navigation",
+        "frictionPoints": [
+          "No obvious way to compare versions or switch between documentation versions",
+          "Minimal guidance for first-time users unfamiliar with RPC categories"
+        ],
+        "progressIndicators": [
+          "Version number: 24.0.0"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 24.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 24.0",
+            "context": "left sidebar",
+            "purpose": "Source attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "24.0.0"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official documentation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-16-2300.png",
+      "label": "23.0.0",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color, large size (h1 for main title)",
+          "bodyStyle": "Regular sans-serif, gray text for secondary information",
+          "dataStyle": "Monospace-like formatting for version numbers and technical identifiers"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top navigation with logo, main menu items, and language selector",
+            "position": "Top of page, full width",
+            "notable": "Dark background with white text, Bitcoin logo with orange circle accent"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned vertical menu with command groups (BLOCKCHAIN, CONTROL, MINING, NETWORK, etc.)",
+            "position": "Right side of page",
+            "notable": "Dark background buttons with white text, search bar above menu items"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Large white central area with version heading and instructions",
+            "position": "Center-left, below navigation",
+            "notable": "Minimal content with clear call-to-action text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Navigation dominates top, large heading centers attention, sidebar provides secondary navigation on right, main content area is spacious and minimal",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access documentation for Bitcoin Core RPC 23.0.0 and navigate to specific command groups",
+        "entryPoints": [
+          "Direct URL access to documentation",
+          "Navigation from main Bitcoin Core website"
+        ],
+        "exitPoints": [
+          "Click on sidebar menu items (BLOCKCHAIN, CONTROL, MINING, etc.)",
+          "Navigation bar links (ABOUT, DOWNLOAD, BLOG, etc.)",
+          "Language selector"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items (BLOCKCHAIN, CONTROL, MINING, NETWORK, RAWTRANSACTIONS, SIGNER, UTIL, WALLET, ZMQ)",
+            "action": "Navigate to specific RPC command group documentation"
+          },
+          {
+            "element": "Search bar",
+            "action": "Search for specific commands or documentation"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Change language preference"
+          },
+          {
+            "element": "Top navigation links",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical - main navigation at top, version-specific documentation title, command groups organized vertically in sidebar, footer with links and copyright",
+        "frictionPoints": [
+          "Minimal content on landing page requires user to click into sidebar to access actual documentation",
+          "Large empty space may confuse new users about next action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 23.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 23.0",
+            "context": "Left side, italicized subtitle",
+            "purpose": "Indicates documentation source and version lineage"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer area",
+            "purpose": "Provides access to legal/compliance information and RSS feed"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "Bottom center",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "23.0.0 (version number format)"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "Official documentation badge"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-17-2200.png",
+      "label": "22.0.0",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark color, large size",
+          "bodyStyle": "Regular sans-serif, gray text for secondary information",
+          "dataStyle": "Monospace-like formatting for version numbers"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top navigation with Bitcoin Core logo, menu, language selector",
+            "position": "Top of page, full width",
+            "notable": "Consistent dark header with orange Bitcoin logo"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned command groups (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, etc.)",
+            "position": "Right side",
+            "notable": "Dark buttons with white text, includes search bar"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Central white space with version header and instruction text",
+            "position": "Center-left",
+            "notable": "Minimal content layout"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top navigation anchors page, large version heading centers focus, sidebar provides hierarchical access to documentation sections",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Bitcoin Core 22.0.0 RPC documentation and browse command groups",
+        "entryPoints": [
+          "Direct URL access",
+          "Navigation from main website"
+        ],
+        "exitPoints": [
+          "Sidebar menu selections",
+          "Top navigation links",
+          "Language switcher"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, SIGNER, UTIL, WALLET, ZMQ)",
+            "action": "Navigate to command group documentation"
+          },
+          {
+            "element": "Search input field",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Navigation links in header",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Version-specific documentation hub with sidebar navigation to RPC command categories",
+        "frictionPoints": [
+          "Empty main content area requires user action to proceed",
+          "No visible indicators of what to do next"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 22.0.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 22.0",
+            "context": "Left sidebar, italicized",
+            "purpose": "Source and version attribution"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer",
+            "purpose": "Compliance and feed access"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "22.0.0"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official branding"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-18-0210.png",
+      "label": "0.21.0",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark, large display size",
+          "bodyStyle": "Regular sans-serif, gray secondary text",
+          "dataStyle": "Version number formatting"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Fixed top header with Bitcoin Core branding, navigation menu, language selector",
+            "position": "Top, full width",
+            "notable": "Consistent design language across all versions"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned command categories with search functionality",
+            "position": "Right side",
+            "notable": "Same menu items as 22.0.0 version (BLOCKCHAIN, CONTROL, GENERATING, MINING, etc.)"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Central documentation entry point with version identifier and navigation prompt",
+            "position": "Center",
+            "notable": "Minimal, clean presentation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Fixed header navigation, large centered version heading, right sidebar for category access, footer information below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access Bitcoin Core 0.21.0 RPC documentation through organized command groups",
+        "entryPoints": [
+          "Direct documentation URL",
+          "Version selection from main site"
+        ],
+        "exitPoints": [
+          "Sidebar category clicks",
+          "Top navigation menu",
+          "Footer links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu buttons (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, SIGNER, UTIL, WALLET, ZMQ)",
+            "action": "Open RPC command documentation for selected category"
+          },
+          {
+            "element": "Search field",
+            "action": "Query documentation content"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Version-specific documentation landing page with sidebar-based category navigation",
+        "frictionPoints": [
+          "Blank main content area suggests empty state",
+          "User must infer that sidebar clicking is required to proceed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.21.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.21.0",
+            "context": "Left side, italicized subtitle",
+            "purpose": "Document source attribution"
+          },
+          {
+            "text": "X | Legal | Privacy Policy | RSS",
+            "context": "Footer area",
+            "purpose": "Social media, compliance, and content distribution links"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "0.21.0"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official documentation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-19-0200.png",
+      "label": "0.20.0",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif, large cap height (Bitcoin Core 0.20.0 RPC)",
+          "bodyStyle": "Regular serif, medium weight for instructional text",
+          "dataStyle": "Monospace or system font for version numbers and technical identifiers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal black bar with Bitcoin Core logo and main nav links (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT)",
+            "position": "Top of page",
+            "notable": "Orange Bitcoin icon provides brand recognition; language selector (English dropdown) in top right"
+          },
+          {
+            "type": "Right Sidebar Navigation",
+            "description": "Dark vertical menu with command group categories (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, UTIL, WALLET, ZMQ)",
+            "position": "Right side",
+            "notable": "Each item is a dark button with white text and icon; search box above categories"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Center panel with version headline and instructional text",
+            "position": "Center-left",
+            "notable": "Large heading announces version; subtle instruction 'Select a command group in the menu' guides user"
+          },
+          {
+            "type": "Left Sidebar Text",
+            "description": "Italicized documentation note",
+            "position": "Left side",
+            "notable": "Indicates documentation export source (Bitcoin Core 0.20.0)"
+          },
+          {
+            "type": "Footer",
+            "description": "Minimal footer with Bitcoin Core logo, social links, legal links, copyright",
+            "position": "Bottom center",
+            "notable": "Orange RSS feed icon provides alt navigation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo and top nav dominate; right sidebar provides secondary navigation; center content area is focal point; large heading anchors attention",
+        "innovativeElements": [
+          "Dual-sidebar layout (left documentation context + right command menu) creates logical asymmetry",
+          "Dark sidebar against white main content creates clear separation of concerns"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access RPC documentation for Bitcoin Core version 0.20.0; browse command groups and API references",
+        "entryPoints": [
+          "Direct link to version-specific documentation",
+          "Navigation from DOWNLOAD or DEVELOPMENT sections",
+          "Search engine result for Bitcoin Core RPC docs"
+        ],
+        "exitPoints": [
+          "Click command group in right sidebar (BLOCKCHAIN, CONTROL, etc.)",
+          "Navigate to ABOUT, BLOG, RELEASES via top nav",
+          "Select different language or visit main site"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command Group Buttons (BLOCKCHAIN, CONTROL, etc.)",
+            "action": "Display RPC method documentation for selected category"
+          },
+          {
+            "element": "Search Box",
+            "action": "Filter/search command groups"
+          },
+          {
+            "element": "Language Dropdown",
+            "action": "Switch documentation language"
+          },
+          {
+            "element": "Top Navigation Links",
+            "action": "Navigate to site sections (ABOUT, DOWNLOAD, BLOG, etc.)"
+          }
+        ],
+        "informationArchitecture": "Hierarchical—version → command group category → individual RPC methods; organized by technical function (blockchain, wallet, mining, etc.)",
+        "frictionPoints": [
+          "Main area requires user to click sidebar to see content (placeholder instructional text may confuse first-time users)",
+          "No visible search across all versions; may need to know exact version number to find docs"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.20.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.20.0",
+            "context": "Left sidebar italicized text",
+            "purpose": "Indicates documentation source and completeness"
+          },
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "Footer",
+            "purpose": "Provides legal and subscription access"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version numbers: Bitcoin Core 0.20.0",
+          "Command group names: BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, UTIL, WALLET, ZMQ"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official branding and logo",
+          "Version-specific documentation (indicates maintained, updated content)",
+          "© 2026 Bitcoin Core copyright notice"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-20-0190.png",
+      "label": "0.19.0",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif, large cap height (Bitcoin Core 0.19.0 RPC)",
+          "bodyStyle": "Regular serif, medium weight for instructional text",
+          "dataStyle": "Monospace or system font for version numbers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal black bar with Bitcoin Core logo and main nav (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT)",
+            "position": "Top of page",
+            "notable": "Identical structure to 0.20.0; consistent branding"
+          },
+          {
+            "type": "Right Sidebar Navigation",
+            "description": "Dark vertical menu with command group categories",
+            "position": "Right side",
+            "notable": "Same structure as 0.20.0 version"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Center panel announcing version 0.19.0 RPC with instruction text",
+            "position": "Center-left",
+            "notable": "Version number only difference from 0.20.0 layout"
+          },
+          {
+            "type": "Left Sidebar Text",
+            "description": "Italicized documentation export note",
+            "position": "Left side",
+            "notable": "References Bitcoin Core 0.19.0 as source"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Identical to 0.20.0—consistent template across versions",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access RPC documentation for Bitcoin Core version 0.19.0",
+        "entryPoints": [
+          "Direct link to version 0.19.0 documentation",
+          "Navigation from version-specific URL or archive",
+          "Dropdown version selector (if available elsewhere)"
+        ],
+        "exitPoints": [
+          "Click command group in right sidebar",
+          "Navigate to other site sections",
+          "Switch to different version (0.20.0, 0.18.0, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command Group Buttons",
+            "action": "Display RPC method documentation"
+          },
+          {
+            "element": "Search Box",
+            "action": "Filter command groups"
+          },
+          {
+            "element": "Top Navigation",
+            "action": "Navigate to site sections"
+          }
+        ],
+        "informationArchitecture": "Identical to 0.20.0—version-based hierarchy",
+        "frictionPoints": [
+          "No visible version selector on landing page; user must know exact URL or navigate from elsewhere to switch versions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.19.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.19.0",
+            "context": "Left sidebar",
+            "purpose": "Source attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 0.19.0"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official branding",
+          "Version-specific documentation",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-21-0180.png",
+      "label": "0.18.0",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif, large cap height (Bitcoin Core 0.18.0 RPC)",
+          "bodyStyle": "Regular serif, medium weight",
+          "dataStyle": "System font for version identifiers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Horizontal black bar with consistent branding and nav structure",
+            "position": "Top",
+            "notable": "Template consistency across all versions"
+          },
+          {
+            "type": "Right Sidebar Navigation",
+            "description": "Dark vertical command group menu",
+            "position": "Right side",
+            "notable": "Identical to previous versions"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Version 0.18.0 announcement with instruction",
+            "position": "Center-left",
+            "notable": "Follows same template pattern"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Consistent template across 0.18.0, 0.19.0, 0.20.0",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Access RPC documentation for Bitcoin Core version 0.18.0",
+        "entryPoints": [
+          "Direct version-specific URL",
+          "Archive or legacy documentation access"
+        ],
+        "exitPoints": [
+          "Click command group",
+          "Navigate to other site sections",
+          "Switch to newer version"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command Group Buttons",
+            "action": "Display RPC methods for category"
+          },
+          {
+            "element": "Search Box",
+            "action": "Filter commands"
+          }
+        ],
+        "informationArchitecture": "Version-based documentation hierarchy",
+        "frictionPoints": [
+          "No visible version navigation; switching versions requires knowing URL or external navigation"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.18.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.18.0",
+            "context": "Left sidebar",
+            "purpose": "Source documentation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 0.18.0"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official branding",
+          "Consistent documentation across versions",
+          "Copyright notice"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-22-0170.png",
+      "label": "0.17.0",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (Bitcoin Core 0.17.0 RPC)",
+          "bodyStyle": "Regular sans-serif, medium size for instructional text",
+          "dataStyle": "Monospace-style for version numbers and technical identifiers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark horizontal nav bar with logo and 8 main menu items (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT)",
+            "position": "Top of page",
+            "notable": "Language selector dropdown (English) in top right"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned vertical menu with 9 command groups in dark buttons (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, UTIL, WALLET, ZMQ)",
+            "position": "Right side",
+            "notable": "Search box at top of sidebar for command lookup"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Left-aligned documentation with version info and instruction text",
+            "position": "Center-left",
+            "notable": "Minimal content, acts as empty state with instructional prompt"
+          },
+          {
+            "type": "Footer",
+            "description": "Contains social links, legal/privacy, RSS feed, and copyright",
+            "position": "Bottom",
+            "notable": "Bitcoin Core branding repeated in footer"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar commands draw primary focus; main content area is secondary and minimalist",
+        "innovativeElements": [
+          "Contextual sidebar navigation that updates based on documentation version"
+        ]
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core RPC documentation for version 0.17.0; browse available commands",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Version selection from releases page",
+          "Search engine results"
+        ],
+        "exitPoints": [
+          "Click command group in sidebar to view details",
+          "Navigate to ABOUT/BLOG/DOWNLOAD via header",
+          "Search for specific command"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command group buttons (BLOCKCHAIN, CONTROL, etc.)",
+            "action": "Navigate to filtered command documentation for that group"
+          },
+          {
+            "element": "Search box in sidebar",
+            "action": "Filter or search for specific RPC commands"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to different sections of Bitcoin Core site"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Change interface language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Site sections → Version → Command groups → Individual commands",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Version number displayed prominently (0.17.0)"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.17.0 RPC",
+        "subheadline": "Documentation exported from Bitcoin Core 0.17.0",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Select a command group in the menu.",
+            "context": "Main content area",
+            "purpose": "Instructs user on next action"
+          },
+          {
+            "text": "Documentation exported",
+            "context": "Left sidebar",
+            "purpose": "Clarifies source of documentation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 0.17.0",
+          "© 2026 Bitcoin Core"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-23-0163.png",
+      "label": "0.16.3",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (Bitcoin Core 0.16.3 RPC)",
+          "bodyStyle": "Regular sans-serif, medium size for instructional text",
+          "dataStyle": "Monospace-style for version numbers and technical identifiers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark horizontal nav bar with logo and 8 main menu items",
+            "position": "Top of page",
+            "notable": "Consistent with 0.17.0 design"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned vertical menu with 8 command groups (no ZMQ in this version)",
+            "position": "Right side",
+            "notable": "Search box at top of sidebar"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Left-aligned documentation header for version 0.16.3",
+            "position": "Center-left",
+            "notable": "Minimal content with instructional prompt"
+          },
+          {
+            "type": "Footer",
+            "description": "Contains social links, legal/privacy, RSS feed, and copyright",
+            "position": "Bottom",
+            "notable": "Bitcoin Core branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar commands draw primary focus; main content area is secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core RPC documentation for version 0.16.3; browse available commands",
+        "entryPoints": [
+          "Direct navigation from main site",
+          "Version selection from releases page"
+        ],
+        "exitPoints": [
+          "Click command group in sidebar",
+          "Navigate via header",
+          "Search for command"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command group buttons (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, UTIL, WALLET)",
+            "action": "Navigate to filtered command documentation"
+          },
+          {
+            "element": "Search box in sidebar",
+            "action": "Filter or search for specific RPC commands"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to different sections"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: Site sections → Version → Command groups → Individual commands",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Version number displayed (0.16.3)"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.16.3 RPC",
+        "subheadline": "Documentation exported from Bitcoin Core 0.16.3",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Select a command group in the menu.",
+            "context": "Main content area",
+            "purpose": "Instructs user on next action"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 0.16.3",
+          "© 2026 Bitcoin Core"
+        ],
+        "trustSignals": [
+          "Bitcoin Core branding",
+          "© 2026 Bitcoin Core copyright"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-24-0162.png",
+      "label": "0.16.2",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF9900"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (Bitcoin Core 0.16.2 RPC)",
+          "bodyStyle": "Regular sans-serif, medium size for instructional text",
+          "dataStyle": "Monospace-style for version numbers"
+        },
+        "components": [
+          {
+            "type": "Header Navigation",
+            "description": "Dark horizontal nav bar with Bitcoin Core logo and 8 menu items",
+            "position": "Top of page",
+            "notable": "Consistent design across versions"
+          },
+          {
+            "type": "Sidebar Menu",
+            "description": "Right-aligned vertical menu with 8 command groups",
+            "position": "Right side",
+            "notable": "Search functionality for commands"
+          },
+          {
+            "type": "Main Content Area",
+            "description": "Left-aligned documentation header for version 0.16.2",
+            "position": "Center-left",
+            "notable": "Minimal, instruction-focused"
+          },
+          {
+            "type": "Footer",
+            "description": "Social, legal, RSS, copyright information",
+            "position": "Bottom",
+            "notable": "Bitcoin Core branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Sidebar commands are primary; main area is secondary empty state",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Access Bitcoin Core RPC documentation for version 0.16.2",
+        "entryPoints": [
+          "Version selection",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Command group selection",
+          "Header navigation",
+          "Command search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Command group buttons",
+            "action": "Display RPC commands for selected group"
+          },
+          {
+            "element": "Sidebar search",
+            "action": "Search RPC commands"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate site sections"
+          }
+        ],
+        "informationArchitecture": "Site → Version → Command groups → Commands",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Version 0.16.2 label"
+        ]
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.16.2 RPC",
+        "subheadline": "Documentation exported from Bitcoin Core 0.16.2",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Select a command group in the menu.",
+            "context": "Main area",
+            "purpose": "Guides user action"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 0.16.2",
+          "© 2026 Bitcoin Core"
+        ],
+        "trustSignals": [
+          "Bitcoin Core official branding",
+          "Copyright notice"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-25-0161.png",
+      "label": "0.16.1",
+      "flowType": "Home",
+      "step": 25,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), dark color",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Version numbers displayed in heading; version prefix in italic subtext"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal black bar with Bitcoin Core logo and main nav items (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT) plus language selector",
+            "position": "top",
+            "notable": "Orange Bitcoin icon logo anchors left side"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Right-side dark gray vertical menu with documentation categories (BLOCKCHAIN, CONTROL, GENERATING, MINING, NETWORK, RAWTRANSACTIONS, UTIL, WALLET)",
+            "position": "right",
+            "notable": "White icon + text labels, search box at top"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Large centered white space with instruction text 'Select a command group in the menu'",
+            "position": "center",
+            "notable": "Minimal content, guides user to sidebar interaction"
+          },
+          {
+            "type": "footer",
+            "description": "Links to Legal, Privacy Policy, RSS feed; Bitcoin Core copyright and logo",
+            "position": "bottom",
+            "notable": "Underlined text links with separator pipes"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation hierarchy clear: global header → sidebar categories → main content area. User attention directed to sidebar menu via instruction text.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Browse or search Bitcoin Core RPC documentation by command group",
+        "entryPoints": [
+          "Direct URL navigation to documentation site",
+          "Link from main Bitcoin Core website"
+        ],
+        "exitPoints": [
+          "Click sidebar menu items (BLOCKCHAIN, CONTROL, etc.) to view command details",
+          "Navigate to other site sections via header nav (DOWNLOAD, RELEASES, BLOG)",
+          "Search via sidebar search box",
+          "Language selector to change content language"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu categories",
+            "action": "Click to view RPC commands grouped by category"
+          },
+          {
+            "element": "Search box",
+            "action": "Type to search documentation"
+          },
+          {
+            "element": "Header navigation links",
+            "action": "Navigate to other sections of Bitcoin Core site"
+          },
+          {
+            "element": "Language dropdown",
+            "action": "Change interface language"
+          },
+          {
+            "element": "Footer links (Legal, Privacy, RSS)",
+            "action": "Navigate to legal info or subscribe to feed"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: global site nav → documentation categories → command groups → individual RPC commands. Sidebar serves as persistent category navigation.",
+        "frictionPoints": [
+          "Large empty main area until user selects a sidebar category may feel inactive",
+          "No visible breadcrumb or indication of current location in hierarchy"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.16.1 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.16.1",
+            "context": "Left sidebar, above main content",
+            "purpose": "Indicates documentation version and source"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "Footer",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: 'Bitcoin Core 0.16.1 RPC'"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core branding",
+          "Security Advisories section in main nav"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-26-0160.png",
+      "label": "0.16.0",
+      "flowType": "Home",
+      "step": 26,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), dark color",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Version numbers displayed in heading; version prefix in italic subtext"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal black bar with Bitcoin Core logo and main nav items (ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT) plus language selector",
+            "position": "top",
+            "notable": "Identical to 0.16.1 version"
+          },
+          {
+            "type": "sidebar-menu",
+            "description": "Right-side dark gray vertical menu with documentation categories",
+            "position": "right",
+            "notable": "Same structure as 0.16.1"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Large centered white space with instruction text",
+            "position": "center",
+            "notable": "Nearly identical to 0.16.1"
+          },
+          {
+            "type": "footer",
+            "description": "Links and copyright information",
+            "position": "bottom",
+            "notable": "Consistent with 0.16.1"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to 0.16.1 — navigation hierarchy clear with sidebar categories and main content area",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Browse or search Bitcoin Core 0.16.0 RPC documentation by command group",
+        "entryPoints": [
+          "Direct URL navigation to version-specific documentation",
+          "Link from releases page or version selection"
+        ],
+        "exitPoints": [
+          "Click sidebar menu items to view command details",
+          "Navigate to other site sections via header nav",
+          "Search via sidebar search box",
+          "Language selector to change interface language"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu categories",
+            "action": "Click to view RPC commands by category"
+          },
+          {
+            "element": "Search box",
+            "action": "Search documentation"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to other sections"
+          },
+          {
+            "element": "Language dropdown",
+            "action": "Change language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical — identical structure to 0.16.1 version documentation",
+        "frictionPoints": [
+          "Empty main area until selection made",
+          "No breadcrumb navigation visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 0.16.0 RPC",
+        "subheadline": "Select a command group in the menu.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Documentation exported from Bitcoin Core 0.16.0",
+            "context": "Left sidebar above main content",
+            "purpose": "Indicates documentation version and source"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "Footer",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Version format: 'Bitcoin Core 0.16.0 RPC'"
+        ],
+        "trustSignals": [
+          "Official Bitcoin Core branding",
+          "Security Advisories section in navigation"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": [
+          "Select a command group in the menu."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-27-announcements.png",
+      "label": "Announcements",
+      "flowType": "Home",
+      "step": 27,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (36px+), dark color",
+          "bodyStyle": "Regular serif (Georgia), 16px, dark gray for body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal black bar with Bitcoin Core logo and main nav items",
+            "position": "top",
+            "notable": "Standard site header consistent across all pages"
+          },
+          {
+            "type": "main-content-area",
+            "description": "Full-width centered content with headline, explanation text, and inline links",
+            "position": "center",
+            "notable": "Generous margins and white space; serif font for body text adds editorial quality"
+          },
+          {
+            "type": "footer",
+            "description": "Links to Legal, Privacy Policy, RSS feed; Bitcoin Core copyright",
+            "position": "bottom",
+            "notable": "Consistent with other pages"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Strong headline draws eye, followed by descriptive paragraphs. Inline hyperlinks (bitcoin core blog, RSS) provide secondary navigation.",
+        "innovativeElements": [
+          "Mixed typography (sans-serif heading + serif body text) creates editorial emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "announcement-landing",
+        "userIntent": "Learn about Bitcoin Core security announcements and find ways to subscribe",
+        "entryPoints": [
+          "Navigation from header (implied from navigation structure)",
+          "Direct URL to announcements section"
+        ],
+        "exitPoints": [
+          "Click 'bitcoin core blog' link to view blog announcements",
+          "Click 'RSS' link to subscribe to feed",
+          "Navigate to other sections via header navigation",
+          "Click footer RSS icon to subscribe"
+        ],
+        "interactiveElements": [
+          {
+            "element": "'bitcoin core blog' hyperlink",
+            "action": "Navigate to blog section"
+          },
+          {
+            "element": "'RSS' underlined link",
+            "action": "Subscribe to RSS feed"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to other site sections"
+          },
+          {
+            "element": "Footer RSS icon",
+            "action": "Subscribe to announcements feed"
+          }
+        ],
+        "informationArchitecture": "Single-column linear flow: headline → explanation → current status → call-to-action (subscribe via RSS or blog)",
+        "frictionPoints": [
+          "Message states 'The announcements list is currently not available' which may reduce user motivation",
+          "Multiple subscription paths (RSS feed, blog) without clear recommendation which to choose"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Subscribe to Bitcoin Core announcements",
+        "subheadline": "Receive notification of important security announcements and releases for Bitcoin Core.",
+        "ctas": [
+          {
+            "text": "RSS",
+            "style": "text-link",
+            "placement": "Inline in body text and footer"
+          },
+          {
+            "text": "bitcoin core blog",
+            "style": "text-link",
+            "placement": "Inline in body text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Subscribe to the RSS feed below or check the bitcoin core blog section.",
+            "context": "Second paragraph of body text",
+            "purpose": "Directs user to two subscription methods"
+          },
+          {
+            "text": "The announcements list is currently not available.",
+            "context": "Third paragraph, standalone sentence",
+            "purpose": "Status message indicating feature unavailability"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "Footer",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Focus on 'important security announcements' emphasizes trust and safety",
+          "Official Bitcoin Core branding and copyright"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "The announcements list is currently not available."
+        ],
+        "emptyStateText": [
+          "The announcements list is currently not available."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-28-x-impersonation.png",
+      "label": "X impersonation",
+      "flowType": "Home",
+      "step": 28,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f7931a"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large size (48px+), dark gray",
+          "bodyStyle": "serif font, medium weight, dark gray, generous line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Black background with Bitcoin Core logo, main nav links, and language selector",
+            "position": "top fixed",
+            "notable": "Orange Bitcoin icon distinguishes the brand"
+          },
+          {
+            "type": "text-content",
+            "description": "Long-form educational text with hyperlinked references",
+            "position": "center main area",
+            "notable": "Multiple inline links (X's Impersonation Policy, report it to X, download page, full node guide) embedded naturally in prose"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading draws eye, then body text flows naturally with strategic link placement to guide security-conscious users",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "educational-content",
+        "userIntent": "Understand how to identify and report fake Bitcoin Core accounts on X/Twitter",
+        "entryPoints": [
+          "Security Advisories menu",
+          "Direct link from security warning",
+          "Social media referral"
+        ],
+        "exitPoints": [
+          "Report to X link",
+          "Download page link",
+          "Full node guide link",
+          "contact@bitcoincore.org email"
+        ],
+        "interactiveElements": [
+          {
+            "element": "X's Impersonation Policy link",
+            "action": "Opens external link to Twitter/X policy page"
+          },
+          {
+            "element": "report it to X link",
+            "action": "Directs user to report fake accounts"
+          },
+          {
+            "element": "download page link",
+            "action": "Routes to official Bitcoin Core download"
+          },
+          {
+            "element": "full node guide link",
+            "action": "Opens verification instructions for binary integrity"
+          }
+        ],
+        "informationArchitecture": "Problem statement → Why it matters → What to do about it → Verification best practices",
+        "frictionPoints": [
+          "Long text-heavy content may overwhelm casual readers",
+          "Multiple inline links could distract from main message"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "X Impersonation",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "report it to X",
+            "style": "text-link",
+            "placement": "inline in second paragraph"
+          },
+          {
+            "text": "download page",
+            "style": "text-link",
+            "placement": "inline in fourth paragraph"
+          },
+          {
+            "text": "full node guide",
+            "style": "text-link",
+            "placement": "inline in fourth paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "contact@bitcoincore.org",
+            "context": "email address provided for reporting X issues",
+            "purpose": "Provides official contact method for security reports"
+          },
+          {
+            "text": "X's Impersonation Policy",
+            "context": "hyperlinked policy reference",
+            "purpose": "Guides user to platform rules"
+          }
+        ],
+        "tone": "professional-technical, urgent-but-measured, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official email address (contact@bitcoincore.org)",
+          "Reference to PGP verification",
+          "Emphasis on official download page"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-29-bitcoin-core-293-released.png",
+      "label": "Bitcoin Core 29.3 released",
+      "flowType": "Home",
+      "step": 29,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f7931a"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large (44px+), dark gray",
+          "bodyStyle": "sans-serif, regular weight, dark gray, clean line spacing",
+          "dataStyle": "inline bold text for version numbers and dates"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Fixed black header with logo and main navigation",
+            "position": "top",
+            "notable": "Consistent branding across all pages"
+          },
+          {
+            "type": "announcement-block",
+            "description": "Primary content area with release announcement",
+            "position": "main center",
+            "notable": "Bold version number in headline, inline hyperlinks to download and release notes"
+          },
+          {
+            "type": "metadata-section",
+            "description": "Horizontal rule followed by publication date",
+            "position": "below announcement",
+            "notable": "Bold text highlights key information: 'Bitcoin Core 29.3 released'"
+          },
+          {
+            "type": "recommended-list",
+            "description": "Bulleted list of related releases with 'VIEW ALL POSTS' link",
+            "position": "lower main area",
+            "notable": "Related articles surface similar content for discovery"
+          },
+          {
+            "type": "footer",
+            "description": "Social links, legal, privacy, RSS, copyright",
+            "position": "bottom",
+            "notable": "Links to X, Legal, Privacy Policy, RSS feed"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Version number headline → call-to-action links → metadata → related content section",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "announcement",
+        "userIntent": "Learn about Bitcoin Core 29.3 release and access download/release notes",
+        "entryPoints": [
+          "RELEASES nav menu",
+          "Blog post link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "download link",
+          "release notes link",
+          "IRC chatroom link",
+          "Related posts (30.2, Wallet Migration, 30.1)",
+          "VIEW ALL POSTS"
+        ],
+        "interactiveElements": [
+          {
+            "element": "download link",
+            "action": "Routes to download page"
+          },
+          {
+            "element": "release notes link",
+            "action": "Opens detailed release changelog"
+          },
+          {
+            "element": "IRC, web link",
+            "action": "Opens IRC chatroom for questions"
+          },
+          {
+            "element": "Related article links",
+            "action": "Navigate to other release announcements"
+          },
+          {
+            "element": "VIEW ALL POSTS",
+            "action": "Display all release announcements"
+          }
+        ],
+        "informationArchitecture": "Lead announcement → Quick action links → Publication metadata → Related releases → Footer",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 29.3 released",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "download",
+            "style": "text-link",
+            "placement": "first paragraph"
+          },
+          {
+            "text": "release notes",
+            "style": "text-link",
+            "placement": "first paragraph"
+          },
+          {
+            "text": "IRC, web",
+            "style": "text-link",
+            "placement": "second paragraph"
+          },
+          {
+            "text": "VIEW ALL POSTS",
+            "style": "text-link",
+            "placement": "recommended section header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core version 29.3 is now available for download.",
+            "context": "Opening sentence",
+            "purpose": "Immediately communicates availability"
+          },
+          {
+            "text": "See the release notes for more information about the bug fixes in this release.",
+            "context": "First paragraph",
+            "purpose": "Guides user to detailed information"
+          },
+          {
+            "text": "If you have any questions, please stop by the #bitcoin IRC chatroom",
+            "context": "Support instruction",
+            "purpose": "Directs users to community support channel"
+          },
+          {
+            "text": "Bitcoin Core 29.3 released was published on February 10, 2026.",
+            "context": "Publication metadata",
+            "purpose": "Establishes credibility and recency"
+          }
+        ],
+        "tone": "professional-technical, straightforward, helpful",
+        "dataFormatting": [
+          "Bitcoin Core 29.3",
+          "February 10, 2026"
+        ],
+        "trustSignals": [
+          "Specific version number",
+          "Exact publication date",
+          "Official download page",
+          "Community IRC support"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-30-bitcoin-core-302-released.png",
+      "label": "Bitcoin Core 30.2 released",
+      "flowType": "Home",
+      "step": 30,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#000000",
+          "#f7931a"
+        ],
+        "typography": {
+          "headingStyle": "bold sans-serif, large (44px+), dark gray",
+          "bodyStyle": "sans-serif, regular weight, dark gray, clean line spacing",
+          "dataStyle": "inline bold text for version numbers and dates"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Fixed black header with logo and navigation menu",
+            "position": "top fixed",
+            "notable": "Consistent with previous pages"
+          },
+          {
+            "type": "announcement-block",
+            "description": "Primary release announcement with version number headline",
+            "position": "main center",
+            "notable": "Nearly identical structure to 29.3 page"
+          },
+          {
+            "type": "metadata-section",
+            "description": "Publication date in bold with horizontal rule separator",
+            "position": "below announcement",
+            "notable": "January 10, 2026 publication date"
+          },
+          {
+            "type": "recommended-section",
+            "description": "Related releases bulleted list with header",
+            "position": "lower main",
+            "notable": "Same recommended posts including 29.3, Wallet Migration, 30.1"
+          },
+          {
+            "type": "footer",
+            "description": "Social, legal, privacy, copyright",
+            "position": "bottom",
+            "notable": "Identical footer to previous pages"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Version headline → action links → metadata → related content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "announcement",
+        "userIntent": "Learn about Bitcoin Core 30.2 release, download, and access release information",
+        "entryPoints": [
+          "RELEASES menu",
+          "Blog",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "download link",
+          "release notes link",
+          "IRC chatroom link",
+          "Related posts",
+          "VIEW ALL POSTS link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "download",
+            "action": "Routes to download page"
+          },
+          {
+            "element": "release notes",
+            "action": "Opens release notes documentation"
+          },
+          {
+            "element": "IRC, web",
+            "action": "Opens community IRC chatroom"
+          },
+          {
+            "element": "Related article titles",
+            "action": "Navigate between release announcements"
+          },
+          {
+            "element": "VIEW ALL POSTS",
+            "action": "Display full list of announcements"
+          }
+        ],
+        "informationArchitecture": "Headline → Description with CTAs → Publication metadata → Related content → Footer",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 30.2 released",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "download",
+            "style": "text-link",
+            "placement": "first paragraph"
+          },
+          {
+            "text": "release notes",
+            "style": "text-link",
+            "placement": "first paragraph"
+          },
+          {
+            "text": "IRC, web",
+            "style": "text-link",
+            "placement": "second paragraph"
+          },
+          {
+            "text": "VIEW ALL POSTS",
+            "style": "text-link",
+            "placement": "recommended section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core version 30.2 is now available for download.",
+            "context": "Opening statement",
+            "purpose": "Communicates immediate availability"
+          },
+          {
+            "text": "See the release notes for more information about the bug fixes in this release.",
+            "context": "First paragraph continuation",
+            "purpose": "Directs to detailed changelog"
+          },
+          {
+            "text": "If you have any questions, please stop by the #bitcoin IRC chatroom",
+            "context": "Support information",
+            "purpose": "Provides community support avenue"
+          },
+          {
+            "text": "Bitcoin Core 30.2 released was published on January 10, 2026.",
+            "context": "Publication metadata",
+            "purpose": "Establishes version history and credibility"
+          }
+        ],
+        "tone": "professional-technical, direct, helpful",
+        "dataFormatting": [
+          "Bitcoin Core 30.2",
+          "January 10, 2026"
+        ],
+        "trustSignals": [
+          "Specific version number",
+          "Exact publication date",
+          "Official channels (download, IRC)",
+          "Related release history"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-31-wallet-migration-failure-may-delete-unrelated-wall.png",
+      "label": "Wallet Migration Failure May Delete Unrelated Wall",
+      "flowType": "Home",
+      "step": 31,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark gray/black, 2-3 line heading",
+          "bodyStyle": "Regular weight serif font, dark gray, medium line-height",
+          "dataStyle": "Version numbers in plain text, dates in standard format"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Bitcoin Core logo and nav links",
+            "position": "Top fixed header",
+            "notable": "Language selector dropdown and consistent dark background"
+          },
+          {
+            "type": "Article content",
+            "description": "Main body text with multiple paragraphs and horizontal dividers",
+            "position": "Center column, wide max-width",
+            "notable": "Clear section breaks with thin horizontal rules"
+          },
+          {
+            "type": "Recommended posts section",
+            "description": "List of related blog posts with 'VIEW ALL POSTS' link",
+            "position": "Bottom, two-column layout",
+            "notable": "Bullet-list style with right-aligned secondary link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominates, body text creates scannable sections, dividers separate content blocks",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "blog-post / security-advisory",
+        "userIntent": "Understand critical wallet migration bug and its impact",
+        "entryPoints": [
+          "From security advisories page",
+          "From blog/posts feed",
+          "Direct link from external source"
+        ],
+        "exitPoints": [
+          "Navigate to recommended posts",
+          "Click to download Bitcoin Core",
+          "Return to main navigation sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Release notes link",
+            "action": "Navigate to detailed release documentation"
+          },
+          {
+            "element": "Recommended posts",
+            "action": "Navigate to related blog articles"
+          },
+          {
+            "element": "VIEW ALL POSTS link",
+            "action": "Navigate to full blog archive"
+          }
+        ],
+        "informationArchitecture": "Problem statement → Detailed explanation → Specific conditions → Recommended actions → Related resources",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Wallet Migration Failure May Delete Unrelated Wallet Files In Bitcoin Core 30.0 and 30.1",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "download",
+            "style": "text-link",
+            "placement": "Within body copy"
+          },
+          {
+            "text": "VIEW ALL POSTS",
+            "style": "text-link",
+            "placement": "Bottom right of recommended section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "was published on January 05, 2026",
+            "context": "Below article title",
+            "purpose": "Publication date tracking"
+          },
+          {
+            "text": "out of an abundance of caution we have removed the binaries for affected releases from bitcoincore.org",
+            "context": "Body paragraph",
+            "purpose": "Explains precautionary action taken"
+          }
+        ],
+        "tone": "professional-technical, cautious",
+        "dataFormatting": [
+          "Bitcoin Core 30.0 and 30.1 (version numbers)",
+          "January 05, 2026 (publication date)",
+          "wallet.dat (filename)"
+        ],
+        "trustSignals": [
+          "Specific version numbers affected",
+          "Clear explanation of rare conditions",
+          "Transparency about remediation steps"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-32-bitcoin-core-301-released.png",
+      "label": "Bitcoin Core 30.1 released",
+      "flowType": "Home",
+      "step": 32,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark color, single-line heading",
+          "bodyStyle": "Regular weight serif font, dark gray, medium line-height",
+          "dataStyle": "Version numbers and dates in plain text"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Bitcoin Core logo",
+            "position": "Top fixed header",
+            "notable": "Consistent styling across all pages"
+          },
+          {
+            "type": "Article content",
+            "description": "Concise release announcement with links",
+            "position": "Center column",
+            "notable": "Shorter format than security advisory, more promotional"
+          },
+          {
+            "type": "Footer",
+            "description": "Links to legal, privacy, RSS; Bitcoin Core logo and copyright",
+            "position": "Bottom",
+            "notable": "Social media link (X), structured footer navigation"
+          },
+          {
+            "type": "Recommended posts section",
+            "description": "Related articles bulleted list",
+            "position": "Bottom, two-column layout",
+            "notable": "One item spans two lines"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading → introductory paragraph → call-to-action links → recommended content",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "release-announcement",
+        "userIntent": "Learn about new Bitcoin Core 30.1 release and access downloads/documentation",
+        "entryPoints": [
+          "From releases page",
+          "From blog feed",
+          "Search result for version number"
+        ],
+        "exitPoints": [
+          "Download Bitcoin Core",
+          "View release notes",
+          "Join IRC chatroom",
+          "Navigate to related posts"
+        ],
+        "interactiveElements": [
+          {
+            "element": "download link",
+            "action": "Navigate to download page"
+          },
+          {
+            "element": "release notes link",
+            "action": "Open detailed changelog"
+          },
+          {
+            "element": "IRC chatroom link",
+            "action": "Join community support channel"
+          },
+          {
+            "element": "Recommended posts",
+            "action": "Navigate to related content"
+          }
+        ],
+        "informationArchitecture": "Release announcement → Download/documentation links → Support resource → Related releases",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Bitcoin Core 30.1 released",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "download",
+            "style": "text-link",
+            "placement": "First paragraph"
+          },
+          {
+            "text": "release notes",
+            "style": "text-link",
+            "placement": "First paragraph"
+          },
+          {
+            "text": "IRC, web",
+            "style": "text-link",
+            "placement": "Second paragraph, within text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core version 30.1 is now available for",
+            "context": "Opening sentence",
+            "purpose": "Immediate clarity on availability"
+          },
+          {
+            "text": "See the release notes for more information about the bug fixes in this release.",
+            "context": "First paragraph",
+            "purpose": "Directs to detailed changelog"
+          },
+          {
+            "text": "If you have any questions, please stop by the #bitcoin IRC chatroom (IRC, web) and we'll do our best to help you.",
+            "context": "Support paragraph",
+            "purpose": "Offers community support avenue"
+          },
+          {
+            "text": "was published on January 02, 2026",
+            "context": "Below headline",
+            "purpose": "Publication date"
+          }
+        ],
+        "tone": "professional-friendly, inviting",
+        "dataFormatting": [
+          "Bitcoin Core version 30.1",
+          "January 02, 2026 (publication date)",
+          "#bitcoin (IRC channel)"
+        ],
+        "trustSignals": [
+          "Direct download availability",
+          "Transparent release notes",
+          "Active community support channel"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-33-cve202546597-highly-unlikely-remote-crash-on-3.png",
+      "label": "CVE-2025-46597 - Highly unlikely remote crash on 3",
+      "flowType": "Home",
+      "step": 33,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, dark color, multi-line technical heading",
+          "bodyStyle": "Regular weight serif font, dark gray, medium line-height",
+          "dataStyle": "Code snippets in monospace font (BLOCK, -maxmempool), severity labels in plain text"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Bitcoin Core branding",
+            "position": "Top fixed header",
+            "notable": "Consistent across all pages"
+          },
+          {
+            "type": "CVE article content",
+            "description": "Structured security disclosure with Details, Attribution, Timeline sections",
+            "position": "Center column",
+            "notable": "Technical depth with clear section headers"
+          },
+          {
+            "type": "Severity indicator",
+            "description": "Inline text label 'Low severity'",
+            "position": "Within introduction paragraph",
+            "notable": "Clear risk assessment early in content"
+          },
+          {
+            "type": "Code references",
+            "description": "Monospace inline code for technical parameters",
+            "position": "Within body text",
+            "notable": "Distinguishes technical terms from narrative"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "CVE identifier and impact in heading → severity level → detailed explanation → technical details → attribution → timeline",
+        "innovativeElements": [
+          "Severity badges inline with content",
+          "Structured security advisory format with clear sections"
+        ]
+      },
+      "flow": {
+        "screenType": "security-advisory / CVE-detail",
+        "userIntent": "Understand specific CVE, its risk level, and technical details",
+        "entryPoints": [
+          "From security advisories page",
+          "From external CVE database link",
+          "Direct search for CVE number"
+        ],
+        "exitPoints": [
+          "Return to security advisories",
+          "Navigate to main site sections",
+          "Research related CVEs"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "CVE identifier and impact → Risk assessment → Overview → Technical details → Attribution → Timeline",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "CVE-2025-46597 - Highly unlikely remote crash on 32-bit systems",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "This issue is considered Low severity.",
+            "context": "After overview paragraph",
+            "purpose": "Risk assessment clarity"
+          },
+          {
+            "text": "Disclosure of the details of a bug on 32-bit systems which may, in a rare edge case, cause the node to crash when receiving a pathological block. This bug would be extremely hard to exploit.",
+            "context": "Opening paragraph",
+            "purpose": "Immediate impact summary"
+          },
+          {
+            "text": "A fix was released on October 10th 2025 in Bitcoin Core v30.0.",
+            "context": "Overview section",
+            "purpose": "Remediation information"
+          }
+        ],
+        "tone": "professional-technical, cautious",
+        "dataFormatting": [
+          "CVE-2025-46597 (CVE identifier)",
+          "32-bit systems (target platform)",
+          "October 10th 2025 (fix date)",
+          "Bitcoin Core v30.0 (fixed version)",
+          "1GB (data size example)",
+          "4GB (memory example)"
+        ],
+        "trustSignals": [
+          "Specific CVE identifier",
+          "Clear severity rating",
+          "Detailed technical explanation",
+          "Named researcher attribution",
+          "Fix already released"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-34-rss.png",
+      "label": "RSS",
+      "flowType": "Home",
+      "step": 34,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, centered, large cap",
+          "bodyStyle": "Regular sans-serif, left-aligned, medium weight",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Dark header with logo, menu items, and language selector",
+            "position": "Top",
+            "notable": "Persistent navigation with Bitcoin Core branding"
+          },
+          {
+            "type": "RSS feed list",
+            "description": "Four feed items with orange RSS icons and descriptive text",
+            "position": "Center content area",
+            "notable": "Clean, scannable list with consistent icon treatment"
+          },
+          {
+            "type": "Footer",
+            "description": "Links and copyright information",
+            "position": "Bottom",
+            "notable": "Social and legal links with RSS feed icon"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Title at top center draws eye, then RSS feed items arranged vertically in logical groups",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Subscribe to Bitcoin Core updates via RSS feeds",
+        "entryPoints": [
+          "Navigation menu BLOG or RELEASES section",
+          "Direct link to RSS page"
+        ],
+        "exitPoints": [
+          "Click on any RSS feed link to subscribe",
+          "Navigation to other sections via header menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "RSS feed links",
+            "action": "Navigate to or subscribe to specific feed"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Jump to different sections of site"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change site language"
+          }
+        ],
+        "informationArchitecture": "Single-column centered layout with title, followed by categorized feed list",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "RSS Feeds",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Security announcements and release announcements feed (English-only)",
+            "context": "First RSS feed item",
+            "purpose": "Clarifies language limitation and feed content"
+          },
+          {
+            "text": "Blog posts feed",
+            "context": "Second feed item",
+            "purpose": "Describes feed content type"
+          },
+          {
+            "text": "Meetings feed",
+            "context": "Third feed item",
+            "purpose": "Describes feed content type"
+          },
+          {
+            "text": "Releases feed",
+            "context": "Fourth feed item",
+            "purpose": "Describes feed content type"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open source project",
+          "Security announcements availability"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-home-35-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 35,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold serif, large, centered",
+          "bodyStyle": "Regular serif, small",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Error heading",
+            "description": "Large serif text displaying error code and message",
+            "position": "Top center",
+            "notable": "Minimal, server-generated error page"
+          },
+          {
+            "type": "Server identifier",
+            "description": "Small text showing 'nginx'",
+            "position": "Below heading",
+            "notable": "Reveals underlying server technology"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code/message dominates, server info minimal",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access non-existent page",
+        "entryPoints": [
+          "Broken or invalid URL navigation"
+        ],
+        "exitPoints": [
+          "Browser back button",
+          "Manual URL entry",
+          "Search"
+        ],
+        "interactiveElements": [],
+        "informationArchitecture": "Minimal - only error message and server identifier",
+        "frictionPoints": [
+          "No navigation back to site",
+          "No helpful links or suggestions",
+          "No context about what went wrong"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 Not Found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "nginx",
+            "context": "Below main error message",
+            "purpose": "Technical identifier of server"
+          }
+        ],
+        "tone": "technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404 Not Found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-1-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, left-aligned, large cap",
+          "bodyStyle": "Regular serif, left-aligned, 16-18px line-height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Dark header with logo, menu items, and language selector",
+            "position": "Top",
+            "notable": "Consistent with other site pages"
+          },
+          {
+            "type": "Main heading",
+            "description": "Page title 'About' in bold sans-serif",
+            "position": "Top of content area",
+            "notable": "Large, prominent positioning"
+          },
+          {
+            "type": "Section headings",
+            "description": "Subheadings for About us, Team, Maintainers in bold sans-serif",
+            "position": "Content area",
+            "notable": "Hierarchical organization of content"
+          },
+          {
+            "type": "Body text with inline links",
+            "description": "Serif body text with underlined hyperlinks",
+            "position": "Center column",
+            "notable": "Standard readable width, serif for body improves readability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Main heading draws eye, section headings create clear content breaks, body text flows in readable column",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Bitcoin Core project, team structure, and contribution model",
+        "entryPoints": [
+          "Navigation menu ABOUT link",
+          "Direct URL access"
+        ],
+        "exitPoints": [
+          "Click external links (GitHub, Bitcoin whitepaper, contribute page)",
+          "Navigation to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Inline links (open source, Bitcoin whitepaper, libsecp256k1, GitHub, contribute to Bitcoin Core)",
+            "action": "Navigate to external resources or related pages"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Jump to different site sections"
+          }
+        ],
+        "informationArchitecture": "Single column, progressive disclosure with clear section headings: About Us → Team → Maintainers",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About",
+        "subheadline": "About us",
+        "ctas": [
+          {
+            "text": "contribute to Bitcoin Core",
+            "style": "text-link",
+            "placement": "End of About Us section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core is an open source project which maintains and releases Bitcoin client software called \"Bitcoin Core\".",
+            "context": "Opening sentence of About Us",
+            "purpose": "Defines project scope and name"
+          },
+          {
+            "text": "It is a direct descendant of the original Bitcoin software client released by Satoshi Nakamoto after he published the famous Bitcoin whitepaper.",
+            "context": "Second paragraph of About Us",
+            "purpose": "Establishes historical credibility and lineage"
+          },
+          {
+            "text": "Bitcoin Core consists of both \"full-node\" software for fully validating the blockchain as well as a bitcoin wallet.",
+            "context": "Third paragraph of About Us",
+            "purpose": "Clarifies technical scope of project"
+          },
+          {
+            "text": "The Bitcoin Core project has a large open source developer community with many casual contributors to the codebase.",
+            "context": "Team section opening",
+            "purpose": "Establishes community size and engagement"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open source",
+          "Direct descendant from Satoshi Nakamoto",
+          "Large developer community",
+          "Maintenance of cryptography library (libsecp256k1)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-5-legal.png",
+      "label": "Legal",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, centered, dark gray",
+          "bodyStyle": "Regular sans-serif, left-aligned, dark text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal dark header with Bitcoin Core logo and menu items",
+            "position": "top",
+            "notable": "Sticky header with language selector dropdown"
+          },
+          {
+            "type": "Link List",
+            "description": "Bulleted list of legal document links",
+            "position": "center",
+            "notable": "Underlined text links for Privacy Policy and Cookie Policy"
+          },
+          {
+            "type": "Footer",
+            "description": "Minimal footer with social links, legal references, and copyright",
+            "position": "bottom",
+            "notable": "Includes X (Twitter) icon and RSS feed link"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clean vertical flow: header → centered heading → bulleted links → footer",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "settings-page",
+        "userIntent": "Access and review legal documentation",
+        "entryPoints": [
+          "CONTACT navigation link",
+          "Footer legal section"
+        ],
+        "exitPoints": [
+          "Privacy Policy link",
+          "Cookie Policy link",
+          "Main navigation items",
+          "Language selector"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Privacy Policy link",
+            "action": "Navigate to Privacy Policy document"
+          },
+          {
+            "element": "Cookie Policy link",
+            "action": "Navigate to Cookie Policy document"
+          },
+          {
+            "element": "Language selector dropdown",
+            "action": "Change page language"
+          }
+        ],
+        "informationArchitecture": "Simple hub-and-spoke: main Legal page links to detailed policy pages",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Legal",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Privacy Policy",
+            "style": "text-link",
+            "placement": "main content area"
+          },
+          {
+            "text": "Cookie Policy",
+            "style": "text-link",
+            "placement": "main content area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Legal | Privacy Policy | RSS",
+            "context": "footer navigation",
+            "purpose": "Quick access to legal documents and content feed"
+          },
+          {
+            "text": "© 2026 Bitcoin Core",
+            "context": "footer",
+            "purpose": "Copyright attribution"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "© 2026 Bitcoin Core"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-6-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 6,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (24-28px), dark gray, left-aligned at top; section headings (18-20px) bold",
+          "bodyStyle": "Regular serif font (Georgia/Times), 16px line-height, justified alignment, high readability",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Sticky horizontal dark header with Bitcoin Core branding and menu",
+            "position": "top",
+            "notable": "Persistent across scroll with English language selector"
+          },
+          {
+            "type": "Content Container",
+            "description": "Wide centered text block containing policy document",
+            "position": "center",
+            "notable": "Generous left/right margins, optimized for readability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Clear hierarchical structure: main heading → section subheadings → body paragraphs with vertical spacing",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Read and understand privacy policy terms",
+        "entryPoints": [
+          "Legal page link",
+          "Footer privacy policy link",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Navigation menu items",
+          "Back to Legal page (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items (ABOUT, DOWNLOAD, BLOG, etc.)",
+            "action": "Navigate to other site sections"
+          },
+          {
+            "element": "Language selector",
+            "action": "Change policy language"
+          }
+        ],
+        "informationArchitecture": "Sequential document structure: Introduction → Data Collection → Data Usage (visible), likely continues below with more sections",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": "Introduction",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "By visiting this website or otherwise providing your personal information to us via any other means, you are accepting and consenting to the practices described in this Policy.",
+            "context": "Introduction section opening",
+            "purpose": "Clear consent statement establishing policy scope"
+          },
+          {
+            "text": "Unless specified otherwise, the term \"visitor\" includes everyone whether you upload information to our website, download information, or are merely visiting.",
+            "context": "Introduction clarification",
+            "purpose": "Define scope of 'visitor' term for policy"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit privacy policy documentation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-2-blog.png",
+      "label": "blog",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 24-32px for section headers (2026, 2025)",
+          "bodyStyle": "Regular sans-serif, dark gray, 14-16px for body text",
+          "dataStyle": "Version numbers and release identifiers displayed in bold headings"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, nav links, and language selector",
+            "position": "Top of page",
+            "notable": "Fixed header with Bitcoin Core branding"
+          },
+          {
+            "type": "Blog post list",
+            "description": "Chronologically organized posts grouped by year with horizontal divider lines",
+            "position": "Main content area",
+            "notable": "Year-based grouping (2026, 2025) creates natural content segmentation"
+          },
+          {
+            "type": "Post entries",
+            "description": "Title-first layout with descriptive text below",
+            "position": "Within blog list",
+            "notable": "Security warnings (wallet migration bug) highlighted with bold text"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Year headers anchor each section; bold post titles draw attention; body text provides context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Browse release notes, security advisories, and development updates for Bitcoin Core",
+        "entryPoints": [
+          "BLOG navigation link from header",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click individual blog post for details",
+          "Navigate to RELEASES section",
+          "Return to ABOUT/DOWNLOAD pages"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Post title links",
+            "action": "Navigate to full blog post article"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Switch between ABOUT, DOWNLOAD, BLOG, RELEASES, SECURITY ADVISORIES, DEVELOPMENT, CONTACT"
+          }
+        ],
+        "informationArchitecture": "Chronological blog listing by year, with most recent content first; each post is a discrete entry with headline and summary",
+        "frictionPoints": [
+          "No search functionality visible for finding specific posts",
+          "No pagination or load-more for older entries"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blog",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core 29.3 is now available.",
+            "context": "Post summary for release announcement",
+            "purpose": "Confirms availability status"
+          },
+          {
+            "text": "A wallet migration bug present in Bitcoin Core 30.0 and 30.1 may delete all files in the wallet directory, potentially resulting in a loss of funds.",
+            "context": "Post summary for security advisory",
+            "purpose": "Urgent warning about critical bug"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Bitcoin Core 29.3",
+          "Bitcoin Core 30.2",
+          "Bitcoin Core 30.1",
+          "CVE-2025-46597"
+        ],
+        "trustSignals": [
+          "Official release announcements",
+          "Security advisory disclosures",
+          "CVE identifiers"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-3-contributing-code.png",
+      "label": "contributing code",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 28-32px",
+          "bodyStyle": "Regular sans-serif, dark gray, 14-16px for body paragraphs",
+          "dataStyle": "Inline hyperlinks in body text (contribution guide)"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Fixed header with Bitcoin Core logo and navigation",
+            "position": "Top of page",
+            "notable": "Consistent header across all pages"
+          },
+          {
+            "type": "Main content block",
+            "description": "Centered, single-column text layout with generous margins",
+            "position": "Page center",
+            "notable": "Clean, minimalist design with focus on readability"
+          },
+          {
+            "type": "Footer",
+            "description": "Links to Legal, Privacy Policy, RSS; social media (X); copyright",
+            "position": "Bottom of page",
+            "notable": "Minimal footer with essential links only"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large heading anchors page; body text flows naturally; hyperlinks embedded in narrative",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "educational-content",
+        "userIntent": "Learn how to contribute code to the Bitcoin Core project",
+        "entryPoints": [
+          "DEVELOPMENT navigation link",
+          "Directed from blog posts about development",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click 'contribution guide' link to external repository",
+          "Return to main navigation",
+          "Navigate to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "contribution guide link",
+            "action": "Navigate to external Git repository contribution documentation"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Switch to other sections"
+          }
+        ],
+        "informationArchitecture": "Linear narrative flow explaining contribution model and directing users to detailed docs",
+        "frictionPoints": [
+          "Contribution details are external; requires leaving site for full information"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "How to contribute code to Bitcoin Core",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "contribution guide",
+            "style": "text-link",
+            "placement": "Inline in body text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The Bitcoin Core project operates an open contributor model where anyone is welcome to contribute towards development in the form of peer review, testing and patches.",
+            "context": "Main body paragraph",
+            "purpose": "Explains the open-source contribution philosophy"
+          },
+          {
+            "text": "Please refer to the contribution guide in the Git repository for more details.",
+            "context": "Closing instruction",
+            "purpose": "Directs users to detailed documentation"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open contributor model",
+          "Peer review emphasis"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/bitcoin-core-settings-4-contact-us.png",
+      "label": "Contact Us",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#FFFFFF",
+          "#FF0000",
+          "#F7931A"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, 28px for main heading",
+          "bodyStyle": "Regular sans-serif, dark gray, 14-16px for body text; italic for emphasis",
+          "dataStyle": "Monospace font for GPG key fingerprints in table"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Fixed header with Bitcoin Core logo and menu",
+            "position": "Top of page",
+            "notable": "Consistent branding"
+          },
+          {
+            "type": "Warning box",
+            "description": "Italicized text with red 'not' emphasis",
+            "position": "Below main heading",
+            "notable": "High-contrast red text for critical information"
+          },
+          {
+            "type": "Contact information block",
+            "description": "Social handles, support links, IRC reference",
+            "position": "Main content",
+            "notable": "Multiple contact channels listed"
+          },
+          {
+            "type": "GPG keys table",
+            "description": "Two-column table with developer names and fingerprints",
+            "position": "Lower content area",
+            "notable": "Structured security credential presentation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Red warning text dominates; table provides structured data reference; descriptive text guides users",
+        "innovativeElements": [
+          "Use of red text for critical 'does not' statement",
+          "GPG fingerprint table for security transparency"
+        ]
+      },
+      "flow": {
+        "screenType": "contact-info",
+        "userIntent": "Find contact methods and GPG keys for Bitcoin Core developers; understand support options",
+        "entryPoints": [
+          "CONTACT navigation link",
+          "Linked from support-related pages"
+        ],
+        "exitPoints": [
+          "Click issue tracker link",
+          "Click IRC link",
+          "Navigate to Stack Exchange",
+          "Return to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "issue tracker link",
+            "action": "Navigate to bug reporting system"
+          },
+          {
+            "element": "IRC link",
+            "action": "Connect to IRC channel"
+          },
+          {
+            "element": "bitcoin.stackexchange.com link",
+            "action": "Navigate to community Q&A"
+          },
+          {
+            "element": "X: @bitcoincoreorg link",
+            "action": "Navigate to Twitter profile"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: primary message (no technical support) → support alternatives → developer contacts → GPG credentials",
+        "frictionPoints": [
+          "Large disclaimer about lack of technical support may deter some users",
+          "GPG key information assumes user familiarity with key management"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Contact Us",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "issue tracker",
+            "style": "text-link",
+            "placement": "Inline in support paragraph"
+          },
+          {
+            "text": "IRC",
+            "style": "text-link",
+            "placement": "Inline in developer paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Bitcoin Core does not provide technical support.",
+            "context": "First statement below heading (prominent)",
+            "purpose": "Sets clear expectations; 'not' in red for emphasis"
+          },
+          {
+            "text": "Community support can be found at bitcoin.stackexchange.com",
+            "context": "Support redirect",
+            "purpose": "Directs users to community resource"
+          },
+          {
+            "text": "X: @bitcoincoreorg",
+            "context": "Social media contact",
+            "purpose": "Provides social channel"
+          },
+          {
+            "text": "You can report bugs in our software using the issue tracker.",
+            "context": "Bug reporting guidance",
+            "purpose": "Explains bug submission process"
+          },
+          {
+            "text": "You can find Bitcoin Core developers on IRC.",
+            "context": "Developer contact",
+            "purpose": "Points to real-time communication channel"
+          },
+          {
+            "text": "The following keys may be used to communicate sensitive information to developers:",
+            "context": "GPG keys introduction",
+            "purpose": "Explains purpose of key table"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "GPG fingerprints: 133E AC17 9436 F14A 5CF1 B794 860F EB80 4E66 9320",
+          "@bitcoincoreorg",
+          "IRC channel reference"
+        ],
+        "trustSignals": [
+          "GPG key fingerprints for developers (Pieter Wuille, Michael Ford, Ava Chow)",
+          "Issue tracker reference (GitHub implied)",
+          "IRC for developer contact",
+          "Official social media (@bitcoincoreorg)"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

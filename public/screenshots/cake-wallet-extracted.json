@@ -1,0 +1,1809 @@
+{
+  "slug": "cake-wallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T11:09:30.765Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 15,
+  "screens": [
+    {
+      "image": "/screenshots/cake-wallet-home-7-create-your-first-wallet.png",
+      "label": "Create your first wallet",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E88E5",
+          "#FFFFFF",
+          "#9E9E9E"
+        ],
+        "typography": {
+          "headingStyle": "Large, light gray sans-serif, centered",
+          "bodyStyle": "Regular gray sans-serif for body text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation with logo, menu items, and search",
+            "position": "top fixed",
+            "notable": "Blue background with white text and icons"
+          },
+          {
+            "type": "empty-state",
+            "description": "Large centered 404 error message",
+            "position": "center",
+            "notable": "Minimal design with only error text"
+          },
+          {
+            "type": "footer",
+            "description": "Dark footer with copyright and social links",
+            "position": "bottom",
+            "notable": "Twitter and GitHub icons"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message draws focus with centered placement in large empty space",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a page that does not exist",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Broken internal link"
+        ],
+        "exitPoints": [
+          "Home",
+          "Get Started",
+          "Cryptos",
+          "Features",
+          "Cake Pay",
+          "Cupcake",
+          "FAQ",
+          "Tutorials",
+          "Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to different sections of documentation"
+          },
+          {
+            "element": "Search box",
+            "action": "Search documentation"
+          }
+        ],
+        "informationArchitecture": "Standard documentation site with main navigation providing multiple exit paths",
+        "frictionPoints": [
+          "User is lost with no suggested recovery action"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404 - Not found",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [],
+        "tone": "minimal-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 - Not found"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-8-why-are-my-funds-not-appearing.png",
+      "label": "Why are my funds not appearing",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#1E88E5",
+          "#A855F7",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large gray sans-serif heading",
+          "bodyStyle": "Regular gray sans-serif body text with inline code formatting",
+          "dataStyle": "Monospaced inline code for status labels (SYNCHRONIZED, Rescan)"
+        },
+        "components": [
+          {
+            "type": "heading",
+            "description": "Main question/topic heading",
+            "position": "top-center",
+            "notable": "Clear problem statement format"
+          },
+          {
+            "type": "illustrative-card",
+            "description": "Purple gradient cards showing wallet status UI examples",
+            "position": "center",
+            "notable": "Two examples with SYNCHRONIZED and 70931 Blocks Remaining states"
+          },
+          {
+            "type": "warning-box",
+            "description": "Yellow-bordered alert box with warning icon",
+            "position": "center",
+            "notable": "Highlights critical information about rescanning consequences"
+          },
+          {
+            "type": "table-of-contents",
+            "description": "Right sidebar with linked section headers",
+            "position": "right",
+            "notable": "Helps users navigate long-form content"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Question headline leads to explanatory text, visual examples provide clarity, warning box emphasizes caution",
+        "innovativeElements": [
+          "Interactive example cards showing actual UI state with gradient backgrounds"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand why wallet funds are not appearing and how to resolve synchronization issues",
+        "entryPoints": [
+          "FAQ section",
+          "Search results",
+          "Support navigation"
+        ],
+        "exitPoints": [
+          "Related FAQ items via table of contents",
+          "Home",
+          "Support contact"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Table of contents links",
+            "action": "Jump to specific sections in the document"
+          },
+          {
+            "element": "Inline links (rescanning, Rescan)",
+            "action": "Provide contextual navigation to related topics"
+          }
+        ],
+        "informationArchitecture": "FAQ article organized with problem statement, explanation, visual examples, warning, and alternative scenarios",
+        "frictionPoints": [
+          "Long-form text requires reading; users might not discover solutions without scrolling"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Why are my funds not appearing?",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "SYNCHRONIZED",
+            "context": "Status label in purple cards",
+            "purpose": "Indicates wallet synchronization state"
+          },
+          {
+            "text": "Warning",
+            "context": "Alert box header",
+            "purpose": "Signals important cautionary information"
+          },
+          {
+            "text": "Rescanning will remove any saved transaction keys and destination addresses, which may be useful for proving payments.",
+            "context": "Warning box content",
+            "purpose": "Explains consequences of user action"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "70931 Blocks Remaining",
+          "SYNCHRONIZED label"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-9-service-status.png",
+      "label": "Service status",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1F2937",
+          "#10B981",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large white sans-serif headings",
+          "bodyStyle": "Regular white sans-serif for service names and status",
+          "dataStyle": "Green monospaced uptime bars, light gray timestamps"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Logo and 'Cake Wallet Status' title",
+            "position": "top-left",
+            "notable": "Consistent branding with documentation site"
+          },
+          {
+            "type": "status-badge",
+            "description": "Green checkmark with 'All Systems Operational' text",
+            "position": "top-left below header",
+            "notable": "Immediately communicates overall health"
+          },
+          {
+            "type": "service-list",
+            "description": "Grouped sections (Websites, Services) with service cards",
+            "position": "left-center",
+            "notable": "100% status badges for each service"
+          },
+          {
+            "type": "uptime-chart",
+            "description": "Green vertical bar visualizations showing 24h uptime",
+            "position": "right-center",
+            "notable": "Visual representation of continuous uptime with timestamps"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Overall status at top, grouped services on left, detailed uptime charts on right; green color dominates to signal health",
+        "innovativeElements": [
+          "Vertical bar chart visualization for uptime monitoring across multiple services"
+        ]
+      },
+      "flow": {
+        "screenType": "dashboard",
+        "userIntent": "Check if Cake Wallet services are operational and view uptime history",
+        "entryPoints": [
+          "Direct status page link",
+          "Help/Support section",
+          "Bookmark"
+        ],
+        "exitPoints": [
+          "External service links (Cake Wallet Website, Forum, Monero.com, Cake Pay, Mempool.Space)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Service links (underlined)",
+            "action": "Navigate to external service websites"
+          }
+        ],
+        "informationArchitecture": "Hierarchical by category (Websites, Services) with uptime status displayed visually; left column lists services with badges, right column shows detailed charts",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "100% status badges",
+          "Green uptime bar visualizations"
+        ]
+      },
+      "copy": {
+        "headline": "Cake Wallet Status",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Cake Wallet Website",
+            "style": "text-link",
+            "placement": "Websites section"
+          },
+          {
+            "text": "Cake Wallet Forum",
+            "style": "text-link",
+            "placement": "Websites section"
+          },
+          {
+            "text": "Monero.com Website",
+            "style": "text-link",
+            "placement": "Websites section"
+          },
+          {
+            "text": "Cake Pay Website",
+            "style": "text-link",
+            "placement": "Websites section"
+          },
+          {
+            "text": "Cake Pay",
+            "style": "text-link",
+            "placement": "Services section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "All Systems Operational",
+            "context": "Status header with green checkmark",
+            "purpose": "Communicates overall system health"
+          },
+          {
+            "text": "100%",
+            "context": "Badge next to each service",
+            "purpose": "Indicates uptime percentage"
+          },
+          {
+            "text": "-472m, now",
+            "context": "Timestamp labels on uptime charts",
+            "purpose": "Shows time range for uptime visualization"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "100% status badges",
+          "-472m now timestamp format"
+        ],
+        "trustSignals": [
+          "All Systems Operational",
+          "100% uptime badges for all services"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F7",
+          "#00B4D8"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large display size (48px+), black text with color highlight on key words",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal navigation with logo, menu items, and CTA button",
+            "position": "Top fixed",
+            "notable": "Clean, minimal header with theme toggle and download app prominence"
+          },
+          {
+            "type": "Hero section",
+            "description": "Three iPhone mockups showing wallet features side-by-side",
+            "position": "Center-upper",
+            "notable": "Multi-device mockup creates depth; blue accent on center phone draws eye"
+          },
+          {
+            "type": "CTA button",
+            "description": "Primary button with dark background",
+            "position": "Below hero image",
+            "notable": "Prominent 'Download Now' button centered below headline"
+          },
+          {
+            "type": "Social proof",
+            "description": "Trust statement with large user count",
+            "position": "Bottom section",
+            "notable": "Bold typography emphasizes 1M+ user milestone"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large hero mockup dominates, headline with color accent below, trust signal at bottom anchors credibility",
+        "innovativeElements": [
+          "Multi-phone mockup layout showing different app screens in single hero",
+          "Color-blocked text treatment (cyan highlight on 'Made Easy')"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Cake Wallet offers and download the app",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign click",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Download App button",
+          "Navigation to About/Docs/Blog",
+          "Community link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download App button",
+            "action": "Likely opens app store links"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to different sections (About Us, Docs, Blog, Community, Cupcake)"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switch between light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Single-column vertical scroll; hero image takes precedence, supporting copy below, trust metric anchors credibility",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Payments Made Easy",
+        "subheadline": "Easily and safely store, send, receive, and exchange your cryptocurrency.",
+        "ctas": [
+          {
+            "text": "Download Now",
+            "style": "primary-button",
+            "placement": "Below headline"
+          },
+          {
+            "text": "Download App",
+            "style": "primary-button",
+            "placement": "Top navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "About Us",
+            "context": "Navigation menu",
+            "purpose": "Company information access"
+          },
+          {
+            "text": "Cupcake",
+            "context": "Navigation menu",
+            "purpose": "Product/service offering"
+          }
+        ],
+        "tone": "friendly-casual, confidence-building",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Trusted by 1,000,000+ users like you",
+          "Multi-platform UI mockups demonstrate real functionality"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-2-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width stacked with card grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F7",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Brand logo strip",
+            "description": "Row of cryptocurrency/partner logos (Monero, Ethereum, Litecoin, etc.)",
+            "position": "Top center",
+            "notable": "Shows integrated asset support; colorful icons add visual interest"
+          },
+          {
+            "type": "Feature cards",
+            "description": "Two-column grid of feature showcases with phone mockups",
+            "position": "Center",
+            "notable": "Left card shows wallet groups UI, right shows swap interface in blue"
+          },
+          {
+            "type": "Descriptive text",
+            "description": "Headline with supporting description for each feature",
+            "position": "Above each card",
+            "notable": "Blue highlight on product name 'Cake Pay' creates visual connection"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Logo strip establishes credibility, two-column feature cards create balanced visual flow, phone mockups validate claims",
+        "innovativeElements": [
+          "Cryptocurrency logo strip showing multi-asset support",
+          "Parallel card layout comparing different wallet capabilities"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about core Cake Wallet features (trustless software, built-in exchange, payments)",
+        "entryPoints": [
+          "Scroll down from hero"
+        ],
+        "exitPoints": [
+          "Continue scrolling for more features",
+          "Click on feature cards (if interactive)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature cards",
+            "action": "Likely expandable or linked to detailed pages"
+          }
+        ],
+        "informationArchitecture": "Sectional breakdown of three key features; logo row establishes multi-asset trust; side-by-side comparisons make information digestible",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cake Wallet focuses on ease of use.",
+        "subheadline": "Since 2018, we've been providing a secure, seamless, and reliable way to store, send, and exchange your crypto with confidence.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Trustless Software",
+            "context": "Feature heading",
+            "purpose": "Describe wallet control benefits"
+          },
+          {
+            "text": "Open source & non-custodial means you have complete control over your private keys and digital assets.",
+            "context": "Feature description",
+            "purpose": "Explain security advantage"
+          },
+          {
+            "text": "Built-in exchange",
+            "context": "Feature heading",
+            "purpose": "Describe trading capability"
+          },
+          {
+            "text": "You can easily exchange XMR, BTC, ETH, LTC, USDT and many more without limits.",
+            "context": "Feature description",
+            "purpose": "Specify supported assets"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [
+          "Asset abbreviations: XMR, BTC, ETH, LTC, USDT"
+        ],
+        "trustSignals": [
+          "Since 2018 (longevity)",
+          "Secure, seamless, reliable positioning",
+          "Open source & non-custodial guarantee"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-3-landing-page-scrolled-2.png",
+      "label": "Landing page — scrolled 2",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "full-width stacked with card grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F7",
+          "#333333"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), black text",
+          "bodyStyle": "Regular sans-serif, medium size (16px), dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Feature cards",
+            "description": "Two-column grid showing 'Easy Payments' and 'Advanced features'",
+            "position": "Upper-center",
+            "notable": "Left card features QR code mockup for payment receiving; right shows Bitcoin balance and Silent Payments toggle"
+          },
+          {
+            "type": "Security section header",
+            "description": "Large centered heading emphasizing privacy and security",
+            "position": "Lower-center",
+            "notable": "Multi-line headline creates emphasis through size and line breaks"
+          },
+          {
+            "type": "Trust statement",
+            "description": "Paragraph explaining open source verification",
+            "position": "Below security header",
+            "notable": "Includes GitHub badge/link (partially visible)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Feature cards guide eye horizontally, security section dominates vertically with centered headline; GitHub badge adds credibility anchor",
+        "innovativeElements": [
+          "QR code mockup demonstrates real-world payment flow",
+          "Silent Payments toggle shows privacy-forward feature",
+          "Bitcoin balance display with dual-unit pricing (USD & native)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand advanced features and security credentials",
+        "entryPoints": [
+          "Scroll down from previous section"
+        ],
+        "exitPoints": [
+          "Click GitHub badge for source verification",
+          "Continue scrolling or bounce to external sites"
+        ],
+        "interactiveElements": [
+          {
+            "element": "GitHub badge",
+            "action": "Links to open source repository"
+          },
+          {
+            "element": "Silent Payments toggle",
+            "action": "Demonstrates feature in mockup"
+          }
+        ],
+        "informationArchitecture": "Feature comparison cards at top, security/trust messaging dominates lower half; progressive disclosure of credibility signals",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your Privacy & Security Matters To Us",
+        "subheadline": "Cake Wallet is 100% free and open source, so you can rest easy knowing our code does what it's supposed to do.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Easy Payments",
+            "context": "Feature heading",
+            "purpose": "Describe payment functionality"
+          },
+          {
+            "text": "Send & receive crypto, and use Cake Pay to seamlessly spend your crypto in everyday life, just like cash.",
+            "context": "Feature description",
+            "purpose": "Explain practical utility with product reference"
+          },
+          {
+            "text": "Advanced features",
+            "context": "Feature heading",
+            "purpose": "Describe advanced capabilities"
+          },
+          {
+            "text": "Full support for background sync, multiple wallets, accounts, and hardware wallets.",
+            "context": "Feature description",
+            "purpose": "Specify power-user capabilities"
+          },
+          {
+            "text": "What are Silent Payments?",
+            "context": "Expandable tooltip",
+            "purpose": "Educate on privacy feature"
+          }
+        ],
+        "tone": "professional-technical, privacy-focused",
+        "dataFormatting": [
+          "Bitcoin balance: 0.00006577 BTC",
+          "USD equivalent: USD 5.51"
+        ],
+        "trustSignals": [
+          "100% free and open source",
+          "GitHub verification link",
+          "Explicit code transparency commitment"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-4-docs.png",
+      "label": "Docs",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#1E88E5",
+          "#FFFFFF",
+          "#2C2C2C"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (Cake Wallet, 48px+), high contrast black on white",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray on white background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal top bar with icon-text navigation items (Home, Get Started, Cryptos, Features, Cake Pay, Cupcake, FAQ, Tutorials, Support)",
+            "position": "top",
+            "notable": "Blue background with white text; includes search bar and GitHub stats (v5.9.0, 1.5K, 317)"
+          },
+          {
+            "type": "Hero Logo + Title",
+            "description": "Cake Wallet logo with stylized shield icon and product name",
+            "position": "left-center",
+            "notable": "Multi-color gradient icon (blue, yellow, orange) creates visual interest"
+          },
+          {
+            "type": "Device Mockup",
+            "description": "Dark laptop and mobile phone displaying wallet interface",
+            "position": "left-center",
+            "notable": "Realistic device frames with visible UI inside; demonstrates cross-platform support"
+          },
+          {
+            "type": "Trust Box",
+            "description": "Bordered callout: 'Thanks for using Cake Wallet! Cake Wallet is open source with a permissive MIT license.'",
+            "position": "right-top",
+            "notable": "Heart emoji adds warmth to technical statement"
+          },
+          {
+            "type": "CTA Buttons",
+            "description": "Two primary buttons: 'Get Started' and 'Support'",
+            "position": "right-bottom",
+            "notable": "Blue outline buttons with arrow icons; well-spaced and scannable"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side anchors with device mockup (visual proof), right side explains value prop and directs action; heading dominates; supporting text is secondary",
+        "innovativeElements": [
+          "Realistic device mockup showing actual wallet UI rather than abstract illustrations",
+          "Open-source trust signal prominently displayed with emoji humanization"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Cake Wallet is and decide whether to get started or learn more",
+        "entryPoints": [
+          "Home navigation link",
+          "Direct landing from marketing site",
+          "Docs main page entry"
+        ],
+        "exitPoints": [
+          "Get Started button (onboarding flow)",
+          "Support button (help center)",
+          "Navigation menu items (Features, Cryptos, FAQ, Tutorials)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Started Button",
+            "action": "Navigate to onboarding/installation flow"
+          },
+          {
+            "element": "Support Button",
+            "action": "Open support page or help documentation"
+          },
+          {
+            "element": "Navigation Items",
+            "action": "Navigate to respective doc sections"
+          },
+          {
+            "element": "Search Bar",
+            "action": "Search across documentation"
+          }
+        ],
+        "informationArchitecture": "Hero section (what + why) followed by value propositions in body copy; clear navigation hierarchy above; GitHub link positions as trustworthy open-source project",
+        "frictionPoints": [
+          "Dense paragraph copy may require multiple reads; could benefit from bulleted features",
+          "No explicit security/safety messaging despite being a wallet (trust box mentions open-source, not security)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Cake Wallet",
+        "subheadline": "Thanks for using Cake Wallet! Cake Wallet is open source with a permissive MIT license.",
+        "ctas": [
+          {
+            "text": "Get Started",
+            "style": "primary-button",
+            "placement": "right-bottom"
+          },
+          {
+            "text": "Support",
+            "style": "primary-button",
+            "placement": "right-bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "open source with a permissive MIT license",
+            "context": "Trust box",
+            "purpose": "Establish credibility and transparency"
+          },
+          {
+            "text": "intuitive privacy tools, cross-chain swaps, buying and selling crypto, powerful hardware wallet support",
+            "context": "Body text",
+            "purpose": "Highlight key features and differentiators"
+          },
+          {
+            "text": "Click Get Started below to walk through installing and setting up Cake Wallet!",
+            "context": "Body text",
+            "purpose": "Direct user action with clear next step"
+          },
+          {
+            "text": "support page",
+            "context": "Body text, blue link",
+            "purpose": "Provide alternative help path"
+          }
+        ],
+        "tone": "professional-technical with friendly undertones (emoji, 'Thanks for using')",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open source with MIT license",
+          "GitHub repository link with version and stats (v5.9.0, 1.5K stars, 317 forks)",
+          "Made since 2018 (implied by 'We've been making the hard things easy since 2018')",
+          "Hardware wallet support mentioned"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-5-blog.png",
+      "label": "Blog",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width with hero section",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#6B7B99",
+          "#1E88E5",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (Welcome to Cake Wallet!, 48px+), white text on gray background",
+          "bodyStyle": "Regular sans-serif, white/light gray text, 18px on gray background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal bar with logo and items: Home, Install, Docs, Community, About",
+            "position": "top",
+            "notable": "Minimal design; right side has Search, Sign in, and white Subscribe button (contrast)"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Full-width gray background with headline, subheadline, and email signup form",
+            "position": "top-center",
+            "notable": "Decorative abstract shapes (blue square, yellow diamond, orange X, blue triangle, yellow star) in background create playful mood"
+          },
+          {
+            "type": "Email Signup Form",
+            "description": "Inline form with email input and blue Subscribe CTA button",
+            "position": "left-center under subheadline",
+            "notable": "White input field, blue button creates strong visual hierarchy"
+          },
+          {
+            "type": "Blog Card Section",
+            "description": "Left-aligned headline and secondary text for blog post preview",
+            "position": "bottom-left",
+            "notable": "Large bold heading with supporting metadata"
+          },
+          {
+            "type": "Featured Image",
+            "description": "Colorful illustration with blockchain/network icons (Arbitrum, Jupiter, etc.) and Subscribe CTA",
+            "position": "bottom-right",
+            "notable": "Branded colors and icons reinforce platform integrations"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Hero section dominates (40% of viewport); email signup is prominent call-to-action; blog content secondary; background shapes add visual interest without overwhelming",
+        "innovativeElements": [
+          "Abstract geometric shapes create dynamic, modern feel without being cluttered",
+          "Subscribe button follows user through page (appears in multiple contexts)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Discover Cake Wallet, sign up for updates, and explore blog content",
+        "entryPoints": [
+          "Home navigation",
+          "Direct URL navigation from marketing",
+          "Blog discovery"
+        ],
+        "exitPoints": [
+          "Subscribe email signup",
+          "Blog post links",
+          "Navigation menu items (Install, Docs, Community, About)",
+          "Sign in button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Subscribe Button",
+            "action": "Submit email and join mailing list"
+          },
+          {
+            "element": "Navigation Items",
+            "action": "Navigate to respective pages"
+          },
+          {
+            "element": "Blog Post Title/Image",
+            "action": "Navigate to full blog post"
+          },
+          {
+            "element": "Search Icon",
+            "action": "Open search functionality"
+          }
+        ],
+        "informationArchitecture": "Top-level navigation with primary action (subscribe); hero section establishes brand; blog content previews below for content discovery",
+        "frictionPoints": [
+          "Email input has placeholder text but no visible label",
+          "Blog post visibility limited; users must scroll to see more content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to Cake Wallet!",
+        "subheadline": "Payments Made Easy. Subscribe to catch the latest updates.",
+        "ctas": [
+          {
+            "text": "Subscribe",
+            "style": "primary-button",
+            "placement": "hero section, inline with email form"
+          },
+          {
+            "text": "Subscribe to Cake Wallet",
+            "style": "secondary-button",
+            "placement": "blog card, bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "jamie@example.com",
+            "context": "Email input placeholder",
+            "purpose": "Show expected format without labeling"
+          },
+          {
+            "text": "Cake adds Support for Arbitrum, Jupiter DEX, Blink API, Plus Birdpay & Aliases for Zcash!",
+            "context": "Blog post headline",
+            "purpose": "Drive engagement with feature announcements"
+          }
+        ],
+        "tone": "friendly-casual, conversational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Newsletter signup indicates active communication with users",
+          "Blog content shows ongoing development and updates"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-6-blog-scrolled-4.png",
+      "label": "Blog — scrolled 4",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#1A1A1A",
+          "#1E88E5",
+          "#2D7A5C"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 36px+, black text on white background",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray",
+          "dataStyle": "Date and read time in smaller, light gray text (14px, e.g., '29 Oct 2025 · 2 min read')"
+        },
+        "components": [
+          {
+            "type": "Blog Post Card 1",
+            "description": "Left-aligned text with headline, date/read time metadata, and featured image on right",
+            "position": "top-right",
+            "notable": "Trezor Safe 7 Support announcement with green-themed branded image"
+          },
+          {
+            "type": "Blog Post Card 2",
+            "description": "Left-aligned text with headline, date/read time metadata, and featured image on right",
+            "position": "bottom-right",
+            "notable": "Technical deep dive on Cupcake with green circuit board background and cupcake icon"
+          },
+          {
+            "type": "Featured Images",
+            "description": "Right-aligned brand/product illustrations with green color schemes and relevant icons",
+            "position": "right side of each card",
+            "notable": "Branded imagery reinforces product partnerships; Subscribe CTAs overlaid on images"
+          },
+          {
+            "type": "Metadata",
+            "description": "Date published and read time estimate",
+            "position": "below headline",
+            "notable": "Light gray, smaller font; helps with scanability"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates each card; images provide visual break; metadata is secondary; left-right split creates clear separation between content and imagery",
+        "innovativeElements": [
+          "Images include inline Subscribe CTAs, creating multiple conversion points",
+          "Color-coded images by topic (green for security/Trezor, green for technical content)"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore blog posts, discover new features and updates, decide which content to read",
+        "entryPoints": [
+          "Blog section of documentation site",
+          "Blog link from home page",
+          "Direct blog URL"
+        ],
+        "exitPoints": [
+          "Click blog post to read full article",
+          "Subscribe CTA on featured image",
+          "Navigate away using top navigation",
+          "Scroll to see more blog posts"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Blog Post Headline/Text",
+            "action": "Navigate to full blog post"
+          },
+          {
+            "element": "Featured Image",
+            "action": "Navigate to full blog post or trigger subscribe overlay"
+          },
+          {
+            "element": "Subscribe CTA Overlay",
+            "action": "Join mailing list"
+          }
+        ],
+        "informationArchitecture": "Chronological blog feed; each post shown as preview card with image, headline, metadata; encourage exploration and subscription throughout",
+        "frictionPoints": [
+          "No excerpt text shown; users must click to understand post content",
+          "Multiple subscribe CTAs may feel repetitive or pushy"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Trezor Safe 7 Support is Now Live in Cake Wallet",
+        "subheadline": "How Cupcake Actually Works: A Technical Deep(ish) Dive",
+        "ctas": [
+          {
+            "text": "Subscribe to Cake Wallet",
+            "style": "secondary-button",
+            "placement": "overlaid on featured images"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "29 Oct 2025 · 2 min read",
+            "context": "Below headline",
+            "purpose": "Set expectation for content length and freshness"
+          },
+          {
+            "text": "20 Oct 2025 · 7 min read",
+            "context": "Below headline",
+            "purpose": "Set expectation for content length and freshness"
+          },
+          {
+            "text": "Supported on Cake Wallet",
+            "context": "On Trezor featured image",
+            "purpose": "Reinforce partnership and integration"
+          },
+          {
+            "text": "Deep Dive",
+            "context": "Featured image text",
+            "purpose": "Highlight content type"
+          }
+        ],
+        "tone": "professional-technical with educational undertones",
+        "dataFormatting": [
+          "Date: 29 Oct 2025",
+          "Read time: 2 min read, 7 min read"
+        ],
+        "trustSignals": [
+          "Hardware wallet partnership (Trezor Safe 7)",
+          "Technical depth signaled (7 min read indicates thorough content)",
+          "Regular publishing cadence (recent dates: Oct 20-29, 2025)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-10-service-status-scrolled-1.png",
+      "label": "Service status — scrolled 1",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0f1419",
+          "#00d084",
+          "#ffd700"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, 18px+, all-caps section headers (Services, Nodes)",
+          "bodyStyle": "sans-serif, regular, 14px, light gray for service names",
+          "dataStyle": "monospace-style uptime percentages in green badges; negative time deltas (-472m) in small gray text"
+        },
+        "components": [
+          {
+            "type": "status-badge",
+            "description": "Green pill-shaped badge showing uptime percentage (100%, 87.48%, 99.17%)",
+            "position": "left of each service/node name",
+            "notable": "Color differentiation—100% is bright green, sub-100% shifts slightly warmer"
+          },
+          {
+            "type": "status-bar",
+            "description": "Horizontal bar chart made of green and yellow segments indicating uptime/downtime",
+            "position": "right side of each row",
+            "notable": "Visual encoding of reliability over time; yellow segments show degradation"
+          },
+          {
+            "type": "metadata",
+            "description": "Time offset (-472m, -473m) and 'now' timestamp",
+            "position": "inline with status bar",
+            "notable": "Indicates when data was last updated relative to current time"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Section headers anchor attention; service/node names left-aligned; status bars draw eye rightward; time metadata on far right",
+        "innovativeElements": [
+          "Segmented horizontal bar chart encoding uptime/downtime in single visual",
+          "Time-delta notation (-472m) for when metrics were captured",
+          "Color-coded percentage badges that shift hue based on reliability threshold"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Monitor health/uptime status of infrastructure services and blockchain nodes",
+        "entryPoints": [
+          "Navigation link from main dashboard or settings",
+          "Direct URL to status page"
+        ],
+        "exitPoints": [
+          "Click service/node name to view details",
+          "Navigate back to main dashboard",
+          "Refresh to update metrics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Service/Node name (underlined)",
+            "action": "Likely opens detailed status page for that service"
+          },
+          {
+            "element": "Refresh mechanism (implied)",
+            "action": "Updates metrics; footer shows 'Refresh In: 04:58' countdown"
+          }
+        ],
+        "informationArchitecture": "Grouped by category (Websites, Services, Nodes); each service listed with uptime %, trend bar, and last-update timestamp",
+        "frictionPoints": [
+          "Negative time notation (-472m) may confuse non-technical users—unclear if it means 'offline for 472 minutes' or other interpretation",
+          "No visible legend explaining the green/yellow bar encoding"
+        ],
+        "progressIndicators": [
+          "Refresh countdown timer at bottom: 'Refresh In: 04:58'",
+          "Last Updated timestamp: '2026-02-14 07:00:58'"
+        ]
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Services, Nodes (section headers)",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "-472m",
+            "context": "Below status bar for each service",
+            "purpose": "Indicates time offset from current moment; unclear semantics"
+          },
+          {
+            "text": "now",
+            "context": "Far right of each row",
+            "purpose": "Anchors time reference to present"
+          },
+          {
+            "text": "Last Updated: 2026-02-14 07:00:58",
+            "context": "Bottom of page",
+            "purpose": "Trust signal; shows data freshness"
+          },
+          {
+            "text": "Refresh In: 04:58",
+            "context": "Bottom of page",
+            "purpose": "Sets expectation for next auto-refresh"
+          }
+        ],
+        "tone": "professional-technical, informational",
+        "dataFormatting": [
+          "87.48%, 99.17%, 100% (uptime percentages)",
+          "-472m, -473m (time deltas)",
+          "Cake Pay Website, Monero Nodes, Bitcoin Nodes (service names)"
+        ],
+        "trustSignals": [
+          "Explicit uptime percentages (100%, 99.17%, 87.48%)",
+          "Last Updated timestamp with precise time",
+          "Auto-refresh countdown showing active monitoring"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-home-11-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#2d3436",
+          "#1a1a1a"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, 36px+, dark gray/black",
+          "bodyStyle": "sans-serif, regular, 16px, medium gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Cake Wallet logo and main navigation (About Us, Docs, Blog, Community, Cupcake)",
+            "position": "top-left to top-right",
+            "notable": "Minimal, clean navigation; Download App and theme toggle buttons on far right"
+          },
+          {
+            "type": "error-display",
+            "description": "Large error code and message centered on page",
+            "position": "center of viewport",
+            "notable": "Minimal, centered layout maximizes white space; auto-redirect message present"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header anchors top; large error code (404) dominates center; subtext smaller and secondary",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User navigated to non-existent page; system communicates error and guides recovery",
+        "entryPoints": [
+          "Invalid URL entered or followed broken link"
+        ],
+        "exitPoints": [
+          "Auto-redirect to homepage (in progress)",
+          "Click navigation links to About Us, Docs, Blog, etc.",
+          "Click Download App"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links",
+            "action": "Navigate to main site sections"
+          },
+          {
+            "element": "Download App button",
+            "action": "Initiate app download"
+          }
+        ],
+        "informationArchitecture": "Error message dominates; header provides escape routes via navigation",
+        "frictionPoints": [
+          "Auto-redirect message implies user must wait or page will auto-load (no manual action option visible)",
+          "No explicit 'Return Home' button—relies on nav header or auto-redirect"
+        ],
+        "progressIndicators": [
+          "Auto-redirect mechanic indicated by 'Redirecting to the homepage...' message"
+        ]
+      },
+      "copy": {
+        "headline": "404 - Page Not Found",
+        "subheadline": "Redirecting to the homepage...",
+        "ctas": [],
+        "microcopy": [],
+        "tone": "professional-technical, matter-of-fact",
+        "dataFormatting": [
+          "404 (HTTP status code)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "404 - Page Not Found",
+          "Redirecting to the homepage..."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-settings-1-about-us.png",
+      "label": "About Us",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#2d3436",
+          "#60a5fa",
+          "#fbbf24",
+          "#ff6b35"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, 32px+, dark charcoal/black",
+          "bodyStyle": "sans-serif, regular, 16px, dark gray, justified text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Cake Wallet logo and main navigation",
+            "position": "top",
+            "notable": "Consistent with 404 page; Download App CTA and theme toggle buttons"
+          },
+          {
+            "type": "icon-row",
+            "description": "Five abstract geometric shapes (square, hexagon, hourglass, triangle, star) in bright colors",
+            "position": "above main headline",
+            "notable": "Decorative; colorful and playful; likely brand identity elements"
+          },
+          {
+            "type": "text-block",
+            "description": "Two paragraphs describing mission and company history",
+            "position": "center of page",
+            "notable": "Justified text alignment; generous line-height; approachable yet informative tone"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icons draw eye; headline 'Financial Freedom For All' anchors purpose; mission statement follows; 'Our Story' section-break shifts focus to company narrative",
+        "innovativeElements": [
+          "Decorative icon set above headline—geometric shapes in bright primary/secondary colors convey playfulness while maintaining professional tone"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Cake Wallet's mission, founding, and values",
+        "entryPoints": [
+          "Click 'About Us' from header navigation",
+          "Direct navigation from company website"
+        ],
+        "exitPoints": [
+          "Click other header links (Docs, Blog, Community, Cupcake)",
+          "Download App CTA",
+          "Scroll to footer for additional options (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation links in header",
+            "action": "Navigate to site sections"
+          },
+          {
+            "element": "Download App button",
+            "action": "Initiate app download"
+          },
+          {
+            "element": "Theme toggle (sun/moon icons)",
+            "action": "Switch between light/dark modes"
+          }
+        ],
+        "informationArchitecture": "Mission statement first (hook); 'Our Story' section second (context); company founding details and innovation history follow",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Financial Freedom For All",
+        "subheadline": "Cake Wallet exists to make self custody achievable, financial privacy approachable, and freedom money accessible.",
+        "ctas": [
+          {
+            "text": "Download App",
+            "style": "primary-button",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "About Us",
+            "context": "Header navigation",
+            "purpose": "Page identifier"
+          }
+        ],
+        "tone": "friendly-casual, educational, mission-driven",
+        "dataFormatting": [
+          "Founded in 2018",
+          "Founder/CEO: Vikrant Sharma"
+        ],
+        "trustSignals": [
+          "Explicit founding date (2018) and founder identity",
+          "Track record of feature firsts: 'first Monero wallet for iOS,' 'first mobile app to feature Litecoin's MWEB privacy network'",
+          "Open-source development mentioned",
+          "Hardware wallet integration, Bitcoin Silent Payments integration listed as cutting-edge innovations"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-settings-2-terms-of-use.png",
+      "label": "Terms Of Use",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FB",
+          "#2D3436"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32px+), dark gray/black for main heading; smaller bold for section headers",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray (#2D3436) with generous line-height for readability",
+          "dataStyle": "Date timestamp in smaller gray text (12px)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top navigation with logo, links, and theme toggle",
+            "position": "top",
+            "notable": "Clean, minimal design with dark download button and theme switcher"
+          },
+          {
+            "type": "sidebar-toc",
+            "description": "Right-side navigation panel with table of contents/section links",
+            "position": "right",
+            "notable": "Sticky sidebar with left border accent, enabling quick navigation to content sections"
+          },
+          {
+            "type": "main-content",
+            "description": "Large left column containing legal text and explanations",
+            "position": "left-center",
+            "notable": "Full-width content area with ample white space and 2-column layout"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates at top; subheading and date create secondary tier; body text flows naturally; sidebar provides tertiary navigation without competing for attention",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Review and understand legal terms of service before using the app",
+        "entryPoints": [
+          "Settings menu",
+          "Legal/Terms link in footer",
+          "Pre-signup flow"
+        ],
+        "exitPoints": [
+          "Back to main site",
+          "Navigate to Privacy Policy via sidebar",
+          "Download App CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar section links",
+            "action": "Jump to corresponding content section"
+          },
+          {
+            "element": "Download App button",
+            "action": "Initiate app download flow"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switch between light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Hierarchical with clear sections: main heading > acceptance section > detailed terms organized by topic in right sidebar for easy scanning",
+        "frictionPoints": [
+          "Long-form legal text may overwhelm users; requires careful reading",
+          "No search functionality visible for finding specific terms",
+          "No print or export option visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms of Use",
+        "subheadline": "Last Modified: January 11, 2022",
+        "ctas": [
+          {
+            "text": "Download App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "These terms of use are entered into by and between You and Cake Labs LLC",
+            "context": "Opening paragraph",
+            "purpose": "Establish party to the agreement"
+          },
+          {
+            "text": "Please read the Terms of Use carefully before you start to use the App.",
+            "context": "Pre-acceptance section",
+            "purpose": "Warning/advisory to user"
+          },
+          {
+            "text": "By using the App you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy",
+            "context": "Acceptance clause",
+            "purpose": "Legal binding acceptance language"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: January 11, 2022"
+        ],
+        "trustSignals": [
+          "Clear company legal name (Cake Labs LLC)",
+          "Specific jurisdiction mentioned (Nevis)",
+          "References to Privacy Policy incorporation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-settings-3-privacy-policy.png",
+      "label": "Privacy Policy",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F7FB",
+          "#2D3436"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 40px+, dark gray for main heading; bold for section headers",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray (#2D3436), with ample line-height",
+          "dataStyle": "Date in smaller gray text (12px)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Same as Terms of Use page",
+            "position": "top",
+            "notable": "Consistent header design across legal pages"
+          },
+          {
+            "type": "sidebar-toc",
+            "description": "Right sidebar with privacy policy section links",
+            "position": "right",
+            "notable": "Enables jumping between topics like Data Security, Definitions, Disclosure, etc."
+          },
+          {
+            "type": "content-section",
+            "description": "Main text area with paragraphs and bullet points",
+            "position": "center-left",
+            "notable": "Bulleted lists for clarity on data collection methods"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Same pattern as Terms page: headline > intro paragraph > detailed sections > sidebar navigation guides secondary exploration",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Understand what data the app collects and how it's protected",
+        "entryPoints": [
+          "Settings menu",
+          "Legal links footer",
+          "Terms of Use page link"
+        ],
+        "exitPoints": [
+          "Navigate back",
+          "Return to Terms of Use",
+          "Contact Us link in sidebar"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar section links",
+            "action": "Jump to sections like Data Security, Transfer of Data, etc."
+          },
+          {
+            "element": "Contact Us link",
+            "action": "Navigate to contact page"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switch light/dark mode"
+          }
+        ],
+        "informationArchitecture": "Linear narrative flow with sidebar-based random access; organizes privacy topics by data type and practices (collection, use, protection, disclosure)",
+        "frictionPoints": [
+          "Dense legal language requires careful reading",
+          "Multiple related sections may require scrolling",
+          "No glossary for privacy terminology"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy Policy",
+        "subheadline": "Last Modified: January 24, 2024",
+        "ctas": [
+          {
+            "text": "Download App",
+            "style": "primary-button",
+            "placement": "top-right navigation"
+          },
+          {
+            "text": "Contact Us",
+            "style": "text-link",
+            "placement": "sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Cake Labs LLC ('Cake Labs', 'Company', or 'We') respects your privacy and are committed to protecting it through our compliance with this policy.",
+            "context": "Opening statement",
+            "purpose": "Reassurance about privacy protection commitment"
+          },
+          {
+            "text": "This policy describes the types of information we may collect from you or that you may provide when you use the App",
+            "context": "Policy scope",
+            "purpose": "Set expectations for what the policy covers"
+          },
+          {
+            "text": "On this App. In email, text, and other electronic messages between you and this App.",
+            "context": "Data collection scope",
+            "purpose": "Enumerate specific collection touchpoints"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Date format: January 24, 2024"
+        ],
+        "trustSignals": [
+          "Recent policy update (Jan 2024 vs Jan 2022 on Terms)",
+          "Specific commitment to privacy protection",
+          "Detailed policy sections addressing major concerns (Data Security, Transfer, Disclosure)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/cake-wallet-swap-1-swapping-between-cryptocurrencies-in-cake.png",
+      "label": "Swapping between cryptocurrencies in Cake",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0066FF",
+          "#7C3AED",
+          "#FF1493"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif heading (28px+) in gray/dark; section subheadings in bold gray",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray; clear and instructional",
+          "dataStyle": "Monospace or distinct font for addresses and crypto amounts (e.g., 'BTC' labels, conversion amounts)"
+        },
+        "components": [
+          {
+            "type": "header-nav",
+            "description": "Blue banner with Cake Wallet Docs branding, search bar, and navigation menu",
+            "position": "top",
+            "notable": "Search functionality prominently placed; icon-based nav (Home, Get Started, Cryptos, Features, etc.)"
+          },
+          {
+            "type": "sidebar",
+            "description": "Left navigation with collapsible feature categories and specific swap-related topics",
+            "position": "left",
+            "notable": "Hierarchical menu structure; 'Swap' is highlighted as current page; organized by feature complexity (Basic, Advanced)"
+          },
+          {
+            "type": "main-content",
+            "description": "Center column with tutorial text explaining swap process step-by-step",
+            "position": "center",
+            "notable": "Numbered steps with clear, instructional language"
+          },
+          {
+            "type": "phone-mockups",
+            "description": "Three phone screenshots showing UI flow for swapping cryptocurrencies",
+            "position": "center-right",
+            "notable": "Vibrant purple/pink gradient backgrounds; shows multiple steps of the swap flow; third screen shows exchange provider selection"
+          },
+          {
+            "type": "toc-sidebar",
+            "description": "Right sidebar with table of contents for current page",
+            "position": "right",
+            "notable": "Step-by-step navigation and link to YouTube tutorials"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Header dominates; left sidebar provides context and navigation; main content flows center; phone mockups break up text with visual examples; right TOC guides secondary navigation",
+        "innovativeElements": [
+          "Phone mockups with realistic UI examples integrated into documentation",
+          "Gradient backgrounds on mockups (purple to pink) create visual interest and brand cohesion",
+          "Three-step visual progression showing exact UI flow users will see"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Learn how to perform a cryptocurrency swap using Cake Wallet",
+        "entryPoints": [
+          "Docs menu > Features > Swap",
+          "Search for 'swap'",
+          "Get Started onboarding"
+        ],
+        "exitPoints": [
+          "Navigate to other Features via sidebar",
+          "Go to Home or Get Started sections",
+          "Click YouTube tutorial link",
+          "Use search to find related topics"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar menu items",
+            "action": "Navigate to other feature documentation"
+          },
+          {
+            "element": "Search bar",
+            "action": "Find specific topics or keywords"
+          },
+          {
+            "element": "Table of contents links (Step 1, Step 2, etc.)",
+            "action": "Jump to specific section within page"
+          },
+          {
+            "element": "YouTube tutorial link",
+            "action": "Opens video tutorial in new tab/window"
+          }
+        ],
+        "informationArchitecture": "Three-part structure: textual instructions + visual phone mockups + step-based TOC. Follows instructional design pattern: introduce feature, break into numbered steps, show UI for each step, link to video reinforcement",
+        "frictionPoints": [
+          "Users may need to reference mockups while reading steps; alignment could be tighter",
+          "Dropdown menus for 'Convert from/to' currencies shown in mockup but interaction not explained in detail",
+          "Exchange provider selection shown but how/why to choose ChangeNOW vs SideShift not clearly explained"
+        ],
+        "progressIndicators": [
+          "Step numbers (Step 1, Step 2, Step 3) in main content",
+          "Visual sequence in phone mockups showing progression",
+          "Table of contents showing multiple steps"
+        ]
+      },
+      "copy": {
+        "headline": "Cake Wallet swaps",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "You can watch our YouTube tutorials here:",
+            "style": "text-link",
+            "placement": "Table of contents sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "If you would like to swap cryptocurrencies, then you can use Cake Wallet's built-in swap. We show examples below converting Bitcoin (BTC) and Monero (XMR), but it works for many other assets as well swap services are provided third parties.",
+            "context": "Introductory paragraph",
+            "purpose": "Set expectations and explain scope of feature"
+          },
+          {
+            "text": "Go to the balance screen and tap on the 'Swap' button. Choose your desired currencies under 'Convert from' and 'Convert to', by tapping on the abbreviation with a dropdown arrow to the right.",
+            "context": "Step 1 instructions",
+            "purpose": "Guide user through first interaction"
+          },
+          {
+            "text": "Fixed rate",
+            "context": "Checkbox option in mockup",
+            "purpose": "Explain optional setting for swap pricing"
+          },
+          {
+            "text": "New Template",
+            "context": "Button in mockup",
+            "purpose": "Action to save swap configuration"
+          },
+          {
+            "text": "Change Exchange Provider",
+            "context": "Modal title in third screen mockup",
+            "purpose": "Explain how to select between ChangeNOW and SideShift"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "Currency pairs: BTC, XMR",
+          "Amounts: 0.0 USD 0.00",
+          "Addresses: Long alphanumeric strings (bc1a5fhqkqhfq...)"
+        ],
+        "trustSignals": [
+          "Third-party swap services mentioned (transparency about providers)",
+          "Multiple exchange provider options (ChangeNOW, SideShift) shown",
+          "YouTube tutorial link (external validation)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

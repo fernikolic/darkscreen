@@ -1,0 +1,2620 @@
+{
+  "slug": "coinbase",
+  "category": "Exchange",
+  "extractedAt": "2026-02-20T11:11:15.719Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 21,
+  "screens": [
+    {
+      "image": "/screenshots/coinbase-home-33-referral-page.png",
+      "label": "referral page",
+      "flowType": "Home",
+      "step": 33,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), centered, dark charcoal",
+          "bodyStyle": "Regular sans-serif, medium size (16px), centered, medium gray",
+          "dataStyle": "Monospace, small size (12px), gray, centered error code"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with Coinbase logo, navigation links (Cryptocurrencies, Individuals, Businesses, Institutions, Developers, Company), search, language selector, sign in/up buttons",
+            "position": "Top",
+            "notable": "Clean, minimal design with clear segmentation of product navigation"
+          },
+          {
+            "type": "Promotional banner",
+            "description": "Underlined link offering €150 referral bonus",
+            "position": "Above header",
+            "notable": "High-contrast call-to-action for conversion"
+          },
+          {
+            "type": "Illustration",
+            "description": "Gear/cog mechanism with search icon, blue and gray colors",
+            "position": "Center",
+            "notable": "Friendly, abstract representation of a broken system"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Blue rounded button with white text",
+            "position": "Center, below error message",
+            "notable": "High contrast, easily tappable target"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered column layout with visual (top), headline (middle), supporting text, error code, then CTA (bottom). Strong vertical flow.",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a referral page URL that no longer exists or is invalid",
+        "entryPoints": [
+          "Direct link to referral page",
+          "Shared referral URL"
+        ],
+        "exitPoints": [
+          "Go back button",
+          "Navigation menu",
+          "Sign up button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Returns user to previous page or home"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Navigates to account creation flow"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to different product sections"
+          }
+        ],
+        "informationArchitecture": "Error page with single recovery action (Go back) and alternate navigation paths",
+        "frictionPoints": [
+          "User landed on broken or expired referral link",
+          "No contextual recovery suggestion beyond generic back button",
+          "Error code displayed may confuse non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "Center, below error message"
+          },
+          {
+            "text": "Sign up",
+            "style": "primary-button",
+            "placement": "Top right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top banner",
+            "purpose": "Drive conversion for new users despite error state"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "177095819290"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": [
+          "The page you're looking for could not be found."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-home-35-perps-page.png",
+      "label": "perps page",
+      "flowType": "Home",
+      "step": 35,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), centered, dark charcoal",
+          "bodyStyle": "Regular sans-serif, medium size (16px), centered, medium gray",
+          "dataStyle": "Monospace, small size (12px), gray, centered error code"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal header with Coinbase logo, navigation links, search, language, sign in/up",
+            "position": "Top",
+            "notable": "Consistent with referral page navigation"
+          },
+          {
+            "type": "Promotional banner",
+            "description": "€150 referral bonus offer",
+            "position": "Above header",
+            "notable": "Same banner as referral page"
+          },
+          {
+            "type": "Gear illustration",
+            "description": "Same error state graphic as referral page",
+            "position": "Center",
+            "notable": "Consistent error visualization across pages"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Go back button",
+            "position": "Center",
+            "notable": "Consistent design language"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical centered layout to referral page",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access perpetuals trading page that is unavailable or broken",
+        "entryPoints": [
+          "Direct navigation to perps page",
+          "Navigation menu link"
+        ],
+        "exitPoints": [
+          "Go back button",
+          "Navigation menu",
+          "Sign up button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Returns user to previous page"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to product sections"
+          }
+        ],
+        "informationArchitecture": "Standard error page with generic recovery options",
+        "frictionPoints": [
+          "Perps feature appears to be unavailable or under development",
+          "User receives no explanation of why perps page doesn't exist",
+          "No fallback to alternative trading features"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "Center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top banner",
+            "purpose": "Conversion incentive"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "177095822813"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": [
+          "The page you're looking for could not be found."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-home-36-predict-page.png",
+      "label": "predict page",
+      "flowType": "Home",
+      "step": 36,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (32px+), centered, dark charcoal",
+          "bodyStyle": "Regular sans-serif, medium size (16px), centered, medium gray",
+          "dataStyle": "Monospace, small size (12px), gray, centered error code"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Standard Coinbase header with logo and product navigation",
+            "position": "Top",
+            "notable": "Consistent across all error pages"
+          },
+          {
+            "type": "Promotional banner",
+            "description": "€150 referral bonus offer",
+            "position": "Above header",
+            "notable": "Persistent across error states"
+          },
+          {
+            "type": "Gear illustration",
+            "description": "Error state graphic with gears and search icon",
+            "position": "Center",
+            "notable": "Reused design component"
+          },
+          {
+            "type": "Primary CTA",
+            "description": "Go back button",
+            "position": "Center",
+            "notable": "Consistent call-to-action"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical centered layout across error pages",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access prediction/betting feature that doesn't exist",
+        "entryPoints": [
+          "Direct navigation",
+          "Navigation menu link to Predict"
+        ],
+        "exitPoints": [
+          "Go back button",
+          "Navigation menu",
+          "Sign up button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigate back"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access other Coinbase features"
+          }
+        ],
+        "informationArchitecture": "Error recovery page with minimal context",
+        "frictionPoints": [
+          "Predict feature appears unavailable or not yet launched",
+          "No guidance on when feature will be available",
+          "No alternative suggestions or related features"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "Center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top banner",
+            "purpose": "Acquisition incentive even on error pages"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "177095823061"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": [
+          "The page you're looking for could not be found."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, left-aligned, high contrast black on white",
+          "bodyStyle": "Regular weight sans-serif, 14-16px, dark gray text",
+          "dataStyle": "Large numeric values in bold (€11,687.21), sparkline chart for trend visualization"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal navbar with logo, category links, search, settings, auth buttons",
+            "position": "Top fixed",
+            "notable": "Clean segmentation by user type (Criptomonedas, Personas físicas, Negocios, Instituciones, Desarrolladores)"
+          },
+          {
+            "type": "Mobile Device Mockup",
+            "description": "iPhone showing app dashboard with balance, transaction buttons, and product cards",
+            "position": "Right side",
+            "notable": "Realistic device frame demonstrating app UI with action buttons (Buy, Send, Receive, Add cash)"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with supporting copy and Spanish flag emoji",
+            "position": "Left side, center-top",
+            "notable": "Localized greeting with regional flag, direct appeal to Spanish market"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Prominent blue rounded button",
+            "position": "Left side, below copy",
+            "notable": "High contrast blue against white background, clear affordance"
+          },
+          {
+            "type": "Cookie Consent Modal",
+            "description": "Semi-transparent overlay with cookie policy text and action buttons",
+            "position": "Bottom right, overlaying content",
+            "notable": "Standard GDPR compliance pattern, blue 'Aceptar' button for positive action"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side focuses on value proposition and CTAs; right side showcases product with device mockup; banner promotion at very top draws attention first",
+        "innovativeElements": [
+          "Device mockup integrated into hero showing live app data",
+          "Localized greeting combining Spanish language with regional flag",
+          "Two distinct CTAs at different positions (one in hero, one in nav)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Coinbase value proposition and begin onboarding process",
+        "entryPoints": [
+          "Direct website visit",
+          "Marketing campaign link",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Register button (hero CTA)",
+          "Register button (nav bar)",
+          "Navigation links to specific segments (Personas físicas, Negocios, etc.)",
+          "Iniciar sesión for existing users"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Register button (hero)",
+            "action": "Initiates signup flow"
+          },
+          {
+            "element": "Register button (nav)",
+            "action": "Initiates signup flow"
+          },
+          {
+            "element": "Iniciar sesión link",
+            "action": "Routes to login screen"
+          },
+          {
+            "element": "Category navigation items",
+            "action": "Routes to segment-specific landing pages"
+          },
+          {
+            "element": "Aceptar/Rechazar cookie buttons",
+            "action": "Manages consent preferences"
+          }
+        ],
+        "informationArchitecture": "Hero value prop → Supporting copy → CTA; Product mockup demonstrates features; Secondary navigation allows segment filtering",
+        "frictionPoints": [
+          "Cookie consent modal overlays content and demands interaction",
+          "Multiple CTA buttons may cause slight decision paralysis",
+          "Device mockup may not render clearly on smaller screens"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "¡Hola, España! Conoce Coinbase",
+        "subheadline": "Coinbase es la plataforma más segura y fiable del mundo para comprar, vender y administrar criptomonedas.",
+        "ctas": [
+          {
+            "text": "Registrate",
+            "style": "primary-button",
+            "placement": "Hero section, left side"
+          },
+          {
+            "text": "Registrate",
+            "style": "primary-button",
+            "placement": "Top right navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Deposita EUR en tu cuenta de forma gratuita hoy para comenzar.",
+            "context": "Below main subheadline",
+            "purpose": "Removes perceived barrier to entry (free deposits)"
+          },
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "Top banner",
+            "purpose": "Promotional incentive for new users"
+          },
+          {
+            "text": "Instantly deposit EUR for zero fees, directly from your bank",
+            "context": "Mobile mockup promotional card",
+            "purpose": "Highlights convenience and cost benefit"
+          },
+          {
+            "text": "Top up from your bank",
+            "context": "Mobile mockup feature callout",
+            "purpose": "Clarifies key feature benefit"
+          }
+        ],
+        "tone": "friendly-casual, confident, reassuring",
+        "dataFormatting": [
+          "€11,687.21 (currency symbol + decimal format)",
+          "Sparkline chart showing upward trend"
+        ],
+        "trustSignals": [
+          "Platform described as 'most secure and reliable in the world'",
+          "Localized presence (Spanish language, regional flag)",
+          "Free deposit promotion"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with modal overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Not prominently featured in modal",
+          "bodyStyle": "Small to regular weight sans-serif, legal/policy text in 12-14px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Overlay",
+            "description": "Semi-transparent white/light gray background overlay over page content",
+            "position": "Centered on screen",
+            "notable": "Standard GDPR/ePrivacy compliance pattern, preserves visibility of underlying content"
+          },
+          {
+            "type": "Cookie Policy Text",
+            "description": "Extended body text explaining cookie usage and preferences",
+            "position": "Center of modal",
+            "notable": "Includes hyperlink to 'Política de Cookies' in blue"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "Two CTA buttons at bottom of modal",
+            "position": "Bottom center",
+            "notable": "Asymmetric design: 'Rechazar' (secondary) and 'Aceptar' (primary blue)"
+          },
+          {
+            "type": "Personalization Link",
+            "description": "Text link for granular cookie settings",
+            "position": "Bottom left of modal",
+            "notable": "Underlined text link providing access to detailed preferences"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Modal centers focus on action buttons; policy text is secondary; link hierarchy helps users find granular controls",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Manage or dismiss cookie consent prompt to continue browsing",
+        "entryPoints": [
+          "Page load (automatic display)"
+        ],
+        "exitPoints": [
+          "Aceptar button (accept all cookies)",
+          "Rechazar button (reject non-essential)",
+          "Personalizar cookies button (custom settings)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Aceptar button",
+            "action": "Accepts all cookies and dismisses modal"
+          },
+          {
+            "element": "Rechazar button",
+            "action": "Rejects non-essential cookies and dismisses modal"
+          },
+          {
+            "element": "Personalizar cookies link",
+            "action": "Opens granular cookie preference panel"
+          },
+          {
+            "element": "Política de Cookies hyperlink",
+            "action": "Opens policy page in new window/tab"
+          }
+        ],
+        "informationArchitecture": "Compliance message → Policy reference → Action choices (with escalation to detailed settings)",
+        "frictionPoints": [
+          "Modal is blocking/intrusive, requires interaction before proceeding",
+          "Dense policy text may not be read by most users",
+          "Button labels require Spanish language understanding"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Rechazar",
+            "style": "secondary-button",
+            "placement": "Bottom right of modal"
+          },
+          {
+            "text": "Aceptar",
+            "style": "primary-button",
+            "placement": "Bottom right of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Utilizamos cookies para que su interacción con nuestro sitio web sea más significativa...",
+            "context": "Main modal body text",
+            "purpose": "Explains cookie policy in Spanish"
+          },
+          {
+            "text": "Personalizar cookies",
+            "context": "Bottom left link",
+            "purpose": "Provides access to granular controls"
+          }
+        ],
+        "tone": "professional-technical, formal",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Transparent cookie policy explanation",
+          "Reference to GDPR/ePrivacy compliance",
+          "Link to detailed policy document"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-home-31-portfolio-page.png",
+      "label": "portfolio page",
+      "flowType": "Home",
+      "step": 31,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, center-aligned, dark color",
+          "bodyStyle": "Regular weight sans-serif, 14-16px, dark gray text, center-aligned",
+          "dataStyle": "Large error code (177095817217) in monospace or mono-spaced font"
+        },
+        "components": [
+          {
+            "type": "Error Icon",
+            "description": "Animated gear/cog illustration with magnifying glass suggesting search/diagnostic",
+            "position": "Center top of viewport",
+            "notable": "Playful mechanical illustration appropriate for technical error context"
+          },
+          {
+            "type": "Error Code",
+            "description": "Long numeric identifier for error tracking",
+            "position": "Center, below icon",
+            "notable": "Technical reference useful for support/debugging"
+          },
+          {
+            "type": "Error Heading",
+            "description": "Primary error message",
+            "position": "Center, below error code",
+            "notable": "Clear, user-friendly Spanish message"
+          },
+          {
+            "type": "Error Description",
+            "description": "Explanation text for the error",
+            "position": "Center, below heading",
+            "notable": "Simple explanation without technical jargon"
+          },
+          {
+            "type": "Recovery CTA",
+            "description": "Primary action button to resolve",
+            "position": "Center, below description",
+            "notable": "Blue button matching brand colors"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon draws attention → Error message → Recovery action; vertical center alignment creates balanced composition",
+        "innovativeElements": [
+          "Animated gear illustration is more sophisticated than standard 404 icon",
+          "Error code provided for technical support reference"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Navigate away from error state and return to functional area of app",
+        "entryPoints": [
+          "Invalid URL navigation",
+          "Broken link from internal navigation",
+          "Session timeout or page removed"
+        ],
+        "exitPoints": [
+          "Volver button (return to previous/home)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Volver button",
+            "action": "Returns user to home or previous page"
+          }
+        ],
+        "informationArchitecture": "Centered error messaging with single recovery path",
+        "frictionPoints": [
+          "User has reached a dead-end requiring explicit action to escape",
+          "No suggestion of where to navigate next beyond 'Go back'"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Página no encontrada",
+        "subheadline": "No se ha podido encontrar la página que buscas.",
+        "ctas": [
+          {
+            "text": "Volver",
+            "style": "primary-button",
+            "placement": "Center, below description"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-technical, apologetic",
+        "dataFormatting": [
+          "177095817217 (error code)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Página no encontrada",
+          "No se ha podido encontrar la página que buscas."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large 48px+ for main headline, hierarchical sizing",
+          "bodyStyle": "Regular sans-serif, 16px body text with 1.5 line-height for readability",
+          "dataStyle": "Monospace-like numerals with currency symbols ($2,727.80), percentage values in green (+1,578.87)"
+        },
+        "components": [
+          {
+            "type": "hero-section",
+            "description": "Large left-aligned text promoting staking APY with 14% highlight",
+            "position": "left side, above fold",
+            "notable": "Spanish language, uses percentage emphasis as key benefit driver"
+          },
+          {
+            "type": "product-cards",
+            "description": "Two mobile mockups showing portfolio dashboard and unstaking flow",
+            "position": "right side",
+            "notable": "Live UI previews create credibility; side-by-side comparison of features"
+          },
+          {
+            "type": "modal-overlay",
+            "description": "Cookie consent dialog with policy text and action buttons",
+            "position": "center bottom, overlaying main content",
+            "notable": "Link to Cookie Policy embedded in body text; persistent until dismissed"
+          },
+          {
+            "type": "cta-button",
+            "description": "Black pill button with 'Empieza' (Start) text",
+            "position": "lower left",
+            "notable": "Contrasts with blue primary theme; positioned to catch eye before cookie modal"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates, supported by product screenshots on right; cookie modal overlays but doesn't block critical content",
+        "innovativeElements": [
+          "Mobile UI mockups embedded as proof points",
+          "Tabbed interface preview (Balance/Insights) within hero section",
+          "Staking earnings visualization with live metrics"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-page-with-overlay",
+        "userIntent": "Learn about staking opportunities and begin earning; comply with cookie policy",
+        "entryPoints": [
+          "Direct landing from marketing campaign",
+          "Navigation from main Coinbase site",
+          "Organic search for staking information"
+        ],
+        "exitPoints": [
+          "Click 'Empieza' to start staking",
+          "Accept/Reject cookies and continue",
+          "Click arrow on card to see full portfolio view"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Cookie consent buttons",
+            "action": "Aceptar (Accept) or Rechazar (Reject) cookies; Personalizar (Customize) preferences"
+          },
+          {
+            "element": "Product card carousel",
+            "action": "Swipe or click arrow to view different portfolio sections"
+          },
+          {
+            "element": "Empieza button",
+            "action": "Navigate to account setup or sign-in for staking enrollment"
+          },
+          {
+            "element": "Política de Cookies link",
+            "action": "Open cookie policy in new tab for detailed information"
+          }
+        ],
+        "informationArchitecture": "Value proposition (APY benefit) → Social proof (live product UI) → Call-to-action, with compliance overlay",
+        "frictionPoints": [
+          "Cookie modal obscures lower portion of hero content",
+          "Dual language may confuse some users if navigation unclear",
+          "Two competing CTAs (Empieza vs cookie buttons)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Gana hasta 14% APY (porcentaje de rendimiento anual) en tus criptomonedas haciendo staking.",
+        "subheadline": "Pon tus criptomonedas a trabajar con el staking, las recompensas de USDC y los préstamos.*",
+        "ctas": [
+          {
+            "text": "Empieza",
+            "style": "primary-button",
+            "placement": "lower left, below subheadline"
+          },
+          {
+            "text": "Aceptar",
+            "style": "primary-button",
+            "placement": "cookie modal, bottom right"
+          },
+          {
+            "text": "Rechazar",
+            "style": "secondary-button",
+            "placement": "cookie modal, bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Utilizamos cookies para que su interacción con nuestro sitio web sea más significativa.",
+            "context": "Cookie consent modal body",
+            "purpose": "Explain cookie purpose and data usage transparency"
+          },
+          {
+            "text": "Staking earnings",
+            "context": "Product card label",
+            "purpose": "Identify key metric section in portfolio view"
+          },
+          {
+            "text": "Staking without lockups - Stake with flexibility now with instant unstaking.",
+            "context": "Product feature description",
+            "purpose": "Highlight key differentiator (flexible/instant unstaking)"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones; aspirational (earn up to 14%)",
+        "dataFormatting": [
+          "$2,727.80 (USD with decimals)",
+          "0.58463 ETH (crypto precision)",
+          "+1,578.87 (positive gains in green)",
+          "2.45% (percentage returns)",
+          "$2,045.85 / $481.95 (staking breakdown)",
+          "76% staked, 25% not staked (proportions)"
+        ],
+        "trustSignals": [
+          "Live portfolio balances shown ($2,727.80 in ETH)",
+          "Real-time earnings visualization (+$63.53 today)",
+          "Unrealized return showing growth (+$1,521.66)",
+          "Institutional-grade staking details"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-5-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#F5F7F9",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px headline with standard weight",
+          "bodyStyle": "Regular sans-serif, 16px neutral gray for supporting text",
+          "dataStyle": "Monospace error code (177095812313) in medium gray"
+        },
+        "components": [
+          {
+            "type": "top-navigation",
+            "description": "Global header with Coinbase logo, main category links (Cryptocurrencies, Individuals, Businesses, etc.), and auth buttons",
+            "position": "top fixed",
+            "notable": "Clean hierarchy with 'Sign up' CTA in blue pill button; search and settings icons on right"
+          },
+          {
+            "type": "promotional-banner",
+            "description": "Inline text banner promoting signup incentive",
+            "position": "above navigation",
+            "notable": "Underlined text style for emphasis; indicates offer/promotion active"
+          },
+          {
+            "type": "error-illustration",
+            "description": "Gear/cog mechanics icon in blue and gray, centered",
+            "position": "center of viewport",
+            "notable": "Minimalist illustration; suggests 'page building' or 'something broken' metaphor"
+          },
+          {
+            "type": "error-container",
+            "description": "Centered text block with error code and message",
+            "position": "below illustration",
+            "notable": "Large whitespace around content; very clean error state design"
+          },
+          {
+            "type": "recovery-button",
+            "description": "Blue pill button with 'Go back' text",
+            "position": "below error message",
+            "notable": "Single, clear action for user recovery"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation bar anchors top; illustration is visual centerpiece; error text is secondary; CTA is clear exit path",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to navigate to a staking page URL that no longer exists or is unavailable",
+        "entryPoints": [
+          "Direct URL navigation (broken link)",
+          "Stale bookmark or cached link",
+          "Internal navigation redirect"
+        ],
+        "exitPoints": [
+          "Click 'Go back' to return to previous page",
+          "Use browser back button",
+          "Navigate via top menu to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigate back to previous page (browser history)"
+          },
+          {
+            "element": "Top navigation links",
+            "action": "Jump to specific category (Cryptocurrencies, Individuals, etc.)"
+          },
+          {
+            "element": "Sign up / Sign in buttons",
+            "action": "Redirect to authentication flows"
+          }
+        ],
+        "informationArchitecture": "Error state presented with sympathetic design; single recovery path provided; alternative navigation available via header",
+        "frictionPoints": [
+          "No search box readily visible to help user find correct page",
+          "Error code shown but not explained",
+          "No suggestions for related/similar pages"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "below error message, center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "177095812313",
+            "context": "Error code display",
+            "purpose": "Provide unique identifier for support/debugging; appears technical but not explained"
+          },
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top banner",
+            "purpose": "Convert users even on error page; promotional intent"
+          }
+        ],
+        "tone": "professional-apologetic; straightforward and honest",
+        "dataFormatting": [
+          "Error code as 12-digit numeric string"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-7-governance-page.png",
+      "label": "governance page",
+      "flowType": "Staking",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#F5F7F9",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 28px headline with standard weight",
+          "bodyStyle": "Regular sans-serif, 16px neutral gray for supporting text",
+          "dataStyle": "Monospace error code (177095817f109) in medium gray"
+        },
+        "components": [
+          {
+            "type": "top-navigation",
+            "description": "Global header with Coinbase logo, main category links (Cryptocurrencies, Individuals, Businesses, etc.), and auth buttons",
+            "position": "top fixed",
+            "notable": "Identical to error page; maintains consistent brand navigation"
+          },
+          {
+            "type": "promotional-banner",
+            "description": "Inline text banner with signup incentive",
+            "position": "above navigation",
+            "notable": "Same promotional message as error page"
+          },
+          {
+            "type": "error-illustration",
+            "description": "Gear/cog mechanics icon in blue and gray, centered",
+            "position": "center of viewport",
+            "notable": "Same illustration as previous 404; suggests consistent error state treatment"
+          },
+          {
+            "type": "error-container",
+            "description": "Centered text block with error code and message",
+            "position": "below illustration",
+            "notable": "Identical layout to error page; suggests template reuse"
+          },
+          {
+            "type": "recovery-button",
+            "description": "Blue pill button with 'Go back' text",
+            "position": "below error message",
+            "notable": "Single, clear action; same style as error page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Navigation bar anchors top; illustration is visual centerpiece; error text secondary; CTA is clear exit",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to navigate to a governance page URL that no longer exists or is unavailable",
+        "entryPoints": [
+          "Direct URL navigation (broken link)",
+          "Stale bookmark or cached link",
+          "Internal navigation redirect"
+        ],
+        "exitPoints": [
+          "Click 'Go back' to return to previous page",
+          "Use browser back button",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigate back to previous page"
+          },
+          {
+            "element": "Top navigation links",
+            "action": "Jump to specific category or section"
+          }
+        ],
+        "informationArchitecture": "Error state presented with sympathetic design; single recovery path; alternative navigation via header",
+        "frictionPoints": [
+          "No search option",
+          "Error code not explained",
+          "No context about governance feature"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "below error message, center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "177095817f109",
+            "context": "Error code display",
+            "purpose": "Unique identifier for support/debugging"
+          },
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top banner",
+            "purpose": "Promotional offer for user acquisition"
+          }
+        ],
+        "tone": "professional-apologetic; straightforward",
+        "dataFormatting": [
+          "Error code as alphanumeric string with hex characters"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-8-vote-page.png",
+      "label": "vote page",
+      "flowType": "Staking",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "bold, dark gray, sans-serif, ~24px",
+          "bodyStyle": "regular, dark gray, sans-serif, ~16px",
+          "dataStyle": "monospace, gray, error code format"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal navigation with logo, menu items, search, sign-in/up buttons",
+            "position": "top fixed",
+            "notable": "Promo banner above nav with €150 offer"
+          },
+          {
+            "type": "icon-illustration",
+            "description": "Gear/cog motif with blue accents over gray background",
+            "position": "center",
+            "notable": "Generic 404 error visual, emphasizes system/processing metaphor"
+          },
+          {
+            "type": "error-code",
+            "description": "Numeric error identifier displayed below icon",
+            "position": "center",
+            "notable": "Provides unique tracking reference for debugging"
+          },
+          {
+            "type": "call-to-action",
+            "description": "Primary button 'Go back'",
+            "position": "center below text",
+            "notable": "Bright blue rounded pill button, high contrast"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon dominates center, error message below, CTA anchors bottom—clean vertical flow guiding eye downward",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a staking vote page that no longer exists or was removed",
+        "entryPoints": [
+          "Direct URL navigation",
+          "broken link from staking section",
+          "bookmarked vote page"
+        ],
+        "exitPoints": [
+          "Go back button",
+          "navigation menu",
+          "search",
+          "sign in/up"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Returns user to previous page in browser history"
+          },
+          {
+            "element": "Header navigation",
+            "action": "Navigate to Cryptocurrencies, Individuals, Businesses, Institutions, Developers, Company sections"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Initiates account creation flow"
+          }
+        ],
+        "informationArchitecture": "Error-first layout: problem statement → supporting detail → recovery action",
+        "frictionPoints": [
+          "Page not found blocks intended action",
+          "Error code not helpful to end user",
+          "No suggestions for alternative staking pages"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center below text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "banner at top of page",
+            "purpose": "Promotional incentive to reduce bounce rate"
+          }
+        ],
+        "tone": "professional-technical, apologetic",
+        "dataFormatting": [
+          "Error ID: 1770958174015"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-9-pool-page.png",
+      "label": "pool page",
+      "flowType": "Staking",
+      "step": 9,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "bold, dark gray, sans-serif, ~24px",
+          "bodyStyle": "regular, dark gray, sans-serif, ~16px",
+          "dataStyle": "monospace, gray, error code format"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Horizontal navigation with logo, menu items, search, sign-in/up buttons",
+            "position": "top fixed",
+            "notable": "Consistent with vote-page header"
+          },
+          {
+            "type": "icon-illustration",
+            "description": "Gear/cog motif with blue accents",
+            "position": "center",
+            "notable": "Same error visual treatment as vote page"
+          },
+          {
+            "type": "error-code",
+            "description": "Numeric error identifier",
+            "position": "center",
+            "notable": "Different error ID than vote page (1770958208416)"
+          },
+          {
+            "type": "call-to-action",
+            "description": "Primary button 'Go back'",
+            "position": "center below text",
+            "notable": "Identical blue pill button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered icon-text-button hierarchy",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a specific staking pool page that no longer exists",
+        "entryPoints": [
+          "Direct URL navigation",
+          "staking dashboard link",
+          "pool list navigation"
+        ],
+        "exitPoints": [
+          "Go back button",
+          "header navigation",
+          "search"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Returns to previous page or staking section"
+          },
+          {
+            "element": "Header navigation items",
+            "action": "Navigate to main crypto sections"
+          }
+        ],
+        "informationArchitecture": "Same as vote page—error-centric layout",
+        "frictionPoints": [
+          "Pool page removed or inaccessible",
+          "No alternative pool suggestions",
+          "Error doesn't indicate if issue is temporary or permanent"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "top banner",
+            "purpose": "Onboarding incentive"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Error ID: 1770958208416"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-10-pools-page.png",
+      "label": "pools page",
+      "flowType": "Staking",
+      "step": 10,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "bold, dark gray, sans-serif, ~24px",
+          "bodyStyle": "regular, dark gray, sans-serif, ~16px",
+          "dataStyle": "monospace, gray, error code format"
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Consistent header across all error screens",
+            "position": "top fixed",
+            "notable": "No variation in header treatment"
+          },
+          {
+            "type": "icon-illustration",
+            "description": "Gear/cog icon system",
+            "position": "center",
+            "notable": "Reused error icon across all three screens"
+          },
+          {
+            "type": "error-code",
+            "description": "Unique numeric identifier per error instance",
+            "position": "center",
+            "notable": "1770958210585 (third unique ID)"
+          },
+          {
+            "type": "button",
+            "description": "Go back navigation button",
+            "position": "center",
+            "notable": "Consistent primary button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Vertical center alignment with icon → code → message → action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access pools listing page within staking section",
+        "entryPoints": [
+          "Direct URL",
+          "staking navigation",
+          "pools menu link"
+        ],
+        "exitPoints": [
+          "Go back",
+          "header navigation",
+          "top banner promo link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigate back in browser history"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Access main platform sections"
+          },
+          {
+            "element": "Sign up button",
+            "action": "Initiate onboarding"
+          }
+        ],
+        "informationArchitecture": "Consistent error page template—no variation across three instances",
+        "frictionPoints": [
+          "Multiple consecutive 404 errors in staking flow suggests either outdated URLs or removed features",
+          "Users attempting staking discovery hitting dead ends",
+          "No contextual help or alternative paths"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center below error message"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "persistent banner at page top",
+            "purpose": "Promotional re-engagement during error recovery"
+          }
+        ],
+        "tone": "professional-technical, neutral",
+        "dataFormatting": [
+          "Error ID: 1770958210585"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-11-liquidity-page.png",
+      "label": "liquidity page",
+      "flowType": "Staking",
+      "step": 11,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large scale (48px+), centered",
+          "bodyStyle": "Regular sans-serif, medium weight, centered, moderate line-height",
+          "dataStyle": "Monospace, gray, error code ID (17709582127110)"
+        },
+        "components": [
+          {
+            "type": "icon-illustration",
+            "description": "Animated gears with magnifying glass, blue and gray color palette",
+            "position": "center, above headline",
+            "notable": "Mechanical metaphor for broken/missing page functionality"
+          },
+          {
+            "type": "button",
+            "description": "Rounded primary CTA button with white text on blue background",
+            "position": "center, below body text",
+            "notable": "Solid blue (#0052FF) with generous padding"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with logo, category links, and auth buttons",
+            "position": "top, sticky",
+            "notable": "Split layout with primary nav on left, secondary actions on right"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Center-focused vertical stack with generous whitespace, icon draws eye first, then headline, then support text, then CTA",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access a page (likely related to staking/liquidity) but it does not exist",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Navigation menu click",
+          "Internal link"
+        ],
+        "exitPoints": [
+          "Go back button (browser or site button)",
+          "Click logo to home",
+          "Use navigation menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigate back to previous page or home"
+          },
+          {
+            "element": "Logo",
+            "action": "Navigate to home page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to main site sections"
+          }
+        ],
+        "informationArchitecture": "Error state with recovery options; minimal information hierarchy",
+        "frictionPoints": [
+          "User cannot access intended liquidity/staking information",
+          "No suggested next steps or related content links",
+          "Generic error state with limited context about what was being sought"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center, below body copy"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "top banner",
+            "purpose": "Promotional incentive to encourage sign-up"
+          }
+        ],
+        "tone": "professional-technical, apologetic",
+        "dataFormatting": [
+          "Error code: 17709582127110"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found"
+        ],
+        "emptyStateText": [
+          "The page you're looking for could not be found."
+        ]
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-staking-12-borrow-page.png",
+      "label": "borrow page",
+      "flowType": "Staking",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, large scale (64px+), left-aligned",
+          "bodyStyle": "Regular sans-serif, medium weight, left-aligned, approachable tone",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "hero-illustration",
+            "description": "Two cryptocurrency coins (Bitcoin orange, USD dollar sign blue) connected by oval/lens shape with sparkles",
+            "position": "right side, center-aligned",
+            "notable": "Modern, colorful crypto iconography; implies conversion/exchange metaphor"
+          },
+          {
+            "type": "button",
+            "description": "Rounded primary CTA button with white text on blue background",
+            "position": "left side, below body text",
+            "notable": "High contrast, rounded pill shape"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation with localized Spanish labels",
+            "position": "top, sticky",
+            "notable": "Fully localized to Spanish (Criptomonedas, Personas físicas, Negocios, etc.)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left column emphasizes headline and CTA, right column features aspirational visual; headline is dominant visual entry point",
+        "innovativeElements": [
+          "Biomorphic lens/oval shape connecting two coins creates sense of bridge/conversion",
+          "Decorative sparkles add premium feel"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "User wants to learn about and initiate a crypto-backed loan in USDC",
+        "entryPoints": [
+          "Navigation menu click on main feature",
+          "Direct URL",
+          "Promotional campaign"
+        ],
+        "exitPoints": [
+          "Get started button (to loan application)",
+          "Navigation to other products",
+          "Learn more about Morpho partnership"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Initiate crypto-backed loan application process"
+          },
+          {
+            "element": "Navigation items",
+            "action": "Browse other Coinbase products/services"
+          }
+        ],
+        "informationArchitecture": "Value proposition-focused landing; feature benefit, provider credential, and single clear CTA",
+        "frictionPoints": [
+          "Limited information about loan terms, rates, or requirements on landing page",
+          "Morpho partnership mentioned but not explained",
+          "No comparison to alternative borrowing methods"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Borrow against your crypto",
+        "subheadline": "Get instant loans in USDC while continuing to hold your crypto. Loans powered by Morpho.",
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "left side, below subheadline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "top banner",
+            "purpose": "Promotional incentive (localized to Spanish)"
+          }
+        ],
+        "tone": "friendly-casual, benefit-focused, conversational",
+        "dataFormatting": [
+          "USDC (currency notation)",
+          "Morpho (partner brand)"
+        ],
+        "trustSignals": [
+          "Powered by Morpho (external protocol partnership)",
+          "Coinbase branding and authentication"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-settings-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "split-panel with modal overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#D4D7DB"
+        ],
+        "typography": {
+          "headingStyle": "Extra-bold sans-serif, large scale (48px+), left-aligned",
+          "bodyStyle": "Regular sans-serif, medium weight, justified, moderate line-height",
+          "dataStyle": "Regular sans-serif, body weight, hyperlinked policy reference"
+        },
+        "components": [
+          {
+            "type": "video-thumbnail",
+            "description": "Colorful abstract design with play button overlay, educational video content",
+            "position": "left side, featured",
+            "notable": "Vibrant color palette (primary, secondary, tertiary colors) suggests engaging video content"
+          },
+          {
+            "type": "modal-overlay",
+            "description": "Semi-transparent white background with cookie policy notice and action buttons",
+            "position": "bottom-right of viewport, overlaying main content",
+            "notable": "Non-intrusive placement; includes link to privacy policy"
+          },
+          {
+            "type": "button-group",
+            "description": "Two primary action buttons (Rechazar/Reject, Aceptar/Accept) plus secondary link",
+            "position": "bottom of modal, right-aligned",
+            "notable": "High contrast blue buttons; balanced reject/accept options"
+          },
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal navigation fully localized to Spanish",
+            "position": "top, sticky",
+            "notable": "Supports multi-language/regional versions"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Background landing page content supports the modal overlay; main headline and content visible but secondary to cookie notice",
+        "innovativeElements": [
+          "Colorful geometric video thumbnail with educational design",
+          "Cookie notice uses soft modal approach rather than full-screen blocker"
+        ]
+      },
+      "flow": {
+        "screenType": "landing with modal overlay",
+        "userIntent": "User wants to learn about cryptocurrency; system requires cookie consent before full engagement",
+        "entryPoints": [
+          "Direct URL to FAQ/learning page",
+          "Navigation menu",
+          "Campaign or referral link"
+        ],
+        "exitPoints": [
+          "Accept cookies (enable full site features)",
+          "Reject cookies (limited functionality)",
+          "Customize cookie preferences",
+          "Continue to learning content sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Aceptar button",
+            "action": "Accept all cookies, dismiss overlay, enable full site features"
+          },
+          {
+            "element": "Rechazar button",
+            "action": "Reject non-essential cookies, dismiss overlay with limited features"
+          },
+          {
+            "element": "Personalizar Cookies link",
+            "action": "Open cookie preference management panel"
+          },
+          {
+            "element": "Política de Cookies link",
+            "action": "Navigate to privacy policy document"
+          }
+        ],
+        "informationArchitecture": "FAQ landing page with categorical sections (Destacado/Featured, Popular); modal interrupts but allows dismissal",
+        "frictionPoints": [
+          "Cookie consent modal blocks access to content before user decision",
+          "Learning sections appear partially visible behind overlay, creating visual interference",
+          "User must evaluate cookie consent before exploring content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Preguntas respondidas sobre criptomonedas",
+        "subheadline": "Guías para principiantes, consejos prácticos y novedades del mercado para todos los públicos, desde los inversores novatos hasta los más veteranos",
+        "ctas": [
+          {
+            "text": "Aceptar",
+            "style": "primary-button",
+            "placement": "bottom right of modal"
+          },
+          {
+            "text": "Rechazar",
+            "style": "primary-button",
+            "placement": "bottom right of modal, left of Aceptar"
+          },
+          {
+            "text": "Personalizar Cookies",
+            "style": "text-link",
+            "placement": "bottom left of modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "top banner",
+            "purpose": "Promotional incentive for sign-up"
+          },
+          {
+            "text": "Utilizamos cookies para que su interacción con nuestro sitio web sea más significativa...",
+            "context": "cookie modal body",
+            "purpose": "Explains cookie usage and data collection practices"
+          },
+          {
+            "text": "Política de Cookies",
+            "context": "cookie modal, hyperlinked",
+            "purpose": "Directs user to detailed privacy/cookie policy"
+          },
+          {
+            "text": "GUÍA PARA PRINCIPIANTES",
+            "context": "right column section header",
+            "purpose": "Categorizes learning content by audience level"
+          },
+          {
+            "text": "¿Qué son las criptomonedas?",
+            "context": "right column, Popular section",
+            "purpose": "Links to foundational cryptocurrency education"
+          }
+        ],
+        "tone": "professional-educational, compliant, friendly",
+        "dataFormatting": [
+          "€150 (currency notation)",
+          "Section labels in Spanish (GUÍA PARA PRINCIPIANTES, PRIMEROS PASOS, GETTING STARTED)"
+        ],
+        "trustSignals": [
+          "Privacy policy reference",
+          "Transparent cookie disclosure",
+          "Educational content positioning"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-settings-2-recursosconsejos-y-guas-sobre-criptomonedas.png",
+      "label": "󰕒RecursosConsejos y guías sobre criptomonedas",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F0F2F5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, extra-large (48px+), black color",
+          "bodyStyle": "Regular sans-serif, medium size, dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Top horizontal nav with logo, category links, and auth buttons",
+            "position": "top fixed",
+            "notable": "Coinbase C logo, primary blue CTA button for 'Empezar'"
+          },
+          {
+            "type": "Breadcrumb",
+            "description": "Learn > Crypto Basics navigation trail",
+            "position": "below nav",
+            "notable": null
+          },
+          {
+            "type": "Illustration",
+            "description": "Orbital diagram with colorful token icons (8-12 abstract circular tokens orbiting central yellow star)",
+            "position": "center-left, 50% width",
+            "notable": "Educational visual metaphor for token ecosystem; soft blue-green background"
+          },
+          {
+            "type": "Modal",
+            "description": "Cookie consent banner with info icon and dual action buttons",
+            "position": "bottom-right overlay",
+            "notable": "Blue 'Accept'/'Reject' buttons; explanatory copy with 'Cookie Policy' link"
+          },
+          {
+            "type": "Social Share",
+            "description": "Twitter, Facebook, LinkedIn, and link-copy icons",
+            "position": "right side",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline dominates; illustration supports narrative; text content below fold",
+        "innovativeElements": [
+          "Orbital token ecosystem illustration conveying interconnected nature",
+          "Integrated cookie consent with educational framing rather than punitive tone"
+        ]
+      },
+      "flow": {
+        "screenType": "educational landing / article introduction",
+        "userIntent": "Learn what cryptocurrency tokens are; understand basic concepts",
+        "entryPoints": [
+          "Search result for 'what is a token'",
+          "Navigation from Learn > Crypto Basics section",
+          "Direct link from marketing email"
+        ],
+        "exitPoints": [
+          "Continue reading article (below fold)",
+          "Navigate to other Learn sections via breadcrumb",
+          "Sign in to platform (header CTA)",
+          "Share article via social buttons"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Empezar Button",
+            "action": "Primary CTA leading to account creation/platform entry"
+          },
+          {
+            "element": "Cookie Consent Modal",
+            "action": "Accept or Reject cookies; customize settings"
+          },
+          {
+            "element": "Social Share Icons",
+            "action": "Share article to Twitter, Facebook, LinkedIn, or copy link"
+          },
+          {
+            "element": "Navigation Links",
+            "action": "Browse other sections (Criptomonedas, Personas físicas, Negocios, etc.)"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: headline > supporting illustration > educational content; secondary navigation (breadcrumb); utility actions (auth, search) in header",
+        "frictionPoints": [
+          "Cookie modal blocks content engagement",
+          "Long scroll required to reach article body text",
+          "No visible next steps or related articles on this viewport"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "¿Qué es un token?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Empezar",
+            "style": "primary-button",
+            "placement": "top-right header"
+          },
+          {
+            "text": "Iniciar sesión",
+            "style": "text-link",
+            "placement": "top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "top banner",
+            "purpose": "Incentive messaging to drive signup"
+          },
+          {
+            "text": "We use cookies to make your interactions with our website more meaningful...",
+            "context": "cookie consent modal",
+            "purpose": "Legal disclosure with educational framing"
+          },
+          {
+            "text": "Learn > Crypto Basics",
+            "context": "breadcrumb navigation",
+            "purpose": "Contextual positioning and navigation support"
+          }
+        ],
+        "tone": "educational-friendly, encouraging",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase branding and logo",
+          "Institutional navigation (Personas físicas, Negocios, Instituciones)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-settings-11-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 11,
+      "design": {
+        "layout": "stacked / card-grid",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#F5F7F9"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32-40px), centered, black",
+          "bodyStyle": "Regular sans-serif, medium (14-16px), dark gray",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header",
+            "description": "Coinbase Help logo, theme toggle, and Sign In button",
+            "position": "top fixed",
+            "notable": "Clean white background; minimal branding"
+          },
+          {
+            "type": "Info Banner",
+            "description": "Two stacked alert cards with info icons and linked text",
+            "position": "upper-middle",
+            "notable": "Light gray background; 'Comprobar el estado en vivo' (Check live status) link; encourages login"
+          },
+          {
+            "type": "Search Bar",
+            "description": "Text input with magnifying glass icon and placeholder 'Buscar artículos'",
+            "position": "center",
+            "notable": "Prominent, rounded corners, light gray background"
+          },
+          {
+            "type": "Navigation Cards",
+            "description": "Three vertical clickable menu items with icons and right arrows",
+            "position": "lower-middle",
+            "notable": "Icon-text pairs (lightbulb, layers, lock); consistent spacing and hover targets"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered, top-down flow: headline → status alerts → search → navigation options",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "help center landing",
+        "userIntent": "Find support; troubleshoot account issues; search knowledge base",
+        "entryPoints": [
+          "Help icon from main platform",
+          "Direct URL navigation",
+          "Status check during service outage"
+        ],
+        "exitPoints": [
+          "Search for articles (search bar)",
+          "Navigate to FAQ topics (3 menu items)",
+          "Sign in to account (header button)",
+          "Check live status (link in banner)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search Bar",
+            "action": "Submit query to search knowledge base articles"
+          },
+          {
+            "element": "Pregunte lo que quieras",
+            "action": "Navigate to FAQ/Q&A section"
+          },
+          {
+            "element": "Asistencia por tema",
+            "action": "Browse support articles by category"
+          },
+          {
+            "element": "Bloquear o desbloquear mi cuenta",
+            "action": "Navigate to account security documentation"
+          },
+          {
+            "element": "Iniciar sesión / No pudo iniciar sesión",
+            "action": "Trigger sign-in flow or troubleshoot login issues"
+          }
+        ],
+        "informationArchitecture": "Self-service first design: search prominence, then category browsing, with urgent info (status alerts) at top",
+        "frictionPoints": [
+          "Two info banners consume vertical space before core navigation",
+          "Limited context on what each menu item contains"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hola: ¿Cómo podemos ayudar?",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Iniciar sesión",
+            "style": "text-link",
+            "placement": "info banner"
+          },
+          {
+            "text": "No pudo iniciar sesión",
+            "style": "text-link",
+            "placement": "info banner"
+          },
+          {
+            "text": "Comprobar el estado en vivo",
+            "style": "text-link",
+            "placement": "info banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Algunos servicios de Coinbase están experimentando problemas, pero tus fondos están seguros.",
+            "context": "info banner top",
+            "purpose": "Reassurance during outage; build trust"
+          },
+          {
+            "text": "Inicia sesión para disfrutar de la mejor experiencia. Podremos identificar tu cuenta y resolver tu problema más rápidamente.",
+            "context": "info banner second",
+            "purpose": "Encourage authentication for better support"
+          },
+          {
+            "text": "Buscar artículos",
+            "context": "search input placeholder",
+            "purpose": "Call-to-action for search functionality"
+          }
+        ],
+        "tone": "supportive-professional, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Live status indicator",
+          "Assurance about fund security",
+          "Account identification promise"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-settings-13-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 13,
+      "design": {
+        "layout": "full-width centered",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#E8EAED"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (32-36px), centered, black",
+          "bodyStyle": "Regular sans-serif, medium (14-16px), dark gray, centered",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Top nav with Coinbase logo, category links, search, theme toggle, auth buttons",
+            "position": "top fixed",
+            "notable": "Consistent with main platform header; primary blue Sign up button"
+          },
+          {
+            "type": "Illustration",
+            "description": "Mechanical gear/cog system with magnifying glass, rendered in gray and blue",
+            "position": "center, large (200px+ diameter)",
+            "notable": "Error/not-found themed; abstract, friendly aesthetic"
+          },
+          {
+            "type": "Error Message",
+            "description": "Centered text block with error code and explanation",
+            "position": "below illustration",
+            "notable": null
+          },
+          {
+            "type": "CTA Button",
+            "description": "Single primary button with 'Go back' text",
+            "position": "bottom center",
+            "notable": "Primary blue color; pill-shaped"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered visual weight; illustration + text + button form vertical spine",
+        "innovativeElements": [
+          "Mechanical/gear illustration metaphor for system error",
+          "Minimal, calm 404 design"
+        ]
+      },
+      "flow": {
+        "screenType": "error / 404 page",
+        "userIntent": "Recover from broken link or invalid URL; navigate to valid page",
+        "entryPoints": [
+          "Broken or outdated link from search engine",
+          "Mistyped URL in address bar",
+          "Stale internal link or redirect failure"
+        ],
+        "exitPoints": [
+          "Click 'Go back' button to return to previous page",
+          "Use browser back button",
+          "Navigate via main navigation (header links)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back Button",
+            "action": "Return to previous page or referer"
+          },
+          {
+            "element": "Top Navigation",
+            "action": "Browse to main sections (Cryptocurrencies, Individuals, etc.)"
+          },
+          {
+            "element": "Search Icon",
+            "action": "Initiate search"
+          },
+          {
+            "element": "Sign up / Sign in",
+            "action": "Auth entry points"
+          }
+        ],
+        "informationArchitecture": "Error recovery focused; clear navigation escape routes; minimal friction to leave page",
+        "frictionPoints": [
+          "Error code displayed (170958095415) but not explained",
+          "Limited guidance on what went wrong or how to find correct page",
+          "No search suggestion or sitemap alternative"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center bottom"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "170958095415",
+            "context": "above main error message",
+            "purpose": "Error tracking/identification code"
+          },
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "top banner",
+            "purpose": "Promotional incentive (carries across all pages)"
+          }
+        ],
+        "tone": "professional-apologetic, brief",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Coinbase branding",
+          "Clear multi-language navigation (indicating global platform)"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-send-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Send",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, white text on dark background, ~60px+ size",
+          "bodyStyle": "Medium sans-serif, white/light gray, ~18px, high contrast",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, category links, search, and auth buttons",
+            "position": "top",
+            "notable": "Clean minimalist design with blue CTA buttons"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with supporting subtext on left, decorative blue symbol on right",
+            "position": "center-left",
+            "notable": "Split layout with asymmetric visual weight"
+          },
+          {
+            "type": "cookie-consent-modal",
+            "description": "White overlay panel with cookie policy explanation, links, and action buttons",
+            "position": "bottom-right",
+            "notable": "Modal overlays main content, semi-transparent background with X close button"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headlines dominate left side, supporting text below, modal overlay at bottom-right draws attention with white background",
+        "innovativeElements": [
+          "Oversized symbol graphic integrated into hero",
+          "Dual-column content layout with asymmetric design"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Coinbase payment solution while managing cookie preferences",
+        "entryPoints": [
+          "Direct landing page visit",
+          "Navigation from main site"
+        ],
+        "exitPoints": [
+          "Contact form via 'Contacta con nosotros' button",
+          "Cookie management via modal actions",
+          "Navigation links to other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contacta con nosotros button",
+            "action": "Opens contact/inquiry form"
+          },
+          {
+            "element": "Cookie consent modal - Aceptar button",
+            "action": "Accepts all cookies and dismisses modal"
+          },
+          {
+            "element": "Cookie consent modal - Rechazar button",
+            "action": "Rejects non-essential cookies"
+          },
+          {
+            "element": "Personalizar cookies link",
+            "action": "Opens cookie preference customization panel"
+          }
+        ],
+        "informationArchitecture": "Primary navigation at top, hero messaging in center, cookie compliance layered as modal overlay",
+        "frictionPoints": [
+          "Cookie modal blocks main content interaction",
+          "Required action needed to proceed past overlay"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "El futuro de los pagos está aquí.",
+        "subheadline": "Mueve dinero a la velocidad de internet. Los pagos con stablecoins se liquidan al instante, 24/7, sin fronteras.",
+        "ctas": [
+          {
+            "text": "Contacta con nosotros",
+            "style": "secondary-button",
+            "placement": "below subheadline"
+          },
+          {
+            "text": "Aceptar",
+            "style": "primary-button",
+            "placement": "cookie modal bottom-right"
+          },
+          {
+            "text": "Rechazar",
+            "style": "secondary-button",
+            "placement": "cookie modal bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "Top banner",
+            "purpose": "Highlight promotional offer to incentivize signup"
+          },
+          {
+            "text": "Política de Cookies",
+            "context": "Cookie modal body",
+            "purpose": "Link to detailed cookie policy"
+          },
+          {
+            "text": "Personalizar cookies",
+            "context": "Cookie modal bottom-left",
+            "purpose": "Allow granular cookie preferences"
+          }
+        ],
+        "tone": "professional-technical, future-focused, confident",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-send-2-bridge-page.png",
+      "label": "bridge page",
+      "flowType": "Send",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#0052FF",
+          "#FFFFFF",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold, dark text, ~48px",
+          "bodyStyle": "Medium sans-serif, dark gray, ~16px",
+          "dataStyle": "Monospace for error code (177095820597)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top navigation with logo, category links, search, language/settings, auth buttons",
+            "position": "top",
+            "notable": "English localization variant"
+          },
+          {
+            "type": "promotion-banner",
+            "description": "Top banner with offer text",
+            "position": "above-nav",
+            "notable": "Persistent promotional element"
+          },
+          {
+            "type": "error-illustration",
+            "description": "Animated/stylized gear/cog icon in blue and gray",
+            "position": "center-upper",
+            "notable": "Mechanical theme suggests 'something broken' metaphor"
+          },
+          {
+            "type": "error-message",
+            "description": "Centered heading and subtext explaining page not found",
+            "position": "center",
+            "notable": "Simple, empathetic error messaging"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Icon dominates visual space, followed by error heading, supporting text below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Handle 404 navigation error gracefully",
+        "entryPoints": [
+          "Broken link",
+          "Invalid URL navigation",
+          "Redirect from deleted page"
+        ],
+        "exitPoints": [
+          "Go back button (returns to previous page)",
+          "Navigation links in header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Go back button",
+            "action": "Navigates back to previous page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to respective sections"
+          },
+          {
+            "element": "Logo",
+            "action": "Returns to home page"
+          }
+        ],
+        "informationArchitecture": "Standard error page with single recovery CTA",
+        "frictionPoints": [
+          "User is on wrong page and needs to navigate away",
+          "Limited context about how to find desired content"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Page not found",
+        "subheadline": "The page you're looking for could not be found.",
+        "ctas": [
+          {
+            "text": "Go back",
+            "style": "primary-button",
+            "placement": "center below error text"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get up to €150 for getting started!",
+            "context": "Top promotion banner",
+            "purpose": "Drive signups/account creation"
+          }
+        ],
+        "tone": "professional-technical, apologetic, helpful",
+        "dataFormatting": [
+          "177095820597 (error reference code)"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "Page not found",
+          "The page you're looking for could not be found."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coinbase-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0052FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large sans-serif, bold, white, ~72px+",
+          "bodyStyle": "Medium sans-serif, light gray, ~18px",
+          "dataStyle": "Monospace numbers in chart context (10,001.00, 9,997.00)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top navigation with logo, categories, search, language/theme toggle, auth",
+            "position": "top",
+            "notable": "Consistent design across site versions"
+          },
+          {
+            "type": "section-header",
+            "description": "Large 'Exchange' text with sub-navigation links",
+            "position": "below-nav",
+            "notable": "Secondary navigation for Exchange product area"
+          },
+          {
+            "type": "hero-headline",
+            "description": "Large centered heading about Coinbase Exchange access",
+            "position": "center",
+            "notable": "Bold value proposition headline"
+          },
+          {
+            "type": "supporting-copy",
+            "description": "Descriptive paragraph about API and liquidity",
+            "position": "below-headline",
+            "notable": "Technical/professional language targets business users"
+          },
+          {
+            "type": "chart-visualization",
+            "description": "Candlestick price chart with red/green coloring",
+            "position": "bottom-left",
+            "notable": "Professional trading chart visualization, partially obscured by modal"
+          },
+          {
+            "type": "cookie-consent-modal",
+            "description": "White overlay with cookie policy explanation",
+            "position": "bottom-right",
+            "notable": "Identical modal to landing page, reused component"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline commands attention, supporting text below, chart adds credibility, modal overlay creates secondary focal point",
+        "innovativeElements": [
+          "Integration of trading chart into marketing content",
+          "Candlestick visualization in hero section"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Coinbase Exchange API capabilities and liquidity access",
+        "entryPoints": [
+          "Navigation from main site",
+          "Direct link to Exchange landing"
+        ],
+        "exitPoints": [
+          "Exchange sub-navigation items (Help, API, Fees, Markets, Liquidity Program, View Exchange)",
+          "Cookie modal actions",
+          "Header navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Exchange sub-navigation links",
+            "action": "Navigate to specific Exchange product pages"
+          },
+          {
+            "element": "Aceptar button",
+            "action": "Accept cookies and dismiss modal"
+          },
+          {
+            "element": "Rechazar button",
+            "action": "Reject non-essential cookies"
+          },
+          {
+            "element": "Personalizar cookies",
+            "action": "Open cookie customization"
+          }
+        ],
+        "informationArchitecture": "Primary nav → Exchange section → Product description + chart + cookie overlay",
+        "frictionPoints": [
+          "Cookie modal blocks main content visualization",
+          "Chart partially hidden by overlay"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Obtenga acceso directo a Coinbase Exchange",
+        "subheadline": "Nuestras API de alto rendimiento le conectan con los fondos de liquidez más profundos de cualquier exchange spot de criptomonedas regulado.",
+        "ctas": [
+          {
+            "text": "Aceptar",
+            "style": "primary-button",
+            "placement": "cookie modal bottom-right"
+          },
+          {
+            "text": "Rechazar",
+            "style": "secondary-button",
+            "placement": "cookie modal bottom-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "¡Consigue hasta 150 € por empezar!",
+            "context": "Top banner",
+            "purpose": "Promotional incentive"
+          },
+          {
+            "text": "Exchange",
+            "context": "Section header",
+            "purpose": "Product category identifier"
+          },
+          {
+            "text": "Help | API | Fees | Markets | Liquidity Program | View Exchange",
+            "context": "Sub-navigation",
+            "purpose": "Quick access to Exchange features and documentation"
+          },
+          {
+            "text": "Política de Cookies",
+            "context": "Cookie modal body",
+            "purpose": "Link to full cookie policy"
+          }
+        ],
+        "tone": "professional-technical, authoritative, B2B-focused",
+        "dataFormatting": [
+          "10,001.00 (price level)",
+          "9,997.00 (price level)"
+        ],
+        "trustSignals": [
+          "API de alto rendimiento (high-performance API)",
+          "fondos de liquidez más profundos (deepest liquidity pools)",
+          "exchange spot de criptomonedas regulado (regulated crypto spot exchange)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

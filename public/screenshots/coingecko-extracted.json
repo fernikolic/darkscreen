@@ -1,0 +1,346 @@
+{
+  "slug": "coingecko",
+  "category": "Analytics",
+  "extractedAt": "2026-02-20T11:20:53.438Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/coingecko-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width with card-grid sections",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#22AB94",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark gray/black, large sizes (32px+)",
+          "bodyStyle": "Regular sans-serif, medium gray, 14-16px",
+          "dataStyle": "Monospace or bold sans-serif for prices/numbers, green for positive changes, light gray for secondary metrics"
+        },
+        "components": [
+          {
+            "type": "Header Bar",
+            "description": "Dark blue-gray banner with market stats ticker, notification banner, and auth buttons",
+            "position": "Top of page",
+            "notable": "Feature announcement banner (Track Multiple Wallets) integrated into header"
+          },
+          {
+            "type": "Navigation Menu",
+            "description": "Horizontal tabs (Cryptocurrencies, Exchanges, NFT, Learn, Products, API) with logo",
+            "position": "Below header",
+            "notable": "Branded Candy and Portfolio features highlighted in secondary nav"
+          },
+          {
+            "type": "Summary Cards",
+            "description": "Three key metrics (Market Cap, 24h Volume) with inline sparkline charts",
+            "position": "Upper content area",
+            "notable": "Green uptrend line for market cap, red downtrend for volume"
+          },
+          {
+            "type": "Trending/Top Gainers Grid",
+            "description": "Three-column card layout showing trending coins and top gainers",
+            "position": "Mid-page, horizontal cards",
+            "notable": "Uses emoji avatars and percentage badges with green/red styling"
+          },
+          {
+            "type": "Data Table",
+            "description": "Sortable table with rank, coin name, price, % changes, volume, market cap, and 7-day chart",
+            "position": "Lower half of page",
+            "notable": "Each row includes a mini sparkline chart; star icons for favoriting; Buy badges on prices"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down: Market stats → Summary cards → Trending section → Full data table. Green accents draw focus to positive changes.",
+        "innovativeElements": [
+          "Integrated sparkline charts within summary cards and table rows",
+          "Feature announcement banner with close button in header",
+          "Multi-section browsing with filter tabs (All, Highlights, Categories, Intent, MEV Protection, Clanker Ecosystem)",
+          "Customize button to save user preferences"
+        ]
+      },
+      "flow": {
+        "screenType": "landing / data-browse",
+        "userIntent": "Browse and compare cryptocurrency prices, volumes, and market cap data; discover trending and top-performing coins",
+        "entryPoints": [
+          "Homepage landing",
+          "Direct URL navigation"
+        ],
+        "exitPoints": [
+          "Click specific coin to view details",
+          "Navigate to Exchanges, NFT, Learn, or API sections",
+          "Login/Sign Up",
+          "Search for specific coin",
+          "Filter by category (Intent, MEV Protection, etc.)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Market Cap Summary Card",
+            "action": "Click to see market cap trends or drill into details"
+          },
+          {
+            "element": "Trending/Top Gainers Cards",
+            "action": "Click 'View more' to expand section"
+          },
+          {
+            "element": "Filter Tabs (All, Highlights, Categories, Intent, MEV Protection, Clanker Ecosystem)",
+            "action": "Click to filter displayed coins by category"
+          },
+          {
+            "element": "Data Table Rows",
+            "action": "Click coin name or row to view detailed coin page"
+          },
+          {
+            "element": "Star Icons",
+            "action": "Click to favorite/save coin"
+          },
+          {
+            "element": "Customize Button",
+            "action": "Open preferences modal to customize table columns/display"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: global market summary → trending/hot coins → comprehensive sortable table. Categories and filters allow users to segment data by use case.",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Market Cap percentage change (4.8%) with green indicator",
+          "24-hour volume with trend indicator",
+          "Individual coin percentage changes (1h, 24h, 7d)"
+        ]
+      },
+      "copy": {
+        "headline": "Cryptocurrency Prices by Market Cap",
+        "subheadline": "The global cryptocurrency market cap today is $2.48 Trillion, a 4.8% change in the last 24 hours.",
+        "ctas": [
+          {
+            "text": "Read more",
+            "style": "text-link",
+            "placement": "Next to subheadline"
+          },
+          {
+            "text": "View more",
+            "style": "text-link with chevron",
+            "placement": "Bottom-right of Trending and Top Gainers cards"
+          },
+          {
+            "text": "Login",
+            "style": "secondary-button",
+            "placement": "Top-right header"
+          },
+          {
+            "text": "Sign Up",
+            "style": "primary-button (green)",
+            "placement": "Top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Buy",
+            "context": "Badge next to Bitcoin and Ethereum prices",
+            "purpose": "Highlight coins available for purchase"
+          },
+          {
+            "text": "Highlights",
+            "context": "Filter tab with toggle indicator",
+            "purpose": "Show curated list of important coins"
+          },
+          {
+            "text": "Market Cap",
+            "context": "Column header in data table",
+            "purpose": "Indicate sorting/column type"
+          },
+          {
+            "text": "Last 7 Days",
+            "context": "Column header with sparkline visualization",
+            "purpose": "Show weekly price trend"
+          }
+        ],
+        "tone": "professional-technical, neutral-informative",
+        "dataFormatting": [
+          "$2.48 Trillion (Market Cap)",
+          "$70,347.26 (Bitcoin price)",
+          "$2,095.46 (Ethereum price)",
+          "4.8% (percentage change with trend indicator)",
+          "$41,947,913,083 (24h trading volume)",
+          "1,406,182,485,398 (Market cap in long form)"
+        ],
+        "trustSignals": [
+          "\"world's largest independent crypto data authority since 2014\"",
+          "18,923 coins tracked",
+          "1,466 exchanges listed"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/coingecko-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width overlay with modal",
+        "colorScheme": "dark overlay with light content background",
+        "primaryColors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#22AB94",
+          "#2D2D2D"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, white text, 32-40px, centered",
+          "bodyStyle": "Regular sans-serif, light gray/white, 14px, left-aligned in modal",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Centered dark overlay with bold headline and subheadline text",
+            "position": "Top 40% of screen",
+            "notable": "Large bold text on dark background creates strong contrast"
+          },
+          {
+            "type": "CTA Button (Primary)",
+            "description": "Green button 'Contact Sales'",
+            "position": "Center below headline",
+            "notable": "Single call-to-action positioned above imagery"
+          },
+          {
+            "type": "Product Screenshot Showcase",
+            "description": "Layered screenshot mockups showing CoinGecko interface and code editor",
+            "position": "Center-bottom, 60% of screen",
+            "notable": "Gradient frame (green-to-beige) creates visual depth; shows product in use"
+          },
+          {
+            "type": "Privacy Notice Modal",
+            "description": "Dark modal overlay (80% opacity) with privacy policy text and buttons",
+            "position": "Bottom 40% of screen, full width",
+            "notable": "Split-column layout: left text, right purposes list + button panel"
+          },
+          {
+            "type": "Button Group (Privacy)",
+            "description": "Three buttons: 'I Accept' (green), 'Reject All' (outlined), 'Show Purposes' (outlined green)",
+            "position": "Bottom-right of privacy modal",
+            "notable": "Vertical stack of buttons with consistent green theme"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Dark overlay focuses attention on headline and CTA, product imagery provides visual proof, privacy modal grounds user in consent requirements",
+        "innovativeElements": [
+          "Gradient frame effect on product screenshots (green → beige)",
+          "Dual-layer modal approach: hero section + consent modal",
+          "Two-column privacy text layout (left: description, right: purposes list)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing with modal / consent-overlay",
+        "userIntent": "Understand API offering for enterprise use; acknowledge privacy/data usage policies before accessing site",
+        "entryPoints": [
+          "User navigates to CoinGecko API page"
+        ],
+        "exitPoints": [
+          "Click 'Contact Sales' to inquire about enterprise API",
+          "Click 'I Accept' to close privacy modal and continue browsing",
+          "Click 'Reject All' to refuse tracking (if compliant)",
+          "Click 'Show Purposes' to expand privacy details",
+          "Click 'More Information' link to view full privacy policy"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Contact Sales Button",
+            "action": "Navigate to sales inquiry form or contact page"
+          },
+          {
+            "element": "I Accept Button",
+            "action": "Accept all tracking/data purposes and close privacy modal"
+          },
+          {
+            "element": "Reject All Button",
+            "action": "Reject non-essential tracking (close modal or set limited consent)"
+          },
+          {
+            "element": "Show Purposes Button",
+            "action": "Expand detailed list of data processing purposes"
+          },
+          {
+            "element": "More Information Link",
+            "action": "Open full privacy policy in new tab/page"
+          }
+        ],
+        "informationArchitecture": "Hero messaging layer above product showcase, privacy consent modal anchored at bottom with detailed explanation and options",
+        "frictionPoints": [
+          "Privacy modal is mandatory and blocks interaction",
+          "Small text in privacy notice may reduce readability",
+          "Multiple consent options might confuse users about implications"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Enterprise-grade Crypto & Onchain Data API, Built for Scale",
+        "subheadline": "Get complete coverage of the crypto market delivered by CoinGecko API, the world's largest independent crypto data authority since 2014.",
+        "ctas": [
+          {
+            "text": "Contact Sales",
+            "style": "primary-button (green)",
+            "placement": "Center below headline"
+          },
+          {
+            "text": "I Accept",
+            "style": "primary-button (green)",
+            "placement": "Bottom-right of privacy modal"
+          },
+          {
+            "text": "Reject All",
+            "style": "ghost-button (outlined)",
+            "placement": "Bottom-right of privacy modal"
+          },
+          {
+            "text": "Show Purposes",
+            "style": "ghost-button (outlined green)",
+            "placement": "Bottom-right of privacy modal"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "We Care About Your Privacy",
+            "context": "Modal header",
+            "purpose": "Signal trustworthiness and compliance"
+          },
+          {
+            "text": "We and our 966 partners store and access personal data, like browsing data or unique identifiers, on your device.",
+            "context": "Privacy modal body text",
+            "purpose": "Transparent disclosure of data practices"
+          },
+          {
+            "text": "Use precise geolocation data. Actively scan device characteristics for identification. Store and/or access information on a device. Personalised advertising and content, advertising and content measurement, audience research and services development.",
+            "context": "Privacy modal purposes list",
+            "purpose": "Detail specific data uses"
+          },
+          {
+            "text": "More Information",
+            "context": "Link in privacy modal footer",
+            "purpose": "Direct to detailed privacy policy"
+          }
+        ],
+        "tone": "professional-technical, serious (privacy notice), value-focused (headline)",
+        "dataFormatting": [
+          "966 partners (data sharing count)"
+        ],
+        "trustSignals": [
+          "\"world's largest independent crypto data authority since 2014\"",
+          "Enterprise-grade positioning",
+          "Explicit privacy and consent disclosures"
+        ],
+        "jargonLevel": "intermediate (headline/API context) to beginner (privacy notice simplification)",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

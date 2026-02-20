@@ -1,0 +1,1815 @@
+{
+  "slug": "nutstash",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:39:09.475Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 18,
+  "screens": [
+    {
+      "image": "/screenshots/nutstash-settings-2-help-page.png",
+      "label": "help page",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "monospace, bold, large (404 error code)",
+          "bodyStyle": "monospace, regular weight, small",
+          "dataStyle": "monospace font for technical IDs and codes"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container with error details",
+            "position": "center of screen",
+            "notable": "Minimal, technical presentation of error information"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Provides helpful navigation out of error state"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, technical details secondary, CTA is primary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Navigate to help/documentation after encountering a 404 error",
+        "entryPoints": [
+          "User attempted to access help page that doesn't exist",
+          "Deep link to missing resource"
+        ],
+        "exitPoints": [
+          "Click documentation link to read error explanation",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation to learn more about this error",
+            "action": "Navigate to documentation page (likely external link)"
+          }
+        ],
+        "informationArchitecture": "Linear - error information presented, single exit path offered",
+        "frictionPoints": [
+          "User cannot access intended help content",
+          "Technical ID may not be useful to typical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button-blue",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::sws7k-1771101420490-0bb70b3220f4`",
+            "context": "error details section",
+            "purpose": "Provides request tracking ID for support"
+          }
+        ],
+        "tone": "technical, helpful",
+        "dataFormatting": [
+          "Code: `NOT_FOUND`",
+          "ID: `cdg1:cdg1::sws7k-1771101420490-0bb70b3220f4`"
+        ],
+        "trustSignals": [
+          "Documentation reference offered"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-settings-3-faq-page.png",
+      "label": "faq page",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "monospace, bold, large (404 error code)",
+          "bodyStyle": "monospace, regular weight, small",
+          "dataStyle": "monospace font for technical IDs and codes"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container with error details",
+            "position": "center of screen",
+            "notable": "Identical layout to help page - consistent error presentation"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Same styling as help page for consistency"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, technical details secondary, CTA is primary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access FAQ section but page does not exist",
+        "entryPoints": [
+          "User clicked FAQ navigation link",
+          "Direct link to non-existent FAQ page"
+        ],
+        "exitPoints": [
+          "Click documentation link",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation to learn more about this error",
+            "action": "Navigate to documentation page"
+          }
+        ],
+        "informationArchitecture": "Linear error handling flow",
+        "frictionPoints": [
+          "FAQ section not available",
+          "User intent blocked"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button-blue",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::wgsfn-1771101422018-b3b8f1eafc71`",
+            "context": "error details section",
+            "purpose": "Provides request tracking ID for support"
+          }
+        ],
+        "tone": "technical, helpful",
+        "dataFormatting": [
+          "Code: `NOT_FOUND`",
+          "ID: `cdg1:cdg1::wgsfn-1771101422018-b3b8f1eafc71`"
+        ],
+        "trustSignals": [
+          "Documentation reference offered"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-settings-4-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "monospace, bold, large (404 error code)",
+          "bodyStyle": "monospace, regular weight, small",
+          "dataStyle": "monospace font for technical IDs and codes"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container with error details",
+            "position": "center of screen",
+            "notable": "Replicates error presentation pattern across all settings pages"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Consistent CTA styling across error states"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error code dominates, technical details secondary, CTA is primary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "View About page information",
+        "entryPoints": [
+          "User clicked About navigation link",
+          "Settings submenu navigation"
+        ],
+        "exitPoints": [
+          "Click documentation link",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation to learn more about this error",
+            "action": "Navigate to documentation page"
+          }
+        ],
+        "informationArchitecture": "Linear error handling flow",
+        "frictionPoints": [
+          "About page not available",
+          "Multiple missing pages indicate incomplete feature set"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button-blue",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::kcvj7-1771101423518-c57ac59b7b30`",
+            "context": "error details section",
+            "purpose": "Provides request tracking ID for support"
+          }
+        ],
+        "tone": "technical, helpful",
+        "dataFormatting": [
+          "Code: `NOT_FOUND`",
+          "ID: `cdg1:cdg1::kcvj7-1771101423518-c57ac59b7b30`"
+        ],
+        "trustSignals": [
+          "Documentation reference offered"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-home-7-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (404 prominent)",
+          "bodyStyle": "Regular sans-serif, monospace for technical details",
+          "dataStyle": "Monospace font for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "Error Card",
+            "description": "Centered container with light gray border showing error details",
+            "position": "Center of viewport",
+            "notable": "Clean minimal design with technical debugging information exposed"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Blue outlined button with text link to documentation",
+            "position": "Below error card",
+            "notable": "Helpful rather than dismissive—directs to learning resource"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error message at top (largest), code below, ID below that, CTA at bottom",
+        "innovativeElements": [
+          "Error ID exposure for support tracking",
+          "Documentation link integrated into error page"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and recover",
+        "entryPoints": [
+          "Direct URL navigation to non-existent page"
+        ],
+        "exitPoints": [
+          "Click documentation link",
+          "Back browser button",
+          "Navigate elsewhere"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link button",
+            "action": "Opens documentation to explain NOT_FOUND error"
+          }
+        ],
+        "informationArchitecture": "Error hierarchy: code → explanation → debugging ID → help link",
+        "frictionPoints": [
+          "No explicit home/back navigation button visible",
+          "Technical ID might confuse non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "Below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "Error details section",
+            "purpose": "Identifies specific error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::ddzx2-1771101417246-39578caa02d4`",
+            "context": "Error details section",
+            "purpose": "Provides unique identifier for support/debugging"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Error code in backticks",
+          "ID in backticks with CDN prefix"
+        ],
+        "trustSignals": [
+          "Error tracking ID for support reference"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-home-8-signin-page.png",
+      "label": "signin page",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size",
+          "bodyStyle": "Regular sans-serif, monospace for technical details",
+          "dataStyle": "Monospace font for codes and IDs"
+        },
+        "components": [
+          {
+            "type": "Error Card",
+            "description": "Centered container with light gray border showing 404 error details",
+            "position": "Center of viewport",
+            "notable": "Identical error page layout despite signin page label—suggests this is an access error"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Blue outlined button directing to documentation",
+            "position": "Below error card",
+            "notable": "Consistent error recovery pattern"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error code at top, technical details below, actionable help link at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access signin page, but it doesn't exist or user lacks permission",
+        "entryPoints": [
+          "Direct signin URL",
+          "Redirect from protected route"
+        ],
+        "exitPoints": [
+          "Click documentation",
+          "Back button",
+          "Navigate to home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link button",
+            "action": "Navigates to error documentation"
+          }
+        ],
+        "informationArchitecture": "Error messaging with technical debugging info",
+        "frictionPoints": [
+          "Page labeled 'signin' but shows 404 error—confusing UX",
+          "No direct path back to authentication"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "Below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "Error details",
+            "purpose": "Specifies error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::pjgxb-1771101426500-6f8f006936a4`",
+            "context": "Error details",
+            "purpose": "Unique error tracking identifier"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Error code in backticks",
+          "Long alphanumeric ID with CDN prefix"
+        ],
+        "trustSignals": [
+          "Error tracking system in place"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-settings-1-settings-page.png",
+      "label": "settings page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large size (404 prominent)",
+          "bodyStyle": "Regular sans-serif, monospace for codes",
+          "dataStyle": "Monospace font for error codes and tracking IDs"
+        },
+        "components": [
+          {
+            "type": "Error Card",
+            "description": "Centered white container with subtle border showing 404 error",
+            "position": "Center of viewport",
+            "notable": "Same error template used across multiple page types"
+          },
+          {
+            "type": "Help Link",
+            "description": "Blue outlined button to documentation",
+            "position": "Below error container",
+            "notable": "Consistent error recovery pattern"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error code dominates, supporting details below, recovery link at bottom",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access settings page",
+        "entryPoints": [
+          "Settings navigation",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Back navigation",
+          "Home"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link",
+            "action": "Opens error documentation"
+          }
+        ],
+        "informationArchitecture": "Error page structure with technical metadata",
+        "frictionPoints": [
+          "Settings page inaccessible—blocks user from configuration",
+          "No alternative navigation shown"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "Below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "Error metadata",
+            "purpose": "Error type identification"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::tq8m8-1771101418866-420db19f4b5d`",
+            "context": "Error metadata",
+            "purpose": "Unique error reference for support"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Backtick-wrapped error code",
+          "CDN-prefixed alphanumeric tracking ID"
+        ],
+        "trustSignals": [
+          "Unique error ID for tracking"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a0033",
+          "#e91e8c",
+          "#7c3aed"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (60px+), white text on dark background",
+          "bodyStyle": "Medium weight sans-serif (16-18px), gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo with mascot",
+            "description": "Pixelated cat character with lightning bolt and sunglasses",
+            "position": "Top-left, floating with glow effect",
+            "notable": "Strong brand identity with retro aesthetic"
+          },
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with Nuts, Why, Features, FAQs, Help, Code",
+            "position": "Top center",
+            "notable": null
+          },
+          {
+            "type": "CTA button",
+            "description": "Pink rounded button with wallet icon",
+            "position": "Top-right",
+            "notable": "High contrast, draws immediate attention"
+          },
+          {
+            "type": "Device mockup",
+            "description": "iPhone frame with purple gradient screen showing welcome message",
+            "position": "Right side",
+            "notable": "Device-in-frame creates product context"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left side anchors with headline and CTAs; right side shows product in context via device mockup; navigation bridges center",
+        "innovativeElements": [
+          "Glowing aura around mascot character",
+          "Pixelated retro mascot contrasts with modern crypto UI",
+          "Device frame positioning creates split-screen layout"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Nutstash is and decide whether to try it",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing materials",
+          "Crypto community forums"
+        ],
+        "exitPoints": [
+          "Try Nutstash button",
+          "Open Wallet button (top-right)",
+          "Navigation to Nuts, Why, Features, FAQs, Help, Code sections",
+          "Check the Code link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Try Nutstash button",
+            "action": "Primary CTA—launches wallet or demo"
+          },
+          {
+            "element": "Check the Code link",
+            "action": "Secondary CTA—navigates to code/developer docs"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Scroll to or navigate to relevant sections"
+          },
+          {
+            "element": "Open Wallet button",
+            "action": "Access wallet if already installed"
+          }
+        ],
+        "informationArchitecture": "Hero-driven layout: value proposition (headline) → explanation (subtext) → dual CTAs → device mockup provides visual context",
+        "frictionPoints": [
+          "No immediate benefit statement in headline—requires reading subtext",
+          "Two competing CTAs might confuse first-time users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Hide your Nuts.",
+        "subheadline": "Nutstash is an ecash wallet for your browser on any device. It uses the cashu ecash protocol to offer a digital cash-like experience.",
+        "ctas": [
+          {
+            "text": "Try Nutstash",
+            "style": "primary-button",
+            "placement": "Left side, below subheadline"
+          },
+          {
+            "text": "Check the Code",
+            "style": "ghost-button",
+            "placement": "Left side, below Try Nutstash"
+          },
+          {
+            "text": "Open Wallet",
+            "style": "primary-button",
+            "placement": "Top-right header"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Ready?",
+            "context": "Above Try Nutstash button",
+            "purpose": "Creates conversational urgency"
+          },
+          {
+            "text": "Are you a Dev?",
+            "context": "Above Check the Code button",
+            "purpose": "Segments users by role"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#1a0033",
+          "#e91e8c",
+          "#7c3aed"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (60px+), white text",
+          "bodyStyle": "Medium weight sans-serif (16-18px), gray text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Logo",
+            "description": "Nutstash wordmark with pixelated cat",
+            "position": "Top-left",
+            "notable": null
+          },
+          {
+            "type": "Navigation",
+            "description": "Horizontal menu bar",
+            "position": "Top center",
+            "notable": null
+          },
+          {
+            "type": "Mobile device mockup",
+            "description": "iPhone frame with purple gradient interior",
+            "position": "Right side",
+            "notable": "Same as screenshot 1—appears persistent"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Same as landing page—device mockup remains dominant visual anchor",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "View onboarding/welcome content in mobile context",
+        "entryPoints": [
+          "Landing page load (persists from screenshot 1)"
+        ],
+        "exitPoints": [
+          "Any navigation or CTA selection",
+          "Scroll down for more content"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Device screen (mockup)",
+            "action": "May display swiping/pagination controls (double arrow visible at bottom)"
+          }
+        ],
+        "informationArchitecture": "Same as screenshot 1—no apparent changes to desktop layout",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Double arrow (>>) at bottom of device mockup suggests pagination/swipeable onboarding"
+        ]
+      },
+      "copy": {
+        "headline": "Hide your Nuts.",
+        "subheadline": "Nutstash is an ecash wallet for your browser on any device. It uses the cashu ecash protocol to offer a digital cash-like experience.",
+        "ctas": [
+          {
+            "text": "Try Nutstash",
+            "style": "primary-button",
+            "placement": "Left side"
+          },
+          {
+            "text": "Check the Code",
+            "style": "ghost-button",
+            "placement": "Left side"
+          }
+        ],
+        "microcopy": [],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-home-5-open-wallet.png",
+      "label": "Open Wallet",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#0a0a0a",
+          "#7c3aed",
+          "#e91e8c"
+        ],
+        "typography": {
+          "headingStyle": "Large bold italic serif (40px+), magenta/pink color",
+          "bodyStyle": "Regular sans-serif (16px), white text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Language selector",
+            "description": "Dropdown with English flag",
+            "position": "Top-center",
+            "notable": null
+          },
+          {
+            "type": "Warning banner",
+            "description": "Yellow/orange warning icon + text on dark background",
+            "position": "Below language selector",
+            "notable": "High contrast warning color grabs attention"
+          },
+          {
+            "type": "Mascot icon",
+            "description": "Pixelated cat in pink/purple square",
+            "position": "Center",
+            "notable": "Smaller than landing page; vertically centered"
+          },
+          {
+            "type": "Modal/dialog box",
+            "description": "Centered white button on dark background",
+            "position": "Bottom",
+            "notable": "Clean, minimal button styling"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Top: warning → center: mascot + welcome text → bottom: CTA button. Vertical centering emphasizes modal dialog",
+        "innovativeElements": [
+          "Centered modal layout breaks from split-panel of previous screens",
+          "Warning banner uses color strategically to build trust"
+        ]
+      },
+      "flow": {
+        "screenType": "onboarding-step",
+        "userIntent": "Review key information about Nutstash before accessing wallet",
+        "entryPoints": [
+          "Click 'Open Wallet' from header",
+          "Click 'Try Nutstash' from landing page"
+        ],
+        "exitPoints": [
+          "OK button (dismisses modal, opens wallet)",
+          "FAQs link (external navigation)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "OK button",
+            "action": "Closes modal and proceeds to wallet interface"
+          },
+          {
+            "element": "FAQs link",
+            "action": "Opens FAQs page in new tab"
+          },
+          {
+            "element": "Language selector",
+            "action": "Changes page language"
+          }
+        ],
+        "informationArchitecture": "Modal overlay with stacked info: warning banner → logo/mascot → headline → body paragraphs → link to FAQs → action button",
+        "frictionPoints": [
+          "Dense text block may deter users—three paragraphs without visual breaks",
+          "No 'Cancel' or close button visible; only OK to proceed"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Welcome to nutstash",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "OK",
+            "style": "primary-button",
+            "placement": "Bottom center, full width"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Nutstash is still in beta development. Please use at own risk.",
+            "context": "Orange warning banner at top",
+            "purpose": "Legal/risk disclosure"
+          },
+          {
+            "text": "Nutstash is a Cashu ecash wallet.",
+            "context": "First paragraph of body text",
+            "purpose": "Defines what the product is"
+          },
+          {
+            "text": "Ecash works without accounts. Cashu tokens are bearer assets, that are stored locally on your nutstash wallet.",
+            "context": "Second paragraph",
+            "purpose": "Explains core mechanism"
+          },
+          {
+            "text": "Nutstash is NOT the custodian. The custodian of your sats are the mints you choose to connect to.",
+            "context": "Third paragraph",
+            "purpose": "Clarifies custody/trust model"
+          },
+          {
+            "text": "for more information, please visit FAQs",
+            "context": "Below body text",
+            "purpose": "Directs users to additional resources"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Explicit non-custody statement",
+          "Beta transparency disclaimer",
+          "Link to FAQs for transparency"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-staking-2-stake-page.png",
+      "label": "stake page",
+      "flowType": "Staking",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Bold monospace for error code",
+          "bodyStyle": "Regular monospace for technical details",
+          "dataStyle": "Monospace inline for IDs and codes"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container with error details",
+            "position": "center of screen",
+            "notable": "Minimalist error presentation with technical transparency"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Helpful recovery action pointing to documentation"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message dominates center, CTA below provides recovery path",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access staking functionality but encountered a 404 error",
+        "entryPoints": [
+          "Navigation from main menu or staking dashboard"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Back navigation (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Navigate to documentation page for error details"
+          }
+        ],
+        "informationArchitecture": "Error code and ID at top, recovery action below",
+        "frictionPoints": [
+          "Page not found blocks access to staking feature",
+          "No clear back button visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Technical identifier for developers"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::2hrjm-1771101431020-cec4a63bc589`",
+            "context": "error details section",
+            "purpose": "Unique request ID for support/debugging"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "404 HTTP status code",
+          "Monospace ID string"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-staking-3-staking-page.png",
+      "label": "staking page",
+      "flowType": "Staking",
+      "step": 3,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Bold monospace for error code",
+          "bodyStyle": "Regular monospace for technical details",
+          "dataStyle": "Monospace inline for IDs and codes"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container with error details",
+            "position": "center of screen",
+            "notable": "Consistent error presentation with request ID"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Documentation link for error resolution"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message dominates, CTA provides path forward",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access staking interface but encountered 404 error",
+        "entryPoints": [
+          "Staking section navigation"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Back navigation (implied)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Navigate to help documentation"
+          }
+        ],
+        "informationArchitecture": "Error code at top, unique ID, recovery link below",
+        "frictionPoints": [
+          "Feature unavailable",
+          "No alternative action paths visible"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details",
+            "purpose": "Error code for troubleshooting"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::qfmfw-1771101432536-bcba9f40cf37`",
+            "context": "error details",
+            "purpose": "Unique identifier for request tracking"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "404 status",
+          "Monospace ID"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-swap-1-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Bold monospace for error code",
+          "bodyStyle": "Regular monospace for technical details",
+          "dataStyle": "Monospace inline"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container centered on page",
+            "position": "center",
+            "notable": "Same consistent error UI across app"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined text-link button",
+            "position": "below error box",
+            "notable": "Consistent recovery pathway"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Centered error dominates with CTA below",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Access swap functionality but received 404 error",
+        "entryPoints": [
+          "Swap feature navigation"
+        ],
+        "exitPoints": [
+          "Documentation link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link",
+            "action": "Open documentation for error resolution"
+          }
+        ],
+        "informationArchitecture": "Error code, technical ID, help link",
+        "frictionPoints": [
+          "Swap feature unavailable",
+          "Limited navigation options"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link-button",
+            "placement": "below error content"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details",
+            "purpose": "Error code identifier"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::fkz4n-1771101434033-cb2ee2e31c8a`",
+            "context": "error details",
+            "purpose": "Request tracking ID"
+          }
+        ],
+        "tone": "technical-professional",
+        "dataFormatting": [
+          "404 HTTP status",
+          "Monospace ID string"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "expert",
+        "errorMessages": [
+          "404: NOT_FOUND"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-onboarding-1-login-page.png",
+      "label": "login page",
+      "flowType": "Onboarding",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, monospace-influenced (404 error code)",
+          "bodyStyle": "sans-serif, regular, technical",
+          "dataStyle": "monospace, inline code formatting for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container displaying 404 error details",
+            "position": "center of screen",
+            "notable": "Clean, minimal design with clearly separated error information"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Links to documentation rather than providing inline help"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error message dominates center, documentation link provides secondary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access login page but encountered a 404 NOT_FOUND error",
+        "entryPoints": [
+          "Direct navigation to login URL",
+          "Redirect from onboarding flow"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link button",
+            "action": "Opens documentation to troubleshoot the 404 error"
+          }
+        ],
+        "informationArchitecture": "Error information displayed hierarchically: status code → error code → request ID, with recovery action below",
+        "frictionPoints": [
+          "Page not found blocks access to login functionality",
+          "No alternative navigation options visible",
+          "Technical error details may confuse non-technical users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link with ghost-button treatment",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Technical identifier for the specific error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::9xwq5-1771101425002-5ae349095589`",
+            "context": "error details section",
+            "purpose": "Request tracking ID for debugging and support"
+          }
+        ],
+        "tone": "technical, neutral",
+        "dataFormatting": [
+          "HTTP status code format: 404",
+          "Error code in backticks: `NOT_FOUND`",
+          "UUID format for request ID"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-onboarding-2-signup-page.png",
+      "label": "signup page",
+      "flowType": "Onboarding",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, monospace-influenced (404 error code)",
+          "bodyStyle": "sans-serif, regular, technical",
+          "dataStyle": "monospace, inline code formatting for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container displaying 404 error details",
+            "position": "center of screen",
+            "notable": "Identical layout to login page error state"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Consistent with login page design pattern"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error message dominates center, documentation link provides secondary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access signup page but encountered a 404 NOT_FOUND error",
+        "entryPoints": [
+          "Direct navigation to signup URL",
+          "Redirect from login or onboarding flow"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link button",
+            "action": "Opens documentation to troubleshoot the 404 error"
+          }
+        ],
+        "informationArchitecture": "Error information displayed hierarchically: status code → error code → request ID, with recovery action below",
+        "frictionPoints": [
+          "Page not found blocks access to signup functionality",
+          "No alternative navigation options",
+          "Users cannot progress in onboarding"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link with ghost-button treatment",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Technical identifier for the specific error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::hzqzt-1771101428024-af0ef9d2deed`",
+            "context": "error details section",
+            "purpose": "Request tracking ID for debugging and support"
+          }
+        ],
+        "tone": "technical, neutral",
+        "dataFormatting": [
+          "HTTP status code format: 404",
+          "Error code in backticks: `NOT_FOUND`",
+          "UUID format for request ID"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-staking-1-earn-page.png",
+      "label": "earn page",
+      "flowType": "Staking",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, monospace-influenced (404 error code)",
+          "bodyStyle": "sans-serif, regular, technical",
+          "dataStyle": "monospace, inline code formatting for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "Light gray bordered container displaying 404 error details",
+            "position": "center of screen",
+            "notable": "Consistent error state design across multiple pages"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue outlined button with text link",
+            "position": "below error box",
+            "notable": "Standard recovery action pattern"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Error message dominates center, documentation link provides secondary action",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "User attempted to access staking/earn page but encountered a 404 NOT_FOUND error",
+        "entryPoints": [
+          "Navigation from dashboard",
+          "Direct URL access",
+          "Sidebar navigation link"
+        ],
+        "exitPoints": [
+          "Documentation link",
+          "Browser back button"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Documentation link button",
+            "action": "Opens documentation to troubleshoot the 404 error"
+          }
+        ],
+        "informationArchitecture": "Error information displayed hierarchically: status code → error code → request ID, with recovery action below",
+        "frictionPoints": [
+          "Core feature (staking/earn) is unavailable",
+          "No fallback navigation",
+          "Users cannot access staking rewards functionality"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "text-link with ghost-button treatment",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Technical identifier for the specific error type"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::x2qct-1771101429511-0eb2ecf4a314`",
+            "context": "error details section",
+            "purpose": "Request tracking ID for debugging and support"
+          }
+        ],
+        "tone": "technical, neutral",
+        "dataFormatting": [
+          "HTTP status code format: 404",
+          "Error code in backticks: `NOT_FOUND`",
+          "UUID format for request ID"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-swap-2-trade-page.png",
+      "label": "trade page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "centered-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, monospace for error code",
+          "bodyStyle": "Regular sans-serif, monospace for technical identifiers",
+          "dataStyle": "Monospace for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "White bordered container with error details",
+            "position": "center of screen",
+            "notable": "Minimal error presentation with technical precision"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue bordered button with text link",
+            "position": "below error box",
+            "notable": "Ghost-style button with no background fill"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message first, technical details second, action link last",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and find help",
+        "entryPoints": [
+          "Failed navigation to trade page",
+          "Server error response"
+        ],
+        "exitPoints": [
+          "Read documentation link",
+          "Back to previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Opens documentation page about 404 errors"
+          }
+        ],
+        "informationArchitecture": "Error hierarchy: status → code → request ID → help link",
+        "frictionPoints": [
+          "User cannot access intended trade page",
+          "Generic error without context"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies the error type for debugging"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::22zkq-1771101435539-5113ee48355e`",
+            "context": "error details section",
+            "purpose": "Unique request identifier for support ticket"
+          }
+        ],
+        "tone": "technical-minimal",
+        "dataFormatting": [
+          "Status code format: 404",
+          "Error code format: NOT_FOUND",
+          "UUID format: cdg1:cdg1::alphanumeric-timestamp-hash"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-swap-3-exchange-page.png",
+      "label": "exchange page",
+      "flowType": "Swap",
+      "step": 3,
+      "design": {
+        "layout": "centered-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, monospace for error code",
+          "bodyStyle": "Regular sans-serif, monospace for technical identifiers",
+          "dataStyle": "Monospace for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "White bordered container with error details",
+            "position": "center of screen",
+            "notable": "Consistent with trade page error pattern"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue bordered button with text link",
+            "position": "below error box",
+            "notable": "Identical CTA styling to trade page"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message first, technical details second, action link last",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and find help",
+        "entryPoints": [
+          "Failed navigation to exchange page",
+          "Server error response"
+        ],
+        "exitPoints": [
+          "Read documentation link",
+          "Back to previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Opens documentation page about 404 errors"
+          }
+        ],
+        "informationArchitecture": "Error hierarchy: status → code → request ID → help link",
+        "frictionPoints": [
+          "User cannot access intended exchange page",
+          "Same generic error as trade page"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies the error type for debugging"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::bl4rw-1771101437028-4b780a939b4c`",
+            "context": "error details section",
+            "purpose": "Unique request identifier for support ticket"
+          }
+        ],
+        "tone": "technical-minimal",
+        "dataFormatting": [
+          "Status code format: 404",
+          "Error code format: NOT_FOUND",
+          "UUID format: cdg1:cdg1::alphanumeric-timestamp-hash"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/nutstash-swap-4-markets-page.png",
+      "label": "markets page",
+      "flowType": "Swap",
+      "step": 4,
+      "design": {
+        "layout": "centered-modal",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#F5F5F5",
+          "#1E88E5"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, monospace for error code",
+          "bodyStyle": "Regular sans-serif, monospace for technical identifiers",
+          "dataStyle": "Monospace for error codes and IDs"
+        },
+        "components": [
+          {
+            "type": "error-box",
+            "description": "White bordered container with error details",
+            "position": "center of screen",
+            "notable": "Consistent error presentation across all pages"
+          },
+          {
+            "type": "cta-button",
+            "description": "Blue bordered button with text link",
+            "position": "below error box",
+            "notable": "Standard help link CTA"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Error message first, technical details second, action link last",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Understand what went wrong and find help",
+        "entryPoints": [
+          "Failed navigation to markets page",
+          "Server error response"
+        ],
+        "exitPoints": [
+          "Read documentation link",
+          "Back to previous page"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Read our documentation link",
+            "action": "Opens documentation page about 404 errors"
+          }
+        ],
+        "informationArchitecture": "Error hierarchy: status → code → request ID → help link",
+        "frictionPoints": [
+          "User cannot access any swap flow pages",
+          "Repeated 404 errors suggest systemic issue"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "404: NOT_FOUND",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Read our documentation to learn more about this error.",
+            "style": "ghost-button",
+            "placement": "below error details"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Code: `NOT_FOUND`",
+            "context": "error details section",
+            "purpose": "Identifies the error type for debugging"
+          },
+          {
+            "text": "ID: `cdg1:cdg1::76jn4-1771101438523-7858c7fb499a`",
+            "context": "error details section",
+            "purpose": "Unique request identifier for support ticket"
+          }
+        ],
+        "tone": "technical-minimal",
+        "dataFormatting": [
+          "Status code format: 404",
+          "Error code format: NOT_FOUND",
+          "UUID format: cdg1:cdg1::alphanumeric-timestamp-hash"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [
+          "404: NOT_FOUND",
+          "Code: `NOT_FOUND`"
+        ],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

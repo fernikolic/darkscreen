@@ -1,0 +1,295 @@
+{
+  "slug": "ledger-live",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T12:07:45.176Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 2,
+  "screens": [
+    {
+      "image": "/screenshots/ledger-live-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "dark",
+        "primaryColors": [
+          "#000000",
+          "#FF6B35",
+          "#E8E8E8"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, high contrast white on black, ~60px+ weight",
+          "bodyStyle": "Medium-weight sans-serif, white/light gray on dark background, readable at body size",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero Section",
+            "description": "Left side text with main headline and subtext over dark background",
+            "position": "left-center",
+            "notable": "Bold, large typography paired with conversational subheading"
+          },
+          {
+            "type": "Product Image",
+            "description": "Two Ledger devices held in hands with light blue gradient background",
+            "position": "right-center",
+            "notable": "High-quality lifestyle photography showing product in real-world context"
+          },
+          {
+            "type": "Feature Icons",
+            "description": "Three horizontal icon+text pairs (security, ease of use, connectivity)",
+            "position": "bottom-left",
+            "notable": "Simple line icons with brief descriptive labels, minimal visual weight"
+          },
+          {
+            "type": "Primary CTA Button",
+            "description": "Bright orange rounded button with arrow",
+            "position": "left-lower",
+            "notable": "High contrast, action-oriented with directional arrow"
+          },
+          {
+            "type": "Secondary CTA Link",
+            "description": "Text link with arrow next to primary button",
+            "position": "left-lower",
+            "notable": "Lower visual priority, alternative action path"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates left side, drawing eye first; product image anchors right; features and CTAs guide downward flow",
+        "innovativeElements": [
+          "Split dark/light background treatment (dark left, light blue right) creates natural visual separation",
+          "Lifestyle photography with actual hands holding devices creates authenticity"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Ledger's crypto wallet products and decide whether to explore further",
+        "entryPoints": [
+          "Direct URL navigation",
+          "Click from promotional banner at top",
+          "Navigation menu from header"
+        ],
+        "exitPoints": [
+          "Click 'Discover Ledger Nano Gen5' (primary)",
+          "Click 'Discover Ledger Wallet' (secondary)",
+          "Click 'Discover now' in top banner",
+          "Navigate via top nav menu",
+          "Click 'Learn more' in security warning"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Discover Ledger Nano Gen5 button",
+            "action": "Navigate to product details page"
+          },
+          {
+            "element": "Discover Ledger Wallet link",
+            "action": "Navigate to wallet product page"
+          },
+          {
+            "element": "Language selector (EN)",
+            "action": "Change language preference"
+          }
+        ],
+        "informationArchitecture": "Problem/solution model: headline identifies main benefit, subheading expands use case, features validate claims, CTAs direct to next step",
+        "frictionPoints": [
+          "Cookie consent modal blocking interaction (overlay covers part of content)",
+          "Multiple CTAs may create decision paralysis",
+          "Security warning banner at top could create anxiety for new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Take control of your crypto today",
+        "subheadline": "Advanced trader? Total beginner? Now you can buy, swap, and more with 15,000+ multichain assets in one secure solution*.",
+        "ctas": [
+          {
+            "text": "Discover Ledger Nano Gen5",
+            "style": "primary-button",
+            "placement": "left-lower"
+          },
+          {
+            "text": "Discover Ledger Wallet",
+            "style": "text-link",
+            "placement": "left-lower"
+          },
+          {
+            "text": "Discover now",
+            "style": "text-link",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "LEDGER CRYPTO WALLETS",
+            "context": "Small label above headline",
+            "purpose": "Category signposting, establishes context"
+          },
+          {
+            "text": "Beware of phishing attacks, Ledger will never ask for the 24 words of your recovery phrase. Never share them.",
+            "context": "Top banner warning",
+            "purpose": "Security education and trust-building"
+          }
+        ],
+        "tone": "professional-technical with friendly-casual undertones; empowering rather than intimidating",
+        "dataFormatting": [
+          "15,000+ multichain assets"
+        ],
+        "trustSignals": [
+          "Industry-leading security (feature callout)",
+          "Beware of phishing warning (security consciousness)",
+          "15,000+ assets coverage (scale/capability)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/ledger-live-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "modal-overlay",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#808080"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, dark text, medium size (~18px)",
+          "bodyStyle": "Regular sans-serif, dark gray text, legal/compliance tone",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Modal Window",
+            "description": "White dialog box centered on dark background overlay",
+            "position": "center",
+            "notable": "Clean, minimal design with clear visual separation from background"
+          },
+          {
+            "type": "Close Button",
+            "description": "X icon in top-right corner",
+            "position": "top-right",
+            "notable": "Allows dismissal without making a choice"
+          },
+          {
+            "type": "Warning Text",
+            "description": "Italicized regulatory disclaimer about crypto investment risks",
+            "position": "modal-top",
+            "notable": "Highlighted phrase 'may be lost' in italics for emphasis"
+          },
+          {
+            "type": "Link Text",
+            "description": "'in detail at this page' underlined link within warning",
+            "position": "modal-top",
+            "notable": "Directs to detailed risk disclosure"
+          },
+          {
+            "type": "Settings Link",
+            "description": "'Cookies Settings' text link",
+            "position": "modal-bottom-left",
+            "notable": "Allows granular cookie preferences"
+          },
+          {
+            "type": "Action Buttons",
+            "description": "'Reject All' (ghost) and 'Accept All' (solid black)",
+            "position": "modal-bottom-right",
+            "notable": "Binary choice with clear visual hierarchy; Accept is dominant"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading guides attention, warning text establishes context, buttons at bottom with Accept emphasized via contrast",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Make a decision about cookie preferences; understand investment risk disclosure",
+        "entryPoints": [
+          "Automatic modal display on page load"
+        ],
+        "exitPoints": [
+          "Click 'Accept All' button",
+          "Click 'Reject All' button",
+          "Click 'Cookies Settings' link",
+          "Click X to close",
+          "Click 'in detail at this page' to view full disclosure"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Accept All button",
+            "action": "Accept all cookies and proceed to page"
+          },
+          {
+            "element": "Reject All button",
+            "action": "Reject non-essential cookies"
+          },
+          {
+            "element": "Cookies Settings link",
+            "action": "Open granular cookie preference controls"
+          },
+          {
+            "element": "in detail at this page link",
+            "action": "Navigate to full risk disclosure page"
+          },
+          {
+            "element": "Close X button",
+            "action": "Dismiss modal"
+          }
+        ],
+        "informationArchitecture": "Regulatory compliance + cookie management; warning about investment risk placed prominently to ensure user acknowledgment",
+        "frictionPoints": [
+          "Modal requires active decision before content access",
+          "Regulatory warning adds cognitive load before user engages with product",
+          "Accept All is visually dominant, potentially nudging users toward maximum data sharing"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Your Cookies preferences !",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Accept All",
+            "style": "primary-button",
+            "placement": "modal-bottom-right"
+          },
+          {
+            "text": "Reject All",
+            "style": "ghost-button",
+            "placement": "modal-bottom-center"
+          },
+          {
+            "text": "Cookies Settings",
+            "style": "text-link",
+            "placement": "modal-bottom-left"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Investing in cryptoassets is not regulated, may not be suitable for retail investors and the entire amount invested may be lost. It is important to read and understand the risks of this investment, which are explained in detail:",
+            "context": "Modal body text",
+            "purpose": "Legal risk disclosure; establishes informed consent"
+          },
+          {
+            "text": "in detail at this page",
+            "context": "Underlined link within warning text",
+            "purpose": "Directs to extended risk information"
+          }
+        ],
+        "tone": "professional-technical, compliant, cautionary",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Regulatory compliance language",
+          "Risk disclosure linked to detailed documentation"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

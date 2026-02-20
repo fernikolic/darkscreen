@@ -1,0 +1,862 @@
+{
+  "slug": "1inch",
+  "category": "DeFi",
+  "extractedAt": "2026-02-20T10:00:53.805Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 7,
+  "screens": [
+    {
+      "image": "/screenshots/1inch-swap-2-swap-page.png",
+      "label": "swap page",
+      "flowType": "Swap",
+      "step": 2,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#ffffff",
+          "#f5f5f5",
+          "#0052ff"
+        ],
+        "typography": {
+          "headingStyle": "sans-serif, bold, uppercase labels for category filters",
+          "bodyStyle": "sans-serif, regular weight for secondary text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header-navigation",
+            "description": "Top bar with logo, main nav tabs (Swap, Pro, Aqua, Portfolio), and wallet connection CTA",
+            "position": "top",
+            "notable": "Clean horizontal navigation with 'Connect wallet' primary button highly visible"
+          },
+          {
+            "type": "search-bar",
+            "description": "Centered search input with placeholder 'Search by name or paste address' and settings icon",
+            "position": "center-upper",
+            "notable": "Blue settings icon provides quick access to swap parameters"
+          },
+          {
+            "type": "filter-pills",
+            "description": "Quick filter buttons (USD, ETH, BTC, DeFi) for token categories",
+            "position": "below-search",
+            "notable": "Light gray background pills, easy scannable token type shortcuts"
+          },
+          {
+            "type": "tab-bar",
+            "description": "Sorting options (Trending, Gainers, New, Most viewed) with time filter (24h)",
+            "position": "below-filters",
+            "notable": "Dark background on 'Trending' shows active state; clear sorting hierarchy"
+          },
+          {
+            "type": "back-button",
+            "description": "Left-facing chevron for navigation",
+            "position": "left of search",
+            "notable": null
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down progressive disclosure: logo → navigation → search → filters → sorting tabs. Search bar and filter pills draw immediate attention.",
+        "innovativeElements": [
+          "Settings icon integrated into search bar rather than separate menu",
+          "Quick-access token category pills reduce friction for common swaps",
+          "Time-bound filter indicator (24h) for trending data"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Search and discover tokens to swap, filter by category and performance metrics",
+        "entryPoints": [
+          "Clicked 'Swap' from main navigation",
+          "Direct link to swap interface",
+          "From portfolio or holdings view"
+        ],
+        "exitPoints": [
+          "Click token from results to initiate swap",
+          "Navigate to 'Pro', 'Aqua', or 'Portfolio' tabs",
+          "Connect wallet to proceed with transaction"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Search input",
+            "action": "Type token name or paste contract address to filter results"
+          },
+          {
+            "element": "Filter pills (USD/ETH/BTC/DeFi)",
+            "action": "Tap to filter tokens by type or base currency"
+          },
+          {
+            "element": "Sort tabs (Trending/Gainers/New/Most viewed)",
+            "action": "Change token sort order and relevance"
+          },
+          {
+            "element": "Settings icon",
+            "action": "Open swap settings/parameters modal"
+          },
+          {
+            "element": "Back button",
+            "action": "Navigate to previous screen"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Authenticate wallet to enable swap execution"
+          }
+        ],
+        "informationArchitecture": "Discovery-first design: users can browse tokens by multiple dimensions (category, performance, time window) before committing to a swap. Search and filtering options are discoverable and prominent.",
+        "frictionPoints": [
+          "Results area appears loading or empty—no tokens visible to guide next action",
+          "Must connect wallet before proceeding (standard but adds step)",
+          "No obvious 'recommended' or default sorting to get started quickly"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Search by name or paste address",
+            "context": "search input placeholder",
+            "purpose": "Instructs user on two ways to find tokens (name or contract)"
+          },
+          {
+            "text": "24h",
+            "context": "right side of sort tabs",
+            "purpose": "Clarifies time window for trending/gainers data"
+          },
+          {
+            "text": "Personal",
+            "context": "dropdown next to logo",
+            "purpose": "Likely indicates account scope or wallet type"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-home-5-portfolio-page.png",
+      "label": "portfolio page",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#00D4FF",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, center-aligned, heavy weight for main headline",
+          "bodyStyle": "Small gray sans-serif for secondary text",
+          "dataStyle": "Large bold numbers with dollar sign prefix, accompanied by subtle chart visualization"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal top nav with logo, dropdown menu, feature links, and utility buttons",
+            "position": "top",
+            "notable": "Connect wallet button styled as primary CTA with black background"
+          },
+          {
+            "type": "hero-section",
+            "description": "Centered vertical stack with subheading, large headline, and CTA button",
+            "position": "center",
+            "notable": "Generous vertical whitespace emphasizing the portfolio value proposition"
+          },
+          {
+            "type": "data-preview-card",
+            "description": "White card showing portfolio value with embedded chart visualization",
+            "position": "bottom",
+            "notable": "Green dotted chart uses color to indicate positive portfolio performance"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Eye drawn from navigation → headline → CTA button → portfolio value card; cyan background acts as focus driver",
+        "innovativeElements": [
+          "High-contrast cyan background as brand differentiator",
+          "Dotted chart visualization for asset growth indication"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-hero",
+        "userIntent": "Understand portfolio feature capabilities and initiate wallet connection",
+        "entryPoints": [
+          "Portfolio navigation link from main nav",
+          "Direct landing page"
+        ],
+        "exitPoints": [
+          "Connect wallet button to authentication",
+          "Navigate to other features via top nav (Swap, Pro, Aqua)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Connect wallet button",
+            "action": "Initiates wallet authentication flow"
+          },
+          {
+            "element": "Personal dropdown",
+            "action": "Reveals user account options"
+          }
+        ],
+        "informationArchitecture": "Hero-driven with clear value prop followed by sample data preview",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Track your digital assets",
+        "subheadline": "1inch Portfolio",
+        "ctas": [
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "center below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Value",
+            "context": "Label above portfolio total",
+            "purpose": "Clarifies metric being displayed"
+          }
+        ],
+        "tone": "friendly-casual with professional edge",
+        "dataFormatting": [
+          "$24,763",
+          "$2,063.53"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-settings-1-about-page.png",
+      "label": "about page",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F5F5F5"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, center-aligned, primary headline with extra weight",
+          "bodyStyle": "Small gray sans-serif for secondary labels",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Persistent top nav with logo, feature links, and utility buttons",
+            "position": "top",
+            "notable": "Consistent across all pages"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large centered vertical stack with company message and dual CTAs",
+            "position": "center",
+            "notable": "Mission-driven copy with contrasting button treatments"
+          },
+          {
+            "type": "footer-section",
+            "description": "Dark bar at bottom suggesting additional content",
+            "position": "bottom",
+            "notable": "Dark background provides visual anchor"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Minimal design guides eye to centered headline and CTA pair",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "landing-about",
+        "userIntent": "Learn about 1inch company mission and explore involvement opportunities",
+        "entryPoints": [
+          "Settings or info menu",
+          "Footer links"
+        ],
+        "exitPoints": [
+          "Join us button to recruitment/onboarding",
+          "Contact button to inquiry form",
+          "Navigation to other platform features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Join us button",
+            "action": "Navigate to career or partnership signup"
+          },
+          {
+            "element": "Contact button",
+            "action": "Open contact form or email"
+          }
+        ],
+        "informationArchitecture": "Mission statement centered with minimal secondary navigation",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "We're building financial freedom for everyone",
+        "subheadline": "About 1inch",
+        "ctas": [
+          {
+            "text": "Join us",
+            "style": "primary-button",
+            "placement": "center below headline"
+          },
+          {
+            "text": "Contact",
+            "style": "secondary-ghost-button",
+            "placement": "center below headline, right of Join us"
+          }
+        ],
+        "microcopy": [],
+        "tone": "professional-inspirational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-swap-1-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Swap",
+      "step": 1,
+      "design": {
+        "layout": "full-width stacked with centered form",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#F8F8F8"
+        ],
+        "typography": {
+          "headingStyle": "Medium gray sans-serif for context labels",
+          "bodyStyle": "Small gray sans-serif for secondary information",
+          "dataStyle": "Large bold sans-serif for token amounts and prices"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top persistent nav",
+            "position": "top",
+            "notable": "Swap tab appears highlighted/active"
+          },
+          {
+            "type": "form-card",
+            "description": "Centered white card containing swap interface",
+            "position": "center",
+            "notable": "Clean two-stage form: Pay amount and Receive token selection"
+          },
+          {
+            "type": "exchange-indicator",
+            "description": "Downward arrow indicating swap direction",
+            "position": "center between pay/receive",
+            "notable": "Visual clarity on transaction direction"
+          },
+          {
+            "type": "button-primary",
+            "description": "Select token CTA",
+            "position": "below receive section",
+            "notable": "Dark background with rounded corners"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Top-down flow from network selection → payment amount → exchange → receive token selection → action button",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "form-swap",
+        "userIntent": "Initiate a token swap transaction by selecting from and to tokens",
+        "entryPoints": [
+          "Swap navigation link",
+          "Direct to swap feature"
+        ],
+        "exitPoints": [
+          "Select token button to token picker modal",
+          "Back to portfolio or other nav items"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Pay on Ethereum selector",
+            "action": "May reveal network options"
+          },
+          {
+            "element": "Token amount input",
+            "action": "User enters swap amount"
+          },
+          {
+            "element": "Exchange arrow icon",
+            "action": "May reverse swap direction"
+          },
+          {
+            "element": "Select token button",
+            "action": "Opens token selection modal"
+          }
+        ],
+        "informationArchitecture": "Two-stage conversion flow: source selection (network + amount) → destination selection (token picker)",
+        "frictionPoints": [
+          "User must complete pay amount before selecting receive token",
+          "Network selection separate from token selection may confuse new users"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "Pay on Ethereum",
+        "ctas": [
+          {
+            "text": "Select token",
+            "style": "primary-button",
+            "placement": "center below receive section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pay on Ethereum",
+            "context": "Above token amount input",
+            "purpose": "Clarifies selected network/chain"
+          },
+          {
+            "text": "Receive",
+            "context": "Above token selection area",
+            "purpose": "Labels swap destination"
+          },
+          {
+            "text": "SELECT TOKEN +",
+            "context": "Placeholder above button",
+            "purpose": "Indicates token selection required"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "1 ETH",
+          "$2,063.53"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, very large (72px+), centered, black",
+          "bodyStyle": "Light gray sans-serif for supporting text",
+          "dataStyle": "Numeric data in light gray with currency notation (13,538.74 USDC)"
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with logo, product links (Swap, Pro, Aqua, Portfolio), and auth buttons",
+            "position": "top",
+            "notable": "Clean minimalist design with clear product hierarchy"
+          },
+          {
+            "type": "hero-cta",
+            "description": "Black rounded pill button with white text",
+            "position": "center",
+            "notable": "High contrast, prominent call-to-action"
+          },
+          {
+            "type": "data-preview",
+            "description": "Shows live Ethereum rate (13,538.74 USDC) with change indicator",
+            "position": "bottom-left",
+            "notable": "Demonstrates live market data functionality"
+          },
+          {
+            "type": "cookie-consent",
+            "description": "Dark modal overlay with privacy messaging",
+            "position": "bottom-right",
+            "notable": "Non-intrusive placement with dual action buttons"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Center-focused design leading eye from headline → CTA → market data preview",
+        "innovativeElements": [
+          "Live market data preview on landing page establishes real-time credibility",
+          "Minimal visual noise allows focus on core value proposition"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand 1inch value proposition and initiate swap or explore features",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing campaign click",
+          "Search engine"
+        ],
+        "exitPoints": [
+          "Get started button → onboarding/swap flow",
+          "Navigation to Swap/Pro/Aqua/Portfolio sections",
+          "Connect wallet button",
+          "App link"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get started button",
+            "action": "Initiates swap flow or authentication"
+          },
+          {
+            "element": "Connect wallet button",
+            "action": "Triggers wallet connection modal"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Routes to different product sections"
+          },
+          {
+            "element": "I agree / Decline buttons",
+            "action": "Cookie consent acceptance/rejection"
+          }
+        ],
+        "informationArchitecture": "Value proposition first, with product navigation available; market data context provided below",
+        "frictionPoints": [
+          "Cookie consent overlay interrupts flow (though dismissible)",
+          "No clear indication of what 'Get started' leads to"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Swap crypto tokens at the best rates",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "center, below headline"
+          },
+          {
+            "text": "Connect wallet",
+            "style": "primary-button",
+            "placement": "top-right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pay on Ethereum",
+            "context": "Above market data",
+            "purpose": "Contextualizes the live rate display"
+          },
+          {
+            "text": "We use cookies to help us give you the best experience on our website.",
+            "context": "Cookie consent modal",
+            "purpose": "Regulatory compliance messaging"
+          }
+        ],
+        "tone": "professional-technical, confident, direct",
+        "dataFormatting": [
+          "13,538.74 USDC",
+          "−$13,540 (change indicator)"
+        ],
+        "trustSignals": [
+          "Live market data display demonstrates real-time functionality"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-home-2-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "full-width with modal overlay",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#0066FF"
+        ],
+        "typography": {
+          "headingStyle": "Body text in white, medium weight sans-serif",
+          "bodyStyle": "Regular sans-serif on dark background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "modal-overlay",
+            "description": "Dark semi-transparent background blocking page interaction",
+            "position": "bottom-right corner",
+            "notable": "Non-blocking design allows visibility of underlying content"
+          },
+          {
+            "type": "consent-card",
+            "description": "Black card with white text and dual action buttons",
+            "position": "bottom-right",
+            "notable": "High contrast, clear button hierarchy (white primary, gray secondary)"
+          },
+          {
+            "type": "link",
+            "description": "Privacy Policy in blue text",
+            "position": "within card",
+            "notable": "Provides transparency/legal route"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Message text → Privacy Policy link → Action buttons (I agree emphasized)",
+        "innovativeElements": [
+          "Corner placement rather than full-screen overlay reduces friction",
+          "Allows page content visibility during consent decision"
+        ]
+      },
+      "flow": {
+        "screenType": "modal",
+        "userIntent": "Comply with privacy regulations while minimizing user interruption",
+        "entryPoints": [
+          "Page load (automatic trigger)"
+        ],
+        "exitPoints": [
+          "I agree button",
+          "Decline button",
+          "X dismiss button (top-right)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "I agree",
+            "action": "Accepts cookies and dismisses modal"
+          },
+          {
+            "element": "Decline",
+            "action": "Rejects cookies and dismisses modal"
+          },
+          {
+            "element": "Privacy Policy",
+            "action": "Opens privacy policy page"
+          },
+          {
+            "element": "X button",
+            "action": "Dismisses modal"
+          }
+        ],
+        "informationArchitecture": "Legal notice → Options → Action buttons",
+        "frictionPoints": [
+          "Modal interrupts user workflow despite corner placement",
+          "Three dismiss options (Decline, X, implicit through continuation) may confuse intent"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": null,
+        "subheadline": "We use cookies to help us give you the best experience on our website.",
+        "ctas": [
+          {
+            "text": "I agree",
+            "style": "primary-button",
+            "placement": "modal footer, white background"
+          },
+          {
+            "text": "Decline",
+            "style": "secondary-button",
+            "placement": "modal footer, dark background"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Privacy Policy",
+            "context": "Modal card",
+            "purpose": "Legal compliance link"
+          }
+        ],
+        "tone": "professional-legal, neutral",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Privacy Policy link demonstrates transparency"
+        ],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/1inch-home-4-landing-page-scrolled-1.png",
+      "label": "Landing page — scrolled 1",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "full-width, stacked sections",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFFFFF",
+          "#000000",
+          "#CCCCCC"
+        ],
+        "typography": {
+          "headingStyle": "Bold black sans-serif, large (40px+), left-aligned",
+          "bodyStyle": "Light gray sans-serif, smaller weight",
+          "dataStyle": "Bold black text for token pairs (SOL → ETH, etc.)"
+        },
+        "components": [
+          {
+            "type": "nav-bar",
+            "description": "Persistent top navigation with logo, features, and wallet connection",
+            "position": "top",
+            "notable": "Remains consistent across scroll"
+          },
+          {
+            "type": "swap-button-primary",
+            "description": "Large black rounded pill button with document icon",
+            "position": "top-center",
+            "notable": "Persistent above-the-fold conversion path"
+          },
+          {
+            "type": "feature-section",
+            "description": "Cross-chain swaps feature description with numbered steps (01 02 03)",
+            "position": "left-side",
+            "notable": "Visual step indicators guide feature exploration"
+          },
+          {
+            "type": "value-proposition",
+            "description": "Section heading about competitive rates",
+            "position": "left-side, below cross-chain section",
+            "notable": "Reinforces core promise"
+          },
+          {
+            "type": "token-swap-cards",
+            "description": "Example swap pairs displayed as light gray cards",
+            "position": "bottom",
+            "notable": "Concrete examples of supported assets"
+          },
+          {
+            "type": "circular-swap-cta",
+            "description": "Large black circle with 'Swap' text at bottom-right",
+            "position": "bottom-right",
+            "notable": "Secondary CTA reinforces primary action"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Feature headline → description → step indicators → supporting section → example tokens → circular CTA",
+        "innovativeElements": [
+          "Numbered step indicators (01 02 03) create visual progression without full tutorial",
+          "Concrete token pair examples provide immediate relevance",
+          "Multiple CTA placements (persistent top button + circular bottom CTA) increase conversion opportunities"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about 1inch features (cross-chain swaps, competitive rates) and initiate action",
+        "entryPoints": [
+          "Landing page scroll",
+          "Direct navigation to Swap feature"
+        ],
+        "exitPoints": [
+          "Swap button (top)",
+          "Get started button (right side)",
+          "Swap CTA (bottom circular button)",
+          "Navigation to other products (Swap, Pro, Aqua, Portfolio)",
+          "Connect wallet"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Swap button (top)",
+            "action": "Initiates swap flow"
+          },
+          {
+            "element": "Get started button",
+            "action": "Initiates onboarding or swap"
+          },
+          {
+            "element": "Step indicators (01 02 03)",
+            "action": "May toggle feature details (assumed)"
+          },
+          {
+            "element": "Token pair cards",
+            "action": "May preview swap or select tokens (assumed)"
+          },
+          {
+            "element": "Circular Swap button",
+            "action": "Secondary CTA to swap"
+          }
+        ],
+        "informationArchitecture": "Feature benefit → Feature description with steps → Value reinforcement → Concrete examples → Call-to-action",
+        "frictionPoints": [
+          "Multiple CTAs might dilute focus (top button, side button, bottom button)",
+          "Step indicators (01 02 03) lack clear interaction pattern"
+        ],
+        "progressIndicators": [
+          "Numbered steps (01 02 03) indicate feature progression"
+        ]
+      },
+      "copy": {
+        "headline": "Cross-chain swaps",
+        "subheadline": "Move assets between 13+ networks, without bridging.",
+        "ctas": [
+          {
+            "text": "Swap",
+            "style": "primary-button",
+            "placement": "top-center, black pill"
+          },
+          {
+            "text": "Get started",
+            "style": "primary-button",
+            "placement": "right side, black pill"
+          },
+          {
+            "text": "Swap",
+            "style": "primary-button",
+            "placement": "bottom-right, black circle"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "01 02 03",
+            "context": "Feature section",
+            "purpose": "Indicates multi-step feature progression"
+          },
+          {
+            "text": "Get the best rates on crypto token swaps",
+            "context": "Secondary headline",
+            "purpose": "Reinforces competitive advantage"
+          }
+        ],
+        "tone": "professional-technical, confident, benefit-focused",
+        "dataFormatting": [
+          "SOL → ETH",
+          "WBTC → ETH",
+          "BNB → USDT",
+          "BNB → USDC",
+          "13+ networks (quantified feature)"
+        ],
+        "trustSignals": [
+          "Specific network count (13+) demonstrates scale",
+          "Token pair examples establish credibility of supported assets"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}

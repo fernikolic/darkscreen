@@ -1,0 +1,3833 @@
+{
+  "slug": "blink-wallet",
+  "category": "Wallet",
+  "extractedAt": "2026-02-20T10:51:35.592Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalScreens": 31,
+  "screens": [
+    {
+      "image": "/screenshots/blink-wallet-home-7-stablesats.png",
+      "label": "Stablesats",
+      "flowType": "Home",
+      "step": 7,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text, bold weight, ~60px",
+          "bodyStyle": "Medium sans-serif black text, regular weight, ~18px line height",
+          "dataStyle": "$0.31 (1,174 SAT), $0.00 amounts displayed in light gray on dark background"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with Blink logo, Features/API dropdowns, Blog, Support, Search",
+            "position": "Top across full width",
+            "notable": "Clean white text on orange background with dropdown indicators"
+          },
+          {
+            "type": "Mobile mockup",
+            "description": "Smartphone displaying Convert flow with BTC to USD conversion interface",
+            "position": "Right side, overlapping into dark section",
+            "notable": "Shows actual app UI with quick-amount buttons (25%, 50%, 75%, 100%)"
+          },
+          {
+            "type": "Icon list",
+            "description": "6 navigation items with orange icons (target, dollar, network, lightning, info, book)",
+            "position": "Bottom left, white background",
+            "notable": "Consistent icon system reinforces feature areas"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Large headline dominates left side, supporting text below, mobile mockup draws eye to right, footer list provides navigation",
+        "innovativeElements": [
+          "Angled device mockup creating dynamic visual flow",
+          "Dark background on right contrasts with vibrant orange"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-showcase",
+        "userIntent": "Learn about Stablesats feature and understand its purpose",
+        "entryPoints": [
+          "Home page navigation",
+          "Features dropdown menu",
+          "Direct URL"
+        ],
+        "exitPoints": [
+          "Click on 'Stablesats Overview' or other list items",
+          "Navigate via top menu",
+          "Click back arrow on mobile mockup"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Features dropdown",
+            "action": "Reveals submenu with feature options"
+          },
+          {
+            "element": "API dropdown",
+            "action": "Shows API documentation links"
+          },
+          {
+            "element": "Icon list items",
+            "action": "Likely navigates to detailed sections for each feature"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          }
+        ],
+        "informationArchitecture": "Hero section with headline and description on left, visual demonstration on right, actionable list at bottom for deeper exploration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Stablesats",
+        "subheadline": "Use Bitcoin without the volatility. Stablesats is like a Dollar stablecoin, but cheaper, faster and interoperable with the Lightning Network - using nothing but Bitcoin and financial markets!",
+        "ctas": [
+          {
+            "text": "Stablesats Overview",
+            "style": "text-link",
+            "placement": "Bottom left icon list"
+          },
+          {
+            "text": "Receive Stablesats",
+            "style": "text-link",
+            "placement": "Bottom left icon list"
+          },
+          {
+            "text": "BTC to USD - USD to BTC",
+            "style": "text-link",
+            "placement": "Bottom left icon list"
+          },
+          {
+            "text": "Send Stablesats",
+            "style": "text-link",
+            "placement": "Bottom left icon list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "From BTC Account",
+            "context": "Mobile UI, above conversion amount",
+            "purpose": "Labels source account type"
+          },
+          {
+            "text": "To USD Account",
+            "context": "Mobile UI, below conversion amount",
+            "purpose": "Labels destination account type"
+          },
+          {
+            "text": "Tap to set amount",
+            "context": "Mobile UI, above quick-action buttons",
+            "purpose": "Instructs user on interaction"
+          }
+        ],
+        "tone": "professional-technical, educational, confident",
+        "dataFormatting": [
+          "$0.31 (1,174 SAT)",
+          "$0.00"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-8-low-fees.png",
+      "label": "Low fees",
+      "flowType": "Home",
+      "step": 8,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text, bold weight, ~60px",
+          "bodyStyle": "Medium sans-serif black text, regular weight, ~18px",
+          "dataStyle": "$1.00 (2,457 SAT), $0.00 (2 SAT) displayed in light gray on dark background"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav with Blink logo, Features/API dropdowns, Blog, Support, Search, language selector",
+            "position": "Top across full width",
+            "notable": null
+          },
+          {
+            "type": "Mobile mockup",
+            "description": "Device showing transaction detail screen with Amount and Fee fields",
+            "position": "Right side, partially visible with overlap",
+            "notable": "Demonstrates zero/minimal fees visually with $0.00 fee amount"
+          },
+          {
+            "type": "Icon list",
+            "description": "5 feature highlight items with orange icons",
+            "position": "Bottom left, white background",
+            "notable": "Each includes specific value propositions (zero fees, low-cost, on-chain, stablesats spread, learn more)"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Bold headline 'Low fees' anchors attention, descriptive paragraph provides context, mobile mockup shows real fee example, list at bottom reinforces benefits",
+        "innovativeElements": [
+          "Mobile mockup shows practical fee comparison ($1.00 charge, $0.00 fee)"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-showcase",
+        "userIntent": "Understand fee structure and value proposition of Blink",
+        "entryPoints": [
+          "Home page scrolling",
+          "Features navigation",
+          "Direct link"
+        ],
+        "exitPoints": [
+          "Click icon list items",
+          "Scroll to next section",
+          "Top navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature list items",
+            "action": "Navigate to detailed explanations or comparisons"
+          },
+          {
+            "element": "Learn more link",
+            "action": "Provides additional fee-related documentation"
+          }
+        ],
+        "informationArchitecture": "Hero section (headline + description) paired with visual example, supporting feature list at bottom",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Low fees",
+        "subheadline": "Experience the convenience of zero fees for intraledger payments, low-cost Lightning transactions, and strategically managed on-chain fees. Convert bitcoin to a stable USD equivalent with Stablesats, cheap and fast.",
+        "ctas": [
+          {
+            "text": "Zero fees Blink-to-Blink!",
+            "style": "text-link",
+            "placement": "Bottom icon list"
+          },
+          {
+            "text": "Low-cost Lightning transactions",
+            "style": "text-link",
+            "placement": "Bottom icon list"
+          },
+          {
+            "text": "On-chain bitcoin payments",
+            "style": "text-link",
+            "placement": "Bottom icon list"
+          },
+          {
+            "text": "Stablesats: BTC to fiat for a 0.2% spread!",
+            "style": "text-link",
+            "placement": "Bottom icon list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Amount",
+            "context": "Mobile UI field label",
+            "purpose": "Identifies transaction amount section"
+          },
+          {
+            "text": "Fee",
+            "context": "Mobile UI field label",
+            "purpose": "Identifies associated fee section"
+          }
+        ],
+        "tone": "professional-technical, value-focused",
+        "dataFormatting": [
+          "$1.00 (2,457 SAT)",
+          "$0.00 (2 SAT)",
+          "0.2% spread"
+        ],
+        "trustSignals": [
+          "Specific percentage spreads mentioned"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-9-vouchers.png",
+      "label": "Vouchers",
+      "flowType": "Home",
+      "step": 9,
+      "design": {
+        "layout": "split-panel-with-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text, bold weight, ~60px",
+          "bodyStyle": "Medium sans-serif black text, regular weight, ~18px",
+          "dataStyle": "$0.06, ZAR 100.00 amounts shown on mobile mockups"
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal nav consistent with other screens",
+            "position": "Top",
+            "notable": null
+          },
+          {
+            "type": "Mobile mockup (top)",
+            "description": "Phone displaying voucher with QR code and 'Open it here' button",
+            "position": "Top right",
+            "notable": "Shows printable/shareable voucher interface with amount and QR code"
+          },
+          {
+            "type": "Desktop mockup",
+            "description": "Tablet/desktop view showing vendor dashboard with ZAR 100.00 and 10% conversion",
+            "position": "Bottom left",
+            "notable": "Demonstrates vendor tools interface"
+          },
+          {
+            "type": "Icon list (upper)",
+            "description": "3 items: Sell bitcoin, Vendor tools, Print your voucher",
+            "position": "Below headline, left side",
+            "notable": "Quick overview of voucher capabilities"
+          },
+          {
+            "type": "Icon list (lower)",
+            "description": "4 checkmark items describing 'Sell bitcoin' feature benefits",
+            "position": "Bottom right, below 'Sell bitcoin' subheading",
+            "notable": "Detailed feature breakdown with checkmarks"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline at top-left, description below, three feature callouts on left, mobile mockup prominent on right, desktop example and detailed benefits below",
+        "innovativeElements": [
+          "Dual device mockups showing different user perspectives (consumer QR code vs vendor dashboard)",
+          "Checkmark icons for trust building"
+        ]
+      },
+      "flow": {
+        "screenType": "landing-feature-showcase",
+        "userIntent": "Understand voucher system for P2P trading and vendor capabilities",
+        "entryPoints": [
+          "Home page scrolling",
+          "Features menu",
+          "Direct navigation"
+        ],
+        "exitPoints": [
+          "Click any feature callout",
+          "Scroll to next section",
+          "Navigate via top menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature list items",
+            "action": "Navigate to detailed explanations or setup flows"
+          },
+          {
+            "element": "'Open it here' button (on mockup)",
+            "action": "Would launch voucher redemption flow in app"
+          }
+        ],
+        "informationArchitecture": "Headline + description on left, three quick-feature callouts, dual mockups demonstrating use cases, detailed benefits list at bottom-right",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink Vouchers",
+        "subheadline": "Blink Vouchers promote P2P trading, empowering both cash-based and Bitcoin circular economies. KYC-free bitcoin",
+        "ctas": [
+          {
+            "text": "Sell bitcoin",
+            "style": "text-link",
+            "placement": "Top left feature list"
+          },
+          {
+            "text": "Vendor tools",
+            "style": "text-link",
+            "placement": "Top left feature list"
+          },
+          {
+            "text": "Print your voucher",
+            "style": "text-link",
+            "placement": "Top left feature list"
+          },
+          {
+            "text": "Become a bitcoin exchange",
+            "style": "text-link",
+            "placement": "Bottom right subheading"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "$0.06",
+            "context": "Voucher amount on mobile mockup",
+            "purpose": "Shows denomination example"
+          },
+          {
+            "text": "Voucher Details",
+            "context": "Mobile UI header",
+            "purpose": "Section label for voucher information"
+          },
+          {
+            "text": "ZAR 100.00",
+            "context": "Desktop mockup, vendor tools view",
+            "purpose": "Shows conversion/denomination capability"
+          },
+          {
+            "text": "Create it with your dollar or bitcoin account",
+            "context": "Checkmark item under Sell bitcoin section",
+            "purpose": "Explains account flexibility"
+          }
+        ],
+        "tone": "professional-technical, empowering, community-focused",
+        "dataFormatting": [
+          "$0.06",
+          "ZAR 100.00",
+          "10% (conversion indicator)"
+        ],
+        "trustSignals": [
+          "KYC-free bitcoin mention",
+          "Multiple checkmarks confirming features"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-1-landing-page.png",
+      "label": "Landing page",
+      "flowType": "Home",
+      "step": 1,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold, large sans-serif (60-80px), black text on orange",
+          "bodyStyle": "Regular sans-serif, smaller weight, black text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal menu with logo, Features, API, Blog, Support, search",
+            "position": "Top fixed",
+            "notable": "Clean whitespace, dropdown indicators on multi-level items"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large headline with subheading and primary CTA button",
+            "position": "Left panel, center-aligned",
+            "notable": "Black rounded pill button against orange background creates strong contrast"
+          },
+          {
+            "type": "Device mockup",
+            "description": "iPhone showing send/receive transaction flow",
+            "position": "Right panel, top-to-middle",
+            "notable": "Angled perspective, shows actual UI with orange accent button"
+          },
+          {
+            "type": "Section teaser",
+            "description": "Tour callout with descriptive text",
+            "position": "Bottom, full-width dark area",
+            "notable": "White text on dark patterned background with crypto icons"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Orange left panel dominates attention; headline draws eye first; device mockup provides visual proof; navigation subtle but accessible",
+        "innovativeElements": [
+          "Split-panel hero with product mockup embedded in design",
+          "Patterned dark background with subtle crypto/payment icons",
+          "Angled device perspective for visual interest"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand what Blink is and download/signup to use the wallet",
+        "entryPoints": [
+          "Direct URL visit",
+          "Marketing link",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Get Blink (CTA button)",
+          "Features dropdown menu",
+          "API documentation",
+          "Blog",
+          "Support"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Get Blink button",
+            "action": "Initiates download or signup flow"
+          },
+          {
+            "element": "Features dropdown",
+            "action": "Expands to show feature details"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          }
+        ],
+        "informationArchitecture": "Hero value proposition -> Tour teaser -> Navigation to deeper sections (Features, API, Blog, Support)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "The everyday Bitcoin wallet",
+        "subheadline": "A reliable and secure Bitcoin payments experience for all.",
+        "ctas": [
+          {
+            "text": "Get Blink",
+            "style": "primary-button",
+            "placement": "Left panel, below headline"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Take a tour of Blink",
+            "context": "Bottom section heading",
+            "purpose": "Invites exploration of features"
+          },
+          {
+            "text": "The features you need to use the best money on earth (Bitcoin, of course) on the Lightning Network.",
+            "context": "Below tour heading",
+            "purpose": "Reinforces value prop and educates on technical layer"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Bitcoin branding",
+          "Lightning Network mention",
+          "Security language ('reliable and secure')"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-2-features.png",
+      "label": "Features",
+      "flowType": "Home",
+      "step": 2,
+      "design": {
+        "layout": "split-panel with stacked features list",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#FFFFFF",
+          "#000000"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 48-60px, black on orange",
+          "bodyStyle": "Regular sans-serif, medium weight, black on white",
+          "dataStyle": "Large bold numbers ('21 seconds') with supporting text"
+        },
+        "components": [
+          {
+            "type": "Feature list",
+            "description": "7 bulleted features with orange icon prefixes",
+            "position": "Left side, below heading",
+            "notable": "Icons are stylized symbols (onboarding icon, dollar, lightning, etc.); consistent orange color"
+          },
+          {
+            "type": "Device mockup",
+            "description": "iPhone showing QR code receive flow",
+            "position": "Right side, upper third",
+            "notable": "Large QR code displayed, dark UI with orange accent, clear wallet functionality"
+          },
+          {
+            "type": "Stat callout box",
+            "description": "Black background with '21 seconds to first sats' metric",
+            "position": "Left side, lower third",
+            "notable": "Lightning bolt emoji, high-contrast dark box, prominent statistic"
+          },
+          {
+            "type": "Feature detail section",
+            "description": "Icon + heading + description for highlighted feature",
+            "position": "Right side, lower third",
+            "notable": "Repeats feature from list above with expanded explanation"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange heading anchors attention; feature icons guide eye down list; stat callout breaks section; device mockup provides visual credibility",
+        "innovativeElements": [
+          "Feature list with consistent icon treatment in brand color",
+          "Speed metric ('21 seconds') prominently featured with lightning imagery",
+          "Dual presentation: list + detail expansion pattern"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Learn about Blink's feature set in detail",
+        "entryPoints": [
+          "Features dropdown from navigation",
+          "Scrolling from landing page"
+        ],
+        "exitPoints": [
+          "Back to navigation",
+          "Scroll to next section (Merchants)",
+          "Click any CTA to download"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature items",
+            "action": "May expand or highlight on hover (not visible in static screenshot)"
+          }
+        ],
+        "informationArchitecture": "Feature overview heading -> Feature list (7 items) -> Speed metric callout -> Deep-dive on first feature",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Features",
+        "subheadline": "Blink is an easy to use, reliable and feature-rich custodial Lightning wallet for everyday payments.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Start receiving bitcoin in seconds, whether you register an account with",
+            "context": "Feature detail section",
+            "purpose": "Explains speed/ease of onboarding"
+          },
+          {
+            "text": "Fast, easy onboarding",
+            "context": "First feature in list",
+            "purpose": "Headline for first benefit"
+          },
+          {
+            "text": "Stableseats Dollars",
+            "context": "Feature list item 2",
+            "purpose": "Indicates stablecoin support"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "21 seconds (time metric)",
+          "Feature list with icon prefixes"
+        ],
+        "trustSignals": [
+          "Lightning wallet technology",
+          "Feature-rich description",
+          "Custodial security model"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-3-for-merchants.png",
+      "label": "For Merchants",
+      "flowType": "Home",
+      "step": 3,
+      "design": {
+        "layout": "split-panel with feature list",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#FFFFFF",
+          "#000000",
+          "#5C6BC0"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 48-60px, black on orange",
+          "bodyStyle": "Regular sans-serif, medium weight, black on white",
+          "dataStyle": "Currency ($21), satoshi amounts (75,473 sats)"
+        },
+        "components": [
+          {
+            "type": "Section heading",
+            "description": "'For Merchants — ways to receive bitcoin' headline",
+            "position": "Left panel, top",
+            "notable": "Same orange background as features section; clear B2B segmentation"
+          },
+          {
+            "type": "Feature list",
+            "description": "3 merchant-specific features with orange icons",
+            "position": "Left side, below heading",
+            "notable": "Icons specific to merchant use cases (register, paycode, address)"
+          },
+          {
+            "type": "Device mockup",
+            "description": "iPhone showing point-of-sale calculator/invoice interface",
+            "position": "Right side, upper half",
+            "notable": "Blue header bar, numeric keypad, amount display ($21), orange 'Create Invoice' button, status message at bottom"
+          },
+          {
+            "type": "Photo/illustration",
+            "description": "Overhead shot of tablet with QR code and phone",
+            "position": "Left side, lower half",
+            "notable": "Real-world use case imagery; shows physical merchant setup"
+          },
+          {
+            "type": "Feature detail",
+            "description": "Icon + heading + description for 'Lightning cash register'",
+            "position": "Right side, lower half",
+            "notable": "Expandable detail section following same pattern as Features page"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Heading dominates left; feature list guides eye; device mockup shows UI credibility; photograph provides real-world context; detail section anchors explanation",
+        "innovativeElements": [
+          "Merchant-focused section with specialized use cases",
+          "Point-of-sale UI mockup with calculator interface",
+          "Real-world context image showing deployment scenario"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Explore merchant-specific payment solutions and use cases",
+        "entryPoints": [
+          "Features menu navigation",
+          "Scrolling from landing/features section"
+        ],
+        "exitPoints": [
+          "Back to navigation",
+          "Scroll to next section",
+          "Download/signup CTA"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Feature items",
+            "action": "May expand or highlight to show details"
+          }
+        ],
+        "informationArchitecture": "Merchant-focused heading -> 3 solution types (register, paycode, address) -> POS mockup + real-world photo -> Deep-dive on cash register feature",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "For Merchants — ways to receive bitcoin",
+        "subheadline": "Blink makes bitcoin payments easy whether you sell products, solicit donations or receive remittances.",
+        "ctas": [
+          {
+            "text": "Create Invoice",
+            "style": "primary-button",
+            "placement": "Device mockup, bottom right"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Pay Mamaróbi",
+            "context": "Device mockup, recipient field",
+            "purpose": "Shows payment destination example"
+          },
+          {
+            "text": "$21 = 75,473 sats",
+            "context": "Device mockup, amount display",
+            "purpose": "Shows currency conversion display"
+          },
+          {
+            "text": "Note: Pancasai",
+            "context": "Device mockup, note field",
+            "purpose": "Shows optional note/memo field"
+          },
+          {
+            "text": "Let others create invoices on your behalf.",
+            "context": "Feature detail section",
+            "purpose": "Explains cash register functionality"
+          },
+          {
+            "text": "Choose any currency to input the amount",
+            "context": "Feature detail section",
+            "purpose": "Highlights multi-currency input flexibility"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "$21 (USD)",
+          "75,473 sats (satoshis)",
+          "3 feature types"
+        ],
+        "trustSignals": [
+          "Real payment UI mockup",
+          "Real-world merchant scenario photography",
+          "Lightning address technology",
+          "Multiple payment acceptance methods"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-4-circles.png",
+      "label": "Circles",
+      "flowType": "Home",
+      "step": 4,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large (48px+), black text on orange background",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray on white",
+          "dataStyle": "Bold numeric displays (21, 1.1k) with green accent indicators"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Orange rounded banner with headline and subtext",
+            "position": "top-left",
+            "notable": "Curved right edge with dark overlay transition"
+          },
+          {
+            "type": "Navigation menu",
+            "description": "Horizontal menu with Features, API, Blog, Support and search",
+            "position": "top",
+            "notable": "White text on orange, minimal styling"
+          },
+          {
+            "type": "Text links with icons",
+            "description": "Orange-branded icon list with questions",
+            "position": "left-center",
+            "notable": "Simple circle and square icons, orange primary color"
+          },
+          {
+            "type": "Phone mockups",
+            "description": "Two dark-themed mobile screens showing Circles feature",
+            "position": "right-center and lower-left",
+            "notable": "Live app UI preview with green highlights and badges"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Strong left-to-right flow: hero section anchors attention, supporting text clarifies, then mockups demonstrate",
+        "innovativeElements": [
+          "Curved split-background design with orange/dark transition",
+          "Dual phone mockups showing multiple app screens"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink Circles feature for Bitcoin adoption tracking and social challenges",
+        "entryPoints": [
+          "Navigation from Features menu",
+          "Direct link from marketing materials"
+        ],
+        "exitPoints": [
+          "Click 'What is Circles?' for deeper info",
+          "Click 'How it works' for mechanics",
+          "Navigate via top menu to other features"
+        ],
+        "interactiveElements": [
+          {
+            "element": "What is Circles? link",
+            "action": "Expands or navigates to feature explanation"
+          },
+          {
+            "element": "How it works link",
+            "action": "Navigates to step-by-step mechanics"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Navigate to Features, API, Blog, Support pages"
+          }
+        ],
+        "informationArchitecture": "Hero explanation → question-based navigation links → app UI proof points",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink Circles",
+        "subheadline": "Bitcoin adoption is a team sport. With Blink Circles you can track progress, challenge friends and even earn prizes as you welcome people to Bitcoin with Blink.",
+        "ctas": [
+          {
+            "text": "What is Circles?",
+            "style": "text-link with icon",
+            "placement": "left content area"
+          },
+          {
+            "text": "How it works",
+            "style": "text-link with icon",
+            "placement": "left content area"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "You're driving Bitcoin adoption",
+            "context": "Mobile app subheader",
+            "purpose": "Reinforces user impact and mission"
+          },
+          {
+            "text": "Inner Circle: 21",
+            "context": "Mobile metric display",
+            "purpose": "Shows progress/achievement milestone"
+          },
+          {
+            "text": "Outer Circle: 1.1k",
+            "context": "Mobile metric display",
+            "purpose": "Demonstrates scale of network"
+          }
+        ],
+        "tone": "friendly-casual, motivational",
+        "dataFormatting": [
+          "21 (numeric metric)",
+          "1.1k (abbreviated thousands)",
+          "September Challenge (temporal event label)"
+        ],
+        "trustSignals": [
+          "Team sport messaging (community-driven)",
+          "Prize incentives mentioned",
+          "Live app UI demonstration"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-5-buy-and-sell.png",
+      "label": "Buy and Sell",
+      "flowType": "Home",
+      "step": 5,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 64px+, black text on orange",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray on white",
+          "dataStyle": "Monospace numeric display in chart context ($42.56, 1020.75%)"
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Orange rounded banner with feature headline and benefit statement",
+            "position": "top-left",
+            "notable": "Curved right edge, positioned above fold"
+          },
+          {
+            "type": "Feature list with icons",
+            "description": "Vertical list of 8 linked feature topics with orange icons",
+            "position": "left-center",
+            "notable": "Consistent orange icon treatment, text-only links"
+          },
+          {
+            "type": "Price chart visualization",
+            "description": "Interactive candlestick chart with orange line, time period toggles",
+            "position": "right side, mobile mockup",
+            "notable": "Yellow/orange accent on 1W toggle button, golden gradient fill"
+          },
+          {
+            "type": "CTA button",
+            "description": "Orange primary button with text",
+            "position": "bottom of mobile mockup",
+            "notable": "Matches brand orange (#FF9500)"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws attention, feature list provides navigation depth, right-side mockup validates feature with live data",
+        "innovativeElements": [
+          "Golden gradient under price chart",
+          "Time-period toggle buttons integrated into chart UI"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Bitcoin buying/selling capabilities and navigate to specific guides or pricing information",
+        "entryPoints": [
+          "Features menu navigation",
+          "Direct feature link"
+        ],
+        "exitPoints": [
+          "Click any feature link (Buy and Sell bitcoin, Level 2 accounts, etc.)",
+          "Click 'Buy and sell bitcoin' button on mockup",
+          "Navigate to Bank details, How to buy/sell guides, Blink Private, Learn more"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Buy and Sell bitcoin",
+            "action": "Primary feature link"
+          },
+          {
+            "element": "Level 2 accounts",
+            "action": "Navigate to account tier info"
+          },
+          {
+            "element": "How to buy bitcoin in El Salvador",
+            "action": "Navigate to regional guide"
+          },
+          {
+            "element": "How to Sell bitcoin in El Salvador",
+            "action": "Navigate to regional guide"
+          },
+          {
+            "element": "Banking details",
+            "action": "Navigate to banking information"
+          },
+          {
+            "element": "How to buy and sell bitcoin on web",
+            "action": "Navigate to web platform guide"
+          },
+          {
+            "element": "Blink Private",
+            "action": "Navigate to premium feature"
+          },
+          {
+            "element": "Learn more",
+            "action": "Navigate to educational content"
+          },
+          {
+            "element": "Buy and sell bitcoin button",
+            "action": "Primary CTA - launch trading interface"
+          }
+        ],
+        "informationArchitecture": "Value proposition → feature-based navigation tree → pricing/functionality proof via chart",
+        "frictionPoints": [
+          "Geographic specificity (El Salvador, Perú) may limit discoverability for other regions"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Buy and Sell",
+        "subheadline": "Buy and Sell Bitcoin effortlessly! Low fees, responsive support, fast and reliable service. Available in El Salvador and Perú",
+        "ctas": [
+          {
+            "text": "Buy and sell bitcoin",
+            "style": "primary-button",
+            "placement": "bottom-right, mobile mockup"
+          },
+          {
+            "text": "Buy and Sell bitcoin",
+            "style": "text-link",
+            "placement": "left feature list"
+          },
+          {
+            "text": "Level 2 accounts",
+            "style": "text-link",
+            "placement": "left feature list"
+          },
+          {
+            "text": "Learn more",
+            "style": "text-link",
+            "placement": "left feature list"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Price for 100,000 sats: $42.56",
+            "context": "Chart header on mobile",
+            "purpose": "Shows real-time pricing and satoshi conversion"
+          },
+          {
+            "text": "1020.75% last few years",
+            "context": "Chart subtitle",
+            "purpose": "Demonstrates Bitcoin appreciation/volatility"
+          }
+        ],
+        "tone": "professional-technical, benefit-focused",
+        "dataFormatting": [
+          "$42.56 (currency with cents)",
+          "100,000 sats (satoshi denomination)",
+          "1020.75% (percentage change)",
+          "Low fees (qualitative benefit)"
+        ],
+        "trustSignals": [
+          "Low fees claim",
+          "Responsive support mentioned",
+          "Fast and reliable service",
+          "Multi-region availability (El Salvador, Perú)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-6-security.png",
+      "label": "Security",
+      "flowType": "Home",
+      "step": 6,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#1a1a1a",
+          "#ffffff"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, 64px+, black text on orange",
+          "bodyStyle": "Regular sans-serif, 16px, dark gray on white",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Hero section",
+            "description": "Orange rounded banner with feature headline and technical description",
+            "position": "top-left",
+            "notable": "Curved right edge with dark overlay bleed"
+          },
+          {
+            "type": "Feature list with icons",
+            "description": "Vertical list of 3 security features with orange icons",
+            "position": "left-center",
+            "notable": "Lock shield, fingerprint, and code bracket icons"
+          },
+          {
+            "type": "Illustration",
+            "description": "Large dual-key security icon on dark background with orange border",
+            "position": "bottom-left",
+            "notable": "Oversized white outline keys inside dark rounded rectangle"
+          },
+          {
+            "type": "Trust signal badge",
+            "description": "Orange icon with text 'High standard for security'",
+            "position": "right side",
+            "notable": "Lock shield icon, emphasizes security positioning"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Headline dominates, supporting features listed left, large illustrative key graphic creates visual anchor, trust signal reinforces on right",
+        "innovativeElements": [
+          "Oversized key illustration metaphor for security",
+          "Color-coordinated orange badges with security icons"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blink's security features and trust infrastructure",
+        "entryPoints": [
+          "Features menu navigation",
+          "Security-specific link"
+        ],
+        "exitPoints": [
+          "Navigate to other features via top menu",
+          "Return to home",
+          "Access Support for security questions"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Features menu",
+            "action": "Navigate to other feature sections"
+          },
+          {
+            "element": "Support link",
+            "action": "Access help and security documentation"
+          }
+        ],
+        "informationArchitecture": "Headline assertion → three core technical features listed → visual proof (key icon) → high-standard trust badge",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Security",
+        "subheadline": "The Blink platform is designed for security, with multi-sig cold storage for funds and multiple authentication methods for users.",
+        "ctas": [
+          {
+            "text": "Features menu items",
+            "style": "top-navigation",
+            "placement": "header"
+          },
+          {
+            "text": "Support",
+            "style": "text-link",
+            "placement": "header navigation"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Multi-sig cold storage",
+            "context": "Feature list item",
+            "purpose": "Highlights technical security implementation"
+          },
+          {
+            "text": "Secure authentication",
+            "context": "Feature list item",
+            "purpose": "Emphasizes multi-method user protection"
+          },
+          {
+            "text": "Open source platform",
+            "context": "Feature list item",
+            "purpose": "Demonstrates transparency and auditability"
+          },
+          {
+            "text": "High standard for security",
+            "context": "Trust signal badge",
+            "purpose": "Reinforces security commitment"
+          }
+        ],
+        "tone": "professional-technical, reassuring",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Multi-sig cold storage (technical standard)",
+          "Multiple authentication methods",
+          "Open source platform (transparency)",
+          "High standard for security claim"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-13-woocommerce-plugin.png",
+      "label": "WooCommerce Plugin",
+      "flowType": "Home",
+      "step": 13,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text on orange, high contrast, ~48px",
+          "bodyStyle": "Medium sans-serif black text on orange, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with Blink logo, Features/API/Blog/Support links, search, language selector",
+            "position": "top",
+            "notable": "White text on orange background, clean minimalist design"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large headline with subheading describing WooCommerce plugin benefits",
+            "position": "left-orange-section",
+            "notable": "Split-screen design with orange left panel and dark right panel with crypto imagery"
+          },
+          {
+            "type": "imagery",
+            "description": "WooCommerce and Bitcoin logos with payment card graphics on right side",
+            "position": "right-section",
+            "notable": "Visual metaphor connecting traditional payments (Visa/Mastercard) to Bitcoin"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline dominates, supported by descriptive text; imagery anchors right side to show integration",
+        "innovativeElements": [
+          "Split-panel hero with contrasting orange/black sections",
+          "Payment method logos integrated into product messaging"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about and understand the Blink WooCommerce plugin for accepting Bitcoin payments",
+        "entryPoints": [
+          "Direct navigation from Features menu",
+          "Blog post about payment solutions",
+          "Search query about WooCommerce Bitcoin"
+        ],
+        "exitPoints": [
+          "API documentation via dropdown",
+          "Blog section for related articles",
+          "Support page for implementation help"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Features dropdown",
+            "action": "Opens submenu showing available integrations and features"
+          },
+          {
+            "element": "API dropdown",
+            "action": "Links to API documentation for developers"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          }
+        ],
+        "informationArchitecture": "Product overview with navigation to supporting resources; linear single-page layout",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "WooCommerce Plugin",
+        "subheadline": "Accept Bitcoin Lightning payments on WooCommerce with our Blink API plugin. Fast, secure, and low-fee transactions for your online store.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Accept Bitcoin",
+            "context": "Navigation section link",
+            "purpose": "Direct users to Bitcoin acceptance documentation"
+          },
+          {
+            "text": "Tutorial",
+            "context": "Navigation section link",
+            "purpose": "Guide users through setup process"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "WooCommerce logo (established e-commerce platform)",
+          "Payment security implied through integration"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-14-screenshot-16.png",
+      "label": "Screenshot 16",
+      "flowType": "Home",
+      "step": 14,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text on orange, ~56px weight",
+          "bodyStyle": "Medium sans-serif black text on orange, ~18px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with Blink logo, Özellikler/API/Blog/Destek links, language selector (TR)",
+            "position": "top",
+            "notable": "Localized to Turkish, maintaining same visual structure"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left orange panel with headline and subheading about daily Bitcoin payments",
+            "position": "left",
+            "notable": "Large body-oriented typography, straightforward value proposition"
+          },
+          {
+            "type": "call-to-action-button",
+            "description": "Black rounded button with white text 'Şimdi indir'",
+            "position": "left-lower",
+            "notable": "High contrast, rounded-pill style button"
+          },
+          {
+            "type": "imagery",
+            "description": "Phone mockup showing Blink app interface on right side",
+            "position": "right-section",
+            "notable": "Contextual product screenshot demonstrating actual app UI"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Headline-first with supporting subheadline, prominent CTA button, product imagery on right",
+        "innovativeElements": [
+          "Localized variant maintaining consistent design language",
+          "Real app UI mockup as social proof"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blink's daily Bitcoin payment capabilities and download the app",
+        "entryPoints": [
+          "Turkish language selection on homepage",
+          "Direct URL to Turkish landing page",
+          "Navigation menu selection"
+        ],
+        "exitPoints": [
+          "Download app via CTA button",
+          "Features section via menu",
+          "Support/Help via menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Şimdi indir button",
+            "action": "Initiates app download or app store redirect"
+          },
+          {
+            "element": "Language selector (TR)",
+            "action": "Confirms or allows language switching"
+          }
+        ],
+        "informationArchitecture": "Localized landing page following same architecture as English version; single-page conversion flow",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Gündelik Bitcoin Cüzdanı",
+        "subheadline": "Herkes için, emniyet ve güvenli bir Bitcoin ödeme deneyimi.",
+        "ctas": [
+          {
+            "text": "Şimdi indir",
+            "style": "primary-button",
+            "placement": "left-panel-lower"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Blink'e bir bakış atın",
+            "context": "Bottom section heading",
+            "purpose": "Secondary headline introducing feature overview"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "App mockup showing real interface"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-15-screenshot-17.png",
+      "label": "Screenshot 17",
+      "flowType": "Home",
+      "step": 15,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif black text on orange, ~52px",
+          "bodyStyle": "Medium sans-serif black text on orange, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Horizontal nav with Blink logo, Funciones/API/Blog/Soporte links, language selector (ES)",
+            "position": "top",
+            "notable": "Spanish localization with consistent minimalist styling"
+          },
+          {
+            "type": "hero-section",
+            "description": "Left orange panel with headline about Bitcoin wallet and subheading about Lightning payments",
+            "position": "left",
+            "notable": "Translation maintains marketing message about ease and reliability"
+          },
+          {
+            "type": "call-to-action-button",
+            "description": "Black rounded button with white text 'Obtener Blink'",
+            "position": "left-lower",
+            "notable": "Contextually appropriate CTA for Spanish audience"
+          },
+          {
+            "type": "imagery",
+            "description": "Phone mockup with Blink app interface on right side",
+            "position": "right-section",
+            "notable": "Consistent product visualization across language variants"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Consistent with other variants: headline dominates, value prop supports, CTA prominent, product image anchors",
+        "innovativeElements": [
+          "Multi-language variant strategy with unified design system",
+          "Real product mockup as proof of functionality"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blink's Bitcoin wallet capabilities in Spanish and obtain the app",
+        "entryPoints": [
+          "Spanish language selection from homepage",
+          "Spanish language market landing",
+          "Regional navigation"
+        ],
+        "exitPoints": [
+          "App download via 'Obtener Blink' button",
+          "Features section via menu",
+          "Support section via menu"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Obtener Blink button",
+            "action": "Redirects to app store or download page"
+          },
+          {
+            "element": "Funciones dropdown",
+            "action": "Opens features submenu"
+          }
+        ],
+        "informationArchitecture": "Localized landing variant following master template; conversion-focused single page",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink - la billetera bitcoin para todo",
+        "subheadline": "Una experiencia de pagos de Bitcoin confiable y segura",
+        "ctas": [
+          {
+            "text": "Obtener Blink",
+            "style": "primary-button",
+            "placement": "left-panel-lower"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Descubre Blink",
+            "context": "Bottom section heading",
+            "purpose": "Secondary CTA introducing features section"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [
+          "App interface mockup showing working product",
+          "Lightning Network mentioned implicitly in subheadline"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-10-api-overview.png",
+      "label": "API Overview",
+      "flowType": "Home",
+      "step": 10,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif, black text on orange background",
+          "bodyStyle": "Regular sans-serif, black text on orange, medium line height",
+          "dataStyle": "Monospace, large bold numbers (BTC/USD amounts) with smaller gray labels on dark cards"
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal white text nav with Features, API, Blog, Support dropdown menus",
+            "position": "Top of orange section",
+            "notable": "Orange background with white text maintains high contrast"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large heading 'Blink API' with descriptive subtext and CTA button",
+            "position": "Upper left, orange background",
+            "notable": "Bold primary CTA with rounded corners"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with 8 icon-labeled items (features, pricing, tutorials, etc.)",
+            "position": "Left side, white background",
+            "notable": "Orange icons with consistent iconography"
+          },
+          {
+            "type": "Card Preview",
+            "description": "Dark rounded card showing wallet with BTC and USD balances",
+            "position": "Right side, dark background",
+            "notable": "Real wallet data display with pending amounts"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section dominates left, navigation menu guides to secondary content, card preview anchors right side",
+        "innovativeElements": [
+          "Split orange/white background creates visual division",
+          "Embedded wallet preview demonstrates product functionality"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink API capabilities and explore integration options",
+        "entryPoints": [
+          "API menu navigation from top bar",
+          "Blog/Blog posts about API",
+          "Direct link from marketing materials"
+        ],
+        "exitPoints": [
+          "Sign in with Blink button",
+          "Sidebar menu items (Feature overview, Get started, API examples)",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sign in with Blink button",
+            "action": "Authenticate and enter dashboard"
+          },
+          {
+            "element": "Sidebar navigation items",
+            "action": "Navigate to documentation sections"
+          },
+          {
+            "element": "Features dropdown",
+            "action": "Show API feature submenu"
+          }
+        ],
+        "informationArchitecture": "Main value proposition in hero, detailed navigation menu for exploration, wallet preview demonstrates real-world usage",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink API",
+        "subheadline": "A powerful, cost-effective, and reliable solution for easily integrating Bitcoin into your projects, regardless of your experience level.",
+        "ctas": [
+          {
+            "text": "Sign in with Blink",
+            "style": "primary-button",
+            "placement": "Below subheadline, hero section"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "About the Blink API",
+            "context": "Sidebar menu",
+            "purpose": "Guide users to overview documentation"
+          },
+          {
+            "text": "Pending Amount: 0",
+            "context": "Wallet card",
+            "purpose": "Clarify transaction status"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [
+          "0.00256022 BTC",
+          "61.69 USD",
+          "Wallet ID: ea308027-84e1-4c07-8034-ea3244b8027"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-11-btcpay-plugin.png",
+      "label": "BTCPay Plugin",
+      "flowType": "Home",
+      "step": 11,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, black text on orange background",
+          "bodyStyle": "Regular sans-serif, black text on orange, medium line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Consistent horizontal nav across top",
+            "position": "Top of page",
+            "notable": "Orange background maintained throughout header"
+          },
+          {
+            "type": "Hero Heading",
+            "description": "'BTCPay x Blink' with explanatory paragraph",
+            "position": "Left side, orange background",
+            "notable": "Large heading emphasizes partnership"
+          },
+          {
+            "type": "Integration Card",
+            "description": "Dark rounded card showing Blink and BTCPay logos with handshake icon",
+            "position": "Right side, dark background",
+            "notable": "Visual representation of partnership/integration"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with 6 contextual items for BTCPay integration",
+            "position": "Left side, white background",
+            "notable": "Orange icons match main branding"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero text dominates left, partnership card anchors right, sidebar provides navigation context",
+        "innovativeElements": [
+          "Partnership card with icon imagery (handshake)",
+          "Color-coded icons for different sections"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand and explore the Blink-BTCPay integration",
+        "entryPoints": [
+          "Blink API menu navigation",
+          "Direct link from BTCPay partnership materials",
+          "Search results for payment integrations"
+        ],
+        "exitPoints": [
+          "Sidebar menu items (Background, Blink Plugin, How-to, Case studies, Payment Gateway, Learn more)",
+          "Main navigation menu",
+          "Back to API overview"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Background menu item",
+            "action": "Navigate to integration background/context"
+          },
+          {
+            "element": "Blink Plugin menu item",
+            "action": "View plugin documentation"
+          },
+          {
+            "element": "Learn more link",
+            "action": "Access detailed integration guides"
+          }
+        ],
+        "informationArchitecture": "Partnership introduction in hero, sidebar provides structured exploration paths, card visual demonstrates collaboration",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "BTCPay x Blink",
+        "subheadline": "Learn more about our integration with BTCPay. The Blink plugin aims to make Lightning payments easy. Developed through a community-driven bounty, this is a prime example of what we achieve together in the open-source bitcoin world.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Background",
+            "context": "Sidebar menu",
+            "purpose": "Provide context on integration origin"
+          },
+          {
+            "text": "How-to",
+            "context": "Sidebar menu",
+            "purpose": "Guide implementation steps"
+          }
+        ],
+        "tone": "professional-technical, community-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Community-driven bounty mentioned",
+          "Open-source bitcoin world reference"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-12-api-use-cases.png",
+      "label": "API Use Cases",
+      "flowType": "Home",
+      "step": 12,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif, black text on orange background",
+          "bodyStyle": "Regular sans-serif, black text on orange, medium line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Consistent horizontal nav maintained",
+            "position": "Top of page",
+            "notable": "Orange background creates continuity"
+          },
+          {
+            "type": "Hero Section",
+            "description": "'Blink API Use Cases' heading with descriptive text",
+            "position": "Upper left, orange background",
+            "notable": "Clear focus on use case exploration"
+          },
+          {
+            "type": "Sidebar Navigation",
+            "description": "Vertical menu with 7 use case/feature items",
+            "position": "Left side, white background",
+            "notable": "Orange icons and checkmark for 'Get started'"
+          },
+          {
+            "type": "Content Card",
+            "description": "Partial orange and black card visible at bottom",
+            "position": "Bottom center",
+            "notable": "Suggests scrollable content below"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero dominates top-left, sidebar provides organized use case navigation, card hints at expandable content",
+        "innovativeElements": [
+          "Organized use case categorization in sidebar",
+          "Orange/black card design suggests interactive exploration"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover how Blink API is used across different products and services",
+        "entryPoints": [
+          "API menu navigation",
+          "From API overview page",
+          "Search for 'Blink use cases'"
+        ],
+        "exitPoints": [
+          "Sidebar menu items (Payment Gateway, Wallet Infrastructure, Dollar Account, WooCommerce Plugin, etc.)",
+          "Scroll to view use case cards below",
+          "Main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Payment Gateway item",
+            "action": "Navigate to payment gateway use case"
+          },
+          {
+            "element": "Wallet Infrastructure item",
+            "action": "Navigate to wallet infrastructure use case"
+          },
+          {
+            "element": "Get started item",
+            "action": "Begin implementation journey"
+          },
+          {
+            "element": "WooCommerce Plugin item",
+            "action": "View ecommerce integration example"
+          }
+        ],
+        "informationArchitecture": "Hero introduces topic, sidebar provides categorized use case selection, cards below provide detailed information for each category",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink API Use Cases",
+        "subheadline": "Learn how projects are using the Blink API into their operations, simplifying Bitcoin usage.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "About the Blink API",
+            "context": "Sidebar menu",
+            "purpose": "Return to API overview"
+          },
+          {
+            "text": "Get started",
+            "context": "Sidebar menu with checkmark",
+            "purpose": "Begin implementation"
+          }
+        ],
+        "tone": "professional-technical, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Real project implementations mentioned",
+          "Multiple use case examples (Payment Gateway, Wallet Infrastructure, Dollar Account, WooCommerce)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-16-screenshot-18.png",
+      "label": "Screenshot 18",
+      "flowType": "Home",
+      "step": 16,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF8C00",
+          "#1a1a1a",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Large black serif-like sans-serif, bold, left-aligned on orange section",
+          "bodyStyle": "Dark gray/black body text, medium weight, readable on orange background",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "Horizontal white text navigation with Fonctionnalité, API, Blog, Support, and search",
+            "position": "Top of orange section",
+            "notable": "Clean minimal nav with dropdown indicators"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with subtext describing the wallet value proposition",
+            "position": "Left side, orange panel",
+            "notable": "Strong visual contrast with dark text on bright orange"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Black rounded pill button 'Obtenir Blink'",
+            "position": "Below subheadline, left side",
+            "notable": "High contrast black on orange for clear affordance"
+          },
+          {
+            "type": "Product Image",
+            "description": "Mobile phone displaying wallet interface with orange accent button",
+            "position": "Right side, integrated with background",
+            "notable": "Realistic product shot showing actual app in use"
+          },
+          {
+            "type": "Section Divider",
+            "description": "Dark section with repeating icon pattern (location pins, links, lightning bolts, Bitcoin symbols)",
+            "position": "Below fold",
+            "notable": "Subtle texture/pattern adds visual interest to dark area"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Left-to-right flow: headline dominates, subtext secondary, CTA tertiary, product image on right reinforces value",
+        "innovativeElements": [
+          "Bold orange/black color split creates strong visual brand identity",
+          "Real device mockup integrated naturally into design rather than isolated",
+          "Repeating icon pattern in footer adds sophisticated branding touch"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink wallet and download/access it",
+        "entryPoints": [
+          "Direct website visit",
+          "Marketing campaign link",
+          "Search engine result"
+        ],
+        "exitPoints": [
+          "Click 'Obtenir Blink' to download/access app",
+          "Navigate to Blog, Support, or Features via top nav",
+          "Scroll down to 'Visite guidée de Blink' section"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Obtenir Blink button",
+            "action": "Primary CTA - likely opens app store or download page"
+          },
+          {
+            "element": "Navigation menu items",
+            "action": "Open dropdown menus or navigate to related pages"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          },
+          {
+            "element": "Language selector (FR)",
+            "action": "Switch language locale"
+          }
+        ],
+        "informationArchitecture": "Hero-driven landing with single primary value proposition, supporting navigation, product imagery for context",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Le portefeuille Bitcoin du quotidien",
+        "subheadline": "Une expérience de paiement Bitcoin fiable et sécurisée pour tous.",
+        "ctas": [
+          {
+            "text": "Obtenir Blink",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "FR",
+            "context": "Top right language selector",
+            "purpose": "Change language to French"
+          },
+          {
+            "text": "Fonctionnalité",
+            "context": "Top navigation dropdown",
+            "purpose": "Access features section"
+          }
+        ],
+        "tone": "friendly-casual, accessible, solution-oriented",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Emphasis on 'fiable et sécurisée' (reliable and secure)",
+          "Real product device mockup showing actual interface"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-17-screenshot-19.png",
+      "label": "Screenshot 19",
+      "flowType": "Home",
+      "step": 17,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF8C00",
+          "#1a1a1a",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold, left-aligned on orange section",
+          "bodyStyle": "Dark gray/black body text, medium weight, readable on orange",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "White text navigation with Features, API, Blog, Support, search",
+            "position": "Top of orange section",
+            "notable": "Note: 'Fonctionnalité' changed to 'Features' (German locale)"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline with descriptive subtext about daily Bitcoin wallet",
+            "position": "Left side, orange panel",
+            "notable": "German language variant of same layout"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Black rounded pill button 'Herunterladen'",
+            "position": "Below subheadline, left side",
+            "notable": "German for 'Download' - localized action"
+          },
+          {
+            "type": "Product Image",
+            "description": "Mobile phone in right panel showing wallet app",
+            "position": "Right side",
+            "notable": "Same device mockup as previous screenshot"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Identical to previous: headline → subtext → CTA → product image",
+        "innovativeElements": [
+          "Multi-language support with seamless localization",
+          "Consistent design across language variants"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink wallet in German and download/access it",
+        "entryPoints": [
+          "Direct website visit with German language preference",
+          "Clicking German language option from previous page",
+          "Marketing campaign targeting German speakers"
+        ],
+        "exitPoints": [
+          "Click 'Herunterladen' to download/access app",
+          "Navigate via top menu",
+          "Change language to another option"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Herunterladen button",
+            "action": "Primary CTA - download or access wallet"
+          },
+          {
+            "element": "Features dropdown",
+            "action": "Expand features menu"
+          },
+          {
+            "element": "Language selector (DE)",
+            "action": "Switch language locale"
+          }
+        ],
+        "informationArchitecture": "Same as previous - hero landing optimized for conversion",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Die Bitcoin Wallet für den Alltag",
+        "subheadline": "Ein zuverlässiges und sicheres Bitcoin-Zahlungserlebnis für alle.",
+        "ctas": [
+          {
+            "text": "Herunterladen",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "DE",
+            "context": "Top right language selector",
+            "purpose": "Current language indicator"
+          }
+        ],
+        "tone": "friendly-casual, professional, accessible",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Keywords: 'zuverlässig' (reliable) and 'sicher' (secure)",
+          "Real device mockup provides credibility"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-18-screenshot-20.png",
+      "label": "Screenshot 20",
+      "flowType": "Home",
+      "step": 18,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF8C00",
+          "#1a1a1a",
+          "#0066CC"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold, left-aligned on orange section",
+          "bodyStyle": "Dark gray/black body text, medium weight, readable on orange",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation Bar",
+            "description": "White text navigation with Recursos, API, Blog, Suporte, search",
+            "position": "Top of orange section",
+            "notable": "Portuguese language localization (BR variant)"
+          },
+          {
+            "type": "Hero Section",
+            "description": "Large headline about daily Bitcoin wallet with supporting subtext",
+            "position": "Left side, orange panel",
+            "notable": "Maintains consistent visual hierarchy across localizations"
+          },
+          {
+            "type": "CTA Button",
+            "description": "Black rounded pill button 'Obter o Blink'",
+            "position": "Below subheadline, left side",
+            "notable": "Portuguese for 'Get Blink' - natural localization"
+          },
+          {
+            "type": "Product Image",
+            "description": "Mobile device showing wallet interface",
+            "position": "Right side, integrated into layout",
+            "notable": "Consistent product mockup across all language variants"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Consistent split-panel design with hero text left, product image right",
+        "innovativeElements": [
+          "Seamless multi-language support (French, German, Portuguese variants shown)",
+          "Template-based approach allows rapid localization without design changes"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink wallet in Portuguese (Brazil) and obtain the app",
+        "entryPoints": [
+          "Direct website visit with Portuguese language preference",
+          "Language selection from navigation",
+          "Regional marketing campaign for Brazil"
+        ],
+        "exitPoints": [
+          "Click 'Obter o Blink' for download/access",
+          "Navigate to Recursos, Blog, or Suporte",
+          "Switch language via BR selector"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Obter o Blink button",
+            "action": "Primary CTA - download/access wallet application"
+          },
+          {
+            "element": "Recursos dropdown",
+            "action": "Access resources section"
+          },
+          {
+            "element": "Language selector (BR)",
+            "action": "Switch to Brazilian Portuguese locale"
+          }
+        ],
+        "informationArchitecture": "Hero-driven landing page with single value prop, localized navigation, clear CTA",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Uma carteira de Bitcoin para o dia a dia",
+        "subheadline": "Uma experiência confiável e segura de pagamentos com Bitcoin para todos.",
+        "ctas": [
+          {
+            "text": "Obter o Blink",
+            "style": "primary-button",
+            "placement": "Below subheadline, left side"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "BR",
+            "context": "Top right language selector",
+            "purpose": "Current language indicator - Brazilian Portuguese"
+          },
+          {
+            "text": "Recursos",
+            "context": "Top navigation",
+            "purpose": "Access features/resources section"
+          }
+        ],
+        "tone": "friendly-casual, accessible, solution-focused",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Words 'confiável' (trustworthy) and 'segura' (secure)",
+          "Real device mockup shows actual product in use",
+          "Emphasis on accessibility: 'para todos' (for everyone)"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-19-en-social.png",
+      "label": "en - social",
+      "flowType": "Home",
+      "step": 19,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold weight (Blink Socials)",
+          "bodyStyle": "Medium black sans-serif for account handles and labels",
+          "dataStyle": "Username handles displayed with platform icons"
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Orange navigation bar with Blink logo and menu items",
+            "position": "top",
+            "notable": "Curved right edge creates modern asymmetric design"
+          },
+          {
+            "type": "hero-section",
+            "description": "Orange hero with headline and subtext describing social links",
+            "position": "left-top",
+            "notable": null
+          },
+          {
+            "type": "hero-image",
+            "description": "Man holding dollar bill with Bitcoin icon overlay",
+            "position": "right-top",
+            "notable": "Casual, approachable imagery contrasts with financial content"
+          },
+          {
+            "type": "social-directory",
+            "description": "Three-column layout of social media links organized by language",
+            "position": "center",
+            "notable": "Platform icons paired with handles for visual scanning"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange header dominates, three equal columns draw eye horizontally, image balances visual weight on right",
+        "innovativeElements": [
+          "Asymmetric curved header edge",
+          "Mixed dark background behind platform icons for depth",
+          "Image positioned outside main content area for emphasis"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Find and follow Blink across social media platforms",
+        "entryPoints": [
+          "Navigation menu from main site",
+          "Direct URL to socials page",
+          "Blog/support references"
+        ],
+        "exitPoints": [
+          "Click social media links (Twitter, Instagram, TikTok, Facebook, Nostr, Telegram)",
+          "Navigate to Features, API, Blog, Support via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Social media handles",
+            "action": "Opens external social profile in new tab"
+          },
+          {
+            "element": "Navigation links",
+            "action": "Navigate to Features, API, Blog, Support pages"
+          },
+          {
+            "element": "Language selector (EN dropdown)",
+            "action": "Switch page language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical by language (English/Spanish/Turkish), then by platform within each language section",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink Socials",
+        "subheadline": "Collection of social media links where you can follow us",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "@blinkbtc",
+            "context": "Twitter/Instagram handle",
+            "purpose": "Account identification"
+          },
+          {
+            "text": "@blinkbitcoin_en",
+            "context": "TikTok handle",
+            "purpose": "Language-specific account identification"
+          },
+          {
+            "text": "community@blink.sv",
+            "context": "Nostr contact",
+            "purpose": "Community engagement channel"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [
+          "@handle format for social accounts",
+          "email@domain.sv format for Nostr"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-20-blink-brand.png",
+      "label": "Blink Brand",
+      "flowType": "Home",
+      "step": 20,
+      "design": {
+        "layout": "card-grid",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold weight (Branding & Resources)",
+          "bodyStyle": "Medium black sans-serif for resource titles",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Orange hero section with headline, subtext, and curved edge",
+            "position": "top",
+            "notable": "Curved asymmetric design consistent across site"
+          },
+          {
+            "type": "resource-card",
+            "description": "Isometric illustration of Blink Brand Book with download button",
+            "position": "left-center",
+            "notable": "3D perspective visual adds sophistication"
+          },
+          {
+            "type": "resource-card",
+            "description": "Photo mockup of onboarding materials with downloads button",
+            "position": "right-center",
+            "notable": "Multiple product mockups demonstrate comprehensive resources"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange header with descriptive text leads eye, two equal-weight cards balance below, CTAs anchored at card bottom",
+        "innovativeElements": [
+          "Isometric 3D perspective on brand book illustration",
+          "Real product photography mixed with illustration",
+          "Consistent orange/black/white color blocking"
+        ]
+      },
+      "flow": {
+        "screenType": "resource-browse",
+        "userIntent": "Access branding materials and community onboarding resources",
+        "entryPoints": [
+          "Navigation from main site",
+          "Features menu",
+          "Community partner discovery"
+        ],
+        "exitPoints": [
+          "Download Brand Book (ZIP)",
+          "Download community resources",
+          "Navigate to other pages via header"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Download (ZIP) button",
+            "action": "Initiates brand book file download"
+          },
+          {
+            "element": "Downloads button",
+            "action": "Initiates community onboarding resources download"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to Features, API, Blog, Support"
+          }
+        ],
+        "informationArchitecture": "Two primary resource categories displayed symmetrically with clear action buttons",
+        "frictionPoints": [
+          "No preview of what's in downloads before committing",
+          "No file size indication for downloads"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Branding & Resources",
+        "subheadline": "Find resources for supporting your bottom-up Bitcoin adoption efforts here.",
+        "ctas": [
+          {
+            "text": "Download (ZIP)",
+            "style": "primary-button",
+            "placement": "below Brand Book card"
+          },
+          {
+            "text": "Downloads",
+            "style": "primary-button",
+            "placement": "below onboarding resources card"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Blink Brand Book",
+            "context": "Resource card title",
+            "purpose": "Resource identification"
+          },
+          {
+            "text": "Community onboarding resources",
+            "context": "Resource card title",
+            "purpose": "Resource identification"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Official brand materials",
+          "Community support resources"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-21-bounties.png",
+      "label": "Bounties",
+      "flowType": "Home",
+      "step": 21,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif, bold weight (Bounties)",
+          "bodyStyle": "Medium black sans-serif for body text and bounty items",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "header",
+            "description": "Orange hero section with curved asymmetric edge",
+            "position": "top-left",
+            "notable": "Extends across majority of viewport with bold typography"
+          },
+          {
+            "type": "hero-image",
+            "description": "Wireless signal icon on dark rounded rectangle",
+            "position": "top-right",
+            "notable": "Abstract icon suggests connectivity and open-source development"
+          },
+          {
+            "type": "list",
+            "description": "Bulleted list of active bounties with icons",
+            "position": "center-left",
+            "notable": "Strike-through text on first item indicates completed bounty"
+          },
+          {
+            "type": "preview",
+            "description": "Partial view of additional content below fold",
+            "position": "bottom",
+            "notable": "Indicates scrollable content continues"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large orange header dominates upper third, descriptive text explains purpose, bulleted list draws focus with icons, image balances right side",
+        "innovativeElements": [
+          "Strike-through styling for completed bounties",
+          "Icon system for different bounty types (bug icon, feature request icon)",
+          "Wireless signal abstract icon represents open development"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Discover available bounties and contribution opportunities",
+        "entryPoints": [
+          "Navigation from main site",
+          "Features or Branding & Resources pages",
+          "Developer community discovery"
+        ],
+        "exitPoints": [
+          "Click on individual bounties (likely external to GitHub)",
+          "Navigate to Features, API, Blog, Support via header",
+          "Scroll to see more bounties below fold"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Bounty items",
+            "action": "Navigate to detailed bounty or external GitHub link"
+          },
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other site sections"
+          }
+        ],
+        "informationArchitecture": "Chronological or priority-based list of bounties with status indicators (completed vs active)",
+        "frictionPoints": [
+          "No clear CTA visible for individual bounties",
+          "No reward/payment amount visible in this view",
+          "Completed bounty still takes up list space"
+        ],
+        "progressIndicators": [
+          "Strike-through styling indicates completion status",
+          "Visual scrolling cue shows more content below"
+        ]
+      },
+      "copy": {
+        "headline": "Bounties",
+        "subheadline": "Welcome to our Bounties page! We're excited to offer developers the opportunity to contribute to our open source Bitcoin wallet. Tackle our remunerated bounties featured on GitHub and help improve our codebase.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Blink API as an LNbits funding source",
+            "context": "First bounty item (struck through)",
+            "purpose": "Completed bounty identification"
+          },
+          {
+            "text": "Blink Plugin for Shopify",
+            "context": "Active bounty item",
+            "purpose": "Active bounty identification"
+          },
+          {
+            "text": "Integration of Payjoin Transaction Protocol into Bria",
+            "context": "Active bounty item",
+            "purpose": "Active bounty identification"
+          },
+          {
+            "text": "General feedback and feature request",
+            "context": "Active bounty item",
+            "purpose": "Open-ended contribution opportunity"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open source commitment",
+          "GitHub integration for transparency",
+          "Remunerated bounties show real investment"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-25-dev-docs.png",
+      "label": "Dev Docs",
+      "flowType": "Home",
+      "step": 25,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#FFA500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Bold sans-serif, large 48px+ for main headline, 32px for section headers",
+          "bodyStyle": "Regular sans-serif, 16px gray text for paragraphs",
+          "dataStyle": "Bold text with bullet points for feature lists"
+        },
+        "components": [
+          {
+            "type": "Sidebar Navigation",
+            "description": "Left sidebar with collapsible menu items organized by topic (Intro, Authentication, API tutorials, etc.)",
+            "position": "left",
+            "notable": "Expandable sections with nested items, orange accent for active state"
+          },
+          {
+            "type": "Right Sidebar Panel",
+            "description": "Secondary navigation with quick links (Feature Overview, Pricing, etc.)",
+            "position": "right",
+            "notable": "Floating sidebar with orange text links"
+          },
+          {
+            "type": "Breadcrumb Navigation",
+            "description": "Home > Intro showing current page location",
+            "position": "top-left of main content",
+            "notable": "Minimal design with arrow separators"
+          },
+          {
+            "type": "Feature List",
+            "description": "Bullet-pointed list with bold feature names and descriptions",
+            "position": "main content area",
+            "notable": "Clean, scannable format with bold emphasis on feature names"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large headline draws attention, subheadlines organize sections, body text provides detail, sidebar navigation anchors users",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "documentation-landing",
+        "userIntent": "Understand what Blink API is and explore its capabilities",
+        "entryPoints": [
+          "Direct navigation from landing site",
+          "Bookmarked developer resource"
+        ],
+        "exitPoints": [
+          "Click sidebar items to dive into specific documentation",
+          "Visit other top-nav sections (Features, API, Blog, Support)"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Sidebar Menu Items",
+            "action": "Expand/collapse sections and navigate to detailed docs"
+          },
+          {
+            "element": "Right Sidebar Links",
+            "action": "Jump to Feature Overview, Pricing, Get Started, tutorials, etc."
+          },
+          {
+            "element": "Top Navigation",
+            "action": "Switch between main sections (Features, API, Blog, Support)"
+          }
+        ],
+        "informationArchitecture": "Three-column layout: deep navigation on left, main educational content in center, quick reference on right",
+        "frictionPoints": [],
+        "progressIndicators": [
+          "Breadcrumb trail showing current location"
+        ]
+      },
+      "copy": {
+        "headline": "Welcome to the Blink API Documentation",
+        "subheadline": "A powerful, cost-effective, and reliable solution for easily integrating simple, reliable Bitcoin & Lightning payments into your projects, regardless of your experience level.",
+        "ctas": [
+          {
+            "text": "Get Started: Register in 2 Minutes",
+            "style": "text-link",
+            "placement": "right sidebar"
+          },
+          {
+            "text": "Interactive Tutorials: Try it Out",
+            "style": "text-link",
+            "placement": "right sidebar"
+          },
+          {
+            "text": "Host it Yourself – Build with Blink",
+            "style": "text-link",
+            "placement": "right sidebar"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Enable onchain and Layer two Lightning payments denominated in bitcoin or USD in just minutes!",
+            "context": "Below main headline",
+            "purpose": "Reinforce key value proposition and speed"
+          },
+          {
+            "text": "Instant transactions – no waiting for funds to arrive",
+            "context": "Feature list item",
+            "purpose": "Highlight specific benefit"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Save 2-5% compared to credit cards"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-26-thispagedoesnotexist404test-page.png",
+      "label": "this-page-does-not-exist-404-test page",
+      "flowType": "Home",
+      "step": 26,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFA500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif 'Oh no...' in very large font at top left, massive '404' centered, regular weight",
+          "bodyStyle": "Regular sans-serif, 18px for error message",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Header Banner",
+            "description": "Full-width orange curved banner with 'Oh no...' text and Blink logo with navigation",
+            "position": "top",
+            "notable": "Playful design with curved bottom edge, maintains brand color and navigation"
+          },
+          {
+            "type": "Centered Error Content",
+            "description": "Large 404 error code with subtext",
+            "position": "center",
+            "notable": "Humorous copy adds personality to error state"
+          },
+          {
+            "type": "Action Button",
+            "description": "Black rounded pill button labeled 'Homepage'",
+            "position": "center below error message",
+            "notable": "High contrast dark button stands out against white background"
+          },
+          {
+            "type": "Footer",
+            "description": "Dark footer with Blink logo, Resources section, BLINK.SV info, and FAQ/Dev Docs links",
+            "position": "bottom",
+            "notable": "Curved top edge matches header design, contains helpful resource links"
+          }
+        ],
+        "spacing": "spacious",
+        "visualHierarchy": "Header dominates top, centered 404 draws eye to middle, button provides escape route, footer anchors bottom",
+        "innovativeElements": [
+          "Curved banner design creating dynamic visual movement",
+          "Humorous error message breaking fourth wall",
+          "Consistent curved design motif (top and bottom)"
+        ]
+      },
+      "flow": {
+        "screenType": "error",
+        "userIntent": "Recover from navigating to a non-existent page",
+        "entryPoints": [
+          "User typed invalid URL",
+          "Broken link from another page"
+        ],
+        "exitPoints": [
+          "Click 'Homepage' button to return to home",
+          "Click footer links to navigate to Resources or other sections"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Homepage Button",
+            "action": "Navigate back to homepage"
+          },
+          {
+            "element": "Top Navigation Menu",
+            "action": "Jump to Features, API, Blog, or Support"
+          },
+          {
+            "element": "Footer Links",
+            "action": "Navigate to Blink Brand, Onboarding resources, Features, FAQ, or Dev Docs"
+          },
+          {
+            "element": "Language Selector (EN)",
+            "action": "Switch language preference"
+          }
+        ],
+        "informationArchitecture": "Error message centers attention, multiple escape routes via navigation and footer",
+        "frictionPoints": [
+          "User landed on non-existent page unexpectedly"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Oh no...",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "Homepage",
+            "style": "primary-button",
+            "placement": "center below error code"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "This page is empty just like promises of altcoins.",
+            "context": "Below 404 error code",
+            "purpose": "Add humor and personality to error page, create memorable moment"
+          }
+        ],
+        "tone": "friendly-casual",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "none",
+        "errorMessages": [
+          "404 - This page is empty just like promises of altcoins."
+        ],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-settings-1-blog.png",
+      "label": "Blog",
+      "flowType": "Settings",
+      "step": 1,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FFA500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif 'Blog' in orange-background banner, 48px+",
+          "bodyStyle": "Regular sans-serif for blog post titles, 20px+",
+          "dataStyle": "Light gray text for dates and categories, 14px"
+        },
+        "components": [
+          {
+            "type": "Header Banner",
+            "description": "Orange curved banner with 'Blog' title and navigation",
+            "position": "top",
+            "notable": "Consistent design pattern with other pages, curved bottom edge"
+          },
+          {
+            "type": "Category Filter Pills",
+            "description": "Horizontal scrollable row of category tags (All, Blink News, Bitcoin Adoption, etc.)",
+            "position": "below header",
+            "notable": "First item 'All' has orange fill/active state, others have border outline"
+          },
+          {
+            "type": "Blog Card Grid",
+            "description": "3-column grid of blog post cards with image, title, date, and category",
+            "position": "main content area",
+            "notable": "Cards feature prominent featured images with orange diagonal shape overlay, visible blog metadata"
+          },
+          {
+            "type": "Blog Post Card",
+            "description": "Individual card with image, date, category tag, and title",
+            "position": "grid layout",
+            "notable": "Orange accent shape adds visual interest, image is dark/grayscale"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Large 'Blog' header draws attention, category filters guide discovery, blog cards arranged for visual scanning",
+        "innovativeElements": [
+          "Orange diagonal shape accent on blog images",
+          "Active state uses orange fill vs border outline for distinction",
+          "Dark/grayscale blog images with colored accent overlays"
+        ]
+      },
+      "flow": {
+        "screenType": "content-browse",
+        "userIntent": "Explore blog posts about Bitcoin, Lightning Network, and Blink news",
+        "entryPoints": [
+          "Click 'Blog' from top navigation",
+          "Direct link from homepage"
+        ],
+        "exitPoints": [
+          "Click blog card to read full article",
+          "Click category pill to filter posts",
+          "Navigate to other main sections via top nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Category Filter Pills",
+            "action": "Filter blog posts by selected category"
+          },
+          {
+            "element": "Blog Card",
+            "action": "Navigate to full blog post article"
+          },
+          {
+            "element": "Top Navigation",
+            "action": "Switch between main site sections (Features, API, Support)"
+          }
+        ],
+        "informationArchitecture": "Hierarchical: header > category filters > grid of cards organized by publication date",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blog",
+        "subheadline": null,
+        "ctas": [
+          {
+            "text": "All",
+            "style": "primary-button",
+            "placement": "filter pills row"
+          },
+          {
+            "text": "Blink News",
+            "style": "ghost-button",
+            "placement": "filter pills row"
+          },
+          {
+            "text": "Bitcoin Adoption",
+            "style": "ghost-button",
+            "placement": "filter pills row"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "February 8, 2026 | Adoption stories",
+            "context": "Below blog card image",
+            "purpose": "Show publication date and category"
+          },
+          {
+            "text": "January 30, 2026 | Bitcoin LN 101",
+            "context": "Below blog card image",
+            "purpose": "Show publication date and category"
+          },
+          {
+            "text": "January 24, 2026 | Adoption stories",
+            "context": "Below blog card image",
+            "purpose": "Show publication date and category"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "February 8, 2026",
+          "January 30, 2026",
+          "January 24, 2026"
+        ],
+        "trustSignals": [],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-22-join-the-beta.png",
+      "label": "Join the Beta",
+      "flowType": "Home",
+      "step": 22,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif headlines (Join the Beta, Download Blink Beta Release) with high contrast",
+          "bodyStyle": "Dark gray body text on white background, comfortable line spacing",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal nav with Blink logo, Features/API dropdowns, Blog, Support, search, and language selector",
+            "position": "top",
+            "notable": "Orange background continues from hero into nav area"
+          },
+          {
+            "type": "hero-section",
+            "description": "Large orange banner with rounded corner, contains headline and subheadline",
+            "position": "top-left",
+            "notable": "Organic rounded corner design creates motion"
+          },
+          {
+            "type": "phone-mockup",
+            "description": "iOS device showing Blink app interface with account balances and transaction history",
+            "position": "right",
+            "notable": "3D perspective mockup demonstrates actual app interface"
+          },
+          {
+            "type": "content-section",
+            "description": "Main article section with headings, body text, and bulleted links to distribution channels",
+            "position": "center-bottom",
+            "notable": "Three distribution links (Apple TestFlight, Google Play, GitHub) are underlined"
+          },
+          {
+            "type": "chat-section",
+            "description": "Secondary section promoting beta tester community on Mattermost",
+            "position": "bottom",
+            "notable": "Linked text 'Blink Beta Testers' highlighted as actionable"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange hero section dominates top half, drawing eye to value proposition; phone mockup provides visual proof; body content below contains detailed information and CTAs",
+        "innovativeElements": [
+          "Curved organic transition between orange hero and white content area",
+          "3D phone mockup integrated into marketing page showing real app interface",
+          "Strategic use of single accent color (orange) for brand consistency"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Understand Blink beta program and download the beta release",
+        "entryPoints": [
+          "Main website navigation",
+          "Direct link to beta program page",
+          "Marketing email or social promotion"
+        ],
+        "exitPoints": [
+          "Apple TestFlight link",
+          "Google Play Store link",
+          "GitHub download link",
+          "Mattermost beta testers chat",
+          "Back to Features/Blog via nav"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Apple TestFlight link",
+            "action": "Navigate to Apple TestFlight beta signup"
+          },
+          {
+            "element": "Google Play link",
+            "action": "Navigate to Google Play Store beta page"
+          },
+          {
+            "element": "GitHub link",
+            "action": "Navigate to GitHub repository for direct APK download"
+          },
+          {
+            "element": "Blink Beta Testers link",
+            "action": "Open Mattermost chat community for testers"
+          },
+          {
+            "element": "Galoy infrastructure link",
+            "action": "Open documentation about backend infrastructure"
+          }
+        ],
+        "informationArchitecture": "Value proposition first (hero), followed by download options, then community engagement opportunity, organized vertically for scanning",
+        "frictionPoints": [
+          "Multiple download paths may confuse which to choose",
+          "GitHub option may be intimidating for non-technical users",
+          "Requires leaving site to access beta (no in-page signup)"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Join the Beta",
+        "subheadline": "Get early access to new features and provide feedback to help improve the app!",
+        "ctas": [
+          {
+            "text": "Apple Testflight",
+            "style": "text-link",
+            "placement": "bullet list"
+          },
+          {
+            "text": "Google Play",
+            "style": "text-link",
+            "placement": "bullet list"
+          },
+          {
+            "text": "GitHub",
+            "style": "text-link",
+            "placement": "bullet list"
+          },
+          {
+            "text": "Blink Beta Testers",
+            "style": "text-link",
+            "placement": "inline in paragraph"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Get early access to new features and provide feedback to help improve the app!",
+            "context": "Hero subheadline",
+            "purpose": "Motivate users to join beta"
+          },
+          {
+            "text": "Blink is an open source custodial Bitcoin and Lightning wallet built on Galoy infrastructure.",
+            "context": "Body paragraph start",
+            "purpose": "Establish credibility and technical foundation"
+          },
+          {
+            "text": "The app is being improved continuously and new features are deployed nearly every week.",
+            "context": "Body paragraph",
+            "purpose": "Emphasize active development and value of testing"
+          },
+          {
+            "text": "You can get access to the beta through your native OS store or by download the latest beta release .apk from GitHub.",
+            "context": "Body paragraph",
+            "purpose": "Explain two paths to access beta"
+          },
+          {
+            "text": "Thanks for helping us test the app and squash the bugs!",
+            "context": "Final paragraph",
+            "purpose": "Build community and appreciation"
+          }
+        ],
+        "tone": "friendly-casual, appreciative, educational",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Open source wallet",
+          "Built on Galoy infrastructure",
+          "Active development (features deployed weekly)",
+          "Community testing channel on Mattermost",
+          "Available on official app stores"
+        ],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-23-blink-private.png",
+      "label": "Blink Private",
+      "flowType": "Home",
+      "step": 23,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#1A1A1E",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large black sans-serif headline (Blink Private) on left side",
+          "bodyStyle": "Dark gray subtext describing the service",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "navigation-bar",
+            "description": "Top horizontal nav with Blink logo, Features/API dropdowns, Blog, Support, search, and language selector",
+            "position": "top",
+            "notable": "Orange background"
+          },
+          {
+            "type": "hero-section",
+            "description": "Orange banner with headline and subheadline text",
+            "position": "left",
+            "notable": "Occupies approximately 40% of viewport height"
+          },
+          {
+            "type": "branded-card",
+            "description": "Dark navy card with Blink Private logo and branding on white/orange background",
+            "position": "right",
+            "notable": "Gold accent circle on logo, dramatic shadow effect"
+          },
+          {
+            "type": "feature-list",
+            "description": "Icon + text pairs describing service offerings",
+            "position": "bottom-left",
+            "notable": "Blink logo icon paired with 'Buy and Sell bitcoin' text"
+          },
+          {
+            "type": "section-heading",
+            "description": "Service Offering heading with bitcoin icon",
+            "position": "bottom-right",
+            "notable": "Indicates content continuation below"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section and brand card are primary focus; feature list and service offering section provide secondary information",
+        "innovativeElements": [
+          "Split-screen layout balancing text and branded mockup",
+          "Dramatic use of dark navy card against orange background for contrast",
+          "Subtle shadow effects on card for depth"
+        ]
+      },
+      "flow": {
+        "screenType": "landing",
+        "userIntent": "Learn about Blink Private OTC desk service for Bitcoin transactions",
+        "entryPoints": [
+          "Main website navigation",
+          "Features dropdown menu",
+          "Direct link from homepage"
+        ],
+        "exitPoints": [
+          "Scroll down to Service Offering section",
+          "Navigate to other Features via top nav",
+          "Return to main Features dropdown"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Features dropdown",
+            "action": "Reveal submenu of Blink features including Private option"
+          }
+        ],
+        "informationArchitecture": "Top-level overview with headline and subheadline, visual product representation, brief feature callout, with indication of more detail below",
+        "frictionPoints": [
+          "Incomplete view - 'Service Offering' section appears cut off, requiring scroll",
+          "No visible CTA button to engage with service",
+          "Limited detail about what OTC desk means or how to access it"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Blink Private",
+        "subheadline": "Blink's OTC (Over-the-Counter) Desk exclusively for Bitcoin transactions in El Salvador",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Buy and Sell bitcoin",
+            "context": "Feature callout with icon",
+            "purpose": "Summarize key service capability"
+          }
+        ],
+        "tone": "professional-technical, premium",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Exclusive service positioning",
+          "OTC desk professional structure",
+          "Regional focus (El Salvador)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-home-24-cookieoverlay-banner.png",
+      "label": "Cookie/overlay banner",
+      "flowType": "Home",
+      "step": 24,
+      "design": {
+        "layout": "sidebar-main",
+        "colorScheme": "light",
+        "primaryColors": [
+          "#000000",
+          "#4B5563",
+          "#FFFFFF",
+          "#5B63D4"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif (What is Blink?) with high contrast against white",
+          "bodyStyle": "Medium gray serif body text with comfortable line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "language-selector",
+            "description": "English dropdown with globe icon in left sidebar",
+            "position": "top-left",
+            "notable": "Indicates internationalization support"
+          },
+          {
+            "type": "sidebar-nav",
+            "description": "Vertical navigation menu with blue-linked category items",
+            "position": "left",
+            "notable": "12+ categories including Security Settings, Custody & Security, etc."
+          },
+          {
+            "type": "main-content-area",
+            "description": "Article format with headline, subheadline, body text, and bulleted features",
+            "position": "center",
+            "notable": "Scrollable content with linked terms"
+          },
+          {
+            "type": "search-bar",
+            "description": "Input field with 'Ask or search...' placeholder and keyboard hints (⌘ K)",
+            "position": "top-right",
+            "notable": "Command palette style keyboard shortcut"
+          },
+          {
+            "type": "cookie-consent-banner",
+            "description": "Modal overlay with cookie notice, privacy policy link, and Accept/Reject buttons",
+            "position": "bottom-right",
+            "notable": "Non-intrusive modal with clear action buttons"
+          },
+          {
+            "type": "utility-toolbar",
+            "description": "Theme toggle, fullscreen, dark mode, and other utilities",
+            "position": "bottom-right",
+            "notable": "Subtle controls for accessibility"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Left sidebar provides category navigation, main content dominates with clear hierarchy of headline → subheadline → body → bulleted features, cookie banner floats above with high z-index",
+        "innovativeElements": [
+          "Knowledge base format with sidebar navigation and deep linking",
+          "Command palette style search (⌘ K hint)",
+          "Contextual breadcrumb through FAQ structure",
+          "Theme and accessibility utilities in bottom right corner"
+        ]
+      },
+      "flow": {
+        "screenType": "data-browse",
+        "userIntent": "Find answers to Blink FAQ questions, learn about wallet features and usage",
+        "entryPoints": [
+          "Direct FAQ link from main site",
+          "Search from top nav",
+          "Sidebar category selection"
+        ],
+        "exitPoints": [
+          "Click sidebar categories to navigate FAQ sections",
+          "Use search bar to query specific topics",
+          "Click linked terms (Blink, stableseats.com, GitHub) to external resources",
+          "Accept/Reject cookie notice"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Language selector",
+            "action": "Change FAQ language"
+          },
+          {
+            "element": "Sidebar categories",
+            "action": "Navigate to different FAQ sections"
+          },
+          {
+            "element": "Search bar (⌘ K)",
+            "action": "Search FAQ content"
+          },
+          {
+            "element": "Inline links (Blink, stableseats.com, GitHub)",
+            "action": "Navigate to external documentation or resources"
+          },
+          {
+            "element": "Accept button",
+            "action": "Accept cookie policy"
+          },
+          {
+            "element": "Reject button",
+            "action": "Reject non-essential cookies"
+          },
+          {
+            "element": "Theme toggle",
+            "action": "Switch between light and dark mode"
+          }
+        ],
+        "informationArchitecture": "Hierarchical FAQ organized by category in sidebar; main content area shows detailed article for selected category; search enables cross-category discovery",
+        "frictionPoints": [
+          "Cookie banner partially blocks content in bottom-right area",
+          "Multiple external links require opening new tabs (stableseats.com, GitHub)",
+          "Deep FAQ content may require scrolling to find specific answers"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "What is Blink?",
+        "subheadline": "The everyday Bitcoin wallet born in El Zonte",
+        "ctas": [
+          {
+            "text": "Copy",
+            "style": "button",
+            "placement": "top-right of headline"
+          },
+          {
+            "text": "Accept",
+            "style": "primary-button",
+            "placement": "cookie consent banner"
+          },
+          {
+            "text": "Reject",
+            "style": "secondary-button",
+            "placement": "cookie consent banner"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "The everyday Bitcoin wallet born in El Zonte",
+            "context": "Subheadline",
+            "purpose": "Establish origin story and positioning"
+          },
+          {
+            "text": "(formerly Bitcoin Beach Wallet)",
+            "context": "Parenthetical in body",
+            "purpose": "Clarify previous product name for existing users"
+          },
+          {
+            "text": "Great for onboarding:",
+            "context": "Bullet point header",
+            "purpose": "Introduce feature category"
+          },
+          {
+            "text": "Blink is great for onboarding with easy setup and educational lessons, making it the perfect wallet to recommend to friends, family, or anyone new to Bitcoin.",
+            "context": "Bullet point body",
+            "purpose": "Explain ease of use value proposition"
+          },
+          {
+            "text": "This site uses cookies to deliver its service and to analyze traffic. By browsing this site, you accept the privacy policy.",
+            "context": "Cookie consent banner",
+            "purpose": "Explain cookie usage and link to privacy policy"
+          }
+        ],
+        "tone": "educational-friendly, professional-technical",
+        "dataFormatting": [],
+        "trustSignals": [
+          "Blink formerly Bitcoin Beach Wallet (established product)",
+          "Open source FOSS (Free Open Source Software)",
+          "Built on Lightning development platform by Galoy",
+          "Multi-language support (30+ currencies, multiple languages)",
+          "Managed Lightning liquidity by dedicated team",
+          "Multiple payment methods (Lightning Address, PoS, invoices, QR codes, on-chain)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-settings-5-privacy-policy.png",
+      "label": "Privacy policy",
+      "flowType": "Settings",
+      "step": 5,
+      "design": {
+        "layout": "full-width",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large, bold black sans-serif (40-48px) on orange hero section",
+          "bodyStyle": "Regular black sans-serif on white background, ~16px line height",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation bar",
+            "description": "Horizontal white navigation with Blink logo, Features/API dropdowns, Blog, Support, search, language selector (EN)",
+            "position": "Top of page",
+            "notable": "White text on orange gradient background with rounded corner treatment"
+          },
+          {
+            "type": "Hero section",
+            "description": "Large orange branded container with heading and date",
+            "position": "Full width below nav",
+            "notable": "Diagonal curved edge on right side creating visual separation from dark background"
+          },
+          {
+            "type": "Content body",
+            "description": "Numbered list sections with bolded section headings",
+            "position": "Below hero, white background",
+            "notable": "Clean paragraph formatting with numbered data collection items"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Hero section dominates top with orange branding, heading is primary focal point, body text structured with section headings and numbered lists for scanability",
+        "innovativeElements": [
+          "Diagonal curved edge on hero section creating distinctive branded shape",
+          "Orange-to-black color contrast for visual impact"
+        ]
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "User reviewing privacy policy compliance and data handling practices",
+        "entryPoints": [
+          "Settings menu navigation",
+          "Footer legal links",
+          "Regulatory compliance requirement"
+        ],
+        "exitPoints": [
+          "Back to Settings",
+          "Navigation to other policy pages (Terms, Support)",
+          "Search function to find specific policies"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Features dropdown",
+            "action": "Expands to show product features"
+          },
+          {
+            "element": "API dropdown",
+            "action": "Expands to show API documentation"
+          },
+          {
+            "element": "Search icon",
+            "action": "Opens search functionality"
+          },
+          {
+            "element": "Language selector (EN)",
+            "action": "Changes document language"
+          }
+        ],
+        "informationArchitecture": "Hierarchical structure: introductory commitment statement → section headings (e.g., 'Data collection and processing') → detailed explanations → numbered categorized lists",
+        "frictionPoints": [
+          "Long-form text may be intimidating without table of contents or quick navigation anchors",
+          "No skip-to-section links visible for different policy topics"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Privacy policy",
+        "subheadline": "October 31 2025",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Blink El Salvador S.A. of C.V. is committed to protecting the privacy and security of our user's personal information.",
+            "context": "Opening paragraph",
+            "purpose": "Establishes trust and regulatory commitment"
+          },
+          {
+            "text": "We understand the importance of balancing compliance with AML/CFT regulations and safeguarding user privacy.",
+            "context": "Opening paragraph continued",
+            "purpose": "Signals regulatory awareness and dual compliance"
+          }
+        ],
+        "tone": "professional-technical",
+        "dataFormatting": [
+          "Numbered lists (1-4) for data types",
+          "Parenthetical examples in parentheses (e.g., name, date of birth, identification documents)"
+        ],
+        "trustSignals": [
+          "AML/CFT compliance mentioned",
+          "Legal entity identification (Blink El Salvador S.A. of C.V.)",
+          "Dated policy (October 31 2025) indicating current version"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-settings-2-support.png",
+      "label": "Support",
+      "flowType": "Settings",
+      "step": 2,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large sans-serif, bold black text on orange background (Support heading), ~48px",
+          "bodyStyle": "Medium sans-serif, dark gray on white background, ~16px",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Orange banner with Blink logo, Features/API/Blog/Support menu items, search and language selector",
+            "position": "top",
+            "notable": "Bold orange background creates strong visual anchor"
+          },
+          {
+            "type": "Link list",
+            "description": "Three vertically stacked text links with orange icons (FAQ site, Support channels, Status page)",
+            "position": "left-center",
+            "notable": "Simple, scannable format with icon-text pairing for quick navigation"
+          },
+          {
+            "type": "Embedded browser mockup",
+            "description": "Realistic macOS browser window showing Blink FAQ page with 'What is Stableseats?' question",
+            "position": "center-bottom",
+            "notable": "Contextual preview of support resource destination"
+          },
+          {
+            "type": "Section heading",
+            "description": "'Frequently Asked Questions' with icon, leading to 'Blink FAQ site' subheading",
+            "position": "right-bottom",
+            "notable": "Consistent icon usage and clear hierarchy"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange banner dominates top third; main support heading is left-aligned and prominent; three quick links create clear secondary options; browser mockup draws eye to right side showing expected outcome",
+        "innovativeElements": [
+          "Embedded browser window mockup providing contextual preview of support destination",
+          "Split-screen layout blending navigation and content preview"
+        ]
+      },
+      "flow": {
+        "screenType": "settings-page / help-hub",
+        "userIntent": "Find support resources and get help with Blink wallet usage",
+        "entryPoints": [
+          "Settings menu from main wallet interface",
+          "Support link in header navigation"
+        ],
+        "exitPoints": [
+          "FAQ site (external link)",
+          "Support channels page",
+          "Status page",
+          "Back to main navigation"
+        ],
+        "interactiveElements": [
+          {
+            "element": "FAQ site link",
+            "action": "Navigate to Blink FAQ documentation site"
+          },
+          {
+            "element": "Support channels link",
+            "action": "Navigate to available support contact methods"
+          },
+          {
+            "element": "Status page link",
+            "action": "Navigate to system status/uptime page"
+          }
+        ],
+        "informationArchitecture": "Hub-and-spoke pattern: main support page offers three clear paths to different support resources (self-service, direct contact, status monitoring)",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Support",
+        "subheadline": "Get your questions answered and learn how to send and receive bitcoin with Blink.",
+        "ctas": [
+          {
+            "text": "FAQ site",
+            "style": "text-link",
+            "placement": "left side menu"
+          },
+          {
+            "text": "Support channels",
+            "style": "text-link",
+            "placement": "left side menu"
+          },
+          {
+            "text": "Status page",
+            "style": "text-link",
+            "placement": "left side menu"
+          }
+        ],
+        "microcopy": [
+          {
+            "text": "Frequently Asked Questions",
+            "context": "Above 'Blink FAQ site' heading on right side",
+            "purpose": "Section label and expectation-setting"
+          }
+        ],
+        "tone": "professional-friendly, educational",
+        "dataFormatting": [],
+        "trustSignals": [],
+        "jargonLevel": "beginner",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-settings-3-about.png",
+      "label": "About",
+      "flowType": "Settings",
+      "step": 3,
+      "design": {
+        "layout": "split-panel",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Large bold sans-serif on orange background (~48px), black text",
+          "bodyStyle": "Medium sans-serif, black text on white (~16px), with colored accents for brand mentions",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Orange banner with Blink logo and main navigation",
+            "position": "top",
+            "notable": "Consistent branding across all settings pages"
+          },
+          {
+            "type": "Hero text block",
+            "description": "About headline and description paragraph on orange background",
+            "position": "left-top",
+            "notable": "Compelling origin story hook within color-blocked section"
+          },
+          {
+            "type": "Hero image",
+            "description": "Scenic coastal photograph with large Bitcoin symbol overlay in orange",
+            "position": "right-top",
+            "notable": "Visual metaphor connecting Bitcoin to El Zonte location"
+          },
+          {
+            "type": "Social proof card",
+            "description": "Twitter/X post from Galoy founder with verified badge, showing real-world bitcoin transaction use case",
+            "position": "left-center",
+            "notable": "Embeds authentic social validation and community narrative"
+          },
+          {
+            "type": "Story section",
+            "description": "'Born in El Zonte' icon label with 'The origin story' heading and detailed narrative text",
+            "position": "right-center",
+            "notable": "Structured storytelling about founding and mission"
+          },
+          {
+            "type": "Photo embedded in narrative",
+            "description": "Real photograph showing person in El Zonte wearing mask",
+            "position": "left-bottom",
+            "notable": "Humanizes the origin story with authentic imagery"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange banner at top; hero image draws eye right; story narrative flows vertically with photo integration; social proof provides mid-page engagement",
+        "innovativeElements": [
+          "Integration of Twitter/X embeds as trust and authenticity signals",
+          "Pairing of scenic coastal imagery with Bitcoin metaphor",
+          "Photo-centric storytelling approach blending text and authentic imagery"
+        ]
+      },
+      "flow": {
+        "screenType": "about-page / company-info",
+        "userIntent": "Learn about Blink wallet, its history, mission, and the team behind it",
+        "entryPoints": [
+          "Settings menu",
+          "About link in footer or navigation"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Navigation to other pages via header",
+          "Implied: clicking on social content or external links"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Twitter/X embed",
+            "action": "View original tweet or navigate to Galoy profile"
+          },
+          {
+            "element": "Underlined 'Galoy' link",
+            "action": "Navigate to external Galoy information"
+          },
+          {
+            "element": "Navigation header",
+            "action": "Return to main site areas or other settings"
+          }
+        ],
+        "informationArchitecture": "Linear storytelling: company identity → real-world validation → detailed origin narrative with supporting imagery",
+        "frictionPoints": [],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "About",
+        "subheadline": "Blink (formerly Bitcoin Beach Wallet) launched in 2020 in El Zonte. Now, it's the favorite Lightning wallet of bitcoiners worldwide.",
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "Born in El Zonte",
+            "context": "Icon-label above narrative section",
+            "purpose": "Section identifier and location anchor"
+          },
+          {
+            "text": "The origin story",
+            "context": "Heading above detailed narrative",
+            "purpose": "Introduce company origin narrative"
+          }
+        ],
+        "tone": "professional-friendly, narrative-driven, community-focused",
+        "dataFormatting": [
+          "2020 (founding year)",
+          "El Zonte (geographic identifier)"
+        ],
+        "trustSignals": [
+          "Verified Twitter account (@GaloyMoney with blue checkmark)",
+          "Real-world transaction example (#bitcoin emoji usage)",
+          "Founder naming (Nicolas Burtey)"
+        ],
+        "jargonLevel": "intermediate",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    },
+    {
+      "image": "/screenshots/blink-wallet-settings-4-terms-conditions.png",
+      "label": "Terms & Conditions",
+      "flowType": "Settings",
+      "step": 4,
+      "design": {
+        "layout": "stacked",
+        "colorScheme": "mixed",
+        "primaryColors": [
+          "#FF9500",
+          "#000000",
+          "#FFFFFF"
+        ],
+        "typography": {
+          "headingStyle": "Extra-large bold sans-serif on orange background (~56px), black text",
+          "bodyStyle": "Regular sans-serif, dark gray/black on white, ~16px line-height for readability of legal text",
+          "dataStyle": null
+        },
+        "components": [
+          {
+            "type": "Navigation header",
+            "description": "Orange banner with Blink logo and main navigation menu",
+            "position": "top",
+            "notable": "Consistent header across all settings pages"
+          },
+          {
+            "type": "Page header section",
+            "description": "Orange color-blocked area with 'Terms & Conditions' heading and effective date",
+            "position": "top",
+            "notable": "Clear title with version date (April 25, 2024) for legal clarity"
+          },
+          {
+            "type": "Body text blocks",
+            "description": "Multiple paragraphs of legal terms in justified alignment with standard formatting",
+            "position": "main content area",
+            "notable": "Dense legal text presented in readable paragraph blocks"
+          }
+        ],
+        "spacing": "comfortable",
+        "visualHierarchy": "Orange banner provides visual separation for header; large heading establishes page identity; body text flows in logical reading order; date provides legal versioning context",
+        "innovativeElements": []
+      },
+      "flow": {
+        "screenType": "legal-document",
+        "userIntent": "Review terms and conditions; understand legal obligations and rights as a Blink user",
+        "entryPoints": [
+          "Settings menu",
+          "Footer link",
+          "During onboarding/account creation"
+        ],
+        "exitPoints": [
+          "Back to settings",
+          "Navigation header",
+          "Scroll to bottom to view additional terms"
+        ],
+        "interactiveElements": [
+          {
+            "element": "Navigation menu",
+            "action": "Navigate to other site sections"
+          },
+          {
+            "element": "Document scroll",
+            "action": "Read full terms (implied continuation below fold)"
+          }
+        ],
+        "informationArchitecture": "Standard legal document: header with version date, followed by sequential paragraphs covering entity information, user agreement, obligations, and data usage",
+        "frictionPoints": [
+          "Dense legal text requires significant time investment to read thoroughly",
+          "Multiple embedded legal identifiers (Tax ID, registration codes) may overwhelm non-legal readers",
+          "Long paragraphs with complex sentences may impede comprehension"
+        ],
+        "progressIndicators": []
+      },
+      "copy": {
+        "headline": "Terms & Conditions",
+        "subheadline": null,
+        "ctas": [],
+        "microcopy": [
+          {
+            "text": "April 25 2024",
+            "context": "Below main heading",
+            "purpose": "Version date for legal document versioning"
+          }
+        ],
+        "tone": "professional-technical, formal-legal",
+        "dataFormatting": [
+          "Entity name: Blink El Salvador, SOCIEDAD ANONIMA DE CAPITAL VARIABLE",
+          "Tax ID: 0614-221021-101-3",
+          "Registration code: 6197cd5706ee0018653e0076",
+          "Regulatory framework: Central Reserve Bank and Superintendency of the Financial System of El Salvador"
+        ],
+        "trustSignals": [
+          "Specific corporate registration and Tax ID provided",
+          "Explicit regulatory oversight mentioned (Central Reserve Bank, Financial System Superintendency)",
+          "Clear legal entity status and jurisdiction (El Salvador)",
+          "Detailed service provider classification"
+        ],
+        "jargonLevel": "expert",
+        "errorMessages": [],
+        "emptyStateText": []
+      }
+    }
+  ]
+}
