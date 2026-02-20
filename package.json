@@ -25,6 +25,12 @@
     "add-app": "node scripts/add-app.mjs",
     "batch-crawl": "node scripts/batch-crawl.mjs",
     "recrawl": "node scripts/recrawl-stale.mjs",
+    "extract": "node scripts/extract.mjs",
+    "extract:all": "node scripts/extract.mjs --all",
+    "synthesize": "node scripts/synthesize.mjs",
+    "package-intel": "node scripts/package.mjs",
+    "intel": "node scripts/extract.mjs --all && node scripts/synthesize.mjs && node scripts/package.mjs",
+    "generate-insights": "node scripts/generate-insights.mjs",
     "deploy": "NEXT_PUBLIC_SCREENSHOT_CDN=https://darkscreen-r2-proxy.fernandonikolic.workers.dev npm run build && node scripts/clean-out-screenshots.mjs && npx wrangler pages deploy out --project-name darkscreen --commit-dirty=true"
   },
   "dependencies": {
@@ -39,6 +45,7 @@
     "firebase": "12.9.0",
     "fuse.js": "7.1.0",
     "jszip": "3.10.1",
+    "nanoid": "5.1.6",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",

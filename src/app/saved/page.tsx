@@ -10,6 +10,7 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { useAuth } from "@/contexts/AuthContext";
 import { useBookmarks } from "@/contexts/BookmarksContext";
 import { useCollections, type Collection } from "@/contexts/CollectionsContext";
+import { ShareCollectionButton } from "@/components/ShareCollectionButton";
 import Link from "next/link";
 
 type Tab = "bookmarks" | "collections";
@@ -282,19 +283,25 @@ function CollectionCard({
       {expanded && (
         <div className="border-t border-dark-border">
           {/* Actions */}
-          <div className="flex gap-3 px-5 py-3">
+          <div className="flex items-center gap-3 px-5 py-3">
             <button
               onClick={onStartEdit}
               className="text-[11px] text-text-tertiary transition-colors hover:text-text-secondary"
             >
               Rename
             </button>
+            <ShareCollectionButton collectionId={col.id} />
             <button
               onClick={onDelete}
               className="text-[11px] text-text-tertiary transition-colors hover:text-red-400"
             >
               Delete
             </button>
+            {col.isPublic && (
+              <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2 py-0.5 text-[9px] font-medium text-cyan-400">
+                Public
+              </span>
+            )}
           </div>
 
           {/* Screens grid */}

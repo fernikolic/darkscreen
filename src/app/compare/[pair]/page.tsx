@@ -101,6 +101,14 @@ export default async function ComparePage({ params }: PageProps) {
             ? `, while ${appB.name} supports ${appB.chains.join(", ")}`
             : `, and ${appB.name} supports the same chain${appB.chains.length !== 1 ? "s" : ""}`}.
         </p>
+        {sharedFlows.length > 0 && (
+          <Link
+            href={`/compare-flows?apps=${appA.slug},${appB.slug}&flow=${sharedFlows[0]}`}
+            className="mt-4 inline-flex items-center gap-2 text-[13px] text-text-secondary transition-colors hover:text-white"
+          >
+            Compare their flows step by step &rarr;
+          </Link>
+        )}
       </div>
 
       {/* Quick stats comparison */}

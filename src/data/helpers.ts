@@ -1,4 +1,5 @@
 import { apps, type AppScreen, type AppChange, type ChangeType, type FlowType, type AppCategory, type ChainType, type IntelLayer, type CryptoApp, type DiffChange, type CopySnapshot, type CopyChange, type TechStackEntry, type PerformanceMetrics, type GranularElementTag, type DetectedElement, INTEL_LAYERS } from "./apps";
+import { insightsBySlug, type Insight } from "./insights";
 import elementsData from "./elements.json";
 import { autoChangesBySlug } from "./auto-changes";
 import { copyDataBySlug } from "./copy-tracking";
@@ -280,4 +281,141 @@ export function getAllElements(): ElementTypeInfo[] {
   }
 
   return result.sort((a, b) => b.count - a.count);
+}
+
+// ── Change helpers (weekly grouping, stats) ──────────────────────────
+
+function getISOWeekKey(dateStr: string): string {
+  const d = new Date(dateStr);
+  const jan4 = new Date(d.getFullYear(), 0, 4);
+  const dayOfYear = Math.floor((d.getTime() - jan4.getTime()) / 86400000) + 4;
+  const week = Math.ceil(dayOfYear / 7);
+  return `${d.getFullYear()}-W${String(week).padStart(2, "0")}`;
+}
+
+function getWeekLabel(weekKey: string): string {
+  const [yearStr, weekStr] = weekKey.split("-W");
+  const year = parseInt(yearStr, 10);
+  const week = parseInt(weekStr, 10);
+  const jan4 = new Date(year, 0, 4);
+  const dayOffset = (week - 1) * 7 - ((jan4.getDay() + 6) % 7);
+  const start = new Date(year, 0, 4 + dayOffset);
+  const end = new Date(start);
+  end.setDate(end.getDate() + 6);
+  const fmt = (d: Date) => d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  return `${fmt(start)} – ${fmt(end)}, ${year}`;
+}
+
+export interface WeeklyChangeGroup {
+  weekKey: string;
+  weekLabel: string;
+  changes: (EnrichedChange | EnrichedAutoChange)[];
+}
+
+export function getChangesByWeek(): WeeklyChangeGroup[] {
+  const all = getAllChangesWithAuto();
+  const weekMap = new Map<string, (EnrichedChange | EnrichedAutoChange)[]>();
+
+  for (const change of all) {
+    const key = getISOWeekKey(change.date);
+    if (!weekMap.has(key)) weekMap.set(key, []);
+    weekMap.get(key)!.push(change);
+  }
+
+  return Array.from(weekMap.entries())
+    .sort(([a], [b]) => b.localeCompare(a))
+    .map(([weekKey, changes]) => ({
+      weekKey,
+      weekLabel: getWeekLabel(weekKey),
+      changes,
+    }));
+}
+
+export function getRecentChanges(n: number): (EnrichedChange | EnrichedAutoChange)[] {
+  return getAllChangesWithAuto().slice(0, n);
+}
+
+export function getChangeStats(): {
+  totalChanges: number;
+  thisWeekCount: number;
+  appsWithChanges: number;
+  byType: Record<string, number>;
+} {
+  const all = getAllChangesWithAuto();
+  const currentWeek = getISOWeekKey(new Date().toISOString());
+  const thisWeek = all.filter((c) => getISOWeekKey(c.date) === currentWeek);
+  const apps = new Set(all.map((c) => c.appSlug));
+  const byType: Record<string, number> = {};
+  for (const c of all) {
+    byType[c.type] = (byType[c.type] || 0) + 1;
+  }
+  return { totalChanges: all.length, thisWeekCount: thisWeek.length, appsWithChanges: apps.size, byType };
+}
+
+// ── Screen helpers for patterns ─────────────────────────────────────
+
+export function getScreensByGranularTag(tag: GranularElementTag): EnrichedScreen[] {
+  const allScreens = getAllScreens();
+  const screensByImage = new Map<string, EnrichedScreen>();
+  for (const s of allScreens) {
+    if (s.image) screensByImage.set(s.image, s);
+  }
+
+  const result: EnrichedScreen[] = [];
+  for (const [imagePath, elements] of Object.entries(elementsMap)) {
+    if (!Array.isArray(elements)) continue;
+    const hasTag = elements.some((el) => el.tag === tag);
+    if (!hasTag) continue;
+    const screen = screensByImage.get(imagePath);
+    if (screen) result.push(screen);
+  }
+  return result;
+}
+
+export function getScreensMatchingAnyTag(tags: GranularElementTag[]): EnrichedScreen[] {
+  const allScreens = getAllScreens();
+  const screensByImage = new Map<string, EnrichedScreen>();
+  for (const s of allScreens) {
+    if (s.image) screensByImage.set(s.image, s);
+  }
+
+  const tagSet = new Set(tags);
+  const result = new Map<string, EnrichedScreen>();
+
+  for (const [imagePath, elements] of Object.entries(elementsMap)) {
+    if (!Array.isArray(elements)) continue;
+    const hasTag = elements.some((el) => tagSet.has(el.tag));
+    if (!hasTag) continue;
+    const screen = screensByImage.get(imagePath);
+    if (screen && !result.has(imagePath)) result.set(imagePath, screen);
+  }
+  return Array.from(result.values());
+}
+
+// ── Flow helpers for comparison ─────────────────────────────────────
+
+export function getFlowsForApps(slugs: string[], flowType: FlowType): AppFlow[] {
+  return getAllFlows().filter(
+    (f) => slugs.includes(f.appSlug) && f.flowType === flowType
+  );
+}
+
+export function getMaxStepCount(flows: AppFlow[]): number {
+  return Math.max(0, ...flows.map((f) => f.count));
+}
+
+// ── Insights helpers ────────────────────────────────────────────────
+
+export function getAllInsights(): Insight[] {
+  const all: Insight[] = [];
+  for (const insights of Object.values(insightsBySlug)) {
+    all.push(...insights);
+  }
+  return all.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getRecentInsights(days: number): Insight[] {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - days);
+  return getAllInsights().filter((i) => new Date(i.date) >= cutoff);
 }

@@ -94,6 +94,12 @@ export default async function FlowPage({ params }: PageProps) {
             </span>
           </div>
         </div>
+        <Link
+          href={`/compare-flows?flow=${flowName}`}
+          className="mt-4 inline-flex items-center gap-2 text-[13px] text-text-secondary transition-colors hover:text-white"
+        >
+          Compare this flow across apps &rarr;
+        </Link>
       </div>
 
       {/* Each app's implementation of this flow */}

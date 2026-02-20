@@ -6,6 +6,7 @@ import { Pricing } from "@/components/Pricing";
 import { AISkillTeaser } from "@/components/AISkillTeaser";
 import { IntelLayerShowcase } from "@/components/IntelLayerShowcase";
 import { SponsorBanner } from "@/components/SponsorBanner";
+import { ChangeHeroBanner } from "@/components/ChangeHeroBanner";
 import { FAQJsonLd } from "@/components/JsonLd";
 import { HOMEPAGE_FAQS } from "@/data/seo";
 import Link from "next/link";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ChangeHeroBanner />
       <ValueProps />
       <IntelLayerShowcase />
       <div className="mx-auto max-w-7xl px-6 py-8">

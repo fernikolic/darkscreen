@@ -16,6 +16,7 @@ import {
   GRANULAR_ELEMENT_TAGS,
 } from "./apps";
 import { getAllScreens, type EnrichedScreen } from "./helpers";
+import { getAllPatterns } from "./patterns";
 
 // ── Slug helpers ──────────────────────────────────────────────
 
@@ -626,10 +627,24 @@ export function getAllSeoRoutes(): string[] {
     routes.push(`/style/${toSlug(style)}`);
   }
 
-  // Pattern pages
+  // Pattern pages (category-flow)
   for (const page of getPatternPages()) {
     routes.push(`/patterns/${page.slug}`);
   }
+
+  // UX pattern pages
+  for (const pattern of getAllPatterns()) {
+    routes.push(`/patterns/${pattern.slug}`);
+  }
+
+  // Compare flows tool
+  routes.push("/compare-flows");
+
+  // Insights page
+  routes.push("/insights");
+
+  // Shared collections page
+  routes.push("/shared");
 
   // Section pages
   for (const section of SECTION_TYPES) {

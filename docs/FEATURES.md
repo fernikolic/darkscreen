@@ -1,6 +1,6 @@
 # Darkscreen Feature Documentation
 
-This document covers the competitive feature set implemented across 5 phases — from the OCR search pipeline to the education pricing tier.
+This document covers the competitive feature set implemented across 6 phases — from the OCR search pipeline to the intelligence layer.
 
 ---
 
@@ -11,11 +11,12 @@ This document covers the competitive feature set implemented across 5 phases —
 3. [Phase 3: Rich Media](#phase-3-rich-media)
 4. [Phase 4: Platform Expansion + Export](#phase-4-platform-expansion--export)
 5. [Phase 5: Polish](#phase-5-polish)
-6. [New Files Reference](#new-files-reference)
-7. [Modified Files Reference](#modified-files-reference)
-8. [Pipeline Commands](#pipeline-commands)
-9. [Dependencies Added](#dependencies-added)
-10. [Estimated API Costs](#estimated-api-costs)
+6. [Phase 6: Intelligence Layer](#phase-6-intelligence-layer)
+7. [New Files Reference](#new-files-reference)
+8. [Modified Files Reference](#modified-files-reference)
+9. [Pipeline Commands](#pipeline-commands)
+10. [Dependencies Added](#dependencies-added)
+11. [Estimated API Costs](#estimated-api-costs)
 
 ---
 
@@ -456,6 +457,426 @@ Updated plan detection logic:
 
 ---
 
+## Phase 6: Intelligence Layer
+
+Six features that transform Darkscreen from a screenshot reference library into a product intelligence tool — showing what changed, why it matters, and what patterns to steal.
+
+### 6A. Enhanced Change Detection & Visual Diffs
+
+**Purpose:** Transform the flat `/changes` timeline into a rich, weekly-grouped change feed with before/after thumbnails and diff percentages.
+
+#### Helpers: `src/data/helpers.ts`
+
+New functions for time-based change grouping:
+
+```typescript
+getISOWeekKey(dateStr: string): string       // "2026-W08"
+getWeekLabel(weekKey: string): string         // "Feb 16 – Feb 22, 2026"
+getChangesByWeek(): WeeklyChangeGroup[]       // all changes grouped by ISO week
+getRecentChanges(n: number): (EnrichedChange | EnrichedAutoChange)[]
+getChangeStats(): { total, thisWeek, uniqueApps, autoDetected }
+```
+
+`WeeklyChangeGroup` contains the week key, label, and an array of merged manual + auto-detected changes sorted by date.
+
+#### Component: `src/components/ChangeCard.tsx`
+
+Rich change entry replacing the plain list items on `/changes`:
+- Timeline dot indicator with connecting line
+- Change type badge (Redesign, New Feature, etc.) + "Auto" source badge
+- Diff percentage when available (`diffPercent > 0`)
+- Expandable before/after image comparison (click to toggle)
+- Links to app detail page
+
+#### Component: `src/components/WeeklyDigest.tsx`
+
+Collapsible weekly sections wrapping `ChangeCard` entries:
+- Week date range header with chevron toggle
+- Summary stats: total changes, type breakdown counts, unique apps
+- First (most recent) week expanded by default
+
+#### Component: `src/components/ChangeHeroBanner.tsx`
+
+Homepage banner shown after `<Hero />`:
+- "X changes detected this week" headline
+- Up to 4 recent change thumbnails as preview grid
+- "View all changes →" link to `/changes`
+- Only renders when there are recent changes
+
+#### Page Rewrite: `src/app/changes/page.tsx`
+
+Two view modes toggled via pills:
+- **Weekly view** — changes grouped into collapsible `WeeklyDigest` sections
+- **Timeline view** — flat chronological list using `ChangeCard` components
+
+Both views share the same filter pipeline (search, category, change type, source).
+
+---
+
+### 6B. Flow-Level Comparison
+
+**Purpose:** Side-by-side flow comparison — select 2-4 apps and a flow type, compare how each implements the same user journey.
+
+#### Helpers: `src/data/helpers.ts`
+
+```typescript
+getFlowsForApps(slugs: string[], flowType: FlowType): Map<string, EnrichedScreen[]>
+getMaxStepCount(flowMap: Map<string, EnrichedScreen[]>): number
+```
+
+#### Component: `src/components/FlowComparisonTool.tsx`
+
+Core interactive tool (~350 lines):
+- **Flow type selector** — pills for all `FlowType` values
+- **App selector** — search input with dropdown, max 4 apps, removable chips
+- **Two view modes:**
+  - *Side-by-side* — `FlowComparisonColumn` per app, vertically scrollable
+  - *Step-by-step* — `StepComparisonRow` per step number, apps in columns
+- **URL state** — `?apps=aave,uniswap&flow=Swap` for shareable links via `router.replace()`
+
+#### Component: `src/components/FlowComparisonColumn.tsx`
+
+Single app's flow rendered as a vertical column:
+- Sticky header with app logo + name
+- Screens listed top-to-bottom with step labels
+- Scroll independently per column
+
+#### Component: `src/components/StepComparisonRow.tsx`
+
+One step across all selected apps in a horizontal row:
+- Step number label on the left
+- One cell per app — screenshot + label, or placeholder if that app has fewer steps
+
+#### Page: `src/app/compare-flows/page.tsx`
+
+Server wrapper with metadata. Wrapped in `<Suspense>` (required for `useSearchParams` in App Router).
+
+#### Cross-links
+
+- `src/app/compare/[pair]/page.tsx` — "Compare their flows step by step →" link when shared flows exist
+- `src/app/flows/[flow]/page.tsx` — "Compare this flow across apps →" link
+
+---
+
+### 6C. Pattern Search (Unified Pattern Library)
+
+**Purpose:** Unify fragmented pattern pages (`/design/[tag]`, `/elements/[element]`, `/patterns/[slug]`) into a searchable visual library of crypto-specific UX patterns.
+
+#### Data: `src/data/patterns.ts`
+
+18 crypto-specific UX pattern definitions:
+
+```typescript
+type PatternCategory = "UX Pattern" | "UI Element" | "Flow Pattern" | "Crypto-Specific";
+
+interface PatternDefinition {
+  slug: string;
+  name: string;
+  description: string;
+  category: PatternCategory;
+  tags: GranularElementTag[];      // element tags that match this pattern
+  labelPatterns?: RegExp[];         // screen label regex matches
+  flowTypes?: FlowType[];           // associated flow types
+}
+```
+
+Patterns include: progressive-disclosure, skeleton-loading, gas-fee-breakdown, slippage-warning, token-selector, wallet-connection, price-impact-display, fee-transparency, transaction-confirmation, address-input, portfolio-overview, staking-rewards, swap-form, order-book, network-selector, progress-stepper, empty-state, notification-system.
+
+Key functions:
+```typescript
+getAllPatterns(): PatternDefinition[]
+getPatternBySlug(slug): PatternDefinition | undefined
+getPatternWithScreens(slug): { pattern, screens, appCount }
+getAllPatternsWithScreens(): PatternWithScreens[]
+searchPatterns(query): PatternWithScreens[]
+```
+
+#### Helpers: `src/data/helpers.ts`
+
+```typescript
+getScreensByGranularTag(tag: GranularElementTag): EnrichedScreen[]
+getScreensMatchingAnyTag(tags: GranularElementTag[]): EnrichedScreen[]
+```
+
+#### Component: `src/components/PatternLibrary.tsx`
+
+Searchable grid with:
+- Real-time text search across pattern names, descriptions, and tags
+- Category pill filters: All | UX Pattern | UI Element | Flow Pattern | Crypto-Specific
+- Results as `PatternCard` grid
+
+#### Component: `src/components/PatternCard.tsx`
+
+Card with:
+- 2×2 thumbnail preview grid from matched screens
+- Pattern name, description
+- Category badge (color-coded)
+- Screen count + app count
+- Links to `/patterns/[slug]` detail page
+
+#### Page: `src/app/patterns/page.tsx`
+
+New patterns index page replacing the old static list. Renders `<PatternLibrary />`.
+
+#### Page Update: `src/app/patterns/[slug]/page.tsx`
+
+Rewritten `generateStaticParams()` merges both category-flow pattern slugs and UX pattern slugs. The render function checks UX patterns first (renders `UXPatternView` — screens grouped by app), falls back to the existing category-flow pattern view.
+
+---
+
+### 6D. AI-Generated Insights
+
+**Purpose:** Build-time script sends diff data to Claude API, generates editorial insights about what changed and why it matters. New `/insights` page.
+
+#### Script: `scripts/generate-insights.mjs`
+
+Build-time insight generation using **Claude Sonnet 4.6** (`claude-sonnet-4-6`):
+
+```bash
+ANTHROPIC_API_KEY=sk-... npm run generate-insights
+```
+
+Pipeline:
+1. Reads `data/*-diff.json` files (output of the diff pipeline)
+2. Filters diffs with `diffPercent > 3%` (skips noise)
+3. Sends each diff to Claude with app metadata + change context
+4. Claude returns: title, summary, analysis, impact level, category
+5. Writes output to `src/data/insights.ts` (idempotent — deduplicates by date + screenLabel)
+
+Features:
+- Batched: 5 concurrent API calls
+- Cached: won't regenerate insights for diffs already processed
+- Requires `ANTHROPIC_API_KEY` environment variable (build-time only, not in static output)
+
+**Why Sonnet 4.6?** Called repeatedly per diff — Sonnet is faster/cheaper while producing good editorial analysis. Opus would be overkill for structured summaries.
+
+#### Data: `src/data/insights.ts`
+
+```typescript
+type InsightCategory = "UX Change" | "Feature Launch" | "Design Trend"
+  | "Copy Update" | "Flow Change" | "Competitive Move";
+
+interface Insight {
+  slug: string;           // app slug
+  date: string;           // ISO date
+  title: string;          // headline
+  summary: string;        // 1-2 sentence summary
+  analysis: string;       // detailed analysis paragraph
+  impact: "low" | "medium" | "high";
+  category: InsightCategory;
+  beforeImage?: string;
+  afterImage?: string;
+  diffPercent?: number;
+  flow?: string;
+  screenLabel?: string;
+}
+
+export const insightsBySlug: Record<string, Insight[]> = {};
+```
+
+Starts empty — populated after first `generate-insights` run.
+
+#### Helpers: `src/data/helpers.ts`
+
+```typescript
+getAllInsights(): Insight[]                    // flat array, newest first
+getRecentInsights(days: number): Insight[]    // filtered by date window
+```
+
+#### Component: `src/components/InsightCard.tsx`
+
+Expandable insight card:
+- App logo + name, date
+- Category badge (color-coded) + impact badge (low/medium/high)
+- Title + summary always visible
+- Click to expand: full analysis text + before/after images
+
+#### Component: `src/components/InsightsPage.tsx`
+
+Filtered insight feed:
+- Category pill filters (All + each InsightCategory)
+- App filter dropdown
+- Paywall: free users see 2 insights/week, pro sees unlimited (via `getInsightLimit()`)
+- `PaywallOverlay` when limit reached
+
+#### Component: `src/components/InsightsBanner.tsx`
+
+Homepage banner:
+- Insight count + "This week in crypto UX" heading
+- Recent insight titles as preview
+- "View insights →" link
+
+#### Access Control: `src/lib/access.ts`
+
+```typescript
+getInsightLimit(plan: PlanId): number | null
+// free → 2 per week, pro/team/education → null (unlimited)
+```
+
+---
+
+### 6E. Enhanced Export & Figma Workflow
+
+**Purpose:** Export flows as image strips, Figma-compatible JSON, and enhanced batch export with format selection.
+
+#### Utility: `src/lib/flow-strip.ts`
+
+Canvas compositing for flow screenshots:
+
+```typescript
+createFlowStrip(
+  screens: EnrichedScreen[],
+  orientation: "horizontal" | "vertical",
+  gap?: number,        // default: 16px
+  maxHeight?: number   // default: 800px
+): Promise<Blob>
+```
+
+How it works:
+1. Fetches all flow images with `crossOrigin = "anonymous"`
+2. Scales to uniform height (horizontal) or width (vertical)
+3. Draws on offscreen `<canvas>` with `#0C0C0E` background and gaps
+4. Returns PNG blob via `canvas.toBlob()`
+
+#### Utility: `src/lib/figma-export.ts`
+
+Figma-compatible JSON frame structure:
+
+```typescript
+interface FigmaFrame {
+  type: "FRAME";
+  name: string;
+  width: number;
+  height: number;
+  children: FigmaNode[];
+  metadata: {
+    app: string;
+    flow: string;
+    exportedAt: string;
+    source: string;
+  };
+}
+```
+
+Functions:
+```typescript
+generateFigmaJSON(screens, appName, flowName): FigmaFrame
+downloadFigmaJSON(screens, appName, flowName): void    // triggers download
+downloadMetadataJSON(screen): void                      // single screen metadata
+```
+
+#### Component: `src/components/ExportMenu.tsx`
+
+Dropdown menu with 7 export formats:
+1. **Download PNG** — direct image download
+2. **Copy to clipboard** — via `copyImageToClipboard()`
+3. **Flow strip (horizontal)** — stitched PNG via `createFlowStrip()`
+4. **Flow strip (vertical)** — vertical stitched PNG
+5. **Figma JSON** — structured frame export (pro-only)
+6. **Metadata JSON** — screen metadata export
+7. **Download as ZIP** — via JSZip (when multiple screens)
+
+All format-specific modules are dynamically imported to avoid bundle bloat.
+
+#### Component: `src/components/BatchExportPanel.tsx`
+
+Batch export UI:
+- Scope selector: by app or by flow
+- Format selector: PNG ZIP, Flow strips, Figma JSON
+- Progress bar during export
+- Pro-only via `canBatchExport()`
+
+#### Integration
+
+- `src/components/FlowPlayer.tsx` — `ExportMenu` added after the Copy button in the top bar
+- `src/components/ScreenModal.tsx` — Download `<a>` tag replaced with `ExportMenu`
+- `src/components/ScreenActions.tsx` — "More export options" expandable section with metadata JSON
+
+#### Access Control: `src/lib/access.ts`
+
+```typescript
+canBatchExport(plan: PlanId): boolean   // pro/team/education only
+canExportFigma(plan: PlanId): boolean   // pro/team/education only
+```
+
+---
+
+### 6F. Shareable Collections
+
+**Purpose:** Public share links for user-created collections. Collections can include per-screen notes/annotations.
+
+#### Architecture
+
+Uses a query param approach (`/shared?id=abc123`) instead of a dynamic route — required because `output: 'export'` can't handle user-generated `[shareId]` params at build time.
+
+Firestore structure:
+- **Private**: `users/{uid}/collections/{id}` — existing, owner-only read/write
+- **Shared**: `sharedCollections/{shareId}` — new top-level collection, public read, owner-only write
+
+#### Context Update: `src/contexts/CollectionsContext.tsx`
+
+Extended `Collection` type:
+```typescript
+interface Collection {
+  // ... existing fields ...
+  shareId?: string;     // nanoid-generated public ID
+  isPublic?: boolean;   // sharing status
+  notes?: Record<string, string>;  // per-screen notes (key = image path with / → __)
+}
+```
+
+New context methods:
+```typescript
+shareCollection(id: string): Promise<string | null>
+// Generates nanoid, writes to sharedCollections/{shareId}, returns shareId
+
+unshareCollection(id: string): Promise<void>
+// Deletes sharedCollections doc, clears shareId/isPublic on user collection
+
+updateCollectionNote(collectionId: string, screenImage: string, note: string): Promise<void>
+// Updates notes map on both user collection and shared collection (if public)
+```
+
+#### Component: `src/components/ShareCollectionButton.tsx`
+
+Share/unshare toggle:
+- "Share" → generates nanoid, writes shared doc, copies URL to clipboard
+- "Shared" (cyan) → click to unshare, plus "Copy link" button
+- Respects `getShareLimit()` — shows upgrade toast when limit reached
+
+#### Component: `src/components/CollectionNotes.tsx`
+
+Inline text notes per screen within a collection:
+- "Add note" link when no note exists
+- Textarea with Save/Cancel when editing
+- Displays saved note as italic text with "Edit" link
+
+#### Component: `src/components/SharedCollectionView.tsx`
+
+Client-side viewer for shared collections:
+1. Reads `?id=` from search params
+2. Fetches `sharedCollections/{shareId}` from Firestore
+3. Resolves screen data via `getAllScreens()` for labels, app names, and flow context
+4. Renders grid of screen cards with app links and notes
+
+#### Page: `src/app/shared/page.tsx`
+
+Server wrapper with `<Suspense>` boundary (needed for `useSearchParams`).
+
+#### Saved Page Update: `src/app/saved/page.tsx`
+
+- `ShareCollectionButton` added to collection card actions (alongside Rename/Delete)
+- "Public" badge (cyan pill) shown for shared collections
+
+#### Access Control: `src/lib/access.ts`
+
+```typescript
+getShareLimit(plan: PlanId): number | null
+// free → 1 shared collection, pro/team/education → null (unlimited)
+```
+
+---
+
 ## New Files Reference
 
 | File | Phase | Purpose |
@@ -482,6 +903,30 @@ Updated plan detection logic:
 | `src/app/elements/[element]/page.tsx` | 2B | Element type browse page |
 | `src/contexts/ThemeContext.tsx` | 5A | Dark/light theme context |
 | `src/lib/batch-export.ts` | 4B | ZIP download utility |
+| `src/components/ChangeCard.tsx` | 6A | Rich change entry with before/after thumbnails |
+| `src/components/WeeklyDigest.tsx` | 6A | Collapsible weekly change group |
+| `src/components/ChangeHeroBanner.tsx` | 6A | Homepage banner: "X changes this week" |
+| `src/components/FlowComparisonTool.tsx` | 6B | Core flow comparison interactive tool |
+| `src/components/FlowComparisonColumn.tsx` | 6B | Single app's flow as vertical column |
+| `src/components/StepComparisonRow.tsx` | 6B | One step across all apps in a row |
+| `src/app/compare-flows/page.tsx` | 6B | Flow comparison page |
+| `src/data/patterns.ts` | 6C | 18 UX pattern definitions + search functions |
+| `src/components/PatternLibrary.tsx` | 6C | Searchable pattern grid with category filters |
+| `src/components/PatternCard.tsx` | 6C | Pattern card with 2×2 preview thumbnails |
+| `src/data/insights.ts` | 6D | AI-generated insight types + data store |
+| `scripts/generate-insights.mjs` | 6D | Claude Sonnet 4.6 insight generation script |
+| `src/components/InsightCard.tsx` | 6D | Expandable insight card with before/after |
+| `src/components/InsightsPage.tsx` | 6D | Filtered insight feed with paywall |
+| `src/components/InsightsBanner.tsx` | 6D | Homepage insight preview banner |
+| `src/app/insights/page.tsx` | 6D | Insights page server wrapper |
+| `src/lib/flow-strip.ts` | 6E | Canvas compositing for flow strip PNGs |
+| `src/lib/figma-export.ts` | 6E | Figma-compatible JSON + metadata export |
+| `src/components/ExportMenu.tsx` | 6E | 7-format export dropdown menu |
+| `src/components/BatchExportPanel.tsx` | 6E | Batch export with scope/format/progress |
+| `src/components/ShareCollectionButton.tsx` | 6F | Share/unshare toggle with link copy |
+| `src/components/CollectionNotes.tsx` | 6F | Inline per-screen notes in collections |
+| `src/components/SharedCollectionView.tsx` | 6F | Public shared collection viewer |
+| `src/app/shared/page.tsx` | 6F | Shared collection page server wrapper |
 
 ## Modified Files Reference
 
@@ -490,17 +935,26 @@ Updated plan detection logic:
 | `scripts/extract-ocr.mjs` | 1A |
 | `scripts/upload-screenshots.sh` | 3A |
 | `src/data/apps.ts` | 2B, 3A, 3B, 4A |
-| `src/data/helpers.ts` | 2B |
-| `src/data/seo.ts` | 2B |
+| `src/data/helpers.ts` | 2B, 6A, 6B, 6C, 6D |
+| `src/data/seo.ts` | 2B, 6B, 6C, 6D, 6F |
 | `src/lib/search.ts` | 1A |
-| `src/lib/access.ts` | 5B |
+| `src/lib/access.ts` | 5B, 6D, 6E, 6F |
 | `src/lib/stripe.ts` | 5B |
 | `src/lib/payments.ts` | 5B |
+| `src/lib/batch-export.ts` | 4B, 6E |
 | `src/app/globals.css` | 5A |
+| `src/app/page.tsx` | 6A |
+| `src/app/changes/page.tsx` | 6A |
 | `src/app/screens/page.tsx` | 1A, 4A, 4B |
+| `src/app/patterns/page.tsx` | 6C |
+| `src/app/patterns/[slug]/page.tsx` | 6C |
+| `src/app/compare/[pair]/page.tsx` | 6B |
+| `src/app/flows/[flow]/page.tsx` | 6B |
+| `src/app/saved/page.tsx` | 6F |
 | `src/app/sitemap.ts` | 2B |
-| `src/components/ScreenModal.tsx` | 2A, 3A |
-| `src/components/FlowPlayer.tsx` | 3B |
+| `src/components/ScreenModal.tsx` | 2A, 3A, 6E |
+| `src/components/FlowPlayer.tsx` | 3B, 6E |
+| `src/components/ScreenActions.tsx` | 6E |
 | `src/components/ScreenCard.tsx` | 3A, 4A |
 | `src/components/SearchOverlay.tsx` | 2C |
 | `src/components/Header.tsx` | 5A |
@@ -508,10 +962,11 @@ Updated plan detection logic:
 | `src/components/Pricing.tsx` | 5B |
 | `src/components/CryptoPayModal.tsx` | 5B |
 | `src/contexts/SubscriptionContext.tsx` | 5B |
+| `src/contexts/CollectionsContext.tsx` | 6F |
 | `tailwind.config.ts` | 5A |
 | `workers/r2-proxy/index.js` | 3A |
 | `firebase-functions/src/index.ts` | 5B |
-| `package.json` | 1B, 4B |
+| `package.json` | 1B, 4B, 6D, 6F |
 
 ## Pipeline Commands
 
@@ -545,6 +1000,11 @@ node scripts/build-similarity.mjs
 # Resolve hotspot targets after crawling
 node scripts/resolve-hotspots.mjs --slug uniswap
 
+# ─── Intelligence Layer ──────────────────────────────────────
+
+# Generate AI insights from diff data (requires Claude API key)
+ANTHROPIC_API_KEY=sk-... npm run generate-insights
+
 # ─── Build & Deploy ──────────────────────────────────────────
 
 npm run build
@@ -557,6 +1017,7 @@ npm run deploy
 |---------|---------|---------|
 | `jszip` | Client-side ZIP creation for batch export | `npm install jszip` |
 | `openai-clip` + `torch` + `pillow` | CLIP embeddings (Python, dev machine only) | `pip install openai-clip torch pillow` |
+| `nanoid` (v5) | Share ID generation for collection sharing | `npm install nanoid` |
 
 ## Estimated API Costs
 
@@ -564,6 +1025,20 @@ npm run deploy
 |---------|-------|------|
 | Full OCR extraction (~4K screenshots) | Claude Haiku | ~$40 |
 | Element detection (~4K screenshots) | Claude Haiku | ~$80 |
+| Insight generation (per diff batch) | Claude Sonnet 4.6 | ~$2-5/run |
 | **Total one-time** | | **~$120** |
 
 Visual similarity (CLIP embeddings) runs locally — no API cost.
+Insight generation is incremental — only processes new diffs each run.
+
+## Access Control Summary (Phase 6)
+
+| Feature | Free | Pro / Team / Education |
+|---------|------|----------------------|
+| Enhanced change feed | Full | Full |
+| Flow comparison tool | Full | Full |
+| Pattern search | Full | Full |
+| AI insights | 2/week | Unlimited |
+| Batch export | — | Full |
+| Figma JSON export | — | Full |
+| Shared collections | 1 collection | Unlimited |

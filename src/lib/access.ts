@@ -41,3 +41,21 @@ export function getFlowPlayerLimit(plan: PlanId): number | null {
 export function canViewChangeHistory(plan: PlanId): boolean {
   return isPaid(plan);
 }
+
+export function getInsightLimit(plan: PlanId): number | null {
+  if (isPaid(plan)) return null; // unlimited
+  return 2; // free: 2 per week
+}
+
+export function canBatchExport(plan: PlanId): boolean {
+  return isPaid(plan);
+}
+
+export function canExportFigma(plan: PlanId): boolean {
+  return isPaid(plan);
+}
+
+export function getShareLimit(plan: PlanId): number | null {
+  if (isPaid(plan)) return null; // unlimited
+  return 1; // free: 1 shared collection
+}

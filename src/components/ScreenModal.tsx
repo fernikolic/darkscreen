@@ -11,6 +11,7 @@ import { useToast } from "@/contexts/ToastContext";
 import { screenshotUrl } from "@/lib/screenshot-url";
 import { SimilarScreens } from "./SimilarScreens";
 import { VideoPlayer } from "./VideoPlayer";
+import { ExportMenu } from "./ExportMenu";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
@@ -179,13 +180,12 @@ export function ScreenModal({
                   </button>
                 )}
                 {screen.image && (
-                  <a
-                    href={screenshotUrl(screen.image)!}
-                    download={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
-                    className="text-[13px] text-text-tertiary transition-colors hover:text-text-primary"
-                  >
-                    Download
-                  </a>
+                  <ExportMenu
+                    screen={screen}
+                    flowScreens={flowScreens}
+                    imageUrl={screenshotUrl(screen.image)}
+                    filename={`${screen.appSlug}-${screen.flow}-${screen.step}.png`}
+                  />
                 )}
               </>
             )}

@@ -35,6 +35,15 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `scripts/wallet-setup.mjs` | MetaMask extension setup for DeFi crawling |
 | `scripts/fetch-logos.mjs` | Fetch app logos from free favicon/logo APIs |
 | `src/components/AppLogo.tsx` | Reusable logo component with letter-circle fallback |
+| `src/data/patterns.ts` | 18 UX pattern definitions + search/match functions |
+| `src/data/insights.ts` | AI-generated insight types + data (populated by `generate-insights`) |
+| `src/app/compare-flows/page.tsx` | Flow comparison tool (2-4 apps side-by-side) |
+| `src/app/insights/page.tsx` | AI-generated change insights feed |
+| `src/app/shared/page.tsx` | Public shared collection viewer |
+| `src/components/ExportMenu.tsx` | 7-format export dropdown (PNG, clipboard, strip, Figma, ZIP) |
+| `src/lib/flow-strip.ts` | Canvas compositing for flow strip PNGs |
+| `src/lib/figma-export.ts` | Figma-compatible JSON export |
+| `scripts/generate-insights.mjs` | Claude Sonnet 4.6 insight generation from diff data |
 
 ## Architecture
 
@@ -43,6 +52,7 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 - **Data-driven** — All app content in `src/data/apps.ts`, easy to extend
 - **Detailed apps** with screenshots + change history (Aave, Binance, Coinbase, Kraken, Leather, Lido, Mempool, MetaMask, Xverse)
 - **Basic listings** with category, flows, and "coming soon" detail pages
+- **Intelligence layer** — change detection, flow comparison, pattern search, AI insights, enhanced export, shareable collections
 
 ## Capture Pipeline
 
@@ -165,6 +175,34 @@ Full documentation in [`docs/SEO.md`](docs/SEO.md). Summary:
 - **Content enrichment**: Data-driven prose on compare, alternatives, and screenshots pages
 
 Key files: `src/components/JsonLd.tsx`, `src/data/seo.ts`, `src/app/sitemap.ts`, `src/app/robots.ts`
+
+## Intelligence Layer
+
+Six features documented in [`docs/FEATURES.md`](docs/FEATURES.md) (Phase 6):
+
+1. **Enhanced Change Detection** — Weekly-grouped change feed with before/after thumbnails, diff percentages, homepage banner
+2. **Flow Comparison** — `/compare-flows` tool: select 2-4 apps + flow type, side-by-side or step-by-step view
+3. **Pattern Search** — Unified `/patterns` library with 18 crypto UX patterns, searchable with category filters
+4. **AI Insights** — Build-time Claude Sonnet 4.6 analysis of diffs → `/insights` page with editorial summaries
+5. **Enhanced Export** — `ExportMenu` with 7 formats: PNG, clipboard, flow strips (H/V), Figma JSON, metadata, ZIP
+6. **Shareable Collections** — Public share links via Firestore `sharedCollections`, per-screen notes, nanoid share IDs
+
+### Generating insights
+
+```bash
+ANTHROPIC_API_KEY=sk-... npm run generate-insights
+```
+
+Reads `data/*-diff.json`, filters `diffPercent > 3%`, sends to Claude, writes `src/data/insights.ts`. Incremental and idempotent.
+
+### Access control
+
+| Feature | Free | Pro |
+|---------|------|-----|
+| AI insights | 2/week | Unlimited |
+| Batch export | — | Full |
+| Figma JSON export | — | Full |
+| Shared collections | 1 | Unlimited |
 
 ## Design System
 

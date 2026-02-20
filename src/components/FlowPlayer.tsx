@@ -10,6 +10,7 @@ import { copyImageToClipboard, useClipboardSupport } from "@/lib/clipboard";
 import { useToast } from "@/contexts/ToastContext";
 import { screenshotUrl } from "@/lib/screenshot-url";
 import { PrototypePlayer } from "./PrototypePlayer";
+import { ExportMenu } from "./ExportMenu";
 
 interface FlowPlayerProps {
   screens: EnrichedScreen[];
@@ -257,6 +258,14 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
                   >
                     {copying ? "Copying..." : "Copy"}
                   </button>
+                )}
+                {!showPaywall && screen.image && (
+                  <ExportMenu
+                    screen={screen}
+                    flowScreens={screens}
+                    imageUrl={screenshotUrl(screen.image)}
+                    filename={`${screen.appSlug}-${screen.flow}-step${screen.step}.png`}
+                  />
                 )}
               </>
             )}
