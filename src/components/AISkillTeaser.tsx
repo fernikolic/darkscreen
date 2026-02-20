@@ -1,3 +1,5 @@
+"use client";
+
 function ClaudeIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -11,6 +13,23 @@ function ClaudeIcon({ className }: { className?: string }) {
   );
 }
 
+function CopyButton({ text }: { text: string }) {
+  return (
+    <button
+      onClick={() => {
+        navigator.clipboard.writeText(text);
+      }}
+      className="absolute right-3 top-3 rounded border border-white/10 bg-white/5 p-1.5 text-text-tertiary transition-colors hover:bg-white/10 hover:text-text-secondary"
+      title="Copy"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3 w-3">
+        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 2h5.5A1.5 1.5 0 0 1 14 3.5V11a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 11V3.5Z" />
+        <path d="M3.5 5A1.5 1.5 0 0 0 2 6.5V13a1.5 1.5 0 0 0 1.5 1.5H8A1.5 1.5 0 0 0 9.5 13v-.5h-3A1.5 1.5 0 0 1 5 11V5h-.5Z" />
+      </svg>
+    </button>
+  );
+}
+
 export function AISkillTeaser() {
   return (
     <section id="ai-skills" className="border-t border-dark-border">
@@ -20,7 +39,7 @@ export function AISkillTeaser() {
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
 
           <div className="relative px-10 py-14 md:px-16 md:py-20">
-            {/* Coming soon pills */}
+            {/* Platform pills */}
             <div className="mb-8 flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5">
                 <ClaudeIcon className="h-3.5 w-3.5 text-[#D97757]" />
@@ -34,12 +53,9 @@ export function AISkillTeaser() {
                   OpenClaw
                 </span>
               </div>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
-                Coming soon
-              </span>
             </div>
 
-            <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div className="grid gap-12 md:grid-cols-2 md:items-start">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-text-primary md:text-3xl">
                   Build better crypto products
@@ -47,43 +63,132 @@ export function AISkillTeaser() {
                   with real market context
                 </h2>
                 <p className="mt-4 max-w-md text-[14px] leading-relaxed text-text-secondary">
-                  Ship better products, faster. Our entire library — distilled
-                  into a skill that gives designers, PMs, and marketers
-                  instant access to what 100+ crypto products actually ship.
-                  Real patterns. Real copy. Real flows.
+                  Our entire library — distilled into an AI skill. Gives
+                  designers, PMs, and marketers instant access to design
+                  patterns, user flows, and copywriting from 105 crypto
+                  products. Real data, not guesswork.
                 </p>
+
+                {/* Three pillars */}
+                <div className="mt-8 space-y-3">
+                  {[
+                    {
+                      label: "Product Design",
+                      description:
+                        "Layouts, components, navigation patterns, color schemes, and typography across 105 apps.",
+                    },
+                    {
+                      label: "User Flows",
+                      description:
+                        "Onboarding, swap, send/receive, staking, and settings flows with step counts and complexity analysis.",
+                    },
+                    {
+                      label: "Copywriting",
+                      description:
+                        "CTA language, error messages, trust signals, tone analysis, and data formatting patterns.",
+                    },
+                  ].map((pillar) => (
+                    <div
+                      key={pillar.label}
+                      className="rounded-md border border-dark-border/60 bg-dark-bg/50 px-5 py-4"
+                    >
+                      <span className="text-[13px] font-medium text-text-primary">
+                        {pillar.label}
+                      </span>
+                      <p className="mt-1 text-[12px] leading-relaxed text-text-tertiary">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-3">
-                {[
-                  {
-                    label: "Product Design",
-                    description:
-                      "Know exactly what patterns top products use — layouts, components, navigation — before you design a single screen.",
-                  },
-                  {
-                    label: "User Flows",
-                    description:
-                      "See how the best apps structure onboarding, trading, and wallet flows. Benchmark your UX against the market.",
-                  },
-                  {
-                    label: "Copywriting",
-                    description:
-                      "Write CTAs, error messages, and security language that matches what users already trust and understand.",
-                  },
-                ].map((pillar) => (
-                  <div
-                    key={pillar.label}
-                    className="rounded-md border border-dark-border/60 bg-dark-bg/50 px-5 py-4"
-                  >
-                    <span className="text-[13px] font-medium text-text-primary">
-                      {pillar.label}
+              {/* Setup instructions */}
+              <div>
+                <h3 className="mb-4 font-mono text-[11px] font-medium uppercase tracking-wider text-text-tertiary">
+                  Setup
+                </h3>
+
+                {/* Step 1 */}
+                <div className="mb-6">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 font-mono text-[10px] text-text-secondary">
+                      1
                     </span>
-                    <p className="mt-1 text-[12px] leading-relaxed text-text-tertiary">
-                      {pillar.description}
-                    </p>
+                    <span className="text-[13px] font-medium text-text-primary">
+                      Clone the skill
+                    </span>
                   </div>
-                ))}
+                  <div className="relative rounded-md border border-dark-border/60 bg-dark-bg p-4">
+                    <CopyButton text="git clone https://github.com/fernikolic/darkscreen.git && cd darkscreen/crypto-product-design" />
+                    <code className="block pr-8 font-mono text-[12px] leading-relaxed text-text-secondary">
+                      <span className="text-text-tertiary">$</span> git clone https://github.com/fernikolic/darkscreen.git{"\n"}
+                      <span className="text-text-tertiary">$</span> cd darkscreen/crypto-product-design
+                    </code>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="mb-6">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 font-mono text-[10px] text-text-secondary">
+                      2
+                    </span>
+                    <span className="text-[13px] font-medium text-text-primary">
+                      Add to your project
+                    </span>
+                  </div>
+                  <div className="relative rounded-md border border-dark-border/60 bg-dark-bg p-4">
+                    <CopyButton text="cp -r crypto-product-design/ /path/to/your-project/" />
+                    <code className="block pr-8 font-mono text-[12px] leading-relaxed text-text-secondary">
+                      <span className="text-text-tertiary">$</span> cp -r crypto-product-design/ /path/to/your-project/
+                    </code>
+                  </div>
+                  <p className="mt-2 text-[11px] leading-relaxed text-text-tertiary">
+                    Claude Code auto-detects SKILL.md in your project directory.
+                  </p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="mb-6">
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 font-mono text-[10px] text-text-secondary">
+                      3
+                    </span>
+                    <span className="text-[13px] font-medium text-text-primary">
+                      Start asking questions
+                    </span>
+                  </div>
+                  <div className="rounded-md border border-dark-border/60 bg-dark-bg p-4">
+                    <code className="block font-mono text-[12px] leading-loose text-text-secondary">
+                      <span className="text-text-tertiary">&gt;</span> What&apos;s the most common swap flow pattern?{"\n"}
+                      <span className="text-text-tertiary">&gt;</span> How do top exchanges handle error states?{"\n"}
+                      <span className="text-text-tertiary">&gt;</span> Compare navigation patterns across DeFi apps{"\n"}
+                      <span className="text-text-tertiary">&gt;</span> What CTA text do wallets use for onboarding?
+                    </code>
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { value: "105", label: "Apps" },
+                    { value: "2,588", label: "Screenshots" },
+                    { value: "8", label: "Categories" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-md border border-dark-border/60 bg-dark-bg/50 px-3 py-3 text-center"
+                    >
+                      <div className="font-heading text-lg font-bold text-text-primary">
+                        {stat.value}
+                      </div>
+                      <div className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
