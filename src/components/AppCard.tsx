@@ -10,7 +10,7 @@ interface AppCardProps {
 }
 
 export function AppCard({ app, bookmarkButton }: AppCardProps) {
-  const hasScreens = app.screens.length > 0;
+  const hasScreens = app.screens.length >= 3;
 
   const card = (
     <div className="overflow-hidden border border-dark-border bg-dark-card transition-all card-hover">

@@ -51,8 +51,8 @@ export default async function AppDetail({ params }: PageProps) {
     notFound();
   }
 
-  // Coming soon state for non-detailed apps
-  if (!app.detailed) {
+  // Coming soon state for non-detailed apps or apps with < 3 screens
+  if (!app.detailed || app.screens.length < 3) {
     return (
       <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
         <Link
