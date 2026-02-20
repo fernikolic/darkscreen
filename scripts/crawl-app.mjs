@@ -1090,12 +1090,6 @@ async function dismissOverlays(page, slug) {
     try {
       const el = page.locator(sel).first();
       if (await el.isVisible({ timeout: 300 })) {
-        // Screenshot the overlay first
-        await capture(page, slug, {
-          action: "overlay",
-          context: `Overlay before dismiss`,
-          force: true,
-        });
         await el.click({ timeout: 2000 });
         await sleep(500);
         dismissed = true;
@@ -1726,15 +1720,8 @@ async function crawlApp(slug, startUrl, appAuthType = "public") {
     } catch {}
   }
 
+  await dismissOverlays(page, slug);
   await capture(page, slug, { action: "landing", context: "Landing page", force: true });
-  const hadOverlay = await dismissOverlays(page, slug);
-  if (hadOverlay) {
-    await capture(page, slug, {
-      action: "landing-clean",
-      context: "Landing page after overlay dismissed",
-      force: true,
-    });
-  }
   await scrollAndCapture(page, slug, "Landing page");
 
   // ── Extract page metadata (zero API cost) ──────────────────────────────
