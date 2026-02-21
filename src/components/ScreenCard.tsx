@@ -5,6 +5,7 @@ import Image from "next/image";
 import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 import { screenshotUrl } from "@/lib/screenshot-url";
 import { SearchMatchBadge } from "@/components/SearchMatchBadge";
+import { TextHighlightOverlay } from "@/components/TextHighlightOverlay";
 
 interface ScreenCardProps {
   screen: EnrichedScreen;
@@ -48,6 +49,7 @@ export function ScreenCard({ screen, onClick, searchQuery }: ScreenCardProps) {
                   </svg>
                 </div>
               )}
+              {searchQuery && screen.image && <TextHighlightOverlay imagePath={screen.image} query={searchQuery} />}
               {searchQuery && <SearchMatchBadge query={searchQuery} />}
             </>
           ) : (

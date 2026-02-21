@@ -7,6 +7,7 @@ import { getAllScreens, type EnrichedScreen, getScreenPath } from "@/data/helper
 import { buildSearchIndex, searchScreens, getOcrText } from "@/lib/search";
 import { OcrSnippet } from "@/components/OcrSnippet";
 import { SearchMatchBadge } from "@/components/SearchMatchBadge";
+import { TextHighlightOverlay } from "@/components/TextHighlightOverlay";
 import { ScreenModal } from "@/components/ScreenModal";
 import { screenshotUrl } from "@/lib/screenshot-url";
 
@@ -177,6 +178,7 @@ export default function TextSearchPage() {
                                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                                 />
                               )}
+                              {screen.image && <TextHighlightOverlay imagePath={screen.image} query={query} />}
                               <SearchMatchBadge query={query} />
                             </div>
                             <div className="border-t border-dark-border p-3">
