@@ -23,30 +23,52 @@ fi
 
 echo "Listing objects in R2 bucket '$BUCKET'..."
 
-# List all screenshot keys from R2
+# List all screenshot keys from R2 via Cloudflare API
+# (wrangler v4 removed `r2 object list`, so we use the REST API directly)
 KEYS_FILE=$(mktemp)
-npx wrangler r2 object list "$BUCKET" --prefix "screenshots/" --remote 2>/dev/null \
-  | node -e "
+CURSOR=""
+while true; do
+  CURSOR_PARAM=""
+  if [[ -n "$CURSOR" ]]; then
+    CURSOR_PARAM="&cursor=$CURSOR"
+  fi
+  RESPONSE=$(curl -sf \
+    "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/r2/buckets/${BUCKET}/objects?prefix=screenshots/&per_page=1000${CURSOR_PARAM}" \
+    -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}")
+
+  echo "$RESPONSE" | node -e "
     const chunks = [];
     process.stdin.on('data', c => chunks.push(c));
     process.stdin.on('end', () => {
-      try {
-        const data = JSON.parse(chunks.join(''));
-        const objects = data.objects || data || [];
-        for (const obj of objects) {
-          const key = obj.key || obj.Key || '';
-          if (!key) continue;
-          const basename = key.replace('screenshots/', '');
-          if (!basename.endsWith('.png') && !basename.endsWith('.webm')) continue;
-          if (basename.includes('-raw-')) continue;
-          console.log(key);
-        }
-      } catch (e) {
-        process.stderr.write('Failed to parse R2 listing: ' + e.message + '\n');
-        process.exit(1);
+      const data = JSON.parse(chunks.join(''));
+      const objects = data.result || [];
+      for (const obj of objects) {
+        const key = obj.key || '';
+        if (!key) continue;
+        const bn = key.replace('screenshots/', '');
+        if (!bn.endsWith('.png') && !bn.endsWith('.webm')) continue;
+        if (bn.includes('-raw-')) continue;
+        console.log(key);
       }
     });
-  " > "$KEYS_FILE"
+  " >> "$KEYS_FILE"
+
+  # Check for pagination
+  NEXT_CURSOR=$(echo "$RESPONSE" | node -e "
+    const chunks = [];
+    process.stdin.on('data', c => chunks.push(c));
+    process.stdin.on('end', () => {
+      const data = JSON.parse(chunks.join(''));
+      const cursor = data.result_info?.cursor || '';
+      if (cursor) process.stdout.write(cursor);
+    });
+  ")
+
+  if [[ -z "$NEXT_CURSOR" ]]; then
+    break
+  fi
+  CURSOR="$NEXT_CURSOR"
+done
 
 # Filter by slug if provided
 if [[ -n "$SLUG_FILTER" ]]; then
