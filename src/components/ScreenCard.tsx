@@ -4,13 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { type EnrichedScreen, getScreenPath } from "@/data/helpers";
 import { screenshotUrl } from "@/lib/screenshot-url";
+import { SearchMatchBadge } from "@/components/SearchMatchBadge";
 
 interface ScreenCardProps {
   screen: EnrichedScreen;
   onClick: () => void;
+  searchQuery?: string;
 }
 
-export function ScreenCard({ screen, onClick }: ScreenCardProps) {
+export function ScreenCard({ screen, onClick, searchQuery }: ScreenCardProps) {
   return (
     <Link
       href={getScreenPath(screen)}
@@ -46,6 +48,7 @@ export function ScreenCard({ screen, onClick }: ScreenCardProps) {
                   </svg>
                 </div>
               )}
+              {searchQuery && <SearchMatchBadge query={searchQuery} />}
             </>
           ) : (
             <div className="flex h-full flex-col items-center justify-center p-4">

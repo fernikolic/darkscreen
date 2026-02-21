@@ -333,6 +333,7 @@ function ScreensPageInner() {
                           setModalScreen(screen);
                         }
                       }}
+                      searchQuery={search.trim() ? search : undefined}
                     />
                     {ocrSnippet && (
                       <OcrSnippet
