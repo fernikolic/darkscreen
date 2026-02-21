@@ -90,15 +90,14 @@ function printProgress() {
   );
 }
 
-// ─── Parse TSV to extract line-level bounding boxes ──────────────────
+// ─── Parse TSV to extract word-level bounding boxes ─────────────────
 
-function parseTsvToLines(tsv, imgWidth, imgHeight) {
+function parseTsvToWords(tsv, imgWidth, imgHeight) {
   const rows = tsv.split("\n");
   // TSV cols: level, page, block, par, line, word, left, top, width, height, conf, text
   // level 5 = word level
 
-  // Group words by line number
-  const lineWords = new Map();
+  const result = [];
 
   for (const row of rows) {
     const cols = row.split("\t");
@@ -107,7 +106,6 @@ function parseTsvToLines(tsv, imgWidth, imgHeight) {
     const level = parseInt(cols[0]);
     if (level !== 5) continue; // only word-level
 
-    const lineNum = `${cols[1]}-${cols[2]}-${cols[3]}-${cols[4]}`; // unique line key
     const left = parseInt(cols[6]);
     const top = parseInt(cols[7]);
     const width = parseInt(cols[8]);
@@ -117,29 +115,14 @@ function parseTsvToLines(tsv, imgWidth, imgHeight) {
 
     if (!text || conf < 15) continue;
 
-    if (!lineWords.has(lineNum)) lineWords.set(lineNum, []);
-    lineWords.get(lineNum).push({ text, left, top, width, height });
-  }
-
-  // Build line-level boxes
-  const result = [];
-  for (const words of lineWords.values()) {
-    const lineText = words.map((w) => w.text).join(" ");
-    if (lineText.length < 2) continue;
-
-    const x0 = Math.min(...words.map((w) => w.left));
-    const y0 = Math.min(...words.map((w) => w.top));
-    const x1 = Math.max(...words.map((w) => w.left + w.width));
-    const y1 = Math.max(...words.map((w) => w.top + w.height));
-
-    const x = +(x0 / imgWidth).toFixed(4);
-    const y = +(y0 / imgHeight).toFixed(4);
-    const w = +((x1 - x0) / imgWidth).toFixed(4);
-    const h = +((y1 - y0) / imgHeight).toFixed(4);
+    const x = +(left / imgWidth).toFixed(4);
+    const y = +(top / imgHeight).toFixed(4);
+    const w = +(width / imgWidth).toFixed(4);
+    const h = +(height / imgHeight).toFixed(4);
 
     if (w <= 0 || h <= 0 || w > 1 || h > 0.5) continue;
 
-    result.push([lineText, x, y, w, h]);
+    result.push([text, x, y, w, h]);
   }
 
   return result;
@@ -161,8 +144,8 @@ async function extractBoxes(worker, imgPath) {
     const meta = await sharp(fullPath).metadata();
     if (!meta.width || !meta.height) return null;
 
-    const lines = parseTsvToLines(data.tsv, meta.width, meta.height);
-    return lines.length > 0 ? lines : null;
+    const words = parseTsvToWords(data.tsv, meta.width, meta.height);
+    return words.length > 0 ? words : null;
   } catch (err) {
     if (completed < 3) console.error(`\n  Error on ${imgPath}: ${err.message}`);
     return null;

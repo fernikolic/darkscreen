@@ -119,12 +119,17 @@ export function TextHighlightOverlay({ imagePath, query, mode = "cover-top" }: T
     const term = query.replace(/^["']|["']$/g, "").trim().toLowerCase();
     if (!term || term.length < 2 || !data) return [];
 
-    const lines = data[imagePath];
-    if (!lines) return [];
+    const words = data[imagePath];
+    if (!words) return [];
 
-    return lines.filter((line) =>
-      (line[0] as string).toLowerCase().includes(term)
-    );
+    // Split query into individual words for word-level matching
+    const queryWords = term.split(/\s+/).filter((w) => w.length >= 2);
+    if (queryWords.length === 0) return [];
+
+    return words.filter((word) => {
+      const wordText = (word[0] as string).toLowerCase();
+      return queryWords.some((qw) => wordText.includes(qw));
+    });
   }, [imagePath, query, data]);
 
   if (matches.length === 0) return null;
