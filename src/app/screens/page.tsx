@@ -386,6 +386,7 @@ function ScreensPageInner() {
           flowScreens={getFlowScreens(modalScreen)}
           onClose={() => setModalScreen(null)}
           onNavigate={setModalScreen}
+          searchQuery={search.trim() || undefined}
         />
       )}
     </div>

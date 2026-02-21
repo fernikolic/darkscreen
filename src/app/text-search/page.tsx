@@ -212,6 +212,7 @@ export default function TextSearchPage() {
           flowScreens={[modalScreen]}
           onClose={() => setModalScreen(null)}
           onNavigate={setModalScreen}
+          searchQuery={query}
         />
       )}
     </div>

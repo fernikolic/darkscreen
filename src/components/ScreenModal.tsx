@@ -12,12 +12,17 @@ import { screenshotUrl } from "@/lib/screenshot-url";
 import { SimilarScreens } from "./SimilarScreens";
 import { VideoPlayer } from "./VideoPlayer";
 import { ExportMenu } from "./ExportMenu";
+import { screenAnalysis } from "@/data/screen-analysis";
+import { ElementHighlight } from "./ElementHighlight";
+import { TextHighlightOverlay } from "./TextHighlightOverlay";
+import elementsData from "@/data/elements.json";
 
 interface ScreenModalProps {
   screen: EnrichedScreen;
   flowScreens: EnrichedScreen[];
   onClose: () => void;
   onNavigate: (screen: EnrichedScreen) => void;
+  searchQuery?: string;
 }
 
 export function ScreenModal({
@@ -25,12 +30,15 @@ export function ScreenModal({
   flowScreens,
   onClose,
   onNavigate,
+  searchQuery,
 }: ScreenModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [showSave, setShowSave] = useState(false);
   const [copying, setCopying] = useState(false);
   const [showEndSlide, setShowEndSlide] = useState(false);
   const [showSimilar, setShowSimilar] = useState(false);
+  const [showAnalysis, setShowAnalysis] = useState(false);
+  const [showComponents, setShowComponents] = useState(false);
   const { openPlayer } = useFlowPlayer();
   const canCopy = useClipboardSupport();
   const { showToast } = useToast();
@@ -171,6 +179,22 @@ export function ScreenModal({
                     {copying ? "Copying..." : "Copy"}
                   </button>
                 )}
+                {screen.image && screenAnalysis[screen.image] && (
+                  <button
+                    onClick={() => { setShowAnalysis(!showAnalysis); if (!showAnalysis) setShowComponents(false); }}
+                    className={`text-[13px] transition-colors ${showAnalysis ? "text-[#00d4ff]" : "text-text-tertiary hover:text-white"}`}
+                  >
+                    Analysis
+                  </button>
+                )}
+                {screen.image && (elementsData as Record<string, unknown[]>)[screen.image]?.length > 0 && (
+                  <button
+                    onClick={() => { setShowComponents(!showComponents); if (!showComponents) setShowAnalysis(false); }}
+                    className={`text-[13px] transition-colors ${showComponents ? "text-[#00d4ff]" : "text-text-tertiary hover:text-white"}`}
+                  >
+                    Components
+                  </button>
+                )}
                 {screen.image && (
                   <button
                     onClick={() => setShowSimilar(!showSimilar)}
@@ -263,6 +287,15 @@ export function ScreenModal({
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority
                 />
+                {searchQuery && screen.image && (
+                  <TextHighlightOverlay imagePath={screen.image} query={searchQuery} mode="contain" />
+                )}
+                {showComponents && screen.image && (elementsData as Record<string, import("@/data/apps").DetectedElement[]>)[screen.image] && (
+                  <ElementHighlight
+                    elements={(elementsData as Record<string, import("@/data/apps").DetectedElement[]>)[screen.image]}
+                    className="z-10"
+                  />
+                )}
               </div>
             ) : (
               <div className="flex aspect-[16/10] w-full max-w-3xl items-center justify-center border border-dark-border bg-dark-card">
@@ -308,6 +341,62 @@ export function ScreenModal({
           </button>
         </div>
       </div>
+
+      {/* Analysis panel */}
+      {showAnalysis && screen.image && screenAnalysis[screen.image] && !showEndSlide && (
+        <div className="max-h-[240px] overflow-y-auto border-t border-dark-border bg-dark-bg/80 px-6 py-4">
+          {(() => {
+            const data = screenAnalysis[screen.image!];
+            return (
+              <div className="grid grid-cols-3 gap-6 text-[12px]">
+                <div>
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Screen Type</p>
+                  <p className="mb-3 text-text-primary">{data.screenType || "Unknown"}</p>
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">User Intent</p>
+                  <p className="text-text-secondary">{data.userIntent || "—"}</p>
+                </div>
+                <div>
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Interactive Elements</p>
+                  <ul className="mb-3 space-y-1">
+                    {(data.interactiveElements || []).slice(0, 5).map((el, i) => (
+                      <li key={i} className="text-text-secondary">
+                        <span className="text-text-primary">{el.element}</span>
+                        <span className="text-text-tertiary"> — {el.action}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">Friction Points</p>
+                  <ul className="mb-3 space-y-1">
+                    {(data.frictionPoints || []).map((fp, i) => (
+                      <li key={i} className="flex items-start gap-1.5 text-text-secondary">
+                        <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-red-400" />
+                        {fp}
+                      </li>
+                    ))}
+                    {(!data.frictionPoints || data.frictionPoints.length === 0) && (
+                      <li className="text-text-tertiary">None detected</li>
+                    )}
+                  </ul>
+                  {data.ctas && data.ctas.length > 0 && (
+                    <>
+                      <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-text-tertiary">CTAs</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {data.ctas.map((cta, i) => (
+                          <span key={i} className="inline-block rounded border border-dark-border px-2 py-0.5 text-[11px] text-text-secondary">
+                            {cta.text}
+                          </span>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
 
       {/* Similar screens panel */}
       {showSimilar && screen.image && !showEndSlide && (
