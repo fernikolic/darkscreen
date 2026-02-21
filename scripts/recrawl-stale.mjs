@@ -7,6 +7,7 @@
  *   node scripts/recrawl-stale.mjs --days 14
  *   node scripts/recrawl-stale.mjs --days 30 --dry-run
  *   node scripts/recrawl-stale.mjs --days 7 --category DeFi
+ *   node scripts/recrawl-stale.mjs --days 7 --auth-only   # login/wallet apps only (CI)
  */
 
 import { readFileSync } from "fs";
@@ -23,6 +24,7 @@ const { values: args } = parseArgs({
   options: {
     days: { type: "string", default: "14" },
     "dry-run": { type: "boolean", default: false },
+    "auth-only": { type: "boolean", default: false },
     category: { type: "string" },
     slug: { type: "string" },
   },
@@ -69,6 +71,9 @@ let stale = allApps.filter((app) => {
   return updated < cutoff;
 });
 
+if (args["auth-only"]) {
+  stale = stale.filter((a) => a.authType !== "public");
+}
 if (args.category) {
   stale = stale.filter((a) => a.category === args.category);
 }
@@ -104,15 +109,16 @@ for (let i = 0; i < stale.length; i++) {
   const app = stale[i];
   console.log(`\n  [${i + 1}/${stale.length}] Recrawling ${app.name}...`);
 
-  // Skip authenticated apps that need manual intervention
-  if (app.authType === "login") {
-    console.log(`    SKIP: "${app.name}" requires login (use --login manually)`);
+  // Skip login apps unless --auth-only is set (CI has saved profiles)
+  if (app.authType === "login" && !args["auth-only"]) {
+    console.log(`    SKIP: "${app.name}" requires login (use --auth-only in CI)`);
     results.skipped.push(app.name);
     continue;
   }
 
   const crawlArgs = ["--slug", app.slug];
   if (app.authType === "wallet") crawlArgs.push("--wallet");
+  if (app.authType === "login") crawlArgs.push("--login");
 
   const steps = [
     { label: "Crawling", cmd: "crawl-app.mjs", args: crawlArgs, timeout: 600000 },

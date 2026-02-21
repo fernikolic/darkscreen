@@ -59,6 +59,10 @@ jobs:
       - name: Generate auto-detected changes
         run: node scripts/generate-changes.mjs --all
 
+      # ─── Extract OCR bounding boxes for text search ──────────
+      - name: Extract OCR boxes for new screenshots
+        run: node scripts/extract-ocr-boxes.mjs --concurrency 2
+
       # ─── Send weekly digest email ────────────────────────────
       - name: Send weekly digest email
         env:
@@ -78,7 +82,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/apps.ts src/data/auto-changes.ts
+          git add src/data/apps.ts src/data/auto-changes.ts public/data/ocr-boxes.json
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
