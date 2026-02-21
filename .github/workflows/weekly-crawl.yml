@@ -59,6 +59,12 @@ jobs:
       - name: Generate auto-detected changes
         run: node scripts/generate-changes.mjs --all
 
+      # ─── Send weekly digest email ────────────────────────────
+      - name: Send weekly digest email
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: node scripts/send-weekly-digest.mjs
+
       # ─── Upload new/changed screenshots to R2 ─────────────────
       - name: Upload screenshots to R2
         env:

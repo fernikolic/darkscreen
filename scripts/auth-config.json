@@ -43,5 +43,426 @@
       "a[href*='/u/funding']",
       "[data-testid='user-menu']"
     ]
+  },
+  "okx": {
+    "loginUrl": "https://www.okx.com/account/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/assets']",
+      "[class*='user-center']"
+    ]
+  },
+  "bybit": {
+    "loginUrl": "https://www.bybit.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/user/assets']",
+      "a[href*='/trade']",
+      "[class*='user-menu']"
+    ]
+  },
+  "crypto-com": {
+    "loginUrl": "https://crypto.com/exchange/login",
+    "selectors": {
+      "username": "input[type='email']",
+      "password": "input[type='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='totp']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/exchange/dashboard']",
+      "a[href*='/exchange/trade']",
+      "[class*='user-avatar']"
+    ]
+  },
+  "gemini": {
+    "loginUrl": "https://exchange.gemini.com/signin",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/balances']",
+      "[data-testid='user-menu']"
+    ]
+  },
+  "robinhood": {
+    "loginUrl": "https://robinhood.com/login",
+    "selectors": {
+      "username": "input[name='username']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href='/']",
+      "[data-testid='portfolio-value']",
+      "a[href*='/account']"
+    ]
+  },
+  "river": {
+    "loginUrl": "https://river.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/account']",
+      "[class*='user-menu']"
+    ]
+  },
+  "strike": {
+    "loginUrl": "https://strike.me/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/settings']",
+      "[class*='user-profile']"
+    ]
+  },
+  "swan": {
+    "loginUrl": "https://app.swanbitcoin.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/account']",
+      "[class*='user-nav']"
+    ]
+  },
+  "fold": {
+    "loginUrl": "https://foldapp.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/rewards']",
+      "[class*='user-menu']"
+    ]
+  },
+  "unchained": {
+    "loginUrl": "https://unchained.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/vaults']",
+      "[class*='user-menu']"
+    ]
+  },
+  "bitstamp": {
+    "loginUrl": "https://www.bitstamp.net/login/",
+    "selectors": {
+      "username": "input[name='username']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='otp']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/account/']",
+      "a[href*='/market/tradeview']",
+      "[class*='user-menu']"
+    ]
+  },
+  "gate-io": {
+    "loginUrl": "https://www.gate.io/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/myaccount']",
+      "a[href*='/trade']",
+      "[class*='user-center']"
+    ]
+  },
+  "bitget": {
+    "loginUrl": "https://www.bitget.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/asset']",
+      "a[href*='/spot']",
+      "[class*='user-center']"
+    ]
+  },
+  "mexc": {
+    "loginUrl": "https://www.mexc.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/assets']",
+      "a[href*='/exchange']",
+      "[class*='user-info']"
+    ]
+  },
+  "htx": {
+    "loginUrl": "https://www.htx.com/en-us/login/",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/en-us/assetintro/']",
+      "a[href*='/en-us/exchange/']",
+      "[class*='user-center']"
+    ]
+  },
+  "bitfinex": {
+    "loginUrl": "https://www.bitfinex.com/login",
+    "selectors": {
+      "username": "input[name='username']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='otp']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/t/']",
+      "a[href*='/wallets']",
+      "[class*='user-menu']"
+    ]
+  },
+  "bitmex": {
+    "loginUrl": "https://www.bitmex.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='token']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/app/trade']",
+      "a[href*='/app/wallet']",
+      "[class*='user-menu']"
+    ]
+  },
+  "upbit": {
+    "loginUrl": "https://upbit.com/signin",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='otp']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/exchange']",
+      "a[href*='/investments']",
+      "[class*='user-box']"
+    ]
+  },
+  "nansen": {
+    "loginUrl": "https://app.nansen.ai/auth/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/smart-money']",
+      "[class*='user-avatar']"
+    ]
+  },
+  "glassnode": {
+    "loginUrl": "https://studio.glassnode.com/auth/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/metrics']",
+      "a[href*='/dashboards']",
+      "[class*='user-menu']"
+    ]
+  },
+  "voltage": {
+    "loginUrl": "https://voltage.cloud/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/nodes']",
+      "[class*='user-menu']"
+    ]
+  },
+  "bitvavo": {
+    "loginUrl": "https://account.bitvavo.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/portfolio']",
+      "[class*='user-menu']"
+    ]
+  },
+  "bullish": {
+    "loginUrl": "https://bullish.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/portfolio']",
+      "[class*='user-menu']"
+    ]
+  },
+  "bitso": {
+    "loginUrl": "https://bitso.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/dashboard']",
+      "a[href*='/trade']",
+      "[class*='user-menu']"
+    ]
+  },
+  "luno": {
+    "loginUrl": "https://www.luno.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='otp']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/wallet']",
+      "a[href*='/exchange']",
+      "[class*='user-menu']"
+    ]
+  },
+  "woo": {
+    "loginUrl": "https://x.woo.org/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/assets']",
+      "[class*='user-center']"
+    ]
+  },
+  "phemex": {
+    "loginUrl": "https://phemex.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/trade']",
+      "a[href*='/assets']",
+      "[class*='user-center']"
+    ]
+  },
+  "bingx": {
+    "loginUrl": "https://bingx.com/login/",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/en-us/assets/']",
+      "a[href*='/en-us/spot/']",
+      "[class*='user-center']"
+    ]
+  },
+  "coinex": {
+    "loginUrl": "https://www.coinex.com/login",
+    "selectors": {
+      "username": "input[name='email']",
+      "password": "input[name='password']",
+      "submit": "button[type='submit']",
+      "totp": "input[name='code']",
+      "totpSubmit": "button[type='submit']"
+    },
+    "successIndicators": [
+      "a[href*='/asset']",
+      "a[href*='/exchange']",
+      "[class*='user-center']"
+    ]
   }
 }

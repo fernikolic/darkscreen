@@ -24,6 +24,14 @@ export function EmailCapture({ variant = "primary", source = "unknown" }: EmailC
         source,
         createdAt: serverTimestamp(),
       });
+
+      // Sync to Brevo for weekly digest (fire-and-forget)
+      fetch("https://us-central1-clawdentials.cloudfunctions.net/brevoSync", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      }).catch(() => {}); // silent fail — Firestore is source of truth
+
       setStatus("success");
       setEmail("");
     } catch {

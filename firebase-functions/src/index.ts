@@ -252,3 +252,99 @@ export const mdkWebhook = functions.https.onRequest(async (req, res) => {
 
   res.status(200).json({ received: true });
 });
+
+/* ─── Brevo newsletter sync ─── */
+
+const BREVO_ALLOWED_ORIGINS = [
+  "https://darkscreens.xyz",
+  "https://www.darkscreens.xyz",
+  "http://localhost:3000",
+];
+
+/**
+ * Brevo contact sync.
+ *
+ * Adds an email to the Brevo "Weekly Digest" list (list ID 2).
+ * Called from the frontend newsletter signup form.
+ *
+ * Setup:
+ *   Set env var: BREVO_API_KEY=xkeysib-...
+ *
+ * Endpoint:
+ *   POST https://us-central1-clawdentials.cloudfunctions.net/brevoSync
+ *   Body: { "email": "user@example.com" }
+ */
+export const brevoSync = functions.https.onRequest(async (req, res) => {
+  // CORS handling
+  const origin = req.headers.origin as string | undefined;
+  if (origin && BREVO_ALLOWED_ORIGINS.includes(origin)) {
+    res.set("Access-Control-Allow-Origin", origin);
+  }
+  res.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    res.status(204).send("");
+    return;
+  }
+
+  if (req.method !== "POST") {
+    res.status(405).send("Method Not Allowed");
+    return;
+  }
+
+  const apiKey = process.env.BREVO_API_KEY;
+  if (!apiKey) {
+    console.error("Missing BREVO_API_KEY");
+    res.status(500).json({ error: "Server configuration error" });
+    return;
+  }
+
+  const { email } = req.body as { email?: string };
+  if (!email || typeof email !== "string") {
+    res.status(400).json({ error: "Missing or invalid email" });
+    return;
+  }
+
+  // Basic email format check
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    res.status(400).json({ error: "Invalid email format" });
+    return;
+  }
+
+  try {
+    const brevoRes = await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: {
+        "api-key": apiKey,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        listIds: [2],
+        updateEnabled: true,
+      }),
+    });
+
+    if (brevoRes.ok || brevoRes.status === 201) {
+      console.log(`[Brevo] Added contact: ${email}`);
+      res.status(200).json({ success: true });
+      return;
+    }
+
+    // Contact already exists — Brevo returns 409 with duplicate_parameter
+    if (brevoRes.status === 409) {
+      console.log(`[Brevo] Contact already exists: ${email}`);
+      res.status(200).json({ success: true, existing: true });
+      return;
+    }
+
+    const errorBody = await brevoRes.text();
+    console.error(`[Brevo] API error ${brevoRes.status}: ${errorBody}`);
+    res.status(brevoRes.status).json({ error: "Brevo API error", details: errorBody });
+  } catch (err) {
+    console.error("[Brevo] Request failed:", err);
+    res.status(500).json({ error: "Failed to sync contact" });
+  }
+});
