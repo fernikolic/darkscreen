@@ -217,9 +217,23 @@ export function Footer() {
               Beta
             </span>
           </div>
-          <span className="font-mono text-[11px] text-text-tertiary">
-            &copy; {new Date().getFullYear()} Darkscreens. All rights reserved.
-          </span>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/terms"
+              className="font-mono text-[11px] text-text-tertiary transition-colors hover:text-text-secondary"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/privacy"
+              className="font-mono text-[11px] text-text-tertiary transition-colors hover:text-text-secondary"
+            >
+              Privacy
+            </Link>
+            <span className="font-mono text-[11px] text-text-tertiary">
+              &copy; {new Date().getFullYear()} Darkscreens
+            </span>
+          </div>
         </div>
       </div>
     </footer>
