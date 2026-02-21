@@ -44,6 +44,13 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `src/lib/flow-strip.ts` | Canvas compositing for flow strip PNGs |
 | `src/lib/figma-export.ts` | Figma-compatible JSON export |
 | `scripts/generate-insights.mjs` | Claude Sonnet 4.6 insight generation from diff data |
+| `.github/workflows/weekly-crawl.yml` | Automated weekly crawl + deploy pipeline |
+| `scripts/download-r2-screenshots.sh` | Download screenshots from R2 (Cloudflare API) |
+| `scripts/upload-screenshots.sh` | Upload screenshots to R2 (wrangler) |
+| `scripts/archive-screens.mjs` | Archive screenshots for diffing |
+| `scripts/diff-screens.mjs` | Pixel-diff current vs archived screenshots |
+| `scripts/generate-changes.mjs` | Generate auto-changes from diff data |
+| `scripts/recrawl-stale.mjs` | Re-crawl apps older than N days |
 
 ## Architecture
 
@@ -213,9 +220,47 @@ Reads `data/*-diff.json`, filters `diffPercent > 3%`, sends to Claude, writes `s
 - Fonts: Space Grotesk (headings), Inter (body), Fira Code (mono/data)
 - Subtle dot-grid texture overlay, card hover border shifts
 
+## Automated Weekly Pipeline (CI)
+
+Screenshots are automatically refreshed every Monday via GitHub Actions.
+
+**Workflow:** `.github/workflows/weekly-crawl.yml` — runs every Monday at 6 AM UTC.
+
+**Pipeline steps:**
+1. Download current screenshots from R2 (via Cloudflare REST API)
+2. Archive them locally (for diffing)
+3. Recrawl stale public apps (7+ days old, login apps auto-skipped)
+4. Diff new screenshots against archive (pixel-level via `pixelmatch`)
+5. Generate auto-detected change records
+6. Upload new screenshots to R2
+7. Commit data changes (`apps.ts`, `auto-changes.ts`)
+8. Build and deploy to Cloudflare Pages
+
+**Key scripts (CI-specific):**
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/download-r2-screenshots.sh` | Download screenshots from R2 bucket via Cloudflare API |
+| `scripts/archive-screens.mjs` | Copy current screenshots to dated archive folder |
+| `scripts/recrawl-stale.mjs` | Re-crawl apps not updated in N days |
+| `scripts/diff-screens.mjs` | Pixel-diff current vs archived screenshots |
+| `scripts/generate-changes.mjs` | Generate `auto-changes.ts` from diff JSON |
+| `scripts/upload-screenshots.sh` | Upload screenshots to R2 bucket via wrangler |
+
+**Required GitHub Secrets** (Settings > Secrets > Actions):
+
+| Secret | Purpose |
+|--------|---------|
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID (dashboard sidebar) |
+| `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages (Edit) + Workers R2 Storage (Edit) |
+
+**R2 bucket:** `darkscreen-screenshots` — stores all labeled screenshots (not raw).
+
+**Manual trigger:** `gh workflow run weekly-crawl.yml`
+
 ## Environment Variables
 
-None required for the MVP.
+None required for local development.
 
 ## Getting Started
 

@@ -317,6 +317,58 @@ Login and wallet apps need to be crawled individually with their respective flag
 
 ---
 
+## Automated Weekly Pipeline (CI)
+
+The entire pipeline runs automatically every Monday via GitHub Actions. No manual intervention needed for public apps.
+
+**Workflow file:** `.github/workflows/weekly-crawl.yml`
+
+**Schedule:** Every Monday at 6 AM UTC (`0 6 * * 1`). Can also be triggered manually with `gh workflow run weekly-crawl.yml`.
+
+### How it works
+
+```
+Download from R2 → Archive → Recrawl stale → Diff → Generate changes → Upload to R2 → Commit → Build → Deploy
+```
+
+| Step | Script | What happens |
+|------|--------|-------------|
+| 1. Download | `download-r2-screenshots.sh` | Pulls current screenshots from R2 via Cloudflare REST API so they can be archived and diffed |
+| 2. Archive | `archive-screens.mjs --all` | Copies screenshots + manifests to `public/screenshots/archive/{slug}/{date}/` |
+| 3. Recrawl | `recrawl-stale.mjs --days 7` | Re-crawls public apps not updated in 7+ days. Runs the full local pipeline (crawl → label → tag → sync) per app. Skips login apps. |
+| 4. Diff | `diff-screens.mjs --all` | Pixel-level comparison (via `pixelmatch`) of new vs archived screenshots. Writes `{slug}-diff.json` |
+| 5. Changes | `generate-changes.mjs --all` | Reads diff JSON, generates `src/data/auto-changes.ts` with change type and description |
+| 6. Upload | `upload-screenshots.sh --all` | Uploads new/changed screenshots to R2 bucket `darkscreen-screenshots` |
+| 7. Commit | git | Commits `apps.ts` and `auto-changes.ts` if changed |
+| 8. Deploy | wrangler | Builds Next.js static export and deploys to Cloudflare Pages |
+
+### Required GitHub Secrets
+
+These must be set at **Settings > Secrets and variables > Actions** in the GitHub repo:
+
+| Secret | Where to find it |
+|--------|-----------------|
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard sidebar |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare > Profile > API Tokens. Needs: **Cloudflare Pages (Edit)** + **Workers R2 Storage (Edit)** |
+
+### What it skips
+
+- **Login apps** (exchanges, dashboards) — `recrawl-stale.mjs` auto-skips `authType: "login"`. These must be recrawled manually with `--login`.
+- **Wallet apps** — attempted with `--wallet` flag but MetaMask isn't available in CI (no extension). These may fail and get logged.
+- **Apps updated within the last 7 days** — not stale, not recrawled.
+
+### Troubleshooting CI
+
+**Workflow never runs on schedule:** GitHub disables cron workflows on repos with no activity for 60 days. Push a commit or trigger manually to re-enable.
+
+**R2 download fails:** Check that `CLOUDFLARE_API_TOKEN` has **Workers R2 Storage (Edit)** permission. The script uses the Cloudflare REST API (`/accounts/{id}/r2/buckets/{name}/objects`), not wrangler, for listing objects.
+
+**Deploy fails:** Check that `CLOUDFLARE_API_TOKEN` has **Cloudflare Pages (Edit)** permission.
+
+**Recrawl fails for specific apps:** Non-fatal. The workflow continues. Check the run logs for which apps failed and why (usually the site changed its DOM structure or added new bot detection).
+
+---
+
 ## Where Files Live
 
 | Path | Contents |
