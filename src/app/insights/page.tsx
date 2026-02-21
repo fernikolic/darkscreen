@@ -4,7 +4,7 @@ import { InsightsPage } from "@/components/InsightsPage";
 export const metadata: Metadata = {
   title: "AI-Generated Crypto UX Insights — Darkscreens",
   description:
-    "Weekly AI-generated analysis of crypto product changes — UX updates, feature launches, design trends, and competitive moves across 150+ products.",
+    "Weekly AI-generated analysis of crypto product changes — UX updates, feature launches, design trends, and competitive moves across 150 products.",
   alternates: { canonical: "/insights" },
   openGraph: {
     title: "AI-Generated Crypto UX Insights",

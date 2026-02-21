@@ -25,8 +25,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.`;
-const shortDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols.`;
+const siteDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS} wallets, exchanges, and DeFi protocols. The design reference built for crypto product teams.`;
+const shortDescription = `Explore screens, flows, and UI patterns from ${TOTAL_APPS} wallets, exchanges, and DeFi protocols.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://darkscreens.xyz"),

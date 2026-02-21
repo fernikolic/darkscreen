@@ -203,7 +203,7 @@ export default async function ElementTagPage({ params }: PageProps) {
           Get notified when we add new {tagName} examples
         </p>
         <p className="mt-3 text-[13px] text-text-secondary">
-          We track {TOTAL_APPS}+ crypto products and update screenshots weekly.
+          We track {TOTAL_APPS} crypto products and update screenshots weekly.
         </p>
         <div className="mt-8 flex justify-center">
           <EmailCapture source={`design-${tagSlug}`} />

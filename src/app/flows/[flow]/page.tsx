@@ -224,7 +224,7 @@ export default async function FlowPage({ params }: PageProps) {
           Get updates when new {flowName.toLowerCase()} flows are added
         </p>
         <p className="mt-3 text-[13px] text-text-secondary">
-          We screenshot {TOTAL_APPS}+ crypto products and track how their flows evolve.
+          We screenshot {TOTAL_APPS} crypto products and track how their flows evolve.
         </p>
         <div className="mt-8 flex justify-center">
           <EmailCapture source={`flow-${flowSlug}`} />

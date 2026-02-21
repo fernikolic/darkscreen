@@ -27,7 +27,7 @@ const tiers = [
     period: "/mo",
     description: "Full library, 12 months of history, weekly digest.",
     features: [
-      `All ${TOTAL_APPS}+ apps`,
+      `All ${TOTAL_APPS} apps`,
       "12 months of history",
       "Before/after comparisons",
       "Weekly change digest",

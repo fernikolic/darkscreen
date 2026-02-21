@@ -93,7 +93,7 @@ export function Hero() {
             <span className="text-white">actually ships</span>
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-[15px] leading-relaxed text-text-secondary">
-            {TOTAL_SCREENS.toLocaleString()}+ screens and flows from {TOTAL_APPS}+
+            {TOTAL_SCREENS.toLocaleString()} screens and flows from {TOTAL_APPS}
             {" "}wallets, exchanges, and DeFi protocols &mdash;
             systematically captured so you can study what the best teams are building.
           </p>
@@ -114,7 +114,7 @@ export function Hero() {
         <div className="mx-auto mt-16 flex max-w-md items-center justify-center gap-10">
           <div className="text-center">
             <span className="block font-mono text-2xl font-medium text-text-primary">
-              {TOTAL_APPS}+
+              {TOTAL_APPS}
             </span>
             <span className="mt-1 block text-[11px] uppercase tracking-wider text-text-tertiary">
               Products
@@ -123,7 +123,7 @@ export function Hero() {
           <div className="h-8 w-px bg-dark-border" />
           <div className="text-center">
             <span className="block font-mono text-2xl font-medium text-text-primary">
-              {TOTAL_SCREENS.toLocaleString()}+
+              {TOTAL_SCREENS.toLocaleString()}
             </span>
             <span className="mt-1 block text-[11px] uppercase tracking-wider text-text-tertiary">
               Screens

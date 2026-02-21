@@ -312,7 +312,7 @@ export function FlowPlayer({ screens, initialIndex, onClose }: FlowPlayerProps) 
             </p>
             <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-text-secondary">
               Get full access to every screen, flow, and update across{" "}
-              {screen.appName} and 100+ other crypto products.
+              {screen.appName} and 100 other crypto products.
             </p>
             <Link
               href="/#pricing"

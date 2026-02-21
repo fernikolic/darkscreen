@@ -260,7 +260,7 @@ export function ScreenModal({
                 </p>
                 <p className="mt-3 max-w-sm text-center text-[14px] leading-relaxed text-text-secondary">
                   Get full access to every screen, flow, and update across{" "}
-                  {screen.appName} and 100+ other crypto products.
+                  {screen.appName} and 100 other crypto products.
                 </p>
                 <Link
                   href="/#pricing"

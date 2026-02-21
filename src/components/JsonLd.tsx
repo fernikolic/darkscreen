@@ -12,7 +12,7 @@ export function WebsiteJsonLd() {
     alternateName: "Darkscreens Crypto Design Library",
     url: "https://darkscreens.xyz",
     description:
-      `Crypto product design library — screenshots, UI patterns, and visual competitive intelligence from ${TOTAL_APPS}+ wallets, exchanges, and DeFi protocols.`,
+      `Crypto product design library — screenshots, UI patterns, and visual competitive intelligence from ${TOTAL_APPS} wallets, exchanges, and DeFi protocols.`,
     potentialAction: {
       "@type": "SearchAction",
       target: {

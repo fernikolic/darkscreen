@@ -45,12 +45,25 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `src/lib/figma-export.ts` | Figma-compatible JSON export |
 | `scripts/generate-insights.mjs` | Claude Sonnet 4.6 insight generation from diff data |
 | `.github/workflows/weekly-crawl.yml` | Automated weekly crawl + deploy pipeline |
+| `.github/workflows/weekly-crawl-auth.yml` | Authenticated crawl CI workflow (login apps) |
 | `scripts/download-r2-screenshots.sh` | Download screenshots from R2 (Cloudflare API) |
 | `scripts/upload-screenshots.sh` | Upload screenshots to R2 (wrangler) |
 | `scripts/archive-screens.mjs` | Archive screenshots for diffing |
 | `scripts/diff-screens.mjs` | Pixel-diff current vs archived screenshots |
 | `scripts/generate-changes.mjs` | Generate auto-changes from diff data |
 | `scripts/recrawl-stale.mjs` | Re-crawl apps older than N days |
+| `scripts/send-weekly-digest.mjs` | Weekly digest email builder + Brevo sender |
+| `scripts/migrate-waitlist-to-brevo.mjs` | One-time Firestore → Brevo migration |
+| `scripts/build-screen-analysis.mjs` | Build-time screen analysis data generator |
+| `scripts/detect-elements.mjs` | Claude Vision UI component detection |
+| `scripts/upload-profiles.sh` | Encrypt + upload Chromium profiles to R2 |
+| `scripts/download-profiles.sh` | Download + decrypt profiles from R2 |
+| `src/data/screen-analysis.ts` | Per-screen analysis data (generated) |
+| `src/data/elements.json` | Detected UI component bounding boxes |
+| `src/components/FlowSummary.tsx` | Flow-level annotation summary bar |
+| `src/components/ElementHighlight.tsx` | SVG overlay for detected UI components |
+| `src/components/EmailCapture.tsx` | Email capture form (syncs to Firestore + Brevo) |
+| `scripts/auth-config.json` | Login app selectors + success indicators (32 apps) |
 
 ## Architecture
 
@@ -59,16 +72,18 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 - **Data-driven** — All app content in `src/data/apps.ts`, easy to extend
 - **Detailed apps** with screenshots + change history (Aave, Binance, Coinbase, Kraken, Leather, Lido, Mempool, MetaMask, Xverse)
 - **Basic listings** with category, flows, and "coming soon" detail pages
-- **Intelligence layer** — change detection, flow comparison, pattern search, AI insights, enhanced export, shareable collections
+- **Intelligence layer** — change detection, flow comparison, pattern search, AI insights, enhanced export, shareable collections, flow annotations, component extraction
 
 ## Capture Pipeline
 
 Zero-cost, fully local pipeline — no API calls required.
 
 ```
-crawl-app.mjs   →  raw screenshots + {slug}-raw.json
-label-local.mjs →  renamed files + {slug}-manifest.json
-auto-tag.mjs    →  tags added to apps.ts screen entries
+crawl-app.mjs            →  raw screenshots + {slug}-raw.json
+label-local.mjs          →  renamed files + {slug}-manifest.json
+auto-tag.mjs             →  tags added to apps.ts screen entries
+build-screen-analysis.mjs →  per-screen analysis data (runs before next build)
+detect-elements.mjs      →  UI component bounding boxes (Claude Vision)
 ```
 
 ### Crawl modes
@@ -185,7 +200,7 @@ Key files: `src/components/JsonLd.tsx`, `src/data/seo.ts`, `src/app/sitemap.ts`,
 
 ## Intelligence Layer
 
-Six features documented in [`docs/FEATURES.md`](docs/FEATURES.md) (Phase 6):
+Ten features documented in [`docs/FEATURES.md`](docs/FEATURES.md):
 
 1. **Enhanced Change Detection** — Weekly-grouped change feed with before/after thumbnails, diff percentages, homepage banner
 2. **Flow Comparison** — `/compare-flows` tool: select 2-4 apps + flow type, side-by-side or step-by-step view
@@ -193,6 +208,10 @@ Six features documented in [`docs/FEATURES.md`](docs/FEATURES.md) (Phase 6):
 4. **AI Insights** — Build-time Claude Sonnet 4.6 analysis of diffs → `/insights` page with editorial summaries
 5. **Enhanced Export** — `ExportMenu` with 7 formats: PNG, clipboard, flow strips (H/V), Figma JSON, metadata, ZIP
 6. **Shareable Collections** — Public share links via Firestore `sharedCollections`, per-screen notes, nanoid share IDs
+7. **Weekly Email Digest** — Dark-themed HTML digest of weekly changes, sent via Brevo transactional API to subscribers
+8. **Flow-Level Annotations** — Per-screen analysis (screen type, friction points, interactive elements, CTAs) shown in ScreenModal + FlowSummary bar
+9. **Component-Level Extraction** — Claude Vision bounding box detection for 44 UI element types, SVG overlay in ScreenModal
+10. **Authenticated Crawl Agent** — Encrypted Chromium profile sync, separate CI workflow for 32 login apps
 
 ### Generating insights
 
@@ -202,6 +221,29 @@ ANTHROPIC_API_KEY=sk-... npm run generate-insights
 
 Reads `data/*-diff.json`, filters `diffPercent > 3%`, sends to Claude, writes `src/data/insights.ts`. Incremental and idempotent.
 
+### Generating screen analysis
+
+```bash
+node scripts/build-screen-analysis.mjs
+```
+
+Reads all `*-extracted.json` files, generates `src/data/screen-analysis.ts` with per-screen analysis (screen type, friction points, interactive elements, CTAs). Runs automatically as part of `npm run build`.
+
+### Detecting UI components
+
+```bash
+# Single app
+ANTHROPIC_API_KEY=sk-... node scripts/detect-elements.mjs --slug coinbase
+
+# All apps
+ANTHROPIC_API_KEY=sk-... node scripts/detect-elements.mjs --all
+
+# Preview without API calls
+node scripts/detect-elements.mjs --all --dry-run
+```
+
+Uses Claude Vision (Haiku) to detect bounding boxes for 44 `GranularElementTag` types across all screenshots. Writes to `src/data/elements.json`. Flags: `--slug`, `--all`, `--force`, `--dry-run`, `--model`, `--concurrency`.
+
 ### Access control
 
 | Feature | Free | Pro |
@@ -210,6 +252,58 @@ Reads `data/*-diff.json`, filters `diffPercent > 3%`, sends to Claude, writes `s
 | Batch export | — | Full |
 | Figma JSON export | — | Full |
 | Shared collections | 1 | Unlimited |
+
+## Weekly Email Digest
+
+Subscribers receive a dark-themed HTML email summarizing weekly screenshot changes, sent via Brevo transactional API.
+
+- **Sender**: `Darkscreens <digest@darkscreens.xyz>`
+- **Brevo list ID 2** = "Weekly Digest" subscribers
+- **Signup flow**: `EmailCapture` component writes to Firestore, then calls the `brevoSync` Firebase Function to add the email to Brevo list 2
+- **Firebase Function**: `brevoSync` in `firebase-functions/src/index.ts` — HTTP function that adds an email to the Brevo contact list
+
+### Sending the digest
+
+```bash
+# Send to all subscribers
+BREVO_API_KEY=... node scripts/send-weekly-digest.mjs
+
+# Preview without sending
+node scripts/send-weekly-digest.mjs --dry-run
+
+# Send test email
+BREVO_API_KEY=... node scripts/send-weekly-digest.mjs --test you@example.com
+```
+
+Reads diff JSON / auto-changes data, builds dark-themed HTML email, sends via Brevo. Runs automatically in the weekly crawl pipeline after `generate-changes`.
+
+### Migrating waitlist
+
+```bash
+BREVO_API_KEY=... node scripts/migrate-waitlist-to-brevo.mjs
+```
+
+One-time migration of Firestore waitlist emails to Brevo contact list 2.
+
+## Authenticated Crawl Agent
+
+Login apps (exchanges, dashboards) are crawled separately from public apps using encrypted Chromium profiles.
+
+- **Config**: `scripts/auth-config.json` — 32 login apps with login URLs, form selectors, success indicators
+- **Profile encryption**: AES-256 with `DARKSCREEN_CRED_KEY` secret
+- **CI workflow**: `.github/workflows/weekly-crawl-auth.yml` — runs every Monday at 9 AM UTC (3 hours after public crawl)
+
+### Profile management
+
+```bash
+# Upload encrypted profiles to R2
+DARKSCREEN_CRED_KEY=... bash scripts/upload-profiles.sh
+
+# Download and decrypt profiles from R2
+DARKSCREEN_CRED_KEY=... bash scripts/download-profiles.sh
+```
+
+Profiles are stored encrypted in the `darkscreen-screenshots` R2 bucket. CI downloads and decrypts them before crawling login apps.
 
 ## Design System
 
@@ -226,15 +320,23 @@ Screenshots are automatically refreshed every Monday via GitHub Actions.
 
 **Workflow:** `.github/workflows/weekly-crawl.yml` — runs every Monday at 6 AM UTC.
 
-**Pipeline steps:**
+**Pipeline steps (public crawl — 6 AM UTC):**
 1. Download current screenshots from R2 (via Cloudflare REST API)
 2. Archive them locally (for diffing)
 3. Recrawl stale public apps (7+ days old, login apps auto-skipped)
 4. Diff new screenshots against archive (pixel-level via `pixelmatch`)
 5. Generate auto-detected change records
-6. Upload new screenshots to R2
-7. Commit data changes (`apps.ts`, `auto-changes.ts`)
-8. Build and deploy to Cloudflare Pages
+6. Send weekly digest email (via Brevo)
+7. Upload new screenshots to R2
+8. Commit data changes (`apps.ts`, `auto-changes.ts`)
+9. Build and deploy to Cloudflare Pages
+
+**Auth crawl pipeline** (`.github/workflows/weekly-crawl-auth.yml` — 9 AM UTC):
+1. Download + decrypt Chromium profiles from R2
+2. Crawl 32 login apps using stored sessions
+3. Encrypt + upload updated profiles to R2
+4. Upload new screenshots to R2
+5. Commit + deploy
 
 **Key scripts (CI-specific):**
 
@@ -245,7 +347,10 @@ Screenshots are automatically refreshed every Monday via GitHub Actions.
 | `scripts/recrawl-stale.mjs` | Re-crawl apps not updated in N days |
 | `scripts/diff-screens.mjs` | Pixel-diff current vs archived screenshots |
 | `scripts/generate-changes.mjs` | Generate `auto-changes.ts` from diff JSON |
+| `scripts/send-weekly-digest.mjs` | Build + send weekly digest email via Brevo |
 | `scripts/upload-screenshots.sh` | Upload screenshots to R2 bucket via wrangler |
+| `scripts/upload-profiles.sh` | Encrypt + upload Chromium profiles to R2 |
+| `scripts/download-profiles.sh` | Download + decrypt Chromium profiles from R2 |
 
 **Required GitHub Secrets** (Settings > Secrets > Actions):
 
@@ -253,10 +358,12 @@ Screenshots are automatically refreshed every Monday via GitHub Actions.
 |--------|---------|
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID (dashboard sidebar) |
 | `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages (Edit) + Workers R2 Storage (Edit) |
+| `BREVO_API_KEY` | Brevo transactional API key (weekly digest email) |
+| `DARKSCREEN_CRED_KEY` | AES-256 encryption key for Chromium profile sync |
 
 **R2 bucket:** `darkscreen-screenshots` — stores all labeled screenshots (not raw).
 
-**Manual trigger:** `gh workflow run weekly-crawl.yml`
+**Manual trigger:** `gh workflow run weekly-crawl.yml` (public) or `gh workflow run weekly-crawl-auth.yml` (auth)
 
 ## Environment Variables
 

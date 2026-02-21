@@ -4,12 +4,12 @@ import { PatternLibrary } from "@/components/PatternLibrary";
 export const metadata: Metadata = {
   title: "Crypto UX Pattern Library — Darkscreens",
   description:
-    "Searchable library of crypto-specific UX patterns — token selectors, gas fee breakdowns, wallet connection flows, swap forms, and more. Real examples from 150+ products.",
+    "Searchable library of crypto-specific UX patterns — token selectors, gas fee breakdowns, wallet connection flows, swap forms, and more. Real examples from 150 products.",
   alternates: { canonical: "/patterns" },
   openGraph: {
     title: "Crypto UX Pattern Library",
     description:
-      "Searchable library of crypto-specific UX patterns with real examples from 150+ products.",
+      "Searchable library of crypto-specific UX patterns with real examples from 150 products.",
     url: "https://darkscreens.xyz/patterns",
     siteName: "Darkscreens",
     type: "website",
